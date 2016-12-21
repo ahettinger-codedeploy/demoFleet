@@ -1,0 +1,7 @@
+SELECT Customer.CustomerNumber, Customer.FirstName, Customer.MiddleInitial, Customer.LastName, Customer.Address1, Customer.Address2, Customer.City, Customer.State, 
+                      Customer.PostalCode, Customer.DayPhone, Customer.NightPhone, Customer.EMailAddress
+FROM Customer  (NOLOCK) INNER JOIN
+SurveyAnswers (NOLOCK) ON Customer.CustomerNumber = SurveyAnswers.CustomerNumber 
+WHERE SurveyAnswers.SurveyNumber = 246 
+AND SurveyAnswers.CustomerNumber NOT IN (SELECT CustomerNumber FROM OrderHeader (NOLOCK) WHERE StatusCode = 'S') 
+AND SurveyAnswers.CustomerNumber NOT IN (SELECT CustomerLastName FROM OrderHeader (NOLOCK) WHERE StatusCode = 'S') 

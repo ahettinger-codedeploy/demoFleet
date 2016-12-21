@@ -1,0 +1,207 @@
+/* 
+================================================
+autosuggest, inquisitor style
+================================================
+*/
+
+body
+{
+	position: relative;
+}
+
+
+div.autosuggest
+{
+	position: absolute;
+	background:#000;
+	background-position: top;
+	background-repeat: no-repeat;
+	padding: 10px 0 0 0;
+	z-index:99999; /*addedd softweb(ishit)*/
+	
+}
+
+div.autosuggest div.as_header,
+div.autosuggest div.as_footer
+{
+	position: relative;
+	height: 6px;
+	padding: 0 6px;
+	background:#000;
+	background-position: top right;
+	background-repeat: no-repeat;
+	overflow: hidden;
+
+}
+div.autosuggest div.as_footer
+{
+	background:#000;
+	
+}
+
+div.autosuggest div.as_header div.as_corner,
+div.autosuggest div.as_footer div.as_corner
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 6px;
+	width: 6px;
+	background:#000;
+	background-position: top left;
+	background-repeat: no-repeat;
+
+}
+div.autosuggest div.as_footer div.as_corner
+{
+	background:#000;
+}
+div.autosuggest div.as_header div.as_bar,
+div.autosuggest div.as_footer div.as_bar
+{
+	height: 6px;
+	overflow: hidden;
+	background-color: #000;
+}
+
+
+div.autosuggest ul
+{
+	list-style: none;
+	margin: 0 0 -4px 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #000;
+}
+
+div.autosuggest ul li
+{
+	padding: 0;
+	margin: 0 4px 4px;
+	text-align: left;
+}
+
+div.autosuggest ul li a
+{
+	display: block;
+	text-decoration: none;
+	background-color: transparent;
+	text-shadow: #000 0px 0px 5px;
+	position: relative;
+	padding: 0;
+	width: 100%;
+	font-size:13px;
+
+
+}
+
+div.autosuggest ul li a span
+{
+	display: block;
+	padding: 2px 0px 0px 8px;
+	font-weight: bold;
+	color:#58B0B4;
+}
+/*************************************************************************************************/
+div.autosuggest ul li.blue a span /*added for different font color*/
+{
+	display: block;
+	padding: 2px 0px 0px 8px;
+	font-weight: bold;
+	color:#58B0B4;
+}
+
+div.autosuggest ul li.blue em
+{
+	font-style: normal;
+	color:#58B0B4;
+}
+
+div.autosuggest ul li.yellow a span
+{
+	display: block;
+	padding: 2px 0px 0px 8px;
+	font-weight: bold;
+	color:#FFCC00;
+}
+
+div.autosuggest ul li.yellow em
+{
+	font-style: normal;
+	color:#FFCC00;
+}
+/*************************************************************************************************/
+
+div.autosuggest ul li a span small
+{
+	font-weight: normal;
+	color: #000;
+}
+
+div.autosuggest ul li.as_highlight a span small
+{
+	color: #000;
+	background:#58B0B4;
+}
+
+div.autosuggest ul li.as_highlight a
+{
+	color: #fff;
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+
+div.autosuggest ul li.as_highlight a span
+{
+	color: #fff;
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	
+}
+
+
+div.autosuggest ul li a .tl,
+div.autosuggest ul li a .tr
+{
+	background-repeat: no-repeat;
+	color:#000;
+	
+}
+div.autosuggest ul li a .tr
+{
+	right: 0;
+	color:#000;
+
+}
+
+div.autosuggest ul li.as_highlight a .tl
+{
+	left: 0;
+	background-position: bottom left;
+	color:#000;
+	
+}
+
+div.autosuggest ul li.as_highlight a .tr
+{
+	right: 0;
+	color:#000;
+	background-position: bottom right;
+	
+}
+
+
+
+div.autosuggest ul li.as_warning
+{
+	font-weight: bold;
+	text-align: center;
+	/*color:#000;*/
+	color:#FFF;/*changed softweb(ishit)*/
+}
+
+div.autosuggest ul em
+{
+	font-style: normal;
+	color:#fff;
+}

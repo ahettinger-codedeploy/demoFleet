@@ -1,0 +1,385 @@
+<%
+'CHANGELOG
+'SSR 05/24/16 - initial development
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta charset="utf-8">
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="https://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+
+<style>
+/* ::::: file:///C:/Users/SergioRodriguez/Documents/Copied%20Web%20Sites/LamaEvents/dalailamacenter.org/sites/dalailamacenter.org/files/css/css_cb773b412abb621fc22ccaac695a993d.css ::::: */
+
+form { margin: 0px; padding: 0px; }
+img { border: 0px none; }
+.clear-block::after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
+.form-item { margin-top: 1em; margin-bottom: 1em; }
+.form-item label { display: block; font-weight: bold; }
+.form-item label.option { display: inline; font-weight: normal; }
+li a.active { color: rgb(0, 0, 0); }
+.block ul { margin: 0px; padding: 0px 0px 0.25em 1em; }
+.date-clear-block::after { content: " "; display: block; height: 0px; clear: both; visibility: hidden; }
+ul.nice-menu, ul.nice-menu ul { z-index: 5; position: relative; }
+ul.nice-menu li { position: relative; }
+ul.nice-menu a { display: block; }
+ul.nice-menu ul, #header-region ul.nice-menu ul { position: absolute; visibility: hidden; }
+ul.nice-menu ul li { display: block; }
+ul.nice-menu::after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
+ul.nice-menu li:hover ul, ul.nice-menu li.menuparent li:hover ul, ul.nice-menu li.menuparent li.menuparent li:hover ul, ul.nice-menu li.menuparent li.menuparent li.menuparent li:hover ul, ul.nice-menu li.over ul, ul.nice-menu li.menuparent li.over ul, ul.nice-menu li.menuparent li.menuparent li.over ul, ul.nice-menu li.menuparent li.menuparent li.menuparent li.over ul, #header-region ul.nice-menu li:hover ul, #header-region ul.nice-menu li.menuparent li:hover ul, #header-region ul.nice-menu li.menuparent li.menuparent li:hover ul, #header-region ul.nice-menu li.over ul, #header-region ul.nice-menu li.menuparent li.over ul, #header-region ul.nice-menu li.menuparent li.menuparent li.over ul { visibility: visible; }
+ul.nice-menu li.menuparent ul, #header-region ul.nice-menu li.menuparent ul { overflow: visible ! important; }
+ul.nice-menu, ul.nice-menu ul { list-style: outside none none; padding: 0px; margin: 0px; border-top: 1px solid rgb(204, 204, 204); }
+ul.nice-menu li { border-width: 0px 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgb(204, 204, 204) rgb(204, 204, 204); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; float: left; background-color: rgb(238, 238, 238); }
+ul.nice-menu a { padding: 0.3em 5px; }
+ul.nice-menu ul { top: 1.8em; left: -1px; border-width: 1px 0px 0px; border-style: solid none none; border-color: rgb(204, 204, 204) -moz-use-text-color -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; margin-right: 0px; }
+ul.nice-menu ul li { width: 12.5em; }
+ul.nice-menu-down { float: left; border: 0px none; }
+ul.nice-menu-down li { border-top: 1px solid rgb(204, 204, 204); }
+ul.nice-menu-down li li { border-top: 0px none; }
+ul.nice-menu-down ul { left: 0px; }
+ul.nice-menu-down ul li { clear: both; }
+ul.nice-menu-down .menuparent a { padding-right: 15px; }
+ul.nice-menu-down li.menuparent { background: rgb(238, 238, 238) url('arrow-down.png') no-repeat scroll right center; }
+ul.nice-menu-down li.menuparent:hover { background: rgb(204, 204, 204) url('arrow-down.png') no-repeat scroll right center; }
+ul.nice-menu li { margin: 0px; padding-left: 0px; background-image: none; }
+div.panel-pane div.admin-links a::before { content: "["; }
+div.panel-pane div.admin-links a::after { content: "]"; }
+#ab-enewsletter-widget { position: fixed; right: 0px; top: 95px; z-index: 1000; }
+#ab-enewsletter-widget #ab-enewsletter-tab, #ab-enewsletter-widget h2.title { display: inline; float: left; height: 166px; width: 40px; }
+#ab-enewsletter-widget h2.title { background: transparent url('enewsletter-tab.png') no-repeat scroll left top; margin: 10px 0px 0px; text-indent: -9999px; }
+#ab-enewsletter-widget h2.title:hover { cursor: pointer; }
+#ab-enewsletter-widget div.content { background: rgb(232, 232, 232) none repeat scroll 0% 0%; border-bottom: 1px solid rgb(204, 204, 204); border-left: 1px solid rgb(204, 204, 204); border-top: 1px solid rgb(204, 204, 204); min-height: 200px; margin-left: 40px; margin-right: -276px; width: 275px; }
+#ab-enewsletter-widget div.content form { padding-left: 10px; padding-right: 10px; }
+#ab-enewsletter-widget input.form-text { width: 220px; }
+#ab-enewsletter-widget input.form-submit { display: block; margin: 10px auto; }
+div.view div.views-admin-links li a::before { content: "["; }
+div.view div.views-admin-links li a::after { content: "]"; }
+body { font-size: 100%; }
+body, caption, th, td, input, textarea, select, option, legend, fieldset { font-family: Tahoma,Verdana,Arial,Helvetica,"Bitstream Vera Sans",sans-serif; }
+h2 { font-size: 1.5em; line-height: 1.3em; margin-top: 0.667em; margin-bottom: 0.667em; }
+h4, h5, h6 { font-size: 1.1em; line-height: 1.3em; margin-top: 0.909em; margin-bottom: 0.909em; }
+p, ul, ol, dl, pre, table, fieldset, blockquote { margin: 1em 0px; }
+ul, ol { margin-left: 0px; padding-left: 2em; }
+.block ul, .item-list ul { margin: 1em 0px; padding: 0px 0px 0px 2em; }
+ul ul, ul ol, ol ol, ol ul, .block ul ul, .block ul ol, .block ol ol, .block ol ul, .item-list ul ul, .item-list ul ol, .item-list ol ol, .item-list ol ul { margin: 0px; }
+li { margin: 0px; padding: 0px; }
+ul { list-style-type: disc; }
+ul ul { list-style-type: circle; }
+a:link {  }
+a:visited {  }
+a:hover, a:focus {  }
+a:active {  }
+img { border: 0px none; }
+form { margin: 0px; padding: 0px; }
+/* ::::: file:///C:/Users/SergioRodriguez/Documents/Copied%20Web%20Sites/LamaEvents/dalailamacenter.org/sites/dalailamacenter.org/files/css/css_71d47b37ff4ab0c74a9eba1faf0af68b.css ::::: */
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0px; padding: 0px; border: 0px none; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
+body { line-height: 1.5; }
+blockquote::before, blockquote::after, q::before, q::after { content: ""; }
+a img { border: medium none; }
+body { font-size: 75%; color: rgb(34, 34, 34); background: rgb(255, 255, 255) none repeat scroll 0% 0%; font-family: "Helvetica Neue",Arial,Helvetica,sans-serif; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; color: rgb(17, 17, 17); }
+h2 { font-size: 2em; margin-bottom: 0.75em; }
+h5 { font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
+p { margin: 0px 0px 1.5em; }
+a:focus, a:hover { color: rgb(0, 0, 0); }
+a { color: rgb(0, 0, 153); text-decoration: underline; }
+li ul, li ol { margin: 0px 1.5em; }
+ul, ol { margin: 0px 1.5em 1.5em; }
+ul { list-style-type: disc; }
+.first { margin-left: 0px; padding-left: 0px; }
+.last { margin-right: 0px; padding-right: 0px; }
+label { font-weight: bold; }
+input[type="text"], input.text, input.title, textarea, select { background-color: rgb(255, 255, 255); border: 1px solid rgb(187, 187, 187); }
+input[type="text"]:focus, input.text:focus, input.title:focus, textarea:focus, select:focus { border-color: rgb(102, 102, 102); }
+input[type="text"], input.text, input.title, textarea, select { margin: 0.5em 0px; }
+input[type="checkbox"], input[type="radio"], input.checkbox, input.radio { position: relative; top: 0.25em; }
+html, body { height: 100%; }
+body { background-color: rgb(204, 218, 222); }
+#wrap-page { background: transparent url('/Clients/dalailamacenter/Images/wrap-shadows.png') repeat-y scroll left top; width: 1000px; margin: 0px auto; min-height: 100%; position: relative; }
+#wrap-page-content { margin: 0px 20px; padding-bottom: 275px; }
+#menu { margin-bottom: 20px; }
+.float-left { float: left; }
+.float-right { float: right; }
+#header { height: 170px; position: relative; }
+#logo { position: absolute; left: 0px; top: 0px; margin: 22px 10px 0px 20px; }
+#slogan { position: absolute; right: 20px; top: 95px; }
+#slogan h2 { font-size: 24px; }
+#menu { height: 50px; background: transparent url('/Clients/dalailamacenter/Images/main-menu-grad.png') repeat-x scroll left top; position: relative; z-index: 50; }
+#menu-content { position: relative; }
+#footer { height: 210px; position: absolute; bottom: 0px; left: 20px; width: 960px; }
+#footer-navigate, #footer-connect-with-us, #footer-tweets { margin-right: 20px; }
+#footer-navigate { width: 100px; }
+#footer-connect-with-us { width: 130px; }
+#footer-copyright { width: 140px; }
+#footer-tweets a, #footer-tweets a:visited, #footer-copyright a, #footer-copyright a:visited { border-bottom: 1px dashed rgb(199, 13, 40); color: rgb(205, 205, 205); }
+#footer a.active:hover, #footer-tweets a:hover, #footer-copyright a:hover { color: rgb(247, 189, 21); }
+#footer a.active { color: rgb(205, 205, 205); }
+body { color: rgb(0, 0, 0); font-family: Helvetica,Helvetica Neue,Arial,sans-serif; }
+h2, .h2 { font-size: 2em; }
+h5, .h5 { font-size: 1em; }
+h1, h2, h3, h4, h5, h6 { font-weight: bold; }
+h1, h2 { line-height: 1em; }
+a, a:visited { color: rgb(199, 13, 40); text-decoration: none; }
+a:hover { color: rgb(247, 189, 21); }
+a.link-1, a.link-1:visited { color: rgb(205, 205, 205); }
+a.link-1:hover { color: rgb(247, 189, 21); }
+li a.active { color: rgb(247, 189, 21); }
+.color-02 { color: rgb(205, 205, 205); }
+.color-20 { color: rgb(247, 189, 21); }
+.bg-01 { background-color: rgb(69, 73, 77); }
+.margin-t100em { margin-top: 1em; }
+.margin-l5px { margin-left: 5px; }
+.margin-r20px { margin-right: 20px; }
+.walls-l { padding-left: 20px; padding-right: 20px; }
+.float-left { float: left; display: inline; }
+.float-right { float: right; }
+.clearfix::after { content: " "; display: block; height: 0px; clear: both; visibility: hidden; overflow: hidden; }
+.clearfix { display: block; }
+.form-item { margin-top: 0px; }
+span.mailchimp-member-count { font-size: 20px; font-weight: bold; color: rgb(199, 13, 40); }
+#header-quicklinks { position: relative; z-index: 10; }
+#search-theme-form { margin-top: 1em; }
+#search-theme-form div { float: left; display: inline; }
+#search-theme-form input.form-text { outline: medium none; padding: 0.4em; margin-top: 0px; }
+#search-theme-form .form-submit { width: 25px; height: 25px; text-indent: -9999px; background: transparent url('/Clients/dalailamacenter/Images/icon-search-25x25.gif') no-repeat scroll left top; border: medium none; margin: 0px 0px 0px 10px; padding: 0px; color: transparent; text-transform: capitalize; }
+#ab-enewsletter-widget h2.title { background-image: url('/Clients/dalailamacenter/Images/enewsletter-tab_001.png'); }
+#ab-enewsletter-widget div.content { background: rgb(100, 100, 100) none repeat scroll 0px 0px; color: rgb(255, 255, 255); }
+#ab-enewsletter-widget div.content #dlc_mailchimp_count { padding: 0px 1.4em; font-size: 1.2em; font-weight: bold; margin: 1.8em 0px 1.4em; }
+#ab-enewsletter-widget div.content #dlc_mailchimp_count span.mailchimp-member-count { color: rgb(255, 255, 255); font-size: 1em; }
+#ab-enewsletter-widget div.form-item { padding: 0px 1.4em; }
+#ab-enewsletter-widget input.form-submit { margin: 0px 0px 20px 98px; }
+ul.list-h { list-style-type: none; list-style-image: none; margin-left: 0px; margin-right: 0px; }
+ul.list-h li { display: inline; float: left; }
+ul.list-v { list-style: outside none none; margin-left: 0px; margin-right: 0px; }
+ul.list-v li { list-style-type: none; list-style-image: none; }
+.list-quicklinks a { padding: 15px 15px 15px 30px; border-right: 1px solid rgb(73, 69, 68); display: block; }
+.list-quicklinks .first a { padding-left: 15px; }
+.list-quicklinks a, .list-quicklinks a:visited, .list-quicklinks a:hover { color: rgb(73, 69, 68); }
+.list-quicklinks a:hover { text-decoration: underline; }
+.list-quicklinks .item-1, .list-quicklinks .item-2, .list-quicklinks .item-3, .list-quicklinks .item-4 { background: transparent none no-repeat scroll 15px 20px; }
+.list-quicklinks .item-1 { background-image: url('/Clients/dalailamacenter/Images/icon-home-10x10.gif'); background-position: 0px 20px; }
+.list-quicklinks .item-2 { background-image: url('/Clients/dalailamacenter/Images/icon-blog-10x10.gif'); }
+.list-quicklinks .item-3 { background-image: url('/Clients/dalailamacenter/Images/icon-contact-10x10.gif'); }
+.list-quicklinks .item-4 { background-image: url('/Clients/dalailamacenter/Images/icon-volunteer-10x10.gif'); }
+.icon-01 { border: medium none; height: 22px; width: 22px; background: transparent url('/Clients/dalailamacenter/Images/sprite-22x22.png') no-repeat scroll 0px 0px; }
+.icon-01-rss { background-position: 0px 0px; }
+.icon-01-twitter { background-position: -22px 0px; }
+.icon-01-facebook { background-position: -44px 0px; }
+.icon-01-flickr { background-position: -66px 0px; }
+.icon-01-youtube { background-position: -88px 0px; }
+ul.nice-menu, ul.nice-menu ul { list-style: outside none none; padding: 0px; margin: 0px; border-top: 1px solid rgb(204, 204, 204); }
+ul.nice-menu li { border-width: 0px 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgb(204, 204, 204) rgb(204, 204, 204); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; float: left; background-color: rgb(51, 51, 51); margin: 0px; padding-left: 0px; background-image: none; }
+ul.nice-menu a { padding: 0.3em 5px; }
+ul.nice-menu ul, #header-region ul.nice-menu ul { top: 1.8em; left: -1px; border-width: 1px 0px 0px; border-style: solid none none; border-color: rgb(204, 204, 204) -moz-use-text-color -moz-use-text-color; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; margin-right: 0px; }
+ul.nice-menu ul li { width: 12.5em; }
+ul.nice-menu-down { background: transparent url('/Clients/dalailamacenter/Images/main-menu-item-border.png') no-repeat scroll right top; border: medium none; display: block; margin: 0px auto; position: relative; width: auto; }
+ul.nice-menu-down ul, #header-region ul.nice-menu-down ul { left: 3px; }
+ul.nice-menu-down li { border: medium none; background: transparent url('/Clients/dalailamacenter/Images/main-menu-item-border.png') no-repeat scroll left top; }
+ul.nice-menu-down li li { background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.95; border-top: 1px solid rgb(205, 205, 205); width: 180px; }
+ul.nice-menu-down li.menuparent, #header-region ul.nice-menu-down li.menuparent { background: transparent url('/Clients/dalailamacenter/Images/main-menu-item-border.png') no-repeat scroll left top; }
+ul.nice-menu-down ul { top: 50px; border: medium none; }
+ul.nice-menu-down ul li { clear: both; }
+ul.nice-menu-down .menuparent a, ul.nice-menu-down li a, ul.nice-menu-down .menuparent a:visited, ul.nice-menu-down li a:visited { color: rgb(205, 205, 205); font-size: 1.42em; padding: 0px 17px; line-height: 50px; }
+ul.nice-menu-down .menuparent ul a, ul.nice-menu-down .menuparent ul a:visited { line-height: 1em; padding: 8px 10px; }
+ul.nice-menu-down .active-trail > a, ul.nice-menu-down li a:hover, ul.nice-menu-down li a.active, ul.nice-menu-down .menuparent a:hover, ul.nice-menu-down .menuparent a.active { color: rgb(247, 189, 21); background: rgb(100, 100, 100) url('/Clients/dalailamacenter/Images/main-menu-item-border.png') no-repeat scroll left top; }
+ul.nice-menu-down ul li a:hover, ul.nice-menu-down ul li a.active { background: rgb(100, 100, 100) none repeat scroll 0% 0%; }
+ul.nice-menu-down li.over, #header-region ul.nice-menu-down li.over, ul.nice-menu-down li.menuparent:hover, #header-region ul.nice-menu-down li.menuparent:hover { background: rgb(100, 100, 100) url('/Clients/dalailamacenter/Images/main-menu-item-border.png') no-repeat scroll left top; }
+ul#nice-menu-0 li.menu-path-node-46 a { color: rgb(247, 189, 21); }
+
+</style>
+<style>
+body {background-color: #CCDADE !important;}
+
+</style>
+
+</head>
+
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+    <div id="wrap-page">
+      <div id="wrap-page-content" class="clearfix">
+
+        <!-- Header -->
+        <div id="header" class="clearfix">
+          
+          <!-- Connect with Us menu -->
+          <div id="header-connect-with-us" class="float-right margin-r20px margin-t100em">
+            <ul class="connect-with-us-list list-h"><li class="item-1 first"><a href="file:///C:/Users/SergioRodriguez/Documents/Copied%20Web%20Sites/LamaEvents/dalailamacenter.org/news/content-feeds.html" class="margin-l5px"><img src="/Clients/dalailamacenter/images/1px.gif" class="icon-01 icon-01-rss"></a></li><li class="item-2"><a href="http://www.twitter.com/dalailamacenter" class="margin-l5px"><img src="/Clients/dalailamacenter/Images/1px.gif" class="icon-01 icon-01-twitter"></a></li><li class="item-3"><a href="http://www.facebook.com/dalailamacenter" class="margin-l5px"><img src="/Clients/dalailamacenter/images/1px.gif" class="icon-01 icon-01-facebook"></a></li><li class="item-4"><a href="http://www.flickr.com/dalailamacenter" class="margin-l5px"><img src="/Clients/dalailamacenter/images/1px.gif" class="icon-01 icon-01-flickr"></a></li><li class="item-5 last"><a href="http://youtube.com/dalailamacenter" class="margin-l5px"><img src="/Clients/dalailamacenter/images/1px.gif" class="icon-01 icon-01-youtube"></a></li></ul>          </div>
+
+          <!-- Search -->
+                      <div id="header-search" class="float-right margin-r20px">
+            
+<div><div class="form-item" id="edit-search-theme-form-1-wrapper">
+ <input maxlength="128" name="search_theme_form" id="edit-search-theme-form-1" size="15" value="" title="Enter the terms you wish to search for." class="form-text" type="text">
+</div>
+<input name="op" id="edit-submit-1" value="Search" class="form-submit" type="submit">
+<input name="form_build_id" id="form-t-V-2LIU7pK4sYAliH_oXF839j5MvcNLu6LO2x-obPs" value="form-t-V-2LIU7pK4sYAliH_oXF839j5MvcNLu6LO2x-obPs" type="hidden">
+<input name="form_id" id="edit-search-theme-form" value="search_theme_form" type="hidden">
+
+</div>
+
+            </div>
+                    
+          <!-- Quick-links menu -->
+                      <div id="header-quicklinks" class="float-right margin-r20px list-quicklinks">
+              <ul class="list-h"><li class="menu-801 item-1 first"><a href="file:///C:/Users/SergioRodriguez/Documents/Copied%20Web%20Sites/LamaEvents/dalailamacenter.org/home.html" title="" class="link-1">Home</a></li>
+<li class="menu-1458 item-2"><a href="file:///C:/Users/SergioRodriguez/Documents/Copied%20Web%20Sites/LamaEvents/dalailamacenter.org/blog.html" title="" class="link-1">Blog</a></li>
+<li class="menu-803 item-3"><a href="file:///C:/Users/SergioRodriguez/Documents/Copied%20Web%20Sites/LamaEvents/dalailamacenter.org/contact.html" title="" class="link-1">Contact</a></li>
+<li class="menu-5476 item-4 last"><a href="file:///C:/Users/SergioRodriguez/Documents/Copied%20Web%20Sites/LamaEvents/dalailamacenter.org/volunteer.html" title="" class="link-1">Volunteer</a></li>
+</ul>            </div>
+          
+          <!-- Logo -->
+          <div id="logo">
+            <a href="file:///C:/Users/SergioRodriguez/Documents/Copied%20Web%20Sites/LamaEvents/dalailamacenter.org/index.html"><img src="/Clients/dalailamacenter/images/logo.png" alt="The Dalia Lama Center"></a>          </div>
+
+          <!-- Slogan -->
+                    <div id="slogan" class="clearfix">
+            <h2><a href="file:///C:/Users/SergioRodriguez/Documents/Copied%20Web%20Sites/LamaEvents/dalailamacenter.org/index.html">TICKETS</a></h2>
+          </div>
+                  </div>
+
+        <!-- Navigation Menu -->
+                  <div id="menu" class="append-bottom">
+            <div id="menu-content">
+              			    <div id="block-custom_dlc_helper-1" class="block block-custom_dlc_helper region-odd even region-count-1 count-2"><div class="block-inner">
+
+  
+  <div class="content">
+    <ul class="nice-menu nice-menu-down" id="nice-menu-0"><li class="menu-1364 menu-path-front first  odd "><a href="http://dalailamacenter.org/" title="">Home</a></li>
+<li class="menu-1474 menuparent menu-path-node-1777 even "><a href="http://dalailamacenter.org/about" title="">About Us</a><ul><li class="menu-636 menu-path-node-13 first  odd "><a href="/about/history" title="History">History</a></li>
+<li class="menu-12714 menu-path-node-2152 even "><a href="http://dalailamacenter.org/about/heart-mind" title="">Heart-Mind        Well-being</a></li>
+<li class="menu-638 menu-path-about-who-we-are odd "><a href="http://dalailamacenter.org/about/who-we-are" title="Who we are">People</a></li>
+<li class="menu-633 menu-path-node-10 even "><a href="http://dalailamacenter.org/about/funding" title="Funding">Funding</a></li>
+<li class="menu-5079 menu-path-contact odd "><a href="http://dalailamacenter.org/contact" title="Contact the Dalai Lama Center">Contact</a></li>
+<li class="menu-642 menu-path-node-19 even  last "><a href="http://dalailamacenter.org/about/faq" title="FAQ">FAQ</a></li>
+</ul>
+</li>
+<li class="menu-1601 menuparent menu-path-node-86 odd "><a href="http://dalailamacenter.org/programs" title="About Our Programs">Programs</a><ul><li class="menu-1537 menu-path-node-86 first  odd "><a href="/programs" title="">About our programs</a></li>
+<li class="menu-10706 menu-path-node-1834 even "><a href="http://dalailamacenter.org/programs/heart-mind-index" title="">Heart-Mind Index</a></li>
+<li class="menu-13132 menu-path-node-2221 odd "><a href="http://dalailamacenter.org/programs/heart-mind-online" title="Heart-Mind Online">Heart-Mind Online</a></li>
+<li class="menu-10326 menu-path-node-1567 even "><a href="http://dalailamacenter.org/programs/programs-development/appreciative-inquiry" title="">Heart-Mind Inquiry</a></li>
+<li class="menu-14076 menu-path-node-2367 odd "><a href="http://dalailamacenter.org/program/heart-mind-parenting-project" title="Heart-Mind Parenting Project">Heart-Mind Parenting Project</a></li>
+<li class="menu-14565 menu-path-node-2260 even  last "><a href="http://dalailamacenter.org/learn/heart-mind-challenge" title="Heart-Mind Challenge">Heart-Mind Challenge</a></li>
+</ul>
+</li>
+<li class="menu-992 menuparent menu-path-events active-trail even "><a href="http://dalailamacenter.org/events" title="" class="active">Events</a><ul><li class="menu-13152 menu-path-node-2233 first  odd "><a href="/program/heart-mind-conference" title="Heart-Mind Conference">Heart-Mind Conference</a></li>
+<li class="menu-6558 menu-path-node-1071 even "><a href="http://dalailamacenter.org/speakers-series" title="Educating the Heart Series">Heart-Mind Speakers Series</a></li>
+<li class="menu-994 menu-path-events-past odd  last "><a href="http://dalailamacenter.org/events/past" title="">Past events</a></li>
+</ul>
+</li>
+<li class="menu-2647 menuparent menu-path-learn odd "><a href="http://dalailamacenter.org/learn" title="">Learn</a><ul><li class="menu-654 menu-path-learn-videos first  odd "><a href="/learn/videos" title="Video">Video</a></li>
+<li class="menu-1756 menu-path-learn-audio even "><a href="http://dalailamacenter.org/learn/audio">Audio</a></li>
+<li class="menu-655 menu-path-node-32 odd "><a href="http://dalailamacenter.org/learn/photos" title="Photos">Photos</a></li>
+<li class="menu-1758 menu-path-learn-books-and-articles even "><a href="http://dalailamacenter.org/learn/books-and-articles">Books and journal articles</a></li>
+<li class="menu-1541 menu-path-learn odd  last "><a href="http://dalailamacenter.org/learn" title="">All knowledge resources</a></li>
+</ul>
+</li>
+<li class="menu-1625 menuparent menu-path-news even "><a href="http://dalailamacenter.org/news">News &amp; Media</a><ul><li class="menu-1014 menu-path-news-latest first  odd "><a href="/news/latest" title="">In the news</a></li>
+<li class="menu-1028 menu-path-news-media-releases even "><a href="http://dalailamacenter.org/news/media-releases" title="">Media releases</a></li>
+<li class="menu-1030 menu-path-node-66 odd "><a href="http://dalailamacenter.org/banners-and-logo" title="Banners and Logo">Banners and logo</a></li>
+<li class="menu-3521 menu-path-news-newsletters even  last "><a href="http://dalailamacenter.org/news/newsletters" title="">Newsletters</a></li>
+</ul>
+</li>
+<li class="menu-5475 menu-path-node-46 odd  last "><a href="http://dalailamacenter.org/donate" title="">Donate</a></li>
+</ul>
+  </div>
+
+  
+</div>
+</div> 
+</div>
+</div>
+        
+<div id="tix" style="min-height:400px;">
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+</div> 
+	
+
+
+
+      <!-- Footer -->
+        <div id="footer" class="bg-01 color-02">
+          <div id="content-footer" class="walls-l margin-t100em">
+            <div class="clearfix">
+              <div id="footer-navigate" class="float-left">
+                <h5 class="color-20">Navigate</h5>
+				         			        <ul class="connect-with-us-list list-v"><li class="item-1 first"><a href="/" class="link-1">Home</a></li><li class="item-2"><a href="/about/history" class="link-1">About</a></li><li class="item-3"><a href="/programs" class="link-1">Programs</a></li><li class="item-4"><a href="/events" class="link-1 active">Events</a></li><li class="item-5"><a href="/learn" class="link-1">Learn</a></li><li class="item-6"><a href="/news" class="link-1">News &amp; Media</a></li><li class="item-7"><a href="/donate" class="link-1">Donate</a></li><li class="item-8 last"><a href="/volunteer" class="link-1">Volunteer</a></li></ul>              </div>
+
+              <div id="footer-connect-with-us" class="float-left">
+                <h5 class="color-20">Connect with Us</h5>
+                <ul class="connect-with-us-list list-v"><li class="item-1 first"><a href="/news/content-feeds" class="link-1">RSS</a></li><li class="item-2"><a href="http://www.twitter.com/dalailamacenter" class="link-1">Twitter</a></li><li class="item-3"><a href="http://www.facebook.com/dalailamacenter" class="link-1">Facebook</a></li><li class="item-4"><a href="http://www.flickr.com/dalailamacenter" class="link-1">Flickr</a></li><li class="item-5"><a href="http://youtube.com/dalailamacenter" class="link-1">YouTube</a></li><li class="item-6 last"><a href="/mailchimp/subscribe" class="link-1">E-newsletter</a></li></ul>              </div>
+
+              <!--
+              <div id="footer-tweets" class="float-left">
+                <h5 class="color-20">Tweets</h5>
+				              </div>
+              -->
+
+              <div id="footer-copyright" class="float-right">
+                <a href="/privacy_policy" class="link-1">Privacy Policy</a><br/>Copyright &copy; 2009 Dalai Lama Center for Peace and Education, all rights reserved.
+              </div>
+            </div>
+
+            
+                      </div>
+        </div>
+
+
+
+    </div> <!-- /#wrap-page-content,  -->
+  </div> <!-- /#wrap-page,  -->
+
+  
+  
+
+
+
+
+
+<div id="ab-enewsletter-widget"><div id="ab-enewsletter-wrap"><div id="ab-enewsletter-tab" class="header"><h2 class="title">E-newsletter</h2></div><div id="ab-enewsletter-content" class="content">
+
+<div><p id="dlc_mailchimp_count">You're joining a community of<span class="mailchimp-member-count"> 12327 </span>people united in their will to cultivate compassion throughout the world.</p><div class="form-item" id="edit-mailchimp-list-82bc946c0d-wrapper">
+ <label class="option" for="edit-mailchimp-list-82bc946c0d"><input name="mailchimp_list_82bc946c0d" id="edit-mailchimp-list-82bc946c0d" value="1" checked="checked" class="form-checkbox mailchimp-newsletter-checkbox-82bc946c0d" type="checkbox"> Subscribe to the Dalai Lama Center Subscribers newsletter</label>
+</div>
+<div class="form-item" id="edit-EMAIL-wrapper">
+ <label for="edit-EMAIL">Email address: </label>
+ <input maxlength="128" name="EMAIL" id="edit-EMAIL" size="60" value="" class="form-text" type="text">
+</div>
+<div class="form-item" id="edit-FNAME-wrapper">
+ <label for="edit-FNAME">First name: </label>
+ <input maxlength="128" name="FNAME" id="edit-FNAME" size="60" value="" class="form-text" type="text">
+</div>
+<div class="form-item" id="edit-LNAME-wrapper">
+ <label for="edit-LNAME">Last name: </label>
+ <input maxlength="128" name="LNAME" id="edit-LNAME" size="60" value="" class="form-text" type="text">
+</div>
+<div class="form-item" id="edit-COUNTRY-wrapper">
+ <label for="edit-COUNTRY">Country: </label>
+ <input maxlength="128" name="COUNTRY" id="edit-COUNTRY" size="60" value="" class="form-text" type="text">
+</div>
+<input name="form_build_id" id="form-4MsYqkHLSTWZQHSbfZ9kKPj-9vuGN5BCHyWomruqP_E" value="form-4MsYqkHLSTWZQHSbfZ9kKPj-9vuGN5BCHyWomruqP_E" type="hidden">
+<input name="form_id" id="edit-ab-enewsletter-subscribe-form" value="ab_enewsletter_subscribe_form" type="hidden">
+<input name="op" id="edit-submit" value="Subscribe" class="form-submit" type="submit">
+
+</div>
+
+</div></div></div>
+
+
+
+</div>
+</form>
+</body>
+</html>
+

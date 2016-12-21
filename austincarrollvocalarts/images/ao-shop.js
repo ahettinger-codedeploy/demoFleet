@@ -1,0 +1,1 @@
+(function(){AO.views.pages.Shop=Backbone.View.extend({})})();

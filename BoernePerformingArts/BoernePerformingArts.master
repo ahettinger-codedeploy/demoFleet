@@ -1,0 +1,1018 @@
+<%
+'changelog'
+'LSP 11/2/16 - initial development'
+%>
+<!DOCTYPE html>
+<!--[if IE 6]>
+<html id="ie6" lang="en-US">
+<![endif]-->
+<!--[if IE 7]>
+<html id="ie7" lang="en-US">
+<![endif]-->
+<!--[if IE 8]>
+<html id="ie8" lang="en-US">
+<![endif]-->
+<!--[if !(IE 6) | !(IE 7) | !(IE 8)  ]><!-->
+<html class="js" lang="en-US">
+<!--<![endif]-->
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+<script src="https://www.tix.com/clients/tix/js/jquery-1.6.4.min.js" type="text/javascript"></script>
+	 <style>
+		 div,span {
+			 font-size: inherit;
+		 }
+	 </style>
+<script src="https://www.tix.com/clients/tix/js/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="https://www.tix.com/javascript/Tooltip.js"></script>
+
+<style>
+    #arrow {
+        z-index: 999998;
+        display: none;
+        background-color: Transparent;
+        pointer-events: none;
+    }
+
+    #tooltipBox {
+        z-index: 999999;
+        display: none;
+        position: absolute;
+    background-color: #fff !important;
+        border: 1px solid rgba(120, 120, 120, 0.8);
+        border-radius: 3px;
+        margin: 10px 8px;
+        padding: 5px;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        pointer-events: none;
+    }
+
+    #EventTooltip {
+        background-color: #fff;
+    }
+
+    #EventTooltip table, #EventTooltip tr, #EventTooltip td {
+        border: 0;
+    }
+
+    .tooltip-text {
+        width: 400px;
+        padding: 10px;
+        font-size: 0.85em;
+    }
+</style>
+
+<div id="tooltipBox">
+    <div id="EventTooltip"><img src="https://www.tix.com/images/loading.gif" /></div>
+</div>    
+<div id="arrow"><img src="https://www.tix.com/images/ArrowLeftDown.png" name="arrowimg" /></div>
+
+	<link rel="pingback" href="http://boerneperformingarts.com/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="http://boerneperformingarts.com/wp-content/themes/Divi/js/html5.js" type="text/javascript"></script>
+	<![endif]-->
+
+	<title>Tickets | Boerne Performing Arts</title>
+	<link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+	<link rel="dns-prefetch" href="http://s.w.org/">
+	<link rel="alternate" type="application/rss+xml" title="Boerne Performing Arts » Feed" href="http://boerneperformingarts.com/feed/">
+	<link rel="alternate" type="application/rss+xml" title="Boerne Performing Arts » Comments Feed" href="http://boerneperformingarts.com/comments/feed/">
+	<link rel="stylesheet" id="divi-fonts-css" href="/clients/boerneperformingarts/images/css.css" type="text/css" media="all">
+	<link rel="stylesheet" id="divi-style-css" href="/clients/boerneperformingarts/images/style.css" type="text/css" media="all">
+	<link rel="stylesheet" id="et-shortcodes-css-css" href="/clients/boerneperformingarts/images/shortcodes.css" type="text/css" media="all">
+	<link rel="stylesheet" id="et-shortcodes-responsive-css-css" href="/clients/boerneperformingarts/images/shortcodes_responsive.css" type="text/css"
+					media="all">
+	<link rel="stylesheet" id="magnific-popup-css" href="/clients/boerneperformingarts/images/magnific_popup.css" type="text/css" media="all">
+	<script type="text/javascript" src="/clients/boerneperformingarts/images/jquery_004.js"></script>
+	<script type="text/javascript" src="/clients/boerneperformingarts/images/jquery-migrate.js"></script>
+	<link rel="https://api.w.org/" href="http://boerneperformingarts.com/wp-json/">
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://boerneperformingarts.com/xmlrpc.php?rsd">
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://boerneperformingarts.com/wp-includes/wlwmanifest.xml">
+	<meta name="generator" content="WordPress 4.6.1">
+	<link rel="canonical" href="http://boerneperformingarts.com/tickets/">
+	<link rel="shortlink" href="http://boerneperformingarts.com/?p=25096">
+	<link rel="alternate" type="application/json+oembed" href="http://boerneperformingarts.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fboerneperformingarts.com%2Ftickets%2F">
+	<link rel="alternate" type="text/xml+oembed" href="http://boerneperformingarts.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fboerneperformingarts.com%2Ftickets%2F&amp;format=xml">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<style id="theme-customizer-css">
+		body {
+			line-height: 1.5em;
+		}
+		
+		.woocommerce #respond input#submit,
+		.woocommerce-page #respond input#submit,
+		.woocommerce #content input.button,
+		.woocommerce-page #content input.button,
+		.woocommerce-message,
+		.woocommerce-error,
+		.woocommerce-info {
+			background: #000000 !important;
+		}
+		
+		#et_search_icon:hover,
+		.mobile_menu_bar:before,
+		.mobile_menu_bar:after,
+		.et_toggle_slide_menu:after,
+		.et-social-icon a:hover,
+		.et_pb_sum,
+		.et_pb_pricing li a,
+		.et_pb_pricing_table_button,
+		.et_overlay:before,
+		.entry-summary p.price ins,
+		.woocommerce div.product span.price,
+		.woocommerce-page div.product span.price,
+		.woocommerce #content div.product span.price,
+		.woocommerce-page #content div.product span.price,
+		.woocommerce div.product p.price,
+		.woocommerce-page div.product p.price,
+		.woocommerce #content div.product p.price,
+		.woocommerce-page #content div.product p.price,
+		.et_pb_member_social_links a:hover,
+		.woocommerce .star-rating span:before,
+		.woocommerce-page .star-rating span:before,
+		.et_pb_widget li a:hover,
+		.et_pb_filterable_portfolio .et_pb_portfolio_filters li a.active,
+		.et_pb_filterable_portfolio .et_pb_portofolio_pagination ul li a.active,
+		.et_pb_gallery .et_pb_gallery_pagination ul li a.active,
+		.wp-pagenavi span.current,
+		.wp-pagenavi a:hover,
+		.nav-single a,
+		.posted_in a {
+			color: #000000;
+		}
+		
+		.et_pb_contact_submit,
+		.et_password_protected_form .et_submit_button,
+		.et_pb_bg_layout_light .et_pb_newsletter_button,
+		.comment-reply-link,
+		.form-submit input,
+		.et_pb_bg_layout_light .et_pb_promo_button,
+		.et_pb_bg_layout_light .et_pb_more_button,
+		.woocommerce a.button.alt,
+		.woocommerce-page a.button.alt,
+		.woocommerce button.button.alt,
+		.woocommerce-page button.button.alt,
+		.woocommerce input.button.alt,
+		.woocommerce-page input.button.alt,
+		.woocommerce #respond input#submit.alt,
+		.woocommerce-page #respond input#submit.alt,
+		.woocommerce #content input.button.alt,
+		.woocommerce-page #content input.button.alt,
+		.woocommerce a.button,
+		.woocommerce-page a.button,
+		.woocommerce button.button,
+		.woocommerce-page button.button,
+		.woocommerce input.button,
+		.woocommerce-page input.button {
+			color: #000000;
+		}
+		
+		.footer-widget h4 {
+			color: #000000;
+		}
+		
+		.et-search-form,
+		.nav li ul,
+		.et_mobile_menu,
+		.footer-widget li:before,
+		.et_pb_pricing li:before,
+		blockquote {
+			border-color: #000000;
+		}
+		
+		.et_pb_counter_amount,
+		.et_pb_featured_table .et_pb_pricing_heading,
+		.et_quote_content,
+		.et_link_content,
+		.et_audio_content,
+		.et_pb_post_slider.et_pb_bg_layout_dark,
+		.et_slide_in_menu_container {
+			background-color: #000000;
+		}
+		
+		.container,
+		.et_pb_row,
+		.et_pb_slider .et_pb_container,
+		.et_pb_fullwidth_section .et_pb_title_container,
+		.et_pb_fullwidth_section .et_pb_title_featured_container,
+		.et_pb_fullwidth_header:not(.et_pb_fullscreen) .et_pb_fullwidth_header_container {
+			max-width: 1091px;
+		}
+		
+		.et_boxed_layout #page-container,
+		.et_fixed_nav.et_boxed_layout #page-container #top-header,
+		.et_fixed_nav.et_boxed_layout #page-container #main-header,
+		.et_boxed_layout #page-container .container,
+		.et_boxed_layout #page-container .et_pb_row {
+			max-width: 1251px;
+		}
+		
+		a {
+			color: #7f6002;
+		}
+		
+		#main-header,
+		#main-header .nav li ul,
+		.et-search-form,
+		#main-header .et_mobile_menu {
+			background-color: #000000;
+		}
+		
+		.nav li ul {
+			border-color: #8c6f05;
+		}
+		
+		#top-header,
+		#et-secondary-nav li ul {
+			background-color: #7c7c7c;
+		}
+		
+		#et-secondary-nav li ul {
+			background-color: #7f7f7f;
+		}
+		
+		#main-header .nav li ul a {
+			color: rgba(242, 242, 242, 0.7);
+		}
+		
+		#top-menu li a {
+			font-size: 13px;
+		}
+		
+		body.et_vertical_nav .container.et_search_form_container .et-search-form input {
+			font-size: 13px !important;
+		}
+		
+		#top-menu li a,
+		.et_search_form_container input {
+			letter-spacing: -1px;
+		}
+		
+		.et_search_form_container input::-moz-placeholder {
+			letter-spacing: -1px;
+		}
+		
+		.et_search_form_container input::-webkit-input-placeholder {
+			letter-spacing: -1px;
+		}
+		
+		.et_search_form_container input:-ms-input-placeholder {
+			letter-spacing: -1px;
+		}
+		
+		#main-footer {
+			background-color: #000000;
+		}
+		
+		#footer-widgets .footer-widget li a {
+			color: #dd9933;
+		}
+		
+		#main-footer .footer-widget h4 {
+			color: #000000;
+		}
+		
+		.footer-widget li:before {
+			border-color: #000000;
+		}
+		
+		.footer-widget .et_pb_widget div,
+		.footer-widget .et_pb_widget ul,
+		.footer-widget .et_pb_widget ol,
+		.footer-widget .et_pb_widget label {
+			line-height: 1.9em;
+		}
+		
+		#footer-widgets .footer-widget li:before {
+			top: 10.3px;
+		}
+		
+		#et-footer-nav {
+			background-color: rgba(79, 79, 79, 0.8);
+		}
+		
+		.bottom-nav,
+		.bottom-nav a,
+		.bottom-nav li.current-menu-item a {
+			color: #b7b7b7;
+		}
+		
+		#et-footer-nav .bottom-nav li.current-menu-item a {
+			color: #b7b7b7;
+		}
+		
+		.bottom-nav,
+		.bottom-nav a {
+			font-size: 13px;
+		}
+		
+		#footer-info,
+		#footer-info a {
+			color: #8c8c8c;
+		}
+		
+		#footer-info {
+			font-size: 12px;
+		}
+		
+		#footer-bottom .et-social-icon a {
+			font-size: 19px;
+		}
+		
+		#footer-bottom .et-social-icon a {
+			color: #f2f2f2;
+		}
+		
+		body .et_pb_button:after,
+		.woocommerce a.button.alt:after,
+		.woocommerce-page a.button.alt:after,
+		.woocommerce button.button.alt:after,
+		.woocommerce-page button.button.alt:after,
+		.woocommerce input.button.alt:after,
+		.woocommerce-page input.button.alt:after,
+		.woocommerce #respond input#submit.alt:after,
+		.woocommerce-page #respond input#submit.alt:after,
+		.woocommerce #content input.button.alt:after,
+		.woocommerce-page #content input.button.alt:after,
+		.woocommerce a.button:after,
+		.woocommerce-page a.button:after,
+		.woocommerce button.button:after,
+		.woocommerce-page button.button:after,
+		.woocommerce input.button:after,
+		.woocommerce-page input.button:after,
+		.woocommerce #respond input#submit:after,
+		.woocommerce-page #respond input#submit:after,
+		.woocommerce #content input.button:after,
+		.woocommerce-page #content input.button:after {
+			content: '';
+			font-size: 20px;
+		}
+		
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		.et_quote_content blockquote p,
+		.et_pb_slide_description .et_pb_slide_title {
+			line-height: 1.2em;
+		}
+		
+		@media only screen and ( min-width: 981px) {
+			.et_pb_section {
+				padding: 0% 0;
+			}
+			.et_pb_section.et_pb_section_first {
+				padding-top: inherit;
+			}
+			.et_pb_fullwidth_section {
+				padding: 0;
+			}
+			.footer-widget h4 {
+				font-size: 10px;
+			}
+			.et_header_style_left #et-top-navigation,
+			.et_header_style_split #et-top-navigation {
+				padding: 56px 0 0 0;
+			}
+			.et_header_style_left #et-top-navigation nav>ul>li>a,
+			.et_header_style_split #et-top-navigation nav>ul>li>a {
+				padding-bottom: 56px;
+			}
+			.et_header_style_split .centered-inline-logo-wrap {
+				width: 112px;
+				margin: -112px 0;
+			}
+			.et_header_style_split .centered-inline-logo-wrap #logo {
+				max-height: 112px;
+			}
+			.et_pb_svg_logo.et_header_style_split .centered-inline-logo-wrap #logo {
+				height: 112px;
+			}
+			.et_header_style_centered #top-menu>li>a {
+				padding-bottom: 20px;
+			}
+			.et_header_style_slide #et-top-navigation,
+			.et_header_style_fullscreen #et-top-navigation {
+				padding: 47px 0 47px 0 !important;
+			}
+			.et_header_style_centered #main-header .logo_container {
+				height: 112px;
+			}
+			.et_header_style_centered.et_hide_primary_logo #main-header:not(.et-fixed-header) .logo_container,
+			.et_header_style_centered.et_hide_fixed_logo #main-header.et-fixed-header .logo_container {
+				height: 20.16px;
+			}
+			.et_header_style_left .et-fixed-header #et-top-navigation,
+			.et_header_style_split .et-fixed-header #et-top-navigation {
+				padding: 40px 0 0 0;
+			}
+			.et_header_style_left .et-fixed-header #et-top-navigation nav>ul>li>a,
+			.et_header_style_split .et-fixed-header #et-top-navigation nav>ul>li>a {
+				padding-bottom: 40px;
+			}
+			.et_header_style_centered header#main-header.et-fixed-header .logo_container {
+				height: 80px;
+			}
+			.et_header_style_split .et-fixed-header .centered-inline-logo-wrap {
+				width: 80px;
+				margin: -80px 0;
+			}
+			.et_header_style_split .et-fixed-header .centered-inline-logo-wrap #logo {
+				max-height: 80px;
+			}
+			.et_pb_svg_logo.et_header_style_split .et-fixed-header .centered-inline-logo-wrap #logo {
+				height: 80px;
+			}
+			.et_header_style_slide .et-fixed-header #et-top-navigation,
+			.et_header_style_fullscreen .et-fixed-header #et-top-navigation {
+				padding: 31px 0 31px 0 !important;
+			}
+			.et_header_style_split .centered-inline-logo-wrap {
+				width: auto;
+				height: 119.28px;
+			}
+			.et_header_style_split .et-fixed-header .centered-inline-logo-wrap {
+				width: auto;
+				height: 89.2px;
+			}
+			.et_header_style_split .centered-inline-logo-wrap #logo,
+			.et_header_style_split .et-fixed-header .centered-inline-logo-wrap #logo {
+				height: auto;
+				max-height: 100%;
+			}
+			.et-fixed-header#top-header,
+			.et-fixed-header#top-header #et-secondary-nav li ul {
+				background-color: #000000;
+			}
+			.et-fixed-header#main-header,
+			.et-fixed-header#main-header .nav li ul,
+			.et-fixed-header .et-search-form {
+				background-color: #ffffff;
+			}
+			.et-fixed-header #top-menu li.current-menu-ancestor>a,
+			.et-fixed-header #top-menu li.current-menu-item>a {
+				color: #a5781d !important;
+			}
+		}
+		
+		@media only screen and ( min-width: 1363px) {
+			.et_pb_row {
+				padding: 27px 0;
+			}
+			.et_pb_section {
+				padding: 0px 0;
+			}
+			.single.et_pb_pagebuilder_layout.et_full_width_page .et_post_meta_wrapper {
+				padding-top: 81px;
+			}
+			.et_pb_section.et_pb_section_first {
+				padding-top: inherit;
+			}
+			.et_pb_fullwidth_section {
+				padding: 0;
+			}
+		}
+		
+		@media only screen and ( max-width: 980px) {
+			.et_header_style_centered .mobile_nav .select_page,
+			.et_header_style_split .mobile_nav .select_page,
+			.et_mobile_menu li a,
+			.mobile_menu_bar:before,
+			.et_nav_text_color_light #top-menu>li>a,
+			.et_nav_text_color_dark #top-menu>li>a,
+			#top-menu a,
+			.et_mobile_menu li a,
+			#et_search_icon:before,
+			#et_top_search .et-search-form input,
+			.et_search_form_container input,
+			#et-top-navigation .et-cart-info {
+				color: rgba(255, 255, 255, 0.6);
+			}
+			.et_close_search_field:after {
+				color: rgba(255, 255, 255, 0.6) !important;
+			}
+			.et_search_form_container input::-moz-placeholder {
+				color: rgba(255, 255, 255, 0.6);
+			}
+			.et_search_form_container input::-webkit-input-placeholder {
+				color: rgba(255, 255, 255, 0.6);
+			}
+			.et_search_form_container input:-ms-input-placeholder {
+				color: rgba(255, 255, 255, 0.6);
+			}
+			h1 {
+				font-size: 32px;
+			}
+			h2,
+			.product .related h2,
+			.et_pb_column_1_2 .et_quote_content blockquote p {
+				font-size: 27px;
+			}
+			h3 {
+				font-size: 23px;
+			}
+			h4,
+			.et_pb_circle_counter h3,
+			.et_pb_number_counter h3,
+			.et_pb_column_1_3 .et_pb_post h2,
+			.et_pb_column_1_4 .et_pb_post h2,
+			.et_pb_blog_grid h2,
+			.et_pb_column_1_3 .et_quote_content blockquote p,
+			.et_pb_column_3_8 .et_quote_content blockquote p,
+			.et_pb_column_1_4 .et_quote_content blockquote p,
+			.et_pb_blog_grid .et_quote_content blockquote p,
+			.et_pb_column_1_3 .et_link_content h2,
+			.et_pb_column_3_8 .et_link_content h2,
+			.et_pb_column_1_4 .et_link_content h2,
+			.et_pb_blog_grid .et_link_content h2,
+			.et_pb_column_1_3 .et_audio_content h2,
+			.et_pb_column_3_8 .et_audio_content h2,
+			.et_pb_column_1_4 .et_audio_content h2,
+			.et_pb_blog_grid .et_audio_content h2,
+			.et_pb_column_3_8 .et_pb_audio_module_content h2,
+			.et_pb_column_1_3 .et_pb_audio_module_content h2,
+			.et_pb_gallery_grid .et_pb_gallery_item h3,
+			.et_pb_portfolio_grid .et_pb_portfolio_item h2,
+			.et_pb_filterable_portfolio_grid .et_pb_portfolio_item h2 {
+				font-size: 19px;
+			}
+			.et_pb_slide_description .et_pb_slide_title {
+				font-size: 48px;
+			}
+			.woocommerce ul.products li.product h3,
+			.woocommerce-page ul.products li.product h3,
+			.et_pb_gallery_grid .et_pb_gallery_item h3,
+			.et_pb_portfolio_grid .et_pb_portfolio_item h2,
+			.et_pb_filterable_portfolio_grid .et_pb_portfolio_item h2,
+			.et_pb_column_1_4 .et_pb_audio_module_content h2 {
+				font-size: 16px;
+			}
+			.et_pb_section {
+				padding: 11px 0;
+			}
+			.et_pb_section.et_pb_section_first {
+				padding-top: inherit;
+			}
+			.et_pb_section.et_pb_fullwidth_section {
+				padding: 0;
+			}
+			.et_pb_row,
+			.et_pb_column .et_pb_row_inner {
+				padding: 0px 0 !important;
+			}
+		}
+		
+		@media only screen and ( max-width: 767px) {
+			body,
+			.et_pb_column_1_2 .et_quote_content blockquote cite,
+			.et_pb_column_1_2 .et_link_content a.et_link_main_url,
+			.et_pb_column_1_3 .et_quote_content blockquote cite,
+			.et_pb_column_3_8 .et_quote_content blockquote cite,
+			.et_pb_column_1_4 .et_quote_content blockquote cite,
+			.et_pb_blog_grid .et_quote_content blockquote cite,
+			.et_pb_column_1_3 .et_link_content a.et_link_main_url,
+			.et_pb_column_3_8 .et_link_content a.et_link_main_url,
+			.et_pb_column_1_4 .et_link_content a.et_link_main_url,
+			.et_pb_blog_grid .et_link_content a.et_link_main_url {
+				font-size: 13px;
+			}
+			.et_pb_slide_content,
+			.et_pb_best_value {
+				font-size: 14px;
+			}
+			h1 {
+				font-size: 27px;
+			}
+			h2,
+			.product .related h2,
+			.et_pb_column_1_2 .et_quote_content blockquote p {
+				font-size: 23px;
+			}
+			h3 {
+				font-size: 19px;
+			}
+			h4,
+			.et_pb_circle_counter h3,
+			.et_pb_number_counter h3,
+			.et_pb_column_1_3 .et_pb_post h2,
+			.et_pb_column_1_4 .et_pb_post h2,
+			.et_pb_blog_grid h2,
+			.et_pb_column_1_3 .et_quote_content blockquote p,
+			.et_pb_column_3_8 .et_quote_content blockquote p,
+			.et_pb_column_1_4 .et_quote_content blockquote p,
+			.et_pb_blog_grid .et_quote_content blockquote p,
+			.et_pb_column_1_3 .et_link_content h2,
+			.et_pb_column_3_8 .et_link_content h2,
+			.et_pb_column_1_4 .et_link_content h2,
+			.et_pb_blog_grid .et_link_content h2,
+			.et_pb_column_1_3 .et_audio_content h2,
+			.et_pb_column_3_8 .et_audio_content h2,
+			.et_pb_column_1_4 .et_audio_content h2,
+			.et_pb_blog_grid .et_audio_content h2,
+			.et_pb_column_3_8 .et_pb_audio_module_content h2,
+			.et_pb_column_1_3 .et_pb_audio_module_content h2,
+			.et_pb_gallery_grid .et_pb_gallery_item h3,
+			.et_pb_portfolio_grid .et_pb_portfolio_item h2,
+			.et_pb_filterable_portfolio_grid .et_pb_portfolio_item h2 {
+				font-size: 16px;
+			}
+			.et_pb_slide_description .et_pb_slide_title {
+				font-size: 41px;
+			}
+			.woocommerce ul.products li.product h3,
+			.woocommerce-page ul.products li.product h3,
+			.et_pb_gallery_grid .et_pb_gallery_item h3,
+			.et_pb_portfolio_grid .et_pb_portfolio_item h2,
+			.et_pb_filterable_portfolio_grid .et_pb_portfolio_item h2,
+			.et_pb_column_1_4 .et_pb_audio_module_content h2 {
+				font-size: 14px;
+			}
+			.et_pb_section {
+				padding: 9px 0;
+			}
+			.et_pb_section.et_pb_section_first {
+				padding-top: inherit;
+			}
+			.et_pb_section.et_pb_fullwidth_section {
+				padding: 0;
+			}
+			.et_pb_row,
+			.et_pb_column .et_pb_row_inner {
+				padding: 7px 0 !important;
+			}
+		}
+	</style>
+	<style id="module-customizer-css">
+		.et_pb_widget_area h4 {
+			font-size: 12px;
+		}
+		
+		.et_pb_space:before {
+			border-top-style: groove;
+		}
+	</style>
+	<style type="text/css" id="custom-background-css">
+		body.custom-background {
+			background-color: #ffffff;
+		}
+	</style>
+
+</head>
+
+<body class="page page-id-25096 page-template-default custom-background et_button_icon_visible et_button_custom_icon et_pb_button_helper_class et_fullwidth_nav et_fullwidth_secondary_nav et_non_fixed_nav et_boxed_layout et_show_nav et_cover_background et_secondary_nav_enabled et_secondary_nav_two_panels et_pb_gutter windows et_pb_gutters3 et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_pb_footer_columns2 et_header_style_split et_pb_pagebuilder_layout et_right_sidebar chrome">
+	<div id="page-container">
+		<div id="top-header">
+			<div class="container clearfix">
+				<div id="et-info">
+					<i class="fa fa-phone"></i>    830.331.9079
+					<a href="mailto:info@boerneperformingarts.com"><i class="fa fa-envelope"></i> info@boerneperformingarts.com</a>
+					<ul class="et-social-icons">
+						<li class="et-social-icon et-social-facebook">
+							<a href="https://www.facebook.com/boerneperformingarts" >
+								<i class="fa fa-facebook"></i>
+							</a>
+						</li>
+						<li class="et-social-icon et-social-twitter">
+							<a href="https://twitter.com/boerneHOTticket" >
+								<i class="fa fa-twitter"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- #et-info -->
+				<div id="et-secondary-menu">
+					<div class="et_duplicate_social_icons">
+						<ul class="et-social-icons">
+							<li class="et-social-icon et-social-facebook">
+								<a href="https://www.facebook.com/boerneperformingarts" >
+									<i class="fa fa-facebook"></i>
+								</a>
+							</li>
+							<li class="et-social-icon et-social-twitter">
+								<a href="https://twitter.com/boerneHOTticket" >
+									<i class="fa fa-twitter"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<ul id="et-secondary-nav" class="menu">
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24660"><a href="http://boerneperformingarts.com/">Home</a></li>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-25096 current_page_item menu-item-25132"><a href="http://boerneperformingarts.com/tickets/">Tickets</a></li>
+						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25195"><a href="https://visitor.r20.constantcontact.com/manage/optin/ea?v=001WLFgBEM4zKeUKBEgCBsErJZO_iLuZhSKv6WKOrWJmDFtNUcbm9yRAPPMo7Z3GaKdNQ9riz6DA3pySef-yB7E_VOQRXppsDO_Ci8Blh1fitSjiIHHLcBgxmu1_Hq3XfJH">Join Our Mailing List</a></li>
+						<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25192"><a href="http://boerneperformingarts.com/contact-us/">Contact</a></li>
+					</ul>
+				</div>
+				<!-- #et-secondary-menu -->
+			</div>
+			<!-- .container -->
+		</div>
+		<!-- #top-header -->
+		<header id="main-header" data-height-onload="126" data-height-loaded="true">
+			<div class="container clearfix et_menu_container">
+				<div id="et-top-navigation" data-height="112" data-fixed-height="80">
+					<nav id="top-menu-nav">
+						<ul id="top-menu" class="nav">
+							<li class="page_item page-item-25184"><a href="http://boerneperformingarts.com/contact-us/">Contact Us</a></li>
+							<li class="centered-inline-logo-wrap" style="width: 238.043px;">
+								<div class="logo_container">
+									<span class="logo_helper"></span>
+									<a href="http://boerneperformingarts.com/">
+										<img src="/clients/boerneperformingarts/images/boernepa-logo-single-inv.jpg" alt="Boerne Performing Arts" id="logo" data-height-percentage="94"
+														data-actual-width="245" data-actual-height="131">
+									</a>
+								</div>
+							</li>
+							<li class="page_item page-item-25306"><a href="http://boerneperformingarts.com/press-archives/">Press Archives</a></li>
+						</ul>
+					</nav>
+					<div id="et_mobile_nav_menu">
+						<div class="mobile_nav closed">
+							<span class="select_page">Select Page</span>
+							<span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+							<ul id="mobile_menu" class="et_mobile_menu">
+								<li class="page_item page-item-25184 et_first_mobile_item"><a href="http://boerneperformingarts.com/contact-us/">Contact Us</a></li>
+								<li class="page_item page-item-25306"><a href="http://boerneperformingarts.com/press-archives/">Press Archives</a></li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24660"><a href="http://boerneperformingarts.com/">Home</a></li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-25096 current_page_item menu-item-25132"><a href="http://boerneperformingarts.com/tickets/">Tickets</a></li>
+								<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25195"><a href="https://visitor.r20.constantcontact.com/manage/optin/ea?v=001WLFgBEM4zKeUKBEgCBsErJZO_iLuZhSKv6WKOrWJmDFtNUcbm9yRAPPMo7Z3GaKdNQ9riz6DA3pySef-yB7E_VOQRXppsDO_Ci8Blh1fitSjiIHHLcBgxmu1_Hq3XfJH">Join Our Mailing List</a></li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25192"><a href="http://boerneperformingarts.com/contact-us/">Contact</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- #et-top-navigation -->
+			</div>
+			<!-- .container -->
+			<div class="et_search_outer">
+				<div class="container et_search_form_container">
+				
+					<span class="et_close_search_field"></span>
+				</div>
+			</div>
+		</header>
+		<!-- #main-header -->
+		<div id="et-main-area">
+			<div id="main-content">
+				<article id="post-25096" class="post-25096 page type-page status-publish hentry">
+					<div class="entry-content">
+						<div class="et_pb_section et_pb_fullwidth_section  et_pb_section_0 et_section_regular">
+							<div class="et_pb_fullwidth_menu et_pb_module et_pb_bg_layout_dark et_pb_text_align_center et_dropdown_animation_fade  et_pb_fullwidth_menu_0"
+											style="background-color: #000000;" data-bg_color="#000000">
+								<div class="et_pb_row clearfix">
+									<nav class="fullwidth-menu-nav">
+										<ul id="menu-under-rotation" class="fullwidth-menu nav downwards" style="background-color: rgb(0, 0, 0);">
+											<li id="menu-item-24661" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24661"><a href="http://boerneperformingarts.com/">Home</a></li>
+											<li id="menu-item-24674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24674"><a href="http://boerneperformingarts.com/artist-info/">Artists</a></li>
+											<li id="menu-item-25006" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25006"><a href="http://boerneperformingarts.com/about-us/">About Us</a></li>
+											<li id="menu-item-25130" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-25096 current_page_item menu-item-25130"><a href="http://boerneperformingarts.com/tickets/">Tickets</a></li>
+											<li id="menu-item-25137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25137"><a href="http://boerneperformingarts.com/for-kids/">For Kids</a></li>
+											<li id="menu-item-25095" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25095"><a href="http://boerneperformingarts.com/scholarship/">Scholarship</a></li>
+											<li id="menu-item-24758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24758"><a href="http://boerneperformingarts.com/press/">Press</a></li>
+											<li id="menu-item-24962" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24962"><a href="http://boerneperformingarts.com/support/">Support</a></li>
+											<li id="menu-item-24672" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24672"><a href="http://boerneperformingarts.com/about-boerne/">About Boerne</a></li>
+											<li id="menu-item-25193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25193"><a href="http://boerneperformingarts.com/contact-us/">Contact</a></li>
+										</ul>
+									</nav>
+									<div class="et_mobile_nav_menu">
+										<a href="#" class="mobile_nav closed">
+											<span class="mobile_menu_bar"></span>
+											<ul id="mobile_menu1" class="et_mobile_menu" style="background-color: rgb(0, 0, 0);">
+												<li id="menu-item-24661" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24661 et_first_mobile_item"><a href="http://boerneperformingarts.com/">Home</a></li>
+												<li id="menu-item-24674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24674"><a href="http://boerneperformingarts.com/artist-info/">Artists</a></li>
+												<li id="menu-item-25006" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25006"><a href="http://boerneperformingarts.com/about-us/">About Us</a></li>
+												<li id="menu-item-25130" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-25096 current_page_item menu-item-25130"><a href="http://boerneperformingarts.com/tickets/">Tickets</a></li>
+												<li id="menu-item-25137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25137"><a href="http://boerneperformingarts.com/for-kids/">For Kids</a></li>
+												<li id="menu-item-25095" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25095"><a href="http://boerneperformingarts.com/scholarship/">Scholarship</a></li>
+												<li id="menu-item-24758" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24758"><a href="http://boerneperformingarts.com/press/">Press</a></li>
+												<li id="menu-item-24962" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24962"><a href="http://boerneperformingarts.com/support/">Support</a></li>
+												<li id="menu-item-24672" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24672"><a href="http://boerneperformingarts.com/about-boerne/">About Boerne</a></li>
+												<li id="menu-item-25193" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25193"><a href="http://boerneperformingarts.com/contact-us/">Contact</a></li>
+											</ul>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="et_pb_module et-waypoint et_pb_fullwidth_image et_pb_animation_off  et_pb_fullwidth_image_0 et-animated">
+								<img src="/clients/boerneperformingarts/images/ticket-title-w.jpg" alt="Tickets" title="Tickets">
+							</div>
+						</div>
+						<!-- .et_pb_section -->
+		
+						<!-- .et_pb_section -->
+						<div class="et_pb_section  et_pb_section_2 et_pb_with_background et_section_regular">
+							<div class=" et_pb_row et_pb_row_1">
+								<div class="et_pb_column et_pb_column_1_2  et_pb_column_1">
+<!--tix content-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+								<!-- .et_pb_column -->
+
+								<!-- .et_pb_column -->
+							</div>
+							<!-- .et_pb_row -->
+						</div>
+						<!-- .et_pb_section -->
+
+						<!-- .et_pb_section -->
+
+						<!-- .et_pb_section -->
+
+						<!-- .et_pb_section -->
+					</div>
+					<!-- .entry-content -->
+				</article>
+				<!-- .et_pb_post -->
+			</div>
+			<!-- #main-content -->
+			<span class="et_pb_scroll_top et-pb-icon et-hidden" style="display: inline;"></span>
+			<footer id="main-footer">
+				<div id="et-footer-nav">
+					<div class="container">
+						<ul id="menu-footer" class="bottom-nav">
+							<li id="menu-item-71" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-71"><a href="http://boerneperformingarts.com/">Home</a></li>
+							<li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="http://boerneperformingarts.com/artist-info/">Artists</a></li>
+							<li id="menu-item-25007" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25007"><a href="http://boerneperformingarts.com/about-us/">About Us</a></li>
+							<li id="menu-item-25131" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-25096 current_page_item menu-item-25131"><a href="http://boerneperformingarts.com/tickets/">Tickets</a></li>
+							<li id="menu-item-25136" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25136"><a href="http://boerneperformingarts.com/for-kids/">For Kids</a></li>
+							<li id="menu-item-25094" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25094"><a href="http://boerneperformingarts.com/scholarship/">Scholarship</a></li>
+							<li id="menu-item-24759" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24759"><a href="http://boerneperformingarts.com/press/">Press</a></li>
+							<li id="menu-item-24966" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24966"><a href="http://boerneperformingarts.com/support/">Support</a></li>
+							<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="http://boerneperformingarts.com/about-boerne/">About Boerne</a></li>
+							<li id="menu-item-25191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25191"><a href="http://boerneperformingarts.com/contact-us/">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- #et-footer-nav -->
+				<div id="footer-bottom">
+					<div class="container clearfix">
+						<ul class="et-social-icons">
+							<li class="et-social-icon et-social-facebook">
+								<a href="https://www.facebook.com/boerneperformingarts" >
+									<i class="fa fa-facebook"></i>
+								</a>
+							</li>
+							<li class="et-social-icon et-social-twitter">
+								<a href="https://twitter.com/boerneHOTticket" >
+									<i class="fa fa-twitter"></i>
+								</a>
+							</li>
+						</ul>
+						<p id="footer-info">Boerne Performing Arts is a 501(c)3 non-profit organization. Copyright. All rights reserved.</p>
+					</div>
+					<!-- .container -->
+				</div>
+			</footer>
+			<!-- #main-footer -->
+		</div>
+		<!-- #et-main-area -->
+	</div>
+	<!-- #page-container -->
+	<style type="text/css" id="et-builder-advanced-style">
+		.et_pb_divider_2:before {
+			border-top-color: #000000;
+			border-top-width: px;
+		}
+		
+		.et_pb_image_3 {
+			margin-left: 0;
+		}
+		
+		.et_pb_image_2 {
+			text-align: center;
+		}
+		
+		.et_pb_divider_2 {
+			height: 3px;
+		}
+		
+		.et_pb_image_4 {
+			text-align: center;
+		}
+		
+		.et_pb_image_5 {
+			margin-left: 0;
+		}
+		
+		.et_pb_divider_3 {
+			height: 3px;
+		}
+		
+		.et_pb_divider_3:before {
+			border-top-color: #000000;
+			border-top-width: px;
+		}
+		
+		.et_pb_divider_1 {
+			height: 3px;
+		}
+		
+		.et_pb_divider_1:before {
+			border-top-color: #000000;
+			border-top-width: px;
+		}
+		
+		.et_pb_text_1 {
+			background-color: #ffffff;
+			border: 3px solid #ededed;
+			padding-top: 20px !important;
+			padding-right: 30px !important;
+			padding-bottom: 20px !important;
+			padding-left: 30px !important;
+		}
+		
+		.et_pb_row_1 {
+			background-color: #ffffff;
+		}
+		
+		.et_pb_section_2.et_pb_section {
+			background-color: rgba(255, 255, 255, 0.31) !important;
+		}
+		
+		.et_pb_text_2 {
+			background-color: #ffffff;
+			border: 3px solid #ededed;
+			padding-top: 20px !important;
+			padding-right: 30px !important;
+			padding-bottom: 38px !important;
+			padding-left: 30px !important;
+		}
+		
+		.et_pb_divider_0:before {
+			border-top-color: #000000;
+			border-top-width: px;
+		}
+		
+		.et_pb_image_1 {
+			text-align: center;
+		}
+		
+		.et_pb_image_0 {
+			text-align: center;
+		}
+		
+		.et_pb_divider_0 {
+			height: 3px;
+		}
+		
+		.et_pb_section_1.et_pb_section {
+			background-color: #ffffff !important;
+		}
+	</style><script type="text/javascript" src="/clients/boerneperformingarts/images/frontend-builder-global-functions.js"></script>
+	<script type="text/javascript" src="/clients/boerneperformingarts/images/jquery_003.js"></script>
+	<script type="text/javascript" src="/clients/boerneperformingarts/images/custom.js"></script>
+	<script type="text/javascript" src="/clients/boerneperformingarts/images/jquery.js"></script>
+	<script type="text/javascript" src="/clients/boerneperformingarts/images/waypoints.js"></script>
+	<script type="text/javascript" src="/clients/boerneperformingarts/images/jquery_002.js"></script>
+	<script type="text/javascript">
+/* <![CDATA[ */
+var et_pb_custom = {"ajaxurl":"http:\/\/boerneperformingarts.com\/wp-admin\/admin-ajax.php","images_uri":"http:\/\/boerneperformingarts.com\/wp-content\/themes\/Divi\/images","builder_images_uri":"http:\/\/boerneperformingarts.com\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"a4ef4bc03c","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"c97d2125c5","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","is_builder_plugin_used":"","is_divi_theme_used":"1","widget_search_selector":".widget_search","is_ab_testing_active":"","page_id":"25096","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":""};
+/* ]]> */
+</script>
+	<script type="text/javascript" src="/clients/boerneperformingarts/images/frontend-builder-scripts.js"></script>
+	<script type="text/javascript" src="/clients/boerneperformingarts/images/wp-embed.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+
+		<script>
+			$(document).ready(function() {
+				$("#MasterContent_TixInnerContent_pnlButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_ButtonPanel").removeAttr("style");
+/* remove extra button defaults
+				$("#MasterContent_TixInnerContent_ctl00_gvSchedule_btnBuyTix_0").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnBackToShopping").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCancelOrder").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCheckout").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_LoginButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CancelOrderButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CompleteButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingBtn").removeAttr("style");*/
+				
+				
+			});
+		</script>
+
+		</div>
+		</form>
+	</body>
+
+	</html>

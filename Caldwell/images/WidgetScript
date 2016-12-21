@@ -1,0 +1,290 @@
+!function(exports, global) {
+    function PublicApi(_pcwi) {
+        var _pcwi = _pcwi, _publicApi = _pcwi.getPublicApi();
+        this.on = function() {
+            return _publicApi.on.apply(_publicApi, arguments);
+        }, this.off = function() {
+            return _publicApi.off.apply(_publicApi, arguments);
+        }, this.action = function() {
+            return _publicApi.action.apply(_publicApi, arguments);
+        }, this.set = function() {
+            return _publicApi.set.apply(_publicApi, arguments);
+        }, this.get = function() {
+            return _publicApi.get.apply(_publicApi, arguments);
+        };
+    }
+    global["true"] = exports;
+    var _pcwi;
+    window._pcCallbackCounter = 0;
+    var WidgetLoader = {
+        Utilities: {
+            Extend: function() {
+                var args = Array.prototype.slice.call(arguments), org = args.shift(), type = "";
+                ("string" == typeof org || "boolean" == typeof org) && (type = org === !0 ? "deep" : org, 
+                org = args.shift(), "defaults" == type && (org = WidgetLoader.Utilities.Extend({}, org), 
+                type = "strict"));
+                for (var i = 0, c = args.length; c > i; i++) {
+                    var prop = args[i];
+                    for (var name in prop) "deep" == type && "object" == typeof prop[name] && "undefined" != typeof org[name] ? WidgetLoader.Utilities.Extend(type, org[name], prop[name]) : ("strict" != type || "strict" == type && "undefined" != typeof org[name]) && (org[name] = prop[name]);
+                }
+                return org;
+            }
+        },
+        Ajax: {
+            JSONPTimeout: null,
+            URLs: {
+                Base: {
+                    ChatServer: "",
+                    PureServer: "",
+                    CdnServer: ""
+                }
+            },
+            CreateJSONPRequest: function(url, data, callback, useCdn, isJavascriptType) {
+                var callbackFunctionName = "_WidgetJPCB" + _pcCallbackCounter;
+                window[callbackFunctionName] = callback;
+                var script = document.createElement("script");
+                script.async = !0, script.type = "text/javascript", _pcCallbackCounter++, script.src = (useCdn ? WidgetLoader.Ajax.URLs.Base.CdnServer : WidgetLoader.Ajax.URLs.Base.PureServer) + url, 
+                script.src += (script.src.lastIndexOf("/") != script.src.length - 1 ? "/" : "") + callbackFunctionName, 
+                script.src += isJavascriptType ? ".js" : "";
+                var scriptReady = !1;
+                script.onload = script.onreadystatechange = function() {
+                    scriptReady || this.readyState && "loaded" != this.readyState && "complete" != this.readyState || (scriptReady = !0, 
+                    WidgetLoader.Ajax.JSONPTimeout = clearTimeout(WidgetLoader.Ajax["JSONPTimeout" + callbackFunctionName]), 
+                    delete window[callbackFunctionName]);
+                };
+                for (var property in data) data.hasOwnProperty(property) && (script.src += "&" + property + "=" + data[property]);
+                window.location.search.indexOf("pcforcemobile") >= 0 && (script.src += "&forcemobile=true"), 
+                document.getElementsByTagName("HEAD")[0].appendChild(script), WidgetLoader.Ajax["JSONPTimeout" + callbackFunctionName] = setTimeout(function() {
+                    throw "Widget Settings failed to download";
+                }, 2e4);
+            },
+            GetWidgetSettings: function(args, callback) {
+                WidgetLoader.Ajax.CreateJSONPRequest("/VisitorWidget/Widget/" + (args.overrideWidgetId || args.widgetId) + "/" + args.widgetVersion, {}, callback, !0, !0);
+            },
+            GetWidgetVersionSettings: function(args, callback) {
+                WidgetLoader.Ajax.CreateJSONPRequest("/VisitorWidget/WidgetVersions/" + args.widgetId, {}, callback);
+            }
+        },
+        Widget: {
+            Availability: null,
+            CurrentInstance: null,
+            GetWidgetVersionSettings: function(args, callback) {
+                WidgetLoader.Ajax.GetWidgetVersionSettings(args, callback);
+            },
+            GetWidgetSettings: function(args, callback) {
+                WidgetLoader.Ajax.GetWidgetSettings(args, callback);
+            }
+        },
+        Load: {
+            Widget: function(response, callback) {
+                function jqueryLoaded() {
+                    if (window.jQuery && window.jQuery != oldJqueryObject) {
+                        window.$pureChatJquery = window.jQuery.noConflict(!0);
+                        var doneFnc = function() {
+                            if (response.hasAllSettings = !0, response.pureServerUrl = WidgetLoader.Ajax.URLs.Base.PureServer, 
+                            response.cdnServerUrl = WidgetLoader.Ajax.URLs.Base.CdnServer, window._pcwi && delete window._pcwi, 
+                            _pcwi = new _PCWidget(response), window.purechatApi) {
+                                var l = window.purechatApi.l, t = window.purechatApi.t;
+                                window.purechatApi = new PublicApi(_pcwi);
+                                for (var next in l) window.purechatApi.on.apply(window.purechatApi, l[next]);
+                                for (var next in t) window.purechatApi.action.apply(window.purechatApi, t[next]);
+                            }
+                            callback(_pcwi);
+                        };
+                        window.$pureChatJquery(function() {
+                            var script = document.createElement("script");
+                            script.async = !0, script.type = "text/javascript", script.src = WidgetLoader.Ajax.URLs.Base.CdnServer + "/VisitorWidget/CompiledWidget/" + response.Version + ".js", 
+                            document.getElementsByTagName("HEAD").item(0).appendChild(script);
+                            var scriptReady = !1;
+                            script.onload = script.onreadystatechange = function(e) {
+                                scriptReady || this.readyState && "loaded" != this.readyState && "complete" != this.readyState || (scriptReady = !0, 
+                                doneFnc());
+                            };
+                        });
+                    }
+                    oldJqueryObject = null;
+                }
+                var allowScript = !1;
+                if (!response.ChatQuotaReached && !response.Stop) if (response.AllowedDomains = "undefined" != typeof response.AllowedDomains ? response.AllowedDomains : [], 
+                response.AllowedDomains.length > 0) {
+                    response.AllowedDomains.push("purechat.com");
+                    for (var i = 0; i < response.AllowedDomains.length; i++) if (/^\*$/.test(response.AllowedDomains[i]) || -1 != document.domain.search(response.AllowedDomains[i])) {
+                        allowScript = !0;
+                        break;
+                    }
+                } else allowScript = !0;
+                if (allowScript) {
+                    var oldJqueryObject = window.jQuery, jqscript = document.createElement("script");
+                    jqscript.async = !0, jqscript.type = "text/javascript", jqscript.src = "//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js";
+                    var jqScriptReady = !1;
+                    jqscript.onload = jqscript.onreadystatechange = function(e) {
+                        jqScriptReady || this.readyState && "loaded" != this.readyState && "complete" != this.readyState || (jqScriptReady = !0, 
+                        jqueryLoaded());
+                    }, jqscript.onerror = function(e) {
+                        jqScriptReady = !0;
+                        var errorjqscript = document.createElement("script");
+                        errorjqscript.async = !0, errorjqscript.type = "text/javascript", errorjqscript.src = WidgetLoader.Ajax.URLs.Base.CdnServer + "/scripts/jquery-1.7.2.min.js";
+                        var errorjqscriptjqScriptReady = !1;
+                        errorjqscript.onload = errorjqscript.onreadystatechange = function(e) {
+                            errorjqscriptjqScriptReady || this.readyState && "loaded" != this.readyState && "complete" != this.readyState || (errorjqscriptjqScriptReady = !0, 
+                            jqueryLoaded());
+                        }, document.getElementsByTagName("HEAD").item(0).appendChild(errorjqscript);
+                    }, document.getElementsByTagName("HEAD").item(0).appendChild(jqscript);
+                }
+            }
+        },
+        MapWidgetVersionsResponse: function(response) {
+            var expanded = {};
+            for (var prop in response) {
+                var val = response[prop];
+                switch (prop) {
+                  case "v":
+                    expanded.Valid = 1 == val;
+                    break;
+
+                  case "sv":
+                    expanded.Version = val;
+                    break;
+
+                  case "cv":
+                    expanded.CssVersion = val;
+                    break;
+
+                  case "wv":
+                    expanded.WidgetVersion = val;
+                    break;
+
+                  case "csu":
+                    expanded.ChatServerUrl = val;
+                    break;
+
+                  case "sru":
+                    expanded.SiteRootUrl = val;
+                    break;
+
+                  case "dap":
+                    expanded.DisableAvailabilityPings = 1 == val;
+                    break;
+
+                  case "ip":
+                    expanded.VisitorIPAddress = val;
+                    break;
+
+                  case "rfm":
+                    expanded.RequestFromMobileDevice = 1 == val;
+                    break;
+
+                  case "aom":
+                    expanded.AllowWidgetOnMobile = 1 == val;
+                    break;
+
+                  case "b":
+                    expanded.IPIsBanned = 1 == val;
+                    break;
+
+                  case "bd":
+                    expanded.BrowserDetails = val;
+                    break;
+
+                  case "cru":
+                    expanded.CdnRootUrl = val;
+                    break;
+
+                  case "id":
+                    expanded.Id = val;
+                    break;
+
+                  case "s":
+                    expanded.Stop = 1 == val;
+                    break;
+
+                  case "qe":
+                    expanded.QuotaExceeded = 1 == val;
+                    break;
+
+                  default:
+                    expanded[prop] = val;
+                }
+            }
+            return expanded;
+        },
+        Init: function(args, callback) {
+            args = WidgetLoader.Utilities.Extend({
+                accountId: "",
+                chatServerUrl: "",
+                checkWidgetAvailableInterval: 2e4,
+                config: {},
+                connectionSettings: {},
+                dataController: null,
+                insertElement: null,
+                isOperator: !1,
+                isWidget: !1,
+                pureServerUrl: "https://app.purechat.com",
+                renderInto: "body",
+                userProperties: {
+                    userId: null,
+                    displayName: null,
+                    authToken: null,
+                    roomId: null,
+                    chatId: null
+                },
+                widgetId: ""
+            }, args), WidgetLoader.Ajax.URLs.Base.ChatServer = args.chatServerUrl, WidgetLoader.Ajax.URLs.Base.PureServer = args.pureServerUrl, 
+            WidgetLoader.Widget.GetWidgetVersionSettings(args, function(versionResponse) {
+                if (versionResponse = WidgetLoader.MapWidgetVersionsResponse(versionResponse), !versionResponse.QuotaExceeded && !versionResponse.Stop) {
+                    WidgetLoader.Ajax.URLs.Base.PureServer = versionResponse.SiteRootUrl, WidgetLoader.Ajax.URLs.Base.CdnServer = versionResponse.CdnRootUrl;
+                    WidgetLoader.Ajax.URLs.Base.ChatServer = versionResponse.ChatServerUrl || "", args.widgetVersion = versionResponse.WidgetVersion, 
+                    WidgetLoader.Widget.GetWidgetSettings(args, function(fullResponse) {
+                        var data = WidgetLoader.Utilities.Extend(fullResponse, versionResponse);
+                        data = WidgetLoader.Utilities.Extend(data, args);
+                        WidgetLoader.Load.Widget(data, function(internalPCWidget) {
+                            callback(internalPCWidget);
+                        });
+                    });
+                }
+            });
+        }
+    };
+    window.PCWidgetLoader = window.PCWidget = function(options) {
+        var self = this, mappedArgs = {};
+        for (var property in options) switch (property.toLowerCase().trim()) {
+          case "c":
+            mappedArgs.widgetId = options[property];
+            break;
+
+          case "o":
+            mappedArgs.overrideWidgetId = options[property];
+            break;
+
+          case "pureserverurl":
+            mappedArgs.pureServerUrl = options[property];
+            break;
+
+          case "chatserverurl":
+            mappedArgs.chatServerUrl = options[property];
+            break;
+
+          case "f":
+            mappedArgs.isWidget = options[property];
+        }
+        try {
+            localStorage.setItem("_purechatLocalStorageAccess", !0);
+        } catch (ex) {
+            throw console.log("Local storage access is not allowed. This is a problem with some browsers running private windows."), 
+            console.log(ex), new Error("Local storage access is not allowed. This is a problem with some browsers running private windows.");
+        }
+        self.set = function() {
+            this._pcWidget && this._pcWidget.getPublicApi().set.apply(this._pcWidget.getPublicApi(), arguments);
+        }, self.get = function() {
+            this._pcWidget && this._pcWidget.getPublicApi().get.apply(this._pcWidget.getPublicApi(), arguments);
+        }, self.on = function() {
+            this._pcWidget && this._pcWidget.getPublicApi().on.apply(this._pcWidget.getPublicApi(), arguments);
+        }, self.trigger = function() {
+            this._pcWidget && this._pcWidget.getPublicApi().trigger.apply(this._pcWidget.getPublicApi(), arguments);
+        }, WidgetLoader.Init(mappedArgs, function(pcWidget) {
+            self._pcWidget = pcWidget;
+        });
+    };
+}({}, function() {
+    return this;
+}());

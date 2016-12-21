@@ -1,0 +1,134 @@
+/* This unique combination of stylistic elements (images, colors, sizes, type and placement) is copyright 2006 Gregory Robleto and the Delaware Shakespeare Festival and may not be reproduced. 
+
+
+LAYOUT ELEMENTS
+---------------------
+TABULA RASA
+BASE LAYOUT
+---------------------
+*/
+
+
+
+/*============================================================================
+
+TABULA RASA
+
+============================================================================*/
+
+/* Normalize margin, padding */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, per, form, fieldset, input, p, blockquote, th, td {
+	margin:0;
+	padding:0;
+	z-index:0;
+	}
+
+/* Normalize font-size for headers */
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+	}
+	
+/* Remove list-styles form lists */
+ol, ul {
+	list-style: none;
+	}
+	
+/*Normalize font-style and font-wight to normal */
+address, caption, cite, code, dfn, th, var {
+	font-style:normal;
+	font-weight:normal;
+	}
+
+/*Remove table borders */
+table {
+	border-collapse: collapse;
+	border-spacing:0;
+	}
+	
+/*Remove border from fieldset and img */
+fieldset, img {
+	border:0;
+	}
+	
+/* Left-aligns text in caption and th */
+caption, th {
+	text-align:left;
+	}
+	
+/*Removes quotation marks from q */
+q:before, q:after {
+	content: '';
+}
+
+/*============================================================================
+
+BASE LAYOUT
+
+============================================================================*/
+
+html { 
+	text-align:center;
+	
+	}
+
+body {
+	
+	width:902px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
+	}
+
+div#branding {
+	width:902px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+div#nav_main {
+	width:902px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+	
+div#nav_section {
+	width:100%;
+	}
+	
+div#content {
+	position:relative;
+	width:902px;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.pc { /* content_main */
+	position: absolute;
+	top:260px;;
+	left:0;
+	width:570px;
+}
+
+.sc { /* content_sub */
+	position: absolute;
+	top:260px;;
+	left:620px;
+	width:230px;
+}
+
+div#site_info {
+	width:100%;
+	}
+
+	
+
+/*============================================================================
+
+CLEARER
+
+============================================================================*/
+
+/* =si_clear_children */
+.clear_children,.cc_tallest { position: relative;top:0; } /**/* html .clear_children { display: inline;}/* PREVENTS MISSING CHILDREN IN IE WIN 5.0 */
+.cc_tallest:after { content: ''; } /* PREVENTS A REDRAW BUG IN SAFARI */

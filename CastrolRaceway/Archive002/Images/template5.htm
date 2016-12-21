@@ -1,0 +1,213 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+
+
+<title> New Document </title>
+<meta name="Generator" content="EditPlus">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+
+<style type="text/css">
+* {	margin: 0px; padding: 0px; }
+a:link, a:visited, a:active { text-decoration:none; color:#003876; }
+a:hover { text-decoration:none; color:#2981da; }
+a#nochange:hover { color:#003876; }
+img { border: none; }
+#container {
+	color:#003876;
+	width:148px;
+	border:1px solid #BFBFBF;
+	background: transparent url('150x90/swirl.gif') no-repeat;
+	padding: 1px 0px;
+}
+#left_col { float:left; width:63px; padding: 0px 2px 1px 2px; }
+#right_col { float:left; padding:5px 0px 0px; width: 78px; }
+#middle_row { clear:both; overflow: auto; padding: 0px 0px 0px 2px; }
+	#middle_row #location { font:bold 14px "Century Gothic", Arial, Helvetica, sans-serif; line-height: 14px; }
+	#icon { float: left; width: 45px; }
+		#icon img { width: 45px; }
+	#temp { float: left; width: auto; padding: 5px 1px; font:20px "Century Gothic", Arial, Helvetica, sans-serif; }
+		#temp sup { font-size: 14px; }
+	#cond { float: right; width:52px; font:10px Arial, Helvetica, sans-serif; padding:3px 0px 0px; }
+
+#bottom_row {
+	clear: both; padding: 0px 0px 0px 2px;
+}
+	input.button, select.button {
+		border: #6c6c6c 1px solid;
+		font-size: 10px;
+		font-family: arial, verdana, helvetica, sans-serif;
+		vertical-align: middle;
+		letter-spacing: 1px;
+	}
+	input.button { width: 85px; padding: 0px 0px 2px 2px; }
+	select.button { width: 140px; }
+	input.searchButton {
+		background: transparent url('150x90/search_en.gif') no-repeat;
+		width: 50px; height: 16px;
+		padding: 1px;
+		border: none;
+		vertical-align: middle;
+	}
+	input.searchButton_fr {
+		background: transparent url('150x90/search_fr.gif') no-repeat;
+		width: 50px; height: 16px;
+		padding: 1px;
+		border: none;
+		vertical-align: middle;
+	}
+</style>
+
+<script language="javascript">
+	<!--
+		function BodyOnLoad()
+		{
+		if (document.searchform.prodname)
+			{
+		document.searchform.prodname.focus();
+			}
+		}
+
+
+		function CheckCity()
+		{
+			if (document.searchform.prodname.value == "city")
+			{
+				document.searchform.prodname.value = "city";
+
+			}
+		}
+
+var xmlhttp1;
+var placeNumber=0;
+
+function loadWarnings() {
+	xmlhttp1=null;
+
+	url = "http://"+location.hostname+"/common/ssidata/warnings/"+warningRegions[placeNumber]+".js";
+	//alert("loadWarnings["+placeNumber+"]:"+url);
+
+	if (window.XMLHttpRequest) { xmlhttp1=new XMLHttpRequest() }	// code for Mozilla, etc.
+	else if (window.ActiveXObject) { xmlhttp1=new ActiveXObject("Microsoft.XMLHTTP") } 	// code for IE
+
+	if (xmlhttp1!=null) {
+		xmlhttp1.onreadystatechange=function() {
+			if (xmlhttp1.readyState==4) {
+				// if "OK"
+				if (xmlhttp1.status==200) {
+					//alert(placeNumber+" = "+xmlhttp1.responseText);
+					document.getElementById('warnings'+placeNumber).innerHTML=xmlhttp1.responseText;
+				} else {
+					//alert("Problem retrieving data:" + xmlhttp1.statusText)
+				}
+
+				placeNumber++;
+				if (placeNumber<5) { loadWarnings(); } else { change0(); }
+			}
+		}
+
+		xmlhttp1.open("GET",url,true);
+		xmlhttp1.send(null);
+	} else {
+		//alert("Your browser does not support XMLHTTP.")
+	}
+}
+
+	-->
+</script>
+
+
+</head><body>
+<script>
+function clearText() {
+	if (document.searchform.prodname.value != "") {
+		document.searchform.prodname.value = "";
+	}
+}
+</script>
+
+
+	<div id="container">
+<form name="searchform" id="searchform" target="_blank" action="http://www.theweathernetwork.com/index.php" method="get">
+<input name="ref" value="wxbtn150x90_search_city" type="hidden">
+					<input name="wbRef" value="www.castrolraceway.com" type="hidden">
+	<input name="link" value="search" type="hidden">
+<img src="template5_data/referer.gif" width="1" height="1"><br>
+	<div id="left_col"><a href="http://www.theweathernetwork.com/?ref=wxbtn150x90_logo_home" target="blank"><img src="template5_data/logo.gif" alt="Logo" title="Logo"></a></div>
+ <div id="warning_link">
+			<div id="right_col">
+							<a href="http://www.theweathernetwork.com/index.php?product=weather&amp;placecode=caab0191&amp;wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_image_city" target="_blank"><img src="template5_data/fullforecast.gif" alt="TWN" title="TWN"></a>
+						  </div>
+		
+
+</div>
+    <!--<div id="right_col"><a href=""><img src="150x90/fullforecast.gif" alt="TWN" title="TWN" /></a></div>-->
+	<!--<div id="right_col"><a href=""><img src="/common/images/wxbuttons/btn_alert_15090.gif" alt="TWN" title="TWN" /></a></div>-->
+
+    <div id="middle_row">
+		<a href="" id="nochange">
+			</a><div id="location"><a class="cityName" href="http://www.theweathernetwork.com/index.php?product=weather&amp;placecode=caab0191&amp;wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city" target="_blank">
+					Leduc, AB
+				</a></div>
+
+            <!-- weather icon here -->
+            <div id="icon"><a href="http://www.theweathernetwork.com/index.php?product=weather&amp;placecode=caab0191&amp;wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_image_city" target="_blank"><img src="template5_data/r.gif" alt="Light snow" title="Light snow" border="0"></a></div>
+            <div id="temp"><a class="currentTemp" href="http://www.theweathernetwork.com/index.php?product=weather&amp;placecode=caab0191&amp;wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city" target="_blank">-6<sup>°c</sup></a><img src="template5_data/counter.gif"></div>
+            <div id="cond"><a class="cityName" href="http://www.theweathernetwork.com/index.php?product=weather&amp;placecode=caab0191&amp;wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city" target="_blank">Light snow</a></div>
+		  
+		</div>
+
+	</form>
+</div>
+
+
+
+
+	<script language="javascript" type="text/javascript">
+
+		  function change0()
+			{
+			document.getElementById("warning_link").innerHTML = '<div id="right_col"><a href="http://www.theweathernetwork.com/index.php?product=weather&placecode=caab0191&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_image_city" target="_blank"><img src="150x90/fullforecast.gif" alt="TWN" title="TWN" /></a></div>';
+
+				document.getElementById("middle_row").innerHTML = "<a href='' id='nochange'><div id='location'><a class='cityName' href='http://www.theweathernetwork.com/index.php?product=weather&placecode=caab0191&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city' target='_blank'>Leduc, AB</a></div><div id='icon'><a href='http://www.theweathernetwork.com/index.php?product=weather&placecode=caab0191&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_image_city' target='_blank'><img src='../common/images/wicons/r.gif' alt='Light snow' title='Light snow' border='0' /></a></div><div id='temp'><a class='currentTemp' href='http://www.theweathernetwork.com/index.php?product=weather&placecode=caab0191&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city' target='_blank'>-6<sup>&deg;c</sup></a><img src='http://btn.counter.weather.ca/counter.gif?btntype=150x90&btncity=Leduc&btnsite=www.castrolraceway.com&btnlang=en'></div><div id='cond'><a class='cityName' href='http://www.theweathernetwork.com/index.php?product=weather&placecode=caab0191&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city' target='_blank'>Light snow</a></div></a>";
+				//document.getElementById("icon").innerHTML = "<a href='http://www.theweathernetwork.com/index.php?product=weather&placecode=caab0191&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_image_city' target='_blank'><img src='../common/images/wxbuttons/r.gif' alt='Light snow' title='Light snow' border='0' /><br /></a>";
+		  }
+		  function change1()
+			{
+			document.getElementById("warning_link").innerHTML = '<div id="right_col"><a href="http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_image_city" target="_blank"><img src="150x90/fullforecast.gif" alt="TWN" title="TWN" /></a></div>';
+
+				document.getElementById("middle_row").innerHTML = "<a href='' id='nochange'><div id='location'><a class='cityName' href='http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city' target='_blank'>NA, NA</a></div><div id='icon'><a href='http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_image_city' target='_blank'><img src='../common/images/wicons/NA.gif' alt='NA' title='NA' border='0' /></a></div><div id='temp'><a class='currentTemp' href='http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city' target='_blank'>NA</a><img src='http://btn.counter.weather.ca/counter.gif?btntype=150x90&btncity=NA&btnsite=www.castrolraceway.com&btnlang=en'></div><div id='cond'><a class='cityName' href='http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city' target='_blank'>NA</a></div></a>";
+				//document.getElementById("icon").innerHTML = '<a href="http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_image_city" target="_blank"><img src="../common/images/wxbuttons/NA.gif" alt="NA" title="NA" border="0" /><br /></a>';
+		  }
+		   function change2()
+			{
+			document.getElementById("warning_link").innerHTML = '<div id="right_col"><a href="http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_image_city" target="_blank"><img src="150x90/fullforecast.gif" alt="TWN" title="TWN" /></a></div>';
+
+				document.getElementById("middle_row").innerHTML = "<a href='' id='nochange'><div id='location'><a class='cityName' href='http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city' target='_blank'>NA, NA</a></div><div id='icon'><a href='http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_image_city' target='_blank'><img src='../common/images/wicons/NA.gif' alt='NA' title='NA' border='0' /></a></div><div id='temp'><a class='currentTemp' href='http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city' target='_blank'>NA</a><img src='http://btn.counter.weather.ca/counter.gif?btntype=150x90&btncity=NA&btnsite=www.castrolraceway.com&btnlang=en'></div><div id='cond'><a class='cityName' href='http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city' target='_blank'>NA</a></div></a>";
+				//document.getElementById("icon").innerHTML = '<a href="http://www.theweathernetwork.com/index.php?product=weather&placecode=caab0191&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_image_city" target="_blank"><img src="../common/images/wxbuttons/r.gif" alt="Light snow" title="Light snow" border="0" /><br /></a>';
+		  }
+		    function change3()
+			{
+			document.getElementById("warning_link").innerHTML = '<div id="right_col"><a href="http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_image_city" target="_blank"><img src="150x90/fullforecast.gif" alt="TWN" title="TWN" /></a></div>';
+
+				document.getElementById("middle_row").innerHTML = "<a href='' id='nochange'><div id='location'><a class='cityName' href='http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city' target='_blank'>NA, NA</a></div><div id='icon'><a href='http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_image_city' target='_blank'><img src='../common/images/wicons/NA.gif' alt='NA' title='NA' border='0' /></a></div><div id='temp'><a class='currentTemp' href='http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city' target='_blank'>NA</a><img src='http://btn.counter.weather.ca/counter.gif?btntype=150x90&btncity=NA&btnsite=www.castrolraceway.com&btnlang=en'></div><div id='cond'><a class='cityName' href='http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city' target='_blank'>NA</a></div></a>";
+				//document.getElementById("icon").innerHTML = '<a href="http://www.theweathernetwork.com/index.php?product=weather&placecode=caab0191&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_image_city" target="_blank"><img src="../common/images/wxbuttons/r.gif" alt="Light snow" title="Light snow" border="0" /><br /></a>';
+		  }
+		    function change4()
+			{
+			document.getElementById("warning_link").innerHTML = '<div id="right_col"><a href="http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_image_city" target="_blank"><img src="150x90/fullforecast.gif" alt="TWN" title="TWN" /></a></div>';
+
+				document.getElementById("middle_row").innerHTML = "<a href='' id='nochange'><div id='location'><a class='cityName' href='http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city' target='_blank'>NA, NA</a></div><div id='icon'><a href='http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_image_city' target='_blank'><img src='../common/images/wicons/NA.gif' alt='NA' title='NA' border='0' /></a></div><div id='temp'><a class='currentTemp' href='http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city' target='_blank'>NA</a><img src='http://btn.counter.weather.ca/counter.gif?btntype=150x90&btncity=NA&btnsite=www.castrolraceway.com&btnlang=en'></div><div id='cond'><a class='cityName' href='http://www.theweathernetwork.comNA&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_text_city' target='_blank'>NA</a></div></a>";
+				//document.getElementById("icon").innerHTML = '<a href="http://www.theweathernetwork.com/index.php?product=weather&placecode=caab0191&wbRef=www.castrolraceway.com&amp;link=cityPage&amp;switchto=c&amp;ref=wxbtn150x90_image_city" target="_blank"><img src="../common/images/wxbuttons/r.gif" alt="Light snow" title="Light snow" border="0" /><br /></a>';
+
+
+		  }
+
+
+  </script>
+
+
+</body></html>

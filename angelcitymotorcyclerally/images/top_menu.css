@@ -1,0 +1,52 @@
+/* Superfish Menu */
+
+
+/*** ESSENTIAL STYLES ***/
+
+.top_menu {
+	line-height:	1.0;
+}
+.top_menu ul {
+	position:		absolute;
+	top:			-999em;
+	width:	    165px; /* left offset of submenus need to match (see below) */
+	
+}
+.top_menu ul li {
+	width:			100%;
+}
+.top_menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+.top_menu li {
+	float:			left;
+	position:		relative;
+}
+.top_menu a {
+	display:		block;
+	position:		relative;
+}
+.top_menu li:hover ul,
+.top_menu li.sfHover ul {
+	left:			0;
+	top:			35px; /* match top ul list item height */
+	z-index:		99;
+}
+ul.top_menu li:hover li ul,
+ul.top_menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.top_menu li li:hover ul,
+ul.top_menu li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}
+ul.top_menu li li:hover li ul,
+ul.top_menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.top_menu li li li:hover ul,
+ul.top_menu li li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			0;
+}

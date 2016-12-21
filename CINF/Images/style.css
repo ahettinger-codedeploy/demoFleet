@@ -1,0 +1,1391 @@
+/*
+Theme Name: FT Framework
+Theme URI: http://fasturtle.com
+Version: 2.0
+Author: Fasturtle
+Author URI: http://fasturtle.com
+*/
+
+
+
+
+
+/*------------------------------------*\
+    $CONTENTS
+	Credit: https://github.com/csswizardry/CSS-Guidelines
+\*------------------------------------*/
+
+/**
+ * CONTENTS............This stylesheet defines defaults which can be overwritten in the child theme.
+ * RESET...............Reset defaults.
+ * TYPOGRAPHY..........Set typography and base content formatting.
+ * COLORS..............Base colors, can be overwritten in the child theme.
+ * LAYOUT..............Main structure of site. Includes Header, Navigation, Article, Aside, Footer.
+	 * SOCIAL MEDIA........Default icons for: Facebook, Twitter, LinkedIn, Pinterest, YouTube, Instagram, Google+, RSS, Email Sign Up
+	 * ROTATOR.............Base rotating header add-on.
+	 * EVENTS CALENDAR.....Events Calendar base styles.
+	 * FEATURES............Base for (4) Featured Callouts.
+	 * LEDE TEXT...........Base Lede Text formatting.
+ * FORMS...............Base styles for forms and the Contact Form 7 plugin.
+ * MISC................CSS Animations, leftovers, etc.
+ */
+
+
+
+
+
+/*------------------------------------*\
+    $RESET
+	@see Eric Meyer's CSS Reset, http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+\*------------------------------------*/
+
+header, footer, section, article, aside, nav { display: block; }
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em{	margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q {	quotes: none; }
+blockquote:before, blockquote:after,q:before, q:after {	content: '';content: none; }
+:focus { outline: 0; }
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+
+
+
+
+
+
+/*------------------------------------*\
+    $TYPOGRAPHY & BASE CONTENT FORMATTING
+	
+	Body text: Helvetica, Arial, sans-serif
+	Headings: Helvetica, Arial, sans-serif
+	Subheadings: Helvetica, Arial, sans-serif
+\*------------------------------------*/
+
+h1, h2, h3, h4, h5, h6{
+	font-weight: bold;
+	font-style: normal;
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+pre {
+	font-family:Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace;
+}
+
+html {
+	font-size:100.01%;
+}
+
+body {
+	font-size:90%;
+	line-height:1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.1;
+	margin-bottom: 0.5em;
+	text-align: left;
+}
+
+h1 {
+	font-size:3em;
+}
+
+h2 {
+	font-size:2em;
+}
+
+h3 {
+	font-size:1.4em;
+}
+
+h4 {
+	font-size:1.2em;
+}
+
+h1.archive {
+    font-size: 2em;
+    padding: 1em 1.5em 0 1.5em;
+	margin-bottom: 0;
+}
+
+blockquote, cite {
+	font-style: italic;
+}
+
+blockquote {
+	font-size: 110%;
+	padding:1em;
+}
+
+cite {
+	font-size: 85%;
+	line-height: 1.4;
+	display: block;
+	font-style: normal;
+	margin-top: 10px;
+}
+
+em, dfn {
+	font-style:italic;
+}
+
+sup, sub {
+	line-height:0;
+}
+
+abbr, acronym {
+	border-bottom:1px dotted #666;
+}
+
+address {
+	font-style:italic;
+	margin:0 0 1.5em;
+}
+
+del {
+	color:#666;
+}
+
+pre {
+	font-size:1em;
+	line-height:1.5;
+	margin:1.5em 0;
+	white-space:pre;
+}
+
+ul, ol {
+	margin:0 1.5em 1.5em 0;
+	padding-left:2.333em;
+}
+
+li ul, li ol {
+	margin:.5em 0 0.5em 2.5em;
+	list-style-type: circle;
+}
+
+ul {
+	list-style-type:disc;
+	margin-left:1.5em;
+}
+
+ol {
+	list-style-type:decimal;
+	margin-left:1.5em;
+}
+
+dd {
+	margin-left:1.5em;
+}
+
+p, dl {
+	margin:0 0 1.5em;
+}
+
+strong, dfn, dl dt {
+	font-weight:700;
+}
+
+a, a:link {
+	text-decoration:underline;
+}
+
+
+
+#main > section > article section table.halves tr td {
+	width: 48% !important;
+}
+
+#main > section > article section table.thirds tr td {
+	width: 32% !important;
+}
+
+
+#main > section > article section iframe,
+#main > section > article section img {
+	background: #fff;
+	border: 1px solid #999;
+	padding: 3px;
+	max-width: 562px;
+}
+
+#main > section > article section img {
+	height: auto;
+}
+
+.centered, .aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+.alignright, img.alignright {
+	float: right;
+	padding: 4px;
+	margin: 0 0 2px 10px;
+	display: inline;
+}
+
+.alignleft, img.alignleft {
+	float: left;
+	padding: 4px;
+	margin: 0 10px 2px 0;
+	display: inline;
+}
+
+
+
+
+
+
+
+
+/*------------------------------------*\
+    $COLORS
+
+	Black: #000
+	Light Gray: #999
+	Medium Gray: #333
+	Dark Gray: #666
+\*------------------------------------*/
+
+body {
+	color: #000;
+}
+
+a, a:link {
+	color:#666;
+}
+
+a:visited {
+	color: #999;
+}
+
+a:hover, a:active, a:focus {
+	color:#000;
+}
+
+h1, h2, h3, h4, h5, h6,
+table thead, table th,
+blockquote, cite {
+	color: #000;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $LAYOUT
+	
+	Header
+	Navigation
+	Social Media
+	Rotator
+	Events Calendar
+	Features
+	Lede Text
+	Article
+	Aside
+	Footer
+\*------------------------------------*/
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	width: 100%;
+	max-width: 100%;
+}
+
+body .wrapper,
+#main {
+	margin:0 auto;
+	position: relative;
+	width:950px;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+
+body > header {
+	padding: 1em 0;
+	position: relative;
+	z-index: 500;
+}
+
+body > header h1#logo {
+	margin: 0;
+	padding: 0;
+}
+
+body > header h1#logo a, 
+body > header h1#logo a:visited, 
+body > header h1#logo a:hover {
+	display: block;
+	text-decoration:none;
+}
+
+body > header h1#logo a img {
+	border: none;
+}
+
+body > header h2#tagline {
+ 	font-size: 1.2em;
+    margin: 0;
+    padding:0;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $NAVIGATION
+\*------------------------------------*/
+
+#nav {
+    background: #000;
+    line-height: 1;
+    overflow: hidden;
+    text-transform: uppercase;
+}
+
+#nav ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+#nav ul > li {
+    float: left;
+	margin-left: 1px;
+}
+
+#nav ul > li:first-child,
+#nav ul > li ul li,
+#nav ul > li ul li ul li {
+    border-left: medium none;
+	margin-left: 0;
+}
+
+#nav ul li a, #nav ul li a:link, 
+#nav ul li a:visited {
+    color: #fff;
+    display: block;
+    margin: 0;
+    padding: 14px;
+    text-align: center;
+    text-decoration: none;
+    white-space: normal;
+}
+
+#nav ul li.current_page_item ul li a,
+#nav ul li ul li a:visited {
+    color: #fff;
+    display: block;
+    text-align: left;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#nav ul li a:hover, 
+#nav ul li a.over, 
+#nav ul li a:active, 
+#nav ul > li.current_page_item > a, 
+#nav ul > li.current-page-ancestor > a, 
+#nav ul li.current_page_item ul li a:hover, 
+#nav ul li ul li a:hover, 
+#nav ul li ul li.current_page_item > a {
+    background: #999;
+    color: #fff;
+    text-decoration: none;
+}
+
+#nav ul li ul.sub-menu li a {
+    color: #fff;
+    text-align: left;
+    text-transform: none;
+    width: auto;
+	display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+	width: 160px;
+}
+
+#nav ul li ul.sub-menu {
+    background:#666;
+    left: -999em;
+    position: absolute;
+    text-align: left;
+    text-transform: none;
+    width: 200px;
+    z-index: 99999;
+}
+
+#nav ul li ul.sub-menu li ul.sub-menu {
+	background: #333;
+}
+
+#nav li:hover ul ul, 
+#nav li.sfhover ul ul {
+    left: -999em;
+}
+
+body #nav ul li:hover > ul.sub-menu, 
+header > #nav ul li.sfhover > ul.sub-menu {
+    left: auto;
+    z-index: 99999;
+}
+
+#nav li li ul, 
+#nav li li ul {
+    left: -999em;
+}
+
+#nav li li:hover ul, 
+#nav li li.sfhover ul {
+    left: auto;
+    margin: -42px 0 0 200px;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $SOCIAL MEDIA
+\*------------------------------------*/
+
+ul.social {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+	overflow: auto;
+}
+
+ul.social li {
+    float: left;
+    margin: 0 0 0 6px;
+}
+
+ul.social li:first-child {
+	margin-left: 0;
+}
+
+ul.social li a {
+    background-image: url(img/social-color.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-attachment: scroll;	
+	background-position: 0 0;
+    display: block;
+    height: 33px;
+    overflow: hidden;
+    text-indent: 150%;
+    white-space: nowrap;
+    width: 33px;
+}
+
+ul.social li.facebook a {
+	background-position: 0 0;
+}
+
+ul.social li.facebook a:hover {
+	background-position: 0 -450px;
+}
+
+ul.social li.twitter a {
+	background-position: 0 -50px;
+}
+
+ul.social li.twitter a:hover {
+	background-position: 0 -500px;
+}
+
+ul.social li.linkedin a {
+	background-position: 0 -100px;
+}
+
+ul.social li.linkedin a:hover {
+	background-position: 0 -550px;
+}
+
+ul.social li.pinterest a {
+	background-position: 0 -150px;
+}
+
+ul.social li.pinterest a:hover {
+	background-position: 0 -600px;
+}
+
+ul.social li.youtube a {
+	background-position: 0 -200px;
+}
+
+ul.social li.youtube a:hover {
+	background-position: 0 -650px;
+}
+
+ul.social li.instagram a {
+	background-position: 0 -250px;
+}
+
+ul.social li.instagram a:hover {
+	background-position: 0 -700px;
+}
+
+ul.social li.googleplus a {
+	background-position: 0 -300px;
+}
+
+ul.social li.googleplus a:hover {
+	background-position: 0 -750px;
+}
+
+ul.social li.rss a {
+	background-position: 0 -350px;
+}
+
+ul.social li.rss a:hover {
+	background-position: 0 -800px;
+}
+
+ul.social li.email a {
+	background-position: 0 -400px;
+}
+
+ul.social li.email a:hover {
+	background-position: 0 -850px;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $ROTATOR
+\*------------------------------------*/
+
+#banner {
+	background:#000;
+	margin: 0 auto;
+	height: 350px;
+}
+
+#banner .wrapper {
+	position: relative;
+	height: 350px;
+}
+
+#rotator {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	list-style-image: none;
+    position:absolute;
+    height:350px;
+	width: 950px;
+	top:0;
+	left:0;
+	z-index: 50;
+    overflow: hidden;
+}
+
+#rotator li {
+    height: 350px;
+	display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 950px;
+}
+
+#rotator li .img {
+    float: left;
+    z-index: 0;
+}
+
+#rotator li .img img {
+	max-width: 950px;
+	height: auto;
+}
+
+#pager {
+ 	bottom: 25px;
+    position: absolute;
+    right: 25px;
+	z-index: 9999;
+}
+
+#pager a {
+	border-radius: 10px;
+    background: #666;
+    display: block;
+    float: left;
+    height: 10px;
+    overflow: hidden;
+    text-indent: 150%;
+    white-space: nowrap;
+    width: 10px;
+	margin-left: 5px;
+}
+
+#pager a.activeSlide {
+	background: #fff;
+}
+
+#rotator li .phrase {
+    display: block;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 20px;
+    text-align: center;
+    top: 60px;
+    width: 260px;
+	z-index: 1000;
+}
+
+#rotator li .phrase h2 {
+    color: #fff;
+    display: block;
+    font-size: 2em;
+    font-weight: normal;
+    line-height: 1.2;
+    padding: 0;
+    text-align: center;
+}
+
+#rotator li .phrase .subheading {
+	font-weight: bold;
+	color: #fff;
+	line-height: 1.2;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $EVENTS CALENDAR
+\*------------------------------------*/
+
+body.single-event #main aside ul li.archives,
+body.single-event #main section article section .image {
+	display: none;
+}
+
+#main > section > article section #em-wrapper table.fullcalendar {
+    max-width: 630px;
+    table-layout: fixed;
+    width: 630px;
+}
+
+#main > section > article section table thead td a, 
+#main > section > article section table th td a {
+	text-decoration: none;
+}
+
+#main table.em-calendar td.eventful a, 
+#main table.em-calendar td.eventful-today a {
+	color: #000;
+}
+
+#main table.em-calendar td.eventful > a, 
+#main table.em-calendar td.eventful-today > a {
+	color: #000;
+}
+
+table.em-calendar td.eventless-today, table.em-calendar td.eventful-today {
+	background: #eee;
+}
+
+table.em-calendar td.month_name {
+	font-weight: normal;
+}
+
+#main table.fullcalendar td {
+    height: 50px;
+    text-align: left;
+    width: 50px;
+}
+
+#em-wrapper table.fullcalendar thead td {
+	text-align: center;
+	height: auto;
+}
+
+#em-wrapper table.fullcalendar td {
+    border-top: medium none;
+    width: auto;
+    word-wrap: break-word;
+}
+
+#em-wrapper table.em-calendar td.eventful-today ul, 
+#em-wrapper table.fullcalendar td.eventful ul, 
+#em-wrapper table.fullcalendar td.eventful-pre ul, 
+#em-wrapper table td.eventful-post ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#em-wrapper table.em-calendar td.eventful-today ul li:first-child, 
+#em-wrapper table.fullcalendar td.eventful ul li:first-child,
+#em-wrapper table.fullcalendar td.eventful-pre ul li:first-child, 
+#em-wrapper table td.eventful-post ul li:first-child {
+    margin-top: 5px;
+}
+
+#em-wrapper table.fullcalendar td.eventful ul li, 
+#em-wrapper table.em-calendar td.eventful-today ul li,
+#em-wrapper table.fullcalendar td.eventful-pre ul li, 
+#em-wrapper table td.eventful-post ul li {
+    font-size: 12px;
+    line-height: 1.2;
+    margin-top: 10px;
+}
+
+#em-wrapper table.em-calendar tr.days-names td {
+	font-weight: bold;
+	height: 15px;
+}
+
+#main > section > article section .vevent .event-map {
+	width: 628px;
+	margin-bottom: 20px;
+	clear: both;
+}
+
+#main > section > article section .vevent .em-location-map {
+	width: 628px !important; /* !important overrides inline styles added by plugin */
+	border: 1px solid #999;
+}
+
+#main > section > article section .vevent .date-times {
+	float: left;
+	width: 100px;
+	margin-right: 20px;
+	text-align: center;
+	line-height: 1;
+}
+
+#main > section > article section .vevent h2.date {
+	overflow: auto;
+	font-size: 24px;
+	border: none;
+	background: #eee;
+	border:1px solid #999;
+	color: #fff;
+	padding: 10px;
+	width: auto;	
+	text-align: center;
+}
+
+#main > section > article section .vevent h3.times {
+	text-align: center;
+	border: none;
+	font-size: 18px;
+	text-align: center;
+}
+
+#main > section > article section .vevent .date .month {
+	text-transform: uppercase;
+	display: block;
+	background: #666;
+}
+
+#main > section > article section .vevent .date .day {
+	font-size: 150%;
+}
+
+#main > section > article section .vevent .event-row {
+	overflow: auto;
+}
+
+#main > section > article section .vevent .description img,
+#main > section > article section .vevent .description {
+	max-width: 500px;
+	height: auto;
+}
+
+.latest-events h2 {
+	margin-bottom: 0;
+}
+
+.latest-events header > a {
+	display: block;
+    margin-bottom: 1.5em;
+}
+
+.latest-events ul.events  {
+	list-style: none;
+	margin: 0;	
+	padding: 0;
+}
+
+.latest-events .events .date {
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.latest-events .events .title {
+	margin: 0;
+}
+
+.latest-events .events a.url {
+	display: block;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $FEATURES
+\*------------------------------------*/
+
+.features {
+	overflow: auto;
+	margin: 1em auto 0;
+}
+
+.features ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.features ul li {
+	background: #000;
+	width: 23%;
+	float: left;
+	margin-left: 22px;
+	text-align: center;
+}
+
+.features ul li:first-child {
+	margin-left: 0;
+}
+
+.features ul li .img {
+	margin: 0 auto;
+	text-align: center;
+	height: 200px;
+	overflow: hidden;
+}
+
+.features ul li .img img {
+	width: auto;
+}
+
+.features ul li .title {
+	text-align: center;
+	padding: 1em;
+}
+
+.features ul li .title a {
+	color: #999;
+	display: block;
+}
+
+.features ul li .title a:hover {
+	color: #fff;
+}
+
+.features ul li .title h2 {
+	color: #fff;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $LEDE TEXT
+\*------------------------------------*/
+
+.intro-text {
+	margin: 3em auto 0;
+	clear:both;
+}
+
+.intro-text .wrapper {
+	padding: 1em 0;
+}
+
+.intro-text .intro-text-title h1, 
+.intro-text .intro-text-body {
+	text-align: center;
+	margin: 0;
+}
+
+.intro-text .intro-text-title h1 {
+	margin-bottom: 0.5em;
+}
+
+.intro-text .intro-text-body a {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $ARTICLE
+\*------------------------------------*/
+
+#main {
+    margin-bottom: 0;
+    overflow: hidden;
+    padding-bottom: 0;
+}
+
+#main > section > article > header {	
+	margin: 0 0 20px 0;
+}
+
+#main > section > article > header h1 {
+    font-variant: normal;
+    margin: 0;
+    padding: 0;
+}
+
+#main > section {
+	margin: 0;
+	float: left;
+	width: 850px;
+}
+
+#main article {
+
+	background: #fff;
+	position: relative;
+}
+
+nav#posts-nav {
+	clear: both;
+	margin: 1em 0;
+	text-align: left;
+}
+
+article header h1 a, 
+article header h1 a:visited {
+	text-decoration:none !important;
+}
+
+article header h1 a:hover,
+article header h1 a:active {
+	text-decoration:none;
+}
+
+article .wp-caption-text {
+	text-align: center;
+	font-style: italic;
+	color: #999;
+	font-size: 90%;
+	margin-bottom: 0;
+}
+
+article footer {	
+	font-style: italic;
+	font-size: 90%;
+	color: #999;
+	border-top: 1px solid #999;
+	padding-top: 5px;
+	overflow: auto;
+	margin-top: .5em;
+	clear: both;
+}
+
+article footer p {
+	float: left;
+	margin-bottom: 0;
+}
+
+article footer a.addthis_button {
+    float: right;
+}
+
+article nav#posts-nav {
+	border: 1px solid #999;
+	padding: 1em 0;	
+	text-align: center;
+	margin-top: 1em;
+	clear: both;
+}
+
+article nav#posts-nav a {
+	font-weight: bold;
+}
+
+#main > section > article section ul,
+#main > section > article section ol {
+	margin: 0 1.5em 1.5em 1.5em;
+	padding-left: 0;
+	list-style-position: outside;
+}
+
+article a.post-edit-link {
+	font-size: 11px;
+	background: #000;
+	text-decoration: none;
+	font-weight: bold;
+	font-style: normal;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 1px 4px 0 4px;	
+}
+
+article a.post-edit-link:hover {
+	background: #666;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $ASIDE
+\*------------------------------------*/
+
+#main > aside {
+	float: left;
+    margin: 0;
+    padding: 4em 0 0 0;
+    width: 275px;
+}
+
+aside > ul {
+	list-style:none;
+	margin:0;
+	padding:0 1em;
+}
+
+#main > aside ul li {
+	padding-bottom: 1em;
+}
+
+.widget {
+	display: block;
+}
+
+#main > aside ul li.blog-archives {
+	padding: 1em 0 2em 0;
+}
+
+#main > aside ul li.blog-archives > h2 {
+	padding: 0;
+}
+
+#main aside .child-pages {
+	padding: 1em;
+	border:1px solid #999;
+	margin-bottom: 2em;
+}
+
+#main aside .child-pages ul {
+	margin: 0;
+	padding: 0 0.75em;
+}
+
+#main aside .child-pages ul li,
+#main aside .child-pages ul li ul,
+#main aside .child-pages ul li ul li {
+	margin: 0;
+	padding: 0;
+}
+
+.latest-posts h2 {
+	margin-bottom: 0;
+}
+
+.latest-posts header > a {
+	display: block;
+	margin-bottom: 1.5em;
+}
+
+.latest-posts .post header p,
+.latest-posts .post header h3 {
+	margin: 0;
+}
+
+.latest-posts .post header h3 {
+	text-transform: none;
+}
+
+.latest-posts .post header p.date {
+	text-transform: uppercase;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+
+body > footer {	
+	background: #000;
+    color: #fff;
+    padding: 1em 0;
+	overflow: auto;
+}
+
+body > footer ul, body > footer ul li ul {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin: 0;
+	padding:0;
+}
+
+body > footer ul {
+	padding: 0 0.5em;
+}
+
+body > footer ul.children, 
+body > footer ul.sub-menu { /* Only show top-level navigation */
+	display: none;
+}
+
+body > footer ul li  {
+	margin: 0;
+	float: left;
+	margin-left: 1em;
+	width: auto;
+}
+
+body > footer ul li a {
+	color: #fff;
+	display:block;
+	line-height: 1.5;
+	margin-bottom: 0;
+	padding:0;
+}
+
+body > footer ul li a, 
+body > footer ul li a:visited {
+	color:#fff;
+}
+
+body > footer ul li a:hover {
+	color: #666;
+}
+
+body > footer ul li a.credit {
+    background: url(img/ftlogo.png) 0 0 no-repeat;
+    display:block;
+	height:19px;
+	overflow:hidden;
+	text-indent:150%;
+	white-space:nowrap;
+	width:128px !important;
+	margin-top: 0;
+}
+
+body > footer #footer-widget-1 {
+	clear: both;
+	overflow: auto;
+	padding: 2em 1.5em 0 1.5em;
+}
+
+body > footer #footer-widget-1 h3.widget-title,
+body > footer #footer-widget-1 .vcard h4.fn {
+	color: #fff;
+	display: none;
+}
+
+body > footer #footer-widget-1 .vcard dl {
+	float: left;
+
+	width: 20%;
+}
+
+body > footer #footer-widget-1 .vcard dt {
+	float: left;
+	margin-right: 10px;
+}
+
+body > footer #footer-widget-1 .vcard dd {
+	margin-left: 0;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+
+\
+.wpcf7 {
+	margin-left:0;
+	margin-right:0;
+	padding:12px;
+}
+
+.wpcf7 div.row {
+	padding: 0.4em 0;
+	clear:both;
+	overflow: hidden;
+	position: relative;
+}
+
+.wpcf7 div.row p {
+	margin-bottom: 0;
+}
+
+
+
+input:focus,
+textarea:focus {
+	border-color: #000;
+}
+
+.wpcf7 select {
+	float:right;
+	font-weight:normal;
+	margin:0 0 6px;
+	width:61%;
+}
+
+.wpcf7 textarea {
+	height:60px;
+}
+
+
+
+span.wpcf7-form-control-wrap {
+	position: relative !important;
+}
+
+.wpcf7 span.wpcf7-not-valid-tip-no-ajax, 
+.wpcf7 span.wpcf7-not-valid-tip {
+    background: url(img/req-icon.png) no-repeat 0 0 transparent !important;
+    display: block;
+	height: 16px;
+	overflow: hidden;
+	text-indent: 150%;
+	white-space: nowrap;
+	width:16px !important;
+	margin-top: 0;
+    border: none !important;
+    color: #b90606;
+    display: block;
+    float: none !important;
+    font-size: 13px !important;
+	line-height: 1.3;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 !important;
+    position: absolute;	
+	right: 10px;	
+	top: 0;
+	font-weight: bold;
+}
+
+.wpcf7 div.wpcf7-response-output {	
+	clear: both;
+	padding: 0.75em;
+    border: 1px solid #fff;
+    color: #fff;
+    font-style: italic;
+	line-height: 1.3;
+	margin: 0;
+}
+
+.wpcf7 div.wpcf7-validation-errors,
+.wpcf7 div.wpcf7-spam-blocked {
+	background: #b90606;
+    border: 1px solid #fff;
+    color: #fff;
+    font-style: italic;
+	line-height: 1.3;
+}
+
+.wpcf7 div.wpcf7-mail-sent-ok {
+	background: #127A33;
+    border: 1px solid #fff;
+    color: #fff;
+    font-style: italic;
+	line-height: 1.3;
+}
+
+.wpcf7 img.ajax-loader {
+	border: none !important;	
+	background: none !important;
+	padding: 0 !important;
+}
+
+.wpcf7 input#captcha {
+	margin:0;
+	width:145px;
+}
+
+.wpcf7 img#captcha-image {
+	background:#000 !important;
+    border: none !important;
+    float: right;
+    padding: 9px 0 !important;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $MISC
+\*------------------------------------*/
+
+a[class*="pdf"], 
+a[href$=".pdf"], 
+a[href*=".pdf"], 
+a.pdf {
+	background:url(img/a-pdf.gif) no-repeat scroll right center transparent;
+	padding:0 1.4em 0 0;
+}
+
+::selection {
+	background: #000;
+	color: #fff;
+}
+
+::-moz-selection {
+	background: #000;
+	color: #fff;
+}
+
+input[type="submit"],
+article a.post-edit-link,
+#nav li a {
+	-webkit-transition:background .2s ease-in;
+	-moz-transition:background .2s ease-in;  
+	-o-transition:background .2s ease-in;  
+	transition:background .2s ease-in; 
+}
+
+a {
+	-webkit-transition:color .2s ease-in;  
+	-moz-transition:color .2s ease-in;  
+	-o-transition:color .2s ease-in;  
+	transition:color .2s ease-in; 
+}

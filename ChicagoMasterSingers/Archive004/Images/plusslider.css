@@ -1,0 +1,96 @@
+/**
+	PlusSlider Version 1.1
+	By Jamy Golden
+	http://css-plus.com
+**/
+
+/* PlusSlider Styling */
+#slider, #slider2{height: 120px; width: 220px; width:500px;position: relative; left: 0;}
+.plusSlider{
+	-moz-background-clip: padding;
+	-webkit-background-clip: padding;
+	background-clip: padding-box;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	padding: 18px;
+	background-color: #000;
+	border: #000;
+	height: 240px;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 220px; width:500px;
+	position: relative;
+}
+.plusSlider .child{float: left;}
+/* Controls */
+.plusSlider-controls-wrapper {
+	background-color: #f1f1f1; /* fallback color */
+	background-image: url(../images/svg-gradient.svg); /* Gradient support for IE9 and Opera */
+	background-image: -moz-linear-gradient(100% 100% 90deg, #ccc, #f1f1f1);
+	background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#f1f1f1), to(#ccc));
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	height: 40px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	z-index: 500;
+}
+.plusSlider-controls{
+	margin: 0 auto;
+	padding: 15px 0;
+}
+.plusSlider-controls a{
+	background: url(../images/plus-sprite.png) no-repeat left top;
+	display: block;
+	float: left;
+	height: 10px;
+	margin: 0 3px;
+	width: 10px;
+	text-indent: -9999px; /*IE6 fix */
+	font-size: 0;
+}
+.plusSlider-controls a.current, .plusSlider-controls a:hover{
+	background-position: -10px 0;
+}
+.plusSlider a.arrow{
+	background: url(../images/plus-sprite.png) no-repeat left top;
+	display: block;
+	height: 32px;
+	opacity: 0;
+	width: 32px;
+	position: absolute;
+	top: 120px;
+	z-index: 200;
+	text-indent: -9999px;
+	/* Fade in/out .arrows on hover */
+	-moz-transition-property: opacity;
+	-moz-transition-duration: 0.2s;
+	-moz-transition-timing-function: ease-in;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 0.2s;
+	-webkit-transition-timing-function: ease-in;
+	transition-property: opacity;
+	transition-duration: 0.2s;
+	transition-timing-function: ease-in;
+}
+.plusSlider:hover  a.arrow{opacity: 1;}
+.plusSlider a.prev{background-position: 0 -10px; left: 10px;}
+.plusSlider a.prev:hover{background-position: 0 -42px; left: 10px;}
+.plusSlider a.next{background-position: -33px -10px; right: 10px;}
+.plusSlider a.next:hover{background-position: -33px -42px;}
+
+/* PlusFader Specific */
+.fader .child{display: none; position: absolute; left: 0; top: 0;}
+.fader .plusSlider-controls{position: relative; z-index: 200;}
+
+/* no-javascript fallback */
+#slider > *, #slider2 > *{display: none;}
+#slider > *:first-child, #slider2 > *:first-child{display: block;}
+/* end no-javascript fallback */

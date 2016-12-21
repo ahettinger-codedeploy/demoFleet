@@ -1,0 +1,409 @@
+/*
+Theme Name: WordPress Default
+Theme URI: http://wordpress.org/
+Description: The default WordPress theme based on the famous <a href="http://binarybonsai.com/kubrick/">Kubrick</a>.
+Version: 1.6
+Author: Michael Heilemann
+Author URI: http://binarybonsai.com/
+Tags: blue, custom header, fixed width, two columns, widgets
+*/
+
+/* ### general ### */
+* { margin: 0px; padding: 0px; }
+html, body { font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000; }
+body { background: url('/clients/ArtsNaplesWorldFestival/Images/body-bg.png') center top no-repeat; }
+img { border: 0px; }
+a, input { outline: none; }
+
+/* ### global classes ### */
+.clear { clear: both; height: 0px; }
+
+/* ### wrapper ### */
+#wrapper { width: 100%; height: 100%; float: left; background: url('/clients/ArtsNaplesWorldFestival/Images/wrapper-bg.png') left top repeat-x; }
+	/* ### main container ### */
+	#mainCntr { width: 778px; margin: 0 auto; }
+
+		/* ### header container ### */
+		#headerCntr { width: 778px; height: 183px; float: left; position: relative; z-index: 2; background: url('/clients/ArtsNaplesWorldFestival/Images/banner_right.png') right top no-repeat;}
+		#headerCntr h1 { position: absolute; top: 10px; left: -60px; }
+		#headerCntr h1 a { display: block; text-indent: -9999px; width: 226px; height: 168px; background: url('/clients/ArtsNaplesWorldFestival/Images/logo.png') no-repeat;  }
+		#headerCntr .description { position: absolute; top: 85px; left: 130px; display: block; text-indent: -9999px; width: 240px; height: 23px; }
+			
+			/* ### language box ### */
+			.languageBox { position: absolute; top: 38px; left: 235px; }
+			.languageBox h3 { padding-bottom: 5px; font-size: 14px; color: #51626f; }			
+			
+			/* ### top Area ### */
+			.topArea { padding: 38px 0 0 0; width: 352px; height: 98px; float: right; }
+			.topArea .support { width: 135px; height: 90px; float: left; }
+			.topArea .support a { display: block; text-indent: -9999px; width: 135px; height: 90px; float: left; background: url('/clients/ArtsNaplesWorldFestival/Images/support.png') no-repeat; }
+			.topArea .support a:hover { background: url('/clients/ArtsNaplesWorldFestival/Images/support-ho.png') no-repeat; }
+			.topArea .address { padding-left: 12px; width: 205px; height: 90px; float: left; font-family: 'Arial Narrow'; font-size: 20px; font-weight: bold; color: #fff; line-height: 23px; }
+			.topArea .address strong { font-family: 'Arial Narrow'; font-size: 20px; line-height: 23px; }
+			.topArea .address a { font-family: Arial; font-size: 12px; font-weight: normal; color: #fff; line-height: 15px; }
+			.topArea .address a:hover { text-decoration: none; }
+			.topArea .address .date { margin-top: 5px; width: 205px; height: 29px; display: block; text-indent: -9999px; background: url('/clients/ArtsNaplesWorldFestival/Images/date.png') no-repeat; }
+			
+			/* ### text Area ### */
+			.menuArea { padding: 3px 0 0 135px; width: 643px; height: 44px; float: left; background: url('/clients/ArtsNaplesWorldFestival/Images/menu-bg.png') no-repeat; }
+			.menuArea ul { list-style: none; }
+			.menuArea li { position: relative; float: left; }
+			.menuArea li a { margin: 0 1px 0 -17px; width: 94px; height: 37px; float: left; display: block; text-indent: -9999px; text-decoration: none; }
+			
+			.menuArea li.home a { background: url(/clients/ArtsNaplesWorldFestival/Images/home.png) no-repeat; } 
+			.menuArea li.home a:hover,.menuArea li.home.current_page_item a { background: url(/clients/ArtsNaplesWorldFestival/Images/home-ho.png) no-repeat; }
+			
+			.menuArea li.festival a { background: url(/clients/ArtsNaplesWorldFestival/Images/festival.png) no-repeat; } 
+			.menuArea li.festival a:hover,.menuArea li.festival.current_page_item a { background: url(/clients/ArtsNaplesWorldFestival/Images/festival-ho.png) no-repeat; }
+			
+			.menuArea li.artists a { background: url(/clients/ArtsNaplesWorldFestival/Images/artists.png) no-repeat; } 
+			.menuArea li.artists a:hover,.menuArea li.artists.current_page_item a { background: url(/clients/ArtsNaplesWorldFestival/Images/artists-ho.png) no-repeat; }
+			
+			.menuArea li.schedule a { background: url(/clients/ArtsNaplesWorldFestival/Images/schedule.png) no-repeat; } 
+			.menuArea li.schedule a:hover,.menuArea li.schedule.current_page_item a { background: url(/clients/ArtsNaplesWorldFestival/Images/schedule-ho.png) no-repeat; }
+			
+			.menuArea li.tickets a { background: url(/clients/ArtsNaplesWorldFestival/Images/tickets.png) no-repeat; } 
+			.menuArea li.tickets a:hover,.menuArea li.tickets.current_page_item a { background: url(/clients/ArtsNaplesWorldFestival/Images/tickets-ho.png) no-repeat; }
+			
+			.menuArea li.sponsors a { background: url(/clients/ArtsNaplesWorldFestival/Images/sponsors.png) no-repeat; } 
+			.menuArea li.sponsors a:hover,.menuArea li.sponsors.current_page_item a { background: url(/clients/ArtsNaplesWorldFestival/Images/sponsors-ho.png) no-repeat; }
+			
+			.menuArea li.about a { background: url(/clients/ArtsNaplesWorldFestival/Images/about.png) no-repeat; } 
+			.menuArea li.about a:hover,.menuArea li.about.current_page_item a { background: url(/clients/ArtsNaplesWorldFestival/Images/about-ho.png) no-repeat; }
+
+                        .menuArea li.innews a { background: url(/clients/ArtsNaplesWorldFestival/Images/innews.png) no-repeat; } 
+			.menuArea li.innews a:hover,.menuArea li.innews.current_page_item a { background: url(/clients/ArtsNaplesWorldFestival/Images/innews-ho.png) no-repeat; }
+			
+			.menuArea li.contact a { background: url(/clients/ArtsNaplesWorldFestival/Images/contact.png) no-repeat; } 
+			.menuArea li.contact a:hover,.menuArea li.contact.current_page_item a { background: url(/clients/ArtsNaplesWorldFestival/Images/contact-ho.png) no-repeat; }
+			
+			.menuArea li.festival ul { padding: 17px 0 0 0; height: 106px; background: url('/clients/ArtsNaplesWorldFestival/Images/festival-sub.gif') no-repeat!important; }
+			.menuArea li.festival ul li a:hover { background: url('/clients/ArtsNaplesWorldFestival/Images/festival-sub-ho.png') repeat!important; }
+			
+			.menuArea li.about ul { padding: 17px 0 0 0; height: 106px; background: url('/clients/ArtsNaplesWorldFestival/Images/about-sub.png') no-repeat!important; }
+			.menuArea li.about ul li a { padding: 0 15px 0 0; text-align: right; }
+			.menuArea li.about ul li a:hover { background: url('/clients/ArtsNaplesWorldFestival/Images/about-sub-ho.png') repeat!important; }
+			
+			.menuArea li ul { display: none; }
+			.menuArea li:hover ul { display: block; position: absolute; top: 37px; left: 0; width: 205px; background: #ad208e; }
+			.menuArea li ul li { display: block; }
+			.menuArea li ul li a { padding: 0 0 0 15px; margin: 0px; text-indent: 0px; width: 190px; height: 18px; float: left; font-size: 12px; color: #fff; line-height: 16px; background: none!important; }
+
+                         /* ### second buttons ### */
+                         .secondbuttons { padding: 0; width: 778px; height: 33px; float: left; background-color: #ced2d5;}
+     
+                         span.imgswap {background-image:url("/clients/ArtsNaplesWorldFestival/Images/buy_tickets_over.png"); 
+                                       background-repeat: no-repeat; display:block;}
+  
+                         span.imgswap:hover img {visibility:hidden;}
+
+                         span.imgswap2 {background-image:url("/clients/ArtsNaplesWorldFestival/Images/sign_up_over.png"); 
+                                        background-repeat: no-repeat; display:block;}
+  
+                         span.imgswap2:hover img {visibility:hidden;}
+
+                         span.imgswap3 {background-image:url("/clients/ArtsNaplesWorldFestival/Images/support_over.png"); 
+                                        background-repeat: no-repeat; display:block;}
+  
+                         span.imgswap3:hover img {visibility:hidden;}
+			
+			/* ### sponser Area ### */
+			.sponserArea { padding: 8px 10px 6px 10px; width: 758px; height: 18px; float: left; font-family: 'Arial Narrow'; font-size: 12px; color: #fff; font-weight: bold; background: url('/clients/ArtsNaplesWorldFestival/Images/sponser-bg.png') repeat; }
+			.sponserArea h3 { width: 185px; font-size: 12px; color: #c0cb20; float: left; text-transform: uppercase; }
+			.sponserArea marquee { width: 560px; float: right; }
+			.sponserArea span { padding-right: 100px; }
+			.sponserArea a { color: #fff; text-decoration: none; }
+			.sponserArea a:hover { text-decoration: underline; }
+			
+		/* ### banner container ### */
+		#bannerCntr { padding: 15px 0 17px 26px; position: relative; z-index: 1; width: 752px; height: 271px; float: left;background: url('/clients/ArtsNaplesWorldFestival/Images/content-bg.png') top repeat-x; }
+		
+		/* ### content container ### */
+		#contentCntr { padding: 0 25px; width: 728px; float: left; background: url('/clients/ArtsNaplesWorldFestival/Images/content-bg.png') top repeat-x;}
+		#contentCntr #contentmain { padding: 11px 20px 40px 20px; width: 688px; float: left; background: #dee6e9 url('/clients/ArtsNaplesWorldFestival/Images/content-bg-in.gif') left bottom repeat-x; }
+
+		/* ### content container for home page ### */	
+
+#contentCntr #contentmain_firsthome { padding: 11px 20px 7px 20px; width: 688px; float: left; background: #dee6e9 url('/clients/ArtsNaplesWorldFestival/Images/content-bg-in.gif') left bottom repeat-x;}
+#contentCntr #contentmain_home { width:708px; float: left;}
+		
+		/* ### content container for contact page ### */		
+		#contentCntr #contentmain_firstcontact { padding: 11px 20px 7px 20px; width: 688px; float: left; background: #dee6e9 url('/clients/ArtsNaplesWorldFestival/Images/content-bg-in.gif') left bottom repeat-x;}
+		#contentCntr #contentmain_contact { width: 708px; float: left;}
+
+#contact_support_bottom {float: right; width: 195px; height: 96px;}
+
+		
+			/* ### front cat ### */
+			#frontCat { padding: 10px 0; margin-left: -6px; width: 700px; float: left; }
+			#frontCat .widget { padding: 4px; margin: 6px; width: 211px; float: left; border: 1px solid #415a68; }
+			#frontCat .widget img { float: left; }
+
+			/* ### front cat - non slider ### */
+
+			#frontCat_nonslide { padding: 10px 0; margin-left: -6px; width: 700px; float: left; }
+			
+			
+			
+			/* ### right panel ### */
+			#frontLeft { padding: 15px 0 0 0; width: 675px; float: left; }
+			
+				/* ### home text ### */
+				.homeText { width: 675px; float: left; font-size: 14px; line-height: 22px; }
+				.homeText h2 { font-family: 'Arial Narrow'; font-size: 26px; color: #0077c0; line-height: 26px; }
+				.homeText p { padding: 10px 0 0 0; }
+				.homeText span { color: #51626f; font-weight: bold; }
+				.homeText img { padding-top: 10px; }
+				.homeText a { color: #51626f; text-decoration: none; }
+				.homeText a:hover { color: #000; text-decoration: underline; }
+			
+			/* ### right panel ### */
+			#frontRight { padding: 15px 45px 0 0; margin-right: -45px; position: relative; width: 223px; min-height: 506px; float: right;}
+			#frontRight .widget { margin-bottom: 8px; }
+			#frontRight h3 { padding: 0 0 8px 0; font-family: 'Arial Narrow'; font-size: 20px; color: #51626f; text-transform: uppercase; text-align: center; }
+			#frontRight .widget_categoryposts { padding: 10px 15px 215px 15px; margin: 0px; border: 1px solid #415b69; }
+			#frontRight .widget_categoryposts h3 { padding: 0px; color: #000; text-align: left; text-transform: none; }
+			#frontRight ul { list-style: none; }
+			#frontRight li p { padding: 5px 0; }
+			#frontRight li { padding: 10px 0; border-bottom: 1px dashed #a4bbc4; }
+			#frontRight li a.post-title { font-size: 14px; font-weight: bold; }
+			#frontRight li a { color: #0077c0; text-decoration: none; }
+			#frontRight li a:hover { color: #000; text-decoration: underline; }
+			
+			#frontRight a.support { position: absolute; bottom: 10px; right: 60px; width: 220px; height: 119px; float: right; display: block; text-indent: -9999px; }
+			
+			/* ### festival left ### */
+			#festLeft { width: 219px; float: left; }
+			#festLeft .widget { padding-bottom: 11px; }
+			#festLeft h3 { padding: 0 0 5px 0; font-family: 'Arial Narrow'; font-size: 16px; color: #51626f; text-transform: uppercase; }
+													
+			/* ### festival right ### */
+			#festRight { width: 463px; float: right; }
+			
+				/* ### festival text ### */
+				.festText { width: 463px; float: left; line-height: 16px; }
+				.festText h2 { padding: 0 0 10px 0; font-family: 'Arial Narrow'; font-size: 45px; color: #0077c0; letter-spacing: -1px; line-height: 48px; }
+				.festText h3 { font-family: 'Arial Narrow'; font-size: 26px; color: #00703c; line-height: 28px; }
+				.festText .t1 { color: #c4a006; }
+				.festText .t2 { color: #d60d8c; }
+				.festText .t3 { color: #a3a60f; }
+				.festText .t4 { color: #f15c22; }
+				.festText .t5 { color: #850d70; }
+				.festText .t6 { color: #b72e36; }
+				.festText p { padding: 0 0 20px 0; }
+				.festText a { color: #00703c; }
+				.festText a:hover { color: #000; text-decoration: none; }
+			
+			/* ### artist main ### */
+			#artistMain { padding: 11px 15px 40px 15px; margin-top: 15px; width: 698px; float: left; background: #dee6e9 url('/clients/ArtsNaplesWorldFestival/Images/content-bg-in.gif') left bottom repeat-x; }
+			#artistMain h2 { font-family: 'Arial Narrow'; font-size: 45px; color: #0077c0; letter-spacing: -1px; line-height: 48px; }
+			#artistMain h3 { padding: 0 0 5px 0; font-family: 'Arial Narrow'; font-size: 20px; color: #fff; line-height: 22px; }
+			#artistMain .ltw_item { margin-top: 13px; width: 698px; float: left;}
+			#artistMain .ltw_image { width: 198px; float: left; background: #dee6e9; }
+			#artistMain .ltw_image img { padding: 3px; float: left; border: 1px solid #b7c3c9; }
+			#artistMain .ltw_content { padding: 10px 12px 5px 12px; width: 472px; min-height: 111px; float: right; font-size: 11px; color: #fff; line-height: 15px; background: #0278c0 url('/clients/ArtsNaplesWorldFestival/Images/artist-bg.jpg') bottom repeat-x; }
+			#artistMain .purchaseTkt { margin-top: -44px; width: 190px; height: 44px; float: right; display: block; text-indent: -9999px; background: url('/clients/ArtsNaplesWorldFestival/Images/purchase-tkt.png') no-repeat; }
+			#artistMain .purchaseTkt:hover { background: url('/clients/ArtsNaplesWorldFestival/Images/purchase-tkt-ho.png') no-repeat; }
+			
+			/* ### right panel ### */
+			#leftPanel { width: 201px; float: left; }
+			#leftPanel .widget { padding: 20px 0 0 0; }
+			
+				/* ### right panel ### */
+				#blogLeft { width: 201px; float: left; }
+				#blogLeft .widget { padding: 20px 0 0 0; }
+				#blogLeft h3 { padding: 0 0 5px 0; font-family: 'Arial Narrow'; font-size: 20px; color: #00703c; line-height: 22px; }
+				#blogLeft ul { padding: 0 0 0 20px; }
+				#blogLeft li { padding: 2px 0; }
+				#blogLeft a { color: #000; }
+				#blogLeft a:hover { color: #00703c; text-decoration: none; }
+													
+			/* ### right panel ### */
+			#rightPanel { width: 477px; float: right; position: relative; }
+			
+				/* ### text Area ### */
+				.textArea { padding: 20px 0 0 0; width: 100%; float: left; line-height: 20px; }
+				.textArea h2 { font-family: 'Arial Narrow'; font-size: 45px; color: #0077c0; letter-spacing: -1px; line-height: 48px; }
+				.textArea h3 { font-family: 'Arial Narrow'; font-size: 26px; color: #00703c; line-height: 28px; }
+				.textArea .t1 { color: #c8d347; }
+				.textArea .t2 { color: #4e2683; }
+				.textArea .t3 { color: #ad208e; }
+				.textArea .t4 { color: #f15c22; }
+				.textArea span.blue { color: #0077c0; font-weight: bold; }
+				.textArea p { padding: 0 0 20px 0; }
+				.textArea a { color: #00703c; }
+				.textArea a:hover { color: #000; text-decoration: none; }
+				.textArea .pierImage { margin: -20px 0 0 -70px; }
+				
+				/* ### contact Area ### */
+				.contactArea { padding: 20px 0 0 10px; width: 678px; min-height: 550px; position: relative; float: left; font-size: 16px; line-height: 20px;}
+				.contactArea h2 { padding: 0 0 15px 255px; font-family: 'Arial Narrow'; font-size: 45px; color: #0077c0; letter-spacing: -2px; line-height: 48px; }
+				.contactArea p { overflow: hidden; padding-bottom: 15px; }
+				.contactArea strong { color: #51626f; }
+				.contactArea a { color: #51626f; }
+				.contactArea a:hover { text-decoration: none; }
+				.contactArea .contactRight { margin-right: -45px; position: absolute; bottom: 110px; right: 0;}
+				.contactArea .buy { float: left; width: 190px; height: 44px; display: block; text-indent: -9999px; background: url('/clients/ArtsNaplesWorldFestival/Images/purchase-tkt.png') no-repeat; }
+				.contactArea .buy:hover { background: url('/clients/ArtsNaplesWorldFestival/Images/purchase-tkt-ho.png') no-repeat; }
+				
+				/* ### blog Area ### */
+				.blogArea { padding: 20px 0 0 0; width: 100%; float: left; line-height: 20px; }
+				.blogArea h2 { font-family: 'Arial Narrow'; font-size: 30px; color: #0077c0; letter-spacing: -1px; line-height: 33px; }
+				.blogArea h3 { font-family: 'Arial Narrow'; font-size: 22px; color: #00703c; line-height: 24px; }
+				.blogArea p { padding: 0 0 20px 0; }
+				.blogArea a { color: #00703c; }
+				.blogArea a:hover { color: #000; text-decoration: none; }
+				
+			/* ### right panel ### */
+			#leftPanel1 { margin-left: -45px; padding: 60px 0 0 0; width: 321px; float: left; }
+			#leftPanel1.page84  { margin-top: -50px; width: 290px; }
+			#leftPanel1 .widget { padding: 20px 0 0 0; }
+													
+			/* ### right panel ### */
+			#rightPanel1 { width: 395px; float: right; }
+			#rightPanel1.page84 { width: 440px; }
+			
+				/* ### text Area ### */
+				.textsubArea { padding: 20px 0 0 0; line-height: 18px; }
+				.textsubArea h2 { font-family: 'Arial Narrow'; font-size: 40px; color: #0077c0; letter-spacing: -2px; line-height: 48px; }
+				.textsubArea h3 { padding: 8px 0 0 0; font-size: 18px; color: #51626f; line-height: 20px; }
+				.textsubArea p { padding: 10px 0 0 0; }
+				.textsubArea span { color: #850d70; font-weight: bold; }
+				.textsubArea a { color: #0077c0; }
+				.textsubArea a:hover { color: #000; text-decoration: none; }
+				
+			/* ### full Area ### */
+			.fullArea { padding: 20px 0 0 0; width: 100%; float: left; line-height: 20px; }
+			.fullArea h2 { font-family: 'Arial Narrow'; font-size: 45px; color: #0077c0; letter-spacing: -1px; line-height: 48px; }
+			.fullArea h3 { font-family: 'Arial Narrow'; font-size: 26px; color: #00703c; line-height: 28px; }
+			.fullArea p { padding:10px 0; }
+			.fullArea ul { padding: 10px 0 10px 25px; }
+			.fullArea ul ul { padding: 0 0 0 20px; }
+			.fullArea a { color: #00703c; }
+			.fullArea a:hover { color: #000; text-decoration: none; }
+				
+			/* ### sponsors box ### */
+			.sponsorsBox { padding: 10px 0 0 0; width: 688px;}
+			.sponsorsBox h2 { padding: 0 0 10px 0; font-family: 'Arial Narrow'; font-size: 40px; color: #0077c0; letter-spacing: -1px; line-height: 42px; text-align: center; }
+			.sponsorsBox h3 { margin: 10px 0 5px 0; font-family: 'Arial Narrow'; font-size: 20px; color: #fff; letter-spacing: 2px; text-align: center; text-transform: uppercase; line-height: 25px; background: url('/clients/ArtsNaplesWorldFestival/Images/t1.gif') center no-repeat; }
+			.sponsorsBox h3.t1 { background: url('/clients/ArtsNaplesWorldFestival/Images/t2.gif') center no-repeat; }
+			.sponsorsBox h3.t2 { background: url('/clients/ArtsNaplesWorldFestival/Images/t3.gif') center no-repeat; }
+			.sponsorsBox h3.t3 { background: url('/clients/ArtsNaplesWorldFestival/Images/t4.gif') center no-repeat; }			
+			.sponsorsBox ul { list-style: none; text-align: center; }
+			.sponsorsBox li { padding: 8px 6px 0 0; display: inline-block; }
+			.sponsorsBox li img { border:#8e8e8e solid 1px; }
+			.sponsorsBox p { padding: 10px 0 0 0; }
+			.sponsorsBox .note { font-family: 'Arial Narrow'; font-size: 12px; color: #51626f; }
+			.sponsorsBox a { color: #0077c0; }
+			.sponsorsBox a:hover { color: #000; text-decoration: none; }
+			
+			/* ### shedule box ### */
+			.sheduleArea { padding: 20px 9px 100px 9px; width: 670px; float: left; position: relative; }
+			.sheduleArea .scheduleTicket { position: absolute; bottom: 0; right: 30px; }
+			.sheduleArea h2 { padding: 0 0 10px 0; font-family: 'Arial Narrow'; font-size: 40px; color: #0077c0; letter-spacing: -1px; line-height: 42px; }
+			.sheduleArea ul { list-style: none; }
+			.sheduleArea li { margin: 8px 0 0 0; width: 670px; min-height: 72px; float: left; font-family: 'Arial Narrow'; font-size: 13px; }
+			.sheduleArea h3 { font-size: 16px; line-height: 16px; }
+			.sheduleArea .date { padding: 10px 0 0 20px; width: 97px; height: 62px; font-size: 17px; color: #fff; font-weight: bold; line-height: 17px; float: left; }
+			.sheduleArea .text { padding: 5px 0 0 8px; width: 350px; float: left; }
+			.sheduleArea .textFull { padding: 5px 0 0 8px; width: 535px; float: left; }
+			.sheduleArea .img { width: 195px; float: right; text-align: right; }
+			
+			.sheduleArea li.orange { background: #c2ccd1 url('/clients/ArtsNaplesWorldFestival/Images/bg1.gif') no-repeat; }
+			.sheduleArea li.orange h3 { color: #e5831c; }
+			
+			.sheduleArea li.purple { background: #c2ccd1 url('/clients/ArtsNaplesWorldFestival/Images/bg2.gif') no-repeat; }
+			.sheduleArea li.purple h3 { color: #a51d86; }
+			
+			.sheduleArea li.blue { background: #c2ccd1 url('/clients/ArtsNaplesWorldFestival/Images/bg3.gif') no-repeat; }
+			.sheduleArea li.blue h3 { color: #003c95; }
+			
+			.sheduleArea li.green { background: #c2ccd1 url('/clients/ArtsNaplesWorldFestival/Images/bg4.gif') no-repeat; }
+			.sheduleArea li.green h3 { color: #006433; }
+			
+			.sheduleArea li.red { background: #c2ccd1 url('/clients/ArtsNaplesWorldFestival/Images/bg5.gif') no-repeat; }
+			.sheduleArea li.red h3 { color: #ab0e14; }
+			
+			.sheduleArea li.yellow { background: #c2ccd1 url('/clients/ArtsNaplesWorldFestival/Images/bg6.gif') no-repeat; }
+			.sheduleArea li.yellow h3 { color: #ad8106; }
+			
+			.sheduleArea li.skyblue { background: #c2ccd1 url('/clients/ArtsNaplesWorldFestival/Images/bg7.gif') no-repeat; }
+			.sheduleArea li.skyblue h3 { color: #1082a9; }
+			
+			.sheduleArea li.lightGreen { background: #c2ccd1 url('/clients/ArtsNaplesWorldFestival/Images/bg8.gif') no-repeat; }
+			.sheduleArea li.lightGreen h3 { color: #7d8107; }
+			
+			#wp_50_photo { margin-left: 3px; width: 176px!important; height: 102px!important; overflow: hidden; }
+												
+		/* ### footer container ### */
+		#footerCntr { margin-top: -7px; padding-top: 7px; width: 100%; height: 430px; float: left; background: url('/clients/ArtsNaplesWorldFestival/Images/footer-bg.png') repeat-x; }
+		#footerCntr #footer { width: 778px; margin: 0 auto; }
+			
+			/* ### bottom area ### */
+			.bottomArea { padding: 8px 25px 0 25px; width: 728px; height: 225px; float: left; background: url('/clients/ArtsNaplesWorldFestival/Images/footer-bg-top.png') no-repeat; }
+			.bottomArea .bottomBor { padding: 15px 0 0 22px; width: 706px; float: left; border-top: 1px solid #fff; }
+			.bottomArea .widget { margin: 0 7px; width: 214px; float: left; }
+			.bottomArea .fwidget { padding-top: 11px; width: 214px; float: left; background: url('/clients/ArtsNaplesWorldFestival/Images/ftop.gif') left top no-repeat; }
+			.bottomArea .fwidgetb { padding-bottom: 11px; width: 214px; float: left; background: url('/clients/ArtsNaplesWorldFestival/Images/fbottom.gif') left bottom no-repeat; }
+			.bottomArea .fwidgetc { padding: 9px 20px; width: 176px; min-height: 100px; float: left; background: url('/clients/ArtsNaplesWorldFestival/Images/fcenter.gif') repeat-y; }
+			.bottomArea h3 { margin-bottom: 8px; font-family: 'Arial Narrow'; color: #fff; text-align: center; height: 19px; text-indent: -9999px; }
+			.bottomArea .social { list-style: none; text-align: center; }
+			.bottomArea .social li { display: inline; }
+			.bottomArea .social li a { margin: 10px 10px 0 10px; width: 36px; height: 35px; display: inline-block; text-indent: -9999px; }
+			.bottomArea .social li.facebook a { background: url('/clients/ArtsNaplesWorldFestival/Images/facebook.png') no-repeat; }
+			.bottomArea .social li.facebook a:hover { background: url('/clients/ArtsNaplesWorldFestival/Images/facebook-ho.png') no-repeat; }
+			.bottomArea .social li.twitter a { background: url('/clients/ArtsNaplesWorldFestival/Images/twitter.png') no-repeat; }
+			.bottomArea .social li.twitter a:hover { background: url('/clients/ArtsNaplesWorldFestival/Images/twitter-ho.png') no-repeat; }
+			
+			.bottomArea .widget_slideshow .widget{ margin: 5px 0 0 2px!important; width: 226px; float: left; }
+			.bottomArea .widget_slideshow .fwidgetc { height: 89px; }
+			
+			.bottomArea .widget_nav_menu ul { list-style: none; }
+			.bottomArea .widget_nav_menu ul li { padding: 0 0 0 7px; line-height: 12px; float: left; width: 80px; background: url('/clients/ArtsNaplesWorldFestival/Images/dot.gif') 0 5px no-repeat; }
+			.bottomArea .widget_nav_menu ul li a { font-family: 'Arial Narrow'; font-size: 11px; color: #c3c533; text-decoration: none; }
+			.bottomArea .widget_nav_menu ul li a:hover { color: #fff; text-decoration: underline; }
+			
+			.bottomArea .widget_slideshow h3 { background: url('/clients/ArtsNaplesWorldFestival/Images/our-generous.png') center no-repeat; }
+			
+			.bottomArea .widget_nav_menu h3 { background: url('/clients/ArtsNaplesWorldFestival/Images/quick-site.png') center top no-repeat; }
+			
+			/* ### copy right ### */
+			.copyRight { width: 778px; float: left; text-align: center; color: #fff; }
+			.copyRight p { padding: 0 0 10px 0; }
+			.copyRight a { color: #fff; text-decoration: none; }
+			.copyRight a:hover { text-decoration: underline; }
+
+/* Begin /clients/ArtsNaplesWorldFestival/Images */
+p img { padding: 0; max-width: 100%; }
+img.centered { display: block; margin-left: auto; margin-right: auto; }
+img.alignright { margin: 0 0 0 12px; display: inline; }
+img.alignleft { margin: 0 12px 0 0; display: inline; }
+.alignright { float: right; }
+.alignleft { float: left; }
+/* End /clients/ArtsNaplesWorldFestival/Images */
+
+/* feb 2013 additions */
+#space {height:20px;}
+#space_less {height: 10px;}
+
+.ftcopy { text-align: center; color: #fff; line-height: 20px; }
+			.ftcopy p { padding: 0 0 10px 0; }
+			.ftcopy a { color: #fff; text-decoration:underline; }
+			.ftcopy a:hover { text-decoration: underline; }
+.ftcopy_sm { font-size: 10px; text-align: center; color: #fff; line-height: 12px; }
+			.ftcopy p { padding: 0 0 10px 0; }
+			.ftcopy a { color: #fff; text-decoration:underline; }
+			.ftcopy a:hover { text-decoration: underline; }
+
+
+#ban_buy_buttons {margin-right: 10px; margin-top: 4px; float: right;}
+
+#ban_donate_buttons {margin-right: 10px; margin-top: 4px; float: right;}
+
+
+
+.news_stand {font-size: 18px; font-weight: bold; }
+
+/* Mar 2013 additions */
+
+.bl_copy {font-size: 30px; line-height: 30px; color: #0077c0;}

@@ -1,0 +1,248 @@
+<%
+'CHANGELOG
+'LSP 2/27/14 - initial development
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+<style type="text/css" media="all">
+	@import url("/clients/ClarkBookstore/Images/campushub.css");
+	@import url("/clients/ClarkBookstore/Images/delta.css");
+</style>
+<script type="text/javascript" src="/clients/ClarkBookstore/Images/campushub.js"></script>
+<script type="text/javascript" src="/clients/ClarkBookstore/Images/jquery.js"></script>
+<script type="text/javascript" src="/clients/ClarkBookstore/Images/modals.js"></script>
+<script type="text/javascript" src="/clients/ClarkBookstore/Images/jqmodal.js"></script>
+<script type="text/javascript" src="/clients/ClarkBookstore/Images/set_modal_div_and_cart_summary_values.js"></script>
+
+
+<script type="text/javascript">
+
+
+ function doLoad(){
+	autoLinkInit();
+ }
+ window.onload = doLoad
+</script>
+
+
+<meta content="width=device-width, minimum-scale=1.0" name="viewport">
+<meta name="format-detection" content="telephone=no">
+
+
+
+<style type="text/css" media="all">
+	@import url("/clients/ClarkBookstore/Images/customize.css");
+	@import url("/clients/ClarkBookstore/Images/responsive.css");
+</style>
+
+
+
+
+
+
+<link href="/clients/ClarkBookstore/Images/css_003.css" rel="stylesheet" type="text/css">
+<link href="/clients/ClarkBookstore/Images/css.css" rel="stylesheet" type="text/css">
+<link href="/clients/ClarkBookstore/Images/css_002.css" rel="stylesheet" type="text/css">
+<script src="/clients/ClarkBookstore/Images/jquery_002.js"></script>
+<script type="text/javascript">  
+ var $jq = jQuery.noConflict();   
+</script>
+
+
+
+
+<script type="text/javascript">
+
+function validateForm(frm) {
+var formIsValid = true;
+
+// find all elements that contain the class "validate-*"
+$("*[class*='validate-'][disabled='']",frm).each(function() {
+formIsValid = (validateField(this)) ? formIsValid : false;
+});
+
+$("*[class*='validateconditional-'][disabled='']",frm).each(function() {
+formIsValid = (validateConditionalField(this)) ? formIsValid : false;
+});
+
+return formIsValid;
+} 
+</script>
+
+
+
+<script type="text/javascript" src="/clients/ClarkBookstore/Images/cookies.js"></script><script type="text/javascript">
+<!--
+var referrer;
+var rootURL = 'http://www.clarkbookstore.com/';
+var rootSURL = 'https://www.clarkbookstore.com/';
+
+if (cookies_enabled) {
+
+referrer = getCookie('referring_url');
+if (!referrer) {
+    referrer = 'http://clarkbookstore.com/';
+if (referrer == ''){
+referrer = 'None';
+}else if((referrer.indexOf(rootURL) >= 0) || (referrer.indexOf(rootSURL) >= 0)){
+referrer = 'Local';
+}
+setCookie('referring_url', referrer);
+referrer = getCookie('referring_url');
+if(!referrer){
+referrer = 'Unknown';
+}
+}else{
+    var referring_page = 'http://clarkbookstore.com/';
+if ((referring_page.indexOf(rootURL) >= 0) ||(referring_page.indexOf(rootSURL) >= 0) ||(referring_page == '')) {
+} else {
+referrer = referring_page
+setCookie('referring_url', referrer);
+}
+}
+} else {
+referrer = 'Unknown';
+}
+//-->
+</script><script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="/clients/ClarkBookstore/Images/ga.js" type="text/javascript"></script><script type="text/javascript">
+var pageTracker = _gat._getTracker('UA-31032318-1');
+pageTracker._setDomainName('none');
+pageTracker._trackPageview();
+</script></head>
+
+<!-- LocalRef:237 -->
+
+
+
+
+
+
+
+<body><div id="header">
+	<div>
+		<div id="site-name"><a href="http://www.clarkbookstore.com/default.asp?"><img src="/clients/ClarkBookstore/Images/BS_LOGO3.png"></a>
+	</div>	
+
+
+
+
+
+
+
+
+<div id="nav">
+
+
+
+		
+		</div>
+		
+	</div>		
+</div>
+
+
+</div>
+
+		
+		<div id="content" class="two-col">
+		<!--TIX DATA START--><BR>
+		<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+		</div>
+
+<div id="footer">
+	<div>
+		<div class="footer-container">						
+					<ul>
+							<li><h2>Store Information</h2></li>
+							<li><a href="http://www.clarkbookstore.com/site_hours.asp?">Hours</a></li>
+							<li><a href="http://www.clarkbookstore.com/site_location.asp?">Location</a></li>
+							<li><a href="http://www.clarkbookstore.com/site_contact.asp?">Contact</a></li>
+							<li><a href="http://www.clarkbookstore.com/site_about_us.asp?">About Us</a></li>
+							<li><a href="http://www.clarkbookstore.com/site_employment.asp?">Employment</a></li>
+							<li><a href="http://www.clarkbookstore.com/site_privacy.asp?">Privacy</a></li>
+							<li><a href="http://www.clarkbookstore.com/site_tos.asp?">Terms of Service</a></li>
+					</ul>
+		</div>
+				
+		<div class="footer-container">						
+					<ul>
+							<li><h2>Customer Service</h2></li>
+							
+							<li><a href="http://www.clarkbookstore.com/site_ol_ord_FAQ.asp?">Online FAQ</a></li>
+							<li><a href="http://www.clarkbookstore.com/site_rental_faq.asp?">Rental FAQ</a></li>
+							<li><a href="http://www.clarkbookstore.com/site_shipping.asp?#shipping">Shipping</a></li>
+							<li><a href="http://www.clarkbookstore.com/site_refunds.asp?">Refunds</a></li>
+							<li><a href="http://www.clarkbookstore.com/site_UPS_tracking.asp?" target="_blank">Track Order</a></li>
+							<li><a href="http://www.clarkbookstore.com/site_payment_options.asp?">Payment Options</a></li>
+							<li><a href="http://www.clarkbookstore.com/site_sms.asp?" target="_blank">Text Notice Service</a></li>
+							
+
+								
+					</ul>
+		</div>
+				
+							
+		<div class="footer-container">						
+					<ul>
+							<li><h2>Resources</h2></li>
+							<!-- <li><a href="http://www.clarkbookstore.com/site_faculty.asp?">Faculty/Staff</a></li> -->
+							<li><a href="http://www.clark.edu/academics/catalog/archive.php" target="_blank">Clark College Catalogs</a></li>						
+							<li><a href="https://www.clark.edu/current_students/" target="_blank">Get Your Schedule</a></li>
+							<li><a href="http://www.clarkbookstore.com/site_first_to_know.asp?">First To Know Email Alerts</a></li>
+							<li><a href="http://www.clark.edu/student_services/security/index.php" target="_blank">Discount Bus Pass</a></li>
+							<li><a href="http://www.money4textbooks.com/" target="_blank">$ For Your Opinion</a></li>
+							<li><a href="http://www.textbookaid.org/" target="_blank">Tax Credits</a></li>
+							<li><a href="http://www.clarkbookstore.com/site_troubleshooting.asp?">Troubleshooting</a></li>								
+					</ul>
+		</div>
+				
+				
+		<div class="footer-container">						
+					<ul>
+							<li><h2>Connect</h2></li><br>
+							
+			<li>
+			
+			<a href="https://www.facebook.com/ClarkCollegeBookstore" target="_blank" class="social"> <img src="/clients/ClarkBookstore/Images/facebook.png" alt="Facebook" class="facebook"></a>
+			<a href="https://twitter.com/ClarkBookstore" target="_blank" class="social"> <img src="/clients/ClarkBookstore/Images/twitter.png" alt="Twitter" class="twitter"></a>	
+			
+			</li>			
+							
+							
+							
+							
+							
+					</ul>
+		</div>
+		
+		<a href="https://www.clark.edu/" target="_blank"> <img src="/clients/ClarkBookstore/Images/footer-clark.png" alt="Clark College Graphic" style="margin-right:25px"> </a>
+		<a href="http://www.clarkpenguins.com/" target="_blank"> <img src="/clients/ClarkBookstore/Images/footer-penguin.png" alt="Clark College Penguin Graphic"> </a>
+		
+			<div id="copyright" style="margin-top:50px;">&#169; 2014&nbsp;Clark College Bookstore</div>
+				
+
+				
+
+			
+	</div>	
+
+
+		
+<script type="text/javascript" src="/clients/ClarkBookstore/Images/mobile.js"></script>
+
+	<!-- end page -->
+	
+
+
+<div style="top: 0px; visibility: hidden;" id="toolTip"></div></div>
+</form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* **********
+Grid is currently set for twelve colums.
+Any number-based class (.one, .two, etc) is out of twelve.
+********** */
+
+/* ********** Responsive Grid - 1px-519px Resolution ********** */
+
+.row:before, .row:after { content: '\0020'; display: block; height: 0; overflow: hidden; visibility: hidden; width: 0; }
+.row { margin: 0 0 8px 0; position: relative; z-index: 1; zoom: 1; }
+.row:after { clear: both; }
+.unit { position: relative; width: 100%; -webkit-transform: translateZ(0px); }
+.disposableMobile, .hide { display: none; }
+
+/* ********** Responsive Grid - 520px - 959px Resolution ********** */
+
+@media screen and (min-width: 520px) {
+.row { margin: 0 0 0 -1%; }
+.unit { display: inline-block; *display: inline; float: left; margin: 0 0 0 1%; width: 99%; }
+.one, .two, .three, .four, .five, .six { width: 49%; }
+.seven, .eight, .nine, .ten, .eleven, .twelve { width: 99%; }
+.disposable { display: none; }
+}
+
+/* ********** Responsive Grid - 740px+ Resolution ********** */
+
+@media screen and (min-width: 740px) {
+.one { width: 7.33%; }
+.two { width: 15.66%; }
+.three { width: 24%; }
+.four { width: 32.33%; }
+.five { width: 40.66%; }
+.six { width: 49%; }
+.seven { width: 57.33% }
+.eight { width: 65.66% }
+.nine { width: 74%; }
+.ten { width: 82.33%; }
+.eleven { width: 90.66%; }
+.twelve { width: 99%; }
+.disposable { display: inline-block; *display: inline; }
+}
+
+/* ********** Responsive Grid - 960px+ Resolution ********** */
+
+@media screen and (min-width: 960px) {
+.container { margin: 0 auto; width: 960px; }
+.disposableMobile { display: inline-block; *display: inline; }
+}

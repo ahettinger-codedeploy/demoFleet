@@ -1,0 +1,188 @@
+<SCRIPT language=JavaScript>
+  var Order = 3;
+  var ADV1 = new Image(); ADV1 = "/PrivateLabel/CypressGardens/Images/passport06.jpg";
+  var ADV2 = new Image(); ADV2 = "/PrivateLabel/CypressGardens/Images/2nddayfree.jpg";
+  var ADV3 = new Image(); ADV3 = "/PrivateLabel/CypressGardens/Images/passport06_plat.jpg";
+  var ADV4 = new Image(); ADV4 = "/PrivateLabel/CypressGardens/Images/grouprates.jpg";
+  var ADV5 = new Image(); ADV5 = "/PrivateLabel/CypressGardens/Images/adcg_tickets.jpg";
+  var ADV6 = new Image(); ADV6 = "/PrivateLabel/CypressGardens/Images/adcg_splashisland.jpg";
+  var ADV7 = new Image(); ADV7 = "/PrivateLabel/CypressGardens/Images/adcg_preferredhotels.jpg";
+  var LNK1 = "http://cypressgardens.com/pricing.asp#Passport06";
+  var LNK2 = "http://cypressgardens.com/pricing.asp#SecondDay";
+  var LNK3 = "http://cypressgardens.com/pricing.asp#PlatPassport06";
+  var LNK4 = "http://cypressgardens.com/pricing.asp#GroupRates";
+  var LNK7 = "http://cypressgardens.com/preferredhotel.asp";
+  var rOrd = 1;
+  var rIMG1 = new Image(); rIMG1 = "/PrivateLabel/CypressGardens/Images/fp_1.gif";
+  var rIMG2 = new Image(); rIMG2 = "/PrivateLabel/CypressGardens/Images/fp_2.gif";
+  var rIMG3 = new Image(); rIMG3 = "/PrivateLabel/CypressGardens/Images/fp_3.gif";
+  var rIMG4 = new Image(); rIMG4 = "/PrivateLabel/CypressGardens/Images/fp_4.gif";
+  function RotateImages(){
+   if(rOrd==1){document.rIMG.src = rIMG1;rOrd=2;}
+   else if(rOrd==2){document.rIMG.src = rIMG2;rOrd=3;}
+   else if(rOrd==3){document.rIMG.src = rIMG3;rOrd=4;}
+   else if(rOrd==4){document.rIMG.src = rIMG4;rOrd=1;}
+   setTimeout("RotateImages()",5000);
+  }
+  function Get_Concert(){
+   if (document.forms[0].sCONCERT.options[document.forms[0].sCONCERT.selectedIndex].value == "" ){
+    window.status='Done';
+    document.forms[0].sCONCERT.selectedIndex = 0;
+   }else if (document.forms[0].sCONCERT.options[document.forms[0].sCONCERT.selectedIndex].value == "PRINT" ){
+    window.open("print_concerts.asp", "PrintConcerts");
+    window.status='Done';
+    document.forms[0].sCONCERT.selectedIndex = 0;
+   }else{
+    document.forms[0].CONCERT.value = document.forms[0].sCONCERT.options[document.forms[0].sCONCERT.selectedIndex].value;
+    document.forms[0].sCONCERT.selectedIndex = 0;
+    window.location.href = "concerts.asp?load=" + document.forms[0].CONCERT.value;
+   }
+  }
+ function popup(WDT, HGT, SRC, NUM){
+  var windef;
+  windef = "height=" + HGT + ",width=" + WDT + ",location=no,scrollbars=no,menubars=no,toolbars=no,resizable=no";
+  window.open("view.asp?src=concerts/" + SRC, NUM, windef);
+ }
+ function PopPrint(SRC){
+  window.open("print_concert.asp?sConcert=" + SRC, "PrintConcerts");
+ }
+  function LoadAds(){
+        if(Order==1){document.IMG1.src=ADV1;document.IMG2.src=ADV2;document.IMG3.src=ADV3;Order=2;}
+   else if(Order==2){document.IMG1.src=ADV2;document.IMG2.src=ADV3;document.IMG3.src=ADV4;Order=3;}
+   else if(Order==3){document.IMG1.src=ADV3;document.IMG2.src=ADV4;document.IMG3.src=ADV5;Order=4;}
+   else if(Order==4){document.IMG1.src=ADV4;document.IMG2.src=ADV5;document.IMG3.src=ADV6;Order=5;}
+   else if(Order==5){document.IMG1.src=ADV5;document.IMG2.src=ADV6;document.IMG3.src=ADV7;Order=6;}
+   else if(Order==6){document.IMG1.src=ADV6;document.IMG2.src=ADV7;document.IMG3.src=ADV1;Order=7;}
+   else if(Order==7){document.IMG1.src=ADV7;document.IMG2.src=ADV1;document.IMG3.src=ADV2;Order=1;}
+   setTimeout("LoadAds()",5000);
+  }
+  function LaunchAd(varIn){
+        if(Order==1&&varIn==1){window.location.href=LNK7}
+   else if(Order==1&&varIn==2){window.location.href=LNK1}
+   else if(Order==1&&varIn==3){window.location.href=LNK2}
+   else if(Order==2&&varIn==1){window.location.href=LNK1}
+   else if(Order==2&&varIn==2){window.location.href=LNK2}
+   else if(Order==2&&varIn==3){window.location.href=LNK3}
+   else if(Order==3&&varIn==1){window.location.href=LNK2}
+   else if(Order==3&&varIn==2){window.location.href=LNK3}
+   else if(Order==3&&varIn==3){window.location.href=LNK4} 
+   else if(Order==4&&varIn==1){window.location.href=LNK3}
+   else if(Order==4&&varIn==2){window.location.href=LNK4}
+   else if(Order==4&&varIn==3){window.open("http://webstore.adventureparksgroup.com");} 
+   else if(Order==5&&varIn==1){window.location.href=LNK4}
+   else if(Order==5&&varIn==2){window.open("http://webstore.adventureparksgroup.com");}
+   else if(Order==5&&varIn==3){window.open("http://splashisland.cypressgardens.com");}
+   else if(Order==6&&varIn==1){window.open("http://webstore.adventureparksgroup.com");}
+   else if(Order==6&&varIn==2){window.open("http://splashisland.cypressgardens.com");}
+   else if(Order==6&&varIn==3){window.location.href=LNK7}
+   else if(Order==7&&varIn==1){window.open("http://splashisland.cypressgardens.com");}
+   else if(Order==7&&varIn==2){window.location.href=LNK7}
+   else if(Order==7&&varIn==3){window.location.href=LNK1}
+  }
+  function SignUp(){
+   if (document.forms[0].Newsletter.value==""){
+    alert('Please Enter Your Email Address Before Signing Up!');
+   }else{
+    window.location.href = 'newsletter.asp?email=' + document.forms[0].Newsletter.value;
+   }
+  }
+ </SCRIPT>
+<!--<BODY text=#000000 vLink=#000000 aLink=#33cc99 link=#000000 leftMargin=0 
+background="/PrivateLabel/CypressGardens/Images/site.gif" topMargin=0 
+onload=LoadAds() rightMargin=0 marginheight="0" marginwidth="0">-->
+<!--<FORM method=post>-->
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=750 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=750 colSpan=5 height=252>
+      <OBJECT 
+      codeBase=https://download.macromedia.com/pub/shockwave/cabs/flash/swflash5r42.cab#version=5,0,42,0 
+      height=252 width=750 classid=clsid:D27CDB6E-AE6D-11cf-96B8-444553540000 
+      VIEWASTEXT><PARAM NAME="movie" VALUE="/PrivateLabel/CypressGardens/Images/cgheader_120705.swf"><PARAM NAME="wmode" VALUE="transparent"><PARAM NAME="bgcolor" VALUE="false"><PARAM NAME="menu" VALUE="false"><PARAM NAME="Quality" VALUE="High">
+      <embed src="/PrivateLabel/CypressGardens/Images/cgheader_120705.swf" wmode="transparent" 
+      quality="high" menu="false" bgcolor="false" WIDTH="750" HEIGHT="252" 
+      TYPE="application/x-shockwave-flash" 
+      PLUGINSPAGE="https://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"></OBJECT></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=750 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width=10><IMG 
+      src="/PrivateLabel/CypressGardens/Images/blank.gif" 
+width=10></TD>
+    <TD vAlign=top width=190>
+      <TABLE cellSpacing=0 cellPadding=0 width=190 
+      background="/PrivateLabel/CypressGardens/Images/block.gif" 
+      border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=15 height=382><IMG height=382 
+            src="/PrivateLabel/CypressGardens/Images/block.gif" 
+            width=15></TD>
+          <TD align=middle width=160 height=382><A 
+            href="javascript:LaunchAd(1);"><IMG height=96 
+            src="/PrivateLabel/CypressGardens/Images/blank.jpg" 
+            width=160 border=0 name=IMG1></A><BR><A 
+            href="javascript:LaunchAd(2);"><IMG height=96 
+            src="/PrivateLabel/CypressGardens/Images/blank.jpg" 
+            width=160 border=0 name=IMG2></A><BR><A 
+            href="javascript:LaunchAd(3);"><IMG height=96 
+            src="/PrivateLabel/CypressGardens/Images/blank.jpg" 
+            width=160 border=0 name=IMG3></A><BR><IMG height=8 
+            src="/PrivateLabel/CypressGardens/Images/block.gif" 
+            width=160><BR><IMG height=26 
+            src="/PrivateLabel/CypressGardens/Images/adventuremail.gif" 
+            width=160><BR><INPUT name=Newsletter><BR><INPUT onclick=javascript:SignUp() type=button value=" Sign Up! "><BR><IMG 
+            height=4 
+            src="/PrivateLabel/CypressGardens/Images/block.gif" 
+            width=160><BR><A href="http://cypressgardens.com/calendar.asp"><IMG 
+            height=40 
+            src="/PrivateLabel/CypressGardens/Images/ophours.jpg" 
+            width=160 border=0></A><BR><IMG height=7 
+            src="/PrivateLabel/CypressGardens/Images/block.gif" 
+            width=160><BR><A title="Designed and Hosted by PlanetBoogie.com" 
+            href="http://www.planetboogie.com/" target=_blank><IMG height=43 
+            src="/PrivateLabel/CypressGardens/Images/miniboogie.gif" 
+            width=64 border=0></A><IMG height=43 
+            src="/PrivateLabel/CypressGardens/Images/block.gif" 
+            width=96></TD>
+          <TD vAlign=top width=15 height=382><IMG height=382 
+            src="/PrivateLabel/CypressGardens/Images/block.gif" 
+            width=15></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top width=10><IMG 
+      src="/PrivateLabel/CypressGardens/Images/blank.gif" 
+width=10></TD>
+    <TD vAlign=top width=530>
+      <TABLE cellSpacing=0 cellPadding=0 width=530 border=0>
+        <TBODY>
+        <TR>
+          <TD width=530 colSpan=3 height=53><IMG height=53 src="/PrivateLabel/CypressGardens/Images/concerts.jpg" 
+            width=530></TD></TR>
+        <TR>
+          <TD width=15 height=45><IMG height=45 src="/PrivateLabel/CypressGardens/Images/block.gif" 
+            width=15></TD>
+          <TD vAlign=center align=middle width=500 background="/PrivateLabel/CypressGardens/Images/concerts_header.gif" 
+          height=45></TD>
+          <TD width=15 height=45><IMG height=45 
+            src="/PrivateLabel/CypressGardens/Images/block.gif" 
+            width=15></TD></TR>
+        <TR>
+          <TD vAlign=top width=15><IMG height=100 
+            src="/PrivateLabel/CypressGardens/Images/block.gif" 
+            width=15></TD>
+          <TD vAlign=top width=500 
+          background="/PrivateLabel/CypressGardens/Images/concerts_body.gif">
+            <TABLE cellSpacing=0 cellPadding=0 width=500 height=300 border=0>
+              <TBODY>
+              <TR>
+                <TD width=500 
+                background="/PrivateLabel/CypressGardens/Images/blank.gif" 
+                colSpan=3 height=10><IMG height=10 
+                  src="/PrivateLabel/CypressGardens/Images/blank.gif" 
+                  width=500></TD></TR>
+              <TR>
+                <TD width=10 
+                background="/PrivateLabel/CypressGardens/Images/blank.gif"><IMG 
+                  src="/PrivateLabel/CypressGardens/Images/blank.gif" 
+                  width=10></TD>
+                <TD width=480 background="/PrivateLabel/CypressGardens/Images/blank.gif">

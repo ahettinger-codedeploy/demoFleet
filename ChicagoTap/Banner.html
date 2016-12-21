@@ -1,0 +1,260 @@
+<LINK href="/PrivateLabel/ChicagoTap/Images/chrp2006.css" type=text/css rel=stylesheet>
+<SCRIPT type=text/javascript>
+<!--
+wantsfoot = "yes";
+function P7_Snap() { //v2.62 by PVII
+  var x,y,ox,bx,oy,p,tx,a,b,k,d,da,e,el,args=P7_Snap.arguments;a=parseInt(a);
+  for (k=0; k<(args.length-3); k+=4)
+   if ((g=MM_findObj(args[k]))!=null) {
+    el=eval(MM_findObj(args[k+1]));
+    a=parseInt(args[k+2]);b=parseInt(args[k+3]);
+    x=0;y=0;ox=0;oy=0;p="";tx=1;da="document.all['"+args[k]+"']";
+    if(document.getElementById) {
+     d="document.getElementsByName('"+args[k]+"')[0]";
+     if(!eval(d)) {d="document.getElementById('"+args[k]+"')";if(!eval(d)) {d=da;}}
+    }else if(document.all) {d=da;} 
+    if (document.all || document.getElementById) {
+     while (tx==1) {p+=".offsetParent";
+      if(eval(d+p)) {x+=parseInt(eval(d+p+".offsetLeft"));y+=parseInt(eval(d+p+".offsetTop"));
+      }else{tx=0;}}
+     ox=parseInt(g.offsetLeft);oy=parseInt(g.offsetTop);var tw=x+ox+y+oy;
+     if(tw==0 || (navigator.appVersion.indexOf("MSIE 4")>-1 && navigator.appVersion.indexOf("Mac")>-1)) {
+      ox=0;oy=0;if(g.style.left){x=parseInt(g.style.left);y=parseInt(g.style.top);
+      }else{var w1=parseInt(el.style.width);bx=(a<0)?-5-w1:-10;
+      a=(Math.abs(a)<1000)?0:a;b=(Math.abs(b)<1000)?0:b;
+      x=document.body.scrollLeft + event.clientX + bx;
+      y=document.body.scrollTop + event.clientY;}}
+   }else if (document.layers) {x=g.x;y=g.y;var q0=document.layers,dd="";
+    for(var s=0;s<q0.length;s++) {dd='document.'+q0[s].name;
+     if(eval(dd+'.document.'+args[k])) {x+=eval(dd+'.left');y+=eval(dd+'.top');break;}}}
+   if(el) {e=(document.layers)?el:el.style;
+   var xx=parseInt(x+ox+a),yy=parseInt(y+oy+b);
+   if(navigator.appName=="Netscape" && parseInt(navigator.appVersion)>4){xx+="px";yy+="px";}
+   if(navigator.appVersion.indexOf("MSIE 5")>-1 && navigator.appVersion.indexOf("Mac")>-1){
+    xx+=parseInt(document.body.leftMargin);yy+=parseInt(document.body.topMargin);
+    xx+="px";yy+="px";}e.left=xx;e.top=yy;}}
+}
+
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function P7AniMagic(el, x, y, a, b, c, s) { //v2.5 PVII
+ var g,elo=el,f="",m=false,d="";x=parseInt(x);y=parseInt(y);
+ var t = 'g.p7Magic = setTimeout("P7AniMagic(\''+elo+'\','; 
+ if ((g=MM_findObj(el))!=null) {d=(document.layers)?g:g.style;}else{return;}
+ if (parseInt(s)>0) {eval(t+x+','+y+','+a+','+b+','+c+',0)",' + s+')');return;}
+ var xx=(parseInt(d.left))?parseInt(d.left):0;
+ var yy=(parseInt(d.top))?parseInt(d.top):0;
+ if(parseInt(c)==1) {x+=xx;y+=yy;m=true;c=0;}
+ else if (c==2) {m=false;clearTimeout(g.p7Magic);}
+ else {var i=parseInt(a);
+  if (eval(g.moved)){clearTimeout(g.p7Magic);}
+  if (xx<x){xx+=i;m=true;if(xx>x){xx=x;}}
+  if (xx>x){xx-=i;m=true;if(xx<x){xx=x;}}
+  if (yy<y){yy+=i;m=true;if(yy>y){yy=y;}}
+  if (yy>y){yy-=i;m=true;if(yy<y){yy=y;}}}
+ if (m) {if((navigator.appName=="Netscape") && parseInt(navigator.appVersion)>4){
+    xx+="px";yy+="px";}
+  d.left=xx;d.top=yy;g.moved=true;eval(t+x+','+y+','+a+','+b+','+c+',0)",'+b+')');
+  }else {g.moved=false;}
+}
+
+function flevDivPositionValue(sDiv, sProperty) { // v2.1, Marja Ribbers-de Vroed, FlevOOware
+	this.opera = (window.opera); // Opera 5+
+	this.ns4 = (document.layers); // Netscape 4.x
+	this.ns6 = (document.getElementById && !document.all && !this.opera); // Netscape 6+
+	this.ie = (document.all);  // Internet Explorer 4+
+    var sValue = ""; docObj = eval("MM_findObj('" + sDiv + "')"); if (docObj == null) {return 0;}
+	if ((sProperty == "left") || (sProperty == "top")) {
+		if (!this.ns4) {docObj = docObj.style;} 
+		sValue = eval("docObj." + sProperty);
+		if ((this.ie) && (sValue == "")) { // IE (on PC) bug with nested layers
+			if (sProperty == "top") { sValue = eval(sDiv + ".offsetTop"); } 
+			else { sValue = eval(sDiv + ".offsetLeft"); } 
+		};
+	}
+	else {
+		if (this.opera) {
+			docObj = docObj.style;
+			if (sProperty == "height") { sValue = docObj.pixelHeight; } 
+			else if (sProperty == "width") { sValue = docObj.pixelWidth; } 
+		}
+		else if (this.ns4) {sValue = eval("docObj.clip." + sProperty);} 
+		else if (this.ns6) {sValue = document.defaultView.getComputedStyle(docObj, "").getPropertyValue(sProperty); } 
+	    else if (this.ie) { 
+			if (sProperty == "width") { sValue = eval(sDiv + ".offsetWidth"); } 
+			else if (sProperty == "height") { sValue = eval(sDiv + ".offsetHeight"); } 
+		}
+   	}
+	sValue = (sValue == "") ? 0 : sValue; 
+	if (isNaN(sValue)) { if (sValue.indexOf('px') > 0) { sValue = sValue.substring(0,sValue.indexOf('px')); } } 
+	return parseInt(sValue); 
+}
+
+function flevPersistentLayer() { // v3.3, Marja Ribbers-de Vroed, FlevOOware
+	var sD = arguments[0], oD = eval("MM_findObj('" + sD + "')"), iWW, iWH, iSX, iSY, iT = 10, sS = "";
+	if (!document.layers) {oD = oD.style;}
+	if (oD.tmpTimeout != null) {clearTimeout(oD.tmpTimeout);}
+	var sXL = arguments[1], sXC = arguments[2], sXR = arguments[3], sYT = arguments[4], sYC = arguments[5], sYB = arguments[6];
+	var iS = (arguments.length > 7) ? parseInt(arguments[7]) : 0, iPx = (arguments.length > 8) ? parseInt(arguments[8]) : 0;
+	if (window.innerWidth) { // NS4, NS6 and Opera
+		var oW = window; iWW = oW.innerWidth; iWH = oW.innerHeight; iSX = oW.pageXOffset; iSY = oW.pageYOffset; }
+	else if (document.documentElement && document.documentElement.clientWidth) { // IE6 in standards compliant mode
+		var oDE = document.documentElement; iWW = oDE.clientWidth; iWH = oDE.clientHeight; iSX = oDE.scrollLeft; iSY = oDE.scrollTop; }
+	else if (document.body) { // IE4+
+		var oDB = document.body; iWW = oDB.clientWidth; iWH = oDB.clientHeight; iSX = oDB.scrollLeft; iSY = oDB.scrollTop; }
+	else {return;}
+	var iCX = iNX = flevDivPositionValue(sD, 'left'), iCY = iNY = flevDivPositionValue(sD, 'top');
+	if (sXL != "") {iNX = iSX + parseInt(sXL);} 
+	else if (sXC != "") {iNX = Math.round(iSX + (iWW/2) - (flevDivPositionValue(sD, 'width')/2));}
+	else if (sXR != "") {iNX = iSX + iWW - (flevDivPositionValue(sD, 'width') + parseInt(sXR));}
+	if (sYT != "") {iNY = iSY + parseInt(sYT);}
+	else if (sYC != "") {iNY = Math.round(iSY + (iWH/2) - (flevDivPositionValue(sD, 'height')/2));}
+	else if (sYB != "") {iNY = iSY + (iWH - flevDivPositionValue(sD, 'height') - parseInt(sYB));}
+	if ((iCX != iNX) || (iCY != iNY)) {
+		if (iS > 0) {
+			if (iPx > 0) { iT = iS;
+				var iPxX = iPx, iPxY = iPx, iMX = Math.abs(iCX - iNX), iMY = Math.abs(iCY - iNY);
+				// take care of diagonal movement
+				if (iMX < iMY) {iPxY = (iMX != 0) ? ((iMY/iMX)*iPx) : iPx;}
+				else {iPxX = (iMY != 0) ? ((iMX/iMY)*iPx) : iPx;}
+				if (iPxX >= iMX) {iPxX = Math.min(Math.ceil(iPxX), iPx);}
+				if (iPxY >= iMY) {iPxY = Math.min(Math.ceil(iPxY), iPx);}
+				// temporary X/Y coordinates
+				if ((iCX < iNX) && (iCX + iPxX < iNX)) {iNX = iCX + iPxX;}
+				if ((iCX > iNX) && (iCX - iPxX > iNX)) {iNX = iCX - iPxX;}
+				if ((iCY < iNY) && (iCY + iPxY < iNY)) {iNY = iCY + iPxY;}
+				if ((iCY > iNY) && (iCY - iPxY > iNY)) {iNY = iCY - iPxY;} }
+			else { 
+				var iMX = ((iNX - iCX) / iS), iMY = ((iNY - iCY) / iS); 
+				iMX = (iMX > 0) ? Math.ceil(iMX) : Math.floor(iMX); iNX = iCX + iMX; 
+				iMY = (iMY > 0) ? Math.ceil(iMY) : Math.floor(iMY); iNY = iCY + iMY; } }
+		if ((parseInt(navigator.appVersion)>4 || navigator.userAgent.indexOf("MSIE")>-1) && (!window.opera)) {sS="px";}
+		if (iMX != 0) {eval("oD.left = '" + iNX + sS + "'");}
+		if (iMY != 0) {eval("oD.top = '" + iNY + sS + "'");} }
+	var sF = "flevPersistentLayer('" + sD + "','" + sXL + "','" + sXC + "','" + sXR + "','" + sYT + "','" + sYC + "','" + sYB + "'," + iS + "," + iPx + ")";
+	oD.tmpTimeout = setTimeout(sF,10);
+}
+
+function flevInitPersistentLayer() { // v3.3, Marja Ribbers-de Vroed, FlevOOware
+	if (arguments.length < 8) {return;}
+	var sD = arguments[0]; if (sD == "") {return;}
+	var	oD = eval("MM_findObj('" + sD + "')"); if (!oD) {return;}
+	var iCSS = parseInt(arguments[1]);
+	var sXL = arguments[2], sXC = arguments[3], sXR = arguments[4], sYT = arguments[5], sYC = arguments[6], sYB = arguments[7];
+	var iS = (arguments.length > 8) ? parseInt(arguments[8]) : 0, iPx = (arguments.length > 9) ? parseInt(arguments[9]) : 0;
+	if (iCSS != 0) { if (!document.layers) {oD = oD.style;} sXL = parseInt(oD.left), sYT = parseInt(oD.top);}
+	var sF = "flevPersistentLayer('" + sD + "','" + sXL + "','" + sXC + "','" + sXR + "','" + sYT + "','" + sYC + "','" + sYB + "'," + iS + "," + iPx + ")";
+	eval(sF);
+}
+
+function tmt_findObj(n){
+	var x,t; if((n.indexOf("?"))>0&&parent.frames.length){t=n.split("?");
+	x=eval("parent.frames['"+t[1]+"'].document.getElementById('"+t[0]+"')");
+	}else{x=document.getElementById(n)}return x;
+}
+
+function tmt_DivMove(theDiv, l, t){
+	var x = (document.layers) ? ".left" : ".style.left";
+	var y = (document.layers) ? ".top" : ".style.top";
+	var fun = (document.getElementById) ? "tmt_findObj" : "MM_findObj";
+	var obj = eval(fun+"(theDiv)");if(obj){
+	eval(fun+"('"+theDiv+"')"+y+"="+t);
+	eval(fun+"('"+theDiv+"')"+x+"="+l);}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+function hideLayers() { //(c) Landa Enterprises 2004, 2005
+  MM_showHideLayers('2005Performances','','hide','2005Performances1','','hide','TapInstruction','','hide','CriticsCorner','','hide','Support','','hide','WhatsNew','','hide','AboutUs','','hide','TapStore','','hide','TapicalLinks','','hide','ContactUs','','hide','Search','','hide','WinterTap','','hide','NationalTap','','hide','GlobalTap','','hide','SummerFestival','','hide','Forum','','hide','Archives','','hide')
+}
+//-->
+</SCRIPT>
+
+
+<!--<BODY onresize="hideLayers();P7_Snap('ulc','TapHome',0,0);P7_Snap('ulc','header02',0,151);P7_Snap('ulc','header03',0,191);P7_Snap('ulc','header04',0,215);P7_Snap('ulc','header05',0,239);P7_Snap('ulc','header06',0,263);P7_Snap('ulc','header07',0,287);P7_Snap('ulc','header08',0,311);P7_Snap('ulc','header09',0,335);P7_Snap('ulc','header10',0,359);P7_Snap('ulc','header11',0,383);P7_Snap('ulc','header12',0,407)" 
+onclick=hideLayers() vLink=#d20009 aLink=#d20009 link=#d20009 bgColor=#528ebd leftMargin=0 topMargin=0 onload="flevInitPersistentLayer('FootTip',0,'145','','','','','0');P7_Snap('ulc','TapHome',0,0);P7_Snap('ulc','header02',0,151);P7_Snap('ulc','header03',0,191);P7_Snap('ulc','header04',0,215);P7_Snap('ulc','header05',0,239);P7_Snap('ulc','header06',0,263);P7_Snap('ulc','header07',0,287);P7_Snap('ulc','header08',0,311);P7_Snap('ulc','header09',0,335);P7_Snap('ulc','header10',0,359);P7_Snap('ulc','header11',0,383);P7_Snap('ulc','header12',0,407)">-->
+<DIV align=center>
+<TABLE cellSpacing=0 cellPadding=0 width=780 border=0><!-- Row 1 -->
+  <TBODY>
+  <TR>
+    <TD width=1><IMG height=1 alt="" 
+      src="/PrivateLabel/ChicagoTap/Images/spacer.gif" 
+      width=1></TD><!-- Change in this table cell below -->
+    <TD vAlign=top align=left colSpan=5><IMG id=ulc height=85 
+      alt="Chicago Human Rhythm Project 2006 The very best of tap dance and percussive dance!" 
+      src="/PrivateLabel/ChicagoTap/Images/header2006.jpg" 
+      width=800 name=ulc></TD></TR><!-- Row 2 -->
+  <TR>
+    <TD><IMG height=1 alt="" 
+      src="/PrivateLabel/ChicagoTap/Images/spacer.gif" 
+      width=180></TD><!-- Changes to next few lines -->
+    <TD vAlign=top align=left 
+    background="/PrivateLabel/ChicagoTap/Images/bluefilm.jpg" 
+    rowSpan=4>
+      <DIV align=center><IMG height=52 
+      src="/PrivateLabel/ChicagoTap/Images/r2c1.jpg" 
+      width=103><BR><IMG height=15 alt="" 
+      src="/PrivateLabel/ChicagoTap/Images/spacer.gif" 
+      width=1><BR><!-- Start Navigation --><A class=navigation 
+      onmouseover=hideLayers() 
+      href="http://www.chicagotap.org/season/index.htm#"><IMG height=315 alt="" 
+      src="/PrivateLabel/ChicagoTap/Images/spacer.gif" 
+      width=103 align=bottom border=0></A> <BR><STRONG>Lead Title 
+      Sponsor:<BR><BR></STRONG><IMG height=40 
+      alt="Sara Lee Foundation - Lead Title Sponsor" 
+      src="/PrivateLabel/ChicagoTap/Images/saraleefoundation_logo103.gif" 
+      width=103> <BR><BR><!-- End Navigation --><!-- Start Sponsor Scroll -->
+      <TABLE cellSpacing=0 cellPadding=0 width=101 BORDER=0>
+        <TBODY>
+        <TR>
+          <TD colSpan=3><IMG height=6 alt="" 
+            src="/PrivateLabel/ChicagoTap/Images/sponsor_frame_top.gif" 
+            width=101></TD></TR>
+        <TR>
+          <TD><IMG height=100 alt="" 
+            src="/PrivateLabel/ChicagoTap/Images/sponsor_frame_left.gif" 
+            width=6></TD>
+          <TD width=90>
+            <OBJECT 
+            codeBase=https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0 
+            height=100 width=90 
+            classid=clsid:D27CDB6E-AE6D-11cf-96B8-444553540000><PARAM NAME="movie" VALUE="/PrivateLabel/ChicagoTap/Images/sponsorscroll-050414.swf"><PARAM NAME="quality" VALUE="high">
+                                                                  <embed 
+            src="/PrivateLabel/ChicagoTap/Images/sponsorscroll-050414.swf" quality=high 
+            pluginspage="https://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash" 
+            type="application/x-shockwave-flash" width="90" height="100">        
+                       </embed> </OBJECT></TD>
+          <TD><IMG height=100 alt="" 
+            src="/PrivateLabel/ChicagoTap/Images/sponsor_frame_right.gif" 
+            width=5></TD></TR>
+        <TR>
+          <TD colSpan=3><IMG height=5 alt="" 
+            src="/PrivateLabel/ChicagoTap/Images/sponsor_frame_bottom.gif" 
+            width=101></TD></TR></TBODY></TABLE></DIV></TD>
+    <TD vAlign=top>
+      
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+					<TD class=tableheader bgColor=#999999><A id=athenaeum 
+            name=athenaeum></A>&nbsp;&nbsp;Tickets</TD></TR>
+        <TR>
+          <TD align="center" valign="top" class=bodytext bgColor=#999999 height=510>

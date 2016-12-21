@@ -1,0 +1,92 @@
+<!--TIX DATA END--></p><center><div id="post_content_div" style="display: none;"></div></center><!-- WebApp ID: 5000 -->
+<script>
+/* please note: this script requires url.js */
+if (typeof(__path_prefix__) == 'undefined')
+    __path_prefix__ = '.';
+if (typeof(URL) == 'function') {
+    var appLoaderUrl = new URL('http://cgiwsc.enhancedsitebuilder.com:80/cgi-bin/AppLoader/AENDU0INEH1P/5000//20091007-130026?cc=1255264408126&modified=20091007-130026');
+    if (appLoaderUrl.setSession())
+        appLoaderUrl.setParameter("foo", Math.random(), true);
+
+    /* adjust protocol/port if extra is shop/footer */
+    urlLocation = new URL( document.location.href );
+    appLoaderUrl.protocol = urlLocation.protocol;
+    var appLoaderUrlStr =  appLoaderUrl.toExternalForm();
+    if( "https" == appLoaderUrl.protocol ) {
+        appLoaderUrlStr = appLoaderUrlStr.replace( /:\d+/, ":443" );
+    } else if( "http" == appLoaderUrl.protocol ) {
+        appLoaderUrlStr = appLoaderUrlStr.replace( /:\d+/, ":80" );
+    }
+    document.write("<SCRIPT src='" + appLoaderUrlStr + "'></"+"SCRIPT>");
+}
+</script><script src="/clients/Dare2Inspire/Images/20091007-130026"></script><script src="/clients/Dare2Inspire/Images/date.js"></script>
+
+
+
+<noscript></noscript>
+</td><td width="14">&nbsp;</td></tr><tr><td width="30">&nbsp;</td><td width="532">&nbsp;</td><td width="14">&nbsp;</td></tr></tbody></table></td><td background="/clients/Dare2Inspire/Images/rechts.gif" height="407" width="46"></td></tr><tr><td colspan="6"><img src="/clients/Dare2Inspire/Images/unten1.gif" height="21" width="817"></td><td><a href="#top"><img src="/clients/Dare2Inspire/Images/totop.gif" border="0" height="21" width="38"></a></td><td colspan="2"><img src="/clients/Dare2Inspire/Images/unten2.gif" height="21" width="65"></td></tr><tr><td colspan="9"><img src="/clients/Dare2Inspire/Images/unten3.gif" height="54" width="920"></td></tr><tr><td><img src="/clients/Dare2Inspire/Images/Abstandhalter.gif" height="1" width="90"></td><td><img src="/clients/Dare2Inspire/Images/Abstandhalter.gif" height="1" width="8"></td><td><img src="/clients/Dare2Inspire/Images/Abstandhalter.gif" height="1" width="184"></td><td><img src="/clients/Dare2Inspire/Images/Abstandhalter.gif" height="1" width="16"></td><td><img src="/clients/Dare2Inspire/Images/Abstandhalter.gif" height="1" width="17"></td><td><img src="/clients/Dare2Inspire/Images/Abstandhalter.gif" height="1" width="502"></td><td><img src="/clients/Dare2Inspire/Images/Abstandhalter.gif" height="1" width="38"></td><td><img src="/clients/Dare2Inspire/Images/Abstandhalter.gif" height="1" width="19"></td><td><img src="/clients/Dare2Inspire/Images/Abstandhalter.gif" height="1" width="46"></td></tr></tbody></table><script>
+
+
+preLoadNaviImages = function() {
+for(var i=0; i<document.images.length; i++) {
+if (document.images[i].name.indexOf("CM4all_") == 0) {
+eval(document.images[i].name + "_hi = new Image()");
+eval(document.images[i].name + "_no = new Image()");
+eval(document.images[i].name + "_an = new Image()");
+var thenormsrc;
+var thenormsrcUrl;
+var savedCC = "";
+if (typeof(URL) != "undefined") {
+thenormsrcUrl = new URL(document.images[i].src, true, true);
+} else if (typeof(window.top.URL) != "undefined") {
+thenormsrcUrl = new window.top.URL(document.images[i].src, true, true);
+}
+if (thenormsrcUrl) {
+savedCC = thenormsrcUrl.getParameter("cc", "");
+thenormsrcUrl.removeAllParams();
+thenormsrc = thenormsrcUrl.toString();
+} else {
+thenormsrc = document.images[i].src;
+}
+var fileext = thenormsrc.substring(thenormsrc.length-4);
+eval(document.images[i].name + "_hi.src = '" + thenormsrc.substring(0,thenormsrc.length-6) + "_m" + fileext + "?cc=" + savedCC  + "'");
+eval(document.images[i].name + "_no.src = '" + thenormsrc.substring(0,thenormsrc.length-6) + "_n" + fileext + "?cc=" + savedCC  + "'");
+eval(document.images[i].name + "_an.src = '" + thenormsrc.substring(0,thenormsrc.length-6) + "_h" + fileext + "?cc=" + savedCC  + "'");
+}
+}
+__navi_init_done__ = true;
+}
+// this can wait a moment
+setTimeout("preLoadNaviImages();", 250);
+
+function setCompanyName() {
+}
+//setTimeout("setCompanyName()", 1);
+
+
+
+</script><script>
+
+new function() {
+	if (typeof(theTemplate) != 'undefined' && theTemplate.hasFlashNavigation == "true") {
+		var anchors = document.links;
+		var url;
+		var base = new URL(document.location.href, true, true);
+		if (anchors) {
+			for (var i = 0 ; i < anchors.length ; i++) {
+				if (!anchors[i].target) {
+					url = new URL(anchors[i].href, true, true);
+					if (url.getParameter("*session*id*key*") != "*session*id*val*") {
+						if (url.protocol != "javascript"
+						 && (base.authority != url.authority || base.port != url.port))
+						{
+							anchors[i].target = "_top";
+						}
+					}
+				}
+			}
+		}
+	}
+}();
+
+</script>

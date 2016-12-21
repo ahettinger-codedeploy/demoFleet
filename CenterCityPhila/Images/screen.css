@@ -1,0 +1,3428 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+:focus { 
+	-moz-outline-style: none; 
+}
+
+html
+{
+	overflow: -moz-scrollbars-vertical;
+}
+
+body {
+	background: url(/clients/CenterCityPhila/Images/bkg_gradient.png) repeat-x;
+	color: #666;
+	font: 11px Tahoma;
+}
+
+a {
+	color: #999;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p {
+	line-height: 19px;
+}
+
+img {
+	border: 0;
+}
+
+hr {
+	border: 0;
+	float: left;
+	height: 4px;
+	margin: 0 0 0 0;
+}
+
+div#BodyContainer {
+	background: url(/clients/CenterCityPhila/Images/bkg_skylineTile.png) repeat-x center 200px;
+	float: left;
+	width: 100%;
+}
+
+div#PageContainer {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+div#InnerContainer {
+	float: left;
+	width: 1000px;
+}
+
+div#Header {
+	height: 129px;
+	float: left;
+	position: relative;
+	width: 1000px;
+}
+
+div#Header h1 {
+	display: block;
+	height: 74px;
+	margin-top: 15px;
+	text-indent: -10001px;
+	width: 570px;
+}
+
+div#Header h1 a {
+	background: url(/clients/CenterCityPhila/Images/bkg_logo.png) -1px 0 no-repeat;
+	display: block;
+	height: 74px;
+	width: 570px;
+}
+
+div#Header h2 {
+	display: none;
+}
+
+ul#Nav {
+	position: absolute;
+	right: 2px;
+	top: 11px;	
+	list-style: none;
+	/*
+	margin-right: 2px;
+	*/
+	float: right;
+}
+
+ul#Nav li {
+	background: url(/clients/CenterCityPhila/Images/icn_navDivider.png) no-repeat 2px 5px;
+	display: inline;
+	padding-left: 15px;
+}
+
+ul#Nav li.first {
+	background: none;
+	padding: 0;
+}
+
+ul#Nav li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+ul#Nav li a:hover {
+	text-decoration: underline;
+}
+
+form#Search {
+	position: absolute;
+	right: 2px;
+	top: 34px;	
+	clear: both;
+	float: right;
+}
+
+form.gsc-search-box,
+form#Search2 {
+	position: static;
+	float: none;
+	display: block;
+	right: 0;
+	top: 0;
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+
+form.gsc-search-box table.gsc-search-box td.gsc-input,
+form#Search dl, form#Search2 dl {
+	background: url(/clients/CenterCityPhila/Images/bkg_search.png) no-repeat;
+	float: left;
+	height: 30px;
+	width: 209px;
+}
+
+form.gsc-search-box table.gsc-search-box td.gsc-input,
+form#Search2 dl {
+	background: url(/clients/CenterCityPhila/Images/bkg_search2.gif) no-repeat;
+	width: 435px;
+	margin: 0 0 0 10px;
+}
+
+table.gsc-branding,
+div.gsc-twiddle,
+div.gsc-trailing-more-results,
+div.gsc-stats,
+div.gsc-more-results-active,
+div.gs-watermark,
+div.gs-visibleUrl-short,
+form#Search dl dt, form#Search2 dl dt {
+	display: none;
+}
+
+.gsc-results {
+	color: #636466;
+	clear: both;
+	border-top: 4px solid #ccc;
+	margin: 0 0 4px;
+	padding-top: 10px;
+}
+
+div.gsc-result
+{
+	margin: 0 10px;
+	padding: 5px 0;
+	line-height: 1.6em;
+}
+
+.gsc-expansionArea div.gsc-result {
+	border-top: 1px dotted #E5E5E5;
+}
+
+a.gs-title {
+	color: #30BEB8;
+	text-decoration: underline;
+}
+
+a.gs-title b {
+	font-weight: normal;
+}
+
+div.gs-snippet {
+	margin: 0pt 0pt 1px;
+}
+
+div.gs-snippet b {
+	font-weight: normal;
+}
+
+.gs-visibleUrl-long {
+	font-size: 9px;
+	color: #999999;
+}
+
+.gsc-cursor-box {
+	border-top: 4px solid #ccc;
+	text-align: right;
+	padding-top: 10px;
+	margin-top: 10px;
+}
+
+.gsc-cursor {
+	margin: 0pt 20px 0pt 0pt;
+}
+
+.gsc-cursor-page {
+	color: #30BEB8;
+	cursor: pointer;
+	display: inline;
+	margin-left: 5px;
+	text-decoration: underline;
+}
+
+.gsc-cursor-current-page {
+	color: #999999;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+form.gsc-search-box table.gsc-search-box td.gsc-input input.gsc-input,
+form#Search dl dd input, form#Search2 dl dd input {
+	background: transparent;
+	border: 0;
+	color: #999;
+	font: 11px Tahoma;
+	margin: 8px 0 0 30px;
+	width: 170px;
+}
+
+form.gsc-search-box table.gsc-search-box td.gsc-input input.gsc-input,
+form#Search2 dl dd input { width: 400px; }
+
+form.gsc-search-box table.gsc-search-box td.gsc-search-button input.gsc-search-button,
+form#Search input#HeaderGoButton, form#Search2 input#BodyGoButton, form#ContactUsForm input#ContactUsButton {
+	background-color: transparent;
+	background-image: url(/clients/CenterCityPhila/Images/btn_searchGo.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+	height: 30px;
+	float: left;
+	font: bold 12px Arial;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	width: 39px;
+}
+
+form.gsc-search-box table.gsc-search-box td.gsc-search-button input.gsc-search-button,
+form#Search2 input#BodyGoButton { background-image: url(/clients/CenterCityPhila/Images/btn_searchResultsGo.gif); }
+
+form#ContactUsForm input#ContactUsButton { background-image: url(/clients/CenterCityPhila/Images/btn_send.gif); }
+
+form.gsc-search-box table.gsc-search-box td.gsc-search-button input.gsc-search-button:hover,
+form#Search input#HeaderGoButton:hover, form#Search2 input#BodyGoButton:hover {
+	background-color: transparent;
+	background-image: url(/clients/CenterCityPhila/Images/btn_searchGo.png);
+	background-position: 0 -30px;
+	background-repeat: no-repeat;
+}
+form#Search2 input#BodyGoButton:hover { background-image: url(/clients/CenterCityPhila/Images/btn_searchResultsGo.gif); background-position: 0 -30px; }
+
+/*new from mm*/
+#ContactUsForm dl {
+	padding: 15px 10px 0;
+	border-top: 4px solid #ccc;
+	border-bottom: 4px solid #ccc;
+	float: left;
+	margin: 5px 0 15px;
+}
+
+#ContactUsForm dl dt {
+	clear: both;
+	float: left;
+	font-weight: bold;
+	text-align: right;
+	padding-top: 8px;
+	width: 64px;
+}
+
+#ContactUsForm dl dt #ContactUsButton {
+	background: url(/clients/CenterCityPhila/Images/btn_send2.gif) no-repeat 0 0;
+	width: 54px;
+	height: 24px;
+	margin: -7px 0 0;
+}
+#ContactUsForm dl dt #ContactUsButton:hover {
+	background-position: 0 -24px;
+}
+
+#ContactUsForm dl dd {
+	float: right;
+	height: 30px;
+	width: 392px;
+	background: #fff url(/clients/CenterCityPhila/Images/bkg_contact-input.gif) no-repeat top left;
+	padding: 0 5px;
+	margin: 0 0 10px;
+}
+#ContactUsForm dl dd#footnote {
+	background-image: none;
+}
+
+#ContactUsForm dl dd.textarea {
+	height: 166px;
+	background: #fff url(/clients/CenterCityPhila/Images/bkg_contact-comments.png) no-repeat top left;
+	padding: 5px;
+}
+
+#ContactUsForm dl dd input {
+	background: transparent;
+	border: 0;
+	width: 382px;
+	margin-top: 5px;
+}
+
+#ContactUsForm dl dd.textarea textarea {
+	background: transparent;
+	color:#333;
+	font-family:Tahoma;
+	font-size:14px;
+	font-size-adjust:none;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:normal;
+	font-weight: normal;
+	border: 0;
+	width: 382px;
+	height: 156px;
+	
+}
+
+div#SocialNetBar {
+	float: right;
+	margin-right: 10px;
+}
+
+div#ActionBarContainer {
+	float: left;
+	margin-left: 189px;
+}
+
+div#ActionBar {
+	color: #fff;
+	font: bold 12px Arial;
+	float: left;
+	padding: 0 0 5px 0;
+	text-transform: uppercase;
+}
+
+div#ActionBar div {
+	float: left;
+}
+
+div#ActionBar div.end {
+	padding: 9px 0 0 0;
+}
+
+div#ActionBar div.middle {
+	margin: 0 5px 0 10px;
+}
+
+div#ActionBar input {
+	color: #fff;
+	font: bold 12px Arial;
+	text-transform: uppercase;
+}
+
+div#ActionBar select {
+	width: 416px;
+}
+
+div#ActionBar input#ActionFormGoButton {
+	background: url(/clients/CenterCityPhila/Images/btn_taskMenuGo.png) 0 0 no-repeat;
+	border: 0;
+	cursor: pointer;
+	height: 32px;
+	margin: 0;
+	padding: 0;
+	width: 54px;
+}
+
+div#ActionBar input#ActionFormGoButton:hover {
+	background: url(/clients/CenterCityPhila/Images/btn_taskMenuGo.png) 0 -32px no-repeat;
+}
+
+div#ColumnContainer {
+	background: url(/clients/CenterCityPhila/Images/bkg_body.png) no-repeat 0 53px;
+	float: left;
+	width: 1000px;
+}
+
+div#ColumnContainer ul {
+	line-height: 19px;
+	width: 100%;
+}
+
+div.Column {
+	float: left;
+	position: relative;
+}
+
+div.Column h3 {
+	height: 53px;
+	text-indent: -10001px;
+}
+
+div.Column h3 a {
+	background-repeat: no-repeat;
+	background-position: 0px -212px;
+	display: block;
+	height: 53px;
+}
+
+a.LearnMore {
+	clear: both;
+	display: block;
+	font-size: 9px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+div.ColumnTab
+{
+	float: left;
+}
+
+div.ColumnTop
+{
+	float: left;
+	position: absolute;
+	z-index: 100;
+}
+
+div.Column div.SlideDetailContainer {
+	background: url(/clients/CenterCityPhila/Images/bkg_transPixelBlack.png) repeat;
+	color: #fff;
+	float: left;
+	overflow: hidden;
+	height: auto; 
+}
+
+div.Column div.SlideDetailContainer div.SlideDetail {
+	background-position: 10px 0;
+	background-repeat: no-repeat;
+	float: left;
+}
+
+div.Column div.SlideDetailContainer div.SlideDetail p {
+	margin: 10px;
+}
+
+div.Column div.SlideDetailBottom {
+	background-repeat: repeat;
+	float: left;
+	height: 10px;
+}
+
+div.Column div.SectionImageContainer {
+	border-bottom-style: solid;
+	border-bottom-width: 10px;
+	display: block;
+	height: 240px; 
+	position: absolute;
+	overflow: hidden;
+	top: 53px;
+	z-index: 1;
+}
+
+div.Column div.SectionImageContainer img.SectionImage {
+	display: block;
+	height: 240px;
+	position: absolute;
+}
+
+div.Column div.ColumnContent {
+	background-position: 0 250px;
+	background-repeat: repeat-x;
+	float: left;
+	padding: 252px 0 0 0;
+}
+
+body.generic div.Column div.ColumnContent { padding: 0 !important; }
+
+/* begin global module declarations */
+
+div.Module {
+	float: left;
+}
+
+div.OneFourth {
+	margin: 15px 10px 9px 10px;
+	width: 226px;
+}
+
+div.OneFourth.NoSidePadding {
+	margin: 15px 0px 9px 0px;
+	width: 246px;
+}
+
+div.OneHalf {
+	margin: 15px 10px 0 10px;
+	width: 476px;	
+}
+
+div.OneWhole {
+	margin: 15px 10px 0 10px;
+	width: 722px;	
+}
+
+div.Top {
+	margin: 0 10px;
+}
+
+div.Module p {
+	margin-bottom: 10px;
+}
+
+div.Module ul {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+div.Module ul li {
+	background-position: 0 8px;
+	background-repeat: no-repeat;
+	list-style: none;
+	margin: 0 0 0 0;
+	padding: 0 0 10px 15px;
+}
+
+/* end global module declarations */
+
+div.Column div.ColumnContent div.Module div.ButtonHolder {
+	float: left; 
+	width: 100%;
+}
+
+div.Column div.ColumnContent div.Module div.ButtonHolder div.ButtonInner {
+	float: left; 
+	/*width: 50%;*/
+	/*Bonnie Changed to 100*/
+	width: 100%;
+}
+
+img.Special {
+	margin: 0 0 9px -1px;
+}
+
+div.Module h4 {
+	background-image: url(/clients/CenterCityPhila/Images/hdr_whyCenterCity.png);
+	background-repeat: no-repeat;
+	height: 22px;
+	margin: 1px 0 0 0;
+	text-indent: -10001px;
+}
+
+div.Module h4.Blank
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_blank.png);
+}	
+
+div.Module h4.CCDAnniversary
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_CCDanniversary.png);
+}	
+
+div.Module h4.DilworthPlaza
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_dilworth.png);
+}
+
+div.Module h4.AnnivSponsors
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_20thsponsors.png);
+}	
+
+div.Module h4.CCEvents
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_ccevents.png);
+}	
+	
+div.Module h4.TaxAbatement
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_TaxAbatement.png);
+}
+
+div.Module h4.WhyCenterCity
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_whyCenterCity.png);
+}
+
+div.Module h4.BroadStLighting
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_BroadStLighting.png);
+}
+
+div.Module h4.HolidaySpree
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_HolidaySpree.png);
+}
+
+div.Module h4.VirtualPhiladelphia
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_VirtualPhila.png);
+}
+
+div.Module h4.RestaurantWeek
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_restaurantWeek.png);
+	height: 23px;
+	margin: -1px 0 0 0;
+}
+
+div.Module h4.RecipeBox
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_RecipeBox.png);
+}
+
+/*added by rj*/
+div.Module h4.CCSchools
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_CCSchools.png);
+}
+
+/*added by rj*/
+div.Module h4.KidsInCC
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_kidsincc.png);
+}
+
+div.Module h4.SOCC
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_SOCC.png);
+}
+
+/*added by rj*/
+div.Module h4.WhatsCooking
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_WhatsCooking.png);
+}
+
+/*added by rj*/
+div.Module h4.FeaturedRestaurant
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_FeaturedRestaurant.png);
+}
+
+/*added by rj*/
+div.Module h4.SipsBars
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_SipsBars.png);
+}
+
+div.Module h4.CCDInitiatives
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_ccdinitiatives.png);
+}
+
+div.Module h4.PhotoContest
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_photocontest.png);
+}
+
+/*added by rj*/
+div.Module h4.SipsCaipirinha
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_SipsCaipirinha.png);
+}
+
+div.Module h4.SipsPhotos
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_SipsPhotos.png);
+}
+
+div.Module h4.ResResources
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_resResources.png);
+}
+
+div.Module h4.CCDGalleryNight
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_CCDGalleryNight.png);
+}
+
+div.Module h4.CCDSips
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_CCDSips.png);
+}
+
+div.Module h4.CPDCMembership
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_CPDCMembership.png);
+}
+
+div.Module h4.Developments
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_Developments.png);
+}
+
+div.Module h4.INCCGuide
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_INCCGuide.png);
+}
+
+div.Module h4.LivingHere
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_LivingHere.png);
+}
+
+div.Module h4.SummerCC
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_SummerCC.png);
+}
+
+div.Module h4.NewsResearch
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_NewsResearch.png);
+}
+
+div.Module h4.ResearchReports
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_ResearchReports.png);
+}
+
+div.Module h4.FrontNewsfeed
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_frontnewsfeed.png);
+}
+
+div.Module h4.FrontNewsCC
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_frontnewsCC.png);
+}
+
+div.Module h4.FeatRetail
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_featretail.png);
+}
+
+div.Module h4.RelatedInfo
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_RelatedInfo.png);
+}
+
+div.Module h4.WeKeepCC
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_WeKeepCC.png);
+}
+
+div.Module h4.WhatWeDo
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_WhatWeDo.png);
+}
+
+div.Module h5 {
+	clear: both;
+	font-weight: normal;
+	font-size: 11px;
+	margin: 0;
+	padding: 3px 5px;
+}
+
+div.Column div.ColumnContent p {
+	margin: 0 0 5px 0;
+}
+
+/*added by rj*/
+body.generic div.Column div.ColumnContent p {
+	margin: 0 0 10px 0;
+}
+
+div.links {
+	float: left;
+	line-height: 19px;
+	margin: 0;
+	width: 226px;
+}
+
+div.links div.link {
+	border-bottom: dotted 1px #e5e5e5;
+	float: left;
+	padding: 5px 0;
+}
+
+div.links div.link.last {
+	border-bottom: 0;
+}
+
+div.links div.term {
+	float: left;
+	width: 62px;
+}
+
+div.links div.term img {
+	float: left;
+	margin: 0 0 0 -1px;
+}
+
+div.links div.term img.publication {
+	float: left;
+	margin: 0 0 0 6px;
+}
+
+div.links div.definition {
+	float: left;
+	margin-left: 4px;
+}
+
+div.links div.definition h6 {
+	font-size: 11px;
+	font-weight: normal;
+	width: 160px;
+}
+
+div.links div.definition a.layer {
+	background: url(/clients/CenterCityPhila/Images/icn_popupLayer.png) 0 4px no-repeat;
+	display: block;
+	font-size: 10px;
+	padding-left: 12px;
+}
+
+div.links div.definition a.page {
+	background: url(/clients/CenterCityPhila/Images/icn_popupAarow.png) 0 4px no-repeat;
+	display: block;
+	font-size: 10px;
+	padding-left: 12px;
+}
+
+div.Column div.ColumnContent a.BlockLink {
+	display: block;
+	height: 19px;
+	float: right; 
+	text-indent: -10001px;
+}
+
+div.Column div.ColumnContent a.BlockLink.All {
+	width: 39px;
+}
+
+div.Column div.ColumnContent a.BlockLink.More {
+	width: 48px;
+}
+
+div#BusinessColumn {
+	width: 251px;
+}
+/*new from mm*/
+body.generic div#ColumnContainer {
+	background-image: url(/clients/CenterCityPhila/Images/bkg_body-map.png);
+}
+
+/*added by rj*/
+body#Pressroom.generic div#ColumnContainer {
+	background: url(/clients/CenterCityPhila/Images/bkg_body.png) no-repeat 0 53px;
+	float: left;
+	width: 1000px;
+}
+
+/*added by rj*/
+body#INCCmetro.generic div#ColumnContainer {
+	background: url(/clients/CenterCityPhila/Images/bkg_body.png) no-repeat 0 53px;
+	float: left;
+	width: 1000px;
+}
+
+/*added by rj*/
+body#INCCcitypaper.generic div#ColumnContainer {
+	background: url(/clients/CenterCityPhila/Images/bkg_body.png) no-repeat 0 53px;
+	float: left;
+	width: 1000px;
+}
+
+/*added by rj*/
+body#INCCpw.generic div#ColumnContainer {
+	background: url(/clients/CenterCityPhila/Images/bkg_body.png) no-repeat 0 53px;
+	float: left;
+	width: 1000px;
+}
+
+div#BusinessColumn h3 {
+	width: 251px;
+}
+
+div#BusinessColumn h3 a {
+	background-image: url(/clients/CenterCityPhila/Images/tab_business.png);
+	width: 251px;
+}
+
+div#BusinessColumn a.LearnMore {
+	color: #69aeff;
+}
+
+div#BusinessColumn div.SlideDetailContainer {
+	margin: 0 0 0 5px;
+	width: 246px;
+}
+
+div#BusinessColumn div.SlideDetailContainer div.SlideDetail {
+	background-image: url(/clients/CenterCityPhila/Images/icn_arrowBusiness.png);
+}
+
+div#BusinessColumn div.SlideDetailBottom {
+	background-image: url(/clients/CenterCityPhila/Images/bkg_transPixelBlue.png);
+	margin: 0 0 0 5px;
+	width: 246px;
+}
+
+div#BusinessColumn div.ColumnContent {
+	/* five pixels of space on the left for the border and shadow */
+	background-image: url(/clients/CenterCityPhila/Images/bkg_content_bus.gif);
+	margin: 0 0 0 5px;
+	width: 246px;
+}
+
+div#BusinessColumn div.ColumnContent hr {
+	background: #c3dfff;
+	color: #c3dfff;
+	width: 246px;
+}
+
+div#BusinessColumn div.ColumnContent h5 {
+	background: #edf5ff;
+}
+
+div#BusinessColumn div.SectionImageContainer {
+	border-bottom-color: #a6cfff;
+	right: 0;
+	width: 246px;
+}
+
+div#BusinessColumn div.SectionImageContainer img.SectionImage {
+	width: 246px;
+}
+
+div#BusinessColumn div.ColumnContent a.BlockLink.All {
+	background: url(/clients/CenterCityPhila/Images/btn_allBusiness.png) no-repeat;
+}
+
+div#BusinessColumn div.ColumnContent a.BlockLink.More {
+	background: url(/clients/CenterCityPhila/Images/btn_moreBusiness.png) no-repeat;
+}
+
+div#LifeColumn {
+	width: 498px;
+}
+
+div#LifeColumn h3 {
+	width: 498px;
+}
+
+div#LifeColumn h3 a {
+	background-image: url(/clients/CenterCityPhila/Images/tab_life.png);
+	width: 498px;
+}
+
+div#LifeColumn a.LearnMore {
+	color: #92e503;
+}
+
+div#parksMain a.LearnMore {
+	color: #92e503;
+}
+
+div#LifeColumn div.SlideDetailContainer {
+	margin: 0 2px;
+	width: 494px;
+}
+
+div#LifeColumn div.SlideDetailContainer div.SlideDetail {
+	background-image: url(/clients/CenterCityPhila/Images/icn_arrowLife.png);
+}
+
+div#LifeColumn div.SlideDetailBottom {
+	background-image: url(/clients/CenterCityPhila/Images/bkg_transPixelGreen.png);
+	margin: 0 2px;
+	width: 494px;
+}
+
+div#LifeColumn div.ColumnContent {
+	/* two pixels of space on either side */
+	background-image: url(/clients/CenterCityPhila/Images/bkg_content_lif.gif);
+	margin: 0 2px;
+	width: 494px;
+}
+/*added by mm*/
+body.generic div#LifeColumn div.ColumnContent {
+	background-image: none;
+}
+
+div#LifeColumn div.SectionImageContainer {
+	border-bottom-color: #beef6a;
+	left: 0;
+	margin: 0 2px;
+	width: 494px;
+}
+
+div#LifeColumn div.SectionImageContainer img.SectionImage {
+	width: 494px;
+}
+
+div#LifeColumn div.ColumnContent hr {
+	background: #d3f59a;
+	color: #d3f59a;
+	width: 494px;
+}
+
+div#LifeColumn div.ColumnContent a.BlockLink.All {
+	background: url(/clients/CenterCityPhila/Images/btn_allLife.png) no-repeat;
+}
+
+div#LifeColumn div.ColumnContent a.BlockLink.More {
+	background: url(/clients/CenterCityPhila/Images/btn_moreLife.png) no-repeat;
+}
+
+div#AboutUsColumn {
+	width: 251px;
+}
+
+div#AboutUsColumn h3 {
+	width: 251px;
+}
+
+div#AboutUsColumn h3 a {
+	background-image: url(/clients/CenterCityPhila/Images/tab_aboutUs.png);
+	width: 251px;
+}
+
+div#AboutUsColumn a.LearnMore {
+	color: #31d0be;
+}
+
+div#AboutUsColumn div.SlideDetailContainer {
+	margin: 0 5px 0 0;
+	width: 246px;
+}
+
+div#AboutUsColumn div.SlideDetailContainer div.SlideDetail {
+	background-image: url(/clients/CenterCityPhila/Images/icn_arrowAboutUs.png);
+}
+
+div#AboutUsColumn div.SlideDetailBottom {
+	background-image: url(/clients/CenterCityPhila/Images/bkg_transPixelTeal.png);
+	margin: 0 5px 0 0;
+	width: 246px;
+}
+
+div#AboutUsColumn div.ColumnContent {
+	/* five pixels of space on the right for the border and shadow */
+	background-image: url(/clients/CenterCityPhila/Images/bkg_content_abt.gif);
+	margin: 0 5px 0 0;
+	width: 246px;
+}
+
+div#AboutUsColumn div.ColumnContent hr {
+	background: #adece5;
+	color: #adece5;
+	width: 246px;
+}
+
+div#AboutUsColumn div.ColumnContent h5 {
+	background: #e0f8f5;
+}
+
+div#AboutUsColumn div.ColumnContent a.BlockLink.All {
+	background: url(/clients/CenterCityPhila/Images/btn_allAboutUs.png) no-repeat;
+}
+
+div#AboutUsColumn div.ColumnContent a.BlockLink.More {
+	background: url(/clients/CenterCityPhila/Images/btn_moreAboutUs.png) no-repeat;
+}
+
+div#AboutUsColumn div.SectionImageContainer {
+	border-bottom-color: #85e3d8;
+	left: 0;
+	width: 246px;
+}
+
+div#AboutUsColumn div.SectionImageContainer img.SectionImage {
+	width: 246px;
+}
+
+div#Footer {
+	background: #dedede;
+	color: #666;
+	float: left;
+	margin: 10px 5px 0 5px;
+	padding: 10px 5px;
+	width: 980px;
+}
+
+div#Footer span {
+	float: left;
+}
+
+div#Footer ul {
+	float: right;
+	list-style: none;
+	width: auto;
+}
+
+div#Footer ul li {
+	background: url(/clients/CenterCityPhila/Images/icn_navDivider.png) no-repeat 2px 4px;
+	display: inline;
+	padding-left: 15px;
+}
+
+div#Footer ul li.first {
+	background: none;
+	padding-left: 0;
+}
+
+div#Footer ul li a {
+	color: #666;
+	text-decoration: none;
+}
+
+div#Footer ul li a:hover {
+	text-decoration: underline;
+}
+
+/* Landing Page Declarations */
+
+div#ColumnContainer ul#TabbedNav {
+	float: left;
+	/* three pixels at top */
+	height: 53px;
+	list-style: none;
+	width: 1000px;
+}
+
+div#ColumnContainer ul#TabbedNav li {
+	float: left;
+	height: 53px;
+}
+
+div#ColumnContainer ul#TabbedNav li a {
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 53px;
+	text-indent: -10001px;
+}
+
+div#ColumnContainer ul#TabbedNav li a#BusinessTab {
+	background-image: url(/clients/CenterCityPhila/Images/tab_business.png);
+	width: 251px;
+}
+
+div#ColumnContainer ul#TabbedNav li a#LifeTab {
+	background-image: url(/clients/CenterCityPhila/Images/tab_life.png);
+	width: 498px;
+}
+
+div#ColumnContainer ul#TabbedNav li a#AboutUsTab {
+	background-image: url(/clients/CenterCityPhila/Images/tab_aboutUs.png);
+	width: 251px;
+}
+
+div#ColumnContainer div#NavColumn {
+	border-top-style: solid;
+	border-top-width: 10px;
+	float: left;
+	margin-left: 5px;
+	margin-right: 2px;
+	width: 246px;
+}
+
+div#ColumnContainer div#NavColumn h4 {
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	height: 30px;
+	margin: 0;
+	text-indent: -10001px;
+	width: 246px;
+}
+
+div#ColumnContainer div#NavColumn ul {
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	list-style: none;
+	width: 246px;
+}
+
+div#ColumnContainer div#NavColumn ul.First {
+	border-bottom-width: 4px;
+}
+
+div#ColumnContainer div#NavColumn ul li {
+	background: url(/clients/CenterCityPhila/Images/divider.gif) no-repeat top left;
+	height: 30px;
+	list-style: none;
+	padding-top: 1px;
+	width: 246px;
+}
+
+div#ColumnContainer div#NavColumn ul li.Top {
+	padding-top: 0;
+}
+
+div#ColumnContainer div#NavColumn ul li a {
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	display: block;
+	height: 30px;
+	list-style: none;
+	text-indent: -10001px;
+	width: 246px;
+}
+
+div#ColumnContainer div#NavColumn ul li a:hover {
+	background-position: 0 -30px;
+}
+
+div#ColumnContainer div#NavColumn div.NavColumnContent {
+	background-repeat: repeat-x;
+	float: left;
+	min-height: 77px;
+	width: 246px;
+}
+
+div#ColumnContainer div#NavColumn div.NavColumnContent div#PhotoViewer, div#ColumnContainer div#BusinessColumn div.ColumnContent div#PhotoViewer {
+	background: url(/clients/CenterCityPhila/Images/bkg_PhotoViewer.png) no-repeat;
+	float: left;
+	height: 280px;
+	margin: 5px 0 0 8px;
+	overflow: hidden;
+	padding: 8px 10px 0 8px;
+	position: relative;
+	width: 212px;
+}
+
+div#ColumnContainer div#NavColumn div.NavColumnContent div#PhotoViewer div.PhotoSlide, div#ColumnContainer div#BusinessColumn div.ColumnContent div#PhotoViewer
+{
+	width:212px;
+	position: absolute;
+}
+
+div#ColumnContainer div#NavColumn div.NavColumnContent div#PhotoViewer div.PhotoSlide, div#ColumnContainer div#BusinessColumn div.ColumnContent div#PhotoViewer a.hidden
+{
+	display: none;
+}
+
+div#ColumnContainer div#NavColumn div.NavColumnContent div#PhotoViewer, div#ColumnContainer div#BusinessColumn div.ColumnContent div#PhotoViewer img.Tall {
+	margin: 4px 0 6px 27px;
+}
+
+div#ColumnContainer div#NavColumn div.NavColumnContent div#PhotoViewer, div#ColumnContainer div#BusinessColumn div.ColumnContent div#PhotoViewer img.Wide {
+}
+
+div#ColumnContainer div#NavColumn div.NavColumnContent div#PhotoViewer, div#ColumnContainer div#BusinessColumn div.ColumnContent div#PhotoViewer p {
+	background: #fff;
+	float: left;
+	font: 9px Verdana, Arial, Helvetica, sans-serif;
+	line-height: 14px;
+	margin-top: 4px;
+	width: 175px;
+}
+
+div#ColumnContainer div#NavColumn div.NavColumnContent div#PhotoViewer, div#ColumnContainer div#BusinessColumn div.ColumnContent div#PhotoViewer a {
+	background-repeat: no-repeat;
+	display: block;
+	height: 16px;
+	text-indent: -10001px;
+	position: absolute;
+	width: 16px;
+	z-index: 3;
+}
+
+div#ColumnContainer div#NavColumn div.NavColumnContent div#PhotoViewer, div#ColumnContainer div#BusinessColumn div.ColumnContent div#PhotoViewer a#LeftArrow {
+	background-image: url(/clients/CenterCityPhila/Images/btn_leftArrow.gif);
+	bottom: 47px;
+	right: 28px;
+}
+
+div#ColumnContainer div#NavColumn div.NavColumnContent div#PhotoViewer, div#ColumnContainer div#BusinessColumn div.ColumnContent div#PhotoViewer a#RightArrow {
+	background-image: url(/clients/CenterCityPhila/Images/btn_rightArrow.gif);
+	bottom: 47px;
+	right: 8px;
+}
+
+div#ColumnContainer div#NavColumn div.NavColumnContent div#PhotoViewer, div#ColumnContainer div#BusinessColumn div.ColumnContent div#PhotoViewer a#ExpandArrow {
+	background-image: url(/clients/CenterCityPhila/Images/btn_maximizeArrow.gif);
+	bottom: 7px;
+	right: 8px;
+}
+
+div#ColumnContainer div#ContentColumn {
+	float: left;
+	position: relative;
+	width: 742px;
+}
+
+div#ColumnContainer div#ContentColumn div.SlideDetailBottom {
+	background-repeat: repeat;
+	height: 10px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 742px;
+	z-index: 2000;
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer {
+	float: left;
+	margin: 188px 0 0 0;
+	position: relative;
+	width: 742px;
+	z-index: 101;
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav {
+	background: url(/clients/CenterCityPhila/Images/bkg_3nav_aboutUs.gif) repeat-x;
+	left: 0px;
+	list-style: none;
+	position: absolute;
+	top: 74px;
+	width: auto;
+	z-index: 1001;
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li {
+	display: inline;
+	float: left;
+	position: relative;
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a {
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	display: block;
+	height: 40px;
+	margin-left: 1px;
+	position: relative;
+	text-indent: -10001px;
+	width: 147px;
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a.first {
+	margin-left: 0;
+	width: 148px;
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a:hover {
+	background-position: 0px -40px;
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_RWmain {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_RWhome.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_RWrestaurants {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_RWrestaurants.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_RWrecipes {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_RWrecipes.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_RWparking {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_RWparking.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_RWcontest {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_RWcontest.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_sipsmain {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_RWhome.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_sipspartic {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_sipspartic.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_sipsmap {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_sipsmap.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_sipscontest {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_RWcontest.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_parksMain {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_ParksMain.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_parksChestnut {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_ParksChestnut.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_parksCollins {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_ParksCollins.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_parksDilworth {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_ParksDilworth.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_parksSisCities {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_ParksSisterCities.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_parks3Pkwy {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_Parks3Parkway.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_LivingHereNhoods {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_lifenhoods.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_LivingHereMain {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_lifelivemain.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_LivingHereResres {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_liferesres.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CCOverview {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_CCoverview.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CCPublications {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_CCpubs.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CCresources {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_CCresources.gif);
+}
+
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_Overview {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_overview.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CSRs {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_commService.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_HomelessProgram {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_homeless.gif);
+}
+
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CCOverview {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_CCoverview.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CCPublications {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_CCpubs.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CCresources {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_CCresources.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CrimePrevention {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_crime.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CommunityCourt {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_commCourt.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_BeautifulOverview {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_overview.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_Parkway {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_parkwayProjects.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_Lighting {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_lighting.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_Signs {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_signsBanners.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_Trees {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_landscaping.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CPDCOverview {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_overview.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CPDCMembers {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_CPDCMembers.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_JoinCPDC {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_joinCPDC.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CPDCHistory {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_CPDCHistory.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_SOCCOverview {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_SOCC.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_SOCCMap01 {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_SOCCM01.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_SOCCMap02 {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_SOCCM02.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_SOCCMap03 {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_SOCCM03.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_SOCCMap04 {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_SOCCM04.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_Plans {
+	background-image: url(/clients/CenterCityPhila/Images/btn_3Nav_plansForGrowth.gif);
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft {
+	float: left;
+	width: 496px;
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-repeat: no-repeat;
+	height: 37px;
+	margin: 15px 0 0 5px;
+	text-indent: -10001px;
+}
+
+div.ContentContainer hr {
+	width: 494px;
+}
+
+div.ContentContainer hr.OneHalf {
+	width: 246px;
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft div.ContentLeftInner {
+	background: url(/clients/CenterCityPhila/Images/bkg_textgradient.gif) repeat-x 0 1px; 
+	border-top-style: solid;
+	border-top-width: 10px;
+	float: left;
+	padding-top: 14px;
+	width: 680px;	
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft div.ContentLeftInnerWide {
+	background: url(/clients/CenterCityPhila/Images/bkg_textgradient.gif) repeat-x 0 1px; 
+	border-top-style: solid;
+	border-top-color: #C8F281;
+	border-top-width: 10px;
+	float: left;
+	padding-top: 14px;
+	width: 742px;	
+}
+
+/*changed apr 24, final three elements were commented out*/
+div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentRight {
+	background: url(/clients/CenterCityPhila/Images/bkg_ContentRight.png) no-repeat;
+	float: left;
+	margin-left: -2px;
+	padding: 0 10px 0;
+	width: 228px;
+/*
+	position: absolute;
+	right: 0;
+	top: 0;
+*/
+}
+
+div.ContentRight h4 {
+	background-repeat: no-repeat;
+	height: 40px;
+	margin: 12px 0 0 2px;
+	text-indent: -10001px;
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h5 {
+	background-color: #edf5ff;
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentRight h5 {
+	background-color: #E0F8F5;
+}
+
+div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentRight h4.RecentPublications {
+	background-image: url(/clients/CenterCityPhila/Images/hdr_recentPublications.gif);
+}
+
+div.Module h4.RecentPublications
+{
+	background-image: url(/clients/CenterCityPhila/Images/hdr_recentPublications.png);
+}
+
+div#ColumnContainer div#ContentColumn div.ImageContainer {
+	height: 240px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 742px;
+}
+
+div#ColumnContainer div#ContentColumn div.ImageContainer img.SectionImage {
+	display: block;
+	height: 240px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 742px;
+}
+
+body.Business hr {
+	background: #c3dfff;
+	color: #c3dfff;
+}
+
+body.Business div.Module ul li {
+	background-image: url(/clients/CenterCityPhila/Images/blt_business.gif);
+}
+
+body.Business div#ColumnContainer ul#TabbedNav li a#BusinessTab {
+	background-position: 0px -212px;
+}
+
+body.Business div#ColumnContainer ul#TabbedNav li a#LifeTab {
+	background-position: 0px 0px;
+}
+
+body.Business div#ColumnContainer ul#TabbedNav li a#AboutUsTab {
+	background-position: 0px -106px;
+}
+
+body.Business div#ColumnContainer ul#TabbedNav li a#BusinessTab:hover {
+	background-position: 0px -212px;
+}
+
+body.Business div#ColumnContainer ul#TabbedNav li a#LifeTab:hover {
+	background-position: 0px -53px;
+}
+
+body.Business div#ColumnContainer ul#TabbedNav li a#AboutUsTab:hover {
+	background-position: 0px -159px;
+}
+
+body.Business div#ColumnContainer div#ContentColumn div.SlideDetailBottom {
+	background-image: url(/clients/CenterCityPhila/Images/bkg_transPixelBlue.png);
+}
+
+body.Business div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft div.ContentLeftInner {
+	border-top-color: #b4d6ff;
+}
+
+body.Business div#ColumnContainer div#NavColumn {
+	border-top-color: #b4d6ff;
+}
+
+body.Business div#ColumnContainer div#NavColumn ul {
+	border-bottom-color: #a1ccff;
+}
+
+body.Business div#ColumnContainer div#NavColumn ul li a#button_WhyCC {
+	background-image: url(/clients/CenterCityPhila/Images/nav_whyCC.gif);
+}
+
+body.Business div#ColumnContainer div#NavColumn ul li a#button_MarketFacts {
+	background-image: url(/clients/CenterCityPhila/Images/nav_CCmarket.gif);
+}
+
+body.Business div#ColumnContainer div#NavColumn ul li a#button_OfficeSpace {
+	background-image: url(/clients/CenterCityPhila/Images/nav_avail.gif);
+}
+
+body.Business div#ColumnContainer div#NavColumn div.NavColumnContent {
+	background-image: url(/clients/CenterCityPhila/Images/bkg_navbottom_Business.gif);
+}
+
+body.Business a.LearnMore {
+	color: #69aeff;
+}
+
+body.Business div#ColumnContainer div#ContentColumn div.ContentContainer {
+	background: url(/clients/CenterCityPhila/Images/bkg_ContentContainer_bus.gif) repeat-x;
+}
+
+body#BusinessLandingPage div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/sub_bkg_business.png);
+}
+
+body#WhyCenterCity div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_whyCenterCity.png);
+	/*width: 217px;*/
+}
+
+body#WhyCenterCity div#ColumnContainer div#NavColumn ul li a#button_WhyCC {
+	background-position: 0 -60px;
+}
+
+/*added by rj*/
+body#VirtualPhiladelphia div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_virtualphiladelphia.png);
+	/*width: 239px;*/
+}
+
+body#MarketFacts div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_centerCityMktFacts.png);
+	/*width: 307px;*/
+}
+
+body#MarketFacts div#ColumnContainer div#NavColumn ul li a#button_MarketFacts {
+	background-position: 0 -60px;
+}
+
+body#AvailableOfficeSpace div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_availableOfficeSpace.png);
+}
+
+body#AvailableOfficeSpace div#ColumnContainer div#NavColumn ul li a#button_OfficeSpace {
+	background-position: 0 -60px;
+}
+
+body#BusinessDetails div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft,
+body#AvailableOfficeSpace div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft {
+	width: 742px;
+}
+
+body#BusinessDetails div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft div.ContentLeftInner,
+body#AvailableOfficeSpace div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft div.ContentLeftInner
+{
+	width: 742px;
+}
+
+body.Life hr {
+	background: #D3F59A;
+	color: #D3F59A;
+}
+
+body.generic div.ColumnContent div.Module ul li,
+body.Life div.Module ul li {
+	background-image: url(/clients/CenterCityPhila/Images/blt_life.gif);
+}
+
+body.Life div#ColumnContainer ul#TabbedNav li a#BusinessTab {
+	background-position: 0px -106px;
+}
+
+body.Life div#ColumnContainer ul#TabbedNav li a#LifeTab {
+	background-position: 0px -212px;
+}
+
+body.Life div#ColumnContainer ul#TabbedNav li a#AboutUsTab {
+	background-position: 0px -106px;
+}
+
+body.Life div#ColumnContainer ul#TabbedNav li a#BusinessTab:hover {
+	background-position: 0px -159px;
+}
+
+body.Life div#ColumnContainer ul#TabbedNav li a#LifeTab:hover {
+	background-position: 0px -212px;
+}
+
+body.Life div#ColumnContainer ul#TabbedNav li a#AboutUsTab:hover {
+	background-position: 0px -159px;
+}
+
+body.Life div#ColumnContainer div#ContentColumn div.SlideDetailBottom {
+	background-image: url(/clients/CenterCityPhila/Images/bkg_transPixelGreen.png);
+}
+
+body.Life div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft div.ContentLeftInner {
+	border-top-color: #c8f281;
+}
+
+body.Life div#ColumnContainer div#NavColumn {
+	border-top-color: #c8f281;
+}
+
+body.Life div#ColumnContainer div#NavColumn ul {
+	border-bottom-color: #baee61;
+}
+
+body.Life div#ColumnContainer div#NavColumn div.NavColumnContent {
+	background-image: url(/clients/CenterCityPhila/Images/bkg_navbottom_Life.gif);
+}
+
+body.Life div#ColumnContainer div#NavColumn ul li a#button_inCCG {
+	background-image: url(/clients/CenterCityPhila/Images/nav_inCCG.gif);
+}
+
+body.Life div#ColumnContainer div#NavColumn ul li a#button_Events {
+	background-image: url(/clients/CenterCityPhila/Images/nav_events.gif);
+}
+
+body.Life div#ColumnContainer div#NavColumn ul li a#button_Parks {
+	background-image: url(/clients/CenterCityPhila/Images/nav_parksplazas.gif);
+}
+
+body.Life div#ColumnContainer div#NavColumn ul li a#button_GettingAround {
+	background-image: url(/clients/CenterCityPhila/Images/nav_getting.gif);
+}
+
+body.Life div#ColumnContainer div#NavColumn ul li a#button_LivingHere {
+	background-image: url(/clients/CenterCityPhila/Images/nav_living.gif);
+}
+
+body.Life div#ColumnContainer div#NavColumn ul li a#button_inCCN {
+	background-image: url(/clients/CenterCityPhila/Images/nav_inCCnow.gif);
+}
+
+body#LifeLandingPage div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/sub_bkg_life.png);
+}
+
+body#GettingAround div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_gettingAround.png);
+}
+
+body#sipsmain div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/hdr_sips.png);
+}
+
+body#sipscontest div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/hdr_sips.png);
+}
+
+body#sipsmap div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/hdr_sips.png);
+}
+
+body#sipspartic div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/hdr_sips.png);
+}
+
+body#RestaurantWeek div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_ccdrw.png);
+}
+
+body#RWmain div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_ccdrw.png);
+}
+
+body#RWrecipes div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_ccdrw.png);
+}
+
+body#RWrestaurants div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_ccdrw.png);
+}
+
+body#RWparking div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_ccdrw.png);
+}
+
+body#RWcontest div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_ccdrw.png);
+}
+
+body#BusinessDetails div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_centerCityGuide.png);
+}
+
+body#BusinessDetails div.ContentLeftInner h4 {
+	background-image: none;
+	text-indent: 0;
+	font-family:Arial,Verdana,sans-serif;
+	font-size:13pt;
+	margin-bottom: 5px;
+}
+
+body#BusinessDetails div.ContentLeftInner hr {
+	margin: 10px 0;
+	width: 474px;
+}
+
+body#BusinessDetails img.businessimage {
+	margin-left: 9px;
+	width:228px;
+}
+
+body#BusinessDetails div.ContentLeftInner a {
+	text-decoration: underline;
+}
+
+body#BusinessDetails div.ContentLeftInner div.Module ul li {
+	background-image: none;
+	padding: 0;
+}
+
+body#LivingHere div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_livingHere.png);
+}
+
+body#RWmain div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_ccdrw.png);
+}
+
+body#RWrestaurants div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_ccdrw.png);
+}
+
+body#RWrecipes div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_ccdrw.png);
+}
+
+body#RWparking div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_ccdrw.png);
+}
+
+body#RWcontest div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_ccdrw.png);
+}
+
+body#parksMain div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_parksplazas.png);
+}
+
+body#parksChestnut div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_parksplazas.png);
+}
+
+body#parksDilworth div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_parksplazas.png);
+}
+
+body#parksSisCities div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_parksplazas.png);
+}
+
+body#parks3Pkwy div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_parksplazas.png);
+}
+
+/*added by rj*/
+body#ResidentialResources div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_residentialResources.png);
+}
+
+body#GiftCard div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_GiftCard.png);
+}
+
+body#InCCNow div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_centerCityNOW.png);
+}
+
+body#BusinessDetails div#ColumnContainer div#NavColumn ul li a#button_inCCG,
+body#Guide div#ColumnContainer div#NavColumn ul li a#button_inCCG {
+	background-position: 0 -60px;
+}
+
+body#parksMain div#ColumnContainer div#NavColumn ul li a#button_Parks {
+	background-position: 0 -60px;
+}
+
+body#parksDilworth div#ColumnContainer div#NavColumn ul li a#button_Parks {
+	background-position: 0 -60px;
+}
+
+body#parksSisCities div#ColumnContainer div#NavColumn ul li a#button_Parks {
+	background-position: 0 -60px;
+}
+
+body#parks3Pkwy div#ColumnContainer div#NavColumn ul li a#button_Parks {
+	background-position: 0 -60px;
+}
+
+body#parksChestnut div#ColumnContainer div#NavColumn ul li a#button_Parks {
+	background-position: 0 -60px;
+}
+
+body#Events div#ColumnContainer div#NavColumn ul li a#button_Events {
+	background-position: 0 -60px;
+}
+
+body#Eventsind div#ColumnContainer div#NavColumn ul li a#button_Events {
+	background-position: 0 -60px;
+}
+
+body#sipsmain div#ColumnContainer div#NavColumn ul li a#button_Events {
+	background-position: 0 -60px;
+}
+
+body#sipsmap div#ColumnContainer div#NavColumn ul li a#button_Events {
+	background-position: 0 -60px;
+}
+
+body#sipspartic div#ColumnContainer div#NavColumn ul li a#button_Events {
+	background-position: 0 -60px;
+}
+
+body#sipscontest div#ColumnContainer div#NavColumn ul li a#button_Events {
+	background-position: 0 -60px;
+}
+
+body#RWmain div#ColumnContainer div#NavColumn ul li a#button_Events {
+	background-position: 0 -60px;
+}
+
+body#RWrecipes div#ColumnContainer div#NavColumn ul li a#button_Events {
+	background-position: 0 -60px;
+}
+
+body#RWrestaurants div#ColumnContainer div#NavColumn ul li a#button_Events {
+	background-position: 0 -60px;
+}
+
+body#RWparking div#ColumnContainer div#NavColumn ul li a#button_Events {
+	background-position: 0 -60px;
+}
+
+body#RWcontest div#ColumnContainer div#NavColumn ul li a#button_Events {
+	background-position: 0 -60px;
+}
+
+body#GettingAround div#ColumnContainer div#NavColumn ul li a#button_GettingAround {
+	background-position: 0 -60px;
+}
+
+body#LivingHere div#ColumnContainer div#NavColumn ul li a#button_LivingHere {
+	background-position: 0 -60px;
+}
+
+/*added by rj*/
+body#ResidentialResources div#ColumnContainer div#NavColumn ul li a#button_LivingHere {
+	background-position: 0 -60px;
+}
+
+body#InCCNow div#ColumnContainer div#NavColumn ul li a#button_inCCN {
+	background-position: 0 -60px;
+}
+
+body.Life a.LearnMore {
+	color: #92e503;
+}
+
+body.Life div#ColumnContainer div#ContentColumn div.ContentContainer {
+	background: url(/clients/CenterCityPhila/Images/bkg_ContentContainer_lif.gif) repeat-x;
+}
+
+body.Life.Special div#ColumnContainer div#ContentColumn div.ContentContainer {
+	background: none;
+}
+
+body.Life.Special div#ColumnContainer div#ContentColumn {
+	background: url(/clients/CenterCityPhila/Images/bkg_ContentContainer.gif) repeat-x top left;
+	min-height: 260px;
+}
+
+body.About hr {
+	background: #adece5;
+	color: #adece5;
+}
+
+body.About div.Module ul li {
+	background-image: url(/clients/CenterCityPhila/Images/blt_aboutUs.gif);
+}
+
+body.About div#ColumnContainer ul#TabbedNav li a#BusinessTab {
+	background-position: 0px -106px;
+}
+
+body.About div#ColumnContainer ul#TabbedNav li a#LifeTab {
+	background-position: 0px -106px;
+}
+
+body.About div#ColumnContainer ul#TabbedNav li a#AboutUsTab {
+	background-position: 0px -212px;
+}
+
+body.About div#ColumnContainer ul#TabbedNav li a#BusinessTab:hover {
+	background-position: 0px -159px;
+}
+
+body.About div#ColumnContainer ul#TabbedNav li a#LifeTab:hover {
+	background-position: 0px -159px;
+}
+
+body.About div#ColumnContainer ul#TabbedNav li a#AboutUsTab:hover {
+	background-position: 0px -212px;
+}
+
+body.About div#ColumnContainer div#ContentColumn div.SlideDetailBottom {
+	background-image: url(/clients/CenterCityPhila/Images/bkg_transPixelTeal.png);
+}
+
+body.About div#ColumnContainer div#ContentColumn div.ContentContainer {
+	background: url(/clients/CenterCityPhila/Images/bkg_ContentContainer_abt.gif) repeat-x;
+}
+
+body.About div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft div.ContentLeftInner {
+	border-top-color: #98e7de;
+}
+
+body.About div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft div.ContentLeftInnerWide {
+	border-top-color: #98e7de;
+}
+
+body.About div#ColumnContainer div#NavColumn {
+	border-top-color: #98e7de;
+}
+
+body.About div#ColumnContainer div#NavColumn h4.WhoWeAre {
+	background-image: url(/clients/CenterCityPhila/Images/nav_whoweare.gif);
+}
+
+body.About div#ColumnContainer div#NavColumn h4.WhatWeDo {
+	background-image: url(/clients/CenterCityPhila/Images/nav_whatwedo.gif);
+}
+
+body.About div#ColumnContainer div#NavColumn ul {
+	border-bottom-color: #98e7de;
+}
+
+body.About div#ColumnContainer div#NavColumn ul li a#button_CCD {
+	background-image: url(/clients/CenterCityPhila/Images/nav_ccdBID.gif);
+}
+
+body.About div#ColumnContainer div#NavColumn ul li a#button_CPDC {
+	background-image: url(/clients/CenterCityPhila/Images/nav_CPDCed.gif);
+}
+
+body.About div#ColumnContainer div#NavColumn ul li a#button_CPTMA {
+	background-image: url(/clients/CenterCityPhila/Images/nav_CPTMAtm.gif);
+}
+
+body.About div#ColumnContainer div#NavColumn ul li a#button_Publications {
+	background-image: url(/clients/CenterCityPhila/Images/nav_pubrep.gif);
+}
+
+body.About div#ColumnContainer div#NavColumn ul li a#button_Employment {
+	background-image: url(/clients/CenterCityPhila/Images/nav_employ.gif);
+}
+
+body.About div#ColumnContainer div#NavColumn ul li a#button_RFP {
+	background-image: url(/clients/CenterCityPhila/Images/nav_rfp.gif);
+}
+
+body.About div#ColumnContainer div#NavColumn ul li a#button_Clean {
+	background-image: url(/clients/CenterCityPhila/Images/nav_clean.gif);
+}
+
+body.About div#ColumnContainer div#NavColumn ul li a#button_Safe {
+	background-image: url(/clients/CenterCityPhila/Images/nav_safe.gif);
+}
+
+body.About div#ColumnContainer div#NavColumn ul li a#button_Beautiful {
+	background-image: url(/clients/CenterCityPhila/Images/nav_beautif.gif);
+}
+
+body.About div#ColumnContainer div#NavColumn ul li a#button_Fun {
+	background-image: url(/clients/CenterCityPhila/Images/nav_fun.gif);
+}
+
+body.About div#ColumnContainer div#NavColumn div.NavColumnContent {
+	background-image: url(/clients/CenterCityPhila/Images/bkg_navbottom_AboutUs.gif);
+}
+
+body.About a.LearnMore {
+	color: #31d0be;
+}
+
+body#AboutLandingPage div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/sub_bkg_aboutUs.png);
+}
+
+body#FAQ div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_faq.png);
+}
+
+body#ResCharges2009 div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_2009ResCharges.png);
+}
+
+body#EstCharges div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_estimatedcharges.png);
+}
+
+body#Safe div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_safe.png);
+}
+
+body#CSRs div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_safe.png);
+}
+
+body#Homeless div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_safe.png);
+}
+
+body#Crime div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_safe.png);
+}
+
+body#Community div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_safe.png);
+}
+
+body#LivingHereNhoods div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_livingHere.png);
+}
+
+body#LivingHereMain div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_livingHere.png);
+}
+
+body#LivingHereResres div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_livingHere.png);
+}
+
+body#CommunityCourtOver div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_communitycourt.png);
+}
+
+body#CommunityCourtPubs div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_communitycourt.png);
+}
+
+body#CommunityCourtRes div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_communitycourt.png);
+}
+
+body#CCD div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_CCD.png);
+}
+
+body#CPDC div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_CPDC.png);
+}
+
+body#SOCCMap01 div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_socc.png);
+}
+
+body#SOCCMap02 div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_socc.png);
+}
+
+body#SOCCMap03 div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_socc.png);
+}
+
+body#SOCCMap04 div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_socc.png);
+}
+
+body#SOCC div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_socc.png);
+}
+
+body#CPDCMembers div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_CPDC.png);
+}
+
+body#JoinCPDC div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_CPDC.png);
+}
+
+body#CPDCHistory div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_CPDC.png);
+}
+
+body#Plans div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_CPDC.png);
+}
+
+body#CPTMA div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_CPTMA.png);
+}
+
+body#Publications div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_publicationsPres.png);
+}
+
+body#Employment div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_employment.png);
+}
+
+body#RFP div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_rfp.png);
+}
+
+body#Clean div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_clean.png);
+}
+
+body#Beautiful div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_beautiful.png);
+}
+
+body#Parkway div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_beautiful.png);
+}
+
+body#Lighting div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_beautiful.png);
+}
+
+body#Signs div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_beautiful.png);
+}
+
+body#Viaduct div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_beautiful.png);
+}
+
+body#Trees div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_beautiful.png);
+}
+
+body#ChestnutPark div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_chestnutpark.png);
+}
+
+body#PlantPhila div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_plantphiladelphia.png);
+}
+
+body#Fun div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_fun.png);
+}
+
+body#SearchResults div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+/*	background-image: url(/clients/CenterCityPhila/Images/title_fun.png);*/
+}
+
+body#Safe div#ColumnContainer div#NavColumn ul li a#button_Safe {
+	background-position: 0 -60px;
+}
+
+body#CSRs div#ColumnContainer div#NavColumn ul li a#button_Safe {
+	background-position: 0 -60px;
+}
+
+body#Homeless div#ColumnContainer div#NavColumn ul li a#button_Safe {
+	background-position: 0 -60px;
+}
+
+body#Crime div#ColumnContainer div#NavColumn ul li a#button_Safe {
+	background-position: 0 -60px;
+}
+
+body#Community div#ColumnContainer div#NavColumn ul li a#button_Safe {
+	background-position: 0 -60px;
+}
+
+body#LivingHereNhoods div#ColumnContainer div#NavColumn ul li a#button_LivingHere {
+	background-position: 0 -60px;
+}
+
+body#LivingHereMain div#ColumnContainer div#NavColumn ul li a#button_LivingHere {
+	background-position: 0 -60px;
+}
+
+body#LivingHereResres div#ColumnContainer div#NavColumn ul li a#button_LivingHere {
+	background-position: 0 -60px;
+}
+
+body#CommunityCourtOver div#ColumnContainer div#NavColumn ul li a#button_Safe {
+	background-position: 0 -60px;
+}
+
+body#CommunityCourtRes div#ColumnContainer div#NavColumn ul li a#button_Safe {
+	background-position: 0 -60px;
+}
+
+body#CommunityCourtPubs div#ColumnContainer div#NavColumn ul li a#button_Safe {
+	background-position: 0 -60px;
+}
+
+body#CCD div#ColumnContainer div#NavColumn ul li a#button_CCD {
+	background-position: 0 -60px;
+}
+
+body#CPDC div#ColumnContainer div#NavColumn ul li a#button_CPDC {
+	background-position: 0 -60px;
+}
+
+body#CPDCMembers div#ColumnContainer div#NavColumn ul li a#button_CPDC {
+	background-position: 0 -60px;
+}
+
+body#JoinCPDC div#ColumnContainer div#NavColumn ul li a#button_CPDC {
+	background-position: 0 -60px;
+}
+
+body#CPDCHistory div#ColumnContainer div#NavColumn ul li a#button_CPDC {
+	background-position: 0 -60px;
+}
+
+body#Plans div#ColumnContainer div#NavColumn ul li a#button_CPDC {
+	background-position: 0 -60px;
+}
+
+body#CPTMA div#ColumnContainer div#NavColumn ul li a#button_CPTMA {
+	background-position: 0 -60px;
+}
+
+body#Employment div#ColumnContainer div#NavColumn ul li a#button_Employment {
+	background-position: 0 -60px;
+}
+
+body#RFP div#ColumnContainer div#NavColumn ul li a#button_RFP {
+	background-position: 0 -60px;
+}
+
+body#SOCC div#ColumnContainer div#NavColumn ul li a#button_Publications {
+	background-position: 0 -60px;
+}
+
+body#SOCCMap01 div#ColumnContainer div#NavColumn ul li a#button_Publications {
+	background-position: 0 -60px;
+}
+
+body#SOCCMap02 div#ColumnContainer div#NavColumn ul li a#button_Publications {
+	background-position: 0 -60px;
+}
+
+body#SOCCMap03 div#ColumnContainer div#NavColumn ul li a#button_Publications {
+	background-position: 0 -60px;
+}
+
+body#SOCCMap04 div#ColumnContainer div#NavColumn ul li a#button_Publications {
+	background-position: 0 -60px;
+}
+
+body#Publications div#ColumnContainer div#NavColumn ul li a#button_Publications {
+	background-position: 0 -60px;
+}
+
+body#Clean div#ColumnContainer div#NavColumn ul li a#button_Clean {
+	background-position: 0 -60px;
+}
+
+body#Beautiful div#ColumnContainer div#NavColumn ul li a#button_Beautiful {
+	background-position: 0 -60px;
+}
+
+body#Parkway div#ColumnContainer div#NavColumn ul li a#button_Beautiful {
+	background-position: 0 -60px;
+}
+
+body#Lighting div#ColumnContainer div#NavColumn ul li a#button_Beautiful {
+	background-position: 0 -60px;
+}
+
+body#Signs div#ColumnContainer div#NavColumn ul li a#button_Beautiful {
+	background-position: 0 -60px;
+}
+
+body#Trees div#ColumnContainer div#NavColumn ul li a#button_Beautiful {
+	background-position: 0 -60px;
+}
+
+body#Viaduct div#ColumnContainer div#NavColumn ul li a#button_Beautiful {
+	background-position: 0 -60px;
+}
+
+body#ChestnutPark div#ColumnContainer div#NavColumn ul li a#button_Beautiful {
+	background-position: 0 -60px;
+}
+
+body#Fun div#ColumnContainer div#NavColumn ul li a#button_Fun {
+	background-position: 0 -60px;
+}
+
+
+body#sipsmain div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_sipsmain {
+	background-position: 0px -80px;
+}
+
+body#sipspartic div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_sipspartic {
+	background-position: 0px -80px;
+}
+
+body#sipsmap div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_sipsmap {
+	background-position: 0px -80px;
+}
+
+body#sipscontest div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_sipscontest {
+	background-position: 0px -80px;
+}
+
+body#Safe div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_Overview {
+	background-position: 0px -80px;
+}
+
+body#CSRs div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CSRs {
+	background-position: 0px -80px;
+}
+
+body#Homeless div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_HomelessProgram {
+	background-position: 0px -80px;
+}
+
+body#RWmain div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_RWmain {
+	background-position: 0px -80px;
+}
+
+body#RWrestaurants div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_RWrestaurants {
+	background-position: 0px -80px;
+}
+
+body#RWrecipes div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_RWrecipes {
+	background-position: 0px -80px;
+}
+
+body#RWparking div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_RWparking {
+	background-position: 0px -80px;
+}
+
+body#RWcontest div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_RWcontest {
+	background-position: 0px -80px;
+}
+
+body#parksMain div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_parksMain {
+	background-position: 0px -80px;
+}
+
+body#parksChestnut div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_parksChestnut {
+	background-position: 0px -80px;
+}
+
+body#parksChestnut div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_parksCollins {
+	background-position: 0px -80px;
+}
+
+body#parks3Pkwy div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_parks3Pkwy {
+	background-position: 0px -80px;
+}
+
+body#parksDilworth div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_parksDilworth {
+	background-position: 0px -80px;
+}
+
+body#parksSisCities div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_parksSisCities {
+	background-position: 0px -80px;
+}
+
+body#LivingHereMain div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_LivingHereMain {
+	background-position: 0px -80px;
+}
+
+body#LivingHereNhoods div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_LivingHereNhoods {
+	background-position: 0px -80px;
+}
+
+body#LivingHereResres div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_LivingHereResres {
+	background-position: 0px -80px;
+}
+
+body#CommunityCourtOver div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CCOverview {
+	background-position: 0px -80px;
+}
+
+body#CommunityCourtPubs div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CCPublications {
+	background-position: 0px -80px;
+}
+
+body#CommunityCourtRes div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CCresources {
+	background-position: 0px -80px;
+}
+
+body#Homeless div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_HomelessProgram {
+	background-position: 0px -80px;
+}
+
+body#Crime div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CrimePrevention {
+	background-position: 0px -80px;
+}
+
+body#Community div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CommunityCourt {
+	background-position: 0px -80px;
+}
+
+body#Beautiful div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_BeautifulOverview {
+	background-position: 0px -80px;
+}
+
+body#Parkway div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_Parkway {
+	background-position: 0px -80px;
+}
+
+body#Lighting div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_Lighting {
+	background-position: 0px -80px;
+}
+
+body#Signs div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_Signs {
+	background-position: 0px -80px;
+}
+
+body#Trees div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_Trees {
+	background-position: 0px -80px;
+}
+
+body#SOCC div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_SOCCOverview {
+	background-position: 0px -80px;
+}
+
+body#SOCCMap01 div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_SOCCMap01 {
+	background-position: 0px -80px;
+}
+
+body#SOCCMap02 div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_SOCCMap02 {
+	background-position: 0px -80px;
+}
+
+body#SOCCMap03 div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_SOCCMap03 {
+	background-position: 0px -80px;
+}
+
+body#SOCCMap04 div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_SOCCMap04 {
+	background-position: 0px -80px;
+}
+
+body#CPDC div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CPDCOverview {
+	background-position: 0px -80px;
+}
+
+body#CPDCMembers div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CPDCMembers {
+	background-position: 0px -80px;
+}
+
+body#JoinCPDC div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_JoinCPDC {
+	background-position: 0px -80px;
+}
+
+body#CPDCHistory div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_CPDCHistory {
+	background-position: 0px -80px;
+}
+
+body#Plans div#ColumnContainer div#ContentColumn div.ContentContainer ul.TertiaryNav li a#Nav3_Plans {
+	background-position: 0px -80px;
+}
+
+a#ProjectsPlanning {
+	background: url(/clients/CenterCityPhila/Images/bkg_ProjectsPlanning.png) no-repeat;
+	display: block;
+	height: 153px;
+	margin: 10px auto 0 auto;
+	text-indent: -10001px;
+	width: 228px;
+}
+
+div.WeKeep
+{
+	background: url(/clients/CenterCityPhila/Images/bkg_WeAreContainer.png) no-repeat;
+	height: 152px;
+	margin: 0 0 10px 0;
+	width: 476px;
+}
+
+div.WeKeep div
+{
+	float: left;
+	padding: 5px 0 0 5px;
+	width: 114px;
+}
+
+div.WeKeep div a.Clean
+{
+	background-image: url(/clients/CenterCityPhila/Images/bkg_WeAreClean.png);
+	background-repeat: no-repeat;
+	display: block;
+	height: 16px;
+	margin: 5px 0 0 0;
+	text-indent: -10001px;
+}
+
+div.WeKeep div a.Safe
+{
+	background-image: url(/clients/CenterCityPhila/Images/bkg_WeAreSafe.png);
+	background-repeat: no-repeat;
+	display: block;
+	height: 16px;
+	margin: 5px 0 0 0;
+	text-indent: -10001px;
+}
+
+div.WeKeep div a.Beautiful
+{
+	background-image: url(/clients/CenterCityPhila/Images/bkg_WeAreBeautiful.png);
+	background-repeat: no-repeat;
+	display: block;
+	height: 16px;
+	margin: 5px 0 0 0;
+	text-indent: -10001px;
+}
+
+div.WeKeep div a.Fun
+{
+	background-image: url(/clients/CenterCityPhila/Images/bkg_WeAreFun.png);
+	background-repeat: no-repeat;
+	display: block;
+	height: 16px;
+	margin: 5px 0 0 0;
+	text-indent: -10001px;
+}
+
+/* Events & Guide Pages */
+
+body.Special div#ColumnContainer div#ContentColumn div.ContentContainer {
+	margin: 0;
+}
+
+body.Special div#ColumnContainer div#ContentColumn div.HeaderRow {
+	float: left;
+	height: 49px;
+	padding: 0;
+	position: relative;
+	width: 742px;
+}
+
+body.Special div#ColumnContainer div#ContentColumn div.HeaderRow h3 {
+	background-repeat: no-repeat;
+	height: 49px;
+	text-indent: -10001px;
+}
+
+body.Special div#ColumnContainer div#ContentColumn div.HeaderRow h3.Guide {
+	background-image: url(/clients/CenterCityPhila/Images/title_centerCityGuide.png);
+}
+
+body.Special div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft {
+	float: left;
+	margin: 0;
+	padding: 0 6px 0 8px;
+	width: 478px;
+}
+/*Special for events*/
+body#Events div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft, body#Events div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentRight { margin: 20px 0 0; }
+
+body.Special div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentRight {
+	background: url(/clients/CenterCityPhila/Images/bkg_ContentRightSecond.png) no-repeat;
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 250px;
+}
+
+body.Special div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentRight h4 {
+	background-repeat: no-repeat;
+}
+
+body.Special div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentRight h4.RightEvents {
+	background-image: url(/clients/CenterCityPhila/Images/hdr_RightEvents.gif);
+	height: 46px;
+	margin: 4px 0 10px 4px;
+	width: 246px;
+}
+
+/*Special for events*/
+body#Events.Special div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentRight h4.RightEvents { height: 48px; background-color: #30BEB8; }
+
+body.Special div#ColumnContainer div#ContentColumn div.ContentShell {
+	float: left;
+	/*
+	padding: 0 8px;
+	*/
+	width: 726px;
+}
+
+body#Events div#ColumnContainer div#ContentColumn div.HeaderRow h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_events.png);
+}
+
+body#Eventsind div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3 {
+	background-image: url(/clients/CenterCityPhila/Images/title_events.png);
+}
+
+/* Tertiaries */
+
+body.Tertiary div#ColumnContainer div#ContentColumn div.ContentContainer {
+	margin: 0;
+}
+
+body.Tertiary div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft {
+	position: relative;
+}
+
+body.Tertiary div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeft h3, body.generic div.ColumnContent h3.title {
+	height: 77px;
+	left: 0;
+	margin: 0;
+	position: absolute;
+	top: 0;
+	width: 742px;
+	z-index: 100;
+}
+/*added by mm*/
+body.generic div.ColumnContent h3.title { position: relative; margin-bottom: 22px; height: 40px; background-repeat: no-repeat; }
+
+/*added by mm*/
+body#SearchResults.generic div.ColumnContent h3.title {
+	background-image: url(/clients/CenterCityPhila/Images/title_search-results.png);
+}
+
+body#ContactUs.generic div.ColumnContent h3.title {
+	background-image: url(/clients/CenterCityPhila/Images/title_contact-us.png);
+}
+
+/*added by rj*/
+body#Pressroom.generic div.ColumnContent h3.title {
+	background-image: url(/clients/CenterCityPhila/Images/title_pressroom.png);
+}
+
+/*added by rj*/
+body#INCCmetro.generic div.ColumnContent h3.title {
+	background-image: url(/clients/CenterCityPhila/Images/title_inccmetro.png);
+}
+
+/*added by rj*/
+body#INCCpw.generic div.ColumnContent h3.title {
+	background-image: url(/clients/CenterCityPhila/Images/title_inccpw.png);
+}
+
+/*added by rj*/
+body#INCCcitypaper.generic div.ColumnContent h3.title {
+	background-image: url(/clients/CenterCityPhila/Images/title_incccitypaper.png);
+}
+
+body#Pressroom.generic div.ColumnContent h3.title {
+	background-image: url(/clients/CenterCityPhila/Images/title_pressroom.png);
+}
+
+body#SiteCredits.generic div.ColumnContent h3.title {
+	background-image: url(/clients/CenterCityPhila/Images/title_site-credits.png);
+}
+
+body#PrivacyPolicy.generic div.ColumnContent h3.title {
+	background-image: url(/clients/CenterCityPhila/Images/title_privacy-policy.png);
+}
+
+body#Error.generic div.ColumnContent h3.title {
+	background-image: url(/clients/CenterCityPhila/Images/title_error.png);
+}
+
+body#CCDBoundaryMap.generic div.ColumnContent h3.title {
+	background-image: url(/clients/CenterCityPhila/Images/title_ccd-boundary-map.png);
+}
+
+body#ReportAProblem.generic div.ColumnContent h3.title {
+	background-image: url(/clients/CenterCityPhila/Images/title_report-a-problem.png);
+}
+
+body#SearchResults.generic div.ColumnContent h3.title span {
+	position: absolute;
+	right: 5px;
+	text-indent: 0;
+	font-size: 11px;
+	color: #777;
+	font-weight: normal;
+	width: 110px;
+	margin-top: 15px;
+}
+
+body#SearchResults.generic div.ColumnContent h3.title span a {
+	text-indent: -10001px;
+	float: right;
+/*	display: block;*/
+	width: 47px;
+	height: 14px;
+	background: transparent url(/clients/CenterCityPhila/Images/icn_google.png) no-repeat 0 0;
+	margin-top: -12px;
+}
+
+body#ContactUs address {
+	font-style: normal;
+	margin: 0 10px 10px;
+	position: relative;
+	line-height: 1.6em;
+}
+
+body#ContactUs address a {
+	color: #30beb8;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+body#ContactUs address span.col {
+	width: 200px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+body.Tertiary div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeftInner {
+	margin-top: 114px;
+	width: 680px;
+}
+
+body.Tertiary div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeftInnerWide {
+	margin-top: 114px;
+	width: 742px;
+}
+
+/*
+body.Tertiary div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeftInner h4 {
+	background-image: none;
+	font-size: 11px;
+	font-weight: bold;
+	text-indent: 0px;
+}
+*/
+
+body.Tertiary div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentRight {
+	margin-top: 78px;
+	position: relative;
+}
+
+body.Nav div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeftInner {
+	margin-top: 114px;
+	width: 680px;
+}
+
+body.Nav div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeftInnerWide {
+	margin-top: 114px;
+	width: 742px;
+}
+
+body.Nav div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentRight h4 {
+	height: 40px;
+	margin: 22px 0 0 2px;
+}
+
+body.Nav div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentRight {
+	margin-top: 114px;
+}
+
+body.About.Nav div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentRight {
+	background: url(/clients/CenterCityPhila/Images/bkg_RightColumn_aboutUs.png) no-repeat;
+}
+
+body.LandingPage div#ColumnContainer div#ContentColumn div.ContentContainer {
+	background: none;
+}
+
+body#SearchResults ul.pagination {
+	float: right;
+	list-style: none;
+	display: block;
+	text-align: right;
+	color: #999;
+	font-weight: bold;
+	margin: 0 20px 0 0;
+	width: auto;
+}
+
+body#SearchResults ul.pagination li {
+	display: inline;
+	margin: 0 0 0 .2em;
+}
+
+body#SearchResults ul.pagination li a, body#SearchResults dl#results dt a {
+	color: #30beb8;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+body#SearchResults h4 {
+	font: normal 18px Arial, sans-serif;
+	float: left;
+	padding: 0 0 0 10px;
+	margin: 0 0 6px 0;
+}
+
+body#SearchResults dl#results {
+	color: #636466;
+	clear: both;
+	padding: 13px 10px;
+	border-top: 4px solid #ccc;
+	border-bottom: 4px solid #ccc;
+	margin: 0 0 4px;
+}
+
+body#SearchResults dl#results dt {
+	margin: 0 0 4px;
+}
+
+body#SearchResults dl#results dd {
+	margin: 0 0 1px;
+	line-height: 1.6em;
+}
+
+body#SearchResults dl#results dd.link {
+	padding-bottom: 5px;
+	font-size: 9px;
+	border-bottom: 1px dotted #e5e5e5;
+	margin: 0 0 4px;
+}
+body#SearchResults dl#results dd.link.last {
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+
+body#SearchResults dl#results dd.link a {
+	color: #999;
+}
+
+/*changed by rj*/
+body#CPDCMembers table, body#ReportAProblem.generic table, body#RestaurantWeek table, body#RWmain table, body#RWrestaurants table, body#RWparking table, body#RWcontest table, body#sipsmain table, body#sipscontest table, body#sipspartic table, body#sipsmap table, body#ResidentialResources table, body#LivingHereResres table, body#Eventsind table, body#ChestnutPark table {
+	width: 474px;
+	border-collapse: collapse;
+	text-align: left;
+	margin: 0 0 15px;
+}
+
+/*changed by rj*/
+body#CPDCMembers caption, body#ReportAProblem.generic caption, body#Publications caption, body#Eventsind caption, body#ResidentialResources caption, body#LivingHereResres caption, body#ChestnutPark caption  {
+	font-weight: bold;
+	color: #636466;
+	text-align: left;
+	margin: 0 0 10px;
+	border-top: 4px solid #98e7de;
+	padding-top: 10px;
+}
+
+/*changed  by rj*/
+body#CPDCMembers caption.first, body#ReportAProblem.generic caption.first, body#Publications caption.first, body#ResidentialResources caption.first, body#LivingHereResres caption.first, body#ChestnutPark caption.first {
+	border-top: 0;
+	padding-top: 0;
+}
+/*
+body#CPDCMembers table tbody {
+	border-bottom: 15px solid #fff;
+	margin-bottom: 10px;
+}*/
+
+/*changed  by rj*/
+body#CPDCMembers table th, body#ReportAProblem.generic table.th, body#RestaurantWeek table th, body#RWmain table th, body#RWrecipes table th, body#RWrestaurants table th, body#RWparking table th, body#RWcontest table th, body#sipsmain table th, body#sipsmap table th, body#sipscontest table th, body#sipspartic table th, body#ResidentialResources table th, body#LivingHereResres table th, body#Eventsind table th, body#ChestnutPark table th {
+	font-weight: normal;
+	color: #636466;
+	width: 230px;
+}
+
+/*changed by rj*/
+body#CPDCMembers table tr, body#CPDCMembers table th, body#CPDCMembers table td, body#ReportAProblem.generic table tr, body#ReportAProblem.generic table th, body#ReportAProblem.generic table td, body#RWrecipe table tr, body#RWrecipe table th, body#RWrecipe table td, body#RestaurantWeek table tr, body#RestaurantWeek table th, body#RestaurantWeek table td, body#RWmain table tr, body#RWmain table th, body#RWmain table td, body#RWparking table tr, body#RWparking table th, body#RWparking table td, body#RWrestaurants table tr, body#RWrestaurants table th, body#RWrestaurants table td, body#sipspartic table tr, body#sipspartic table td, body#sipspartic table th, body#RWcontest table tr, body#RWcontest table th, body#RWcontest table td, body#ResidentialResources table tr, body#ResidentialResources table th, body#ResidentialResources table td, body#LivingHereResres table td, body#Eventsind table tr, body#Eventsind table th, body#Eventsind table td, body#ChestnutPark table tr, body#ChestnutPark table th, body#ChestnutPark table td, body#Pressroom table tr, body#Pressroom table th, bodyPressroom table td {
+	padding: 5px 10px 8px;
+}
+
+/*changed  by rj*/
+body#CPDCMembers table tr.alt, body#ReportAProblem.generic table tr.alt, body#RestaurantWeek table tr.alt, body#RWmain table tr.alt, body#RWrestaurants table tr.alt, body#RWrecipes table tr.alt, body#RWparking table tr.alt, body#RWcontest table tr.alt, body#ResidentialResources tr.alt, body#LivingHereResres tr.alt, body#Eventsind tr.alt, body#ChestnutPark tr.alt, body#Pressroom tr.alt {
+	background-color: #f4f4f4;
+}
+
+/*changed  by rj*/
+body#CPDCMembers table a, body#ReportAProblem.generic table a, body#ResidentialResources table a, body#LivingHereResres table a, body#Eventsind Table a, body#ChestnutPark Table a, body#Pressroom Table a {
+	color: #30beb8;
+	font-weight: normal;
+}
+
+/*changed  by rj*/
+body#RestaurantWeek table a {
+	color: #d82e45;
+	font-weight: bold;
+}
+
+body#RWmain table a {
+	color: #d82e45;
+	font-weight: bold;
+}
+
+body#RWrestaurants table a {
+	color: #d82e45;
+	font-weight: bold;
+}
+
+body#RWparking table a {
+	color: #d82e45;
+	font-weight: bold;
+}
+
+body#RWcontest table a {
+	color: #d82e45;
+	font-weight: bold;
+}
+
+body.Tertiary div.ContentLeftInner h6 {
+	font-size: 11px;
+	font-weight: bold;
+	padding: 10px 0;
+}
+
+body.Tertiary div.ContentLeftInner h6.first {
+	padding: 0 0 10px 0;
+}
+
+body.Tertiary div.ContentLeftInner dl {
+	border-bottom: solid 5px #98E7DE;
+	padding-bottom: 15px;
+}
+
+body.Tertiary div.ContentLeftInner dl dt {
+	font-weight: bold;
+	padding: 10px 10px 5px;
+}
+
+body.Tertiary div.ContentLeftInner dl dd {
+	padding: 0 10px 8px;
+}
+
+body.Tertiary div.ContentLeftInner dl dt.alt,
+body.Tertiary div.ContentLeftInner dl dd.alt {
+	background-color: #F4F4F4;
+}
+
+body.Tertiary div.ContentLeftInner a {
+	color: #30BEB8;
+}
+
+body#parksMain div.ContentLeftInner a {
+	color: #92E503;
+}
+
+body#parksSisCities div.ContentLeftInner a {
+	color: #6242AD;
+}
+
+body#parks3Pkwy div.ContentLeftInner a {
+	color: #92E503;
+}
+
+body#parksDilworth div.ContentLeftInner a {
+	color: #92E503;
+}
+
+body#parksChestnut div.ContentLeftInner a {
+	color: #92E503;
+}
+
+/*added by rj*/
+body.generic div.ColumnContent a {
+	color: #30BEB8;
+}
+
+div.RightSideColumn {
+	background: #fff;
+	float: left;
+	padding: 15px 0;
+	width: 246;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+body#Update div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeftInner,
+body#InCCNow div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeftInner,
+body#RestaurantWeek div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeftInner {
+	padding-top: 0;
+}
+
+body#RestaurantWeek div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentLeftInner div.Module h4.WhyCenterCity {
+	background-image: url(/clients/CenterCityPhila/Images/hdr_whyCenterCity.png);
+	background-repeat: no-repeat;
+	height: 22px;
+	margin: 1px 0 0 0;
+	text-indent: -10001px;
+}
+
+ul#RestaurantLinks {
+	list-style: none;
+	margin: 0;
+	padding: 15px 0 0 0;
+}
+
+ul#RestaurantLinks li {
+	background: none;
+	display: block;
+	text-indent: -10001px;
+	margin: 0;
+	padding: 0;
+}
+
+ul#RestaurantLinks li a {
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	display: block;
+	text-indent: -10001px;
+	width: 246px;
+}
+
+ul#RestaurantLinks li a#RestaurantFindRestoff {
+	background-image: url(/clients/CenterCityPhila/Images/btn_find-restaurant.png);
+	height: 84px;
+}
+
+/*ul#RestaurantLinks li a#RestaurantFindRestoff:hover {
+	background-position: 0 -84px;
+}*/
+
+ul#RestaurantLinks li a#RestaurantFindRestcon {
+	background-image: url(/clients/CenterCityPhila/Images/btn_find-restaurant.png);
+	height: 84px;
+}
+
+/*ul#RestaurantLinks li a#RestaurantFindRestcon:hover {
+	background-position: 0 -84px;
+}*/
+
+ul#RestaurantLinks li a#RestaurantFindParkoff {
+	background-image: url(/clients/CenterCityPhila/Images/btn_find-parkingoff.png);
+	height: 79px;
+}
+
+/*ul#RestaurantLinks li a#RestaurantFindParkoff:hover {
+	background-position: 0 -79x;
+}*/
+
+ul#RestaurantLinks li a#RestaurantFindParkcon {
+	background-image: url(/clients/CenterCityPhila/Images/btn_find-parking.png);
+	height: 72px;
+}
+
+/*ul#RestaurantLinks li a#RestaurantFindParkcon:hover {
+	background-position: 0 -72x;
+}*/
+
+ul#RestaurantLinks li a#RestaurantContest {
+	background-image: url(/clients/CenterCityPhila/Images/btn_contest.png);
+	height: 79px;
+}
+
+/*ul#RestaurantLinks li a#RestaurantContest:hover {
+	background-position: 0 -85px;
+}*/
+
+div.RightSideColumn hr {
+	width: 240px;
+}
+
+a#RestaurantWeekEvents {
+	color: #548401;
+	font-size: 10px;
+	font-weight: bold;
+	left: 13px;
+	position: absolute;
+	text-transform: uppercase;
+	top: 50px;
+	z-index: 1000;
+}
+
+a#RestaurantWeekEvents:hover {
+	text-decoration: none;
+}
+
+body#Update div.ContentLeftInner h6,
+body#InCCNow div.ContentLeftInner h6 {
+	font: bold 11px Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0 0 0 0;
+}
+
+body#Update div.ContentLeftInner h6.single,
+body#InCCNow div.ContentLeftInner h6.single {
+	font: normal 14pt Arial, Helvetica, sans-serif;
+}
+
+body#Update div.ContentLeftInner h6 a,
+body#InCCNow div.ContentLeftInner h6 a {
+	color: #666;
+}
+
+body#Update div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentRight,
+body#InCCNow div#ColumnContainer div#ContentColumn div.ContentContainer div.ContentRight {
+	background-image: none;
+	float: left;
+	margin-left: 0;
+	padding: 0;
+	width: 246px;
+}
+
+div.post {
+	border-bottom: solid 1px #30beb8;
+}
+
+div.entry {
+	margin-top: 10px;
+}
+
+div.BlogRight {
+	background: #fff;
+	float: left;
+	min-height: 142px;
+	padding: 0 0 0 0;
+	width: 246px;
+}
+
+div.BlogRight h6 {
+	background: url(/clients/CenterCityPhila/Images/bkg_archives.png) no-repeat;
+	height: 46px;
+	float: left;
+	margin: 0;
+	text-indent: -10001px;
+	width: 246px;
+}
+
+div.BlogRight ul {
+	margin: 0;
+	padding: 5px 0 0 10px;
+	width: 236px;
+}
+
+a.DonateNowbutton { 
+	background: url(/clients/CenterCityPhila/Images/btn_DonateNow.png) no-repeat 0 0; width: 234px; height: 46px; display: block; text-indent: -9999px; 
+}
+
+a.DonateNowbutton:hover { background-position: 0 -49px; }
+
+body#RestaurantWeek a.redbold { 
+	color:#b72928; font-weight:bold;
+	  }  
+	  
+body#RWmain a.redbold { 
+	color:#b72928; font-weight:bold;
+	  } 	  
+
+body#RWparking a.redbold { 
+	color:#b72928; font-weight:bold;
+	  } 	
+	  
+body#RWrestaurants a.redbold { 
+	color:#b72928; font-weight:bold;
+	  } 
+	  
+body#RWrecipes a.redbold { 
+	color:#b72928; font-weight:bold;
+	  } 	  	
+	  
+body#RWcontest a.redbold { 
+	color:#b72928; font-weight:bold;
+	  } 	
+
+body#RestaurantWeek a.rwlink { 
+	color:#b72928;
+	  }  
+
+body#RWparking a.rwlink { 
+	color:#b72928;
+	  }  	  
+	  
+body#RWrestaurants a.rwlink { 
+	color:#b72928;
+	  }  
+
+body#RWrecipes a.rwlink { 
+	color:#b72928;
+	  } 
+	  	  	  
+body#RestaurantWeek span.hg { 
+	background: url("/clients/CenterCityPhila/Images/homegrown_icon_web.png") no-repeat scroll left top transparent;
+	width: 17px; 
+	height: 13px;
+	overflow: hidden; 
+	display: block;
+	float: none;
+	padding-left: 20px;
+	display: inline;
+	  }  
+
+body#RWrestaurants span.hg { 
+	background: url("/clients/CenterCityPhila/Images/homegrown_icon_web.png") no-repeat scroll left top transparent;
+	width: 17px; 
+	height: 13px;
+	overflow: hidden; 
+	display: block;
+	float: none;
+	padding-left: 20px;
+	display: inline;
+	  }  
+	  
+div#cuisinesearch { 
+	  border: 1px solid #e5e5e5;
+	  padding: 5px 10px 5px 10px;
+	  width: 430px;
+	  height: 30px;
+	  }  
+	  
+div.mapkey { font-size:12px; }
+	
+img.key {
+	vertical-align:middle;
+	padding-left:20px;
+	}
+	
+div#mapsection { border:1px solid #ccc; outline:none; }	
+
+object#mapsection { border:1px solid #ccc; outline:none; }
+
+#menuregion {
+    border: 1px solid #E5E5E5;
+    padding: 20px;
+    text-align: center;
+}
+		
+p.menuLabel {
+	  font-weight:bold;
+	  padding:12px 0;
+	  color:#999;
+	  font:15px Tahoma;
+	}
+	
+body#RWparking table#rwparking	{
+	width: 760px;
+	}
+	
+body#RestaurantWeek #h7 {
+    color: #666666;
+    font: 14px Tahoma;
+}	

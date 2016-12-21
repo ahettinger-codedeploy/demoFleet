@@ -1,0 +1,1 @@
+function ComponentArt_Menu_SetKeyboardFocusedMenu(menuObj){qqPa=menuObj;};function ComponentArt_Menu_InitKeyboard(menu){ComponentArt_Menu_SetKeyboardFocusedMenu(menu);menu.KeyboardEnabled=true;menu.qzad=menu.Items()[0];document.onkeydown=ComponentArt_HandleKeyPress;};var ComponentArt_Menu_Keyboard_Loaded=true;

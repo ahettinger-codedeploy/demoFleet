@@ -1,0 +1,490 @@
+/**
+ * @file
+ * @project 713
+ * @package sftheme
+ * @site app1
+ */
+
+/*----------------------------------
+		Typography Reset
+----------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {font-weight:normal;}
+h1 {font-size:22px;margin:10px 0;padding:0px;font-family: "Trebuchet MS", Helvetica, sans-serif;font-style: italic;}
+h2 {font-size:20px;margin:10px 0;padding:0px;font-family: "Trebuchet MS", Helvetica, sans-serif;font-style: italic;}
+h3 {font-size:20px;margin:10px 0;padding:0px;font-family: "Trebuchet MS", Helvetica, sans-serif;font-style: italic;}
+h4 {font-size:16px;margin:5px 0;padding:0px;font-family: "Trebuchet MS", Helvetica, sans-serif;}
+h5 {font-size:16px;font-weight:normal;margin:5px 0;padding:0px;font-family: "Trebuchet MS", Helvetica, sans-serif;}
+h6 {font-size:16px;font-weight:normal;margin:3px 0;padding:0px;font-family: "Trebuchet MS", Helvetica, sans-serif;}
+
+legend
+{color: #ffffff;}
+/*----------------------------------
+		General
+----------------------------------*/
+
+body {
+	background-image: url(/clients/CharlestonPirateTour/Images/713_background.jpg);
+	background-repeat: repeat-x;
+	background-color: #000000;
+	margin: 0;
+	font-family: Arial, Helvetica, FreeSans, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+}
+
+.sf_outer_wrapper {
+	width: 897px;
+	margin: 0 auto;
+	padding: 0 14px;
+	background-image: url(/clients/CharlestonPirateTour/Images/713_sidebar.jpg);
+	background-repeat: repeat-y;
+	background-color: #0D0D0D;
+}
+
+/*--------------------------------
+		Header
+---------------------------------*/
+
+.sf_region1 {
+	width: 897px;
+	background-color: #121212;
+	background-image: url(/clients/CharlestonPirateTour/Images/713_top.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom:
+}
+
+.sf_region1:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	font-height: 1px;
+	margin:0px;
+	padding:0px;
+}
+
+.sf_extra2 {	
+	width: 897px;	
+	height: 2px;
+}
+
+.sf_main_header {
+	min-height: 48px;
+	height: auto !important;
+	height: 48px;	
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 32px;
+	font-weight: bold;
+	font-style: italic;
+	color: #ffffff;
+	padding: 10px 20px 10px;	
+}
+
+.sf_extra3 {	
+	width: 897px;
+	height: 200px;
+	background-image: url(/clients/CharlestonPirateTour/Images/713_header.jpg);
+	background-repeat: no-repeat;
+}
+
+.sf_sub_header { 
+	display: none;
+}
+
+.sf_main_header p, .sf_sub_header p {
+	margin: 0px;
+	padding: 0px;
+}
+
+/*--------------------------
+		End Header
+--------------------------*/
+
+.sf_extra4 {
+	width: 897px;
+	height: 39px;
+}
+
+/*--------------------------------
+		Navigation
+---------------------------------*/
+
+.sf_navigation .widget_header {
+	display: none;
+}
+
+.sf_navigation {
+	float: left;
+	width: 205px;
+	background-image: url(/clients/CharlestonPirateTour/Images/713_menuback.gif);
+	background-repeat: repeat-y;
+}
+
+.sf_navigation:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	font-height: 1px;
+	margin:0px;
+	padding:0px;
+}
+
+.sf_navigation ul {
+	margin:0px;
+	float:left;
+	padding: 7px 0 0;
+	list-style-type:none;
+}
+
+.sf_navigation ul:after {
+	content: ".";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    font-size: 1px;
+    clear: both;
+}
+
+.sf_navigation ul li {	
+	background-image: url(/clients/CharlestonPirateTour/Images/713_menuoneback.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	float:left;
+	width:175px;
+	padding: 10px 10px 10px 20px;
+}
+
+.sf_navigation ul li.sf_last_nav_item {	
+	padding-bottom: 17px;
+}
+
+.sf_navigation ul li.sf_first_nav_item {
+}
+
+.sf_navigation ul li a {
+	padding-left: 15px;
+	color: #ededed;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	text-decoration: none;
+	display: block;
+}
+
+.sf_navigation ul li a:visited {	
+	color: #ededed;
+}
+
+.sf_navigation ul li a:hover {
+}
+
+/*------------------------------------
+	Flyout - Left Aligned Menu
+------------------------------------*/
+
+
+.sf_navigation .subnav {  
+	position:absolute;
+	background:#333333;
+	border:solid 1px #000000;
+	left: -999em;
+	width:133px;
+	padding:3px 3px 0px 3px;
+	margin:-24px 0 0 150px;
+	z-index:1000;
+}
+
+.sf_navigation .subnav li {
+	margin:0;
+	padding:0;
+	background:none;
+	height:auto;
+	width:auto;
+	border:none;
+	float:left;
+}
+
+.sf_navigation .subnav li a {
+	background: #222222;
+	border:solid 1px #000000;
+	display : block;
+	width:120px;
+	height:auto;
+	margin:0 0 3px 0;
+	padding:5px;
+	white-space:normal;
+}
+
+.sf_navigation .subnav li a:visited {	
+}
+
+.sf_navigation .subnav li a:hover {
+	background:#000000;
+}
+
+#Nav1 li:hover ul, 
+#Nav1 li.sfhover ul {  
+	left: auto;
+}
+
+#Nav1 li:hover, #Nav1 li.hover {  
+    position: static;  
+}
+
+#Nav1 iframe {
+	position: absolute;
+	/* account for the border */
+	left: -0.25em;
+	top: -0.25em;
+	z-index: 0;
+	filter: progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0);
+	margin-left: 3px;
+}
+
+/*--------------------------------
+		End Navigation
+---------------------------------*/
+
+/*--------------------------------
+		 	Page Title
+---------------------------------*/
+
+.sf_pagetitle {
+	color: #ffffff;
+	float: right;
+	display: inline;
+	width: 640px;
+	margin: 0 30px 10px 0;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-style: italic;	
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.sf_pagetitle h1 {
+	font-size:20px;
+	font-weight:bold;
+	margin:0;
+}
+
+/*--------------------------------
+		 End Page Title
+---------------------------------*/
+
+/*--------------------------
+		Content
+--------------------------*/
+
+.sf_content {
+	float: right;
+	display: inline;
+	width: 660px;
+	margin: 0 20px 10px 0;
+	color: #bbbbbb;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+
+.sf_content:after {
+	content: " ";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	font-height: 1px;
+	margin:0px;
+	padding:0px;
+}
+
+.sf_content img {	
+}
+
+/*--------------------------
+		End Content
+--------------------------*/
+
+.sf_extra7 {	
+	clear: both;
+}
+
+/*--------------------------
+		 Footer
+--------------------------*/
+
+.sf_footer {
+	background-color: #0D0D0D;
+	width: 897px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 13px;
+	text-align: center;
+	padding: 40px 0 20px;
+	margin-top: 20px;
+	background-image: url(/clients/CharlestonPirateTour/Images/713_footer.jpg);
+	background-position: top;
+	background-repeat: no-repeat;
+}
+
+.sf_footer p{
+	margin:0px;
+	padding:0px;
+}
+
+/*--------------------------
+		End Footer
+--------------------------*/
+
+a:link {
+
+}
+
+a:visited {
+}
+
+a:hover {	
+	color: #ffffff;
+}
+
+.sf_banner {
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	margin: 0 auto;
+	padding: 10px 0;
+	color: #cccccc;
+	width: 925px;
+	background-image: url(/clients/CharlestonPirateTour/Images/713_sidebar2.jpg);
+	background-repeat: repeat-y;
+}
+
+.sf_banner a:link, .sf_banner a:visited {
+	color: #cccccc;
+	text-decoration: none;
+}
+
+/*--------------------------
+		Sidebar
+--------------------------*/
+
+/* sPod */
+
+.sf_pod {
+  margin-top: 20px;
+  float: left;
+  padding: 0 10px;
+  color: #BBBBBB;
+}
+
+.sf_pod:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+.sf_region4 {
+	float: left;
+	display: block;
+	width: 205px;	
+	clear:left;
+}
+
+.widgetset {
+	float: left;
+	margin-top: 20px;
+}
+
+.widgetset .widget {
+	background-repeat: no-repeat;
+	background-position: bottom;
+	margin: 0px;
+	padding: 0px;
+	margin-bottom:15px;	
+}
+
+.widgetset .widget_header {
+	margin:0px;
+	padding:3px 10px;	
+	font-weight: normal;
+	text-align: left;
+	color: #ADADAD;			
+}
+
+.widgetset .widget_header a,
+.widgetset .widget_header a:visited {
+	text-decoration: none !important;	
+}
+
+.widgetset .widget_content {
+	padding: 5px 10px;
+	margin: 0px;
+	background-color: #161616;
+	border: 1px solid #242424;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	width: 185px;
+	overflow:hidden;	
+}
+
+.widgetset .widget ul,
+.widgetset .widget ol {
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+}
+
+.widgetset .widget li {	
+	padding: 5px 0px;
+}
+
+.widgetset .widget img {
+	vertical-align: top;
+	padding: 2px 0;
+}
+
+.widgetset a:link,
+.widgetset a:visited {
+	text-decoration:underline;	
+}
+
+.widgetset a:hover {	
+	text-decoration: none;	
+}
+
+.widgetset .widget_content .form_item {
+	margin:10px 0;
+	padding:0px;
+	width: 160px;
+}
+
+.widgetset .widget input,
+.widgetset .widget select {	
+	width:160px;
+}
+
+.widgetset .widget .btn {
+	width:auto;
+	margin: 5px 0px;
+}
+
+.btn, .checkout a.button, .checkout input.button {
+	margin: 3px 3px 3px 0;
+	padding: 2px;	
+	font-size: 11px;
+	font-weight: normal;
+	font-family: Arial, Helvetica, FreeSans, sans-serif;
+	cursor: pointer;
+	border-style: solid;
+	border-width: 1px;	
+	background-color: #262626;
+	border: 1px solid #343434;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #ffffff;
+}
+
+.btn:hover, .checkout a.button:hover, .checkout input.button:hover {
+	background-color: #343434;
+}

@@ -1,0 +1,87 @@
+<LINK 
+href="/PrivateLabel/CambridgeScienceFestival/images/styles.css" type=text/css 
+rel=stylesheet>
+
+<SCRIPT language=JavaScript>
+  <!--
+    function WM_preloadImages() {
+      // Don't bother if there's no document.images
+      if (document.images) {
+        if (typeof(document.WM) == 'undefined'){
+          document.WM = new Object();
+        }
+        document.WM.loadedImages = new Array();
+        // Loop through all the arguments.
+        var argLength = WM_preloadImages.arguments.length;
+        for(arg=0;arg<argLength;arg++) {
+          // For each arg, create a new image.
+          document.WM.loadedImages[arg] = new Image();
+          // Then set the source of that image to the current argument.
+          document.WM.loadedImages[arg].src = WM_preloadImages.arguments[arg];
+        }
+      }
+    }
+      
+    function WM_imageSwap(daImage, daSrc){
+      var objStr,obj;
+      /*
+        WM_imageSwap()
+        Changes the source of an image.
+    
+        Source: Webmonkey Code Library
+        (http://www.hotwired.com/webmonkey/javascript/code_library/)
+    
+        Author: Shvatz
+        Author Email: shvatz@wired.com
+    
+        Usage: WM_imageSwap(originalImage, 'newSourceUrl');
+      */
+      
+      if(document.images){
+        // Check to see whether you are using a name, number, or object
+        if (typeof(daImage) == 'string') {
+          // This whole objStr nonesense is here solely to gain compatability
+          // with ie3 for the mac.
+          objStr = 'document.' + daImage;
+          obj = eval(objStr);
+          obj.src = daSrc;
+        } else if ((typeof(daImage) == 'object') && daImage && daImage.src) {
+          daImage.src = daSrc;
+        }
+      }
+    }
+    // -->
+  </SCRIPT>
+
+
+<DIV class=wrapper>
+<DIV id=banner><IMG 
+src="/PrivateLabel/CambridgeScienceFestival/images/banner_events.gif"> </DIV><!-- BEGIN LOGO -->
+<DIV id=logo><A href="http://www.cambridgesciencefestival.org/index.php"><IMG 
+src="/PrivateLabel/CambridgeScienceFestival/images/logo_csf_sm.gif"></A></DIV><!-- END LOGO --><BR 
+clear=all><!-- BEGIN MAIN NAVIGATION -->
+<DIV class=nav_main><A 
+onmouseover="WM_imageSwap('nav_about', '/PrivateLabel/CambridgeScienceFestival/images/nav_about_on.gif');" 
+onmouseout="WM_imageSwap('nav_about', '/PrivateLabel/CambridgeScienceFestival/images/nav_about.gif');" 
+href="http://www.cambridgesciencefestival.org/about.php"><IMG alt="About Us" 
+src="/PrivateLabel/CambridgeScienceFestival/images/nav_about.gif" name=nav_about></A> <A 
+onmouseover="WM_imageSwap('nav_involved', '/PrivateLabel/CambridgeScienceFestival/images/nav_involved_on.gif');" 
+onmouseout="WM_imageSwap('nav_involved', '/PrivateLabel/CambridgeScienceFestival/images/nav_involved.gif');" 
+href="http://www.cambridgesciencefestival.org/involved.php"><IMG 
+alt="Get Involved" src="/PrivateLabel/CambridgeScienceFestival/images/nav_involved.gif" 
+name=nav_involved></A> <A 
+href="http://www.cambridgesciencefestival.org/events.php"><IMG alt=Events 
+src="/PrivateLabel/CambridgeScienceFestival/images/nav_events_on.gif" 
+name=nav_events></A> <A 
+onmouseover="WM_imageSwap('nav_partners', '/PrivateLabel/CambridgeScienceFestival/images/nav_partners_on.gif');" 
+onmouseout="WM_imageSwap('nav_partners', '/PrivateLabel/CambridgeScienceFestival/images/nav_partners.gif');" 
+href="http://www.cambridgesciencefestival.org/partners_funders.php"><IMG 
+alt="Funder, Partners, and Sponsors" 
+src="/PrivateLabel/CambridgeScienceFestival/images/nav_partners.gif" 
+name=nav_partners></A> <A 
+onmouseover="WM_imageSwap('nav_pressroom', '/PrivateLabel/CambridgeScienceFestival/images/nav_pressroom_on.gif');" 
+onmouseout="WM_imageSwap('nav_pressroom', '/PrivateLabel/CambridgeScienceFestival/images/nav_pressroom.gif');" 
+href="http://www.cambridgesciencefestival.org/pressroom.php"><IMG alt=Pressroom 
+src="/PrivateLabel/CambridgeScienceFestival/images/nav_pressroom.gif" 
+name=nav_pressroom></A> </DIV><!-- END MAIN NAVIGATION --><!-- BEGIN MAIN TEXT AREA -->
+<DIV class=right_section>

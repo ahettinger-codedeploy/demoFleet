@@ -1,0 +1,159 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+<script language="javascript">
+var arrDays = new Array();
+arrDays[0] = 'All';
+
+for (var i=1; i<32; i++){
+	arrDays[arrDays.length] = i;
+}
+
+function fillDays(){
+	var intMonth;
+	var intYear;	
+	var monthDays; 
+	
+	if (document.forms[0].Day != null){
+		document.forms[0].Day.options.length = 0;
+		intMonth = document.forms[0].Month.value;
+		intYear = document.forms[0].Year.value;
+	
+		if (intYear % 4 == 0 && intMonth == 2){
+			monthDays = 29;			
+		} else if (intMonth == 2) {
+			monthDays = 28;
+		} else if (intMonth == 4 || intMonth == 6 || intMonth == 9 || intMonth == 11){
+			monthDays = 30;
+		} else monthDays = 31;
+			
+		for (var i=0; i<arrDays.length; i++){					
+			if (i <=monthDays){				
+				document.forms[0].Day.options[i] = new Option(arrDays[i], arrDays[i]);			
+			}
+		}
+	}
+}
+function submitPage() {
+	document.forms[0].submit();
+}
+
+function submitReg() {
+	parent.frames['Results'].document.location.href = 'OpenRegistrations.asp?GF=&OrgID=1272&strColumnsToShow=';
+}
+</script>
+<link rel="stylesheet" type="text/css" href="Header_data/eventu.css">
+
+<style>
+.Search
+{	FONT-FAMILY: Verdana;
+	COLOR: #000063;
+	FONT-SIZE: 8pt;
+	FONT-WEIGHT: bold;
+	FONT-STYLE: normal;
+	TEXT-DECORATION: none;
+}
+.SearchBackground
+{	BACKGROUND-COLOR: #FFFFFF;
+	BACKGROUND-IMAGE: url();
+}
+.SearchButton
+{	BORDER-COLOR: #000063;
+	BACKGROUND-COLOR: #e7e7e7;
+	BORDER-WIDTH: 1px;
+	COLOR: #000063;
+}</style>
+
+
+</head><body class="SearchBackground">
+<form method="post" action="MonthlyCalendar.asp?GF=&amp;OrgID=1272" target="Results">
+<input name="OrgID" value="1272" type="hidden">
+<input name="ResourceID" value="" type="hidden">
+<input name="strColumnsToShow" value="" type="hidden">
+<input name="CategoryID" value="" type="hidden">
+<input name="CellPadding" value="" type="hidden">
+<table class="SmallText" border="0" cellpadding="1" cellspacing="0">
+<tbody><tr class="Search"><td nowrap="nowrap">Search:</td><td>Month:</td><td>Year:</td><td colspan="2">&nbsp;</td></tr>
+<tr><td><select name="DepartmentID">
+			<option value="0">All
+</option><option value="4874">55+ Ministry</option>
+<option value="4642">Administration</option>
+<option value="11506">Bible Study</option>
+<option value="5181">Car Care Ministry</option>
+<option value="5188">Childcare Ministry</option>
+<option value="4869">Children's Ministry</option>
+<option value="5199">Christian Preschool</option>
+<option value="5189">College Ministry</option>
+<option value="4875">Drama Ministry</option>
+<option value="4885">Evangelism Ministry</option>
+<option value="4895">GA Ministry</option>
+<option value="4888">Harvest Christian Schools</option>
+<option value="11647">Hispanic Ministry</option>
+<option value="4886">International Ministry</option>
+<option value="5184">Library Ministry</option>
+<option value="11673">Major Events/Churchwide Events</option>
+<option value="4873">Median Adult Ministry</option>
+<option value="5192">Men's Ministry</option>
+<option value="5185">Ministry Class</option>
+<option value="4887">Missions &amp; Ministry</option>
+<option value="10405">Mother's Day Out</option>
+<option value="5194">Mothers Of Preschoolers (MOPS)</option>
+<option value="4881">Music Ministry-Adult</option>
+<option value="4878">Music Ministry-Children's Choir</option>
+<option value="4880">Music Ministry-High School Choir</option>
+<option value="4877">Music Ministry-Instrumental</option>
+<option value="4879">Music Ministry-Middle School Choir</option>
+<option value="4864">Pastor's Ministry</option>
+<option value="4893">Pastoral Ministries</option>
+<option value="4894">Prayer Ministry</option>
+<option value="5186">Precepts Ministry</option>
+<option value="4896">RA Ministry</option>
+<option value="5190">Single Adult Ministry</option>
+<option value="5179">Sports &amp; Fitness Center</option>
+<option value="5197">Student Ministry-Acteens</option>
+<option value="5180">Student Ministry-Girls</option>
+<option value="10404">Student Ministry-High School</option>
+<option value="5191">Student Ministry-Middle School</option>
+<option value="5187">Support Groups Ministry</option>
+<option value="19439">Weddings</option>
+<option value="5196">Women's Ministry</option>
+<option value="4872">Young Adult Ministry</option>
+
+		</select>
+</td><td>
+		<select name="Month" onchange="fillDays();">
+<option value="1">Jan
+</option><option value="2">Feb
+</option><option value="3">Mar
+</option><option value="4">Apr
+</option><option value="5">May
+</option><option value="6">Jun
+</option><option value="7">Jul
+</option><option value="8">Aug
+</option><option value="9">Sep
+</option><option value="10">Oct
+</option><option selected="selected" value="11">Nov
+</option><option value="12">Dec
+		</option></select></td><td>
+		<select name="Year" onchange="fillDays();">
+<option value="2007">2007
+</option><option selected="selected" value="2008">2008
+</option><option value="2009">2009
+</option><option value="2010">2010
+</option><option value="2011">2011
+</option><option value="2012">2012
+</option><option value="2013">2013
+		</option></select></td>
+<td valign="bottom" nowrap="nowrap">
+<input class="SearchButton" onclick="submitPage()" value="Search" id="Search" name="Search" type="button"></td>
+<td valign="bottom"><input class="SearchButton" onclick="submitReg()" value="Open Registrations" id="Reg" name="Reg" type="button">
+</td>
+</tr></tbody></table>
+
+</form>
+<script language="JavaScript">
+fillDays();
+</script>
+</body></html>

@@ -1,0 +1,640 @@
+/* ----- BASE ---- */
+/* ----- VERSION1 ---- 
+@BODYBG:                #FBFBFB;
+@COLOR:                 #444444;
+
+@DARKBG:                #F1F1F1;
+@DARKERBG:              #393F42;
+@DARKESTBG:             #2F3335;
+@DARKCOLOR:             #999999;
+@DARKBORDER:			#3B3E41;
+@DARKTITLECOLOR:        #F6F6F6;
+
+@PRIMARYCOLOR:          #8EA33E;
+@PRIMARYLIGHTCOLOR:		#A2B653;
+@PRIMARYBORDER:			#AFBD59;
+
+@LIGHTBG:  				#DDDDDD;
+@LIGHTERBG:				#EEEEEE;
+@LIGHTESTBG:			#F9F9F9;
+@LIGHTCOLOR:			#333333;
+@LIGHTBORDER:			#D6D6D6; 
+@LIGHTERBORDER:         #EFEFEF;
+@LIGHTERCOLOR:          #666666;
+@LIGHTESTCOLOR:       	#FFFFFF;
+
+@LIGHTERBORDER:			#E7ECEE;
+@LIGHTSHADOW:           rgba(0, 0, 0, 0.1);
+
+
+@SPECIALBG:		    	#282E31;
+@SPECIALLIGHTBG:		#3F484D;
+@SPECIALBORDER:		    #4A555B;
+@SPECIALCOLOR:			#89AA38;
+
+@FADEHEADINGCOLOR:      #BBBBBB;
+
+*//* Browser Resets */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.carousel {
+  margin-bottom: 0;
+}
+/* FlexSlider Necessary Styles
+*********************************/.flexslider {
+  margin: 0;
+  padding: 0;
+}
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+/* Clearfix for the .slides element */
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+html[xmlns] .slides {
+  display: block;
+}
+* html .slides {
+  height: 1%;
+}
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {
+  display: block;
+}
+/* FlexSlider Default Theme 
+*********************************/
+.flexslider {
+  zoom: 1;
+}
+.flex-viewport {
+  max-height: 2000px;
+  z-index: 9999;
+}
+.loading .flex-viewport {
+  max-height: 300px;
+}
+.flexslider .slides {
+  zoom: 1;
+}
+.carousel li {
+  margin-right: 5px;
+}
+/* Direction Nav */
+.flex-direction-nav {
+  *height: 0;
+}
+.flex-direction-nav li {
+  background: #418cd1;
+}
+.flex-direction-nav a {
+  text-indent: -9999px;
+  background: #418cd1;
+  width: 44px;
+  height: 64px;
+  opacity: 0.6;
+  top: 50%;
+  margin-top: -25px;
+  position: absolute;
+  text-decoration: none;
+  border: none;
+}
+.flex-direction-nav a:hover {
+  opacity: 1;
+}
+.flex-direction-nav .flex-next {
+  outline: none;
+  background: #418cd1 url(../img/flex-arrow-right.png) no-repeat;
+  right: 0px;
+}
+.flex-direction-nav .flex-prev {
+  outline: none;
+  left: 0px;
+  background: #418cd1 url(../img/flex-arrow-left.png) no-repeat;
+}
+.flexslider:hover .flex-next:hover,
+.flexslider:hover .flex-prev:hover {
+  opacity: 1;
+}
+.flex-direction-nav .flex-disabled {
+  opacity: .3!important;
+  filter: alpha(opacity=30);
+  cursor: default;
+}
+/* Control Nav */
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+}
+.flex-control-nav li {
+  padding: 0 1px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.flex-control-paging li a {
+  width: 12px;
+  height: 12px;
+  display: block;
+  background: url(../img/bullet_off.png) no-repeat;
+  cursor: pointer;
+  text-indent: -9999px;
+}
+.flex-control-paging li a:hover {
+  background: url(../img/bullet_on.png) no-repeat;
+}
+.flex-control-paging li a.flex-active {
+  background: url(../img/bullet_on.png) no-repeat;
+  cursor: default;
+}
+.flex-control-thumbs {
+  margin: 0;
+  position: static;
+  overflow: hidden;
+}
+.flex-control-thumbs li {
+  float: left;
+  margin: 0;
+}
+.flex-control-thumbs img {
+  width: 100%;
+  display: block;
+  opacity: .6;
+  cursor: pointer;
+}
+.flex-control-thumbs img:hover {
+  opacity: 1;
+}
+.flex-control-thumbs .flex-active {
+  opacity: 1;
+  cursor: default;
+}
+@media screen and (max-width: 860px) {
+  .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 0;
+  }
+  .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 0;
+  }
+}
+/*=== Theme Styles ==== */
+
+.homeslider{
+    margin-left:-10px;
+    margin-right:-8px;
+    margin-bottom:40px;
+    padding:0 !important;
+}
+.homeslider .flex-direction-nav{
+  opacity: 0;
+}
+.homeslider:hover .flex-direction-nav{
+  opacity: 0.8;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+.homeslider .flex-direction-nav a{
+  display: block;
+  width: 44px;
+  height: 64px;
+}
+.homeslider .flex-direction-nav .flex-prev{
+  background: #418cd1 url(../img/flex-arrow-left.png) no-repeat 0 0;
+}
+.homeslider .flex-direction-nav .flex-next{
+  background: #418cd1 url(../img/flex-arrow-right.png) no-repeat 0 0;
+}
+.homeslider .flex-control-nav,
+.sampleslider .flex-control-nav .sampleslider2 .flex-control-nav {
+  width: auto;
+  right: 15px;
+  bottom: 10px;
+  z-index: 999;
+}
+.homeslider .flex-control-nav li,
+.sampleslider .flex-control-nav li,
+.sampleslider2 .flex-control-nav li {
+  margin: 2px;
+}
+.homeslider .flex-control-paging li a,
+.sampleslider .flex-control-paging li a,
+.sampleslider2 .flex-control-paging li a {
+  width: 20px;
+  height: 5px;
+  opacity: 0.8;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  background: #888;
+  border: 1px solid #777;
+  box-shadow: none;
+}
+.homeslider .flex-control-paging li a.flex-active,
+.homeslider .flex-control-paging li a:hover,
+.sampleslider .flex-control-paging li a.flex-active,
+.sampleslider .flex-control-paging li a:hover,
+.sampleslider2 .flex-control-paging li a:hover {
+  background: #529de2;
+  border: 1px solid #418cd1;
+}
+.sampleslider_container {
+  margin: 10px;
+  position: relative;
+}
+.archive_carousel_block{
+    margin: 10px 20px 15px 40px;
+}
+.archive_carousel{position:relative;}
+.archive_carousel h3.title{
+    margin-left:30px;
+    position:relative;
+}
+
+
+.archive_carousel .flex-control-nav,
+.vibe_carousel .flex-control-nav{
+  position: absolute;
+  top: 7px;
+    right: 20px;
+  text-align: center;
+  width: auto;
+  z-index: 999;
+  outline: none;
+}
+@-moz-document url-prefix() { 
+  .vibe_carousel .flex-control-nav {
+     top:15px;
+  }
+}
+
+.vibe_carousel .flex-direction-nav{
+   position: absolute;
+  top: 34px;
+  right: 10px;
+  width: auto;
+  z-index: 999;
+  outline: none;
+}
+.vibe_carousel.carousel_testimonial.carousel_columns1 .flex-direction-nav{
+    right:0;
+}
+  .vibe_carousel .flex-direction-nav .flex-prev,
+  .vibe_carousel .flex-direction-nav .flex-next{
+    background:#393F42 url(../img/button-arrows.png) 2px 2px;
+  display: block;
+  width: 19px;
+  height: 19px;  
+  padding:2px;
+  opacity: 0.4;
+  /*border-radius:32px;*/
+  }
+ .vibe_carousel .flex-direction-nav .flex-prev{background-position:0 -17px;margin-left:-48px;} 
+.archive_carousel .flex-control-nav{top:-40px;}
+.widget_carousel .flex-direction-nav,
+.widget_carousel .flex-control-nav {
+  position: absolute;
+  top: -40px;
+  right: 20px;
+  text-align: center;
+  width: auto;
+  z-index: 999;
+}
+
+.archive_carousel .flex-control-paging li a,
+.vibe_carousel .flex-control-paging li a,
+.widget_carousel .flex-control-nav li a {
+  width: 20px;
+  height: 7px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  background: #888;
+}
+.widget_carousel .flex-control-nav li a {
+  width: 10px;
+}
+
+.archive_carousel .flex-control-paging li a:hover,
+.vibe_carousel .flex-control-paging li a:hover,
+.widget_carousel .flex-control-nav li a:hover {
+  background: #418cd1;
+  opacity: 0.8;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -ms-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.archive_carousel .flex-control-paging li a.flex-active,
+.vibe_carousel .flex-control-paging li a.flex-active,
+.widget_carousel .flex-control-nav li a.flex-active {
+  background: #418cd1;
+}
+
+.carousel-control{
+  background-color: #418cd1;
+  cursor: pointer;
+  border: none;
+  border-radius: 0;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  margin-top: -30px;
+  font-size: 50px;
+  font-weight: 100;
+  line-height: 0px;
+  padding: 5px 0px;
+  text-indent: -9999px;
+  width: 30px;
+  display: none;
+  z-index: 999;
+}
+.thumb_slider:hover .carousel-control{
+  display: block;
+}
+.carousel-control span {
+  background-image: url(../img/button-arrows.png);
+  display: block;
+  width: 19px;
+  height: 19px;
+  margin: 10px 5px;
+}
+.carousel-control.left span{
+  background-position: 0 -19px;
+}
+.carousel-control.right {
+  right: 0px;
+  left: auto;
+}
+#testimonials_carousel .flex-control-nav {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-align: center;
+  width: auto;
+}
+/*==== Main Slider Slides ====*/
+/*==== slides CSS EDIT YOUR CSS HERE ====*/
+.slide_title,
+.slide_content,
+.slide_action {
+  position: absolute;
+  opacity: 0;
+}
+.slide_caption {
+ /* padding: 20px;*/
+}
+.v_first .v_text_block .slide_caption .slide_title,
+.slide_caption .slide_title {
+  background: url('../img/slide_bg.png');
+  color: #ffffff;
+  padding: 10px 15px 8px;
+  top: 80px;
+  left: 80px;
+  font-size: 24px;
+  font-weight: 100;
+}
+.v_first .v_text_block .slide_caption .slide_content,
+.slide_caption .slide_content {
+  background: url('../img/slide_bg.png');
+  color: #ffffff;
+  padding: 10px;
+  top: 130px;
+  width: 40%;
+  left: 80px;
+  font-size: 14px;
+  line-height: 16px;
+}
+.slide_caption .slide_action {
+  top: 220px;
+  left: 70px;
+}
+
+
+/*=== Slider Style 2 ===*/
+.flex-caption {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  color: #ffffff;
+  padding: 10px 20px;
+  background: url('../img/darkbg.png');
+  max-width: 300px;
+}
+.v_first .v_text_block .flex-caption h3,
+.flex-caption h3 {
+  color: #ffffff;
+  line-height: 12px;
+  padding: 20px 5px 10px;
+}
+.v_first .v_text_block .flex-caption p,
+.flex-caption p{
+  line-height: 14px;
+  padding: 0 5px;
+  color: #ffffff;
+}
+
+
+.span12 .thumbnail-simple-slider .flex-control-thumbs li{
+	max-width: 184px;
+}
+
+.span12 .full-width .thumbnail-simple-slider .flex-control-thumbs li{
+	max-width: 191px;
+	border-top: 2px solid #333;	border-bottom: 2px solid #333;
+}
+
+.thumbnail-simple-slider{
+	margin-bottom: 80px !important;
+}
+
+/*=== ThumbCarousel ===*/
+.stepcarousel_step {
+  background: #EEE;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #DDD;
+  border-right:none;
+  height: 71px;
+}
+.stepcarousel_step h3 span {
+  font-size: 18px;
+  background: #999;
+  border: 1px solid #888;
+  border-radius: 20px;
+  margin: -5px 5px 10px 0;
+  padding: 12px 13px !important; /*Change here to adjust step label in stepslider */
+  color: #ffffff;
+  float: left;
+}
+.flex-active-slide .stepcarousel_step h3 span {
+  background: #529de2;
+  border: 1px solid #418cd1;
+}
+.flex-active-slide .stepcarousel_step {
+  background: #f9f9f9;
+  border: 1px solid #ffffff;
+  border-bottom: none;
+}
+.stepcarousel_step h3 {
+  margin: 20px;
+  font-size: 14px;
+  line-height: 14px;
+  padding:0 !important;
+}
+.stepcarousel_step h3 small {
+  white-space: nowrap;
+  font-size: 12px;
+}
+.stepcarousel_step:hover {
+  background: #ffffff;
+}
+.stepcarousel_step:hover h3 span {
+  background: #529de2;
+  border: 1px solid #418cd1;
+}
+/*=== Slider Style 8 ==*/
+.homeslider3 .flex-control-thumbs {
+  box-shadow: inset 0 5px 5px #444444;
+}
+.homeslider3 .flex-control-thumbs li {
+  box-shadow: inset 0 0 5px black;
+  border: 5px solid #444444;
+  border-left: none;
+  border-right: none;
+}
+/*==== Responsive Slides ====*/
+@media (min-width: 768px) and (max-width: 969px) {
+  .flex-caption {
+    top: 60px;
+  }
+  .slide_action {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+.slide_content,.slide_action {
+  display: none;
+}
+
+  .flex-caption {
+    top: 20px;
+  }
+  .flex-caption h5 {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .slide_content,
+  .slide_action {
+    display: none;
+  }
+  .slide_title {
+    top: 20px;
+    left: 20px;
+  }
+  .flex-caption {
+    top: 0px;
+  }
+  #timer,
+  .countdown_signup {
+    margin-left: 5%;
+  }
+}
+
+
+.fullwidth.v_first .full-width{
+    padding: 0 !important;
+margin-left: -10px !important;
+margin-right: -8px !important;
+margin-top: 0px !important;
+margin-bottom: 0px;
+}
+
+
+
+
+.flexslider.shadow,
+.fit_video.shadow,
+.fitaudio.shadow,
+.fitother.shadow{
+	box-shadow:0 5px 10px #333;
+	margin-bottom: 10px;
+}
+
+.flexslider.hover,
+.fit_video.hover,
+.fitaudio.hover,
+.fitother.hover{
+	padding-bottom: 55px;
+	background: url('../img/hover_shadow.png') no-repeat 50% 100%;
+}
+
+.flexslider.elegant1,
+.fit_video.elegant1,
+.fitaudio.elegant1,
+.fitother.elegant1{
+	padding-bottom: 35px;
+	background: url('../img/elegant.png') no-repeat 0% 100%;
+}
+
+
+.flexslider.elegant,
+.fit_video.elegant,
+.fitaudio.elegant,
+.fitother.elegant{
+	padding-bottom: 50px;
+	background: url('../img/elegant_shadow.png') no-repeat 0 100%;
+        margin-bottom:10px;
+}
+
+
+/*==== CSS Fixes =====*/
+.fullwidth.v_first .full-width.attach_tagline_thumbslider{
+	margin-top: -40px !important;
+}
+
+.archiveitem{width:220px;}
+
+
+.slide_action.button{
+	line-height: 20px;
+}

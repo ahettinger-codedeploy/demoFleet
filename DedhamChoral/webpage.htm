@@ -1,0 +1,486 @@
+<%
+'CHANGELOG
+'LSP 09/19/14 - initial development
+%>
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+        
+        <link rel="alternate" type="application/rss+xml" title="Dedham Choral Society RSS Feed" href="http://www.dedhamchoral.org/feed/">
+        <link rel="alternate" type="application/atom+xml" title="Dedham Choral Society Atom Feed" href="http://www.dedhamchoral.org/feed/atom/">
+        <link rel="pingback" href="http://www.dedhamchoral.org/wp/xmlrpc.php">
+         <!--[if lte IE 11]>
+         <link rel='stylesheet' href='http://www.dedhamchoral.org/wp/wp-content/themes/dedhamchoral/stylesheet/css/ie.css' /> 
+         <![endif]-->
+
+         <!--[if lte IE 9]>
+         <script src="http://www.dedhamchoral.org/wp/wp-content/themes/dedhamchoral/js/html5shiv.js" type="text/javascript"></script>
+         <![endif]-->
+
+         <!--[if lte IE 8]>
+            <script type="text/javascript" src="http://www.dedhamchoral.org/wp/wp-content/themes/dedhamchoral/js/respond.js"></script>
+         <![endif]-->
+
+         <script style="" src="/clients/DedhamChoral/Images/ga.js" async="" type="text/javascript"></script><script async="" type="text/javascript" src="/clients/DedhamChoral/Images/webfont.js"></script><script type="text/javascript">
+          var mk_images_dir = "http://www.dedhamchoral.org/wp/wp-content/themes/dedhamchoral/images",
+          mk_theme_js_path = "http://www.dedhamchoral.org/wp/wp-content/themes/dedhamchoral/js",
+          mk_nav_res_width = 1140,
+          mk_header_sticky = 1,
+          mk_grid_width = 1140,
+          mk_preloader_logo = "",
+          mk_header_padding = 30,
+          mk_accent_color = "#c22d2d",
+          mk_squeeze_header = 1,
+          mk_logo_height = 70,
+          mk_preloader_txt_color = "#444444",
+          mk_smooth_scroll_option = 1,
+          mk_preloader_bg_color = "#ffffff";
+          
+           var mk_header_trans_offset = 0;
+                   </script>
+               
+    <script type="text/javascript">var ajaxurl = "http://www.dedhamchoral.org/wp/wp-admin/admin-ajax.php"</script><script type="text/javascript">
+    WebFontConfig = {
+    google: { families: [ 'Source+Sans+Pro:Light+200,300,Normal+400,Semi-Bold+600,Bold+700,Ultra-Bold+900,Ultra-Bold+900+Italic','Source+Sans+Pro:Light+200,300,Normal+400,Semi-Bold+600,Bold+700,Ultra-Bold+900,Ultra-Bold+900+Italic','Source+Sans+Pro:Light+200,300,Normal+400,Semi-Bold+600,Bold+700,Ultra-Bold+900,Ultra-Bold+900+Italic','Source+Sans+Pro:Light+200,300,Normal+400,Semi-Bold+600,Bold+700,Ultra-Bold+900,Ultra-Bold+900+Italic', ] }
+    };
+    (function() {
+    var wf = document.createElement('script');
+    wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+      '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+    })();
+</script>
+<link rel="alternate" type="application/rss+xml" title="Dedham Choral Society » Feed" href="http://www.dedhamchoral.org/feed/">
+<link rel="alternate" type="application/rss+xml" title="Dedham Choral Society » Comments Feed" href="http://www.dedhamchoral.org/comments/feed/">
+<link rel="stylesheet" id="theme-styles-css" href="/clients/DedhamChoral/Images/theme-styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="artbees-icons-css" href="/clients/DedhamChoral/Images/artbees-icons.css" type="text/css" media="all">
+<link rel="stylesheet" id="fontawesome-css" href="/clients/DedhamChoral/Images/font-awesome.css" type="text/css" media="all">
+<link rel="stylesheet" id="rs-plugin-settings-css" href="/clients/DedhamChoral/Images/settings.css" type="text/css" media="all">
+<style type="text/css">
+.tp-caption a {
+color:#ff7302;
+text-shadow:none;
+-webkit-transition:all 0.2s ease-out;
+-moz-transition:all 0.2s ease-out;
+-o-transition:all 0.2s ease-out;
+-ms-transition:all 0.2s ease-out;
+}
+
+.tp-caption a:hover {
+color:#ffa902;
+}
+</style>
+<link rel="stylesheet" id="rs-plugin-captions-css" href="/clients/DedhamChoral/Images/captions.css" type="text/css" media="all">
+<link rel="stylesheet" id="google-calendar-events-public-css" href="/clients/DedhamChoral/Images/gce-style.css" type="text/css" media="all">
+<link rel="stylesheet" id="mk-style-css" href="/clients/DedhamChoral/Images/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="theme-dynamic-styles-css" href="/clients/DedhamChoral/Images/custom.css" type="text/css" media="all">
+<style type="text/css">
+.mk-grid, .mk-inner-grid{max-width: 1140px;}.theme-page-wrapper.right-layout .theme-content, .theme-page-wrapper.left-layout .theme-content {width: 70%;}.theme-page-wrapper #mk-sidebar{width: 30%;}.mk-boxed-enabled,.mk-boxed-enabled #mk-header.sticky-header,.mk-boxed-enabled #mk-header.transparent-header-sticky, .mk-boxed-enabled .mk-secondary-header{max-width: 1200px;}@media handheld, only screen and (max-width: 1140px){#sub-footer .item-holder{margin:0 20px;}}body,.theme-main-wrapper{background-color:#fff; background-position:right bottom;background-attachment:scroll;background-repeat:repeat;}.mk-side-dashboard {background-color:#191919;}#mk-header, .mk-secondary-header{background-color:#fff; background-position:right bottom;background-attachment:scroll;background-repeat:repeat;;border-top:1px solid #c22d2d;}.transparent-header.light-header-skin,.transparent-header.dark-header-skin {  border-top: none !important;  background: none !important;}#mk-page-title {background-color:#fafafa; background-position:right bottom;background-attachment:scroll;background-repeat:repeat;border-bottom:1px solid #eeeeee;;}#theme-page{background-color:#fff; background-position:right bottom;background-attachment:scroll;background-repeat:repeat;}#mk-footer{background-color:#191919; background-position:right bottom;background-attachment:scroll;background-repeat:repeat;}#sub-footer {background-color: #262626;}#mk-page-title{padding:40px 0;}#mk-page-title .mk-page-heading{font-size:25px;color:#111111;}#mk-breadcrumbs {line-height:25px;}.widgettitle {font-family:Source Sans Pro;font-size:17px;font-weight:600;}.mk-side-dashboard .widgettitle,.mk-side-dashboard .widgettitle a{color: #959595;}.mk-side-dashboard, .mk-side-dashboard p{color: #6f6f6f;}.mk-side-dashboard a {color: #afafaf;}.mk-side-dashboard a:hover{color: #c22d2d;}#mk-sidebar .widgettitle,#mk-sidebar .widgettitle a{color: #555555;}#mk-sidebar, #mk-sidebar p{color: #666666;}#mk-sidebar a {color: #444;}#mk-sidebar a:hover{color: #c22d2d;}#mk-footer .widgettitle,#mk-footer .widgettitle a{color: #959595;}#mk-footer, #mk-footer p{color: #6f6f6f;}#mk-footer a{color: #afafaf;}#mk-footer a:hover{color: #c22d2d;}.mk-footer-copyright,.mk-footer-copyright a {color: #666666 !important;}.mk-footer-social a {color: #666666 !important;}.mk-footer-social a:hover {color: #c22d2d !important;}body{line-height: 20px;font-family:Source Sans Pro;font-size:15px;color:#111111;}p {font-size:15px;color:#111111;}a {color:#c22d2d;}a:hover {color:#555555;}#theme-page h1,#theme-page h2,#theme-page h3,#theme-page h4,#theme-page h5,#theme-page h6 {font-weight:600;color:#111111;}h1, h2, h3, h4, h5, h6 {font-family:Source Sans Pro;}input,button,textarea {font-family:Source Sans Pro;}.header-searchform-input input[type=text]{background-color:#fff;}.sticky-header.sticky-header-padding {padding-top:130px;}#mk-main-navigation > ul > li.menu-item,#mk-main-navigation > ul > li.menu-item > a,.mk-header-search,.mk-header-search a,.mk-cart-link, .dashboard-trigger,.responsive-nav-link{height:130px;line-height:130px;}.sticky-trigger-header #mk-main-navigation > ul > li.menu-item,.sticky-trigger-header #mk-main-navigation > ul > li.menu-item > a,.sticky-trigger-header .mk-header-search,.sticky-trigger-header .mk-header-search a,.sticky-trigger-header .mk-cart-link,.sticky-trigger-header .dashboard-trigger,.sticky-trigger-header .responsive-nav-link{height:71.666666666667px;line-height:71.666666666667px;}.sticky-trigger-header #mk-main-navigation > ul > li.menu-item > a {padding-left:15px;padding-right:15px;}.mk-header-logo, .mk-header-logo a {height:70px;line-height:70px;}.sticky-trigger-header .mk-header-logo, .sticky-trigger-header .mk-header-logo a {height:46.666666666667px;line-height:46.666666666667px;}.mk-header-logo,.mk-header-logo a {margin-top: 30px;margin-bottom: 30px;}.sticky-trigger-header .mk-header-logo,.sticky-trigger-header .mk-header-logo a{margin-top:10.714285714286px;margin-bottom: 10.714285714286px;}#mk-main-navigation > ul > li.menu-item > a {font-family:Source Sans Pro;font-size:12px;}#mk-main-navigation > ul > li.menu-item > a{color:#666666;background-color:;}#mk-main-navigation > ul > li.current-menu-item > a,#mk-main-navigation > ul > li.current-menu-ancestor > a,#mk-main-navigation > ul > li.menu-item:hover > a{color:#c22d2d;background-color:;}#mk-main-navigation > ul > li.menu-item > a:hover{color:#c22d2d;background-color:;}.dashboard-trigger,.res-nav-active {color:#666666;}.dashboard-trigger:hover,.res-nav-active:hover {color:#c22d2d;}#mk-main-navigation ul li .sub  {border-top:1px solid #c22d2d;}#mk-main-navigation ul li ul,.header-searchform-input .ui-autocomplete,.mk-shopping-box,.shopping-box-header > span {background-color:#191919;}#mk-main-navigation ul ul a{color:#fff;background-color:;}#mk-main-navigation ul ul li.current-menu-item > a,#mk-main-navigation ul ul li.current-menu-ancestor > a {color:#000;background-color:#c22d2d !important;}.header-searchform-input .ui-autocomplete .search-title,.header-searchform-input .ui-autocomplete .search-date,.header-searchform-input .ui-autocomplete i{color:#fff;}.header-searchform-input .ui-autocomplete i,.header-searchform-input .ui-autocomplete img{border-color:#fff;}.header-searchform-input .ui-autocomplete li:hover  i,.header-searchform-input .ui-autocomplete li:hover img {border-color:#000;}#mk-main-navigation .megamenu-title,.mk-mega-icon {color:#fff;}#mk-main-navigation ul ul a:hover,.header-searchform-input .ui-autocomplete li:hover{color:#000;background-color:#c22d2d !important;}.header-searchform-input .ui-autocomplete li:hover .search-title,.header-searchform-input .ui-autocomplete li:hover .search-date,.header-searchform-input .ui-autocomplete li:hover i, #mk-main-navigation ul ul a:hover i{color:#000;}.header-searchform-input input[type=text],.dashboard-trigger,.responsive-nav-link i{color:#666666;}.header-search-icon,.header-search-close{color: #c22d2d;}.header-search-icon:hover{color: #666666;}.responsive-nav-container{background-color:#191919;}#mk-responsive-nav a, #mk-responsive-nav .mk_mega_menu .megamenu-title {color:#fff;background-color:;}#mk-responsive-nav a:hover{color:#000;background-color:#c22d2d;}@media handheld, only screen and (max-width: 1220px){.dashboard-trigger.res-mode {display:block !important;}.dashboard-trigger.desktop-mode {display:none !important;}}@media handheld, only screen and (max-width: 1140px){#mk-header.sticky-header,.mk-secondary-header {position: relative !important;}.main-navigation-ul li.menu-item,.main-navigation-ul li.sub-menu,.sticky-header-padding{display:none !important;}.header-search-icon i,.mk-cart-link i {padding:0 !important;margin:0 !important;border:none !important;}.header-search-icon,.mk-cart-link {margin:0 8px !important;padding:0 !important;}.mk-header-logo {margin-left:20px !important;display:inline-block !important;}.main-navigation-ul {text-align:center !important;}.responsive-nav-link {display:inline-block !important;}.mk-shopping-box {display:none !important;}}.mk-skin-color,.blog-categories a,.blog-categories,.rating-star .rated,.widget_testimonials .testimonial-position,.testimonial-company,.portfolio-similar-meta .cats,.entry-meta .cats a,.search-meta span a,.search-meta span,.single-share-trigger:hover,.single-share-trigger.mk-toggle-active,.project_content_section .project_cats a,.mk-love-holder i:hover,.blog-comments i:hover,.comment-count i:hover,.widget_posts_lists li .cats a,.mk-employeee-networks li a:hover,.mk-tweet-shortcode span a,.portfolio-permalink:hover i,.mk-pricing-table .mk-icon-star,.mk-process-steps.dark-skin .step-icon,.mk-social-network a.light,.mk-edge-next, .mk-edge-prev,.prev-item-caption, .next-item-caption,.mk-employees.column-style .team-member-position,.mk-event-countdown.accent-skin .countdown-timer,.mk-box-text:hover i,.mk-process-steps.light-skin .mk-step:hover .step-icon,.mk-process-steps.light-skin .active-step-item .step-icon,.blog-modern-entry .blog-categories{color: #c22d2d;}.mk-love-holder .item-loved i,.widget_posts_lists .cats a,#mk-breadcrumbs a:hover,.widget_social_networks a.light,.widget_posts_tabs .cats a {color: #c22d2d !important;}a:hover,.mk-tweet-shortcode span a:hover {color:#555555;}/* Main Skin Color : Background-color Property */#wp-calendar td#today,div.jp-play-bar,.mk-header-button:hover,.next-prev-top .go-to-top:hover,.wide-eye-portfolio-item .portfolio-meta .the-title,.mk-portfolio-carousel .portfolio-meta:before,.meta-image.frame-grid-portfolio-item .portfolio-meta .the-title,.masonry-border,.author-social li a:hover,.slideshow-swiper-arrows:hover,.mk-clients-shortcode .clients-info,.mk-contact-form-wrapper .mk-form-row i.input-focused,.mk-login-form .form-row i.input-focused,.comment-form-row i.input-focused,.widget_social_networks a:hover, .mk-social-network a:hover,.blog-masonry-entry .post-type-icon:hover,.list-posttype-col .post-type-icon:hover,.single-type-icon,.demo_store,.add_to_cart_button:hover,.mk-process-steps.dark-skin .mk-step:hover .step-icon,.mk-process-steps.dark-skin .active-step-item .step-icon,.mk-social-network a.light:hover,.widget_tag_cloud a:hover, .widget_categories a:hover,.edge-nav-bg,.gform_wrapper .button:hover,.mk-event-countdown.accent-skin li:before,.masonry-border,.mk-gallery.thumb-style .gallery-thumb-lightbox:hover,.fancybox-close:hover,.fancybox-nav span:hover,.blog-scroller-arrows:hover{background-color: #c22d2d;}.hover-overlay {Background-color:#c22d2d;}::-webkit-selection{background-color: #c22d2d;color:#fff;}::-moz-selection{background-color: #c22d2d;color:#fff;}::selection{background-color: #c22d2d;color:#fff;}.next-prev-top .go-to-top,.mk-contact-form-wrapper .text-input:focus, .mk-contact-form-wrapper .mk-textarea:focus,.widget .mk-contact-form-wrapper .text-input:focus, .widget .mk-contact-form-wrapper .mk-textarea:focus,.mk-contact-form-wrapper .mk-form-row i.input-focused,.comment-form-row .text-input:focus, .comment-textarea textarea:focus,.comment-form-row i.input-focused,.mk-login-form .form-row i.input-focused,.mk-login-form .form-row input:focus,#sub-footer,.mk-social-network a.light,.mk-event-countdown.accent-skin li{border-color: #c22d2d;}.mk-divider .divider-inner i  {background-color: #fff;}.mk-loader {border: 2px solid #c22d2d;}.alt-title span,.single-post-fancy-title span,.portfolio-social-share,.woocommerce-share ul{background-color: #fff;}                            
+</style>
+<link rel="stylesheet" id="evcal_google_fonts-css" href="/clients/DedhamChoral/Images/css.css" type="text/css" media="screen">
+<link rel="stylesheet" id="evcal_cal_default-css" href="/clients/DedhamChoral/Images/eventon_styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="evo_font_icons-css" href="/clients/DedhamChoral/Images/font-awesome_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="fancybox-css" href="/clients/DedhamChoral/Images/jquery.css" type="text/css" media="screen">
+<!-- This site uses the Yoast Google Analytics plugin v5.0.6 - Universal disabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-54610633-1']);
+	_gaq.push(['_gat._forceSSL']);
+	_gaq.push(['_trackPageview']);
+
+	(function () {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>
+<!-- / Yoast Google Analytics -->
+<script type="text/javascript" src="/clients/DedhamChoral/Images/jquery_009.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/jquery-migrate.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/jquery_011.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/jquery_013.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.dedhamchoral.org/wp/xmlrpc.php?rsd">
+<link rel="shortlink" href="http://www.dedhamchoral.org/?p=407">
+<meta name="generator" content="dedhamchoral 2.0">
+
+
+<!-- EventON Version -->
+<meta name="generator" content="EventON 2.2.18">
+
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+
+<!-- All in One SEO Pack 2.2.3.1 by Michael Torbert of Semper Fi Web Design[477,562] -->
+<meta name="description" itemprop="description" content="Tickets available for: A Gaelic Christmas 8 PM Friday, December 12, 2014 Holy Name Church, 1689 Centre Street, West Roxbury MA Open Seating Tickets:">
+
+<link rel="canonical" href="http://www.dedhamchoral.org/buy-tickets/">
+<!-- /all in one seo pack -->
+<!-- ////////// TYPEKIT ////////// -->
+
+<script type="text/javascript" src="/clients/DedhamChoral/Images/cnp8bbs.js"></script>
+<style type="text/css">.tk-minion-pro-caption{font-family:"minion-pro-caption",sans-serif;}</style><link href="/clients/DedhamChoral/Images/d.css" rel="stylesheet"><script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	<!-- Easy FancyBox 1.5.6 using FancyBox 1.3.6 - RavanH (http://status301.net/wordpress-plugins/easy-fancybox/) -->
+	<script type="text/javascript">
+	/* <![CDATA[ */
+	var fb_timeout = null;
+	var fb_opts = { 'overlayShow' : true, 'hideOnOverlayClick' : true, 'showCloseButton' : true, 'centerOnScroll' : true, 'enableEscapeButton' : true, 'autoScale' : true };
+	var easy_fancybox_handler = function(){
+	/* IMG */
+	var fb_IMG_select = 'a[href*=".jpg"]:not(.nofancybox), area[href*=".jpg"]:not(.nofancybox), a[href*=".jpeg"]:not(.nofancybox), area[href*=".jpeg"]:not(.nofancybox), a[href*=".png"]:not(.nofancybox), area[href*=".png"]:not(.nofancybox)';
+	jQuery(fb_IMG_select).addClass('fancybox');
+	var fb_IMG_sections = jQuery('div.gallery');
+	fb_IMG_sections.each(function() { jQuery(this).find(fb_IMG_select).attr('rel', 'gallery-' + fb_IMG_sections.index(this)); });
+	jQuery('a.fancybox, area.fancybox, li.fancybox a:not(li.nofancybox a)').fancybox( jQuery.extend({}, fb_opts, { 'transitionIn' : 'elastic', 'easingIn' : 'easeOutBack', 'transitionOut' : 'elastic', 'easingOut' : 'easeInBack', 'opacity' : false, 'hideOnContentClick' : false, 'titleShow' : true, 'titlePosition' : 'over', 'titleFromAlt' : true, 'showNavArrows' : true, 'enableKeyboardNav' : true, 'cyclic' : false }) );
+	/* Auto-click */ 
+	jQuery('#fancybox-auto').trigger('click');
+	}
+	/* ]]> */
+	</script>
+	<style type="text/css">
+.fancybox-hidden{display:none}.rtl #fancybox-left{left:auto;right:0px}.rtl #fancybox-right{left:0px;right:auto}.rtl #fancybox-right-ico{background-position:-40px -30px}.rtl #fancybox-left-ico{background-position:-40px -60px}.rtl .fancybox-title-over{text-align:right}.rtl #fancybox-left-ico,.rtl #fancybox-right-ico{right:-9999px}.rtl #fancybox-right:hover span{right:auto;left:20px}.rtl #fancybox-left:hover span{right:20px}#fancybox-img{max-width:none;max-height:none}
+#fancybox-overlay{background-attachment:fixed;background-image:url("http://www.dedhamchoral.org/wp/wp-content/plugins/easy-fancybox/light-mask.png");background-position:center;background-repeat:no-repeat;background-size:cover;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://www.dedhamchoral.org/wp/wp-content/plugins/easy-fancybox/light-mask.png",sizingMethod="scale");-ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://www.dedhamchoral.org/wp/wp-content/plugins/easy-fancybox/light-mask.png',sizingMethod='scale')";}
+#fancybox-outer{background-color:#fff}
+#fancybox-content{border-color:#fff}
+#fancybox-content{color:inherit}
+	</style>
+<link href="/clients/DedhamChoral/Images/css_002.css" rel="stylesheet">
+    <style type="text/css">.fancybox-margin{margin-right:17px;}</style><script src="/clients/DedhamChoral/Images/commonutilstats.js" charset="UTF-8" type="text/javascript"></script></head>
+
+<body class="page page-id-407 page-template-default">
+
+
+      
+
+<div class="theme-main-wrapper">
+<div id="mk-boxed-layout" class="mk-full-enabled">
+
+
+
+<header id="mk-header" class="sticky-header mk-header-module" data-header-style="block" data-transparent-skin="light" data-height="130" data-sticky-height="71">
+
+  <div class="mk-grid">
+      <nav id="mk-main-navigation"><ul id="menu-main-menu" class="main-navigation-ul"><li class="responsive-nav-link"><i class="mk-theme-icon-responsive"></i></li><li class="mk-header-logo mobile-menu-exists"><a href="http://www.dedhamchoral.org/" title="Dedham Choral Society"><img alt="Dedham Choral Society" class="mk-dark-logo" src="/clients/DedhamChoral/Images/logo.png" data-retina-src="http://www.dedhamchoral.org/wp/wp-content/uploads/2014/08/logo-retina.png"><img alt="Dedham Choral Society" class="mk-mobile-logo" src="/clients/DedhamChoral/Images/logo-mobile.png" data-retina-src="http://www.dedhamchoral.org/wp/wp-content/uploads/2014/08/logo-mobile-retina.png"></a></li><li id="menu-item-174" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Program</a>
+<div style="left: 351.917px; top: 130px; z-index: 1000;" class="sub-container non-mega mk-nested-sub"><ul style="" class="sub-menu  sub">
+	<li id="menu-item-130" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.dedhamchoral.org/program/">Current &amp; Upcoming</a></li>
+	<li id="menu-item-177" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.dedhamchoral.org/past-performances/">Past Performances</a></li>
+</ul></div>
+</li>
+<li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children"><a href="#">Tickets &amp; Support</a>
+<div style="left: 449.533px; top: 130px; z-index: 1000;" class="sub-container non-mega mk-nested-sub"><ul style="" class="sub-menu  sub">
+	<li id="menu-item-409" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-407 current_page_item"><a href="http://www.dedhamchoral.org/buy-tickets/">Buy Tickets</a></li>
+	<li id="menu-item-129" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.dedhamchoral.org/support/">Support Us</a></li>
+</ul></div>
+</li>
+<li id="menu-item-134" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.dedhamchoral.org/listen/">Listen</a></li>
+<li id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">About Us</a>
+<div style="left: 688.85px; top: 130px; z-index: 1000;" class="sub-container non-mega mk-nested-sub"><ul style="" class="sub-menu  sub">
+	<li id="menu-item-436" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.dedhamchoral.org/about-dcs/">About DCS</a></li>
+	<li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.dedhamchoral.org/music-director/">Music Director</a></li>
+	<li id="menu-item-486" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.dedhamchoral.org/where-we-sing/">Where We Sing</a></li>
+	<li id="menu-item-140" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.dedhamchoral.org/our-mission-history/">Our Mission &amp; History</a></li>
+	<li id="menu-item-168" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.dedhamchoral.org/outreach/">Outreach &amp; Activities</a></li>
+</ul></div>
+</li>
+<li id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Info &amp; Contact</a>
+<div style="left: 790.1px; top: 130px; z-index: 1000;" class="sub-container non-mega mk-nested-sub"><ul style="" class="sub-menu  sub">
+	<li id="menu-item-506" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.dedhamchoral.org/maps-directions/">Maps &amp; Directions</a></li>
+	<li id="menu-item-182" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.dedhamchoral.org/join/">Join Us</a></li>
+	<li id="menu-item-190" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.dedhamchoral.org/audience-feedback/">Audience Feedback</a></li>
+	<li id="menu-item-183" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.dedhamchoral.org/contact-us/">Contact Us</a></li>
+</ul></div>
+</li>
+<li id="menu-item-229" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.dedhamchoral.org/members/">For Members</a></li>
+<li class="dashboard-trigger res-mode"><i class="mk-theme-icon-dashboard"></i></li><li class="mk-header-search">
+			<a class="header-search-icon" href="#"><i class="mk-icon-search"></i></a>
+		</li></ul></nav> </div>
+
+  <div class="dashboard-trigger desktop-mode"><i class="mk-theme-icon-dashboard"></i></div>
+  
+
+</header>
+
+
+<div class="responsive-nav-container"></div>
+
+
+<div class="sticky-header-padding sticky-header"></div>
+
+
+<section id="mk-page-title" class="left-align"><div class="mk-grid"><h1 class="mk-page-heading">Buy Tickets</h1><div id="mk-breadcrumbs" class="dark-skin"><a href="http://www.dedhamchoral.org/" class="home">Home</a> <span class="separator">/</span> Buy Tickets</div><div class="clearboth"></div></div></section>
+<div id="theme-page">
+	<div class="theme-page-wrapper mk-main-wrapper full-layout  mk-grid vc_row-fluid">
+		<div class="theme-content " itemprop="mainContentOfPage">
+	<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder></div>
+		
+	<div class="clearboth"></div>	
+	</div>
+	<div class="clearboth"></div>
+</div>
+<section id="mk-footer">
+<div class="footer-wrapper mk-grid">
+<div class="mk-padding-wrapper">
+			<div class="mk-col-1-3"><section id="text-2" class="widget widget_text">			<div class="textwidget"><p><a href="http://www.dedhamchoral.org/home"><img src="/clients/DedhamChoral/Images/logo-footer.png"></a></p>
+<p>One of Boston area's premier community choruses, the Dedham Choral 
+Society is widely recognized for excellent musicianship, enjoyable and 
+challenging repertoire, and the enthusiasm and energy of its members.</p>
+<p><small>&#169; Dedham Choral Society 2014.<br>
+Homepage photograph courtesy of Steven Handler.</small></p>
+</div>
+		</section></div>
+			<div class="mk-col-1-3"><section id="text-3" class="widget widget_text"><div class="widgettitle">Contact Us</div>			<div class="textwidget"><p>PO Box 1338<br>
+Dedham, MA 02027<br>
+781-326-1520 (answering service)<br>
+<a href="mailto:info@dedhamchoral.org">info@dedhamchoral.org</a><a></a></p><a>
+<p><strong>Rehearsal Location</strong><br>
+Allin Congregational Church<br>
+683 High Street<br>
+Dedham, MA 02026</p>
+</a></div><a>
+		</a></section></div><a>
+</a><div class="mk-col-1-3"><a></a><section id="nav_menu-2" class="widget widget_nav_menu"><a><div class="widgettitle">Quick Links</div></a><div class="menu-footer-quicklinks-container"><a></a><ul id="menu-footer-quicklinks" class="menu"><a></a><li id="menu-item-260" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-260"><a></a><a href="http://www.dedhamchoral.org/program/">Our Upcoming Program</a></li>
+<li id="menu-item-410" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-407 current_page_item menu-item-410"><a href="http://www.dedhamchoral.org/buy-tickets/">Buy Tickets</a></li>
+<li id="menu-item-387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-387"><a href="http://www.dedhamchoral.org/join/">Become a Member</a></li>
+</ul></div></section><section id="text-4" class="widget widget_text">			
+		</section></div>
+ 
+<div class="clearboth"></div>      
+</div>
+</div>
+<div class="clearboth"></div>
+
+
+</section>
+
+
+
+
+
+</div><!-- End boxed layout -->
+<a href="#" class="mk-go-top off"><i class="mk-theme-icon-top-bigger"></i></a>
+</div><!-- End Theme main Wrapper -->
+
+
+<div class="mk-side-dashboard"><section id="text-6" class="widget widget_text">			<div class="textwidget"><a href="http://www.dedhamchoral.org/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.dedhamchoral.org/', '']);"><img src="/clients/DedhamChoral/Images/logo-wht.png" class="logo-sidebar"></a></div>
+		</section><section id="text-5" class="widget widget_text"><div class="widgettitle">Upcoming Concerts</div>			<div class="textwidget"><div id="evcal_calendar_1" class="ajde_evcal_calendar    evoEL">
+				<div class="evo-data" data-cyear="2015" data-cmonth="11" data-runajax="1" data-evc_open="0" data-cal_ver="2.2.18" data-mapscroll="true" data-mapformat="roadmap" data-mapzoom="18" data-ev_cnt="5" data-show_limit="no" data-tiles="no" data-sort_by="sort_date" data-filters_on="false" data-range_start="1411084800" data-range_end="1448927999" data-send_unix="1" data-ux_val="0" data-accord="0"></div><div id="evcal_head" class="calendar_header evcal_nosort"><div class="cal_arguments" style="display:none" hide_past="no" show_et_ft_img="no" event_order="ASC" ft_event_priority="no" month_incre="0" evc_open="no" show_limit="no" etc_override="no" tiles="no" tile_height="0" tile_bg="0" tile_count="2" etop_month="no" lang="L1"></div><div class="clear"></div></div><div class="eventon_sorting_section" style="display:none">
+				<div class="eventon_filter_line"><div class="eventon_filter" filter_field="event_type" filter_val="all" filter_type="tax" data-fl_o="IN"></div><div class="eventon_filter" filter_field="event_type_2" filter_val="all" filter_type="tax" data-fl_o="IN"></div></div><div class="clear"></div></div><div id="eventon_loadbar_section"><div id="eventon_loadbar"></div></div><div id="evcal_list" class="eventon_events_list "><div id="event_24" class="eventon_list_event event" event_id="24" itemscope="" itemtype="http://schema.org/Event" style="" data-colr="#c22d2d"><div class="evo_event_schema" style="display:none">
+						<a href="http://www.dedhamchoral.org/events/a-gaelic-christmas/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.dedhamchoral.org/events/a-gaelic-christmas/', '']);" itemprop="url"></a>				
+						<time itemprop="startDate" datetime="2014-12-12"></time>
+						<time itemprop="endDate" datetime="2014-12-12"></time>
+								<item style="display:none" itemprop="location" itemscope="" itemtype="http://schema.org/Place">
+									<span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+										<item itemprop="streetAddress">1689 Centre St, West Roxbury, MA 02132</item>
+									</span>
+								</item></div>
+			<a href="http://www.dedhamchoral.org/events/a-gaelic-christmas/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.dedhamchoral.org/events/a-gaelic-christmas/', '12dec8:00 pmA Gaelic ChristmasMusic from Ireland and Scotland by Charles Villiers Stanford, Eric Sweeney, and James MacMillan8:00 pm Holy Name Church']);" id="evc_141841440024" class="evcal_list_a desc_trig sin_val " data-exlk="1" style="border-color: #c22d2d;" data-gmtrig="1" data-ux_val="4"><span class="evcal_cblock" bgcolor="#c22d2d" smon="december" syr="2014"><em class="evo_date"><span class="start">12<em>dec</em></span></em><em class="evo_time"><span class="start">8:00 pm</span></em><em class="clear"></em></span><span class="evcal_desc evo_info " data-latlng="42.288145,-71.146684" data-location_address="1689 Centre St, West Roxbury, MA 02132" data-location_type="lonlat" data-location_name="Holy Name Church" data-location_status="true"><span class="evcal_desc2 evcal_event_title" itemprop="name">A Gaelic Christmas</span><span class="evcal_event_subtitle">Music from Ireland and Scotland by Charles Villiers Stanford, Eric Sweeney, and James MacMillan</span><span class="evcal_desc_info"><em class="evcal_time">8:00 pm</em> <em class="evcal_location event_location_name">Holy Name Church</em></span><span class="evcal_desc3"></span></span><em class="clear"></em></a><div class="event_description evcal_eventcard " style="display:none"><div class="evo_metarow_details evorow evcal_evdata_row bordb evcal_event_details">
+						<div class="event_excerpt" style="display:none"><h3 class="padb5 evo_h3">Event Details</h3><p>Music
+ from Ireland and Scotland&nbsp;by Charles Villiers Stanford, Eric 
+Sweeney, and James MacMillan, and compositions from the Irish chamber 
+choir&nbsp;Anúna
+Friday, [...]</p></div>
+						<span class="evcal_evdata_icons"><i class="fa fa-align-justify"></i></span>
+						<div class="evcal_evdata_cell "><div class="eventon_full_description">
+								<h3 class="padb5 evo_h3">Event Details</h3><div class="eventon_desc_in" itemprop="description">
+								<p><img class="alignleft wp-image-2659" src="/clients/DedhamChoral/Images/concert-placeholder.jpg" alt="DCS concert" height="197" width="135">Music from <strong>Ireland and Scotland&nbsp;</strong>by Charles Villiers Stanford, Eric Sweeney, and James MacMillan, and compositions from the <strong>Irish chamber choir&nbsp;<span style="color: #000000;">Anúna</span></strong></p>
+<p>Friday, December 12, 2014<br>
+8 PM at Holy Name Church, West Roxbury</p>
+</div><div class="clear"></div>
+
+							</div>
+						</div>
+					</div><div class="evo_metarow_cusF1 evorow evcal_evdata_row bordb evcal_evrow_sm ">
+						<span class="evcal_evdata_custometa_icons"><i class="fa fa-ticket"></i></span>
+						<div class="evcal_evdata_cell">							
+							<h3 class="evo_h3">Purchase Tickets</h3><a href="http://www.dedhamchoral.org/wp/buy-tickets/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.dedhamchoral.org/wp/buy-tickets/', 'Buy tickets']);" class="evcal_btn evo_cusmeta_btn">Buy tickets</a></div></div><div class="evo_metarow_time_location evorow bordb ">
+						<div class="tb">
+							<div class="tbrow">
+							<div class="evcal_col50 bordr">
+								<div class="evcal_evdata_row evo_time">
+									<span class="evcal_evdata_icons"><i class="fa fa-clock-o"></i></span>
+									<div class="evcal_evdata_cell">							
+										<h3 class="evo_h3">Time</h3><p>(Friday) 8:00 pm</p>
+									</div>
+								</div>
+							</div><div class="evcal_col50">
+								<div class="evcal_evdata_row evo_location">
+									<span class="evcal_evdata_icons"><i class="fa fa-map-marker"></i></span>
+									<div class="evcal_evdata_cell">							
+										<h3 class="evo_h3">Location</h3><p class="evo_location_name">Holy Name Church</p><p>1689 Centre St, West Roxbury, MA 02132</p>
+									</div>
+								</div>
+							</div><div class="clear"></div>
+							</div></div>
+						</div><div class="evo_metarow_gmap evorow evcal_gmaps bordb " id="evc1418414400541c49c09a4ad24_gmap"></div><div class="evo_metarow_getDr evorow evcal_evdata_row bordb evcal_evrow_sm getdirections">
+						<form action="http://maps.google.com/maps" method="get" target="_blank">
+						<input name="daddr" value="1689 Centre St, West Roxbury, MA 02132" type="hidden"> 
+						<p><input class="evoInput" name="saddr" placeholder="Type your address to get directions" type="text">
+						<button type="submit" class="evcal_evdata_icons evcalicon_9" title="Click here to get directions"><i class="fa fa-road"></i></button>
+						</p></form>
+					</div><div class="bordb evo_metarow_socialmedia evcal_evdata_row">
+						<div class="evo_sm FacebookShare"><a class="fb evo_ss" target="_blank" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" href="http://www.facebook.com/sharer.php?s=100&amp;p[url]=http%3A%2F%2Fwww.dedhamchoral.org%2Fevents%2Fa-gaelic-christmas%2F&amp;p[title]=A%20Gaelic%20Christmas&amp;p[summary]=Music+from+Ireland+and+Scotland%C2%A0by+Charles+Villiers+Stanford%2C+...&amp;display=popup"><i class="fa fa-facebook"></i></a></div><div class="evo_sm Twitter"><a href="http://twitter.com/share?original_referer=http%3A%2F%2Fwww.dedhamchoral.org%2Fevents%2Fa-gaelic-christmas%2F&amp;text=A%20Gaelic%20Christmas" class="tw evo_ss" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false; _gaq.push(['_trackEvent', 'outbound-widget', 'http://twitter.com/share?original_referer=http%3A%2F%2Fwww.dedhamchoral.org%2Fevents%2Fa-gaelic-christmas%2F&amp;text=A Gaelic Christmas', '']);" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter"></i></a></div><div class="evo_sm LinkedIn"><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.dedhamchoral.org/events/a-gaelic-christmas/&amp;title=A%20Gaelic%20Christmas&amp;summary=Music+from+Ireland+and+Scotland%C2%A0by+Charles+Villiers+Stanford%2C+..." onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.dedhamchoral.org/events/a-gaelic-christmas/&amp;title=A%20Gaelic%20Christmas&amp;summary=Music+from+Ireland+and+Scotland%C2%A0by+Charles+Villiers+Stanford%2C+...', '']);" class="li evo_ss" target="_blank"><i class="fa fa-linkedin"></i></a></div><div class="evo_sm Google"><a href="https://plus.google.com/share?url=http://www.dedhamchoral.org/events/a-gaelic-christmas/" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'https://plus.google.com/share?url=http://www.dedhamchoral.org/events/a-gaelic-christmas/', '']);" class="gp evo_ss" target="_blank"><i class="fa fa-google-plus"></i></a></div><div class="clear"></div>
+					</div></div><div class="clear end"></div></div><div id="event_156" class="eventon_list_event event" event_id="156" itemscope="" itemtype="http://schema.org/Event" style="" data-colr="#c22d2d"><div class="evo_event_schema" style="display:none">
+						<a href="http://www.dedhamchoral.org/events/celebrating-60-years/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.dedhamchoral.org/events/celebrating-60-years/', '']);" itemprop="url"></a>				
+						<time itemprop="startDate" datetime="2015-4-12"></time>
+						<time itemprop="endDate" datetime="2015-4-12"></time>
+								<item style="display:none" itemprop="location" itemscope="" itemtype="http://schema.org/Place">
+									<span itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+										<item itemprop="streetAddress">290 Huntington Ave, Boston, MA 02115</item>
+									</span>
+								</item></div>
+			<a href="http://www.dedhamchoral.org/events/celebrating-60-years/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.dedhamchoral.org/events/celebrating-60-years/', '12apr3:00 pmCelebrating 60 Years!A Gala concert featuring Felix Mendelssohn3:00 pm Jordan Hall, New England Conservatory']);" id="evc_1428850800156" class="evcal_list_a desc_trig sin_val " data-exlk="1" style="border-color: #c22d2d;" data-gmtrig="1" data-ux_val="4"><span class="evcal_cblock" bgcolor="#c22d2d" smon="april" syr="2015"><em class="evo_date"><span class="start">12<em>apr</em></span></em><em class="evo_time"><span class="start">3:00 pm</span></em><em class="clear"></em></span><span class="evcal_desc evo_info " data-latlng="42.341165,-71.086564" data-location_address="290 Huntington Ave, Boston, MA 02115" data-location_type="lonlat" data-location_name="Jordan Hall, New England Conservatory" data-location_status="true"><span class="evcal_desc2 evcal_event_title" itemprop="name">Celebrating 60 Years!</span><span class="evcal_event_subtitle">A Gala concert featuring Felix Mendelssohn</span><span class="evcal_desc_info"><em class="evcal_time">3:00 pm</em> <em class="evcal_location event_location_name">Jordan Hall, New England Conservatory</em></span><span class="evcal_desc3"></span></span><em class="clear"></em></a><div class="event_description evcal_eventcard " style="display:none"><div class="evo_metarow_details evorow evcal_evdata_row bordb evcal_event_details">
+						<div class="event_excerpt" style="display:none"><h3 class="padb5 evo_h3">Event Details</h3><p>A Gala concert featuring Felix Mendelssohn's
+spectacular and majestic Symphony No. 2,
+Hymn of Praise with full orchestra and soloists
+Sunday April 12, [...]</p></div>
+						<span class="evcal_evdata_icons"><i class="fa fa-align-justify"></i></span>
+						<div class="evcal_evdata_cell "><div class="eventon_full_description">
+								<h3 class="padb5 evo_h3">Event Details</h3><div class="eventon_desc_in" itemprop="description">
+								<p><img class="alignleft wp-image-2659" src="/clients/DedhamChoral/Images/concert-placeholder.jpg" alt="DCS concert" height="197" width="135">A Gala concert featuring <strong>Felix Mendelssohn</strong>‘s<br>
+spectacular and majestic Symphony No. 2,<br>
+<strong>Hymn of Praise</strong> with full orchestra and soloists</p>
+<p>Sunday April 12, 2015 at 3PM<br>
+Jordan Hall, New England Conservatory</p>
+</div><div class="clear"></div>
+
+							</div>
+						</div>
+					</div><div class="evo_metarow_time_location evorow bordb ">
+						<div class="tb">
+							<div class="tbrow">
+							<div class="evcal_col50 bordr">
+								<div class="evcal_evdata_row evo_time">
+									<span class="evcal_evdata_icons"><i class="fa fa-clock-o"></i></span>
+									<div class="evcal_evdata_cell">							
+										<h3 class="evo_h3">Time</h3><p>(Sunday) 3:00 pm</p>
+									</div>
+								</div>
+							</div><div class="evcal_col50">
+								<div class="evcal_evdata_row evo_location">
+									<span class="evcal_evdata_icons"><i class="fa fa-map-marker"></i></span>
+									<div class="evcal_evdata_cell">							
+										<h3 class="evo_h3">Location</h3><p class="evo_location_name">Jordan Hall, New England Conservatory</p><p>290 Huntington Ave, Boston, MA 02115</p>
+									</div>
+								</div>
+							</div><div class="clear"></div>
+							</div></div>
+						</div><div class="evo_metarow_gmap evorow evcal_gmaps bordb " id="evc1428850800541c49c09b47f156_gmap"></div><div class="evo_metarow_getDr evorow evcal_evdata_row bordb evcal_evrow_sm getdirections">
+						<form action="http://maps.google.com/maps" method="get" target="_blank">
+						<input name="daddr" value="290 Huntington Ave, Boston, MA 02115" type="hidden"> 
+						<p><input class="evoInput" name="saddr" placeholder="Type your address to get directions" type="text">
+						<button type="submit" class="evcal_evdata_icons evcalicon_9" title="Click here to get directions"><i class="fa fa-road"></i></button>
+						</p></form>
+					</div><div class="bordb evo_metarow_socialmedia evcal_evdata_row">
+						<div class="evo_sm FacebookShare"><a class="fb evo_ss" target="_blank" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" href="http://www.facebook.com/sharer.php?s=100&amp;p[url]=http%3A%2F%2Fwww.dedhamchoral.org%2Fevents%2Fcelebrating-60-years%2F&amp;p[title]=Celebrating%2060%20Years%21&amp;p[summary]=A+Gala+concert+featuring+Felix+Mendelssohn%27s%0D%0Aspectacular+and+...&amp;display=popup"><i class="fa fa-facebook"></i></a></div><div class="evo_sm Twitter"><a href="http://twitter.com/share?original_referer=http%3A%2F%2Fwww.dedhamchoral.org%2Fevents%2Fcelebrating-60-years%2F&amp;text=Celebrating%2060%20Years%21" class="tw evo_ss" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false; _gaq.push(['_trackEvent', 'outbound-widget', 'http://twitter.com/share?original_referer=http%3A%2F%2Fwww.dedhamchoral.org%2Fevents%2Fcelebrating-60-years%2F&amp;text=Celebrating 60 Years!', '']);" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter"></i></a></div><div class="evo_sm LinkedIn"><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.dedhamchoral.org/events/celebrating-60-years/&amp;title=Celebrating%2060%20Years%21&amp;summary=A+Gala+concert+featuring+Felix+Mendelssohn%27s%0D%0Aspectacular+and+..." onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'http://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.dedhamchoral.org/events/celebrating-60-years/&amp;title=Celebrating%2060%20Years%21&amp;summary=A+Gala+concert+featuring+Felix+Mendelssohn%27s%0D%0Aspectacular+and+...', '']);" class="li evo_ss" target="_blank"><i class="fa fa-linkedin"></i></a></div><div class="evo_sm Google"><a href="https://plus.google.com/share?url=http://www.dedhamchoral.org/events/celebrating-60-years/" onclick="_gaq.push(['_trackEvent', 'outbound-widget', 'https://plus.google.com/share?url=http://www.dedhamchoral.org/events/celebrating-60-years/', '']);" class="gp evo_ss" target="_blank"><i class="fa fa-google-plus"></i></a></div><div class="clear"></div>
+					</div></div><div class="clear end"></div></div>				</div><!-- #evcal_list-->
+				<div class="clear"></div>
+				</div><!-- .ajde_evcal_calendar-->
+
+				
+
+<div class="mk-button-align left"><a href="http://www.dedhamchoral.org/wp/buy-tickets/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.dedhamchoral.org/wp/buy-tickets/', 'Buy Tickets']);" target="_blank" class="mk-button btn-6055  flat-button medium btn-directions"><span>Buy Tickets</span></a></div>
+
+<style type="text/css">
+        .btn-6055 {
+            background-color:#c22d2d;
+            color:#fff;
+            margin-bottom:0px;
+        }
+        .btn-6055:hover {
+            background-color:#a52626;
+            color:#fff;
+        }
+        .btn-6055 i{
+            border-color:rgba(255,255,255,0.5) !important; 
+        }
+        </style>
+
+<hr>
+
+
+</div>
+		</section><section id="text-7" class="widget widget_text"><div class="widgettitle">Support &amp; Join</div>			<div class="textwidget"><strong><a href="http://www.dedhamchoral.org/wp/support/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.dedhamchoral.org/wp/support/', 'Support Us']);">Support Us</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="http://www.dedhamchoral.org/wp/join/" onclick="_gaq.push(['_trackEvent', 'outbound-widget-int', 'http://www.dedhamchoral.org/wp/join/', 'Join the Society']);">Join the Society</a></strong></div>
+		</section></div>
+<script>function hefo_popup(url, width, height) {
+var left = Math.round(screen.width/2-width/2); var top = 0;
+if (screen.height > height) top = Math.round(screen.height/2-height/2);
+window.open(url, "share", "scrollbars=yes,resizable=yes,toolbar=no,location=yes,width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
+return false;
+}</script><link rel="stylesheet" id="eventon_dynamic_styles-css" href="/clients/DedhamChoral/Images/eventon_dynamic_styles.css" type="text/css" media="all">
+<script type="text/javascript" src="/clients/DedhamChoral/Images/jquery_008.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/jquery_003.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/jquery_002.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/skrollr-min.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/jquery_004.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/plugins-ck.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ajax_login_object = {"ajaxurl":"http:\/\/www.dedhamchoral.org\/wp\/wp-admin\/admin-ajax.php","redirecturl":"http:\/\/www.dedhamchoral.org","loadingmessage":"Sending user info, please wait..."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/theme-scripts-ck.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/custom.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/jquery-qtip.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var gce = {"ajaxurl":"http:\/\/www.dedhamchoral.org\/wp\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/gce-script.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/jquery_014.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/jquery_007.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/jquery.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/jquery_005.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var the_ajax_script = {"ajaxurl":"http:\/\/www.dedhamchoral.org\/wp\/wp-admin\/admin-ajax.php","postnonce":"d71e6a092a"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/eventon_script.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/eventon_gen_maps.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/js"></script><script src="/clients/DedhamChoral/Images/main.js" type="text/javascript"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/eventon_init_gmap.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/jquery_006.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/jquery_010.js"></script>
+<script type="text/javascript" src="/clients/DedhamChoral/Images/jquery_012.js"></script>
+
+<script type="text/javascript">
+jQuery(document).on('ready post-load', easy_fancybox_handler );
+</script>
+	<script type="text/javascript">
+	                jQuery(document).ready(function(){
+
+});            	</script>
+
+
+
+
+
+
+
+
+
+<div class="evo_popup" style="display:none"><div class="evo_popin"><a class="evopopclose">X</a><div class="evo_pop_body evcal_eventcard"></div></div></div><div class="evo_popbg" style="display:none"></div><div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></div>
+</form>
+</body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using apc
+Database Caching 20/27 queries in 0.004 seconds using apc
+Object Caching 1969/2016 objects using apc
+
+ Served from: www.dedhamchoral.org @ 2014-09-19 15:20:32 by W3 Total Cache -->

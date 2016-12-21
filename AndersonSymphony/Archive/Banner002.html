@@ -1,0 +1,135 @@
+<SCRIPT language=JavaScript>
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+// -->
+</SCRIPT>
+</HEAD>
+<DIV align=center>
+<DIV align=center>
+<TABLE cellSpacing=0 cellPadding=0 width="80%" border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <DIV align=center>
+      <DIV align=center>
+      <TABLE height=949 cellSpacing=1 width="78%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=middle>
+            <TABLE cellSpacing=1 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD><IMG height=207 src="/PrivateLabel/AndersonSymphony/Images/aso-header1.jpg" 
+                  width=780 border=0></TD></TR></TBODY></TABLE>
+            <TABLE cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD align=middle bgColor=#ffffff height=25><A 
+                  href="http://www.andersonsymphony.org/season.htm"><IMG 
+                  onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'/PrivateLabel/AndersonSymphony/Images/button8.jpg')" 
+                  onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'/PrivateLabel/AndersonSymphony/Images/button9.jpg')" 
+                  id=img1 
+                  onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'/PrivateLabel/AndersonSymphony/Images/button8.jpg')" 
+                  onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'/PrivateLabel/AndersonSymphony/Images/button7.jpg')" 
+                  height=20 alt="2006-2007 SEASON" 
+                  src="/PrivateLabel/AndersonSymphony/Images/button7.jpg" width=125 border=0 
+                  fp-title="2006-2007 SEASON" 
+                  fp-style="fp-btn: Simple Text 3; fp-proportional: 0; fp-orig: 0"></A><A 
+                  href="http://andersonsymphony.tix.com/"><IMG 
+                  onmouseup="FP_swapImg(0,0,/*id*/'img22',/*url*/'/PrivateLabel/AndersonSymphony/Images/button2.jpg')" 
+                  onmousedown="FP_swapImg(1,0,/*id*/'img22',/*url*/'/PrivateLabel/AndersonSymphony/Images/button3.jpg')" 
+                  id=img22 
+                  onmouseover="FP_swapImg(1,0,/*id*/'img22',/*url*/'/PrivateLabel/AndersonSymphony/Images/button2.jpg')" 
+                  onmouseout="FP_swapImg(0,0,/*id*/'img22',/*url*/'/PrivateLabel/AndersonSymphony/Images/button1.jpg')" 
+                  height=20 alt=TICKETS src="/PrivateLabel/AndersonSymphony/Images/button1.jpg" 
+                  width=75 border=0 fp-title="TICKETS" 
+                  fp-style="fp-btn: Simple Text 4; fp-proportional: 0; fp-orig: 0"></A><A 
+                  href="http://www.andersonsymphony.org/get_involved.htm"><IMG 
+                  onmouseup="FP_swapImg(0,0,/*id*/'img10',/*url*/'/PrivateLabel/AndersonSymphony/Images/button37.jpg')" 
+                  onmousedown="FP_swapImg(1,0,/*id*/'img10',/*url*/'/PrivateLabel/AndersonSymphony/Images/button38.jpg')" 
+                  id=img10 
+                  onmouseover="FP_swapImg(1,0,/*id*/'img10',/*url*/'/PrivateLabel/AndersonSymphony/Images/button37.jpg')" 
+                  onmouseout="FP_swapImg(0,0,/*id*/'img10',/*url*/'/PrivateLabel/AndersonSymphony/Images/button4.jpg')" 
+                  height=20 alt="GET INVOLVED" src="/PrivateLabel/AndersonSymphony/Images/button4.jpg" 
+                  width=100 border=0 fp-title="GET INVOLVED" 
+                  fp-style="fp-btn: Simple Text 4; fp-proportional: 0; fp-orig: 0"></A><A 
+                  href="http://www.andersonsymphony.org/about_us.htm"><IMG 
+                  onmouseup="FP_swapImg(0,0,/*id*/'img11',/*url*/'/PrivateLabel/AndersonSymphony/Images/buttonE.jpg')" 
+                  onmousedown="FP_swapImg(1,0,/*id*/'img11',/*url*/'/PrivateLabel/AndersonSymphony/Images/buttonF.jpg')" 
+                  id=img11 
+                  onmouseover="FP_swapImg(1,0,/*id*/'img11',/*url*/'/PrivateLabel/AndersonSymphony/Images/buttonE.jpg')" 
+                  onmouseout="FP_swapImg(0,0,/*id*/'img11',/*url*/'/PrivateLabel/AndersonSymphony/Images/buttonD1.jpg')" 
+                  height=20 alt=COMPANY src="/PrivateLabel/AndersonSymphony/Images/buttonD1.jpg" 
+                  width=75 border=0 fp-title="COMPANY" 
+                  fp-style="fp-btn: Simple Text 4; fp-proportional: 0; fp-orig: 0"></A><A 
+                  href="http://www.andersonsymphony.org/news.htm"><IMG 
+                  onmouseup="FP_swapImg(0,0,/*id*/'img12',/*url*/'/PrivateLabel/AndersonSymphony/Images/button39.jpg')" 
+                  onmousedown="FP_swapImg(1,0,/*id*/'img12',/*url*/'/PrivateLabel/AndersonSymphony/Images/button40.jpg')" 
+                  id=img12 
+                  onmouseover="FP_swapImg(1,0,/*id*/'img12',/*url*/'/PrivateLabel/AndersonSymphony/Images/button39.jpg')" 
+                  onmouseout="FP_swapImg(0,0,/*id*/'img12',/*url*/'/PrivateLabel/AndersonSymphony/Images/button43.jpg')" 
+                  height=20 alt=NEWS src="/PrivateLabel/AndersonSymphony/Images/button43.jpg" width=50 
+                  border=0 fp-title="NEWS" 
+                  fp-style="fp-btn: Simple Text 4; fp-proportional: 0; fp-orig: 0"></A><A 
+                  href="http://www.andersonsymphony.org/youth.htm"><IMG 
+                  onmouseup="FP_swapImg(0,0,/*id*/'img14',/*url*/'/PrivateLabel/AndersonSymphony/Images/button1A1.jpg')" 
+                  onmousedown="FP_swapImg(1,0,/*id*/'img14',/*url*/'/PrivateLabel/AndersonSymphony/Images/button1B.jpg')" 
+                  id=img14 
+                  onmouseover="FP_swapImg(1,0,/*id*/'img14',/*url*/'/PrivateLabel/AndersonSymphony/Images/button1A1.jpg')" 
+                  onmouseout="FP_swapImg(0,0,/*id*/'img14',/*url*/'/PrivateLabel/AndersonSymphony/Images/button44.jpg')" 
+                  height=20 alt=YOUTH src="/PrivateLabel/AndersonSymphony/Images/button44.jpg" 
+                  width=60 border=0 fp-title="YOUTH" 
+                  fp-style="fp-btn: Simple Text 4; fp-proportional: 0; fp-orig: 0"></A><A 
+                  href="http://www.andersonsymphony.org/calendar.htm"><IMG 
+                  onmouseup="FP_swapImg(0,0,/*id*/'img13',/*url*/'/PrivateLabel/AndersonSymphony/Images/button41.jpg')" 
+                  onmousedown="FP_swapImg(1,0,/*id*/'img13',/*url*/'/PrivateLabel/AndersonSymphony/Images/button42.jpg')" 
+                  id=img13 
+                  onmouseover="FP_swapImg(1,0,/*id*/'img13',/*url*/'/PrivateLabel/AndersonSymphony/Images/button41.jpg')" 
+                  onmouseout="FP_swapImg(0,0,/*id*/'img13',/*url*/'/PrivateLabel/AndersonSymphony/Images/button45.jpg')" 
+                  height=20 alt=CALENDAR src="/PrivateLabel/AndersonSymphony/Images/button45.jpg" 
+                  width=75 border=0 fp-title="CALENDAR" 
+                  fp-style="fp-btn: Simple Text 4; fp-proportional: 0; fp-orig: 0"></A></TD></TR>
+              <TR>
+                <TD align=middle><A 
+                  href="http://www.andersonsymphony.org/season.htm"><IMG 
+                  height=82 src="/PrivateLabel/AndersonSymphony/Images/aso-header2main.jpg" width=776 
+                  align=left border=0></A></TD></TR></TBODY></TABLE>
+            <P align=center><FONT face=Tahoma><FONT color=#ffcc99><STRONG 
+            style="FONT-WEIGHT: 400">The widely-acclaimed <EM>Anderson Symphony 
+            Orchestra</EM> of Indiana, performing in the circa 
+            1929</STRONG></FONT><EM><STRONG style="FONT-WEIGHT: 400"><A 
+            href="http://www.andersonparamount.org/"><FONT 
+            color=#ffcc66><BR></FONT></A></STRONG><A 
+            href="http://www.andersonparamount.org/"><FONT 
+            color=#ffffff><STRONG><SPAN style="TEXT-DECORATION: none">Paramount 
+            Theatre</SPAN></STRONG></FONT></A></EM><FONT color=#ffcc99><STRONG> 
+            </STRONG><STRONG style="FONT-WEIGHT: 400">with its majestic, Spanish 
+            architecture, intimate atmosphere, and fine 
+            acoustics,</STRONG></FONT></FONT><FONT face=Tahoma 
+            color=#ffcc99><BR><STRONG style="FONT-WEIGHT: 400">makes this a 
+            grand way to conduct an evening!</STRONG><BR>&nbsp;</FONT>
+            
+            <TABLE borderColor=#cc6600 cellPadding=2 width="100%" bgColor=#000000 border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top height=500>
+                  

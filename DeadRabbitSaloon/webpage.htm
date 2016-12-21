@@ -1,0 +1,70 @@
+<%
+'CHANGELOG
+'LSP 08/07/14 - initial development
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+<link href="/clients/DeadRabbitSaloon/Images/beta02.css" rel="stylesheet" type="text/css">
+<link href="/clients/DeadRabbitSaloon/Images/events01.css" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+<!--
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body onload="MM_preloadImages('/clients/DeadRabbitSaloon/Images/home001_roll.png','/clients/DeadRabbitSaloon/Images/fb01_roll.png')">
+<div class="hat">
+    	<div class="pagetitle">
+       		<img src="/clients/DeadRabbitSaloon/Images/events001.png">
+     	</div>
+        <div class="navbar">
+        	<a href="http://www.deadrabbitsaloon.com/home.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('home roll over','','/clients/DeadRabbitSaloon/Images/home001_roll.png',1)"><img src="/clients/DeadRabbitSaloon/Images/home001.png" alt="Welcome the Ridge" name="home roll over" id="home roll over"></a>
+            <a href="http://www.deadrabbitsaloon.com/menu.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('menu roll over','','/clients/DeadRabbitSaloon/Images/menu001_roll.png',1)"><img src="/clients/DeadRabbitSaloon/Images/menu001.png" alt="See what's in the kitchen" name="menu roll over" id="menu roll over"></a>
+            <a href="http://www.deadrabbitsaloon.com/events.html" ><img src="/clients/DeadRabbitSaloon/Images/events001_roll.png" alt="Coming up" name="events roll over" id="events roll over"></a>
+            <a href="http://www.deadrabbitsaloon.com/about.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('about roll over','','/clients/DeadRabbitSaloon/Images/about001_roll.png',1)"><img src="/clients/DeadRabbitSaloon/Images/about001.png" alt="Meet the Family" name="about roll over" id="about roll over"></a>
+            <a href="http://www.deadrabbitsaloon.com/contact.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('contact roll over','','/clients/DeadRabbitSaloon/Images/contact001_roll.png',1)"><img src="/clients/DeadRabbitSaloon/Images/contact001.png" alt="Find Us" name="contact roll over" id="contact roll over"></a>
+            <a href="http://www.deadrabbitsaloon.com/merch.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('merch roll over','','/clients/DeadRabbitSaloon/Images/merch001_roll.png',1)"><img src="/clients/DeadRabbitSaloon/Images/merch001.png" alt="Wear the Rabbit" name="merch roll over" id="merch roll over"></a>
+        <a href="https://www.facebook.com/DeadRabbitSaloon" target="_blank" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('fb_link','','/clients/DeadRabbitSaloon/Images/fb01_roll.png',1)"><img src="/clients/DeadRabbitSaloon/Images/fb01.png" alt="link to the Dead Rabbit Saloon's Facebook Page" name="fb_link" id="fb_link" border="0" height="40" width="40"></a>
+        </div>
+        
+</div>
+	<div class="fullcal">
+<!--TIX DATA START-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+	</div>
+<div class="boots">
+            	<img src="/clients/DeadRabbitSaloon/Images/header001.png"><br>
+                Dead Rabbit Saloon and Logo are trademark by the Dead Rabbit Saloon. Use of content is prohibited.<br>
+                Web design and content Developed by Anthony Jon Burns @ <a href="https://www.azrdesign.com/" title="Chaos and Design" target="_blank">aZrdesign</a> 2013.
+                </div>
+</div>
+</form>
+</body>
+</html>

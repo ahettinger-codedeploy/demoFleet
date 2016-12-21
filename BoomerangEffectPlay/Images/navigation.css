@@ -1,0 +1,158 @@
+/**
+ * @file
+ * Navigation Styling
+ */
+
+
+/*
+ * The active item in a Drupal menu
+ */
+ 
+li a.active {
+  color: gray !important;
+}
+
+/*
+ * Navigation bar
+ */
+#navigation {
+  overflow: hidden; /* Sometimes you want to prevent overlapping with main div. */
+	width:600px;
+	padding-left:525px; /* Float the nav bar over to the right*/
+}
+
+#navigation ul.links, /* Main menu and secondary menu links */
+#navigation .content ul /* Menu block links */ {
+  margin: 0;
+  text-align: left; /* LTR */
+}
+
+#navigation ul.links li, /* A simple method to get navigation links to appear in one line. */
+#navigation .content li {
+  width:125px;
+	height:27px;
+	float: left; /* LTR */
+  padding: 0 0 0 0; /* LTR */
+	margin: 10px 0 0 0;
+}
+
+li.menu-388 {
+	width: 100px !important ;
+}
+
+.region-navigation {
+}
+
+/*
+ * Main menu and Secondary menu links
+ */
+
+#secondary-menu {
+  float: right;
+}
+
+/*
+ * Menu blocks
+ */
+.block-menu {
+}
+
+/*
+ * "Menu block" blocks
+ *
+ * Drupal core has limited ways in which it can display its menus. To get around
+ * these limitations, see http://drupal.org/project/menu_block
+ */
+.block-menu-block {
+}
+
+#main-menu a {
+	display:block;
+	text-indent:-9999px;
+	white-space: nowrap;
+	height:22px;
+}
+
+/* Nav bar images */
+#home-link {
+	background:url("/clients/BoomerangEffectPlay/Images/home_sprite.png") no-repeat scroll 0 -22px transparent;
+	margin-top:5px;
+}
+
+#about-link {
+	/* background:url("/clients/BoomerangEffectPlay/Images/about_sprite.png") no-repeat scroll 0 -22px transparent; */
+	background:url("/clients/BoomerangEffectPlay/Images/about_sprite.png") no-repeat scroll 0 -22px transparent;
+	margin-top:5px;
+}
+
+#cast-link {
+	background:url("/clients/BoomerangEffectPlay/Images/cast_sprite.png") no-repeat scroll 0 -22px transparent;
+	margin-top:5px;
+}
+
+/*different because the tail of the 'p'*/
+#photos-link {
+	background:url("/clients/BoomerangEffectPlay/Images/photos_sprite.png") no-repeat scroll 0 -22px transparent;
+	margin-top:5px;
+}
+
+
+/*different because the tail of the 'p'*/
+#press-link {
+	background:url("/clients/BoomerangEffectPlay/Images/press_sprite.png") no-repeat scroll 0 -22px transparent;
+	margin-top:5px;
+}
+
+
+/* Animate the nav bar rollover by cancelling the Y axis background position */
+#main-menu a:hover {
+	background-position: 0 0;
+}
+
+/*
+#main-menu a:active {
+	margin: 0;
+	padding: 0;
+}
+*/
+
+/* Active nav bar images */
+li.active #home-link {
+	height:50px;
+	margin: 0 0 0 -12px;
+	padding: 0;
+	background:url("/clients/BoomerangEffectPlay/Images/home_active.png") no-repeat scroll 0 0 transparent;
+}
+
+li.active #about-link {
+	height:50px;
+	margin: 0 0 0 -12px;
+	padding: 0;
+	background:url("/clients/BoomerangEffectPlay/Images/about_active.png") no-repeat scroll 0 0 transparent;
+}
+
+
+li.active #cast-link {
+	height:50px;
+	margin: 0 0 0 -12px;
+	padding: 0;
+	background:url("/clients/BoomerangEffectPlay/Images/cast_active.png") no-repeat scroll 0 0 transparent;
+}
+
+
+/*different because the tail of the 'p'*/
+li.active #photos-link {
+	height:50px;
+	margin: 0 0 0 -12px;
+	padding: 0;
+	background:url("../images/photos/photos_active.png") no-repeat scroll 0 0 transparent;
+}
+
+
+/*different because the tail of the 'p'*/
+li.active #press-link {
+	height:50px;
+	margin: 0 0 0 -12px;
+	padding: 0;
+	background:url("../images/press/press_active.png") no-repeat scroll 0 0 transparent;
+}

@@ -1,0 +1,796 @@
+<%
+'CHANGELOG
+'LSP 07/07/14 - initial development
+'JAI 10/23/15 - Moved some JS to external file
+%>
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+<link rel="stylesheet" href="/clients/Auyoga/Images/base.css" type="text/css">
+<link rel="stylesheet" href="/clients/Auyoga/Images/grid.css" type="text/css">
+<link rel="stylesheet" href="/clients/Auyoga/Images/accordion.css" type="text/css">
+<link rel="stylesheet" href="/clients/Auyoga/Images/content-layout.css" type="text/css">
+<link rel="stylesheet" href="/clients/Auyoga/Images/content-modules.css" type="text/css">
+<link rel="stylesheet" href="/clients/Auyoga/Images/wrapper-styles.css" type="text/css">
+<link rel="stylesheet" href="/clients/Auyoga/Images/school-cas-homepage-modules.css" type="text/css">
+<link rel="stylesheet" href="/clients/Auyoga/Images/profile-page-modules.css" type="text/css">
+<link rel="stylesheet" href="/clients/Auyoga/Images/school-cas.css" type="text/css">
+<link rel="stylesheet" href="/clients/Auyoga/Images/sIFR-screen.css" type="text/css">
+<link rel="stylesheet" href="/clients/Auyoga/Images/ie.css" type="text/css">
+<link rel="stylesheet" href="/clients/Auyoga/Images/default.css" type="text/css">
+<style type="text/css">
+	.mw { color:#000000;font-family:Verdana,Arial,Helvetica;font-weight:bold;font-size:xx-small;text-decoration:none; }
+	a.mw:link	{color:#000000;font-family:Verdana,Arial,Helvetica;font-weight:bold;font-size:xx-small;text-decoration:none;}
+	a.mw:visited	{color:#000000;font-family:Verdana,Arial,Helvetica;font-weight:bold;font-size:xx-small;text-decoration:none;}
+	a.mw:hover	{color:#0000FF;font-family:Verdana,Arial,Helvetica;font-weight:bold;font-size:xx-small;text-decoration:none;}
+</style> <script src="/clients/Auyoga/Images/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="/clients/Auyoga/Images/browser-all.js"></script> <link rel="canonical" href="http://www.american.edu/cas/museum/">
+	<!-- Server: WWW01 -->
+	<meta name="verify-v1" content="C8BKbPWIV/0vmitgtXynwUnk3XHxNzpqpXOLS4oKc+c=">
+	
+	<link rel="stylesheet" href="/clients/Auyoga/Images/body.css" type="text/css">
+	
+	
+	
+	<link rel="stylesheet" href="/clients/Auyoga/Images/emergency.css">
+	<link rel="stylesheet" href="/clients/Auyoga/Images/reskin.css" type="text/css">
+	<script src="/clients/Auyoga/Images/sifr.js" type="text/javascript"></script>
+	<script src="/clients/Auyoga/Images/sifr-addons.js" type="text/javascript"></script>
+	
+    <script src="/clients/Auyoga/Images/prototype-1.js" type="text/javascript"></script>
+	<script src="/clients/Auyoga/Images/scriptaculous9f06.js" type="text/javascript"></script>
+	<script src="/clients/Auyoga/Images/effects.js" type="text/javascript"></script>
+	<script src="/clients/Auyoga/Images/accordion.js" type="text/javascript"></script>
+	<script src="/clients/Auyoga/Images/reskin-AU.js" type="text/javascript"></script>
+	<script src="/clients/Auyoga/Images/carousel.js" type="text/javascript"></script>
+	<script src="/clients/Auyoga/Images/jquery-1.js" type="text/javascript"></script>
+	
+
+	
+	<link type="text/css" rel="stylesheet" href="/clients/Auyoga/Images/reskin-CAS.css"> 
+	
+	<script type="text/javascript">
+		if(typeof scriptsLoaded === 'undefined'){
+			var scriptsLoaded= new Array();
+		}
+
+		jQuery.noConflict();
+		scriptsLoaded["jQuery"] = true;
+	</script>
+
+
+
+	
+
+
+
+	<script type="text/javascript">
+
+ 	function gup( name )
+	{
+		  name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+		  var regexS = "[\\?&]"+name+"=([^&#]*)";
+		  var regex = new RegExp( regexS );
+		  var results = regex.exec( window.location.href );
+		  if( results == null )
+		    return "";
+		  else
+		    return results[1];
+	}
+
+	var urlTracker = gup('tracker');
+	var utmSource = gup('utm_source');
+	var utmName = gup('utm_name');
+	var utmMedium = gup('utm_medium');
+
+ 	 var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-10527037-1']);
+	  _gaq.push(['_trackPageview']);
+
+  		if(utmSource != '')
+		{
+			_gaq.push(['_setCampMediumKey', utmMedium ]);	// Medium
+			_gaq.push(['_setCampNameKey', utmName ]);		// Name
+			_gaq.push(['_setCampSourceKey', utmSource ]);    // source
+
+
+		}
+
+		else if(urlTracker != '' )
+		{
+			_gaq.push(['_setCampMediumKey', 'redirect']);
+			_gaq.push(['_setCampNameKey', 'Redirects']);
+			_gaq.push(['_setCampSourceKey', urlTracker]);    // source
+
+		}
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+
+	<script type="text/javascript" src="/clients/Auyoga/Images/utils.js"></script>
+			
+				
+				<script type="text/javascript">
+					if(typeof scriptsLoaded === 'undefined'){
+						var scriptsLoaded= new Array();
+					}
+					//Load jQuery only once.
+					if(!("jQuery" in scriptsLoaded)){
+						document.write('<script type="text\/javascript" src="\/ADF\/thirdParty\/jquery\/jquery-1.7.js"><\/script><script type="text\/javascript">jQuery.noConflict();<\/script>'+'<script type="text/javascript"><\/script>');
+						scriptsLoaded["jQuery"] = true;
+						
+						}
+				</script>
+			
+	<link rel="stylesheet" href="/clients/Auyoga/Images/thickbox.css" type="text/css" media="screen">
+	<script type="text/javascript" src="/clients/Auyoga/Images/thickbox.js"></script>
+	<link rel="stylesheet" href="/clients/Auyoga/Images/commonspot.css" type="text/css" id="cs_maincss">
+    <script src="/clients/Auyoga/Images/InternalScript.js" type="text/javascript"></script>
+    <script src="/clients/Auyoga/Images/util.js" type="text/javascript" id="cs_util_js"> </script>
+
+
+<link rel="stylesheet" href="/clients/Auyoga/Images/buttons.css" type="text/css" id="buttons_css">
+<link rel="stylesheet" href="/clients/Auyoga/Images/lightbox.css" type="text/css" id="cs_lightbox_css">
+<script src="/clients/Auyoga/Images/lightbox.js" type="text/javascript" id="cs_lightbox_js"></script>
+    
+<script src="/clients/Auyoga/Images/overrides.js" type="text/javascript" id="cs_overrides"></script>
+    
+
+<script src="/clients/Auyoga/Images/window_ref.js" type="text/javascript" id="cs_windowref"></script>
+    
+
+    </head>
+    <body class="CS_Document" lang="en"><a name="__topdoc__"></a><script src="/clients/Auyoga/Images/always-include-common.js" type="text/javascript"></script><script type="text/javascript">
+<!--
+		// always-include-ie.js  Copyright 1998-2005 PaperThin, Inc. All rights reserved.
+
+bName = navigator.appName;
+bVer = parseInt(navigator.appVersion);
+
+var bCanRollover=0
+if (bName == "Netscape")
+{
+	if(bVer >= 3)
+		bCanRollover=1;
+}
+else if (bName == "Microsoft Internet Explorer")
+{
+	if(bVer >= 4)
+		bCanRollover=1;
+}
+
+function ImageSet(imgID,newTarget)
+{
+	if (bCanRollover)
+		document[imgID].src=newTarget;
+}
+function clearStatus()
+{
+	window.status = "";
+}
+function setStatbar(statbar)
+{
+	var strStatbar=unescape(statbar);
+	window.status=strStatbar;
+}
+function onLoadComplete()
+{
+	if( menus_included == 1 )
+		document.onmouseover = document_mouseover;	// defined in menu_ie.js
+}
+function HandleLink(parentID,link,displaylink) 
+{
+	// links are in one of the following formats:
+	// 		cpe_60_0,CP___PAGEID=100
+	// 		CPNEWWIN:WindowName^params@CP___
+	// 			CPNEWWIN:child^top=110:left=130:ww=140:hh=150:tb=1:loc=1:dir=0:stat=1:mb=1:sb=1:rs=1@CP___PAGEID=3811,Adv-Search-2,1
+	// displaylink is the server relative URL or fully qualified URL
+	windowname = "";
+	windowparams = "";
+
+	// "CPNEWWIN:" & NewWindowName & "^" & params & "@" & linkStruct.LinkURL; 
+	pos = link.indexOf("CPNEWWIN:");
+	if (pos != -1)
+	{
+		pos1 = link.indexOf ("^");
+		windowname = link.substring (pos+9, pos1);
+		pos2 = link.indexOf ("@");
+		windowparams = link.substring (pos1 + 1, pos2);
+		link = link.substring (pos2 + 1, link.length);
+	}
+	
+	if( displaylink && displaylink != "" )
+	{		
+		if (windowname == "")
+			window.location = displaylink;
+		else
+		{
+			windowparams = FormatWindowParams(windowparams);
+			window.open (displaylink, windowname, windowparams);
+		}
+	}
+	else
+	{
+		targetLink = link;
+
+		if (link.indexOf ("CP___") != -1)
+		{
+
+			httpPos = -1;
+			commaPos = link.indexOf(",");
+			if (commaPos != -1)
+			{
+				targetUrl = link.substr(commaPos + 1);
+				if (targetUrl.indexOf("://") != -1 || targetUrl.indexOf("/") == 0)
+				{
+						httpPos = commaPos + 1;
+				}		
+			}
+				
+			if (httpPos != -1)
+			{
+				targetLink = link.substr(httpPos);
+
+				commaPos = targetLink.indexOf(",");
+				if (commaPos != -1)
+					targetLink = targetLink.substr(0, commaPos);
+			}
+			else
+				targetLink = jsDlgLoader + "?csModule=utilities/handle-link&thelink=" + link;
+			
+			if (windowname == "")
+				window.location = targetLink;
+			else
+			{
+				windowparams = FormatWindowParams(windowparams);
+				window.open (targetLink, windowname, windowparams);
+			}
+		}
+		else
+		{
+			//commaPos = link.indexOf(",");
+			//if (commaPos != -1)
+			//	link = link.substr(0, commaPos);
+
+			if (windowname == "")
+				window.location = link;
+			else
+			{
+				windowparams = FormatWindowParams(windowparams);
+				window.open (link, windowname, windowparams);
+			}
+		}
+	}
+
+}
+function doWindowOpen(href,name,params)
+{
+	if (params != '')
+	window.open (href, name, params);
+	else
+		window.open (href, name);	
+}
+
+// 	CPNEWWIN:child^top=110:left=130:ww=140:hh=150:tb=1:loc=1:dir=0:stat=1:mb=1:sb=1:rs=1@CP___PAGEID=3811,Adv-Search-2,1
+function FormatWindowParams(windowparams)
+{
+	if( windowparams.indexOf(":loc=") != -1 || windowparams.indexOf(":ww=") != -1 || windowparams.indexOf(":hh=") != -1 || 
+	    windowparams.indexOf(":left=") != -1 || windowparams.indexOf(":top=") != -1 )
+	{
+		windowparams = substringReplace(windowparams,':left=',',left=');
+		windowparams = substringReplace(windowparams,'left=','left=');
+		windowparams = substringReplace(windowparams,':ww=',',width=');
+		windowparams = substringReplace(windowparams,'ww=','width=');		
+		windowparams = substringReplace(windowparams,':hh=',',height=');
+		windowparams = substringReplace(windowparams,'hh=','height=');
+		windowparams = substringReplace(windowparams,':loc=',',location=');
+		windowparams = substringReplace(windowparams,'loc=','location=');
+		windowparams = substringReplace(windowparams,':dir=',',directories=');
+		windowparams = substringReplace(windowparams,'dir=','directories=');
+		windowparams = substringReplace(windowparams,':tb=',',toolbar=');
+		windowparams = substringReplace(windowparams,'tb=','toolbar=');
+		windowparams = substringReplace(windowparams,':stat=',',status=');
+		windowparams = substringReplace(windowparams,':mb=',',menubar=');
+		windowparams = substringReplace(windowparams,':sb=',',scrollbars=');
+		windowparams = substringReplace(windowparams,':rs=',',resizable=');
+	}
+	return windowparams;
+}
+
+// -->
+		</script>
+    
+    <div id="cs_control_1547642" class="cs_control CS_Element_DHTML_Menu"></div>
+<!-- // Server: www01.american.edu -->
+
+
+
+	<script type="text/javascript">
+		jQuery("document").ready(function(){
+			jQuery.ajax({
+				url: '/customcf/emergency/actives.txt',
+				cache: false,
+				dataType: "json",
+				success: function(response) {
+				  	jQuery.each(response.DATA, function(index) {
+				  		if (this[9]) {
+						  	var returnHTML = '<p><span class="interiorMsg">' + this[1] + '</span><span class="interiorMsg2">' + this[2];
+						  	if (this[6]) {
+						  		returnHTML += ' <a href="' + this[7] + '" class="emergency-link">Learn More</a>';
+						  	};
+						  	returnHTML += '</span>';
+						    jQuery('#emergency-top').append(returnHTML).parent().show();
+						};
+				  	});
+				}
+			});
+		});
+	</script>
+ 	<div id="emergency-wrapper" style="display:none;">
+ 		<div id="emergency-top">
+ 		</div>
+	</div>
+
+	<div class="reskin">
+		<div id="wrapper-reskin">
+			<header>
+				<div class="sideshades">
+					<div class="etched-top"></div>
+					<div id="logo-reskin">
+						<a href="http://www.american.edu/" class="crest"><img src="/clients/Auyoga/Images/AU-crest.png" alt="AU home" title="AU home"></a>
+						<a href="http://www.american.edu/cas"><img src="/clients/Auyoga/Images/CAS-logo.png" alt="CAS home" title="CAS home"></a>
+						<div id="utilities-reskin">
+							<div id="login-reskin">
+								<a href="#">Log in<span></span></a>
+							</div>
+							<div id="login-detail">
+								<span class="arrow"></span>
+								<ul>
+									<li><a href="https://myau.american.edu/">myau.american.edu</a></li>
+									<li><a href="http://mail.google.com/a/student.american.edu">Student Gmail</a></li>
+									<li><a href="https://blackboard.american.edu/">Blackboard</a></li>
+								</ul>
+							</div>
+			
+						</div>
+					</div>
+				</div>
+			</header>
+		
+				<div class="expand-tab"><span>Expand AU Menu<span class="arrow-down"></span></span><div></div></div>
+				<nav class="site-nav">
+					<ul style="display: none; visibility: visible;" class="main">
+				
+				        <li id="admissions-reskin">
+							<a href="#" onclick="return false;"><span class="bullet"></span><span class="label">Admissions</span></a>
+							<ul style="min-height: 253px;" class="sub-nav">
+								
+									<li><a href="http://www.american.edu/admissions/index.cfm">Overview</a></li>
+									
+									<li><a href="http://www.american.edu/admissions/apply/index.cfm">Apply</a></li>
+									
+									<li><a href="http://www.american.edu/degrees.cfm">Degrees</a></li>
+									
+									<li><a href="http://www.american.edu/admissions/freshman/index.cfm">Undergraduate</a></li>
+									
+									<li><a href="http://www.american.edu/provost/grad/schools-colleges.cfm">Graduate</a></li>
+									
+									<li><a href="http://www.american.edu/finance/studentaccounts/Tuition-and-Fees-Information.cfm">Tuition &amp; Fees</a></li>
+									
+									<li><a href="http://www.american.edu/financialaid/index.cfm">Financial Aid</a></li>
+										
+							</ul>
+						</li>
+				
+				        <li id="academics-reskin">
+							<a href="#" onclick="return false;"><span class="bullet"></span><span class="label">Academics</span></a>
+							<ul style="min-height: 253px;" class="sub-nav">
+								
+									<li><a href="http://www.american.edu/academics/index.cfm">Overview</a></li>
+									
+									<li class="has-child"><a href="http://www.american.edu/about/schoolsandcolleges.cfm" onclick="if(!isMobile)return false;">Schools &amp; Colleges <span class="arrow"></span></a>
+									<ul class="sub-nav-child">
+											<li><a href="http://www.american.edu/about/schoolsandcolleges.cfm">Overview</a></li>
+											<li><a href="http://www.american.edu/cas/">College of Arts and Sciences</a></li>
+											<li><a href="http://www.american.edu/kogod/">Kogod School of Business</a></li>
+											<li><a href="http://www.american.edu/soc/">School of Communication</a></li>
+											<li><a href="http://www.american.edu/sis/">School of International Service</a></li>
+											<li><a href="http://www.american.edu/spexs/">School of Professional &amp; Extended Studies</a></li>
+											<li><a href="http://www.american.edu/spa/">School of Public Affairs</a></li>
+											<li><a href="http://www.wcl.american.edu/" target="_blank">Washington College of Law</a></li>
+										</ul>
+									</li>
+									
+									<li><a href="http://www.american.edu/degrees.cfm">Degrees</a></li>
+									
+									<li><a href="http://www.american.edu/provost/registrar/universitycatalog.cfm">Catalog</a></li>
+									
+									<li><a href="http://www.american.edu/provost/registrar/registration/registrationdates.cfm">Registration</a></li>
+									
+									<li><a href="http://www.american.edu/library/index.cfm">Library</a></li>
+									
+									<li><a href="http://www.american.edu/universitylife/calendars.cfm">Calendars</a></li>
+									
+									<li><a href="http://auabroad.american.edu/" target="_blank">Study Abroad</a></li>
+									
+									<li><a href="http://www.american.edu/summer/index.cfm">Summer Programs</a></li>
+									
+									<li><a href="http://www.american.edu/onlinelearning/index.cfm">Online Programs</a></li>
+									
+									<li><a href="http://www.american.edu/provost/honors/index.cfm">Honors</a></li>
+										
+							</ul>
+						</li>
+				
+				        <li id="research-reskin">
+							<a href="#" onclick="return false;"><span class="bullet"></span><span class="label">Research</span></a>
+							<ul style="min-height: 253px;" class="sub-nav">
+								
+									<li><a href="http://www.american.edu/research/index.cfm">Overview</a></li>
+									
+									<li><a href="http://www.american.edu/research/awards.cfm">Awards</a></li>
+									
+									<li><a href="http://www.american.edu/research/centers-institutes.cfm">Centers &amp; Institutes</a></li>
+									
+									<li><a href="http://www.american.edu/research/upcoming-events.cfm">Events</a></li>
+									
+									<li><a href="http://www.american.edu/library/index.cfm">Library</a></li>
+									
+									<li><a href="http://www.american.edu/research/funding.cfm">Funding Opportunities</a></li>
+									
+									<li><a href="http://www.american.edu/provost/osp/index.cfm">Sponsored Programs</a></li>
+										
+							</ul>
+						</li>
+				
+				        <li id="university life-reskin">
+							<a href="#" onclick="return false;"><span class="bullet"></span><span class="label">University Life</span></a>
+							<ul style="min-height: 253px;" class="sub-nav">
+								
+									<li><a href="http://www.american.edu/universitylife/index.cfm">Overview</a></li>
+									
+									<li><a href="http://www.aueagles.com/" target="_blank">Athletics</a></li>
+									
+									<li><a href="http://www.american.edu/ocl/housing/index.cfm">Housing</a></li>
+									
+									<li><a href="http://www.american.edu/ocl/dining/index.cfm">Dining &amp; Retail</a></li>
+									
+									<li><a href="http://www.american.edu/ocl/FY411/index.cfm">New Students</a></li>
+									
+									<li><a href="http://www.american.edu/universitylife/career.cfm">Career Services</a></li>
+									
+									<li><a href="http://www.american.edu/ocl/activities/index.cfm">Student Organizations</a></li>
+									
+									<li><a href="http://www.american.edu/universitylife/calendars.cfm">Calendars</a></li>
+									
+									<li><a href="http://www.american.edu/cas/auarts/index.cfm">AU Arts</a></li>
+									
+									<li><a href="http://www.wamu.org/" target="_blank">WAMU 88.5</a></li>
+										
+							</ul>
+						</li>
+				
+				        <li id="alumni-reskin">
+							<a href="#" onclick="return false;"><span class="bullet"></span><span class="label">Alumni</span></a>
+							<ul style="min-height: 253px;" class="sub-nav">
+								
+									<li><a href="http://www.american.edu/alumni/index.cfm">Overview</a></li>
+									
+									<li><a href="http://alumniassociation.american.edu/s/1395/event.aspx?sid=1395&amp;gid=1&amp;pgid=338" target="_blank">Events</a></li>
+									
+									<li><a href="http://alumniassociation.american.edu/s/1395/start.aspx?sid=1395&amp;gid=1&amp;pgid=339" target="_blank">Volunteer</a></li>
+									
+									<li><a href="http://www.american.edu/alumni/benefits/Index.cfm">Benefits</a></li>
+									
+									<li><a href="https://securelb.imodules.com/s/1395/index1col.aspx?sid=1395&amp;gid=1&amp;pgid=982&amp;cid=2262" target="_blank">Give to AU</a></li>
+									
+									<li><a href="http://www.american.edu/careercenter/alumni/index.cfm">Alumni Career Services</a></li>
+									
+									<li><a href="http://www.american.edu/library/services/alumni.cfm">Alumni Library Privileges</a></li>
+									
+									<li><a href="https://securelb.imodules.com/s/1395/index1col.aspx?sid=1395&amp;gid=1&amp;pgid=3&amp;cid=40" target="_blank">Community Login</a></li>
+										
+							</ul>
+						</li>
+				
+				        <li id="about-reskin">
+							<a href="#" onclick="return false;"><span class="bullet"></span><span class="label">About</span></a>
+							<ul style="min-height: 253px;" class="sub-nav">
+								
+									<li><a href="http://www.american.edu/about/index.cfm">Overview</a></li>
+									
+									<li><a href="http://video.realviewtv.com/education/au/map" target="_blank">Virtual Tour</a></li>
+									
+									<li><a href="http://www.american.edu/about/fast-facts.cfm">Facts</a></li>
+									
+									<li class="has-child"><a href="http://www.american.edu/about/schoolsandcolleges.cfm" onclick="if(!isMobile)return false;">Schools &amp; Colleges <span class="arrow"></span></a>
+									<ul class="sub-nav-child">
+											<li><a href="http://www.american.edu/about/schoolsandcolleges.cfm">Overview</a></li>
+											<li><a href="http://www.american.edu/cas/">College of Arts and Sciences</a></li>
+											<li><a href="http://www.american.edu/kogod/">Kogod School of Business</a></li>
+											<li><a href="http://www.american.edu/soc/">School of Communication</a></li>
+											<li><a href="http://www.american.edu/sis/">School of International Service</a></li>
+											<li><a href="http://www.american.edu/spexs/">School of Professional &amp; Extended Studies</a></li>
+											<li><a href="http://www.american.edu/spa/">School of Public Affairs</a></li>
+											<li><a href="http://www.wcl.american.edu/" target="_blank">Washington College of Law</a></li>
+										</ul>
+									</li>
+									
+									<li><a href="http://www.american.edu/about/leadership.cfm">Leadership</a></li>
+									
+									<li><a href="http://www.american.edu/finance/" target="_blank">Financial Statements</a></li>
+									
+									<li><a href="http://www.american.edu/hr/index.cfm">Work at AU</a></li>
+									
+									<li><a href="http://www.american.edu/directory/index.cfm">Faculty &amp; Staff Directory</a></li>
+									
+									<li><a href="http://www.american.edu/offices.cfm">Office &amp; Service Directory</a></li>
+										
+							</ul>
+						</li>
+				
+					</ul>
+				
+					<div>
+						<ul class="site">
+							
+								<li style="width: 60px;"><a href="http://www.american.edu/cas/auarts/index.cfm">Arts<span class="separator"></span></a></li>
+							
+								<li style="width: 108px;"><a href="http://www.american.edu/cas/humanities/index.cfm">Humanities<span class="separator"></span></a></li>
+							
+								<li style="width: 89px;"><a href="http://www.american.edu/cas/sciences/index.cfm">Sciences<span class="separator"></span></a></li>
+							
+								<li style="width: 120px;"><a href="http://www.american.edu/cas/social-sciences/index.cfm">Social Sciences<span class="separator"></span></a></li>
+							
+								<li style="width: 97px;"><a href="http://www.american.edu/cas/seth/index.cfm">Education<span class="separator"></span></a></li>
+							
+								<li style="width: 150px;"><a href="http://www.american.edu/cas/research/index.cfm">Research &amp; Centers<span class="separator"></span></a></li>
+							
+								<li style="width: 142px;"><a href="http://www.american.edu/cas/advising/index.cfm">Advising &amp; <br> Student Resources<span class="separator"></span></a></li>
+							
+								<li style="width: 77px;"><a href="http://www.american.edu/cas/alumni/index.cfm">Alumni<span class="separator"></span></a></li>
+							
+								<li style="width: 143px;"><a href="http://www.american.edu/cas/about/index.cfm">About the College<span class="separator"></span></a></li>
+							
+						</ul>
+					</div>
+				
+				</nav>
+		</div>
+	</div>
+	
+
+<div class="clear"></div>
+
+
+	
+			<div class="top-nav-holder">
+				<ul id="global-top-subnav-left">
+			
+					<li><a href="http://www.american.edu/cas/faculty/index.cfm">Faculty Profiles</a></li>
+					<li><a href="http://www.american.edu/degrees.cfm?school=CAS">Degrees, Majors &amp; Certificates</a></li>
+					<li><a href="http://www.american.edu/cas/news/index.cfm">News</a></li>
+					<li><a href="http://www.american.edu/cas/calendar/index.cfm">Calendar</a></li>
+					<li class="last"><a href="http://www.american.edu/offices.cfm?school=CAS">Directory</a></li>
+					
+				</ul>
+				<ul id="global-top-subnav-right">
+					
+					<li>Admissions &amp; Info:</li>
+					
+						<li><a href="http://www.american.edu/cas/admissions/index.cfm">Graduate</a></li>
+						<li class="last"><a href="http://www.american.edu/cas/admissions/undergraduate.cfm">Undergraduate</a></li>
+
+						
+						
+				</ul>
+			</div>
+			
+	
+	<div class="page-title-holder">
+		
+			<div id="cs_control_27039" class="cs_control CS_Element_Custom"> 
+					<div class="page-title page-title-promo">
+						<h1 class="sifr-head sIFR-replaced"><embed style="width: 710px; height: 25px;" class="sIFR-flash" type="application/x-shockwave-flash" sifr="true" bgcolor="transparent" wmode="transparent" flashvars="txt=AMERICAN UNIVERSITY MUSEUM AT THE KATZEN ARTS CENTER&amp;textalign=left&amp;offsetTop=0&amp;textcolor=#504d48&amp;hovercolor=#C90016&amp;linkcolor=#504d48&amp;w=710&amp;h=25" quality="best" src="/clients/Auyoga/Images/gotham.swf" height="25" width="710"><span class="sIFR-alternate">AMERICAN UNIVERSITY MUSEUM AT THE KATZEN ARTS CENTER</span></h1>
+						
+							
+<div id="cs_control_174601" class="cs_control CS_Element_Custom">
+	<a href="http://www.american.edu/cas/museum/" class="promo">
+		<img src="/clients/Auyoga/Images/thekpromo_v3a-1102_3_4.jpg" title="thekpromo_v3a-1102_3" alt="thekpromo_v3a-1102_3">
+	</a>
+	</div>
+
+							
+						
+						<div class="clear"></div>
+					</div>
+				</div><div id="cs_control_1364" class="cs_control CS_Element_Custom"></div>
+		
+	</div> 
+	
+<div id="main-container">
+<div style="background-color: #ffffff; width:987px; border: 1px solid #B4AE95;">	
+
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+</div>
+</div>
+<div class="clear"></div>
+<!--begin IMODULES scrape footer -->
+		<div class="reskin">	
+			<footer>
+				<div id="social-media-bar">
+					<span>Connect With AU</span>
+					<ul>
+						<li><a href="http://www.facebook.com/AmericanUniversity" target="_blank"><span class="icon-facebook social-icon"></span>Facebook</a></li>
+						<li><a href="http://www.twitter.com/AmericanU" target="_blank"><span class="icon-twitter social-icon"></span>Twitter</a></li>
+						<li><a href="http://www.youtube.com/americanuniversity" target="_blank"><span class="icon-youtube social-icon"></span>YouTube</a></li>
+						<li><a href="http://www.linkedin.com/groups?gid=39961&amp;trk=group-name" target="_blank"><span class="icon-linkedin social-icon"></span>LinkedIn</a></li>
+						<li><a href="http://instagram.com/americanuniversity" target="_blank"><span class="icon-instagram social-icon"></span>Instagram</a></li>
+						<li><a href="http://blogs.american.edu/" target="_blank"><span class="icon-wordpress social-icon"></span>AU Blogs</a></li>
+						<li><a href="http://www.american.edu/socialmedia/"><span class="icon-ausocial social-icon"></span>AU Social Media Directory</a></li>
+					</ul>
+				</div>
+				<div class="footer-top-reskin">
+				    <div class="left">
+						<p>
+							<a href="http://www.american.edu/" class="home-link-reskin"><span class="icon-home"></span>Home</a> 
+						</p>
+				    </div>
+				    <div class="right">
+						<p>
+							<a href="http://www.american.edu/emergency/">Emergency Preparedness</a> |
+							<a href="http://www.american.edu/hr/">Work at AU</a> |
+							<a href="http://www.american.edu/media/">Media Relations</a> |
+							<a href="http://www.american.edu/m/">AU Mobile</a> |
+							<a href="http://www.american.edu/website-feedback.cfm">Website Feedback</a>
+						</p>
+				    </div>
+				</div>
+				<div class="clearfix"></div>
+				<div class="footer-bottom-reskin">
+					<div class="left">
+							<div>4400 Massachusetts Avenue, NW, Washington, DC 20016</div>
+							<div>(202) 885-1000 | <a href="http://www.american.edu/contact-au.cfm">Contact Us</a> | <a href="http://www.american.edu/aumaps/index.cfm">Maps</a></div>
+					</div>
+					<div class="right">
+							Copyright © <script type="text/javascript">document.write(new Date().getFullYear())</script>2014 American University. <a href="http://www.american.edu/oit/policies/Web-Copyright.cfm">Privacy</a> |
+							<a href="http://www.american.edu/policies/disclosure.cfm">Disclosure</a> |
+							<a href="https://www.american.edu/loader.cfm?csModule=security/getfile&amp;pageid=3031888?">EEO</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+
+ 
+<!--end IMODULES scrape footer -->
+
+
+	<script type="text/javascript">
+		// pop-up login if asked
+		jQuery(document).ready(function($){
+			if( document.location.href.indexOf("autoLogin=1") > 0 )
+			{
+				$("#autoLogin").show();
+				$("#autoLogin").children("a").trigger("click");
+				$("#autoLogin").hide();
+			}
+		});
+	</script>
+	<div id="autoLogin" class="hey" style="display:none">
+		 <a href="https://localhost/login.cfm?backURL=Login&amp;hidePendingActions=1" title="Login" class="">Login</a> 
+	</div><div style="display:block; clear:left; padding:0px; font-family:Verdana,Arial; font-size:10px; color:gray;"></div>
+		<script type="text/javascript">
+		<!--
+			var jsPageContributeMode = 'read';
+			var jsPageSessionContributeMode = 'read';
+			
+			var jsPageAuthorMode = 0;
+			var jsPageEditMode = 0;
+
+			
+			if(!commonspot)
+				var commonspot = {};
+			commonspot.csPage = {};
+			commonspot.csPage.url = '/cas/museum/index.cfm';
+			
+			commonspot.csPage.id = 1547642;
+			commonspot.csPage.title = 'Museum  HOME';
+
+			commonspot.csPage.pagetype = 0;
+			commonspot.csPage.publicationState = 'Published Page';	
+			commonspot.csPage.siteRoot = '/';
+			commonspot.csPage.subsiteRoot = '/cas/museum/';			
+			commonspot.csPage.mode = jsPageSessionContributeMode;
+			commonspot.csPage.authorok = 0;
+			commonspot.csPage.approvalstatus = 0;
+			commonspot.csPage.showContainerUI = 0;
+			commonspot.csPage.requestedVersionTimestamp = '';
+			commonspot.csPage.userRights = {};
+			commonspot.csPage.userRights.isLoggedIn = 0;
+			commonspot.csPage.userRights.licensedContributor = 0;
+			commonspot.csPage.userRights.read = 1;
+			commonspot.csPage.userRights.author = 0;
+			commonspot.csPage.userRights.edit = 0;
+			commonspot.csPage.userRights.approve = 0;
+			commonspot.csPage.userRights.history = 0;
+			commonspot.csPage.userRights.design = 0;
+			commonspot.csPage.userRights.admin = 0;
+			commonspot.csPage.userRights.subsiteAdmin = 0;
+			commonspot.csPage.userRights.siteAdmin = 0;
+			commonspot.csPage.userRights.customerAdmin = 0;
+			commonspot.csPage.userRights.serverAdmin = 0;
+
+			commonspot.csPage.enabledMenuClasses = '';
+			
+			commonspot.csPage.visibleMenuClasses = '';
+
+			
+			commonspot.csPage.subsiteContext = {};
+			commonspot.csPage.subsiteContext.sitetype = 1;
+			commonspot.csPage.subsiteContext.siteid = 1;
+			commonspot.csPage.subsiteContext.subsiteid = 1200;
+			commonspot.csPage.subsiteContext.siteurl = '/';
+			commonspot.csPage.subsiteContext.subsiteurl = '/cas/museum/';
+			commonspot.csPage.subsiteContext.sitename = 'au';
+			commonspot.csPage.subsiteContext.subsitename = 'museum';
+			commonspot.csPage.subsiteContext.menucontexttimestamp = '1404414775777';
+			commonspot.csPage.serveradminurl = "/commonspot/admin/";
+			if (parent.commonspot)
+				parent.commonspot.csPage = commonspot.csPage;
+			var doLviewRedirect;
+			if(parent &&
+						parent.commonspot &&
+						parent.commonspot.lview &&
+						!doLviewRedirect &&
+						parent.commonspot.lightbox &&
+						parent.commonspot.lightbox.stack.length == 0)
+			{
+			
+				commonspot.csPage.showPageSubmit = false;
+			
+				onPageArrival = function()
+				{
+					parent.commonspot.lview.currentPage.onPageArrival( commonspot.csPage );
+				};
+				onPageUnload = function()
+				{
+					parent.commonspot.lview.currentPage.onPageUnload();
+				};
+				parent.Spry.Utils.addEventListener(window, 'load', onPageArrival, false);
+				parent.Spry.Utils.addEventListener(window, 'unload', onPageUnload, false);
+			}
+		
+
+		// -->
+		</script> 
+<script type="text/javascript">
+<!--
+	if (typeof parent.commonspot == 'undefined' || typeof parent.commonspot.lview == 'undefined')
+		loadNonDashboardFiles();
+	else if (parent.commonspot && typeof newWindow == 'undefined')
+	{
+		var arrFiles = 
+				[
+					{fileName: '/commonspot/javascript/lightbox/overrides.js', fileType: 'script', fileID: 'cs_overrides'},
+					{fileName: '/commonspot/javascript/lightbox/window_ref.js', fileType: 'script', fileID: 'cs_windowref'}
+				];
+		
+		loadDashboardFiles(arrFiles);
+	}	
+//-->
+</script>
+
+</div>
+</form>
+</body>
+</html>

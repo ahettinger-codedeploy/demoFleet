@@ -1,0 +1,123 @@
+<%
+    'CHANGELOG
+    'LSP 12/17/13 - initial development
+    'TTT 9/3/15 - Modified to add tracking pixels
+%>
+<%@ Master Language="VB" %>
+
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Data.SqlClient" %>
+<%@ Import Namespace="System" %>
+<%@ Import Namespace="System.IO" %>
+<%@ Import Namespace="GlobalClass" %>
+
+<script runat="server">
+    Protected OrderEventCompleted As Boolean = False
+    Dim EventCode As Long = 766027
+    
+    Public Sub Page_PreRender()
+        If InStr(LCase(Request.ServerVariables("SCRIPT_NAME")), "pay.aspx") And Session("OrderNumber") Is Nothing Then
+            Try
+                Dim pnlOrderConfirmation As Panel = CType(GlobalClass.FindControlRecursive(MasterContent, "pnlOrderConfirmation"), Panel)
+                If Not pnlOrderConfirmation Is Nothing Then 'Found main panel that contains OrderConfirmation U.C
+                    Dim lblOrderNumber As Label = CType(GlobalClass.FindControlRecursive(pnlOrderConfirmation, "lblOrderNumber"), Label)
+                    If Not lblOrderNumber Is Nothing Then 'Found label for OrderNumber of OrderHeaderPanel U.C loaded within OrderConfirmation U.C
+                        Dim OrderNumber As Integer = CleanNumeric(lblOrderNumber.Text)
+                        If IsNumeric(OrderNumber) Then
+                            Dim DBTix As New SqlConnection
+                            Dim DBCmd As New SqlCommand
+                            Dim DataReader As SqlDataReader
+                            DBOpen(DBTix)
+                            Dim SQLOrderTix As String = "SELECT TOP(1) LineNumber FROM OrderLine WITH (NOLOCK) INNER JOIN Seat WITH (NOLOCK) ON OrderLine.ItemNumber = Seat.ItemNumber WHERE OrderLine.OrderNumber = @OrderNumber AND Seat.EventCode = @EventCode AND OrderLine.StatusCode = 'S' AND OrderLine.ItemType IN ('Seat', 'SubFixedEvent')"
+                            DBCmd = New SqlCommand(SQLOrderTix, DBTix)
+                            DBCmd.Parameters.AddWithValue("@OrderNumber", CleanNumeric(OrderNumber))
+                            DBCmd.Parameters.AddWithValue("@EventCode", EventCode)
+                            DataReader = DBCmd.ExecuteReader()
+                            DBCmd.Parameters.Clear()
+                            If DataReader.HasRows() Then
+                                OrderEventCompleted = True
+                            End If
+                            DataReader.Close()
+                            DBCmd.Dispose()
+                            DBClose(DBTix)
+                        End If
+                    End If
+                End If
+            Catch ex As Exception
+                'Do nothing but prevent crashing if unable to get the completed OrderTotal
+            End Try
+        End If
+    End Sub
+</script>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<style id="StylePlaceholder" type="text/css"></style><link href="/clients/DurangoConcerts/Images/default.css" type="text/css" rel="stylesheet"><link href="/clients/DurangoConcerts/Images/module.css" type="text/css" rel="stylesheet"><link href="/clients/DurangoConcerts/Images/HomePage.css" type="text/css" rel="stylesheet"><link href="/clients/DurangoConcerts/Images/container.css" type="text/css" rel="stylesheet"><link href="/clients/DurangoConcerts/Images/portal.css" type="text/css" rel="stylesheet"><script src="/clients/DurangoConcerts/Images/ga.js" async="" type="text/javascript"></script><script src="/clients/DurangoConcerts/Images/jquery.js" type="text/javascript"></script><link href="/clients/DurangoConcerts/Images/CSSHandler.css" rel="stylesheet" type="text/css"><link href="/clients/DurangoConcerts/Images/Telerik.css" type="text/css" rel="stylesheet">
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>    
+
+
+
+
+<script src="/clients/DurangoConcerts/Images/WebResource.js" type="text/javascript"></script>
+
+
+<script src="/clients/DurangoConcerts/Images/jquery-ui-1.js" type="text/javascript"></script>
+<script src="/clients/DurangoConcerts/Images/JSHandler.ashx" type="text/javascript"></script>
+<script src="/clients/DurangoConcerts/Images/jquery_002.js" type="text/javascript"></script><script type="text/javascript">DDRjQuery=window.DDRjQuery||jQuery;</script><script type="text/javascript">if (!(window.DDR && window.DDR.Menu && window.DDR.Menu.Providers && window.DDR.Menu.Providers.DNNMenu)) document.write(unescape('%3Cscript src="/DesktopModules/DDRMenu/DNNMenu/DNNMenu.min.js" type="text/javascript"%3E%3C/script%3E'));</script><script src="/clients/DurangoConcerts/Images/DNNMenu.js" type="text/javascript"></script>
+<script src="/clients/DurangoConcerts/Images/Telerik.js" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+        <script src="/clients/DurangoConcerts/Images/dnncore.js" type="text/javascript"></script>
+        
+        <div id="dnn_ControlPanel">
+</div>
+<div id="wrapper">
+    <div id="navbar">
+        <!-- DDRmenu v02.00.01 - DNNMenu template --><script type="text/javascript">
+			DDR.Menu.registerMenu('dnn_dnnNAV_ctldnnNAV', {MenuStyle:"DNNMenu",ControlID:"ctldnnNAV",PathImage:"/Portals/142/",PathSystemImage:"/images/",PathSystemScript:"/controls/SolpartMenu/",IndicateChildImageSub:"/images/spacer.gif",CSSControl:"mainMenu",CSSContainerSub:"menuSubContainer",CSSNodeRoot:"menuItemsRoot",CSSIcon:"IconHidden",CSSNodeHoverSub:"menuItemsSubHover",CSSNodeHoverRoot:"menuItemsRootHover",CSSNodeSelectedSub:"menuSelectedSub",CSSNodeSelectedRoot:"menuSelectedRoot",StyleControlHeight:0,StyleBorderWidth:0,StyleNodeHeight:0,StyleIconWidth:0,StyleFontSize:0,EffectsDuration:0,EffectsShadowStrength:0,ControlOrientation:"Horizontal",ControlAlignment:"Left",ForceDownLevel:"False",MouseOutHideDelay:0,MouseOverDisplay:"Highlight",MouseOverAction:"Expand",ForceCrawlerDisplay:"False",IndicateChildren:false,PopulateNodesFromClient:false});
+		</script><style type="text/css">	#dnn_dnnNAV_ctldnnNAV {		display: none;	}</style><span><span class="mainMenu"><span style="position: relative;" class="root menuSelectedRoot sel bc mi mi0 id5694 first"><a href="http://www.durangoconcerts.com/" style="position: absolute; display: block; border: 0px none; padding: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; text-decoration: none; background: none repeat scroll 0% 0% transparent;"><span style="visibility:hidden">Home</span></a><span class="icn"></span><span style="cursor: pointer;" class="txt">Home</span></span><span style="position: relative;" class="root menuItemsRoot mi mi1 id5760"><a href="http://durangoconcerts.tix.com/Schedule.aspx?OrgNum=260" style="position: absolute; display: block; border: 0px none; padding: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; text-decoration: none; background: none repeat scroll 0% 0% transparent;"><span style="visibility:hidden">Performances</span></a><span class="icn"></span><span style="cursor: pointer;" class="txt">Performances</span></span><span style="position: relative;" class="root menuItemsRoot mi mi2 id5761"><a href="http://www.durangoconcerts.com/TicketInfo.aspx" style="position: absolute; display: block; border: 0px none; padding: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; text-decoration: none; background: none repeat scroll 0% 0% transparent;"><span style="visibility:hidden">Ticket Info</span></a><span class="icn"></span><span style="cursor: pointer;" class="txt">Ticket Info</span></span><span style="position: relative;" class="root menuItemsRoot mi mi3 id5762"><a href="http://www.durangoconcerts.com/Directions.aspx" style="position: absolute; display: block; border: 0px none; padding: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; text-decoration: none; background: none repeat scroll 0% 0% transparent;"><span style="visibility:hidden">Directions</span></a><span class="icn"></span><span style="cursor: pointer;" class="txt">Directions</span></span><span style="position: relative;" class="root menuItemsRoot mi mi4 id5763"><a href="http://www.durangoconcerts.com/FacilityRentals.aspx" style="position: absolute; display: block; border: 0px none; padding: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; text-decoration: none; background: none repeat scroll 0% 0% transparent;"><span style="visibility:hidden">Facility &amp; Rentals</span></a><span class="icn"></span><span style="cursor: pointer;" class="txt">Facility &amp; Rentals</span></span><span style="position: relative;" class="root menuItemsRoot mi mi5 id5764"><a href="http://www.durangoconcerts.com/Media.aspx" style="position: absolute; display: block; border: 0px none; padding: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; text-decoration: none; background: none repeat scroll 0% 0% transparent;"><span style="visibility:hidden">Media</span></a><span class="icn"></span><span style="cursor: pointer;" class="txt">Media</span></span><span style="position: relative;" class="root menuItemsRoot mi mi6 id6321"><a href="http://www.durangoconcerts.com/FAQs.aspx" style="position: absolute; display: block; border: 0px none; padding: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; text-decoration: none; background: none repeat scroll 0% 0% transparent;"><span style="visibility:hidden">FAQs</span></a><span class="icn"></span><span style="cursor: pointer;" class="txt">FAQs</span></span><span style="position: relative;" class="root menuItemsRoot mi mi7 id6577 last"><a href="http://www.durangoconcerts.com/AboutUs.aspx" style="position: absolute; display: block; border: 0px none; padding: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; text-decoration: none; background: none repeat scroll 0% 0% transparent;"><span style="visibility:hidden">About Us</span></a><span class="icn"></span><span style="cursor: pointer;" class="txt">About Us</span></span></span></span>
+    </div>
+    <div id="mainbody">
+        <div id="maincopy">
+		<!--TIX DATA START-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+        </div>
+     
+
+
+        </div>
+        <div class="clearboth">
+        </div>
+    </div>
+    <div id="footer">
+        <a href="http://www2.fortlewis.edu/durangoconcerts/ContactUs.aspx">Contact Us</a>
+        &nbsp;|&nbsp; <a href="http://visitor.r20.constantcontact.com/manage/optin/ea?v=001QCEETLfRg3aG3ZiVYJrtuA%3D%3D" target="_blank">Join Our Mailing List</a> &nbsp;|&nbsp; <a href="http://www.swartsprograms.com/" target="_blank">Advertise in Our Programs</a><br>
+        Community Concert Hall &nbsp;|&nbsp; Fort Lewis College &nbsp;|&nbsp; Durango, CO
+        81301 &nbsp;|&nbsp; 970-247-7657 &nbsp;|&nbsp;
+        <a id="dnn_dnnLOGIN_loginLink" title="Login" class="SkinObject" href="http://www.durangoconcerts.com/login.aspx?returnurl=%2f">Login</a>
+<!--close loginGroup-->
+    </div>
+</div>
+
+<% If OrderEventCompleted Then%>    
+<script type="text/javascript">
+    var axel = Math.random() + "";
+    var a = axel * 10000000000000;
+    document.write('<iframe src="https://4448541.fls.doubleclick.net/activityi;src=4448541;type=invmedia;cat=qnaevm5j;ord=' + a + '?" width="1" height="1" frameborder="0" style="display:none"></iframe>');
+</script>
+<noscript>
+<iframe src="https://4448541.fls.doubleclick.net/activityi;src=4448541;type=invmedia;cat=qnaevm5j;ord=1?" width="1" height="1" frameborder="0" style="display:none"></iframe>
+</noscript>
+<% End If%>
+
+</div>
+</form>
+</body>
+</html>

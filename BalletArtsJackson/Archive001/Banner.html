@@ -1,0 +1,112 @@
+
+<LINK media=all href="/PrivateLabel/BalletArtsJackson/Images/index.css" type=text/css rel=stylesheet>
+
+<SCRIPT type=text/javascript>
+<!--
+//- IMAGE SWAP  [ CONFIG ]---------------------------------
+
+	var base = "/PrivateLabel/BalletArtsJackson/Images/";
+	var offSuffix = "_off.gif";
+	var overSuffix = "_over.gif";
+	var onSuffix = "_on.gif";
+
+	var precacheKeys = new Array("nav_home","nav_season","nav_tickets","nav_events","nav_contribute","nav_about","nav_contact","subnav_contact","subnav_login","subnav_admin","subnav_credits");
+	
+//---------------------------------------------------------
+
+	var IMGOFF = "0";
+	var IMGOVER = "1";
+	var IMGON = "2";
+		
+	var precacheImages = new Array();
+	
+	if (document.images) {
+		for (var i=0; i < precacheKeys.length; i++) {
+			precacheImages[precacheKeys[i]+IMGOFF] = new Image();
+			precacheImages[precacheKeys[i]+IMGOVER] = new Image();	
+			precacheImages[precacheKeys[i]+IMGON] = new Image();
+			precacheImages[precacheKeys[i]+IMGOFF].src = base + precacheKeys[i] + offSuffix;
+			precacheImages[precacheKeys[i]+IMGOVER].src = base + precacheKeys[i] + overSuffix;
+			precacheImages[precacheKeys[i]+IMGON].src = base + precacheKeys[i] + onSuffix;
+		}
+	}
+	
+	// key,status=0/1
+	function setImg()
+	{
+		if (document.images) {
+			for (var i=0; i < setImg.arguments.length; i+=2) {
+				var key = setImg.arguments[i];
+				var status = setImg.arguments[i+1];
+				document.images[key].src = precacheImages[key+status].src;
+			}
+		}
+	}
+// -->
+</SCRIPT>
+<table align=center>
+<tr height=10><td></td></tr>
+<tr><td align=center>
+
+
+<TABLE class=maintable cellSpacing=0 cellPadding=0 width=750 border=0>
+  <TBODY>
+  <TR>
+    <TD><IMG height=1 alt="" src="/PrivateLabel/BalletArtsJackson/Images/spacer.gif" width=250></TD>
+    <TD><IMG height=1 alt="" src="/PrivateLabel/BalletArtsJackson/Images/spacer.gif" width=250></TD>
+    </TR>
+  <TR>
+    <TD class=nav align=right colSpan=2><A 
+      onmouseover="setImg('nav_home',IMGOVER)" 
+      onclick="setImg('nav_home',IMGON)" onmouseout="setImg('nav_home',IMGOFF)" 
+      href="http://balletartsjackson.org/index.php?/balletarts/"><IMG 
+      id=nav_home height=32 alt=Home src="/PrivateLabel/BalletArtsJackson/Images/nav_home_off.gif" 
+      width=48 border=0 name=nav_home></A><A 
+      onmouseover="setImg('nav_season',IMGOVER)" 
+      onclick="setImg('nav_season',IMGON)" 
+      onmouseout="setImg('nav_season',IMGOFF)" 
+      href="http://balletartsjackson.org/index.php?/balletarts/season/"><IMG 
+      id=nav_season height=32 alt="Current Season" 
+      src="/PrivateLabel/BalletArtsJackson/Images/nav_season_off.gif" width=101 border=0 
+      name=nav_season></A><A onmouseover="setImg('nav_tickets',IMGOVER)" 
+      onclick="setImg('nav_tickets',IMGON)" 
+      onmouseout="setImg('nav_tickets',IMGOFF)" 
+      href="http://balletartsjackson.org/index.php?/balletarts/tickets/"><IMG 
+      id=nav_tickets height=32 alt="Buy Tickets" 
+      src="/PrivateLabel/BalletArtsJackson/Images/nav_tickets_off.gif" width=79 border=0 
+      name=nav_tickets></A><A onmouseover="setImg('nav_events',IMGOVER)" 
+      onclick="setImg('nav_events',IMGON)" 
+      onmouseout="setImg('nav_events',IMGOFF)" 
+      href="http://balletartsjackson.org/index.php?/balletarts/events/"><IMG 
+      id=nav_events height=32 alt=Events src="/PrivateLabel/BalletArtsJackson/Images/nav_events_off.gif" 
+      width=54 border=0 name=nav_events></A><A 
+      onmouseover="setImg('nav_contribute',IMGOVER)" 
+      onclick="setImg('nav_contribute',IMGON)" 
+      onmouseout="setImg('nav_contribute',IMGOFF)" 
+      href="http://balletartsjackson.org/index.php?/balletarts/contribute/"><IMG 
+      id=nav_contribute height=32 alt="Support the Ballet" 
+      src="/PrivateLabel/BalletArtsJackson/Images/nav_contribute_off.gif" width=78 border=0 
+      name=nav_contribute></A><A onmouseover="setImg('nav_about',IMGOVER)" 
+      onclick="setImg('nav_about',IMGON)" 
+      onmouseout="setImg('nav_about',IMGOFF)" 
+      href="http://balletartsjackson.org/index.php?/balletarts/about/"><IMG 
+      id=nav_about height=32 alt="About Us" 
+      src="/PrivateLabel/BalletArtsJackson/Images/nav_about_off.gif" width=68 border=0 
+      name=nav_about></A><A onmouseover="setImg('nav_contact',IMGOVER)" 
+      onclick="setImg('nav_contact',IMGON)" 
+      onmouseout="setImg('nav_contact',IMGOFF)" 
+      href="http://balletartsjackson.org/index.php?/balletarts/contact/"><IMG 
+      id=nav_contact height=32 alt="Contact Us" 
+      src="/PrivateLabel/BalletArtsJackson/Images/nav_contact_off.gif" width=84 border=0 
+      name=nav_contact></A></TD></TR>
+  <TR>
+    <TD class=hdr colSpan=2><A 
+      href="http://balletartsjackson.org/index.php?/balletarts/"><IMG height=228 
+      alt="Ballet Arts of Jackson" src="/PrivateLabel/BalletArtsJackson/Images/hdr_logo.gif" width=337 
+      border=0></A><IMG height=228 alt="" 
+      src="/PrivateLabel/BalletArtsJackson/Images/hdr_img_tickets.jpg" width=413></TD></TR>
+  <TR>
+    <TD class=ctrbox vAlign=top colSpan=2 height=100>
+      <DIV class=ctrboxtitle>TICKET </DIV>
+      <DIV class=ctrboxtext>
+      <P>

@@ -1,0 +1,351 @@
+/* 
+	
+	Designate the first column by declaring a class of `main` on the column div
+	
+	grid-a: 2 column, 635 x 331
+ 		A 985px sectional grid with 2 columns
+	
+*/
+
+div.grid-a {
+	width:985px;
+	height:auto;
+	float:left;
+	display:inline;
+	
+}
+div.grid-a .main {
+	width:654px !important;
+	float:left;
+	_display:inline;
+	_overflow: hidden;
+}
+div.grid-a .column {
+	width:331px;
+	float:left;
+	_display:inline;
+	_overflow: hidden;
+}
+
+/* GRID-b: 4 column, 635 x 33  */
+
+/* 	
+	grid-b: 4 column base, BUT IS ALSO USED FOR the 3:1 ratio at the footer of the home page
+ 	A 985px sectional grid with 4 evenly spaced columns
+	
+*/
+
+/* GRID B IS AWFULLY CLOSE TO GRID A - CAN CONSOLIDATE */
+div.grid-b {
+	width:985px;
+	height:auto;
+	float:left;
+}
+div.grid-b .main {
+	width:719px !important; /* Why is this set to 734 when it's a 4 column grid? -cs because there is a subgrid of the 4 column that uses 3/4 of it-bg */
+	float:left;
+}
+div.grid-b .column {
+	width:233px;
+	margin: 27px 0px 11px 11px;
+	_margin: 23px 0px 11px 13px;
+	float:left;
+	display: inline;
+	_width: 233px;
+	_overflow: hidden;
+	padding: 0;
+}
+div.grid-b .column.last {
+	margin-right:0;
+	display: inline;
+}
+
+
+
+/* GRID-C: 2 column, 492 pieces  */
+/* 	
+	grid-c: 2 column, uneven halves...also contains a single column span with 17px margins
+*/
+div.grid-c {
+	width:985px;
+	height:auto;
+	float:left;
+}
+
+div.grid-c .main {
+	width: 951px;
+}
+
+div.grid-c .column {
+	width: 495px;
+	overflow: hidden;
+	float:left;
+}
+
+div.grid-c .column.last {
+	width: 490px;
+	float:left;
+	overflow: hidden;
+	background: transparent url(/clients/Auyoga/Images/cat-content-bg.gif) top left no-repeat;
+}
+
+
+
+/* GRID-d: 3 column with different sized pieces  */
+
+/* 	
+	grid-d: 3 column with three different sized columns
+	
+*/
+
+/* GRID D IS AWFULLY CLOSE TO GRID A AND B - CAN CONSOLIDATE */
+div.grid-d {
+	width:985px;
+	height:auto;
+	float:left;
+}
+
+div.grid-d .main {  /* THIS CAN BE CELANED UP MORE */
+	width: 686px;
+	float:left;
+	margin: 0px 0px 17px 0px;
+	padding: 0 25px 0 17px;
+	background: url(/clients/Auyoga/Images/cat-content-bg.gif) right -70px no-repeat;
+	
+}
+
+div.grid-d .column.first {
+	width: 367px;
+	float:left;
+}
+
+div.grid-d .column { /* THIS 283 column is for the uneven triple */
+	width: 283px;
+	float:left;
+	margin: 0px 0px 17px 17px;
+	padding-right: 17px;
+	border-right: none;
+}
+
+div.grid-d .column.last {
+	width: 231px !important;
+	/* border-right: none; */
+	padding: 0;
+	margin: 0 0 0 10px;
+	display: inline;
+	_margin-left: 5px;
+}
+
+div.grid-d .column.dotted {
+	border-right: 0px dotted #ccc;
+}
+
+div.grid-d .column-even { /* THIS COLUMN MAKES IT PERFECTLY EVEN AT a 305 column with 14 px margin on the left */
+	width:311px;
+	margin: 0px 0px 0px 13px;
+	float:left;
+	display: inline;
+}
+
+
+/*
+	grid-e: 2 column, 251 x 734
+	A 985px sectional grid with 2 columns (wider column on right)
+	additional inner-column and innercolumn2 have been added for interior grid layout
+*/
+div.grid-e {
+	width:985px;
+	height:auto;
+	float:left;
+}
+
+div.grid-e .column.first {
+	width:248px !important;
+	float:left;
+	border-right: none !important;
+	display: inline;
+}
+
+div.grid-e .column {
+	float:left;
+	width:737px;
+	border-right: none !important;
+	display: inline;
+}
+
+div.grid-e .inner-column { /* I added this substyle to grid-e to faciliate uniform interior layouts */
+	float: left;
+	width: 220px;
+	margin: 10px 10px 0px 10px;
+	display: inline;
+}
+
+div.grid-e .inner-dblcolumn { /* I added this substyle to grid-e to faciliate uniform interior layouts */
+	float: left;
+	width: 472px;
+	margin: 10px 0px 0px 0px;
+	display: inline;
+}
+
+
+/*
+	grid-f: 1 column full page - used for profile pages
+		A 985px holder, each module makes up a 985px row
+*/
+
+div.grid-f {
+	width:985px;
+	height:auto;
+	float:left;
+}
+
+div.grid-f .main {
+	width: 950px;
+	float:left;
+	height: auto;
+	margin: 0px 0px 17px 0px;
+	padding: 0 17px 17px 17px;
+}
+
+div.grid-f .row {
+	float:left;
+	height: auto;
+	width:950px;
+}
+
+div.grid-f .row.student-first {
+	float:left;
+	width:950px;
+	height: auto;
+	background: url(/clients/Auyoga/Images/first-profile-row-bg.gif) bottom center no-repeat;
+}
+
+div.grid-f .row.faculty-first {
+	float:left;
+	width:950px;
+	height: auto;
+	background: url(/clients/Auyoga/Images/first-profile-row-bg.gif) bottom center no-repeat;
+}
+
+/*
+	grid-g: 2 column layout with a wide 734px main container and a second 250px margin
+	THE SIZES MAY CHANGE TO HOUSE THAT SHAPE ON THE RIGHT SIDE
+*/
+
+div.grid-g {
+	width:985px;
+	height:auto;
+	float:left;
+}
+
+div.grid-g .column.first {
+	display: inline;
+	width: 722px;
+	float:left;
+}
+
+div.grid-g .column {
+	display: inline;
+	width: 261px; /* THIS SHOULD BE 263 TO MAKE 985 WITH 722 BUT IE6 SAYS "NO"*/
+	float:left;
+}
+
+div.grid-g .column.divider {
+	background:transparent url(/clients/Auyoga/Images/cat-content-bg.gif) no-repeat left top;
+}
+
+/*
+	grid-h: VERY UNEVEN 3 Column grid
+*/
+div.grid-h {
+	width:985px;
+	height:auto;
+	float:left;
+	overflow: hidden;
+}
+
+div.grid-h .column {
+	display: inline;
+	width: 382px;
+	padding: 0px 0px 0px 10px;
+	margin: 10px 0px 0px 10px;
+	float: left;
+	height: 200px;
+	position: relative;
+	overflow: hidden;
+}
+
+div.grid-h .column.first {
+	display: inline;
+	width: 157px; /* 1/26/09 - kb: changed from 145px to accomodate slightly more info for alumni homepage*/
+	overflow: hidden;
+}
+
+div.grid-h .column.last {
+	display: inline;
+	width: 382px;
+	overflow: hidden;
+}
+
+/*
+	grid-i: 2 column, 220 wide mini columns that go inside the main column in grid e
+*/
+div.grid-i {
+	width:248px;
+	height:auto;
+	float:left;
+}
+
+div.grid-i .column {
+	float: left;
+	width: 220px;
+	margin: 10px 10px 0px 10px;
+	display: inline;
+}
+
+div.grid-j .column {
+	display: inline;
+	width: 300px;
+	padding: 0px 0px 0px 10px;
+	margin: 8px 0px 0px 8px;
+	float: left;
+	height: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+div.grid-j .column.first {
+	display: inline;
+	width: 365px;
+	overflow: hidden;
+}
+
+div.grid-j .column.middle {
+	display: inline;
+	width: 305px;
+	overflow: hidden;
+}
+
+div.grid-j .column.last {
+	display: inline;
+	width: 248px;
+	overflow: hidden;
+}
+
+
+/*
+	GENERAL GRID STYLES
+*/
+
+/* Change all the div's with the class grid-divider to hr's with a class grid-divider... this looks right on all browsers and fixes ie6 bug */
+hr.grid-divider {
+	width:950px;
+	height:4px;
+	background-color:#b2b2b2;
+	clear: both;
+	border: none;
+	margin:0 0 19px 19px;
+	padding: 0;
+	display:block;
+}
+

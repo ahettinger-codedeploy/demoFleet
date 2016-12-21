@@ -1,0 +1,246 @@
+<!--CHANGELOG-->
+<!--LSP 7/13/11 - Initial Development-->
+<link rel="stylesheet" type="text/css" media="screen" href="/clients/BostonCamerata/Images/normalizer.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/clients/BostonCamerata/Images/bc-style-programs.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/clients/BostonCamerata/Images/uvumi-dropdown.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/clients/BostonCamerata/Images/uvumi-scrollbar.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/clients/BostonCamerata/Images/leftlinktxt.css">
+<!--[if IE 6]>
+	<link rel="stylesheet" type="text/css" href="ie6.css" />
+<![endif]-->
+
+<script type="text/javascript" src="/clients/BostonCamerata/Images/mootools-for-dropdown.js"> </script>
+<script type="text/javascript" src="/clients/BostonCamerata/Images/UvumiDropdown-compressed.js"> </script>
+<!--<script type="text/javascript" src="mootools-for-scrollbar.js"> </script>
+<script type="text/javascript" src="UvumiScrollbar-compressed.js"> </script>-->
+
+<script type="text/javascript"><!--Uvumi Dropdown-->
+	var myMenu = new UvumiDropdown("dropdown-menu");
+</script>
+<script type="text/javascript">
+    var scroller = new UvumiScrollbar("scrollbar-demo");
+    window.addEvent('domready',function(){
+        $('hideSections').addEvent('click',function(){
+            $$('.introsection, .renaissancesection, .baroquesection, .xmassection, .new_worldsection').setStyle('display','none');
+			$$('.medievalsection').setStyle('display','block');
+            scroller.update();
+        });
+        $('hideSections2').addEvent('click',function(){
+            $$('.introsection, .medievalsection, .baroquesection, .xmassection, .new_worldsection').setStyle('display','none');
+			$$('.renaissancesection').setStyle('display','block');
+            scroller.update();
+        });
+        $('hideSections3').addEvent('click',function(){
+            $$('.introsection, .medievalsection, .renaissancesection, .xmassection, .new_worldsection').setStyle('display','none');
+			$$('.baroquesection').setStyle('display','block');
+            scroller.update();
+        });
+        $('hideSections4').addEvent('click',function(){
+            $$('.introsection, .medievalsection, .renaissancesection, .baroquesection, .new_worldsection').setStyle('display','none');
+			$$('.xmassection').setStyle('display','block');
+            scroller.update();
+        });
+        $('hideSections5').addEvent('click',function(){
+            $$('.introsection, .medievalsection, .renaissancesection, .baroquesection, .xmassection').setStyle('display','none');
+			$$('.new_worldsection').setStyle('display','block');
+            scroller.update();
+        });					
+        $('showSections').addEvent('click',function(){
+            $$('.introsection, .medievalsection, .renaissancesection, .baroquesection, .xmassection, .new_worldsection').setStyle('display','block');
+            scroller.update();
+        });
+    });
+</script>
+<style type="text/css">
+<!--
+#wrapper #content #main .block #scrollbar-demo .medievalheading {
+	margin-top:10px;
+}
+#wrapper #content #main .block #scrollbar-demo #synopsis {
+	width:550px;
+	height:150px;
+	border-top:1px solid #e6ddcc;
+	border-bottom:1px solid #e6ddcc;
+	margin-top:5px;
+}
+#wrapper #content #main .block #scrollbar-demo #synopsis #headingimg {
+	width:140px;
+	height:130px;
+	margin-top:10px;
+	float:left;
+}
+#wrapper #content #main .block #scrollbar-demo #synopsis #headingtext .header {
+	font-size:20px;
+}
+#wrapper #content #main .block #scrollbar-demo #synopsis #synopbuttons {
+	margin-top:10px;
+}
+#wrapper #content #main .block #scrollbar-demo #headlabel {
+	margin-top:35px;
+}
+#wrapper #content #main .block #scrollbar-demo .introsection a {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#e6ddcc;
+	text-decoration:underline;
+}
+#wrapper #content #main .block #scrollbar-demo .introsection a:hover {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#CCCCCC;
+	text-decoration:underline;
+}
+-->
+</style>
+<style type="text/css">
+		#scrollbar-demo { color: #e6ddcc; text-align: left; font-family: Verdana,Geneva,sans-serif; font-size: 12px; }
+		.event { clear: both; }
+		.month { font-size: 30px; font-weight: bold; clear: both; }
+		.date { float: left; width: 100px; font-size: 24px; font-weight: bold; font-family: Georgia,"Times New Roman",Times,serif; color: #FFCC66 }
+		.year { font-size: 28px; font-weight: bold; font-family: Georgia,"Times New Roman",Times,serif; color: #FFCC66 }
+		.description { float: right; width: 480px; margin: 5px 0px 10px 0px; }
+		.space { clear: both; margin-bottom: 30px; }
+		.eventimage { text-align: center; }
+		#scrollbar-demo a {
+		 font-family:Verdana, Arial, Helvetica, sans-serif;
+		 font-size:12px;
+		 color: #FFCC99;
+		 text-decoration: none;
+		}
+		
+		h1,h2 {
+			font-family: Georgia, "Times New Roman", Times, serif;
+			color: #FFCC66;
+			font-size: 14pt;
+			font-variant:small-caps;
+		}
+		h2 {
+			font-size: 18pt;
+			text-align: center;
+			color: #fff;
+		}			
+</style>
+</head>
+
+<body>
+	<div id="wrapper"><!-- open wrapper -->
+	
+	<!-- HEADER -->
+		<div id="header"><!-- open header -->
+			<div id="headerlogo"><!-- open headerlogo -->
+				<a href="http://bostoncamerata.org/index.html"><img src="/clients/BostonCamerata/Images/newlogo.png"></a>			</div><!-- close headerlogo -->
+			<div id="headerpattern"><!-- open headerpattern -->
+				<div id="headerglow"><!-- open headerglow -->
+					<div id="mininav"><!-- open mininav -->
+		<a href="http://bostoncamerata.org/auditions.html"><img src="/clients/BostonCamerata/Images/auditions.png" title="Now Auditioning"></a>
+			<a href="http://bostoncamerata.org/tickets.html"><img src="/clients/BostonCamerata/Images/tickets.gif" title="buy tickets"></a>
+						<a href="http://bostoncamerata.org/bcshop.html"><img src="/clients/BostonCamerata/Images/shop.png"></a>
+						<a href="http://bostoncamerata.org/press.html"><img src="/clients/BostonCamerata/Images/press.png"></a>
+						<a href="http://bostoncamerata.org/contact.php"><img src="/clients/BostonCamerata/Images/contct.png"></a>                    </div><!-- close mininav -->
+				</div><!-- close headerglow -->
+			</div><!-- close headerpattern -->
+		</div><!-- close header -->
+		
+
+	
+	<!-- CONTENT -->
+		<div id="content"><!-- open content -->
+				
+			<!-- NAV -->
+				<div id="navbox"><!-- open navbox -->
+					<div id="navline"><!-- open navline -->
+					</div><!-- close navline -->
+					<div id="navgradient"><!-- open navgradient -->
+					</div><!-- close navgradient -->
+				</div><!-- close navbox -->
+                
+            <!--MAIN-->
+            <div id="main" class="allprograms"><!--open Main-->
+            		<!-- NAVIGATION -->
+					<div id="navigation"><!-- open navigation -->
+						<ul class="dropdown" id="dropdown-menu" style="margin-bottom: 0pt; overflow: visible; height: auto; margin-left: -1px; visibility: visible;">
+							<!--ABOUT button-->
+							<li style="position: relative; display: block; top: 0px; z-index: 1; float: left;" class="f submenu">
+								<a style="display: block;" href="http://bostoncamerata.org/about.html"><img src="/clients/BostonCamerata/Images/About.gif"></a>
+									<ul style="display: block; visibility: hidden; opacity: 0; position: absolute; top: 20px; left: 0px; margin-left: 0px;">
+                                    	<li style="visibility: hidden; opacity: 0; position: relative; display: block; top: 0px; z-index: 1;" class="a"><a style="display: block;" href="http://bostoncamerata.org/history.html"><img src="/clients/BostonCamerata/Images/history.gif"></a></li><!--History-->
+										<li style="visibility: hidden; opacity: 0; position: relative; display: block; top: -30px; z-index: 1;" class="a"><a style="display: block;" href="http://bostoncamerata.org/directors.html"><img src="/clients/BostonCamerata/Images/Directors.gif"></a></li><!--Directors-->                                        <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: -60px; z-index: 1;" class="a"><a style="display: block;" href="http://bostoncamerata.org/musicians.html"><img src="/clients/BostonCamerata/Images/Musicians.gif"></a></li><!--Musicians-->
+										<li style="visibility: hidden; opacity: 0; position: relative; display: block; top: -90px; z-index: 1;" class="a"><a style="display: block;" href="http://bostoncamerata.org/bcbios-admin.html"><img src="/clients/BostonCamerata/Images/Admin.gif"></a></li><!--Admin & Board-->
+                                    </ul>
+                          </li><!--close About-->
+                             <!--PROGRAMS button--> 
+                             <li style="position: relative; display: block; top: 0px; z-index: 1; float: left;" class="f">
+                             	<a style="display: block;" href="http://bostoncamerata.org/bcprograms.html"><img src="/clients/BostonCamerata/Images/Programs.gif"></a>                             </li> 
+                             <!--LIVE Button-->
+                             <li style="position: relative; display: block; top: 0px; z-index: 1; float: left;" class="f">
+                             	<a style="display: block;" href="http://bostoncamerata.org/live.html"><img src="/clients/BostonCamerata/Images/Live.gif"></a>
+                             </li><!--close Live-->
+                             <!--NEWS Button-->
+                             <li style="position: relative; display: block; top: 0px; z-index: 1; float: left;" class="f">
+                             	<a style="display: block;" href="http://bostoncamerata.org/blog/index.html"><img src="/clients/BostonCamerata/Images/News.gif"></a></li>
+                             <!--SIGHTS & SOUNDS Button-->
+                             <li style="position: relative; display: block; top: 0px; z-index: 1; float: left;" class="f submenu">
+                             	<a style="display: block;" href="http://bostoncamerata.org/sights.html"><img src="/clients/BostonCamerata/Images/SightsSounds.gif"></a>
+                                	<ul style="display: block; visibility: hidden; opacity: 0; position: absolute; top: 20px; left: 0px; margin-left: 0px;">
+                                       
+                                       <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: 0px; z-index: 1;" class="c"><a style="display: block;" href="http://bostoncamerata.org/video.html"><img src="/clients/BostonCamerata/Images/Video.gif"></a></li><!--Video -->
+                                       <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: -30px; z-index: 1;" class="c"><a style="display: block;" href="http://bostoncamerata.org/camradio.html"><img src="/clients/BostonCamerata/Images/CamRadio.gif"></a></li><!--Camerata Radio -->
+                                    </ul>
+                             </li> <!--close Sights & Sounds-->
+                             <!--LEARN Button-->
+                             <li style="position: relative; display: block; top: 0px; z-index: 1; float: left;" class="f submenu">                             	<a style="display: block;" href="http://bostoncamerata.org/learn.html"><img src="/clients/BostonCamerata/Images/Learn.gif"></a>
+                                	<ul style="display: block; visibility: hidden; opacity: 0; position: absolute; top: 20px; left: 0px; margin-left: 0px;">
+                                    	<li style="visibility: hidden; opacity: 0; position: relative; display: block; top: 0px; z-index: 1;" class="d"><a style="display: block;" href="http://bostoncamerata.org/residencies.html"><img src="/clients/BostonCamerata/Images/Residencies.gif"></a></li><!--Residencies-->
+                                        <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: -30px; z-index: 1;" class="d"><a style="display: block;" href="http://bostoncamerata.org/learnmat.html"><img src="/clients/BostonCamerata/Images/LearnMat.gif"></a></li><!--LearningMaterials-->
+                                    </ul>
+                             </li><!--close Learn-->
+                             <!--CONTRIBUTE Button-->
+                             <li style="position: relative; display: block; top: 0px; z-index: 1; float: left;" class="f submenu">
+                             	<a style="display: block;" href="http://bostoncamerata.org/contribute.html"><img src="/clients/BostonCamerata/Images/Contribute.gif"></a>
+                                	<ul style="display: block; visibility: hidden; opacity: 0; position: absolute; top: 20px; left: 0px; margin-left: 0px;">                                    	<li style="visibility: hidden; opacity: 0; position: relative; display: block; top: 0px; z-index: 1;" class="e"><a style="display: block;" href="http://bostoncamerata.org/individual.html"><img src="/clients/BostonCamerata/Images/Individual.gif"></a></li><!--Individual-->
+                                        <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: -30px; z-index: 1;" class="e"><a style="display: block;" href="http://bostoncamerata.org/corp.html"><img src="/clients/BostonCamerata/Images/Corp.gif"></a></li><!--Corp-->
+                                        <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: -60px; z-index: 1;" class="e"><a style="display: block;" href="http://bostoncamerata.org/inkind.html"><img src="/clients/BostonCamerata/Images/InKind.gif"></a></li><!--InKind-->
+                                        <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: -90px; z-index: 1;" class="e"><a style="display: block;" href="http://bostoncamerata.org/volunteer.html"><img src="/clients/BostonCamerata/Images/Volunteer.gif"></a></li><!--Volunteer-->
+                                    </ul>
+                             </li><!--close Contribute-->                
+                      <li style="clear: both; display: block; position: relative; top: 0px; height: 0px; width: 0px; font-size: 0px; line-height: 0px; margin: 0px; padding: 0px;">&nbsp;</li></ul>
+					</div><!-- close navigation -->
+               <!--close leftlinks-->	
+				
+                <div class="block"><!--open Block-->
+                    <div id="scrollbar-demo"><!--open scrollbar demo--><!--ENTER PROGRAM INFO HERE!!!!!!!-->
+					<!--TIX DATA START-->
+					
+					
+
+					<!--TIX DATA END-->
+						
+                  </div><!--close scrollbar demo-->
+				</div>
+                <!--close Block-->
+			</div><!--close Main-->
+		</div><!-- close content -->
+		
+		<!-- FOOTER -->
+			<div id="footer">
+				<div id="secondarynav">
+					<a href="http://bostoncamerata.org/index.html">HOME</a> | 
+					<a href="http://bostoncamerata.org/about.html">ABOUT</a> | 
+					<a href="http://bostoncamerata.org/programs.html">PROGRAMS</a> | 
+					<a href="http://bostoncamerata.org/live.html">LIVE</a> | 
+					<a href="http://bostoncamerata.org/blog/index.html">NEWS</a> | 
+					<a href="http://bostoncamerata.org/sights.html">SIGHTS &amp; SOUNDS</a> | 
+					<a href="http://bostoncamerata.org/learn.html">EDUCATION</a> | 
+					<a href="http://bostoncamerata.org/contribute.html">CONTRIBUTE</a> | 
+					<a href="http://bostoncamerata.org/bcshop.html">SHOP</a> | 
+					<a href="http://bostoncamerata.org/press.html">PRESS</a> | 
+					<a href="http://bostoncamerata.org/contact.php">CONTACT</a> 
+					| <a href="http://bostoncamerata.org/tickets.html">TICKETS</a>
+				</div>
+				<div id="address">
+					<p style="margin-bottom: 0">The Boston Camerata | 45 Ash Street, Auburndale, MA 02466 | 617.262.2092 | All Rights Reserved 2009 The Boston Camerata</p>
+				</div>
+			</div>
+	</div><!-- close wrapper -->
+
+</body></html>

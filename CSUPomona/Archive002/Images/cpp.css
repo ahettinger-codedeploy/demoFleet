@@ -1,0 +1,458 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Here are the official web colors, taken from the Graphic Standards Manual at http://www.csupomona.edu/~publicaffairs/graphics/webcolors.shtml:
+
+logo green   #1E4D2B
+gold         #C6930A   	
+orange       #A24E12
+light green  #679000
+olive        #998714
+brown        #613418
+purple       #5A2D5F
+dark blue    #293F6F
+maroon       #7C1D20
+light blue   #607C8C
+red          #E31B23
+
+dark eggplant #231F20
+*/
+
+html, body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+body {
+	font-family: Calibri, "Franklin Gothic Book", "Myriad Pro", "Arial Narrow", "Nimbus Sans L Condensed", sans-serif;
+	font-size: 100.01%;
+	padding: 0;
+	margin: 0;
+	background: #7EA53E url(/clients/CSUPomona/Images/bodybg.gif) center center repeat-y;
+}
+#container {
+	min-height:100%;
+	position:relative;
+}
+webpage_files {
+	border: none;
+}
+#header {
+	width: 100%;
+	height: 113px;
+	background: #231F20;
+}
+#header_contents {
+	margin: 0 auto 0 auto;
+	width: 940px;
+}
+#header_graphic {
+	width: 550px;
+	height: 93px;
+	float:left;
+	background: #231F20;
+}
+#header webpage_files {
+	float:left;
+	display:block;
+	border: none;
+}
+#header_links {
+	display:table-cell;
+	vertical-align: middle;
+	text-align: right;
+	height: 60px;
+	width: 390px;
+	font-size: 0.9em;
+	background-color: #231F20;
+}
+#header_links ul {
+	float:right;
+	padding: 0;
+	margin: 3px 0 0 0;
+	background-color: #231F20;
+}
+#header_links li {
+	list-style: none;
+	display: inline;
+	padding: 0 7px 0 3px;
+	border-right: 1px solid #FFFFFF;
+	background-color: #231F20;
+}
+#header_links li.last {
+	border-right: none;
+}
+#header_links a:link {
+	color: #F8D16B;
+	text-decoration: none;
+}
+#header_links a:visited {
+	color: #F8D16B;
+	text-decoration: none;
+}
+#header_links a:hover, #header_links a:active, #header_links a:focus {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+#search {
+	width: 390px;
+	height: 53px;
+	float: right;
+	background: #231F20 url(/clients/CSUPomona/Images/topheader_search.gif) top left no-repeat;
+}
+#search #searchbutton {
+	float: right;
+	margin-top: 0px;
+	margin-right: 32px;
+}
+#search input#q {
+	width: 157px;
+	height: 17px;
+	font-size: 13px;
+	border: none;
+	margin-top: 6px;
+	margin-left: 162px;
+	background: url(/clients/CSUPomona/Images/searchbg.gif) no-repeat;
+	float: left;
+}
+#search input#q:hover, #search input#q:focus, #search input#q:active {
+	background: #FFFFFF;
+}
+.centeredmenu {
+	float:left;
+	width:100%;
+	background:#F5BC23;
+	overflow:hidden;
+	position:relative;
+}
+.centeredmenu ul {
+	clear:left;
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	left:50%;
+	text-align:center;
+}
+.centeredmenu ul li {
+	display:block;
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	right:50%;
+}
+.centeredmenu ul li a {
+	display:block;
+	margin:0 0 0 1px;
+	padding:3px 17px;
+	background:#F5BC23;
+	color:#000;
+	text-decoration:none;
+	line-height:1.3em;
+}
+.centeredmenu ul li a:hover, .centeredmenu ul li a:focus, .centeredmenu ul li a:active {
+	background:#1E4D2B;
+	color:#fff;
+}
+.centeredmenu ul li.inactive, .centeredmenu ul li.inactive:hover {
+	display:block;
+	margin:0 0 0 1px;
+	padding:3px 17px;
+	color:#1E4D2B;
+	background:#fff;
+	font-weight:bold;
+	line-height:1.3em;
+}
+#pagebackground {
+	width: 100%;
+	height: 100%;
+}
+#contents {
+	width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 35px;
+	background-color: #FFF;
+}
+#leftcolumn {
+	float: left;
+	width: 626px;
+	background-color: #fff;
+}
+#leftcolumn a {
+	text-decoration:underline;
+}
+#rightcolumn a {
+	text-decoration:underline;
+}
+#rightcolumn {
+	float: right;
+	width: 314px;
+	background-color:#fff;
+	margin: 0px;
+}
+#rightcolumn webpage_files, #leftcolumn webpage_files  {
+	
+	-webkit-border-top-right-radius: 20px;
+	-webkit-border-bottom-left-radius: 20px;
+	-moz-border-radius-topright: 20px;
+	-moz-border-radius-bottomleft: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+#rightcolumn webpage_files, #leftcolumn webpage_files, .shade {
+	-moz-box-shadow: 6px 6px 7px #999;
+	-webkit-box-shadow: 6px 6px 7px #999;
+	box-shadow: 6px 6px 7px #999;
+	} 
+
+#rightcolumn webpage_files.noshade, #leftcolumn webpage_files.noshade {
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	box-shadow: none;
+	-webkit-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	-moz-border-radius: 0px;
+}
+#contents_folder { /* usable in either left or right columns */
+	margin: 17px;
+}
+#footer {
+	background-color: #231F20;
+	color: #FFFFFF;
+	margin: 0;
+	width: 100%;
+	font-size: 0.9em;
+	font-weight: normal;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	height: 35px;
+}
+#footer_contents {
+	width: 906px;
+	margin: 0 auto 0 auto;
+	text-align: left;
+}
+#footer p#copyright {
+	float: left;
+	margin: 7px 0 7px 0;
+	padding: 0 8px 0 0;
+	background-color: #231F20;
+}
+#footer p#lastmod {
+	display: inline; /* fix IE bug - http://www.positioniseverything.net/explorer/doubled-margin.html */
+	float: right;
+	margin: 7px 7px 7px 0;
+}
+#footer ul {
+	float: left;
+	padding: 0 0 0 0;
+	margin: 7px 0 7px 0;
+}
+#footer li {
+	list-style: none;
+	float: left;
+	padding: 0 8px 0 8px;
+	border-left: 1px solid #FFFFFF;
+}
+#footer a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#footer a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#footer a:hover, #footer a:active, #footer a:focus {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a:link {
+	color: #1E4D2B;
+}
+a:visited {
+	color: #1E4D2B;
+}
+a:hover, a:active, a:focus {
+	color: #E31B23;
+	text-decoration: none;
+}
+h1 {
+	margin: 0 0 0 0px;
+	padding: 0px 7px 7px 0;
+	font-size: 1.4em;
+	color: #1E4D2B;
+	font-variant:small-caps;
+}
+h2 {
+	margin: 0 0 7px -17px;
+	padding: 2px 2px 0px 42px;
+	color:#827D83;
+	font-size: 1.2em;
+	background: #FFFFFF url(/clients/CSUPomona/Images/h2bullet-gold.gif) center left no-repeat;
+}
+h3 {
+	margin: 0 0 0 0px;
+	color: #679000;
+	font-size: 1em;
+}
+.invisible {
+	display: none;
+}
+h2.logogreen {
+	background: #FFFFFF url(/clients/CSUPomona/Images/h2bullet-logogreen.gif) center left no-repeat;
+}
+h2.brown {
+	background: #FFFFFF url(/clients/CSUPomona/Images/h2bullet-brown.gif) center left no-repeat;
+}
+h2.darkblue {
+	background: #FFFFFF url(/clients/CSUPomona/Images/h2bullet-darkblue.gif) center left no-repeat;
+}
+h2.eggplant {
+	background: #FFFFFF url(/clients/CSUPomona/Images/h2bullet-eggplant.gif) center left no-repeat;
+}
+h2.lightblue {
+	background: #FFFFFF url(/clients/CSUPomona/Images/h2bullet-lightblue.gif) center left no-repeat;
+}
+h2.lightgreen {
+	background: #FFFFFF url(/clients/CSUPomona/Images/h2bullet-lightgreen.gif) center left no-repeat;
+}
+h2.maroon {
+	background: #FFFFFF url(/clients/CSUPomona/Images/h2bullet-maroon.gif) center left no-repeat;
+}
+h2.olive {
+	background: #FFFFFF url(/clients/CSUPomona/Images/h2bullet-olive.gif) center left no-repeat;
+}
+h2.orange {
+	background: #FFFFFF url(/clients/CSUPomona/Images/h2bullet-orange.gif) center left no-repeat;
+}
+h2.purple {
+	background: #FFFFFF url(/clients/CSUPomona/Images/h2bullet-purple.gif) center left no-repeat;
+}
+h2.red {
+	background: #FFFFFF url(/clients/CSUPomona/Images/h2bullet-red.gif) center left no-repeat;
+}
+#rightcolumn .icons {
+	margin: 0;
+	text-align: right;
+}
+#rightcolumn .icons webpage_files {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+#rightnav {
+	width: 100%;
+	background-color: #1E4D2B;
+	
+}
+#rightnav h1, #rightnavpub h1  {
+	color:#FFF;
+	padding:10px;
+	margin-bottom:-15px;
+}
+#rightnav ul {
+	margin: 0;
+	padding: 17px;
+	list-style: url(/clients/CSUPomona/Images/pointerbullet-green.gif);
+	font-size: 1.1em;
+}
+#rightnav li {
+	margin: 0 0 0.4em 24px;
+	color: #F1CD6D;
+}
+#rightnav a:link, #rightnav a:visited {
+	text-decoration: none;
+	color: #fff;
+}
+#rightnav a:hover, #rightnav a:active, #rightnav a:focus {
+	text-decoration: none;
+	color: #F8D16B;
+}
+table#icon_nav {
+	margin: 0px 0 0 0;
+	padding: 0;
+	width: 100%;
+	font-size: 1.2em;
+	background: url(/clients/CSUPomona/Images/icon_gradient_bg.jpg) top left;
+}
+table#icon_nav td {
+	margin: 0;
+	padding: 0 17px 0 0px;
+	font-weight: bold;
+	text-align: right;
+	vertical-align: middle;
+	height: 65px;
+	background: center left no-repeat;
+}
+table#icon_nav a {
+	padding-left: 70px; /* width of icon + whitespace */
+	display: block;
+	line-height: 1.1em;
+}
+#connect {
+	margin-top:16px;
+	text-align:center;
+}
+#connect webpage_files {
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	box-shadow:nonef;
+	margin:0px 8px;
+}
+/* Hide from IE-Mac \*/
+
+* html table#icon_nav a {
+	width: 110px;
+}
+/* End hide */
+table#icon_nav a:link, table#icon_nav a:visited {
+	text-decoration: none;
+}
+table#icon_nav a:hover, table#icon_nav a:active, table#icon_nav a:focus {
+	text-decoration: none;
+}
+#header_contents {
+	position: relative;
+}
+.skipnav a {
+	top: 10px;
+	left: 10px;
+	font-size: .9em;
+	font-weight: bold;
+	position: absolute;
+	text-decoration: underline;
+	padding: 0px;
+	letter-spacing: .1em;
+}
+.skipnav a:link, .skipnav a:visited {
+	color: #231F20;
+	font-size: 0px;
+}
+.skipnav a:active, .skipnav a:focus {
+	background-color: #231F20;
+	color: #FFFFFF;
+	font-size: .9em;
+}
+.contents_column {
+	margin: 0px 20px 10px 1px;
+	float: left;
+	width: 275p
+}
+/*
+ #rightcolumn ul { padding:0px;margin:0px;}
+#rightcolumn ul li{padding:5px 20px;
+	list-style:none;
+	
+	color:#669; background-color:#396;}
+	
+	#rightcolumn ul li a{
+		display:block;
+		padding-left:50px;font-variant:small-caps; text-decoration:none;
+	background: #FFFFFF url(/clients/CSUPomona/Images/h2bullet-gold.gif) center left no-repeat;}*/
+
+

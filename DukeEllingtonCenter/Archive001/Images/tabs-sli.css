@@ -1,0 +1,105 @@
+/* container for slides */
+.webpage_files {
+	position:relative;	
+	height:479px;
+	width:654px;
+	float:left;	
+	cursor:pointer;
+
+}
+
+/* single slide */
+.webpage_files div {
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;		
+	padding:0 0 0 0;
+	height:256px;
+	font-size:12px;
+}
+
+/* header */
+.webpage_files h3 {
+	font-size:22px;
+	font-weight:normal;
+	margin:0 0 20px 0;
+	color:#456;
+}
+
+/* tabs (those little circles below slides) */
+.tabs {
+	clear:both;
+	display:none;
+}
+
+/* single tab */
+.tabs a {
+	width:8px;
+	height:8px;
+	float:left;
+	margin:3px;
+	background:url(navigato.png) 0 0 no-repeat;
+	display:block;
+	font-size:1px;		
+}
+
+/* mouseover state */
+.tabs a:hover {
+	background-position:0 -8px;      
+}
+
+/* active state (current page state) */
+.tabs a.current {
+	background-position:0 -16px;     
+} 	
+
+
+/* prev and next buttons */
+.forward {
+	float:left;
+	background:#f4f3f3 url(/clients/DukeEllingtonCenter/Images/slider_button_left.gif) 0 0 no-repeat !important;
+	display:block;
+	width:50px;
+	height:26px;
+	cursor:pointer;
+	font-size:1px;
+	text-indent:-9999em;
+	position:absolute;
+	margin:285px 0 0 554px;
+	*margin:285px 0 0 -100px;
+}
+.forward:hover{ background:#21201f url(/clients/DukeEllingtonCenter/Images/slider_button_left1.gif) 0 0 no-repeat !important;}
+.backward:hover{background:#21201f url(/clients/DukeEllingtonCenter/Images/slider_button_rigtht1.gif) right top no-repeat  !important;}
+
+.backward{background:#f4f3f3 url(/clients/DukeEllingtonCenter/Images/slider_button_rigtht.gif) right top no-repeat; margin:295px 0 0 604px !important; *margin:295px 0 0 -50px !important; display:block;
+	width:50px;
+	height:26px;
+	cursor:pointer;
+	font-size:1px;
+	text-indent:-9999em;
+	position:absolute;
+	float:left;}
+
+/* next */
+.forward 				{ background-position: 0 -30px; clear:right; }
+.forward:hover 		{ background-position:-30px -30px; }
+.forward:active 	 	{ background-position:-60px -30px; } 
+
+
+/* prev */
+.backward:hover  		{ background-position:-30px 0; }
+.backward:active  	{ background-position:-60px 0; }
+
+/* disabled navigational button. is not needed when tabs are configured with rotate: true */
+.disabled {
+	visibility:hidden !important;		
+}
+
+
+.slider-button-main{ position:absolute; margin:301px 0 0 554px; *margin:301px 0 0 -100px;}
+.slider-button-main button{ display:block; border:none; background:#d73d1f; text-align:center; color:#ffffff; font-size:12px; line-height:24px; text-transform:uppercase; width:50px; float:left; font-family:Tahoma; height:25px; padding:0 !important;}
+.slider-button-main button:hover{ color:#FFF; background:#21201f;}
+.slider-button-main .button-play{ margin:0 0 0 0;}
+
+.webpage_files div img, .webpage_files div{ width:654px; height:479px;}

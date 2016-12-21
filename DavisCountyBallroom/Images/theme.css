@@ -1,0 +1,260 @@
+/*********************************************************
+**********************************************************
+
+	Folder:	Theme214
+	Name:	Dark Stripes
+	Cat:	Generic
+
+**********************************************************
+*********************************************************/
+
+
+
+/*------------------------------------
+	GENERAL
+------------------------------------*/
+body{
+	color: #808080;
+	margin: 0;
+	background-color:#000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+.sf_outer_wrapper{
+}
+.sf_wrapper{
+	width: 100%;
+	margin: auto;
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+
+
+/*------------------------------------
+	HEADER
+------------------------------------*/
+.sf_header_wrapper{
+	padding-top: 50px;
+	margin: 0px 50px;
+	min-height: 213px; 
+	height: auto !important; 
+	height: 213px;
+}
+.sf_header_wrapper:after{
+	content: ".";
+	display: block;
+	visibility: hidden;
+	height: 0;
+	font-size: 1px;
+	clear: both;
+}
+.sf_main_header{
+	font-size: 56px;
+	font-weight: bold;
+	height: 80px;
+	overflow:hidden;
+}
+.sf_sub_header{
+	font-size: 18px;
+	font-weight: bold;
+	height: 30px;
+	overflow:hidden;
+}
+.sf_sub_header p, .sf_main_header p{
+	margin: 0;
+	padding: 0;
+}
+/*------------------------------------
+	Dropdown
+------------------------------------*/
+#Nav1 iframe {
+	position: absolute;
+	/* account for the border */
+	left: -0.25em;
+	top: -0.25em;
+	z-index: 0;
+	filter: progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=0);
+	margin-left: 3px;
+}
+#Nav1, 
+#Nav1 ul { /* all lists */
+	list-style:none;
+	width:100%;
+}
+
+#Nav1 a {
+	display:block;
+}
+
+#Nav1 li { /* all list items */
+	float:left;
+}
+
+#Nav1 li ul { /* second-level lists */
+	position:absolute;
+	left:-999em;
+	width:150px;
+	margin:0;
+	z-index:1000;
+}
+#Nav1 li ul li{
+	float:left;
+	width:150px;
+	background:#ffffff;
+	margin:0;
+}
+#Nav1 li ul li a{
+	background:#ffffff;
+	white-space:normal;
+	width:150px;
+	padding:8px 7px 0px 7px;
+	border:none;
+}
+#Nav1 li ul li a:hover{
+	background:#2B2B2B;
+}
+#Nav1 li:hover ul, 
+#Nav1 li.sfhover ul { /* lists nested under hovered list items */
+	left:auto;
+}
+#Nav1 li ul {
+}
+
+/*------------------------------------
+	NAVIGATION
+------------------------------------*/
+.sf_navigation_top,.sf_subnavigation, .sf_subnavigation2 {
+	display:none;
+}
+
+.sf_navigation{
+	margin: -10px auto 0 auto;
+	width:100%;
+}
+.sf_navigation ul{
+	margin: 0;
+	margin-left: 50px;
+	margin-right: 50px;
+	padding: 0;
+	height: auto !important; height: 1%;
+}
+.sf_navigation ul:after{
+	content: ".";
+	display: block;
+	visibility: hidden;
+	height: 0;
+	font-size: 1px;
+	clear: both;
+}
+.sf_navigation ul li{
+	list-style-type: none;
+	float: left;
+}
+.sf_navigation ul li.sf_last_nav_item{
+}
+.sf_navigation ul li a{
+	display: block;
+	text-decoration: none;
+	min-height: 28px; height: auto !important; height: 28px;
+	width: auto !important; width: 1%;
+	white-space: nowrap;
+	font-size: 14px;
+	padding: 8px 20px 0 20px;
+}
+.sf_navigation ul li a:visited{
+}
+.sf_navigation ul li a:hover{
+	background-color: #2B2B2B;
+	background-image: url(/clients/DavisCountyBallroom/Images/nav_hover.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+/*------------------------------------
+	PAGE TITLE
+------------------------------------*/
+.sf_pagetitle{
+	font-weight:bold;
+	font-size: 18px;
+	padding: 18px 50px 18px 50px;
+	background-image: url(/clients/DavisCountyBallroom/Images/pagetitle.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	color: #fff;
+	clear: both;
+}
+
+/*------------------------------------
+	CONTENT
+------------------------------------*/
+.sf_content{
+	color: #808080;
+	padding: 20px 50px 0px 50px;
+	clear: both;
+}
+
+/*------------------------------------
+	FOOTER
+------------------------------------*/
+.sf_footer{
+	padding: 20px 50px 40px 50px;
+	font-size: 10px;
+	text-align: center;
+	color: #ccc;
+	clear: both;
+}
+
+
+/*--------------------------
+		Extra Stuff
+--------------------------*/
+
+a:link {
+	color: #808080;
+}
+
+a:visited {
+	color: #808080;
+}
+
+a:hover {
+	color: #808080;
+}
+
+/*------------------------------------
+	BANNER
+------------------------------------*/
+.sf_banner{
+	color: #808080;
+	margin-bottom: 35px;
+	padding-top: 80px;
+	text-align: center;
+	font-size: 12px;
+}
+.sf_banner div#bannerLink{
+	padding-top: 10px;
+}
+
+.sf_banner a{
+	color: #808080;
+}
+.sf_banner a:visited{
+	color: #808080;
+}
+.sf_banner a:hover{
+	color: #808080;
+}
+
+/**
+ * Sticking flyout menu bug
+ *
+ * @bugfix
+ * @affected ie7
+ * @css-for ie7
+ * @valid yes
+ */
+#Nav1 li:hover, #Nav1 li.hover {  
+    position: static;  
+} 

@@ -1,0 +1,157 @@
+/*
+ * PureDOMExplorer Demo styles 
+ * written by Chris Heilmann 
+ * More at http://onlinetools.org/tools/puredom/
+ //TN customized
+ */
+#pdemenuholder {
+	background: #eee;
+	z-index:1; 
+	padding: 0;
+	margin: 0;
+	position:relative;
+	border-right: 1px solid #CCCCCC;
+}
+ 
+ul.pde a:link,
+ul.pde a:visited,
+ul.pde a:hover,
+ul.pde a:active{
+	text-decoration:none;
+	color:#000;
+	font-weight: normal;
+	overflow: hidden; 
+	outline: none;
+}
+ul.pde,ul.pde li{
+	margin:0;
+	padding:0;
+	list-style: none;
+	list-style-position: outside;
+	list-style-image:none;
+}
+ul.pde{
+	/*margin:.5em auto;*/
+	width:100%;
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+}
+/*first submenus ul-set*/
+ul.pde ul{
+	margin:0 0 0 1.1em;
+	padding:0;
+}
+ul.pde li{
+	line-height: 1.3em;
+	padding: 0;
+}
+ul.pde li li{
+	font-size: 1em;
+	line-height: 1em;
+	padding: 4px 2px 4px 8px;
+	border-bottom: 1px dashed #ccc;
+}
+/* dynamically added to LIs with nested ULs */
+ul.pde li.parent{
+	padding-left:0;
+}
+ul.pde li.parent img{
+	border: none;
+}
+/* dynamically added to LIs with nested ULs and SPAN elements in them */
+ul.pde li.current li{
+	background: #fff;
+}
+/* The class to hide nested ULs */
+.pdehide{
+	   display: none;
+}
+/* The class to show nested ULs */
+.pdeshow{
+	   position:relative;
+	   top: 0px;
+	   left: 2px;
+}
+	   
+
+/*//TN span style for when menu is selected*/	   
+ul.pde b {
+	padding: 0px 0px 0px 0px !important;
+}
+/*//TN added class for when menu contains image instead of text (button vs.)*/   
+ul.pde li.parent img.menuimg{
+	border: none;
+	cursor: pointer;
+}
+/*//TN class for expand/minimize img */
+img.expandminimize {
+	cursor: N-resize; padding-top: 0px; padding-bottom: 2px; padding-right: 4px; float: left;
+}
+/*//TN class for expand/minimize filler img */
+img.expandminimizefiller {
+	padding-top: 2px; padding-bottom: 2px; padding-right: 4px; float: left;
+}
+/*The Link style for top-level menuitems and is read by all browsers*/
+ul.pde li a.menudepth0 {
+	color: #000;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+/*The Link style for top-level menuitems hidden from Netscape 4*/
+ul.pde li a.menudepth0 {
+	/*/*/display: block;
+	color: #000;
+	text-decoration: none;
+	background: #eee url("/clients/BattleintheBallroom/Images/pde_button_bg.jpg") bottom left repeat-x;
+	margin: 0px;
+	padding: 5px 2px 5px 4px !important;
+	vertical-align: top;
+	border-bottom: 2px solid #990000;
+	cursor: pointer;
+	/* */
+}
+ul.pde li a.menudepth0:visited {
+	color: #000;
+	font-weight: bold;
+}
+ul.pde li a.menudepth0:hover {
+	color: #000;
+	font-weight: bold;
+	background: #cccccc url("/clients/BattleintheBallroom/Images/pde_button_bg_hover.jpg") bottom left repeat-x;
+}
+ul.pde li a.menudepth0:active {
+	color: #000;
+	font-weight: bold;
+}
+/*
+ul.pde li #pdeselected a:link, ul.pde li #pdeselected a:visited, ul.pde li #pdeselected a:hover, ul.pde li #pdeselected a:active {
+	padding: 4px 2px 4px 6px !important;
+	background-color: #cccccc;
+	display: block;
+	font-weight: bold;
+	color: #000;
+}*/
+#pdelinkselected  {
+	color: #990000;
+	background-color: transparent;
+	font-weight: bold;
+}
+/*//TN styles for top selected item*/
+ul.pde #pdeselected0 a.menudepth0 {
+	color: #000;
+	font-size: 1.1em;
+	font-weight: bold;
+}
+ul.pde #pdeselected0 a.menudepth0 {
+	/*/*/display: block;
+	color: #990000;
+	text-decoration: none;
+	background: #cccccc url("/clients/BattleintheBallroom/Images/pde_button_bg_hover.jpg") bottom left repeat-x;
+	margin: 0px;
+	padding: 5px 2px 5px 4px !important;
+	vertical-align: middle;
+	border-bottom: 2px solid #990000;
+	line-height: 1.3em;
+	font-size: 1.1em;
+	cursor: default;
+}

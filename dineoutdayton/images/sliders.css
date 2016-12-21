@@ -1,0 +1,397 @@
+/* The Nivo Slider styles */
+.nivoSlider {position:relative;}
+.nivoSlider img {position:absolute; top:0px; left:0px;}
+.nivoSlider a.nivo-imageLink {position:absolute; top:0px; left:0px; width:100%; height:100%; border:0; padding:0; margin:0; z-index:6; display:none;}
+.nivo-slice {display:block; position:absolute; z-index:5; height:100%;}
+.nivo-box {display:block; position:absolute; z-index:5;}
+.nivo-caption {position:absolute;left:0px;bottom:0px;background:#000;color:#fff;opacity:0.8;width:100%;z-index:8;}
+.nivo-caption p {padding:5px;margin:0;}
+.nivo-caption a {display:inline !important;}
+.nivo-html-caption {display:none;}
+.nivo-directionNav a {position:absolute;top:45%;z-index:9;cursor:pointer;}
+.nivo-prevNav {left:0px;}
+.nivo-nextNav {right:0px;}
+.nivo-controlNav a {position:relative;z-index:9;cursor:pointer;}
+.nivo-controlNav a.active {font-weight:bold;}
+div.anythingSlider, .nivoSlider {position:relative;background:#fff url(../images/loading.gif) no-repeat 50% 50%;}
+.nivoSlider img {position:absolute;top:0px;left:0px;display:none;}
+.nivoSlider a {border:0;display:block;}
+.nivo-controlNav {position:absolute;right:0;bottom:3px;}
+.nivo-controlNav a {display:block;width:19px;height:20px;background:url(../images/gray_pager.png) no-repeat;text-indent:-9999px;border:0;margin-right:3px;float:left;}
+.nivo-controlNav a.active {background-position:0 -20px;}
+.nivo-directionNav a {display:block;width:30px;height:30px;text-indent:-9999px;border:0;}
+a.nivo-nextNav {background-position:0px 0px;right:5px;background-image:url(../images/gray_next.png);}
+a.nivo-nextNav:hover {background-position:0px 30px;}
+a.nivo-prevNav {left:5px;background-image:url(../images/gray_prev.png);background-position:0px 0px;}
+a.nivo-prevNav:hover {background-position:0px 30px;}
+.nivo-caption {font-family: Helvetica, Arial, sans-serif;}
+.nivo-caption a {color:#fff;border-bottom:1px dotted #fff;}
+.nivo-caption a:hover {color:#fff;}
+/** Nivo Themes*/
+.nivoblue .nivo-controlNav a {background-image:url(../images/blue_pager.png)}
+.nivoblue a.nivo-nextNav {background-image:url(../images/blue_next.png)}
+.nivoblue a.nivo-prevNav	{background-image:url(../images/blue_prev.png)}
+.nivogreen .nivo-controlNav a {background-image:url(../images/green_pager.png)}
+.nivogreen a.nivo-nextNav {background-image:url(../images/green_next.png)}
+.nivogreen a.nivo-prevNav	{background-image:url(../images/green_prev.png)}
+.nivoorange .nivo-controlNav a {background-image:url(../images/orange_pager.png)}
+.nivoorange a.nivo-nextNav {background-image:url(../images/orange_next.png)}
+.nivoorange a.nivo-prevNav	{background-image:url(../images/orange_prev.png)}
+.nivopurple .nivo-controlNav a {background-image:url(../images/purple_pager.png)}
+.nivopurple a.nivo-nextNav {background-image:url(../images/purple_next.png)}
+.nivopurple a.nivo-prevNav	{background-image:url(../images/purple_prev.png)}
+.nivored .nivo-controlNav a {background-image:url(../images/red_pager.png)}
+.nivored a.nivo-nextNav {background-image:url(../images/red_next.png)}
+.nivored a.nivo-prevNav	{background-image:url(../images/red_prev.png)}
+.nivoyellow .nivo-controlNav a {background-image:url(../images/yellow_pager.png)}
+.nivoyellow a.nivo-nextNav {background-image:url(../images/yellow_next.png)}
+.nivoyellow a.nivo-prevNav	{background-image:url(../images/yellow_prev.png)}
+
+/* SlideDeck */
+.skin-slidedeck {position: relative;padding: 11px 11px 11px 11px;background: url('../images/back.png') 0 0 #d7d7d7;border: 14px solid #fff;box-shadow: 0 0 5px rgba(0,0,0,0.2);-moz-box-shadow: 0 0 5px rgba(0,0,0,0.2);-webkit-box-shadow: 0 0 5px rgba(0,0,0,0.2);}
+.skin-slidedeck dl.slidedeck {position: relative;width: 100%;height: 100%;margin: 0;padding: 0;}
+.skin-slidedeck dl.slidedeck > dd {position: relative;height: 294px;padding: 10px 15px;margin: 0;border-right: 5px solid #d7d7d7;background: url('../images/slides.png') bottom left #d7d7d7;overflow: hidden;}
+.skin-slidedeck dl.slidedeck > dt {position: relative;cursor: pointer;height: 43px;line-height: 38px;font-size: 12px;font-weight: bold;font-family: "Futura Bold", Arial, Helvetica, sans-serif;text-transform: uppercase;letter-spacing: 1px;background: url('../images/spines.png') top left #d7d7d7;color: #505050;margin: 0;padding: 0;}
+.skin-slidedeck dl.slidedeck dt.spine:hover {color: #000;background-position: center left;}
+.skin-slidedeck dl.slidedeck dt.spine.active, .skin-slidedeck dl.slidedeck dt.spine.active:hover {cursor: default;color: #fff;background-position: bottom left;}
+.skin-slidedeck dl.slidedeck dt.spine .index {margin-bottom: 2px;font-size: 24px;font-weight: normal;font-family: Arial, Helvetica, sans-serif;color: #505050;}
+.skin-slidedeck dl.slidedeck dt.spine.active .index {margin-bottom: 0;}
+.skin-slidedeck dl.slidedeck dt.spine:hover .index {color: #000000;}
+.skin-slidedeck dl.slidedeck dt.spine.active .index {color: #ffffff;}
+.skin-slidedeck dl.slidedeck .activeCorner {margin-left: -6px;background-image: url('../images/corner.png');width: 12px;height: 25px;}
+
+/** Anything */
+.anythingBase { max-width: 32766px; }
+
+div.anythingSlider .anythingControls ul a.cur, div.anythingSlider .anythingControls ul a {color: #000;text-indent:-5000px;}
+.anythingControls ul a.cur {background-position:0 20px;}
+div.anythingSlider .start-stop {display:none;}
+div.anythingSlider.activeSlider .anythingWindow {border-color: #7C9127;}
+div.anythingSlider.activeSlider .anythingControls ul a.cur, div.anythingSlider.activeSlider .anythingControls ul a {}
+div.anythingSlider {display: block;	margin: 0 auto;overflow: hidden !important;position: relative;}
+div.anythingSlider .anythingWindow {overflow: hidden;position: relative;width: 100%;height: 100%;}
+.anythingBase {background: transparent;list-style: none;position: absolute;top: 0;left: 0;margin: 0;padding: 0;}
+.anythingBase .panel {background: transparent;display: block;overflow: hidden;float: left;padding: 0;margin: 0;}
+div.anythingSlider .arrow {top: 50%;position: absolute;display: block;}
+div.anythingSlider .arrow a {display: block;height: 30px;margin: -15px 2px 0 2px;width: 30px;text-align: center;outline: 0;}
+div.anythingSlider .arrow a span {display: block; text-indent: -9999px;}
+div.anythingSlider .back {left: 5px;}
+div.anythingSlider .back a {background-position:0px 30px;background-image:url(../images/gray_prev.png);}
+div.anythingSlider .back a:hover, div.anythingSlider .back a.hover {background-position: 0 0;}
+div.anythingSlider .back.disabled {display: none;}
+div.anythingSlider .forward {right: 5px;}
+div.anythingSlider .forward a {background-position:0px 30px;background-image:url(../images/gray_next.png);}
+div.anythingSlider .forward a:hover, div.anythingSlider .forward a.hover {background-position: 0 0;}
+div.anythingSlider .forward.disabled {display: none;}
+div.anythingSlider .anythingControls {position:absolute;outline: 0; display: none;margin-top:-22px;right:2px;}
+div.anythingSlider .anythingControls ul { margin: 0 0 0 0; padding: 0; float: right; }
+div.anythingSlider .anythingControls ul li { display: block;float:left;margin-left:2px; }
+div.anythingSlider .anythingControls ul a {height: 20px;background-image: url(../images/gray_pager.png);width:19px;text-indent:-5000px;display:block;}
+div.anythingSlider .anythingControls .anythingNavWindow {overflow: hidden; float: left;}
+div.anythingSlider.rtl .anythingControls ul a { float: right; }
+div.anythingSlider.rtl .anythingControls ul { float: left; }
+div.anythingSlider.rtl .anythingWindow {direction: ltr;unicode-bidi: bidi-override;}
+.anyCaption {background-color: #000000;opacity: 0.6;padding: 20px 0px 10px 0px;position: absolute;z-index: 100;width:100%;bottom: 0px;}
+.anyCaption h3, .anyCaption p {padding-left:10px;padding-right:10px;color:#FFFFFF;margin-bottom: 10px;}
+.slidertitle, .slidertext {margin-bottom: 10px;}
+/** Anything Themes */
+div.anythingSlider.Anygreen .back a {background-image: url(../images/green_prev.png)}
+div.anythingSlider.Anygreen .forward a {background-image: url(../images/green_next.png)}
+div.anythingSlider.Anygreen .anythingControls ul a { background-image: url(../images/green_pager.png)}
+div.anythingSlider.Anyblue .back a {background-image: url(../images/blue_prev.png)}
+div.anythingSlider.Anyblue .forward a {background-image: url(../images/blue_next.png)}
+div.anythingSlider.Anyblue .anythingControls ul a { background-image: url(../images/blue_pager.png)}
+div.anythingSlider.Anyorange .back a {background-image: url(../images/orange_prev.png)}
+div.anythingSlider.Anyorange .forward a {background-image: url(../images/orange_next.png)}
+div.anythingSlider.Anyorange .anythingControls ul a { background-image: url(../images/orange_pager.png)}
+div.anythingSlider.Anypurple .back a {background-image: url(../images/purple_prev.png)}
+div.anythingSlider.Anypurple .forward a {background-image: url(../images/purple_next.png)}
+div.anythingSlider.Anypurple .anythingControls ul a { background-image: url(../images/purple_pager.png)}
+div.anythingSlider.Anyred .back a {background-image: url(../images/red_prev.png)}
+div.anythingSlider.Anyred .forward a {background-image: url(../images/red_next.png)}
+div.anythingSlider.Anyred .anythingControls ul a { background-image: url(../images/red_pager.png)}
+div.anythingSlider.Anyyellow .back a {background-image: url(../images/yellow_prev.png)}
+div.anythingSlider.Anyyellow .forward a {background-image: url(../images/yellow_next.png)}
+div.anythingSlider.Anyyellow .anythingControls ul a { background-image: url(../images/yellow_pager.png)}
+
+/** Bx Slider **/
+.bxtitle {text-align:center;padding:0 30px;margin-bottom:0;}
+.bx-wrapper {padding-top:15px;}
+.bx-next , .bx-prev{z-index:99}
+.gray .bx-next {position:absolute;top:-30px;right:0px;z-index:999;width: 30px;height: 30px;text-indent: -999999px;background: url(../images/gray_next.png) no-repeat 0 -30px;}
+.gray .bx-prev {position:absolute;top:-30px;left:0px;z-index:999;width: 30px;height: 30px;text-indent: -999999px;background: url(../images/gray_prev.png) no-repeat 0 -30px;}
+.green .bx-next {position:absolute;top:-30px;right:0px;z-index:999;width: 30px;height: 30px;text-indent: -999999px;background: url(../images/green_next.png) no-repeat 0 -30px;}
+.green .bx-prev {position:absolute;top:-30px;left:0px;z-index:999;width: 30px;height: 30px;text-indent: -999999px;background: url(../images/green_prev.png) no-repeat 0 -30px;}
+.blue .bx-next {position:absolute;top:-30px;right:0px;z-index:999;width: 30px;height: 30px;text-indent: -999999px;background: url(../images/blue_next.png) no-repeat 0 -30px;}
+.blue .bx-prev {position:absolute;top:-30px;left:0px;z-index:999;width: 30px;height: 30px;text-indent: -999999px;background: url(../images/blue_prev.png) no-repeat 0 -30px;}
+.orange .bx-next {position:absolute;top:-30px;right:0px;z-index:999;width: 30px;height: 30px;text-indent: -999999px;background: url(../images/orange_next.png) no-repeat 0 -30px;}
+.orange .bx-prev {position:absolute;top:-30px;left:0px;z-index:999;width: 30px;height: 30px;text-indent: -999999px;background: url(../images/orange_prev.png) no-repeat 0 -30px;}
+.purple .bx-next {position:absolute;top:-30px;right:0px;z-index:999;width: 30px;height: 30px;text-indent: -999999px;background: url(../images/purple_next.png) no-repeat 0 -30px;}
+.purple .bx-prev {position:absolute;top:-30px;left:0px;z-index:999;width: 30px;height: 30px;text-indent: -999999px;background: url(../images/purple_prev.png) no-repeat 0 -30px;}
+.red .bx-next {position:absolute;top:-30px;right:0px;z-index:999;width: 30px;height: 30px;text-indent: -999999px;background: url(../images/red_next.png) no-repeat 0 -30px;}
+.red .bx-prev {position:absolute;top:-30px;left:0px;z-index:999;width: 30px;height: 30px;text-indent: -999999px;background: url(../images/red_prev.png) no-repeat 0 -30px;}
+.yellow .bx-next {position:absolute;top:-30px;right:0px;z-index:999;width: 30px;height: 30px;text-indent: -999999px;background: url(../images/yellow_next.png) no-repeat 0 -30px;}
+.yellow .bx-prev {position:absolute;top:-30px;left:0px;z-index:999;width: 30px;height: 30px;text-indent: -999999px;background: url(../images/yellow_prev.png) no-repeat 0 -30px;}
+.bx-pager a {margin-right: 5px;color: #fff;padding: 3px 8px 3px 6px;font-size: 12px;zoom:1;background: url(../images/gray_pager.png) no-repeat 0 -20px;}
+.bx-auto .start {background: url(../images/gray_auto.png) no-repeat 0 2px;padding-left: 13px;}
+.bx-auto .stop {background: url(../images/gray_auto.png) no-repeat 0 -14px;padding-left: 13px;}
+.bx-next:hover, .bx-prev:hover {background-position: 0 0;}
+.bx-pager .pager-active, .bx-pager a:hover {background-position: 0 0;}
+.bx-pager {text-align:center;padding-top: 7px;font-size:12px;color:#666;}
+.bx-captions {text-align:center;font-size: 12px;padding: 7px 0;color: #666;}
+.bx-auto {text-align: center;padding-top: 15px;}
+.bx-auto a {color: #666;font-size: 12px;}
+
+/* AnythingSlider IE7 and older stylesheet - included !important flag in case the theme is loaded after page load */
+
+/* Navigation Arrows */
+div.anythingSlider .arrow {
+	top: 50% !important;
+}
+div.anythingSlider-metallic .arrow {
+	top: 40% !important;
+}
+div.anythingSlider-construction .arrow {
+	top: 14% !important;
+}
+div.anythingSlider-minimalist-round .arrow , div.anythingSlider-minimalist-square .arrow {
+	top: 45% !important;
+}
+div.anythingSlider-cs-portfolio .arrow {
+	bottom: -24px !important;
+}
+
+div.anythingSlider .arrow a,
+div.anythingSlider-metallic .arrow a,
+div.anythingSlider-minimalist-square .arrow a,
+div.anythingSlider-construction .arrow a,
+div.anythingSlider-minimalist-round .arrow a {
+	margin: 0 !important;
+}
+
+/* When using the navigationSize option, the side margins need to be zero
+   None of the navigation panels look good in IE7 now =( */
+div.anythingSlider .anythingControls ul.thumbNav a {
+	margin: 0;
+}
+div.anythingSlider .anythingControls .anythingNavWindow li {
+	padding: 3px 0 0 0;
+}
+div.anythingSlider-cs-portfolio .anythingControls .anythingNavWindow {
+	margin: 18px 0 0 0;
+}
+/* S3 Slider */
+.s3Slider {
+   position: relative; /* important */
+   overflow: hidden; /* important */
+   width:900px;
+   height:400px;
+}
+
+.s3sliderContent {
+   position: absolute; /* important */
+   top: 0; /* important */
+   margin-left: 0; /* important */
+     width:900px;
+   height:400px;
+}
+
+.s3sliderImage {
+   float: left; /* important */
+   position: relative; /* important */
+   display: none; /* important */
+}
+
+.s3sliderImage div {
+   position: absolute; /* important */
+   font: 15px/18px Arial, Helvetica, sans-serif;
+   padding-top: 10px;
+   width: 374px;
+   background-color: #000;
+   filter: alpha(opacity=70); /* here you can set the opacity of box with text */
+   -moz-opacity: 0.7; /* here you can set the opacity of box with text */
+   -khtml-opacity: 0.7; /* here you can set the opacity of box with text */
+   opacity: 0.7; /* here you can set the opacity of box with text */
+   color: #fff;
+   display: none; /* important */
+
+}
+
+.s3sliderImage div.top {
+	top: 0;
+	left: 0;
+}
+.s3sliderImage div.bottom {
+	bottom: 0;
+    left: 0;
+}
+.s3sliderImage div.left {
+	top: 0;
+    left: 0;
+}
+.s3sliderImage div.right {
+	right: 0;
+	bottom: 0;	
+}
+.s3sliderImageclear {
+   clear: both;
+    float: left; /* important */
+   position: relative; /* important */
+   display: none; /* important */
+}
+
+
+/*
+ * jQuery FlexSlider v1.8
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+
+/* Browser Resets */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus  {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;}
+
+/* FlexSlider Necessary Styles
+*********************************/
+.flexslider {margin: 0; padding: 0;}
+.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.flexslider .slides img {max-width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+/* Clearfix for the .slides element */
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .slides {display: block;}
+* html .slides {height: 1%;}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+.no-js .slides > li:first-child {display: block;}
+
+
+/* FlexSlider Default Theme
+*********************************/
+.flexslider {background: #fff; border: 4px solid #fff; position: relative; -webkit-border-radius: 5px; -moz-border-radius: 5px; -o-border-radius: 5px; border-radius: 5px; zoom: 1;}
+.flexslider .slides {zoom: 1;}
+.flexslider .slides > li {position: relative;}
+/* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
+.flex-container {zoom: 1; position: relative;}
+
+/* Caption style */
+/* IE rgba() hack */
+.flex-caption {background:none; -ms-filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000); zoom: 1;}
+.flex-caption {width: 96%; padding: 2%; margin: 0; position: absolute; left: 0; bottom: 0; background: rgba(0,0,0,.3); color: #fff; text-shadow: 0 -1px 0 rgba(0,0,0,.3); font-size: 14px; line-height: 18px;}
+
+/* Direction Nav */
+.flex-direction-nav { height: 0; }
+.flex-direction-nav li a {width: 52px; height: 52px; margin: -13px 0 0; display: block; background: url(theme/bg_direction_nav.png) no-repeat; position: absolute; top: 50%; cursor: pointer; text-indent: -999em;}
+.flex-direction-nav li .next {background-position: -52px 0; right: -21px;}
+.flex-direction-nav li .prev {left: -20px;}
+.flex-direction-nav li .disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
+
+/* Control Nav */
+.flex-control-nav {width: 100%; position: absolute; bottom: -30px; text-align: center;}
+.flex-control-nav li {margin: 0 0 0 5px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-nav li:first-child {margin: 0;}
+.flex-control-nav li a {width: 13px; height: 13px; display: block; background: url(theme/bg_control_nav.png) no-repeat; cursor: pointer; text-indent: -999em;}
+.flex-control-nav li a:hover {background-position: 0 -13px;}
+.flex-control-nav li a.active {background-position: 0 -26px; cursor: default;}
+
+#supersized-loader { position:absolute; top:50%; left:50%; z-index:0; width:60px; height:60px; margin:-30px 0 0 -30px; text-indent:-999em; background:url(../img/progress.gif) no-repeat center center;}
+#supersized {  display:block; position:absolute; left:0; top:0; overflow:hidden; z-index:-999; height:100%; width:100%; }
+#supersized img { width:auto; height:auto; position:relative; display:none; outline:none; border:none; }
+#supersized.speed img { -ms-interpolation-mode:nearest-neighbor; image-rendering: -moz-crisp-edges; }	/*Speed*/
+#supersized.quality img { -ms-interpolation-mode:bicubic; image-rendering: optimizeQuality; }			/*Quality*/
+#supersized li { display:block; list-style:none; z-index:-30; position:fixed; overflow:hidden; top:0; left:0; width:100%; height:100%; background:#111; }
+#supersized a { width:100%; height:100%; display:block; }
+#supersized li.prevslide { z-index:-20; }
+#supersized li.activeslide { z-index:-10; }
+#supersized li.image-loading { background:#111 url(../img/progress.gif) no-repeat center center; width:100%; height:100%; }
+#supersized li.image-loading img{ visibility:hidden; }
+#supersized li.prevslide img, #supersized li.activeslide img{ display:inline; }
+
+#controls-wrapper { margin:0 auto; height:42px; width:100%; bottom:0px; left:0; z-index:4; background:url(../../img/nav-bg.png) repeat-x; position:fixed; }
+#controls { overflow:hidden; height:100%; position:relative; text-align:left; z-index:5; }
+#slidecounter { float:left; color:#999; font:14px "Helvetica Neue", Helvetica, Arial, sans-serif; text-shadow:#000 0 -1px 0; margin:0px 10px 0 15px; line-height:42px; }
+#slidecaption { position:absolute; bottom:0;width:100%; text-align:center;}
+#navigation { float:right; margin:0px 20px 0 0; }
+#play-button:hover{ background-position:0 1px; cursor:pointer; }
+#prevslide, #nextslide{ position:absolute; height:30px; width:30px; top:50%;}
+a.forward{background-position:0px 0px;right:5px;background-image:url(../images/gray_next.png);}
+a.forward:hover {background-position:0px 30px;}
+a.back{background-position:0px 0px;left:5px;background-image:url(../images/gray_prev.png);}
+a.back:hover {background-position:0px 30px;}
+div.supercontainer.Anygreen .back  {background-image: url(../images/green_prev.png)}
+div.supercontainer.Anygreen .forward  {background-image: url(../images/green_next.png)}
+div.supercontainer.Anygreen .anythingControls ul a { background-image: url(../images/green_pager.png)}
+div.supercontainer.Anyblue .back  {background-image: url(../images/blue_prev.png)}
+div.supercontainer.Anyblue .forward  {background-image: url(../images/blue_next.png)}
+div.supercontainer.Anyblue .anythingControls ul a { background-image: url(../images/blue_pager.png)}
+div.supercontainer.Anyorange .back  {background-image: url(../images/orange_prev.png)}
+div.supercontainer.Anyorange .forward  {background-image: url(../images/orange_next.png)}
+div.supercontainer.Anyorange .anythingControls ul a { background-image: url(../images/orange_pager.png)}
+div.supercontainer.Anypurple .back  {background-image: url(../images/purple_prev.png)}
+div.supercontainer.Anypurple .forward  {background-image: url(../images/purple_next.png)}
+div.supercontainer.Anypurple .anythingControls ul a { background-image: url(../images/purple_pager.png)}
+div.supercontainer.Anyred .back  {background-image: url(../images/red_prev.png)}
+div.supercontainer.Anyred .forward  {background-image: url(../images/red_next.png)}
+div.supercontainer.Anyred .anythingControls ul a { background-image: url(../images/red_pager.png)}
+div.supercontainer.Anyyellow .back  {background-image: url(../images/yellow_prev.png)}
+div.supercontainer.Anyyellow .forward {background-image: url(../images/yellow_next.png)}
+div.supercontainer.Anyyellow .anythingControls ul a { background-image: url(../images/yellow_pager.png)}		
+
+
+				
+				#list-slide { position: relative; margin:404px 0px 0px -20px;}
+				ul#slide-list{ padding:15px 0; float:left; position:absolute; left:50%; }
+					ul#slide-list li{ list-style:none; width:12px; height:12px; float:left; margin:0 5px 0 0; }
+						ul#slide-list li.current-slide a, ul#slide-list li.current-slide a:hover{ background-position:0 0px; }
+						ul#slide-list li a{ display:block; width:12px; height:12px; background:url('../../img/nav-dot.png') no-repeat 0 -24px; }
+							ul#slide-list li a:hover{ background-position:0 -12px; cursor:pointer; }
+				
+				#tray-button{ float:right; margin-top:1px; border-left:1px solid #333; background:url('../../img/bg-hover.png') repeat-x 0 44px; }
+					#tray-button:hover{ background-position:0 1px; cursor:pointer; }
+		
+	
+	/* Progress Bar
+	----------------------------*/					
+	#progress-back{ z-index:5; position: absolute; left:0; top:0; height:4px; width:100%; }
+		#progress-bar{ position:relative; height:4px; width:100%; }
+	
+	
+	/* Thumbnail Navigation
+	----------------------------*/	
+	#nextthumb,#prevthumb { z-index:2; display:none; position:fixed; bottom:61px; height:75px; width:100px; overflow:hidden; background:#ddd; border:1px solid #fff; -webkit-box-shadow:0 0 5px #000; }
+		#nextthumb { right:12px; }
+		#prevthumb { left:12px; }
+			#nextthumb img, #prevthumb img { width:150px; height:auto;  }
+			#nextthumb:active, #prevthumb:active { bottom:59px; }
+			#nextthumb:hover, #prevthumb:hover { cursor:pointer; }
+	
+	
+	/* Thumbnail Tray
+	----------------------------*/			
+	#thumb-tray{ position:fixed; z-index:3; bottom:0; left:0; background:url(../../img/bg-black.png); height:150px; width:100%; overflow:hidden; text-align:center; -moz-box-shadow: 0px 0px 4px #000; -webkit-box-shadow: 0px 0px 4px #000; box-shadow: 0px 0px 4px #000; }
+		
+		#thumb-back, #thumb-forward{ position:absolute; z-index:5; bottom:42px; height:108px; width:40px; }
+			#thumb-back{ left:0; background: url('../../img/thumb-back.png') no-repeat center center;}
+			#thumb-forward{ right:0; background:url('../../img/thumb-forward.png') no-repeat center center;}
+				#thumb-back:hover, #thumb-forward:hover{ cursor:pointer; background-color:rgba(256,256,256, 0.1); }
+					#thumb-back:hover{ border-right:1px solid rgba(256,256,256, 0.2); }
+					#thumb-forward:hover{ border-left:1px solid rgba(256,256,256, 0.2); }
+		
+		
+		ul#thumb-list{ display:inline-block; list-style:none; position:relative; left:0px; padding:0 0px; }
+			ul#thumb-list li{ background:#111; list-style:none; display:inline; width:150px; height:108px; overflow:hidden; float:left; margin:0; }
+				ul#thumb-list li img { width:200px; height:auto; opacity:0.5; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; filter:alpha(opacity=60); }
+				ul#thumb-list li.current-thumb img, ul#thumb-list li:hover img{ opacity:1; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter:alpha(opacity=100); }
+				ul#thumb-list li:hover{ cursor:pointer; }

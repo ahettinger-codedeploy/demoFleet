@@ -1,0 +1,550 @@
+html, body {
+	height: 100%;
+}
+body {
+	background-color: #e5e5e5;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background-size: 100%;
+	color: #656565;
+}
+header, footer, article, nav, section, hgroup, figure { display: block; }
+/* Links */
+a {
+	color: #999;
+	text-decoration: none;
+}
+a:hover {
+	color: #666;
+}
+
+#container {
+	background: transparent url(/clients/ArtsWhistler/Images/container_background.gif) top left repeat-y;
+	text-align: left;
+	margin: 0px auto;
+	width: 960px;
+	padding: 0 43px 0 44px;
+	overflow: hidden;
+}
+
+/* Top Nav */
+#top {
+	padding: 6px 0;
+	text-align: right;
+	overflow: hidden;
+	height: 24px;
+	width: 650px;
+	margin-left: 360px;
+}
+	#top nav, #top .moduletable {
+		float: left;
+		margin: 0;
+	}
+	#top nav {
+		width: 415px;	
+		font-size: 11px;
+		top: auto;
+		padding: 5px 0;
+	}
+		#top nav ul {
+			background: none;
+			border: none;
+			padding: 0;
+			margin: 0;
+			height: auto;
+		}
+			#top nav ul li a {
+				letter-spacing: 0px;
+				border-left: 1px solid #ccc;
+				padding: 0 10px;
+				line-height: 12px;
+				color: #000;
+			}
+			#top nav ul li:first-child a {
+				border: none;
+			}
+
+/* Search */
+.search label {
+	display: none;
+	visibility: hidden;
+}
+	form.search #mod_search_searchword {
+		color: #ccc;
+	}
+		form.search #mod_search_searchword:focus {
+			color: #000;
+		}
+	form.search input.button {
+		margin: 0;
+		position: relative;
+		top: 4px;
+		padding-left: 4px;
+	}
+
+
+header {
+	background: transparent url(/clients/ArtsWhistler/Images/banners/baron.jpg) top left no-repeat;
+	width: 100%;
+	height: 195px;
+	border-top: 1px solid #cdcdcd;
+}
+	h1.logo {
+		background: transparent url(/clients/ArtsWhistler/Images/logo.gif) top left no-repeat;
+		text-indent: -999em;
+		width: 296px;
+		height: 154px;
+		position: relative;
+		top: 10px;
+		left: 20px;
+	}
+		h1.logo a {
+			display: block;
+			width: 273px;
+			height: 126px;
+		}
+
+/* Nav */
+nav {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	top: -17px;
+	z-index: 10;
+	margin-bottom: 35px;
+}
+	nav ul {
+		background: transparent url(/clients/ArtsWhistler/Images/nav_background.png) top left repeat-x;
+		height: 33px;
+		margin: 0 auto;
+		padding-top: 17px;
+		border-bottom: 1px solid #cdcdcd;
+	}
+		nav ul li {
+			display: inline;
+			float: left;
+		}
+			nav ul li a {
+				display: block;
+				padding: 8px 16px;
+				text-transform: uppercase;
+				color: #000;
+			}
+				nav ul li a.plus, nav ul li .folder {
+					display: none;
+					visibility: hidden;
+					line-height: 0px;
+					padding: 0;
+				}
+
+#content.has_aside {
+
+	width: 925px;
+}
+.frontpage #content {
+	padding-right: 30px;
+	border-right: 1px solid #ccc;
+}
+	.leadinghome img {
+		border-left: 1px solid #ccc;
+		padding-left: 20px;
+	}
+aside {
+	width: 200px;
+	float: left;
+}
+	aside nav {
+		margin: 0;
+		top: 0px;
+	}
+	*+html aside nav { /* Stupid IE7 hack */
+		height: 700px;
+	}
+		aside nav ul {
+			padding: 0;
+			margin: 0;
+		}
+		aside nav ul ul {
+			background: none;
+			height: auto;
+			border: none;
+			padding: 0;
+			clear: both;
+		}
+			aside nav ul ul li a {
+				text-transform: none;
+				letter-spacing: 0px;
+			}
+			aside nav ul ul li a {
+				padding: 6px 15px;
+				border-top: 1px solid #e5e5e5;
+				text-decoration: none;
+				font-size: 11px;
+				display: block;
+				background: transparent url(/clients/ArtsWhistler/Images/arrow.gif) center left no-repeat;
+				color: #656565;
+				width: 135px;
+			}
+			/*aside nav ul ul li:first-child a {
+				border: none;
+			}*/
+			aside nav ul ul li a:hover, aside nav ul ul li a.sublevel:hover, aside nav ul ul li a.sublevel_current:hover, aside nav ul ul li #active_menu:hover, aside nav ul ul li a.mainlevel_current:hover, aside nav ul ul li a.mainlevel_active:hover {
+				background-color: #e4e4e4;
+				color: #333333;
+			}
+			aside nav ul ul ul { 
+				padding-left: 10px;
+			}
+				aside nav ul ul ul li a {
+					padding: 2px 10px;
+					background: transparent url(/clients/ArtsWhistler/Images/arrow_small.gif) center left no-repeat;
+					font-size: 10px;
+					width: 135px;
+					border: none;
+				}
+			aside nav ul ul ul li a.sublevel, aside nav ul ul li a.sublevel_current, aside nav ul ul li a.sublevel_active {
+				background-color: #f5f5f5;
+				color: #000;
+			}
+			aside nav ul li a.sublevel_current {
+				font-weight: bold;
+			}
+			/* aside nav ul ul li a.sublevel, aside nav ul ul li a.sublevel_current, aside nav ul ul li #active_menu, aside nav ul ul li a.mainlevel_current, aside nav ul ul li a.mainlevel_active */
+		aside nav ul, aside nav ul li a, aside nav ul li a.mainlevel_active {
+			background: none;
+			border: none;
+			
+		}
+	
+#content.has_right {
+	float: left;
+	width: 900px;
+}	
+aside.right {
+	width: 200px;
+	float: right;
+}
+	aside .moduletable {
+		margin-bottom: 25px;
+	}
+	aside .moduletable.donate {
+		line-height: 0;
+	}
+		aside #contact label {
+			font-size: 11px;
+			color: #000;
+		}
+	aside .newsletter {
+		background-color: #f5f5f5;
+		border: 1px solid #d0d0d0;
+		width: 170px;
+		padding: 10px;
+		color: #000;
+	}
+	
+footer {
+	background: transparent url(/clients/ArtsWhistler/Images/container_bottom.gif) top left no-repeat;
+	height: 100px;
+	margin: 0 auto;
+	width: 1047px;
+	padding: 55px 0px 5px;
+	text-align: left;
+	font-size: 11px;
+}
+	footer .footer_-_copyright, footer .footer_menu {
+		float: left;
+		width: 780px;
+	}
+	footer .footer_menu {
+		float: left;
+		width: 220px;
+	}
+	footer .icons {
+		float: right;
+		width: 40px;
+	}
+		footer ul li {
+			float: left;
+		}
+			footer ul li a {
+				padding: 0 10px;
+				text-transform: uppercase;
+				border-left: 1px solid #ccc;
+			}
+			footer ul li:first-child a {
+				border: none;
+			} 
+
+/* Modules / Componetns */
+
+div.twitter {
+	overflow: hidden;
+	height: 60px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background: transparent url(/clients/ArtsWhistler/Images/twitter_bird.gif) left center no-repeat;
+}
+div.homepage_-_latest_news, div.homepage_-_calls_for_entry {
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 20px;
+	height: 140px;
+	overflow: auto;
+}
+div.frontpage.events_and_programs {
+	padding: 0px;
+}
+div.frontpage.full_listing_link, div.events_and_programs {
+	padding-top: 0;
+}
+	div.frontpage.full_listing_link a {
+		color: #c60b46;
+	}
+div.frontpage, .bloghome {
+	clear: both;
+	padding: 20px 0;
+}
+div.left {
+	clear: none;
+	width: 50%;
+	float: left;
+}
+	div.left ul li {
+		padding: 2px 15px;
+		text-decoration: none;
+		font-size: 11px;
+		display: block;
+		background: transparent url(/clients/ArtsWhistler/Images/arrow.gif) center left no-repeat;
+	}
+		
+/* Layouts */
+.blog .leading {
+	display: block;
+	overflow: hidden;
+	padding: 0 10px;
+	zoom: 1;
+}
+.blog .article_row {
+	display: block;
+	overflow: hidden;
+	zoom: 1;
+}
+	.blog .article_column {
+		padding: 0 10px;
+		margin: 10px 10px 0 0;
+		float: left;
+		font-size: 0.9em;
+	}
+		.blog .column2, .blog .column4 {
+			margin-right: 0;
+		}
+		.blog .article_column h5 {
+			font-size: 1.4em;
+			line-height: 1.5em;
+		}
+	.article_separator {
+		display: none;
+		visibility: hidden;
+		line-height: 0px;
+		height: 0px;
+	}
+
+/* Search */
+ form.search_result label {
+	display: inline;
+}
+.searchintro {
+	font-weight:normal;
+	margin:0 0 20px;
+}
+	.searchintro img {
+		display:inline;
+		border:0;
+	}
+.display {
+	margin:20px 0 0;
+	text-align:right;
+}
+.filter {
+	margin:10px 0 0;
+}
+.highlight {
+	color: #E88003;
+}
+fieldset.word, fieldset.only {
+	border:solid 1px #ccc;
+}
+.only {
+	border:solid 0;
+	margin:10px 0 0 10px;
+	padding:5px 10px;
+	line-height:1.3em;
+}
+.word {
+	padding:10px;
+}
+.word input {
+	background:#fff;
+	border:solid 1px #999;
+	font-weight:bold;
+	margin:0 0 0 10px;
+	padding:2px;
+}
+.phrase {
+	color:#000;
+	margin:10px 10px 10px 0;
+	padding:10px;
+	width:60%;
+	border:solid 1px #ccc;
+	float:left;
+}
+.search_result .button {
+	float: right;
+}
+
+	
+/*Selects*/
+.phrase .inputbox {
+	background:#fff;
+	color:#000;
+	display:block;
+	height:1.5em;
+	margin-top:10px;
+	width:12em;
+}
+	.phrase .inputbox option {
+		background:#EFDEEA;
+		border-bottom:solid 1px #333;
+		padding:2px;
+	}
+	.phrase .inputbox option a:hover {
+		background:#C00;
+		border-color:#CFD0D6;
+		color:#fff;
+	}
+.search_result legend {
+	border-bottom:solid 0 #000;
+}
+
+
+/* Misc Styles */
+.clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+p {
+	padding: 0.5em 0;
+}
+strong {
+	font-weight: bold;
+}
+p.buttonheading {
+	padding: 0;
+	display: none;
+}
+fieldset div, form button, form input.button {
+	margin: 0.5em 0;
+}
+form label {
+	display: block;
+}
+form label.remember {
+	display: inline;
+}
+
+/* Same as H2 in styles.css */
+div.componentheading {
+	color: #e88003;
+	font-size: 18px;
+	text-transform: uppercase;
+	font-weight: normal;
+	margin: 6px 0;
+}
+
+/* System Messages */
+#system-message {
+	margin:10px 0 20px 0;
+	padding: 0 !important;
+	background:#fff;
+	border:solid 0px;
+}
+#system-message dt { font-weight: bold; }
+#system-message dd { margin: 0;  font-weight: bold; text-indent: 0px;background:#fff;padding:0 }
+#system-message dd ul { margin-bottom: 10px; list-style: none; padding: 4px 0px 0px; border-top: 3px solid #BFA842; border-bottom: 3px solid #BFA842;}
+
+/* System Standard Messages */
+#system-message dt.message { display: none; }
+#system-message dd.message {  }
+#system-message dd.message ul { }
+
+/* System Error Messages */
+#system-message dt.error { display: none; }
+#system-message dd.error {  }
+#system-message dd.error ul { margin:0}
+
+/* System Notice Messages */
+#system-message dt.notice { display: none; }
+#system-message dd.notice {  }
+#system-message dd.notice ul { }
+
+/* Editor */
+form.editor {
+	display: block;
+	overflow: hidden;
+}
+form.editor label {
+	display: inline;
+	vertical-align: top;
+}
+	form.editor .metadata label {
+		display: block;
+	}
+form.editor fieldset {
+	border: 2px groove threedface;
+	padding: 1.0em;
+	margin-bottom: 1.0em;
+}
+	form.editor fieldset legend {
+		color: #6CB245;
+		font-size: 1.2em;
+		padding: 0 1.0em
+	}
+form.editor fieldset div.wrap {
+	height: 2px;
+	margin: 0;
+}
+form.editor .button2-left {
+	background: transparent url(../../../administrator/templates/khepri/images/j_button2_left.png) no-repeat scroll 0 0;
+	float: left;
+	margin-left: 5px;
+}
+	form.editor .button2-left .image {
+		background: transparent url(../../../administrator/templates/khepri/images/j_button2_image.png) no-repeat scroll 100% 0;	
+		margin: 0;
+	}
+	form.editor .button2-left .pagebreak {
+		background: transparent url(../../../administrator/templates/khepri/images/j_button2_pagebreak.png) no-repeat scroll 100% 0;
+		margin: 0;
+	}
+	form.editor .button2-left .readmore {
+		background: transparent url(../../../administrator/templates/khepri/images/j_button2_readmore.png) no-repeat scroll 100% 0;
+		margin: 0;
+	}
+		form.editor .button2-left a, .button2-left span {
+			padding: 0 24px 0 6px;
+		}
+		
+form.editor #text_parent {
+	width: 70%;
+}
+
+.validation-advice {
+	font-size: 9px;
+	color: red;
+}
+.jcfooter {
+	display: none;
+}

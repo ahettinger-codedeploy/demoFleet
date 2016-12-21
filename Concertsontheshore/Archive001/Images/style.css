@@ -1,0 +1,289 @@
+/*
+Theme Name: Events Template
+
+-------------------------------------------------------------- */
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+@font-face {
+	font-family: 'OpenSans-CondensedBold';
+	src: url('/clients/russianriverfestivals/Images/opensans-condbold.eot');
+	src: url('/clients/russianriverfestivals/Images/opensans-condbold.eot?#iefix') format('embedded-opentype'),
+			 url('/clients/russianriverfestivals/Images/opensans-condbold.woff') format('woff'),
+			 url('/clients/russianriverfestivals/Images/opensans-condbold.ttf') format('truetype'),
+			 url('/clients/russianriverfestivals/Images/opensans-condbold.svg#opensans-condbold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Ubuntu-Bold';
+	src: url('/clients/russianriverfestivals/Images/ubuntu-bold.eot');
+	src: url('/clients/russianriverfestivals/Images/ubuntu-bold.eot?#iefix') format('embedded-opentype'),
+			 url('/clients/russianriverfestivals/Images/ubuntu-bold.woff') format('woff'),
+			 url('/clients/russianriverfestivals/Images/ubuntu-bold.ttf') format('truetype'),
+			 url('/clients/russianriverfestivals/Images/ubuntu-bold.svg#ubuntu-bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('/clients/russianriverfestivals/Images/ubuntu-regular.eot');
+	src: url('/clients/russianriverfestivals/Images/ubuntu-regular.eot?#iefix') format('embedded-opentype'),
+			 url('/clients/russianriverfestivals/Images/ubuntu-regular.woff') format('woff'),
+			 url('/clients/russianriverfestivals/Images/ubuntu-regular.ttf') format('truetype'),
+			 url('/clients/russianriverfestivals/Images/ubuntu-regular.svg#ubuntu-regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+body{ background: #fff url(/clients/russianriverfestivals/Images/main-bg.jpg) top center repeat; font-family: 'Ubuntu','Arial',  sans-serif; width; auto; }
+#fancybox-wrap, #fancybox-wrap * {
+    box-sizing: content-box !important;
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+}
+/*
+.top-bar{ background: #fff url(/clients/russianriverfestivals/Images/top-nav-bg.jpg) repeat-x; height: 94px;border-bottom: 4px solid #ccc;}
+.top-bar ul > li a:not(.button) {color: #000; }
+.top-bar ul.logo{ height: 90px; position: absolute; z-index: 100;}
+.top-bar ul > li.toggle-topbar a { border-color:black transparent transparent transparent; }
+.top-bar.expanded ul li.toggle-topbar a { border-color: transparent transparent rgba(0, 0, 0, 0.5) transparent; }
+.top-bar ul > li:not(.name):hover, .top-bar ul > li:not(.name).active, .top-bar ul > li:not(.name):focus { background: transparent; }
+*/
+h1, h2, h3, h4, h5, h6 {font-family: 'OpenSans-CondensedBold','Arial Narrow', sans-serif; font-weight: normal;}
+a {color: #137b95;}
+.top-bar{ height: 30px; color: #fff; font-family: 'OpenSans-CondensedBold', sans-serif; text-transform: uppercase; margin-bottom: 10px;}
+
+
+.social { height: 30px; overflow: hidden; }
+.social a.icon{ height: 30px; width: 30px; overflow: hidden;}
+.social .solink span{ padding-left: 300px; }
+.social .facebook{ background: transparent url(/clients/russianriverfestivals/Images/facebook-icon.png) center center no-repeat; }
+.social .twitter{ background: transparent url(/clients/russianriverfestivals/Images/twitter-icon.png) center center no-repeat; }
+.social  ul > li { line-height: 30px; font-size: 12px;}
+.social ul > li a.icon{ height: 30px; }
+.social ul > li a:not(.button){ line-height:30px; font-weight: normal;}
+.social ul > li a.icon:not(.button) { color: white; display: block; font-weight: bold; font-size: 12px; font-weight: bold; height: 30px; line-height: 30px; padding: 0 15px; }
+.long-button{width: 200px;}
+.long-button span{float: left;}
+.long-button a{float: left;}
+.logo.row{ position: relative; z-index: 100;} 
+.logo img{ position: absolute; }
+
+.nav-bar{ margin: 0; background: transparent; border: 0; font-family: 'OpenSans-CondensedBold', sans-serif;  }
+.nav-bar > li { background: transparent; border: 0;}
+.nav-bar > li.current-menu-item { background: #e79467; }
+.nav-bar > li > a { color: #000; text-transform: uppercase;}
+.nav-bar > li.current-menu-item > a { color: #000; text-transform: uppercase;}
+.nav-bar > li:last-child { border: 0; }
+.nav-bar > li.active:hover { background: #2ba6cb; cursor: default; }
+.nav-bar > li:hover { background: #e79467; }
+.nav-bar > li > a:first-child { padding: 0 20px }
+.nav-bar > li.has-flyout > a:first-child {padding-right: 10px;}
+
+.nav-bar > li.has-flyout > a:first-child:after { content: ""; display: block; width: 0; height: 0; border: solid 0px; border-color: #e6e6e6 transparent transparent transparent; position: absolute; right: 20px; top: 17px; }
+a.flyout-toggle { display: none !important; }
+
+
+
+.main-nav{ margin-top: 40px; position: relative; z-index: 50;}
+.main-nav .row{ background: white url(/clients/russianriverfestivals/Images/texture-bg.jpg) repeat;}
+.flyout{ top: 38px; background: transparent; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none; border: 0;}
+ul.flyout li{ border: 0; }
+ul.flyout li a, .nav-bar li ul li a {background: rgba(231,148,103,1); color: #000; border: 0;}
+ul.flyout .has-flyout ul{ left: 200px; top:0px; }
+
+.content{ min-height: 600px; }
+.date {text-align: center;}
+
+
+.event-info { color: #fff; padding: 2%; text-align: center;  background: rgba(0, 0, 0, .8); margin-top: 20px;}
+.event-info h2, .event-info h3{ color:#fff; margin: 0;}
+.event-info h2{ font-family: 'Ubuntu-Bold','Arial',  sans-serif; font-weight: 700; font-size: 39px;}
+.event-info h3{ font-size: 15px;font-family: 'OpenSans-CondensedBold', sans-serif !important; }
+.hasCountdown { border: 0 !important; margin-top: 15px; height: 80px; padding: 10px; background: rgba(0, 0, 0, .8) !important;}
+.countdown_section{font-family: 'OpenSans-CondensedBold', sans-serif; color: #fff; }
+.countdown_amount{margin: 10px 5px -5px 5px;display: block;background: #000;padding: 5px 0;}
+/*
+.countdown_section .countdown_amount{  background: #1d1d1d; background: #1d1d1d;width: 100%;display: inline-block;padding: 6px; position: relative; z-index: 40;}
+.countdown_show4 .countdown_section {width: 20.5%; padding: 2%; font-weight: bold;}
+.countdown_section .countdown_amount:after { content: " ";  width: 100%;   height: 100%;   position: absolute;   z-index: 39;   top: 0;   left: 0; background: url('/clients/russianriverfestivals/Images/countdown-bg.png') center no-repeat;}
+*/
+.ticket-btn{ background: #19a3c5; padding: 3% 8%; margin: 5% auto; font-size: 1.4em; text-transform: uppercase; font-family: 'OpenSans-CondensedBold', sans-serif; font-weight: bold; color:#fff; border-bottom: 7px solid #137b95; display: inline-block; zoom: 1; *display:  inline;}
+.event-info-container{margin: 5%}
+.entry-meta{display: none;}
+
+
+
+.sidebar .instapress-shortcode .instapress-shortcode-image {width: 30%;}
+.widget-area aside{ margin: 5%; }
+
+footer{ color: #fff; padding-top: 20px;  background: #292929 url(/clients/russianriverfestivals/Images/footer-bg.jpg) bottom repeat-x; }
+footer li { font-size: 12px; }
+footer ul.side-nav li { margin: 0;}
+footer .copy p{ margin: 30px 0 0 0; }
+footer a { color:#fff; }
+footer h4, footer h3{ margin: 0; color: #fff; font-size: 15px; font-weight: bold; text-transform: uppercase;}
+footer ul.side-nav{ padding: 10px 0; }
+footer ul.contact-info{ padding: 0; }
+footer ul.contact-info li{ border-bottom: 1px solid #646464; padding: 10px; font-weight: bold; }
+footer .partners{ height: 90px; margin-top: 20px;}
+footer .partners h3{ margin-top: 30px;}
+footer .partners .ten{ overflow: hidden; }
+footer .info{ font-family: 'OpenSans-CondensedBold', sans-serif;  text-transform: uppercase;}
+footer .long-button{ height: 30px; text-align: right;line-height: 30px;}
+footer .long-button span{ width: 100%;}
+footer .long-button a{ float: none;}
+footer .long-button img{ vertical-align: middle; margin-left: 10px;}
+footer .newsletter { line-height: 30px; }
+footer .widget-title{ margin-bottom: 10px; }
+footer .gigasavvy{font-family: 'Ubuntu','Arial', sans-serif;text-transform: none;color: #fff;font-size: 11px;}
+.image_carousel {	padding: 0;}
+.image_carousel img { width: 90px; height: 90px;}
+.image_carousel a{	border: 0px solid #ccc;	background-color: transparent;	padding: 0px;	margin: 0px 20px;	display: block;	float: left;}
+
+
+
+@media only screen and (max-width: 767px) { 
+	ul.flyout, .nav-bar li ul {margin-top: -40px;padding-bottom: 40px;list-style: none;}
+	.main-nav {margin-top: 100px;}
+}
+
+
+/* -----------------------------------------
+   Home
+----------------------------------------- */
+.home .artist.row{ background: white url(/clients/russianriverfestivals/Images/texture-bg.jpg) repeat;} 
+.home .artist.row .twelve{ background: #454545; color: #fff; white-space: nowrap;}
+.home .artist.row .twelve h3{ color:#fff; }
+.home .artist.row .twelve a{ color: #fff;}
+.home .artist.row .three { padding: 20px; }
+.home .artist a{ color: #000; }
+.home .artist a.image{height: 117px;overflow: hidden;display: block;}
+.home .artist a span{color:#e79467; }
+.home .highlights{ background: #454545; color: #fff;}
+.home .highlights h3{ font-family: 'Ubuntu','Arial',  sans-serif; color: #fff; height: 35px; font-size: 14px; line-height: 35px; padding-left: 50px;}
+.home .sliders{ padding: 0; min-height: 250px;}
+.home .highlights .news h3 {background: transparent url('/clients/russianriverfestivals/Images/news-icon.png') 10px center no-repeat;}
+.home .highlights .feed h3{background: transparent url('/clients/russianriverfestivals/Images/facebook-icon2.png') 10px center no-repeat;}
+.home .highlights .instagram  h3{background: transparent url('/clients/russianriverfestivals/Images/instagram-icon.png') 10px center no-repeat; position: relative; left: -10px;}
+.home .highlights .text{padding: 0 15px;}
+.home .highlights a{ color: #e7ca73; }
+.home .highlights .news a{ text-transform: uppercase; }
+.home .flavortext{z-index: 100;position: absolute;bottom: 0;width: 100%; height: 13.5%; background: rgba(225,225,225,.8);  font-family: 'Ubuntu','Arial',  sans-serif; padding: 7px 10px; font-weight: bold; font-size: 20px; text-transform: uppercase;}
+.home div.orbit-wrapper div.slider-nav span { top: auto; bottom: 0;}
+.home div.orbit-wrapper div.slider-nav span.left { right: 125px; left: auto;}
+.home ul.orbit-bullets { bottom: 3px; top: auto; left: auto; right: 40px; margin-left: auto;}
+.home ul.orbit-bullets li { background-image: url(/clients/russianriverfestivals/Images/bullets.png); }
+.home div.orbit-wrapper div.slider-nav span.left {background: url('/clients/russianriverfestivals/Images/left-arrow-small.png');}
+.home div.orbit-wrapper div.slider-nav span.right {background: url('/clients/russianriverfestivals/Images/right-arrow-small.png');}
+.home div.orbit-wrapper div.timer {right: auto; left: 10px;}
+#slider { width: 942px; height: 371px; margin-bottom: 40px; background: #000 url('/clients/russianriverfestivals/Images/foundation/orbit/loading.gif') no-repeat center center; overflow: hidden; position: relative; }
+#slider div.orbit-slide { display: none; }
+
+.home .event-info-container{ position: relative;  position: absolute; z-index: 38;top: 3%; margin: 0; right: 1%;}
+/*
+.home .event-info { background: rgba(0, 0, 0, .8); color: #fff; width: 95%; padding: 2%; text-align: center;}
+.home .event-info h2, .home .event-info h3{ color:#fff; margin: 0;}
+.home .hasCountdown { border: 0; }
+.home .countdown_section{font-family: 'OpenSans-CondensedBold', sans-serif; }
+.home .countdown_section .countdown_amount{  background: #1d1d1d; background: #1d1d1d;width: 100%;display: inline-block;padding: 6px; position: relative; z-index: 40;}
+.home .countdown_show4 .countdown_section {width: 20.5%; margin: 2%; padding: 2%; font-weight: bold;}
+.home .countdown_section .countdown_amount:after { content: " ";  width: 100%;   height: 100%;   position: absolute;   z-index: 39;   top: 0;   left: 0; background: url('/clients/russianriverfestivals/Images/countdown-bg.png') no-repeat;}
+.home .ticket-btn{ background: #19a3c5; padding: 3% 8%; margin: 5% auto; font-size: 1.4em; text-transform: uppercase; font-family: 'OpenSans-CondensedBold', sans-serif; font-weight: bold; color:#fff; border-bottom: 7px solid #137b95; display: inline-block; zoom: 1; *display:  inline;}
+*/
+
+
+#instagram-widget-2 .instagram-image {
+width: 75px;
+height: 75px;
+}
+/* -----------------------------------------
+   Content
+----------------------------------------- */
+.content{ background: url(/clients/russianriverfestivals/Images/content-bg.png); padding-bottom: 20px; padding-top:20px;}
+.content h1, .content h2, .content h3, .content h4, .content h5 {font-family: 'Ubuntu-Bold';font-weight: normal;}
+.content h1 {font-size: 22px;line-height: 25px;}
+.content .eight.columns{padding-left: 30px;}
+.content a{ font-weight: bold; }
+
+.accordion .title{ position: relative; margin-bottom: 5px;}
+.accordion h3{position: absolute;top: 0;text-align: center;width: 100%;font-family: 'OpenSans-CondensedBold', sans-serif; color:#fff; background: rgba(0,0,0,.7); margin:0; padding: 15px; font-size: 1.5em;}
+.accordion{ padding-bottom: 10px; border-bottom: 1px dotted #888; margin-bottom: 20px;}
+.accordion .instructions{ text-align: center; margin-bottom: 10px; font-size: .7em;}
+.tabs {margin-top: 20px;  background: rgba(225,225,225,.8); font-family: 'OpenSans-CondensedBold', sans-serif; font-size: 1.2em;}
+.tabs dd.active, .tabs li.active { border-top: 3px solid #fff;}
+.tabs-content{}
+.tabs-content .block-grid li{ height: 147px; overflow:  hidden; margin-bottom: 15px; }
+.tabs dd.active a, .tabs li.active a { font-weight: normal}
+
+.artist-marquee{ position: relative;}
+.artist-marquee img{ width: 100%; }
+.artist-marquee .highlight-bar{ position: absolute; bottom: 0; height: 50px; width: 100%; background: rgba(255,255,255,.8); height: 50px; overflow: hidden;}
+.artist-marquee .highlight-bar h3{ font-size: 1.5em; display: inline; margin: 8px; float: left;max-width: 40%;line-height: 20px;}
+.artist-marquee .highlight-bar h4{ font-size: 18px;  margin: 0 0 5px 0; font-family: 'OpenSans-CondensedBold', sans-serif;}
+.artist-marquee .highlight-bar .info{float: right;font-family: 'OpenSans-CondensedBold', sans-serif; width: 50%;}
+.artist-marquee .highlight-bar .info a{text-transform: uppercase; color:#2ba6cb; }
+.artist-marquee .highlight-bar .info .ticket-btn{color:#fff; float: right; margin: 2.5%; margin-bottom: 20px; padding: .5% 3%;}
+.artist-marquee .highlight-bar .info .datelink{ float: right; margin-top: 6px;}
+
+
+
+.artist-archive li .item-container{ background: #fff; height: 310px;}
+.artist-archive li .item-container a{display: block; height: 195px; overflow:  hidden;}
+.artist-archive li .item-container img{ width: 96%; margin: 2% 2% 0 2%;}
+.artist-archive li .item-container .highlight-bar{ padding: 3%;}
+.artist-archive li .item-container h3{ margin: 0;}
+
+.page-template-page-partners-php .block-grid{ text-align: center; }
+
+/* -----------------------------------------
+   Sidebar
+----------------------------------------- */
+.widget_nav_menu{ background:#d1d1d1; font-family: 'OpenSans-CondensedBold', sans-serif; font-size: 1.2em; }
+.widget_nav_menu h3{ margin:0; background:#e79468; padding: 3px;}
+.widget_nav_menu ul{ list-style: none;}
+.widget_nav_menu ul li ul{ margin-left: 0; }
+.widget_nav_menu a{ color: #000; display: block;  padding: 3px; font-size: 1em; text-decoration: underline; font-weight: normal;}
+.widget_nav_menu li ul li a{  font-size: inherit; border: 0; text-decoration: none;}
+.widget_nav_menu .current-menu-item a {color: #fff; background-color: #000;}
+.widget_nav_menu .current-menu-item li a{ background: transparent; color: inherit; font-size: inherit;}
+.widget_nav_menu a:hover , .widget_nav_menu .current-menu-item li a:hover{background-color: #f5b492; color: #fff;}
+
+@media print {
+  div:not(.reveal-modal) {
+    display: block;
+  }
+  .logo img{ margin: 0; position: relative;}
+}
+
+
+@media only screen and (max-width: 940px){
+	
+}
+
+@media only screen and (max-width: 767px){
+	
+	.artist-archive li .item-container {
+	background: #fff;
+	height: 250px;
+	}
+	.artist-archive li .item-container a {
+	display: block;
+	height: 150px;
+	overflow: hidden;
+	}	
+	#countdown{ display: none;}
+	.home .event-info-container { width: 100%; position: relative; right: auto; padding:0;}
+	.event-info{ margin:0;}
+	.flavortext {display: none;}
+	#slider { margin: 1% 0;}
+	
+	.partners .two{ display: none; }
+}
+
+
+@media only screen and (max-width: 500px){
+}

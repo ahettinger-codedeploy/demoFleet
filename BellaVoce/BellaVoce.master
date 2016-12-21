@@ -1,0 +1,932 @@
+<%
+'changelog'
+'LSP 10/10/16 - initial development'
+%>
+<!DOCTYPE html>
+<html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:website="http://ogp.me/ns/website"
+  itemscope="" itemtype="http://schema.org/WebPage" class="yui3-js-enabled js flexbox canvas canvastext webgl no-touch hashchange history draganddrop rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms no-csstransforms3d csstransitions video audio svg inlinesvg svgclippaths wf-futurapt-n7-active wf-freightsanspro-n4-active wf-europa-n3-active wf-europa-n7-active wf-europa-i3-active wf-freightsanspro-n3-active wf-freightsanspro-i3-active wf-freightsanspro-i4-active wf-freightsanspro-n5-active wf-freightsanspro-i5-active wf-freightsanspro-n6-active wf-freightsanspro-i6-active wf-freightsanspro-n7-active wf-freightsanspro-i7-active wf-freightsanspro-n9-active wf-freightsanspro-i9-active wf-futurapt-n4-active wf-futurapt-n5-active wf-futurapt-n3-active wf-futurapt-i3-active wf-futurapt-i4-active wf-futurapt-i5-active wf-europa-n4-active wf-europa-i4-active wf-europa-i7-active wf-futurapt-i7-active wf-futurapt-n8-active wf-futurapt-i8-active wf-active"
+  style="" id="yui_3_17_2_1_1476119848771_106" lang="en-US">
+<div id="yui3-css-stamp" style="position: absolute !important; visibility: hidden !important"></div>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <script type="text/javascript" src="/clients/bellavoce/images/fqdlk1KKUkxKLjT_F8rXpVyL_jrjsAgffEotLfF0kuSfeGCIfFHN4UJLFRbh5.js"></script>
+  <style type="text/css">
+    @font-face {
+      font-family: freight-sans-pro;
+      src: url(https://fonts.typekit.net/af/38580f/000000000000000000010b58/27/l?subset_id=2&fvd=n3) format("woff2");
+      font-weight: 300;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: freight-sans-pro;
+      src: url(https://fonts.typekit.net/af/58b7ff/000000000000000000010b59/27/l?subset_id=2&fvd=i3) format("woff2");
+      font-weight: 300;
+      font-style: italic;
+    }
+    
+    @font-face {
+      font-family: freight-sans-pro;
+      src: url(https://fonts.typekit.net/af/3b068a/000000000000000000010b5a/27/l?subset_id=2&fvd=n4) format("woff2");
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: freight-sans-pro;
+      src: url(https://fonts.typekit.net/af/d3755d/000000000000000000010b5b/27/l?subset_id=2&fvd=i4) format("woff2");
+      font-weight: 400;
+      font-style: italic;
+    }
+    
+    @font-face {
+      font-family: freight-sans-pro;
+      src: url(https://fonts.typekit.net/af/03d4ad/000000000000000000010b5c/27/l?subset_id=2&fvd=n5) format("woff2");
+      font-weight: 500;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: freight-sans-pro;
+      src: url(https://fonts.typekit.net/af/ff10a4/000000000000000000010b5d/27/l?subset_id=2&fvd=i5) format("woff2");
+      font-weight: 500;
+      font-style: italic;
+    }
+    
+    @font-face {
+      font-family: freight-sans-pro;
+      src: url(https://fonts.typekit.net/af/8ac0b0/000000000000000000010b5e/27/l?subset_id=2&fvd=n6) format("woff2");
+      font-weight: 600;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: freight-sans-pro;
+      src: url(https://fonts.typekit.net/af/e8560e/000000000000000000010b5f/27/l?subset_id=2&fvd=i6) format("woff2");
+      font-weight: 600;
+      font-style: italic;
+    }
+    
+    @font-face {
+      font-family: freight-sans-pro;
+      src: url(https://fonts.typekit.net/af/58d56b/000000000000000000010b60/27/l?subset_id=2&fvd=n7) format("woff2");
+      font-weight: 700;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: freight-sans-pro;
+      src: url(https://fonts.typekit.net/af/8d0db2/000000000000000000010b61/27/l?subset_id=2&fvd=i7) format("woff2");
+      font-weight: 700;
+      font-style: italic;
+    }
+    
+    @font-face {
+      font-family: freight-sans-pro;
+      src: url(https://fonts.typekit.net/af/0f300d/000000000000000000010b62/27/l?subset_id=2&fvd=n9) format("woff2");
+      font-weight: 900;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: freight-sans-pro;
+      src: url(https://fonts.typekit.net/af/8c5807/000000000000000000010b63/27/l?subset_id=2&fvd=i9) format("woff2");
+      font-weight: 900;
+      font-style: italic;
+    }
+    
+    @font-face {
+      font-family: futura-pt;
+      src: url(https://fonts.typekit.net/af/75f41e/000000000000000000010096/27/l?subset_id=2&fvd=n3) format("woff2");
+      font-weight: 300;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: futura-pt;
+      src: url(https://fonts.typekit.net/af/4221eb/000000000000000000010093/27/l?subset_id=2&fvd=i3) format("woff2");
+      font-weight: 300;
+      font-style: italic;
+    }
+    
+    @font-face {
+      font-family: futura-pt;
+      src: url(https://fonts.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: futura-pt;
+      src: url(https://fonts.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");
+      font-weight: 400;
+      font-style: italic;
+    }
+    
+    @font-face {
+      font-family: futura-pt;
+      src: url(https://fonts.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");
+      font-weight: 500;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: futura-pt;
+      src: url(https://fonts.typekit.net/af/e54bf3/000000000000000000010090/27/l?subset_id=2&fvd=i5) format("woff2");
+      font-weight: 500;
+      font-style: italic;
+    }
+    
+    @font-face {
+      font-family: futura-pt;
+      src: url(https://fonts.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");
+      font-weight: 700;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: futura-pt;
+      src: url(https://fonts.typekit.net/af/1ffb9f/000000000000000000010092/27/l?subset_id=2&fvd=i7) format("woff2");
+      font-weight: 700;
+      font-style: italic;
+    }
+    
+    @font-face {
+      font-family: futura-pt;
+      src: url(https://fonts.typekit.net/af/f73c9d/000000000000000000010097/27/l?subset_id=2&fvd=n8) format("woff2");
+      font-weight: 800;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: futura-pt;
+      src: url(https://fonts.typekit.net/af/f1920f/000000000000000000010098/27/l?subset_id=2&fvd=i8) format("woff2");
+      font-weight: 800;
+      font-style: italic;
+    }
+    
+    @font-face {
+      font-family: europa;
+      src: url(https://fonts.typekit.net/af/de8f44/0000000000000000000129a3/27/l?subset_id=2&fvd=n3) format("woff2");
+      font-weight: 300;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: europa;
+      src: url(https://fonts.typekit.net/af/4f7924/0000000000000000000129a6/27/l?subset_id=2&fvd=i3) format("woff2");
+      font-weight: 300;
+      font-style: italic;
+    }
+    
+    @font-face {
+      font-family: europa;
+      src: url(https://fonts.typekit.net/af/6478d5/0000000000000000000129a4/27/l?subset_id=2&fvd=n4) format("woff2");
+      font-weight: 400;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: europa;
+      src: url(https://fonts.typekit.net/af/9e7c05/0000000000000000000129a7/27/l?subset_id=2&fvd=i4) format("woff2");
+      font-weight: 400;
+      font-style: italic;
+    }
+    
+    @font-face {
+      font-family: europa;
+      src: url(https://fonts.typekit.net/af/e0a21b/0000000000000000000129a5/27/l?subset_id=2&fvd=n7) format("woff2");
+      font-weight: 700;
+      font-style: normal;
+    }
+    
+    @font-face {
+      font-family: europa;
+      src: url(https://fonts.typekit.net/af/a13e2d/0000000000000000000129a8/27/l?subset_id=2&fvd=i7) format("woff2");
+      font-weight: 700;
+      font-style: italic;
+    }
+  </style>
+    <link rel="stylesheet" type="text/css" href="/clients/bellavoce/images/site.css">
+    <!-- <![endif]-->
+    <!-- End of Squarespace Headers -->
+
+</head>
+
+<body class="site-title-position-bottom      social-icon-style-round  gallery-design-slideshow aspect-ratio-auto lightbox-style-dark gallery-navigation-numbers gallery-info-overlay-always-show gallery-aspect-ratio-32-standard gallery-arrow-style-rectangular gallery-transitions-fade gallery-show-arrows gallery-auto-crop gallery-autoplay gallery-loop product-list-titles-under product-list-alignment-center product-item-size-11-square product-image-auto-crop product-gallery-size-11-square  show-product-price show-product-item-nav product-social-sharing  event-show-past-events event-thumbnails event-thumbnail-size-32-standard event-date-label  event-list-show-cats event-list-date event-list-time event-list-address     event-excerpts  event-item-back-link     hide-opentable-icons opentable-style-dark newsletter-style-dark small-button-style-solid small-button-shape-square medium-button-style-solid medium-button-shape-square large-button-style-solid large-button-shape-square button-style-default button-corner-style-square tweak-product-quick-view-button-style-floating tweak-product-quick-view-button-position-bottom tweak-product-quick-view-lightbox-excerpt-display-truncate tweak-product-quick-view-lightbox-show-arrows tweak-product-quick-view-lightbox-show-close-button tweak-product-quick-view-lightbox-controls-weight-light native-currency-code-usd collection-55a53161e4b0635b1073072a collection-type-page collection-layout-default mobile-style-available site-title"
+  id="collection-55a53161e4b0635b1073072a" style="background-color:darkgray;">
+
+  <div id="mobileNav">
+    <div class="wrapper">
+
+
+      <div id="topNav">
+        <nav class="main-nav mobile-nav">
+          <ul>
+
+
+
+
+            <li class="page-collection">
+
+
+              <a href="http://www.bellavoce.org/">Home</a>
+
+
+
+
+            </li>
+
+
+
+
+
+
+
+
+            <li>
+              <ul>
+                <li class="folder-titletext"><a href="http://www.bellavoce.org/concertd/">Concerts &amp; Events</a></li>
+
+
+
+                <li class="subfolder page-collection active-link">
+
+
+                  <a href="http://www.bellavoce.org/2015-16-season/">2016-17 Season Subscription</a>
+
+
+
+
+                </li>
+
+
+
+                <li class="subfolder page-collection">
+
+
+                  <a href="http://www.bellavoce.org/bella-voce-concerts/">Bella Voce Concerts</a>
+
+
+
+
+                </li>
+
+
+
+                <li class="subfolder page-collection">
+
+
+                  <a href="http://www.bellavoce.org/messiah/">Messiah 2016</a>
+
+
+
+
+                </li>
+
+
+
+                <li class="subfolder page-collection">
+
+
+                  <a href="http://www.bellavoce.org/holiday/">Holiday 2016</a>
+
+
+
+
+                </li>
+
+
+
+                <li class="subfolder page-collection">
+
+
+                  <a href="http://www.bellavoce.org/spring/">Spring 2017</a>
+
+
+
+
+                </li>
+
+
+
+                <li class="subfolder page-collection">
+
+
+                  <a href="http://www.bellavoce.org/season-preview/">2016-17 Gala</a>
+
+
+
+
+                </li>
+
+
+
+                <li class="subfolder page-collection">
+
+
+                  <a href="http://www.bellavoce.org/opus-327/">Opus 327 NFP Series</a>
+
+
+
+
+                </li>
+
+
+
+                <li class="subfolder page-collection">
+
+
+                  <a href="http://www.bellavoce.org/st-cecelia/">Cecilia</a>
+
+
+
+
+                </li>
+
+
+
+                <li class="subfolder page-collection">
+
+
+                  <a href="http://www.bellavoce.org/bach-cantantas/">Bach Cantatas</a>
+
+
+
+
+                </li>
+
+
+
+                <li class="subfolder page-collection">
+
+
+                  <a href="http://www.bellavoce.org/new-page-1/">Monteverdi</a>
+
+
+
+
+                </li>
+
+
+              </ul>
+            </li>
+
+
+
+
+
+
+
+
+            <li class=" external-link">
+
+
+
+
+              <a href="http://bellavoce.tix.com/">Tickets</a>
+
+
+            </li>
+
+
+
+
+
+
+
+
+
+            <li class="page-collection">
+
+
+              <a href="http://www.bellavoce.org/donate/">Donate</a>
+
+
+
+
+            </li>
+
+
+
+
+
+
+
+
+            <li>
+              <ul>
+                <li class="folder-titletext"><a href="http://www.bellavoce.org/listen/">Listen</a></li>
+
+
+
+                <li class="subfolder page-collection">
+
+
+                  <a href="http://www.bellavoce.org/audio/">Sample Audio</a>
+
+
+
+
+                </li>
+
+
+
+                <li class="subfolder page-collection">
+
+
+                  <a href="http://www.bellavoce.org/recordings/">Recordings</a>
+
+
+
+
+                </li>
+
+
+              </ul>
+            </li>
+
+
+
+
+
+
+
+
+            <li class="page-collection">
+
+
+              <a href="http://www.bellavoce.org/reviews/">Reviews</a>
+
+
+
+
+            </li>
+
+
+
+
+
+
+
+
+            <li>
+              <ul>
+                <li class="folder-titletext"><a href="http://www.bellavoce.org/about/">About Us</a></li>
+
+
+
+                <li class="subfolder page-collection">
+
+
+                  <a href="http://www.bellavoce.org/who-we-are/">Who We Are</a>
+
+
+
+
+                </li>
+
+
+
+                <li class="subfolder page-collection">
+
+
+                  <a href="http://www.bellavoce.org/artistic-director/">Artistic Director</a>
+
+
+
+
+                </li>
+
+
+
+                <li class="subfolder page-collection">
+
+
+                  <a href="http://www.bellavoce.org/artistic-director-emerita/">Artistic Director Emerita</a>
+
+
+
+
+                </li>
+
+
+              </ul>
+            </li>
+
+
+
+
+
+
+
+
+            <li class="page-collection">
+
+
+              <a href="http://www.bellavoce.org/contact/">Contact</a>
+
+
+
+
+            </li>
+
+
+
+
+
+
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div id="bannerImage" class="default-background default-background" data-content-field="page-settings" style="margin-bottom: 27px;">
+    <div id="logo">
+
+      <h1 class="logo fade-in" data-content-field="site-title" id="yui_3_17_2_1_1476119848771_131">
+        <a href="http://www.bellavoce.org/" data-shrink-original-size="36" style="letter-spacing: 0.0277778em;">
+            
+              Bella Voce
+            
+          </a>
+      </h1>
+
+    </div>
+  </div>
+
+
+
+  <header id="header">
+
+    <div class="logo-subtitle">Chicago's Premier Professional Chamber Choir</div>
+
+
+
+    <div id="topNav">
+      <nav class="main-nav dropdown-hover desktop-nav" data-content-field="navigation-mainNav">
+        <ul>
+
+
+          <li class="page-collection" id="53b31083e4b0a4eb8af99346">
+
+
+
+
+            <a href="http://www.bellavoce.org/">Home</a>
+
+
+
+
+
+
+
+          </li>
+
+
+
+          <li class="folder-collection folder active-link active-folder" id="53b310a7e4b0f3ce57561658">
+
+
+
+            <a>Concerts &amp; Events</a>
+            <div class="subnav" style="margin-left: -129px;">
+              <ul>
+
+
+                <li class="page-collection active-link">
+                  <a href="http://www.bellavoce.org/2015-16-season/">2016-17 Season Subscription</a>
+                </li>
+
+
+
+
+                <li class="page-collection">
+                  <a href="http://www.bellavoce.org/bella-voce-concerts/">Bella Voce Concerts</a>
+                </li>
+
+
+
+
+                <li class="page-collection">
+                  <a href="http://www.bellavoce.org/messiah/">Messiah 2016</a>
+                </li>
+
+
+
+
+                <li class="page-collection">
+                  <a href="http://www.bellavoce.org/holiday/">Holiday 2016</a>
+                </li>
+
+
+
+
+                <li class="page-collection">
+                  <a href="http://www.bellavoce.org/spring/">Spring 2017</a>
+                </li>
+
+
+
+
+                <li class="page-collection">
+                  <a href="http://www.bellavoce.org/season-preview/">2016-17 Gala</a>
+                </li>
+
+
+
+
+                <li class="page-collection">
+                  <a href="http://www.bellavoce.org/opus-327/">Opus 327 NFP Series</a>
+                </li>
+
+
+
+
+                <li class="page-collection">
+                  <a href="http://www.bellavoce.org/st-cecelia/">Cecilia</a>
+                </li>
+
+
+
+
+                <li class="page-collection">
+                  <a href="http://www.bellavoce.org/bach-cantantas/">Bach Cantatas</a>
+                </li>
+
+
+
+
+                <li class="page-collection">
+                  <a href="http://www.bellavoce.org/new-page-1/">Monteverdi</a>
+                </li>
+
+
+
+              </ul>
+            </div>
+
+
+
+          </li>
+
+
+
+          <li class=" external-link" id="tickets">
+
+
+
+
+
+
+            <a href="http://bellavoce.tix.com/">Tickets</a>
+
+
+
+
+
+          </li>
+
+
+
+          <li class="page-collection" id="53b31298e4b059c25caeb32f">
+
+
+
+
+            <a href="http://www.bellavoce.org/donate/">Donate</a>
+
+
+
+
+
+
+
+          </li>
+
+
+
+          <li class="folder-collection folder" id="53b3130ce4b0bf59f94a37a5">
+
+
+
+            <a>Listen</a>
+            <div class="subnav" style="margin-left: -63px;">
+              <ul>
+
+
+                <li class="page-collection">
+                  <a href="http://www.bellavoce.org/audio/">Sample Audio</a>
+                </li>
+
+
+
+
+                <li class="page-collection">
+                  <a href="http://www.bellavoce.org/recordings/">Recordings</a>
+                </li>
+
+
+
+              </ul>
+            </div>
+
+
+
+          </li>
+
+
+
+          <li class="page-collection" id="53b313ace4b0a4eb8af99883">
+
+
+
+
+            <a href="http://www.bellavoce.org/reviews/">Reviews</a>
+
+
+
+
+
+
+
+          </li>
+
+
+
+          <li class="folder-collection folder" id="53b311f5e4b0979330320c08">
+
+
+
+            <a>About Us</a>
+            <div class="subnav" style="margin-left: -118.5px;">
+              <ul>
+
+
+                <li class="page-collection">
+                  <a href="http://www.bellavoce.org/who-we-are/">Who We Are</a>
+                </li>
+
+
+
+
+                <li class="page-collection">
+                  <a href="http://www.bellavoce.org/artistic-director/">Artistic Director</a>
+                </li>
+
+
+
+
+                <li class="page-collection">
+                  <a href="http://www.bellavoce.org/artistic-director-emerita/">Artistic Director Emerita</a>
+                </li>
+
+
+
+              </ul>
+            </div>
+
+
+
+          </li>
+
+
+
+          <li class="page-collection" id="53b36e56e4b0f49e4e2a364d">
+
+
+
+
+            <a href="http://www.bellavoce.org/contact/">Contact</a>
+
+
+
+
+
+
+
+          </li>
+
+
+
+          <li id="mobileMenuLink"><a>Menu</a></li>
+
+        </ul>
+      </nav>
+
+    </div>
+
+
+  </header>
+
+  <div id="canvas">
+    <div id="wrapper" class="cf">
+
+
+
+      <header class="page-title">
+        <h1>2016-17 Season Subscription</h1>
+      </header>
+      <div class="page-description"></div>
+
+
+
+
+
+      <!-- TAG FILTER RESULTS ex: http://base-template.squarespace.com/blog/?tag=tag2 -->
+
+
+
+      <!-- AUTHOR FILTER RESULTS ex: http://www.base-template.com/blog?author=4f046df4d09ae2cf23d1aaa2 -->
+
+
+
+      <section id="page" role="main" data-content-field="main-content">
+
+        <div class="sqs-layout sqs-grid-12 columns-12" data-type="page" data-updated-on="1475738527071" id="page-55a53161e4b0635b1073072a">
+          <div class="row sqs-row" id="yui_3_17_2_1_1476119848771_105">
+            <div class="col sqs-col-12 span-12">
+              <asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+  </div>
+ 
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="page-divider"></div>
+
+    <footer id="footer">
+      <div class="sqs-layout sqs-grid-12 columns-12" data-layout-label="Footer Content" data-type="block-field" data-updated-on="1475734553279"
+        id="footerBlock">
+        <div class="row sqs-row">
+          <div class="col sqs-col-12 span-12">
+            <div class="sqs-block html-block sqs-block-html" data-block-type="2" id="block-bc1b5a496f49b415e9b2">
+              <div class="sqs-block-content">
+                <p class="text-align-right"><strong>Bella Voce</strong><br>c/o School of Theatre &amp; Music<br>University of Illinois at Chicago<br>1040
+                  W. Harrison St., MC255<br>Chicago, IL 60607-7130</p>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div id="footerBlocks-2" class="social-links" data-content-field="connected-accounts">
+        <a href="https://twitter.com/BellaVoceChicag" target="_blank" ><i class="fa fa-twitter"></i></a>
+        <a href="https://www.facebook.com/BellaVoceChicago/app_216201571807288?ref=hl" target="_blank" ><i class="fa fa-facebook"></i></a>
+      </div>
+
+
+    </footer>
+
+  </div>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+
+		<script>
+			$(document).ready(function() {
+				$("#MasterContent_TixInnerContent_pnlButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_ButtonPanel").removeAttr("style");
+/* remove extra button defaults
+				$("#MasterContent_TixInnerContent_ctl00_gvSchedule_btnBuyTix_0").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnBackToShopping").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCancelOrder").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCheckout").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_LoginButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CancelOrderButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CompleteButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingBtn").removeAttr("style");*/
+				
+				
+			});
+		</script>
+
+		</div>
+		</form>
+	</body>
+
+	</html>

@@ -1,0 +1,1566 @@
+@charset "UTF-8";
+
+/* 
+   css Copyright © 2005-2012 Karelia Software. All rights reserved.
+   css released under Creative Commons License  - http://creativecommons.org/licenses/by-sa/2.5/ 
+   All associated graphics belong to their respective owners and are licensed separately. 
+*/
+
+/* IE7 hacks */
+
+*:first-child+html .gridItem img {
+	position:relative;
+	top:0px;
+}
+
+*:first-child+html .gridItem h3 {
+	position:relative;
+	top:0px;
+}
+
+/* Navigation arrows */
+div.text-navigation { text-align:center; margin-bottom:1em;}
+div.text-navigation div { display:inline; margin:0px 0.5em; }
+.collection-navigation .disabled-navigation { text-indent:-5000px; }
+
+/* 2.0 wrap compatibility. 2.0-compatible designs can further adjust these if they need */
+.wide { display:block; }
+
+.narrow.left {   /* Some designs won't respect without !important */
+    float:left!important;
+    clear:left!important;
+}
+.narrow.right {
+    float:right!important;
+    clear:right!important;
+}
+
+.wide.left .graphic, img.wide.left { margin-left:0px; margin-right:auto; }
+.wide.center .graphic, img.wide.center { margin-left:auto; margin-right:auto; }
+.wide.right .graphic, img.wide.right { margin-left:auto; margin-right:0px; }
+
+.ImageElement.left, .AudioElement.left { text-align:left; }
+.ImageElement.center, .AudioElement.center { text-align:center; }
+.ImageElement.right, .AudioElement.right { text-align:right; }
+
+/* Captions should align themselves with the graphic */
+.graphic-container.left .caption { text-align:left; }
+.graphic-container.center .caption { text-align:center; }
+.graphic-container.right .caption { text-align:right; }
+
+/* Inline iframes need to display as a block to layout right */
+.graphic iframe { display:block; }
+
+/* Pagelet photo grids should be generally be auto width (some 1.x designs hardcoded an exact width) */
+.pagelet .photogrid-index { width:auto; }
+
+/* For content like amazon which forces white background. Design SHOULD set color for A tag and text color. */
+.whiteBackground
+{
+	background-color:white;
+}
+
+.article-info
+{
+	margin-bottom:1em;
+}
+ 
+/* Firefox reduce dotted lines on links */
+.photo-navigation a:focus, .replaced a:focus {overflow:hidden;}
+
+/* Disqus correction to prevent overflow scroll bars in some designs */
+#dsq-content { overflow:hidden; }
+#dsq-content .dsq-auth-header { width: auto!important; }
+#dsq-content .dsq-by { margin: 4px 6px 0px 0px; }
+#dsq-content .dsq-by a, #dsq-content .dsq-by a:hover { border: 0px none; }
+#dsq-content h3 { margin:0px; }
+
+/* Site menus. Don't wrap the top level items, and wrap sub-menu items normaly. */
+#sitemenu-content ul li span.in { white-space:nowrap;}
+* html #sitemenu-content ul li span.in {white-space: normal}
+*:first-child+html #sitemenu-content ul li span.in {white-space: normal}
+#sitemenu-content ul ul li span.in {white-space: normal}
+#sitemenu-content span.in { position: relative; }
+
+body { word-wrap:break-word; }
+
+/* Make sure scaled-down images look good in IE */
+img { -ms-interpolation-mode: bicubic; }
+
+/* MODIFIED, BASED ON THE FOLLOWING BASE CSS AND DEFAULT THEME
+*/
+/*
+ * jQuery Nivo Slider v3.2
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2012, Dev7studios
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+/* The Nivo Slider styles */
+.nivoSlider {
+	position:relative;
+	width:100%;
+	height:auto;
+	overflow: hidden;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	max-width: none;
+}
+.nivo-main-image {
+	display: block !important;
+	position: relative !important; 
+	width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+	background:white; 
+	filter:alpha(opacity=0); 
+	opacity:0;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+	top:0;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+	overflow:hidden;
+}
+.nivo-box img { display:block; }
+
+/* Caption styles */
+.nivo-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	width:100%;
+	z-index:8;
+	padding: 5px 10px;
+	opacity: 0.8;
+	overflow: hidden;
+	display: none;
+	-moz-opacity: 0.8;
+	filter:alpha(opacity=8);
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.nivo-caption p {
+	padding:5px;
+	margin:0;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0px;
+}
+.nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav {
+	text-align:center;
+}
+.nivo-controlNav a {
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
+
+/*
+Skin Name: Nivo Slider Default Theme
+Skin URI: http://nivo.dev7studios.com
+Description: The default skin for the Nivo Slider.
+Version: 1.3
+Author: Gilbert Pellegrom
+Author URI: http://dev7studios.com
+Supports Thumbs: true
+*/
+
+.nivoSlider {
+	position:relative;
+	background:#fff url(nivo-images/loading.gif) no-repeat 50% 50%;
+    margin-bottom:10px;
+	-webkit-box-shadow: 0px 1px 5px 0px rgb(128,128,128);
+	-webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 1px 5px 0px rgb(128,128,128);
+	-moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 1px 5px 0px rgb(128,128,128);
+	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+	margin:0 !important;
+	border:none !important;
+	padding:0 !important;
+}
+.nivoSlider a {
+	border:0;
+	display:block;
+}
+
+.nivo-controlNav a {
+	margin:0 4px;
+}
+
+.nivo-dots .nivo-controlNav a {
+	display:inline-block;
+	width:16px;
+	height:16px;
+	background:url(nivo-images/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin: 0 2px;
+}
+
+.nivo-directionNav a {
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(nivo-images/arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	opacity: 0;
+	-webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+
+
+.nivoSlider:hover .nivo-directionNav a { opacity: 1; }
+
+a.nivo-nextNav {
+	background-position:-30px 0;
+	right:15px;
+}
+a.nivo-prevNav {
+	left:15px;
+}
+
+.nivo-dots .nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.nivo-caption a {
+    color:#fff;
+    border-bottom:1px dotted #fff;
+}
+.nivo-caption a:hover {
+    color:#fff;
+}
+
+.nivo-thumbs-enabled {
+	width: 100%;
+}
+.nivo-thumbs-enabled a {
+	width: auto;
+	height: auto;
+	background: none;
+	margin-bottom: 5px;
+}
+.nivo-thumbs-enabled img {
+	padding:0 !important; margin:0; background:none !important; border:none;
+}
+
+.photogrid-index-bottom { clear:left; }
+
+/*
+	Based on ColorBox 1.3.19 example1.  Changes:
+		changed "colorbox/" to "colorbox/"
+		removed background:url line for #cboxOverlay
+        added color to #cboxError
+*/
+/*
+    ColorBox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto; -webkit-overflow-scrolling: touch;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%; height:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+.cboxPhoto{float:left; margin:auto; border:0; display:block; max-width:none;}
+.cboxIframe{width:100%; height:100%; display:block; border:0;}
+#colorbox, #cboxContent, #cboxLoadedContent{box-sizing:content-box; -moz-box-sizing:content-box; -webkit-box-sizing:content-box;}
+
+/* 
+    User Style:
+    Change the following styles to modify the appearance of ColorBox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+#colorbox{}
+
+    #cboxTopLeft,#cboxTopRight,#cboxBottomLeft,#cboxBottomRight,#cboxMiddleLeft,#cboxMiddleRight{width:21px; height:21px; background:url(colorbox/controls.png) no-repeat}
+
+    #cboxTopLeft{background-position:-101px 0;}
+    #cboxTopRight{background-position:-130px 0;}
+    #cboxBottomLeft{background-position:-101px -29px;}
+    #cboxBottomRight{background-position:-130px -29px;}
+    #cboxMiddleLeft{background-position:left top; background-repeat:repeat-y;}
+    #cboxMiddleRight{background-position:right top; background-repeat:repeat-y;}
+
+    #cboxTopCenter{height:21px; background:url(colorbox/border.png) 0 0 repeat-x;}
+    #cboxBottomCenter{height:21px; background:url(colorbox/border.png) 0 -29px repeat-x;}
+    #cboxContent{background:#fff; overflow:hidden;}
+        .cboxIframe{background:#fff;}
+        #cboxError{padding:50px; border:1px solid #ccc;color:red;}
+        #cboxLoadedContent{margin-bottom:28px;}
+        #cboxTitle{position:absolute; bottom:4px; left:0; text-align:center; width:100%; color:#949494;}
+        #cboxCurrent{position:absolute; bottom:4px; left:58px; color:#949494;}
+        #cboxSlideshow{position:absolute; bottom:4px; right:30px; color:#0092ef;}
+            
+        #cboxPrevious,#cboxNext,#cboxClose{background:url(colorbox/controls.png) no-repeat; width:25px; height:25px; text-indent:-9999px;}
+            
+        #cboxPrevious{position:absolute; bottom:0; left:0; background-position:-75px 0;}
+        #cboxPrevious:hover{background-position:-75px -25px;}
+        #cboxNext{position:absolute; bottom:0; left:27px; background-position:-50px 0;}
+        #cboxNext:hover{background-position:-50px -25px;}
+        #cboxLoadingOverlay{background:url(colorbox/loading_background.png) no-repeat center center;}
+        #cboxLoadingGraphic{background:url(colorbox/loading.gif) no-repeat center center;}
+        #cboxClose{position:absolute; bottom:0; right:0; background-position:-25px 0;}
+        #cboxClose:hover{background-position:-25px -25px;}
+
+
+/*
+  The following fixes a problem where IE7 and IE8 replace a PNG's alpha transparency with a black fill
+  when an alpha filter (opacity change) is set on the element or ancestor element.  This style is not applied to or needed in IE9.
+  See: http://jacklmoore.com/notes/ie-transparency-problems/
+*/
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FFFFFF,endColorstr=#00FFFFFF);
+}
+
+/*
+  The following provides PNG transparency support for IE6
+  Feel free to remove this and the /ie6/ directory if you have dropped IE6 support.
+*/
+.cboxIE6 #cboxTopLeft{background:url(colorbox/ie6/borderTopLeft.png);}
+.cboxIE6 #cboxTopCenter{background:url(colorbox/ie6/borderTopCenter.png);}
+.cboxIE6 #cboxTopRight{background:url(colorbox/ie6/borderTopRight.png);}
+.cboxIE6 #cboxBottomLeft{background:url(colorbox/ie6/borderBottomLeft.png);}
+.cboxIE6 #cboxBottomCenter{background:url(colorbox/ie6/borderBottomCenter.png);}
+.cboxIE6 #cboxBottomRight{background:url(colorbox/ie6/borderBottomRight.png);}
+.cboxIE6 #cboxMiddleLeft{background:url(colorbox/ie6/borderMiddleLeft.png);}
+.cboxIE6 #cboxMiddleRight{background:url(colorbox/ie6/borderMiddleRight.png);}
+
+.cboxIE6 #cboxTopLeft,
+.cboxIE6 #cboxTopCenter,
+.cboxIE6 #cboxTopRight,
+.cboxIE6 #cboxBottomLeft,
+.cboxIE6 #cboxBottomCenter,
+.cboxIE6 #cboxBottomRight,
+.cboxIE6 #cboxMiddleLeft,
+.cboxIE6 #cboxMiddleRight {
+    _behavior: expression(this.src = this.src ? this.src : this.currentStyle.backgroundImage.split('"')[1], this.style.background = "none", this.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src=" + this.src + ", sizingMethod='scale')");
+}
+
+textarea.fullWidth, input.fullWidth, select.fullWidth {
+	width:96%;
+	margin:4px 0;
+}
+textarea.fullWidth, select.fullWidth {
+	margin: 4px 1px
+}
+
+form.contactElement input.submit {
+	width:auto;
+	display:block;
+	margin-left:auto;
+	margin-right:2%;
+}
+form.contactElement th {
+	text-align:right;
+	font-weight:normal;
+	width:25%;
+}
+
+.contactError { color:red; font-weight:bold; }
+
+/* Contact Element For IE 7 */
+*:first-child+html form.contactElement input.submit {
+	padding:0px 10%;
+	min-width: 0px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+form.contactElement p {
+	text-align: left;
+}
+
+/*
+File:  'Blueball Shadow Red' main.css Style Sheet
+Created:  13, November, 2009
+Last Modified: 29, July, 2011
+Version: 4.0
+Author:  Charlie Lockhart, Blueball Design
+www.sandvoxdesigns.blueballdesign.com
+Copyright 2010-2011 Charlie Lockhart/Blueball Design USA, All Rights Reserved
+*/
+
+/* @group Global CSS */
+
+body {
+	margin: 0px auto;
+	background: #161616 url(/clients/BrandonBennettLive/Images/shadow_bodybgtile_1.jpg) top left repeat-x;
+	font-family: "Lucida Grande", "Lucida Sans", Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	line-height: 1.7em;
+	color: #8e8e8e;
+	height: 100%;
+	text-align: left;
+	word-wrap: break-word;
+}
+
+img {
+	border: 0;
+}
+
+a img {
+	border: 0;
+}
+
+a:link, a:visited, a:active {
+	color: #9e9e9e;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #d53a38;	text-decoration: underline;
+}
+
+p {
+	margin: 0 0 12px 0;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+blockquote {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;	font-style: normal;	margin: 8px 0 8px 12px;	font-size: 1.2em;
+	line-height: 1.6em;
+	padding:  0 10px 0 9px;
+	border-left: 3px solid #4e4e4e;
+	font-weight: bold;
+	color: #d53a38;
+	letter-spacing: .5px;
+}
+
+h2 {
+	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.7em;
+	line-height: 1.3em;
+	color: #d53a38;
+	font-weight: bold;
+	margin: 0 0 10px 0;
+	padding: 0;
+	text-align: left;	
+	letter-spacing: .5px;
+}
+
+* html h2 {
+	letter-spacing: -1px;
+	font-weight: 800;
+}
+
+*:first-child+html h2 {
+	font-size: 1.75em;
+}
+
+h3 {
+	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.4em;
+	line-height: 1.3em;
+	color: #d53a38;
+	font-weight: bold;
+	margin: 0 0 6px 0;
+	padding: 0;
+	letter-spacing: .5px;
+}
+
+*:first-child+html h3 {
+	font-size: 1.4em;
+}
+
+* html h2, h3 {
+	font-weight: 700;
+}
+
+.hidden {
+	display: none;
+}
+
+.ImageElement, .VideoElement {
+	text-align: center;
+	margin-top: 20px;
+}
+
+img.narrow {
+	float: left;
+	margin: 4px 14px 4px 0;
+}
+
+* html img.narrow {
+	margin: 4px 10px 4px 0;
+}
+
+img.wide {
+	display: block;
+}
+
+div.rssBadge {
+	margin: 10px;
+	text-align: center !important;
+}
+
+* html div.rssBadge {
+	margin: 5px;
+}
+
+* {
+	
+}
+
+/* Small icon option */
+
+img.smallRSSBadgeIcon {
+	vertical-align: middle;
+}
+
+img.smallRSSBadgeIconLeft {
+	margin-right: 4px;
+}
+
+img.smallRSSBadgeIconRight {
+	margin-left: 4px;
+}
+
+/* Large icon option */
+
+div.largeRSSBadgeIcon, p.largeRSSBadgeIcon {
+	margin: 0 10px;
+	text-align: center !important;
+}
+
+* html div.largeRSSBadgeIcon, p.largeRSSBadgeIcon {
+	margin: 0 5px;
+}
+
+img.largeRSSBadgeIcon {
+	margin-bottom: 4px;
+}
+
+p.largeRSSBadgeIcon {
+	margin: 0;
+}
+
+ul {
+	padding-left: 20px;
+	list-style-type: disc;
+}
+
+ol, dd {
+	padding-left: 20px;
+}
+
+ol.arabic-numbers {
+	list-style-type: decimal;
+}
+
+ol.upper-alpha {
+	list-style-type: upper-alpha;
+}
+
+ol.lower-alpha {
+	list-style-type: lower-alpha;
+}
+
+ol.upper-roman {
+	list-style-type: upper-roman;
+}
+
+ol.lower-roman {
+	list-style-type: lower-roman;
+}
+
+.sitemap-page a:hover {
+	color: #d53a38;
+	text-decoration: underline;
+}
+
+/* @end */
+
+/* @group Page Container */
+
+#page-container {
+	width: 996px;
+	margin: 0px auto;
+	height: 100%;
+	z-index: 10;
+}
+
+#page {
+	clear: both;
+	margin: 0 auto;
+	margin-top: 0px;
+	float: left;
+	width: 996px;
+	background: url(shadow_pagetopbg_980.jpg) top center no-repeat;
+}
+
+.no-sidebar #page {
+	clear: both;
+	margin: 0 auto;
+	margin-top: 0px;
+	float: left;
+	width: 996px;
+	
+}
+
+
+/* @end */
+
+/* @group Page Top */
+
+#page-top {
+	position: relative;
+	margin: 0px 25px 0px 5px;
+	float: left;
+	width: 180px;
+	background: transparent;
+	overflow: visible;
+	height: auto;
+}
+
+* html #page-top {
+	display: inline;
+}
+
+#title {
+	margin: 0px;
+}
+
+#title #logo-container {
+	position: absolute;
+	top: 21px;
+	left: 0px;
+	right: 0px;
+}
+
+#logo {
+	display: block;
+	width: 178px;
+	height: 57px;
+	background: transparent;
+}
+
+#logo a {
+	border: 0;
+}
+
+#title h1 {
+	position: absolute;
+	top: 28px;
+	left: 234px;
+	right: 0px;
+	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	width: 722px;
+	padding: 0 0 8px 0;
+	font-size: 1.8em;
+	line-height: 1.0em;
+	text-align: left;
+	font-weight: normal;
+	background: transparent;
+	color: #9e9e9e;
+}
+
+* html #title h1 {
+	font-weight: 600;
+	letter-spacing: -1px;
+}
+
+*:first-child+html h1 {
+}
+
+#title h1 a:link, #title h1 a:visited, #title h1 a:active {
+	text-decoration: none;
+	color: #9e9e9e;
+}
+
+#title h1 a:hover {
+	text-decoration: none;
+	color: #d53a38;
+	padding: 0;
+	background: transparent;
+}
+
+.has-logo #title h1 {
+	right: 250px;
+}
+
+.no-logo #title h1 {
+	right: 50px;
+}
+
+#title p {
+	position: absolute;
+	top: 110px;
+	left: 234px;
+	width:  722px;
+	right: 0;
+	padding: 0;
+	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 1.2em;
+	font-weight: bold;
+	line-height: 1.1em;
+	text-align: left;
+	background: transparent;
+	letter-spacing: .5px;
+	color: #7e7e7e;
+}
+
+* html #title p {
+	font-weight: 600;
+}
+
+.has-logo #title p {
+	right: 250px;
+}
+
+.no-logo #title p {
+	right: 50px;
+}
+
+/* @end */
+
+/* @group Site Nav Menu */
+
+#page-top #sitemenu-container {
+	position: relative;
+	width: 200px;
+	padding: 0;
+	margin: 136px 0 20px 0;
+	background: transparent;
+	z-index: 26;
+	overflow: hidden;
+}
+
+#sitemenu {
+	width: 200px;
+	margin: 0 auto;
+	padding: 0;
+	border: none;
+	height: 100%;
+	list-style-type: none;
+	font-size: 14.5px;
+	text-align: left;
+}
+
+* html #sitemenu {
+	font-weight: 600;
+}
+
+#sitemenu a {
+	text-decoration: none;
+}
+
+#sitemenu ul {
+	width: 195px;
+	margin: 0 auto;
+	margin-bottom: 0px;
+	padding: 3px 5px 4px 0px;
+	color: #e1e0df;
+	padding: 0;
+	border: none;
+	height: 100%;
+	list-style-type: none;
+	font-size: 14.5px;
+}
+
+#sitemenu li a {
+	width: 195px;
+	display: inline-block;
+	white-space: normal;
+	margin-bottom: 0px;
+	color: #e1e0df;
+	padding: 3px 5px 4px 0px;
+	border: none;
+	background: transparent;
+	border-bottom: 1px solid #333333;
+	text-decoration: none;
+}
+
+#sitemenu li a:hover {
+	color: #d53a38;
+	margin-bottom: 0px;
+	padding: 3px 5px 4px 0px;
+	border: none;
+	background: transparent;
+	text-decoration: none;
+	border-bottom: 1px solid #333333;
+}
+
+#sitemenu li.currentPage {
+	width: 185px;
+	color: #d53a38;
+	margin-bottom: 0px;
+	padding: 3px 5px 4px 10px;
+	border: none;
+	background: transparent url(navarrow_d53a38.jpg) center left no-repeat;
+	text-decoration: none;
+	border-bottom: 1px solid #333333;
+}
+
+#sitemenu li.currentParent .in {
+	width: 185px;
+	color: #d53a38;
+	margin-bottom: 0px;
+	padding: 3px 5px 4px 10px;
+	border: none;
+	background: transparent url(navarrow_d53a38.jpg) center left no-repeat;
+	text-decoration: none;
+}
+
+* html #sitemenu li.currentPage .in {
+	font-weight: 700;
+}
+
+*:first-child+html #sitemenu li.currentPage .in {
+	font-weight: 700;
+}
+
+#sitemenu li.currentPage .in {
+}
+
+* html #sitemenu li.currentPage .in {
+}
+
+*:first-child+html #sitemenu li.currentPage .in {
+}
+
+/* @end */
+
+/* @group Sidebar */
+
+.allow-sidebar #main {
+	width: 522px;
+	background: transparent;
+}
+
+* html .allow-sidebar #main {
+	width: 492px;
+}
+
+.no-sidebar #main {
+	width: 738px;
+	background: transparent;
+	z-index: 5;
+}
+
+#sidebar-container {
+	position: relative;
+	float: right;
+	margin: 6px 0 20px 0;
+	width: 220px;
+	padding: 166px 0 0 0;
+	background: transparent;
+}
+
+* html #sidebar-container {
+	margin: 3px 6px 0 0;
+	padding: 177px 0 0 0;
+}
+
+*:first-child+html #sidebar-container {
+	margin: 3px 6px 0 0;
+	padding: 177px 0 0 0;
+}
+
+#sidebar-top {
+	margin: 5px;
+}
+
+#sidebar-content {
+	margin: 0;
+	text-align: left;
+	padding: 0 10px 0 0;
+}
+
+#sidebar-bottom {
+	margin: 5px;
+}
+
+/* @end */
+
+/* @group Page Content */
+
+#page-content {
+	position: relative;
+	margin: 144px 0 20px 240px;
+	background: transparent url(banner.jpg) top left no-repeat;
+}
+
+* html #page-content {
+	height: 1%;
+	margin: 144px 0 20px 236px;
+}
+
+#main {
+}
+
+#main-content {
+	margin: 0 0 20px 0;
+	width: 700px;
+	height: 100%;
+	padding:0px 14px 10px 0px;
+	background: transparent;
+
+}
+
+* html #main-content {
+	padding: 177px 7px 10px 0px;
+}
+
+*:first-child+html #main-content {
+	padding: 177px 14px 10px 0px;
+}
+
+.no-sidebar #main-content {
+	margin: 0 0 20px 0;
+	padding: 177px 5px 10px 0px;
+}
+
+#page-bottom {
+	position: relative;
+	margin-top: -10px;
+	margin-bottom: 24px;
+	padding: 0 0 24px 0;
+	float: left;
+	clear: right;
+	display: block;
+	height: auto;
+	width: 996px;
+	background: transparent;
+	z-index: 2;
+}
+
+* html #page-bottom {
+	margin-top: -20px;
+}
+
+*:first-child+html #page-bottom {
+	margin-top: -20px;
+}
+
+#page-bottom-contents {
+	position: relative;
+	width:  738px;
+	font-size: .95em;
+	line-height: 1.5em;
+	font-weight: 500;
+	color: #8e8e8e;
+	text-align: left;
+	padding: 22px 0 0 0;
+	margin: 0 auto;
+	margin-left: 240px;
+	white-space: normal;
+	border-top: 1px solid #51555A;
+	z-index: 4;
+}
+
+#page-bottom a:link, #page-bottom a:visited {
+	color: #9e9e9e;
+	text-decoration: underline;
+}
+
+#page-bottom a:hover {
+	color: #d53a38;	text-decoration: underline;
+}
+
+.listing-index h3 {
+	font-size: 1em;
+	font-weight: normal;
+}
+
+/* @end */
+
+/* @group Contact Form */
+
+form.contactElement textarea,form.contactElement input,form.contactElement select {
+	width: 97%;
+	margin: 4px 0;
+	background: #e1e0df;
+	color: #3e3e3e;
+}
+
+form.contactElement input.submit {
+	width: auto;
+	display: block;
+	margin-left: auto;
+	margin-right: 2%;
+	min-width: 50%;
+}
+
+form.contactElement th {
+	text-align: right;
+	font-weight: normal;
+	width: 25%;
+}
+
+*:first-child+html form.contactElement input.submit {
+	padding: 0px 10%;
+}
+
+td.dli1 {
+	text-align: center;
+}
+
+/* @end */
+
+/* @group Pagelets */
+
+.pagelet {
+	font-size: .95em;
+	line-height: 1.4em;
+	overflow: hidden;
+	margin: 0px 0 12px 0;
+	padding: 8px 0 8px 0;
+	width: 200px;
+	background: transparent;
+}
+
+.pagelet.bordered {
+	border: 1px solid #3e3e3e;
+	padding: 6px 5px 6px 8px;
+	margin: 8px 0 12px 0;
+	width: 186px;
+}
+
+* html .pagelet.bordered {
+	margin: 4px 0 12px 0;
+}
+
+.pagelet.bordered .photo img {
+	border: none;
+	padding: 0;
+}
+
+.pagelet h4 {
+	font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.3em;
+	font-weight: bold;
+	line-height: 1.3em;
+	color: #d53a38;
+	padding: 0;
+	margin-top: 0px;
+	margin-bottom: 5px;
+	letter-spacing: .5px;
+}
+
+.pagelet p {
+	margin-bottom: 0px;
+	text-align: left;
+}
+
+.pagelet a:link, .pagelet a:visited {
+	color: #9e9e9e;
+	text-decoration: underline;
+	background: transparent;
+}
+
+.pagelet a:hover {
+	color: #d53a38;
+	text-decoration: underline;
+	background: transparent;
+}
+
+.pagelet ul {
+	line-height: 1.4em;
+	margin: 5px 0 0 0;
+}
+
+.pagelet .photo img {
+	border: none;
+	padding: 0;
+	background: transparent;
+	margin: -2px 0 2px -1px;
+	text-align: center;
+}
+
+.pagelet img {
+	border: none;
+	padding: 0;
+}
+
+.pagelet a img {
+	border: none;
+	padding: 0;
+}
+
+.pagelet .photo .imageLink {
+	background: transparent;
+}
+
+.pagelet .photo .imageLink a:hover {
+	background: transparent;
+}
+
+/* @end */
+
+/* @group Callouts */
+
+.callout {
+	float: left;
+	margin: 2px 14px 10px 0;
+	padding: 0 0 0 0;
+}
+
+* html .callout {
+	margin: 0 14px 10px 0;
+}
+
+*:first-child+html .callout {
+	margin: 0 14px 10px 0;
+}
+
+.callout a:link, .callout a:visited {
+	color: #9e9e9e;
+	text-decoration: underline;
+	background: transparent;
+}
+
+.callout a:hover {
+	color: #d53a38;
+	text-decoration: underline;
+	background: transparent;
+}
+
+.callout .photo {
+	margin-left: 0px;
+	text-align: center;
+}
+
+.callout p {
+	line-height: 1.2em;
+}
+
+/* @end */
+
+/* @group Blog-Article Page */
+
+#index {
+	margin: 0 0 10px 0;
+}
+
+.article {
+	margin-bottom: 0;
+}
+
+.article-info {
+	font-style: normal;
+	margin-bottom: 0;
+}
+
+.article-content {
+	margin-bottom: 2px;
+	color: #8e8e8e;
+}
+
+.article-content p {
+	color: #8e8e8e;
+	margin: 0 0 10px 0;
+}
+
+.article-summary {
+clear: left;
+}
+
+.article h3 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.35em;
+	line-height: 1.2em;
+	color: #d53a38;
+	font-weight: bold;
+	margin: 0 0 9px 0;
+	letter-spacing: .5px;
+}
+
+*:first-child+html .article h3 {
+	width: auto;
+}
+
+.article h3 a, .article h3 a:active, .article h3 a:focus {
+	text-decoration: none;
+	color: #d53a38;
+}
+
+.article h3 a:hover {
+	text-decoration: underline;
+	color: #9e9e9e;
+}
+
+.general-index h3 {
+	width: 99%;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.2em;
+	line-height: 1.2em;
+	color: #d53a38;
+	font-weight: bold;
+	margin: 0;
+	padding: 10px 0 7px 0;
+	letter-spacing: .5px;
+}
+
+.general-index {
+	width: 99%;
+	margin: 4px 0 8px 0;
+	padding: 0;
+}
+
+* html .general-index {
+	width: 98%;
+}
+
+.Download-index h3 {
+	width: 99%;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.15em;
+	line-height: 1.2em;
+	color: #d53a38;
+	font-weight: bold;
+	margin: 0;
+	padding: 10px 0 7px 0;
+	letter-spacing: .5px;
+}
+
+.article-info .timestamp {
+	font-size: .9em;
+	background: url(clock.jpg) left center no-repeat;
+	padding: 0 0 1px 19px;
+	margin: 3px 0 0 0;
+}
+
+.article-info .continue-reading-link a:link, .article-info .continue-reading-link a:visited, .article-info .continue-reading-link a:active {
+	color: #9e9e9e;
+	text-decoration: underline;
+	background: transparent;
+	padding: 0 0 3px 0;
+	font-size: .95em;
+	margin: 0;
+	font-style: normal;
+}
+
+.article-info .continue-reading-link a:hover {
+	color: #d53a38;
+	text-decoration: underline;
+	background: transparent;
+	padding: 0 8px 3px 0;
+	font-size: .95em;
+	margin: 0;
+	font-style: normal;
+}
+
+.comments {
+	font-size: .95em;
+	margin: 3px 0 5px 0;
+}
+
+div.collection-navigation {
+	text-align: left;
+	padding: 5px 0 5px 0;
+}
+
+/* @end */
+
+/* @group Photo Grid */
+
+.photogrid-index {
+	margin-top: 16px;
+	text-align: center;
+	margin: auto;
+	overflow: visible;
+}
+
+* html .photogrid-index {
+	position: relative;
+	height: 1%;
+}
+
+*:first-child+html .photogrid-index {
+	width: 98%;
+}
+
+.photogrid-index a {
+	text-decoration: none;
+	padding: 1px 3px;
+}
+
+.photogrid-index h3 a:hover {
+	text-decoration: underline;
+}
+
+.gridItem {
+	float: left;
+	position: relative;
+	width: 142px;
+	height: 180px;	margin: 6px 0 6px 0;
+	padding-top: 10px;
+	overflow: hidden;
+}
+
+* html .griditem {
+	margin: 3px 0 3px 0;
+}
+
+body.allow-sidebar .gridItem {
+	width: 148px;
+}
+
+.gridItem h3 {
+	font-weight: normal;
+	font-size: .95em;
+	line-height: 1.3em;
+	color: #383d44;
+	margin: 2px 5px 0 5px;
+	padding: 0 2px;
+	position: absolute;
+	top: 140px;
+	width: 128px;
+}
+
+* html .gridItem h3 {
+	position: relative;
+	top: 0px;
+}
+
+*:first-child+html .gridItem h3 {
+	position: relative;
+	top: 0px;
+	font-weight: normal;
+	font-size: .95em;
+	line-height: 1.3em;
+}
+
+.gridItem h3 a:link, .gridItem h3 a:visited, .gridItem h3 a:focus {
+	text-decoration: underline;
+}
+
+.gridItem h3 a:hover {
+	text-decoration: underline;
+}
+
+body.allow-sidebar .gridItem h3 {
+	width: 126px;
+	margin: 4px 10px 0px 10px;
+}
+
+.gridItem img {
+	margin: auto;
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 40px;
+	right: 0;
+	left: 0;
+	border: 0;
+}
+
+* html .gridItem img {
+	position: relative;
+	top: 0;
+}
+
+*:first-child+html .gridItem img {
+	position: relative;
+	top: 0;
+}
+
+/* @end */
+
+/* @group Single Photo Page */
+
+.photo-navigation {
+	position: relative;
+	z-index: 100;
+	height: 40px;
+	width: 200px;
+	margin: 0px auto;
+	margin-top: 8px;
+	margin-bottom: 0;
+}
+
+.photo img {
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 8px;
+}
+
+.caption {
+	font-size: 1em;
+	line-height: 1.4em;
+	font-weight: normal;
+	letter-spacing: .6px;
+}
+
+* html .caption {
+	font-weight: 700;
+	letter-spacing: 0px;
+}
+
+.photo-navigation a {
+	border: none;
+}
+
+.photo-navigation div {
+	width: 50px;
+	height: 38px;
+	position: absolute;
+	text-indent: -5000em;
+}
+
+.photo-navigation a {
+	border-bottom: none;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.image-controls a, .image-controls a:hover {
+	border: 0;
+}
+
+#previous-photo {
+	left: 27px;
+}
+
+* html #previous-photo {
+	left: 28px! important;
+}
+
+*:first-child+html #previous-photo {
+	left: 27px;
+}
+
+#previous-photo a {
+	background: url(arrow_left_off.jpg) top no-repeat;
+}
+
+#previous-photo a:hover {
+	background: url(arrow_red_left_on.jpg) top no-repeat;
+}
+
+#previous-photo a:visited {
+	background: url(arrow_left_off.jpg) top no-repeat;
+}
+
+#next-photo {
+	background: url(arrow_right_off.jpg) top no-repeat;
+	left: 122px;
+}
+
+* html #next-photo {
+	left: 122px! important;
+}
+
+*:first-child+html #next-photo {
+	left: 122px;
+}
+
+#next-photo a {
+	background: url(arrow_right_off.jpg) top no-repeat;
+}
+
+#next-photo a:hover {
+	background: url(arrow_red_right_on.jpg) top no-repeat;
+}
+
+#next-photo a:visited {
+	background: url(arrow_right_off.jpg) top no-repeat;
+}
+
+#photo-list {
+	background: url(index_off.jpg) top no-repeat;
+	left: 75px;
+}
+
+* html #photo-list {
+	left: 75px! important;
+}
+
+*:first-child+html #photo-list {
+	left: 75px;
+}
+
+#photo-list a {
+	background: url(index_off.jpg) top no-repeat;
+}
+
+#photo-list a:hover {
+	background: url(index_red_on.jpg) top no-repeat;
+}
+
+.image-controls a {
+	border-bottom: 0;
+}
+
+/* @end */
+
+.callout-container, .graphic-container { clear:both; }
+

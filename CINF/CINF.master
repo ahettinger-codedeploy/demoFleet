@@ -1,0 +1,227 @@
+<%
+'CHANGELOG
+'LSP 02/24/15 - initial development
+'LSP 05/02/16 - add fb tracking pixel
+%>
+	<%@ Master Language="VB" %>
+
+		<%@ Import Namespace="System.Data" %>
+			<%@ Import Namespace="System.Data.SqlClient" %>
+				<%@ Import Namespace="System" %>
+					<%@ Import Namespace="System.IO" %>
+						<%@ Import Namespace="System.Net" %>
+							<%@ Import Namespace="System.Text" %>
+								<%@ Import Namespace="GlobalClass" %>
+								
+									<script runat="server">
+										'CHANGELOG
+										'LSP 03/26/14 - initial development
+										'TTT 6/2/14 - Added Google Analytic codes
+										'JAI 8/29/14 - Moved first Facebook Tracking Pixel to display on every page.
+										'JAI 9/13/14 - Removed <form> tag.
+										'??? 3/4/15 - ???
+										'JAI 5/19/15 - Corrected phone #
+										'TTT 9/2/15 - Updated tracking pixels
+
+										Protected OrderCompleted As Boolean = False
+										Protected OrderTotal As Decimal = 0
+										Protected Quantity As Integer = 0
+
+										Public Sub Page_PreRender()
+										If InStr(LCase(Request.ServerVariables("SCRIPT_NAME")), "pay.aspx") And Session("OrderNumber") Is Nothing Then
+										OrderCompleted = True
+										Try
+										Dim pnlOrderConfirmation As Panel = CType(GlobalClass.FindControlRecursive(MasterContent, "pnlOrderConfirmation"), Panel)
+										If Not pnlOrderConfirmation Is Nothing Then 'Found main panel that contains OrderConfirmation U.C
+										Dim lblOrderNumber As Label = CType(GlobalClass.FindControlRecursive(pnlOrderConfirmation, "lblOrderNumber"), Label)
+										If Not lblOrderNumber Is Nothing Then 'Found label for OrderNumber of OrderHeaderPanel U.C loaded within OrderConfirmation U.C
+										Dim OrderNumber As Integer = CleanNumeric(lblOrderNumber.Text)
+
+										If IsNumeric(OrderNumber) Then
+										Dim DBTix As New SqlConnection
+										Dim DBCmd As New SqlCommand
+										Dim DataReader As SqlDataReader
+										DBOpen(DBTix)
+										Dim SQLOrderTix As String = "SELECT OrderHeader.OrderNumber, OrderHeader.Total, COUNT(*) AS LineCount FROM OrderHeader WITH (NOLOCK) INNER JOIN OrderLine WITH (NOLOCK) ON OrderHeader.OrderNumber = OrderLine.OrderNumber WHERE OrderHeader.OrderNumber = @OrderNumber AND OrderHeader.StatusCode = 'S' AND OrderLine.ItemType IN ('Seat', 'SubFixedEvent') GROUP BY OrderHeader.OrderNumber, OrderHeader.Total"
+										DBCmd = New SqlCommand(SQLOrderTix, DBTix)
+										DBCmd.Parameters.AddWithValue("@OrderNumber", CleanNumeric(OrderNumber))
+										DataReader = DBCmd.ExecuteReader()
+										DBCmd.Parameters.Clear()
+										If DataReader.HasRows() Then
+										DataReader.Read()
+										OrderTotal = CDec(DataReader("Total"))
+										Quantity = CInt(DataReader("LineCount"))
+										Else
+										OrderTotal = 0
+										Quantity = 0
+										End If
+										DataReader.Close()
+										DBCmd.Dispose()
+										DBClose(DBTix)
+										End If
+										End If
+										End If
+										Catch ex As Exception
+											'Do nothing but prevent crashing if failed
+										End Try
+										End If
+										End Sub
+									</script>
+									<!DOCTYPE html>
+									<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+									<head runat="server">
+										<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+									</head>
+
+									<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0>
+										<form id="form1" runat="server">
+											<div>
+												<html lang="en-US">
+
+												<head>
+
+													<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+													<title>Phoenix Suitcase Party » Tickets</title>
+
+													<link rel="icon" type="image/png" href="http://www.phoenixsuitcaseparty.com/wp-content/themes/ny/img/favicon.png">
+													<link rel="apple-touch-icon" href="http://www.phoenixsuitcaseparty.com/wp-content/themes/ny/img/apple-touch-icon.png">
+													<link rel="apple-touch-icon" sizes="72x72" href="http://www.phoenixsuitcaseparty.com/wp-content/themes/ny/img/apple-touch-icon-72x72.png">
+													<link rel="apple-touch-icon" sizes="114x114" href="http://www.phoenixsuitcaseparty.com/wp-content/themes/ny/img/apple-touch-icon-114x114.png">
+
+													<!-- Share on Facebook Meta BEGIN -->
+													<meta property="og:title" content="Phoenix Suitcase Party">
+													<meta property="og:description" content="">
+													<meta property="og:image" content="http://www.phoenixsuitcaseparty.com/wp-content/themes/ny/img/facebook-share.png">
+													<!-- Share on Facebook Meta END -->
+
+
+													<link rel="stylesheet" href="/clients/CINF/Images/print.css" type="text/css" media="print">
+
+													<link rel="stylesheet" id="screen-css" href="/clients/CINF/Images/style.css" type="text/css" media="screen">
+													<link rel="stylesheet" id="child-theme-css" href="/clients/CINF/Images/style_002.css" type="text/css" media="screen">
+													<link rel="stylesheet" id="jquery.lightbox.min.css-css" href="/clients/CINF/Images/lightbox.css" type="text/css" media="all">
+													<script type="text/javascript" src="/clients/CINF/Images/jquery_005.js"></script>
+													<script type="text/javascript" src="/clients/CINF/Images/jquery-migrate.js"></script>
+													<script type="text/javascript" src="/clients/CINF/Images/jquery_002.js"></script>
+													<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.phoenixsuitcaseparty.com/xmlrpc.php?rsd">
+													<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.phoenixsuitcaseparty.com/wp-includes/wlwmanifest.xml">
+													<meta name="generator" content="WordPress 4.1.1">
+													<link rel="canonical" href="http://www.phoenixsuitcaseparty.com/tickets/">
+													<link rel="shortlink" href="http://www.phoenixsuitcaseparty.com/?p=17">
+
+
+													<!-- Facebook Pixel Code -->
+													<script>
+														! function(f, b, e, v, n, t, s) {
+															if (f.fbq) return;
+															n = f.fbq = function() {
+																n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+															};
+															if (!f._fbq) f._fbq = n;
+															n.push = n;
+															n.loaded = !0;
+															n.version = '2.0';
+															n.queue = [];
+															t = b.createElement(e);
+															t.async = !0;
+															t.src = v;
+															s = b.getElementsByTagName(e)[0];
+															s.parentNode.insertBefore(t, s)
+														}(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+														fbq('init', '484032708474333');
+														fbq('track', "PageView");
+													</script> <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=484032708474333&ev=PageView&noscript=1" /></noscript>
+													<!-- End Facebook Pixel Code -->
+
+												</head>
+
+												<body class="page page-id-17 page-template-default">
+													<header>
+
+														<nav id="nav">
+															<div class="wrapper">
+																<ul id="menu-main" class="menu">
+																	<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="http://www.phoenixsuitcaseparty.com/">Home</a></li>
+																	<li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-26"><a href="http://www.phoenixsuitcaseparty.com/about-the-event/">About the Event</a>
+																		<ul class="sub-menu">
+																			<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-34"><a href="http://www.phoenixsuitcaseparty.com/venue/">Venue</a></li>
+																			<li id="menu-item-159" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-159"><a href="http://www.phoenixsuitcaseparty.com/about-the-event/grand-prize/">Grand Prize</a></li>
+																			<li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="http://www.phoenixsuitcaseparty.com/gallery/">Photo Gallery</a></li>
+																		</ul>
+																	</li>
+																	<li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="http://www.phoenixsuitcaseparty.com/faq/">FAQ</a></li>
+																	<li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a href="http://www.phoenixsuitcaseparty.com/contact/">Contact</a></li>
+																	<li id="menu-item-32" class="middle menu-item menu-item-type-post_type menu-item-object-page menu-item-32"><a href="http://www.phoenixsuitcaseparty.com/sponsors/">Sponsors</a></li>
+																	<li id="menu-item-753" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-753"><a title="Click here to see last year’s items" href="http://www.phoenixsuitcaseparty.com/silent-auction/">Silent Auction</a></li>
+																	<li id="menu-item-771" class="highlight menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-17 current_page_item menu-item-771"><a href="http://www.phoenixsuitcaseparty.com/tickets/">Tickets</a></li>
+																</ul>
+															</div>
+														</nav>
+
+														<div class="wrapper">
+															<div id="logo">
+																<a href="http://www.phoenixsuitcaseparty.com/" title="Back to home">
+																	<img src="/clients/CINF/Images/logo.png" alt="Phoenix Suitcase Party">
+																</a>
+															</div>
+														</div>
+													</header>
+
+
+													<div class="subpage-banner">
+
+														<div class="shadow"></div>
+														<div class="overlay"></div>
+
+														<div class="img" style="background-image:url(/clients/CINF/Images/banner-placeholder-bw.jpg)">
+														</div>
+													</div>
+
+
+													<div class="main-bg">
+														<div id="main">
+
+															<section>
+																<article>
+
+
+																	<header>
+																		<h1>Tickets</h1>
+																	</header>
+
+																	<section>
+																		<!--TIX DATA START-->
+																		<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+
+																	</section>
+
+
+																</article>
+															</section>
+
+
+
+														</div>
+													</div>
+													<div class="thanks">
+														<div class="wrapper">
+
+															<a class="facebook" href="https://www.facebook.com/Phoenix2030Club" target="_blank">Like Us on Facebook</a>
+														</div>
+													</div>
+
+													<footer id="sitemap">
+														<div class="wrapper">
+
+
+
+														</div>
+													</footer>
+													<script type="text/javascript" src="/clients/CINF/Images/jquery_003.js"></script>
+											</div>
+										</form>
+										</body>
+
+										</html>

@@ -1,0 +1,389 @@
+/*GLOBAL Settings*/
+img {border: none;}
+a img {border:none; }
+/*LAYOUT*/
+html, body {
+	color: #000000;
+	background: #000000 url(/clients/BattleintheBallroom/Images/body_bg.jpg) repeat-x;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .9em;
+	padding:0;
+	margin:0;
+	width:100%;
+	min-width:994px;
+	text-align:center;/*//TN added for fixed center*/
+}
+
+#canvas {
+   margin:0 auto;
+   width: 994px;
+   text-align:left;
+   border: 1px solid #cc0000;
+}
+
+/*FIXES (might as well load this in the beginning)*/
+.clearfix:after {
+	clear: both;
+	display: block;
+	content: " ";
+	height: 0px;
+	visibility: hidden;
+}
+.clearfix {
+	display: inline-block;
+}
+/* Hide these rules from IE-mac \*/
+* html .clearfix {
+	height: 1%;
+}
+.clearfix {
+	display: block;
+}
+li.clearfix {
+	display: list-item;
+}
+/* End hide from IE-mac */
+
+
+/*CSS PRELOADS (hides from user)*/
+.preload{display:none;}
+
+/*LEFT NAV COL*/
+#container{
+	background-color: #ffffff;
+	overflow:hidden;
+	margin:0 0px;
+	padding-left:226px; /* The width of the leftnavcol */
+}
+* html #container{
+	height:1%; /* So IE plays nice */
+}
+#content{
+	background-color: #ffffff;
+	width:100%;
+	border-left:226px solid #eeeeee; /* The width and color of the leftnavcol */
+	margin-left:-226px; /* Hat tip to Ryan Brill */
+	float:right;
+}
+#leftnavcol{
+	background-color:#eeeeee;
+	width:226px;
+	float:left;
+	margin-left:-226px;
+	display:inline; /* So IE plays nice */
+}
+/*HEADER*/
+#header {
+	background: #000000 url(/clients/BattleintheBallroom/Images/bib_header.jpg) no-repeat left top;
+	margin:auto;
+	height: 140px;
+}
+#header img {float:left;}
+#logoprint_wrapper {display: none;}
+#header #logoprint {display: none;}
+#header h1 {display: none;}
+#header_searchbox {
+	text-align: right;
+	width: 300px;
+	float:right;
+	padding-right: 5px;
+	margin: 90px 5px 5px 5px;
+	font-size: 11px;
+	color: #ffffff;
+	font-weight: bold;
+}
+#header_searchbox form{
+	margin: 0;
+	padding: 0;
+}
+#searchboxform {}
+#userlinksnav {padding: 5px 12px 5px 5px;}
+#header_searchbox a:link,
+#header_searchbox a:visited {
+	color:#ffffff;
+}
+#header_searchbox a:hover {
+	color:#cc0000;
+}
+#header_searchbox a:active {
+	color:#ffffff;
+}
+.searchbox_txtinput {color: #cccccc; padding: 2px; background: #000000 url(/clients/BattleintheBallroom/Images/textinput_bg.jpg) repeat left top; font-size: 11px; font-family: Arial, Helvetica, sans-serif; border: 1px solid #990000;}
+.searchbox_txtinput_highlight {color: #ffffff; padding: 2px; background: #000000 url(/clients/BattleintheBallroom/Images/textinput_bg_hover.jpg) repeat left top; font-size: 11px; font-family: Arial, Helvetica, sans-serif; border: 1px solid #FF0000;}#userlinksnav {padding: 5px 12px 5px 5px;}
+
+/*TOPMENU*/
+#topnav {
+	border-top: 1px solid #cc0000;
+	border-bottom: 1px solid #990000;
+	height: 40px; 
+	background: #cc0000 url(/clients/BattleintheBallroom/Images/topmenu_expand_bg.jpg) repeat-x center center;
+	margin: auto;
+	text-align: center;
+}
+#topnav img {
+	border: none;
+	margin: 0px 5px 0px 5px;
+}
+
+#topmenuitems {
+	margin: 0px 20px 0px 20px;
+	display: inline;
+	margin: 0;
+	padding: 0;
+	font-size: 1.3em;
+}
+
+#topmenuitems a:link{
+	background-color: inherit;
+	color: #ffffff;
+	font-weight:bold;
+	padding: 0px;
+	text-decoration: none;
+}
+#topmenuitems a:visited {
+	background-color: inherit;
+	color: #ffffff;
+	font-weight:bold;
+	padding: 0px;
+	text-decoration: none;
+}
+#topmenuitems a:hover {
+	background-color: inherit;
+	color: #000000;
+	padding: 0px;
+	text-decoration: none;
+}
+#topmenuitems a:active {
+	background-color: inherit;
+	color: #000000;
+	padding: 0px;
+	text-decoration: none;
+}
+/*MAIN CONTENT AREA*/
+#content_padding {text-align: left; padding: 8px;}
+
+/*BLOCKS*/
+.leftBlockTitle {padding: 5px; font-size: 1.1em; background-color: #5F5F5F; color: #ffffff; font-weight: bold; border-bottom: 2px solid #000; text-transform: uppercase; text-align: center;}
+.leftBlockContent {padding: 5px 0px 5px 0px; line-height: 1em; background: #ffffff; border-right: 1px solid #eeeeee;}
+/*CUSTOM BLOCKS*/
+.boxBlock {
+	text-indent:0;
+	font-weight:normal;
+	background-color:#fff;
+	padding:1em;
+	margin-bottom:1em;
+	border-top:10px solid #eee;
+	border-left:1px solid #eee;
+	border-right:1px solid #eee;
+	border-bottom:1px solid #eee;
+	overflow:hidden;
+}
+.centralblock_wrapper {}
+.centralblock_heading {margin: 0px 0px 5px 0px; font-size: 1.3em; text-transform: uppercase;}
+.centralblock_content {}
+#findus_box_holder {text-align: center;}
+img.findus_webpage_files {margin: 2px;}
+
+.pagecolumnleft 
+{
+	float: left;
+	width:360px;
+	margin-bottom:.75em;
+	padding:0 10px 0 0;
+}
+.pagecolumnright
+{
+	float: right;
+	width:360px;
+	margin-bottom:.75em;
+	padding:0 0 0 10px;
+}
+
+/*BANNER*/
+#banner {
+	margin: auto;
+	text-align: center;
+	background: #fff;
+}
+#banner img {border: 1px solid #cc0000; margin: 5px;}
+/*FOOTER*/
+#footer
+{
+	margin: auto;
+	text-align: center;
+	background: #cc0000 url(/clients/BattleintheBallroom/Images/footer_bg.jpg) repeat-x top center;
+	height : 45px; 
+	border-top: 5px solid #990000;
+}
+#footer_links {font-size:.9em; color: #eeeeee; font-weight: bold;}
+#footer_copyright {font-size:.8em; color: #eeeeee;}
+#footer_links a:link,
+#footer_links a:visited,
+#footer_links a:hover,
+#footer_links a:active{
+	color:#eeeeee;
+	font-weight: normal;
+}
+/*FRONT PAGE */
+#frontpage_hlight_holder {width: 768px; border: 0px;}
+#frontpageimage {height:350px;}
+#frontpageimage_txtholder {padding: 305px 5px 5px 20px; color: #ffffff; font-weight: bold; font-size: 1.5em; font-family: Geneva, Arial, Helvetica, sans-serif;}
+#frontpage_lefthlight {width: 165px; background-color: #ffffff; height:350px; float: right; text-align: right; margin: 0px;}
+
+/*BREADCRUMB NAVIGATION */
+#nav_breadcrumb_container {border-bottom: 1px solid #cc0000; text-align: left; padding: 2px 5px 2px 5px;}
+
+/*XOOPS STYLES*/
+/*the following are from xoops.css in root*/
+/* $Id: xoops.css 2577 2008-12-06 16:58:57Z beckmi $ */
+table {
+    width:      100%;
+}
+
+img {
+    border:     0;
+}
+img.center {
+    text-align:     center;
+    margin:         0 auto;
+    display:        block;
+    margin-top:     6px;
+    margin-bottom:  4px;
+}
+img.left {
+    text-align:     left;
+    float:          left;
+    margin:         2px 6px 2px 0;
+    clear:          left;
+}
+img.right {
+    float:          right;
+    text-align:     right;
+    margin:         2px 0 2px 6px;
+    clear:          right;
+}
+acronym, abbr, dfn {
+    cursor:         help;
+}
+#xoopsHiddenText {
+    visibility:         hidden;
+    color:              #000000;
+    font-weight:        normal;
+    font-style:         normal;
+    text-decoration:    none;
+}
+.pagneutral {
+    font-size:          10px;
+    width:              16px;
+    height:             19px;
+    text-align:         center;
+    background-image:   url(./webpage_files/pagneutral.gif);
+}
+.pagact {
+    font-size:          10px;
+    width:              16px;
+    height:             19px;
+    text-align:         center;
+    background-image:   url(./webpage_files/pagact.gif);
+}
+.paginact {
+    font-size:          10px;
+    width:              16px;
+    height:             19px;
+    text-align:         center;
+    background-image:   url(./webpage_files/paginact.gif);
+}
+/* For required elements in XOOPS form, can be overwritten in theme styles */
+.xoops-form-element-caption .caption-marker {
+    display:            none;
+}
+
+.xoops-form-element-caption-required .caption-marker {
+	background-color:   inherit;
+	padding-left: 	    2px;
+	color: 			    #ff0000;
+}
+
+.xoops-form-element-help {
+	font-size:		    .9em;
+    padding-top:        5px;
+    font-weight:        normal;
+}
+
+/*XOOPS theme based definitions*/
+a {color: #990000; text-decoration: none; font-weight: bold; background-color: transparent;}
+a:hover {color: #CC0000;}
+
+h1 {font-size:1.6em; margin: 0px 5px 10px 0px;}
+h2 {font-size:1.3em;}
+h3 {font-size:1.2em;}
+h4 {font-size:1.1em;}
+h5 {font-size:1em;}
+ul { margin: 2px; padding: 2px; list-style: disc inside; text-align: left;}
+ol { margin: 2px; padding: 2px; list-style: decimal inside; text-align: left;}
+li { margin-left: 2px; color: #990000;}
+
+input.formButton {}
+
+.item {border: 1px solid #666;}
+.itemHead {padding: 3px; background-color: #990000; color: #fff;}
+.itemInfo {text-align: right; padding: 3px; background-color: #efefef}
+.itemTitle a {font-size: 1.2em; font-weight: bold; font-variant: small-caps; color: #fff; background-color: transparent;}
+.itemPoster {font-size: .9em; font-style:italic;}
+.itemPostDate {font-size: .9em; font-style:italic;}
+.itemStats {font-size: .9em; font-style:italic;}
+.itemBody {padding-left: 5px;}
+.itemText {margin-top: 5px; margin-bottom: 5px; line-height: 1.5em;}
+.itemText:first-letter {font-size: 1.3em; font-weight: bold;}
+.itemFoot {text-align: right; padding: 3px; background-color: #efefef;}
+.itemAdminLink {font-size: .9em;}
+.itemPermaLink {font-size: .9em;}
+
+#mainmenu a {background-color: #e6e6e6; display: block; margin: 0; padding: 4px;}
+#mainmenu a:hover {background-color: #fff;}
+#mainmenu a.menuTop {padding-left: 3px; border-top: 1px solid #c0c0c0; border-right: 1px solid #666; border-bottom: 1px solid #666; border-left: 1px solid #c0c0c0;}
+#mainmenu a.menuMain {padding-left: 3px; border-right: 1px solid #666; border-bottom: 1px solid #666; border-left: 1px solid #c0c0c0;}
+#mainmenu a.menuSub {padding-left: 9px; border-right: 1px solid #666; border-bottom: 1px solid #666; border-left: 1px solid #c0c0c0;}
+
+#usermenu {	font-size : .9em;}
+#usermenu a {background-color: #e6e6e6; display: block; margin: 0; padding: 2px; border-bottom: 1px solid #666; font-weight : normal;}
+#usermenu a:hover {background-color: #fff;}
+#usermenu a.menuTop {border-top: 1px solid #c0c0c0;}
+#usermenu a.highlight {background-color: #fcc;}
+
+
+caption {font-weight: bold;}
+
+.outer {border: 1px solid #c0c0c0;}
+.head {background-color: #C0C0C0; padding: 5px; font-weight: bold;}
+.even {background-color: #eeeeee; padding: 5px;}
+.odd {background-color: #cccccc; padding: 5px;}
+.foot {background-color: #C0C0C0; padding: 5px; font-weight: bold;}
+tr.even td {background-color: #dee3e7; padding: 5px;}
+tr.odd td {background-color: #E9E9E9; padding: 5px;}
+tr.foot td {background-color: #C0C0C0; padding: 5px; color:inherit; font-weight: bold;}
+
+.errorMsg,.confirmMsg, .resultMsg  { padding: .8em; text-align:center; margin-bottom: 1em; border: 2px solid #ddd;}
+.errorMsg  { background-color: #FBE3E4; color: #D12F19; border-color: #FBC2C4; }
+.confirmMsg { background-color: #FFF6BF; color: #817134; border-color: #FFD324; }
+.resultMsg { background-color: #E6EFC2; color: #529214; border-color: #C6D880; }
+.errorMsg a { background-color: transparent; color: #D12F19; }
+.confirmMsg a { background-color: transparent; color: #817134; }
+.successMsg a { background-color: transparent; color: #529214; }
+
+.xoopsCode { background: #fff; border: 1px inset #000080; font-family: "Courier New",Courier,monospace; padding: 0 6px 6px 6px; height: 200px; overflow: auto; font-size:.9em;}
+.xoopsQuote { background: #fff; border: 1px inset #000080; font-family: "Courier New",Courier,monospace; padding: 0 6px 6px 6px; font-size:.9em;}
+blockquote {font-style : italic; line-height:1.4em;} 
+
+.comTitle {font-weight: bold; margin-bottom: 2px;}
+.comText {padding: 2px;}
+.comUserStat {font-size: .9em; color: #990000; font-weight:bold; border: 1px solid #c0c0c0; background-color: #fff; margin: 2px; padding: 2px;}
+.comUserStatCaption {font-weight: normal;}
+.comUserStatus {margin-left: 2px; margin-top: 10px; color: #990000; font-weight:bold; font-size: .9em;}
+.comUserRank {margin: 2px;}
+.comUserRankText {font-size: .9em;font-weight:bold;}
+.comUserRankImg {border: 0;}
+.comUserName a {color: #fff;}
+.comUserImg {margin: 2px;}
+.comDate {font-weight: normal; font-style: italic; font-size: .8em;}
+.comDateCaption {font-weight: bold; font-style: normal;}

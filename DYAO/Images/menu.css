@@ -1,0 +1,266 @@
+/*--------------------------------------------------------------------------------------------------------
+				BREADCRUMB MENU
+--------------------------------------------------------------------------------------------------------*/
+
+#breadcrumb { height: 20px; margin-bottom: 5px; font-size: 90%; }
+
+.home #breadcrumb .breadcrumbs { display: none; }
+
+
+/*--------------------------------------------------------------------------------------------------------
+				TOP (RIGHT) NAVIGATION MENU
+--------------------------------------------------------------------------------------------------------*/
+
+#topmenu {
+	padding: 54px 0 0 688px;
+	list-style: none;
+}
+
+#topmenu li { 
+	display: inline; 
+	float: left; 
+	list-style-type: none;
+	border-right: #FFFFFF 1px solid;
+}
+
+#topmenu li:last-child {
+	border-right: none;
+}
+
+
+#topmenu li a {
+	display: block;
+	float: left;
+	height: 14px;
+	line-height: 14px;
+	padding: 0 15px;
+	color: #FFFFFF;
+	font-family:Century Gothic,Verdana,Helvetica,sans-serif;
+}
+
+/*--------------------------------------------------------------------------------------------------------
+				MAIN NAVIGATION MENU
+--------------------------------------------------------------------------------------------------------*/
+
+
+/* *** Container *** */
+#mainnav {
+	width: 990px;
+	height: 55px;
+	background: url(/clients/DYAO/Images/bg-nav.jpg) left top no-repeat;
+	margin:0 auto;
+	margin-bottom:5px;
+	padding:0 0 0 30px;
+}
+
+#sidenav #left-main { padding-bottom: 20px; }
+
+/* *** Level 1 *** */
+
+#mainnav ul.menu {
+	display: block;
+	float: left;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	list-style: none;
+	z-index: 75;
+	position: absolute;
+}
+
+/*#mainnav ul.menu li.item1 { display: none; } /* hide HOME on the navigation */
+
+#mainnav ul.menu li {
+	display: inline;
+	float: left;
+	list-style-type: none;
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+	height: 55px;
+	position: relative;
+}
+
+#mainnav ul.menu li a { 
+	display: block;
+	float: left;
+	text-decoration: none;
+	height: 45px;
+	font-family: Century Gothic, Verdana, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 34px;
+	color: #ffffff;
+	padding: 10px 20px 0;
+	margin: 0;
+}
+
+#mainnav ul.menu li.over a, 
+#mainnav ul.menu li a:hover, 
+#mainnav ul.menu li.active a {	background:url(/clients/DYAO/Images/bg-nav-roll.jpg) repeat-x top center; }
+
+
+/* *** Level 2 *** */
+
+#mainnav ul.menu li ul {
+	display: block;
+	left: -9999px;
+	top: 55px;
+	position: absolute;
+	width: 178px; 
+	z-index: 1000;
+	list-style-type: none;
+	margin: 0 0 0 0;
+	padding: 5px 10px 5px 10px;
+	border: 1px solid #11100e;
+	background-color: #6a5e31; 
+}
+
+#mainnav ul.menu  li.over ul, 
+#mainnav ul.menu  li:hover ul { 
+	left: 0; 
+}
+
+#mainnav ul.menu li ul li {
+	border: none;
+	display: block;
+	float: none;
+	list-style: none;
+	line-height: 10px;
+	height: 100%;
+	padding: 0;
+	margin: 0 0 0 8px;
+	position: relative;
+	background-image: none;
+	background-color: transparent;
+}
+
+#mainnav ul.menu li ul li a, 
+#mainnav ul.menu li.over ul li a,
+#mainnav ul.menu li.active ul li a {
+	display: block;
+	padding: 5px 5px 2px 5px;
+	margin: 8px 0 0 0;
+	width: 100%;
+	height: 16px;
+	line-height: 100%;
+	font-size: 100%;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: none;
+	text-align: left;
+	background: #6a5e31 url(/clients/DYAO/Images/spacer.gif) top left repeat; 
+}
+
+
+#mainnav ul.menu li.active ul li.over a, 
+#mainnav ul.menu li.active ul li a:hover, 
+#mainnav ul.menu li ul li.active a, 
+#mainnav ul.menu li ul li.over a, 
+#mainnav ul.menu li ul li a:hover {	
+	background: #6a5e31 url(/clients/DYAO/Images/spacer.gif) top left repeat; 
+}
+
+
+/* ***  Level 3 *** */
+
+#mainnav ul.menu li ul li ul, 
+#mainnav ul.menu li.over ul li ul {
+	position: static;
+	z-index: 1500;
+	display: block;
+	float: none;
+	border: none;
+	list-style-type: none;
+	width: 158px;
+	margin: 0 0 0 0;
+	padding: 0 0 0 14px;
+}
+
+#mainnav ul.menu li ul li ul li {
+	border: none;
+	display: block;
+	list-style: none;
+	float: none;
+}
+
+#mainnav ul.menu li ul li ul li a,
+#mainnav ul.menu li.active ul li ul li a,
+#mainnav ul.menu li ul li.active ul li a {
+	display: block;
+	margin: 4px 0 0 0;
+	height: 100%;
+	width: 98%;
+	line-height: 100%;
+	font-size: 10px; 
+	text-decoration: none;
+	font-weight: normal;
+	background-color: #6a5e31;
+}
+	
+
+/* *** Level 4 *** */
+#mainnav ul.menu li ul li ul li ul { width: 90%; }
+
+#mainnav ul.menu li ul li ul li ul li a {
+	font-weight: normal;
+}
+
+
+
+/* *** Level 5 *** */
+
+#mainnav ul.menu li ul li ul li ul li ul { width: 80%; }
+
+#mainnav ul.menu li ul li ul li ul li ul li a {
+	font-weight: normal;
+
+}
+
+/* *****  Hidden Items ****
+
+#mainnav ul.menu li.item1 { 
+	display: none;
+}
+
+*/
+
+/*--------------------------------------------------------------------------------------------------------
+				FOOTER NAVIGATION MENU
+--------------------------------------------------------------------------------------------------------*/
+
+#foot {
+	text-align:center;
+	padding-top: 45px;
+}
+
+#foot ul.menu {
+	list-style: none;
+	width:860px;
+	margin: 20px auto 5px;
+	padding:0;
+}
+
+#foot ul.menu li {
+	display: inline;
+	float: left;
+	font-family: Century Gothic, Verdana, Helvetica, sans-serif;
+	font-size:10px;
+	margin:0 auto;
+	padding: 0 20px;
+	border-right: #3a6a74 2px solid;
+}
+
+#foot ul.menu li:last-child { border-right: none; }
+
+#foot ul.menu li a {
+	text-decoration:none;
+	color:#3a6a74;
+	padding:0;
+	margin:0;
+	font-size: 12px;
+	font-weight: bold;
+	font-family:Century Gothic,Verdana,Helvetica,sans-serif;
+}
+
+#foot ul.menu li a:hover {
+	text-decoration:underline;
+}

@@ -1,0 +1,393 @@
+<%
+'CHANGELOG
+'LSP 03/06/15 - initial development
+%>
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Calendar | Alumni &amp; Friends of LaGuardia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <style type="text/css">
+					.no-break br {
+						display: none !important;
+					}
+			</style><link rel="stylesheet" href="/clients/AlumniandFriends/Images/style.css">
+<link rel="stylesheet" href="/clients/AlumniandFriends/Images/main.css">
+<link rel="stylesheet" href="/clients/AlumniandFriends/Images/dashicons.css">
+<link rel="stylesheet" href="/clients/AlumniandFriends/Images/thickbox.css">
+<script src="/clients/AlumniandFriends/Images/analytics.js"></script><script type="text/javascript" src="/clients/AlumniandFriends/Images/jquery_002.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ajax_login_object = {"ajaxurl":"http:\/\/alumniandfriends.org\/cms\/wp-admin\/admin-ajax.php","redirecturl":"http:\/\/alumniandfriends.org\/dashboard\/","loadingmessage":"Sending user info, please wait..."};
+/* ]]> */
+</script>
+<script>window.jQuery || document.write('<script src="http://alumniandfriends.org/content/themes/afl_theme/assets/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/ajax-login-script.js"></script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/cc-widget.js"></script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/modernizr-2.js"></script>
+<script charset="utf-8" type="text/javascript">var switchTo5x=true;</script>
+<script charset="utf-8" type="text/javascript" src="/clients/AlumniandFriends/Images/buttons.js"></script>
+<script charset="utf-8" type="text/javascript">stLight.options({"publisher":"7acf4b40-0478-4dd2-bfd7-7d11d78ea52e"});var st_type="wordpress4.0.1";</script>
+	<link rel="canonical" href="http://alumniandfriends.org/calendar/">
+  <link rel="shortcut icon" href="/clients/AlumniandFriends/Images/logo.png" type="image/x-icon">
+  <link rel="alternate" type="application/rss+xml" title="Alumni &amp; Friends of LaGuardia Feed" href="http://alumniandfriends.org/feed/">
+<script src="/clients/AlumniandFriends/Images/getAllAppDefault.esi" type="text/javascript"></script><script src="/clients/AlumniandFriends/Images/checkOAuth.esi" type="text/javascript"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f8;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3a5795;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #2f477a;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f8;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style><link href="/clients/AlumniandFriends/Images/buttons.css" type="text/css" rel="stylesheet"></head><body class="page page-id-1752 calendar">
+
+  <!--[if lt IE 8]>
+    <div class="alert alert-warning">
+      You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.    </div>
+  <![endif]-->
+
+  <header class="banner navbar navbar-default navbar-static-top" role="banner">
+  <div class="container">
+  	<div class="row">
+		<div id="header-branding" class="navbar-header">
+		
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+			<a id="logo-header" href="http://alumniandfriends.org/">
+			  <img id="logo-img" class="pull-left" src="/clients/AlumniandFriends/Images/logo.png">
+			  <span id="logo-text" class="pull-left">Alumni<br class"hidden-xs"="">and Friends of LaGuardia High School</span>
+			</a>
+		
+	    </div>
+		
+				
+		<div id="top-menu" class="col-xs-12">
+		
+			<div id="socialmenu">
+				
+				<!-- Social menu -->
+				<ul class="list-inline">
+					<li><a target="_blank" href="https://www.facebook.com/AlumniandFriends" class="social-icon facebook gray"></a></li>					
+										
+					<li><a target="_blank" href="https://www.linkedin.com/groups/Alumni-Friends-LaGuardia-High-School-5133636" class="social-icon linkedin gray"></a></li>					
+									</ul>
+				
+				<!-- Top navigation menu -->
+				<ul id="links_menu" class="list-inline">
+					<li class="menu-login hidden-xs"><a href="http://laguardiahs.org/" target="_blank">LaGuardia HS</a></li>
+					<li class="menu-login hidden-xs"><a href="http://laguardiahspa.org/" target="_blank">Parents Assn.</a></li>
+				<li class="menu-login"><a data-original-title="Login" href="#" data-toggle="popover" title="">Login</a></li><li class="menu-forms"><a href="http://alumniandfriends.org/forms/">Forms</a></li>
+<li class="menu-contact-af"><a href="http://alumniandfriends.org/about/contact-us/">Contact A&amp;F</a></li>
+<li class="menu-shop"><a target="_blank" href="https://www.facebook.com/AlumniandFriends/app_189977524185">Shop</a></li>
+			     	
+				 </ul>
+			</div>
+			
+			
+		</div>
+		
+		<div id="primary_nav">
+		    <nav class="collapse navbar-collapse" role="navigation">
+		      <ul id="menu-primary-navigation" class="nav navbar-nav"><li class="menu-join-af"><a href="http://alumniandfriends.org/join/">Join A&amp;F</a></li>
+<li class="dropdown menu-our-community"><a class="dropdown-toggle" data-target="#" href="http://alumniandfriends.org/our-community/notable-alumni/">Our Community <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-notable-alumni"><a href="http://alumniandfriends.org/our-community/notable-alumni/">Notable Alumni</a></li>
+	<li class="menu-where-are-we-now"><a href="http://alumniandfriends.org/category/where-are-we-now/">Where Are We Now?</a></li>
+	<li class="menu-did-you-know"><a href="http://alumniandfriends.org/about/did-you-know/">Did You Know?</a></li>
+	<li class="menu-student-success-stories"><a href="http://alumniandfriends.org/our-community/student-success-stories/">Student Success Stories</a></li>
+	<li class="menu-in-memoriam"><a href="http://alumniandfriends.org/inmemoriam">In Memoriam</a></li>
+	<li class="menu-af-class-leaders"><a href="http://alumniandfriends.org/our-community/class-leaders/">A&amp;F Class Leaders</a></li>
+</ul>
+</li>
+<li class="dropdown menu-about"><a class="dropdown-toggle" data-target="#" href="http://alumniandfriends.org/about/">About <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-mission"><a href="http://alumniandfriends.org/mission/">Mission</a></li>
+	<li class="menu-programs"><a href="http://alumniandfriends.org/about/programs/">Programs</a></li>
+	<li class="menu-history"><a href="http://alumniandfriends.org/about/history/">History</a></li>
+	<li class="menu-board-of-directors"><a href="http://alumniandfriends.org/about/board-of-directors/">Board of Directors</a></li>
+	<li class="menu-staff"><a href="http://alumniandfriends.org/about/staff/">Staff</a></li>
+	<li class="menu-contact-us"><a href="http://alumniandfriends.org/about/contact-us/">Contact Us</a></li>
+</ul>
+</li>
+<li class="active current_page_item menu-calendar"><a href="http://alumniandfriends.org/calendar/">Calendar</a></li>
+<li class="dropdown menu-news"><a class="dropdown-toggle" data-target="#" href="http://alumniandfriends.org/news/">News <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-news"><a href="http://alumniandfriends.org/news/">News</a></li>
+	<li class="menu-alumni-update-newsletters"><a href="http://alumniandfriends.org/alumni-update-newsletter/">Alumni Update Newsletters</a></li>
+</ul>
+</li>
+<li class="dropdown menu-support-af"><a class="dropdown-toggle" data-target="#" href="http://alumniandfriends.org/give/">Support A&amp;F <b class="caret"></b></a>
+<ul class="dropdown-menu">
+	<li class="menu-give"><a href="http://alumniandfriends.org/give/">Give</a></li>
+	<li class="menu-named-funds"><a href="http://alumniandfriends.org/give/named-funds/">Named Funds</a></li>
+	<li class="menu-find-a-fund"><a href="https://alumniandfriends.org/fund/">Find a Fund</a></li>
+	<li class="menu-legacy-society"><a href="http://alumniandfriends.org/give/legacy-society/">Legacy Society</a></li>
+</ul>
+</li>
+</ul>		    </nav>
+		</div>
+			
+			
+  </div>
+	
+  </div>
+</header>
+<div id="loginform" class="hidden-xs hidden-sm hidden-md hidden-lg">
+		<div class="row omb_row-sm-offset-3 omb_socialButtons">
+    	    <div class="text-center">
+    	    	<button type="button" class="btn btn-fb btn-lg" onclick="showInstaPopup()">
+				  Login with Facebook
+				</button>
+    	    	
+
+		        <!-- <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
+			        <i class="fa fa-facebook visible-xs"></i>
+			        <span class="hidden-xs">Facebook</span>
+		        </a> -->
+	        </div>
+		</div>
+
+		<div class="separator">
+			<hr>
+			<div class="orseparator text-center">or</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-xs-12">	
+			    <form action="login" id="wploginform" autocomplete="off" method="POST" _lpchecked="1">
+					<div class="input-group">
+						<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+						<input id="username" class="form-control" name="username" placeholder="E-mail / Username" autocomplete="off" type="text">
+					</div>
+					<span class="help-block"></span>
+										
+					<div class="input-group">
+						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+						<input id="password" class="form-control" name="password" placeholder="Password" autocomplete="off" type="password">
+					</div>
+                    <span class="help-block status"></span>
+					
+					<input id="security" name="security" value="7f4ee37602" type="hidden"><input name="_wp_http_referer" value="/calendar/" type="hidden">					<input class="btn btn-lg btn-primary btn-block" value="Login" name="submit" type="submit">
+				</form>
+			</div>
+    	</div>
+    	
+		<div class="row">
+			<!-- <div class="col-xs-12 col-sm-6">
+				<label class="checkbox">
+					<input type="checkbox" value="remember-me"><small>Remember Me</small>
+				</label>
+			</div> -->
+			<div class="col-xs-12">
+				<p class="omb_forgotPwd">
+					<a class="lost" href="http://alumniandfriends.org/cms/wp-login.php?action=lostpassword">Forgot password?</a>
+					<a class="lost pull-right" href="https://alumniandfriends.org/registration/">Sign-Up</a>
+				</p>
+				  <p style="line-height:20px">Attention Existing Members: Please click on <a class="lost" href="http://alumniandfriends.org/cms/wp-login.php?action=lostpassword" style="color:#e63b14">RESET PASSWORD</a> to continue to access all the features of the re-launched Alumni site!</p>
+
+			</div>
+		</div>	    	
+
+</div>    <div class="page-headline">
+    	<div class="breadcrumb-wrapper">
+    		<div class="container">
+    			<ol class="breadcrumb"><li><a href="http://alumniandfriends.org/">Home</a></li><li>Calendar</li></ol>			   <!-- <ol class="breadcrumb ">
+			    
+				  <li><a href="http://alumniandfriends.org">Home</a></li>
+				  <li class="active">Calendar</li>
+				</ol> -->
+    		</div>
+    	</div>	    
+    </div>
+	
+
+        
+    
+  <div class="wrap container" role="document">
+    <div class="content row">
+      <main class="main col-sm-12" role="main">
+	 <!--TIX DATA START-->
+	 <asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+</main>
+          </div><!-- /.content -->
+  </div><!-- /.wrap -->
+
+<footer class="hidden-print">
+<div id="subfooter">
+	<div class="container">
+		<div class="col-sm-6">
+			<p></p><p>Copyright &#169; 2003-2015&nbsp;Alumni &amp;&nbsp;Friends of 
+LaGuardia High School. All rights reserved. A&amp;F is a non-profit, 501
+ (c) 3 organization.</p>
+<p>Our EIN is 13-3166108. Alumni &amp;&nbsp;Friends of Fiorello H. 
+Laguardia High School of Music and Art and Performing Arts You may 
+examine our filings with the New York State Department of Law&nbsp;<a href="http://www.charitiesnys.com/RegistrySearch/show_details.jsp?id=%7B44C00134-8DBA-499D-AD01-3F910D484FFC%7D" target="_blank">here</a>.</p>
+<p><a title="Privacy Policy" href="http://alumniandfriends.org/privacy-policy/">Privacy Policy</a></p>
+<p></p>
+		</div>
+		<section class="widget widget_afl_followus-2 widget_afl_followus">		<h3>Follow Us</h3>
+		 <ul>
+		
+			 				<li>
+					<a target="_blank" href="https://www.facebook.com/AlumniandFriends">
+						<span class="social-icon facebook gray"></span>Facebook
+					</a>
+				</li>
+									
+						
+						<li>
+				<a target="_blank" href="https://www.linkedin.com/groups/Alumni-Friends-LaGuardia-High-School-5133636">
+					<span class="social-icon linkedin gray"></span>Linkedin
+				</a>
+			</li>
+						   
+		 </ul>
+		
+		</section><section class="widget text-2 widget_text"><h3>Connect</h3>			<div class="textwidget"><p>Join our mailing list to receive regular updates from LaGuardia Arts Alumni and Friends</p>
+<a class="btn btn-lg col-xs-12" href="http://alumniandfriends.org/connect/">Sign Up  Now</a></div>
+		</section>		<p id="siteby" class="col-xs-12">Website by <a href="http://www.ironpaper.com/" target="_blank">Ironpaper</a></p>
+		
+	</div>
+</div>
+</footer>
+
+
+
+<!-- WP-FB AutoConnect Init v4.0.8 (NEW API) -->
+
+    <div class=" fb_reset" id="fb-root"><script async="" src="/clients/AlumniandFriends/Images/all.js"></script><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="/clients/AlumniandFriends/Images/rFG58m7xAig.htm" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" scrolling="no" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0"></iframe><iframe src="/clients/AlumniandFriends/Images/rFG58m7xAig_002.htm" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" scrolling="no" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+
+    <script type="text/javascript">//<!--
+
+      window.fbAsyncInit = function()
+
+      {
+
+        FB.init({
+
+            appId: '272674496268979',
+
+            status: true,
+
+            cookie: true,
+
+            xfbml: true,
+
+            oauth: true,
+
+            channelUrl: 'http://alumniandfriends.org/content/plugins/wp-fb-autoconnect/assets/channel.html' 
+
+        });
+
+                    
+
+      };
+
+
+
+      (function() {
+
+        var e = document.createElement('script');
+
+        e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+
+        e.async = true;
+
+        document.getElementById('fb-root').appendChild(e);
+
+      }());
+
+    //--></script>
+
+    <!-- WP-FB AutoConnect Button v4.0.8 -->
+    <script type="text/javascript">//<!--
+    function showInstaPopup()
+    {
+    	FB.login(function(response)
+		{
+    		  if (response.authResponse)
+    			jfb_js_login_callback();
+    		  else
+				alert("Sorry, you must be logged in to access this content.");
+    	},
+    	{scope: 'email,user_about_me'}); 
+    }
+    //--></script>
+    
+<!-- WP-FB AutoConnect Callback v4.0.8 -->
+<form id="wp-fb-ac-fm" name="jfb_js_login_callback_form" method="post" action="http://alumniandfriends.org/dashboard/">
+          <input name="redirectTo" value="http://alumniandfriends.org/dashboard/" type="hidden">
+          <input name="access_token" id="jfb_access_token" value="0" type="hidden">
+          <input name="fbuid" id="jfb_fbuid" value="0" type="hidden">
+          <input id="autoconnect_nonce" name="autoconnect_nonce" value="a01a2f1705" type="hidden"><input name="_wp_http_referer" value="/calendar/" type="hidden">             
+     </form>
+
+        <script type="text/javascript">//<!--
+    function jfb_js_login_callback()
+    {
+        //wpfb_add_to_js: An action to allow the user to inject additional JS to be executed before the login takes place
+                //wpfb_add_to_js: Finished
+
+        //Make sure the user logged into Facebook (didn't click "cancel" in the login prompt)
+        FB.getLoginStatus(function(response)
+        {
+            if (!response.authResponse)
+            {
+                                return;
+            }
+            
+            //Set the uid & access token to be sent in to our login script
+            jQuery('#jfb_access_token').val(response.authResponse.accessToken);
+            jQuery("#jfb_fbuid").val(response.authResponse.userID);
+        
+            //Submit the login and close the FB.getLoginStatus call
+            document.jfb_js_login_callback_form.submit();
+        })
+    }
+    //--></script>
+    <script type="text/javascript" src="/clients/AlumniandFriends/Images/jquery.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/alumniandfriends.org\/cms\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/thickbox.js"></script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/scripts.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var ajaxHandler = {"ajaxurl":"http:\/\/alumniandfriends.org\/cms\/wp-admin\/admin-ajax.php","themeurl":"http:\/\/alumniandfriends.org\/content\/themes\/afl_theme","ajax_nonce":"714047ab80"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/page_calendar.js"></script>
+<script>
+  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+  e.src='//www.google-analytics.com/analytics.js';
+  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+  ga('create','UA-59626447-1');ga('send','pageview');
+</script>
+
+<script type="text/javascript">
+
+$('a').filter(function(index) { if ($(this).text() === "My Profile"){ $(this).prop('href','http://alumniandfriends.org/profile/');} });
+
+$('a').filter(function(index) { if ($(this).text() === "Logout"){ $(this).prop('href','http://alumniandfriends.org/cms/wp-login.php?action=logout&redirect_to=http%3A%2F%2Falumniandfriends.org&_wpnonce=d692bd34bb'); } });
+
+
+</script>
+
+
+<div style="position: absolute; top: -1999px; left: -1988px;" id="stcpDiv">ShareThis Copy and Paste</div><iframe style="display:none;" scrolling="no" src="/clients/AlumniandFriends/Images/getSegment.htm" name="stSegmentFrame" id="stSegmentFrame" frameborder="0" height="0px" width="0px"></iframe><div style="display: none;" class="stwrapper stwrapper5x" id="stwrapper"><iframe src="/clients/AlumniandFriends/Images/index.htm" scrolling="no" name="stLframe" class="stLframe" id="stLframe" allowtransparency="true" frameborder="0"></iframe></div><div onclick="javascript:stWidget.closeWidget();" id="stOverlay"></div>
+</div>
+</form>
+</body>
+</html>

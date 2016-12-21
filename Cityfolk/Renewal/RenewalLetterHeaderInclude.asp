@@ -1,0 +1,7 @@
+<%
+RenewalLetter = "<CENTER>" & vbCrLf
+RenewalLetter = RenewalLetter & "<table border=""0"" width=""750""><tbody>" & vbCrLf
+RenewalLetter = RenewalLetter & "<tr><td ALIGN=""center""><FONT FACE=Calibri,Charcoal,Arial><TABLE><TR VALIGN=TOP><TD><IMG SRC=""/PrivateLabel/CityFolk/Renewal/Images/New CF logo no tagline bw.jpg"" WIDTH=225></TD><TD ALIGN=CENTER><FONT SIZE=6><B>CITYFOLK CELTIC SERIES</FONT><BR><FONT SIZE=5>2011–2012 SUBSCRIPTION RENEWAL</B></FONT></TD></TR></TABLE></FONT></td></tr>" & vbCrLf
+RenewalLetter = RenewalLetter & "<tr><td><FONT FACE=Calibri,Charcoal,Arial><TABLE border=1><TR><TD><B>THREE CONVENIENT WAYS TO RENEW</B><TABLE BORDER=0 CELLSPACING=1 CELLPADDING=0><TR><TD COLSPAN=2><B>1 – Renew by phone</B> through the Cityfolk Box Office at 937–496–3863, Monday – Friday from 10 am – 3 pm.</TD></TR><TR><TD COLSPAN=2><B>2 – Renew by mail</B> by filling out this form and mailing it to the Cityfolk Box Office at the address below.</TD></TR><TR VALIGN=TOP><TD><B>3 – Renew online</B> by going to http://cityfolk.tix.com/renew.asp,<BR>and entering the following:</TD><TD><B>Order Number:</B> " & rsOrderLine("OrderNumber") & "<BR><B>Renewal Code:</B> " & RenewalCode & "</TD></TR></TABLE></TD></TR></TABLE></FONT></td></tr></TBODY></TABLE></CENTER>" & vbCrLf
+Response.Write RenewalLetter
+%>  

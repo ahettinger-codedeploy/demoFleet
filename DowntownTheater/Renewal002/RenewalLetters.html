@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<title>TIX Support</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link type="text/css" rel="stylesheet" href="https://www.testtix.com/assets/app.css">
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900" >
+
+<link rel="stylesheet" type="text/css" href="https://oss.maxcdn.com/icheck/1.0.2/skins/all.min.css" >
+
+<link type="text/css" rel="stylesheet" href="css/basic.css">
+
+<link type="text/css" rel="stylesheet" href="css/panel.css">	
+
+<link type="text/css" rel="stylesheet" href="css/table.css">
+
+<link type="text/css" rel="stylesheet" href="css/switch.css">
+
+<link type="text/css" rel="stylesheet" href="css/buttons.css">
+
+</head>
+
+<body>
+
+<DIV class="container" style="width:980px; padding-top: 25px;">
+
+	<section class="fade-in fade-one">	
+
+		<div class="panel panel-default fade-in fade-two" id="panel-parent">
+		
+			<div class="panel-heading" id="panel-header">
+			  
+				<div class="panel-title">
+				
+					<nav class="navbar" role="navigation">
+					
+						<div class="navbar-header">
+							<span class="navbar-brand">Downtown Theater</span>
+						</div>
+			 
+						<div class="pull-left">
+							<ul class="nav nav-tabs">
+								<li class="active">
+								  <a href="">
+								  <i class="glyphicon glyphicon-print"></i>
+								  <span class="icon-label">Letters</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="">
+								  <i class="glyphicon glyphicon-send"></i>
+								  <span class="icon-label">Emails</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="">
+								  <i class="glyphicon glyphicon-list"></i>
+								  <span class="icon-label">Reports</span>
+								  </a>
+								</li>	
+							</ul>
+						</div>
+
+						<div class="nav-btn pull-right">
+							<BUTTON class="btn btn-large btn-default" id="btnOptions" type="button" data-placement="top" title="Options">
+								<span class="fa fa-cog"></span>
+								<SPAN class="icon-label">Options</SPAN>
+							</BUTTON>
+						</div>
+	
+					</nav>
+				  
+				</div>
+				
+			</div>
+		  
+		
+			<!-- panel edit -->  
+			<DIV class="panel-body" id="panel-options-outer">
+				<DIV class="container-fluid" id="panel-options-inner"> 
+								 
+					<ul class="nav nav-pills nav-stacked col-sm-3" style="margin-top: 15px;" style="outline:1px solid red; padding: 15px;">
+						<li  class="active"><a href="#tabA" data-toggle="tab">Printing Options</a></li>
+						<li><a href="#tabB" data-toggle="tab">Option B</a></li>
+						<li><a href="#tabC" data-toggle="tab">Option C</a></li>
+						<li><a href="#tabD" data-toggle="tab">Option D</a></li>
+					</ul>
+
+					<div class="tab-content col-sm-9">
+							
+						<div class="tab-pane  active" id="tabA" style="border:1px solid rgb(222, 223, 225); border-radius:4px; padding: 5px; min-height: 250px;">
+							
+							<h4>Printing Options</h4>
+							
+							<form class="form-horizontal" role="form">
+							
+								<fieldset>
+			 
+									<div class="form-group">
+
+										<label class="col-sm-3 control-label">Preview Mode</label>
+
+										<div class="col-lg-6">
+
+											<label class="switch switch-success">
+												<input type="checkbox" id="toggle-switch" class="switch-input form control"> 
+												<span class="switch-label" data-on="ON" data-off="OFF"></span>
+												<span class="switch-handle"></span>
+											</label>
+
+										</div>
+
+									</div>
+
+									<div class="form-group">
+
+										<label class="col-sm-3 control-label">Template</label>
+										
+										<div class="col-lg-7">
+											<select class="toggle-control form-control">
+												<option>Template</option>
+												<option>Template</option>
+												<option>Template</option>
+												<option>Template</option>
+											</select>	
+										</div>
+				 
+									</div>
+
+
+								</fieldset>
+
+							</form>
+							
+						</div>
+						
+						<div class="tab-pane" id="tabB" style="border:1px solid rgb(222, 223, 225); border-radius:4px; padding: 5px; min-height: 250px;">
+							<h3>Option B</h3>	
+						</div>
+						
+						<div class="tab-pane" id="tabC" style="border:1px solid rgb(222, 223, 225); border-radius:4px; padding: 5px; min-height: 250px;">
+							<h3>Option C</h3>
+						</div>
+						
+						<div class="tab-pane" id="tabD" style="border:1px solid rgb(222, 223, 225); border-radius:4px; padding: 5px; min-height: 250px;">
+							<h3>Option D</h3>
+						</div>
+						
+					</div>
+					
+				</div>
+
+			</div>
+		  
+			<!-- panel body -->
+			<div class="panel-body fade-in fade-three" id="panel-display">
+	  
+				<H3 class="panel-title">Letters</H3>
+				
+				<FORM ACTION="RenewalLetters.asp" METHOD="post">
+				
+				<INPUT TYPE="hidden" NAME="FormName" VALUE="PrintLetters">
+				                        
+                        <TABLE class="table">
+                              <THEAD>
+                                    <TR><TH>Print</TH><TH>Event<BR>Code</TH><TH>Date<BR>Time</TH><TH>Production<BR>Name</TH><TH>Venue<BR>Name</TH><TH>Order<BR>Quantity</TH></TR>
+                              </THEAD>
+                              <TBODY>
+                                    <TR>
+                                    <TD><INPUT TYPE="checkbox" NAME="EventCode" VALUE=772764></TD>
+                                    <TD>772764</TD>
+                                    <TD>Fri&nbsp;7/8/2016<BR>8:00 PM</TD>
+                                    <TD>Serious Drama</TD>
+                                    <TD>Downtown Theater Main Stage</TD>
+                                    <TD ALIGN="center">6</TD>
+                                    </TR>
+                                    <TR>
+                                    <TD><INPUT TYPE="checkbox" NAME="EventCode" VALUE=653550></TD>
+                                    <TD>653550</TD>
+                                    <TD>Mon&nbsp;12/5/2016<BR>8:00 PM</TD>
+                                    <TD>Serious Drama</TD>
+                                    <TD>Downtown Theater Main Stage</TD>
+                                    <TD ALIGN="center">3</TD>
+                                    </TR>
+                                    <TR>
+                                    <TD><INPUT TYPE="checkbox" NAME="EventCode" VALUE=657627></TD>
+                                    <TD>657627</TD>
+                                    <TD>Mon&nbsp;1/16/2017<BR>8:00 PM</TD>
+                                    <TD>Broadway Musical based on a Movie</TD>
+                                    <TD>Pine Ave Movie Theater</TD>
+                                    <TD ALIGN="center">2</TD>
+                                    </TR>
+                                    <TR>
+                                    <TD><INPUT TYPE="checkbox" NAME="EventCode" VALUE=485568></TD>
+                                    <TD>485568</TD>
+                                    <TD>Mon&nbsp;6/12/2017<BR>8:00 PM</TD>
+                                    <TD>Jersey Boys</TD>
+                                    <TD>Locotini Italian Food Palace</TD>
+                                    <TD ALIGN="center">6</TD>
+                                    </TR>
+                                    <TR>
+                                    <TD><INPUT TYPE="checkbox" NAME="EventCode" VALUE=657628></TD>
+                                    <TD>657628</TD>
+                                    <TD>Mon&nbsp;6/19/2017<BR>8:00 PM</TD>
+                                    <TD>Funny Comedy</TD>
+                                    <TD>Pine Ave Movie Theater</TD>
+                                    <TD ALIGN="center">2</TD>
+                                    </TR>
+                                    <TR>
+                                    <TD><INPUT TYPE="checkbox" NAME="EventCode" VALUE=779313></TD>
+                                    <TD>779313</TD>
+                                    <TD>Fri&nbsp;7/28/2017<BR>8:00 PM</TD>
+                                    <TD>Little Shop of Horrors</TD>
+                                    <TD>Locotini Italian Food Palace</TD>
+                                    <TD ALIGN="center">19</TD>
+                                    </TR>
+                                    <TR>
+                                    <TD><INPUT TYPE="checkbox" NAME="EventCode" VALUE=606284></TD>
+                                    <TD>606284</TD>
+                                    <TD>Mon&nbsp;10/2/2017<BR>8:00 PM</TD>
+                                    <TD>Vaudville Melodrama Show</TD>
+                                    <TD>TicketPlace Annex</TD>
+                                    <TD ALIGN="center">3</TD>
+                                    </TR>
+                                    <TR>
+                                    <TD><INPUT TYPE="checkbox" NAME="EventCode" VALUE=820785></TD>
+                                    <TD>820785</TD>
+                                    <TD>Thu&nbsp;12/28/2017<BR>8:00 PM</TD>
+                                    <TD>Sweeny Todd</TD>
+                                    <TD>Locotini Italian Food Palace</TD>
+                                    <TD ALIGN="center">17</TD>
+                                    </TR>
+                                    <TR>
+                                    <TD><INPUT TYPE="checkbox" NAME="EventCode" VALUE=772762></TD>
+                                    <TD>772762</TD>
+                                    <TD>Sun&nbsp;6/10/2018<BR>8:00 PM</TD>
+                                    <TD>Pops Concert</TD>
+                                    <TD>Downtown Theater Main Stage</TD>
+                                    <TD ALIGN="center">28</TD>
+                                    </TR>
+                                    <TR>
+                                    <TD><INPUT TYPE="checkbox" NAME="EventCode" VALUE=606066></TD>
+                                    <TD>606066</TD>
+                                    <TD>Sun&nbsp;9/30/2018<BR>8:00 PM</TD>
+                                    <TD>Museum Tour</TD>
+                                    <TD>TicketPlace Pavillion</TD>
+                                    <TD ALIGN="center">3</TD>
+                                    </TR>
+                                    <TR>
+                                    <TD><INPUT TYPE="checkbox" NAME="EventCode" VALUE=877484></TD>
+                                    <TD>877484</TD>
+                                    <TD>Sun&nbsp;9/30/2018<BR>8:00 PM</TD>
+                                    <TD>The Sesquicentennial Celebration of the Historic 5th Ward Kick off Concert </TD>
+                                    <TD>TicketPlace Pavillion</TD>
+                                    <TD ALIGN="center">1</TD>
+                                    </TR>
+                              </TBODY>
+                        </TABLE>
+				
+				<p>
+				<input type="submit" class="btn btn-ghost btn-default toggle-submit toggle-control" value="Print"/>
+				</p>
+
+			</div>
+
+			
+		</DIV>
+
+	</section>
+	
+</div>
+
+	<SCRIPT src="https://code.jquery.com/jquery-1.9.1.js" type="text/javascript" language="javascript"></SCRIPT> 
+	<SCRIPT src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript" language="javascript"></SCRIPT> 
+	<SCRIPT src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" type="text/javascript" language="javascript"></SCRIPT> 
+	<SCRIPT src="https://cdn.jsdelivr.net/icheck/1.0.2/icheck.min.js" type="text/javascript" language="javascript" ></SCRIPT> 
+	
+	<SCRIPT type="text/javascript" language="javascript">
+	
+		$(function() 
+		{
+		
+			// iCHECK - RADIO BUTTON
+		
+			// set radio button color
+			$("input[type=radio]").iCheck(
+			{
+				radioClass: 'iradio_square-green',
+				increaseArea: '30%'
+			});
+			
+			// activate hightlight for pre-selected radiobuttons
+			$("input[type=radio]:checked").each(function() 
+			{
+				$(this).closest("tr").addClass("active");
+			});
+			
+			// toggle hightlight when radiobutton changes state
+			$("input[type=radio]").on('ifToggled', function(event)
+			{
+				$(this).closest("tr").toggleClass("active")
+			});
+			
+			// iCHECK - CHECKBOX
+			
+			// set checkbox color
+			// ignore toggle switch checkboxes
+			$("input[type=checkbox]:not(.switch-input)").iCheck(
+			{
+				checkboxClass: 'icheckbox_square-green',
+				increaseArea: '30%'
+			});
+
+			// activate hightlight for pre-selected checkboxes
+			$("input[type=checkbox]:checked").each(function() 
+			{
+				$(this).closest("tr").addClass("active");
+			});
+
+			// toggle hightlight when checkbox changes state
+			$("input[type=checkbox]").on('ifToggled', function(event)
+			{
+				$(this).closest("tr").toggleClass("active")
+			});
+		 
+		}); 
+		
+				(function($) 
+		{
+			$.fn.toggleDisabled = function() 
+			{
+				return this.each(function() 
+				{
+					var $this = $(this);
+					if ($this.attr('disabled')) $this.removeAttr('disabled');		
+					
+					else $this.attr('disabled', 'disabled');
+				});
+			};
+		})(jQuery);
+
+		$(function() 
+		{
+			//toggle switch is disabled by default
+			$('#toggle-switch').prop('checked', false);
+			
+			//toggle controls are all disabled by default
+			$('.toggle-control').prop('disabled', true);
+
+			//toggle control submit is enabled by default
+			$('.toggle-submit').prop('disabled', false);
+			
+			//enable toggle controls when toggle switch selected
+			$('#toggle-switch').change(function() 
+			{
+				$('.toggle-control').toggleDisabled();       
+			});
+		});
+
+
+		jQuery.fn.blindToggle = function(speed, easing, callback) 
+		{
+		var h = (this.height() + parseInt(this.css('paddingTop')) + parseInt(this.css('paddingBottom')) + 9);
+		return this.animate({marginTop: parseInt(this.css('marginTop')) < 0 ? 0 : -h}, speed, easing, callback);  
+		};
+ 
+		jQuery.fn.slideFadeToggle = function(speed, easing, callback) 
+		{
+		return this.animate({opacity: 'toggle', height: 'toggle'}, speed, easing, callback);  
+		};
+ 
+		$(function() 
+		{
+			$('#btnOptions').click(function() 
+			{
+				$('#panel-options-inner').blindToggle(1000, 'easeInOutQuart');
+			});    
+		});
+
+	</SCRIPT>
+ 
+</BODY>
+</HTML>

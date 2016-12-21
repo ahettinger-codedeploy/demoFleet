@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+	<html lang="en">
+	
+	<head>
+	
+	<title>
+		DowntownTheater - Ticket Sales
+	</title>
+
+	<style>
+	/* ::::: http://downtowntheater.testtix.com/CSS/TixCommon.css ::::: */
+
+	.PanelHeader { border-width: 1px; border-color: rgb(170, 170, 170); border-style: solid; font-weight: bold; text-align: left; padding: 5px 10px; }
+	.PanelContent { border-width: 1px; border-color: rgb(170, 170, 170); border-style: none solid solid; text-align: left; padding: 5px 10px; }
+	.TixContent { font-size: 12px; line-height: normal; }
+	.TixContent table, tbody, tr, td, div, span { font-size: 12px; line-height: normal; }
+	.TixContent th { padding: 4px; }
+	/* ::::: http://downtowntheater.testtix.com/css/Tooltip.css ::::: */
+
+	#arrow { z-index: 999999; display: none; background-color: Transparent; }
+	#tooltipBox { z-index: 999998; display: none; position: absolute; background-color: Transparent; }
+	#EventTooltip { background-color: rgb(255, 255, 255); }
+	#BubbleTL { background-image: url('bubbletl.png'); background-color: transparent; }
+	#BubbleTR { background-image: url('bubbletr.png'); background-color: Transparent; }
+	#BubbleBL { background-image: url('bubblebl.png'); background-color: Transparent; }
+	#BubbleBR { background-image: url('bubblebr.png'); background-color: Transparent; }
+	#BubbleTop { background-image: url('bubbletop.png'); background-repeat: repeat-x; background-color: Transparent; }
+	#BubbleBottom { background-image: url('bubblebottom.png'); background-repeat: repeat-x; background-color: Transparent; }
+	#BubbleLeft { background-image: url('bubbleleft.png'); background-repeat: repeat-y; background-color: Transparent; }
+	#BubbleRight { background-image: url('bubbleright.png'); background-repeat: repeat-y; background-color: Transparent; }
+	BODY { background-color: rgb(87, 195, 223); color: rgb(102, 102, 102); font-family: verdana,arial,helvetica; }
+	.TixClass2 { color: rgb(102, 102, 102); background-color: rgb(255, 255, 255); }
+	.TixClass2 a { color: rgb(102, 102, 102); }
+	.TixClass2 a:link { color: rgb(102, 102, 102); text-decoration: underline; }
+	.TixClass2 a:visited { color: rgb(102, 102, 102); text-decoration: underline; }
+	.TixClass2 a:active { color: rgb(102, 102, 102); text-decoration: underline; }
+	.TixClass4 { color: rgb(102, 102, 102); background-color: rgb(255, 255, 255); }
+	.TixClass4 a:link { color: rgb(102, 102, 102); text-decoration: underline; }
+	.TixClass4 a:visited { color: rgb(102, 102, 102); text-decoration: underline; }
+	.TixClass4 a:active { color: rgb(102, 102, 102); text-decoration: underline; }
+	.PanelHeader { color: rgb(102, 102, 102); background-color: rgb(255, 255, 255); font-family: verdana,arial,helvetica; }
+	.PanelHeader a { color: rgb(102, 102, 102); }
+	.PanelHeader a:link { color: rgb(102, 102, 102); text-decoration: underline; }
+	.PanelHeader a:visited { color: rgb(102, 102, 102); text-decoration: underline; }
+	.PanelHeader a:active { color: rgb(102, 102, 102); text-decoration: underline; }
+	.PanelContent { color: rgb(102, 102, 102); background-color: rgb(255, 255, 255); font-family: verdana,arial,helvetica; }
+	</style>
+	
+	<style>
+	BODY {
+	background-color: #57c3df;
+	color: #666666;
+	font-family: verdana,arial,helvetica; }
+	.TixClass1 {
+	color: #666666;
+	background-color: #57c3df; }
+	.TixClass1 a:link {color: #666666; text-decoration: underline;}
+	.TixClass1 a:visited {color: #666666; text-decoration: underline;}
+	.TixClass1 a:active {color: #666666; text-decoration: underline;}
+	.TixClass2 {
+	color: #666666;
+	background-color: #ffffff; }
+	.TixClass2 a {color: #666666}
+	.TixClass2 a:link {color: #666666; text-decoration: underline;}
+	.TixClass2 a:visited {color: #666666; text-decoration: underline;}
+	.TixClass2 a:active {color: #666666; text-decoration: underline;}
+	.TixClass3 {
+	color: #666666;
+	background-color: #ffffff; }
+	.TixClass3 a {color: #666666}
+	.TixClass3 a:link {color: #666666; text-decoration: underline;}
+	.TixClass3 a:visited {color: #666666; text-decoration: underline;}
+	.TixClass3 a:active {color: #666666; text-decoration: underline;}
+	.TixClass4 {
+	color: #666666;
+	background-color: #ffffff; }
+	.TixClass4 a:link {color: #666666; text-decoration: underline;}
+	.TixClass4 a:visited {color: #666666; text-decoration: underline;}
+	.TixClass4 a:active {color: #666666; text-decoration: underline;}
+	.PanelHeader {
+	color: #666666;
+	background-color: #ffffff;
+	font-family: verdana,arial,helvetica; }
+	.PanelHeader a {color: #666666}
+	.PanelHeader a:link {color: #666666; text-decoration: underline;}
+	.PanelHeader a:visited {color: #666666; text-decoration: underline;}
+	.PanelHeader a:active {color: #666666; text-decoration: underline;}
+	.PanelContent {
+	color: #666666;
+	background-color: #ffffff;
+	font-family: verdana,arial,helvetica; }
+	.PanelContent a:link {color: #666666; text-decoration: underline;}
+	.PanelContent a:visited {color: #666666; text-decoration: underline;}
+	.PanelContent a:active {color: #666666; text-decoration: underline;}
+	</style>
+	
+	<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel="stylesheet" type="text/css">
+
+
+	
+	<style>
+	
+	.panel 
+	{
+	float: none;
+	font-family: "Droid Sans",sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	max-width: 990px;
+	}
+
+	.panel { margin-bottom: 20px; background-color: rgb(255, 255, 255); border: 1px solid transparent; border-radius: 4px; box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05); }
+	.panel-body { padding: 15px; }
+	.panel-heading { padding: 10px 15px; border-bottom: 1px solid transparent; border-top-left-radius: 3px; border-top-right-radius: 3px; }
+	.panel-title { margin-top: 0px; margin-bottom: 0px; font-size: 16px; color: inherit; }
+	.panel-default { border-color: rgb(221, 221, 221); }
+	.panel-default > .panel-heading { color: rgb(51, 51, 51); background-color: rgb(245, 245, 245); border-color: rgb(221, 221, 221); }
+	
+	
+	</style>
+	
+	<style>
+	
+	/* table */ 
+
+	.TixContent table, tbody, tr, td, div, span 
+	{
+	font-size: 24px;
+	line-height: normal;
+	}
+	
+	
+	</style>
+	
+	<style>
+	
+	/* buttons */ 
+	
+	button, 
+	input[type="button"], 
+	input[type="reset"], 
+	input[type="submit"] 
+	{	
+	font-size: 12px; 
+	font-weight: 400; 
+	line-height: 1.42857; 
+
+	text-align: center; 
+	vertical-align: middle; 
+	white-space: nowrap; 
+	display: inline-block; 
+
+	border: 1px solid transparent; 
+	border-radius: 4px;
+
+	cursor: pointer; 
+	background-image: none; 
+
+	padding: 6px 12px; 
+	margin-bottom: 0px; 
+
+	-webkit-user-select: none;  /* Chrome Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	-o-user-select: none;		/* Opera */
+	user-select: none;  		/* IE */ 
+	}
+	
+	/* buy button */ 
+	
+	#MasterContent_TixInnerContent_ctl00_gvSchedule .TixClass4 td input
+	{
+	background-color: rgb(92, 184, 92) !important;
+	border-color: rgb(76, 174, 76)  !important;
+	color: rgb(255, 255, 255)  !important;
+	}
+	
+	</style>
+
+	</head>
+
+<body>
+
+	<div class="panel panel-default">
+
+		<div id="MasterContent_TixContent" class="TixContent">
+
+		<div style="width:100%; text-align:center">
+
+			<div id="MasterContent_pnlTopNav" style="text-align:right;padding: 0px 0px 0px 0px">
+
+				<table cellspacing="0" align="center" cellpadding="0" width="100%" border="0">
+					<tr>
+						<td valign="bottom" style="border-style:none none solid none; border-color: #AAAAAA; border-width: 1px" width="10" >
+							<div id="MasterContent_Panel3" style="height:1px;width:10px;">	</div>
+						</td>
+						<td valign="bottom">
+							<div id="MasterContent_pnlPageTitle" style="text-align:center;white-space:nowrap;border-style: solid solid none solid;border-width:1px;border-color: #AAAAAA;padding: 5px 10px 5px 10px;">
+					
+							<span id="MasterContent_lblPageTitle" style="font-size:Small;font-weight:bold;">Schedule of Events</span>
+							
+							</div>
+						</td>
+						<td valign="bottom" style="border-style:none none solid none; border-color: #AAAAAA; border-width: 1px">
+							<div id="MasterContent_HSpacer0" style="height:1px;width:100px;">
+							</div>
+						</td>
+						<td width="100" valign="bottom" >
+							<div id="MasterContent_LoginPanel" class="PanelHeader TixClass2" style="color:#666666;background-color:#FFFFFF;text-align:center;border-style: solid">
+					
+							<a id="MasterContent_LoginStatus1" href="javascript:__doPostBack(&#39;ctl00$ctl00$MasterContent$LoginStatus1$ctl02&#39;,&#39;&#39;)" style="font-weight:normal;text-decoration:none;">Login</a>
+							
+							</div>
+						</td>
+						<td valign="bottom" style="border-style:none none solid none; border-color: #AAAAAA; border-width: 1px" width="2">
+							<div id="MasterContent_HSpacer1" style="height:1px;width:2px;">
+
+							</div>
+						</td>
+						<td valign="bottom" width="100">
+							<div id="MasterContent_ShoppingCartPanel" class="PanelHeader TixClass2" style="color:#666666;background-color:#FFFFFF;text-align:center;white-space:nowrap;border-style: solid">
+					
+							<a id="MasterContent_ShoppingCartLink" href="ShoppingCart.aspx" style="font-weight:normal;text-decoration:none;">Shopping Cart</a>
+							
+							</div>
+						</td>
+						<td valign="bottom" style="border-style:none none solid none; border-color: #AAAAAA; border-width: 1px" width="2">
+							<div id="MasterContent_Panel1" style="height:1px;width:2px;">
+
+							</div>
+						</td>
+						<td width="100" valign="bottom">
+							<div id="MasterContent_AccountPanel" class="PanelHeader TixClass2" style="color:#666666;background-color:#FFFFFF;text-align:center;border-style: solid">
+					
+							<!--<span id="MasterContent_AccountLabel" style="font-size:X-Small;font-weight:bold;">Account</span>-->
+							<a id="MasterContent_AccountLink" href="/Secure/Account.aspx" style="font-weight:normal;text-decoration:none;">Account</a>
+							
+							</div>
+						</td>
+						<td valign="bottom" style="border-style:none none solid none; border-color: #AAAAAA; border-width: 1px" width="10">
+							<div id="MasterContent_Panel4" style="height:1px;width:2px;">
+
+							</div>
+						</td>
+					</tr>
+				</table>
+
+			</div>
+
+			<div id="MasterContent_pnlPageBox" class="TixContent" style="border-style: none solid solid solid; border-color: #AAAAAA; border-width: 1px; padding: 5px 5px 20px 5px">
+
+				<div id="valSummary" style="color:White;background-color:#CC0000;border-color:Black;border-width:1px;border-style:solid;font-size:Small;font-weight:bold;padding:5px;display:none;"></div>
+
+				<script type="text/javascript">
+				//<![CDATA[
+				Sys.WebForms.PageRequestManager._initialize('ctl00$ctl00$MasterContent$TixInnerContent$ScriptManager1', 'form1', [], [], [], 90, 'ctl00$ctl00');
+						//]]>
+				</script>
+
+				<div id="MasterContent_TixInnerContent_pnlPreSale_pnlPreSale" class="PanelContent TixClass4" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;MasterContent_TixInnerContent_pnlPreSale_btnPreSale&#39;)" style="text-align:center;padding: 10px 10px 10px 10px; border-style: solid;">
+							
+
+					<table style="width:100%">
+					  <tr>
+						<td style="vertical-align:middle;text-align:center">
+						  <span id="MasterContent_TixInnerContent_pnlPreSale_lblPreSalePrompt" style="vertical-align:middle">You are currently logged in with Pre-sale Code: Test.</span>&nbsp;
+						  &nbsp;
+						  
+						  <input type="submit" name="ctl00$ctl00$MasterContent$TixInnerContent$pnlPreSale$btnPreSaleLogout" value="Log Out" id="MasterContent_TixInnerContent_pnlPreSale_btnPreSaleLogout" style="color:White;background-color:#31418C;" />
+						</td>
+					  </tr>
+					  <tr><td style="text-align:center"><span id="MasterContent_TixInnerContent_pnlPreSale_PreSaleCodeRequired" style="display:none;">Presale Code Required</span></td></tr>
+					  <tr><td style="text-align:center"><span id="MasterContent_TixInnerContent_pnlPreSale_lblPreSaleInfo">The applicable pre-sale events appear below.</span></td></tr>
+					</table>
+
+				</div>
+
+				<br />
+
+				<div id="MasterContent_TixInnerContent_pnlGridView" style="width:100%;">
+					
+
+					<style type="text/css">
+						.prod_thumbnail
+						{
+							max-width: 100px;
+							max-height: 75px;
+						}
+						.grid_Pager td a
+						{
+							padding: 3px;
+						}
+						.grid_Pager span 
+						{ 
+							padding: 3px;
+							border: 1px solid;
+							font-weight: bold; 
+						}
+					</style>
+
+					<div id="MasterContent_TixInnerContent_ctl00_ScheduleEventsPanel" style="width:100%;">
+							
+						<div>
+						
+							<table cellspacing="0" cellpadding="4" rules="rows" border="1" id="MasterContent_TixInnerContent_ctl00_gvSchedule" style="border-color:#FCFCFC;width:100%;border-collapse:collapse;">
+							<tr class="TixClass2" align="left">
+							<th align="left" scope="col">Date/Time</th><th align="left" scope="col">&nbsp;</th><th align="left" scope="col">Event</th><th align="left" scope="col">Venue/Location</th><th align="left" scope="col">Buy Tix</th>
+							</tr>
+							
+							<tr class="TixClass4">
+							<td align="left" valign="top" style="width:15%;white-space:nowrap;">Fri 5/20/2016<br />at 8:00 PM</td><td align="center" valign="top"><div id="MasterContent_TixInnerContent_ctl00_gvSchedule_pnlThumbnail_0">
+
+							</div></td><td align="left" valign="top" onmouseover="ttDelay=setTimeout(&#39;eventTooltip(\&#39;/AJAX/EventInfo.asp?EventCode=772761\&#39;, this)&#39;, 200);" onmouseout="clearTimeout(ttDelay);hideTooltip();" style="font-weight:bold;width:40%;">
+							<a id="MasterContent_TixInnerContent_ctl00_gvSchedule_hlEvent_0" href="/Event.aspx?EventCode=772761">Broadway Musical based on a Movie</a>
+
+							</td><td align="left" valign="top" style="width:30%;">
+							<span id="MasterContent_TixInnerContent_ctl00_gvSchedule_lblVenue_0">Downtown Theater Main Stage</span><br />
+							<span id="MasterContent_TixInnerContent_ctl00_gvSchedule_lblCity_0">Long Beach</span>, <span id="MasterContent_TixInnerContent_ctl00_gvSchedule_lblState_0">CA</span>
+							</td><td align="left" valign="top" style="width:15%;"><input type="submit" name="ctl00$ctl00$MasterContent$TixInnerContent$ctl00$gvSchedule$ctl02$btnBuyTix" value="Buy Tix" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$MasterContent$TixInnerContent$ctl00$gvSchedule$ctl02$btnBuyTix&quot;, &quot;&quot;, false, &quot;&quot;, &quot;/Event.aspx?EventCode=772761&quot;, false, false))" id="MasterContent_TixInnerContent_ctl00_gvSchedule_btnBuyTix_0" style="color:White;background-color:#008400;width:75px;" /></td>
+							</tr>
+							
+							<tr class="TixClass4">
+							<td align="left" valign="top" style="width:15%;white-space:nowrap;">Fri 5/20/2016<br />at 8:00 PM</td><td align="center" valign="top"><div id="MasterContent_TixInnerContent_ctl00_gvSchedule_pnlThumbnail_0">
+
+							</div></td><td align="left" valign="top" onmouseover="ttDelay=setTimeout(&#39;eventTooltip(\&#39;/AJAX/EventInfo.asp?EventCode=772761\&#39;, this)&#39;, 200);" onmouseout="clearTimeout(ttDelay);hideTooltip();" style="font-weight:bold;width:40%;">
+							<a id="MasterContent_TixInnerContent_ctl00_gvSchedule_hlEvent_0" href="/Event.aspx?EventCode=772761">Broadway Musical based on a Movie</a>
+
+							</td><td align="left" valign="top" style="width:30%;">
+							<span id="MasterContent_TixInnerContent_ctl00_gvSchedule_lblVenue_0">Downtown Theater Main Stage</span><br />
+							<span id="MasterContent_TixInnerContent_ctl00_gvSchedule_lblCity_0">Long Beach</span>, <span id="MasterContent_TixInnerContent_ctl00_gvSchedule_lblState_0">CA</span>
+							</td><td align="left" valign="top" style="width:15%;"><input type="submit" name="ctl00$ctl00$MasterContent$TixInnerContent$ctl00$gvSchedule$ctl02$btnBuyTix" value="Buy Tix" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$MasterContent$TixInnerContent$ctl00$gvSchedule$ctl02$btnBuyTix&quot;, &quot;&quot;, false, &quot;&quot;, &quot;/Event.aspx?EventCode=772761&quot;, false, false))" id="MasterContent_TixInnerContent_ctl00_gvSchedule_btnBuyTix_0" style="color:White;background-color:#008400;width:75px;" /></td>
+							</tr>
+							
+							<tr class="TixClass4">
+							<td align="left" valign="top" style="width:15%;white-space:nowrap;">Fri 5/20/2016<br />at 8:00 PM</td><td align="center" valign="top"><div id="MasterContent_TixInnerContent_ctl00_gvSchedule_pnlThumbnail_0">
+
+							</div></td><td align="left" valign="top" onmouseover="ttDelay=setTimeout(&#39;eventTooltip(\&#39;/AJAX/EventInfo.asp?EventCode=772761\&#39;, this)&#39;, 200);" onmouseout="clearTimeout(ttDelay);hideTooltip();" style="font-weight:bold;width:40%;">
+							<a id="MasterContent_TixInnerContent_ctl00_gvSchedule_hlEvent_0" href="/Event.aspx?EventCode=772761">Broadway Musical based on a Movie</a>
+
+							</td><td align="left" valign="top" style="width:30%;">
+							<span id="MasterContent_TixInnerContent_ctl00_gvSchedule_lblVenue_0">Downtown Theater Main Stage</span><br />
+							<span id="MasterContent_TixInnerContent_ctl00_gvSchedule_lblCity_0">Long Beach</span>, <span id="MasterContent_TixInnerContent_ctl00_gvSchedule_lblState_0">CA</span>
+							</td><td align="left" valign="top" style="width:15%;"><input type="submit" name="ctl00$ctl00$MasterContent$TixInnerContent$ctl00$gvSchedule$ctl02$btnBuyTix" value="Buy Tix" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$MasterContent$TixInnerContent$ctl00$gvSchedule$ctl02$btnBuyTix&quot;, &quot;&quot;, false, &quot;&quot;, &quot;/Event.aspx?EventCode=772761&quot;, false, false))" id="MasterContent_TixInnerContent_ctl00_gvSchedule_btnBuyTix_0" style="color:White;background-color:#008400;width:75px;" /></td>
+							</tr>
+							
+							</table>
+							
+						</div>
+				
+						<div id="MasterContent_TixInnerContent_ctl00_pnlPageCount" class="TixClass2" style="text-align:right;">
+							<span id="MasterContent_TixInnerContent_ctl00_lblPageCount"></span>
+						</div>
+				
+
+					</div>
+				
+				</div>
+
+				<script type="text/javascript" src="/javascript/Tooltip.js"></script>
+				
+				<link rel="stylesheet" href="/css/Tooltip.css" media="screen" type="text/css" />
+
+				<div id="tooltipBox">
+					<table cellpadding="0" cellspacing="0" border="0">
+					  <tr>
+						<td id="BubbleTL" class="BubbleTL" width="23" height="23"><img src="/images/clear.gif" height="23" width="23" alt="" /></td>
+						<td id="BubbleTop" class="BubbleTop" height="23"><img src="/images/clear.gif" height="23" width="23" alt="" /></td>
+						<td id="BubbleTR" class="BubbleTR" width="23" height="23"><img src="/images/clear.gif" height="23" width="23" alt="" /></td>
+					  </tr>
+					  <tr>
+						<td id="BubbleLeft" class="BubbleLeft" width="23"><img src="/images/clear.gif" height="23" width="23" alt="" /></td>
+						<td id="EventTooltip"><img src="/images/loading.gif" alt="" /></td>
+						<td id="BubbleRight" class="BubbleRight" width="23"><img src="/images/clear.gif" height="23" width="23" alt="" /></td>
+					  </tr>
+					  <tr>
+						<td id="BubbleBL" class="BubbleBL" width="23" height="23"><img src="/images/clear.gif" height="23" width="23" alt="" /></td>
+						<td id="BubbleBottom" class="BubbleBottom" height="23"><img src="/images/clear.gif" height="23" width="23" alt="" /></td>
+						<td id="BubbleBR" class="BubbleBR" width="23" height="23"><img src="/images/clear.gif" height="23" width="23" alt="" /></td>
+					  </tr>
+					</table>
+				</div>    
+
+				<div id="arrow"><img src="/images/ArrowLeftDown.png" name="arrowimg" alt="" /></div>
+
+			</div>
+
+			<br />
+			
+			<div id="MasterContent_TixFooter">
+			
+				<table width="100%"><tr><td align="center"><a href="/TermsOfUse.aspx">Terms of Use</a> | <a href="/Privacy.aspx">Privacy Policy</a> | <a href="/Secure/Account.aspx">Account</a></td></tr></table><br />
+				<table width="100%"><tr><td align="center"><span id="MasterContent_lblTixPowered"><a href="http://tix.com/Default.asp"><img src="/Images/PoweredByTixTransparentWhite.gif" border=0 width=122 height=41></a></span></td></tr></table><br />
+				<table width="100%"><tr><td align="center">Copyright © 2001 - 2015
+						<a href="http://www.tix.com" style="text-decoration:none">Tix, Inc.</a><br />
+				<a href="http://www.tix.com" style="text-decoration:none">Box Office Software</a> and
+						<a href="http://www.tix.com" style="text-decoration:none">Online Ticketing Solutions</a>.<br />
+				All rights reserved.<br /><br /></td></tr></table>
+				<br />
+			
+			</div>
+
+		</div>
+
+		</div>
+
+			<!-- AddThis Button BEGIN
+			<script type="text/javascript">var addthis_pub = "tixinc";</script>
+			<a href="http://www.addthis.com/bookmark.php" onmouseover="return addthis_open(this, '', 'http://www.tix.com/event.asp?event=169083', 'Awesome Ticketing Site')" onmouseout="addthis_close()" onclick="return addthis_sendto()"><img src="http://s7.addthis.com/static/btn/lg-share-en.gif" width="125" height="16" border="0" alt="" /></a><script type="text/javascript" src="http://s7.addthis.com/js/152/addthis_widget.js"></script>
+			AddThis Button END -->
+
+			<!-- AddThis Button BEGIN
+			<script type="text/javascript">function fbs_click() {u=location.href;t=document.title;window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(u)+'&t='+encodeURIComponent(t),'sharer','toolbar=0,status=0,width=626,height=436');return false;}</script><style> html .fb_share_button { display: -moz-inline-block; display:inline-block; padding:1px 20px 0 5px; height:15px; border:1px solid #d8dfea; background:url(http://b.static.ak.fbcdn.net/images/share/facebook_share_icon.gif?7:26981) no-repeat top right; } html .fb_share_button:hover { color:#fff; border-color:#295582; background:#3b5998 url(http://b.static.ak.fbcdn.net/images/share/facebook_share_icon.gif?7:26981) no-repeat top right; text-decoration:none; } </style> <a href="http://www.facebook.com/share.php?u=http://www.tix.com" class="fb_share_button" onclick="return fbs_click()" target="_blank" style="text-decoration:none;">Share</a>
+			AddThis Button END -->
+
+		<span>
+
+
+
+		</span>
+
+	</div>
+
+</body>
+</html>

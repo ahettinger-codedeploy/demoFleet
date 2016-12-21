@@ -1,0 +1,165 @@
+ function homeLink (locid){  window.location = 'http://wowweb.weather.com/weather/local/'+locid;  }  var intImage = 2; var tabs = new Array();tabs[tabs.length] = 'tab1';tabs[tabs.length] = 'tab2'; function selectTab(tab) {for( index = 0; index < tabs.length; index++ ) { 	var img = document.getElementById(tabs[index]); 	if( (index + 1) == tab ) {		img.src = img.src.replace('Off', 'On');	} else {		img.src = img.src.replace('On', 'Off');	} if(tab==1) {    document.getElementById('tab4').style.border="#333333 solid";    document.getElementById('tab4').style.borderWidth="0px 0px 1px 0px";    document.getElementById('tab3').style.border="#CCCCCC solid";    document.getElementById('tab3').style.borderWidth="0px 0px 1px 0px";    if (document.getElementById) document.getElementById('maptab1').style.display = "block";    if (document.getElementById) document.getElementById('maptab2').style.display = "none"; } else if(tab==2) {    document.getElementById('tab4').style.border="#CCCCCC solid";    document.getElementById('tab4').style.borderWidth="0px 0px 1px 0px";    document.getElementById('tab3').style.border="#333333 solid";    document.getElementById('tab3').style.borderWidth="0px 0px 1px 0px";    if (document.getElementById) document.getElementById('maptab2').style.display = "block";    if (document.getElementById) document.getElementById('maptab1').style.display = "none"; }}} function doSearch(){ var wh = document.getElementById('wowzipcode').value; window.open("http://wowweb.weather.com/search/enhanced?what=Weather36HourBusinessTravelerCommand&config=SZ=180x150*WX=FHW*LNK=SSNL*UNT=F*BGI=boat*MAP=null|null*DN=www.janiegodfrey.com*TIER=0*PID=1044452561*MD5=25972093365ba5464f642138b67d18ec&par=WOWs0_1044452561&site=180x150&cm_ven=WOWs0&cm_cat=180x150&code=link&promo=searchbox&cm_ite=link&cm_pla=searchbox&where="+wh, "wownewwin"); return false;}  function hrefURL (url){  window.location = url;  }  
+
+if (document.getElementById && !document.getElementById('wx_wow_css') ) 
+{
+       var head = document.getElementsByTagName('head')[0];      
+       var link = document.createElement('link');
+       link.id = 'wx_wow_css';
+       link.rel = 'stylesheet';
+       link.type = 'text/css';
+
+       link.title = 'wow';
+
+       // replace the next line with conditional code based on protocol
+       link.href = 'http://imawow.weather.com/web/common/header/stylesheet/wow.css';
+       head.appendChild(link);
+} 
+
+function addEvent(objObject, strEventName, fnHandler) {
+       if (objObject.addEventListener)
+       		objObject.addEventListener(strEventName, fnHandler, false);
+       else if (objObject.attachEvent)
+       		objObject.attachEvent("on" + strEventName, fnHandler);
+}
+
+var divId;
+var newDiv;
+var targetDiv;
+
+// Note - this function is ONLY run by IE browser.
+function initIE(mydivId, moduleHTML) {
+       divId = mydivId;
+       
+       newDiv = document.createElement('div');
+       newDiv.innerHTML = moduleHTML;
+       var loadingDiv = newDiv.firstChild.cloneNode(false);
+       loadingDiv.innerHTML = '<table style="width: 100%; height: 100%; background-color: #fafafa;"><tr valign="middle"><td align="center"><h3>Loading...</h3></td></tr></table>';
+       targetDiv = document.getElementById(divId);
+       targetDiv.innerHTML = '';
+       targetDiv.appendChild(loadingDiv);
+
+	   // now start the time/out iterations 
+       wxDivLoadPulse();       
+}
+
+
+// timeout logic variables
+var wx_timeoutID = 0;
+var wx_currentTimeout = 10, wx_wait = 0; wx_maxWait = 6000;
+
+// this logic iteratively check's for the WOW div availability until timeout or cancelled
+// the goal here is to wach the page load, and render the WOWs module as soon as the
+// WOWs div appears on the page.  The change is applied part of BZ 7171, replacing 
+// the prior logic of waiting for entire page to be reloaded. And the users were
+// clearly seeing the "Loading..." message because of latency caused by either
+// WOWs users web site page, or because of of the end users low bandwidth. 
+//
+// Note - this function is ONLY run by IE browser.
+
+function wxDivLoadPulse() {
+	if(!updateWxWOWDIV() && (wx_wait < wx_maxWait)) {		
+		wx_wait += wx_currentTimeout;
+		wx_timeoutID = setTimeout('wxDivLoadPulse()', wx_currentTimeout);
+		wx_currentTimeout = wx_currentTimeout * 2;
+	} else {
+		wx_timeoutID = 0;
+	}
+}
+
+		
+// cancels the pulse (if it's still going) and triggers the final update	
+// Note - this function is ONLY run by IE browser.
+function updateWxWOWDIV()
+{	       
+
+  if (wx_timeoutID != 0) clearTimeout(wx_timeoutID);
+  //alert("divID = " + divId + " newDiv innerhtml =  " + newDiv.innerHTML);
+  // if the wxWOW DIV ID loaded on the page assign the wow html to it
+
+  if(  document.getElementById(divId)  )
+  {
+	targetDiv.className = "wow_container";
+    targetDiv.innerHTML = newDiv.innerHTML;
+                      
+    return true;
+  }
+  else
+  	return false;
+}
+ 
+// Note - this function is ONLY run by IE browser.
+function init(mydivId, moduleHTML) {
+       // if IE browser start a loading time lapse presentation
+       // until the WOW div is available on the page
+       if (document.all) {
+              initIE(mydivId, moduleHTML)
+
+       } else {
+	      document.getElementById(mydivId).className =  "wow_container";
+              document.getElementById(mydivId).innerHTML = moduleHTML;
+
+       }
+
+}
+init('wx_module_3703','<style type="text/css">'+
+'div.wow_container table, div.wow_container tr, div.wow_container td, div.wow_container p, div.wow_container div {line-height:1em;font-size:11px;border:none;background:none;}'+
+'</style>'+
+'    '+
+'     '+
+'    '+
+'    '+
+'      <div style="border:0px 0px 0px 0px;padding:0px 0px 0px 0px;margin: 0px 0px 0px 0px;position:relative; width:180px; height:150px;overflow:hidden;">'+
+'      <div id="wowoverlay"></div>'+
+'      <form name="searchform" action="?"  onSubmit="return doSearch()">'+
+'      <TABLE ALIGN="left" CLASS="wowfill" bgcolor="#FFFFFF" CELLPADDING="0" CELLSPACING="0" style="background-image: url(http://imawow.weather.com/web/wow/180x150/boat.jpg);background-repeat: no-repeat;background-position:top;border:#666666 solid; border-width:1px 1px 1px 1px;border-collapse: separate;" WIDTH="180" HEIGHT="150">'+
+'       <TR>'+
+'    	<TD height="25">'+
+'    	 <TABLE ALIGN="left" CELLPADDING=0 CELLSPACING=0 BORDER=0>'+
+'    	  <TR>'+
+'  	   <TD height="25" VALIGN="middle" ALIGN="left" style="padding: 0px 5px 0px 5px;"><a href="http://wowweb.weather.com/weather/local/66212?config=SZ=180x150*WX=FHW*LNK=SSNL*UNT=F*BGI=boat*MAP=null|null*DN=www.janiegodfrey.com*TIER=0*PID=1044452561*MD5=25972093365ba5464f642138b67d18ec&par=WOWs0_1044452561&site=180x150&cm_ven=WOWs0&cm_cat=180x150&code=link&promo=cityName&cm_ite=link&cm_pla=cityName" class="wowwhtLink10" style="font-family:Verdana;font-size:10px;font-weight:bold;color:#FFFFFF;text-decoration:underline;"  target="wownewwin">Shawnee Mission, KS</a></TD>'+
+'          </TR>'+
+'    	 </TABLE>	'+
+'    	</TD>'+
+'       </TR> '+
+'       <TR>'+
+'        <TD ALIGN="left" HEIGHT="75" VALIGN="top" style="padding: 0px 5px 0px 7px;"><!-- left side wx icon-->'+
+'         <TABLE WIDTH="100%" HEIGHT="10" BORDER="0" CELLPADDING="0" CELLSPACING="0">'+
+'             '+
+'    	  <TR>'+
+'    	   <TD valign="top"><IMG SRC="http://imawow.weather.com/web/blank.gif" WIDTH="1" HEIGHT="10" BORDER="0" /></TD>'+
+'    	  </TR> '+
+'    		 '+
+'    	 </TABLE>	'+
+'    	 <TABLE WIDTH="100%" HEIGHT="60" BORDER="0" CELLPADDING="0" CELLSPACING="0">'+
+'      	  <TR>'+
+'         <TD WIDTH="31" VALIGN="middle" style="padding: 0px 0px 0px 7px;"><a href="http://wowweb.weather.com/weather/local/66212?config=SZ=180x150*WX=FHW*LNK=SSNL*UNT=F*BGI=boat*MAP=null|null*DN=www.janiegodfrey.com*TIER=0*PID=1044452561*MD5=25972093365ba5464f642138b67d18ec&par=WOWs0_1044452561&site=180x150&cm_ven=WOWs0&cm_cat=180x150&code=cc&promo=cc-icon&cm_ite=cc&cm_pla=cc-icon" target="wownewwin"><IMG SRC="http://imawow.weather.com/web/common/wxicons/31/26.gif?12122006" WIDTH="31" HEIGHT="31" BORDER="0" /></A></TD>'+
+'           <TD WIDTH="100%" valign="middle" style="padding: 0px 0px 0px 7px;">'+
+'       	   <DIV id=""  style="cursor: pointer;">'+
+'            <TABLE WIDTH="80" BORDER="0" CELLPADDING="0" CELLSPACING="0">'+
+'             <TR>'+
+'  	      <TD VALIGN="top" class="wowhiTempSev"><A style="text-decoration:none;" HREF="http://wowweb.weather.com/weather/local/66212?config=SZ=180x150*WX=FHW*LNK=SSNL*UNT=F*BGI=boat*MAP=null|null*DN=www.janiegodfrey.com*TIER=0*PID=1044452561*MD5=25972093365ba5464f642138b67d18ec&par=WOWs0_1044452561&site=180x150&cm_ven=WOWs0&cm_cat=180x150&code=cc&promo=cc-text&cm_ite=cc&cm_pla=cc-text" target="wownewwin"><div class="wowtempText" style="font-family:Arial;font-size:18px;font-weight:bold;color:#333333;text-decoration:none;"><B>33&deg;F</B></div><DIV CLASS="wowwxPhraseSm" valign="top" ALIGN="left" style="font-family:Arial;font-size:10px;font-weight:normal;color:#333333;text-decoration:none;">Cloudy</DIV></A></td>'+
+'             </tr>'+
+'            </TABLE>'+
+'    	    </DIV></TD> '+
+'    	  </tr>'+
+'    	  <TR>'+
+'           <TD colspan="2" valign="top">'+
+'            <TABLE BORDER="0" CELLPADDING="0" CELLSPACING="0">'+
+'             <TR>'+
+' 	      <TD valign="top" style="padding: 2px 0px 0px 5px;" CLASS="wowwxLink10" align="left"><A HREF="http://wowweb.weather.com/weather/hourbyhour/66212?config=SZ=180x150*WX=FHW*LNK=SSNL*UNT=F*BGI=boat*MAP=null|null*DN=www.janiegodfrey.com*TIER=0*PID=1044452561*MD5=25972093365ba5464f642138b67d18ec&par=WOWs0_1044452561&site=180x150&cm_ven=WOWs0&cm_cat=180x150&code=link&promo=hrbyhr&cm_ite=link&cm_pla=hrbyhr" style="font-family:Arial;font-size:10px;font-weight:regular;color:#3333FF;text-decoration:underline;" target="wownewwin">Hour-by-hour</A><FONT COLOR="#333333"> | </FONT><A HREF="http://wowweb.weather.com/weather/tenday/66212?config=SZ=180x150*WX=FHW*LNK=SSNL*UNT=F*BGI=boat*MAP=null|null*DN=www.janiegodfrey.com*TIER=0*PID=1044452561*MD5=25972093365ba5464f642138b67d18ec&par=WOWs0_1044452561&site=180x150&cm_ven=WOWs0&cm_cat=180x150&code=link&promo=10day&cm_ite=link&cm_pla=10day" style="font-family:Arial;font-size:10px;font-weight:regular;color:#3333FF;text-decoration:underline;" target="wownewwin">10-day</A></TD>'+
+'             </TR>'+
+'            </TABLE>'+
+'           </TD>'+
+'          </TR>   '+
+'         </TABLE>'+
+'        </TD>	'+
+'       </TR>'+
+'       <TR>'+
+'        <TD height="25" align="center" valign="middle" STYLE="padding: 5px 0px 0px 0px;"><INPUT TYPE="TEXT" STYLE="width:120px;" id="wowzipcode" VALUE="Enter city or U.S.zip" CLASS="wowwxFade" onFocus="this.value=\'\'" />&nbsp;<INPUT TYPE="IMAGE" SRC="http://imawow.weather.com/web/common/buttons/go_search.gif" WIDTH="26" HEIGHT="18" border="0" ALIGN="ABSMIDDLE" ALT="GO" onClick="return doSearch()" />'+
+'        	'+
+'        <div  style="background-image: url(http://x.weather.com/wow/17?cb=0.5626322392400653&config=SZ=180x150*WX=FHW*LNK=SSNL*UNT=F*BGI=boat*MAP=null|null*DN=www.janiegodfrey.com*TIER=0*PID=1044452561*MD5=25972093365ba5464f642138b67d18ec&TIER=0);background-repeat: no-repeat;"></div>'+
+'        </TD>'+
+'       </TR>'+
+'      </TABLE></form>'+
+'   <DIV style="position: relative;left:128px;top:74px;width: 36px;cursor:pointer;oveflow:hidden;"><A HREF="http://wowweb.weather.com?config=SZ=180x150*WX=FHW*LNK=SSNL*UNT=F*BGI=boat*MAP=null|null*DN=www.janiegodfrey.com*TIER=0*PID=1044452561*MD5=25972093365ba5464f642138b67d18ec&par=WOWs0_1044452561&site=180x150&cm_ven=WOWs0&cm_cat=180x150&code=brand&promo=logo&cm_ite=brand&cm_pla=logo" target="wownewwin"><img src="http://imawow.weather.com/web/wow/images/BabyinvisBtn.gif" width="52" height="44" border="0" /></A></DIV>'+
+'      </div>'); 

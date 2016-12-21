@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0050)http://ccchristiantheatre.org/tickets/tickets.html -->
+<HTML><HEAD><TITLE>Contra Costa Christian Theatre - Tickets</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META 
+content="Contra Costa Christian Theatre is a professional quality theatre company/ministry, sponsored by Walnut Creek Presbyterian Church. Participants are from many different churches and backgrounds, coming together to further God's Kingdom through the performing arts." 
+name=description>
+<META 
+content="Contra Costa Christian Theatre, contra, costa, christian, theatre, drama, comedy, acting, play, plays, stage" 
+name=keywords><LINK href="WebSite_files/ccctstyles.css" type=text/css 
+rel=stylesheet>
+<STYLE>DIV.clTop {
+	WIDTH: 114px; POSITION: absolute; valign: 0
+}
+DIV.clSub {
+	LEFT: 0px; WIDTH: 114px; POSITION: absolute; valign: 0
+}
+#divCont {
+	LEFT: 0px; WIDTH: 114px; POSITION: relative; TOP: 0px; HEIGHT: 550px
+}
+A.clSubb {
+	FONT-SIZE: 9pt; COLOR: #990000; FONT-FAMILY: Helvetica, Arial, sans-serif; TEXT-DECORATION: underline
+}
+A.clSubb1 {
+	FONT-SIZE: 8pt; COLOR: #990000; FONT-FAMILY: Helvetica, Arial, sans-serif; TEXT-DECORATION: underline
+}
+#divMain {
+	POSITION: absolute; valign: 0
+}
+</STYLE>
+
+<SCRIPT language=JavaScript>
+<!--//BEGIN Script
+/********************************************************************************
+Copyright (C) 1999 Thomas Brattli
+This script is made by and copyrighted to Thomas Brattli at www.bratta.com
+Visit for more great scripts.
+This may be used freely as long as this msg is intact!
+********************************************************************************/
+
+/************************************************************************************
+This script is a "foldout" menu script, all the "foldouts" will
+stay outfolded in older browsers. Works in ie4+ and ns4+.
+
+To change where the menu appears change the left and top values of the divCont
+in the stylesheets, it's currently placed relative so you can
+place this menu in tables or similar if you want. Change the
+text colors and size in the A.clMain and A.clSubb classes.
+************************************************************************************/
+
+/************************************************************************************
+Change this to false if you want all the submenus to get unfold when you
+foldout a new one.
+************************************************************************************/
+var stayFolded=false
+
+/************************************************************************************
+Browsercheck
+************************************************************************************/
+var n = (document.layers) ? 1:0;
+var ie = (document.all) ? 1:0;
+var browser=((n || ie) && parseInt(navigator.appVersion)>=4)
+
+/************************************************************************************
+Making cross-browser objects
+************************************************************************************/
+function makeMenu(obj,nest){
+        nest=(!nest) ? '':'document.'+nest+'.'
+        this.css=(n) ? eval(nest+'document.'+obj):eval('document.all.'+obj+'.style')
+        this.ref=(n) ? eval(nest+'document.'+obj+'.document'):eval('document');
+        this.height=n?this.ref.height:eval(obj+'.offsetHeight')
+        this.x=(n)? this.css.left:this.css.pixelLeft;this.y=(n)? this.css.top:this.css.pixelTop;
+        this.hideIt=b_hideIt;   this.showIt=b_showIt; this.vis=b_vis; this.moveIt=b_moveIt
+        return this
+}
+function b_showIt(){this.css.visibility="visible"}
+function b_hideIt(){this.css.visibility="hidden"}
+function b_vis(){if(this.css.visibility=="hidden" || this.css.visibility=="hide") return true;}
+function b_moveIt(x,y){this.x=x; this.y=y; this.css.left=this.x; this.css.top=this.y}
+/************************************************************************************
+Initiating the page. Just add to the arrays here to get more menuitems
+and add divs in the page
+************************************************************************************/
+function init(){
+        oTop=new Array()
+        oTop[0]=new makeMenu('divTop1','divCont')
+        oTop[1]=new makeMenu('divTop2','divCont')
+        oTop[2]=new makeMenu('divTop3','divCont')
+        oTop[3]=new makeMenu('divTop4','divCont')
+        oTop[4]=new makeMenu('divTop5','divCont')
+        oTop[5]=new makeMenu('divTop6','divCont')
+        oTop[6]=new makeMenu('divTop7','divCont')
+        oTop[7]=new makeMenu('divTop8','divCont')
+
+        oSub=new Array()
+        oSub[0]=new makeMenu('divSub1','divCont.document.divTop1')
+        oSub[1]=new makeMenu('divSub2','divCont.document.divTop2')
+        oSub[2]=new makeMenu('divSub3','divCont.document.divTop3')
+        oSub[3]=new makeMenu('divSub4','divCont.document.divTop4')
+        oSub[4]=new makeMenu('divSub5','divCont.document.divTop5')
+        oSub[5]=new makeMenu('divSub6','divCont.document.divTop6')
+        oSub[6]=new makeMenu('divSub7','divCont.document.divTop7')
+        oSub[7]=new makeMenu('divSub8','divCont.document.divTop8')
+        for(i=0;i<oSub.length;i++){ oSub[i].hideIt() }
+        for(i=1;i<oTop.length;i++){ oTop[i].moveIt(0,oTop[i-1].y+oTop[i-1].height) }
+}
+/************************************************************************************
+This is the function that changes the sub menus to folded or unfolded state.
+************************************************************************************/
+
+function menu(num){
+        if(browser){
+                if(!stayFolded){
+                        for(i=0;i<oSub.length;i++){
+                                if(i!=num) oSub[i].hideIt()
+                        }
+                        for(i=1;i<oTop.length;i++){
+                                oTop[i].moveIt(0,oTop[i-1].y+oTop[i-1].height)
+                        }
+                }
+                oSub[num].vis()?oSub[num].showIt():oSub[num].hideIt()
+                for(i=1;i<oTop.length;i++){
+                        if(!oSub[i-1].vis()) oTop[i].moveIt(0,oTop[i-1].y+oTop[i-1].height+oSub[i-1].height)
+                        else oTop[i].moveIt(0,oTop[i-1].y+oTop[i-1].height)
+                }
+        }
+}
+//Initiating the menus onload, if it's a 4.x+ browser.
+//if(browser) onload=init;
+//-->
+</SCRIPT>
+
+<META content="MSHTML 6.00.6000.16544" name=GENERATOR></HEAD>
+<BODY text=#000000 vLink=#666666 aLink=#ff6666 link=#990000 bgColor=#ffffff 
+leftMargin=0 background=WebSite_files/CCCTGUI_16.gif topMargin=0 
+marginheight="0" marginwidth="0">
+<TABLE cellSpacing=0 cellPadding=0 width=800 border=0><!--Header Graphics-->
+  <TBODY>
+  <TR>
+    <TD vAlign=top align=left width=186 height=159 rowSpan=2><IMG height=159 
+      src="WebSite_files/CCCTGUI_01.gif" width=186></TD>
+    <TD vAlign=center align=left width=332 
+    background=WebSite_files/CCCTGUI_02.gif height=118><!--******PLACE AD HERE!*****-->
+    <TD vAlign=top align=left width=282 background=WebSite_files/CCCTGUI_03.gif 
+    height=159 rowSpan=2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG height=159 
+      src="WebSite_files/hotshot.gif" width=193 align=top></TD></TR><!--Section Title-->
+  <TR>
+    <TD vAlign=center align=left width=300 height=0>
+      <H1>Tickets</H1></TD></TR><!--Left Navigation-->
+  <TR>
+    <TD vAlign=top align=left width=140><IMG 
+      src="WebSite_files/CCCTGUI_04.gif" width=140 border=0> 
+      <DIV id=divCont>
+      <DIV id=divTop1><A 
+      href="http://ccchristiantheatre.org/home/home.html"><IMG height=39 
+      src="WebSite_files/home.jpg" width=140 border=0></A><BR>
+      <DIV id=divSub1></DIV></DIV>
+      <DIV id=divTop2><A 
+      href="http://ccchristiantheatre.org/about/about.html"><IMG height=39 
+      src="WebSite_files/about.jpg" width=140 border=0></A><BR>
+      <DIV id=divSub2></DIV></DIV>
+      <DIV id=divTop3><A 
+      href="http://ccchristiantheatre.org/auditions/auditions.html"><IMG 
+      height=39 src="WebSite_files/auditions.jpg" width=140 border=0></A><BR>
+      <DIV id=divSub3></DIV></DIV>
+      <DIV id=divTop4><A 
+      href="http://ccchristiantheatre.org/tickets/tickets.html"><IMG height=39 
+      src="WebSite_files/tickets_on.jpg" width=140 border=0></A><BR>
+      <DIV class=clSub id=divSub4></DIV></DIV>
+      <DIV id=divTop5><A class=clSubb 
+      href="http://ccchristiantheatre.org/productions/current.html"><IMG 
+      height=39 src="WebSite_files/productions.jpg" width=140 border=0></A><BR>
+      <DIV id=divSub5><A 
+      href="http://ccchristiantheatre.org/productions/current.html"><IMG 
+      height=20 src="WebSite_files/productionscurrent.jpg" width=140 
+      border=0></A><BR><A 
+      href="http://ccchristiantheatre.org/productions/future.html"><IMG 
+      height=20 src="WebSite_files/productionsfuture.jpg" width=140 
+      border=0></A><BR><A 
+      href="http://ccchristiantheatre.org/productions/past.html"><IMG height=20 
+      src="WebSite_files/productionspast.jpg" width=140 border=0></A><BR><A 
+      href="http://ccchristiantheatre.org/reviews/reviews.html"><IMG height=20 
+      src="WebSite_files/productionsshowreviews.jpg" width=140 
+      border=0></A><BR></DIV></DIV>
+      <DIV id=divTop6><A 
+      href="http://ccchristiantheatre.org/donate/donate.html"><IMG height=39 
+      src="WebSite_files/donate.jpg" width=140 border=0></A><BR>
+      <DIV id=divSub6></DIV></DIV>
+      <DIV id=divTop7><A 
+      href="http://ccchristiantheatre.org/resources/resources.html"><IMG 
+      height=39 src="WebSite_files/resources.jpg" width=140 border=0></A><BR>
+      <DIV id=divSub7></DIV></DIV>
+      <DIV id=divTop8><A 
+      href="http://ccchristiantheatre.org/contact/contact.html"><IMG height=39 
+      src="WebSite_files/contact.jpg" width=140 border=0></A><BR>
+      <DIV id=divSub8></DIV></DIV></DIV></TD><!--Headline, Body Text-->
+    <TD vAlign=top align=left width=600 colSpan=2><A name=top></A>
+      <H2>&nbsp;</H2><!--<p class="first">All Productions will be performed at <b>the Del Valle Theater</b> in Walnut Creek, CA.  Please <a href="../contact/contact.html">click here</a> for directions to the theater.</p>
+			<p class="first">Tickets are available through the <b>Dean Lesher Regional Center for the Arts</b>.  <a href="http://www.dlrca.org/tickets.html" target="_blank">Click here</a> for additional information, directions and hours of operation.</p>
+			<p class="first"><b>Walk-in Sales:</b> The Center Ticket Office is located adjacent to the Center's main entry at:  1601 Civic Drive, Walnut Creek, CA 94596</p>
+			<p class="first"><b>Charge Tickets by Phone:</b>  925-943-SHOW (7469)</p>
+			<p class="first"><b>Order Tickets Online:</b>  <a href="http://purchase.tickets.com/buy/TicketPurchase?orgid=23939" target="_blank">click here</a>.</p>-->
+      <P class=first>&nbsp;</P>
+      <P class=first><B>Please check back in November for ticket purchase 
+      information.</B></P><!--<p class="first">High School Musical will be performed at the DVC Performing Arts Centre.</p>
+		<p class="first"><b>Theatre Location:</b><br>DVC Performing Arts Centre<br>321 Golf Club Road<br>Pleasant Hill, CA  94523</p> 
+
+		<p class="first">Tickets can be purchased online using a credit card via email.  <a href="mailto:Michele@ccchristiantheatre.org">Click Here</a> to request your ticket purchase email.  Please allow 24 hours for email.  Tickets can also be purchased at the door.</p>-->
+      <P class=first>&nbsp;</P>
+      <P class=first>&nbsp;</P><!--Footer Links and Copy Right Text-->
+      <HR>
+
+      <P class=second><A 
+      href="http://ccchristiantheatre.org/home/home.html">Home</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A 
+      href="http://ccchristiantheatre.org/about/about.html">About&nbsp;Us</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A 
+      href="http://ccchristiantheatre.org/auditions/auditions.html">Auditions</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A 
+      href="http://ccchristiantheatre.org/tickets/tickets.html">Tickets</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A 
+      href="http://ccchristiantheatre.org/productions/current.html">Productions</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A 
+      href="http://ccchristiantheatre.org/donate/donate.html">Donate to 
+      Us</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A 
+      href="http://ccchristiantheatre.org/resources/resources.html">Resources</A>&nbsp;&nbsp;|&nbsp;&nbsp;<A 
+      href="http://ccchristiantheatre.org/contact/contact.html">Contact&nbsp;Us</A></P>
+      <P class=second><NOBR>Contra Costa Christian Theatre is a professional 
+      quality <A 
+      href="http://ccchristiantheatre.org/about/finance.html">non-profit 
+      (501c3)</A> theatre company/ministry.</NOBR><BR>Experiencing problems with 
+      the site? Contact the <A 
+      href="mailto:webmaster@ccchristiantheatre.org">Webmaster</A>.<BR>© Contra 
+      Costa Christian Theatre</P></TD></TR></TBODY></TABLE></BODY></HTML>

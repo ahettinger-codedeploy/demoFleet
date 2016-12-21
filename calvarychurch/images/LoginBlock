@@ -1,0 +1,556 @@
+
+        
+        ews.Login = ews.Login || {};
+        
+        ews.Login.Input = "";
+        ews.Login.Count = 0;
+        
+        $(document).ready(function() {
+            $(".ews_login_h_bg").appendTo("body");
+            
+            $(".ews_login_h_username").keydown(function(event) {
+                $(".ews_login_h_wrongusername").hide();
+                if (!$.browser.msie) {
+                    $(".ews_login_h_username").attr("placeholder","Email Address");
+                }
+                
+                var k = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+                if (k == 13) {
+                    $(".ews_login_h_password").focus();
+                    return false;
+                }               
+                $(".ews_login_h_wrongusername").hide();
+            });
+            $(".ews_login_h_wrongusername").click(function() {
+                $(".ews_login_h_wrongusername").hide();
+                $(".ews_login_h_username").focus();
+            });
+            
+
+
+            if ($.browser.msie) {
+                $(".ews_login_h_password_real").removeAttr("placeholder");
+                
+                if ($(".ews_login_h_password_real").val() == "") {
+                    $(".ews_login_h_password_overlay").val("Password");
+                    $(".ews_login_h_password_overlay").addClass('placeholder');
+                    $(".ews_login_h_password_real").hide();
+                    $(".ews_login_h_password_overlay").show();
+                    $(".ews_login_h_password_overlay").focus();
+                }
+
+                $(".ews_login_h_password_overlay").keydown(function(event) {
+                    if ($(".ews_login_h_password_overlay").val() == "Invalid Password")
+                        $(".ews_login_h_password_overlay").val("Password");
+                    $(".ews_login_h_password_real").val($(".ews_login_h_password_overlay").val().substring(0,$(".ews_login_h_password_overlay").val().length - $(".ews_login_h_password_overlay").attr('placeholder').length));
+                    //$(".ews_login_h_password_real").val($(".ews_login_h_password_overlay").val());
+                    $(".ews_login_h_password_overlay").val("");
+                    $(".ews_login_h_password_overlay").hide();
+                    $(".ews_login_h_password_real").show();
+                    $(".ews_login_h_password_real").focus();
+                    $(".ews_login_h_wrongpassword").hide();
+                });
+                $(".ews_login_h_password_real").keyup(function(event) {
+                    var input = $(this);
+                    if (input.val() == "") {
+                        $(".ews_login_h_password_overlay").val("Password");
+                        $(".ews_login_h_password_overlay").addClass('placeholder');
+                        $(".ews_login_h_password_real").hide();
+                        $(".ews_login_h_password_overlay").show();
+                        $(".ews_login_h_password_overlay").focus();
+                    }
+                 });
+            }
+
+            $(".ews_login_h_password").keydown(function(event) {
+                
+                var k = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+                if (k == 13) {
+                    ews.Login.Submit_Click();
+                    return false;
+                }
+                $(".ews_login_h_wrongpassword").hide();
+                if (!$.browser.msie) {
+                    $(".ews_login_h_password").attr("placeholder","Password");
+                }
+            });
+            $(".ews_login_h_wrongpassword").click(function() {
+                $(".ews_login_h_wrongpassword").hide();
+                $(".ews_login_h_password").focus();
+            });
+            $(".ews_login_h_submit").click(ews.Login.Submit_Click);
+            $(".ews_login_h_cancel").click(ews.Login.Cancel_Click);
+            $(".ews_login_h_forget").click(ews.Login.Forget_Click);
+            
+            if ($.browser.msie) {
+                ews.Login.MakePlaceHolders();
+            }
+
+        });
+        ews.Login.SetCursorIE = function(input) {
+            if (input.createTextRange) {  
+                var FieldRange = input.createTextRange();  
+                FieldRange.moveStart('character', 0);  
+                FieldRange.collapse();  
+                FieldRange.select();  
+            }
+            else
+            {
+                input.setSelectionRange(0, 0);
+            }
+        }
+        ews.Login.MakePlaceHolders = function() {
+                if ($(".ews_login_h_username").val() == "") {
+                    $(".ews_login_h_username").addClass("placeholder");
+                    $(".ews_login_h_username").val("Email Address");
+                }
+                
+        
+                $('[placeholder]').focus(function() {
+                    var input = $(this);
+                    if (input.hasClass("placeholder"))
+                    {
+                        ews.Login.SetCursorIE(input[0]);
+                    }
+                }).click(function() {
+                    var input = $(this);
+                    if (input.hasClass("placeholder"))
+                    {
+                        ews.Login.SetCursorIE(input[0]);
+                    }
+                }).keyup(function() {
+                    var input = $(this);
+                    
+                    if (input.hasClass("placeholder") && input.val() != input.attr('placeholder')) {
+                        input.val(input.val().substring(0,input.val().length - input.attr('placeholder').length));
+                        input.removeClass('placeholder');
+                    }
+                    if (input.val() == "")
+                    {
+                        input.addClass('placeholder');
+                        input.val(input.attr('placeholder'));
+                        ews.Login.SetCursorIE(input[0]);
+
+                    }
+                    $(".ews_login_h_username").attr("placeholder","Email Address");
+                }).change(function() {
+                    var input = $(this);
+                    if (input.hasClass("placeholder") && input.val() != input.attr('placeholder')) {
+                        input.val(input.val().substring(0,input.val().length - input.attr('placeholder').length));
+                        input.removeClass('placeholder');
+                    }
+                    if (input.val() == "")
+                    {
+                        input.addClass('placeholder');
+                        input.val(input.attr('placeholder'));
+                        ews.Login.SetCursorIE(input[0]);
+                    }
+                });
+
+                $('[placeholder]').parents('form').submit(function() {
+                    $(this).find('[placeholder]').each(function() {
+                    var input = $(this);
+                    if (input.val() == input.attr('placeholder')) {
+                        input.val('');
+                    }
+                    })
+                });
+        }
+        
+        $(document).keyup(function(event) {
+            if (event.currentTarget.activeElement.nodeName != "INPUT" && event.currentTarget.activeElement.nodeName != "TEXTAREA" && event.currentTarget.activeElement.id != "wEditorArea") {
+                var k = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+                if (k == 76 && ews.Login.Input == "") {
+                    ews.Login.Input = "l";
+                } else if (k == 79 && ews.Login.Input == "l") {
+                    ews.Login.Input = "lo";
+                } else if (k == 71 && ews.Login.Input == "lo") {
+                    ews.Login.Input = "log";
+                } else if (k == 73 && ews.Login.Input == "log") {
+                    ews.Login.Input = "logi";
+                } else if (k == 78 && ews.Login.Input == "logi") {
+                    ews.Login.Input = "";
+                    ews.Login.Show();
+                } else {
+                    ews.Login.Input = "";
+                }
+            }
+        });
+        
+        ews.Login.SetLoginBoxBgPosition = function() {
+            var w = document.documentElement.clientWidth;
+            var h = document.documentElement.clientHeight;
+            $(".ews_login_h_bg").css({ height: h + "px", width: w + "px" });
+            $(".ews_login_h_box").css({ top: (h / 2 - 334 / 2) + "px", left: (w / 2 - 453 / 2) + "px" });
+        }
+        
+        ews.Login.Show = function() {
+            $(window).resize(ews.Login.SetLoginBoxBgPosition);
+            ews.Login.SetLoginBoxBgPosition();
+            ews.Login.LoadNews();            
+            $(".ews_login_h_bg").fadeIn(500);
+            
+            //if ($(".ews_login_h_username").val() == $(".ews_login_h_username").attr("placeholder"))
+            $(".ews_login_h_username").focus();
+            //else
+                //$(".ews_login_h_password").focus();
+        }
+
+        ews.Login.Submit_Click = function() {
+            var sPath = '/ControlPanel/Login.aspx';
+            var sUsername = $(".ews_login_h_username").val();
+            var sPassword =  $(".ews_login_h_password").val();
+            var sRemember =  $(".ews_login_h_remember").attr("checked");
+            $(".ews_login_h_wrongusername").hide();
+            $(".ews_login_h_wrongpassword").hide();
+            ews.Login.LastReturnUrl = null;
+            $.post(sPath, { username:sUsername, password:sPassword, remember:sRemember }, ews.Login.Finish);
+        }
+
+        ews.Login.Finish = function(data) {
+            if (data == "Success") {
+                if (window.location.search.indexOf("ReturnUrl") > 0)
+                {
+
+                    var urlParams = {};
+                    var e,
+                        a = /\+/g,  // Regex for replacing addition symbol with a space
+                        r = /([^&=]+)=?([^&]*)/g,
+                        d = function (s) { return decodeURIComponent(s.replace(a, " ")); },
+                        q = window.location.search.substring(1);
+
+                    while (e = r.exec(q))
+                        urlParams[d(e[1])] = d(e[2]);
+
+                    window.location = urlParams["ReturnUrl"];
+                }
+                else
+                    window.location.reload();
+            } else if (data == "Invalid Username."){
+                ews.Login.ShowWrongUsername();
+                $(".ews_login_h_username").focus().select();
+            } else if (data == "Invalid Password.") {
+                ews.Login.Count++;
+                if (ews.Login.Count > 1) {
+                    $(".ews_login_h_wrongpassword").html("If you are having difficulty logging in, <a style='color:#A4A4A4' href='javascript:ews.Login.Forget_Click();'>click here</a>.");
+                }
+                ews.Login.ShowWrongPassword();
+                $(".ews_login_h_password").focus().select();
+            } else if (data == "Used Example.") {
+                alert("Accessing your Amp Vibe site as a new administrator is now more personalized and secure. Please log in using your email address. If you are not sure of your password, click the “Reset my password” link. For further questions, contact your site administrator or support@elexio.com.");
+            } else if (data == "Valid User No Email") {
+    
+                ews.Login.OldPassword();
+            } else {
+                $(".ews_login_h_username").focus().select();
+                ews.Login.ShowWrongUsername();
+                ews.Login.ShowWrongPassword();
+            }
+        }
+        
+        ews.Login.ShowWrongPassword = function() {
+            $(".ews_login_h_wrongpassword").show();
+            $(".ews_login_h_password").val("");
+            
+            if ($(".ews_login_h_password").attr("oldplaceholder") != $(".ews_login_h_password").attr("placeholder"))
+            {
+                $(".ews_login_h_password").attr("oldplaceholder", $(".ews_login_h_password").attr("placeholder"));
+            }
+            $(".ews_login_h_password").attr("placeholder","Invalid Password");
+            if ($.browser.msie)
+            {
+                $(".ews_login_h_password").hide();
+                $(".ews_login_h_password_overlay").show();
+                $(".ews_login_h_password_overlay").addClass('placeholder');
+                $(".ews_login_h_password_overlay").val( $(".ews_login_h_password_overlay").attr("placeholder"));
+            }
+            //if ($.browser.ie)
+            //    ews.Login.MakePlaceHolders();
+            
+        }
+        ews.Login.ShowWrongUsername = function() {
+            $(".ews_login_h_wrongusername").show();
+            if ($.browser.msie ) {
+                $(".ews_login_h_username").val("Invalid Email Address");
+                $(".ews_login_h_username").addClass('placeholder');
+            } else {
+                $(".ews_login_h_username").val("");
+
+            }
+            $(".ews_login_h_username").attr("oldplaceholder", "Email Address");
+            $(".ews_login_h_username").attr("placeholder","Invalid Email Address");
+        }
+
+        ews.Login.Cancel_Click = function() {
+            $(".ews_login_h_bg").fadeOut(500);
+            $(".ews_login_h_wrongusername").hide();
+            $(".ews_login_h_wrongpassword").hide();
+        }
+
+
+        /// Forgot Password
+        ews.Login.Forget_Click = function() {
+            var eLitebox = $(
+'<div class="ews_login_r_box"> \
+    <input class="ews_login_r_email" type="text" /> \
+    <div class="ews_login_r_msgreset">A new password has been emailed to you. Please click Cancel to return to the login screen.</div> \
+    <div class="ews_login_r_msgfailed"></div> \
+    <div class="ews_login_r_reset" onclick="ews.Login.Reset_Click()"></div> \
+    <div class="ews_login_r_cancel" onclick="ews.Login.ForgotCancel_Click()"></div> \
+</div>');
+            eLitebox.appendTo("Body");
+            
+            var w = document.documentElement.clientWidth;
+            var h = document.documentElement.clientHeight;
+            eLitebox.css({ top: (h / 2 - 254 / 2) + "px", left: (w / 2 - 453 / 2) + "px" });
+            
+            $(".ews_login_h_box").fadeOut(500, function() {
+                $(".ews_login_r_box").fadeIn();
+            });
+        }
+
+                /// Forgot Password
+        ews.Login.OldPassword = function() {
+
+            var eLitebox = $(
+'<div class="ews_login_o_box"> \
+    <input class="ews_login_o_email" type="text" placeholder="Email Address" /> \
+    <input class="ews_login_o_email2" type="text"  placeholder="Re-Enter Email Address" /> \
+    <div class="ews_login_o_msgfailed"></div> \
+    <div class="ews_login_o_reset" onclick="ews.Login.Change_Click()"></div> \
+    <div class="ews_login_o_cancel" onclick="ews.Login.OldPasswordCancel_Click()"></div> \
+</div>');
+            eLitebox.appendTo("Body");
+            
+            var w = document.documentElement.clientWidth;
+            var h = document.documentElement.clientHeight;
+            eLitebox.css({ top: (h / 2 - 254 / 2) + "px", left: (w / 2 - 453 / 2) + "px" });
+            
+            $(".ews_login_h_box").fadeOut(500, function() {
+                $(".ews_login_o_box").fadeIn();
+                if ($.browser.msie ) {
+                    ews.Login.MakePlaceHolders(); //make placeholders work in ie
+                }
+            });
+        }
+
+        ews.Login.OldPasswordCancel_Click = function() {
+            $(".ews_login_o_box").fadeOut(500, function() {
+                $(".ews_login_h_box").fadeIn();
+                $(".ews_login_o_box").remove();
+            });
+        }
+
+        ews.Login.ForgotCancel_Click = function() {
+            $(".ews_login_r_box").fadeOut(500, function() {
+                $(".ews_login_h_box").fadeIn();
+                $(".ews_login_r_box").remove();
+            });
+        }
+        
+        ews.Login.Reset_Click = function() {
+            $(".ews_login_r_msgreset").hide();
+            $(".ews_login_r_msgfailed").hide();
+            $(".ews_login_r_reset").hide();
+            $(".ews_login_r_cancel").hide();
+            var sPath = '/ControlPanel/Login.aspx';
+            var sEmail = $(".ews_login_r_email").val();
+            $.post(sPath, { reset:"true", email:sEmail }, ews.Login.ResetFinish);
+        }
+
+        ews.Login.Change_Click = function() {
+;
+            var sPath = '/ControlPanel/Login.aspx';
+            var sEmail = $(".ews_login_o_email").val();
+            var sEmail2 = $(".ews_login_o_email2").val();
+            var sUsername = $(".ews_login_h_username").val();
+            var sPassword = $(".ews_login_h_password").val();
+
+            if (sEmail == "")
+            {
+                alert('Enter a valid email address');
+                return;
+            }
+            if (sEmail.indexOf("@") == -1 || sEmail.indexOf(".") == -1)
+            {
+                alert(sEmail + ' is not a valid email address');
+                return;
+            }
+            if (sEmail != sEmail2)
+            {
+                alert('Email addresses do not match');
+                return;
+            }
+            $(".ews_login_o_msgreset").hide();
+            $(".ews_login_o_msgfailed").hide();
+            $(".ews_login_o_reset").hide();
+            $(".ews_login_o_cancel").hide()
+
+            $.post(sPath, { reset:"true", email:sEmail, username: sEmail, oldusername: sUsername , password: sPassword }, ews.Login.ChangeFinish);
+        }
+
+        ews.Login.ResetFinish = function(data) {
+            if (data == "Success") {
+                $(".ews_login_r_cancel").show();
+                $(".ews_login_r_msgreset").show();
+                $(".ews_login_r_msgfailed").hide();
+            } else {
+                $(".ews_login_r_reset").show();
+                $(".ews_login_r_cancel").show();
+                $(".ews_login_r_msgreset").hide();
+                $(".ews_login_r_msgfailed").html(data).show();
+            }
+        }
+        
+        ews.Login.ChangeFinish = function(data) {
+            if (data == "Done.") {
+                $(".ews_login_h_username").val($(".ews_login_o_email").val());
+                $(".ews_login_o_box").fadeOut(500, function() {
+                    $(".ews_login_h_box").fadeIn();
+                    $(".ews_login_o_box").remove();
+                });
+            } else {
+                $(".ews_login_o_reset").show();
+                $(".ews_login_o_cancel").show();
+                $(".ews_login_o_msgreset").hide();
+                $(".ews_login_o_msgfailed").html(data).show();
+            }
+        }
+
+        /// Form View js
+
+        $(function() {
+            $("[name=ews_loginpassword]").keyup(function(event) {
+                var k = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+                if (k == 13) {
+                    ews.Login.FormSubmit_Click(this, $(this).attr("RedirectUrl"));
+                }     
+            });
+            $("[name=ews_loginemail]").keyup(function(event) {
+                var k = event.keyCode ? event.keyCode : event.which ? event.which : event.charCode;
+                if (k == 13) {
+                    $("[name=ews_loginpassword]").focus();
+                    return false;
+                }     
+            });
+        });
+
+        ews.Login.FormSubmit_Click = function(eButton, sRedirectUrl) {
+            var sPath = '/ControlPanel/Login.aspx';
+            var jParent = $(eButton).parents(".ews_block").first();
+            var sUsername = jParent.find("[name=ews_loginemail]").val();
+            var sPassword =  jParent.find("[name=ews_loginpassword]").val();
+            var sRemember =  jParent.find("[name=ews_loginremember]").attr("checked");
+            $(".ews_login_h_wrongusername").hide();
+            $(".ews_login_h_wrongpassword").hide();
+            ews.Login.LastReturnUrl = sRedirectUrl;
+            $.post(sPath, { username:sUsername, password:sPassword, remember:sRemember }, ews.Login.FormFinish);
+        }
+
+        ews.Login.FormFinish = function(data) {
+            if (data == "Success") {
+                if (ews.Login.LastReturnUrl)
+                    window.location = ews.Login.LastReturnUrl;
+                else
+                    window.location.reload();
+
+            } else {
+                $(".ews_login_f_error").html(data).show();
+                if (data == "Invalid Username") {
+                    $("input[name='ews_loginemail']").focus().select();
+                } else if (data == "Invalid Password") {
+                    $(".input[name='ews_loginpassword']").focus().select();
+                }
+            }
+        }
+
+        ews.Login.Forgot_Click = function(data) {
+            $(".ews_login_f_forgot").show();
+        }
+
+        ews.Login.FormReset_Click = function(eButton) {
+            var sPath = '/ControlPanel/Login.aspx';
+            var jParent = $(eButton).parents(".ews_block").first();
+            var sEmail = jParent.find("[name=ews_resetpassword]").val();
+            $.post(sPath, { Reset:"true", email: sEmail }, ews.Login.FormResetFinish);
+        }
+
+        ews.Login.FormResetCancel_Click = function(data) {
+            $(".ews_login_f_forgot").hide();
+        }
+
+        ews.Login.FormResetFinish = function(data) {
+            if (data == "Success") {
+                $(".ews_login_f_forgot").hide();
+                alert('An email has been sent to you with your new password.');
+            } else {
+                $(".ews_login_f_forgot").hide();
+                $(".ews_login_f_error").html(data).show();
+            }
+        }
+        $(function() {
+            if (window.location.search.indexOf('norights') > -1) {
+                alert('You do not have rights to view this content.');
+                document.location = "http://" + window.location.hostname;
+            }
+
+        });
+        ews.Login.SelectedNews = null;
+        ews.Login.NewsTimer = null;
+        ews.Login.LoadNews = function() {
+            var i = 0;
+
+            $(".ews_login_h_newsbox_slide").each(function(){
+                var oSlide = $(this);
+                i++;
+                var sClass = "";
+                if (i == 2)
+                {
+                    $(".ews_login_h_newsbox_controls").show();
+                }
+                if (i == 1)
+                {
+                    $(".ews_login_h_box").addClass("ews_login_h_box_auto");
+                    $(".ews_login_h_newsbox").show();
+                    ews.Login.SelectedNews = oSlide;
+                    oSlide.show();
+                    sClass = "newsbox_active";
+                }
+                $(".ews_login_h_newsbox_controls").append($("<a href=\"#\" class=\"newsbox "+ sClass +"\"></a>").click(function(){
+                    ews.Login.MovetoSlide(oSlide, this);
+                }));
+            });
+            if ($(".ews_login_h_newsbox_slide").length > 1) {
+                ews.Login.NewsTimer = setInterval(function() {
+                    if (ews.Login.SelectedNews.next().length == 1){
+                        ews.Login.MovetoSlide(ews.Login.SelectedNews.next(),  $(".newsbox_active").next());
+                    } else {
+                        ews.Login.MovetoSlide($(".ews_login_h_newsbox_slide").first(),  $(".newsbox").first());
+                    }
+                },3000);
+            }
+        }
+        ews.Login.MovetoSlide = function(oSlide, oClicked) {
+            if (oSlide.attr("ID") != ews.Login.SelectedNews.attr("ID")){
+                $(".newsbox").removeClass("newsbox_active");
+                $(oClicked).addClass("newsbox_active");
+                ews.Login.SelectedNews.animate({
+                    left: '-' + ews.Login.SelectedNews.width()
+                    }, 'slow', function() {
+                    $(this).hide();
+                });
+                oSlide.css('left', oSlide.width());
+                oSlide.show();
+                oSlide.animate({
+                    left: '0'
+                    }, 'slow', function() {
+                            
+                });
+                ews.Login.SelectedNews = oSlide;
+                oSlide.show();
+            }
+        }
+        
+if (typeof Sys != "undefined" && Sys && Sys.Application) {
+    Sys.Application.notifyScriptLoaded();
+}

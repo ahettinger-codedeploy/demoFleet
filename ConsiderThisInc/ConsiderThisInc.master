@@ -1,0 +1,535 @@
+<%
+'CHANGELOG
+'LSP 08/05/15 - initial development
+%>
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+<html class=" js_active  vc_desktop  vc_transform " lang="en-US"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Tickets | Consider This, Inc.</title>
+<link id="the1-google-fonts" href="/clients/ConsiderThisInc/Images/css.css" rel="stylesheet" type="text/css"><link rel="alternate" type="application/rss+xml" title="Consider This, Inc. » Feed" href="http://www.considerthisinc.com/?feed=rss2">
+<link rel="alternate" type="application/rss+xml" title="Consider This, Inc. » Comments Feed" href="http://www.considerthisinc.com/?feed=comments-rss2">
+
+<link rel="stylesheet" id="contact-form-7-css" href="/clients/ConsiderThisInc/Images/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="rs-plugin-settings-css" href="/clients/ConsiderThisInc/Images/settings.css" type="text/css" media="all">
+<style id="rs-plugin-settings-inline-css" type="text/css">
+.tp-caption a{color:#ff7302;text-shadow:none;-webkit-transition:all 0.2s ease-out;-moz-transition:all 0.2s ease-out;-o-transition:all 0.2s ease-out;-ms-transition:all 0.2s ease-out}.tp-caption a:hover{color:#ffa902}
+</style>
+<link rel="stylesheet" id="simplecarousel-css" href="/clients/ConsiderThisInc/Images/jquery.css" type="text/css" media="all">
+<link rel="stylesheet" id="simplegallery-css" href="/clients/ConsiderThisInc/Images/jquery_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="the1PostGallery-css" href="/clients/ConsiderThisInc/Images/gallery.css" type="text/css" media="all">
+<link rel="stylesheet" id="the1_googlemaps_style-css" href="/clients/ConsiderThisInc/Images/googlemaps.css" type="text/css" media="all">
+<link rel="stylesheet" id="the1_slider-css" href="/clients/ConsiderThisInc/Images/_frontend.css" type="text/css" media="all">
+<link rel="stylesheet" id="the1-grid-css" href="/clients/ConsiderThisInc/Images/grid.css" type="text/css" media="all">
+<link rel="stylesheet" id="the1-wpbasics-css" href="/clients/ConsiderThisInc/Images/wp.css" type="text/css" media="all">
+<link rel="stylesheet" id="fontawesome-css" href="/clients/ConsiderThisInc/Images/font-awesome.css" type="text/css" media="all">
+<link rel="stylesheet" id="style-css" href="/clients/ConsiderThisInc/Images/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="skin-style-css" href="/clients/ConsiderThisInc/Images/style-skin.css" type="text/css" media="all">
+<link rel="stylesheet" id="js_composer_front-css" href="/clients/ConsiderThisInc/Images/js_composer.css" type="text/css" media="all">
+<link rel="stylesheet" id="shortcodes_style-css" href="/clients/ConsiderThisInc/Images/shortcodes.css" type="text/css" media="all">
+<script type="text/javascript" src="/clients/ConsiderThisInc/Images/jquery.js"></script>
+<script type="text/javascript" src="/clients/ConsiderThisInc/Images/jquery-migrate.js"></script>
+<script type="text/javascript" src="/clients/ConsiderThisInc/Images/jquery_005.js"></script>
+<script type="text/javascript" src="/clients/ConsiderThisInc/Images/jquery_004.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var like_this_ajax_object = {"ajax_url":"http:\/\/www.considerthisinc.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/clients/ConsiderThisInc/Images/likesScript.js"></script>
+<script type="text/javascript" src="/clients/ConsiderThisInc/Images/js"></script><script src="/clients/ConsiderThisInc/Images/main.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.considerthisinc.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.considerthisinc.com/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 4.2.4">
+<link rel="canonical" href="http://www.considerthisinc.com/?page_id=10">
+<link rel="shortlink" href="http://www.considerthisinc.com/?p=10">
+		<script type="text/javascript">
+			jQuery(document).ready(function() {
+				// CUSTOM AJAX CONTENT LOADING FUNCTION
+				var ajaxRevslider = function(obj) {
+
+					// obj.type : Post Type
+					// obj.id : ID of Content to Load
+					// obj.aspectratio : The Aspect Ratio of the Container / Media
+					// obj.selector : The Container Selector where the Content of Ajax will be injected. It is done via the Essential Grid on Return of Content
+
+					var content = "";
+
+					data = {};
+
+					data.action = 'revslider_ajax_call_front';
+					data.client_action = 'get_slider_html';
+					data.token = '5048bd6a77';
+					data.type = obj.type;
+					data.id = obj.id;
+					data.aspectratio = obj.aspectratio;
+
+					// SYNC AJAX REQUEST
+					jQuery.ajax({
+						type:"post",
+						url:"http://www.considerthisinc.com/wp-admin/admin-ajax.php",
+						dataType: 'json',
+						data:data,
+						async:false,
+						success: function(ret, textStatus, XMLHttpRequest) {
+							if(ret.success == true)
+								content = ret.data;
+						},
+						error: function(e) {
+							console.log(e);
+						}
+					});
+
+					 // FIRST RETURN THE CONTENT WHEN IT IS LOADED !!
+					 return content;
+				};
+
+				// CUSTOM AJAX FUNCTION TO REMOVE THE SLIDER
+				var ajaxRemoveRevslider = function(obj) {
+					return jQuery(obj.selector+" .rev_slider").revkill();
+				};
+
+				// EXTEND THE AJAX CONTENT LOADING TYPES WITH TYPE AND FUNCTION
+				var extendessential = setInterval(function() {
+					if (jQuery.fn.tpessential != undefined) {
+						clearInterval(extendessential);
+						if(typeof(jQuery.fn.tpessential.defaults) !== 'undefined') {
+							jQuery.fn.tpessential.defaults.ajaxTypes.push({type:"revslider",func:ajaxRevslider,killfunc:ajaxRemoveRevslider,openAnimationSpeed:0.3});
+							// type:  Name of the Post to load via Ajax into the Essential Grid Ajax Container
+							// func: the Function Name which is Called once the Item with the Post Type has been clicked
+							// killfunc: function to kill in case the Ajax Window going to be removed (before Remove function !
+							// openAnimationSpeed: how quick the Ajax Content window should be animated (default is 0.3)
+						}
+					}
+				},30);
+			});
+		</script>
+
+		<style type="text/css">
+
+			.the1DonationMeter{
+				border: solid 1px #ddd;
+				padding: 20px 30px;
+				margin: 30px 0;
+				}
+
+			.the1DonationMeter_bar{
+				height: 18px;
+				max-width: 550px;
+				background: #808080;
+				margin-bottom: 70px;
+				border-radius:  4px / 50%;
+				}
+			.the1DonationMeter_progress{
+				height: 100%;
+				width: 70%;
+				background: #fcb922;
+				position: relative;
+				border-radius:  4px / 50%;
+				}
+			.the1DonationMeter_progress_value{
+				height: 36px;
+				line-height: 36px;
+				padding: 0 15px;
+				text-align: center;
+				background: #eee;
+				color: #222;
+				position: absolute;
+				right: 0;
+				bottom: -6px;
+				transform: translate(50%, 100%);
+				border-radius: 3px;
+				}
+			.the1DonationMeter_progress_value:before{
+				content: " ";
+				display: block;
+				margin: auto;
+				height: 0;
+				width: 0;
+				position: absolute;
+				border: solid 6px transparent;
+				border-bottom-color: #eee;
+				box-sizing: content-box;
+				transform: translate(-50%, -100%);
+				top: 0;
+				left: 50%;
+				}
+			.the1DonationMeter_excerpt{
+				margin-bottom: 20px;
+				}
+
+
+			.the1ThumbDonationMeter{
+				color: #fff;
+				}
+			.the1ThumbDonationMeter_excerpt{
+				margin-bottom: 12px;
+				font-size: 18px;
+				}
+			.the1ThumbDonationMeter_bar{
+				height: 14px;
+				max-width: 380px;
+				margin: auto;
+				background: rgba(255,255,255,0.3);
+				border-radius:  4px / 50%;
+				}
+			.the1ThumbDonationMeter_progress{
+				height: 100%;
+				width: 10%;
+				background: #e7b133;
+				border-radius:  4px / 50%;
+				}
+			.the1ThumbDonationMeter_progress_value{
+				display: none;
+				}
+
+
+        </style>
+		<style type="text/css">
+
+
+	/*	font: body  */
+
+		body{ font-family:Open Sans,Arial,sans-serif; color:#333333; font-size:15px; font-weight:normal; letter-spacing:0em; }
+				a {
+			color:#284cff;			}
+
+				a:hover {
+			color:#26e9ff;			}
+
+	/*	background: body  */
+
+								body{
+									}
+
+	/*	font: headings  */
+
+		h1{ font-weight:700; letter-spacing:0em; color:#443e47; font-family:Open Sans Condensed,Arial,sans-serif; text-transform:none; }		h2{ font-weight:700; letter-spacing:0.06em; color:#443e47; font-family:Open Sans Condensed,Arial,sans-serif; text-transform:uppercase; }		h3{ font-weight:700; letter-spacing:0.03em; color:#443e47; font-family:Open Sans Condensed,Arial,sans-serif; text-transform:none; }		h4{ font-weight:300; letter-spacing:0.06em; color:#443e47; font-family:Open Sans Condensed,Arial,sans-serif; text-transform:uppercase; }		h5{ font-weight:600; letter-spacing:0.03em; color:#999999; font-family:Open Sans,Arial,sans-serif; text-transform:none; }		h6{ font-weight:600; letter-spacing:0.03em; color:#000000; font-family:Open Sans,Arial,sans-serif; text-transform:uppercase; }
+		h1 a{ color:#443e47; }		h2 a{ color:#443e47; }		h3 a{ color:#443e47; }		h4 a{ color:#443e47; }		h5 a{ color:#999999; }		h6 a{ color:#000000; }
+		@media screen and (min-width:901px){
+			h1{ font-size:37px; }			h2{ font-size:24px; }			h3{ font-size:20px; }			h4{ font-size:15px; }			h5{ font-size:14px; }			h6{ font-size:14px; }		}
+
+	/*	header  */
+
+
+
+				.header-wrapper{
+						}
+		.header-spacer{
+						}
+		#header-sticky{
+			background-color: #302c2d;			}
+
+		#header{
+			background-color: #302c2d;			}
+		@media screen and (min-width:601px){
+		#header{
+			background-color: rgba(48,44,45,0.5);						}
+		}
+		/*
+		@media screen and (min-width:901px){
+		.header-height{
+						}
+		.header-height--lineheight{
+						}
+		}
+		*/
+
+						.header-info,
+		.header-info a{
+			color: rgba(255,255,255,0.7);			}
+		.header-info a:hover{
+			color:#ffffff;			}
+
+		.site-logo, .site-logo:hover{ font-weight:500; letter-spacing:0.03em; color:#ffffff; font-family:Raleway,Arial,sans-serif; font-size:32px; text-transform:none; }		.main-nav > ul > li > a{ font-weight:700; letter-spacing:0.06em; color:#f9f9f9; font-family:Open Sans Condensed,Arial,sans-serif; font-size:19px; text-transform:capitalize; }		.main-nav .sub-menu, .main-nav-mobile{ font-family:Open Sans Condensed,Arial,sans-serif; }
+				.main-nav > ul > li:hover > a,
+		.main-nav > ul > li.current-menu-item > a{
+			color:#c9c9c9;
+		}
+
+						.main-nav > ul > li:before{
+			color: #bcbcbc;			}
+		.main-nav > ul > li:hover:before,
+		.main-nav > ul > li.current-menu-item:before{
+			color: #ffffff;			}
+
+
+	/*	title-bar  */
+
+				.title-bar--post{
+						background-color: #353539;			}
+
+				.title-bar--page{
+			background-image: url(http://www.considerthisinc.com/wp-content/uploads/2015/03/cropped-Arsenic-and-Old-Lace-Cast-Header.jpg);			background-color: #353539;			}
+
+				.title-bar--archive{
+						background-color: #353539;			}
+
+				.title-bar--archive-works{
+						background-color: #333;			}
+
+				.title-bar--work{
+						background-color: #333;			}
+
+
+	/*	micromenu  */
+
+		@media screen and (min-width:801px){
+			.header-home.fixed .site-logo span,
+			.header-inside.fixed .site-logo span{
+				font-size: 85%;
+			}
+		}
+
+
+	/*	buttons  */
+
+		.the1_button, #submit, .wpcf7-submit{ font-family:Open Sans Condensed,Arial,sans-serif; letter-spacing:0.1em; font-weight:700; text-transform:uppercase; }
+		@media screen and (min-width:901px){
+		.the1_button, #submit, .wpcf7-submit{ font-size:14px; }		}
+
+				.the1_button,
+		input[type=button],
+		input[type=submit]{
+			color:#ffffff;
+			background-color:#d24c55;
+			}
+				.the1_button--filled:hover,
+		input[type=button]:hover,
+		input[type=submit]:hover {
+			color:#ffffff!important;
+			background-color:#ac3d45 !important;			}
+
+				.the1_button--outlined{
+			color:#444444;
+			border-color:#444444;
+			}
+				.the1_button--outlined:hover{
+			color:#ffffff!important;
+			border-color:#ffffff!important;			background-color:#000000 !important;			}
+
+				.the1_button--naked{
+			color:#ffffff;
+			}
+				.the1_button--naked:hover{
+			color:#c4c4c4!important;
+			}
+
+	/*	footer  */
+
+		#footer, #footer a{ font-family:Open Sans,Arial,sans-serif; font-size:14px; letter-spacing:0em; color:#939393; font-weight:normal; text-transform:none; }		#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6{ font-family:Open Sans Condensed,Arial,sans-serif; font-size:20px; letter-spacing:0.03em; color:#ffffff; font-weight:700; text-transform:uppercase; }
+				#footer{
+						}
+
+								.footer-overlay{
+			background-color: rgba(60,59,61,1) !important;			}
+
+								.copyright-wrapper{
+			background-color: rgba(0,0,0,0.35) !important;
+		}
+
+				#footer a {
+			color:#bbbbbb;			}
+
+				#footer a:hover {
+			color:#ffffff;			}
+
+	/*	service blocks  */
+
+		.service-title{ font-family:Open Sans Condensed,Arial,sans-serif; }
+
+	/*	plugin: works  */
+
+
+		@media screen and (min-width:1281px){
+						}
+
+	/*	USER CUSTOM CSS  */
+
+		#header {
+	border-bottom: solid 1px rgba(255,255,255,0.4);
+}
+.ts-wrapper.using-tabs{
+	border-bottom: solid 1px #7C755E;
+}
+
+</style>
+<style>#the1-node{background:url(http://www.considerthisinc.com/wp-content/themes/Nonprofit/core/admin/images/interface/logo_16.png) no-repeat; padding-left: 25px;}</style><meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress.">
+<!--[if IE 8]><link rel="stylesheet" type="text/css" href="http://www.considerthisinc.com/wp-content/plugins/js_composer/assets/css/vc-ie8.css" media="screen"><![endif]--><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #aaaaaa; }
+</style>
+<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>	<script src="/clients/ConsiderThisInc/Images/common.js" charset="UTF-8" type="text/javascript"></script><script src="/clients/ConsiderThisInc/Images/util.js" charset="UTF-8" type="text/javascript"></script><script src="/clients/ConsiderThisInc/Images/stats.js" charset="UTF-8" type="text/javascript"></script></head>
+	<body class="page page-id-10 page-template-default custom-background static-parallax-footer wpb-js-composer js-comp-ver-4.5.3 vc_responsive">
+
+
+    	<div id="wrapper" class="s-main-wrapper">
+
+
+
+
+
+    <!-- static header -->
+
+                <div class="s-header-wrapper header-wrapper layout2 header-wrapper--overlayed ">
+                <header id="header" class="main-header box-shadow">
+                	<div class="s-container--wide">
+                    <div class="s-section s-section--sides">
+                        <div class="main-header-inner header-height clearfix">
+
+                            <a class="site-logo site-logo--text float-left" href="http://www.considerthisinc.com/"><span class="valign-middle">   </span></a>                            <div class="main-nav-toggle s-visible-small noselect"><i class="fa fa-bars"></i></div>
+							<div class="header-info-wrapper valign-middle float-right s-visible-large">
+								                            </div>
+
+							<div class="header-search-wrapper valign-middle s-visible-large">
+						                         </div>
+
+                            <nav id="main-nav" class="main-nav s-visible-large valign-middle">
+								<ul class="menu valign-middle"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307"><a href="http://www.considerthisinc.com/">Welcome to Consider This</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-309"><a href="http://www.considerthisinc.com/?page_id=6">Coming Productions</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item menu-item-310"><a href="http://www.considerthisinc.com/?page_id=10">Tickets</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-308"><a href="http://www.considerthisinc.com/?page_id=8">Join Consider This</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-474"><a href="http://www.considerthisinc.com/?page_id=267">Fundraising</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-486"><a href="http://www.considerthisinc.com/?page_id=484">Become a Sponsor</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-491"><a href="http://www.considerthisinc.com/?page_id=489">Donation</a></li>
+</ul>                            </nav>
+                        </div>
+                    </div>
+                    </div>
+                </header>
+            </div>
+
+
+    <!-- sticky header -->
+
+    <div class="header-wrapper-sticky hidden">
+
+        <div id="header-sticky" class="main-header header-height--sticky">
+        <div class="s-container--wide clearfix fullheight s-section s-section--sides">
+
+            <a class="site-logo site-logo--text float-left" href="http://www.considerthisinc.com/"><span class="valign-middle">   </span></a>
+            <div class="header-search-wrapper valign-middle float-right s-visible-large">
+                 </div>
+
+            <nav id="main-nav-sticky" class="main-nav nav-wrapper  s-visible-large">
+				<ul class="menu valign-middle"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307"><a href="http://www.considerthisinc.com/">Welcome to Consider This</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-309"><a href="http://www.considerthisinc.com/?page_id=6">Coming Productions</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item menu-item-310"><a href="http://www.considerthisinc.com/?page_id=10">Tickets</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-308"><a href="http://www.considerthisinc.com/?page_id=8">Join Consider This</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-474"><a href="http://www.considerthisinc.com/?page_id=267">Fundraising</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-486"><a href="http://www.considerthisinc.com/?page_id=484">Become a Sponsor</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-491"><a href="http://www.considerthisinc.com/?page_id=489">Donation</a></li>
+</ul>            </nav>
+
+			<div class="main-nav-toggle s-visible-small noselect"><i class="fa fa-bars"></i></div>
+        </div>
+        </div>
+
+    </div>
+
+    <!-- mobile nav -->
+
+    <nav id="main-nav-mobile" class="main-nav-mobile s-visible-small">
+        <div class="main-nav-mobile__top">
+      
+			<div class="main-nav-toggle s-visible-small noselect"><i class="fa fa-close"></i></div>        </div>
+        <ul class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-307"><a href="http://www.considerthisinc.com/">Welcome to Consider This</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-309"><a href="http://www.considerthisinc.com/?page_id=6">Coming Productions</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item menu-item-310"><a href="http://www.considerthisinc.com/?page_id=10">Tickets</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-308"><a href="http://www.considerthisinc.com/?page_id=8">Join Consider This</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-474"><a href="http://www.considerthisinc.com/?page_id=267">Fundraising</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-486"><a href="http://www.considerthisinc.com/?page_id=484">Become a Sponsor</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-491"><a href="http://www.considerthisinc.com/?page_id=489">Donation</a></li>
+</ul>    </nav>
+
+
+
+            <div id="main" class="clearfix">
+            <!-- title bar -->
+
+
+<div class="header-spacer header-height header-spacer--layout2 header-spacer--overlayed"></div>
+
+            <!-- content -->
+			<div id="content">
+            					<div id="content__inner" class="s-container clearfix">
+
+					<!-- main content wrapper -->
+					<div class="s-main s-main--no-sidebar s-main--padding clearfix s-main--padding">
+						<section class="s-section ">
+              <asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+	</section>
+					</div>
+
+					<!-- sidebar -->
+
+				</div>
+			</div>
+
+
+            </div> <!-- /container -->
+
+
+            	<div id="footer-wrapper" class="footer-wrapper">
+                    <footer id="footer" class="footer">
+                	<div class="footer-overlay">
+
+
+
+                        <div class="copyright-wrapper">
+                            <div class="s-container">
+                                <div class="copyright s-section">
+                                	<div class="s-section-negative s-section-negative--sides">
+                                        <div class="s-row">
+                                            <div class="s-col-6 copyright__left">Consider This, Inc. * La Vergne, TN * (615) 830-2162 * ConsiderThisInc@gmail.com</div>
+                                            <div class="s-col-6 copyright__right">Copyright &#169;2015 * All Rights Reserved</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    </footer>
+                </div>
+
+
+            <link rel="stylesheet" id="vc_google_fonts_oleo_scriptregular700-css" href="/clients/ConsiderThisInc/Images/css_002.css" type="text/css" media="all">
+<script type="text/javascript" src="/clients/ConsiderThisInc/Images/jquery_006.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.considerthisinc.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/clients/ConsiderThisInc/Images/scripts.js"></script>
+<script type="text/javascript" src="/clients/ConsiderThisInc/Images/_frontend.js"></script>
+<script type="text/javascript" src="/clients/ConsiderThisInc/Images/js_composer_front.js"></script>
+<script type="text/javascript" src="/clients/ConsiderThisInc/Images/core.js"></script>
+<script type="text/javascript" src="/clients/ConsiderThisInc/Images/waypoints.js"></script>
+<script type="text/javascript" src="/clients/ConsiderThisInc/Images/smoothScroll.js"></script>
+<script type="text/javascript" src="/clients/ConsiderThisInc/Images/masonry.js"></script>
+<script type="text/javascript" src="/clients/ConsiderThisInc/Images/jquery_003.js"></script>
+<script type="text/javascript" src="/clients/ConsiderThisInc/Images/jquery_002.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var the1Globals = {"templateUrl":"http:\/\/www.considerthisinc.com\/wp-content\/themes\/Nonprofit","ajaxUrl":"http:\/\/www.considerthisinc.com\/wp-admin\/admin-ajax.php","siteTitle":"Consider This, Inc."};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/clients/ConsiderThisInc/Images/functions.js"></script>
+
+		</div><!--#wrapper-->
+
+  </div>
+  </form>
+  </body>
+  </html>

@@ -1,0 +1,461 @@
+/* **********
+*
+*
+*     Navigation styles - 1px-519px Resolution
+*
+*
+********** */
+
+#navigation {
+	background: #fff;
+	font-size: 1.8rem;
+	position: relative;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+}
+    #navigation.fixed
+    {
+        position: fixed;
+        top: 0;
+    }
+#navigation .row {
+	margin: 0;
+}
+#navigation span {
+	cursor: pointer;
+	display: block;
+}
+#primaryNavToggle {
+	background: url(http://atlanta.usdmdev.net/_static/webpage_files/mobile_menu_icon.png) 10px center no-repeat;
+	font-size: 2.4rem;
+	padding: 10px 10px 10px 60px;
+}
+#primaryNav a, #mobileNav a, #secondaryNav a {
+	display: block;
+	padding: 10px 15px;
+}
+#secondaryNav #headerSocialDropdown a {
+	padding: 0;
+}
+#primaryNav {
+	z-index: 0;
+}
+#primaryNavToggle {
+	border-right: 1px solid #c4c4c4;
+	float: left;
+	margin-left: 25%;
+	width: 50%;
+}
+#primaryNavToggle, #primaryNav a, #mobileNav a {
+	color: #6d6d6d;
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+#primaryNav ul ul li a, #mobileNav ul ul li a {
+	font-weight: normal;
+	text-transform: none;
+}
+    #mobileNav ul ul li a.heading,
+    #mobileNav ul ul li a.mp-back
+    {
+        font-weight:bold;
+        text-transform:uppercase;
+    }
+#secondaryNav {
+	float: left;
+	position: relative;
+	width: 12.5%;
+	z-index: 0;
+    left:25%;
+}
+#secondaryNav ul {
+	display: none;
+}
+#secondaryNavToggle, #secondaryNav {
+	background: #6d6d6d;
+}
+#secondaryNavToggle, #secondaryNav a {
+	color: #cdcdcd;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+#secondaryNavToggle {
+	font-weight: bold;
+}
+#secondaryNav ul {
+	background: url(/clients/Atlanta/Images/secondary_nav_border.png) right top repeat-y;
+	padding: 0 2px 0 0;
+}
+#siteSearch {
+	clear: both;
+	display: inline;
+	padding: 5px 7px;
+    width:12.5%;
+	position:absolute;
+    right:12.5%;
+    top:0;
+	z-index: 0;
+}
+#siteSearchBox {
+	background: url(/clients/Atlanta/Images/site_search_box_background.png) #fff 1px 1px no-repeat;
+	border: 1px solid #c8c8c8;
+	box-shadow: inset 0 0 3px #d2d2d2;
+	font-size: 2rem;
+	height: 32px;
+	padding: 0 0 0 33px;
+	position: relative;
+	width: 100%;
+	z-index: 0;
+}
+#siteSearchSubmit {
+	background: url(/clients/Atlanta/Images/sprites.png) -98px -52px;
+	border: 0;
+	height: 17px;
+	position: absolute;
+	right: 5%;
+	top: 12px;
+	width: 17px;
+	z-index: 1;
+}
+input.gsc-input {
+    display:none;
+}
+input.gsc-search-button {
+    margin-left:-10px;
+}
+td.gsc-search-button {
+    text-align:right;
+}
+#logo {
+	border-right: 1px solid #c4c4c4;
+	left: 0;
+	padding: 5px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 25%;
+}
+#logo webpage_files {
+	height: 35px;
+	width: 69px;
+}
+#shareThis {
+	display: block;
+	height: 44px;
+	position: relative;
+}
+#shareThis a#headerSocial {
+	display: block;
+	height: 100%;
+	padding: 11px 14px 0 14px;
+	text-align: center;
+	width: 100%;
+}
+#headerSocialDropdownShell {
+	bottom: -41px;
+	display: none;
+	position: absolute;
+	right: 0;
+	z-index: 2;
+}
+#shareThis:hover #headerSocialDropdownShell {
+	display: block;
+}
+#headerSocialDropdown {
+	background: #fff;
+	border: 2px solid #c4c4c4;
+	margin: 13px 0 0 0;
+	overflow: hidden;
+	padding: 5px;
+	width: 190px;
+}
+#headerSocialDropdownArrow {
+	background: url(/_static/webpage_files/header_social_arrow.png);
+	height: 10px;
+	position: absolute;
+	right: 8px;
+	top: 5px;
+	width: 20px;
+}
+#searchToggle {
+	background: url(/_static/webpage_files/magnifying_glass.png) center center no-repeat;
+	display: block;
+	float: left;
+	height: 44px;
+	width: 12.5%;
+}
+.mp-back, .heading {
+	border-bottom: 1px solid #ccc;
+}
+
+/* **********
+*
+*
+*     Navigation styles - 740px+ Resolution
+*
+*
+********** */
+
+@media screen and (min-width: 740px) {
+#navigation {
+	background: url(/clients/Atlanta/Images/navigation_background.png) repeat;
+	left: 0;
+	position: absolute;
+	top: .5em;
+    height:79px;
+}
+    #navigation.fixed
+    {
+        position: fixed;
+        top: 0;
+    }
+#navigation .row {
+	margin: 0 0 8px 0;
+}
+#navigation .unit {
+	padding: 30px 0 0 0;
+}
+#navigation span {
+	display: none;
+}
+#primaryNavToggle, #secondaryNavToggle {
+	padding: 5px 10px;
+}
+#primaryNav, #secondaryNav {
+	display: block;
+}
+#primaryNav li, #secondaryNav li {
+	display: inline;
+}
+#primaryNav a, #secondaryNav a {
+	display: inline;
+	letter-spacing: 0;
+	padding: 0;
+}
+#primaryNav {
+	display: inline;
+	float: right;
+	font-size: 1.2rem;
+	right: 225px;
+	position: absolute;
+	top: 35px;
+}
+#primaryNav ul ul {
+	background: #ececec;
+	left: 0;
+	padding: 10px 0 0 0;
+	position: absolute;
+	top: 30px;
+	visibility: hidden;
+}
+#primaryNav li {
+	position: relative;
+}
+#primaryNav li a {
+	display: inline-block;
+	padding: 16px 5px;
+}
+#primaryNav ul ul ul {
+	padding: 0;
+}
+#secondaryNav {
+	box-shadow: 0 0 3px #666;
+	display: inline;
+	font-size: 1rem;
+	position: absolute;
+	right: 0;
+	text-align: right;
+	top: 0;
+	width: auto;
+	z-index: 1;
+}
+#secondaryNav ul {
+	display: block;
+	float: right;
+	padding: 0 9px 0 0;
+}
+#secondaryNav li a {
+	display: inline-block;
+	letter-spacing: 1px;
+	padding: 10px 7px;
+}
+#shareThis {
+	height: auto;
+	float: right;
+}
+#shareThis a#headerSocial {
+	padding: 7px 14px 0 14px;
+	text-align: left;
+}
+#siteSearch {
+	display: block;
+	float: right;
+    position:relative;
+	margin-top: 4px;
+	padding: 0;
+	width: 215px;
+}
+input.gsc-search-button {
+    margin-left:0;
+}
+input.gsc-input {
+    display:block;
+}
+#siteSearchBox {
+	font-size: 1rem;
+}
+#siteSearchSubmit {
+	top: 7px;
+}
+.mp-level {
+	display: inline;
+}
+#logo {
+	border-right: none;
+	padding: 0;
+	text-align: left;
+}
+#logo webpage_files {
+	height: auto;
+	width: auto;
+}
+#searchToggle {
+	display: none;
+}
+}
+
+/* **********
+*
+*
+*     Navigation styles - 960px+ Resolution
+*
+*
+********** */
+
+@media screen and (min-width: 960px) {
+#primaryNav li a {
+	padding: 16px 10px;
+}
+#primaryNav ul ul li.subnav {
+	background: url(/clients/Atlanta/Images/nav_border.png) #ececec right top repeat-y;
+	height: 30px;
+}
+#primaryNav ul ul li.subnav:last-child {
+	background: none;
+}
+#primaryNav ul ul li.subnav > a {
+    font-weight:bold;
+}
+#primaryNav ul ul ul {
+	background: url(/clients/Atlanta/Images/nav_border.png) #ececec right top repeat-y;
+    width:100%;
+}
+#primaryNav ul ul ul li.subnav {
+    display:none;
+}
+#primaryNav ul li:last-child ul {
+	background: #ececec;
+}
+#primaryNav ul > ul {
+	left: 50%;
+}
+#primaryNav ul li:hover > a {
+	background: url(/clients/Atlanta/Images/subnav_pointer.png) center bottom no-repeat;
+}
+#primaryNav ul li:hover ul {
+	visibility: visible;
+}
+#primaryNav ul li.things-to-do > ul {
+	left: 0;
+	margin-left: -192px;
+	width: 954px;
+}
+#primaryNav ul li.find-a-hotel > ul,
+#primaryNav ul li.where-to-eat > ul,
+#primaryNav ul li.events > ul,
+#primaryNav ul li.explore > ul {
+	margin-left: -33%;
+	width: 488px;
+}
+#primaryNav ul li.events > ul,
+#primaryNav ul li.explore > ul {
+    margin-left:-160%;
+}
+#primaryNav ul ul li {
+	float: left;
+}
+#primaryNav ul ul li a {
+	color: #575757;
+	display: block;
+	padding: 5px 10px;
+}
+#primaryNav ul ul ul li a {
+	font-weight: normal;
+	padding-left: 14px;
+	text-transform: none;
+}
+#secondaryNav ul {
+	padding: 0 9px 0 7px;
+}
+#logo {
+	height: 52px;
+	left: 0;
+	top: 14px;
+	width: 103px;
+}
+
+/* ********      Container for ads     ******** */
+.submenu-container li {
+    width: 122px;
+}
+.submenu-container.things-to-do {
+    height: 266px;
+}
+
+.subnav.things-to-do .nav-advert{
+    width: 50%;
+    margin: 0 auto 0 auto;
+}
+
+.submenu-container.things-to-do li {
+    width:106px;
+}
+
+.submenu-container.find-a-hotel {
+    height: 166px;
+}
+
+.submenu-container.where-to-eat {
+    height: 266px;
+}
+
+.submenu-container.where-to-eat li {
+    width: 122px;
+}
+
+.submenu-container.events {
+    height: 345px;
+}
+
+.submenu-container.events li {
+    width: 122px;
+}
+
+.submenu-container.explore {
+    height: 180px;
+}
+
+.submenu-container.explore li {
+    width: 122px;
+}
+
+.submenu-container.blog {
+    
+}
+
+.submenu-container.deals {
+    height:122px;
+}
+}

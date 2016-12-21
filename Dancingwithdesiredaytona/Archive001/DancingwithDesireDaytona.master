@@ -1,0 +1,300 @@
+<%
+'CHANGELOG
+'LSP 08/29/14 - initial development
+%>
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+<meta name="title" content="Dancing With Desire - Sponsorship Levels">
+<meta name="description" content="null">
+<meta name="keywords" content="null">
+<link rel="stylesheet" type="text/css" href="/clients/DancingwithDesireDaytona/Images/css.css"><style type="text/css">
+.w-font-antic { font-family: 'Antic', sans-serif !important; }
+.w-font-helvetica { font-family: 'Helvetica Neue', sans-serif !important; }
+.w-font-cardo { font-family: 'Cardo', serif !important; }
+.w-font-raleway { font-family: 'Raleway', sans-serif !important; }
+</style>
+<script src="/clients/DancingwithDesireDaytona/Images/ga.js" async="" type="text/javascript"></script><script>
+webs = window.webs || {};
+webs.locale = "en-US";
+webs.props = {
+	globalAssetBaseURL: "http://static.websimages.com/v1bd85c6",
+	staticServer: "http://static.websimages.com",
+	membersServer: "http://members.webs.com",
+	dynamicAssetServer: "http://dynamic.websimages.com",
+	modulesVersion: "v1bd85c6",
+	environment: "production",
+	imageProcessorServer: "http://imageprocessor.websimages.com"
+};
+webs.theme = {"slug":"soft_light","name":"Soft Light","premium":false,"mobile":false,"translate":false,"customizable":true,"moduleStyles":{"email_list":{"soft_light_default":{"global":{"css":"css\/email_list.less"},"inherit":"default","default":true}},"carousel":{"soft_light_default":{"global":{"css":"css\/carousel.less"},"inherit":"default","default":true}},"button":{"soft_light_default":{"global":{"css":"css\/button.less"},"inherit":"default","default":true}},"contact_form":{"soft_light_default":{"global":{"css":"css\/contact_form.less"},"inherit":"default","default":true}}}};
+webs.theme.style = {"name":"Default","slug":"default","swatchColor":"#95abae","thumb":"thumbs\/default.jpg","css":"css\/base.less"};
+webs.theme.url = 'http://dynamic.websimages.com/s/themes/soft_light/v1.35';
+webs.theme.variables = {"footer_title":{"lineHeight":20,"linkColor":"#ffffff","area":"Footer","color":"#ffffff","font":"raleway","hidden":false,"align":null,"name":"Titles","slug":"footer_title","type":"text","hoverColor":"#ffffff","size":19},"bg_main":{"area":"Content","pattern":null,"color":"#ffffff","texture":null,"hidden":false,"align":null,"name":null,"image":{"position":null,"fileId":null,"path":"http:\/\/www.absolutelyballroom.net\/Background\/footer-tile.jpg","attachment":null,"repeat":null,"size":null},"slug":"bg_main","type":"background"},"text":{"lineHeight":20,"linkColor":"#ffffff","area":"Body","color":"#ffffff","font":"cardo","hidden":false,"align":null,"name":"Text","slug":"text","type":"text","hoverColor":"#ffffff","size":16},"title":{"lineHeight":24,"linkColor":"#ffffff","area":"Body","color":"#6f5151","font":"cardo","hidden":false,"align":null,"name":"Titles","slug":"title","type":"text","hoverColor":"#ffffff","size":20},"footer_text":{"lineHeight":18,"linkColor":"#ffffff","area":"Footer","color":"#cccccc","font":"helvetica","hidden":false,"align":null,"name":"Text","slug":"footer_text","type":"text","hoverColor":"#ffffff","size":13},"bg_nav":{"area":"Navigation","color":"#ffffff","hidden":false,"align":null,"name":"Background","slug":"bg_nav","type":"color"},"header_subtitle":{"area":"Global","color":"#f5f5f5","font":"helvetica","hidden":true,"align":null,"name":null,"slug":"header_subtitle","type":"font"},"theme":{"area":"Global","color":"#ffffff","hidden":false,"align":null,"name":"Accent","slug":"theme","type":"color"},"header_title":{"area":"Global","color":"#f5f5f5","font":"antic","hidden":true,"align":null,"name":null,"slug":"header_title","type":"font"},"nav":{"lineHeight":15,"linkColor":"#7d7d7d","area":"Navigation","color":"#877272","font":"antic","hidden":false,"align":null,"name":"Text","slug":"nav","type":"text","hoverColor":"#7d7d7d","size":15},"bg_footer":{"area":"Footer","pattern":null,"color":"#676767","texture":null,"hidden":false,"align":null,"name":null,"image":{"position":null,"fileId":null,"path":"http:\/\/www.absolutelyballroom.net\/Background\/footer-tile.jpg","attachment":null,"repeat":null,"size":null},"slug":"bg_footer","type":"background"},"bg_body":{"area":"Header","pattern":null,"color":"#95abae","texture":null,"hidden":false,"align":null,"name":null,"image":{"position":null,"fileId":null,"path":"http:\/\/www.absolutelyballroom.net\/Background\/footer-tile.jpg","attachment":null,"repeat":null,"size":null},"slug":"bg_body","type":"background"}};
+webs.site = {
+	url: "http://www.dancingwithdesiredaytona.com/",
+	id: 127871219,
+	premium: true,
+	consolidatedModuleAssets: true
+};
+webs.locale = 'en-US';
+webs.renderedModulesPromises = [];
+</script>
+<script src="/clients/DancingwithDesireDaytona/Images/modernizr-old.js"></script>
+<script src="/clients/DancingwithDesireDaytona/Images/require.js"></script>
+<script src="/clients/DancingwithDesireDaytona/Images/jquery.js"></script>
+<script src="/clients/DancingwithDesireDaytona/Images/bootstrap.js"></script>
+<script>define('moduleVersions', function(){return {"mobile_link":"1.8","mobile_email":"1.7","zumba_membership":"1.14","photo_gallery_slideshow":"1.3","zumba-membership":"1.1","zumba-licenses":"1.1","zumba_footer":"1.10","slideshow":"1.27","button":"1.14","text_image":"1.12","horizontal_rule":"1.14","video":"1.23","follow":"1.13","spacer":"1.7","text":"1.19","mobile_text":"1.8","image":"1.16","table":"1.18","mobile_location":"1.8","photo_gallery":"1.46","fb-comments":"1.9","mobile_social":"1.9","zumba_qualifications":"1.10","zumba_shop":"1.8","zumba-contact":"1.1","contact_form":"1.32","google_map":"1.22","seo_footer":"1.14","sb2_paragraph":"1.14","zumba_contact":"1.13","share_button":"1.9","fb-like":"1.16","social-links":"1.18","zumba-qualifications":"1.1","title":"1.16","mobile_phone":"1.6","carousel":"1.35","donate":"1.10","twitter-feed":"1.17","ads":"1.4","email_list":"1.8","buckets":"1.13","audio":"1.14","header_editor":"1.47","paypal":"1.10","google_checkout":"1.7","zumba_calendar":"1.19","zumba-footer":"1.1","html":"1.16","zumba_licenses":"1.10","widget_bank":"1.7","mobile_hours":"1.9"};});</script>
+
+
+<link id="webs-theme-css" rel="stylesheet" type="text/css" href="/clients/DancingwithDesireDaytona/Images/a.css"><link rel="stylesheet" type="text/css" href="/clients/DancingwithDesireDaytona/Images/sitebase.css"><script src="/clients/DancingwithDesireDaytona/Images/view.js"></script>
+<meta name="fw:category" content="0">
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setDomainName','none']);_gaq.push(['_setAllowHash',false]);_gaq.push(['_setAllowLinker',true]);_gaq.push(['_setAccount','UA-230305-2']);_gaq.push(['_trackPageview']);</script>
+<script src="/clients/DancingwithDesireDaytona/Images/ModuleClassLoader.js" data-requiremodule="internal/sitebuilder/common/ModuleClassLoader" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><link href="/clients/DancingwithDesireDaytona/Images/tooltip.css" type="text/css" rel="stylesheet"><script src="/clients/DancingwithDesireDaytona/Images/creativeCommons.js" data-requiremodule="internal/sitebuilder/common/creativeCommons" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="/clients/DancingwithDesireDaytona/Images/translate.js" data-requiremodule="translate" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="/clients/DancingwithDesireDaytona/Images/localize.js" data-requiremodule="localize" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="/clients/DancingwithDesireDaytona/Images/locale.js" data-requiremodule="locale" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="/clients/DancingwithDesireDaytona/Images/a" data-requiremodule="http://dynamic.websimages.com/s/resources/en-US/webs.creativecommons.attribution/?callback=define" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="/clients/DancingwithDesireDaytona/Images/header_editor_view.js" data-requiremodule="http://dynamic.websimages.com/s/modules/header_editor/v1.47/header_editor_view.js" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="/clients/DancingwithDesireDaytona/Images/title_view.js" data-requiremodule="http://dynamic.websimages.com/s/modules/title/v1.16/title_view.js" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="/clients/DancingwithDesireDaytona/Images/a_002" data-requiremodule="http://dynamic.websimages.com/s/resources/en-US/webs.module.header_editor/?callback=define" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="/clients/DancingwithDesireDaytona/Images/html_view.js" data-requiremodule="http://dynamic.websimages.com/s/modules/html/v1.16/html_view.js" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script><script src="/clients/DancingwithDesireDaytona/Images/horizontal_rule_view.js" data-requiremodule="http://dynamic.websimages.com/s/modules/horizontal_rule/v1.14/horizontal_rule_view.js" data-requirecontext="_" async="" charset="utf-8" type="text/javascript"></script></head>
+
+<body>
+
+
+	<div class="wrap">
+		<div class="header-wrap">
+
+<header id="webs-header">
+	<div class="site-title">
+		<section class="webs-content-header webs-content" data-role="webs-header" data-webs-module="header_editor" data-webs-locked="true" id="53f5ea700cf2ea299da9c0a9"><!-- Begin Tree --><div class="webs-parent webs-parent-0"><div class="webs-parent webs-parent-1 webs-col"><style type="text/css">#webs-bin-53f5ea700cf2ea299da9c0aa .w-header-area-custom {
+  width: 100%;
+}
+#webs-bin-53f5ea700cf2ea299da9c0aa .title {
+  top: 44px;
+  z-index: 20;
+  display: none;
+}
+#webs-bin-53f5ea700cf2ea299da9c0aa .subtitle {
+  top: 70px;
+  z-index: 21;
+  display: none;
+}
+#webs-bin-53f5ea700cf2ea299da9c0aa .w-header-layer-align-left.title,
+#webs-bin-53f5ea700cf2ea299da9c0aa .w-header-layer-align-center.title {
+  left: 10px;
+}
+#webs-bin-53f5ea700cf2ea299da9c0aa .w-header-layer-align-left.subtitle,
+#webs-bin-53f5ea700cf2ea299da9c0aa .w-header-layer-align-center.subtitle {
+  left: 12px;
+}
+#webs-bin-53f5ea700cf2ea299da9c0aa .w-header-layer-align-left.w-header-layer-centered,
+#webs-bin-53f5ea700cf2ea299da9c0aa .w-header-layer-align-center.w-header-layer-centered {
+  right: auto;
+  left: 50%;
+}
+#webs-bin-53f5ea700cf2ea299da9c0aa .w-header-layer-align-right.title {
+  right: 0px;
+}
+#webs-bin-53f5ea700cf2ea299da9c0aa .w-header-layer-align-right.subtitle {
+  right: 0px;
+}
+#webs-bin-53f5ea700cf2ea299da9c0aa .logo {
+  top: 63px;
+  width: 230px;
+  left: 1px;
+  height: 117px;
+  display: none;
+}
+#webs-bin-53f5ea700cf2ea299da9c0aa .background {
+  background-image: url('');
+  background-position: 0px 0px;
+}
+</style>
+	<div class="webs-bin" id="webs-bin-53f5ea700cf2ea299da9c0aa">
+		<div class="webs-bin-wrap">
+			<div class="webs-container webs-module-header_editor  w-header_editor-default">
+<div class="w-header-area ">
+	
+		
+			<div id="" class="w-header-layer w-header-layer-text w-header-layer-align-left " style="left:333px; right:autopx;  top:103px; z-index: 10;">
+				<div class="w-header-layer-container">
+					<div class="w-header-text-container">
+						<div class="w-header-text ">
+							<span style="font-size: 14px;"><span style="font-size: 12px;">P</span></span><span style="font-size: 12px;">resented by: <a id="313CDE70-F3E4-4C3C-84B5-0578BF077748" href="http://www.absolutelyballroom.net/">Absolutely Ballroom</a> of Ormond Beach, F</span><span style="font-size: 12px;">l</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+	
+
+	
+		
+			
+				<div id="" class="w-header-layer w-header-layer-image" style="left:806px; top:88px; z-index: 0; width:135px; height:124px;">
+					<div class="w-header-layer-container">
+						
+							<img class="w-header-image" src="/clients/DancingwithDesireDaytona/Images/Presented-By.png">
+						
+					</div>
+				</div>
+			
+		
+	
+		
+			
+				<div id="" class="w-header-layer w-header-layer-image" style="left:0px; top:0px; z-index: 1; width:690px; height:128px;">
+					<div class="w-header-layer-container">
+						
+							<img class="w-header-image" src="/clients/DancingwithDesireDaytona/Images/logo-long-16.png">
+						
+					</div>
+				</div>
+			
+		
+	
+
+	
+		<div id="" class="w-header-layer w-header-layer-image w-header-layer-logo logo">
+			<div class="w-header-layer-container">
+				<img class="w-header-image w-header-logo" src="/clients/DancingwithDesireDaytona/Images/logo-sized.png">
+			</div>
+		</div>
+	
+
+	
+		<div id="" class="title w-header-layer w-header-layer-text w-header-layer-align-left ">
+			<div class="w-header-layer-container">
+				<h1 class="w-header-text-container">
+					<div class="w-header-text w-header-title ">
+						
+							Dancing With Desire
+						
+					</div>
+				</h1>
+			</div>
+		</div>
+	
+
+	
+		<div id="" class="subtitle w-header-layer w-header-layer-text w-header-layer-align-left ">
+			<div class="w-header-layer-container">
+				<h2 class="w-header-text-container">
+					<div class="w-header-text w-header-subtitle " data-placeholder="Subtitle">
+						
+							Click here to edit subtitle
+						
+					</div>
+				</h2>
+			</div>
+		</div>
+	
+
+</div><!-- END w-header-area -->
+
+			</div>
+		</div>
+	</div>
+
+
+</div></div></section>
+	</div>
+	<nav>
+		<span id="translatedMore" style="display:none; top: -9999px !important; left: -9999px !important;">More</span>
+<ul id="webs-nav" class="webs-nav">
+	<li class="webs-home fw-class-4119639092e62c55ea8be348e4d9260d"><a href="http://www.dancingwithdesiredaytona.com/" title="Event"><span class="title">Event</span><span class="after"></span></a></li>
+	<li class="active fw-class-7908cec14d7f827a5e61658d2496ca1d"><a href="http://www.dancingwithdesiredaytona.com/sponsorship-levels" title="Sponsorship Levels"><span class="title">Sponsorship Levels</span><span class="after"></span></a></li>
+	<li class="fw-class-2f8a6bf31f3bd67bd2d9720c58b19c9a"><a href="http://www.dancingwithdesiredaytona.com/contact" title="Contact"><span class="title">Contact</span><span class="after"></span></a></li>
+</ul>
+
+	</nav>
+</header>
+
+<div class="pagetitle-wrapper">
+	<section class="webs-content webs-pagetitle" data-role="webs-pagetitle" data-webs-module="title" data-webs-locked="true" id="53f9fbca0cf2e59a505cf6ba"><!-- Begin Tree --><div class="webs-parent webs-parent-0"><div class="webs-parent webs-parent-1 webs-col">
+	<div class="webs-bin" id="webs-bin-53f9fbca0cf2e59a505cf6bb">
+		<div class="webs-bin-wrap">
+			<div class="webs-container webs-module-title  w-title-default">
+<h3 class="webs-title webs-title-align-center ">
+	
+	<div class="w-text ">Tickets</div>
+</h3>
+
+			</div>
+		</div>
+	</div>
+
+
+</div></div></section>
+</div>
+
+</div>
+<div class="main-wrap">
+	<div class="webs-main webs-main-sidebar-none clearfix">
+		<section class="webs-content webs-body" data-role="webs-body" id="53f5ea710cf2ea299da9c0af"><!-- Begin Tree --><div class="webs-parent webs-parent-0"><div class="webs-parent webs-parent-1 webs-col">
+	<div class="webs-bin" id="webs-bin-53fbaca6d24b76b1771a3863">
+		<div class="webs-bin-wrap">
+			<div class="webs-container webs-module-html  w-html-base">
+<div class="w-custom-html"><div style="width:100%" class="webs-content webs-pagetitle" align="left">
+<div style="padding:10px; background-color:#fff; border: solid 5px #000;
+color:#6f5151; font-size:20px; width900px;" align="left">
+<!--TIX DATA START-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+  </div>
+</div></div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="webs-bin" id="webs-bin-53fbaf51d24b76b1771a395a">
+		<div class="webs-bin-wrap">
+			<div class="webs-container webs-module-horizontal_rule  w-horizontal_rule-dark-1 w-horizontal_rule-dark w-horizontal_rule-base">
+<div class="webs-hr webs-align-center" style="width: 100%; margin-top: 1px; margin-bottom: 1px;">
+	<div class="webs-hr-rule">
+		<div class="webs-hr-left-container webs-hr-container">
+			<div class="webs-hr-left webs-hr-bg"></div>
+		</div>
+		<div class="webs-hr-left-spacer-container webs-hr-container">
+			<div class="webs-hr-left-spacer webs-hr-bg"></div>
+		</div>
+		<div class="webs-hr-center-container webs-hr-container">
+			<div class="webs-hr-center webs-hr-bg"></div>
+		</div>
+		<div class="webs-hr-right-spacer-container webs-hr-container">
+			<div class="webs-hr-right-spacer webs-hr-bg"></div>
+		</div>
+		<div class="webs-hr-right-container webs-hr-container">
+			<div class="webs-hr-right webs-hr-bg"></div>
+		</div>
+	</div>
+</div>
+
+			</div>
+		</div>
+	</div>
+
+
+</div></div></section>
+	</div>
+</div>
+
+<div class="footer-wrap">
+	<div id="footer" class="clearfix">
+		<div class="webs-content" data-role="webs-footer" data-webs-module="text" id="53f5ea700cf2ea299da9c0ac"><!-- Begin Tree --><div class="webs-parent webs-parent-0"><div class="webs-parent webs-parent-1 webs-col"></div></div></div>
+	</div>
+</div>
+
+	</div>
+
+
+
+
+
+<img style="position: absolute; left: 0px; bottom: 0px;" src="/clients/DancingwithDesireDaytona/Images/record.txt" height="1" width="1">
+</div>
+</form>
+</body>
+</html>
+
+

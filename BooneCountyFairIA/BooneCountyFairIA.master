@@ -1,0 +1,523 @@
+<%
+'changelog
+'LSP 06/09/16 - initial development
+%>
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Roboto:400,700|Satisfy|Actor|Open+Sans:400,700|Lobster|Lobster+Two' rel='stylesheet' type='text/css'>
+
+	<link id="wsite-base-style" rel="stylesheet" type="text/css" href="/clients/BooneCountyFairIA/Images/sites.css">
+	<link rel="stylesheet" type="text/css" href="/clients/BooneCountyFairIA/Images/fancybox.css">
+	<link rel="stylesheet" type="text/css" href="/clients/BooneCountyFairIA/Images/main_style.css" title="wsite-theme-css">
+
+	<style type="text/css">
+		.wsite-elements.wsite-not-footer div.paragraph,
+		.wsite-elements.wsite-not-footer p,
+		.wsite-elements.wsite-not-footer .product-block .product-title,
+		.wsite-elements.wsite-not-footer .product-description,
+		.wsite-elements.wsite-not-footer .wsite-form-field label,
+		.wsite-elements.wsite-not-footer .wsite-form-field label,
+		#wsite-content div.paragraph,
+		#wsite-content p,
+		#wsite-content .product-block .product-title,
+		#wsite-content .product-description,
+		#wsite-content .wsite-form-field label,
+		#wsite-content .wsite-form-field label,
+		.blog-sidebar div.paragraph,
+		.blog-sidebar p,
+		.blog-sidebar .wsite-form-field label,
+		.blog-sidebar .wsite-form-field label {
+			font-family: "Roboto" !important;
+		}
+		
+		#wsite-content div.paragraph,
+		#wsite-content p,
+		#wsite-content .product-block .product-title,
+		#wsite-content .product-description,
+		#wsite-content .wsite-form-field label,
+		#wsite-content .wsite-form-field label,
+		.blog-sidebar div.paragraph,
+		.blog-sidebar p,
+		.blog-sidebar .wsite-form-field label,
+		.blog-sidebar .wsite-form-field label {}
+		
+		.wsite-elements.wsite-footer div.paragraph,
+		.wsite-elements.wsite-footer p,
+		.wsite-elements.wsite-footer .product-block .product-title,
+		.wsite-elements.wsite-footer .product-description,
+		.wsite-elements.wsite-footer .wsite-form-field label,
+		.wsite-elements.wsite-footer .wsite-form-field label {}
+		
+		.wsite-elements.wsite-not-footer h2,
+		.wsite-elements.wsite-not-footer .product-long .product-title,
+		.wsite-elements.wsite-not-footer .product-large .product-title,
+		.wsite-elements.wsite-not-footer .product-small .product-title,
+		#wsite-content h2,
+		#wsite-content .product-long .product-title,
+		#wsite-content .product-large .product-title,
+		#wsite-content .product-small .product-title,
+		.blog-sidebar h2 {
+			font-family: "Roboto" !important;
+		}
+		
+		#wsite-content h2,
+		#wsite-content .product-long .product-title,
+		#wsite-content .product-large .product-title,
+		#wsite-content .product-small .product-title,
+		.blog-sidebar h2 {}
+		
+		.wsite-elements.wsite-footer h2,
+		.wsite-elements.wsite-footer .product-long .product-title,
+		.wsite-elements.wsite-footer .product-large .product-title,
+		.wsite-elements.wsite-footer .product-small .product-title {}
+		
+		#wsite-title {
+			font-family: "Actor" !important;
+		}
+		
+		.wsite-menu-default a {
+			font-family: "Roboto" !important;
+		}
+		
+		.wsite-menu a {}
+		
+		.wsite-image div,
+		.wsite-caption {}
+		
+		.galleryCaptionInnerText {}
+		
+		.fancybox-title {}
+		
+		.wslide-caption-text {}
+		
+		.wsite-phone {}
+		
+		.wsite-headline {
+			font-family: "Roboto" !important;
+		}
+		
+		.wsite-headline-paragraph {
+			font-family: "Roboto" !important;
+		}
+		
+		.wsite-button-inner {}
+		
+		.wsite-not-footer blockquote {}
+		
+		.wsite-footer blockquote {}
+		
+		.blog-header h2 a {}
+		
+		#wsite-content h2.wsite-product-title {}
+		
+		.wsite-product .wsite-product-price a {}
+	</style>
+	<style type="text/css">
+		#wsite-com-product-images .wsite-imageaspectratio-image-height,
+		.wsite-com-category-product-image-height.wsite-imageaspectratio-image-height,
+		.wsite-product .wsite-imageaspectratio-image-height,
+		.wsite-com-category-product-featured-image-height.wsite-imageaspectratio-image-height {
+			margin-bottom: 100% !important
+		}
+		
+		.wsite-com-category-product-group .wsite-com-column {
+			width: 33.33% !important
+		}
+		
+		.wsite-com-category-product-featured-group .wsite-com-column {
+			width: 25.00% !important
+		}
+		
+		.wsite-com-category-subcategory-group .wsite-com-column {
+			width: 33.33% !important
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="/clients/BooneCountyFairIA/Images/slideshow.css">
+
+
+
+
+</head>
+
+<body class="no-header-page wsite-theme-light  wsite-page-index">
+	<div class="header-wrap">
+		<div id="container">
+			<table id="header">
+				<tbody>
+					<tr>
+						<td id="logo"><span class="wsite-logo">
+
+	<a href="http://boonecountyfair.weebly.com/">
+		<img src="/clients/BooneCountyFairIA/Images/1462211440.png" style="margin-top:61px;">
+	</a>
+
+</span></td>
+						<td id="header-right">
+							<table>
+								<tbody>
+									<tr>
+										<td class="phone-number"></td>
+										<td class="social">
+											<div style="text-align:left;">
+												<div style="height:0px;overflow:hidden"></div>
+												<span class="wsite-social wsite-social-default"><a class="first-child wsite-social-item wsite-social-facebook" href="http://www.facebook.com/BooneCountyFairIA" target="_blank"><span class="wsite-social-item-inner"></span></a><a class="wsite-social-item wsite-social-twitter"
+																href="http://twitter.com/BooneCoFairIA" target="_blank"><span class="wsite-social-item-inner"></span></a><a class="last-child wsite-social-item wsite-social-mail" href="mailto:boonecountyfairgrounds@gmail.com" target="_blank"><span class="wsite-social-item-inner"></span></a></span>
+												<div style="height:0px;overflow:hidden"></div>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="search"></div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div id="wrap" class="wsite-background">
+		<div id="page">
+			<div id="main-bot">
+				<div id="main-wrap">
+					<div id="nav-wrap">
+						<div id="">
+							<div id="topnav">
+								<ul class="wsite-menu-default">
+									<li style="position: relative;" id="active" class="wsite-menu-item-wrap     wsite-nav-1">
+										<a style="position: relative;" href="http://boonecountyfair.weebly.com/" class="wsite-menu-item">
+											Home
+										</a>
+
+
+									</li>
+									<li style="position: relative;" id="pg799510694540970003" class="wsite-menu-item-wrap     wsite-nav-2">
+										<a style="position: relative;" href="http://boonecountyfair.weebly.com/fair-attractions.html" class="wsite-menu-item">
+											Fair Attractions
+										</a>
+
+
+									</li>
+									<li style="position: relative;" id="pg683241250922663817" class="wsite-menu-item-wrap     wsite-nav-3">
+										<a style="position: relative;" href="http://boonecountyfair.weebly.com/fair-contests.html" class="wsite-menu-item">
+											Fair Contests
+										</a>
+
+
+									</li>
+									<li style="position: relative;" id="pg364420115952251072" class="wsite-menu-item-wrap     wsite-nav-4">
+										<a style="position: relative;" href="http://boonecountyfairia.weebly.com/" class="wsite-menu-item">
+											Fairgrounds Information
+										</a>
+
+
+									</li>
+								</ul>
+								<div style="clear:both"></div>
+							</div>
+						</div>
+					</div>
+					<div id="main">
+						<div id="banner-wrap">
+							<div id="banner">
+								<div class="wsite-header"></div>
+							</div>
+						</div>
+						<div id="content">
+							<div id="wsite-content" class="wsite-elements wsite-not-footer">
+<!--tix content-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+
+								<div class="paragraph" style="text-align:center;">Boone County Fairgrounds<br>(515) 432-5899<br>1601 Industrial Park Rd<br>Boone, IA 50036<br>boonecountyfairgrounds@gmail.com</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	<!-- End Quantcast tag -->
+
+
+
+
+
+
+
+
+
+	<div id="wsite-menus">
+		<div class="wsite-menu-wrap" style="display: none; position: absolute;">
+			<ul class="wsite-menu">
+				<li style="position: relative;" id="wsite-nav-966562482780599132" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/sponsorship-information.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Sponsorship Information
+		</span>
+					</a>
+
+				</li>
+
+			</ul>
+		</div>
+		<div class="wsite-menu-wrap" style="display: none; position: absolute;">
+			<ul class="wsite-menu">
+				<li style="position: relative;" id="wsite-nav-752191982696463821" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/carnival.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Carnival
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-109736442395641358" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/grandstand-shows.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Grandstand Shows
+		</span><span class="wsite-menu-arrow">&gt;</span>
+					</a>
+					<div class="wsite-menu-wrap" style="display: none; position: absolute;">
+						<ul class="wsite-menu">
+							<li style="position: relative;" id="wsite-nav-454809245307702556" class="wsite-menu-subitem-wrap ">
+								<a style="position: relative;" href="http://boonecountyfair.weebly.com/ticket-information.html" class="wsite-menu-subitem">
+									<span class="wsite-menu-title">
+			Ticket Information
+		</span>
+								</a>
+
+							</li>
+
+						</ul>
+					</div>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-890566420876448257" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/free-stage.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Free Stage
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-335942919806286657" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/daytime-entertainment.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Daytime Entertainment
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-108599659833046975" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/vendors.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Vendors
+		</span><span class="wsite-menu-arrow">&gt;</span>
+					</a>
+					<div class="wsite-menu-wrap" style="display: none; position: absolute;">
+						<ul class="wsite-menu">
+							<li style="position: relative;" id="wsite-nav-113220355951581131" class="wsite-menu-subitem-wrap ">
+								<a style="position: relative;" href="http://boonecountyfair.weebly.com/food-vendor.html" class="wsite-menu-subitem">
+									<span class="wsite-menu-title">
+			Food Vendor
+		</span>
+								</a>
+
+							</li>
+
+						</ul>
+					</div>
+
+				</li>
+
+			</ul>
+		</div>
+		<div class="wsite-menu-wrap" style="display: none; position: absolute;">
+			<ul class="wsite-menu">
+				<li style="position: relative;" id="wsite-nav-169698895511796562" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/4-h--ffa.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			4-H &amp; FFA
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-163856024229455860" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/fair-queen-contest.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Fair Queen Contest
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-369287204787749414" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/little-ms--mr.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Little Ms. &amp; Mr.
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-270092437334378776" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/bill-riley-talent-show.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Bill Riley Talent Show
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-703284104306249618" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/open-horticulture.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Open Horticulture
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-153605189319337165" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/open-home-division.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Open Home Division
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-505725173665985137" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/open-photography.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Open Photography
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-507119364814575106" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/open-horse-show.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Open Horse Show
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-801612693803613247" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/open-beef-show.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Open Beef Show
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-363962213308353043" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/pre-4-h-shows.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Pre 4-H Shows
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-783815740490401392" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/mud-volleyball-tournament.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Mud Volleyball Tournament
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-763110111404869877" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/farm-bureau-cookout-contest.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Farm Bureau Cookout Contest
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-607128819567411726" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/fair-parade.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Fair Parade
+		</span>
+					</a>
+
+				</li>
+
+			</ul>
+		</div>
+		<div class="wsite-menu-wrap" style="display: none; position: absolute;">
+			<ul class="wsite-menu">
+				<li style="position: relative;" id="wsite-nav-595184056754290523" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/visitor-information.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Visitor Information
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-878792304877596570" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/camping.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Camping
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-730785956964621543" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfairia.weebly.com/" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Facility Rental
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-851165419396855578" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/about.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			About
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-756739604820919002" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/contact.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Contact
+		</span>
+					</a>
+
+				</li>
+				<li style="position: relative;" id="wsite-nav-932579271613281823" class="wsite-menu-subitem-wrap ">
+					<a style="position: relative;" href="http://boonecountyfair.weebly.com/calendar-of-events.html" class="wsite-menu-subitem">
+						<span class="wsite-menu-title">
+			Calendar of Events
+		</span>
+					</a>
+
+				</li>
+
+			</ul>
+		</div>
+	</div>
+</div>
+</form>
+</body>
+</html>

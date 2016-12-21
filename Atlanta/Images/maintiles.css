@@ -1,0 +1,184 @@
+/* **********
+*
+*
+*     Main tile styles - 1px-519px Resolution
+*
+*
+********** */
+
+#mainTiles {
+	clear: both;
+	position: relative;
+	z-index: 1;
+}
+#mainTiles #breadcrumbs {
+	background: none;
+	display: none;
+	padding: 0;
+}
+#mainTilesPromos {
+	margin-bottom: 0;
+}
+#mainTilesPromosTitle {
+	color: #fff;
+	font-size: 2.6rem;
+	letter-spacing: 2px;
+	padding: 0 2%;
+	text-transform: uppercase;
+}
+#mainTilesPromos .unit {
+	overflow: hidden;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+#mainTilesPromos .unit:last-child {
+	margin-bottom: 0;
+}
+#mainTilesPromos section img {
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 60%;
+	z-index: 0;
+}
+#mainTilesPromos p {
+	display: block;
+	line-height: 1.5;
+	margin: 0 4% 10px 49%;
+	position: relative;
+	z-index: 1;
+}
+#mainTilesPromos .learnMore {
+	bottom: 5%;
+	height: 22px;
+	margin: 0 4% 10px 49%;
+	position: relative;
+	z-index: 1;
+}
+.slideout {
+	background: url(../img/main_tile_slideout_horizontal.png);
+	display: none;
+	height: 500px;
+	position: absolute;
+	left: 40%;
+	top: 0;
+	width: 100%;
+	z-index: 0;
+}
+
+/* **********
+*
+*
+*     Main tile styles - 520px-969px Resolution
+*
+*
+********** */
+
+@media screen and (min-width: 520px) {
+#mainTiles #breadcrumbs {
+	display: block;
+}
+#mainTilesPromos .unit {
+	border-top: 1px solid #c2c2c2;
+	border-bottom: 1px solid #c2c2c2;
+	height: 185px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+#mainTilesPromos section img {
+	width: 80%;
+}
+#mainTile1, #mainTile3 {
+	border-right: 1px solid #c2c2c2;
+}
+#mainTile2, #mainTile4 {
+	border-left: 1px solid #c2c2c2;
+}
+#mainTilesPromos p {
+	margin: 0 4% 11px 51%;
+}
+#mainTilesPromos .learnMore {
+	margin: 0 4% 0 51%;
+}
+.slideout {
+	height: 220px;
+}
+}
+
+/* **********
+*
+*
+*     Main tile styles - 740px+ Resolution
+*
+*
+********** */
+
+@media screen and (min-width: 740px) {
+#mainTiles {
+	padding-top: 8px;
+}
+#mainTile1, #mainTile3, #mainTile2, #mainTile4 {
+	border: 1px solid #c2c2c2;
+}
+#mainTilesPromos .unit {
+	height: 225px;
+	margin-top: 8px;
+	padding: 0 10px;
+}
+#mainTiles .slide:hover {
+	box-shadow: 0 0 5px #000;
+}
+#mainTilesPromos section img {
+	width: 100%;
+}
+#mainTilesPromos p {
+	margin: 0 0 11px 0;
+	position: relative;
+	z-index: 1;
+}
+#mainTilesPromos .learnMore {
+	background: url(../img/learn_more_arrow.png) #fff left top no-repeat;
+	height: 28px;
+	margin: 0;
+	padding-top: 6px;
+	position: relative;
+	right: 0;
+}
+.slideout {
+	background: url(../img/main_tile_slideout.png);
+	display: block;
+	left: 0;
+	top: 34%;
+	z-index: 0;
+}
+}
+
+/* **********
+*
+*
+*     Main tile styles - 960px+ Resolution
+*
+*
+********** */
+
+@media screen and (min-width: 960px) {
+/* *********** header *********** */
+
+#mainTiles {
+	bottom: 0;
+	position: absolute;
+	width: 100%;
+}
+    body.wireframe--interior-2col-left #mainTiles,
+    body.wireframe--interior-3col #mainTiles
+    {
+        bottom:37px;
+    }
+#mainTilesPromosTitle {
+	padding: 0;
+}
+#mainTilesPromos .unit {
+	margin-top: 8px;
+	margin-bottom: 16px;
+}
+}

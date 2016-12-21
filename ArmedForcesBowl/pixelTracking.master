@@ -1,0 +1,115 @@
+<%
+'CHANGELOG
+'SSR 12/09/15 - Added facebook tracking pixel
+%>
+	
+	<%@ Master Language="VB" %>
+
+	<%@ Import Namespace="System.Data" %>
+	<%@ Import Namespace="System.Data.SqlClient" %>
+	<%@ Import Namespace="System" %>
+	<%@ Import Namespace="System.IO" %>
+	<%@ Import Namespace="GlobalClass" %>
+
+	<script runat="server">
+
+		Protected OrderCompleted As Boolean = False
+		Protected OrderTotal As Decimal
+		Protected CustomerNumber As Integer
+		Protected Quantity As Integer
+		Protected OrderNumber As Integer
+
+		Public Sub Page_PreRender()
+			If InStr(LCase(Request.ServerVariables("SCRIPT_NAME")), "pay.aspx") And Session("OrderNumber") Is Nothing Then
+				OrderCompleted = True
+				Try
+					Dim pnlOrderConfirmation As Panel = CType(GlobalClass.FindControlRecursive(MasterContent, "pnlOrderConfirmation"), Panel)
+					If Not pnlOrderConfirmation Is Nothing Then 'Found main panel that contains OrderConfirmation U.C
+						Dim lblOrderNumber As Label = CType(GlobalClass.FindControlRecursive(pnlOrderConfirmation, "lblOrderNumber"), Label)
+						If Not lblOrderNumber Is Nothing Then 'Found label for OrderNumber of OrderHeaderPanel U.C loaded within OrderConfirmation U.C
+							Dim OrderNumber As Integer = CleanNumeric(lblOrderNumber.Text)
+
+							If IsNumeric(OrderNumber) Then
+								Dim DBTix As New SqlConnection
+								Dim DBCmd As New SqlCommand
+								Dim DataReader As SqlDataReader
+								DBOpen(DBTix)
+								Dim SQLOrderTix As String = "SELECT OrderHeader.Total as OrderTotal, OrderHeader.CustomerNumber, COUNT(*) AS Quantity, OrderHeader.OrderNumber FROM OrderHeader (NOLOCK) INNER JOIN OrderLine (NOLOCK) ON OrderHeader.OrderNumber = OrderLine.OrderNumber INNER JOIN Seat (NOLOCK) ON OrderLine.ItemNumber = Seat.ItemNumber INNER JOIN Event (NOLOCK) ON Seat.EventCode = Event.EventCode WHERE OrderHeader.OrderNumber = @OrderNumber AND OrderHeader.StatusCode = 'S' AND OrderLine.ItemType IN ('Seat', 'SubFixedEvent') GROUP BY OrderHeader.OrderNumber, OrderHeader.CustomerNumber, OrderHeader.Total"
+								DBCmd = New SqlCommand(SQLOrderTix, DBTix)
+								DBCmd.Parameters.AddWithValue("@OrderNumber", CleanNumeric(OrderNumber))
+								DataReader = DBCmd.ExecuteReader()
+								DBCmd.Parameters.Clear()
+								If DataReader.HasRows() Then
+									DataReader.Read()
+									OrderTotal = CDec(DataReader("OrderTotal"))
+									CustomerNumber = CInt(DataReader("CustomerNumber"))
+									Quantity = CInt(DataReader("Quantity"))
+									OrderNumber = CInt(DataReader("OrderNumber"))
+								Else
+									OrderTotal = 0
+									Quantity = 0
+								End If
+								DataReader.Close()
+								DBCmd.Dispose()
+								DBClose(DBTix)
+							End If
+						End If
+					End If
+				Catch ex As Exception
+					'Do nothing but prevent crashing if failed
+				End Try
+			End If
+		End Sub
+		
+	</script>
+	
+	<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+	
+	<head runat="server">
+	<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+	</head>
+	
+	<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+	<FORM id="form1" runat="server">
+	<DIV>
+	
+<!--  master page content -->
+
+
+	
+<!-- /master page content -->
+
+	<% If OrderCompleted Then%>
+
+		<!-- Facebook Conversion Code for Armed Forces -->
+		<script>(function() { var _fbq = window._fbq || (window._fbq = []); if (!_fbq.loaded) { var fbds = document.createElement('script'); fbds.async = true; fbds.src = '//connect.facebook.net/en_US/fbds.js'; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fbds, s); _fbq.loaded = true; }})(); window._fbq = window._fbq || []; window._fbq.push(['track', '6029470394927', {'value':'<%=FormatNumber(OrderTotal, 2)%>','currency':'USD'}]); </script>
+		<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6029470394927&amp;cd[value]=0.00&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+
+	<% End If%>
+
+	</DIV>
+	</FORM>
+	</BODY>
+	</HTML>
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

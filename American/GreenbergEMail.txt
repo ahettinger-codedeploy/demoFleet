@@ -1,0 +1,7 @@
+SELECT     dgcTransaction.SettleStatusID AS Expr3, tixdb.dbo.Customer.EMailAddress AS Expr1, tixdb.dbo.Customer.UserID AS Expr2, *
+FROM         dgCharge..dgcTransaction INNER JOIN
+                      tixdb.dbo.OrderHeader ON dgcTransaction.CustomerID = tixdb.dbo.OrderHeader.OrderNumber INNER JOIN
+                      tixdb.dbo.Customer ON tixdb.dbo.OrderHeader.CustomerNumber = tixdb.dbo.Customer.CustomerNumber
+WHERE     (dgcTransaction.SettleStatusID IN (9)) AND (tixdb.dbo.Customer.EMailAddress <> '') AND (dgcTransaction.TransType = 'sale') AND 
+                      (tixdb.dbo.OrderHeader.StatusCode = 's')
+ORDER BY dgcTransaction.CustomerID

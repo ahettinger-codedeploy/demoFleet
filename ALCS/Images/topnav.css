@@ -1,0 +1,40 @@
+#header_nav {background-color: #d62128; height:25px; padding:0; margin:0; border:0; width:100%;}
+/* Add a relative position with a high z-index to make it appear over any element below */
+#tabnav {position:relative; height:25px; z-index:100; width:100%;}
+/* Get rid of the margin, padding and bullets in the unordered lists */
+#headermenu, #headermenu ul {padding:0; margin:0px 0px 0px 0px; list-style-type:none;}
+/* Set up the link size, color and borders */
+#headermenu a.toplink, #headermenu a.toplink:visited {display:block; color:#ffffff; font-size:13px; height:25px; line-height:24px; text-decoration:none; padding:0px 10px 0px 10px; border:1px solid #9b181b; border-width:0px 0px 0px 1px; text-align:center;}
+#headermenu a.downlink, #headermenu a.downlink:visited {display:block; width:175px; color:#231f20; text-decoration:none; padding:5px; border:1px solid #d62128; border-width:1px 1px 0px 1px; text-align:left;}
+/* last right category border */
+#headermenu a.lastright, #headermenu a.lastright:visited {border-right-width:1px;}
+/* last bottom border */
+#headermenu a.lastbottom, #headermenu a.lastbottom:visited {border-bottom:1px solid #d62128;}
+/* Set up the list items */
+#headermenu li {float:left; background:#d62128;}
+#headermenu li ul li {float:left; background:#ffffff;}
+/* For Non-IE browsers and IE7 */
+#headermenu li:hover {position:relative;}
+/* Make the hovered list color persist */
+#headermenu li:hover > a.toplink {background:#9b181b; color:#cdcdcd;}
+#headermenu li ul li:hover > a.downlink {background:#d62128; color:#231f20;}
+#headermenu a.tabnav_default, #headermenu a.tabnav_default:visited {background:#9b181b; color:#cdcdcd;}
+/* Set up the sublevel lists with a position absolute for flyouts and overrun padding. The transparent gif is for IE to work */
+#headermenu li ul {display:none; margin:0;}
+/* For Non-IE and IE7 make the sublevels visible on list hover. This is all it needs */
+#headermenu li:hover > ul {display:block; position:absolute; top:-11px; left:80px; padding:9px 30px 30px 30px; width:150px;}
+/* Position the first sub level beneath the top level liinks */
+#headermenu > li:hover > ul {left:-30px; top:16px;}
+/* get rid of the table */
+#headermenu table {position:absolute; border-collapse:collapse; top:0; left:0; z-index:100; font-size:1em;}
+/* For IE5.5 and IE6 give the hovered links a position relative and a change of background and foreground color. This is needed to trigger IE to show the sub levels */
+* html #headermenu li a.toplink:hover {position:relative; background:#9b181b; color:#cdcdcd;}
+* html #headermenu li ul li a.downlink:hover {position:relative; background:#d62128; color:#231f20;}
+/* For accessibility of the top level menu when tabbing */
+#headermenu li a.toplink:active, #headermenu li a.toplink:focus {background:#9b181b; color:#cdcdcd;}
+#headermenu li ul li a.downlink:active, #headermenu li a.downlink:focus {background:#d62128; color:#231f20;}
+/* This lot is for IE5.5 and IE6 ONLY and is necessary to make the sublevels appear */
+/* change the drop down levels from display:none; to visibility:hidden; */
+* html #headermenu li ul {visibility:hidden; display:block; position:absolute; top:-11px; left:80px; padding:10px 30px 30px 30px;}
+/* make the second level visible when hover on first level link and position it */
+#headermenu li a:hover ul {visibility:visible; left:-30px; top:14px;}

@@ -1,0 +1,1610 @@
+<%
+'CHANGELOG
+'LSP 08/05/14 - initial development
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+<link href="/clients/ALZ/Images/styles.css" rel="stylesheet" type="text/css">
+<link rel="alternate stylesheet" type="text/css" href="/clients/ALZ/Images/large.css" title="A++">
+<link rel="alternate stylesheet" type="text/css" href="/clients/ALZ/Images/medium.css" title="A+">
+<link rel="alternate stylesheet" type="text/css" href="/clients/ALZ/Images/small.css" title="A">
+
+<link href="/clients/ALZ/Images/leftnav_styles.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="/clients/ALZ/Images/print_002.css" type="text/css" media="print">
+<script src="/clients/ALZ/Images/v2" async=""></script><script src="/clients/ALZ/Images/dDSjyCPpar4Aj2acwqm_6l.js" async=""></script><script async="" src="/clients/ALZ/Images/cbgapi.loaded_0"></script><script id="undefined" src="/clients/ALZ/Images/inpage_linkid.js" async="" type="text/javascript"></script><script src="/clients/ALZ/Images/all.js" async="" id="facebook-jssdk"></script><script src="/clients/ALZ/Images/ti.js" type="text/javascript" async=""></script><script src="/clients/ALZ/Images/ga.js" async="" type="text/javascript"></script><script src="/clients/ALZ/Images/styleswitch.js" type="text/javascript">
+ /***********************************************
+ * Style Sheet Switcher v1.1- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+ * This notice MUST stay intact for legal use
+ * Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+ ***********************************************/
+ </script><!-- holds Text Sizer code -->
+<script type="text/javascript" src="/clients/ALZ/Images/leftnav.js"></script>
+<!-- BEGIN FANCY BOX-->
+<script src="/clients/ALZ/Images/AC_RunActiveContent.js" type="text/javascript"></script>
+<script type="text/javascript" src="/clients/ALZ/Images/animatedcollapse.js">
+/***********************************************
+* Animated Collapsible DIV v2.4- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+***********************************************/
+</script>
+
+
+<!-- END Tynt Script -->
+
+<!-- BEGIN SOCIAL JS -->
+
+
+
+<!-- js for social tool placement -->
+
+<script type="text/javascript" language="javascript">
+	var divHeight = document.getElementById('content').offsetHeight;
+	var actualPlacement =  325 + divHeight;
+	var actualPlacement = actualPlacement * -1;
+	var placement = actualPlacement + "px";
+	function positionit(){
+		document.getElementById('floatdiv').style.top=placement;
+		//document.getElementById('floatdiv').style.top="-3000px";
+		document.getElementById('floatdiv').style.position='absolute';
+		document.getElementById('floatdiv').style.display='block';
+		alert(divHeight);
+		//document.getElementById('content').style.backgroundColor='#ff00ff';
+	}
+</script>
+<!-- END SOCIAL JS -->
+
+<style>
+/*-------MBT Floating Sharing Widget------------*/
+#socialBox{
+width: 750px;
+
+}
+#floatdiv {
+ /*position: fixed;*/
+	/*position: absolute;  plugged in and bypassing the js up top.*/
+	display: none;
+	margin-top: 2px;
+	margin-left: 747px	 
+	
+}
+
+#mbtsidebar {
+ padding-left:5px;
+ width:84px;
+ margin:0 0 0 5px;
+ background: url('/clients/ALZ/Images/social-bg.png') top left no-repeat;
+ height: 336px;
+
+}
+
+div#floatdiv div#mbtsidebar table tbody tr td iframe.twitter-share-button{
+ width: 60px!important;
+}
+div.fb-like span.fb_edge_comment_widget{
+ margin-left: -453px;
+}
+.fb_share_count_top {width:52px !important;}
+.fb_share_count_top, .fb_share_count_inner {-moz-border-radius:3px;-webkit-border-radius:3px;}
+.FBConnectButton_Small, .FBConnectButton_RTL_Small {width:52px !important; -moz-border-radius:3px;/*bs-fsmsb*/-webkit-border-radius:3px;}
+.FBConnectButton_Small .FBConnectButton_Text {padding:2px 2px 3px !important;-moz-border-radius:3px;-webkit-border-radius:3px;font-size:8px;}
+   a.shareLinks{
+    text-decoration:underline;
+    color: #286BA9;
+    font-size: 11px;
+}
+a:hover.shareLinks{
+    text-decoration: none;
+}
+
+/**/
+
+/*NON SCROLLER for testing */
+
+	#nonScroll.fixed, #floatdiv.fixed{
+		position: fixed;
+	}
+	#nonScroll.fixed, #floatdiv.nonFixed{
+		position: absolute;
+	}
+	#nonScroll.fixed, #floatdiv.nonFixedAboveFooter{
+		position: absolute;
+	}
+	
+</style>
+
+
+         
+<style>
+	div div#mainContent div.printHide div#allBottomArea.printHide{
+		padding: 0px;	
+	}
+	div div#mainContent div.printHide div#allBottomArea.printHide br,
+	div div#mainContent div.printHide div#allBottomArea.printHide div#enewsSignup{
+		display: none;
+		visibility: hidden;	
+	}
+	html body div div#mainContent div.printHide div#allBottomArea.printHide div.onlyPurple br{
+		display: block;
+		visibility: visible;	
+	}
+</style>
+
+<style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,.fb_connect_bar_container span,.fb_connect_bar_container a,.fb_connect_bar_container img,.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}.fb_connect_bar a:hover{color:#fff}.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}.fb_connect_bar div a,.fb_connect_bar span,.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style></head>
+
+<body>
+<div align="center">
+
+
+<!-- Find Your Chapter -->
+
+  <link rel="stylesheet" href="/clients/ALZ/Images/print.css" type="text/css" media="print">
+  <link rel="alternate stylesheet" type="text/css" href="/clients/ALZ/Images/large_002.css" title="A++">
+  <link rel="alternate stylesheet" type="text/css" href="/clients/ALZ/Images/medium_002.css" title="A+">
+  <link rel="alternate stylesheet" type="text/css" href="/clients/ALZ/Images/small_002.css" title="A">
+
+
+
+<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="/clients/ALZ/Images/oDB-fAAStWy.htm" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" scrolling="no" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0"></iframe><iframe src="/clients/ALZ/Images/oDB-fAAStWy_002.htm" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" scrolling="no" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="/clients/ALZ/Images/ping.htm" style="display: none;" scrolling="no" allowtransparency="true" name="f3f342727a8be78" frameborder="0"></iframe></div></div></div>
+<script>
+ window.fbAsyncInit = function() {
+  FB.init({
+   appId   : '45062702490', // App ID
+   channelUrl : 'http://www.alz.org/apps/care-enews-form.asp', // Channel File
+   status   : true, // check login status
+   cookie   : true, // enable cookies to allow the server to access the session
+   xfbml   : true // parse XFBML
+  });
+
+  // Additional initialization code here
+ };
+
+ // Load the SDK Asynchronously
+ (function(d){
+   var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement('script'); js.id = id; js.async = true;
+   js.src = "//connect.facebook.net/en_US/all.js";
+   ref.parentNode.insertBefore(js, ref);
+  }(document));
+</script>
+
+<script gapi_processed="true" type="text/javascript" src="/clients/ALZ/Images/plusone.js"></script>
+<script type="text/javascript">
+<!--
+function go(){
+	location=document.languages.options[document.languages.selectedIndex].value
+}
+//-->
+</script>
+<style type="text/css">
+body { background-color: #ececec; margin:0; padding:0; } /* kt added 1/12/12 */
+.topNav {
+	font-family:Arial, Helvetica, sans-serif;
+  font-size: 11px;
+	margin: 0;
+	padding: 0;
+}
+.topNav a {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  text-decoration: none;
+  color: #00539b;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.topNav a:hover {
+  text-decoration: underline;
+}
+
+.chapterIDLine{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9pt;
+  color:#FFFFFF;
+  margin: 5px 10px 5px 28px;
+  font-weight: bold;
+  letter-spacing: 0.5pt;
+}
+
+.findUsText {
+	font-family:Arial, Helvetica, sans-serif;
+  color: #333;
+  margin-top: 19px;
+  font-size:14px;
+	margin-left: 8px;
+	font-weight: normal;
+}
+
+.banner_phone {
+	font-family:Arial, Helvetica, sans-serif;
+  color: #505050;
+  margin-top: 16px;
+  font-size:17px;
+	margin-left: 8px;
+	font-weight: bold;
+}
+.searchState {
+	font-family:Arial, Helvetica, sans-serif;
+  color: #00539b;
+  margin-top: 18px;
+  font-size:12px;
+	margin-left: 8px;
+	font-weight: normal;
+}
+.searchState a{
+	color: #00539b;
+}
+.searchState a:hover {
+		text-decoration: none;
+}
+.styled {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	width: 90px;
+}
+</style>
+
+
+<div class="printHide" style="background-image:url(/clients/ALZ/Images/header_bg_repeat.jpg); background-repeat:repeat-x;" align="center">
+<table class="printHide" border="0" cellpadding="0" cellspacing="0" width="960">
+<tbody><tr>
+<!--BEGIN Home | News | Events, etc NAV -->
+<td class="topNav" align="right" bgcolor="#ffffff" height="16">
+</td>
+</tr>
+<!--END Home | News | Events, etc NAV -->
+<!--BEGIN logo | search AREA -->
+<tr align="left" valign="top">
+ <td bgcolor="#FFFFFF" height="84" width="960"><table border="0" cellpadding="0" cellspacing="0" height="84" width="960">
+  <tbody><tr>
+    <td align="left" height="84" valign="top" width="499"><a href="http://www.alz.org/" target="_parent"><img src="/clients/ALZ/Images/logo_alz_tm.png" border="0" height="82" width="399"></a></td>
+    <td align="right" height="84" valign="middle" width="253"><!-- ********************** new google code 1/10/2010 ********************** -->
+
+
+
+
+</td>
+    </tr>
+ </tbody></table></td>
+ </tr>
+<!--BEGIN About us | enewsletter | message boards NAV -->
+  <tr>
+<td align="left" height="43" valign="top">
+<p style="margin:0; padding:0;"><a href="http://www.alz.org/about_us_about_us_.asp" target="_parent"><img src="/clients/ALZ/Images/btn_about_us.jpg" name="abs_topMenu1" id="abs_topMenu1" onmouseover="document.abs_topMenu1.src='/clients/ALZ/Images/btn_about_us_ov.jpg'" onmouseout="document.abs_topMenu1.src='/clients/ALZ/Images/btn_about_us.jpg'" onclick="_gaq.push(['_trackEvent', 'Care Center', 'Main Navigation Buttons', 'About Us']);" border="0" height="43" width="105"></a><img src="/clients/ALZ/Images/top_nav_divider.jpg" height="43" width="1"><a href="http://www.alz.org/apps/care-enews-form.asp?type=topNav" target="_parent"><img src="/clients/ALZ/Images/btn_enews.jpg" name="abs_topMenu2" id="abs_topMenu2" onmouseover="document.abs_topMenu2.src='/clients/ALZ/Images/btn_enews_ov.jpg'" onmouseout="document.abs_topMenu2.src='/clients/ALZ/Images/btn_enews.jpg'" onclick="_gaq.push(['_trackEvent', 'Care Center', 'Main Navigation Buttons', 'eNewsletter']);" border="0" height="43" width="119"></a><img src="/clients/ALZ/Images/top_nav_divider.jpg" height="43" width="1"><a href="https://www.alzconnected.org/" target="_parent"><img src="/clients/ALZ/Images/btn_message_boards.jpg" name="abs_topMenu3" id="abs_topMenu3" onmouseover="document.abs_topMenu3.src='/clients/ALZ/Images/btn_message_boards_ov.jpg'" onmouseout="document.abs_topMenu3.src='/clients/ALZ/Images/btn_message_boards.jpg'" onclick="_gaq.push(['_trackEvent', 'Care Center', 'Main Navigation Buttons', 'Message Boards']);" border="0" height="43" width="142"></a><img src="/clients/ALZ/Images/top_nav_divider.jpg" height="43" width="1"><a href="http://www.actionalz.org/" target="_parent"><img src="/clients/ALZ/Images/btn_action_center.jpg" name="abs_topMenu4" id="abs_topMenu4" onmouseover="document.abs_topMenu4.src='/clients/ALZ/Images/btn_action_center_ov.jpg'" onmouseout="document.abs_topMenu4.src='/clients/ALZ/Images/btn_action_center.jpg'" onclick="_gaq.push(['_trackEvent', 'Care Center', 'Main Navigation Buttons', 'Action Center']);" border="0" height="43" width="127"></a><img src="/clients/ALZ/Images/top_nav_divider.jpg" height="43" width="1"><a href="http://www.alz.org/join_the_cause_advocacy.asp" target="_parent"><img src="/clients/ALZ/Images/btn_advocate.jpg" alt="Advocate" name="abs_topMenu6" id="abs_topMenu6" onmouseover="document.abs_topMenu6.src='/clients/ALZ/Images/btn_advocate_ov.jpg'" onmouseout="document.abs_topMenu6.src='/clients/ALZ/Images/btn_advocate.jpg'" onclick="_gaq.push(['_trackEvent', 'Care Center', 'Main Navigation Buttons', 'Advocate']);" border="0" height="43" width="103"></a><img src="/clients/ALZ/Images/top_nav_divider.jpg" height="43" width="1"><a href="http://www.alz.org/walk/overview.asp?memory=main_navi" target="_new"><img src="/clients/ALZ/Images/btn_walk.jpg" alt="Walk" name="abs_topMenu7" id="abs_topMenu7" onmouseover="document.abs_topMenu7.src='/clients/ALZ/Images/btn_walk_ov.jpg'" onmouseout="document.abs_topMenu7.src='/clients/ALZ/Images/btn_walk.jpg'" onclick="_gaq.push(['_trackEvent', 'Care Center', 'Main Navigation Buttons', 'Walk']);" border="0" height="43" width="184"></a><img src="/clients/ALZ/Images/top_nav_divider.jpg" height="43" width="1"><a href="http://www.alz.org/shop/" target="_new"><img src="/clients/ALZ/Images/btn_shop.jpg" alt="Shop" name="abs_topMenu8" id="abs_topMenu8" onmouseover="document.abs_topMenu8.src='/clients/ALZ/Images/btn_shop_ov.jpg'" onmouseout="document.abs_topMenu8.src='/clients/ALZ/Images/btn_shop.jpg'" onclick="_gaq.push(['_trackEvent', 'Care Center', 'Main Navigation Buttons', 'Shop']);" border="0" height="43" width="77"></a><img src="/clients/ALZ/Images/top_nav_divider.jpg" height="43" width="1"><a href="http://www.alz.org/join_the_cause_donate.asp" target="_parent"><img src="/clients/ALZ/Images/btn_donate.jpg" alt="Donate" name="abs_topMenu5" id="abs_topMenu5" onmouseover="document.abs_topMenu5.src='/clients/ALZ/Images/btn_donate_ov.jpg'" onmouseout="document.abs_topMenu5.src='/clients/ALZ/Images/btn_donate.jpg'" onclick="_gaq.push(['_trackEvent', 'Care Center', 'Main Navigation Buttons', 'Donate']);" border="0" height="43" width="96"></a></p></td></tr>
+<!--BEGIN 24/7 helplin AREA -->
+</tbody></table>
+
+</div> <!-- end center align -->
+<!-- start peel -->
+<!-- start peel -->
+<style type="text/css">
+#page-flip {position: absolute;	right: 0; top: 0; float: right; }
+#page-flip-image { width:120px; height:120px; z-index:10000; position:absolute; right:0; top:0; -ms-interpolation-mode:bicubic; }
+#page-flip-message { width:120px; height:120px; overflow:hidden; position:absolute; right:0; top:0; background:url(/images_custom/peel/walk_peel.jpg) no-repeat right top!important; }/*THIS IMAGE CHANGES WITH VERY UPDATE*/
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+/* Styles */
+	#page-flip {display:none;  }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+       #page-flip {display:none;  }
+     }
+
+
+@media only screen
+and (max-width : 975px) {
+       #page-flip {display:none;  }
+     }
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px) {
+/* Styles */
+#page-flip {display:none;  }
+}
+
+</style>
+
+<script type="text/javascript" src="/clients/ALZ/Images/mootools-core-1.js"></script>
+
+<script language="JavaScript1.1">
+<!--
+function go(){
+    location=document.languages.options[document.languages.selectedIndex].value
+}
+//-->
+
+(function($,$$) { window.addEvent('domready',function() {
+
+	var flip = $('page-flip');
+	var flipImage = $('page-flip-image');
+	var flipMessage = $('page-flip-message');
+
+	flip.addEvents({
+		mouseenter:function() {
+			$$(flipImage,flipMessage).set('morph',{ duration: 500 }).morph({
+				width: 350,
+				height: 362
+			});
+		},
+		mouseleave:function() {
+			flipImage.set('morph',{ duration: 220 }).morph({
+				width: 120,
+				height: 120
+			});
+			flipMessage.set('morph',{ duration:200 }).morph({
+				width: 120,
+				height:120
+			});
+		}
+	});
+}); })(document.id,$$);
+
+
+</script>
+<!--
+-->
+
+
+<!-- end peel -->
+
+
+<!-- end peel --><!-- Panel Slider for Contact -->
+<script src="/clients/ALZ/Images/jquery.js" type="text/javascript"></script>
+<!-- Expand Collapse -->
+<script type="text/javascript">
+$(function(){
+
+var whichSection = '' 
+
+$("#nav1").click(function(){
+
+	if ($("#menu2").is(":visible")){ $("#menu2").slideUp(200);}
+	if ($("#menu3").is(":visible")){ $("#menu3").slideUp(200);}
+	if ($("#menu4").is(":visible")){ $("#menu4").slideUp(200);}
+	if ($("#menu5").is(":visible")){ $("#menu5").slideUp(200);}
+	if ($("#menu6").is(":visible")){ $("#menu6").slideUp(200);}
+	if ($("#menu7").is(":visible")){ $("#menu7").slideUp(200);}
+				
+	// turn off all the nav buttons (otherwise it'll stay on the arrow state
+	// maybe later we can put this in a function that each nav click function calls
+	if (whichSection != "dailyCare") { $(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care.gif")};
+	if (whichSection == "dailyCare") { $(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care_b.gif")};
+		
+	if (whichSection != "stagesBehaviors") {$(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages.gif")};
+	if (whichSection == "stagesBehaviors") {$(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages_b.gif")};
+	
+	if (whichSection != "getSupport") {$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support.gif")};
+	if (whichSection == "getSupport") {$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support_b.gif")};
+				
+	if (whichSection != "safety") {$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety.gif")};
+	if (whichSection == "safety") {$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety_b.gif")};
+	
+	if (whichSection != "careOptions") {$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options.gif")};
+	if (whichSection == "careOptions") {$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options_b.gif")};
+				
+	if (whichSection != "financial") {$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial.gif")};	
+	if (whichSection == "financial") {$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial_b.gif")};	
+		
+});
+	
+
+$("#nav2").click(function(event) {event.preventDefault();
+
+	if ($("#menu3").is(":visible")){ $("#menu3").slideUp(200);}
+	if ($("#menu4").is(":visible")){ $("#menu4").slideUp(200);}
+	if ($("#menu5").is(":visible")){ $("#menu5").slideUp(200);}
+	if ($("#menu6").is(":visible")){ $("#menu6").slideUp(200);}
+	if ($("#menu7").is(":visible")){ $("#menu7").slideUp(200);}
+				
+	if (whichSection == "dailyCare") 
+		{$(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care_b_arrow.gif");}
+	else
+		if ($("#menu2").is(":visible"))
+			{$(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care_dp.gif");}
+		else
+			{$(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care_arrow.gif")};
+	
+	// turn off all the nav buttons (otherwise it'll stay on the arrow state
+	// maybe later we can put this in a function that each nav click function calls
+	if (whichSection != "stagesBehaviors") {$(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages.gif")};
+	if (whichSection == "stagesBehaviors") {$(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages_b.gif")};
+				
+	if (whichSection != "getSupport") {$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support.gif")};
+	if (whichSection == "getSupport") {$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support_b.gif")};
+				
+	if (whichSection != "safety") {$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety.gif")};
+	if (whichSection == "safety") {$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety_b.gif")};
+				
+	if (whichSection != "careOptions") {$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options.gif")};
+	if (whichSection == "careOptions") {$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options_b.gif")};
+				
+	if (whichSection != "financial") {$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial.gif")};
+	if (whichSection == "financial") {$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial_b.gif")};						
+						
+	if ($("#menu3").is(":visible") || $("#menu4").is(":visible") || $("#menu5").is(":visible") || $("#menu6").is(":visible") || $("#menu7").is(":visible")) 
+		{$("#menu2").delay(300).slideToggle(300);} else {$("#menu2").delay(0).slideToggle(300);}
+
+});
+
+	
+				
+				
+$("#nav3").click(function(event) {event.preventDefault();
+
+	if ($("#menu2").is(":visible")){ $("#menu2").slideUp(200);}
+	if ($("#menu4").is(":visible")){ $("#menu4").slideUp(200);}
+	if ($("#menu5").is(":visible")){ $("#menu5").slideUp(200);}
+	if ($("#menu6").is(":visible")){ $("#menu6").slideUp(200);}
+	if ($("#menu7").is(":visible")){ $("#menu7").slideUp(200);}
+	
+	if (whichSection == "stagesBehaviors") 
+		{$(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages_b_arrow.gif");}
+	else
+		if ($("#menu3").is(":visible"))
+			{$(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages_dp.gif");}
+		else
+			{$(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages_arrow.gif")};
+					
+	// turn off all the nav buttons (otherwise it'll stay on the arrow state
+	// maybe later we can put this in a function that each nav click function calls
+	if (whichSection != "dailyCare") { $(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care.gif")};
+	if (whichSection == "dailyCare") { $(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care_b.gif")};
+				
+	if (whichSection != "getSupport") {$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support.gif")};
+	if (whichSection == "getSupport") {$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support_b.gif")};
+			
+	if (whichSection != "safety") {$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety.gif")};
+	if (whichSection == "safety") {$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety_b.gif")};
+				
+	if (whichSection != "careOptions") {$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options.gif")};
+	if (whichSection == "careOptions") {$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options_b.gif")};
+				
+	if (whichSection != "financial") {$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial.gif")};	
+	if (whichSection == "financial") {$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial_b.gif")};	
+				
+	if ($("#menu2").is(":visible") || $("#menu4").is(":visible") || $("#menu5").is(":visible") || $("#menu6").is(":visible") || $("#menu7").is(":visible")) 
+		{$("#menu3").delay(300).slideToggle(300);} else {$("#menu3").delay(0).slideToggle(300);}
+				
+});
+				
+
+$("#nav4").click(function(event) {event.preventDefault();
+	if ($("#menu2").is(":visible")){ $("#menu2").slideUp(200);}
+	if ($("#menu3").is(":visible")){ $("#menu3").slideUp(200);}
+	if ($("#menu5").is(":visible")){ $("#menu5").slideUp(200);}
+	if ($("#menu6").is(":visible")){ $("#menu6").slideUp(200);}
+	if ($("#menu7").is(":visible")){ $("#menu7").slideUp(200);}
+				
+	if (whichSection == "getSupport")
+		{$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support_b_arrow.gif");}
+	else
+		if ($("#menu4").is(":visible"))
+			{$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support_dp.gif");}
+		else
+			{$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support_arrow.gif")};
+				
+	// turn off all the nav buttons (otherwise it'll stay on the arrow state
+	// maybe later we can put this in a function that each nav click function calls
+	if (whichSection != "dailyCare") { $(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care.gif")};
+	if (whichSection == "dailyCare") { $(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care_b.gif")};
+				
+	if (whichSection != "stagesBehaviors") {$(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages.gif")};
+	if (whichSection == "stagesBehaviors") {$(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages_b.gif")};
+				
+	if (whichSection != "safety") {$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety.gif")};
+	if (whichSection == "safety") {$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety_b.gif")};
+				
+	if (whichSection != "careOptions") {$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options.gif")};
+	if (whichSection == "careOptions") {$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options_b.gif")};
+				
+	if (whichSection != "financial") {$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial.gif")};
+	if (whichSection == "financial") {$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial_b.gif")};
+					
+	if ($("#menu2").is(":visible") || $("#menu3").is(":visible") || $("#menu5").is(":visible") || $("#menu6").is(":visible") || $("#menu7").is(":visible")) 
+		{$("#menu4").delay(300).slideToggle(300);} else {$("#menu4").delay(0).slideToggle(300);}
+				
+});
+				
+
+$("#nav5").click(function(event) {event.preventDefault();
+	if ($("#menu2").is(":visible")){ $("#menu2").slideUp(200);}
+	if ($("#menu3").is(":visible")){ $("#menu3").slideUp(200);}
+	if ($("#menu4").is(":visible")){ $("#menu4").slideUp(200);}
+	if ($("#menu6").is(":visible")){ $("#menu6").slideUp(200);}
+	if ($("#menu7").is(":visible")){ $("#menu7").slideUp(200);}
+				
+	if (whichSection == "safety")
+		{$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety_b_arrow.gif");}
+	else
+		if ($("#menu5").is(":visible"))
+			{$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety_dp.gif");}
+		else 
+			{$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety_arrow.gif")};
+	
+	// turn off all the nav buttons (otherwise it'll stay on the arrow state
+	// maybe later we can put this in a function that each nav click function calls
+	if (whichSection != "dailyCare") { $(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care.gif")};
+	if (whichSection == "dailyCare") { $(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care_b.gif")};
+				
+	if (whichSection != "stagesBehaviors") {$(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages.gif")};
+	if (whichSection == "stagesBehaviors") {$(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages_b.gif")};
+				
+	if (whichSection != "getSupport") {$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support.gif")};
+	if (whichSection == "getSupport") {$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support_b.gif")};
+				
+	if (whichSection != "careOptions") {$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options.gif")};
+	if (whichSection == "careOptions") {$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options_b.gif")};
+				
+	if (whichSection != "financial") {$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial.gif")};
+	if (whichSection == "financial") {$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial_b.gif")};
+					
+	if ($("#menu2").is(":visible") || $("#menu3").is(":visible") || $("#menu4").is(":visible") || $("#menu6").is(":visible") || $("#menu7").is(":visible")) 
+		{$("#menu5").delay(300).slideToggle(300);} else {$("#menu5").delay(0).slideToggle(300);}
+			
+});
+				
+
+$("#nav6").click(function(event) {event.preventDefault();
+	if ($("#menu2").is(":visible")){ $("#menu2").slideUp(200);}
+	if ($("#menu3").is(":visible")){ $("#menu3").slideUp(200);}
+	if ($("#menu4").is(":visible")){ $("#menu4").slideUp(200);}
+	if ($("#menu5").is(":visible")){ $("#menu5").slideUp(200);}
+	if ($("#menu7").is(":visible")){ $("#menu7").slideUp(200);}
+				
+	if (whichSection == "careOptions")
+		{$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options_b_arrow.gif");}
+	else
+		if ($("#menu6").is(":visible"))
+			{$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options_dp.gif");}
+		else
+			{$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options_arrow.gif")};
+
+	// turn off all the nav buttons (otherwise it'll stay on the arrow state
+	// maybe later we can put this in a function that each nav click function calls
+	if (whichSection != "dailyCare") { $(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care.gif")};
+	if (whichSection == "dailyCare") { $(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care_b.gif")};
+				
+	if (whichSection != "stagesBehaviors") {$(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages.gif")};
+	if (whichSection == "stagesBehaviors") {$(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages_b.gif")};
+				
+	if (whichSection != "getSupport") {$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support.gif")};
+	if (whichSection == "getSupport") {$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support_b.gif")};
+				
+	if (whichSection != "safety") {$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety.gif")};
+	if (whichSection == "safety") {$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety_b.gif")};
+				
+	if (whichSection != "financial") {$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial.gif")};
+	if (whichSection == "financial") {$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial_b.gif")};
+										
+	if ($("#menu2").is(":visible") || $("#menu3").is(":visible") || $("#menu4").is(":visible") || $("#menu5").is(":visible") || $("#menu7").is(":visible")) 
+		{$("#menu6").delay(300).slideToggle(300);} else {$("#menu6").delay(0).slideToggle(300);}
+			
+});
+				
+
+$("#nav7").click(function(event) {event.preventDefault();
+	// if other menus are open, close them.
+	if ($("#menu2").is(":visible")){ $("#menu2").slideUp(200);}
+	if ($("#menu3").is(":visible")){ $("#menu3").slideUp(200);}
+	if ($("#menu4").is(":visible")){ $("#menu4").slideUp(200);}
+	if ($("#menu5").is(":visible")){ $("#menu5").slideUp(200);}
+	if ($("#menu6").is(":visible")){ $("#menu6").slideUp(200);}
+				
+	if (whichSection == "financial")
+		{$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial_b_arrow.gif");}
+	else
+		if ($("#menu7").is(":visible"))
+			{$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial_dp.gif");}
+		else
+			{$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial_arrow.gif")};							
+				
+	// turn off all the nav buttons (otherwise it'll stay on the arrow state
+	// maybe later we can put this in a function that each nav click function calls
+	if (whichSection != "dailyCare") { $(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care.gif")};
+	if (whichSection == "dailyCare") { $(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care_b.gif")};
+				
+	if (whichSection != "stagesBehaviors") {$(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages.gif")};
+	if (whichSection == "stagesBehaviors") {$(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages_b.gif")};
+				
+	if (whichSection != "getSupport") {$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support.gif")};
+	if (whichSection == "getSupport") {$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support_b.gif")};
+				
+	if (whichSection != "safety") {$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety.gif")};
+	if (whichSection == "safety") {$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety_b.gif")};
+				
+	if (whichSection != "careOptions") {$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options.gif")};	
+	if (whichSection == "careOptions") {$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options_b.gif")};	
+			
+	// check if other menus are open. if they are, delay the open. if they are not, open right away.
+	if ($("#menu2").is(":visible") || $("#menu3").is(":visible") || $("#menu4").is(":visible") || $("#menu5").is(":visible") || $("#menu6").is(":visible")) 
+		{$("#menu7").delay(300).slideToggle(300);} else {$("#menu7").delay(0).slideToggle(300);}
+		
+});
+
+
+
+$(".dailyBtn").mouseover(function(){
+	if (whichSection == "dailyCare") 
+		{ $(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care_b_arrow.gif");}
+	else
+		if ($("#menu2").is(":visible"))
+			{ $(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care_arrow.gif");}
+		else
+			{ $(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care_dp.gif")};
+});
+
+
+
+$(".dailyBtn").mouseout(function(){
+	if (whichSection == "dailyCare") 
+		if ($("#menu2").is(":visible"))
+			{ $(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care_b_arrow.gif");}
+		else
+			{ $(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care_b.gif");}
+	else 
+		{
+		if ($("#menu2").is(":visible"))
+			{$(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care_arrow.gif");}
+		else 
+			{$(".dailyBtn").attr("src","/clients/ALZ/Images/" +"btn_daily_care.gif");};
+	};
+});
+
+
+
+
+$(".behaviorsBtn").mouseover(function(){
+	if (whichSection == "stagesBehaviors") 
+		{$(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages_b_arrow.gif");}
+	else
+		if ($("#menu3").is(":visible"))
+			{ $(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages_arrow.gif");}
+		else
+			{ $(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages_dp.gif")};
+	
+});
+
+
+$(".behaviorsBtn").mouseout(function(){
+	if (whichSection == "stagesBehaviors") 
+		if ($("#menu3").is(":visible"))
+			{ $(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages_b_arrow.gif");}
+		else
+			{ $(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages_b.gif");}
+	else 
+		{
+		if ($("#menu3").is(":visible"))
+			{$(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages_arrow.gif");}
+		else
+			{$(".behaviorsBtn").attr("src","/clients/ALZ/Images/" +"btn_stages.gif");}
+	};
+});
+
+
+
+$(".supportBtn").mouseover(function(){
+	if (whichSection == "getSupport") 
+		{ $(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support_b_arrow.gif");}
+	else
+		if ($("#menu4").is(":visible"))
+			{ $(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support_arrow.gif");}
+		else
+			{ $(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support_dp.gif")};
+});
+
+
+$(".supportBtn").mouseout(function(){
+	if (whichSection == "getSupport") 
+		if ($("#menu4").is(":visible"))
+			{$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support_b_arrow.gif");}
+		else
+			{$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support_b.gif");}
+	else 
+		{
+		if ($("#menu4").is(":visible"))
+			{$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support_arrow.gif");}
+		else
+			{$(".supportBtn").attr("src","/clients/ALZ/Images/" +"btn_get_support.gif");};
+	};
+});
+
+
+
+$(".safetyBtn").mouseover(function(){
+	if (whichSection == "safety") 
+		{ $(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety_b_arrow.gif");}
+	else
+		if ($("#menu5").is(":visible"))
+			{ $(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety_arrow.gif");}
+		else
+			{ $(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety_dp.gif")};
+});
+
+$(".safetyBtn").mouseout(function(){
+	if (whichSection == "safety")
+		if ($("#menu5").is(":visible"))
+			{$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety_b_arrow.gif");}
+		else
+			{$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety_b.gif");}
+	else 
+		{
+		if ($("#menu5").is(":visible"))
+			{$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety_arrow.gif");}
+		else
+			{$(".safetyBtn").attr("src","/clients/ALZ/Images/" +"btn_safety.gif");};
+	};
+});
+
+
+$(".careBtn").mouseover(function(){
+	if (whichSection == "careOptions") 
+		{$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options_b_arrow.gif");}
+	else
+		if ($("#menu6").is(":visible"))
+			{$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options_arrow.gif");}
+		else
+			{$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options_dp.gif")};
+});
+
+$(".careBtn").mouseout(function(){
+	if (whichSection == "careOptions")
+		if ($("#menu6").is(":visible"))
+			{$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options_b_arrow.gif");}
+		else
+			{$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options_b.gif");}
+	else 
+		{
+		if ($("#menu6").is(":visible"))
+			{$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options_arrow.gif");}
+		else
+			{$(".careBtn").attr("src","/clients/ALZ/Images/" +"btn_care_options.gif")};
+	};
+});
+
+$(".financialBtn").mouseover(function(){
+	if (whichSection == "financial") 
+		{ $(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial_b_arrow.gif");}
+	else
+		if ($("#menu7").is(":visible"))
+			{ $(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial_arrow.gif");}
+		else
+			{ $(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial_dp.gif")};
+});
+
+$(".financialBtn").mouseout(function(){
+	if (whichSection == "financial") 
+		if ($("#menu7").is(":visible"))
+			{$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial_b_arrow.gif");}
+		else
+			{$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial_b.gif");}
+	else 
+		{
+		if ($("#menu7").is(":visible"))
+			{$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial_arrow.gif");}
+		else 
+			{$(".financialBtn").attr("src","/clients/ALZ/Images/" +"btn_financial.gif");};
+	};
+});
+
+}); 
+
+// X for close statements
+$(document).ready(function(){
+	
+	$("#closeDailyCare").click(function(){
+		if ($("#menu2").is(":visible")){ $("#menu2").slideUp();}
+		
+		if ("" == "dailyCare")
+			{$(".dailyBtn").attr("src","/clients/ALZ/Images/btn_daily_care_b.gif");}
+		else
+			{$(".dailyBtn").attr("src","/clients/ALZ/Images/btn_daily_care.gif");}
+	});
+	
+	$("#closeStages").click(function(){
+		if ($("#menu3").is(":visible")){ $("#menu3").slideUp();}
+		
+		if ("" == "stagesBehaviors")
+			{$(".behaviorsBtn").attr("src","/clients/ALZ/Images/btn_stages_b.gif");}
+		else
+			{$(".behaviorsBtn").attr("src","/clients/ALZ/Images/btn_stages.gif");}
+	});
+	
+	$("#closeSupport").click(function(){
+		if ($("#menu4").is(":visible")){ $("#menu4").slideUp();}
+		
+		if ("" == "getSupport")
+			{$(".supportBtn").attr("src","/clients/ALZ/Images/btn_get_support_b.gif");}
+		else
+			{$(".supportBtn").attr("src","/clients/ALZ/Images/btn_get_support.gif");}
+	});
+	
+	
+	$("#closeSafety").click(function(){
+		if ($("#menu5").is(":visible")){ $("#menu5").slideUp();}
+		
+		if ("" == "safety")
+			{$(".safetyBtn").attr("src","/clients/ALZ/Images/btn_safety_b.gif");}
+		else
+			{$(".safetyBtn").attr("src","/clients/ALZ/Images/btn_safety.gif");}
+			
+	});
+	
+	$("#closeCareOptions").click(function(){
+		if ($("#menu6").is(":visible")){ $("#menu6").slideUp();}
+		
+		if ("" == "careOptions")
+			{$(".careBtn").attr("src","/clients/ALZ/Images/btn_care_options_b.gif");}
+		else
+			{$(".careBtn").attr("src","/clients/ALZ/Images/btn_care_options.gif");}
+	});
+	
+	$("#closeFinancial").click(function(){
+		if ($("#menu7").is(":visible")){ $("#menu7").slideUp();}
+		
+		if ("" == "financial")
+			{$(".financialBtn").attr("src","/clients/ALZ/Images/btn_financial_b.gif");}
+		else
+			{$(".financialBtn").attr("src","/clients/ALZ/Images/btn_financial.gif");}
+			
+	});
+ });
+</script>
+
+<style type="text/css">
+			.wrapper {
+				float: left;
+			}
+			
+			#nav1{
+			display:block;
+      width : 133px;
+			
+			
+      }
+			#nav2{
+      display:block;
+      	width : 106px ;
+			
+      }
+			#nav3{
+      display:block;
+      	width : 168px;
+			
+      }
+			#nav4{
+      display:block;
+      	width : 123px;
+			
+      }
+			#nav5{
+      display:block;
+      	width : 82px;
+			
+      }
+			#nav6{
+      display:block;
+      	width : 128px ;
+			
+      }
+			#nav7{
+      display:block;
+      	width : 205px;
+			
+      }
+			
+			
+      #menu1 {
+      }
+
+
+      #menu2 {
+      display: none;
+			/* width:945px; */
+      }
+			
+			#menu3 {
+      display: none;
+      /* 	width:961px; */
+      }
+			
+			#menu4 {
+      display: none;
+     /* 	width:961px; */
+      }
+			
+			#menu5 {
+      display: none;
+     /* 	width:961px; */
+      }
+			
+			#menu6 {
+      display: none;
+      /* 	width:961px; */
+      }
+			
+			#menu7 {
+      display:none;
+     /* 	width:961px; */
+      }
+
+li a.topNavLink_v2 {font-family:Arial, Helvetica, sans-serif; font-size: 14px !important; line-height: 20px; font-weight:bold; /* kt changed to 14/bold 5/30/12 */ }
+
+div.close {width:25px; height:25px; margin-bottom:20px; margin-top : 20px; }
+
+</style>
+
+
+
+<div class="printReveal ccHdrLogo" align="left">
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</div>
+<div class="printHide" style="width: 1057px; margin: 0; padding:0;"><img src="/clients/ALZ/Images/carecenter_header.jpg" alt="Care Center" class="printHide" height="105" width="960"><br></div>
+
+
+<div id="careNav" class="printHide">
+	 <div class="wrapper"><a href="http://www.alz.org/care/overview.asp"><img src="/clients/ALZ/Images/btn_cg_home.gif" onmouseover="src='/clients/ALZ/Images/btn_cg_home_dp.gif'" onmouseout="src='/clients/ALZ/Images/btn_cg_home.gif'" border="0" height="42" width="133"></a></div>
+ 
+  <div class="wrapper"><a href="#" id="nav2"><img src="/clients/ALZ/Images/btn_daily_care.gif" class="dailyBtn" onclick="javascript:animatedcollapse.show('topNavDaily');" border="0" height="42" width="106"></a></div>
+  
+  <div class="wrapper"><a href="#" id="nav3"><img src="/clients/ALZ/Images/btn_stages.gif" class="behaviorsBtn" onclick="javascript:animatedcollapse.show('topNavBehavior');" border="0" height="42" width="168"></a></div>
+  
+  <div class="wrapper"><a href="#" id="nav4"><img src="/clients/ALZ/Images/btn_get_support.gif" class="supportBtn" onclick="javascript:animatedcollapse.show('topNavSupport');" border="0" height="42" width="123"></a></div>
+ 
+  <div class="wrapper"><a href="#" id="nav5"><img src="/clients/ALZ/Images/btn_safety.gif" class="safetyBtn" onclick="javascript:animatedcollapse.show('topNavSafety');" border="0" height="42" width="82"></a></div>
+ 
+  <div class="wrapper"><a href="#" id="nav6"><img src="/clients/ALZ/Images/btn_care_options.gif" class="careBtn" onclick="javascript:animatedcollapse.show('topNavCareOptions');" border="0" height="42" width="128"></a></div>
+ 
+  <div class="wrapper"><a href="#" id="nav7"><img src="/clients/ALZ/Images/btn_financial.gif" class="financialBtn" onclick="javascript:animatedcollapse.show('topNavFinancial');" border="0" height="42" width="223"></a></div>
+  
+  
+  </div> <!-- END careNav buttons -->
+<!-- TOPNAV DAILY --> 
+<div style="display: none;" id="menu2" class="testMK">
+	<div id="topNavDaily" style="width: 100%;">
+    
+  	<table cellpadding="0" cellspacing="0">
+  	<tbody><tr>
+    	<td valign="top">
+		<!--	<ul style="width: 190px; margin-left: 0px;">
+  				<li><a href="/care/alzheimers-dementia-daily-plan.asp" class="topNavLink_v2"><strong>Daily Care Overview</strong></a><br />
+  				  <a href="/care/alzheimers-dementia-daily-plan.asp"><img src="/clients/ALZ/Images/nav_photo_daily_care.jpg" width="155" height="104" border="0" style="margin-top: 8px;" /></a></li>
+  			</ul>
+		-->
+			<ul style="width: 190px; margin-left: 0px;">
+				<li>Start Here<hr class="topNavDividerHorizLineThick"></li>
+				<li><a href="http://www.alz.org/care/alzheimers-dementia-daily-plan.asp">What You Need to Know</a><hr class="topNavDividerHorizLine"></li>
+				<li><a href="http://www.alz.org/care/alzheimers-dementia-online-tools.asp">Online Tools</a></li>
+				<li><a href="http://www.alz.org/care/alzheimers-dementia-daily-plan.asp"><img src="/clients/ALZ/Images/nav-dropdown-img-dailycare.jpg" alt="Caregivers need a support network." style="margin-top : 10px;" onmouseover="src='/clients/ALZ/Images/nav-dropdown-img-dailycare-over.jpg'" onmouseout="src='/clients/ALZ/Images/nav-dropdown-img-dailycare.jpg'" border="0"></a></li>
+			</ul>
+      </td>
+      
+      <td valign="top">
+      	 <ul> 
+          <li>Enhancing Daily Life<hr class="topNavDividerHorizLineThick"></li>
+          <li><a href="http://www.alz.org/care/dementia-creating-a-plan.asp">Daily Plan</a><hr class="topNavDividerHorizLine"></li>
+          <li><a href="http://www.alz.org/care/alzheimers-dementia-activities.asp">Activities</a><hr class="topNavDividerHorizLine"></li>
+          <li><a href="http://www.alz.org/care/dementia-communication-tips.asp">Communication</a><hr class="topNavDividerHorizLine"></li>
+          <li><a href="http://www.alz.org/care/alzheimers-food-eating.asp">Food &amp; Eating</a><hr class="topNavDividerHorizLine"></li>
+          <li><a href="http://www.alz.org/care/alzheimers-dementia-music-art-therapy.asp">Music &amp; Art</a></li>
+        </ul>
+      </td>
+      
+      <td valign="top">
+      	<ul>
+          <li>Personal Care<hr class="topNavDividerHorizLineThick"></li>
+          <li><a href="http://www.alz.org/care/alzheimers-dementia-incontinence.asp">Incontinence</a><hr class="topNavDividerHorizLine"></li>
+          <li><a href="http://www.alz.org/care/alzheimers-dementia-bathing.asp">Bathing</a><hr class="topNavDividerHorizLine"></li>
+          <li><a href="http://www.alz.org/care/alzheimers-dementia-dressing.asp">Dressing &amp; Grooming</a><hr class="topNavDividerHorizLine"></li>
+          <li><a href="http://www.alz.org/care/alzheimers-dementia-dental.asp">Dental Care</a></li> 
+        </ul>
+      </td>
+      
+      <td valign="top">
+      	<ul>
+          <li>Medical Care<hr class="topNavDividerHorizLineThick"></li>
+          <li><a href="http://www.alz.org/care/dementia-doctor-patient-communication.asp">Working with the Doctor</a><hr class="topNavDividerHorizLine"></li>
+          <li><a href="http://www.alz.org/alzheimers_disease_treatments.asp" target="_blank">Treatments</a><hr class="topNavDividerHorizLine"></li>
+           <li><a href="http://www.alz.org/research/clinical_trials/find_clinical_trials_trialmatch.asp" target="_blank">Clinical Trials</a><hr class="topNavDividerHorizLine"></li>
+          <li><a href="http://www.alz.org/care/dementia-medication-drug-safety.asp">Medication Safety</a></li>
+          <li><div id="closeDailyCare" class="close"><img src="/clients/ALZ/Images/close_btn.gif" style="margin-left : 105px;" onmouseover="src='/clients/ALZ/Images/close_btn_ov.gif'; this.style.cursor='pointer';" onmouseout="src='/clients/ALZ/Images/close_btn.gif'"></div></li>
+        </ul>
+        
+
+      </td>
+    </tr>
+  </tbody></table>
+  	</div>
+ </div>
+ 
+ 
+<!-- TOPNAV BEHAVIOR --> 
+<div style="display: none;" id="menu3" class="testMK">
+	<div id="topNavBehavior" style="width: 100%;">
+    <table cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td valign="top">
+        	<ul style="width: 190px; margin-left: 0px;">
+				<li>Start Here<hr class="topNavDividerHorizLineThick"></li>
+				<li><a href="http://www.alz.org/care/alzheimers-dementia-stages-behaviors.asp">What You Need to Know</a><hr class="topNavDividerHorizLine"></li>
+				<li><a href="http://www.alz.org/care/alzheimers-dementia-online-tools.asp">Online Tools</a></li>
+				<li><a href="http://www.alz.org/care/alzheimers-dementia-stages-behaviors.asp"><img src="/clients/ALZ/Images/nav-dropdown-img-stages.jpg" alt="Caregivers need a support network." style="margin-top : 10px;" onmouseover="src='/clients/ALZ/Images/nav-dropdown-img-stages-over.jpg'" onmouseout="src='/clients/ALZ/Images/nav-dropdown-img-stages.jpg'" border="0"></a></li>
+			</ul>
+        </td>
+        
+        <td valign="top">
+           <ul> 
+            <li>Stages<hr class="topNavDividerHorizLineThick"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-early-mild-stage-caregiving.asp">Early-Stage Caregiving</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-mid-moderate-stage-caregiving.asp" onclick="_gaq.push(['_trackEvent', 'Care Center', 'Dropdown Stages-Behaviors', 'Middle-Stage Caregiving']);">Middle-Stage Caregiving</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-late-end-stage-caregiving.asp">Late-Stage Caregiving</a></li>
+          </ul>
+        </td>
+        
+        <td colspan="2" valign="top">
+        <!-- NOTE: this is hacking for exception where blue line should go across 2 columns - was decided post-build -->
+        <ul style="margin-bottom:0px;"><li>Behaviors<hr class="topNavDividerHorizLineThick" style="width: 400px;"></li></ul>
+         <div style="float:left; width: 220px; margin-top:0px;">
+          <ul style="margin-top:0px;">
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-aggression-anger.asp">Aggression &amp; Anger</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-agitation-anxiety.asp">Anxiety &amp; Agitation</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-depression.asp">Depression</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-hallucinations.asp">Hallucinations</a><hr class="topNavDividerHorizLine"></li> 
+            <li><a href="http://www.alz.org/care/dementia-memory-loss-problems-confusion.asp">Memory Loss &amp; Confusion</a></li> 
+          </ul>
+          </div>
+        <div style="float:left; width: 220px;">
+           <ul style="margin-top:0px;">
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-repetition.asp">Repetition</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-sleep-issues-sundowning.asp">Sleep Issues &amp; Sundowning</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-suspicion-delusions.asp">Suspicion &amp; Delusions</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-wandering.asp">Wandering</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-elder-abuse.asp">Abuse</a></li>
+            <li><div id="closeStages" class="close"><img src="/clients/ALZ/Images/close_btn.gif" style="margin-left : 105px;" onmouseover="src='/clients/ALZ/Images/close_btn_ov.gif'; this.style.cursor='pointer';" onmouseout="src='/clients/ALZ/Images/close_btn.gif'"></div>
+          </li>
+          </ul>
+          </div>
+        </td>
+      </tr>
+    </tbody></table>
+
+		</div>
+  </div>
+<!-- TOPNAV SUPPORT --> 
+
+<div style="display: none;" id="menu4" class="testMK">
+	<div id="topNavSupport" style="width: 100%;">
+  	 <table cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td valign="top">          
+          <ul style="width: 190px; margin-left: 0px;">
+          	<li>Start Here<hr class="topNavDividerHorizLineThick"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-support-help.asp">What You Need to Know</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-online-tools.asp">Online Tools</a></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-support-help.asp"><img src="/clients/ALZ/Images/nav-dropdown-img-support.jpg" alt="Caregivers need a support network." style="margin-top : 10px;" onmouseover="src='/clients/ALZ/Images/nav-dropdown-img-support-over.jpg'" onmouseout="src='/clients/ALZ/Images/nav-dropdown-img-support.jpg'" border="0"></a></li>
+  					<!--<li><a href="/care/alzheimers-dementia-support-help.asp" class="topNavLink_v2"><strong>Get Support Overview</strong></a><br />
+  				 		 <a href="/care/alzheimers-dementia-support-help.asp"><img src="/clients/ALZ/Images/nav_photo_get_support.jpg" width="155" height="104" border="0" style="margin-top: 8px;" /></a></li>-->
+  				</ul>
+        </td>
+        
+        <td valign="top">
+           <ul> 
+            <li>Community<hr class="topNavDividerHorizLineThick"></li>
+             <li><a href="http://www.alz.org/care/alzheimers-dementia-support-groups.asp">Support Groups</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alzconnected.org/" target="_blank">Online Community</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://blog.alz.org/" target="_blank">Blog</a></li>
+          </ul>
+        </td>
+        
+        <td valign="top">
+          <ul>
+            <li>Training &amp; Resources<hr class="topNavDividerHorizLineThick"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-care-training-certification.asp">Care Training Resources</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-caregiver-notebook.asp">Caregiver Notebook</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-family-conflicts.asp">Resolving Family Conflicts</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-holidays.asp">Holidays</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-ethical-issues.asp">Ethical &amp; Care Issues</a></li> 
+          </ul>
+        </td>
+        
+        <td valign="top">
+          <ul>
+            <li>Caregiver Health<hr class="topNavDividerHorizLineThick"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-healthy-caregiver.asp">Being a Healthy Caregiver</a><hr class="topNavDividerHorizLine"></li> 
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-caregiver-stress-burnout.asp">Caregiver Stress</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-caregiver-depression.asp">Caregiver Depression</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-relationship-changes.asp">Relationship Changes</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-grief-loss.asp">Grief &amp; Loss as Alzheimer's Progresses</a></li>
+            <li><div id="closeSupport" class="close"><img src="/clients/ALZ/Images/close_btn.gif" style="margin-left:105px;" onmouseover="src='/clients/ALZ/Images/close_btn_ov.gif'; this.style.cursor='pointer';" onmouseout="src='/clients/ALZ/Images/close_btn.gif'"></div></li>
+          </ul>
+           
+        </td>
+      </tr>
+    </tbody></table>
+	</div>
+ </div>
+<!-- TOPNAV SAFETY --> 
+<div style="display: none;" id="menu5" class="testMK">
+	<div id="topNavSafety" style="width: 100%;">
+  	 <table cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td valign="top">
+          <ul style="width: 190px; margin-left: 0px;">
+  					
+				<li>Start Here<hr class="topNavDividerHorizLineThick"></li>
+				<li><a href="http://www.alz.org/care/alzheimers-dementia-safety.asp">What You Need to Know</a><hr class="topNavDividerHorizLine"></li>
+				<li><a href="http://www.alz.org/care/alzheimers-dementia-online-tools.asp">Online Tools</a></li>
+				<li><a href="http://www.alz.org/care/alzheimers-dementia-safety.asp"><img src="/clients/ALZ/Images/nav-dropdown-img-safety.jpg" alt="Caregivers need a support network." style="margin-top : 10px;" onmouseover="src='/clients/ALZ/Images/nav-dropdown-img-safety-over.jpg'" onmouseout="src='/clients/ALZ/Images/nav-dropdown-img-safety.jpg'" border="0"></a></li>
+			</ul>
+        </td>
+        
+        <td valign="top">
+           <ul> 
+            <li>Top Safety Concerns<hr class="topNavDividerHorizLineThick"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-wandering.asp">Wandering</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-home-safety.asp">Home Safety</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-and-driving.asp">Dementia &amp; Driving</a></li><hr class="topNavDividerHorizLine">
+            <li><a href="http://www.alz.org/care/dementia-medication-drug-safety.asp">Medication Safety</a></li>
+          </ul>
+        </td>
+        
+        <td valign="top">
+          <ul>
+            <li>Safety Systems<hr class="topNavDividerHorizLineThick"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-gps-comfortzone.asp">Comfort Zone</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/dementia-medic-alert-safe-return.asp">MedicAlert + Safe Return</a></li>
+          </ul>
+        </td>
+        
+        <td valign="top">
+          <ul>
+            <li>Special Situations<hr class="topNavDividerHorizLineThick"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-and-traveling.asp">Traveling</a><hr class="topNavDividerHorizLine"></li> 
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-disaster-preparedness.asp">In a Disaster</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-elder-abuse.asp">Abuse</a></li>
+            <li><div id="closeSafety" class="close"><img src="/clients/ALZ/Images/close_btn.gif" style="margin-left : 105px;" onmouseover="src='/clients/ALZ/Images/close_btn_ov.gif'; this.style.cursor='pointer';" onmouseout="src='/clients/ALZ/Images/close_btn.gif'"></div></li>
+          </ul>
+           
+        </td>
+      </tr>
+    </tbody></table>
+	</div>
+ </div>
+
+<!-- TOPNAV CARE OPTIONS --> 
+<div style="display: none;" id="menu6" class="testMK">
+	<div id="topNavCareOptions" style="width: 100%;">
+	
+ <table cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td valign="top">
+          <ul style="width: 190px; margin-left: 0px;">
+				<li>Start Here<hr class="topNavDividerHorizLineThick"></li>
+				<li><a href="http://www.alz.org/care/alzheimers-dementia-care-housing.asp">What You Need to Know</a><hr class="topNavDividerHorizLine"></li>
+				<li><a href="http://www.alz.org/care/alzheimers-dementia-online-tools.asp">Online Tools</a></li>
+				<li><a href="http://www.alz.org/care/alzheimers-dementia-care-housing.asp"><img src="/clients/ALZ/Images/nav-dropdown-img-care.jpg" alt="Caregivers need a support network." style="margin-top : 10px;" onmouseover="src='/clients/ALZ/Images/nav-dropdown-img-care-over.jpg'" onmouseout="src='/clients/ALZ/Images/nav-dropdown-img-care.jpg'" border="0"></a></li>
+			</ul>
+        </td>
+        
+        <td valign="top">
+           <ul> 
+            <li>Types of Care<hr class="topNavDividerHorizLineThick"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-adult-day-centers.asp">Adult Day Centers</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-in-home-health.asp">In-Home Care</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-residential-facilities.asp">Residential Care</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-caregiver-respite.asp">Respite Care</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-hospice.asp">Hospice Care</a></li>
+          </ul>
+        </td>
+        
+        <td valign="top">
+          <ul>
+            <li>Finding Care<hr class="topNavDividerHorizLineThick"></li>
+            <!--<li><a href="/care/alzheimers-dementia-get-help.asp">When to Get Help</a><hr class="topNavDividerHorizLine" /></li>-->
+            <li><a href="http://www.communityresourcefinder.org/" target="_blank">Community Resource Finder</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-screening-providers.asp">Choosing Care Providers</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-changing-providers.asp">Changing Care Providers</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-glossary.asp">Glossary</a></li>
+          </ul>
+           
+        </td>
+        
+        <td valign="top">
+          <ul>
+            <li>Coordinating Care<hr class="topNavDividerHorizLineThick"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-working-with-providers.asp">Working with Care Providers</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-care-calendar.asp">Care Team Calendar</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-long-distance-caregiving.asp">Long-Distance Caregiving</a></li>
+            <li><div id="closeCareOptions" class="close"><img src="/clients/ALZ/Images/close_btn.gif" style="margin-left : 105px;" onmouseover="src='/clients/ALZ/Images/close_btn_ov.gif'; this.style.cursor='pointer';" onmouseout="src='/clients/ALZ/Images/close_btn.gif'"></div></li>
+          </ul>
+          
+        </td>
+      </tr>
+    </tbody></table>
+	</div>
+ </div>
+<!-- TOPNAV FINANCIAL --> 
+<div style="display: none;" id="menu7" class="testMK">
+	<div id="topNavFinancial" style="width: 100%;">
+  
+  <table cellpadding="0" cellspacing="0">
+      <tbody><tr>
+        <td valign="top">
+          <ul style="width: 190px; margin-left: 0px;">
+				<li>Start Here<hr class="topNavDividerHorizLineThick"></li>
+				<li><a href="http://www.alz.org/care/alzheimers-dementia-financial-legal-planning.asp">What You Need to Know</a><hr class="topNavDividerHorizLine"></li>
+				<li><a href="http://www.alz.org/care/alzheimers-dementia-online-tools.asp">Online Tools</a></li>
+				<li><a href="http://www.alz.org/care/alzheimers-dementia-financial-legal-planning.asp"><img src="/clients/ALZ/Images/nav-dropdown-img-financial.jpg" alt="Caregivers need a support network." style="margin-top : 10px;" onmouseover="src='/clients/ALZ/Images/nav-dropdown-img-financial-over.jpg'" onmouseout="src='/clients/ALZ/Images/nav-dropdown-img-financial.jpg'" border="0"></a></li>
+			</ul>
+        </td>
+        
+        <td colspan="2" valign="top">
+    <!-- NOTE: this is hacking for exception where blue line should go across 2 columns - was decided post-build -->
+        <ul style="margin-bottom:0"><li>Financial Matters<hr class="topNavDividerHorizLineThick" style="width: 400px;"></li></ul>
+         <div style="float:left; width: 220px;">
+           <ul style="margin-top:0px;">
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-common-costs.asp">Planning for Care Costs</a><hr class="topNavDividerHorizLine"></li>
+						<li><a href="http://www.alz.org/care/alzheimers-dementia-costs-paying-for-care.asp">Paying for Care</a><hr class="topNavDividerHorizLine"></li>
+						<li><a href="http://www.alz.org/care/alzheimers-dementia-insurance.asp">Insurance</a><hr class="topNavDividerHorizLine"></li>
+						<li><a href="http://www.alz.org/care/alzheimers-dementia-medicare.asp">Medicare</a></li>
+          </ul>
+       	  </div>
+       	 <div style="float:left; width: 220px;">
+          	 <ul style="margin-top:0px;">
+						<li><a href="http://www.alz.org/care/alzheimers-dementia-medicare-part-d.asp">Medicare Part D Benefits</a><hr class="topNavDividerHorizLine"></li>
+						<li><a href="http://www.alz.org/care/alzheimers-dementia-medicaid.asp">Medicaid</a><hr class="topNavDividerHorizLine"></li>
+						<li><a href="http://www.alz.org/care/alzheimers-dementia-tax-deductions-credits.asp">Tax Deductions &amp; Credits</a></li>
+          </ul>
+         </div>
+        </td>
+        
+        <td valign="top">
+          <ul style="width:auto">
+            <li>Legal Matters<hr class="topNavDividerHorizLineThick"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-planning-ahead.asp">Planning Ahead</a><hr class="topNavDividerHorizLine"></li>
+            <li><a href="http://www.alz.org/care/alzheimers-dementia-legal-documents.asp">Legal Documents</a></li>
+            <li><div id="closeFinancial" class="close"><img src="/clients/ALZ/Images/close_btn.gif" style="margin-left : 105px;" onmouseover="src='/clients/ALZ/Images/close_btn_ov.gif'; this.style.cursor='pointer';" onmouseout="src='/clients/ALZ/Images/close_btn.gif'"></div></li>
+          </ul>
+           
+        </td>
+      </tr>
+    </tbody></table>
+
+	</div>
+</div>
+<div id="breadcrumbArea" class="printHide" align="center">
+
+</div>
+
+<br clear="all">
+<div id="mainContent"><div class="leftNavBlip"></div>
+ <div id="mainContentArea" style="width: 880px;">
+<!--TIX DATA START-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+ </div> 
+	<!-- end mainContentArea div -->
+ 
+<!-- include virtual="/_alzFooter/footer_enews_signup_care_center-old-edgar-12202012.asp"--> <!-- Enews signup -->
+ <br clear="all">
+<!-- CHAPTER PAGE ***
+
+		************************
+		************************
+		************************
+			The footer for both chapter and national are the same.
+			The chapter version is currently commented out
+			along with the conditionals that make it work.
+		************************
+		************************
+		************************
+
+	-->
+	<!--includes virtual="/_alzFooter/footer-yearendgiving-carecenter-chapter.asp" --> <!-- CHAPTER VERSION OF THIS FOOTER -->
+	
+
+<!--<link href="/_alzFooter/alz_footer_CareCenter.css" rel="stylesheet" type="text/css">-->
+<!-- start required field validation -->
+
+
+
+
+
+
+
+<!--BEGIN CALLOUT | POST LONGEST DAY -->
+<!--<SCRIPT src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></SCRIPT>-->
+<link rel="stylesheet" href="/clients/ALZ/Images/style.css" type="text/css" media="all">
+
+<div id="footerBigContainerWalk" style="margin-left: auto; margin-right: auto; ">
+	<div id="footerBig_hp_walksnear_box" align="left">
+    	<img src="/clients/ALZ/Images/walk-logo.png" id="walkLogoFooter" align="Walk to End Alzheimer's">
+
+        <div id="TRByZip"></div>
+    </div>
+        <!-- end left side geo -->
+	<div id="footerBigMap">
+		<p id="footerBigLeadTheWay">Join or start a team today.</p>
+		<p id="joinAWalkButtonFooterBig"><a href="http://act.alz.org/site/PageServer?pagename=walk_search&amp;utm_source=alz.org&amp;utm_medium=referral&amp;utm_campaign=caregiver-center-walk-find-button" target="_blank" onclick="_gaq.push(['_trackEvent', 'caregiver-center', 'find-button', 'walk-search-page', 1200]);"><img src="/clients/ALZ/Images/joinawalk.png" onmouseover="src='/_buildouts/geolocation/images/joinawalk-ov.png'" onmouseout="src='/_buildouts/geolocation/images/joinawalk.png'" alt="Find a Walk" border="0"></a></p>
+        <div id="footerBigMapInclude"><div style="display: none;">
+
+    <script type="text/javascript">
+      <!--
+      function searchState_ex(state) {
+        //$('#TrEventSearchFormState').attr('action', $('#TrEventSearchFormState').attr('action') + state);
+        $('#fr_event_state_ex').val(state);
+        $('#TrEventSearchFormState').submit();
+      }
+      -->
+    </script>
+</div>
+<img src="/clients/ALZ/Images/walk-map-2013.png" alt="Washington" usemap="#m_unitedstatesmap" id="unitedstatesmap" border="0">
+<map id="m_unitedstatesmap" name="m_unitedstatesmap">
+
+  <area title="AK" shape="rect" coords="59,221,144,281" href="javascript:%20void();" onclick="searchState_ex('AK'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);" alt="Alaska">
+  <area shape="poly" coords="171,165,197,166,197,187,242,200,247,235,246,274,166,272,151,234,138,205,170,211" href="javascript:%20void();" onclick="searchState_ex('TX'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);" alt="Texas">
+  <area shape="poly" coords="37,9,31,35,79,54,87,23" href="javascript:%20void();" alt="Washington" onclick="searchState_ex('WA'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="32,39,18,74,69,92,79,60,69,52" href="javascript:%20void();" alt="Oregon" onclick="searchState_ex('OR'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="16,79,11,123,22,151,48,185,67,190,75,170,41,118,48,89" href="javascript:%20void();" alt="California" onclick="searchState_ex('CA'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="91,24,101,68,118,73,114,100,72,92" href="javascript:%20void();" alt="Idaho" onclick="searchState_ex('ID'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="50,88,90,99,76,164,43,120" href="javascript:%20void();" alt="Nevada" onclick="searchState_ex('NV'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="68,190,113,211,122,153,83,145" href="javascript:%20void();" alt="Arizona" onclick="searchState_ex('AZ'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="84,143,121,150,126,114,112,112,112,102,95,99" href="javascript:%20void();" alt="Utah" onclick="searchState_ex('UT'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="96,25,104,66,168,73,171,36" href="javascript:%20void();" alt="Montana" onclick="searchState_ex('MT'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="120,70,114,109,167,115,169,75" href="javascript:%20void();" alt="Wyoming" onclick="searchState_ex('WY'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="128,115,123,151,177,159,181,119" href="javascript:%20void();" alt="Colorado" onclick="searchState_ex('CO'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="115,210,137,204,166,208,170,162,124,154" href="javascript:%20void();" alt="New Mexico" onclick="searchState_ex('NM'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="182,159,237,161,240,193,199,185,200,167,179,165" href="javascript:%20void();" alt="Oklahoma" onclick="searchState_ex('OK'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="182,129,179,157,237,158,237,131" href="javascript:%20void();" alt="Kansas" onclick="searchState_ex('KS'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="172,97,170,115,184,117,183,126,230,127,221,102" href="javascript:%20void();" alt="Nebraska" onclick="searchState_ex('NE'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="172,66,169,95,223,99,224,68" href="javascript:%20void();" alt="South Dakota" onclick="searchState_ex('SD'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="173,65,173,35,221,35,223,66" href="javascript:%20void();" alt="North Dakota" onclick="searchState_ex('ND'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="223,37,226,94,264,92,254,78,252,66,270,46" href="javascript:%20void();" alt="Minnesota" onclick="searchState_ex('MN'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="226,95,232,124,263,124,272,108,264,94" href="javascript:%20void();" alt="Iowa" onclick="searchState_ex('IA'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="235,127,263,126,281,156,280,167,274,164,242,164,239,133" href="javascript:%20void();" alt="Missouri" onclick="searchState_ex('MO'; _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);)">
+  <area shape="poly" coords="240,166,243,199,271,199,277,169" href="javascript:%20void();" alt="Arkansas" onclick="searchState_ex('AR'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="246,202,250,232,285,236,282,221,269,220,269,202" href="javascript:%20void();" alt="Louisiana" onclick="searchState_ex('LA'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="286,226,295,225,294,180,278,181,272,202,271,219" href="javascript:%20void();" alt="Mississippi" onclick="searchState_ex('MS'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="274,103,293,104,296,139,288,157,266,128" href="javascript:%20void();" alt="Illinois" onclick="searchState_ex('IL'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="263,61,287,72,290,83,289,102,271,100,263,85,255,72,255,64" href="javascript:%20void();" alt="Wisconsin" onclick="searchState_ex('WI'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="268,61,318,51,330,86,326,100,315,106,294,104,293,74" href="javascript:%20void();" alt="Michigan" onclick="searchState_ex('MI'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="295,106,298,139,295,149,316,134,312,107" href="javascript:%20void();" alt="Indiana" onclick="searchState_ex('IN'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="283,162,303,148,318,137,332,141,339,149,330,157" href="javascript:%20void();" alt="Kentucky" onclick="searchState_ex('KY'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="283,166,277,179,326,176,343,157" href="javascript:%20void();" alt="Tennessee" onclick="searchState_ex('TN'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="296,181,297,224,322,217,323,203,316,178" href="javascript:%20void();" alt="Alabama" onclick="searchState_ex('AL'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="304,226,369,280,387,261,360,215,328,219,313,222" href="javascript:%20void();" alt="Florida" onclick="searchState_ex('FL'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="319,179,333,177,357,201,352,214,326,217" href="javascript:%20void();" alt="Georgia" onclick="searchState_ex('GA'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="336,176,358,199,375,180,364,173,350,172,342,172" href="javascript:%20void();" alt="South Carolina" onclick="searchState_ex('SC'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="331,175,346,157,390,149,393,177,379,180,367,172,353,170,343,171" href="javascript:%20void();" alt="North Carolina" onclick="searchState_ex('NC'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="335,155,348,149,357,143,367,128,375,128,384,140,388,148" href="javascript:%20void();" alt="Virginia" onclick="searchState_ex('VA'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="335,138,343,148,355,142,366,126,355,124,348,123,342,129" href="javascript:%20void();" alt="West Virginia" onclick="searchState_ex('WV'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="315,108,318,134,332,138,345,124,345,102" href="javascript:%20void();" alt="Ohio" onclick="searchState_ex('OH'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="407,53,414,71,438,50,429,24,410,24" href="javascript:%20void();" alt="Maine" onclick="searchState_ex('ME'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="346,101,348,122,386,114,390,109,387,104,387,98,383,93" href="javascript:%20void();" alt="Pennsylvania" onclick="searchState_ex('PA'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="349,98,366,63,390,58,393,70,396,81,395,91,397,97,388,95,384,91" href="javascript:%20void();" alt="New York" onclick="searchState_ex('NY'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="392,58,403,55,403,79,399,80" href="javascript:%20void();" alt="Vermont" onclick="searchState_ex('VT'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="405,78,414,75,406,56,404,58" href="javascript:%20void();" alt="New Hampshire" onclick="searchState_ex('NH'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="398,82,399,88,411,84,419,88,424,82,418,74" href="javascript:%20void();" alt="Massachusetts" onclick="searchState_ex('MA'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="409,87,413,92,416,89,412,86" href="javascript:%20void();" alt="Rhode Island" onclick="searchState_ex('RI'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="397,89,400,98,410,93,408,87" href="javascript:%20void();" alt="Connecticut" onclick="searchState_ex('CT'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="389,98,389,105,392,110,388,115,394,120,398,108,396,100" href="javascript:%20void();" alt="New Jersey onClick=" searchstate_ex('nj');="" _gaq.push(['_trackevent',="" 'caregiver-center',="" 'main-banner-map-click',="" 'walk-search-page',="" 1200]);"="">
+  <area shape="poly" coords="386,116,389,128,397,125,391,119" href="javascript:%20void();" alt="Delaware" onclick="searchState_ex('DE'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="358,122,373,127,385,138,393,135,393,129,388,129,385,117" href="javascript:%20void();" alt="Maryland" onclick="searchState_ex('MD'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="poly" coords="6,208,23,260,48,255,52,217" href="javascript:%20void();" alt="Hawaii" onclick="searchState_ex('HI'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  
+  
+  <area shape="rect" coords="429,63,458,83" href="javascript:%20void();" alt="Vermont" onclick="searchState_ex('VT'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="rect" coords="430,84,456,101" href="javascript:%20void();" alt="New Hampshire" onclick="searchState_ex('NH'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="rect" coords="430,103,456,120" href="javascript:%20void();" alt="Massachusetts" onclick="searchState_ex('MA'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="rect" coords="431,120,456,139" href="javascript:%20void();" alt="Rhode Island" onclick="searchState_ex('RI'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="rect" coords="432,140,455,155" href="javascript:%20void();" alt="Connecticut" onclick="searchState_ex('CT'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="rect" coords="430,157,459,172" href="javascript:%20void();" alt="New Jersey" onclick="searchState_ex('NJ'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="rect" coords="430,173,456,191" href="javascript:%20void();" alt="Delaware" onclick="searchState_ex('DE'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="rect" coords="428,192,458,209" href="javascript:%20void();" alt="Maryland" onclick="searchState_ex('MD'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+  <area shape="rect" coords="428,210,454,228" href="javascript:%20void();" alt="Washington D.C." onclick="searchState_ex('DC'); _gaq.push(['_trackEvent', 'caregiver-center', 'main-banner-map-click', 'walk-search-page', 1200]);">
+</map>
+</div>
+    </div>
+    <div id="footerBigWalkPhotos"><img src="/clients/ALZ/Images/walk-photos.png"></div>
+</div>
+<!-- END | POST LONGEST DAY -->
+
+
+
+ <!-- donation box -->
+
+
+<br style="margin:0; padding:0" class="printHide" clear="all">
+
+
+<div class="printHide" align="center">
+ <div id="allBottomArea" class="printHide">
+
+
+
+
+
+
+ <div class="onlyPurple" align="center"> <!-- purple area below enews signup -->
+
+
+
+ <div id="footer_bg_bar"></div>
+ <div id="footerContainer" class="version2">
+
+ 		<div class="colA">
+ 			<h2>Plan ahead</h2>
+ 			<a href="https://www.alzheimersnavigator.org/?type=alzFooter" target="_blank" class="footerBorder"><img src="/clients/ALZ/Images/footer-logo-plan-ahead.jpg" border="0"></a>
+
+ 			<h2 class="row2">Get help and support</h2>
+ 			<ul class="footerLinks">
+ 				<li><a href="http://www.alz.org/living_with_alzheimers_if_you_have_alzheimers.asp?type=carecenter_footer">I have Alzheimer's</a></li>
+ 				<li><a href="http://www.alz.org/living_with_alzheimers_caring_for_alzheimers.asp?type=carecenter_footer">I am a caregiver</a></li>
+ 				<li><a href="http://www.alz.org/professionals_and_researchers_professional_care_providers.asp?type=carecenter_footer">I am a care professional</a></li>
+ 				<li><a href="http://www.alz.org/professionals_and_researchers_14294.asp?type=carecenter_footer">I am a physician</a></li>
+ 				<li><a href="http://www.alz.org/research/overview.asp?type=carecenter_footer">I am a researcher</a></li>
+ 			</ul>
+
+ 		</div>
+ 		<div class="colB">
+ 			<h2>Message boards</h2>
+ 			<div class="footerBorder bgGrade"><a href="http://www.alzconnected.org/discussion.aspx?type=carecenter_footer" target="_blank"><img src="/clients/ALZ/Images/footer-logo-alz-connected.png" border="0"></a></div>
+
+ 			<h2 class="row2">Get the facts</h2>
+ 			<ul class="footerLinks">
+ 				<li><a href="http://www.alz.org/alzheimers_disease_10_signs_of_alzheimers.asp?type=carecenter_footer">10 warning signs &amp; symptoms</a></li>
+ 				<li><a href="http://www.alz.org/alzheimers_disease_what_is_dementia.asp?type=carecenter_footer">What is dementia</a></li>
+ 				<li><a href="http://www.alz.org/alzheimers_disease_what_is_alzheimers.asp?type=carecenter_footer">What is Alzheimer's</a></li>
+ 				<li><a href="http://www.alz.org/alzheimers_disease_stages_of_alzheimers.asp?type=carecenter_footer">7 stages of Alzheimer's</a></li>
+ 				<li><a href="http://www.alz.org/alzheimers_disease_treatments.asp?type=carecenter_footer">Treatments</a></li>
+ 			</ul>
+ 		</div>
+ 		<div class="colC">
+ 			<h2>Contact us</h2>
+ 			 <div id="helpLine" class="noBgImg"><p class="helpNumber"><a href="http://www.alz.org/we_can_help_24_7_helpline.asp?type=carecenter_footer">24/7 Helpline: <br>
+ 				1-800-272-3900</a><br>
+               <a href="http://www.alz.org/apps/findus.asp?type=carecenter_footer" style="line-height: 30px;">Find Your Local Chapter</a></p>
+             </div>
+
+ 			<h2 class="row2">Get Involved</h2>
+ 			<ul class="footerLinks">
+ 				<li><a href="http://www.alz.org/join_the_cause_donate.asp?type=carecenter_footer">Make a donation to fight Alz</a></li>
+ 				<li><a href="http://www.alz.org/walk/overview.asp?type=carecenter_footer">Walk to End Alzheimer's</a></li>
+ 				<li><a href="http://www.alz.org/join_the_cause_advocacy.asp?type=carecenter_footer">Become an advocate</a></li>
+ 			</ul>
+ 			<div style="margin-top: 17px;"><a href="http://www.facebook.com/actionalz" target="_blank"><img src="/clients/ALZ/Images/footer_facebook.gif" onmouseover="src='/_alzFooter/footer_facebook_ov.gif'" onmouseout="src='/_alzFooter/footer_facebook.gif'" border="0"></a>  <a href="http://twitter.com/alzassociation" target="_blank" style="margin-left: 10px; margin-right: 10px;"><img src="/clients/ALZ/Images/footer_twitter.gif" onmouseover="src='/_alzFooter/footer_twitter_ov.gif'" onmouseout="src='/_alzFooter/footer_twitter.gif'" border="0"></a>  <a href="http://www.youtube.com/actionalz" target="_blank"><img src="/clients/ALZ/Images/footer_youtube.gif" onmouseover="src='/_alzFooter/footer_youtube_ov.gif'" onmouseout="src='/_alzFooter/footer_youtube.gif'" border="0"></a></div>
+ 		</div>
+
+
+
+     	<!--
+ 		<div class="colA">
+             <h2>Get help and support</h2>
+             <ul class="footerLinks">
+             	<li><a href="/living_with_alzheimers_if_you_have_alzheimers.asp?type=alzFooter">I have Alzheimer's</a></li>
+    		  	    <li><a href="/living_with_alzheimers_caring_for_alzheimers.asp?type=alzFooter">I am a caregiver</a></li>
+    		  	    <li><a href="/professionals_and_researchers_professional_care_providers.asp?type=alzFooter">I am a care professional</a></li>
+    		  	    <li><a href="/professionals_and_researchers_14294.asp?type=alzFooter">I am a physician</a></li>
+    		  	    <li><a href="/research/overview.asp?type=alzFooter">I am a researcher</a></li>
+                 <li><a href="/research/clinical_trials/find_clinical_trials_trialmatch.asp?type=alzFooter">Find a clinical trial</a></li>
+             </ul>
+         <div id="helpLine"><p class="helpNumber"><a href="/we_can_help_24_7_helpline.asp?type=alzFooter">24/7 Helpline: 1-800-272-3900</a><br />
+               <a href="/apps/findus.asp?type=alzFooter">Find Your Local Chapter</a></p>
+             </div>
+     	</div>
+ 		-->
+
+
+ 		  <!-- end colA -->
+ 		  <!--
+         <div class="colB">
+ 			<h2>Get the facts</h2>
+ 			<ul class="footerLinks">
+ 				<li><a href="/alzheimers_disease_10_signs_of_alzheimers.asp?type=alzFooter">10 warning signs</a></li>
+ 				<li><a href="/alzheimers_disease_what_is_dementia.asp?type=alzFooter">What is dementia</a></li>
+ 				<li><a href="/alzheimers_disease_what_is_alzheimers.asp?type=alzFooter">What is Alzheimer's</a></li>
+ 				<li><a href="/alzheimers_disease_stages_of_alzheimers.asp?type=alzFooter">7 stages of Alzheimer's</a></li>
+ 				<li><a href="/alzheimers_disease_treatments.asp?type=alzFooter">Treatments</a></li>
+ 				<li><a href="/library/index.asp?type=alzFooter">Virtual Library</a></li>
+ 			</ul>
+ 			<h2 style="margin-top: 20px;">Interactive Brain Tour</h2>
+ 			<p class="brainText"><a href="/alzheimers_disease_4719.asp?type=alzFooter"><img src="/_alzFooter/footer_braintour_photo.gif" width="82" height="60" border="0" align="left" style="margin-right: 12px;" /></a><a href="/alzheimers_disease_4719.asp?type=alzFooter">Learn how<br />Alzheimer's <br />affects the brain</a></p>
+       </div>
+ 	  -->
+         <!-- end colB -->
+ 		<!--
+ 		<div class="colC">
+ 			<h2>Join us on...</h2>
+ 			<ul class="footerLinks">
+ 				<li><a href="/living_with_alzheimers_message_boards_lwa.asp?type=alzFooter">Message boards</a></li>
+ 				<li><a href="http://blog.alz.org/">Blog</a></li>
+ 			</ul>
+ 			<div style="margin-top: 17px;"><a href="http://www.facebook.com/actionalz" target="_blank"><img src="/_alzFooter/footer_facebook.gif" border="0" onMouseOver="src='/_alzFooter/footer_facebook_ov.gif'" onMouseOut="src='/_alzFooter/footer_facebook.gif'" /></a>  <a href="http://twitter.com/alzassociation" target="_blank"><img src="/_alzFooter/footer_twitter.gif" border="0" onMouseOver="src='/_alzFooter/footer_twitter_ov.gif'" onMouseOut="src='/_alzFooter/footer_twitter.gif'" /></a>  <a href="http://www.youtube.com/actionalz" target="_blank"><img src="/_alzFooter/footer_youtube.gif" border="0" onMouseOver="src='/_alzFooter/footer_youtube_ov.gif'" onMouseOut="src='/_alzFooter/footer_youtube.gif'" /></a></div>
+ 			<h2 style="margin-top: 65px;">Get Involved</h2>
+ 			<ul class="footerLinks">
+ 				<li><a href="/join_the_cause_donate.asp?type=alzFooter">Make a donation to fight Alz</a></li>
+ 				<li><a href="/walk/overview.asp?type=alzFooter">Walk to End Alzheimer's</a></li>
+ 				<li><a href="/join_the_cause_advocacy.asp?type=alzFooter">Become an advocate</a></li>
+ 			 </ul>
+ 		</div>
+ 	  -->
+     <!-- end colC -->
+
+
+
+    </div>
+
+ <!-- purple bar allt he way across footer -->
+ <!--include virtual="/_alzFooter/alz_footer_care_center-eo-09242012.asp"--> <!-- 3 column of links -->
+
+<link href="/clients/ALZ/Images/alz_footer_CareCenter.css" rel="stylesheet" type="text/css">
+<div id="footerLastLinks">
+<a href="http://www.alz.org/about_us_about_us_.asp">About Us</a> | <a href="http://www.alz.org/news_and_events.asp">News</a>  | <a href="http://www.alz.org/news_and_events_upcoming_events.asp">Events</a> | <a href="http://www.alz.org/media.asp">Press</a> | <a href="http://www.alz.org/about_this_site.asp">About this Site</a> | <a href="http://www.alz.org/about_this_site.asp#Security_and_privacy_policy">Privacy Policy</a> | <a href="http://www.alz.org/about_this_site.asp#copyright">Copyrights &amp; Reprints</a> | <a href="http://www.alz.org/contact_us_contact_us.asp">Contact Us</a>        
+<div class="bbb">
+    	 <a href="https://www.healthonnet.org/HONcode/Conduct.html?HONConduct336200" onclick="window.open(this.href); return false;"><img src="/clients/ALZ/Images/HONConduct336200_s.gif" style="border:0px; float:left; margin:0; padding:0;" title="This website is certified by Health On the Net Foundation. Click to verify." alt="This website is certified by Health On the Net Foundation. Click to verify." height="72" hspace="2" vspace="2" width="49"></a> <a href="http://charityreports.bbb.org/public/seal.aspx?ID=359302003" target="_blank"><img src="/clients/ALZ/Images/Accred_charity_ltr.gif" style="margin-bottom: 12px;" border="0" height="84" width="54"></a>
+</div> <!-- end class = bbb -->
+
+
+
+        	<p style="margin-top: 20px;"><strong>National Headquarters</strong><br>Alzheimer's Association National Office, 225 N. Michigan Ave., Fl. 17, Chicago, IL 60601 <br>
+       	    Alzheimer's Association is a not-for-profit 501(c)(3) organization. </p>
+        	<p>Copyright &#169; 2014&nbsp; Alzheimer's Association<sup></sup>. All rights reserved. </p>
+
+</div> <!-- end footerLastLinks -->
+
+
+ <!-- About Alz, About site, etc -->
+ 
+<div class="btmLogos">
+	<a href="http://www.alz.org/"><img src="/clients/ALZ/Images/footer_alz_logos_CareCenter.gif" alt="Alzheimer's Association" style="margin-top: 0px; margin-left: 20px; margin-right: 45px;" border="0" align="left" height="82" width="291"></a><p><strong>Our vision is a world without Alzheimer's</strong> <br>Formed
+ in 1980, the Alzheimer's Association is the world's leading voluntary 
+health organization in Alzheimer's care, support and research.</p>		
+</div> <!-- end btmLogos --> <!-- Alz logo and mission statement -->
+ </div> <!-- end onlyPurpl div -->
+ </div> <!-- end allBottomArea div -->
+
+<!-- BEGIN ANALYTICS *note: Google analytics are on each page individually before the close of header tag-->
+<!-- WEBTRENDS -->
+<!-- start Webtrends tag -->
+<script src="/clients/ALZ/Images/wtid_alz.js" type="text/javascript"></script>
+<script src="/clients/ALZ/Images/wt.js" type="text/javascript"></script>
+<noscript>
+<IMG ALT="" BORDER="0" NAME="DCSIMG" WIDTH="1" HEIGHT="1" SRC="http://sdc.alz.org/dcs6gkg4k10000kfxf9ct2x7p_7q3e/njs.gif?dcsuri=/nojavascript&amp;WT.js=No">
+</noscript>
+<!-- end Webtrends tag -->
+
+<!-- END ANALYTICS -->
+
+</div>
+
+
+ <!-- NOTE: this footer calls national footer, but wanted to shorten page, so put calls in one include -->
+</div><!-- end mainContent div -->
+</div> <!-- end align center -->
+
+<!-- yahoo/bing cpc conversion tracking -->
+<script type="text/javascript"> if (!window.mstag) mstag = {loadTag : function(){},time : (new Date()).getTime()};</script> <script id="mstag_tops" type="text/javascript" src="/clients/ALZ/Images/mstag.js"></script> <script type="text/javascript"> mstag.loadTag("analytics", {dedup:"1",domainId:"107177",type:"1",actionid:"62711"})</script> <noscript> <iframe src="//flex.atdmt.com/mstag/tag/98ac6b1a-4f5a-40e0-a19f-164b71b4a566/analytics.html?dedup=1&domainId=107177&type=1&actionid=62711" frameborder="0" scrolling="no" width="1" height="1" style="visibility:hidden;display:none"> </iframe> </noscript>
+<!-- end yahoo/bing cpc conversion tracking -->
+</div>
+</form>
+</body>
+</html>

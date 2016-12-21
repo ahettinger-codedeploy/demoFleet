@@ -1,0 +1,822 @@
+/**
+ * Theme Name: Life Collage
+ * Theme URI: http://themehybrid.com/themes/life-collage
+ * Description: A collage of of one's thoughts, hobbies, and favorites.  A child theme of the Hybrid theme framework.
+ * Version: 0.1
+ * Author: Justin Tadlock
+ * Author URI: http://justintadlock.com
+ * Tags: brown, threaded-comments, microformats, two-columns, fixed-width
+ * Template: hybrid
+ *
+ * Copyright (c) 2008 Justin Tadlock.  All rights reserved.
+ * http://justintadlock.com
+ *
+ * Life Collage is released under the GNU General Public License, version 2 (GPL).
+ * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ */
+
+
+
+/* Uncomment the below line if using the Hybrid Tabs plugin */
+/* @import url('tabs.css'); */
+
+/* Body */
+body {
+	font: 14px/22px Georgia, Cambria, Times, "Times New Roman", serif;
+	color: #333;
+	background: url(../webpage_files/dark.jpg) repeat 0 0;
+	}
+
+/* Body container */
+#body-container {
+	width: 820px;
+	margin:0 auto 25px auto;
+	}
+
+/**
+* Elements
+************************************************/
+
+/* Links */
+a {
+	color: #8d5608;
+	}
+a:hover {
+	text-decoration: underline;
+	}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+	margin-bottom: 20px;
+	font-family: Georgia, Cambria, Times, "Times New Roman", serif;
+	}
+h2 {
+	font-size: 17px;
+	}
+h3 {
+	font-size: 16px;
+	}
+h4 {
+	font-size: 15px;
+	}
+h5 {
+	font-size: 14px;
+	}
+h6 {
+	font-size: 13px;
+	}
+p {
+	font-size:17px;
+}
+/* Lists */
+.content ul {
+	list-style: none;
+	}
+.content ul li {
+	overflow: hidden;
+	padding-left: 10px;
+	background: url(../webpage_files/bullet.png) no-repeat 0 9px;
+	}
+
+/* Blockqoutes */
+blockquote {
+	overflow: hidden;
+	margin: 0 10px;
+	padding: 0 0 0 20px;
+	background: url(../webpage_files/blockquote.jpg) no-repeat 0 0;
+	}
+blockquote blockquote {
+	padding: 0 10px;
+	font-size: 12px;
+	color: #666;
+	background: transparent;
+	}
+blockquote.pullquote {
+	width: 200px;
+	margin: 9px 0 3px 0;
+	padding: 6px 9px;
+	font-size: 18px;
+	text-align: center;
+	color: #333;
+	background: transparent;
+	border-top: 3px double #e9e5d5;
+	border-bottom: 3px double #e9e5d5;
+	}
+.pullquote p {
+	margin: 0;
+	}
+span.pullquote {
+	float: none !important;
+	margin: 0 !important;
+	}
+
+/* Code */
+code {
+	padding: 0 3px;
+	background: url(../webpage_files/dark.jpg) repeat 0 0;
+	}
+pre {
+	overflow: auto;
+	background: url(../webpage_files/dark.jpg) repeat 0 0;
+	}
+
+/* Alignment */
+.alignleft, .left {
+	float: left;
+	margin-right: 10px !important;
+	}
+.alignright, .right {
+	float: right;
+	margin-left: 10px !important;
+	}
+.aligncenter, .center {
+	display: block;
+	margin: 0 auto 20px auto;
+	}
+.block {
+	display: block;
+	margin: 0 0 20px 0;
+	}
+.clear {
+	clear: both;
+	}
+
+/* Tables */
+table {
+	width: 100%;
+	margin-bottom: 20px;
+	border-spacing: 1px;
+	}
+th {
+	color: #8d5608;
+	background: url(../webpage_files/menu-bg.jpg) repeat-x 0 0;
+	}
+td {
+	background: url(../webpage_files/alt.gif) repeat 0 0;
+	}
+th, td {
+	padding: 5px;
+	}
+
+/* Drop caps */
+.drop-cap {
+	float: left;
+	line-height: 30px;
+	margin: 6px 6px 0 0;
+	padding: 0 9px 3px 9px;
+	font-size: 36px;
+	font-family: "Warnock Pro", "Goudy Old Style", Palatino,"Book Antiqua", Cambria, Georgia, serif;
+	color: #b4a681;
+	background: url(../webpage_files/dark.jpg) repeat 0 0;
+	}
+
+/* Warnings, notes, errors, and downloads */
+.note, .download, .warning, .alert, .error {
+	padding: 10px;
+	background: url(../webpage_files/dark.jpg) repeat 0 0;
+	border: 1px solid #e2decc;
+	}
+
+/**
+* ../webpage_files
+************************************************/
+.post img {
+	max-width: 470px;
+	padding: 5px 5px 10px 5px !important;
+	background: #e2decc url(../webpage_files/photo-bg.gif) repeat-x 0 bottom;
+	}
+
+/* Captions [caption] */
+.wp-caption {
+	max-width: 480px;
+	padding: 5px 0 10px 0;
+	background: #e2decc url(../webpage_files/photo-bg.gif) repeat-x 0 bottom;
+	text-align: center;
+	}
+.wp-caption p.wp-caption-text {
+	margin: 0;
+	padding: 0 5px;
+	text-align: right;
+	font-size: 11px;
+	color: #8d5608;
+	}
+.wp-caption img, .wp-caption a img {
+	max-width: 468px;
+	margin: 0 auto;
+	padding: 0 !important;
+	background: transparent;
+	border: 1px solid #d0ccbc;
+	}
+
+/* Thumbnails */
+.thumbnail {
+	float: left;
+	width: 55px;
+	height: 55px;
+	margin: 10px 0 0 20px;
+	}
+
+/* Gallery [gallery] */
+.gallery {
+	margin-bottom: 20px !important;
+	}
+.gallery img {
+	border: none !important;
+	}
+
+/**
+* Header
+************************************************/
+#header {
+	background:transparent url(../webpage_files/header-bg.jpg) no-repeat scroll 10px 13px;
+	height:55px;
+	margin:0 auto 0 0;
+	padding-left:40px;
+	padding-top:19px;
+	width:749px;
+}
+
+#site-title {
+	float: left;
+	margin: 10px 0 0 0;
+	padding: 0 0 0 20px;
+	font-size: 26px;
+	font-weight: bold;
+	text-transform: uppercase;
+	}
+#site-title a {
+	color: #ffeea1;
+	}
+#site-description {
+	margin: 10px 0 0 10px;
+	float: left;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: normal;
+	text-transform: lowercase;
+	color: #000;
+	}
+
+/**
+* Navigation
+************************************************/
+#navigation {
+	width: 760px;
+	height: 39px;
+	margin-bottom: 20px;
+	padding: 10px 10px 0 10px;
+	background: url(../webpage_files/menu-bg.jpg) repeat-x 0 0;
+	}
+
+/* Page navigation */
+#page-nav {
+	float: left;
+	width: 560px;
+	}
+#page-nav ul {
+	float: left;
+	list-style: none;
+	margin: 0;
+	}
+#page-nav ul.menu {
+	width: 560px;
+	}
+#page-nav li a {
+	display: block;
+	padding: 8px 10px 12px 10px;
+	font: 12px arial, verdana, sans-serif;
+	font-weight: bold;
+	color: #fff;
+	background: transparent url(../webpage_files/menu-a-bg.jpg) no-repeat right 0;
+	}
+#page-nav li.current_page_item {
+	color: #333;
+	background: url(../webpage_files/current-page.jpg) repeat-x 0 0;
+	}
+#page-nav li.current_page_item li {
+	color: #8d5608;
+	background: #f3efe4 url(../webpage_files/dark.jpg) repeat 0 0;
+	}
+
+/* Drop-down styles */
+#page-nav ul ul {
+	background: #f3efe4 url(../webpage_files/dark.jpg) repeat 0 0;
+	}
+#page-nav li li {
+	background: transparent;
+	border-bottom: 1px solid #e1dac8;
+	}
+#page-nav li li a {
+	padding: 10px;
+	background: transparent;
+	}
+
+/* Search */
+#navigation .search {
+	float: right;
+	width: 190px;
+	height: 29px;
+	background: url(../webpage_files/search.jpg) no-repeat 0 0;
+	}
+#navigation input {
+	font: 12px arial, verdana, sans-serif;
+	padding: 7px 0 0 0;
+	background: transparent;
+	border: none;
+	}
+#navigation .search-text {
+	float: left;
+	width: 136px;
+	padding: 7px 10px 0 10px;
+	color: #fff;
+	}
+#navigation .search-submit {
+	float: left;
+	width: 34px;
+	font-weight: bold;
+	color: #fff;
+	}
+#navigation .search-submit:hover {
+	cursor: pointer;
+	}
+
+/**
+* Container (content and widget areas)
+************************************************/
+#container {
+	overflow: hidden;
+	width: 780px;
+	}
+
+/* Splash */
+#splash {
+	overflow: hidden;
+	height: 410px;
+	margin: 0 0 20px 0;
+	padding: 20px 0 0 20px;
+	background: url(../webpage_files/splash.jpg) no-repeat 0 0;
+	border:10px solid #037078;
+	}
+#splash .widget {
+	float: left;
+	overflow: hidden;
+	width: 170px;
+	margin: 0 20px 0 0;
+	padding: 0;
+	color: #365426;
+	background: transparent;
+	border: none;
+	}
+#splash .widget-title {
+	color: #365426;
+	}
+
+/**
+* Content
+************************************************/
+.content {
+	overflow: hidden;
+	float: left;
+	width: 520px;
+	}
+.page-template-no-widgets .content, .no-widgets .content {
+	width: 780px;
+	}
+
+/* Posts */
+.post {
+	overflow: hidden;
+	margin: 0 0 20px 0;
+	color: #333;
+	background: url(../webpage_files/light.gif) repeat 0 0;
+	border-top: 5px solid #e5e0d0;
+	}	
+
+/* Entry title */
+.entry-title {
+	overflow: hidden;
+	margin: 0 0 10px 0;
+	padding: 20px;
+	font: 26px Georgia, Cambria, Times, 'Times New Roman';
+	background: url(../webpage_files/border.jpg) repeat-x 0 bottom;
+	}
+.entry-title a {
+	color: #037078;
+	}
+.title {
+	overflow: hidden;
+	margin:0;
+	padding:0;
+	font: 20px Georgia, Cambria, Times, 'Times New Roman';
+	color: #037078;
+	display:block;
+	}
+.headTitle {
+	font-size:24px;
+	padding-bottom:20px;
+}
+.sub-title {
+	overflow: hidden;
+	margin:0;
+	padding:0;
+	font: 18px Georgia, Cambria, Times, 'Times New Roman';
+	color: #000;
+	display:block;
+	}
+/* Post Entry */
+.entry-content, .entry-summary {
+	overflow: hidden;
+	margin: 0 20px;
+	font: 14px/22px Georgia, Cambria, Times, 'Times New Roman';
+	}
+.more-link {
+	padding-right: 15px;
+	background: url(../webpage_files/more-link.jpg) no-repeat right 3px;
+	}
+
+/* Post Meta */
+.entry-meta {
+	overflow: hidden;
+	padding: 20px 20px 5px 20px;
+	font: 12px/22px arial, verdana, sans-serif;
+	background: url(../webpage_files/border.jpg) repeat-x 0 0;
+	}
+.entry-meta a {
+	color: #708266;
+	}
+.post p a:link {
+	color:#000;
+	text-decoration:underline;
+}
+.post p a:hover {
+	text-decoration:none;
+}
+/* Multi-paged posts */
+p.pages a {
+	overflow: hidden;
+	margin: 0 3px;
+	padding: 3px 6px;
+	background: url(../webpage_files/dark.jpg) repeat 0 0;
+	border: 1px solid #e2decc;
+	}
+
+.navigation-attachment {
+	overflow: hidden;
+	padding: 0 20px;
+	margin-bottom: 20px;
+	}
+
+/* Series */
+.series {
+	overflow: hidden;
+	margin: 0 0 20px 0;
+	padding: 14px 20px 0 20px;
+	background: url(../webpage_files/light.gif) repeat 0 0;
+	border-top: 5px solid #e5e0d0;
+	}
+.series-title {
+	margin: 0 0 6px 0;
+	padding: 0 0 5px 0;
+	font: 14px verdana, arial, sans-serif;
+	font-weight: bold;
+	color: #708266;
+	border-bottom: 1px solid #e9e5d5;
+	}
+.series ul {
+	margin-left: 0;
+	}
+
+/* Archives and other page types */
+.category-info, .author-info, .date-info, .tag-info, .archive-info, .search-info {
+	overflow: hidden;
+	margin: 0 0 20px 0;
+	color: #333;
+	background: url(../webpage_files/light.gif) repeat 0 0;
+	border-top: 5px solid #e5e0d0;
+	}
+.page-template-biography .author-info {
+	margin: 0;
+	border: none;
+	}
+.page-title, .category-title, .author-title, .date-title, .tag-title, .archive-title, .search-title, .error-404-title {
+	margin: 20px 0;
+	padding: 0 20px 20px 20px;
+	font: 18px Georgia, Cambria, Times, 'Times New Roman';
+	background: url(../webpage_files/border.jpg) repeat-x 0 bottom;
+	}
+.category-description, .author-description, .date-description, .tag-description, .archive-description, .search-description {
+	margin: 0 20px;
+	}
+.author-profile .avatar, .author-info .avatar {
+	float: left;
+	width: 55px;
+	height: 55px;
+	margin: 0 10px 0 0;
+	padding: 5px 5px 10px 5px;
+	background: #e2decc url(../webpage_files/photo-bg.gif) repeat-x 0 bottom;
+	}
+.author-profile .author-name {
+	margin-bottom: 0;
+	}
+
+/* Navigation links */
+.navigation-links {
+	overflow: hidden;
+	height: 100%;
+	margin: 0 0 20px 0;
+	padding: 15px 20px;
+	line-height: 19px;
+	font-size: 14px;
+	font-weight: bold;
+	background: url(../webpage_files/light.gif) repeat 0 0;
+	}
+.previous {
+	float: left;
+	width: 40%;
+	padding-left: 23px;
+	background: url(../webpage_files/previous.jpg) no-repeat 0 5px;
+	}
+.next {
+	float: right;
+	width: 40%;
+	text-align: right;
+	padding-right: 23px;
+	background: url(../webpage_files/next.jpg) no-repeat right 5px;
+	}
+
+/* WP PageNavi */
+.wp-pagenavi {
+	overflow: hidden;
+	margin: 0 0 20px 0;
+	padding: 20px;
+	background: url(../webpage_files/light.gif) repeat 0 0;
+	}
+.wp-pagenavi .pages {
+	margin-right: 6px;
+	padding: 3px 6px;
+	}
+.wp-pagenavi .current, .wp-pagenavi .extend, .wp-pagenavi a {
+	margin-right: 6px;
+	padding: 3px 6px;
+	background: url(../webpage_files/dark.jpg) repeat 0 0;
+	border: 1px solid #e2decc;
+	}
+
+/**
+* Widget Areas
+************************************************/
+#primary, #secondary {
+	overflow: hidden;
+	float: right;
+	width: 240px;
+	line-height: 19px;
+	}
+#secondary {
+	clear: right;
+	}
+
+/* Widgets */
+.widget {
+	overflow: hidden;
+	margin: 0 0 20px 0;
+	padding: 14px 20px 0 20px;
+	background: url(../webpage_files/light.gif) repeat 0 0;
+	border-top: 5px solid #e5e0d0;
+	}
+
+/* Widget title */
+.widget-title {
+	margin: 0 0 6px 0;
+	padding: 0 0 5px 0;
+	font: 14px verdana, arial, sans-serif;
+	font-weight: bold;
+	color: #708266;
+	border-bottom: 1px solid #e9e5d5;
+	}
+
+/* Widget lists */
+.widget ul {
+	list-style: none;
+	margin-left: 0;
+	}
+.widget ul ul {
+	margin: 0;
+	}
+.widget ul li {
+	margin: 0 0 6px 0;
+	padding: 0 0 5px 0;
+	border-bottom: 1px solid #e9e5d5;
+	}
+.content .widget ul li {
+	overflow: hidden;
+	padding: 0 0 5px 7px;
+	background: url(../webpage_files/bullet.png) no-repeat 0 9px;
+	}
+.widget ul li li, .content .widget ul li li {
+	overflow: hidden;
+	margin: 0 0 0 10px;
+	padding: 2px 0 2px 7px;
+	background: url(../webpage_files/bullet.png) no-repeat 0 9px;
+	border: none;
+	}
+
+/**
+* Comments Template
+************************************************/
+#comments, #respond {
+	overflow: hidden;
+	height: 100%;
+	margin: 0 0 20px 0;
+	padding: 15px 0 20px 0;
+	background: url(../webpage_files/light.gif) repeat 0 0;
+	border-top: 5px solid #e5e0d0;
+	}
+#comments #respond {
+	padding: 15px 0 0 0;
+	border: none;
+	}
+
+/* Comments header */
+.comments-header, #reply {
+	margin: 2px 0 20px 0;
+	padding: 0 20px 18px 20px;
+	font: normal normal 18px/19px georgia, cambria, times, 'times new roman', serif;
+	background: url(../webpage_files/border.jpg) repeat-x 0 bottom;
+	}
+#comments #reply {
+	margin-bottom: 0;
+	padding: 0 0 20px 0;
+	background: transparent;
+	}
+#comments .comments-header {
+	margin-bottom: 0;
+	}
+
+/* Comments list */
+#comments ol {
+	list-style: none;
+	overflow: hidden;
+	clear: left;
+	z-index: 0;
+	margin: 0 20px;
+	}
+#comments ol ol {
+	margin: 0 0 0 10px;
+	}
+#comments li {
+	overflow: hidden;
+	padding: 19px 0 0 0;
+	}
+#comments li li {
+	margin: 0;
+	padding-left: 20px;
+	background: url(../webpage_files/comment-thread.jpg) no-repeat 0 25px;
+	}
+
+/* Avatar */
+#comments .avatar {
+	overflow: hidden;
+	float: left;
+	width: 50px;
+	height: 50px;
+	margin: 5px 10px 0 0;
+	padding: 5px 5px 10px 5px;
+	background: #e2decc url(../webpage_files/photo-bg.gif) repeat-x 0 bottom;
+	}
+
+/* Comment meta data */
+.comment-meta-data {
+	padding: 0 0 4px 0;
+	font: 12px/22px arial, verdana, sans-serif;
+	}
+.comment-meta-data a {
+	color: #708266;
+	}
+
+/* Comment author */
+.comment-author cite {
+	font: normal bold 14px/22px georgia, cambria, times, serif;
+	}
+.comment-author a {
+	color: #8d5608;
+	}
+
+/* Comment text */
+.comment-text {
+	border-bottom: 1px solid #e5e0d0;
+	}
+
+/* Comments form */
+#respond {
+	padding: 15px 0 20px 0;
+	}
+#respond form {
+	padding: 0 20px;
+	}
+#comments #respond form {
+	padding: 0;
+	}
+#respond .form-author, #respond .form-email, #repsond .form-url {
+	margin: 0 0 10px 0;
+	}
+#respond .form-author label, #respond .form-email label, #respond .form-url label {
+	float: left;
+	width: 70px;
+	margin: 0 10px 0 0;
+	padding: 5px 0 5px 10px;
+	font: normal normal 12px/19px georgia, cambria, times, 'times new roman', serif;
+	background: url(../webpage_files/comment-submit.jpg) repeat 0 0;
+	}
+.text-input {
+	display: block;
+	padding: 5px 5px 6px 5px;
+	border: 1px solid #e9e5d5;
+	}
+#respond .text-input {
+	width: 275px;
+	}
+
+#respond .form-textarea label {
+	display: none;
+	}
+textarea {
+	width: 98%;
+	border: 1px solid #e9e5d5;
+	}
+#respond .form-submit {
+	overflow: hidden;
+	}
+#respond .button {
+	float: left;
+	padding: 5px 30px;
+	margin: 0 10px 10px 0;
+	font: normal bold 12px/19px georgia, cambria, times, 'times new roman', serif;
+	color: #80713d;
+	background: url(../webpage_files/comment-submit.jpg) repeat 0 0;
+	border: none;
+	}
+.button:hover {
+	cursor: pointer;
+	}
+
+.comment-action {
+	clear: both;
+	}
+
+/**
+* Footer
+************************************************/
+
+/* Subsidiary */
+#subsidiary {
+	float: left;
+	overflow: hidden;
+	width: 760px;
+	padding: 20px 0 0 20px;
+	margin: 0 0 20px 0;
+	background: url(../webpage_files/light.gif) repeat 0 0;
+	border-top: 5px solid #e5e0d0;
+	}
+#subsidiary .widget {
+	float: left;
+	overflow: hidden;
+	width: 170px;
+	margin: 0 20px 0 0;
+	padding: 0;
+	border: none;
+	}
+
+/* Footer */
+#footer {
+	clear: both;
+	overflow: hidden;
+	width: 740px;
+	height: 39px;
+	padding: 20px;
+	font: 12px/19px arial, verdana, sans-serif;
+	color: #333;
+	background: url(../webpage_files/menu-bg.jpg) repeat-x 0 0;
+	}
+#footer a {
+	color: #8d5608;
+	}
+#footer .copyright {
+	float: left;
+	width: 40%;
+	}
+#footer .credit {
+	float: right;
+	text-align: right;
+	width: 40%;
+	}
+
+/* Some IE6-specific rules b/c it can't seem to handle background ../webpage_files correctly */
+.ie6 blockquote, .ie6 .series, .ie6 .post, .ie6 .entry-title, .ie6 #primary, .ie6 #secondary, .ie6 #subsidiary, .ie6 .widget,
+.ie6 .category-info, .ie6 .author-info, .ie6 .date-info, .ie6 .tag-info, .ie6 .archive-info, .ie6 .search-info,
+#comments li {
+	height: 100%;
+	}

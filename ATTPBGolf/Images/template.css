@@ -1,0 +1,1285 @@
+/*@import url("LReal.css");*/
+
+/* _________________________________________________
+
+VERB Interactive CSS Framework (Change to Site Name)
+
+Author: VERB Interactive
+Version: 2.5
+URL: http://www.verbinteractive.com
+_____________________________________________________
+
+
+DO NOT FORGET TO REMOVE COMMENTS. READ THROUGH THIS
+FILE VERY CAREFULLY AND REMOVE WHATEVER YOU DONT NEED. 
+
+*/
+
+
+
+/* =============================================================================
+   Reset
+   ========================================================================== */
+
+/* This is a modified HTML5 reset. It will reset all 
+elements to have no (or very basic) styling. It also 
+includes some HTML5-specific rules for when or if we 
+ever move in that direction.
+*/
+
+
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var,
+b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; }
+body { line-height:1; }
+ol, ul {list-style:none;}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { display:block; }
+nav ul { list-style:none; }
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; }
+
+:focus, input {outline:0;}
+
+
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/* The following root styles correct font-sizing 
+issues with MSIE and iOS devices. They also help
+to simplify font sizing calculations.
+
+The :: selection rules set the text-highlight 
+color. Modify as appropriate.
+*/
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { font: normal 62.5%/1.5 sans-serif; font-family: Verdana, Geneva, sans-serif; color: #231f20 }
+
+::-moz-selection { background: #3399ff; color: #fff; text-shadow: none; }
+::selection { background: #3399ff; color: #fff; text-shadow: none; }
+
+
+
+/* =============================================================================
+   Helper Classes
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* CLEARFIX! Works 98% of the time. Just add "cf" as
+a class to your collapsed element.
+*/
+.cf:before, .cf:after { content: ""; display: table; }
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/* Clear Div class, but you shouldn't usually need it if you're using the above */
+.clr {clear:both; margin-bottom:-1px; height:1px; line-height:1px; background:transparent;}
+
+.img-right { float:right; margin:0 0 10px 10px}
+.img-left { float:left; margin:0 10px 10px 0}
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+
+/* The below is basic typographic styling, but
+don't forget to review to set anything you might
+still need. READ THROUGH THIS SECTION CAREFULLY!
+
+Note the classes .h1-.h6, for cases where styling
+matches one heading but semantics dicate another.
+
+For example:
+<h2> is appropriate, but <h3> styling is used.
+<h2 class="h3">I'm appropriate</h2>
+*/
+
+
+
+/*
+font-family:'Bembo MT W01 Bold';
+font-family:'BemboMTW01-BoldItalic';
+font-family:'Bembo MT W01 Italic';
+font-family:'Bembo W01';
+*/
+
+
+/* Don't forget! font-weight, margin-bottom */
+h1, .h1 { font-size:2.5em; font-family:'Bembo W01'; font-weight:normal; line-height: 0.8em; padding-bottom: 5px;}
+h1.no-h2 {padding-bottom:15px;}
+/*h2, .h2 { font-size:2.6em; font-family:'Bembo MT W01 Italic'; font-weight:normal; background:url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) bottom left repeat-x; margin-bottom:12px; padding-bottom:2px;}*/
+	h2.alt { background: none; margin: 0; padding: 0; }
+	h2.w-600 { width:600px}
+h2.blue { color:#008ed2; background:none; padding:none; margin-bottom:3px; font-size:2.4em}
+h3, .h3 { font-size: 1.5em;  }
+h4, .h4 { font-size: 1.4em; font-family:Georgia, "Times New Roman", Times, serif; font-weight:normal; color:#6eb43f; padding-bottom:15px; font-weight:bold}
+.h4 {font-size: 1.1em;}
+h5, .h5 { font-size: 1.3em; }
+h6, .h6 { font-size: 1.2em; }
+
+.h2-dotted {font-size:2.6em; font-family:'Bembo W01'; font-weight:normal; background:url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) bottom left repeat-x; margin-bottom:12px; padding-bottom:2px;}
+
+.item-page h2, .item-page .h2 {font-size:1.4em; font-family:Georgia, "Times New Roman", Times, serif; font-weight:normal; margin:0 0 12px 0; padding:0; color:#6eb43f; background:none;}
+.item-page h3, .item-page .h3 {font-size:1.6em; font-family:Georgia, "Times New Roman", Times, serif; font-weight:normal; margin:24px 0 6px 0; padding:0;}
+
+p { margin-bottom:15px}
+ 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: inherit; text-decoration: none;}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {text-decoration: none;}
+
+/* Set List Styles */
+ul, ol { margin: 0 0 1.5em; padding-left: 24px; list-style-type: disc; }
+ol { list-style-type: decimal; }
+ol ol li {list-style-type: lower-alpha;}
+li ul, li ol { margin: 0; }
+dl, dd { margin: 0 0 1.5em; }
+dt { font-weight: normal; }
+
+/* Set font-size */
+p, li, pre, dl, blockquote, cite { font-size: 1.3em; }
+li p, ul li li, ol li li {font-size: 1em;}
+
+/* Misc Typographical Elements */
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+i, em { font-style: italic; }
+
+blockquote { margin: 1em 40px; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+small { font-size: 85%; }
+
+/* Redeclare monospace font family */
+code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+
+/* =============================================================================
+   Links (And special link classes)
+   ========================================================================== */
+
+a { color: #008ed2; text-decoration:underline; }
+a:visited { color: #008ed2; }
+a:hover { color: #008ed2; text-decoration:none; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers. */
+a:hover, a:active { outline: 0; };}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+/* Mostly usability fixes in this section, but also
+some important vendor-specific browser fixes!
+
+This is mostly beta but it *should* all work. If you
+run into any issues, tell Brandon. :)
+*/
+
+label { cursor: pointer; }
+button, input, select, textarea { vertical-align: baseline; *vertical-align: middle; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+button[disabled], input[disabled] { cursor: default; }
+
+/* 1. Remove default vertical scrollbar in IE6/7/8/9
+   2. Allow only vertical resizing 
+*/
+textarea { font-family: sans-serif; overflow: auto; vertical-align: top; resize: vertical; }
+
+/* Normalize Browser Styling */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+/* Remove inner padding and border in FF3/4 */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* Style Placeholder Attribute */
+::-webkit-input-placeholder { color: inherit; }
+input:-moz-placeholder { color: inherit; }
+
+/* Remove Input highlight in Webkit */
+input:focus { outline: 0; }
+
+/* It's all very good, just go with it. */
+button, input { line-height: normal; }
+.ie6 legend,.ie7 legend { margin-left: -7px; }
+.ie6 input { vertical-align: text-bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+
+/* Make modern browsers use IE's form box model, padding becomes part of the width! */
+input, textarea  { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; }
+
+
+/***************
+
+	YOUR FORM STYLES HERE!
+	(Remove comment)
+
+***************/
+
+
+/* =============================================================================
+   Media (Images, Embeddables)
+   ========================================================================== */
+
+/* 1. Improve image quality when scaled in IE7
+   2. Remove the gap between images and borders on image containers
+*/
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+
+.table {border:1px solid #211f20; margin:5px 0 20px; width:100%}
+.table caption {border:1px solid #211f20; background:#d3ab4b; font-weight:bold; font-size:1.4em; padding:5px 10px;}
+.table th {background:#211f20; font-weight:bold; color:#fff; font-size:1.4em; padding:5px 10px;}
+.table td {background:url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) left bottom repeat-x; font-size:1.3em; padding:5px 10px;}
+.table tr.last td {background:none;}
+
+
+/* =============================================================================
+   Layout (Use for templates only. For things in content, use below sections)
+   ========================================================================== */
+.site-wrapper {min-width:1000px; overflow-x:hidden;}
+
+.header {/*height:617px;*/ background-color:#231f20; position:relative;}
+
+/*.header .hero {width:1000px; height:617px; margin:0 auto 0;}
+.header .hero .inner {background:url(/clients/ATTPBGolf/Images/hero-default.jpg) left top no-repeat; width:1415px; height:617px; margin:0 0 0 -196px;}*/
+
+#hero-container {width:1000px; /*height:617px;*/ margin:0 auto 0;}
+#slider-wrapper,
+#hero-wrapper {width:1415px; /*height:617px;*/ margin:0 0 0 -196px; /*background:url(/clients/ATTPBGolf/Images/hero-default.jpg) left top no-repeat;*/}
+/*img.hero {width:1415px; height:617px;}*/
+
+#slider { position: relative; height: 617px; }
+#slider .slides { position: relative; margin: 0; padding: 0; list-style: none; }
+#slider .slides li { position: absolute; margin: 0; padding: 0; list-style: none; height: 617px; width: 1415px; }
+#slider .slides li a { display: block; height: 617px; width: 1415px; cursor: pointer; }
+
+#slider .arrow-left {position:absolute; left:220px; top:520px; cursor:pointer; width:31px; height:31px; background:url(/clients/ATTPBGolf/Images/btn-hero-slider-previous.png) left top no-repeat; text-indent:-9999px; overflow:hidden;}
+#slider .arrow-right {position:absolute; left:255px; top:520px; cursor:pointer; width:31px; height:31px;background:url(/clients/ATTPBGolf/Images/btn-hero-slider-next.png) left top no-repeat; text-indent:-9999px; overflow:hidden; }
+#slider .arrow-left:hover { background-position:0 -31px}
+#slider .arrow-right:hover { background-position:0 -31px}
+#slider-wrapper {width:1415px; height:617px; margin:0 0 0 -196px;}
+
+.header .hero-overlay {width:1000px; position:absolute; left:50%; top:0; margin:0 0 0 -500px;}
+.header .hero-overlay .inner {width:1415px; height:136px; display:block; margin:0 0 0 -196px; background:url(/clients/ATTPBGolf/Images/overlay-hero.png) left top repeat-x;}
+
+.header .main {width:1000px; position:absolute; left:50%; top:0; margin:0 0 0 -500px;}
+.header .main p.logo {position:absolute; left:0; top:7px;}
+.header .main p.logo img {display:none;}
+.header .main p.logo a {width:132px; height:100px; display:block; text-indent:-9999px; overflow:hidden; background:url(/clients/ATTPBGolf/Images/logo-attpbnpa.png) left top no-repeat;}
+.header .main .logo-byline p {position:absolute; left:176px; top:37px; font-family:"Bembo W01"; font-size:2.2em; line-height:22px; color:#fefefe;}
+.header .main .logo-byline2 p {position:absolute; left:176px; top:62px; font-family:"Bembo MT W01 Italic"; font-size:1.6em; line-height:22px; color:#fefefe;}
+.header .main p.buy-tickets {position:absolute; right:0; top:39px;}
+.header .main .social {position:absolute; right:170px; top:48px;}
+
+/*.main-nav {position:absolute; left:0; top:114px; background:#d2ab4a url(/clients/ATTPBGolf/Images/bg-main-nav.gif) left top repeat-x; width:100%;}
+.main-nav ul.richmegamenuul {width:1000px; height:48px; margin:0 auto 0; padding:0; list-style:none; position:relative; overflow:visible;}
+.main-nav ul.richmegamenuul li {list-style:none; margin:0; padding:0 6px 0 6px; float:left; display:block; font-family:"Bembo W01"; font-size:1.6em; text-transform:uppercase; font-weight:normal;}
+.main-nav ul.richmegamenuul li a,
+.main-nav ul.richmegamenuul li a:visited {color:#fefefe; text-decoration:none; display:block; height:48px; line-height:48px; padding:0 20px 0 20px;}
+.main-nav ul.richmegamenuul li a:hover {color:#d2ab4a; text-decoration:none;}
+.main-nav ul.richmegamenuul li span.current-menu a {color:#d2ab4a; text-decoration:none;}
+
+.megarichmenu1 {position:absolute; left:0; top:0;}
+.megarichmenu3 {position:absolute; left:300px; top:0;}
+.megarichmenu4 {position:absolute; left:520px; top:0;}
+.megarichmenu5 {position:absolute; left:692px; top:0;}
+.megarichmenu6 {position:absolute; left:828px; top:0;}*/
+
+.main-nav {position:absolute; left:0; top:114px; background:url(/clients/ATTPBGolf/Images/bg-main-nav.gif) left top repeat-x; width:100%;}
+ul.richmegamenuul {width:1000px; height:48px; margin:0 auto 0; padding:0; list-style:none; position:relative; overflow:visible; font-family:"Bembo W01"; font-size:1.6em; text-transform:uppercase; font-weight:normal;}
+li.megarichmenu {font-size:100%; list-style:none; margin:0; padding:0 1px 0 1px; float:left; display:block;}
+.richmegamenuul .megarichmenu1 a {padding-left:0;}
+.richmegamenuul .megarichmenu9 a {padding-right:0;}
+span.megarichmenubutton a {padding:0 10px 0 10px; color:#fefefe; text-decoration:none; display:block; height:48px; line-height:48px;}
+span.megarichmenubutton a:hover {color:#d2ab4a; text-decoration:none;}
+span.current-menu a {color:#d2ab4a; text-decoration:none;}
+/*li.megarichmenu1 {width:292px;}
+li.megarichmenu3 {width:252px;}
+li.megarichmenu4 {width:163px;}
+li.megarichmenu5 {width:124px;}
+li.megarichmenu6 {width:156px;}*/
+span#currentmega {background:url(/clients/ATTPBGolf/Images/bg-main-nav-selected.png) 50% bottom no-repeat; display:block;}
+ul.megarichmenucolumns {display:none; width:4000px; height:40px; margin-left:-2000px; padding:0; list-style:none; background-color:#d2ab4a; position:absolute; left:50%; top:48px;}
+
+li.megarichmenu ul.megarichmenuitemlist {margin:0; padding:0; list-style:none; position:absolute; left:50%; top:0; width:1000px; margin-left:-500px;}
+li.megarichmenu1 ul.megarichmenuitemlist { margin-left:-500px;}
+li.megarichmenu3 ul.megarichmenuitemlist { margin-left:-500px;}
+li.megarichmenu5 ul.megarichmenuitemlist { margin-left:-200px;}
+li.megarichmenu6 ul.megarichmenuitemlist { margin-left:20px;}
+li.megarichmenu7 ul.megarichmenuitemlist { margin-left:60px;}
+li.megarichmenu8 ul.megarichmenuitemlist { margin-left:0px;}
+li.megarichmenu li.megamenu_link {display:block; float:left; padding:0 10px 0 10px; background:url(/clients/ATTPBGolf/Images/bg-mega-menu-item.gif) right 15px no-repeat;}
+li.megarichmenu li.idval4,
+li.megarichmenu li.idval9,
+li.megarichmenu li.idval13,
+li.megarichmenu li.idval14,
+li.megarichmenu li.idval16,
+li.megarichmenu li.idval19 {background:none;}
+li.megarichmenu li.megamenu_link a {color:#ffffff; text-decoration:none; height:40px; line-height:40px;}
+li.megarichmenu li.megamenu_link a:hover {color:#231f20;}
+
+.content {width:976px; margin:-49px auto 0; padding:30px 24px 30px 24px; border-top:solid 7px #231f20; background-color:#ffffff; position:relative;}
+.content .main {float:left;}
+.content .sub-nav {width:215px; margin:0 24px 0 0; float:left; }
+.content .extra {width:290px; margin:0 0 0 34px; float:right;}
+.content .extra-left {width:323px; margin:0 51px 0 24px; float:left;}
+
+#two-col-mod-left .item-page {width:737px}
+#two-col-mod-right .item-page {width:650px}
+#three-col .item-page {width:388px;}
+#three-col-mini .item-page { width:527px}
+#one-col .item-page {width:976px;}
+.extra-mini {float:left; width:185px; margin-left: 25px;}
+#two-col-extra-left .item-page { width:565px}
+
+.extra-bottom {clear:both; float:left; width:974px;}
+
+.extra-mini h2 {font-size:2.35em; line-height:26px; padding-bottom:6px;}
+
+.footer {position:relative;}
+
+.footer-main {background:url(/clients/ATTPBGolf/Images/bg-footer-main.gif) left top repeat-x; height:302px;}
+
+.footer-main .main { width:930px; margin:0 auto; position:relative;}
+.footer-main p {color:#fefefe; padding-bottom:16px;}
+.footer-main a {color:#fefefe; text-decoration:underline;}
+.footer-main a:hover {color:#fefefe; text-decoration:none;}
+.footer-main h3 {color:#fefefe; font:normal 2.1em Bembo W01; padding-bottom:2px;}
+
+
+.footer-main .get-in-touch {background:url(/clients/ATTPBGolf/Images/bg-dotted-seperator.png) right 8px no-repeat; width:175px; position:absolute; left:0; top:40px;}
+.footer-main .stay-connected {background:url(/clients/ATTPBGolf/Images/bg-dotted-seperator.png) right 8px no-repeat; width:215px; position:absolute; left:175px; top:40px; padding:0 38px 0 35px;}
+.footer-main .stay-connected ul {display:block; margin:0; padding:0; list-style:none;}
+.footer-main .stay-connected ul li {display:inline; float:left; margin:0; padding:0 6px 0 0; width:36px; height:36px; list-style:none;}
+.footer-main .stay-connected ul li a {display:block; cursor:pointer; overflow:hidden; text-indent:-9999px; width:36px; height:36px;}
+.footer-main .stay-connected ul li.facebook a {background:url(/clients/ATTPBGolf/Images/facebook.png)}
+.footer-main .stay-connected ul li.facebook a:hover { background-position: 0 -36px; }
+.footer-main .stay-connected ul li.twitter a {background:url(/clients/ATTPBGolf/Images/twitter.png)}
+.footer-main .stay-connected ul li.twitter a:hover { background-position: 0 -36px; }
+.footer-main .stay-connected form {height:29px;}
+.footer-main .stay-connected input {float:left; margin:0; padding:0;}
+
+.footer-main .stay-connected form { overflow: hidden; display: block; height: 29px; margin: 0 0 10px; }
+.footer-main .stay-connected input.button {background:#6eb43f url(/clients/ATTPBGolf/Images/bg-btn-arrow.png) right center no-repeat; text-indent:-9999px; width:40px; height:29px; border:none; padding:0; margin:0;}
+.footer-main .stay-connected input.button:hover {background-color:#7cbb52;}
+.footer-main .stay-connected input#email_address {border:none; border-bottom:1px solid #a7a5a6; border-left:1px solid #8b8889; font-size:1.1em; color:#828282; padding:7px; width:160px; min-height: 29px;}
+
+.footer-main .mobile-apps {background:url(/clients/ATTPBGolf/Images/bg-dotted-seperator.png) right 8px no-repeat; width:183px; position:absolute; left:463px; top:40px; padding:0 30px 0 34px;}
+.footer-main .mobile-apps ul {margin:0; padding:0; list-style:none;}
+.footer-main .mobile-apps ul li {display:block; margin:0; padding:0; list-style:none; height:36px; margin-top:10px;}
+.footer-main .mobile-apps ul li a {display:block; padding-left:48px; line-height:36px;}
+.footer-main .mobile-apps ul li.android a {background:url(/clients/ATTPBGolf/Images/android.png) no-repeat;}
+.footer-main .mobile-apps ul li.appstore a {background:url(/clients/ATTPBGolf/Images/appstore.png) no-repeat;}
+
+.footer-main .be-a-hero {width:201px; position:absolute; left:710px; top:40px; padding:0 0 0 30px;}
+.footer-main .be-a-hero a {text-decoration:none; font-style:normal;}
+.footer-main .be-a-hero .btn-basic {width:191px;}
+.footer-main .be-a-hero .btn-blue {margin-top:20px;}
+
+.footer-extra {background:url(/clients/ATTPBGolf/Images/bg-footer-copyright.jpg) left top repeat; height:315px; position:relative;}
+
+.footer-extra .main { width:930px; margin:0 auto; position:relative;}
+
+.footer-extra .sponsors {width:930px; margin:0 auto; height:180px; padding:30px 0 0; position:relative;}
+.footer-extra .sponsors h3 {text-align:center; font:normal 2.3em Bembo MT W01 italic;}
+.footer-extra .sponsors ul {position:absolute; left:0; top:0; display:block; margin:0; padding:0;}
+.footer-extra .sponsors ul li {position:absolute; display:block; background:none; margin:0; padding:0;}
+.footer-extra .sponsors ul li a {overflow:hidden; display:block; text-indent:-9999px; cursor:pointer;}
+.footer-extra .sponsors ul li.at-and-t {width:150px; height:120px; left:290px; top:60px;}
+.footer-extra .sponsors ul li.at-and-t a {width:150px; height:120px; background:url(/clients/ATTPBGolf/Images/at-and-t.png);}
+.footer-extra .sponsors ul li.e-trade {width:173px; height:26px; left:474px; top:121px;}
+.footer-extra .sponsors ul li.e-trade a {width:173px; height:26px; background:url(/clients/ATTPBGolf/Images/e-trade.png);}
+.footer-extra .sponsors ul li.fedex-cup {width:138px; height:69px; left:135px; top:93px;}
+.footer-extra .sponsors ul li.fedex-cup a {width:138px; height:69px; background:url(/clients/ATTPBGolf/Images/fedex-cup-combined-tour.png);}
+.footer-extra .sponsors ul li.kohler {width:110px; height:25px; left:683px; top:121px;}
+.footer-extra .sponsors ul li.kohler a {width:110px; height:25px; background:url(/clients/ATTPBGolf/Images/kohler.png);}
+.footer-extra .sponsors ul li.mastercard {width:107px; height:64px; left:820px; top:98px;}
+.footer-extra .sponsors ul li.mastercard a {width:107px; height:64px; background:url(/clients/ATTPBGolf/Images/mastercard.png);}
+.footer-extra .sponsors ul li.monterey-peninsula-foundation {width:96px; height:109px; left:0; top:69px;}
+.footer-extra .sponsors ul li.monterey-peninsula-foundation a {width:96px; height:109px; background:url(/clients/ATTPBGolf/Images/monterey-peninsula-foundation.png);}
+
+#footer-slider  {width:465px; position:absolute; left:465px; top:0; display:block; margin:0; padding:0;}
+#footer-slider .slider {height:120px; width:465px; margin:60px 0 0 0; padding:0; overflow:hidden; position:relative;}
+#footer-slider .slider .slide {width:465px; height:120px; position:absolute; left:0; top:0; margin:0; padding:0}
+#footer-slider .slider .slide p {float:left; width:150px; height:120px; margin:0 5px 0 0; padding:0; text-align:center;}
+#footer-slider #footer-slider-btn-left {z-index:3; position:absolute; left:0; top:70px; cursor:pointer; width:60px; height:90px; text-indent:-9999px; overflow:hidden; opacity:0.5; filter:alpha(opacity=50); MozOpacity:0.5;}
+#footer-slider #footer-slider-btn-left:hover {background:url(/clients/ATTPBGolf/Images/btn-footer-slider-previous.png) left center no-repeat;}
+#footer-slider #footer-slider-btn-right {z-index:3; position:absolute; right:0; top:70px; cursor:pointer; width:60px; height:90px; text-indent:-9999px; overflow:hidden; opacity:0.5; filter:alpha(opacity=50); MozOpacity:0.5;}
+#footer-slider #footer-slider-btn-right:hover {background:url(/clients/ATTPBGolf/Images/btn-footer-slider-next.png) right center no-repeat;}
+
+.footer-extra .joomla-nav {position:absolute; top:210px; right:0; width:930px; display:inline; text-align:right}
+.footer-extra .joomla-nav li {display:inline; color:#231f20; font-size:1.1em; padding:0 7px; border-left:1px solid #231f20;}
+.footer-extra .joomla-nav li.item145 {border:none;}
+.footer-extra .joomla-nav li a {display:inline; color:#231f20;}
+.footer-extra .joomla-nav li a:hover {text-decoration:none;}
+
+.footer-extra .copyright {width:930px; margin:0;}
+.footer-extra .copyright p {font-size:1.1em;}
+
+#our-sites {display:none; background:#231f20; margin:0; padding:0;}
+#our-sites .inner {width:810px; height:125px; margin:0 auto 0; position:relative;}
+#our-sites p {margin:0; padding:0; width:270px; height:125px; float:left; text-align:center; position:relative;}
+#our-sites p a {width:270px; height:125px; display:block; overflow:hidden; margin:0 auto; padding:90px 0 0 0; color:#fefefe; text-decoration:none;}
+#our-sites p a:hover {text-decoration:underline;}
+#our-sites p img {position:absolute; top:10px; left:50%;}
+#our-sites p.mpf a {/*background:url(/clients/ATTPBGolf/Images/logo-our-sites-mpf.png) center center no-repeat; width:100px;*/}
+#our-sites p.mpf img {margin-left:-30px;}
+#our-sites p.attpbnpa a {/*background:url(/clients/ATTPBGolf/Images/logo-our-sites-attpbnpa.png) center center no-repeat; width:129px;*/}
+#our-sites p.attpbnpa img {margin-left:-42px;}
+#our-sites p.fto a {/*background:url(/clients/ATTPBGolf/Images/logo-our-sites-fto.png) center center no-repeat; width:217px;*/}
+#our-sites p.fto img {margin-left:-66px;}
+
+#btn-our-sites {display:block; width:110px; height:40px; margin:0; padding:0 0 0 14px; position:absolute; left:0; top:-6px; color:#fefefe; background:#231f20 url(/clients/ATTPBGolf/Images/bg-our-sites.png) 97px 17px no-repeat; font-family:'Bembo W01'; font-size:2.1em; line-height:40px; cursor:pointer;}
+.active-button { background-position: 97px -34px!important}
+
+
+/* =============================================================================
+   Content
+   ========================================================================== */
+.content ul.reasons-to-sponsor-list { padding:0;}
+.content ul.reasons-to-sponsor-list li { list-style-type:none; padding-bottom:10px; background:none;}
+.content ul.reasons-to-sponsor-list li img { float:left; margin-right:25px}
+.content ul.reasons-to-sponsor-list li span {margin-top: 7px; display: block;}
+
+.content ol { counter-reset:li; margin-left:0; padding-left:0;}
+.content ol > li {position:relative; margin:0 0 10px 34px; padding:0; list-style:none; line-height:26px;}
+.content ol > li:before {content:counter(li); counter-increment:li; position:absolute; top:0; left:-34px; width:26px; height:26px; line-height:26px; margin:0; padding:0; color:#ffffff; background:url(/clients/ATTPBGolf/Images/bg-ol-bullet.png) left top no-repeat; font-family:Arial, Helvetica, sans-serif; font-size:1.6em; font-style:italic; font-weight:normal; text-align:center;}
+.content ol li {*list-style:decimal;}/*IE7 and below fix*/
+.content ol li ol {margin-top:10px;}
+
+.content ul { padding-left:0!important; list-style-type:none!important} 
+.content ul li { background: url(/clients/ATTPBGolf/Images/bg-ul-bullet.png) 0 7px no-repeat; padding-left:14px ;margin-bottom: 10px;}
+.content ul ul {margin-top: 10px; margin-left:10px;}
+.content ul ul li {margin-top: 10px;}
+
+.content ul.green-arrow-list, ul.green-arrow-list ul { padding-left:0!important; list-style-type:none!important} 
+.content ul.green-arrow-list ul {margin-top: 10px;}
+.content ul.green-arrow-list li { background: url(/clients/ATTPBGolf/Images/green-arrow.jpg) 0 1px no-repeat; padding-left:20px ;margin-bottom: 10px;}
+
+p.investment {font-family:"Bembo MT W01 Italic"; font-size:2.6em; line-height:26px; margin-bottom:2px;}
+p.amount {font-family:Georgia; font-size:2.4em; line-height:24px; margin-bottom:4px;}
+p.extras {font-family:Georgia; font-size:1.2em; font-style:italic; margin-bottom:0;}
+p.highlights {font-family:"Bembo MT W01 Italic"; font-size:2.6em; line-height:26px; margin:15px 0 4px 0;}
+p.plus {font-family:Georgia; font-size:1.4em; font-style:italic; color:#81be58; font-weight:bold; margin-bottom:0;}
+p.footnote {font-family:Arial; font-size:1.0em;padding-left: 9px;}
+
+
+
+
+.hospitality-teaser {background:url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) bottom left repeat-x; clear:both; width:974px; padding:0 0 18px 0; margin:0 0 14px 0;}
+.hospitality-teaser p {margin:0; padding:0;}
+.hospitality-teaser .thumb {width:154px; float:left; padding:0 0 0 26px;}
+.hospitality-teaser .thumb img {border: 1px solid #ebdab0; padding: 6px; width:140px; height:140px;}
+.hospitality-teaser .thumb p.btn-basic {width:154px; text-align:right; font-size:1.8em;}
+.hospitality-teaser .thumb p.btn-basic a {padding-top:0; padding:0 53px 0 0;}
+
+.hospitality-teaser .info {width:274px; padding:0 100px 0 20px; float:left; background:url(/clients/ATTPBGolf/Images/bg-hospitality-teaser.png) 320px 64px no-repeat;}
+.hospitality-teaser .info p.title {font-family:"Bembo MT W01 Italic"; font-size:3.0em; line-height:30px; margin-bottom:6px;}
+.hospitality-teaser .info p a {color:#231f20; text-decoration:none;}
+.hospitality-teaser .info p a:hover {color:#231f20; text-decoration:underline;}
+.hospitality-teaser .info p.description {margin-bottom:10px;}
+.hospitality-teaser .info p.investment {font-family:"Bembo MT W01 Italic"; font-size:2.0em; line-height:20px; margin-bottom:4px;}
+.hospitality-teaser .info p.amount {font-family:Georgia; font-size:2.4em; line-height:24px; margin-bottom:12px;}
+.hospitality-teaser .info p.extras {font-family:Georgia; font-size:1.2em; font-style:italic;}
+
+.hospitality-teaser .highlights {float:right; width:400px;}
+.hospitality-teaser .highlights p {font-family:"Bembo MT W01 Italic"; font-size:2.0em; padding:0 0 6px 0;}
+
+.branding-teaser {background:url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) bottom left repeat-x; clear:both; width:974px; padding:0 0 18px 0; margin:0 0 14px 0;}
+.branding-teaser p.title {font-family:"Bembo MT W01 Italic"; font-size:3.0em; line-height:30px; margin-bottom:6px;}
+.branding-teaser p a {color:#231F20; text-decoration:none;}
+.branding-teaser p a:hover {color:#231F20; text-decoration:underline;}
+.branding-teaser p.btn-basic a {color:#fefefe; text-decoration:none; font-size:0.8em}
+.branding-teaser p.description {margin-bottom:10px;}
+.branding-teaser p.investment {font-family:"Bembo MT W01 Italic"; font-size:2.0em; line-height:20px; margin-bottom:4px;}
+.branding-teaser p.amount {font-family:Georgia; font-size:2.4em; line-height:24px; margin-bottom:12px;}
+
+.call-to-talk { clear:both; font-family:"Bembo MT W01 Italic"; font-size:2.5em; text-align:center}
+.call-to-talk span {color:#008ED2}
+
+/* =============================================================================
+   Sidebar
+   ========================================================================== */
+
+.cta-download-sponsorship-pdf {margin-bottom:30px;}
+.cta-download-sponsorship-pdf a {width:323px; height:123px; display:block; background:#6eb43f url(/clients/ATTPBGolf/Images/bg-btn-arrow.png) 190px center no-repeat; font-family:"Bembo MT W01 Italic"; font-size:2.4em; line-height:26px; color:#fefefe; text-decoration:none; border:solid 1px #6eb43f; }
+.cta-download-sponsorship-pdf a:hover {background-color:#7cbb52; border-color:#7cbb52;}
+.cta-download-sponsorship-pdf span {width:188px; display:block; float:left; margin:9px 0 0 14px;}
+.cta-download-sponsorship-pdf img {float:right; margin:5px 8px 0 0;}
+.main .contact-us-cta a {width: 300px; background: #6EB43E url(/clients/ATTPBGolf/Images/bg-btn-arrow.png) 167px center no-repeat}
+.main .contact-us-cta a:hover {background-color:#7cbb52; border-color:#7cbb52;}
+
+.sub-nav .joomla-nav { padding:0; margin:0 0 25px 0;}
+.sub-nav .joomla-nav li { list-style-type:none; background:none; padding:0; margin:0;}
+.sub-nav .joomla-nav ul { padding:0; margin:0 0 10px 0}
+.sub-nav .joomla-nav li a {color: #008ED2;background: none;padding: none; font-family:"Bembo W01"; font-size:1.8em; text-decoration:none; background: url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) bottom left repeat-x; display: block; margin-bottom: 10px; line-height: 0.8em; padding-bottom: 8px;}
+.sub-nav .joomla-nav ul li  a { background: #231F20;color: white;padding: 4px 9px;text-decoration: none; font-weight:bold; font-size:13px; font-family:Arial, Helvetica, sans-serif;line-height: 1.3em; margin-bottom:3px}
+.sub-nav .joomla-nav ul li.selected a {background:#231F20 url(/clients/ATTPBGolf/Images/bg-sub-nav-selected.png) 200px center no-repeat;}
+.sub-nav .joomla-nav ul li ul li a,
+.sub-nav .joomla-nav ul li.selected ul li a { background:#fff; color:#231F20; border-bottom:1px solid #d2d1d2; font-weight:normal; padding:2px 2px}
+.sub-nav .joomla-nav ul li ul li a:hover,
+.joomla-nav ul li ul li#current a {color: #008ed2}
+
+.cta-play-video { width: 310px; height: 208px; border: 1px solid #EBDAB0; padding: 6px; background: url(/images/cta/cta-play-video.jpg) 6px 6px no-repeat; }
+.cta-play-video .play-video-cta { display: block; width: 310px; height: 208px; text-indent: -9999em; background:url(/images/cta/att-video-btn.png) center 79px no-repeat; }
+.cta-play-video .play-video-cta:hover { background-position: center -171px; }
+
+.cta-why-sponsor .cta-play-video { display: block; width: 250px; height: 140px; text-indent: -9999em; background:url(/images/cta/cta-play-video.jpg) -30px -40px no-repeat; border:none; margin-top:20px;}
+.cta-why-sponsor .cta-play-video .play-video-cta {width:250px; height:140px; background:url(/images/cta/att-video-btn.png) center 24px no-repeat;}
+.cta-why-sponsor .cta-play-video .play-video-cta:hover {background:url(/images/cta/att-video-btn.png) center -226px no-repeat;}
+
+.cta-gallery img {padding:6px; margin-bottom:6px; border: 1px solid #EBDAB0;}
+
+.item106 .separator,
+.item112 .separator,
+.item116 .separator,
+.item120 .separator,
+.item147 .separator,
+.item153 .separator,
+.item160 .separator {background: #231F20;color: white;padding: 4px 9px;text-decoration: none; font-weight:bold; font-size:13px; font-family:Arial, Helvetica, sans-serif;line-height: 1.3em; margin-bottom:3px}
+.separator { background:#d2ab4a; display:block; padding: 2px 0 0 8px; font-weight:bold}
+
+/* =============================================================================
+   Modules, Components, Plugins, Bits and Bobs, Whatsits and the occational Who
+   ========================================================================== */
+
+.btn-basic {font-family:"Bembo W01"; font-size:1.9em; line-height:22px; color:#fefefe;  display:inline-block; /* zoom and *display are to emulate inline-block in IE7 */zoom:1; *display:inline;}
+.btn-basic a {display:block; background:#6eb43f url(/clients/ATTPBGolf/Images/bg-btn-arrow.png) right center no-repeat; padding:7px 33px 7px 11px; color:#fefefe; text-decoration:none; border:solid 1px #6eb43f;}
+.btn-basic a:hover {color:#fefefe; text-decoration:none; background-color:#7cbb52; border-color:#7cbb52;}
+
+.btn-green a {background-color:#6eb43f; border-color:#6eb43f;}
+.btn-green a:hover {color:#fefefe; text-decoration:none; background-color:#7cbb52; border-color:#7cbb52;}
+.btn-blue a {background-color:#008ed2; border-color:#008ed2;}
+.btn-blue a:hover {color:#fefefe; text-decoration:none; background-color:#1999d6; border-color:#1999d6;}
+
+.button-cta a {padding: 21px 45px 20px 25px; font-size: 1.1em;}
+.button-cta  {margin-bottom: 65px;}
+
+.styleGuideDescription {display:none;}
+
+.floatRight {float:right; width:313px; margin:0 0 10px 60px;}
+
+.right {float:right;}
+.left {float:left;}
+
+.col-3-full { clear:both; }
+.col-3-full .col {width:300px; margin: 0 38px 30px 0; float:left;}
+.col-3-full .last {margin-right:0;}
+.col-3-full img {margin-bottom: 20px;}
+
+.col-2 { clear:both; }
+.col-2 .col {width:284px; margin: 0 38px 30px 0; float:left;}
+.col-2 .last {margin-right:0;}
+.col-2 img {margin-bottom: 20px;}
+
+.leftCTA {float:left; width:278px; margin:0 10px 10px 0;}
+	.extra-left .leftCTA, .sub-nav .leftCTA {width:auto; float:none; margin:0;}
+	
+.rightCTA {float:right; width:278px; margin:0 0 10px 10px;}
+
+.leftCTA .inner {width:276px;}
+	.extra-left .leftCTA .inner, .sub-nav .leftCTA .inner {width:auto;}
+
+.leftCTA, .rightCTA {padding:6px; background:#211f20; color:#f9f9f9;}
+.leftCTA .inner {border:1px solid #6d6c6a; text-align:center; /*padding:18px 0;*/ padding:13px; overflow:hidden;}
+.leftCTA h3, .rightCTA h3 {font-family:'Bembo W01'; font-weight:normal; font-size:2.2em; line-height:0.9em; padding:0 0 3px 0; margin:0; font-style:normal;}
+.leftCTA a, .rightCTA a, .rightCTA a:visited {color:#f9f9f9;}
+.leftCTA p, .rightCTA p {/*font-size:1.2em;*/ padding:15px 0 0; margin:0;}
+.cta-interested-in-playing .inner p { text-align:center}
+.content .cta-interested-in-playing .inner {padding:13px 13px 35px 13px;}
+.content .cta-interested-in-playing {width: 280px; }
+
+.leftCTA span, .rightCTA span {font-size:0.8em; text-transform:uppercase; font-family:Georgia, "Times New Roman", Times, serif;}
+
+.rightCTA .inner { padding:13px; border:1px solid #6d6c6a; overflow:hidden;}
+.rightCTA .left { float:left}
+.rightCTA h3 { text-align:center; }
+.rightCTA .division h3 { text-align:left; clear:both}
+
+.leftCTA .division, .rightCTA .division {background:url(/clients/ATTPBGolf/Images/bg-divider.png) 0 10px repeat-x; text-align:left;}
+.rightCTA .division {padding-top: 27px;clear: both;}
+
+.rightCTA .quote {font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; font-size:1.4em; float:none; width:auto; padding:0;}
+.rightCTA .open-quote {display:block; background: url(/clients/ATTPBGolf/Images/quote-open.png) no-repeat;  height: 11px; width: 14px; float: left; margin-right: 10px;}
+.rightCTA .close-quote {display:inline-block; background: url(/clients/ATTPBGolf/Images/quote-closed.png) no-repeat; height: 11px; width: 14px; margin-left: 10px;}
+.rightCTA .quote-by {text-transform:none;}
+
+.img-left { float:left; margin: 0 30px 5px 0}
+.site-wrapper .green-cta { background:#6EB43F}
+.site-wrapper .green-cta .inner  { border:1px solid #a0ce82;}
+
+.site-wrapper .green-cta h2 {background:url(/clients/ATTPBGolf/Images/green-w-white-dots) 6px 36px no-repeat;text-align: center;}
+
+.content .quote-italic {font-family: Georgia;
+font-size: 1em;
+font-style: italic;
+margin-bottom: 0; text-transform:none}
+
+.content .quoted { font-style:italic; background: url(/clients/ATTPBGolf/Images/green-quote-left.jpg) no-repeat; padding-left:20px}
+.content .quoter {padding-left:20px; margin-bottom: 10px; font-style:italic; font-size: 1.3em;}
+.content .quoted p { padding-top:0}
+.content .end-quote {background: url(/clients/ATTPBGolf/Images/green-quote-right.jpg) 0 -2px no-repeat; display:inline-block; width:17px; height:11px; margin-left:5px; text-indent:-9999px;}
+
+#show-hidden-copy {color:#008ED2; text-decoration:underline; cursor:pointer}
+#show-hidden-copy:hover { text-decoration:none}
+
+.notes { color: red; font-weight:bold}
+
+.reasons-to-sponsor-list li { clear:both}
+.reasons-to-sponsor-list li img { margin-bottom:20px}
+
+.tournament-schedule-list-wrapper p {padding:0; margin:0;}
+.tournament-schedule-list-wrapper .tournament-schedule-list  {background: url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) left 14px repeat-x; margin:0; padding:0; line-height:20px; height:20px;}
+.tournament-schedule-list-wrapper .tournament-schedule-list .text-float { float:left; display:block; clear:both; background:#FFF; padding-right:3px; line-height:20px; height:20px;}
+.tournament-schedule-list-wrapper .tournament-schedule-list .time-float { float:right; display:block; background:#FFF; padding-left:6px; width:130px; text-align:left; line-height:20px; height:20px;}
+.tournament-schedule-list-wrapper h4 { clear:both; padding-top:15px}
+
+/* Tabs */
+.tabs .tabs-nav-wrapper {background:url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) left bottom repeat-x; margin:0 0 0 0; padding:0;}
+.tabs .tabs-nav-wrapper li {background:url(/clients/ATTPBGolf/Images/bg-dotted-vertical.png) right top repeat-y; display:inline-block; /* zoom and *display are to emulate inline-block in IE7 */zoom:1; *display:inline; margin:0; padding:4px 12px 6px 12px; cursor:pointer; list-style:none; color:#231f20; font-family:Georgia, "Times New Roman", Times, serif; font-size:1.5em;}
+.tabs .tabs-nav-wrapper li.selected {background-color:#ffffff; color:#008ed2;}
+.tabs .tab {clear:both;}
+
+#homepage-tabs .tabs-nav-wrapper li {font-size:1.9em; padding:4px 0 6px 0; width:161px; text-align:center; font-weight:normal;}
+#homepage-tabs .tabs-nav-wrapper li.last {background:none;}
+#homepage-tabs .tabs-nav-wrapper li:hover { color:#555}
+#homepage-tabs .tabs-nav-wrapper li.selected:hover { cursor:default; color:#008ED2; }
+
+#support-your-charity { background:#fff; border: 1px solid #EBDAB0; width: 309px; margin:0;}
+#support-your-charity h3 { color:#231F20; line-height: 1.1em;}
+#support-your-charity p { color:#231F20; padding-top:10px}
+#support-your-charity .division {background: url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) 0 15px repeat-x; padding-top: 22px;}
+#support-your-charity  .inner { border:none}
+#support-your-charity a { color:#008ED2;}
+
+.extra .btn-pro-am {width:325px;}
+.extra .btn-pro-am a {padding-right:35px;}
+
+.single-time { padding-right:62px}
+.tournament-schedule-list-wrapper h4 { padding-bottom:0} 
+#print-page { padding-left:25px; margin:20px 0 5px 0; background: url(/clients/ATTPBGolf/Images/print-page.gif) no-repeat; padding-bottom:10px;  display:block; text-decoration:none; color:#231F20; font-family:"Bembo MT W01 Italic"; font-size: 1.2em; line-height: 1.0em;}
+#save-page {padding-left:25px; background: url(/clients/ATTPBGolf/Images/save-page.gif) no-repeat; padding-bottom:10px; display:block; text-decoration:none; color:#231F20; font-family:"Bembo MT W01 Italic"; font-size: 1.2em; line-height: 1.0em;}
+#print-page:hover, #save-page:hover { text-decoration:underline}
+#phone-number {font-family: Georgia; }
+.content #email-black {text-decoration:none; color:#231F20; font-family: Georgia; }
+.content #email-black:hover { text-decoration:underline}
+
+.reasons-to-sponsor-list li p { display: block;float: left;width: 475px;}
+.reasons-to-sponsor-list li img { float:left}
+.reasons-to-sponsor-list li {padding-top: 10px;}
+
+.image-preview img {border: 1px solid #EBDAB0;padding: 4px; margin:0 10px 3px 0}
+.image-preview { width:168px; float:left; margin-right: 11px;
+;}
+.content .last-preview { margin-right:0}
+.image-preview a { font-size:1.2em}
+
+
+.content-video-cta { float:right;}
+.content-video-cta img {border: 1px solid #EBDAB0;padding: 4px; margin:0 10px 3px 50px}
+
+
+#hospitality-tabs {clear: both;}
+
+#photo-gallery-cta a { width:276PX; margin-top: -15px;}
+
+#photo-gallery-cta-mini a {font-size: 0.8em; padding: 7px 30px 7px 6px;}
+#photo-gallery-cta-mini {margin-top: -15px; display:block}
+
+.item168 { display:none}
+#hospitality-tabs { position:relative; margin: 48px 0 48px; }
+.PDF-in-tab {position: absolute;top: 8px;right: 0;font-size: 1.6em; font-family:"Bembo MT W01 Italic"; display:block; background: url(/clients/ATTPBGolf/Images/pdf-icon.jpg) no-repeat; padding-left:20px; }
+.PDF-in-tab a {color:#231F20!important; text-decoration:none}
+.PDF-in-tab a:hover { text-decoration:underline}
+
+
+.sitemap {padding:20px 40px 0 0;}
+
+li.megarichmenu li.megamenu_link a.active {color:#231f20;}
+
+.main #motioncontainer {width: 616px;}
+.branding-teaser .extras {margin-bottom: 10px;
+margin-top: -6px;}
+.tournament-photo-caption { padding-top:23px}
+
+.item188 { display:none}
+
+#mc_embedded_subscribe_form #EMAIL {border: none;
+border: 1px solid 
+#CCC;
+
+font-size: 1.1em;
+color: 
+#828282;
+padding: 7px;
+width: 160px;
+min-height: 29px;}
+
+#mc_embedded_subscribe_form .submit {
+background: 
+#6EB43F url(/clients/ATTPBGolf/Images/bg-btn-arrow.png) right center no-repeat;
+text-indent: -9999px;
+width: 40px;
+height: 30px;
+border: 1px solid 
+#CCC;
+padding: 0;
+margin: 0;
+margin-left:-5px;
+padding-bottom: 1px;
+}
+.form-error {
+padding: 20px 20px 20px 90px;
+background: url(/clients/ATTPBGolf/Images/caution.gif) 4px 10px no-repeat 
+#FEF1EC;
+border: 2px solid 
+#F72020;
+margin-bottom: 20px;
+}
+
+ .form-error #myJavascriptError_message {
+font-size: 1.6em;
+color: 
+#F72020;
+margin:0 0 5px 0;
+}
+#mc_embedded_subscribe_form { margin-bottom:10px}
+.moduletable h3 { margin-bottom:5px}
+
+
+
+a.default-cta {width:278px; padding:6px; background:#211f20; color:#f9f9f9; text-decoration:none;}
+a.default-cta:hover {background-color:#373334;}
+a.default-cta .inner {width:276px; border:1px solid #6d6c6a; text-align:center; padding:12px 0 12px 0;}
+a.default-cta p {padding:0 0 9px 0; margin:0;}
+a.default-cta .title {font-family:'Bembo W01'; font-weight:normal; font-size:2.2em; line-height:0.9em; font-style:normal;}
+a.default-cta .pdf-download {display:inline; padding:4px 0 9px 35px;}
+
+a.default-cta span.title {font-size:1.8em; }
+
+.cta-join-these-charities {margin-left:30px;}
+
+
+.cta-download-sponsorship-pdf-homepage {margin-bottom:30px;}
+.cta-download-sponsorship-pdf-homepage a {width:323px; height:123px; display:block; background-color:#6eb43f; font-family:"Bembo MT W01 Italic"; font-size:2.2em; line-height:26px; color:#fefefe; text-decoration:none; border:solid 1px #6eb43f; }
+.cta-download-sponsorship-pdf-homepage a span {color:#fefefe;}
+.cta-download-sponsorship-pdf-homepage a:hover {background-color:#7cbb52; border-color:#7cbb52;}
+.cta-download-sponsorship-pdf-homepage span {width:170px; display:block; float:left; margin:9px 0 0 12px;}
+.cta-download-sponsorship-pdf-homepage img {float:right; margin:12px 8px 0 0;}
+
+.cta-download-sponsorship-pdf-sponsorship-opp {margin:0 0 30px 20px;}
+.cta-download-sponsorship-pdf-sponsorship-opp a {width:323px; height:123px; display:block; background-color:#6eb43f; font-family:"Bembo MT W01 Italic"; font-size:2.0em; line-height:26px; color:#fefefe; text-decoration:none; border:solid 1px #6eb43f; }
+.cta-download-sponsorship-pdf-sponsorship-opp a span {color:#fefefe;}
+.cta-download-sponsorship-pdf-sponsorship-opp a:hover {background-color:#7cbb52; border-color:#7cbb52;}
+.cta-download-sponsorship-pdf-sponsorship-opp span {width:154px; display:block; float:left; margin:9px 0 0 8px;}
+.cta-download-sponsorship-pdf-sponsorship-opp img {float:right; margin:12px 8px 0 0;}
+
+#countdown {margin-bottom:40px;}
+#countdown .countdown-col {width:80px; display:block; float:left; text-align:center; background:url(/clients/ATTPBGolf/Images/bg-dotted-vertical-light.png) right 0 repeat-y;}
+#countdown .countdown-col span.number {font-family:"Bembo W01"; font-size:4.0em; font-weight:bold; color:#6f6f6f; line-height:40px;}
+#countdown .countdown-col span.unit {font-family:"Bembo W01"; font-size:1.6em; color:#231f20; line-height:16px;}
+
+.caption-title {background-color:#231f20; color:#fefefe; text-align:center; margin:0; padding:0; font-family:"Bembo W01"; font-size:2.4em; line-height:26px;}
+.caption-comment {background-color:#231f20; border-bottom:solid 1px #7b7879; color:#fefefe; text-align:center; margin:0 0 13px 0; padding:0 0 6px 0; font-family:"Bembo W01"; font-size:1.8em; line-height:18px;}
+
+.cta-get-news-by-email {margin:0; padding:6px; background:#211f20; color:#f9f9f9;}
+.cta-get-news-by-email .inner {border:1px solid #6d6c6a; text-align:center; padding:18px 0;}
+.cta-get-news-by-email h3 {font-family:'Bembo W01'; font-weight:normal; font-size:2.2em; line-height:0.9em; padding-bottom:3px;}
+.cta-get-news-by-email p {padding:18px 25px 0 25px; font-size:1.3em; font-family:Arial, Helvetica, sans-serif;}
+.cta-get-news-by-email .form-wrapper { overflow: hidden; display: block; height: 29px; margin:0 0 0 25px; padding:0; }
+.cta-get-news-by-email .form {margin:0; padding:0;}
+.cta-get-news-by-email input {float:left; margin:0; padding:0;}
+.cta-get-news-by-email input.button {background-color:#6eb43f; width:48px; height:29px; border:none; padding:0; margin:0; color:#ffffff; text-transform:uppercase;}
+.cta-get-news-by-email input.button:hover {background-color:#7cbb52;}
+.cta-get-news-by-email input#email-address {border:none; border-bottom:1px solid #a7a5a6; border-left:1px solid #8b8889; font-size:1.1em; color:#828282; padding:7px; width:180px; min-height: 29px;}
+
+.tournament-ctas {margin-top:30px;}
+.cta-tournament {width:304px; height:150px; overflow:hidden; position:relative;}
+.cta-tournament-scoring {float:left; margin:0 7px 7px 0; background:url(/images/content/bg-cta-tournament-scoring.jpg) left top no-repeat;}
+.cta-tournament-history {float:left; margin:0 0 7px 0; background:url(/images/content/bg-cta-tournament-history.jpg) left top no-repeat;}
+.cta-tournament-courses {float:left; clear:left; margin:0 7px 7px 0; background:url(/images/content/bg-cta-tournament-courses.jpg) left top no-repeat;}
+.cta-tournament-shop {float:left; margin:0 0 7px 0; background:url(/images/content/bg-cta-tournament-shop.jpg) left top no-repeat;}
+.cta-tournament .cta-image a {width:304px; height:150px; display:block; text-indent:-9999px; overflow:hidden;}
+.cta-tournament .cta-caption-hover {position:absolute; left:0; bottom:0; width:296px; height:46px; background:url(/clients/ATTPBGolf/Images/bg-caption-hover.png) left top repeat; padding-left:8px;}
+.cta-tournament .cta-caption-hover a {width:304px; height:70px; display:block; font-family:Arial, Helvetica, sans-serif; font-size:1.3em; color:#ffffff; text-indent:inherit; text-decoration:none;}
+.cta-tournament .cta-caption {position:absolute; left:0; top:0; height:30px; background:#d2ab4a url(/clients/ATTPBGolf/Images/bg-caption.png) right 13px no-repeat; color:#ffffff; font-family:"Bembo W01"; font-size:1.8em; padding:0 41px 0 10px;}
+
+
+.cta-pics-videos {width:304px; height:150px; overflow:hidden; position:relative;}
+.cta-pics-videos-image-gallery {float:left; margin:0 7px 7px 0; background:url(/images/content/bg-cta-image-gallery.jpg) left top no-repeat;}
+.cta-pics-videos-photo-gallery {float:left; margin:0 0 7px 0; background:url(/images/content/bg-cta-video-gallery.jpg) left top no-repeat;}
+.cta-pics-videos .cta-image a {width:304px; height:150px; display:block; text-indent:-9999px; overflow:hidden;}
+.cta-pics-videos .cta-caption-hover {position:absolute; left:0; bottom:0; width:296px; height:46px; background:url(/clients/ATTPBGolf/Images/bg-caption-hover.png) left top repeat; padding-left:8px;}
+.cta-pics-videos .cta-caption-hover a {width:304px; height:70px; display:block; font-family:Arial, Helvetica, sans-serif; font-size:1.3em; color:#ffffff; text-indent:inherit; text-decoration:none;}
+.cta-pics-videos .cta-caption {position:absolute; left:0; top:0; height:30px; background:#d2ab4a url(/clients/ATTPBGolf/Images/bg-caption.png) right 13px no-repeat; color:#ffffff; font-family:"Bembo W01"; font-size:1.8em; padding:0 41px 0 10px;}
+
+.cta-past-celebrities {text-align:center; margin-left:30px; float:right;}
+
+.cta-course-maps {text-align:center; margin-left:30px; float:right;}
+
+.cta-volunteer-application {text-align:center; float:left; margin-bottom:12px;}
+
+.cta-fun-stories {float:right;}
+
+.cta-purchase-cover-stories {clear:right;}
+
+#players-tabs {clear:both;}
+
+#twtr-widget-1 {margin:20px 0 0 0;}
+
+.players {width:975px;}
+.players .player {float:left; margin:0 0 10px 0; padding:0;}
+.players .player a {color:#ffffff; text-decoration:none;}
+.players .player .player-image {border:solid 1px #dddcdc; border-width:1px 1px 0 1px; margin:0; padding:0;}
+/*.players .player a:hover .player-image {border-color:#ffffff;}*/
+.players .player .player-image img {margin:9px;}
+.players-professionals .player span .player-caption {height:35px; display:block; background-color:#d2ab4a; font-family:"Bembo W01"; font-size:2.6em; color:#ffffff; text-decoration:none; line-height:35px; text-align:center;}
+.players-professionals .player a .player-caption {height:35px; display:block; background:#d2ab4a url(/clients/ATTPBGolf/Images/bg-player-caption.png) right 13px no-repeat; font-family:"Bembo W01"; font-size:2.2em; color:#ffffff; text-decoration:none; line-height:35px; text-align:center;}
+.players-professionals .player a:hover .player-caption {background-color:#ddc077;}
+.players-professionals .player {margin-right:10px;}
+.players-celebrities .player .player-caption p {height:35px; display:block; background-color:#d2ab4a; font-family:"Bembo W01"; font-size:2.2em; color:#ffffff; text-decoration:none; line-height:35px; text-align:center; margin:0; padding:0;}
+.players-celebrities {padding-top:15px;}
+.players-celebrities .player {margin-right:6px;}
+.players .last {margin-right:0;}
+
+.players-pagination {text-align:center; clear:both; padding-top:15px;}
+.players-pagination p span {padding:0 6px 0 6px;}
+
+.sponsors-list {}
+.sponsors-list .sponsor {width:145px; height:150px; float:left; margin:0 20px 14px 0; padding:0; text-align:center;}
+.sponsors-list img {margin:0 0 6px 0; padding:0; width:145px; height:100px;}
+.sponsors-list span {font-family:Arial, Helvetica, sans-serif; color:#008ED2;}
+.sponsors-list .last {margin-right:0;}
+
+.charities-list {}
+.charities-list .charity-item {width:145px; height:150px; float:left; margin:0 20px 14px 0; padding:0; text-align:center;}
+.charities-list img {margin:0 0 6px 0; padding:0; width:145px; height:100px;}
+.charities-list .img-holder {margin:0 0 6px 0; padding:0; width:145px; height:100px; display:block;}
+.charities-list span {font-family:Arial, Helvetica, sans-serif; color:#008ED2;}
+.charities-list .last {margin-right:0;}
+
+.charities-pagination {text-align:center; clear:both; padding-top:15px;}
+.charities-pagination p span {padding:0 6px 0 6px;}
+
+.press-release {margin:12px 0 0 0;}
+.press-releases p { margin:0; padding:0;}
+.press-releases .date {}
+.press-releases .title {line-height:27px;}
+.press-releases .title a {/*padding:0 0 0 30px; background: url(/clients/ATTPBGolf/Images/pdf-icon.png) left 4px no-repeat;*/ line-height:27px; display:block;}
+.press-releases .download {}
+.press-releases .pdf-download {}
+.press-releases img { margin-right:5px}
+
+
+.scoring {/*background:url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) bottom left repeat-x;*/}
+.scoring h4 {margin:0; padding:0; background:url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) top left repeat-x; font-weight:normal;}
+.scoring h4.first {margin-top:36px;}
+.scoring h4 a {margin:0; padding:12px 0 12px 0; display:block; color:#6eb43f;}
+.scoring h4 a:hover {color:#008ed2;}
+.scoring h4 a:focus,
+.scoring h4 a:active {-moz-outline-style:none; outline:none;}
+.scoring h4 a span {background:url(/clients/ATTPBGolf/Images/btn-expand.png) center left no-repeat; float:right; padding:0 0 0 20px; color:#1a1718;}
+.scoring h4 a.selected span {background:url(/clients/ATTPBGolf/Images/btn-contract.png) center left no-repeat;}
+.scoring .stats-toggle {display:none;}
+
+.past-champions h2 {margin:0; padding:0; background:url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) top left repeat-x; font-weight:normal;}
+.past-champions h2 a {margin:0; padding:12px 0 12px 0; display:block;}
+.past-champions h2 a:focus,
+.past-champions h2 a:active {-moz-outline-style:none; outline:none;}
+.past-champions h2 a span {background:url(/clients/ATTPBGolf/Images/btn-expand.png) center left no-repeat; float:right; padding:0 0 0 20px; color:#1a1718;}
+.past-champions h2 a.selected span {background:url(/clients/ATTPBGolf/Images/btn-contract.png) center left no-repeat;}
+.past-champions .stats-toggle {display:none;}
+
+.tournament-stats {/*background:url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) bottom left repeat-x;*/}
+.tournament-stats h2 {margin:0; padding:0; background:url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) top left repeat-x;}
+.tournament-stats h2 a {margin:0; padding:12px 0 12px 0; display:block;}
+.tournament-stats h2 a:focus,
+.tournament-stats h2 a:active {-moz-outline-style:none; outline:none;}
+.tournament-stats h2 a span {background:url(/clients/ATTPBGolf/Images/btn-expand.png) center left no-repeat; float:right; padding:0 0 0 20px; color:#1a1718;}
+.tournament-stats h2 a.selected span {background:url(/clients/ATTPBGolf/Images/btn-contract.png) center left no-repeat;}
+.tournament-stats .stats-toggle {display:none;}
+
+.products {margin:0; padding:0 0 12px 0;}
+.products .product {margin:0; padding:16px 0 0 0;}
+.products .product p {margin:0; padding:0 0 6px 0;}
+.products .product .title {font-size: 1.6em; font-family:Georgia, "Times New Roman", Times, serif; font-weight:normal; font-weight:normal}
+.products .price {color:#6eb43f; font-weight:bold;}
+
+.courses {margin:0; padding:24px 0 0 0;}
+.courses .course {margin:0 0 24px; 0; padding:0; clear:both;}
+.courses .course .alpha {float:left; margin:0 14px 0 0; width:233px;}
+.courses .course .beta {float:left; margin:0; width:477px;}
+.courses .course p {font-size:1.2em; line-height:18px;}
+.courses .course p.title {margin:0 0 6px 0; padding:0; font-size: 1.6em; line-height:16px; font-family:Georgia, "Times New Roman", Times, serif; color:#6eb43f; font-weight:normal; font-weight:normal}
+
+#map-canvas {width: 292px;height: 478px; float:right; margin:0;}
+
+#birdies-faq-tabs {margin-top:24px;}
+
+.contact-form {margin:0;}
+.contact-form .inner {padding:22px; text-align:center;}
+.contact-form ul {margin:0 0 0 8px; padding:0; list-style:none; text-align:left;}
+.contact-form ul li {margin:0; padding:0; list-style:none; background:none; font-size:1.6em; font-family:Georgia, "Times New Roman", Times, serif;}
+.contact-form input {display:block; width:216px; height:28px; margin:0; padding:0 7px 0 7px; font-size:11px; line-height:29px; font-family:Arial, Helvetica, sans-serif; color:#6f6f6f; border-left:solid 1px #868485; border-bottom:solid 1px #a3a2a3; border-right:solid 1px #939292; border-top:none; background-color:#ffffff;}
+.contact-form input.submit {background:#6eb43f url(/clients/ATTPBGolf/Images/bg-btn-arrow.png) right center no-repeat; width:217px; font-family:"Bembo W01"; font-size:19px; line-height:19px; color:#fefefe; padding:10px 34px 10px 0; margin:20px 0 0; border:none; text-align:right; height:auto;}
+.contact-form input.submit:hover {background-color:#7cbb52;}
+/*.contact-form select {display:block; width:216px; height:28px; margin:0; padding:0 7px 0 7px; font-size:11px; line-height:29px; font-family:Arial, Helvetica, sans-serif; color:#6f6f6f; background:#ffffff url(/clients/ATTPBGolf/Images/bg-btn-select.png) right center no-repeat; border-left:solid 1px #868485; border-bottom:solid 1px #a3a2a3; border-right:solid 1px #939292; border-top:none;}*/
+.contact-form .selector,
+.contact-form .selector:hover,
+.contact-form .selector.hover,
+.contact-form .selector.hover:hover,
+.contact-form .selector.focus:hover,
+.contact-form .selector.focus {background:#ffffff url(/clients/ATTPBGolf/Images/bg-btn-select.png) right center no-repeat; width:204px; border-left:solid 1px #868485; border-bottom:solid 1px #a3a2a3; border-right:solid 1px #939292; border-top:none;}
+.contact-form .selector span {font-size:11px; text-transform:none; font-family:Arial, Helvetica, sans-serif; background:none;}
+.contact-form textarea {display:block; width:216px; height:80px; margin:0; padding:3px 7px 0 7px; font-size:11px; line-height:15px; font-family:Arial, Helvetica, sans-serif; color:#6f6f6f; border-left:solid 1px #868485; border-bottom:solid 1px #a3a2a3; border-right:solid 1px #939292; border-top:none; background-color:#ffffff;}
+.contact-form label {display:block; margin:10px 0 4px 0; font-style:italic;}
+
+.cta-fact-sheet {background:url(/images/content/icon-fact-sheet.gif) left top no-repeat; width:350px; height:148px;   float:left;}
+
+.cta-media-sheet {background:url(/images/content/icon-media-sheet.gif) left top no-repeat; width:350px; height:148px;  margin:0 30px 0 0; float:left;}
+
+.main .gallery {width:737px;} 
+.main .gallery .jg_pathway {display:none;}
+.main .gallery .sectiontableheader {font-size:2.6em; font-family:'Bembo MT W01 Italic'; font-weight:normal; line-height: 0.8em;padding-bottom: 5px; text-align:left;}
+
+.video-left {float:left; width:350px; margin:0 37px 0 0;}
+.video-right {float:left; width:350px;}
+
+.cta-player-interviews { width: 310px; height: 208px; border: 1px solid #EBDAB0; padding: 6px; background: url(/images/cta/cta-player-interviews.jpg) 6px 6px no-repeat; }
+.cta-player-interviews a { display: block; width: 310px; height: 208px; text-indent: -9999em;}
+
+.twtr-widget .twtr-timeline .twtr-tweet p {font-size:inherit!important; line-height:inherit!important;}
+
+
+.tickets {clear:both; overflow:hidden;}
+.tickets h2 {font-size:2.4em; font-family:'Bembo W01'; font-weight:normal; line-height: 0.8em;padding-bottom: 5px; font-style:normal; color:#ffffff; text-align:center;}
+
+.content .tickets-bottom li {margin:0;}
+.content .tickets-bottom li.no-bullet {padding-left:0; background:none;}
+
+.btn-basic {clear:left; float:left;}
+
+.tickets .grounds-tickets {background-color:#231f20; padding:14px 10px 14px 10px; width:455px; float:left; margin-right:26px;}
+	.tickets-bottom .grounds-tickets {background:none;}
+.tickets .upgrades-packages-more {background-color:#231f20; padding:14px 10px 14px 10px; width:455px; float:left;}
+	.tickets-bottom .upgrades-packages-more {background:none;}
+.tickets .tickets-inner {background-color:#ffffff; padding:10px 5px 10px 5px;}
+.tickets .ticket {background:url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) bottom left repeat-x; padding:4px 0 8px 0;}
+.tickets .ticket p {margin:0; padding:0;}
+.tickets .ticket .thumb {width:151px; float:left; margin-right:9px;}
+.tickets .ticket .thumb a {width:151px; height:68px; border:solid 1px #d5d4d4; position:relative; display:block;}
+.tickets .ticket img.img-thumb {position:absolute; left:4px; top:4px;}
+.tickets .ticket img.btn-plus {position:absolute; left:133px; top:50px;}
+.tickets .ticket .info {width:285px; float:left;}
+.tickets .ticket .info p.title {width:280px; font-size:1.4em; font-family:Georgia, "Times New Roman", Times, serif; font-weight:bold;}
+.tickets .ticket .info p.price {/*width:155px;*/width:280px; float:left; font-family:Arial, Helvetica, sans-serif; font-size:1.3em; font-style:italic;}
+
+.tickets .ticket .info .btn-basic a {font-size: 0.8em;	padding: 1px 28px 2px 11px; margin:5px 5px}
+.tickets .ticket .info p.more {/*width:155px;*/ float:left;}
+/*add again when making buy now buttons live
+.tickets .ticket .info p.buy-now {width:125px; float:right;}*/
+.tickets .ticket .more-info {clear:both; display:none; padding:12px 12px 0 12px;}
+.tickets .ticket .more-info ul li {font-family:Arial, Helvetica, sans-serif; margin-bottom:0; line-height:17px;}
+.tickets .last {background:none;}
+
+.btn-delivery-options {float:right; margin-right:16px;}
+.btn-compare-packages {clear:both; float:right;}
+
+.cta-offline-ticket-purchases {margin-left:40px;}
+
+.volunteer-quote {width:260px; float:right; padding:20px; margin-left:25px;}
+.volunteer-quote p {margin:0; padding:0;}
+.volunteer-quote .quote-text {font-family:Georgia, "Times New Roman", Times, serif; font-size:1.4em; font-style:italic; padding:0 0 0 16px; background:url(/clients/ATTPBGolf/Images/quote-open.gif) left top no-repeat;}
+.volunteer-quote .quote-text span {padding:0 16px 0 0; background:url(/clients/ATTPBGolf/Images/quote-closed.gif) right bottom no-repeat;}
+.volunteer-quote .quote-by {text-align:right; font-size:1.3em; font-family:Arial, Helvetica, sans-serif; font-style:italic; line-height:13px;}
+
+.volunteers {clear:both;}
+.volunteers .alpha {float:left; width:350px; margin:20px 30px 0 0;}
+.volunteers .beta {float:left; width:350px; margin-top:20px;}
+
+/* lee.css */
+
+
+.content .left-timeline {float:left; border-right:1px solid #dddcdc; margin:0 22px 0 0; padding:0 22px 20px 0; }
+.content .right-timeline {float:left;}
+.right-timeline , .left-timeline {width:46.6%; margin:0 ;  }
+.content .right-timeline li , .content .left-timeline li { display:block; margin:0 0 10px 0; padding:0; padding:5px; border:1px solid #dddcdc; background:none; position:relative}
+.content .right-timeline h3 , .content .left-timeline h3 { font-weight:bold; font-size:1.1em; margin:5px 0 0 0}
+.content .right-timeline p , .content .left-timeline p { margin-bottom:5px}
+
+.content .timeline-left-floaty { background:url(/clients/ATTPBGolf/Images/timeline-left.gif) no-repeat; position:absolute; top:15px; right:-16px; width:17px; height:45px}
+.content .timeline-right-floaty { background:url(/clients/ATTPBGolf/Images/timeline-right.jpg) no-repeat; position:absolute; top:15px; left:-17px; width:17px; height:45px}
+
+.content .left-timeline li.date-2010 .timeline-left-floaty {top:223px;}
+.content .left-timeline li.date-1991 .timeline-left-floaty {top:200px;}
+.content .left-timeline li.date-1967 .timeline-left-floaty {top:200px;}
+.content .left-timeline li.date-1946 .timeline-left-floaty {top:223px;}
+.content .left-timeline li.date-1942 .timeline-left-floaty {top:10px;}
+/*.content .left-timeline li.date-1937 .timeline-left-floaty {top:15px;}*/
+
+.content .right-timeline li:before, .content .right-timeline li:after, .content .left-timeline li:before, .content .left-timeline li:after { content: ""; display: table; }
+.content .right-timeline li:after,.content .left-timeline li:after  { clear: both; }
+.content .left-timeline li { *zoom: 1; }
+
+
+
+h2.width390 {width: 440px;}
+.content ul.latest-news { padding:0;}
+.content ul.latest-news li {list-style-type: none;padding: 0px;background: none;}
+.content ul.latest-news li img {float: left;margin-right: 25px;margin-top: 3px;}
+.content ul.latest-news li p {display: inline-block;width: 76%;}
+.content ul.latest-news li h3 { line-height: 1.0em; font-weight:normal;font-family: 'Bembo W01'; font-style:normal; font-size: 1.4em; margin: 16px 0 6px 0;}
+
+
+.col-3-full { clear:both; }
+.col-3-full .col {width:300px; margin: 0 38px 30px 0; float:left;}
+.col-3-full .last {margin-right:0;}
+.col-3-full img {margin-bottom: 20px;}
+
+.pdf-download { background: url(/clients/ATTPBGolf/Images/pdf-icon.png) no-repeat; padding: 2px 0 3px 35px; font-family: 'Bembo W01'; font-size: 1.4em; text-decoration:none}
+#pdf-download-application p { padding-top:9px}
+
+.quote { display:block; width:300px ; float:right; font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; font-size:1.4em; margin-left:20px}
+.open-quote { display:block; background: url(/clients/ATTPBGolf/Images/quote-open.gif) no-repeat;  height: 11px;
+width: 14px;
+float: left;
+margin-right: 10px;}
+.close-quote { display:inline-block; background: url(/clients/ATTPBGolf/Images/quote-closed.gif) no-repeat; height: 11px;
+width: 14px;
+margin-left: 10px;}
+.quote-by { font-style:normal;  font-size:0.9em}
+
+.content .schedule-of-events h4 { text-transform:uppercase}
+.content .schedule-of-events ul li { margin-bottom:0px}
+.content .schedule-of-events ul li.no-bullet {background:none;}
+
+.not-done { background-color:#FF0; padding:2px}
+
+/* Schedule Of Events */
+.rightCTA .btn-basic {font-size: 1.9em; width: 247px;margin: 0 2px;padding: 12px 0 0px; text-align:center}
+.schedule-of-events-sidebar img { margin: 0 auto; display:block; margin-top:15px}
+.schedule-of-events-sidebar p {font-size:1.2em;}
+.text-right { text-align:right}
+.text-right strong { float:left}
+.site-wrapper .content .text-center{ text-align:center; 
+padding-top:3px}
+
+
+.schedule-of-events { position:relative;}
+.schedule-of-events #print-this-page, .schedule-of-events #email-schedule { font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; color:#231f20; text-decoration:none; margin:0 0 12px 0;}
+.error_active {border: 2px solid #C6151B;margin: 10px 0px;padding: 10px 23px;color: #C6151B;background-color: #FFFFD6;}
+.error_msg p { margin:0}
+#more-inputs {cursor:pointer}
+.schedule-of-events #print-this-page { background: url(/clients/ATTPBGolf/Images/printer.gif) 12px top no-repeat; padding-left:34px; cursor:pointer}
+.schedule-of-events #email-schedule {background: url(/clients/ATTPBGolf/Images/email-icon.gif) 0 1px no-repeat; padding-left:23px; cursor:pointer}
+.schedule-of-events #print-this-page:hover, .schedule-of-events #email-schedule:hover { text-decoration:underline}
+#additional-inputs { display:none}
+
+.send-schedule-container {background: url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) bottom left repeat-x; margin:10px 0; padding-bottom:10px}
+.send-schedule-container input {border: 1px solid #A7A5A6;border-left: 1px solid #8B8889;font-size: em;color: #828282;padding: 7px;width: 199px;}
+#email-schedule-submit {text-decoration: none;
+background-color: #7CBB52;
+border-color: #7CBB52;font-family: "Bembo MT W01 Italic"; color:#fff; background: #6EB43F url(/clients/ATTPBGolf/Images/bg-btn-arrow.png) right center no-repeat; font-size:2.0em}
+#email-schedule-submit:hover {background-color: #7CBB52;}
+
+
+.keep-sake-title {margin-top:36px;}
+.keep-sake { width:300px; position:relative;float:left; height:90px; margin:15px 37px 50px 0 }
+.keep-sake.last { margin-right:0;}
+.keep-sake img { float:right; position: absolute;top: -6px;right: 0;}
+.content .keep-sake h3 { float:left; font-family: 'Bembo W01'; font-weight: normal; font-size: 1.9em; background: url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) bottom left repeat-x; line-height:1.1em; padding-bottom:11p; width: 203px;height: 50px; font-style:normal}
+.price-point { position:absolute; top:-5px; right:60px; background: url(/clients/ATTPBGolf/Images/price-point.png) 0 1px no-repeat; width:45px; height:35px; font-family: 'Bembo MT W01 Italic'; color:#fff; font-size:2.5em; text-align:center; padding:12px 6px}
+.keep-sake a { float:left; clear:both; font-size: 1.1em;margin-top: 7px;}
+
+.inline-sidebar {width: 300px;
+float: right;
+margin-left: 34px;}
+.limited-quantities {background: url(/clients/ATTPBGolf/Images/limited-quantities-flag.png) bottom left repeat-x; width:109px; height:17px; position:absolute; top:79px; right:-7px; }
+
+#two-col-mod-left .latest-news p { width:560px}
+#two-col-mod-left .latest-news .half p { width:225px}
+.charity p { float:right ;display:block; width: 487px;}
+.charity { margin-bottom:20px}
+
+#two-col-mod-left .latest-news:before, #two-col-mod-left .latest-news:after { content: ""; display: table; }
+#two-col-mod-left .latest-news:after { clear: both; }
+#two-col-mod-left .latest-news { *zoom: 1; }
+
+
+.products4x4 { margin:15px 0 20px 0}
+.products4x4 .product img { float:left; margin-right:10px}
+	.products4x4 .product .img-left img {float:none; margin:0;}
+	.products4x4 .product .img-left {margin:0 10px 10px 0;}
+.products4x4 .product:before, .products .product:after { content: ""; display: table; }
+.products4x4 .product:after { clear: both; }
+.products4x4 .product { *zoom: 1; width: 44%;margin-right: 64px;float: left; margin-bottom:10px}
+.products4x4 .last { margin-right:0}
+.products4x4 .purchase {width: 171px; float:right;}
+	.products4x4 .img-left .purchase {width:auto; float:none; text-align:center;}
+	
+.products3x3 { margin:15px 0 20px 0; overflow:hidden;}
+.products3x3 .product img { float:right; margin-left:10px}
+.products3x3 .product:before, .products .product:after { content: ""; display: table; }
+.products3x3 .product:after { clear: both; }
+.products3x3 .product { *zoom: 1; width: 30%; margin-right: 35px;float: left; margin-bottom:10px}
+.products3x3 .last { margin-right:0}
+	
+.product .title {font-size: 1.6em;font-family: Georgia, "Times New Roman", Times, serif; font-weight: normal;margin: 0x 0 6px 0;padding: 0; line-height:1.2em}
+	.products3x3 .product .title {background:url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) left bottom repeat-x; margin:32px 0 10px 0; padding:0 0 15px 0;}
+.product .price {font-size: 1.0em;font-family: Georgia, "Times New Roman", Times, serif;font-weight: normal;font-style: italic;color: #6EB43F;padding-bottom: 15px;font-weight: bold;}
+
+.inline-circle{background: url(/clients/ATTPBGolf/Images/bg-ol-bullet.png) left top no-repeat;width: 28px;height: 29px; float:left;font-family: Arial, Helvetica, sans-serif;font-size: 1.9em;font-style: italic;font-weight: normal; color:#fff; padding-left: 7px; margin-top:4px;}
+
+.homepage-buy-now {width:311px; margin:0; text-align:center;}
+.homepage-buy-now p.become-a-sponsor {width:283px; margin:0;}
+
+.content .cta-birdies .flag {background: url(/clients/ATTPBGolf/Images/highly-recommended.png) no-repeat; height: 107px; width: 128px; position:absolute; top:-1px; right:-1px;}
+.content .cta-birdies .inner { position:relative}
+.content .cta-birdies h3 { text-align:left; }
+.content .cta-birdies h3.h3-shrink { font-size: 2em; margin:13px 0 -16px 0;}
+.content .cta-birdies h3 { margin-bottom:10px}
+
+.content .cta-latest-birdies-news .inner {text-align:left;}
+
+
+.highlight-sub { margin-bottom:4px}
+.highlight-link {font-family: 'Bembo MT W01 Italic'; font-size:1.2em }
+
+.content .recognition-tables { width:350px; float:left; margin-right:30px}
+.content .last {margin-right:0}
+
+.footer-note { font-style:italic; font-size:1.1em}
+#parking-table td { height:50px; display:table-cell; line-height:2em}
+.table .last-row td { background:none}
+
+#join-us-pro-am .btn-basic { margin-bottom:10px}
+#join-us-pro-am h3 { font-size:2.2em}
+
+#mc_embedded_subscribe_form .submit:hover {background-color: #7CBB52;}
+
+
+.players-celebrities .player-caption p { width:321px!important}
+.col-right-float { float:right; width:300px; }
+
+
+#verb a {color: #231F20; text-decoration:none}
+#verb a:hover { text-decoration:underline}
+
+
+/* Ipad Slider */
+
+#dlmodule {}
+	
+	#dl { margin: 0 auto; max-width: 1415px; background-color: transparent; }
+		#dl .wrapper { position: relative; height: 617px; overflow: hidden; }
+
+	#dlBody{margin: 0pt auto; width: 1415px;position:relative}
+
+		#dlScroller { float: left; padding: 0; height: 100%; }
+		#dlScroller .iSlide { position: relative; height: 617px; color: white; }
+		#dlScroller .slideImage { height: 100%; }
+		#dlScroller .slideTitle { display: block; position: absolute; bottom: 0; padding: 8px 0; width: 100%; background-color: rgba(0,0,0,0.7); display: none; }
+	
+			#dlScroller ul { display: block; float: left; padding: 0; margin: 0; width: 100%; height: 100%; list-style: none; text-align: left; }
+			#dlScroller ul li { display: block; float: left; padding: 0px; width: 1415px; height: 617px; -webkit-box-sizing: border-box; text-align: center; }
+	
+		#dlNav { display: block; position: absolute; bottom: 80px; left: 151px; margin: 0; padding: 0; width: 200px; height:11px; display: none;}
+		
+			#dlIndicator, #dlIndicator > li { display: block; margin: 0; padding: 0; list-style: none; }
+			#dlIndicator { padding-top: 1px; text-align: center; }
+			#dlIndicator > li { display:inline-block; margin-right: 4px; width: 5px; height: 5px; text-indent:-9999em; -webkit-border-radius: 3px; background: #767676; overflow: hidden; }
+			#dlIndicator > li.active,#videoIndicator > li.active,#buzzworthyIndicator > li.active { background:#fff; }
+			#dlIndicator > li:last-child{margin:0}
+
+	#dl .btn { display: block; position: absolute; bottom: 63px; z-index: 50; width: 43px; height: 43px; text-indent: -99999px;  display: none;}
+	#dl .btn-left { right: 204px; background: url(../images/previous.png) no-repeat; color: #9B7D0D; text-indent: -99999px; }
+	#dl .btn-right { right: 152px; background: url(../images/next.png) no-repeat; color: #9B7D0D; text-indent: -99999px; }
+	
+#ue4p8y_2 { display:none}
+.site-wrapper .addthis_button_facebook_like at300b {width: 45px!important;overflow: hidden;}
+
+/* IE7 Fixes */
+.ie7 .player-caption {width:235px}
+.ie7 .tournament-stats h2 a span { margin-top:-20px}
+.ie7 .tournament-stats h2 a { height:20px}
+.tournament-stats h2 a { color:#6EB43F}
+.tournament-stats h2 a:hover {color:#008ED2}
+.ie7 .past-champions h2 a span { margin-top:-20px}
+.ie7 .past-champions h2 a { height:20px}
+.past-champions h2 a { color:#6EB43F}
+.past-champions h2 a:hover {color:#008ED2}
+.ie7 .scoring h2 a span { margin-top:-20px}
+.ie7 .scoring h2 a { height:20px}
+.scoring h2 a { color:#6EB43F}
+.scoring h2 a:hover {color:#008ED2}
+.ie7 div.selector { width:220px!important}
+.ie7 div.selector select { width:230px}
+.ie7 .schedule-of-events input { width:200px!important}
+.ie7 .inline-sidebar { float:none!important; width:auto!important}
+.ie7 .cta-course-maps { margin-left:10px}
+
+.slide img {background: transparent;filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src=ie8-logo.png,sizingMethod='crop');}
+
+
+.addthis_toolbox { width:285px}
+
+/* make the like button smaller */
+.site-wrapper .addthis_default_style .addthis_button_facebook_like {width: 45px;overflow: hidden;}
+.site-wrapper .addthis_default_style .addthis_nonzero {width: 90px;}
+
+
+.tickets .sold-out { width: 80px;float: right; height:73px; background:url(../images/sold-out.gif) no-repeat; text-indent:-999px; }
+

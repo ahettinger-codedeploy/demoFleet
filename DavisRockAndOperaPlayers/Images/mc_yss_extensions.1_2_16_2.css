@@ -1,0 +1,2315 @@
+#imgviewer-index
+{
+    TEXT-ALIGN: left;
+    PADDING-BOTTOM: 3px;
+    MIN-HEIGHT: 24px;
+    PADDING-LEFT: 9px;
+    PADDING-RIGHT: 0px;
+    BACKGROUND: #333;
+    HEIGHT: 24px;
+    PADDING-TOP: 3px
+}
+.imgZoomInCtrl
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    WIDTH: 26px;
+    DISPLAY: none;
+    BACKGROUND: url(http://us.i1.yimg.com/us.yimg.com/lib/smb/assets/hosting/yss/extensions/slideshow/zoom_sm_1.0.gif) no-repeat 0% 50%;
+    HEIGHT: 26px;
+    CURSOR: pointer
+}
+#imgviewer-overlay
+{
+    Z-INDEX: 3;
+    BORDER-BOTTOM: 0px;
+    POSITION: fixed;
+    FILTER: alpha(opacity=80);
+    BORDER-LEFT: 0px;
+    WIDTH: 100%;
+    DISPLAY: none;
+    BACKGROUND: #111;
+    HEIGHT: 100%;
+    BORDER-TOP: 0px;
+    TOP: 0px;
+    BORDER-RIGHT: 0px;
+    LEFT: 0px;
+    opacity: .8
+}
+#imgviewer-overlay .iframe4IE
+{
+    DISPLAY: none
+}
+* HTML #imgviewer-overlay .iframe4IE
+{
+    Z-INDEX: -1;
+    BORDER-BOTTOM: 0px;
+    POSITION: absolute;
+    FILTER: alpha(opacity=0);
+    BORDER-LEFT: 0px;
+    WIDTH: 100%;
+    DISPLAY: block;
+    HEIGHT: 100%;
+    VISIBILITY: visible;
+    BORDER-TOP: 0px;
+    TOP: 0px;
+    BORDER-RIGHT: 0px;
+    LEFT: 0px
+}
+#imgviewer-stage
+{
+    Z-INDEX: 3;
+    BORDER-BOTTOM: #999 2px solid;
+    POSITION: fixed;
+    TEXT-ALIGN: center;
+    BORDER-LEFT: #999 2px solid;
+    PADDING-BOTTOM: 9px;
+    PADDING-LEFT: 9px;
+    WIDTH: 90%;
+    PADDING-RIGHT: 9px;
+    DISPLAY: none;
+    FONT-FAMILY: "Trebuchet MS", Arial;
+    BACKGROUND: #111;
+    HEIGHT: 80%;
+    COLOR: #ddd;
+    BORDER-TOP: #999 2px solid;
+    TOP: 50%;
+    BORDER-RIGHT: #999 2px solid;
+    PADDING-TOP: 9px;
+    LEFT: 50%
+}
+#imgviewer-stage #imgviewer-closeButton
+{
+    CURSOR: pointer
+}
+#imgviewer-slideshow LI IMG
+{
+    CURSOR: pointer
+}
+#imgviewer-stage #imgviewer-closeButton
+{
+    MARGIN: -25px 10px 0pt 0pt;
+    WIDTH: 20px;
+    DISPLAY: inline;
+    BACKGROUND: url(http://us.i1.yimg.com/us.yimg.com/lib/smb/assets/hosting/yss/extensions/slideshow/close_2.2.gif) no-repeat 0% 50%;
+    FLOAT: right;
+    HEIGHT: 20px;
+    COLOR: #fff;
+    OVERFLOW: hidden;
+    TEXT-DECORATION: none
+}
+#imgviewer-stage #imgviewer-closeButton:hover
+{
+    BACKGROUND-POSITION: 100% 50%
+}
+#imageCell
+{
+    POSITION: relative;
+    BACKGROUND: url(http://us.i1.yimg.com/us.yimg.com/lib/smb/assets/hosting/yss/extensions/slideshow/loading_1.0.gif) no-repeat 50% 50%
+}
+#imageCell IMG
+{
+    POSITION: relative;
+    TOP: 50%
+}
+#imgviewer-stage #imgviewer-closeButton SPAN
+{
+    MARGIN-LEFT: -100px
+}
+#captionCell
+{
+    POSITION: absolute;
+    WIDTH: 100%;
+    BOTTOM: 9px;
+    LEFT: 9px
+}
+#imgviewer-caption
+{
+    TEXT-ALIGN: left;
+    PADDING-BOTTOM: 10px;
+    MARGIN: 0px;
+    PADDING-LEFT: 10px;
+    PADDING-RIGHT: 10px;
+    BACKGROUND: #333;
+    HEIGHT: 55px;
+    FONT-SIZE: 0.85em;
+    OVERFLOW: auto;
+    PADDING-TOP: 10px
+}
+#imgviewer-slideshow
+{
+    Z-INDEX: 4;
+    POSITION: absolute;
+    LIST-STYLE-TYPE: none;
+    WIDTH: 186px;
+    BOTTOM: 85px;
+    DISPLAY: block;
+    BACKGROUND: url(http://us.i1.yimg.com/us.yimg.com/lib/smb/assets/hosting/yss/extensions/slideshow/controls_ul_1.0.png) no-repeat;
+    HEIGHT: 61px;
+    MARGIN-LEFT: -93px;
+    LEFT: 50%
+}
+.macBug#imgviewer-slideshow
+{
+    LEFT: -1000em
+}
+.macBug#imgviewer-slideshow
+{
+    DISPLAY: none;
+    LEFT: 50%
+}
+x:unknown
+{
+    DISPLAY: none;
+    LEFT: 50%
+}
+.macBug#imgviewer-slideshow
+{
+    DISPLAY: block;
+    LEFT: -1000em
+}
+x:unknown
+{
+    DISPLAY: block;
+    LEFT: -1000em
+}
+x:unknown
+{
+    DISPLAY: block;
+    LEFT: -1000em
+}
+#imgviewer-slideshow LI
+{
+    LIST-STYLE-TYPE: none;
+    MARGIN: 0px 1px;
+    DISPLAY: inline
+}
+#imgviewer-slideshow LI A
+{
+    POSITION: absolute;
+    DISPLAY: block
+}
+#imgviewer-slideshow #slideshow-prev
+{
+    TOP: 12px;
+    LEFT: 13px
+}
+#imgviewer-slideshow #slideshow-prev
+{
+    WIDTH: 36px;
+    HEIGHT: 36px
+}
+#imgviewer-slideshow #slideshow-prev IMG
+{
+    WIDTH: 36px;
+    HEIGHT: 36px
+}
+#imgviewer-slideshow #slideshow-startstop
+{
+    TOP: 7px;
+    LEFT: 70px
+}
+#imgviewer-slideshow #slideshow-startstop
+{
+    WIDTH: 46px;
+    HEIGHT: 46px
+}
+#imgviewer-slideshow #slideshow-startstop IMG
+{
+    WIDTH: 46px;
+    HEIGHT: 46px
+}
+#imgviewer-slideshow .stopSlideShow
+{
+    BACKGROUND: url(http://us.i1.yimg.com/us.yimg.com/lib/smb/assets/hosting/yss/extensions/slideshow/stop_1.0.png) no-repeat 5px 3px
+}
+#imgviewer-slideshow #slideshow-next
+{
+    TOP: 13px;
+    LEFT: 139px
+}
+#imgviewer-slideshow #slideshow-next
+{
+    WIDTH: 33px;
+    HEIGHT: 35px
+}
+#imgviewer-slideshow #slideshow-next IMG
+{
+    WIDTH: 33px;
+    HEIGHT: 35px
+}
+#imgviewer-stage #imgviewer-stageImage
+{
+    BACKGROUND: #fff
+}
+* HTML
+{
+    BACKGROUND: url(about:blank) fixed
+}
+* HTML BODY
+{
+    HEIGHT: 100%
+}
+* HTML #imgviewer-overlay
+{
+    POSITION: absolute;
+    ;
+    TOP: expression(documentElement.scrollTop)
+}
+* HTML #imgviewer-stage
+{
+    POSITION: absolute;
+    ;
+    TOP: expression(documentElement.scrollTop + (this.parentNode.offsetHeight / 2))
+}
+* HTML #imgviewer-slideshow
+{
+    BACKGROUND: url(http://us.i1.yimg.com/us.yimg.com/lib/smb/assets/hosting/yss/extensions/slideshow/controls_ul_ie_1.0.gif) no-repeat
+}
+.stage-on#imgviewer-stage
+{
+    DISPLAY: block
+}
+.ap#body
+{
+    Z-INDEX: 1;
+    POSITION: absolute;
+    WIDTH: 100%
+}
+#imgviewer-slideshow .dimmed
+{
+    FILTER: alpha(opacity=60);
+    CURSOR: default;
+    opacity: .6
+}
+#ymp-player DIV
+{
+    DISPLAY: block
+}
+#ymp-tray DIV
+{
+    DISPLAY: block
+}
+#ymp-player DIV
+{
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px
+}
+#ymp-player UL
+{
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px
+}
+#ymp-player LI
+{
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px
+}
+#ymp-player TEXTAREA
+{
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px
+}
+#ymp-player P
+{
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px
+}
+#ymp-player TD
+{
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px
+}
+#ymp-tray DIV
+{
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px
+}
+#ymp-tray UL
+{
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px
+}
+#ymp-tray LI
+{
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px
+}
+#ymp-tray TEXTAREA
+{
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px
+}
+#ymp-tray P
+{
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    PADDING-TOP: 0px
+}
+#ymp-player IMG
+{
+    BORDER-BOTTOM: 0px;
+    BORDER-LEFT: 0px;
+    BORDER-TOP: 0px;
+    BORDER-RIGHT: 0px
+}
+#ymp-tray IMG
+{
+    BORDER-BOTTOM: 0px;
+    BORDER-LEFT: 0px;
+    BORDER-TOP: 0px;
+    BORDER-RIGHT: 0px
+}
+#ymp-player EM
+{
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal
+}
+#ymp-player STRONG
+{
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal
+}
+#ymp-tray EM
+{
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal
+}
+#ymp-tray STRONG
+{
+    FONT-STYLE: normal;
+    FONT-WEIGHT: normal
+}
+#ymp-player LI
+{
+    LIST-STYLE-TYPE: none
+}
+#ymp-tray LI
+{
+    LIST-STYLE-TYPE: none
+}
+#ymp-player SUP
+{
+    VERTICAL-ALIGN: text-top
+}
+#ymp-tray SUP
+{
+    VERTICAL-ALIGN: text-top
+}
+#ymp-player SUB
+{
+    VERTICAL-ALIGN: text-bottom
+}
+#ymp-tray SUB
+{
+    VERTICAL-ALIGN: text-bottom
+}
+#ymp-player INPUT
+{
+    FONT-FAMILY: inherit;
+    FONT-SIZE: 100%
+}
+#ymp-player TEXTAREA
+{
+    FONT-FAMILY: inherit;
+    FONT-SIZE: 100%
+}
+#ymp-player SELECT
+{
+    FONT-FAMILY: inherit;
+    FONT-SIZE: 100%
+}
+#ymp-tray INPUT
+{
+    FONT-FAMILY: inherit;
+    FONT-SIZE: 100%
+}
+#ymp-tray TEXTAREA
+{
+    FONT-FAMILY: inherit;
+    FONT-SIZE: 100%
+}
+#ymp-tray SELECT
+{
+    FONT-FAMILY: inherit;
+    FONT-SIZE: 100%
+}
+#ymp-player TABLE
+{
+    BORDER-SPACING: 0;
+    BORDER-COLLAPSE: collapse
+}
+#ymp-player
+{
+    Z-INDEX: 9999;
+    POSITION: fixed;
+    TEXT-ALIGN: left;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    WIDTH: 33px;
+    BOTTOM: 10px;
+    PADDING-RIGHT: 0px;
+    COLOR: #595959;
+    OVERFLOW: hidden;
+    PADDING-TOP: 0px;
+    LEFT: 0px
+}
+#ymp-body
+{
+    POSITION: relative;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    FONT-FAMILY: Arial, Helvetica;
+    BACKGROUND-POSITION: 100% -313px;
+    HEIGHT: 71px;
+    FONT-SIZE: 12px;
+    OVERFLOW: hidden;
+    PADDING-TOP: 0px
+}
+#ymp-body H1
+{
+    POSITION: absolute;
+    WIDTH: 0px;
+    HEIGHT: 0px;
+    LEFT: -10000px
+}
+#ymp-tray H1
+{
+    POSITION: absolute;
+    WIDTH: 0px;
+    HEIGHT: 0px;
+    LEFT: -10000px
+}
+#ymp-body H2
+{
+    POSITION: absolute;
+    WIDTH: 0px;
+    HEIGHT: 0px;
+    LEFT: -10000px
+}
+#ymp-tray H2
+{
+    POSITION: absolute;
+    WIDTH: 0px;
+    HEIGHT: 0px;
+    LEFT: -10000px
+}
+#ymp-body H3
+{
+    POSITION: absolute;
+    WIDTH: 0px;
+    HEIGHT: 0px;
+    LEFT: -10000px
+}
+#ymp-tray H3
+{
+    POSITION: absolute;
+    WIDTH: 0px;
+    HEIGHT: 0px;
+    LEFT: -10000px
+}
+#ymp-body H4
+{
+    POSITION: absolute;
+    WIDTH: 0px;
+    HEIGHT: 0px;
+    LEFT: -10000px
+}
+#ymp-tray H4
+{
+    POSITION: absolute;
+    WIDTH: 0px;
+    HEIGHT: 0px;
+    LEFT: -10000px
+}
+#ymp-body H5
+{
+    POSITION: absolute;
+    WIDTH: 0px;
+    HEIGHT: 0px;
+    LEFT: -10000px
+}
+#ymp-tray H5
+{
+    POSITION: absolute;
+    WIDTH: 0px;
+    HEIGHT: 0px;
+    LEFT: -10000px
+}
+#ymp-body H6 #ymp-tray H6
+{
+    POSITION: absolute;
+    WIDTH: 0px;
+    HEIGHT: 0px;
+    LEFT: -10000px
+}
+#ymp-body A
+{
+    BORDER-BOTTOM: medium none;
+    BORDER-LEFT: medium none;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    OUTLINE-STYLE: none;
+    OUTLINE-COLOR: invert;
+    PADDING-LEFT: 0px;
+    OUTLINE-WIDTH: medium;
+    PADDING-RIGHT: 0px;
+    FONT-FAMILY: Arial, Helvetica;
+    BORDER-TOP: medium none;
+    BORDER-RIGHT: medium none;
+    TEXT-DECORATION: none;
+    PADDING-TOP: 0px
+}
+#ymp-tray A
+{
+    BORDER-BOTTOM: medium none;
+    BORDER-LEFT: medium none;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    OUTLINE-STYLE: none;
+    OUTLINE-COLOR: invert;
+    PADDING-LEFT: 0px;
+    OUTLINE-WIDTH: medium;
+    PADDING-RIGHT: 0px;
+    FONT-FAMILY: Arial, Helvetica;
+    BORDER-TOP: medium none;
+    BORDER-RIGHT: medium none;
+    TEXT-DECORATION: none;
+    PADDING-TOP: 0px
+}
+#ymp-body A SPAN
+{
+    BORDER-BOTTOM: medium none;
+    BORDER-LEFT: medium none;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    BORDER-TOP: medium none;
+    BORDER-RIGHT: medium none;
+    PADDING-TOP: 0px
+}
+#ymp-tray A SPAN
+{
+    BORDER-BOTTOM: medium none;
+    BORDER-LEFT: medium none;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    BORDER-TOP: medium none;
+    BORDER-RIGHT: medium none;
+    PADDING-TOP: 0px
+}
+#ymp-body A:hover
+{
+    TEXT-DECORATION: underline
+}
+.ymp-player-min #ymp-body
+{
+    WIDTH: 33px;
+    BACKGROUND-POSITION: -655px -313px
+}
+.ymp-player-max #ymp-body
+{
+    WIDTH: 554px
+}
+#ymp-body #ymp-body-base
+{
+    Z-INDEX: 1;
+    POSITION: relative;
+    WIDTH: 546px;
+    HEIGHT: 62px;
+    opacity: .9;
+    -moz-opacity: .9
+}
+#ymp-body #ymp-body-strip
+{
+    FILTER: alpha(opacity=90);
+    WIDTH: 544px;
+    HEIGHT: 100%
+}
+#ymp-body #ymp-body-cap
+{
+    POSITION: absolute;
+    FILTER: alpha(opacity=90);
+    WIDTH: 4px;
+    HEIGHT: 100%;
+    TOP: 0px;
+    RIGHT: 0px
+}
+.ymp-player-min #ymp-body #ymp-body-base
+{
+    WIDTH: 24px
+}
+.ymp-player-min #ymp-body #ymp-body-strip
+{
+    WIDTH: 21px
+}
+#ymp-body #ymp-meta
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    WIDTH: 344px;
+    BACKGROUND-POSITION: -180px 0px;
+    HEIGHT: 54px;
+    TOP: 4px;
+    LEFT: 180px
+}
+#ymp-body #ymp-meta-bottom-right
+{
+    POSITION: absolute;
+    BOTTOM: 5px;
+    RIGHT: 5px
+}
+#ymp-body #ymp-meta-top
+{
+    POSITION: absolute;
+    WIDTH: 280px;
+    DISPLAY: table;
+    TOP: 5px;
+    LEFT: 58px
+}
+#ymp-body #ymp-meta-bottom
+{
+    POSITION: absolute;
+    WIDTH: 280px;
+    DISPLAY: table;
+    TOP: 5px;
+    LEFT: 58px
+}
+#ymp-body #ymp-meta-bottom
+{
+    BOTTOM: 5px;
+    TOP: auto
+}
+#ymp-body #ymp-meta-bottom TD
+{
+    HEIGHT: 16px;
+    FONT-SIZE: 11px;
+    VERTICAL-ALIGN: bottom
+}
+#ymp-body #ymp-meta-top TD
+{
+    HEIGHT: 32px;
+    VERTICAL-ALIGN: top
+}
+#ymp-body #ymp-meta-progress
+{
+    POSITION: relative;
+    LINE-HEIGHT: 16px;
+    MARGIN: 0px 5px 0px 0px;
+    WHITE-SPACE: nowrap;
+    FONT-SIZE: 11px;
+    TOP: 2px
+}
+#ymp-body #ymp-stickwall
+{
+    Z-INDEX: 3;
+    POSITION: absolute;
+    WIDTH: 344px;
+    DISPLAY: none;
+    BACKGROUND-POSITION: -179px -199px;
+    HEIGHT: 54px;
+    TOP: 0px;
+    LEFT: 0px
+}
+#ymp-body .ymp-stickwall-gradient
+{
+    POSITION: absolute;
+    WIDTH: 100%;
+    BACKGROUND-POSITION: -180px -54px;
+    HEIGHT: 100%;
+    TOP: 0px;
+    LEFT: 0px
+}
+#ymp-body #ymp-yahoo-logo
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    WIDTH: 28px;
+    BACKGROUND-POSITION: -120px -62px;
+    HEIGHT: 17px;
+    TOP: 22px;
+    LEFT: 11px
+}
+#ymp-body .ymp-pix-dark
+{
+    POSITION: absolute;
+    WIDTH: 1px;
+    DISPLAY: block;
+    HEIGHT: 1px;
+    OVERFLOW: hidden
+}
+#ymp-tray .ymp-pix-dark
+{
+    POSITION: absolute;
+    WIDTH: 1px;
+    DISPLAY: block;
+    HEIGHT: 1px;
+    OVERFLOW: hidden
+}
+#ymp-body .ymp-pix-light
+{
+    POSITION: absolute;
+    WIDTH: 1px;
+    DISPLAY: block;
+    HEIGHT: 1px;
+    OVERFLOW: hidden
+}
+#ymp-tray .ymp-pix-light
+{
+    POSITION: absolute;
+    WIDTH: 1px;
+    DISPLAY: block;
+    HEIGHT: 1px;
+    OVERFLOW: hidden
+}
+#ymp-body .ymp-pix-light
+{
+    FILTER: alpha(opacity=19);
+    opacity: .19;
+    -moz-opacity: .19
+}
+#ymp-tray .ymp-pix-light
+{
+    FILTER: alpha(opacity=19);
+    opacity: .19;
+    -moz-opacity: .19
+}
+#ymp-body .ymp-pix-dark
+{
+    FILTER: alpha(opacity=69);
+    opacity: .69;
+    -moz-opacity: .69
+}
+#ymp-tray .ymp-pix-dark
+{
+    FILTER: alpha(opacity=69);
+    opacity: .69;
+    -moz-opacity: .69
+}
+#ymp-body .ymp-pix-tr1
+{
+    TOP: 0px;
+    RIGHT: 2px
+}
+#ymp-tray .ymp-pix-tr1
+{
+    TOP: 0px;
+    RIGHT: 2px
+}
+#ymp-body .ymp-pix-tr2
+{
+    TOP: 0px;
+    RIGHT: 1px
+}
+#ymp-tray .ymp-pix-tr2
+{
+    TOP: 0px;
+    RIGHT: 1px
+}
+#ymp-body .ymp-pix-tr3
+{
+    TOP: 1px;
+    RIGHT: 0px
+}
+#ymp-tray .ymp-pix-tr3
+{
+    TOP: 1px;
+    RIGHT: 0px
+}
+#ymp-body .ymp-pix-tr4
+{
+    TOP: 2px;
+    RIGHT: 0px
+}
+#ymp-tray .ymp-pix-tr4
+{
+    TOP: 2px;
+    RIGHT: 0px
+}
+#ymp-body .ymp-pix-tl1
+{
+    TOP: 2px;
+    LEFT: 0px
+}
+#ymp-tray .ymp-pix-tl1
+{
+    TOP: 2px;
+    LEFT: 0px
+}
+#ymp-body .ymp-pix-tl2
+{
+    TOP: 1px;
+    LEFT: 0px
+}
+#ymp-tray .ymp-pix-tl2
+{
+    TOP: 1px;
+    LEFT: 0px
+}
+#ymp-body .ymp-pix-tl3
+{
+    TOP: 0px;
+    LEFT: 1px
+}
+#ymp-tray .ymp-pix-tl3
+{
+    TOP: 0px;
+    LEFT: 1px
+}
+#ymp-body .ymp-pix-tl4
+{
+    TOP: 0px;
+    LEFT: 2px
+}
+#ymp-tray .ymp-pix-tl4
+{
+    TOP: 0px;
+    LEFT: 2px
+}
+#ymp-body .ymp-pix-br1
+{
+    BOTTOM: 0px;
+    RIGHT: 2px
+}
+#ymp-tray .ymp-pix-br1
+{
+    BOTTOM: 0px;
+    RIGHT: 2px
+}
+#ymp-body .ymp-pix-br2
+{
+    BOTTOM: 0px;
+    RIGHT: 1px
+}
+#ymp-tray .ymp-pix-br2
+{
+    BOTTOM: 0px;
+    RIGHT: 1px
+}
+#ymp-body .ymp-pix-br3
+{
+    BOTTOM: 1px;
+    RIGHT: 0px
+}
+#ymp-tray .ymp-pix-br3
+{
+    BOTTOM: 1px;
+    RIGHT: 0px
+}
+#ymp-body .ymp-pix-br4
+{
+    BOTTOM: 2px;
+    RIGHT: 0px
+}
+#ymp-tray .ymp-pix-br4
+{
+    BOTTOM: 2px;
+    RIGHT: 0px
+}
+#ymp-body .ymp-cap-body1
+{
+    POSITION: absolute;
+    OVERFLOW: hidden
+}
+#ymp-body .ymp-cap-body2
+{
+    POSITION: absolute;
+    OVERFLOW: hidden
+}
+#ymp-body .ymp-stickwall-body1
+{
+    POSITION: absolute;
+    OVERFLOW: hidden
+}
+#ymp-body .ymp-stickwall-body2
+{
+    POSITION: absolute;
+    OVERFLOW: hidden
+}
+#ymp-body .ymp-stickwall-body3
+{
+    POSITION: absolute;
+    OVERFLOW: hidden
+}
+#ymp-body .ymp-stickwall-body4
+{
+    POSITION: absolute;
+    OVERFLOW: hidden
+}
+#ymp-body .ymp-stickwall-body5
+{
+    POSITION: absolute;
+    OVERFLOW: hidden
+}
+#ymp-body .ymp-cap-body1
+{
+    WIDTH: 2px;
+    HEIGHT: 60px;
+    TOP: 1px;
+    RIGHT: 1px
+}
+#ymp-body .ymp-cap-body2
+{
+    WIDTH: 1px;
+    HEIGHT: 56px;
+    TOP: 3px;
+    RIGHT: 0px
+}
+#ymp-body .ymp-stickwall-body1
+{
+    WIDTH: 1px;
+    HEIGHT: 50px;
+    TOP: 2px;
+    LEFT: 0px
+}
+#ymp-body .ymp-stickwall-body2
+{
+    WIDTH: 1px;
+    HEIGHT: 52px;
+    TOP: 1px;
+    LEFT: 1px
+}
+#ymp-body .ymp-stickwall-body3
+{
+    WIDTH: 1px;
+    HEIGHT: 52px;
+    TOP: 1px;
+    RIGHT: 1px
+}
+#ymp-body .ymp-stickwall-body4
+{
+    WIDTH: 1px;
+    HEIGHT: 50px;
+    TOP: 2px;
+    RIGHT: 0px
+}
+#ymp-body .ymp-stickwall-body5
+{
+    WIDTH: 340px;
+    HEIGHT: 100%;
+    TOP: 0px;
+    LEFT: 2px
+}
+#ymp-body #ymp-rhap-stickwall
+{
+    DISPLAY: none
+}
+#ymp-body #ymp-error-stickwall
+{
+    DISPLAY: none
+}
+#ymp-body .ymp-rhap-stickwall .ymp-stickwall-body1
+{
+    BACKGROUND-COLOR: #6cabd2
+}
+#ymp-body .ymp-rhap-stickwall .ymp-stickwall-body2
+{
+    BACKGROUND-COLOR: #6cabd2
+}
+#ymp-body .ymp-rhap-stickwall .ymp-stickwall-body3
+{
+    BACKGROUND-COLOR: #6cabd2
+}
+#ymp-body .ymp-rhap-stickwall .ymp-stickwall-body4
+{
+    BACKGROUND-COLOR: #6cabd2
+}
+#ymp-body .ymp-rhap-stickwall .ymp-stickwall-body5
+{
+    BACKGROUND-COLOR: #6cabd2
+}
+#ymp-body .ymp-error-stickwall .ymp-stickwall-body1
+{
+    BACKGROUND-COLOR: #6cabd2
+}
+#ymp-body .ymp-error-stickwall .ymp-stickwall-body2
+{
+    BACKGROUND-COLOR: #6cabd2
+}
+#ymp-body .ymp-error-stickwall .ymp-stickwall-body3
+{
+    BACKGROUND-COLOR: #6cabd2
+}
+#ymp-body .ymp-error-stickwall .ymp-stickwall-body4
+{
+    BACKGROUND-COLOR: #6cabd2
+}
+#ymp-body .ymp-error-stickwall .ymp-stickwall-body5
+{
+    BACKGROUND-COLOR: #6cabd2
+}
+#ymp-body .ymp-error-stickwall H2
+{
+    POSITION: absolute;
+    PADDING-BOTTOM: 0px;
+    LINE-HEIGHT: 14px;
+    MARGIN: 0px;
+    PADDING-LEFT: 34px;
+    WIDTH: 295px;
+    PADDING-RIGHT: 0px;
+    COLOR: #444;
+    FONT-SIZE: 11px;
+    TOP: 12px;
+    PADDING-TOP: 0px;
+    LEFT: 11px
+}
+#ymp-body .ymp-error-stickwall SPAN.ymp-skin
+{
+    POSITION: absolute;
+    WIDTH: 24px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -524px 0px;
+    HEIGHT: 20px;
+    TOP: 5px;
+    LEFT: 0px
+}
+#ymp-body .ymp-error-stickwall A
+{
+    COLOR: #444;
+    TEXT-DECORATION: underline
+}
+.ymp-color-main
+{
+    BACKGROUND-COLOR: #bfbfbf
+}
+.ymp-color-tray
+{
+    BACKGROUND-COLOR: #8d8e8d
+}
+.ymp-color-text-main
+{
+    COLOR: #595959
+}
+.ymp-color-text-main:link
+{
+    COLOR: #595959
+}
+.ymp-color-text-tray
+{
+    COLOR: #fff
+}
+.ymp-color-text-tray:link
+{
+    COLOR: #fff
+}
+.ymp-skin
+{
+    BACKGROUND-IMAGE: url(http://us.i1.yimg.com/us.yimg.com/lib/smb/assets/hosting/yss/extensions/images/b1/mediaplayer.png);
+    BACKGROUND-REPEAT: no-repeat;
+    -background-image: url(http://us.i1.yimg.com/us.yimg.com/lib/smb/assets/hosting/yss/extensions/images/b1/mediaplayer.gif)
+}
+.show-scrollbars
+{
+    OVERFLOW: hidden
+}
+#ymp-tray
+{
+    Z-INDEX: 9998;
+    POSITION: fixed;
+    TEXT-ALIGN: left;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    WIDTH: 344px;
+    BOTTOM: 81px;
+    PADDING-RIGHT: 0px;
+    DISPLAY: none;
+    FONT-FAMILY: Arial, Helvetica;
+    HEIGHT: 18px;
+    FONT-SIZE: 11px;
+    OVERFLOW: hidden;
+    PADDING-TOP: 0px;
+    LEFT: 180px
+}
+#ymp-tray-body
+{
+    POSITION: relative;
+    FILTER: alpha(opacity=95);
+    WIDTH: 100%;
+    BACKGROUND-POSITION: -180px -108px;
+    HEIGHT: 100%;
+    opacity: .95;
+    -moz-opacity: .95
+}
+#ymp-tray-top
+{
+    POSITION: absolute;
+    WIDTH: 100%;
+    HEIGHT: 6px;
+    OVERFLOW: hidden;
+    TOP: 18px;
+    LEFT: 0px
+}
+.ymp-tray-body1
+{
+    MARGIN: 0px 0px 0px 3px;
+    WIDTH: 100%;
+    DISPLAY: block;
+    HEIGHT: 1px;
+    OVERFLOW: hidden
+}
+.ymp-tray-body2
+{
+    MARGIN: 0px 0px 0px 1px;
+    WIDTH: 100%;
+    DISPLAY: block;
+    HEIGHT: 2px;
+    OVERFLOW: hidden
+}
+.ymp-tray-body3
+{
+    WIDTH: 100%;
+    DISPLAY: block;
+    HEIGHT: 100%
+}
+#ymp-tray UL#ymp-tray-list
+{
+    POSITION: absolute;
+    PADDING-BOTTOM: 0px;
+    OVERFLOW-X: hidden;
+    OVERFLOW-Y: hidden;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    WIDTH: 100%;
+    PADDING-RIGHT: 0px;
+    HEIGHT: 180px;
+    TOP: 24px;
+    PADDING-TOP: 0px;
+    LEFT: 0px
+}
+#ymp-tray UL LI
+{
+    POSITION: relative;
+    COLOR: #fff;
+    OVERFLOW: hidden
+}
+#ymp-tray UL LI A
+{
+    PADDING-BOTTOM: 0px;
+    LINE-HEIGHT: 20px;
+    MARGIN: 0px;
+    PADDING-LEFT: 15px;
+    WIDTH: 100%;
+    TEXT-OVERFLOW: ellipsis;
+    PADDING-RIGHT: 0px;
+    DISPLAY: block;
+    WHITE-SPACE: nowrap;
+    FONT-SIZE: 11px;
+    OVERFLOW: hidden;
+    TEXT-DECORATION: none;
+    PADDING-TOP: 0px
+}
+#ymp-tray UL LI A:hover
+{
+    BACKGROUND-COLOR: #9e9e9e;
+    COLOR: #000
+}
+#ymp-tray UL LI A.ymp-tray-track-focus
+{
+    BACKGROUND-COLOR: #9e9e9e;
+    COLOR: #000
+}
+#ymp-tray UL LI A.playing
+{
+    BACKGROUND-COLOR: #889b64
+}
+#ymp-tray UL.ymp-nested-list
+{
+    POSITION: relative;
+    WIDTH: 100%;
+    HEIGHT: auto;
+    OVERFLOW: hidden
+}
+#ymp-tray UL.ymp-nested-list A.ymp-tray-track
+{
+    PADDING-LEFT: 44px
+}
+#ymp-tray #ymp-btn-tray
+{
+    POSITION: absolute;
+    PADDING-BOTTOM: 0px;
+    TEXT-TRANSFORM: uppercase;
+    PADDING-LEFT: 3px;
+    PADDING-RIGHT: 3px;
+    DISPLAY: block;
+    FONT-FAMILY: Arial, Helvetica;
+    HEIGHT: 18px;
+    COLOR: #fff;
+    FONT-SIZE: 9px;
+    TOP: 0px;
+    CURSOR: pointer;
+    RIGHT: 0px;
+    FONT-WEIGHT: bold;
+    TEXT-DECORATION: none;
+    PADDING-TOP: 0px
+}
+#ymp-tray #ymp-btn-tray EM
+{
+    POSITION: relative;
+    PADDING-BOTTOM: 0px;
+    LINE-HEIGHT: 9px;
+    FONT-STYLE: normal;
+    PADDING-LEFT: 5px;
+    PADDING-RIGHT: 15px;
+    DISPLAY: block;
+    FLOAT: left;
+    HEIGHT: 18px;
+    OVERFLOW: hidden;
+    FONT-WEIGHT: bold;
+    PADDING-TOP: 4px;
+    -line-height: 8px
+}
+#ymp-tray .ymp-up-arrow
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    WIDTH: 7px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -135px -80px;
+    HEIGHT: 6px;
+    OVERFLOW: hidden;
+    TOP: 5px;
+    RIGHT: 6px
+}
+#ymp-tray .ymp-down-arrow
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    WIDTH: 7px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -135px -80px;
+    HEIGHT: 6px;
+    OVERFLOW: hidden;
+    TOP: 5px;
+    RIGHT: 6px
+}
+#ymp-tray .ymp-right-arrow
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    WIDTH: 7px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -135px -80px;
+    HEIGHT: 6px;
+    OVERFLOW: hidden;
+    TOP: 5px;
+    RIGHT: 6px
+}
+#ymp-tray .ymp-up-arrow
+{
+    BACKGROUND-POSITION: -135px -86px
+}
+#ymp-tray .ymp-right-arrow
+{
+    WIDTH: 6px;
+    BACKGROUND-POSITION: -135px -92px;
+    HEIGHT: 7px
+}
+#ymp-tray UL#ymp-tray-list .ymp-down-arrow
+{
+    TOP: 7px;
+    RIGHT: auto;
+    LEFT: 5px
+}
+#ymp-tray UL#ymp-tray-list .ymp-right-arrow
+{
+    TOP: 7px;
+    RIGHT: auto;
+    LEFT: 5px
+}
+.ymp-btn-tray-body1
+{
+    POSITION: absolute;
+    WIDTH: 1px;
+    DISPLAY: block;
+    HEIGHT: 100%;
+    TOP: 3px;
+    LEFT: 0px
+}
+.ymp-btn-tray-body2
+{
+    POSITION: absolute;
+    WIDTH: 2px;
+    DISPLAY: block;
+    HEIGHT: 100%;
+    TOP: 1px;
+    LEFT: 1px
+}
+.ymp-btn-tray-body3
+{
+    POSITION: absolute;
+    WIDTH: 1px;
+    DISPLAY: block;
+    HEIGHT: 100%;
+    TOP: 3px;
+    RIGHT: 0px
+}
+.ymp-btn-tray-body4
+{
+    POSITION: absolute;
+    WIDTH: 2px;
+    DISPLAY: block;
+    HEIGHT: 100%;
+    TOP: 1px;
+    RIGHT: 1px
+}
+.ymp-pix-bl
+{
+    BOTTOM: 0px;
+    LEFT: -1px
+}
+#ymp-body #ymp-control
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    WIDTH: 104px;
+    BACKGROUND-POSITION: -525px -113px;
+    HEIGHT: 44px;
+    TOP: 13px;
+    LEFT: 49px
+}
+#ymp-body A.ymp-btn-play
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    TEXT-INDENT: -9000px;
+    WIDTH: 35px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -50px 0px;
+    HEIGHT: 33px;
+    TOP: 2px;
+    CURSOR: pointer;
+    LEFT: 32px
+}
+#ymp-body A.ymp-btn-pause
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    TEXT-INDENT: -9000px;
+    WIDTH: 35px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -50px 0px;
+    HEIGHT: 33px;
+    TOP: 2px;
+    CURSOR: pointer;
+    LEFT: 32px
+}
+#ymp-body A.ymp-btn-play:hover
+{
+    BACKGROUND-POSITION: -50px -34px
+}
+#ymp-body A.ymp-btn-play:active
+{
+    BACKGROUND-POSITION: -50px -68px
+}
+#ymp-body A.ymp-btn-play-disabled
+{
+    BACKGROUND-POSITION: -50px -99px;
+    CURSOR: default
+}
+#ymp-body A.ymp-btn-play-disabled:hover
+{
+    BACKGROUND-POSITION: -50px -99px;
+    CURSOR: default
+}
+#ymp-body A.ymp-btn-play-disabled:active
+{
+    BACKGROUND-POSITION: -50px -99px;
+    CURSOR: default
+}
+#ymp-body A.ymp-btn-pause
+{
+    BACKGROUND-POSITION: -84px 0px
+}
+#ymp-body A.ymp-btn-pause:hover
+{
+    BACKGROUND-POSITION: -84px -34px
+}
+#ymp-body A.ymp-btn-pause:active
+{
+    BACKGROUND-POSITION: -84px -68px
+}
+#ymp-body A.ymp-btn-pause-disabled
+{
+    BACKGROUND-POSITION: -81px -99px;
+    CURSOR: default
+}
+#ymp-body A.ymp-btn-pause-disabled:hover
+{
+    BACKGROUND-POSITION: -81px -99px;
+    CURSOR: default
+}
+#ymp-body A.ymp-btn-pause-disabled:active
+{
+    BACKGROUND-POSITION: -81px -99px;
+    CURSOR: default
+}
+#ymp-body A.ymp-btn-next
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    TEXT-INDENT: -1000px;
+    WIDTH: 25px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -25px 0px;
+    HEIGHT: 25px;
+    TOP: 7px;
+    CURSOR: pointer;
+    LEFT: 72px
+}
+#ymp-body A.ymp-btn-prev
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    TEXT-INDENT: -1000px;
+    WIDTH: 25px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -25px 0px;
+    HEIGHT: 25px;
+    TOP: 7px;
+    CURSOR: pointer;
+    LEFT: 72px
+}
+#ymp-body A.ymp-btn-next:hover
+{
+    BACKGROUND-POSITION: -25px -25px
+}
+#ymp-body A.ymp-btn-next:active
+{
+    BACKGROUND-POSITION: -25px -51px
+}
+#ymp-body A.ymp-btn-next-disabled
+{
+    BACKGROUND-POSITION: -25px -75px;
+    CURSOR: default
+}
+#ymp-body A.ymp-btn-next-disabled:hover
+{
+    BACKGROUND-POSITION: -25px -75px;
+    CURSOR: default
+}
+#ymp-body A.ymp-btn-next-disabled:active
+{
+    BACKGROUND-POSITION: -25px -75px;
+    CURSOR: default
+}
+#ymp-body A.ymp-btn-prev
+{
+    BACKGROUND-POSITION: 0px 0px;
+    LEFT: 3px
+}
+#ymp-body A.ymp-btn-prev:hover
+{
+    BACKGROUND-POSITION: 0px -25px
+}
+#ymp-body A.ymp-btn-prev:active
+{
+    BACKGROUND-POSITION: 0px -51px
+}
+#ymp-body A.ymp-btn-prev-disabled
+{
+    BACKGROUND-POSITION: 0px -75px;
+    CURSOR: default
+}
+#ymp-body A.ymp-btn-prev-disabled:hover
+{
+    BACKGROUND-POSITION: 0px -75px;
+    CURSOR: default
+}
+#ymp-body A.ymp-btn-prev-disabled:active
+{
+    BACKGROUND-POSITION: 0px -75px;
+    CURSOR: default
+}
+#ymp-body #ymp-btn-min
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    TEXT-INDENT: -1000px;
+    WIDTH: 15px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -159px -35px;
+    HEIGHT: 62px;
+    OVERFLOW: hidden;
+    TOP: 0px;
+    CURSOR: pointer;
+    RIGHT: 10px
+}
+#ymp-body #ymp-btn-max
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    TEXT-INDENT: -1000px;
+    WIDTH: 24px;
+    DISPLAY: block;
+    HEIGHT: 62px;
+    OVERFLOW: hidden;
+    TOP: 0px;
+    CURSOR: pointer;
+    LEFT: 0px
+}
+#ymp-body #ymp-btn-max SPAN
+{
+    POSITION: absolute;
+    WIDTH: 8px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -119px -80px;
+    HEIGHT: 17px;
+    OVERFLOW: hidden;
+    TOP: 23px;
+    LEFT: 9px
+}
+#ymp-body #ymp-btn-max SPAN.ymp-animarrow
+{
+    BACKGROUND: url(http://us.i1.yimg.com/us.yimg.com/lib/smb/assets/hosting/yss/extensions/images/b1/mediaplayer-animarrow.gif) no-repeat 0px 0px
+}
+.ymp-player-max #ymp-body #ymp-btn-max
+{
+    DISPLAY: none
+}
+.ymp-player-min #ymp-body #ymp-btn-min
+{
+    DISPLAY: none
+}
+.ymp-player-min #ymp-body #ymp-btn-close
+{
+    DISPLAY: none
+}
+.ymp-player-min #ymp-body #ymp-btn-pop
+{
+    DISPLAY: none
+}
+.ymp-player-hidden
+{
+    DISPLAY: none
+}
+#ymp-body A#ymp-btn-close
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    TEXT-INDENT: -1000px;
+    WIDTH: 14px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -609px 0px;
+    HEIGHT: 14px;
+    OVERFLOW: hidden;
+    TOP: 2px;
+    CURSOR: pointer;
+    RIGHT: 27px
+}
+#ymp-body A#ymp-btn-pop
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    TEXT-INDENT: -1000px;
+    WIDTH: 14px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -609px 0px;
+    HEIGHT: 14px;
+    OVERFLOW: hidden;
+    TOP: 2px;
+    CURSOR: pointer;
+    RIGHT: 27px
+}
+#ymp-body A#ymp-btn-close:hover
+{
+    BACKGROUND-POSITION: -609px -14px
+}
+#ymp-body A#ymp-btn-close:active
+{
+    BACKGROUND-POSITION: -609px -28px
+}
+#ymp-body A#ymp-btn-pop
+{
+    BACKGROUND-POSITION: -595px 0px;
+    TOP: 18px
+}
+#ymp-body A#ymp-btn-pop:hover
+{
+    BACKGROUND-POSITION: -595px -14px
+}
+#ymp-body A#ymp-btn-pop:active
+{
+    BACKGROUND-POSITION: -595px -28px
+}
+#ymp-body A#ymp-btn-target
+{
+    Z-INDEX: 2;
+    TEXT-INDENT: -9000px;
+    WIDTH: 16px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -623px 0px;
+    FLOAT: right;
+    HEIGHT: 16px;
+    CURSOR: pointer
+}
+#ymp-body A#ymp-btn-target:hover
+{
+    BACKGROUND-POSITION: -623px -16px
+}
+#ymp-body A#ymp-btn-target:active
+{
+    BACKGROUND-POSITION: -623px -32px
+}
+#ymp-body .ymp-error-icon
+{
+    Z-INDEX: 2;
+    TEXT-INDENT: -9000px;
+    WIDTH: 16px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -150px 0px;
+    HEIGHT: 16px;
+    OVERFLOW: hidden;
+    CURSOR: pointer
+}
+#ymp-tray .ymp-error-icon
+{
+    Z-INDEX: 2;
+    TEXT-INDENT: -9000px;
+    WIDTH: 16px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -150px 0px;
+    HEIGHT: 16px;
+    OVERFLOW: hidden;
+    CURSOR: pointer
+}
+#ymp-tray .ymp-error-icon
+{
+    POSITION: absolute;
+    TOP: 2px;
+    RIGHT: 3px
+}
+A.ymp-btn-page-play
+{
+    POSITION: relative !important;
+    OUTLINE-STYLE: none !important;
+    OUTLINE-COLOR: invert !important;
+    OUTLINE-WIDTH: medium !important
+}
+A.ymp-btn-page-pause
+{
+    POSITION: relative !important;
+    OUTLINE-STYLE: none !important;
+    OUTLINE-COLOR: invert !important;
+    OUTLINE-WIDTH: medium !important
+}
+A.ymp-btn-page-play EM.ymp-skin
+{
+    POSITION: absolute;
+    WIDTH: 14px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -676px 0px;
+    HEIGHT: 14px;
+    OVERFLOW: hidden;
+    TOP: 0.22em;
+    CURSOR: pointer;
+    LEFT: 0px
+}
+A.ymp-btn-page-pause EM.ymp-skin
+{
+    POSITION: absolute;
+    WIDTH: 14px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -676px 0px;
+    HEIGHT: 14px;
+    OVERFLOW: hidden;
+    TOP: 0.22em;
+    CURSOR: pointer;
+    LEFT: 0px
+}
+A.ymp-btn-page-play:hover EM.ymp-skin
+{
+    BACKGROUND-POSITION: -676px -14px
+}
+A.ymp-btn-page-play:active EM.ymp-skin
+{
+    BACKGROUND-POSITION: -676px -28px
+}
+A.ymp-btn-page-pause EM.ymp-skin
+{
+    BACKGROUND-POSITION: -662px 0px
+}
+A.ymp-btn-page-pause:hover EM.ymp-skin
+{
+    BACKGROUND-POSITION: -662px -14px
+}
+A.ymp-btn-page-pause:active EM.ymp-skin
+{
+    BACKGROUND-POSITION: -662px -28px
+}
+A.ymp-btn-page-target EM.ymp-skin
+{
+    BACKGROUND: url(http://us.i1.yimg.com/us.yimg.com/lib/smb/assets/hosting/yss/extensions/images/b1/mediaplayer-findlink.gif) no-repeat 0px 0px
+}
+A.ymp-btn-page-target:hover EM.ymp-skin
+{
+    BACKGROUND: url(http://us.i1.yimg.com/us.yimg.com/lib/smb/assets/hosting/yss/extensions/images/b1/mediaplayer-findlink.gif) no-repeat 0px 0px
+}
+A.ymp-btn-page-target:active EM.ymp-skin
+{
+    BACKGROUND: url(http://us.i1.yimg.com/us.yimg.com/lib/smb/assets/hosting/yss/extensions/images/b1/mediaplayer-findlink.gif) no-repeat 0px 0px
+}
+#ymp-body A.ymp-btn
+{
+    Z-INDEX: 2;
+    POSITION: relative;
+    PADDING-BOTTOM: 0px;
+    LINE-HEIGHT: 16px;
+    MARGIN: 0px 0px 0px 7px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 7px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: 100% -48px;
+    HEIGHT: 16px;
+    FONT-SIZE: 11px;
+    CURSOR: pointer;
+    PADDING-TOP: 0px
+}
+#ymp-body A.ymp-btn EM
+{
+    POSITION: absolute;
+    WIDTH: 7px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -525px -48px;
+    HEIGHT: 100%;
+    OVERFLOW: hidden;
+    TOP: 0px;
+    LEFT: -7px
+}
+#ymp-body A.ymp-btn:hover
+{
+    BACKGROUND-POSITION: 100% -64px;
+    TEXT-DECORATION: none
+}
+#ymp-body A.ymp-btn:hover EM
+{
+    BACKGROUND-POSITION: -525px -64px
+}
+#ymp-body A.ymp-btn:active
+{
+    BACKGROUND-POSITION: 100% -80px
+}
+#ymp-body A.ymp-btn:active EM
+{
+    BACKGROUND-POSITION: -525px -80px
+}
+#ymp-body #ymp-btn-buy
+{
+    MARGIN-RIGHT: 2px
+}
+#ymp-body .ymp-icon-buy
+{
+    POSITION: relative;
+    WIDTH: 17px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -142px -79px;
+    HEIGHT: 13px;
+    TOP: 1px;
+    LEFT: -1px
+}
+#ymp-body A.ymp-btn-alt
+{
+    Z-INDEX: 2;
+    POSITION: relative;
+    PADDING-BOTTOM: 0px;
+    LINE-HEIGHT: 16px;
+    MARGIN: 0px 0px 0px 7px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 7px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: 100% -64px;
+    HEIGHT: 16px;
+    COLOR: #666;
+    FONT-SIZE: 11px;
+    CURSOR: pointer;
+    FONT-WEIGHT: normal;
+    PADDING-TOP: 0px
+}
+#ymp-body A.ymp-btn-alt EM
+{
+    POSITION: absolute;
+    WIDTH: 7px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -525px -64px;
+    HEIGHT: 100%;
+    OVERFLOW: hidden;
+    TOP: 0px;
+    LEFT: -7px
+}
+#ymp-body A.ymp-btn-alt:hover
+{
+    TEXT-DECORATION: none
+}
+#ymp-body .ymp-meta-box
+{
+    POSITION: relative;
+    LINE-HEIGHT: 13px
+}
+#ymp-body #ymp-meta-track-title
+{
+    POSITION: absolute;
+    WIDTH: 100%;
+    TEXT-OVERFLOW: ellipsis;
+    DISPLAY: block;
+    WHITE-SPACE: nowrap;
+    FONT-SIZE: 12px;
+    OVERFLOW: hidden;
+    TOP: 0px;
+    FONT-WEIGHT: bold;
+    LEFT: 0px;
+    -o-text-overflow: ellipsis
+}
+#ymp-body #ymp-meta-album-title
+{
+    POSITION: absolute;
+    WIDTH: 100%;
+    TEXT-OVERFLOW: ellipsis;
+    DISPLAY: block;
+    WHITE-SPACE: nowrap;
+    FONT-SIZE: 12px;
+    OVERFLOW: hidden;
+    TOP: 0px;
+    FONT-WEIGHT: bold;
+    LEFT: 0px;
+    -o-text-overflow: ellipsis
+}
+#ymp-body #ymp-meta-artist-title
+{
+    POSITION: absolute;
+    WIDTH: 100%;
+    TEXT-OVERFLOW: ellipsis;
+    DISPLAY: block;
+    WHITE-SPACE: nowrap;
+    FONT-SIZE: 12px;
+    OVERFLOW: hidden;
+    TOP: 0px;
+    FONT-WEIGHT: bold;
+    LEFT: 0px;
+    -o-text-overflow: ellipsis
+}
+#ymp-body #ymp-meta-album-title
+{
+    FONT-SIZE: 11px;
+    TOP: 1px;
+    FONT-WEIGHT: normal
+}
+#ymp-body #ymp-meta-artist-title
+{
+    FONT-SIZE: 11px;
+    TOP: 18px;
+    FONT-WEIGHT: normal
+}
+#ymp-body window
+{
+    WIDTH: 100%;
+    -moz-user-focus: normal;
+    -moz-user-select: text
+}
+#ymp-body description
+{
+    -moz-user-focus: normal;
+    -moz-user-select: text
+}
+#ymp-body #ymp-meta-image
+{
+    BORDER-BOTTOM: #adacac 1px solid;
+    POSITION: absolute;
+    BORDER-LEFT: #adacac 1px solid;
+    WIDTH: 46px;
+    DISPLAY: block;
+    BACKGROUND: url(http://us.i1.yimg.com/us.yimg.com/lib/smb/assets/hosting/yss/extensions/images/b1/mediaplayer-default-album.gif) no-repeat 0px 0px;
+    HEIGHT: 46px;
+    OVERFLOW: hidden;
+    BORDER-TOP: #adacac 1px solid;
+    TOP: 3px;
+    BORDER-RIGHT: #adacac 1px solid;
+    LEFT: 2px
+}
+#ymp-body #ymp-relevance
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    WIDTH: 120px;
+    HEIGHT: 62px;
+    OVERFLOW: hidden;
+    TOP: 0px;
+    LEFT: 527px
+}
+#ymp-body #ymp-getplayer
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    TEXT-ALIGN: center;
+    LINE-HEIGHT: 14px;
+    WIDTH: 121px;
+    DISPLAY: block;
+    COLOR: #3d9ad0;
+    FONT-SIZE: 13px;
+    TOP: 18px;
+    FONT-WEIGHT: bold;
+    LEFT: 3px
+}
+#ymp-body #ymp-getlyrics
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    DISPLAY: none;
+    COLOR: #3d9ad0;
+    FONT-SIZE: 13px;
+    TOP: 16px;
+    FONT-WEIGHT: bold;
+    LEFT: 17px
+}
+#ymp-body #ymp-watchvideo
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    DISPLAY: none;
+    COLOR: #3d9ad0;
+    FONT-SIZE: 13px;
+    TOP: 16px;
+    FONT-WEIGHT: bold;
+    LEFT: 17px
+}
+#ymp-body #ymp-getlyrics EM
+{
+    FONT-STYLE: normal;
+    COLOR: #686868;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: normal
+}
+#ymp-body #ymp-watchvideo EM
+{
+    FONT-STYLE: normal;
+    COLOR: #686868;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: normal
+}
+#ymp-body #ymp-getlyrics SPAN
+{
+    POSITION: absolute;
+    WIDTH: 14px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -648px 0px;
+    HEIGHT: 13px;
+    OVERFLOW: hidden;
+    TOP: 17px;
+    CURSOR: pointer;
+    LEFT: 63px
+}
+#ymp-body #ymp-watchvideo SPAN
+{
+    POSITION: absolute;
+    WIDTH: 14px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -648px 0px;
+    HEIGHT: 13px;
+    OVERFLOW: hidden;
+    TOP: 17px;
+    CURSOR: pointer;
+    LEFT: 63px
+}
+#ymp-body A#ymp-getlyrics:hover EM
+{
+    COLOR: #3d9ad0
+}
+#ymp-body A#ymp-watchvideo:hover EM
+{
+    COLOR: #3d9ad0
+}
+#ymp-body A#ymp-getlyrics:hover SPAN
+{
+    BACKGROUND-POSITION: -648px -13px
+}
+#ymp-body A#ymp-watchvideo:hover SPAN
+{
+    BACKGROUND-POSITION: -648px -13px
+}
+#ymp-body #ymp-volume
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    WIDTH: 12px;
+    BACKGROUND-POSITION: -125px -21px;
+    HEIGHT: 39px;
+    TOP: 12px;
+    LEFT: 158px
+}
+#ymp-body #ymp-volume-cover
+{
+    POSITION: absolute;
+    WIDTH: 100%;
+    BOTTOM: 0px;
+    HEIGHT: 23px;
+    OVERFLOW: hidden;
+    LEFT: 0px
+}
+#ymp-body #ymp-volume-cover SPAN
+{
+    POSITION: absolute;
+    WIDTH: 100%;
+    BOTTOM: 0px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -140px -21px;
+    HEIGHT: 39px;
+    LEFT: 0px
+}
+#ymp-body A#ymp-volume-thumb
+{
+    POSITION: absolute;
+    TEXT-INDENT: -1000px;
+    WIDTH: 13px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -119px 0px;
+    HEIGHT: 7px;
+    OVERFLOW: hidden;
+    TOP: 16px;
+    LEFT: 0px
+}
+#ymp-body A#ymp-volume-thumb:hover
+{
+    BACKGROUND-POSITION: -119px -7px
+}
+#ymp-body A#ymp-volume-thumb:active
+{
+    BACKGROUND-POSITION: -119px -14px
+}
+#ymp-error-bubble
+{
+    Z-INDEX: 10000;
+    BORDER-BOTTOM: #999 1px solid;
+    POSITION: absolute;
+    BORDER-LEFT: #999 1px solid;
+    BACKGROUND-COLOR: #fff;
+    WIDTH: 200px;
+    DISPLAY: none;
+    BORDER-TOP: #999 1px solid;
+    TOP: 0px;
+    BORDER-RIGHT: #999 1px solid;
+    LEFT: 0px
+}
+#ymp-error-msg
+{
+    MARGIN: 10px;
+    FONT-SIZE: 11px
+}
+.ymp-error-tail
+{
+    POSITION: absolute;
+    WIDTH: 21px;
+    BOTTOM: -18px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -158px -17px;
+    HEIGHT: 18px;
+    LEFT: 0px
+}
+#ymp-secret-bubble
+{
+    Z-INDEX: 10000;
+    BORDER-BOTTOM: #999 1px solid;
+    POSITION: absolute;
+    BORDER-LEFT: #999 1px solid;
+    BACKGROUND-COLOR: #fff;
+    WIDTH: 400px;
+    DISPLAY: none;
+    BORDER-TOP: #999 1px solid;
+    TOP: 0px;
+    BORDER-RIGHT: #999 1px solid;
+    LEFT: 0px
+}
+#ymp-secret-msg
+{
+    MARGIN: 10px;
+    FONT-SIZE: 11px
+}
+#ymp-secret-msg #ymp-secret-msg-header
+{
+    POSITION: relative;
+    TEXT-ALIGN: center;
+    FONT-STYLE: normal;
+    WIDTH: 100%;
+    FONT-WEIGHT: bold
+}
+#ymp-secret-msg TABLE
+{
+    WIDTH: 100%
+}
+#ymp-secret-msg TH
+{
+    TEXT-ALIGN: center
+}
+#ymp-secret-msg TD
+{
+    TEXT-ALIGN: center
+}
+#ymp-secret-bubble A#ymp-btn-close-secret
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    TEXT-INDENT: -1000px;
+    WIDTH: 14px;
+    DISPLAY: block;
+    BACKGROUND-POSITION: -609px 0px;
+    HEIGHT: 14px;
+    OVERFLOW: hidden;
+    TOP: 2px;
+    CURSOR: pointer;
+    RIGHT: 2px
+}
+#ymp-secret-bubble A#ymp-btn-close-secret:hover
+{
+    BACKGROUND-POSITION: -609px -14px
+}
+#ymp-secret-bubble A#ymp-btn-close-secret:active
+{
+    BACKGROUND-POSITION: -609px -28px
+}
+#ymp-body .ymp-rhap-powered
+{
+    POSITION: relative;
+    TEXT-INDENT: -9000px;
+    MARGIN: 0px 0px 0px 4px;
+    WIDTH: 107px;
+    DISPLAY: block;
+    BACKGROUND: url(http://us.i1.yimg.com/us.yimg.com/lib/smb/assets/hosting/yss/extensions/images/b1/mediaplayer-rhapsody.png) no-repeat 0px 0px;
+    HEIGHT: 13px;
+    OVERFLOW: hidden;
+    TOP: -2px
+}
+#ymp-body .ymp-rhap-stickwall .ymp-rhap-powered
+{
+    POSITION: absolute;
+    MARGIN: 0px;
+    TOP: 3px;
+    RIGHT: 5px
+}
+#ymp-body #ymp-rhap-brand
+{
+    DISPLAY: none
+}
+#ymp-body .ymp-rhap-stickwall H2
+{
+    POSITION: absolute;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    COLOR: #58a9cf;
+    FONT-SIZE: 14px;
+    TOP: 6px;
+    PADDING-TOP: 0px;
+    LEFT: 15px
+}
+#ymp-body #ymp-rhap-stickwall-action
+{
+    POSITION: absolute;
+    BOTTOM: 6px;
+    LEFT: 15px
+}
+#ymp-body #ymp-rhap-stickwall-action .ymp-btn-alt
+{
+    FLOAT: left;
+    MARGIN-RIGHT: 5px
+}
+#ymp-body #ymp-rhap-getunlimited
+{
+    POSITION: absolute;
+    DISPLAY: none;
+    COLOR: #3d9ad0;
+    MAX-HEIGHT: 14px;
+    FONT-SIZE: 10px;
+    OVERFLOW: hidden;
+    TOP: 11px;
+    RIGHT: 0px;
+    FONT-WEIGHT: normal
+}
+#ymp-body #ymp-rhap-playinfo
+{
+    Z-INDEX: 2;
+    POSITION: absolute;
+    TEXT-ALIGN: right;
+    LINE-HEIGHT: 24px;
+    WIDTH: 92px;
+    DISPLAY: none;
+    COLOR: #686868;
+    TOP: 8px;
+    FONT-WEIGHT: bold;
+    LEFT: 17px
+}
+#ymp-body #ymp-rhap-playinfo A
+{
+    PADDING-BOTTOM: 0px;
+    LINE-HEIGHT: 13px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    PADDING-RIGHT: 0px;
+    DISPLAY: block;
+    COLOR: #3d9ad0;
+    FONT-SIZE: 11px;
+    FONT-WEIGHT: normal;
+    PADDING-TOP: 1px
+}
+#ymp-body #ymp-rhap-playinfo A EM
+{
+    FONT-STYLE: normal;
+    FONT-SIZE: 14px
+}
+#ymp-body #ymp-rhap-playinfo A:hover
+{
+    TEXT-DECORATION: underline
+}
+#ymp-body #ymp-rhap-playcount
+{
+    MARGIN: 0px 5px 0px 0px;
+    COLOR: #fff;
+    FONT-SIZE: 30px;
+    FONT-WEIGHT: bold
+}
+#ymwp-contplay-form
+{
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-LEFT: 0px;
+    WIDTH: 0px;
+    PADDING-RIGHT: 0px;
+    HEIGHT: 0px;
+    PADDING-TOP: 0px
+}

@@ -1,0 +1,2214 @@
+﻿@import url("/clients/ALPLMFoundation/Images/SOIControls.css");
+@import url("/clients/ALPLMFoundation/Images/SOINavigation.css");
+/* ===================================================================================
+   Base Classes
+   =================================================================================== */
+
+body
+{
+	font-size:80%;
+	line-height: 1.25;
+	color:#000000;
+	background: url("/clients/ALPLMFoundation/Images/soibkg.png") #036 repeat-x top left;
+	cursor:default;
+}
+
+div.page
+{
+	width: 986px; /* Equivalent to roughly 986px at the default font size. (Formerly 79 em) */
+	margin: 0 auto;
+	padding: 0;
+	background-color: transparent;
+	min-height: 100%;
+}
+
+.main
+{
+	padding: 0px;
+	background-color: #fff;
+	overflow: hidden;
+	border-left:2px white solid;
+	border-right:2px white solid;
+}
+.content
+{
+	padding: 0px 0px 1.5em 0px;	
+	overflow:hidden;
+}
+
+	/* -------------------------------------------------------
+	   Base Classes - Fonts, Layouts and Positioning
+	   ------------------------------------------------------- */
+
+/* force inheritance */
+input,
+select,
+textarea,
+button
+{
+	font-size: 100%;
+}
+
+/* force inheritance in IE 5 */
+table
+{
+	font-size: 100%;
+	color: #000;
+}
+
+code,
+kbd,
+samp,
+var
+{
+	font-family: "Courier New", Courier, monospace;
+	font-size: 110%;
+}
+
+h1  /* 22px */
+{
+	font-size: 190%;
+	margin: 0px 0 6px 0;
+}
+
+h2  /* 18px */
+{
+	font-size: 130%;
+	margin: 0 0 .35em 0;
+}
+
+h3  /* 16px */
+{
+	font-size: 125%;
+	margin: 0 0 .4em 0;
+}
+
+h4  /* 14px */
+{
+	font-size: 110%;
+	margin: 0 0 .45em 0;
+}
+
+h5
+{
+	font-size: 100%;
+	margin: 0 0 .5em 0;
+	font-style: italic;
+}
+
+h6
+{
+	font-size: 100%;
+	margin: 0 0 .5em 0;
+	font-style: italic;
+	font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	color: #369;
+}
+
+p
+{
+	margin: 10px 0;
+}
+
+blockquote
+{
+	margin: .5em 1.25em;
+}
+
+dl
+{
+	margin: 0;
+	padding: 0;
+}
+
+dt
+{
+	margin: .5em 0;
+	padding: 0;
+}
+
+dd
+{
+	margin: .5em 0;
+	padding: 0 0 0 1.5em;
+}
+
+a,
+a:link
+{
+	color: #036;
+}
+
+a:visited
+{
+	color: #036;
+}
+
+a:hover,
+a:focus,
+a:active
+{
+	/* This way, users who may be navigating via keyboard
+		can tell when a given link is focused */
+	text-decoration: underline;
+}
+
+a img,
+img
+{
+	border: none;
+	text-decoration: none;
+}
+
+.content a,
+.content a:link
+{
+	color: #036;
+	text-decoration: underline;
+}
+
+.content a:visited
+{
+	color: #036;
+	text-decoration: underline;
+}
+
+.content a:hover,
+.content a:focus,
+.content a:active
+{
+	/* This way, users who may be navigating via keyboard
+		can tell when a given link is focused */
+	text-decoration: none;
+}
+
+form
+{
+	margin: 0;
+	padding: 0;
+}
+
+fieldset
+{
+	margin: .5em 0;
+	padding: .25em 9px;
+}
+
+legend
+{
+	margin: 0 -2px;
+	padding: 0 2px;
+	*margin-left: -9px;
+	color: #000;
+}
+
+input
+{
+	margin: 0;
+}
+
+textarea,
+select.listbox
+{
+	display: block;
+}
+
+/* .readonly { background-image: url(readonlybackground.png); } */
+/* select.readonly { background-color: #eee; } */
+
+abbr,
+acronym
+{
+	*border-bottom: 1px dotted #999;  /* show underline in IE */
+}
+
+a abbr,
+a acronym
+{
+	border-bottom-style: none;
+}
+
+del,
+del a
+{
+	color: #600;
+	text-decoration: line-through;
+}
+
+ins
+{
+	color: #060;
+	font-style: italic;
+	text-decoration: none;
+}
+
+hr
+{
+	height: 1px;
+	border: none;
+	border-top: 1px solid #ccc;
+}
+.ms-vh { color:inherit;}
+th.ms-vh {font-family:inherit; font-size:1em;}
+.ms-vb {font-family:inherit; font-size:1em; line-height:inherit;}
+.ms-WPBody { font-family:inherit; font-size:1em; }
+
+/***************************************************************************/
+/*                        BASIC UTILITY CSS CLASSES                        */
+/***************************************************************************/
+
+.alignleft
+{
+	text-align: left;
+}
+
+.aligncenter
+{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.alignright
+{
+	text-align: right;
+}
+
+.clearfloat
+{
+	clear: both;
+}
+
+.floatleft
+{
+	float: left;
+	margin-right: 1em;
+}
+
+.floatright
+{
+	float: right;
+	margin-left: 1em;
+}
+
+.floatLeft
+{
+	float: left;
+	margin-right: 0px;
+	margin-left: 0px;
+	margin-top: 5px;
+}
+
+.floatRight
+{
+	float: right;
+	min-width: 100px;
+	margin-left: 10px;
+	margin-right: 0px;
+	margin-top: 5px;
+}
+
+.fullwidth
+{
+	width: 99%;
+}
+
+.hidden
+{
+	display: none;
+}
+
+.invisible
+{
+	position: absolute;
+	left: -10000px;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.nowrap
+{
+	white-space: nowrap;
+}
+
+.softbreak
+{
+	font-size: 0;
+}
+
+.content
+{
+	background-color: #fff;
+}
+
+.removeMargins
+{
+	margin-top: -11px;
+	margin-left: -11px;
+	margin-right: -10px;
+}
+
+.Vertical:after
+{
+	content: ".";
+	display: block;
+	visibility: hidden;
+	clear: both;
+	height: 0;
+	line-height: 0;
+	font-size: 1px;
+}
+
+/* ===================================================================================
+   Accessibliity Navigation
+   =================================================================================== */
+
+div#accessibilityNav
+{
+	position: absolute;
+	width: 100%;
+	left: -10000px;
+	/* 
+		This is mostly for IE's sake.  Else it somehow leaves a gap
+		for this element even though it's been absolutely positioned.
+	*/
+	height: 0px;
+}
+
+	div#accessibilityNav ul,
+		div#accessibilityNav ul li
+	{
+		/* General reset */
+		margin: 0em;
+		padding: 0em;
+		list-style-type: none;
+		min-height: 1px;
+	}
+
+		/* Hide some items by default from sighted users */
+		div#accessibilityNav h2,
+			div#accessibilityNav a
+		{
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			text-decoration: underline;
+		}
+
+		/* When tabbing to / activating the skip links,
+			show them on screen as well */
+		div#accessibilityNav a:focus,
+		div#accessibilityNav a:hover,
+		div#accessibilityNav a:active
+		{
+			left: 10000px;
+			display: block;
+			width: 100%;
+			padding-top: 0.5em;
+			padding-bottom: 0.5em;
+			background-color: white;
+		}
+
+			/*
+				This span element is used to avoid anomalies on account of the 
+				CSS box model.  Namely, the links already have a defined width 
+				of 100% width and so any additional padding-left or padding-right
+				would increase their width beyond 100%.
+			*/
+
+			div#accessibilityNav a:focus span,
+			div#accessibilityNav a:hover span,
+			div#accessibilityNav a:active span
+			{
+				padding-left: 0.5em;
+				padding-right: 0.5em;
+				display: block;
+			}
+
+/* ===================================================================================
+   Masthead
+   =================================================================================== */
+
+div#masthead
+{
+	padding-top: 10px;
+}
+/*
+.ms-welcomeMenu
+{
+	font-size:.85em;
+}
+
+.ms-siteactionsmenu
+{
+	font-size:.85em;
+	padding-left:20px;
+}
+.ms-siteactionsmenuinner, .ms-siteactionsmenuhover
+{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+.ms-siteactionsmenuinner
+{
+	border-color:transparent;
+	background:transparent none no-repeat;
+}
+
+.ms-siteactionsmenuhover, .ms-SpLinkButtonActive.ms-welcomeMenu
+{
+	background-color:#369;
+}
+*/
+	/* -------------------------------------------------------
+	   Masthead - Utility Navigation
+	   ------------------------------------------------------- */
+
+	div#masthead div#utilityNav
+	{
+		background-color: transparent;
+		color: white;
+		max-height: 4em;
+		overflow: hidden;
+		font-size: 0.85em;
+		vertical-align: middle;
+	}
+
+		div#masthead div#utilityNav,
+			div#utilityNav ul
+		{
+			margin: 0px;
+			float: left;
+			display: inline; /* This helps IE with floated elements */
+		}
+
+	div#utilityNav h2
+	{
+		position: absolute;
+		left: -10000px;
+		height: 0px;
+	}
+
+	div#utilityNav ul
+	{
+		list-style-type: none;
+		/* General reset first */
+		margin: 0em;
+		padding: 0em;
+		padding-left: 20px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+
+	/*
+		Easy Clearing - Tony Aslett, Position is Everything, and Alex Robinson
+		http://www.tanfa.co.uk/archives/show.asp?var=300
+	*/
+
+	div#utilityNav ul:after
+	{
+		content: ".";
+		display: block;
+		visibility: hidden;
+		clear: both;
+		height: 0;
+		line-height: 0;
+		font-size: 1px;
+	}
+
+	div#utilityNav ul
+	{
+		display: inline-block;
+	}
+
+	/* 1st for IE 5-6, hidden from IE 5 Mac */ /*\*/
+	* html div#utilityNav ul
+	{
+		height: 1%;
+	}
+
+	div#utilityNav ul
+	{
+		display: block;
+	}
+
+	/**/ /* end hidden from IE 5 Mac */
+
+		div#utilityNav ul li
+		{
+			margin: 0em;
+			padding: 0em;
+			border-left: thin white solid;
+			float: left;
+			display: inline; /* This helps IE with floated elements */
+		}
+
+			div#utilityNav ul li.first-child
+			{
+				border-left-width: 0px;
+			}
+
+			div#utilityNav ul li a
+			{
+				color: white;
+				text-decoration: none;
+				font-weight: bold;
+				float: left;
+				display: inline; /* This helps IE with floated elements */
+				padding-left: 1.0em;
+				padding-right: 1.1em;
+			}
+
+			/* This way, users who may be navigating via keyboard
+				can more easily see when a given link is focused */
+			div#utilityNav ul li a:focus,
+			div#utilityNav ul li a:hover
+			{
+				text-decoration: underline;
+			}
+	/* -------------------------------------------------------
+	   Masthead - Login fieldset
+	   ------------------------------------------------------- */
+			.s4-trc-container-menu
+			{
+				float:right;
+				margin-top:0px;
+				margin-right:15px;
+				margin-bottom:0px;
+			}
+
+	/* -------------------------------------------------------
+	   Masthead - Search fieldset
+	   ------------------------------------------------------- */
+
+			div#masthead .s4-search
+			{
+				margin-bottom:4px;
+			}
+		    div#masthead .s4-search INPUT.ms-sbplain
+		    {
+		        WIDTH: 180px; 
+		        height: 20px; 
+		        BACKGROUND: url("images/soi_searchbox.gif") no-repeat left top; 
+		        border: none; 
+		        padding: 2px 0px 0px 8px; 
+		        margin: 0px; 
+		        vertical-align: top;    
+		        border:none !important;   
+		        font-family:inherit;                                     
+		    }    
+		    div#masthead .s4-search .ms-sbgo a
+		    {
+		        background: url('images/soi_gobutton.gif') transparent no-repeat scroll left top;
+		        border-width:0;
+		        height:20px;
+		        width:29px;    
+		        display:block; 
+		        border-top-width:1px;
+		        border-bottom-width:1px;
+		        padding-top:2px;   
+		    }
+		    div#masthead .srch-gosearchimg
+		    {
+				display:none;
+			}
+    
+
+	/*	-------------------------------------------------------
+		Masthead - Alerts (such as Amber Alerts)
+		------------------------------------------------------- */
+
+	div#masthead div#alerts
+	{
+		clear: both;
+		background-color: #F6BF30; /* Medium orange */
+		font-size: 1.05em;
+	}
+
+	/*
+		Easy Clearing - Tony Aslett, Position is Everything, and Alex Robinson
+		http://www.tanfa.co.uk/archives/show.asp?var=300
+	*/
+
+	div#masthead div#alerts:after
+	{
+		content: ".";
+		display: block;
+		visibility: hidden;
+		clear: both;
+		height: 0;
+		line-height: 0;
+		font-size: 1px;
+	}
+
+	div#masthead div#alerts
+	{
+		display: inline-block;
+	}
+
+	/* 1st for IE 5-6, hidden from IE 5 Mac */ /*\*/
+	* html div#masthead div#alerts
+	{
+		height: 1%;
+	}
+
+	div#masthead div#alerts
+	{
+		display: block;
+	}
+
+	/**/ /* end hidden from IE 5 Mac */
+
+		div#alerts a.primary-image
+		{
+			float: left;
+			display: inline; /* This helps IE with floated elements */
+		}
+
+		div#alerts a.secondary-image
+		{
+			float: right;
+			display: inline; /* This helps IE with floated elements */
+		}
+
+			div#alerts a.primary-image img,
+			div#alerts a.secondary-image img
+			{
+				height: 30px;
+			}
+
+		div#alerts ul,
+			div#alerts ul li
+		{
+			/* General reset */
+			margin: 0em;
+			padding: 0em;
+			list-style-type: none;
+		}
+
+			div#alerts ul li a
+			{
+				display: block;
+				text-align: center;
+				color: black;
+				font-weight: bold;
+				line-height: 2.2em;
+			}
+
+			/* Using the TripSwitch to trigger hasLayout in IE
+				http://www.tanfa.co.uk/css/examples/haslayout/tripswitch-demo.asp */
+			/* trigger haslayout for IE>5.0 */
+			div#alerts ul li a
+			{
+				display: inline-block;
+			}
+
+			/* put it back to what it should be in separate rule */
+			div#alerts ul li a
+			{
+				display: block;
+			}
+
+			/* end TripSwitch */
+
+				/* This way, keyboard users can know when this particular
+				   link may have focus */
+				div#alerts ul li a:focus,
+				div#alerts ul li a:hover
+				{
+					text-decoration: none;
+				}
+
+	/* -------------------------------------------------------
+	   Masthead - Site Banner
+	   ------------------------------------------------------- */
+
+	div#masthead div#banner
+	{
+		clear: both;
+		background: transparent url("Images/Banner.jpg") left top no-repeat;
+		background-color: white;
+		height: 188px;
+	}
+
+		div#banner a
+		{
+			/*
+			display: block;
+			height: 188px;
+			*/
+		}
+
+			div#banner img
+			{
+				position: relative;
+				top: 10px;
+				left: 15px;
+			}
+
+/* ===================================================================================
+   Page Titles
+   =================================================================================== */
+
+.pageTitle h1
+{
+	width: 100%;
+	text-indent: 40px;
+	background-image: url('Images/YellowArrow.gif');
+	background-repeat: no-repeat;
+}
+
+div.pageTitle #SOIWelcomeSplashTitle
+{
+	position: absolute;
+	left: -10000px;
+	height: 0px;
+}
+
+/* ===================================================================================
+   Page Layout
+   =================================================================================== */
+
+.column
+{
+	float: left;
+}
+
+.SOI-Links
+{
+	overflow: hidden;
+}
+
+div.soi-slwp ul
+{
+	list-style-type: none;
+	margin-left: 10px;
+	padding-left: 30px;
+}
+
+.soilinks,
+.soibullet, .welcome-content ul
+{
+	list-style-image: url(images/nav_arrows10x8_006699.gif);
+	list-style-position:outside;
+}
+.soilinks li
+{
+	margin: 7px 0px;
+}
+.wpnewslist
+{
+	margin-left:0px;
+}
+.wpnewslist .wpnewsitemimg
+{
+	list-style-image:none;
+	list-style-type:none;
+	margin-bottom:10px;	
+	border-bottom: 1px gray solid;
+	padding-bottom:10px;
+}
+.wpnewsimg
+{
+	float:left;
+	padding-right:5px;
+}
+.wpnewsitem
+{
+	margin: 10px 0;
+}
+.wpnewsitem a:link
+{
+	text-decoration:none;
+}
+.band
+{
+	padding: .25em;
+}
+
+div.band
+{
+	background: url("Images/wpheader.gif") repeat-x left bottom;
+}
+
+div.groupheader h2
+{
+	padding-left: 10px;
+	padding-top: 4px;
+	min-height: 30px;
+}
+
+div.band h2
+{
+	background-image: url('Images/OnlineServices.gif');
+	padding-left: 40px;
+	background-repeat: no-repeat;
+	background-position: 5px 0px;
+}
+
+	/* -------------------------------------------------------
+	   Page Layouts - Breadcrumbs
+	   ------------------------------------------------------- */
+
+.soi-pagebreadcrumb
+{
+	background-color: #fff;
+	color: #368;
+	text-decoration: none;
+	line-height: 2em;
+}
+
+.soi-pagebreadcrumb ol
+{
+	margin: 0;
+	padding: 0 0 0 3em;
+}
+
+.soi-pagebreadcrumb li
+{
+	display: inline;
+}
+
+.soi-pagebreadcrumb a
+{
+	color: #369;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 0 15px 0 3px;
+	background: transparent url('/clients/ALPLMFoundation/Images/arrow.png') right bottom no-repeat;
+}
+
+.soi-pagebreadcrumb a:hover
+{
+	color: #000000;
+	text-decoration: underline;
+}
+
+#SOIWelcomeSplashBreadCrumb
+{
+	display: none;
+}
+
+.link-item,
+.link-item a
+{
+	text-decoration: none;
+	font-size: 1em;
+}
+
+.description
+{
+	font-size: 1em;
+	font-family: inherit;
+	color:#000;
+}
+
+.bullet
+{
+	padding-left:15px;
+	background-image: url('Images/nav_arrows10x8_006699.gif');
+}
+.dfwp-list
+{
+	padding-left:5px;
+}
+x.dfwp-list li
+{
+	margin-top:.5em;
+	margin-bottom:.5em;
+}
+.groupmarker
+{
+	margin-left:10px;
+	margin-right:10px;
+	width:auto;
+}
+	/* -------------------------------------------------------
+	   Page Layouts - Columns
+	   ------------------------------------------------------- */
+
+#sidebar
+{
+	width: 240px;
+	float: right;
+	xposition:relative;
+	display: block;
+	padding: 0px 10px 0px 0px;
+}
+
+
+.WelcomeLeft .welcomeImage
+{
+	float: right;
+}
+
+.WelcomeLeft
+{
+	float: left;
+	width: 70%;
+	padding-left: 10px;
+}
+
+.WelcomeRight
+{
+	float: right;
+	width: 26%;
+}
+
+.welcomeImage img
+{
+	margin-right: 10px;
+	margin-left: 0px;
+	margin-top: 5px;
+	border: solid 1px #ccc;
+}
+
+.header
+{
+	padding-bottom: 0px;
+	padding-right: 0px;
+	padding-left: 0px;
+	text-align: right;
+	white-space: nowrap;
+	border-bottom: solid 1px #ccc;
+	font-size: 1em;
+	color: #000;
+}
+
+.imageSplash img
+{
+	border: solid 1px #ccc;
+}
+
+.soitable, .soi-datatable
+{
+	width:100%;
+}
+
+.soitable td, .soitable th, .soi-datatable td, .soi-datatable th
+{
+	text-align: left;
+	padding: 6px 6px 6px 12px;
+	font-weight:normal;
+}
+
+.soitable .ms-alternating, .soi-datatable .odd
+{
+	background-color:#e4e4e4;
+}
+.soitable .soi-toprow th
+{
+	font-weight:bold;
+}
+.soitable, .soitable td, .soitable th
+{
+	border-collapse:collapse;
+}
+.soitable thead tr th
+{
+	border-top:2px #369 solid;
+	border-bottom:2px #369 solid;
+}
+.soi-features
+{
+	list-style: none;
+	text-align: center;
+}
+
+.soi-features li
+{
+	float: left;
+	height: 70px;
+}
+
+.soi-features img
+{
+	margin: 5px;
+}
+
+/****************************************************************************************************/
+/*                                    WEB PART ZONE STYLE RULES                                     */
+/****************************************************************************************************/
+
+#wpzMid3
+{
+	width: 100%;
+	overflow: hidden;
+	margin: auto;
+}
+
+#wpzMid3 .Column3
+{
+	float: left;
+	width: 33%;
+}
+
+#wpzMid3 .Column3 .cssbox
+{
+	padding-left: 10px;
+	padding-right: 10px;
+	height: 17em;
+}
+
+#wpzLeft,
+#wpzRight
+{
+	float: left;
+	width: 49.5%;
+}
+
+#wpzLeft
+{
+	height: 100%;
+}
+
+div.cssbox
+{
+	padding-bottom:25px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.welcomeImage
+{
+	display: none;
+}
+
+.SOISummaryLinks
+{
+	margin: 0px;
+}
+
+/* ===================================================================================
+   Web Parts
+   =================================================================================== */
+
+.ChromeDefault h2,
+.ChromeTitleOnly h2,
+.ChromeTitleAndBorder h2
+{
+	text-align: left;
+	margin: 0px;
+	color: #036;
+	padding: 0px 0px 5px;
+}
+
+div.ChromeTitleAndBorder .boxin,
+div.ChromeBorderOnly .boxin
+{
+	border-style: solid solid none solid !important;
+	border-color: #369;
+	padding: 5px 9px 7px !important;
+	border-width: thin;
+}
+
+div.ChromeTitleOnly .boxin,
+div.ChromeDefault .boxin
+{
+	border: medium #369 none !important;
+}
+
+.cssbox_head
+{
+	color: #369;
+	background: url("Images/wpheader.gif") repeat-x left bottom;
+}
+
+.cssbox_head h2
+{
+	padding-left: 10px;
+	padding-top: 4px;
+	min-height: 30px;
+}
+
+.ms-WPTitle {
+	font-family:inherit;
+	font-size:1.2em;
+	color:#369;
+}
+/* -------------------------------------------------------
+   Rotator - Container
+   ------------------------------------------------------- */
+
+div.rotator h2
+{
+	position: absolute;
+	left: -10000px;
+	height: 0px;
+}
+
+div.rotator
+{
+	/* Make sure margins don't leak out via margin collapsing */
+	padding-bottom: 1px;
+	margin-bottom: 1em;
+}
+
+	/* These bits help IE6 / IE7 with alignment */
+
+	/* 1st for IE 5.x-6, 2nd for IE 7, hidden from IE 5 Mac */ /*\*/
+	/*
+	* html div.rotator ol.thumbnails,
+		* html div.rotator span.photo
+	{
+		padding-top: 20px;
+	}
+
+	* + html div.rotator ol.thumbnails,
+		* + html div.rotator span.photo
+	{
+		padding-top: 20px;
+	}
+	*/
+	/**/ /* end hidden from IE 5 Mac */
+
+/*
+  Easy Clearing - Tony Aslett, Position is Everything, and Alex Robinson
+  http://www.tanfa.co.uk/archives/show.asp?var=300
+*/
+
+div.rotator:after
+{
+	content: ".";
+	display: block;
+	visibility: hidden;
+	clear: both;
+	height: 0;
+	line-height: 0;
+	font-size: 1px;
+}
+
+div.rotator
+{
+	display: inline-block;
+}
+
+/* 1st for IE 5-6, hidden from IE 5 Mac */ /*\*/
+* html div.rotator
+{
+	height: 1%;
+}
+
+div.rotator
+{
+	display: block;
+}
+
+/**/ /* end hidden from IE 5 Mac */
+
+	/* -------------------------------------------------------
+	   Rotator - Thumbnails
+	   ------------------------------------------------------- */
+
+	div.rotator ol.thumbnails
+	{
+		float: left;
+		display: inline; /* This helps IE with floated elements */
+		width: auto;
+		margin: 20px 0 0;
+		padding: 0em;
+		list-style-position: outside;
+	}
+
+		div.rotator ol.thumbnails li
+		{
+			margin: 0em;
+			padding: 0em;
+			list-style-type: none;
+			margin-bottom: 1.5em;
+		}
+
+			div.rotator ol.thumbnails li a
+			{
+				display: block;
+				padding: 5px 10px;
+				margin: auto 7px;
+				color: #fff;
+				background-image: url('/clients/ALPLMFoundation/Images/soithumbnail.png');
+				background-repeat: no-repeat;
+				background-color: #369;
+			}
+
+				div.rotator ol.thumbnails li a img
+				{
+					/*
+						(This way, the thumbnails don't shift 
+						as they're being hovered over.)
+					*/
+					border: medium transparent solid;
+				}
+
+				div.rotator ol.thumbnails li a:hover,
+					div.rotator ol.thumbnails li.current a
+				{
+					color: #000;
+					background-color: #cf9c37;
+				}
+
+	/*	-------------------------------------------------------
+		Rotator - Tabs
+		------------------------------------------------------- */
+	.tab
+	{
+		position: absolute;
+		left: -10000px;
+	}
+
+	div.rotator ul.tabs,
+		div.rotator ul.tabs li.tab
+	{
+		/* General reset */
+		margin: 0em;
+		padding: 0em;
+		list-style: none;
+	}
+
+		/*
+			Easy Clearing - Tony Aslett, Position is Everything, and Alex Robinson
+			http://www.tanfa.co.uk/archives/show.asp?var=300
+		*/
+
+		div.rotator ul.tabs li.tab:after
+		{
+			content: ".";
+			display: block;
+			visibility: hidden;
+			clear: both;
+			height: 0;
+			line-height: 0;
+			font-size: 1px;
+		}
+
+		div.rotator ul.tabs li.tab
+		{
+			display: inline-block;
+		}
+
+		/* 1st for IE 5-6, hidden from IE 5 Mac */ /*\*/
+		* html div.rotator ul.tabs li.tab
+		{
+			height: 1%;
+		}
+
+		div.rotator ul.tabs li.tab
+		{
+			display: block;
+		}
+				
+		/**/ /* end hidden from IE 5 Mac */
+
+			div.rotator ul.tabs li.tab span.photo
+			{
+				float: left;
+				display: inline; /* This helps IE with floated elements */
+				margin: 0;
+				margin-right: 20px;
+			}
+
+			div.rotator ul.tabs li.tab div.copy ul
+			{
+				list-style-position: inside;
+			}
+
+			div.rotator ul.tabs li.current
+			{
+				position: static;
+				left: 0px;
+			}
+
+/* ===================================================================================
+   Search Results
+   =================================================================================== */
+
+/* ?????????? */
+.srch-refinearea
+{
+	float: left;
+	width: 175px;
+}
+
+/* ??????????? */
+.srch-resultsarea
+{
+	clear: none;
+	float: left;
+	width: 760px;
+}
+
+/* ??????? */
+.srch-boxarea
+{
+	margin-left: 199px;
+	padding-bottom: 10px;
+}
+
+/* Web Part specifically */
+.srch-boxarea div.search-container input.type-search
+{
+	width: 500px;
+	height: 25px;
+	padding: 2px 0px 0px 8px;
+	margin: 0px;
+	vertical-align: top;
+	font-size: 1.3em;
+}
+
+.srch-boxarea div.search-container input.type-submit
+{
+	border: none;
+	padding: 0px;
+	margin: 0px;
+	vertical-align: top;
+}
+
+.srch-boxarea div.search-container .search-label-hint
+{
+	position: absolute;
+	padding-top: 6px;
+	padding-left: 8px;
+	height: 25px;
+	color: gray;
+}
+
+.srch-results
+{
+	padding-top: 10px;
+}
+
+/*** Adds Spacing to the right of the Search Results Icon ***/
+.srch-Icon
+{
+	padding-right: 8px;
+	vertical-align: top;
+}
+
+.srch-Title
+{
+	color: #369;
+}
+
+/*** Removes Background color behind  Search Results Text Stats ***/
+.srch-stats
+{
+	border-top: 1px #036 solid;
+	border-bottom: 1px #036 solid;
+	background-color: #eaeaf3 !important;
+	padding-left: 5px;
+	margin-left: 24px;
+	min-height: 20px;
+}
+
+/*	===================================================================================
+	Footer
+	=================================================================================== */
+
+div#footer
+{
+	width: 986px; /* Equivalent to roughly 986px at the default font size. */
+	max-width: 100%;
+	min-width: 760px;
+	margin: auto;
+	color: #247;
+	padding-bottom: 1.5em;
+	border-top: 2px #ce9b35 solid;
+	background: url("Images/footer.gif") no-repeat bottom center;
+}
+
+	/*
+		Easy Clearing - Tony Aslett, Position is Everything, and Alex Robinson
+		http://www.tanfa.co.uk/archives/show.asp?var=300
+	*/
+
+	div#footer:after
+	{
+		content: ".";
+		display: block;
+		visibility: hidden;
+		clear: both;
+		height: 0;
+		line-height: 0;
+		font-size: 1px;
+	}
+
+	div#footer
+	{
+		display: inline-block;
+	}
+
+	/* 1st for IE 5-6, hidden from IE 5 Mac */ /*\*/
+	* html div#footer
+	{
+		height: 1%;
+	}
+
+	div#footer
+	{
+		display: block;
+	}
+
+	/**/ /* end hidden from IE 5 Mac */
+
+	/* aria-label for the footer */
+	div#footer h2
+	{
+		position: absolute;
+		left: -10000px;
+	}
+
+	div#footer div.group
+	{
+		float: left;
+		display: inline; /* This helps IE with floated elements */
+	}
+
+		/* Properties for a 3-column footer */
+		div#footer.three-column div.group
+		{
+			width: 22%; /* 17em / 77em = 22% */
+			margin-left: 9.0%; /* 5.1em / 77em = 6.6% */
+		}
+
+		/* Properties, if need be, for a 4-column version */
+		div#footer.four-column div.group
+		{
+			width: 16.5%;
+			margin-left: 6.75%;
+		}
+
+		div#footer div.group h2
+		{
+			/* Make sure that this header isn't hidden, like the aria label is */
+			position: static;
+			font-weight: bold;
+			color: #247;
+		}
+
+		div#footer div.group a
+		{
+			color: #247;
+
+			/* This allows for a wider click area, putting Fitts' Law to work for us.
+			   http://particletree.com/features/visualizing-fittss-law/
+			*/
+			display: block;
+		}
+
+			/* Using the TripSwitch to trigger hasLayout for IE6
+			   http://www.tanfa.co.uk/css/examples/haslayout/tripswitch-demo.asp */
+			* html div#footer div.SOISummaryLinks ul li a  /* trigger haslayout for IE>5.0 */
+			{
+				display: inline-block;
+			}
+
+			* html div#footer div.SOISummaryLinks ul li a /* put it back to what it should be in separate rule */
+			{
+				display: block;
+			}
+
+			/* end TripSwitch */
+
+	/* -------------------------------------------------------
+	   Footer - Copyright White
+	   ------------------------------------------------------- */
+
+		.copyright
+		{
+			padding-top: 10px;
+			text-align: center;
+			clear: both;
+			color: #FFF;
+		}
+
+/* ===================================================================================
+   Feedback Forms
+   =================================================================================== */
+
+div.feedbackform
+{
+	overflow: hidden;
+	background-color: #e4e4e4;
+	border: 1px #666 solid;
+	width: 625px;
+}
+
+div.feedbackform .soifield
+{
+	border-top: 1px #666 solid;
+	padding: 5px;
+	clear: left;
+}
+
+div.feedbackform .soifield .soiformlabel
+{
+	width: 190px;
+	font-weight: bold;
+	vertical-align: top;
+	float: left;
+	margin-bottom: 5px;
+}
+
+div.feedbackform .soifield .Feedback,
+div.feedbackform .soifield .soiformradio,
+div.feedbackform .soifield .soiformchecklist
+{
+	width: 400px;
+	float: left;
+	margin-bottom: 5px;
+}
+
+div.feedbackform .soifield .soiformdropdown,
+div.feedbackform .soifield .DateOnlyCssClass,
+div.feedbackform .soifield .soiformcheckbox
+{
+	width: auto;
+}
+
+div.feedbackform .soifield fieldset
+{
+	display: inline;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+div.feedbackform .soifield fieldset ol
+{
+	list-style: none;
+	padding: 0;
+	float: left;
+	margin-left: 0px;
+	font-weight: bold;
+}
+
+div.feedbackform .soifield fieldset legend
+{
+	position: absolute;
+	left: -10000px;
+	height: 1px;
+	width: 1px;
+}
+
+div.feedbackform .soifield .soiformdesc
+{
+	display: block;
+	font-style: italic;
+	font-weight: normal;
+}
+
+div.feedbackform .feedbackButtons
+{
+	padding: .5em;
+	text-align: center;
+	border-top: 1px #666 solid;
+	margin-top: 5px;
+	clear: left;
+}
+
+div.feedbackform .feedbackButtons input
+{
+	padding-bottom: .4em;
+	width: 7.5em;
+	height: 2.1em;
+	padding-top: .1em;
+	margin: 5px;
+}
+
+/* /End of Feedback Forms */
+/* ===================================================================================
+   Page Layout Rich Text Editor Styles
+   =================================================================================== */
+
+P.soi-rteElement-P
+{
+	-ms-name: "Paragraph";
+}
+
+H2.soi-rteElement-H2
+{
+	-ms-name: "Heading 2";
+}
+
+H3.soi-rteElement-H3
+{
+	-ms-name: "Heading 3";
+}
+
+H4.soi-rteElement-H4
+{
+	-ms-name: "Heading 4";
+}
+
+H2.soi-rteElement-H2B
+{
+	-ms-name: "Alt Heading 2";
+}
+
+H3.soi-rteElement-H3B
+{
+	-ms-name: "Alt Heading 3";
+}
+
+H4.soi-rteElement-H4B
+{
+	-ms-name: "Alt Heading 4";
+}
+HR.soi-rteElement-Hr{
+-ms-name:"Horizontal Rule";
+}
+.soi-rteElement-Hr
+{
+background-color:#b6b6b6;
+height:1px;
+}
+
+div.soi-rteElement-Callout1
+{
+	-ms-name: "Callout 1";
+	width: 320px;
+	padding: 10px;
+	color: #000;
+	border: 1px solid #036;
+	float: left;
+	background-color: #9cf;
+}
+
+div.soi-rteElement-Callout2
+{
+	-ms-name: "Callout 2";
+	width: 320px;
+	padding: 10px;
+	color:#000;
+	border: 1px solid #036;
+	float: right;
+	background-color: #9cf;
+}
+
+div.soi-rteElement-Callout3
+{
+	-ms-name: "Callout 3";
+	width: 320px;
+	padding: 10px;
+	color: #000;
+	border: 1px solid #ce9b35;
+	float: left;
+	background-color: #fbe0a8;
+}
+
+div.soi-rteElement-Callout4
+{
+	-ms-name: "Callout 4";
+	width: 320px;
+	padding: 10px;
+	color: #000;
+	border: 1px solid #ce9b35;
+	float: right;
+	background-color: #fbe0a8;
+}
+
+div.soi-rteElement-Callout5
+{
+	-ms-name: "Callout 5";
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+	padding: 10px;
+	color: #000;
+	border: 1px solid #a5a5a5;
+	background-color: #f2f2f2;
+}
+
+.soi-rteStyle-Normal
+{
+	-ms-name: "Normal";
+}
+
+.soi-rteStyle-Highlight
+{
+	-ms-name: "Highlight";
+	background-color: #fae032;
+}
+
+.soi-rteStyle-Byline
+{
+	-ms-name: "Byline";
+	font-style: italic;
+	font-weight: bold;
+}
+
+.soi-rteStyle-Tagline
+{
+	-ms-name: "Tagline";
+	font-size: 1.3em;
+	color: #8b8b8b;
+}
+
+.soi-rteStyle-Comment
+{
+	-ms-name: "Comment";
+	font-style: italic;
+	text-shadow: 0px 0px 5px #000;
+}
+
+.soi-rteStyle-References
+{
+	-ms-name: "References";
+	color: #828282;
+}
+
+.soi-rteStyle-Caption
+{
+	-ms-name: "Caption";
+	color: #b6b6b6;
+}
+
+.soi-rteImage-0
+{
+	-ms-name: "No border";
+}
+
+.soi-rteImage-1
+{
+	-ms-name: "Thin line border";
+	background-color: #182738;
+	border: 1px solid #385b83;
+	background-image: url("/_layouts/images/tabtitlerowbottombg.png");
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+.soi-rteImage-2
+{
+	-ms-name: "Table border";
+	padding: 2px;
+	border-top: 1px solid #D8D8D8;
+	border-bottom: 1px solid #BFBFBF;
+	border-left: 1px solid #D8D8D8;
+	border-right: 1px solid #BFBFBF;
+}
+
+.soi-rteImage-3
+{
+	-ms-name: "Dark border";
+	padding: 15px;
+	background-color: #182738;
+	border: 1px solid 385b83;
+	background-image: url("/_layouts/images/tabtitlerowbottombg.png");
+	background-attachment: fixed;
+	background-repeat: repeat-x;
+	background-position: left bottom;
+}
+
+.soi-rteImage-4
+{
+	-ms-name: "Light border";
+	padding: 6px;
+	padding-bottom: 33px;
+	background-color: #F2F2F2;
+	border-top: 1px solid #D8D8D8;
+	border-bottom: 1px solid #BFBFBF;
+	border-left: 1px solid #D8D8D8;
+	border-right: 1px solid #BFBFBF;
+	background-image: url("/_layouts/images/selbg.png");
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+.soi-rteTable-default,
+.soi-rteTableHeaderFirstCol-default,
+.soi-rteTableHeaderLastCol-default,
+.soi-rteTableHeaderOddCol-default,
+.soi-rteTableHeaderEvenCol-default,
+.soi-rteTableFirstCol-default,
+.soi-rteTableLastCol-default,
+.soi-rteTableOddCol-default,
+.soi-rteTableEvenCol-default,
+.soi-rteTableFooterFirstCol-default,
+.soi-rteTableFooterLastCol-default,
+.soi-rteTableFooterOddCol-default,
+.soi-rteTableFooterEvenCol-default,
+td.soi-rteTable-default,
+th.soi-rteTable-default,
+.soi-rtetablecells
+{
+	-ms-name: "Default Table Style - Light";
+	border: solid 1px #c4c4c4;
+	padding: 2px;
+	vertical-align: top;
+}
+
+.soi-rteTable-0
+{
+	-ms-name: "Table Style 1 - Clear";
+	border-width: 0px;
+	border-style: none;
+	border-collapse: collapse;
+}
+
+.soi-rteTable-1
+{
+	-ms-name: "Table Style 2 - Light Banded";
+	text-align: left;
+	line-height: 2;
+	vertical-align: top;
+	color: #00558D;
+	font-size: 1em;
+}
+
+.soi-rteTable-1 th.soi-rteTableHeaderRow-1,
+.soi-rteTable-1 tr.soi-rteTableFooterRow-1
+{
+	background-color: #FFF;
+	border-top: 1px #0072bc solid;
+	border-bottom: 1px #0072bc solid;
+}
+
+.soi-rteTable-1 th.soi-rteTableHeaderFirstCol-1,
+.soi-rteTable-1 th.soi-rteTableFooterFirstCol-1
+{
+	border-top: 1px #0072bc solid;
+	border-bottom: 1px #0072bc solid;
+}
+
+.soi-rteTable-1 th.soi-rteTableHeaderOddCol-1,
+.soi-rteTable-1 td.soi-rteTableFooterOddCol-1
+{
+	border-top: 1px #0072bc solid;
+	border-bottom: 1px #0072bc solid;
+}
+
+.soi-rteTable-1 th.soi-rteTableHeaderEvenCol-1,
+.soi-rteTable-1 td.soi-rteTableFooterEvenCol-1
+{
+	border-top: 1px #0072bc solid;
+	border-bottom: 1px #0072bc solid;
+}
+
+.soi-rteTable-1 th.soi-rteTableHeaderLastCol-1,
+.soi-rteTable-1 th.soi-rteTableFooterLastCol-1
+{
+	border-top: 1px #0072bc solid;
+	border-bottom: 1px #0072bc solid;
+}
+
+.soi-rteTable-1 tr.soi-rteTableOddRow-1
+{
+	background-color: #BEE5FF;
+}
+
+.soi-rteTable-1 tr.soi-rteTableEvenRow-1
+{
+	background-color: #fff;
+}
+
+.soi-rteTable-1 th.soi-rteTableFirstCol-1
+{
+	font-weight: normal;
+}
+
+.soi-rteTable-1 td.soi-rteTableLastCol-1
+{
+	font-weight: normal;
+}
+
+.soi-rteTable-1 td.soi-rteTableOddCol-1{}
+
+.soi-rteTable-1 td.soi-rteTableEvenCol-1{}
+
+.soi-rteTable-6
+{
+	-ms-name: "Table Style 3 - Medium Two Tones";
+	text-align:left;
+	line-height: 2;
+	vertical-align: top;
+	color: #000;
+	font-size: 1em;
+}
+
+.soi-rteTable-6 th.soi-rteTableHeaderRow-6,
+.soi-rteTable-6 tr.soi-rteTableFooterRow-6
+{
+	background-color: #FFF;
+	border-top: 1px #0072bc solid;
+	border-bottom: 1px #0072bc solid;
+}
+
+.soi-rteTable-6 th.soi-rteTableHeaderFirstCol-6,
+.soi-rteTable-6 th.soi-rteTableFooterFirstCol-6
+{
+	color: #fff;
+	background-color: #0072bc;
+	border-top: 2px #000 solid;
+	border-bottom: 2px #000 solid;
+}
+
+.soi-rteTable-6 th.soi-rteTableHeaderOddCol-6,
+.soi-rteTable-6 td.soi-rteTableFooterOddCol-6
+{
+	color: #fff;
+	background-color: #0072bc;
+	border-top: 2px #000 solid;
+	border-bottom: 2px #000 solid;
+}
+
+.soi-rteTable-6 th.soi-rteTableHeaderEvenCol-6,
+.soi-rteTable-6 td.soi-rteTableFooterEvenCol-6
+{
+	color: #fff;
+	background-color: #0072bc;
+	border-top: 2px #000 solid;
+	border-bottom: 2px #000 solid;
+}
+
+.soi-rteTable-6 th.soi-rteTableHeaderLastCol-6,
+.soi-rteTable-6 td.soi-rteTableFooterLastCol-6
+{
+	color: #fff;
+	background-color: #0072bc;
+	border-top: 2px #000 solid;
+	border-bottom: 2px #000 solid;
+}
+
+.soi-rteTable-6 tr.soi-rteTableOddRow-6
+{
+	background-color: #d8d8d8;
+}
+
+.soi-rteTable-6 tr.soi-rteTableEvenRow-6
+{
+	background-color: #fff;
+}
+
+.soi-rteTable-6 th.soi-rteTableFirstCol-6
+{
+	font-weight: normal;
+}
+
+.soi-rteTable-6 td.soi-rteTableLastCol-6
+{
+	font-weight: normal;
+}
+
+.soi-rteTable-6 td.soi-rteTableOddCol-6{}
+
+.soi-rteTable-6 td.soi-rteTableEvenCol-6{}
+
+.soi-rteTableGrid td,
+.soi-rteTableGrid th
+{
+	border: 1px dotted black;
+}
+
+.soi-rtePosition-1
+{
+	-ms-name: "Left";
+	float: left;
+}
+
+.soi-rtePosition-2
+{
+	-ms-name: "Right";
+	float: right;
+}
+
+.soi-rtePosition-3
+{
+	-ms-name: "Top";
+	vertical-align: text-top;
+}
+
+.soi-rtePosition-4
+{
+	-ms-name: "Middle";
+	vertical-align: middle;
+}
+
+.soi-rtePosition-5
+{
+	-ms-name: "Bottom";
+	vertical-align: text-bottom;
+}
+
+.soi-rtestate-write
+{
+	cursor: text;
+	min-height: 1em;
+}
+
+.ms-asset-icon
+{
+	border-width: 0px;
+	margin: 0px 5px;
+}
+
+.soi-rtestate-field table,
+.soi-rtestate-write table
+{
+	border-collapse: collapse;
+}
+
+.soi-rtestate-write p,
+.soi-rtestate-read p
+{
+	margin: 0px 0px 10px 0px;
+}
+
+.soi-rte-autocomplete
+{
+	background-color: #fafafa;
+	border-width: 1px;
+	border-style: solid;
+	border-top-color: #dfdfdf;
+	border-right-color: #c0c0c0;
+	border-bottom-color: #c0c0c0;
+	border-left-color: #dfdfdf;
+	font-family: Verdana;
+	font-size: 1em;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	position: absolute;
+}
+
+.soi-rte-autocomplete-results div
+{
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+	color: #65686b;
+	padding-left: 10px;
+	padding-right: 10px;
+	overflow: hidden;
+}
+
+.soi-rte-autocomplete-results div.soi-rte-autocomplete-selected
+{
+	background-color: #e8f6fe;
+	border-top: 1px solid #9ccdee;
+	border-bottom: 1px solid #79c3f4;
+	color: #0072bc;
+}
+
+.soi-rte-autocomplete-modes div
+{
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
+	color: #202122;
+	padding-left: 20px;
+	padding-right: 10px;
+}
+
+.soi-rte-autocomplete-modes div.soi-rte-autocomplete-selected
+{
+	background-color: #e8f6fe;
+	border-top: 1px solid #9ccdee;
+	border-bottom: 1px solid #79c3f4;
+	color: #0072bc;
+}
+
+.soi-rte-autocomplete-info
+{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.soi-rte-layoutszone-outer
+{
+	float: left;
+}
+
+.soi-rte-layoutszone-inner
+{
+	word-wrap: break-word;
+	border: 1px solid transparent;
+	margin: 1px;
+	padding: 10px;
+	overflow: hidden;
+}
+
+.soi-rte-layoutszone-inner-editable
+{
+	border: 1px solid #b0d5ee;
+	margin: 1px;
+	padding: 10px;
+	overflow: hidden;
+	min-height: 100px !important;
+}
+
+.soi-rte-layoutszone-fixer
+{
+	clear: both;
+}
+
+.soi-rte-wpbox
+{
+	font-family: inherit;
+	font-size: inherit;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	color: inherit;
+	word-spacing: normal;
+	letter-spacing: normal;
+	text-transform: none;
+	text-align: left;
+	text-indent: 0px;
+	text-decoration: none;
+	line-height: normal;
+	white-space: normal;
+	list-style-type: disc;
+	list-style-image: none;
+	list-style-position: outside;
+}
+
+.soi-rtestate-field
+{
+	word-wrap: break-word;
+}
+
+.soi-rtefield
+{
+	background-color: #fff;
+	min-width: 384px;
+	padding: 2px;
+}
+
+.ms-formbody .soi-rtefield
+{
+	border: 1px inset #bbb;
+}
+
+/* ===================================================================================
+   Print Styles
+   =================================================================================== */
+
+@media print
+{
+	.tabcontent
+	{
+		display: block !important;
+	}
+
+	.content
+	{
+		margin: 0 !important;
+	}
+
+	#masthead,
+	#globalNav,
+	#sidebar,
+	#footer,
+	.copyright
+	{
+		display: none !important;
+	}
+}

@@ -1,0 +1,186 @@
+
+var Netsol={'AdAgent':{'util':{},'conf':{},'classes':{'lib':{}},'modules':{'SubModules':{},'util':{},'conf':{}},'client':{}},'temp':{},'modules':{},'classes':{},'util':{'Array':{},'Object':{},'String':{}},'SysVars':{}};Netsol.util.Array.isEmpty=function(a){if(!a||(a.length===0)){return true;}
+return false;};Netsol.util.Array.map=function(a,f){var newArray=[],i=0,l=0;for(i=0,l=a.length;i<l;i++){newArray[i]=f(i,a[i]);}
+return newArray;};Netsol.util.Array.contains=function(a,o){var i=0,l=0;for(i=0,l=a.length;i<l;i++){if(a[i]===o){return true;}}
+return false;};Netsol.util.Object.originalMethods=[];var x;for(x in Object.prototype){Netsol.util.Object.originalMethods.push(x);}
+Netsol.util.Object.map=function(o,f){var x;for(x in o){if((x!='map')&&!Netsol.util.Array.contains(Netsol.util.Object.originalMethods,x)){f(x,o[x]);}}};Netsol.util.Object.mapToArray=function(o,f){var newArray=[];Netsol.util.Object.map(o,function(k,v){newArray.push(f(k,v));});return newArray;};Netsol.util.String.endsWith=function(str,suffix){return str.indexOf(suffix,str.length-suffix.length)!==-1;};Netsol.util.String.trim=function(str){return str.replace(/^\s+|\s+$/g,'');}
+Netsol.util.normalizeSearchKeyword=function(sekw){var searchWords=null,i=0,a=[];if(!sekw){return null;}
+searchWords=sekw.split(/\s+/);for(i=0;i<searchWords.length;i++){if(!searchWords[i]){continue;}
+a.push(searchWords[i].toLowerCase());}
+if(a.length===0){return null;}
+return a.join(' ');};Netsol.util.isLeadSearchKeyword=function(sekw){var normalizedKw=null;if(!Netsol.AdAgent.modules.conf.leadSearchTerms){return false;}
+normalizedKw=Netsol.util.normalizeSearchKeyword(sekw);if(!normalizedKw){return false;}
+return!!Netsol.AdAgent.modules.conf.leadSearchTerms[normalizedKw];};Netsol.util.isLeadPage=function(urlInfo,leadPages){var path=null,i=0,n=0,leadPageUrlInfo=null,isLeadPath=null;if(!urlInfo){return false;}
+path=urlInfo.getPath();if(!path||Netsol.util.Array.isEmpty(leadPages)){return false;}
+isLeadPath=function(leadPath){var match=false,leadRegexPattern=null,leadRegex=null,escapeRegEx=new RegExp('(\\'+['/','.','*','+','?','|','(',')','[',']','{','}','\\','$','^'].join('|\\')+')','g');if(leadPath.indexOf('*')<0){match=(leadPath===path);}
+else{leadRegexPattern=leadPath.replace(escapeRegEx,'\\$1').replace('\\*','.*');leadRegex=new RegExp(leadRegexPattern);match=!Netsol.util.Array.isEmpty(path.match(leadRegex));}
+return match;};for(i=0,n=leadPages.length;i<n;i++){leadPageUrlInfo=Netsol.util.getURLInfo(leadPages[i]);if(isLeadPath(leadPageUrlInfo.getPath())){return true;}}
+return false;};Netsol.util.setCookie=function(name,value,expireDays){var expirationDate='',expDate=new Date();if(expireDays!==null){expDate.setDate(expDate.getDate()+expireDays);expirationDate=';expires='+expDate.toGMTString()+';path=/';}
+document.cookie=name+'='+escape(value)+expirationDate;};Netsol.util.getCookie=function(name){var cookieStart=document.cookie.indexOf(name+'='),endIndex=0;if(cookieStart>=0){cookieStart+=name.length+1;endIndex=document.cookie.indexOf(';',cookieStart);if(endIndex<0){return unescape(document.cookie.substr(cookieStart));}
+else{return unescape(document.cookie.substr(cookieStart,endIndex-cookieStart));}}
+return null;};Netsol.util.resetCookie=function(name){if(Netsol.util.getCookie(name)!==null){Netsol.util.setCookie(name,'',-1);}};Netsol.util.resetCookies=function(names){var i=0,l=0;for(i=0,l=names.length;i<l;i++){Netsol.util.resetCookie(names[i]);}};Netsol.util.getURLInfo=function(uri){var parseUri=function(sourceUri){var uriPartNames=['source','protocol','authority','domain','port','path','directoryPath','fileName','query','anchor'],uriParts=new RegExp('^(?:([^:/?#.]+):)?(?://)?(([^:/?#]*)(?::(\\d*))?)?((/(?:[^?#](?![^?#/]*\\.[^?#/.]+(?:[\\?#]|$)))*/?)?([^?#/]*))?(?:\\?([^#]*))?(?:#(.*))?').exec(sourceUri),uri={},i=0;for(i=0;i<10;i++){uri[uriPartNames[i]]=(uriParts[i]?uriParts[i]:'');}
+if(uri.directoryPath.length>0){uri.directoryPath=uri.directoryPath.replace(/\/?$/,'/');}
+return uri;},parsedUri=null,scheme=null,hostName=null,path=null,semicolonIndex=0,queryString=null,params=new Netsol.classes.Parameters(),paramsArray=null,i=0,l=0,temp=null;parsedUri=parseUri(uri);scheme=parsedUri.protocol||'http';hostName=parsedUri.domain;if(!hostName){hostName='';}
+path=parsedUri.path;if(path){semicolonIndex=path.indexOf(';');if(semicolonIndex>=0){path=path.substring(0,semicolonIndex);}}
+else{path='';}
+queryString=parsedUri.query;if(queryString){paramsArray=queryString.split(/[&;]/);if(!Netsol.util.Array.isEmpty(paramsArray)){for(i=0,l=paramsArray.length;i<l;i++){temp=paramsArray[i].split('=');params.add(temp[0],temp[1]);}}}
+return new Netsol.classes.URLInfo(scheme,hostName,path,params);};Netsol.util.BindLoadMethod=function(func){var newFunc=null,fol=null;newFunc=function(){Netsol.SysVars.isReady=true;func();};if(document.addEventListener){document.addEventListener('DOMContentLoaded',newFunc,false);return;}
+if(Netsol.SysVars.browser.msie&&(window==top)){(function(){if(Netsol.SysVars.isReady){return;}
+try{document.documentElement.doScroll('left');}
+catch(error){setTimeout(arguments.callee,0);return;}
+newFunc();}());return;}
+fol=document.onload;document.onload=fol?function(){fol();newFunc();}:newFunc;};Netsol.classes.URLInfo=function(scheme,hostName,path,params){this.map=function(mapper){Netsol.util.Array.map(params,mapper);};this.getParameters=function(){return params.copy();};this.get=function(key){return params.get(key);};this.getPath=function(){return path;};this.getFullPath=function(){return path+(params.isEmpty()?'':('?'+params.toString()));};this.getScheme=function(){return scheme;};this.getHostName=function(){return hostName.toLowerCase();};this.toString=function(){return'{Scheme: '+this.getScheme()+', HostName: '+this.getHostName()+', FullPath: '+this.getFullPath()+', Path: '+this.getPath()+', Parameters: '+this.getParameters()+'}';};};Netsol.AdAgent.util.getLastHit=function(){var converted=Netsol.util.getCookie('_nsz1'),vid=parseInt(Netsol.util.getCookie('_nsz2'),10),vkw=Netsol.util.getCookie('_nsz3'),vaid=parseInt(Netsol.util.getCookie('_nsz4'),10),nsagid=parseInt(Netsol.util.getCookie('_nsz5'),10),vkwid=parseInt(Netsol.util.getCookie('_nsz6'),10),vkwmt=Netsol.util.getCookie('_nsz10'),seid=parseInt(Netsol.util.getCookie('_nsz7'),10),sekw=Netsol.util.getCookie('_nsz8'),sessid=Netsol.util.getCookie('_nsz9');if(isNaN(vid)&&isNaN(seid)){return null;}
+converted=(converted===null)?false:(converted==='1');if(isNaN(vid)||(vid===null)){vid=-1;}
+if(isNaN(vaid)||(vaid===null)){vaid=-1;}
+if(isNaN(nsagid)||(nsagid===null)){nsagid=-1;}
+if(isNaN(vkwid)||(vkwid===null)){vkwid=-1;}
+if(isNaN(seid)||(seid===null)){seid=0;}
+return new Netsol.AdAgent.classes.Hit(converted,vid,vkw,vaid,nsagid,vkwid,vkwmt,seid,sekw,sessid);};Netsol.AdAgent.classes.Hit=function(converted,vid,vkw,vaid,nsagid,vkwid,vkwmt,seid,sekw,sessid){this.isConverted=function(){return converted;};this.getVendorId=function(){return vid;};this.getVendorKeyword=function(){return vkw;};this.getVendorAdId=function(){return vaid;};this.getNSAdGroupId=function(){return nsagid;};this.getVendorKeywordId=function(){return vkwid;};this.getVendorKeywordMatchType=function(){return vkwmt;};this.convert=function(){converted=true;Netsol.util.setCookie('_nsz1','1',3);};this.getSearchEngineId=function(){return seid;};this.getSearchEngineKeyword=function(){return sekw;};this.getSessionId=function(){return sessid;};};Netsol.util.HTTPRequest=function(method,unidirectional,destination,parameters,asynchronous,successCallback,failureCallback){if(((method!=='GET')&&(method!=='POST'))||((method==='POST')&&unidirectional)){throw'Illegal method: '+method;}
+var requestObject=(window.ActiveXObject)?new ActiveXObject('Microsoft.XMLHTTP'):(window.XMLHttpRequest)?new XMLHttpRequest():null;if(!requestObject){throw'This browser is not supported for XMLHTTP communication';}
+this.exec=function(){var params=parameters.toString(),workingPostPage=destination+((method==='GET'&&params!=='')?'?'+params:''),loadScript=null;if(unidirectional){loadScript=function(){var scriptElement=document.createElement('script');scriptElement.setAttribute('src',workingPostPage);scriptElement.setAttribute('type','text/javascript');if(successCallback){if(Netsol.SysVars.browser.msie){scriptElement.onreadystatechange=function(){if((this.readyState==='loaded')||(this.readyState==='complete')){successCallback();}};}
+else{scriptElement.onload=function(){successCallback();};}}
+document.getElementsByTagName('head')[0].appendChild(scriptElement);};loadScript();}
+else{requestObject.onreadystatechange=function(){if(requestObject.readyState===4){if(requestObject.status===200){successCallback(requestObject.responseText);}
+else{failureCallback(requestObject.status);}}};var postData=(method==='POST')?params:null;requestObject.open(method,workingPostPage,asynchronous);requestObject.send(postData);}};};Netsol.AdAgent.util.HTTPRequest=function(method,unidirectional,destination,parameters,asynchronous,successCallback,failureCallback){var req=new Netsol.util.HTTPRequest(method,unidirectional,destination,parameters,asynchronous,successCallback,failureCallback);this.exec=function(){if(Netsol.AdAgent.conf.pid){parameters.add('pid',Netsol.AdAgent.conf.pid);}
+parameters.add('ts',new Date().getTime().toString());req.exec();parameters.remove('ts');parameters.remove('pid');};};Netsol.classes.Parameters=function(){var params={},paramCount=0;this.add=function(k,v){if(typeof(params[k])!=='undefined'){paramCount--;}
+params[k]=v;paramCount++;};this.get=function(k){return params[k];};this.map=function(fnc){Netsol.util.Object.map(params,fnc);};this.remove=function(k){if(typeof(params[k])!=='undefined'){delete params[k];paramCount--;}};this.copy=function(){var temp=new Netsol.classes.Parameters();Netsol.util.Object.map(params,function(k,v){temp.add(k,v);});return temp;};this.isEmpty=function(){return paramCount===0;};this.toString=function(){return Netsol.util.Object.mapToArray(params,function(k,v){return encodeURIComponent(k)+((typeof(v)==='undefined')?'':('='+encodeURIComponent(v)));}).join('&');};};Netsol.AdAgent.modules.ModuleSet=function(){var modules=[];this.addModule=function(module){if(typeof(module.exec)==='undefined'){throw'Module does not have exec method defined.';}
+modules.push(module);};this.exec=function(doc){var i;for(i=0;i<modules.length;i++){modules[i].exec(doc);}};};Netsol.SysVars.uri=Netsol.util.getURLInfo(location.href);Netsol.SysVars.isReady=false;Netsol.SysVars.userAgent=navigator.userAgent.toLowerCase();Netsol.SysVars.browser={opera:/opera/.test(Netsol.SysVars.userAgent),msie:/msie/.test(Netsol.SysVars.userAgent)&&!/opera/.test(Netsol.SysVars.userAgent),mozilla:/mozilla/.test(Netsol.SysVars.userAgent)&&!/(compatible|webkit)/.test(Netsol.SysVars.userAgent)};
+
+
+Netsol.AdAgent.modules.conf.Stats={};Netsol.AdAgent.modules.SubModules.VendorParameters=function(){this.exec=function(doc){var parameters=new Netsol.classes.Parameters(),adHit=true,searchEngineHit=true,nsagid=null,vkw=null,vkwid=null,vkwmt=null,vaid=null,vid=-1,type=null,sekw=null,seid=0,sessid=null,httpReferrer=null,httpReferrerHostName=null,searchEngines=null,i=0,matchResult=null,re=/\+/g,lastHit=null;httpReferrer=parent.document.referrer;if(!httpReferrer){adHit=false;searchEngineHit=false;}
+else{httpReferrerHostName=Netsol.util.getURLInfo(httpReferrer).getHostName();if(Netsol.AdAgent.conf.primaryDomainName&&Netsol.util.String.endsWith('.'+httpReferrerHostName,Netsol.AdAgent.conf.primaryDomainName)){adHit=false;searchEngineHit=false;}}
+if(adHit){nsagid=Netsol.SysVars.uri.get('adGroup');if(!nsagid){nsagid=-1;adHit=false;}
+if(adHit){if((vkw=Netsol.SysVars.uri.get('keywords'))&&(vaid=Netsol.SysVars.uri.get('creative'))){if(vkw.charAt(0)!=='{'){vid=1;vkwmt=Netsol.SysVars.uri.get('matchtype');}}
+else if((vkw=Netsol.SysVars.uri.get('OVKEY'))&&(vaid=Netsol.SysVars.uri.get('OVADID'))&&(vkwid=Netsol.SysVars.uri.get('OVKWID'))){if(vkw.charAt(0)!=='{'){vid=2;}}
+else if((vaid=Netsol.SysVars.uri.get('MSADID'))&&(vkwid=Netsol.SysVars.uri.get('MSKWID'))){vid=3;vkwmt=Netsol.SysVars.uri.get('MSKWMT');}
+else{adHit=false;}}
+else{nsagid=Netsol.SysVars.uri.get('_nsag');if(nsagid){adHit=true;vid=8;}}
+if(vid<=0){adHit=false;}}
+if(!nsagid){nsagid=-1;}
+if(!vkw){vkw=null;}
+if(!vkwmt){vkwmt=null;}
+if(!vkwid){vkwid=null;}
+if(!vaid){vaid=-1;}
+if(!vid){vid=-1;}
+if(searchEngineHit){if(!Netsol.util.Array.isEmpty(Netsol.AdAgent.modules.conf.Stats.searchEngines)){searchEngines=Netsol.AdAgent.modules.conf.Stats.searchEngines;for(i=0;i<searchEngines.length;i++){matchResult=httpReferrer.match(searchEngines[i].r);if(matchResult!==null){seid=searchEngines[i].id;if(matchResult[1]){sekw=decodeURIComponent(matchResult[1]);sekw=Netsol.util.normalizeSearchKeyword(sekw.replace(re,' '));}
+break;}}}
+if(seid<=0){searchEngineHit=false;}}
+if(!sekw){sekw=null;}
+if(!seid){seid=0;}
+sessid=Netsol.util.getCookie('_nsz9');if(!sessid&&Netsol.AdAgent.conf.sessid){sessid=Netsol.AdAgent.conf.sessid;Netsol.util.setCookie('_nsz9',sessid,10000);}
+lastHit=null;if(adHit){if(vkw!==null){vkw=decodeURIComponent(vkw);}
+Netsol.util.resetCookies(['_nsz1','_nsz2','_nsz3','_nsz4','_nsz5','_nsz6','_nsz10']);Netsol.util.setCookie('_nsz1',0);Netsol.util.setCookie('_nsz2',vid,3);if(vkw){Netsol.util.setCookie('_nsz3',vkw,3);}
+if(vaid>0){Netsol.util.setCookie('_nsz4',vaid,3);}
+Netsol.util.setCookie('_nsz5',nsagid,3);if(vkwid>0){Netsol.util.setCookie('_nsz6',vkwid,3);}
+if(vkwmt){Netsol.util.setCookie('_nsz10',vkwmt,3);}
+type='1';Netsol.util.resetCookies(['_nsz7','_nsz8']);if(searchEngineHit){Netsol.util.setCookie('_nsz7',seid,3);if(sekw){Netsol.util.setCookie('_nsz8',sekw,3);}}
+lastHit=new Netsol.AdAgent.classes.Hit(false,vid,vkw,vaid,nsagid,vkwid,vkwmt,seid,sekw,sessid);}
+else{lastHit=Netsol.AdAgent.util.getLastHit();}
+if((lastHit===null)||((lastHit.getVendorId()<=0)&&searchEngineHit)){if(searchEngineHit){Netsol.util.resetCookies(['_nsz1','_nsz7','_nsz8']);Netsol.util.setCookie('_nsz7',seid,3);if(sekw){Netsol.util.setCookie('_nsz8',sekw,3);}
+parameters.add('seid',seid);parameters.add('sekw',sekw);}
+if(sessid){parameters.add('sessid',sessid);}}
+else{parameters.add('ppcvid',lastHit.getVendorId());parameters.add('ppckw',lastHit.getVendorKeyword());parameters.add('ppcvaid',lastHit.getVendorAdId());parameters.add('ppcnsagid',lastHit.getNSAdGroupId());parameters.add('ppcvkwid',lastHit.getVendorKeywordId());parameters.add('ppcvkwmt',lastHit.getVendorKeywordMatchType());parameters.add('seid',lastHit.getSearchEngineId());parameters.add('sekw',lastHit.getSearchEngineKeyword());parameters.add('sessid',lastHit.getSessionId());}
+if(type!==null){parameters.add('pce',type);}
+return parameters;};};Netsol.AdAgent.modules.SubModules.HighValuePageLead=function(){this.exec=function(doc){var parameters=new Netsol.classes.Parameters(),lastHit=null;if(!Netsol.util.Array.isEmpty(Netsol.AdAgent.conf.aliases)&&Netsol.util.Array.contains(Netsol.AdAgent.conf.aliases,Netsol.SysVars.uri.getHostName())){return parameters;}
+if(!Netsol.util.isLeadPage(Netsol.SysVars.uri,Netsol.AdAgent.modules.conf.Stats.highValuePages)){return parameters;}
+lastHit=Netsol.AdAgent.util.getLastHit();if(!lastHit){return parameters;}
+if(!lastHit.isConverted()){if((lastHit.getVendorId()<=0)&&!Netsol.util.isLeadSearchKeyword(lastHit.getSearchEngineKeyword())){return parameters;}}
+parameters.add('leadType','HIGH_VALUE_PAGE');lastHit.convert();return parameters;};};Netsol.AdAgent.modules.SubModules.ShoppingCartLead=function(){var CSVToArray=function(strData,strDelimiter,strQuote){strDelimiter=(strDelimiter||',');strQuote=(strQuote||'"');var objPattern=new RegExp(('(\\'+strDelimiter+'|\\r?\\n|\\r|^)'+'(?:'+'\\'+strQuote+'([^'+'\\'+strQuote+']*(?:'+'\\'+strQuote+'\\'+strQuote+'[^'+'\\'+strQuote+']*)*)'+'\\'+strQuote+'|'+'([^'+'\\'+strQuote+'\\'+strDelimiter+'\\r\\n]*))'),'gi'),arrData=[[]],arrMatches=null,strMatchedDelimiter=null,strMatchedValue=null;while((arrMatches=objPattern.exec(strData))!==null){strMatchedDelimiter=arrMatches[1];if(strMatchedDelimiter.length&&(strMatchedDelimiter!==strDelimiter)){arrData.push([]);}
+if(arrMatches[2]){strMatchedValue=arrMatches[2].replace(new RegExp('\\'+strQuote+'\\'+strQuote,'g'),'\\'+strQuote);}
+else{strMatchedValue=arrMatches[3];}
+arrData[arrData.length-1].push(strMatchedValue);}
+return arrData;};this.exec=function(doc){var parameters=new Netsol.classes.Parameters(),lastHit=null,documentHtml=null,extractShoppingCart=function(pattern){var match=documentHtml.match(pattern),cartData=null,fields=null;if(!Netsol.util.Array.isEmpty(match)){cartData=match[1];if(cartData){cartData=cartData.replace(/\s*\/\/.*/g,'');cartData=cartData.replace(/\r|\n/g,'');cartData=cartData.replace(/,\s*/g,',');cartData=cartData.replace(/^\s+|\s+$/g,'');if(cartData){fields=CSVToArray(cartData,',',cartData.charAt(0));if(!Netsol.util.Array.isEmpty(fields)){fields=fields[0];if(!Netsol.util.Array.isEmpty(fields)&&(fields.length>=8)){if(fields[2]){parameters.add('leadType','SHOPPING_CART');parameters.add('af',fields[1]);parameters.add('am',fields[2]);parameters.add('ci',fields[5]);parameters.add('co',fields[7]);parameters.add('oi',fields[0]);parameters.add('sh',fields[4]);parameters.add('st',fields[6]);parameters.add('ta',fields[3]);lastHit.convert();}
+else{}}}}}}};if(!Netsol.util.Array.isEmpty(Netsol.AdAgent.conf.aliases)&&Netsol.util.Array.contains(Netsol.AdAgent.conf.aliases,Netsol.SysVars.uri.getHostName())){return parameters;}
+if(!Netsol.util.Array.isEmpty(Netsol.AdAgent.modules.conf.Stats.shoppingCartPages)&&!Netsol.util.isLeadPage(Netsol.SysVars.uri,Netsol.AdAgent.modules.conf.Stats.shoppingCartPages)){return parameters;}
+lastHit=Netsol.AdAgent.util.getLastHit();if(!lastHit){return parameters;}
+if(!lastHit.isConverted()){if((lastHit.getVendorId()<=0)&&!Netsol.util.isLeadSearchKeyword(lastHit.getSearchEngineKeyword())){return parameters;}}
+try{documentHtml=document.getElementsByTagName('html')[0].innerHTML;if(documentHtml){if(documentHtml.indexOf('._addTrans')>-1){extractShoppingCart(/\._addTrans\(([\s\S]*?)\);/i);}
+else if((documentHtml.indexOf('"_addTrans')>-1)||(documentHtml.indexOf('\'_addTrans')>-1)){extractShoppingCart(/\[\s*['"]_addTrans['"]\s*,([\s\S]*?)\]/i);}}}
+catch(ex){}
+return parameters;};};Netsol.modules.Stats=function(){var subModules=[];this.addSubmodule=function(subModule){subModules.push(subModule);};this.exec=function(doc){var params=new Netsol.classes.Parameters(),r='NULL',s_n=navigator,s_u=s_n.userAgent,s_w=s_n.appVersion,s_apn=s_n.appName,s_ie=s_w.indexOf('MSIE '),s_ns6=s_u.indexOf('Netscape6/'),s_ios=0,r_d=0,s_apv,s_i,cookiesEnabled;if(!Netsol.util.Array.isEmpty(Netsol.AdAgent.conf.aliases)&&Netsol.util.Array.contains(Netsol.AdAgent.conf.aliases,Netsol.SysVars.uri.getHostName())){return;}
+if(s_w.indexOf('Opera')>=0||s_u.indexOf('Opera')>=0){s_apn='Opera';}
+if(s_ie>0){s_i=s_w.substring(s_ie+5);s_apv=parseInt(s_i,10);if(s_apv>3){s_apv=parseFloat(s_i);}}
+else if(s_ns6>0){s_apv=parseFloat(s_u.substring(s_ns6+10));}
+else{s_apv=parseFloat(s_w);}
+if(s_apv>=4&&s_apn!=='Opera'&&(s_ns6<0||s_apv>=6.1)){s_ios=1;}
+if(!r_d){if(s_u.indexOf('Mac')>=0&&s_u.indexOf('MSIE 4')>=0){r=document.referrer;}
+else{r=parent.document.referrer;}}
+Netsol.util.setCookie('s_cc','true',1);cookiesEnabled=Netsol.util.getCookie('s_cc')?'1':'0';Netsol.util.resetCookie('s_cc');Netsol.util.resetCookie('nsvz');var t=-new Date().getTimezoneOffset(),s='',c='',v='',p='',bw='',bh='',j='1.0';if(s_apv>=4){s=screen.width+'x'+screen.height;}
+if(s_apn==='Netscape'||s_apn==='Opera'){if(s_apv>=3){j='1.1';var i1=0;var i2=0;var sta;while(i2<30&&i1<navigator.plugins.length){sta=navigator.plugins[i1].name;if(sta.length>100){sta=sta.substring(0,100);}
+sta+=';';if(p.indexOf(sta)<0){p+=sta;}
+i1++;i2++;}
+v=navigator.javaEnabled()?'Y':'N';}
+if(s_apv>=4){j='1.2';c=screen.pixelDepth;bw=window.innerWidth;bh=window.innerHeight;}
+if(s_apv>=4.06){j='1.3';}}
+else if(s_apn==='Microsoft Internet Explorer'){if(s_apv<4){r='NULL';}
+if(s_apv>=4){v=navigator.javaEnabled()?'Y':'N';j='1.2';c=screen.colorDepth;}
+if(s_apv===5){bw=document.documentElement.offsetWidth;bh=document.documentElement.offsetHeight;j='1.3';if(s_u.indexOf('Mac')<0){document.body.addBehavior("#default#homePage");document.body.addBehavior("#default#clientCaps");}}}
+params.add('k',cookiesEnabled);params.add('t',t);params.add('c',c);params.add('j',j);params.add('bw',bw);params.add('bh',bh);params.add('r',r);params.add('s',s);params.add('p',p);params.add('v',v);params.add('g',location.href);try{if(pageName){params.add('pn',pageName);}}
+catch(e){}
+var adder=function(k,v){params.add(k,v);},i=0,l=0,subModuleParameters=null;for(i=0,l=subModules.length;i<l;i++){subModuleParameters=subModules[i].exec(doc);subModuleParameters.map(adder);}
+new Netsol.AdAgent.util.HTTPRequest('GET',true,Netsol.SysVars.uri.getScheme()+'://stats.netsolads.com/PostStats',params,false,null,null).exec();};};
+
+
+Netsol.AdAgent.modules.conf.Email={};Netsol.AdAgent.modules.util.EmailLead={};Netsol.AdAgent.modules.util.EmailLead.onclickDef=function(toAddress,pid,ppcvid,ppckw,ppcvaid,ppcvkwid,ppcnsagid,sessid,seid,sekw,referrer,ppcvkwmt,subject,bodyText){return function(e){var params=new Netsol.classes.Parameters();params.add('bodyText',bodyText);params.add('pid',pid);params.add('ppckw',ppckw);params.add('ppcvid',ppcvid);params.add('ppcvaid',ppcvaid);params.add('ppcnsagid',ppcnsagid);params.add('ppcvkwid',ppcvkwid);params.add('ppcvkwmt',ppcvkwmt);params.add('seid',seid);params.add('sekw',sekw);params.add('sessid',sessid);params.add('subject',subject);params.add('r',referrer);params.add('to',toAddress);window.open('http://stats.netsolads.com/PostEmailCLead?'+params.toString(),'emailWindow','status=1,width=450,height=370');return false;};};Netsol.AdAgent.modules.EMailLead=function(){this.exec=function(doc){var nodes=null,lastHit=null,pid=null,ppckw=null,ppcvid=null,ppcvaid=null,ppcvkwid=null,ppcvkwmt=null,ppcnsagid=null,sessid=null,seid=null,sekw=null,referrer=null,i=0,href=null,toAddress=null,queryIndex=0,urlInfo=null,subject=null,bodyText=null;if(!Netsol.util.Array.isEmpty(Netsol.AdAgent.conf.aliases)&&Netsol.util.Array.contains(Netsol.AdAgent.conf.aliases,Netsol.SysVars.uri.getHostName())){return;}
+lastHit=Netsol.AdAgent.util.getLastHit();if(!lastHit){return;}
+if(Netsol.AdAgent.conf.pid){pid=Netsol.AdAgent.conf.pid;}
+ppcvid=lastHit.getVendorId();ppckw=lastHit.getVendorKeyword();ppcvaid=lastHit.getVendorAdId();ppcnsagid=lastHit.getNSAdGroupId();ppcvkwid=lastHit.getVendorKeywordId();ppcvkwmt=lastHit.getVendorKeywordMatchType();seid=lastHit.getSearchEngineId();sekw=lastHit.getSearchEngineKeyword();sessid=lastHit.getSessionId();if(!lastHit.isConverted()){if((ppcvid<=0)&&!Netsol.util.isLeadSearchKeyword(sekw)){return;}
+lastHit.convert();}
+referrer=location.href;nodes=doc.getElementsByTagName('a');for(i=0;i<nodes.length;i++){href=nodes[i].getAttribute('href');if(/mailto:/.test(href)){toAddress=href.substring(7,href.length);if(toAddress){toAddress=Netsol.util.String.trim(toAddress);if(!Netsol.util.Array.isEmpty(Netsol.AdAgent.modules.conf.Email.addresses)&&!Netsol.util.Array.contains(Netsol.AdAgent.modules.conf.Email.addresses,toAddress.toLowerCase())){continue;}
+subject=null;bodyText=null;queryIndex=toAddress.indexOf('?');if(queryIndex>0){urlInfo=Netsol.util.getURLInfo(toAddress.substring(queryIndex));subject=urlInfo.get('subject');bodyText=urlInfo.get('body');toAddress=toAddress.substring(0,queryIndex);}
+nodes[i].setAttribute('href','javascript:;');nodes[i].onclick=Netsol.AdAgent.modules.util.EmailLead.onclickDef(toAddress,pid,ppcvid,ppckw,ppcvaid,ppcvkwid,ppcnsagid,sessid,seid,sekw,referrer,ppcvkwmt,subject,bodyText);}}}};};
+
+
+Netsol.AdAgent.modules.conf.Form={};Netsol.AdAgent.classes.FormLead=function(actionUrl,httpMethod,parameters,successCallback){var params=new Netsol.classes.Parameters(),lastHit=null;parameters.map(function(k,v){params.add('li_'+k,v);});params.add('leadType','FORM');params.add('uri',actionUrl);params.add('r',location.href);params.add('m',httpMethod);lastHit=Netsol.AdAgent.util.getLastHit();if(lastHit!==null){params.add('ppckw',lastHit.getVendorKeyword());params.add('ppcvid',lastHit.getVendorId());params.add('ppcvaid',lastHit.getVendorAdId());params.add('ppcnsagid',lastHit.getNSAdGroupId());params.add('ppcvkwid',lastHit.getVendorKeywordId());params.add('ppcvkwmt',lastHit.getVendorKeywordMatchType());params.add('seid',lastHit.getSearchEngineId());params.add('sekw',lastHit.getSearchEngineKeyword());params.add('sessid',lastHit.getSessionId());lastHit.convert();}
+this.exec=function(){new Netsol.AdAgent.util.HTTPRequest('GET',true,Netsol.SysVars.uri.getScheme()+'://stats.netsolads.com/PostLead',params,false,successCallback,null).exec();};};Netsol.AdAgent.modules.FormLead=function(){var hookForm=function(f){var eventHandler=f.onsubmit,originalOnSubmit=!eventHandler?function(e){return true;}:function(e){return eventHandler(e);},recursiveCall=false,submitted=false;f.onsubmit=function(e){var parameters=new Netsol.classes.Parameters(),i=0,j=0,element=null,name=null,excludeParameters=Netsol.util.Array.isEmpty(Netsol.AdAgent.modules.conf.Form.excludeParameters)?null:Netsol.AdAgent.modules.conf.Form.excludeParameters,doSubmit=null;if(recursiveCall){recursiveCall=false;return originalOnSubmit(e);}
+nextElement:for(i=0;i<this.elements.length;i++){element=this.elements[i];name=element.name?element.name:element.id?element.id:false;if(!name){continue nextElement;}
+if(((element.type==='radio')||(element.type==='checkbox'))&&!element.checked){continue nextElement;}
+if(element.type==='file'){continue nextElement;}
+if(excludeParameters){for(j=0;j<excludeParameters.length;j++){if(name.match(excludeParameters[j])){continue nextElement;}}}
+parameters.add(name,element.value);}
+doSubmit=function(){if(submitted){submitted=false;return;}
+submitted=true;if(f.submit.tagName==='INPUT'){recursiveCall=true;f.submit.click();}
+else{if(originalOnSubmit(e)){f.submit();}}};new Netsol.AdAgent.classes.FormLead(f.action,f.method,parameters,function(){doSubmit();}).exec();window.setTimeout(function(){doSubmit();},3000);return false;};},getFormActionCompleteUrl=function(form){var formAction=null,locationUrl=null,index=0;if(form){if(form.action.indexOf('://')<0){if(form.baseURI){locationUrl=form.baseURI;}
+else if(form.document){locationUrl=form.document.location.href;}
+if(form.action.charAt(0)==='/'){index=locationUrl.indexOf('://');index=locationUrl.indexOf('/',index+3);}
+else{index=locationUrl.lastIndexOf('/')+1;}
+formAction=locationUrl.substr(0,index)+form.action;}
+else{formAction=form.action;}}
+return formAction;};this.exec=function(doc){var lastHit=null,nodes=null,i=0,form=null;if(!Netsol.util.Array.isEmpty(Netsol.AdAgent.conf.aliases)&&Netsol.util.Array.contains(Netsol.AdAgent.conf.aliases,Netsol.SysVars.uri.getHostName())){return;}
+lastHit=Netsol.AdAgent.util.getLastHit();if(!lastHit){return;}
+if(!lastHit.isConverted()){if((lastHit.getVendorId()<=0)&&!Netsol.util.isLeadSearchKeyword(lastHit.getSearchEngineKeyword())){return;}}
+nodes=doc.getElementsByTagName('form');for(i=0;i<nodes.length;i++){form=nodes[i];form.action=getFormActionCompleteUrl(form);if(Netsol.util.isLeadPage(Netsol.util.getURLInfo(form.action),Netsol.AdAgent.modules.conf.Form.pages)){hookForm(form);}}};};
+
+
+Netsol.AdAgent.modules.conf.Replacement={'mappings':{},'searchEngine':{}};Netsol.AdAgent.classes.TextReplacement=function(regexIn,textOut){var regex=new RegExp(regexIn,'g');this.rep=function(str){try{return str.replace(regex,textOut);}
+catch(ex){return str;}};};Netsol.AdAgent.modules.Replacement=function(){this.exec=function(document){var lastHit=null,nsagid=0,seid=0,sekw=null,replacements=null,setupReplacements=null,i=0,l=0,setupAdGroupReplacements=null,setupSearchEngineReplacements=null;if(Netsol.SysVars.browser.opera){return;}
+if(!Netsol.util.Array.isEmpty(Netsol.AdAgent.conf.aliases)&&Netsol.util.Array.contains(Netsol.AdAgent.conf.aliases,Netsol.SysVars.uri.getHostName())){return;}
+if(!Netsol.AdAgent.modules.conf.Replacement.mappings.adGroup&&!Netsol.AdAgent.modules.conf.Replacement.mappings.searchEngine){return;}
+lastHit=Netsol.AdAgent.util.getLastHit();if(!lastHit){}
+replacements=[];setupReplacements=function(replacementActions){if(!Netsol.util.Array.isEmpty(replacementActions)){for(i=0,l=replacementActions.length;i<l;i++){replacements.push(new Netsol.AdAgent.classes.TextReplacement(replacementActions[i].f,replacementActions[i].t));}}};if(Netsol.AdAgent.modules.conf.Replacement.mappings.adGroup){if(lastHit){nsagid=parseInt(lastHit.getNSAdGroupId(),10);if(isNaN(nsagid)){nsagid=-1;}}
+else{nsagid=-1;}
+if(nsagid>0){setupAdGroupReplacements=function(adGroupId){var adGroupActions=Netsol.AdAgent.modules.conf.Replacement.mappings.adGroup[adGroupId];setupReplacements(adGroupActions);};setupAdGroupReplacements(nsagid);setupAdGroupReplacements(0);}}
+if(Netsol.AdAgent.modules.conf.Replacement.mappings.searchEngine){if(lastHit){seid=parseInt(lastHit.getSearchEngineId(),10);if(isNaN(seid)){seid=-1;}
+sekw=lastHit.getSearchEngineKeyword();}
+else{seid=Netsol.AdAgent.modules.conf.Replacement.searchEngine.allowAnyHit?0:-1;}
+if(seid>=0){setupSearchEngineReplacements=function(searchEngineId,searchEngineKeyword){var key=searchEngineId+'/'+((searchEngineKeyword!==null)?searchEngineKeyword:'');var searchEngineActions=Netsol.AdAgent.modules.conf.Replacement.mappings.searchEngine[key];if(!searchEngineActions&&(searchEngineKeyword!==null)){key=searchEngineId+'/';searchEngineActions=Netsol.AdAgent.modules.conf.Replacement.mappings.searchEngine[key];}
+setupReplacements(searchEngineActions);};if(seid>0){setupSearchEngineReplacements(seid,sekw);}
+setupSearchEngineReplacements(0,null);}}
+if(replacements.length>0){(function(el){var i=0,j=0,l=0;if(!el.childNodes){return;}
+for(i=0,l=el.childNodes.length;i<l;i++){if(el.childNodes[i].nodeType===3){for(j=0;j<replacements.length;j++){el.childNodes[i].nodeValue=replacements[j].rep(el.childNodes[i].nodeValue);}}
+else{arguments.callee(el.childNodes[i]);}}})(document);}};};
+
+
+Netsol.AdAgent.conf.primaryDomainName = 'refugecountryclub.com';
+Netsol.AdAgent.modules.conf.leadSearchTerms = {};
+Netsol.AdAgent.conf.pid = '285836642';
+Netsol.AdAgent.conf.sessid = '934D5096D3652BB6DF31FACDEE259CAFD324D83438F756B05EE9B1E117BB78EF';
+Netsol.AdAgent.modules.conf.Stats.searchEngines = [{'id':1,'r':/https?:\/\/[^\/?]*?\.google\.[^\/?]*?[\/?].*?[?&]q=(.*?)(?:&|$)/},{'id':2,'r':/https?:\/\/[^\/?]*?\.yahoo\.[^\/?]*?[\/?].*?[?&]p=(.*?)(?:&|$)/},{'id':3,'r':/https?:\/\/[^\/?]*?\.bing\.[^\/?]*?[\/?].*?[?&]q=(.*?)(?:&|$)/},{'id':4,'r':/https?:\/\/[^\/?]*?\.ask\.[^\/?]*?[\/?].*?[?&]q=(.*?)(?:&|$)/},{'id':5,'r':/https?:\/\/[^\/?]*?\.aol\.[^\/?]*?[\/?].*?[?&]q=(.*?)(?:&|$)/},{'id':6,'r':/https?:\/\/[^\/?]*?\.yellowpages\.com[\/?].*?(?:(?:[?&]search_terms=(.*?)(?:&|$))|$)/},{'id':7,'r':/https?:\/\/[^\/?]*?\.superpages\.[^\/?]*?[\/?].*?[?&]C=(.*?)(?:&|$)/},{'id':8,'r':/https?:\/\/[^\/?]*?\.citysearch\.[^\/?]*?[\/?].*/},{'id':9,'r':/https?:\/\/[^\/?]*?\.yellowbook\.[^\/?]*?[\/?].*?[?&]what=(.*?)(?:&|$)/},{'id':10,'r':/https?:\/\/[^\/?]*?\.yelp\.[^\/?]*?[\/?].*/},{'id':12,'r':/https?:\/\/[^\/?]*?\.yellowpages\.ca[\/?].*/},{'id':13,'r':/https?:\/\/[^\/?]*?\.dexknows\.[^\/?]*?[\/?].*/}];
+Netsol.AdAgent.client.ModuleSet = new Netsol.AdAgent.modules.ModuleSet();
+
+Netsol.temp.statsModule = new Netsol.modules.Stats();                                                      
+Netsol.temp.statsModule.addSubmodule(new Netsol.AdAgent.modules.SubModules.VendorParameters());            
+if (false) {Netsol.temp.statsModule.addSubmodule(new Netsol.AdAgent.modules.SubModules.HighValuePageLead());} 
+if (false) {Netsol.temp.statsModule.addSubmodule(new Netsol.AdAgent.modules.SubModules.ShoppingCartLead());}  
+Netsol.AdAgent.client.ModuleSet.addModule(Netsol.temp.statsModule);
+Netsol.util.BindLoadMethod(function(e){Netsol.AdAgent.client.ModuleSet.exec(document);});

@@ -1,0 +1,17 @@
+-----------------------
+ZIP CODE REPORT BY ACT
+-----------------------
+
+
+SELECT     Customer.City, Customer.State, Customer.PostalCode, COUNT(OrderLine.LineNumber) AS TicketCount
+FROM         OrderHeader WITH (NOLOCK) INNER JOIN
+                      Customer WITH (NOLOCK) ON OrderHeader.CustomerNumber = Customer.CustomerNumber INNER JOIN
+                      OrderLine WITH (NOLOCK) ON OrderHeader.OrderNumber = OrderLine.OrderNumber INNER JOIN
+                      Seat WITH (NOLOCK) ON OrderLine.ItemNumber = Seat.ItemNumber INNER JOIN
+                      Event WITH (NOLOCK) ON Seat.EventCode = Event.EventCode INNER JOIN
+                      Act WITH (NOLOCK) ON Event.ActCode = Act.ActCode INNER JOIN
+                      OrganizationVenue WITH (NOLOCK) ON Event.VenueCode = OrganizationVenue.VenueCode INNER JOIN
+                      OrganizationAct WITH (NOLOCK) ON Event.ActCode = OrganizationAct.ActCode
+WHERE     (OrganizationVenue.OrganizationNumber = 600) AND (OrderHeader.StatusCode = 'S') AND (OrganizationAct.OrganizationNumber = 600) AND 
+                      (OrderLine.ItemType IN ('Seat', 'SubSeat', 'SubFixedEvent')) AND (OrganizationAct.ActCode = 6934)
+GROUP BY Customer.City, Customer.State, Customer.PostalCode

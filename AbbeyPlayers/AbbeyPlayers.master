@@ -1,0 +1,885 @@
+<%
+'changelog'
+'LSP 06/23/16 - initial development'
+'LSP 12/02/16 - remove header at top'
+%>
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en-US">
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	
+	<link rel="stylesheet" id="simple-banner-style-css" href="/clients/abbeyplayers/images/simple-banner.css" type="text/css" media="all">
+
+	<link rel="stylesheet" id="tempera-style-css" href="/clients/abbeyplayers/images/style.css" type="text/css" media="all">
+	
+	<link rel="https://api.w.org/" href="http://abbeyplayers.route66.net/wp-json/">
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://abbeyplayers.route66.net/xmlrpc.php?rsd">
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://abbeyplayers.route66.net/wp-includes/wlwmanifest.xml">
+	<link rel="shortlink" href="http://abbeyplayers.route66.net/?p=51">
+	<link rel="alternate" type="application/json+oembed" href="http://abbeyplayers.route66.net/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fabbeyplayers.route66.net%2Fupcoming-performances%2F">
+	<link rel="alternate" type="text/xml+oembed" href="http://abbeyplayers.route66.net/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fabbeyplayers.route66.net%2Fupcoming-performances%2F&amp;format=xml">
+	<!-- <meta name="NextGEN" version="2.1.43" /> -->
+	<style type="text/css" media="screen">
+		.simple-banner {
+			background: #562e25
+		}
+		
+		;
+	</style>
+
+	<style type="text/css" id="custom-background-css">
+		body.custom-background {
+			background-color: #d6906d;
+			background-image: url('/clients/abbeyplayers/images/Brickwall1.jpg');
+			background-repeat: repeat;
+			background-position: top center;
+			background-attachment: fixed;
+		}
+	</style>
+	<style type="text/css">
+		#header,
+		#main,
+		#topbar-inner {
+			max-width: 1150px;
+		}
+		
+		#container.one-column {}
+		
+		#container.two-columns-right #secondary {
+			width: 250px;
+			float: right;
+		}
+		
+		#container.two-columns-right #content {
+			width: 810px;
+			float: left;
+		}
+		/*fallback*/
+		
+		#container.two-columns-right #content {
+			width: calc(100% - 280px);
+			float: left;
+		}
+		
+		#container.two-columns-left #primary {
+			width: 250px;
+			float: left;
+		}
+		
+		#container.two-columns-left #content {
+			width: 810px;
+			float: right;
+		}
+		/*fallback*/
+		
+		#container.two-columns-left #content {
+			width: -moz-calc(100% - 280px);
+			float: right;
+			width: -webkit-calc(100% - 280px);
+			width: calc(100% - 280px);
+		}
+		
+		#container.three-columns-right .sidey {
+			width: 125px;
+			float: left;
+		}
+		
+		#container.three-columns-right #primary {
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+		
+		#container.three-columns-right #content {
+			width: 780px;
+			float: left;
+		}
+		/*fallback*/
+		
+		#container.three-columns-right #content {
+			width: -moz-calc(100% - 310px);
+			float: left;
+			width: -webkit-calc(100% - 310px);
+			width: calc(100% - 310px);
+		}
+		
+		#container.three-columns-left .sidey {
+			width: 125px;
+			float: left;
+		}
+		
+		#container.three-columns-left #secondary {
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+		
+		#container.three-columns-left #content {
+			width: 780px;
+			float: right;
+		}
+		/*fallback*/
+		
+		#container.three-columns-left #content {
+			width: -moz-calc(100% - 310px);
+			float: right;
+			width: -webkit-calc(100% - 310px);
+			width: calc(100% - 310px);
+		}
+		
+		#container.three-columns-sided .sidey {
+			width: 125px;
+			float: left;
+		}
+		
+		#container.three-columns-sided #secondary {
+			float: right;
+		}
+		
+		#container.three-columns-sided #content {
+			width: 780px;
+			float: right;
+			/*fallback*/
+			width: -moz-calc(100% - 310px);
+			float: right;
+			width: -webkit-calc(100% - 310px);
+			float: right;
+			width: calc(100% - 310px);
+			float: right;
+			margin: 0 155px 0 -1090px;
+		}
+		
+		body {
+			font-family: Tahoma, Geneva, sans-serif;
+		}
+		
+		#content h1.entry-title a,
+		#content h2.entry-title a,
+		#content h1.entry-title,
+		#content h2.entry-title {
+			font-family: Yanone Kaffeesatz Regular;
+		}
+		
+		.widget-title,
+		.widget-title a {
+			line-height: normal;
+			font-family: Open Sans Light;
+		}
+		
+		.entry-content h1,
+		.entry-content h2,
+		.entry-content h3,
+		.entry-content h4,
+		.entry-content h5,
+		.entry-content h6,
+		#comments #reply-title,
+		.nivo-caption h2,
+		#front-text1 h1,
+		#front-text2 h1,
+		.column-header-image {
+			font-family: Open Sans Light;
+		}
+		
+		#site-title span a {
+			font-family: Ubuntu;
+		}
+		
+		#access ul li a,
+		#access ul li a span {
+			font-family: Tahoma, Geneva, sans-serif;
+		}
+		
+		body {
+			color: #562e25;
+			background-color: #171717
+		}
+		
+		a {
+			color: #1693A5;
+		}
+		
+		a:hover,
+		.entry-meta span a:hover,
+		.comments-link a:hover {
+			color: #D6341D;
+		}
+		
+		#header {
+			background-color: ;
+		}
+		
+		#site-title span a {
+			color: #562e25;
+		}
+		
+		#site-description {
+			color: #562e25;
+		}
+		
+		.socials a {
+			background-color: #1693A5;
+		}
+		
+		.socials-hover {
+			background-color: #D6341D;
+		}
+		/* Main menu top level */
+		
+		#access a,
+		#nav-toggle span {
+			color: #562e25;
+		}
+		
+		#access,
+		#nav-toggle {
+			background-color: #ddd4d4;
+		}
+		
+		#access> .menu> ul> li> a> span {
+			border-color: #bfb6b6;
+			-moz-box-shadow: 1px 0 0 #f5ecec;
+			-webkit-box-shadow: 1px 0 0 #f5ecec;
+			box-shadow: 1px 0 0 #f5ecec;
+		}
+		
+		#access a:hover {
+			background-color: #eae1e1;
+		}
+		
+		#access ul li.current_page_item> a,
+		#access ul li.current-menu-item> a,
+		#access ul li.current_page_ancestor> a,
+		#access ul li.current-menu-ancestor> a {
+			background-color: #eae1e1;
+		}
+		/* Main menu Submenus */
+		
+		#access> .menu> ul> li> ul:before {
+			border-bottom-color: #ddd4d4;
+		}
+		
+		#access ul ul ul:before {
+			border-right-color: #ddd4d4;
+		}
+		
+		#access ul ul li {
+			background-color: #ddd4d4;
+			border-top-color: #ebe2e2;
+			border-bottom-color: #d2c9c9
+		}
+		
+		#access ul ul li a {
+			color: #562e25
+		}
+		
+		#access ul ul li a:hover {
+			background: #ebe2e2
+		}
+		
+		#access ul ul li.current_page_item> a,
+		#access ul ul li.current-menu-item> a,
+		#access ul ul li.current_page_ancestor> a,
+		#access ul ul li.current-menu-ancestor> a {
+			background-color: #ebe2e2;
+		}
+		
+		#topbar {
+			display: none;
+		}
+		
+		.topmenu ul li a {
+			color: #F7F7F7;
+		}
+		
+		.topmenu ul li a:hover {
+			color: #EEEEEE;
+			border-bottom-color: #1693A5;
+		}
+		
+		#main {
+			background-color: #ddd4d4;
+		}
+		
+		#author-info,
+		#entry-author-info,
+		.page-title {
+			border-color: #1693A5;
+			background: #F7F7F7;
+		}
+		
+		#entry-author-info #author-avatar,
+		#author-info #author-avatar {
+			border-color: #EEEEEE;
+		}
+		
+		.sidey .widget-container {
+			color: #333333;
+			background-color: ;
+		}
+		
+		.sidey .widget-title {
+			color: #666666;
+			background-color: #F7F7F7;
+			border-color: #cfcfcf;
+		}
+		
+		.sidey .widget-container a {
+			color: ;
+		}
+		
+		.sidey .widget-container a:hover {
+			color: ;
+		}
+		
+		.entry-content h1,
+		.entry-content h2,
+		.entry-content h3,
+		.entry-content h4,
+		.entry-content h5,
+		.entry-content h6 {
+			color: #444444;
+		}
+		
+		.sticky .entry-header {
+			border-color: #1693A5
+		}
+		
+		.entry-title,
+		.entry-title a {
+			color: #444444;
+		}
+		
+		.entry-title a:hover {
+			color: #000000;
+		}
+		
+		#content h3.entry-format {
+			color: #562e25;
+			background-color: #ddd4d4;
+		}
+		
+		#footer {
+			color: #AAAAAA;
+			background-color: ;
+		}
+		
+		#footer2 {
+			color: #AAAAAA;
+			background-color: #F7F7F7;
+		}
+		
+		#footer a {
+			color: ;
+		}
+		
+		#footer a:hover {
+			color: ;
+		}
+		
+		#footer2 a,
+		.footermenu ul li:after {
+			color: ;
+		}
+		
+		#footer2 a:hover {
+			color: ;
+		}
+		
+		#footer .widget-container {
+			color: #562e25;
+			background-color: ;
+		}
+		
+		#footer .widget-title {
+			color: #ddd4d4;
+			background-color: #a55845;
+			border-color: #7d301d
+		}
+		
+		a.continue-reading-link,
+		#cryout_ajax_more_trigger {
+			color: #562e25 !important;
+			background: #ddd4d4;
+			border-bottom-color: #1693A5;
+		}
+		
+		a.continue-reading-link:after {
+			background-color: #D6341D;
+		}
+		
+		a.continue-reading-link i.icon-right-dir {
+			color: #1693A5
+		}
+		
+		a.continue-reading-link:hover i.icon-right-dir {
+			color: #D6341D
+		}
+		
+		.page-link a,
+		.page-link> span> em {
+			border-color: #CCCCCC
+		}
+		
+		.columnmore a {
+			background: #D6341D;
+			color: #F7F7F7
+		}
+		
+		.columnmore a:hover {
+			background: #1693A5;
+		}
+		
+
+		
+		.file:hover,
+		.button:hover,
+		#respond .form-submit input#submit:hover {
+			background-color: #F7F7F7;
+		}
+		
+		.entry-content tr th,
+		.entry-content thead th {
+			color: #444444;
+		}
+		
+		.entry-content fieldset,
+		#content tr td,
+		#content tr th,
+		#content thead th {
+			border-color: #CCCCCC;
+		}
+		
+		#content tr.even td {
+			background-color: #F7F7F7 !important;
+		}
+		
+		hr {
+			background-color: #CCCCCC;
+		}
+		
+
+		
+		.entry-content code {
+			border-color: #CCCCCC;
+			border-bottom-color: #1693A5;
+		}
+		
+		.entry-content pre {
+			border-color: #CCCCCC;
+			background-color: #F7F7F7;
+		}
+		
+		.entry-content blockquote {
+			border-color: #EEEEEE;
+		}
+		
+		abbr,
+		acronym {
+			border-color: #562e25;
+		}
+		
+		.comment-meta a {
+			color: #562e25;
+		}
+		
+		#respond .form-allowed-tags {
+			color: #562e25;
+		}
+		
+		.reply a {
+			background-color: #F7F7F7;
+			border-color: #EEEEEE;
+		}
+		
+		.reply a:hover {
+			background-color: #ddd4d4;
+			color: #1693A5;
+		}
+		
+		.entry-meta .icon-metas:before {
+			color: #562e25;
+		}
+		
+		.entry-meta span a,
+		.comments-link a {
+			color: #562e25;
+		}
+		
+		.entry-meta span a:hover,
+		.comments-link a:hover {
+			color: ;
+		}
+		
+		.nav-next a:hover {}
+		
+		.nav-previous a:hover {}
+		
+		.pagination {
+			border-color: #ededed;
+		}
+		
+		.pagination span,
+		.pagination a {
+			background: #F7F7F7;
+			border-left-color: #dddddd;
+			border-right-color: #ffffff;
+		}
+		
+		.pagination a:hover {
+			background: #ffffff;
+		}
+		
+		#searchform input[type="text"] {
+			color: #562e25;
+		}
+		
+		.caption-accented .wp-caption {
+			background-color: rgba(22, 147, 165, 0.8);
+			color: #ddd4d4
+		}
+		
+		.tempera-image-one .entry-content img[class*='align'],
+		.tempera-image-one .entry-summary img[class*='align'],
+		.tempera-image-two .entry-content img[class*='align'],
+		.tempera-image-two .entry-summary img[class*='align'] {
+			border-color: #1693A5;
+		}
+		
+		#content p,
+		#content ul,
+		#content ol,
+		#content,
+		#frontpage blockquote {
+			text-align: Justify;
+		}
+		
+		#content p,
+		#content ul,
+		#content ol,
+		.widget-area,
+		.widget-area a,
+		table,
+		table td {
+			font-size: 15px;
+			word-spacing: Default;
+			letter-spacing: Default;
+		}
+		
+		#content p,
+		#content ul,
+		#content ol,
+		.widget-area,
+		.widget-area a {
+			line-height: 1.7em;
+		}
+		
+		#bg_image {
+			display: block;
+			margin: 0 auto;
+		}
+		
+		#content h1.entry-title,
+		#content h2.entry-title {
+			font-size: 34px;
+		}
+		
+		.widget-title,
+		.widget-title a {
+			font-size: 18px;
+		}
+		
+		#content .entry-content h1 {
+			font-size: 38px;
+		}
+		
+		#content .entry-content h2 {
+			font-size: 34px;
+		}
+		
+		#content .entry-content h3 {
+			font-size: 29px;
+		}
+		
+		#content .entry-content h4 {
+			font-size: 24px;
+		}
+		
+		#content .entry-content h5 {
+			font-size: 19px;
+		}
+		
+		#content .entry-content h6 {
+			font-size: 14px;
+		}
+		
+		#site-title span a {
+			font-size: 50px;
+		}
+		
+		#access ul li a {
+			font-size: 16px;
+		}
+		
+		#access ul ul ul a {
+			font-size: 14px;
+		}
+		
+		#respond .form-allowed-tags {
+			display: none;
+		}
+		
+		.nocomments,
+		.nocomments2 {
+			display: none;
+		}
+		
+		.comments-link span {
+			display: none;
+		}
+		
+		#header-container> div {
+			margin: 40px 0 0 0px;
+		}
+		
+		.page h1.entry-title,
+		.home .page h2.entry-title {
+			display: none;
+		}
+		
+		#content p,
+		#content ul,
+		#content ol,
+		#content dd,
+		#content pre,
+		#content hr {
+			margin-bottom: 1.0em;
+		}
+		
+		#toTop {
+			background: #ddd4d4;
+			margin-left: 1300px;
+		}
+		
+		#toTop:hover .icon-back2top:before {
+			color: #D6341D;
+		}
+		
+		#main {
+			margin-top: 20px;
+		}
+		
+		#forbottom {
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+		
+		#header-widget-area {
+			width: 33%;
+		}
+		
+		#branding {
+			height: 120px;
+		}
+	</style>
+
+	<link rel="stylesheet" id="tempera_style_mobile" href="/clients/abbeyplayers/images/style-mobile.css" type="text/css" media="all">
+	<script type="text/javascript">
+		var cryout_global_content_width = 900;
+		var cryout_toTop_offset = 1150;
+	</script>
+	<!--[if lt IE 9]>
+<script>
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+</script>
+<![endif]-->
+
+</head>
+
+<body class="page page-id-51 page-template page-template-templates page-template-template-onecolumn page-template-templatestemplate-onecolumn-php custom-background tempera-image-none caption-dark magazine-layout tempera-menu-left">
+
+
+
+	<div id="wrapper" class="hfeed">
+		<div id="topbar">
+			<div id="topbar-inner">
+				<nav class="topmenu">
+					<ul id="menu-abbeyplayers" class="menu">
+						<li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-34"><a href="http://abbeyplayers.route66.net/about-us/">About Us</a></li>
+						<li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"><a href="http://abbeyplayers.route66.net/tickets/">Tickets</a></li>
+						<li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-51 current_page_item menu-item-has-children menu-item-66"><a href="http://abbeyplayers.route66.net/upcoming-performances/">Upcoming Performances</a></li>
+						<li id="menu-item-134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-134"><a href="http://abbeyplayers.route66.net/past-productions/">Past Productions</a></li>
+						<li id="menu-item-65" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a href="http://abbeyplayers.route66.net/support-membership/">Support/Membership</a></li>
+						<li id="menu-item-151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a href="http://abbeyplayers.route66.net/photos/">Photos</a></li>
+						<li id="menu-item-35" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-35"><a href="http://abbeyplayers.route66.net/find-us/">Find Us</a></li>
+						<li id="menu-item-340" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-340"><a href="http://abbeyplayers.route66.net/t-shirts/">T-Shirts</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<div id="header-full">
+			<header id="header">
+				<div id="masthead">
+					<div id="branding" role="banner">
+						<div id="header-container">
+							<div>
+								<div id="site-title"><span> <a href="http://abbeyplayers.route66.net/" title="Abbey Players" rel="home">Abbey Players</a> </span></div>
+								<div id="site-description">Abbeville, Louisiana</div>
+							</div>
+						</div>
+						<div style="clear:both;"></div>
+					</div>
+					<!-- #branding -->
+					<a id="nav-toggle"><span>&nbsp;</span></a>
+					<nav id="access" role="navigation">
+						<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+						<div class="menu">
+							<ul id="prime_nav" class="menu">
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-34"><a aria-haspopup="true" href="http://abbeyplayers.route66.net/about-us/"><span>About Us</span></a>
+									<ul style="display: none;" class="sub-menu">
+										<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="http://abbeyplayers.route66.net/history/"><span>History</span></a></li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"><a href="http://abbeyplayers.route66.net/tickets/"><span>Tickets</span></a></li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-51 current_page_item menu-item-has-children menu-item-66"><a aria-haspopup="true" href="http://abbeyplayers.route66.net/upcoming-performances/"><span>Upcoming Performances</span></a>
+									<ul style="display: none; opacity: 1; margin-top: 50px; visibility: visible; overflow: visible;" class="sub-menu">
+										<li id="menu-item-213" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-213"><a href="http://abbeyplayers.route66.net/scheduled-auditions/"><span>Scheduled Auditions</span></a></li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-134"><a aria-haspopup="true" href="http://abbeyplayers.route66.net/past-productions/"><span>Past Productions</span></a>
+									<ul style="display: none;" class="sub-menu">
+										<li id="menu-item-222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-222"><a href="http://abbeyplayers.route66.net/past-productions/murder-at-deadwood-saloon/"><span>Murder at Deadwood Saloon</span></a></li>
+										<li id="menu-item-204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a href="http://abbeyplayers.route66.net/past-productions/dirt-road-lafayette/"><span>Dirt Road to Lafayette</span></a></li>
+										<li id="menu-item-135" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-135"><a href="http://abbeyplayers.route66.net/past-productions/posters-from-the-past/"><span>Posters from the Past</span></a></li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a href="http://abbeyplayers.route66.net/support-membership/"><span>Support/Membership</span></a></li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a href="http://abbeyplayers.route66.net/photos/"><span>Photos</span></a></li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-35"><a aria-haspopup="true" href="http://abbeyplayers.route66.net/find-us/"><span>Find Us</span></a>
+									<ul style="display: none;" class="sub-menu">
+										<li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-406"><a href="http://abbeyplayers.route66.net/directions/"><span>Directions</span></a></li>
+									</ul>
+								</li>
+								<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-340"><a href="http://abbeyplayers.route66.net/t-shirts/"><span>T-Shirts</span></a></li>
+							</ul>
+						</div>
+					</nav>
+					<!-- #access -->
+				</div>
+				<!-- #masthead -->
+			</header>
+			<!-- #header -->
+		</div>
+		<!-- #header-full -->
+
+		<div style="clear:both;height:0;"> </div>
+
+		<div id="main">
+			<div id="toTop"><i class="icon-back2top"></i> </div>
+			<div id="forbottom">
+
+				<div style="clear:both;"> </div>
+
+
+				<section id="container" class="one-column">
+
+					<div id="content" role="main">
+<!--tix content-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+					</div>
+					<!-- #content -->
+
+				</section>
+				<!-- #container -->
+
+				<div style="clear:both;"></div>
+			</div>
+			<!-- #forbottom -->
+
+
+			<footer id="footer" role="contentinfo">
+				<div id="colophon">
+
+
+
+					<div id="footer-widget-area" role="complementary" class="footerone">
+
+						<div id="first" class="widget-area">
+							<ul class="xoxo">
+								<li id="text-3" class="widget-container widget_text">
+									<h3 class="widget-title">Contact Us:</h3>
+									<div class="textwidget">
+										<p>Abbey Players<br> 200 S. State Street<br> Post Office Box 1211<br> Abbeville, LA 70511-1211<br> (337) 893-2442<br> abbeyplayers@gmail.com
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- #first .widget-area -->
+
+
+
+					</div>
+					<!-- #footer-widget-area -->
+
+				</div>
+				<!-- #colophon -->
+
+				<div id="footer2">
+
+					<div id="site-copyright">Site designed by Southern Internet Marketing. All photos on this site are copyrighted and may not be used without written permission. -- Copyright 2016</div>
+					<nav class="footermenu">
+						<ul id="menu-abbeyplayers-1" class="menu">
+							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-34"><a href="http://abbeyplayers.route66.net/about-us/">About Us</a></li>
+							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"><a href="http://abbeyplayers.route66.net/tickets/">Tickets</a></li>
+							<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-51 current_page_item menu-item-has-children menu-item-66"><a href="http://abbeyplayers.route66.net/upcoming-performances/">Upcoming Performances</a></li>
+							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-134"><a href="http://abbeyplayers.route66.net/past-productions/">Past Productions</a></li>
+							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a href="http://abbeyplayers.route66.net/support-membership/">Support/Membership</a></li>
+							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-151"><a href="http://abbeyplayers.route66.net/photos/">Photos</a></li>
+							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-35"><a href="http://abbeyplayers.route66.net/find-us/">Find Us</a></li>
+							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-340"><a href="http://abbeyplayers.route66.net/t-shirts/">T-Shirts</a></li>
+						</ul>
+					</nav> <span style="display:block;float:right;text-align:right;padding:5px 20px 5px;text-transform:uppercase;font-size:11px;">
+	Powered by <a target="_blank" href="http://www.cryoutcreations.eu/" title="Tempera Theme by Cryout Creations">Tempera</a> &amp; <a target="_blank" href="http://wordpress.org/" title="Semantic Personal Publishing Platform">  WordPress.		</a>
+	</span>
+					<!-- #site-info -->
+
+				</div>
+				<!-- #footer2 -->
+
+			</footer>
+			<!-- #footer -->
+
+		</div>
+		<!-- #main -->
+	</div>
+	<!-- #wrapper -->
+
+
+	<!-- ngg_resource_manager_marker -->
+
+</div>
+</form>
+</body>
+</html>

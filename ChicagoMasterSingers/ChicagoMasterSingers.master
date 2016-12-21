@@ -1,0 +1,678 @@
+<%
+'changelog'
+'LSP 10/05/16 - initial development'
+%>
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+	<link id="wsite-base-style" rel="stylesheet" type="text/css" href="/clients/ChicagoMasterSingers/Images/sites.css">
+	<link rel="stylesheet" type="text/css" href="/clients/ChicagoMasterSingers/Images/fancybox.css">
+	<link rel="stylesheet" type="text/css" href="/clients/ChicagoMasterSingers/Images/social-icons.css" media="screen,projection">
+	<link rel="stylesheet" type="text/css" href="/clients/ChicagoMasterSingers/Images/main_style.css" title="wsite-theme-css">
+	<link href="/clients/ChicagoMasterSingers/Images/css_002.css" rel="stylesheet" type="text/css">
+	<link href="/clients/ChicagoMasterSingers/Images/css_003.css" rel="stylesheet" type="text/css">
+
+	<link href="/clients/ChicagoMasterSingers/Images/css.css" rel="stylesheet" type="text/css">
+	<link href="/clients/ChicagoMasterSingers/Images/css.css" rel="stylesheet" type="text/css">
+	<link href="/clients/ChicagoMasterSingers/Images/css.css" rel="stylesheet" type="text/css">
+	<style type="text/css">
+		.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph,
+		.wsite-elements.wsite-not-footer:not(.wsite-header-elements) p,
+		.wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title,
+		.wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description,
+		.wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label,
+		.wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label,
+		#wsite-content div.paragraph,
+		#wsite-content p,
+		#wsite-content .product-block .product-title,
+		#wsite-content .product-description,
+		#wsite-content .wsite-form-field label,
+		#wsite-content .wsite-form-field label,
+		.blog-sidebar div.paragraph,
+		.blog-sidebar p,
+		.blog-sidebar .wsite-form-field label,
+		.blog-sidebar .wsite-form-field label {}
+		
+		#wsite-content div.paragraph,
+		#wsite-content p,
+		#wsite-content .product-block .product-title,
+		#wsite-content .product-description,
+		#wsite-content .wsite-form-field label,
+		#wsite-content .wsite-form-field label,
+		.blog-sidebar div.paragraph,
+		.blog-sidebar p,
+		.blog-sidebar .wsite-form-field label,
+		.blog-sidebar .wsite-form-field label {}
+		
+		.wsite-elements.wsite-footer div.paragraph,
+		.wsite-elements.wsite-footer p,
+		.wsite-elements.wsite-footer .product-block .product-title,
+		.wsite-elements.wsite-footer .product-description,
+		.wsite-elements.wsite-footer .wsite-form-field label,
+		.wsite-elements.wsite-footer .wsite-form-field label {}
+		
+		.wsite-elements.wsite-not-footer:not(.wsite-header-elements) h2,
+		.wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-long .product-title,
+		.wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-large .product-title,
+		.wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-small .product-title,
+		#wsite-content h2,
+		#wsite-content .product-long .product-title,
+		#wsite-content .product-large .product-title,
+		#wsite-content .product-small .product-title,
+		.blog-sidebar h2 {
+			font-family: "Montserrat" !important;
+			text-transform: none !important;
+		}
+		
+		#wsite-content h2,
+		#wsite-content .product-long .product-title,
+		#wsite-content .product-large .product-title,
+		#wsite-content .product-small .product-title,
+		.blog-sidebar h2 {}
+		
+		.wsite-elements.wsite-footer h2,
+		.wsite-elements.wsite-footer .product-long .product-title,
+		.wsite-elements.wsite-footer .product-large .product-title,
+		.wsite-elements.wsite-footer .product-small .product-title {}
+		
+		#wsite-title {}
+		
+		.wsite-menu-default a {}
+		
+		.wsite-menu a {}
+		
+		.wsite-image div,
+		.wsite-caption {}
+		
+		.galleryCaptionInnerText {}
+		
+		.fancybox-title {}
+		
+		.wslide-caption-text {}
+		
+		.wsite-phone {}
+		
+		.wsite-headline,
+		.wsite-header-section .wsite-content-title {
+			font-family: "Montserrat" !important;
+			font-size: 49px !important;
+			font-weight: 700 !important;
+		}
+		
+		.wsite-headline-paragraph,
+		.wsite-header-section .paragraph {
+			font-family: "Montserrat" !important;
+			font-weight: 400 !important;
+			font-style: normal !important;
+		}
+		
+		.wsite-button-inner {}
+		
+		.wsite-not-footer blockquote {}
+		
+		.wsite-footer blockquote {}
+		
+		.blog-header h2 a {}
+		
+		#wsite-content h2.wsite-product-title {}
+		
+		.wsite-product .wsite-product-price a {}
+	</style>
+	<style>
+		.wsite-background {
+			background-image: url("/uploads/8/8/2/0/88200698/background-images/1366250879.jpg") !important;
+			background-repeat: no-repeat !important;
+			background-position: 50.00% 56.12% !important;
+			background-size: 100% !important;
+			background-color: transparent !important;
+		}
+		
+		body.wsite-background {
+			background-attachment: fixed !important;
+		}
+		
+		.wsite-background.wsite-custom-background {
+			background-size: cover !important
+		}
+	</style>
+
+
+</head>
+
+<body class="no-header  wsite-page-tickets  full-width-on  wsite-theme-light postload">
+	<div class="body-wrap">
+
+		<div id="header">
+			<div class="nav-trigger hamburger">
+				<div class="open-btn">
+					<span class="mobile"></span>
+					<span class="mobile"></span>
+					<span class="mobile"></span>
+				</div>
+			</div>
+			<div id="sitename"><span class="wsite-logo">
+
+	<a href="http://www.chicagomastersingers.org/">
+		<img src="/clients/ChicagoMasterSingers/Images/1472785303.png">
+	</a>
+
+</span></div>
+		</div>
+
+		<div id="wrapper">
+			<div class="bg-wrapper">
+				<div id="navigation">
+					<ul class="wsite-menu-default">
+						<li id="pg186720399554917955" class="wsite-menu-item-wrap    wsite-nav-1" style="position: relative;">
+							<a href="http://www.chicagomastersingers.org/" class="wsite-menu-item" style="position: relative;">
+				Home
+			</a>
+
+						</li>
+						<li id="pg180027315239897566" class="wsite-menu-item-wrap    wsite-nav-2" style="position: relative;">
+							<a href="http://www.chicagomastersingers.org/2016-17-season.html" class="wsite-menu-item" style="position: relative;">
+				2016-17 Season
+			</a>
+
+						</li>
+						<li id="active" class="wsite-menu-item-wrap    wsite-nav-3" style="position: relative;">
+							<a href="http://www.chicagomastersingers.org/tickets.html" class="wsite-menu-item" style="position: relative;">
+				Tickets
+			</a>
+
+						</li>
+						<li id="pg407167124179290135" class="wsite-menu-item-wrap    wsite-nav-4" style="position: relative;">
+							<a href="http://www.chicagomastersingers.org/about.html" class="wsite-menu-item" style="position: relative;">
+				About
+			</a>
+
+
+						</li>
+						<li id="pg314671664617357697" class="wsite-menu-item-wrap    wsite-nav-5" style="position: relative;">
+							<a href="http://www.chicagomastersingers.org/advertise.html" class="wsite-menu-item" style="position: relative;">
+				Advertise
+			</a>
+
+						</li>
+						<li id="pg563497698885974055" class="wsite-menu-item-wrap    wsite-nav-6" style="position: relative;">
+							<a href="http://www.chicagomastersingers.org/auditions.html" class="wsite-menu-item" style="position: relative;">
+				Auditions
+			</a>
+
+						</li>
+						<li id="pg743927067573987325" class="wsite-menu-item-wrap    wsite-nav-7" style="position: relative;">
+							<a href="http://www.chicagomastersingers.org/gallery.html" class="wsite-menu-item" style="position: relative;">
+				Gallery
+			</a>
+
+						</li>
+						<li id="pg975112045103824375" class="wsite-menu-item-wrap    wsite-nav-8" style="position: relative;">
+							<a href="http://www.chicagomastersingers.org/contact.html" class="wsite-menu-item" style="position: relative;">
+				Contact
+			</a>
+
+						</li>
+						<li id="pg770791262545241181" class="wsite-menu-item-wrap    wsite-nav-9" style="position: relative;">
+							<a href="http://www.chicagomastersingers.org/singers.html" class="wsite-menu-item" style="position: relative;">
+				Singers
+			</a>
+
+
+						</li>
+					</ul>
+				</div>
+				<div id="content-wrapper">
+					<div id="wsite-content" class="wsite-elements wsite-not-footer">
+						<div class="wsite-section-wrap">
+							<div class="wsite-section wsite-body-section wsite-background-13 wsite-custom-background">
+								<div class="wsite-section-content">
+									<div class="container">
+										<div class="wsite-section-elements">
+											<div>
+												<div class="wsite-multicol">
+<!--tix content-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+</div>
+				</div>
+			</div>
+			<div id="footer">
+				<div id="footer-content">
+					<div class="wsite-elements wsite-footer">
+						<div>
+							<div class="wsite-multicol">
+								<div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+									<table class="wsite-multicol-table">
+										<tbody class="wsite-multicol-tbody">
+											<tr class="wsite-multicol-tr">
+												<td class="wsite-multicol-col" style="width:27.919699916169%; padding:0 15px;">
+
+
+
+													<h2 class="wsite-content-title"><strong>Chicago Master<br>​Singers</strong></h2>
+
+
+
+												</td>
+												<td class="wsite-multicol-col" style="width:17.989062757316%; padding:0 15px;">
+
+
+
+													<h2 class="wsite-content-title"><strong>Support CMS</strong></h2>
+
+
+
+												</td>
+												<td class="wsite-multicol-col" style="width:16.333432447614%; padding:0 15px;">
+
+
+
+													<h2 class="wsite-content-title"><strong>Join our Mail list</strong></h2>
+
+
+
+												</td>
+												<td class="wsite-multicol-col" style="width:37.7578048789%; padding:0 15px;">
+
+
+
+													<h2 class="wsite-content-title"><strong>Follow us on<br>Facebook</strong></h2>
+
+
+
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="wsite-multicol">
+								<div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+									<table class="wsite-multicol-table">
+										<tbody class="wsite-multicol-tbody">
+											<tr class="wsite-multicol-tr">
+												<td class="wsite-multicol-col" style="width:27.830687830688%; padding:0 15px;">
+
+
+
+													<div class="paragraph">
+														<font color="#515151">P.O. Box 1503<br>Barrington, IL &nbsp;60011-1503<br>​1-877-TALK CMS (825-5267)</font>
+													</div>
+
+
+
+												</td>
+												<td class="wsite-multicol-col" style="width:72.169312169312%; padding:0 15px;">
+
+
+
+													<div>
+														<div class="wsite-multicol">
+															<div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+																<table class="wsite-multicol-table">
+																	<tbody class="wsite-multicol-tbody">
+																		<tr class="wsite-multicol-tr">
+																			<td class="wsite-multicol-col" style="width:22.666386396426%; padding:0 15px;">
+
+
+
+																				<div style="text-align:left;">
+																					<div style="height: 10px; overflow: hidden;"></div>
+																					<a class="wsite-button wsite-button-small wsite-button-highlight" href="http://chicagomastersingers.tix.com/Donation.aspx?OrgNum=1978"
+																									target="_blank">
+																						<span class="wsite-button-inner">Donate</span>
+																					</a>
+																					<div style="height: 10px; overflow: hidden;"></div>
+																				</div>
+
+
+
+																			</td>
+																			<td class="wsite-multicol-col" style="width:23.601433585926%; padding:0 15px;">
+
+
+
+																				<div style="text-align:left;">
+																					<div style="height: 10px; overflow: hidden;"></div>
+																					<a class="wsite-button wsite-button-small wsite-button-highlight" href="http://eepurl.com/GxVVj" target="_blank">
+																						<span class="wsite-button-inner">Sign up Today</span>
+																					</a>
+																					<div style="height: 10px; overflow: hidden;"></div>
+																				</div>
+
+
+
+																			</td>
+																			<td class="wsite-multicol-col" style="width:26.498061378566%; padding:0 15px;">
+
+
+
+																				<div>
+																					<div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+																						<a href="https://www.facebook.com/ChicagoMasterSingers/" target="_blank">
+																							<img src="/clients/ChicagoMasterSingers/Images/facebook-like-button-big.jpg" alt="Picture" style="width:128;max-width:100%">
+																						</a>
+																						<div style="display:block;font-size:90%"></div>
+																					</div>
+																				</div>
+
+
+
+																			</td>
+																			<td class="wsite-multicol-col" style="width:27.234118639082%; padding:0 15px;">
+
+
+
+																				<div>
+																					<div class="wsite-image wsite-image-border-none " style="padding-top:10px;padding-bottom:10px;margin-left:0px;margin-right:0px;text-align:center">
+																						<a>
+																							<img src="/clients/ChicagoMasterSingers/Images/logo-bw-ok-page.jpg" alt="Picture" style="width:125;max-width:100%">
+																						</a>
+																						<div style="display:block;font-size:90%"></div>
+																					</div>
+																				</div>
+
+
+
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
+														</div>
+													</div>
+
+
+
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+						<div class="paragraph">
+							<font size="1" color="#2a2a2a">website design by Gayle Heatherington at WindyDayDesign.com</font>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="navmobile-wrapper">
+			<div id="navmobile" class="nav">
+				<div class="wsite-mobile-menu" style="display: block;">
+					<div class="wsite-animation-wrap" style="position: relative; height: 100%;">
+						<ul class="wsite-menu-default wsite-menu-slide" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+							<li id="pg186720399554917955" class="wsite-menu-item-wrap">
+								<a href="http://www.chicagomastersingers.org/" class="wsite-menu-item">
+				Home
+			</a>
+
+							</li>
+							<li id="pg180027315239897566" class="wsite-menu-item-wrap">
+								<a href="http://www.chicagomastersingers.org/2016-17-season.html" class="wsite-menu-item">
+				2016-17 Season
+			</a>
+
+							</li>
+							<li id="active" class="wsite-menu-item-wrap">
+								<a href="http://www.chicagomastersingers.org/tickets.html" class="wsite-menu-item">
+				Tickets
+			</a>
+
+							</li>
+							<li id="pg407167124179290135" class="wsite-menu-item-wrap">
+								<a href="http://www.chicagomastersingers.org/about.html" class="wsite-menu-item">
+				About
+			<span class="wsite-menu-mobile-arrow"></span></a>
+
+
+							</li>
+							<li id="pg314671664617357697" class="wsite-menu-item-wrap">
+								<a href="http://www.chicagomastersingers.org/advertise.html" class="wsite-menu-item">
+				Advertise
+			</a>
+
+							</li>
+							<li id="pg563497698885974055" class="wsite-menu-item-wrap">
+								<a href="http://www.chicagomastersingers.org/auditions.html" class="wsite-menu-item">
+				Auditions
+			</a>
+
+							</li>
+							<li id="pg743927067573987325" class="wsite-menu-item-wrap">
+								<a href="http://www.chicagomastersingers.org/gallery.html" class="wsite-menu-item">
+				Gallery
+			</a>
+
+							</li>
+							<li id="pg975112045103824375" class="wsite-menu-item-wrap">
+								<a href="http://www.chicagomastersingers.org/contact.html" class="wsite-menu-item">
+				Contact
+			</a>
+
+							</li>
+							<li id="pg770791262545241181" class="wsite-menu-item-wrap">
+								<a href="http://www.chicagomastersingers.org/singers.html" class="wsite-menu-item">
+				Singers
+			<span class="wsite-menu-mobile-arrow"></span></a>
+
+
+							</li>
+						</ul>
+						<div class="wsite-menu-wrap wsite-menu-slide" style="display: none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+							<ul class="wsite-menu">
+								<li class="wsite-menu-back-item"><a><span class="wsite-menu-mobile-arrow"></span><span class="wsite-menu-back">Back</span></a></li>
+								<li class="wsite-menu-master-item"><a href="http://www.chicagomastersingers.org/about.html" class="wsite-menu-item">
+				About
+			</a></li>
+								<li id="wsite-nav-717258319316788250" class="wsite-menu-subitem-wrap ">
+									<a href="http://www.chicagomastersingers.org/tours.html" class="wsite-menu-subitem">
+										<span class="wsite-menu-title">
+			Tours
+		</span>
+									</a>
+
+								</li>
+								<li id="wsite-nav-664140886751727920" class="wsite-menu-subitem-wrap ">
+									<a href="http://www.chicagomastersingers.org/news.html" class="wsite-menu-subitem">
+										<span class="wsite-menu-title">
+			News
+		</span>
+									</a>
+
+								</li>
+								<li id="wsite-nav-729016937163633676" class="wsite-menu-subitem-wrap ">
+									<a href="http://www.chicagomastersingers.org/events.html" class="wsite-menu-subitem">
+										<span class="wsite-menu-title">
+			Events
+		</span>
+									</a>
+
+								</li>
+
+							</ul>
+						</div>
+						<div class="wsite-menu-wrap wsite-menu-slide" style="display: none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
+							<ul class="wsite-menu">
+								<li class="wsite-menu-back-item"><a><span class="wsite-menu-mobile-arrow"></span><span class="wsite-menu-back">Back</span></a></li>
+								<li class="wsite-menu-master-item"><a href="http://www.chicagomastersingers.org/singers.html" class="wsite-menu-item">
+				Singers
+			</a></li>
+								<li id="wsite-nav-635429047581308763" class="wsite-menu-subitem-wrap ">
+									<a href="http://www.chicagomastersingers.org/rehearsal-notes.html" class="wsite-menu-subitem">
+										<span class="wsite-menu-title">
+			Rehearsal Notes
+		</span>
+									</a>
+
+								</li>
+								<li id="wsite-nav-588034455213661845" class="wsite-menu-subitem-wrap ">
+									<a href="http://www.chicagomastersingers.org/singers-picture-directory.html" class="wsite-menu-subitem">
+										<span class="wsite-menu-title">
+			Singers Picture Directory
+		</span>
+									</a>
+
+								</li>
+								<li id="wsite-nav-587260492205128104" class="wsite-menu-subitem-wrap ">
+									<a href="http://www.chicagomastersingers.org/section-leaders.html" class="wsite-menu-subitem">
+										<span class="wsite-menu-title">
+			Section Leaders
+		</span>
+									</a>
+
+								</li>
+								<li id="wsite-nav-912586300784628014" class="wsite-menu-subitem-wrap ">
+									<a href="http://www.chicagomastersingers.org/board-of-directors.html" class="wsite-menu-subitem">
+										<span class="wsite-menu-title">
+			Board of Directors
+		</span>
+									</a>
+
+								</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+	<div id="eu-cookie" class="notification" style="display: none;">
+		<span id="eu-cookie-content"></span>
+		<span id="eu-cookie-close">✕</span>
+	</div>
+
+
+
+
+
+	<div id="wsite-menus">
+		<div class="wsite-menu-wrap" style="position: absolute; left: 573.283px; display: none; top: 276px;">
+			<ul class="wsite-menu" style="display: none;">
+				<li id="wsite-nav-717258319316788250" class="wsite-menu-subitem-wrap " style="position: relative;">
+					<a href="http://www.chicagomastersingers.org/tours.html" class="wsite-menu-subitem" style="position: relative;">
+						<span class="wsite-menu-title">
+			Tours
+		</span>
+					</a>
+
+				</li>
+				<li id="wsite-nav-664140886751727920" class="wsite-menu-subitem-wrap " style="position: relative;">
+					<a href="http://www.chicagomastersingers.org/news.html" class="wsite-menu-subitem" style="position: relative;">
+						<span class="wsite-menu-title">
+			News
+		</span>
+					</a>
+
+				</li>
+				<li id="wsite-nav-729016937163633676" class="wsite-menu-subitem-wrap " style="position: relative;">
+					<a href="http://www.chicagomastersingers.org/events.html" class="wsite-menu-subitem" style="position: relative;">
+						<span class="wsite-menu-title">
+			Events
+		</span>
+					</a>
+
+				</li>
+
+			</ul>
+		</div>
+		<div class="wsite-menu-wrap" style="display: none; position: absolute;">
+			<ul class="wsite-menu">
+				<li id="wsite-nav-635429047581308763" class="wsite-menu-subitem-wrap " style="position: relative;">
+					<a href="http://www.chicagomastersingers.org/rehearsal-notes.html" class="wsite-menu-subitem" style="position: relative;">
+						<span class="wsite-menu-title">
+			Rehearsal Notes
+		</span>
+					</a>
+
+				</li>
+				<li id="wsite-nav-588034455213661845" class="wsite-menu-subitem-wrap " style="position: relative;">
+					<a href="http://www.chicagomastersingers.org/singers-picture-directory.html" class="wsite-menu-subitem" style="position: relative;">
+						<span class="wsite-menu-title">
+			Singers Picture Directory
+		</span>
+					</a>
+
+				</li>
+				<li id="wsite-nav-587260492205128104" class="wsite-menu-subitem-wrap " style="position: relative;">
+					<a href="http://www.chicagomastersingers.org/section-leaders.html" class="wsite-menu-subitem" style="position: relative;">
+						<span class="wsite-menu-title">
+			Section Leaders
+		</span>
+					</a>
+
+				</li>
+				<li id="wsite-nav-912586300784628014" class="wsite-menu-subitem-wrap " style="position: relative;">
+					<a href="http://www.chicagomastersingers.org/board-of-directors.html" class="wsite-menu-subitem" style="position: relative;">
+						<span class="wsite-menu-title">
+			Board of Directors
+		</span>
+					</a>
+
+				</li>
+
+			</ul>
+		</div>
+	</div>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+
+		<script>
+			$(document).ready(function() {
+				$("#MasterContent_TixInnerContent_pnlButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_ButtonPanel").removeAttr("style");
+/* remove extra button defaults
+				$("#MasterContent_TixInnerContent_ctl00_gvSchedule_btnBuyTix_0").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnBackToShopping").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCancelOrder").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCheckout").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_LoginButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CancelOrderButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CompleteButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingBtn").removeAttr("style");*/
+				
+				
+			});
+		</script>
+
+		</div>
+		</form>
+	</body>
+
+	</html>

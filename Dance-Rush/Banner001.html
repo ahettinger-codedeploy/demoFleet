@@ -1,0 +1,285 @@
+<!--CHANGELOG-->
+<!--LSP 6/6/12 - initial development-->
+    <script src="/clients/Dance-Rush/Images/all.js" id="facebook-jssdk"></script><script type="text/javascript" src="/clients/Dance-Rush/Images/jquery_1_4_4.js"></script>
+    <link rel="stylesheet" href="/clients/Dance-Rush/Images/yada_20.css" type="text/css" media="screen, projection">
+    <link href="/clients/Dance-Rush/Images/video-js.css" rel="stylesheet">
+    <script src="/clients/Dance-Rush/Images/video.js" async="true"></script>
+    <script language="javascript">
+jQuery(function() {
+                        jQuery('.alt_main_btn').click(function(){
+                document.location.href='/altone';
+            });
+            jQuery('.alt_forum_btn').click(function(){
+                document.location.href='/1forum/1forum/yada/';
+            });
+            jQuery('.alt_video_btn').click(function(){
+                document.location.href='/video';
+            });
+            jQuery('.alt_photo_btn').click(function(){
+                document.location.href='/photo';
+            });
+            jQuery('.alt_about_btn').click(function(){
+                document.location.href='/about';
+            });
+            jQuery('.alt_tickets_btn').click(function(){
+            document.location.href='/tickets';
+            });
+            jQuery('#buyTicket').click(function(){
+            document.location.href='/tickets';
+            });
+            jQuery('.alt_blog_btn').click(function(){
+                document.location.href='/blog';
+            });
+            jQuery('.alt_venue_btn').click(function(){
+            document.location.href='/venue';
+            });
+            jQuery('.slave_header_text').click(function(){
+            document.location.href='/altone';
+            });
+            jQuery('.tw_ico').click(function(){
+            window.open('https://twitter.com/#!/YADADANCERUSH','_newtab');
+            });
+            jQuery('.enterbtn').click(function(){
+                document.ny_subscribe_form.submit();
+            });
+
+
+
+            jQuery('.fb_ico').click(function(){
+                window.open('http://www.facebook.com/pages/Dance-RUSH-BY-YADA-Dance-Company/166684123446908','_newtab');
+            });
+            jQuery('.yt_ico').click(function(){
+                window.open('http://www.youtube.com/user/oxmalta','_newtab');
+            });
+            jQuery('.ylp_ico').click(function(){
+                window.open('http://www.yelp.com/biz/palace-of-fine-arts-theatre-san-francisco','_newtab');
+            });
+            jQuery('#videoButton').click(function(){
+            var myPlayer = _V_("yada_video");
+            myPlayer.pause();
+            jQuery("#pollContent").hide();
+            jQuery("#subscribeContent").hide();
+            jQuery("#videoContent").slideToggle("slow");
+            });
+            jQuery('#pollButton').click(function(){
+            var myPlayer = _V_("yada_video");
+            myPlayer.pause();
+            jQuery("#videoContent").hide();
+            jQuery("#subscribeContent").hide();
+            jQuery("#pollContent").slideToggle("slow");
+
+            });
+            jQuery('#subscribeButton').click(function(){
+            var myPlayer = _V_("yada_video");
+            myPlayer.pause();
+            jQuery("#pollContent").hide();
+            jQuery("#videoContent").hide();
+            jQuery("#subscribeContent").slideToggle("slow");
+            });
+
+            jQuery('#ny_email').focus(function(){
+                if (jQuery(this).val() == "enter email to subscribe"){
+                    jQuery(this).val('');
+                    jQuery(this).removeClass("noobsaibot")
+                }
+
+            });
+            jQuery('#ny_email').focusout(function(){
+
+                if (jQuery(this).val() == ""){
+                    jQuery(this).addClass("noobsaibot");
+                    jQuery(this).val('enter email to subscribe');
+                }
+            });
+            $(document).ready(function() {
+                jQuery('#ny_email').val('enter email to subscribe');
+            });
+
+
+            jQuery('.sbmtbtn').click(function(){
+            var mail = $('.jinput').val()
+            var ajaxurl = 'http://dance-rush.com/wp-admin/admin-ajax.php';
+
+            jQuery.post(
+            ajaxurl,
+            {
+            'action':'add_notify',
+            'notify_mail':mail
+            },
+            function(response){
+            var myJSONObject = response;
+                        jQuery(".outinfo").empty();
+                        jQuery(".outinfo").append(response.msg);
+            }
+            );
+
+            });
+
+
+            jQuery('.feedback_btn').click(function(){
+            var mail = $('.f_mail').val()
+            var msg = $('.f_msg').val()
+            var ajaxurl = 'http://dance-rush.com/wp-admin/admin-ajax.php';
+
+            jQuery.post(
+            ajaxurl,
+            {
+            'action':'add_feedback',
+            'mail':mail,
+            'user_msg':msg
+            },
+            function(response){
+            var myJSONObject = response;
+
+            jQuery(".feedback_outinfo").empty();
+                        jQuery(".feedback_outinfo").append(response.msg);
+            }
+            );
+
+            });
+
+
+
+
+        });
+    </script>
+    <link rel="alternate" type="application/rss+xml" title="DANCE RUSH - THE SHOW FROM MALTA » Feed" href="http://dance-rush.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="DANCE RUSH - THE SHOW FROM MALTA » Comments Feed" href="http://dance-rush.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="DANCE RUSH - THE SHOW FROM MALTA » Tickets Comments Feed" href="http://dance-rush.com/tickets/feed/">
+<link rel="stylesheet" id="bbpress-style-css" href="/clients/Dance-Rush/Images/bbpress.css" type="text/css" media="screen">
+<link rel="stylesheet" id="wp-polls-css" href="/clients/Dance-Rush/Images/polls-css.css" type="text/css" media="all">
+<link rel="stylesheet" id="lightboxStyle-css" href="/clients/Dance-Rush/Images/colorbox.css" type="text/css" media="screen">
+<script type="text/javascript" src="/clients/Dance-Rush/Images/jquery_002.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://dance-rush.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://dance-rush.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Blog" href="http://dance-rush.com/blog/">
+<link rel="next" title="Polls" href="http://dance-rush.com/polls/">
+<meta name="generator" content="WordPress 3.3.1">
+<link rel="canonical" href="http://dance-rush.com/tickets/">
+<link rel="stylesheet" type="text/css" media="all" href="/clients/Dance-Rush/Images/byrev-gallery-pagination.css">  <link href="/clients/Dance-Rush/Images/video-js.css" rel="stylesheet">
+  <script src="/clients/Dance-Rush/Images/video.js"></script>
+
+    <link href="/clients/Dance-Rush/Images/video-js.css" rel="stylesheet">
+    <script src="/clients/Dance-Rush/Images/video.js" async="true"></script>
+
+    <style type="text/css">
+        .centred_wide{
+            width: 100%;
+            text-align: center;
+            display: block;
+        }
+        .tickets_left{
+            width: 68%;
+            float: left;
+        }
+        .tickets_right{
+            width: 32%;
+            float: left;
+        }
+        .soclear{
+            clear: both;
+        }
+        .soclear table{
+            color: white;
+            width: 100%;
+        }
+        .sobold{
+            font-weight: bold;
+        }
+        .leftalign{
+            text-align: left;
+        }
+        .centeralign{
+            text-align: center;
+        }
+        .rightalign{
+            text-align: right;
+        }
+        .tickets_wrap{
+            font-size: 10pt;
+            font-weight: bold;
+        }
+        .jyellow{
+            color: yellow;
+        }
+        .jpink{
+            color: #e737ff;
+        }
+        .jinput{
+            width: 100%;
+            margin-top: 5px;
+        }
+        .jshedule{
+            text-align: center;
+            padding: 30px 30px 30px 0;
+            font-weight: bold;
+        }
+        .jshedule td{
+            width: 33%;
+        }
+        .jdescr {
+            font-size: 10pt;
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+        .jdescr td{
+            vertical-align: top;
+        }
+        .sothin{
+            font-weight: normal;
+        }
+        .jgray{
+            color: gray;
+        }
+        .sosmall{
+            font-size: 8pt;
+        }
+        .hormarg{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .sbmtbtn{
+            background: url("/clients/Dance-Rush/Images/submit_button.png");
+            width: 66px;
+            height: 20px;
+            margin: 5px auto 0;
+            cursor: pointer;
+        }
+
+    </style>
+
+
+<body class="alt_body">
+
+
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div class="alt_wrapall">
+    <div class="alt_slave_bg">
+        <!--        <div class="alt_content">-->
+        <div class="slave_header">
+            <div class="slave_header_text"></div>
+        </div>
+        <div class="alt_slave_menu">
+                        <div class="ourfont alt_menu_elem alt_main_btn">MAIN</div>
+            <div class="ourfont alt_menu_elem alt_about_btn">SHOW</div>
+            <div class="ourfont alt_menu_elem alt_video_btn">VIDEO</div>
+            <div class="ourfont alt_menu_elem alt_photo_btn">PHOTO</div>
+            <div class="ourfont alt_menu_elem alt_blog_btn">BLOG</div>
+            <div class="ourfont alt_menu_elem alt_forum_btn">FORUM</div>
+            <div class="ourfont alt_menu_elem alt_tickets_btn">TICKETS</div>
+            <div class="ourfont alt_menu_elem alt_venue_btn">VENUE</div>
+        </div>
+        <div class="rigth_slave_content">
+
+            <div class="direct_content" style="background: url('/clients/Dance-Rush/Images/venue-pattern.png');color: white;margin-top: 70px;border-radius: 0;padding: 40px;width:560px;">
+
+                <div class="tickets_wrap">
+				<!--TIX DATA START-->

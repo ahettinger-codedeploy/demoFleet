@@ -1,0 +1,771 @@
+
+
+<style type="text/css">
+<!--
+body, p, th, td, input, textarea {font-family:Tahoma, Verdana, Arial, sans-serif; color:#18598D; font-size: 14px; line-height:130%; }
+body {margin:0px 0px 20px 0; padding:0; background:url(../webpage_files/bg.jpg) repeat-x #FFFFFF; }
+ul {list-style-type: none; padding:0; margin:.3em 0 .3em 0; }
+ul li {background: url('../webpage_files/bullet.gif') no-repeat; background-position:0em .5em; padding-left: 1em; padding-bottom:.3em; }
+hr {color:#18598D; background-color:#18598D; }
+form {margin-top:0; margin-bottom:0; }
+h1, h2, h3 {margin:0 0 10px 0; padding:0; line-height:1.2em; }
+h1 {font-size:2.5em; color:#1C639F; font-family:Georgia, "Times New Roman", Times, serif  }
+h2 {font-size:1.5em; color:#18598D; }
+h3 {font-size:1.25em; color:#18598D; }
+p {margin:0 0 1em 0}
+
+
+
+/* used in store */
+
+.inputelements {
+	font-size:9pt;
+	font-family:Tahoma;
+	color:#FFCC66;
+	background-color:#006CA7;
+}
+
+.smalllink a:link    {color:#FF6699; text-decoration:none; font-size:80%;}
+.smalllink a:visited {color:#FF6699; text-decoration:none; font-size:80%;}
+.smalllink a:hover   {color:#FF0033; text-decoration:underline; font-size:80%;}
+.smalllink a:active  {color:#FF0000; text-decoration:none; font-size:80%;}
+.producthed {
+	font: bold 140% Tahoma, Arial, Helvetica, sans-serif;
+	color: #990000;
+	text-decoration: none;
+}
+.productdesc {
+	font: bold 120% Tahoma, Arial, Helvetica, sans-serif;
+	color: #990000;
+}
+#topbar {
+	background: url(../webpage_files/topbar.png);
+}
+td.rulert {
+	border-top: thin #336699;
+	border-right: thin solid #336699;
+	border-bottom: thin #336699;
+	border-left: thin #336699;
+}
+
+.brightblue {
+	font: bold Arial, Helvetica, sans-serif;
+	color: #0000FF;
+}
+/* end store styles */
+
+
+#slideShow {
+  width : 250px;
+  height : 250px;
+  padding : 10px;
+}
+
+
+
+a:link, a:visited {
+	text-decoration:underline;
+color:#009900; 	font-weight: bold;
+	line-height:100%;
+}
+a:hover {text-decoration:none; color:#000066; font-weight: bold}
+a:active {text-decoration:none; color:#000066; font-weight: bold}
+
+.heading-fancy {font-family: pristina, cursive; font-size:140%; font-weight:bold; }
+.color1 {color:#18598D}
+.color2 {color:#000066}
+.color3 {color:#1C639F}
+.highlight {color:#1C639F; font-weight:bold; }
+.note {font-size:90%; color:#1C639F; padding:7px; border: 1px solid #18598D; background-color:#F0F0F0}
+.testimonial {font-size:90%; color:#18598D; padding:7px; border: 1px solid #1C639F; }
+.smallertext {font-size:90%; }
+.smallesttext {font-size:80%; }
+.largertext {font-size:115%; }
+.largesttext {font-size:130%; }
+.required {color:#FF0066; font-weight:bold; }
+.hrule {border-top:1px solid #18598D; margin:5px 0px;}
+
+/* for forms */
+form {margin-top:0; margin-bottom:0; }
+#formcontainer {margin:20px auto; padding:10px; border:1px solid #ccc}
+.cellrow {width:100%; clear:both; margin:3px; padding:2px;}
+.celllabel {width:12em; float:left; text-align:right; padding-right:.5em}
+.cellvalue {float:left}
+.cellrow-overunder {width:100%; clear:both; margin:10px; padding:0;}
+.cellbox {float:left; margin-right:1em}
+.frmCantChange {color:#999; height:1.5em; border:1px solid #ddd; padding:0px 15px 0px 3px; background-color:#F0F0F0}
+.contentUnpublished {background-color:#FFFFCC; }
+.clear {clear:both}
+.formsection {color:#18598D; font-weight:bold; background-color:#EDEDED; }
+
+img.box {padding:1px; border:solid; border-width:1px 3px 3px 1px; border-color:#CCC #333 #333 #CCC; }
+
+.previewmode {margin:7px; padding:7px; background-color:yellow; color:red; font-size:2em; text-align:center}
+
+#webpagecontainer {background-color:#FFFFFF; border:0px solid #000066}
+#container {background-color:#FFFFFF;}
+#container-content {}
+#header {padding: 10px; }
+#content {background:url(../webpage_files/bgContainer.jpg) repeat-x; padding:15px; }
+
+#header p {margin:0 0 5px 0;}
+#headerbanner {margin:0 auto; width:750; background-color:#000; text-align:center;}
+#headerbanner p {margin:0; padding:7px;}
+
+#col-left-container {width:150px; height:100%; background:url(../webpage_files/bgContainer.jpg) repeat-x; border-right:4px #94BADA; border-right-style: dotted; }
+#col-left {padding:15px 5px; }
+#col-left p {margin:0 0 5px 0;}
+
+#col-right-container {width:150px; height:100%; background:url(../webpage_files/bgContainer.jpg) repeat-x; border-left:4px #94BADA; border-left-style: dotted; }
+#col-right {padding:15px 5px; }
+#col-right p {margin:0 0 5px 0;}
+
+#nav-section {padding-left:15px;}
+#nav-section p {margin:0 0 1em 0;}
+a.nav-section:link {text-decoration:none; color:#18598D; font-weight:bold;  }
+a.nav-section:visited {text-decoration:none; color:#18598D; font-weight:bold; }
+a.nav-section:hover {text-decoration:underline; color:#009900; font-weight:bold; }
+a.nav-section:active {text-decoration:none; color:#009900; font-weight:bold; }
+
+#nav-detail {font-size:90%; padding-left:5px; }
+a.nav-detail:link {text-decoration:none; color:#18598D; font-weight:bold; }
+a.nav-detail:visited {text-decoration:none; color:#18598D; font-weight:bold; }
+a.nav-detail:hover {text-decoration:underline; color:#000066; font-weight:bold; }
+a.nav-detail:active {text-decoration:none; color:#000066; font-weight:bold; }
+
+#quotescontainer {font-size:80%; color:#18598D; font-weight:bold; padding:5px; border:2px solid #1C639F; background-image: url(../webpage_files/bg-fondgris.gif); }
+.quotestitle {font-size:100%; }
+.quotestext {}
+.quoteswho {font-style:italic; }
+
+#testimonialcontainer {font-size:80%; color:#1C639F; font-weight:bold; padding:5px; border:2px solid #18598D; background-image: url(../webpage_files/bg-diagonal.gif); }
+.testimonialtitle {font-size:100%; }
+.testimonialtext {}
+.testimonialwho {font-style:italic; }
+
+#countdownarea {height:65px; padding:5px; border:1px solid #1C639F; background:#FF6600 url(../webpage_files/bg-countdown.jpg) repeat-x top left; vertical-align:middle; margin-bottom:1em; }
+.countdowntime {text-align:center; font-size:90%; color:#18598D; font-weight:bold; padding:7px;}
+.countdowntix {text-align:center; font-size:90%; color:#18598D;}
+.countdowntixvalue {}
+
+#formwarning {margin:7px; padding:5px; border: 1px solid #D92D39; background-color:#FCFCFC; }
+.formwarning {color:#D92D39; }
+
+#artistperformingbox {background-color:#FFCC66;}
+#artistsongbox {background-color:#FFCC66;}
+
+
+#prtsndsav {color:#333333; font-size:90%; padding-left:10px; }
+a.prtsndsav:link {color:#333333; font-size:90%; font-weight:normal; text-decoration:none; }
+a.prtsndsav:visited {color:#333333; font-size:90%; font-weight:normal; text-decoration:none; }
+a.prtsndsav:hover {color:#333333; font-size:90%; font-weight:normal; text-decoration:underline; }
+a.prtsndsav:active {color:#333333; font-size:90%; font-weight:normal; text-decoration:underline; }
+
+#footer {background: url(../webpage_files/footer.gif) no-repeat; }
+#footer td {color:#666666; font-size:70%; padding:7px 20px; border-top: 0px solid #000066; }
+a.footer:link    {color:#666666; text-decoration:underline; }
+a.footer:visited {color:#666666; text-decoration:underline; }
+a.footer:hover   {color:#666666; text-decoration:none; }
+a.footer:active  {color:#666666; text-decoration:none; }
+
+/* Admin Styles ----------------------------------------------------------- */
+#adminheader {padding:10px}
+#adminheadertitle {}
+#adminheaderlogo {}
+
+#admin-nav-section {padding:5px; border-top:1px solid #ccc; border-bottom:1px solid #ccc; background:url(../_admin/_assets/graphics/bg-navtoolbar.gif) repeat-x; }
+a.admin-nav-section:link {text-decoration:none; color:#18598D; font-weight:bold; }
+a.admin-nav-section:visited {text-decoration:none; color:#18598D; font-weight:bold; }
+a.admin-nav-section:hover {text-decoration:underline; color:#000066; font-weight:bold; }
+a.admin-nav-section:active {text-decoration:none; color:#000066; font-weight:bold; }
+
+.adminLastAction {color:red}
+
+/* Image Gallery */
+.thumbtitle {text-align:center; }
+.enlargedimagetitle {padding:0px 10px; font-weight:bold; font-size:1.3em; }
+.enlargedimagecategory {padding:0px 20px; color:#1D5DAA; font-family:'Times New Roman', Times, serif; font-size:1.5em; font-weight:bold; }
+#thumbcontainer {padding:10px; }
+#enlargedimagecontainer {padding:0px 10px; }
+
+/*Nifty Corners Cube CSS by Alessandro Fulciniti */
+b.niftycorners,b.niftyfill{display:block}
+b.niftycorners *{display:block;height: 1px;line-height:1px;font-size: 1px;
+    overflow:hidden;border-style:solid;border-width: 0 1px}
+/*normal*/
+b.r1{margin: 0 3px;border-width: 0 2px}
+b.r2{margin: 0 2px}
+b.r3{margin: 0 1px}
+b.r4{height: 2px}
+b.rb1{margin: 0 8px;border-width:0 2px}
+b.rb2{margin: 0 6px;border-width:0 2px}
+b.rb3{margin: 0 5px}
+b.rb4{margin: 0 4px}
+b.rb5{margin: 0 3px}
+b.rb6{margin: 0 2px}
+b.rb7{margin: 0 1px;height:2px}
+b.rb8{margin: 0;height:2px}
+b.rs1{margin: 0 1px}
+
+/*transparent inside*/
+b.t1{border-width: 0 5px}
+b.t2{border-width: 0 3px}
+b.t3{border-width: 0 2px}
+b.t4{height: 2px}
+b.tb1{border-width: 0 10px}
+b.tb2{border-width: 0 8px}
+b.tb3{border-width: 0 6px}
+b.tb4{border-width: 0 5px}
+b.tb5{border-width: 0 4px}
+b.tb6{border-width: 0 3px}
+b.tb7{border-width: 0 2px;height:2px}
+b.tb8{border-width: 0 1px;height:2px}
+b.ts1{border-width: 0 2px}
+
+
+a#schedule {text-decoration:none; color:#000066; font-weight:bold; }
+a#schedule {text-decoration:none; color:#009900; font-weight:bold; }-->
+</style>
+
+<script language="javascript" type="text/javascript" src="webpage_files/ajax.js"></script>
+<script language="javascript" type="text/javascript" src="webpage_files/hideme.js"></script>
+<!--[if lte IE 6]>
+	<script type="text/javascript" src="../_javascripts/supersleight.js"></script>
+<![endif]-->
+<script language="javascript" type="text/javascript">
+function getEmailDomain () {
+	return '';
+}
+</script>
+</head><body>
+
+<table id="webpagecontainer" align="center" border="0" cellpadding="0" cellspacing="0" width="750">
+  <tbody><tr>
+    <td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr>
+    <td><a href="http://www.12stepmusicfest.com/general/master.php"><img src="webpage_files/header.jpg" alt="12 Step Music Fest" border="0"></a></td>
+  </tr>
+</tbody></table>
+<table id="container-content" align="center" border="0" cellpadding="0" cellspacing="0" width="750">
+  <tbody><tr>
+    <td id="col-left-container" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="150">
+  <tbody><tr> 
+    <td id="col-left">
+                <div id="countdownarea" class="countdowntix">
+            <script language="JavaScript1.2">
+// <!-- Quick! Hide the java!
+
+//Dynamic countdown Script II- © Dynamic Drive (www.dynamicdrive.com)
+//Support for hour minutes and seconds added by Chuck Winrich (winrich@babson.edu) on 12-12-2001
+//For full source code, 100's more DHTML scripts, visit http://www.dynamicdrive.com
+
+function setcountdown(theyear,themonth,theday,thehour,themin,thesec){
+yr=theyear;mo=themonth;da=theday;hr=thehour;min=themin;sec=thesec
+}
+
+//////////CONFIGURE THE COUNTDOWN SCRIPT HERE//////////////////
+
+//STEP 1: Configure the countdown-to date, in the format year, month, day, hour(0=midnight,23=11pm), minutes, seconds:
+setcountdown (2009,11,05,12,00,00)
+
+//STEP 2: Change the two text below to reflect the occasion, and message to display on that occasion, respectively
+var occasion="Gates open in"
+var message_on_occasion="Gates Open Now!"
+
+//STEP 3: Configure the below 5 variables to set the width, height, background color, and text style of the countdown area
+var countdownwidth=''
+var countdownheight=''
+var countdownbgcolor=''
+var opentags=''
+var closetags=''
+
+//////////DO NOT EDIT PAST THIS LINE//////////////////
+
+var montharray=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec")
+var crosscount=''
+
+function start_countdown(){
+if (document.layers)
+document.countdownnsmain.visibility="show"
+else if (document.all||document.getElementById)
+crosscount=document.getElementById&&!document.all?document.getElementById("countdownie") : countdownie
+countdown()
+}
+
+if (document.all||document.getElementById)
+document.write('<span id="countdownie" style="width:'+countdownwidth+'; background-color:'+countdownbgcolor+'"></span>')
+
+window.onload=start_countdown
+
+
+function countdown(){
+var today=new Date()
+var todayy=today.getYear()
+if (todayy < 1000)
+todayy+=1900
+var todaym=today.getMonth()
+var todayd=today.getDate()
+var todayh=today.getHours()
+var todaymin=today.getMinutes()
+var todaysec=today.getSeconds()
+var todaystring=montharray[todaym]+" "+todayd+", "+todayy+" "+todayh+":"+todaymin+":"+todaysec
+futurestring=montharray[mo-1]+" "+da+", "+yr+" "+hr+":"+min+":"+sec
+dd=Date.parse(futurestring)-Date.parse(todaystring)
+dday=Math.floor(dd/(60*60*1000*24)*1)
+dhour=Math.floor((dd%(60*60*1000*24))/(60*60*1000)*1)
+dmin=Math.floor(((dd%(60*60*1000*24))%(60*60*1000))/(60*1000)*1)
+if (dmin<10) dmin="0"+dmin
+dsec=Math.floor((((dd%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1)
+if (dsec<10) dsec="0"+dsec
+//if on day of occasion
+if(dday<=0&&dhour<=0&&dmin<=0&&dsec<=1&&todayd==da){
+if (document.layers){
+document.countdownnsmain.document.countdownnssub.document.write(opentags+message_on_occasion+closetags)
+document.countdownnsmain.document.countdownnssub.document.close()
+}
+else if (document.all||document.getElementById)
+crosscount.innerHTML=opentags+message_on_occasion+closetags
+return
+}
+//if passed day of occasion
+else if (dday<=-1){
+if (document.layers){
+document.countdownnsmain.document.countdownnssub.document.write(opentags+message_on_occasion+closetags)
+document.countdownnsmain.document.countdownnssub.document.close()
+}
+else if (document.all||document.getElementById)
+crosscount.innerHTML=opentags+message_on_occasion+closetags
+return
+}
+//else, if not yet
+else{
+if (document.layers){
+document.countdownnsmain.document.countdownnssub.document.write(opentags+occasion+"<br>"+dday+ " days, "+dhour+":"+dmin+":"+dsec+closetags)
+document.countdownnsmain.document.countdownnssub.document.close()
+}
+else if (document.all||document.getElementById)
+crosscount.innerHTML=opentags+occasion+"<br>"+dday+ " days, "+dhour+":"+dmin+":"+dsec+closetags
+}
+setTimeout("countdown()",1000)
+}
+// We're back! -->
+</script><span id="countdownie" style="">Gates open in<br>237 days, 23:26:28</span>
+
+<ilayer id="countdownnsmain" width="&amp;{countdownwidth};" height="&amp;{countdownheight};" bgcolor="&amp;{countdownbgcolor};" visibility="hide"><layer id="countdownnssub" width="&amp;{countdownwidth};" height="&amp;{countdownheight};" left="0" top="0"></layer></ilayer>          </div>
+      
+      <div> <!-- begin Nav, abbrev -->
+<div id="nav-section">
+<p><a id="home" class="nav-section" href="http://www.12stepmusicfest.com/general/home.php">Home</a></p>
+<p><a id="st-storeMain" class="nav-section" href="http://www.12stepmusicfest.com/general/st-storeMain.php">12-Step Store</a></p>
+<p><a id="about12step" class="nav-section" href="http://www.12stepmusicfest.com/general/about12step.php">About 12 Step Music Fest</a></p>
+<p><a id="tickets" class="nav-section" href="http://www.12stepmusicfest.com/general/tickets.php">Tickets</a></p>
+<p><a id="camping" class="nav-section" href="http://www.12stepmusicfest.com/general/camping.php">Camping</a></p>
+<p><a id="artists" class="nav-section" href="http://www.12stepmusicfest.com/general/artists.php">Artists</a></p>
+<p><a id="photos" class="nav-section" href="http://12stepmusicfest.fotki.com/2008">Photo Gallery</a></p>
+<p><a id="photos" class="nav-section" href="http://www.12stepmusicfest.com/general/videos2008.php">Videos 2008</a></p>
+<p><a id="talentshow" class="nav-section" href="http://www.12stepmusicfest.com/general/talentshow.php">Talent Show</a></p>
+<p><a id="schedule" class="nav-section" href="http://www.12stepmusicfest.com/general/schedule.php">Schedule</a>&nbsp;2008</p>
+<p><a id="policies" class="nav-section" href="http://www.12stepmusicfest.com/general/policies.php">Policies</a></p>
+<p><a id="directions" class="nav-section" href="http://www.12stepmusicfest.com/general/directions.php">Directions</a></p>
+<p><a id="sponsorship" class="nav-section" href="http://www.12stepmusicfest.com/general/sponsorship.php">Sponsorship</a></p>
+<p><a id="volunteers" class="nav-section" href="http://www.12stepmusicfest.com/general/volunteers.php">Volunteers</a></p>
+<p><a id="advertising" class="nav-section" href="http://www.12stepmusicfest.com/general/advertising.php">Advertising</a></p>
+<p><a id="givingback" class="nav-section" href="http://www.12stepmusicfest.com/general/givingback.php">Donate</a></p>
+<p><a class="nav-section" href="http://www.12stepmusicfest.com/general/discussion.php">Discussion Group</a></p>
+<p><a class="nav-section" href="http://www.12stepmusicfest.com/general/streetteam-form.php">Street Teams</a></p>
+<p><a class="nav-section" href="http://www.12stepmusicfest.com/general/maillist-form.php">Mailing List</a></p>
+<p><a class="nav-section" href="http://www.12stepmusicfest.com/general/links.php">Links</a></p>
+<p><a id="contact" class="nav-section" href="http://www.12stepmusicfest.com/general/contact.php">Contact Us</a></p>
+</div>
+</div> <!-- end Nav, abbrev -->
+    </td>
+  </tr>
+</tbody></table>
+    </td>
+    <td id="content" valign="top" width="100%">
+<div> <!-- begin main content -->
+<h2 style="text-align: center;"><span style="font-size: medium;">Schedule 2008 (last years)</span></h2>
+<p><span style="font-size: large;"><br></span></p>
+<p style="text-align: center;"><strong><span style="font-size: large;">Main Stage</span></strong></p>
+<table style="width: 375px;" align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td style="width: 215px; background-color: rgb(255, 255, 153);" colspan="3" valign="middle">
+<div style="text-align: center;"><strong>Thursday:</strong></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="150">
+<div style="text-align: right;">7pm - 8pm<br></div>
+</td>
+<td valign="top" width="21">&nbsp;<br><br></td>
+<td valign="top" width="215">Fire Zuave<br></td>
+</tr>
+<tr>
+<td valign="top" width="150">
+<div style="text-align: right;">8:30pm - 9:30pm<br></div>
+</td>
+<td valign="top" width="21">&nbsp;<br><br></td>
+<td valign="top" width="215">Selfish Steam<br></td>
+</tr>
+<tr>
+<td valign="top" width="150">
+<div style="text-align: right;">10pm - 11pm<br></div>
+</td>
+<td valign="top" width="21">&nbsp;<br><br></td>
+<td valign="top" width="215">Dawn Wilder<br></td>
+</tr>
+<tr>
+<td valign="top" width="150"><br></td>
+<td valign="top" width="21"><br></td>
+<td valign="top" width="215"><br></td>
+</tr>
+<tr>
+<td style="width: 118px; background-color: rgb(255, 255, 153);" colspan="3" valign="top">
+<div style="text-align: center;"><strong>Friday:</strong></div>
+</td>
+</tr>
+<tr>
+<td style="width: 150px;" valign="top">
+<div style="text-align: right;">11:30am - 12:30pm <br></div>
+</td>
+<td valign="top" width="21">&nbsp;<br><br></td>
+<td valign="top" width="215">Tribal Style<br></td>
+</tr>
+<tr>
+<td style="width: 150px;" valign="top">
+<div style="text-align: right;">1pm - 2pm<br></div>
+</td>
+<td valign="top" width="21">&nbsp;<br><br></td>
+<td valign="top" width="215">Fire Zuave<br></td>
+</tr>
+<tr>
+<td valign="top" width="150">
+<div style="text-align: right;">2:30pm - 3:30pm<br></div>
+</td>
+<td valign="top" width="21">&nbsp;<br><br></td>
+<td valign="top" width="215">Totaro<br></td>
+</tr>
+<tr>
+<td valign="top" width="150">
+<div style="text-align: right;">4pm - 5pm<br></div>
+</td>
+<td valign="top" width="21">&nbsp;<br><br></td>
+<td valign="top" width="215">Blackfinger<br></td>
+</tr>
+<tr>
+<td valign="top" width="150">
+<div style="text-align: right;">7:00pm - 8:30pm<br></div>
+</td>
+<td valign="top" width="21">&nbsp;<br><br></td>
+<td valign="top" width="215">Art Alexakis Speaker<br></td>
+</tr>
+<tr>
+<td valign="top" width="150">
+<div style="text-align: right;">9pm - 10:30pm<br></div>
+</td>
+<td valign="top" width="21">&nbsp;<br><br></td>
+<td valign="top" width="215">Art Alexakis of Everclear solo performance<br></td>
+</tr>
+<tr>
+<td valign="top" width="150"><br></td>
+<td valign="top" width="21"><br></td>
+<td valign="top" width="215"><br></td>
+</tr>
+<tr>
+<td style="width: 118px; background-color: rgb(255, 255, 153);" colspan="3" valign="top">
+<div style="text-align: center;"><strong>Saturday:</strong></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="150">
+<div style="text-align: right;">10:30am - 1pm<br></div>
+</td>
+<td valign="top" width="21">&nbsp;<br><br></td>
+<td valign="top" width="215">Talent Show<br></td>
+</tr>
+<tr>
+<td valign="top" width="150">
+<div style="text-align: right;">1:30pm - 2:30pm<br></div>
+</td>
+<td valign="top" width="21">&nbsp;<br><br></td>
+<td valign="top" width="215">Selfish Steam<br></td>
+</tr>
+<tr>
+<td valign="top" width="150">
+<div style="text-align: right;">3pm - 4pm<br></div>
+</td>
+<td valign="top" width="21">&nbsp;<br><br></td>
+<td valign="top" width="215">Black Finger<br></td>
+</tr>
+<tr>
+<td valign="top" width="150">
+<div style="text-align: right;">4:30pm - 5:30pm<br></div>
+</td>
+<td valign="top" width="21">&nbsp;<br><br></td>
+<td valign="top" width="215">borderLine</td>
+</tr>
+<tr>
+<td valign="top" width="150">
+<div style="text-align: right;">7pm - 7:30pm<br></div>
+</td>
+<td valign="top" width="21">&nbsp;<br><br></td>
+<td valign="top" width="215">Recovery Countdown<br></td>
+</tr>
+<tr>
+<td valign="top" width="150">
+<div style="text-align: right;">7:30pm - 9pm<br></div>
+</td>
+<td valign="top" width="21">&nbsp;<br><br></td>
+<td valign="top" width="215">Peter Tork Speaker<br></td>
+</tr>
+<tr>
+<td valign="top" width="150">
+<div style="text-align: right;">9:30pm - 11pm<br></div>
+</td>
+<td valign="top" width="21">&nbsp;<br><br></td>
+<td valign="top" width="215">Shoe Suede Blues featuring Peter Tork<br></td>
+</tr>
+<tr>
+<td valign="top" width="150"><br></td>
+<td valign="top" width="21"><br></td>
+<td valign="top" width="215"><br></td>
+</tr>
+<tr>
+<td style="width: 118px; background-color: rgb(255, 255, 153);" colspan="3" valign="top">
+<div style="text-align: center;"><strong>Sunday:</strong></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="150">
+<div style="text-align: right;">10am<br></div>
+</td>
+<td valign="top" width="21">&nbsp;<br><br></td>
+<td valign="top" width="215">
+<p>Talent Show Winner and Michael Purington</p>
+<p>Random Drawing from Surverys</p>
+<p>for Banner Give Away</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<hr>
+<p style="text-align: center;"><span style="font-size: large;"><strong><span lang="EN">Coffee House</span></strong></span></p>
+<p><span lang="EN">
+<table style="width: 375px;" align="center" border="0" cellpadding="0" cellspacing="0">
+<tbody>
+<tr>
+<td style="width: 148px; background-color: rgb(255, 255, 153);" colspan="3" valign="top">
+<div style="text-align: center;"><strong>Thursday:</strong></div>
+</td>
+</tr>
+<tr>
+<td style="width: 150px; text-align: right;" valign="top">1:30pm - 2:30pm<br><br></td>
+<td>&nbsp;</td>
+<td style="width: 174px;" align="left" valign="top">Steve Green<br><br></td>
+</tr>
+<tr>
+<td style="width: 150px; text-align: right;">2:30pm - 3:30pm<br><br></td>
+<td>&nbsp;</td>
+<td>Greg Gerace<br><br></td>
+</tr>
+<tr>
+<td style="width: 150px; text-align: right;">3:30pm - 4:30pm<br><br></td>
+<td>&nbsp;</td>
+<td>Starving Artist Tour<br><br></td>
+</tr>
+<tr>
+<td style="width: 150px; text-align: right;" valign="top"><span lang="EN">11pm - 12am<br><br></span></td>
+<td>&nbsp;</td>
+<td><span lang="EN">Amanda Broadway<br><br></span></td>
+</tr>
+<tr>
+<td style="width: 150px; text-align: right;" valign="top"><span lang="EN">12am - 1am<br><br></span></td>
+<td>&nbsp;</td>
+<td><span lang="EN">Dan Banks &amp; Matt Baxley<br><br></span></td>
+</tr>
+<tr>
+<td valign="top" width="148"><br></td>
+<td valign="top" width="22"><br></td>
+<td valign="top" width="174"><br></td>
+</tr>
+<tr>
+<td style="width: 148px; background-color: rgb(255, 255, 153);" colspan="3" valign="top">
+<div style="text-align: center;"><strong>Friday:</strong></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="148">
+<div style="text-align: right;">12:30pm - 1:30pm<br></div>
+</td>
+<td valign="top" width="22">&nbsp;<br><br></td>
+<td valign="top" width="174">Special Guest<br></td>
+</tr>
+<tr>
+<td valign="top" width="148">
+<div style="text-align: right;">1:30pm - 2:30pm<br></div>
+</td>
+<td valign="top" width="22">&nbsp;<br><br></td>
+<td valign="top" width="174">Jaclyn Heyen<br></td>
+</tr>
+<tr>
+<td valign="top" width="148">
+<div style="text-align: right;">2:30pm - 3:30pm<br></div>
+</td>
+<td valign="top" width="22">&nbsp;<br><br></td>
+<td valign="top" width="174">Kim J<br></td>
+</tr>
+<tr>
+<td valign="top" width="148">
+<div style="text-align: right;">3:30pm - 4:30pm<br></div>
+</td>
+<td valign="top" width="22">&nbsp;<br><br></td>
+<td valign="top" width="174">Leah Clark<br></td>
+</tr>
+<tr>
+<td valign="top" width="148">
+<div style="text-align: right;">4:30pm - 5:30pm<br></div>
+</td>
+<td valign="top" width="22">&nbsp;<br><br></td>
+<td valign="top" width="174">Amanda Broadway<br></td>
+</tr>
+<tr>
+<td valign="top" width="148">
+<div style="text-align: right;">11pm - 12am<br></div>
+</td>
+<td valign="top" width="22">&nbsp;<br><br></td>
+<td valign="top" width="174">Tommy Holmes<br></td>
+</tr>
+<tr>
+<td valign="top" width="148">
+<div style="text-align: right;">12am- 1am<br></div>
+</td>
+<td valign="top" width="22">&nbsp;<br><br></td>
+<td valign="top" width="174">Mike Purington<br></td>
+</tr>
+<tr>
+<td valign="top" width="148"><br></td>
+<td valign="top" width="22"><br></td>
+<td valign="top" width="174"><br></td>
+</tr>
+<tr>
+<td style="width: 148px; background-color: rgb(255, 255, 153);" colspan="3" valign="top">
+<div style="text-align: center;"><strong>Saturday:</strong></div>
+</td>
+</tr>
+<tr>
+<td valign="top" width="148">
+<div style="text-align: right;">1:30pm - 2:30pm<br></div>
+</td>
+<td valign="top" width="22">&nbsp;<br><br></td>
+<td valign="top" width="174">Dan Banks &amp; Matt Baxley<br></td>
+</tr>
+<tr>
+<td valign="top" width="148">
+<div style="text-align: right;">2:30pm - 3:30pm<br></div>
+</td>
+<td valign="top" width="22">&nbsp;<br><br></td>
+<td valign="top" width="174">Nino Tianelli<br></td>
+</tr>
+<tr>
+<td valign="top" width="148">
+<div style="text-align: right;">3:30pm - 4:30pm<br></div>
+</td>
+<td valign="top" width="22">&nbsp;<br><br></td>
+<td valign="top" width="174">Patti B<br></td>
+</tr>
+<tr>
+<td valign="top" width="148">
+<div style="text-align: right;">4:30pm - 5:30pm<br></div>
+</td>
+<td valign="top" width="22">&nbsp;<br><br></td>
+<td valign="top" width="174">Jerry and Gracie Vandiver<br></td>
+</tr>
+<tr>
+<td valign="top" width="148">
+<div style="text-align: right;">11pm - 12am<br></div>
+</td>
+<td valign="top" width="22">&nbsp;<br><br></td>
+<td valign="top" width="174">Lauren Adams<br></td>
+</tr>
+<tr>
+<td valign="top" width="148" height="38">
+<div style="text-align: right;">12am - 1am<br></div>
+</td>
+<td valign="top" width="22">&nbsp;<br><br></td>
+<td valign="top" width="174">
+<p>All Star Jam and</p>
+<p>Sing Along</p>
+</td>
+</tr>
+</tbody>
+</table>
+&nbsp;
+<div style="text-align: center;">Schedule and artists subject to change without notice</div>
+</span></p>
+</div> <!-- end main content -->
+    </td>
+    <td id="col-right-container" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="150">
+  <tbody><tr> 
+    <td id="col-right">
+      <div id="countdownarea" class="countdowntix">
+        <span class="countdowntixvalue"><strong>Tickets go on sale March 13, 2009 !!</strong></span>
+<!--
+        As of 09/12/08<br />Tickets Remaining:<br />
+        <span class='countdowntixvalue'>We can't keep up!</span>
+-->
+      </div>
+      <div> <!-- begin What's New -->
+<p align="center"><img src="webpage_files/btnWhatsNew.gif" alt="What's New"></p>
+</div> <!-- end What's New -->
+<div> <!-- begin Text -->
+<p><strong>
+<p style="text-align: center;"><strong><a href="http://www.take12radio.com/" target="_blank">Take 12 Radio</a></strong></p>
+<p style="text-align: center;">Recovery Internet Radio</p>
+<p style="text-align: center;">
+</p><p style="text-align: center;"><strong><em></em></strong></p>
+</strong></p>
+<strong></strong><strong><a href="http://www.intherooms.com/" target="_blank">In The Rooms</a></strong><p></p>
+<p style="text-align: center;"><strong>A social network. Free to Join.</strong></p>
+<p style="text-align: center;"><strong><a href="http://www.itsallinthejourney.com/" target="_blank">It's All In The Journey Magazine</a></strong></p>
+<p style="text-align: center;"><strong>Recovery magazine</strong></p>
+<p style="text-align: center;"><strong></strong></p>
+<p style="text-align: center;">&nbsp;</p>
+<hr>
+</div> <!-- end Text -->
+<div> <!-- begin Buy Now -->
+<p align="center">&nbsp;</p>
+<p align="center"><a href="http://www.12stepmusicfest.com/general/master.php?pn=tickets"><img src="webpage_files/btnBuyNow.gif" alt="Buy Now" border="0"></a></p>
+</div> <!-- end Buy Now -->
+<div> <!-- begin Text -->
+<p style="text-align: center;"><strong></strong></p>
+<p style="text-align: center;">&nbsp;</p>
+</div> <!-- end Text -->
+      <p>&nbsp;</p>
+      <div id="testimonialcontainer">
+  <span class="testimonialtitle">Testimonial</span><br>
+  <span class="testimonialtext">Thanks for a spectacular weekend! Kudos to Dawn and Rich!! Bravo!</span><br>
+  <span class="testimonialwho">- Kenny P</span>
+</div>
+       
+    </td>
+  </tr>
+</tbody></table>
+    </td>
+  </tr>
+</tbody></table> <!-- end of container-content table -->
+<table id="footer" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr>
+    <td width="130">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.12stepmusicfest.com/general/master.php?pn=privacy" class="footer">privacy</a></td>
+    <td class="footer" align="center">Copyright © 2009&nbsp;No Matter What Productions, Inc. ~ All Rights Reserved.<br>
+      All other trademarks are property of their respective owners.</td>
+    <td align="center" width="130">site by<br><a href="http://www.thirstylizards.com/" class="footer">Thirsty Lizards</a></td>
+  </tr>
+</tbody></table>
+  </td></tr>
+</tbody></table>  <!-- end of web page container table -->
+</body></html>

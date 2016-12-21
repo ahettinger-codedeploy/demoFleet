@@ -1,0 +1,369 @@
+/* Basics */
+
+body {
+width: 100%; height: 100%;
+padding-bottom: 200px;
+font-family: sans-serif;
+}
+
+p, ul, ol, div, span {
+color: #666666;
+}
+p, ul, ol {
+font-size: 16px;
+line-height: 24px;
+margin: 0 0 15px;
+}
+p:last-child, ul:last-child, ol:last-child {
+margin: 0;
+}
+b, strong
+{ font-weight: bold; }
+i, em
+{ font-style: italic; }
+
+a, a:visited, h1, h2, h3, h4, h5, h6 {
+text-decoration: none;
+color: #d62f31;
+}
+a:hover, a:active {
+text-decoration: underline;
+}
+small {
+font-size: smaller;
+}
+
+h1, h2, h3, h4, h5, h6, .PageTitle {
+color: #333333;
+font-weight: bold;
+font-family: Times New Roman, Times, serif;
+}
+h1 {
+font-size: 32px;
+padding: 15px 0;
+}
+h2 {
+font-size: 28px;
+padding: 15px 0;
+}
+h3 {
+font-size: 24px;
+padding: 10px 0;
+}
+h4 {
+font-size: 20px;
+padding: 5px 0;
+}
+h5 {
+font-size: 16px;
+padding: 5px 0;
+}
+h6 {
+font-size: 14px;
+padding: 5px 0;
+}
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child, .PageTitle:first-child {
+padding-top: 0;
+}
+hr {
+  display: none;
+}
+
+/* Layout */
+
+
+.wrap { 
+overflow: hidden;
+}
+.width {
+padding: 0px;
+margin: 0 auto;
+position: relative;
+width: 960px;    
+overflow: hidden;
+}
+
+.column {
+float: left;
+padding: 20px;
+}
+#content .left-column {
+width: 270px;
+background: white;
+}
+#content .right-column {
+width: 610px;
+}
+
+
+#site {
+margin: 0 auto;
+background: #E8E8E8;
+}
+
+#header-wrap {
+margin: 0 auto; 
+height: 484px;
+}
+#header {
+height: 484px;
+}
+
+#utility-bar {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CCFFFFFF,endColorstr=#CCFFFFFF); /* IE6–IE9 */
+	zoom: 1;
+	background-color: transparent;
+	background-color: rgba(255, 255, 255, 0.8) !important;  /* FF3+, Saf3+, Opera 10.10+, Chrome, IE9 */
+    position: absolute;
+    width: 100%;
+	height: 25px;
+	font-size: 13px;
+	text-align: center;
+	line-height: 23px;
+	color: #333333;
+	color: rgba(51,51,51,0.8);
+	-webkit-border-bottom-right-radius: 6px;
+	-webkit-border-bottom-left-radius: 6px;
+	-moz-border-radius-bottomright: 6px;
+	-moz-border-radius-bottomleft: 6px;
+	border-bottom-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+}
+#utility-bar span {
+	color: #ffffff;
+	margin: 0 10px;
+}
+
+.logo {
+font: normal 24px/24px sans-serif;
+text-transform: lowercase;
+color: white;
+position: absolute;
+z-index: 10;
+top: 206px;
+left: 26px;
+display: block;
+height: 128px; width: 304px;
+background: url("/clients/AcadianaSymphony/Images/logo.png") no-repeat scroll 0 0 transparent;
+position: relative;
+letter-spacing: 5px;
+}
+.logo:hover, .logo:active {
+  /* for IE */
+  filter:alpha(opacity=95);
+  /* CSS3 standard */
+  opacity:0.95;
+  text-decoration: none; 
+  color: #69AEDC;
+}
+.logo span {
+	color: #999999;
+	text-align: center;
+	visibility: hidden;
+}
+.main-image {
+  position: absolute;
+  top: 110px;
+  right: 0;
+  width: 600px; height: 328px;
+}
+.main-image table {
+  width: 600px; height: 328px;
+}
+.main-image table td {
+  width: 600px; height: 328px;
+      vertical-align: bottom;
+          text-align: center;
+}
+  
+
+
+
+#content-wrap {
+}
+#content {
+padding: 0;
+
+}
+#content a {
+}
+#content a:hover {
+}
+#content ul, #content ol {
+list-style: disc inside none;
+}
+#content li {
+margin-left: 6px;
+}
+#content-container {
+}
+
+
+#content .left-column .announcement-list {
+  margin-bottom: 25px;
+}
+#content .left-column .announcement-list .date {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: #990000;
+  margin: 0;
+}
+#content .left-column .announcement-list h2 {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: Times New Roman, Times, serif;
+  padding: 0;
+}
+#content .left-column .announcement-list h2 a {
+  color: #333333;
+}
+#content .left-column .announcement-list h2 a:hover {
+  color: #990000;
+  text-decoration: none;
+}
+#content .left-column .announcement-list p {
+  color: #666666;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+
+#content .right-column .announcement-list {
+  margin-bottom: 25px;
+  float: left; clear: both;
+}
+#content .right-column .announcement-list .date {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  color: #990000;
+  margin: 0 0 0 10px;
+  float: right;
+}
+#content .right-column .announcement-list h2 {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: bold;
+  font-family: Times New Roman, Times, serif;
+  padding: 0;
+  float: left;
+}
+#content .right-column .announcement-list h2 a {
+  color: #333333;
+}
+#content .right-column .announcement-list h2 a:hover {
+  color: #990000;
+  text-decoration: none;
+}
+#content .right-column .announcement-list p {
+  color: #666666;
+  font-size: 15px;
+  line-height: 18px;
+  float: left;
+}
+
+.announcement-details span.date {
+    font-size: 24px;
+}
+.announcement-details .goBack {
+  text-align: right;
+  text-transform: lowercase;
+}
+.announcement-details .goBack a {
+  opacity: 0.5;
+}
+.announcement-details .goBack a:hover {
+  text-decoration: none;
+  opacity: 1.0;
+}
+
+#footer-wrap {
+margin: 10px 0;
+}
+#footer {
+text-transform: lowercase;
+color: #999999; 
+}
+
+#copyright {
+    padding: 20px 0;
+	text-align: right;
+	float: left;
+	width: 40%;
+}
+#copyright li {
+font-size: 12px;
+color: #999999; 
+}
+
+/* Forms */
+
+.form label, .webform label, input {
+font-size: 14px;    line-height: 16px;
+ color: #333333;
+}
+
+table.webform td {
+padding: 5px 0;  
+ color: #333333; 
+}
+
+
+form {
+background-color: #e7e7e7;
+padding: 0;
+margin: 10px 0;
+float: left;
+}
+
+form, table.webform td, .form label, .webform label {
+    color: #666666;
+    font-size: 16px;
+    line-height: 24px;
+}
+#catwebformbutton, .cat_textbox {
+    color: #333333;
+}
+input.cat_textbox, textarea.cat_listbox, select.cat_dropdown, select.cat_listbox {
+    width: 265px;
+}
+.form-item {
+    clear: both;
+    float: left;
+    margin: 3px 0;
+    padding: 6px;
+}
+.form-item label, .form-item input, .form-item select, .form-item textarea {
+    clear: both;
+    float: left; 
+}
+.form-item label {
+}
+label.checkbox-label {
+    clear: none;
+    float: left;
+    padding: 2px;
+}
+.required {
+    background: none repeat scroll 0 0 #efefef;
+}
+span.required {
+    margin: 0 2px;
+    padding: 2px;
+}
+.no-clear {
+    clear: none;
+    margin-left: 5px;
+}
+
+.captchaimg {
+float: left;
+clear: both;
+}
+
+.checklist input {
+margin: 8px 4px;
+}

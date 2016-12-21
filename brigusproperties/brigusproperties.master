@@ -1,0 +1,125 @@
+<%
+'changelog'
+'LSP 09/07/16 - initial development'
+%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+
+
+
+
+		<!-- bootstrap-->
+	<link rel="stylesheet" href="/clients/brigusproperties/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/clients/brigusproperties/assets/css/bootstrap-theme.min.css">
+	<!--font awesome-->
+	<link rel="stylesheet" href="/clients/brigusproperties/assets/css/font-awesome.css">
+		<link rel="stylesheet" href="/clients/brigusproperties/assets/css/font-awesome.min.css">
+
+	<!--custom css-->
+	<link rel="stylesheet" href="/clients/brigusproperties/assets/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Fjalla+One|Lato:400,700" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar navbar-bigus navbar-fixed-top" role="navigation">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+<i class="fa fa-bars fa-2x"></i>
+		</button>
+
+	</div>
+
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse navbar-ex1-collapse">
+
+		<ul class="nav navbar-nav navbar-right">
+			<li  ><a href="http://brigusproperties.ca/">Home</a></li>
+			<li><a href="http://brigusproperties.ca/about-us.html">About Us</a></li>
+			<li><a href="http://brigusproperties.ca/portfolio.html">Portfolio</a></li>
+			<li><a href="http://brigusproperties.ca/brigus-tents.html">Brigus Tents</a></li>
+			<li id="active"><a href="http://brigusproperties.ca/tourism-chalet.html">Tourism Chalet</a></li>
+	
+		</ul>
+	</div><!-- /.navbar-collapse -->
+</nav>
+
+<div class="jumbotron-bigus">
+	<div class="container">
+		<h1>BRIGUS PROPERTIES</h1>
+
+	</div>
+</div>
+
+<section>
+
+<div class="container">
+	
+	<div class="row">
+		
+		<div class="content col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			
+		<!--tix content-->
+		
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+		</div>
+		
+	</div>
+	
+</div>
+	
+</section>
+
+<footer class="footer-bigus">
+ 
+<div class="container">
+	
+	<div class="row">
+		
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	
+		</div>
+		
+	</div>
+	
+</div>
+	
+</footer>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="/clients/brigusproperties/assets/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+
+		<script>
+			$(document).ready(function() {
+				$("#MasterContent_TixInnerContent_pnlButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_ButtonPanel").removeAttr("style");
+
+			
+			});
+		</script>
+
+		</div>
+		</form>
+	</body>
+
+	</html>
+

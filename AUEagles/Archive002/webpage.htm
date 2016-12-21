@@ -1,0 +1,457 @@
+<%
+'CHANGELOG
+'LSP 07/19/2013 - Initial development
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+<html class=" js no-flexbox flexboxlegacy no-touch hashchange history draganddrop rgba multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio" style="" xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="/clients/AUEagles/Images/auth014.js" type="text/javascript"></script><link media="all" href="/clients/AUEagles/Images/widget115.css" type="text/css" rel="stylesheet">
+    <title>American University Athletics</title>
+        <link rel="stylesheet" href="/clients/AUEagles/Images/base.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/clients/AUEagles/Images/redesign.css">
+    <link rel="stylesheet" type="text/css" href="/clients/AUEagles/Images/pi-widgets.css">
+    <link rel="shortcut icon" href="http://cdn87.psbin.com/yilx4wyqu90q5jmn/favicon.ico">
+    <script type="text/javascript" src="/clients/AUEagles/Images/jquery.js"></script>
+    <script type="text/javascript" src="/clients/AUEagles/Images/jquery-dropdown-faisal.js"></script>
+    <script type="text/javascript" src="/clients/AUEagles/Images/init-jquery.js"></script>
+    <script src="/clients/AUEagles/Images/modernizr.js"></script>
+
+<script type="text/javascript">
+$( function() {
+     $(document).bind("contextmenu",function(e){
+	return false;
+     });
+});
+</script>
+
+     <script type="text/javascript" src="/clients/AUEagles/Images/jquery_002.js"></script>
+     <link rel="stylesheet" type="text/css" href="/clients/AUEagles/Images/jquery.css">
+
+ <script type="text/javascript">
+      
+/***********************************************
+* Ultimate Fade-In Slideshow (v1.51): ?? Dynamic Drive (http://www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+ 
+var fadeimages=new Array()
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages[0]=["photo1.jpg", "", ""] //plain image syntax
+fadeimages[1]=["photo2.jpg", "http://www.cssdrive.com", ""] //image with link syntax
+fadeimages[2]=["photo3.jpg", "http://www.javascriptkit.com", "_new"] //image with link and target syntax
+ 
+var fadeimages2=new Array() //2nd array set example. Remove or add more sets as needed.
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages2[0]=["photo1.jpg", "", ""] //plain image syntax
+fadeimages2[1]=["photo2.jpg", "http://www.cssdrive.com", ""] //image with link syntax
+fadeimages2[2]=["photo3.jpg", "http://www.javascriptkit.com", "_new"] //image with link and target syntax
+ 
+var fadebgcolor="white"
+
+////NO need to edit beyond here/////////////
+ 
+var fadearray=new Array() //array to cache fadeshow instances
+var fadeclear=new Array() //array to cache corresponding clearinterval pointers
+ 
+var dom=(document.getElementById) //modern dom browsers
+var iebrowser=document.all
+ 
+function fadeshow(theimages, fadewidth, fadeheight, borderwidth, delay, pause, displayorder){
+this.pausecheck=pause
+this.mouseovercheck=0
+this.delay=delay
+this.degree=10 //initial opacity degree (10%)
+this.curimageindex=0
+this.nextimageindex=1
+fadearray[fadearray.length]=this
+this.slideshowid=fadearray.length-1
+this.canvasbase="canvas"+this.slideshowid
+this.curcanvas=this.canvasbase+"_0"
+if (typeof displayorder!="undefined")
+theimages.sort(function() {return 0.5 - Math.random();}) //thanks to Mike (aka Mwinter) :)
+this.theimages=theimages
+this.imageborder=parseInt(borderwidth)
+this.postimages=new Array() //preload images
+for (p=0;p<theimages.length;p++){
+this.postimages[p]=new Image()
+this.postimages[p].src=theimages[p][0]
+}
+ 
+var fadewidth=fadewidth+this.imageborder*2
+var fadeheight=fadeheight+this.imageborder*2
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers (ie: Firefox)
+document.write('<div id="master'+this.slideshowid+'" style="position:relative;width:'+fadewidth+'px;height:'+fadeheight+'px;overflow:hidden;"><div id="'+this.canvasbase+'_0" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div><div id="'+this.canvasbase+'_1" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);opacity:0.1;-moz-opacity:0.1;-khtml-opacity:0.1;background-color:'+fadebgcolor+'"></div></div>')
+else
+document.write('<div><img name="defaultslide'+this.slideshowid+'" src="'+this.postimages[0].src+'"></div>')
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers such as Firefox
+this.startit()
+else{
+this.curimageindex++
+setInterval("fadearray["+this.slideshowid+"].rotateimage()", this.delay)
+}
+}
+
+function fadepic(obj){
+if (obj.degree<100){
+obj.degree+=10
+if (obj.tempobj.filters&&obj.tempobj.filters[0]){
+if (typeof obj.tempobj.filters[0].opacity=="number") //if IE6+
+obj.tempobj.filters[0].opacity=obj.degree
+else //else if IE5.5-
+obj.tempobj.style.filter="alpha(opacity="+obj.degree+")"
+}
+else if (obj.tempobj.style.MozOpacity)
+obj.tempobj.style.MozOpacity=obj.degree/101
+else if (obj.tempobj.style.KhtmlOpacity)
+obj.tempobj.style.KhtmlOpacity=obj.degree/100
+else if (obj.tempobj.style.opacity&&!obj.tempobj.filters)
+obj.tempobj.style.opacity=obj.degree/101
+}
+else{
+clearInterval(fadeclear[obj.slideshowid])
+obj.nextcanvas=(obj.curcanvas==obj.canvasbase+"_0")? obj.canvasbase+"_0" : obj.canvasbase+"_1"
+obj.tempobj=iebrowser? iebrowser[obj.nextcanvas] : document.getElementById(obj.nextcanvas)
+obj.populateslide(obj.tempobj, obj.nextimageindex)
+obj.nextimageindex=(obj.nextimageindex<obj.postimages.length-1)? obj.nextimageindex+1 : 0
+setTimeout("fadearray["+obj.slideshowid+"].rotateimage()", obj.delay)
+}
+}
+ 
+fadeshow.prototype.populateslide=function(picobj, picindex){
+var slideHTML=""
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML='<a href="'+this.theimages[picindex][1]+'" target="'+this.theimages[picindex][2]+'">'
+slideHTML+='<img src="'+this.postimages[picindex].src+'" border="'+this.imageborder+'px">'
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML+='</a>'
+picobj.innerHTML=slideHTML
+}
+ 
+ 
+fadeshow.prototype.rotateimage=function(){
+if (this.pausecheck==1) //if pause onMouseover enabled, cache object
+var cacheobj=this
+if (this.mouseovercheck==1)
+setTimeout(function(){cacheobj.rotateimage()}, 100)
+else if (iebrowser&&dom||dom){
+this.resetit()
+var crossobj=this.tempobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+crossobj.style.zIndex++
+fadeclear[this.slideshowid]=setInterval("fadepic(fadearray["+this.slideshowid+"])",50)
+this.curcanvas=(this.curcanvas==this.canvasbase+"_0")? this.canvasbase+"_1" : this.canvasbase+"_0"
+}
+else{
+var ns4imgobj=document.images['defaultslide'+this.slideshowid]
+ns4imgobj.src=this.postimages[this.curimageindex].src
+}
+this.curimageindex=(this.curimageindex<this.postimages.length-1)? this.curimageindex+1 : 0
+}
+ 
+fadeshow.prototype.resetit=function(){
+this.degree=10
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+if (crossobj.filters&&crossobj.filters[0]){
+if (typeof crossobj.filters[0].opacity=="number") //if IE6+
+crossobj.filters(0).opacity=this.degree
+else //else if IE5.5-
+crossobj.style.filter="alpha(opacity="+this.degree+")"
+}
+else if (crossobj.style.MozOpacity)
+crossobj.style.MozOpacity=this.degree/101
+else if (crossobj.style.KhtmlOpacity)
+crossobj.style.KhtmlOpacity=this.degree/100
+else if (crossobj.style.opacity&&!crossobj.filters)
+crossobj.style.opacity=this.degree/101
+}
+ 
+ 
+fadeshow.prototype.startit=function(){
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+this.populateslide(crossobj, this.curimageindex)
+if (this.pausecheck==1){ //IF SLIDESHOW SHOULD PAUSE ONMOUSEOVER
+var cacheobj=this
+var crossobjcontainer=iebrowser? iebrowser["master"+this.slideshowid] : document.getElementById("master"+this.slideshowid)
+crossobjcontainer.onmouseover=function(){cacheobj.mouseovercheck=1}
+crossobjcontainer.onmouseout=function(){cacheobj.mouseovercheck=0}
+}
+this.rotateimage()
+}
+
+</script>
+
+
+
+
+
+<div id="_atssh" style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;"><iframe src="/clients/AUEagles/Images/sh126.htm" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px none; left: 0px; top: 0px;" title="AddThis utility frame" id="_atssh43"></iframe></div><script src="/clients/AUEagles/Images/core086.js" type="text/javascript"></script></head>
+<body>
+
+
+
+<div style="background-image: url(&quot;/clients/AUEagles/Images/default.jpg&quot;);" id="wrapper">
+
+    <!-- HEADER -->
+    <div id="header">
+       <div class="header-bg"></div>
+       <div id="nav">
+  <ul>
+                  <li class="dropdown-li">
+          <a class="nav1" href="#" style="background-image: url(/clients/AUEagles/Images/sports_nav.jpg)"></a>
+          <div id="submenu-container">
+  <div class="submenu">
+    <ul>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/m-baskbl/index">Men's Basketball</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/w-baskbl/index">Women's Basketball</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/c-xc/index">Cross Country</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/w-fieldh/index">Field Hockey</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/w-lacros/index">Women's Lacrosse</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/m-soccer/index">Men's Soccer</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/w-soccer/index">Women's Soccer</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/c-swim/index">Swimming &amp; Diving</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/c-track/index">Track &amp; Field</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/w-volley/index">Volleyball</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/m-wrestl/index">Wrestling</a></li>
+              <li></li>
+    </ul>
+  </div>
+</div>
+        </li>
+                        <li class="dropdown-li">
+          <a class="nav2" href="#" style="background-image: url(/clients/AUEagles/Images/schedules_nav.jpg)"></a>
+          <div id="submenu-container">
+  <div class="submenu">
+    <ul>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/m-baskbl/2012-13/schedule">Men's Basketball</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/w-baskbl/2012-13/schedule">Women's Basketball</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/c-xc/2012-13/schedule">Cross Country</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/w-fieldh/2012-13/schedule">Field Hockey</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/w-lacros/2012-13/schedule">Women's Lacrosse</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/m-soccer/2012-13/schedule">Men's Soccer</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/w-soccer/2012-13/schedule">Women's Soccer</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/c-swim/2012-13/schedule">Swimming &amp; Diving</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/c-track/2012-13/schedule">Track &amp; Field</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/w-volley/2012-13/schedule">Volleyball</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/sports/m-wrestl/2012-13/schedule">Wrestling</a></li>
+              <li></li>
+    </ul>
+  </div>
+</div>
+        </li>
+                        <li class="dropdown-li">
+          <a class="nav3" href="#" style="background-image: url(/clients/AUEagles/Images/inside_athletics_nav.jpg)"></a>
+          <div id="submenu-container">
+  <div class="submenu">
+    <ul>
+              <li style="margin-bottom: 0"><a href="http://www.american.edu/ocl/asac/Student-Athletes-Academic-Support.cfm">Academic Support</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/fan_central/travel">Accommodations and Dining</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/information/2011-12_All-Americans">All-Americans</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/fan_central/history">Athletics Timeline</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/information/broadcast">Broadcasters</a></li>
+              <li style="margin-bottom: 0"><a href="http://video.realviewtv.com/education/au/map/">Campus Map</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/information/compliance/index">Compliance</a></li>
+              <li style="margin-bottom: 0"><a href="http://american.edu/admissions/pdf/upload/Directions-to-AU.pdf">Directions</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/composite">Events Calendar</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/genrel/index">General Releases</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/information/hof/index">Hall of Fame</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/information/directory/staff">Staff Directory</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/information/str_and_cond/index">Strength &amp; Conditioning</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/information/bylaws">SAAC</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/studentAthletes/2013-14_Student-Athlete_Handbook">Student-Athlete Handbook</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/fan_central/Tailgating">Tailgating Policies</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/fan_central/American_University_Athletics_2013-14_Visitors_Guide.pdf">Visitors Guide</a></li>
+              <li></li>
+    </ul>
+  </div>
+</div>
+        </li>
+                        <li class="dropdown-li">
+          <a class="nav4" href="#" style="background-image: url(/clients/AUEagles/Images/alumni_friends_nav.jpg)"></a>
+          <div id="submenu-container">
+  <div class="submenu">
+    <ul>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/eaglesClub/index">Eagles Club</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/BlueCrew2/index">Blue Crew 2</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/alumniFriends/index">Alumni &amp; Friends</a></li>
+              <li></li>
+    </ul>
+  </div>
+</div>
+        </li>
+                        <li class="dropdown-li">
+          <a class="nav5" href="#" style="background-image: url(/clients/AUEagles/Images/multimedia_nav.jpg)"></a>
+          <div id="submenu-container">
+  <div class="submenu">
+    <ul>
+              <li style="margin-bottom: 0"><a href="http://www.aueagles.tv/">Eagles Vision TV</a></li>
+              <li style="margin-bottom: 0"><a href="http://www.patriotleague.org/allaccess/">Patriot League All*Access</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/video/Eye_on_the_Eagles/playlists">Eye on the Eagles TV Show</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/multimedia/2011-12/AU_Men-s_Basketball_Weekly_Radio_Show">Men's Basketball Radio Show</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/video/Mens_Basketball/playlists">Men's Basketball Videos</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/video/Womens_Basketball/playlists">Women's Basketball Videos</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/video/XC_and_Track/playlists">Cross Country/Track Videos</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/video/Field_Hockey/playlists">Field Hockey Videos</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/video/Lacrosse/playlists">Lacrosse Videos</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/video/Mens_Soccer/playlists">Men's Soccer Videos</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/video/Womens_Soccer/playlists">Women's Soccer Videos</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/video/Swim_and_Dive/playlists">Swimming and Diving Videos</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/video/Volleyball/playlists">Volleyball Videos</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/video/Wrestling/playlists">Wrestling Videos</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/video/General_Athletics/playlists">General Athletics Videos</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/video/Eagles_Club/playlists">Eagles Club Videos</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/video/american_minute_playlists">American Minute Videos</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/video/postgame_highlights_playlists">Postgame Highlight Videos</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/eaglesSpotlight/student_athlete_of_the_week/2012-13">GEICO SA of the Week</a></li>
+              <li style="margin-bottom: 0"><a href="https://www.aueagles.tv/archives.html">Archived Broadcasts</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/genrel/2012-13/releases/20120829a">Photo Galleries</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/stayConnected/facebook">Facebook</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/stayConnected/twitter">Twitter</a></li>
+              <li style="margin-bottom: 0"><a href="http://www.youtube.com/user/AmericanUnivEagles">YouTube</a></li>
+              <li style="margin-bottom: 0"><a href="http://aueagles.com/fan_poll-2012">Eagles Fan Poll</a></li>
+              <li></li>
+    </ul>
+  </div>
+</div>
+        </li>
+            </ul>
+</div>
+               <div id="top-nav">
+           <div class="section-header" style="width: 50px"></div>
+            <ul>
+                <li><a href="http://aueagles.com/tickets/index">Tickets</a></li>
+                <li><a href="http://aueagles.com/genrel/index">News</a></li>
+                <li><a href="http://aueagles.com/eaglesclub/index">Eagles Club</a></li>
+                <li><a href="http://american.edu/admissions/toursinfosessions.cfm" target="_blank">Visit American</a></li>
+                <li><a href="http://aueagles.com/bluecrew/index">Blue Crew</a></li>
+                <li><a href="http://aueagles.com/fan_central/band_and_spirit">Band &amp; Spirit</a></li>
+                <li><a href="http://aueagles.com/photos/photos_and_merchandise">Shop</a></li>
+                <li class="last"><a href="http://aueagles.com/information/sponsors/index">Corporate Partners</a></li>
+            </ul>
+        </div>
+
+       <div class="header-icons">
+           <a href="http://aueagles.com/eaglesClub/index" class="icon1"></a>
+           <a href="http://aueagles.com/tickets/index" class="icon2"></a>
+           <a href="http://american.edu/" target="_blank" class="icon3"></a>
+       </div>
+       <a href="http://aueagles.com/landing/index" class="home-link"></a>
+    </div>
+
+<div id="des-wrapper">
+
+<div class="wc">
+
+
+<table style="float: right" border="0" cellspacing="5">
+<tbody><tr>
+    <td valign="top"><a href="http://aueagles.com/tickets/index?dec=/printer-decorator&amp;" target="_printer_friendly"><img src="/clients/AUEagles/Images/printer-friendly.gif"></a></td>
+    <td valign="top"></td>
+ 
+</tr>
+</tbody></table>
+
+<br style="clear: both;">
+
+
+ 
+
+  <div class="rich clearfix">
+
+<!--TIX DATA STARt-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+
+</div>
+</div>
+
+    <div class="fr">
+        <div style="opacity: 0.5;" class="trans"></div>
+        <div class="content">
+          <div class="footer-buttons">
+<a href="http://aueagles.com/information/directory/staff"><img src="/clients/AUEagles/Images/auw.jpg" alt=""></a>
+<a href="http://aueagles.com/studentAthletes/2013-14_Student-Athlete_Handbook"><img src="/clients/AUEagles/Images/studentAthletes.jpg" alt=""></a>
+<a href="http://aueagles.com/landing/welcome_recruits"><img src="/clients/AUEagles/Images/welcome.jpg" alt=""></a>
+<a href="http://american.edu/discoverau/"><img src="/clients/AUEagles/Images/onCampus.jpg" alt=""></a>
+<a href="http://www.american.edu/"><img src="/clients/AUEagles/Images/americanEDU.jpg" alt=""></a>
+<a href="http://www1.american.edu/recfit/clubs/"><img src="/clients/AUEagles/Images/auw.jpg" alt=""></a>
+<a href="http://www1.american.edu/recfit/"><img src="/clients/AUEagles/Images/fitness.jpg" alt=""></a>
+<a href="http://aueagles.com/information/facilities/index"><img src="/clients/AUEagles/Images/facilities.jpg" alt=""></a>
+<a href="http://www.patriotleague.org/"><img src="/clients/AUEagles/Images/patriot_league.jpg" alt=""></a>
+<a href="http://www.ncaa.org/"><img src="/clients/AUEagles/Images/ncaa.jpg" alt=""></a>
+</div>
+
+
+            <div id="search">
+                
+            </div>
+
+            <a href="http://www.prestosports.com/" class="prestosports"><img src="/clients/AUEagles/Images/prestosports.jpg"></a>
+        </div>
+    </div>
+
+</div> </div> 
+<div id="hidden-block">
+<span id="1">/images/background/default.jpg</span>
+<span id="2">/images/background/m-baskbl1.jpg</span>
+<span id="3">/images/background/m-wrestl1.jpg</span>
+
+</div>
+
+<center><script type="text/javascript">GA_googleFillSlot("AMERICAN_728X90");</script></center>
+
+
+<div style="color:#fff; font-size:12px; margin:10px;">View: <a href="http://aueagles.com/action/browser-mode?u=%2Ftickets%2Findex&amp;m=1">Mobile</a> | Desktop</div>
+
+
+<!-- dropoff-scripts -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="/clients/AUEagles/Images/cookie-handler.js"></script>
+
+<script type="text/javascript">
+$(function() {
+	if (readCookie('adminuser')) {
+		$('body').append('<span id="edit-page-btn" style="display: block; padding: 10px; z-index: 9999; background: #000; color: #fff; font-size: 12px; position: fixed; right: 0; top: 0; cursor: default">Edit Page</span>');
+		$('#edit-page-btn').click(function() {
+			url = document.location.protocol + '//' + document.location.hostname
+			if (document.location.port) url += ':' + document.location.port;
+			url += '/admin/content/wiki/g2g';
+			url += document.location.pathname;
+			window.location = url;
+		});
+	}
+});
+</script>
+
+<!-- rum footer -->
+<script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" + "rpm-images.newrelic.com/42/eum/rum.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","beacon-4.newrelic.com","a8324e80d1","1004718","MgcAZENYXhJYVkFdXQtNJFldTVUTFnFaWVMMDEJeUFRVQV9cWUBXFw==",0,165,new Date().getTime(),"","","","",""]);</script>
+
+ 
+
+
+
+
+
+<script src="/clients/AUEagles/Images/rum.js" type="text/javascript"></script><script src="/clients/AUEagles/Images/a8324e80d1" type="text/javascript"></script></div>
+</form>
+</body>
+</html>

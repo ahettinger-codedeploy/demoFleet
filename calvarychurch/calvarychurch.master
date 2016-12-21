@@ -1,0 +1,658 @@
+<%
+'changelog'
+'LSP 08/19/16 - initial development'
+%>
+<!DOCTYPE html>
+<html class="js flexbox flexboxlegacy webgl no-touch rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio svg inlinesvg js flexbox flexboxlegacy webgl no-touch rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio svg inlinesvg state-expanded"
+    style="">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+    <title>
+        Calvary Church: Calendar
+    </title>
+
+    <!-- STYLES -->
+    <link id="ctl00_Link3" rel="stylesheet" type="text/css" href="/clients/calvarychurch/images/normalize.css" media="all">
+    <link id="ctl00_Link2" rel="stylesheet" type="text/css" href="/clients/calvarychurch/images/content.css" media="all">
+    <link id="ctl00_Link1" rel="stylesheet" type="text/css" href="/clients/calvarychurch/images/responsive_002.css" media="all">
+    <link id="ctl00_Link4" rel="stylesheet" type="text/css" href="/clients/calvarychurch/images/responsive.css" media="all">
+    <link rel="shortcut icon" href="http://calvarychurch.org/files/favicon%20%281%29.ico">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="Church, Calvary, Calvary Church, Lancaster, Pennsylvania, Bible, Hope, Gospel, Evangelical, Biblical, Sermon, Beau Eckert, Johnny Miller, David Allen, Eric Chriton, Frank Torrey">
+    <meta name="description" content="Calvary Church is a non-denominational church dedicated to Pursuing Life in Christ. We have a strong commitment to knowing God through the Bible and Reaching out to the world through God's love.">
+    <meta name="ews_pageid" content="58">
+    <meta name="server_name" content="WEB15">
+    <meta name="ews_ref" content="2364 - calvarychurch.org">
+
+  
+    <style type="text/css">
+        .bgcolor {
+            background: #ffffff;
+        }
+        
+        .buttoncolor {
+            background: #62a60e;
+        }
+        
+        .ews_ue .ews_ue_title {
+            background: #62a60e;
+        }
+        
+        .ews_ue_moveevents a {
+            background: #62a60e;
+        }
+        
+        .ews_directory_group_header {
+            background: #62a60e;
+        }
+        
+        .ews_cal_grid_header {
+            background: #62a60e;
+        }
+        
+        .contentarea a.globalformats_Button {
+            background: #62a60e;
+        }
+        
+        .mean-container .mean-bar {
+            background: #62a60e;
+        }
+        
+        .custom-title {
+            background: #62a60e;
+        }
+        
+        h1#pagename {
+            background: #62a60e;
+        }
+        
+        .ews_cal_list_month_header {
+            background: #62a60e;
+        }
+        
+        .media-compact h2 {
+            background: #62a60e;
+        }
+        
+        .footercolor {
+            background: #76787b;
+        }
+        
+        .text-color {
+            color: #62a60e;
+        }
+        
+        .page header #nav #ewsmenu_main li a:hover {
+            color: #62a60e;
+        }
+        
+        .page header #nav #ewsmenu_main li.selected>a {
+            color: #62a60e;
+        }
+        
+        .contentarea h1 {
+            color: #62a60e;
+        }
+        
+        .contentarea h2 {
+            color: #62a60e;
+        }
+        
+        .contentarea a {
+            color: #62a60e;
+        }
+        
+        .ews_menu li a:hover {
+            color: #62a60e;
+        }
+        
+        .page .main #sidebar .ews_menu #ewsmenu_submenu>li a:hover {
+            color: #62a60e;
+        }
+        
+        .page .main #sidebar .ews_menu #ewsmenu_submenu>li.selected>a {
+            color: #62a60e;
+        }
+        
+        .ews_menu #ewsmenu>li a:hover {
+            color: #62a60e;
+        }
+        
+        .ews_cal_grid_event:hover {
+            color: #62a60e;
+        }
+        
+        .contentarea .ews_menu #ewsmenu li.selected>a {
+            color: #62a60e;
+        }
+        
+        .footertext-color {
+            color: #ffffff;
+        }
+        
+        .contentarea-footer {
+            color: #ffffff;
+        }
+        
+        .contentarea-footer a {
+            color: #ffffff;
+        }
+    </style>
+    <style>
+    div,span{
+        font-size: inherit;
+        font-family: inherit;
+    }
+    </style>
+</head>
+
+<body class="bgcolor">
+
+    <!-- CUSTOMIZATION -->
+
+    <!-- Background Image -->
+    <div id="ctl00_background_image" class="ews_block ews_img background_image">
+
+        <div id="ctl00_background_image_wImageDiv" class="background_image" style="background-image:url('');"></div>
+    </div>
+
+
+    <!-- Background Pattern -->
+    <div id="ctl00_bgpattern" class="ews_block ews_img bgpattern">
+
+        <div id="ctl00_bgpattern_wImageDiv" class="bgpattern" style="background-image:url('');"></div>
+    </div>
+
+
+    <!-- Background Color -->
+    <div id="ctl00_BackgroundColorBlock" class="ews_block">
+
+        <div class="ews_cpb_container3">
+
+        </div>
+
+    </div>
+
+
+    <!-- Text & Menu Colors -->
+    <div id="ctl00_TextColorBlock" class="ews_block">
+
+        <div class="ews_cpb_container3">
+
+        </div>
+
+    </div>
+
+
+    <div class="page">
+
+       
+            <div id="" class="ews_block ews_login">
+
+
+
+            </div>
+
+
+
+
+            <header>
+                <!-- Header Content -->
+                <div id="logo">
+                    <div id="ctl00_logozone" class="ews_block ews_logo">
+
+
+                        <div class="ews_orglogo">
+                            <a href="http://calvarychurch.org/"><img id="ctl00_logozone_wImage" src="/clients/calvarychurch/images/CalvaryLogo.png"><span class="ews_orglogo_spacer" style="display:none;">&nbsp;</span></a>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+                <div id="nav">
+                    <div id="ctl00_mainmenu" class="ews_block ews_menu nav">
+
+                        <ul id="ewsmenu_main">
+                            <li class="ews_menu_item"><a href="http://calvarychurch.org/about-us">About Us</a>
+                                <ul class="ews_menu_container">
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/about-us/our-beliefs">Our Beliefs</a>
+                                        <ul class="ews_menu_container">
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/about-us/our-beliefs/baptism">Baptism</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/about-us/vision-values">Vision &amp; Values</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/about-us/ministry-strategy">Ministry Strategy</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/about-us/staff">Staff</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/about-us/directions">Directions</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/about-us/history">History</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/about-us/service-times">Service Times</a></li>
+                                </ul>
+                            </li>
+                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries">Ministries</a>
+                                <ul class="ews_menu_container">
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/adults">Adults</a>
+                                        <ul class="ews_menu_container">
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/adults/adult-bible-fellowships">Adult Bible Fellowships</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/adults/small-groups">Small Groups</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/adults/mens-ministry">Men's Ministry</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/adults/womens-ministry">Women's Ministry</a>
+                                                <ul class="ews_menu_container">
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/adults/womens-ministry/study-share-registration">Study Share Registration</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/adults/young-adults">Young Adults</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/adults/inductive-bible-studies">Inductive Bible Studies</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/adults/chinese-church">Chinese Church</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/adults/financial-peace-university">Financial Peace University</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student">Student</a>
+                                        <ul class="ews_menu_container">
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/parents">Parents</a>
+                                                <ul class="ews_menu_container">
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/parents/parent-resources">Parent Resources</a>
+                                                        <ul class="ews_menu_container">
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/parents/parent-resources/teen-issues-and-culture">Teen Issues and Culture</a></li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/parents/parent-resources/parenting-teens">Parenting Teens</a></li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/parents/parent-resources/spiritual-growth">Spiritual Growth</a></li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/parents/parent-resources/theology">Theology</a></li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/parents/parent-resources/apologetics">Apologetics</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/parents/pg13">PG-13 Resources</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/middle-school">Middle School</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/high-school">High School</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/student-groups">Student Groups</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/leaders">Leaders</a>
+                                                <ul class="ews_menu_container">
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/leaders/recommitment">Leader Recommitment Form</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/leaders/leader-resources">Leader Resources</a>
+                                                        <ul class="ews_menu_container">
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/leaders/leader-resources/teen-issues-and-culture">Teen Issues and Culture</a></li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/leaders/leader-resources/leadership">Leadership</a></li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/leaders/leader-resources/spiritual-growth">Spiritual Growth</a></li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/leaders/leader-resources/theology">Theology</a></li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/leaders/leader-resources/apologetics">Apologetics</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/leaders/stories">Stories of Life Change</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/upcoming-events">Upcoming Events</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/summertrips">Summer Trips</a>
+                                                <ul class="ews_menu_container">
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/summertrips/summertrips-resources">Summer Trips Resources</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/printable-resources">Printable Resources</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/blog">Blog</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/media">Media</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/middle-school-podcasts">Middle School Podcasts</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/student/high-school-podcasts">High School Podcasts</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children">Children</a>
+                                        <ul class="ews_menu_container">
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/nursery">Nursery</a>
+                                                <ul class="ews_menu_container">
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/nursery/faqs">FAQ's</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/nursery/curriculum">Curriculum</a>
+                                                        <ul class="ews_menu_container">
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/nursery/curriculum/nursery-verses">Nursery Verses</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/nursery/study--share-childcare---%28duplicated%29">Study &amp; Share Childcare - (Duplicated)</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/nursery/child-dedication">Child Dedication</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/nursery/parent-handbooks">Parent Handbooks</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/nursery/volunteer-positions" target="_self">Volunteer Positions</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/nursery/tueswed-pre-registration" target="_self">Tues/Wed Pre-Registration</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/early-childhood">Early Childhood</a>
+                                                <ul class="ews_menu_container">
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/early-childhood/sunday-school">Sunday School</a>
+                                                        <ul class="ews_menu_container">
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/early-childhood/sunday-school/beginner-verses">Beginner Verses</a></li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/early-childhood/sunday-school/changer-verses">Changer Verses</a></li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/early-childhood/sunday-school/pre-k-verses">Pre-K Verses</a></li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/early-childhood/sunday-school/kindergarten-verses">Kindergarten Verses</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/early-childhood/childrens-church">Children's Church</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/early-childhood/study--share-childcare" target="_self">Study &amp; Share Childcare</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/early-childhood/little-discovery-clubs">Little Discovery Clubs</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/early-childhood/parent-handbooks">Parent Handbooks</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/early-childhood/tueswed-pre-registration" target="_self">Tues/Wed Pre-Registration</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/elementary">Elementary</a>
+                                                <ul class="ews_menu_container">
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/elementary/grades-1-4">Grades 1-4</a>
+                                                        <ul class="ews_menu_container">
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/elementary/grades-1-4/sunday-school">Sunday School</a>
+                                                                <ul class="ews_menu_container">
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/elementary/grades-1-4/sunday-school/grade-1-bookmarks">Grade 1 Bookmarks</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/elementary/grades-1-4/sunday-school/grade-2-bookmarks">Grade 2 Bookmarks</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/elementary/grades-1-4/sunday-school/grade-3-bookmarks">Grade 3 Bookmarks</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/elementary/grades-1-4/sunday-school/grade-4-bookmarks">Grade 4 Bookmarks</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/elementary/grades-1-4/discovery-clubs">Discovery Clubs</a></li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/elementary/grades-1-4/kings-kids">King's Kids</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/elementary/grades-5-6">Grades 5-6</a>
+                                                        <ul class="ews_menu_container">
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/elementary/grades-5-6/sunday-school">Sunday School</a></li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/elementary/grades-5-6/discovery-clubs">Discovery Clubs</a></li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/elementary/grades-5-6/kings-kids">King's Kids</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/elementary/parent-handbooks">Parent Handbooks</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/parents">Parents</a>
+                                                <ul class="ews_menu_container">
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/parents/child-dedication">Child Dedication</a>
+                                                        <ul class="ews_menu_container">
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/parents/child-dedication/child-dedication-homework">Child Dedication Homework</a></li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/parents/child-dedication/class-sign-up">Class Sign Up</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/parents/gospel-threads" target="_self">Gospel Threads</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/parents/parents-handbooks">Parents Handbooks</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/parents/parenting-resources">Parenting Resources</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/parents/recommended-books">Recommended Books</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/parents/tueswed-pre-registration">Tues/Wed Pre-Registration</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers">Volunteers</a>
+                                                <ul class="ews_menu_container">
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/volunteer-opportunities">Volunteer Opportunities</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions">Job Descriptions</a>
+                                                        <ul class="ews_menu_container">
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/nursery-positions">Nursery Positions</a>
+                                                                <ul class="ews_menu_container">
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/nursery-positions/team-leader">Team Leader</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/nursery-positions/coordinator">Coordinator</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/nursery-positions/caregiver">Caregiver</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/nursery-positions/checkpoint">Checkpoint</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/nursery-positions/laundry-team">Laundry Team</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/nursery-positions/visual-curriculum-coordinator">Visual Curriculum Coordinator</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/nursery-positions/cleaning-crew-coordinator">Cleaning Crew Coordinator</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/nursery-positions/cleaning-crew">Cleaning Crew</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/early-childhood-positions">Early Childhood Positions</a>
+                                                                <ul class="ews_menu_container">
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/early-childhood-positions/coordinator">Coordinator</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/early-childhood-positions/teacher">Teacher</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/early-childhood-positions/assistant">Assistant</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/elementary-positions">Elementary Positions</a>
+                                                                <ul class="ews_menu_container">
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/elementary-positions/coordinator">Coordinator</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/elementary-positions/assistant-coordinator">Assistant Coordinator</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/elementary-positions/teacher">Teacher</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/elementary-positions/Team-Leader">Team Leader</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/elementary-positions/small-group-leader">Small Group Leader</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/elementary-positions/Read-Around-the-World-Data-Entry">Read Around the World Data Entry</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/kings-kids-positions">King's Kids Positions</a>
+                                                                <ul class="ews_menu_container">
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/kings-kids-positions/choir-leader">Choir Leader</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/kings-kids-positions/accompanist">Accompanist</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/kings-kids-positions/assistant">Assistant</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/study--share-care-positions">Study &amp; Share Care Positions</a>
+                                                                <ul class="ews_menu_container">
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/study--share-care-positions/nursery-coordinator" target="_self">Nursery Coordinator</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/study--share-care-positions/nursery-caregiver" target="_self">Nursery Caregiver</a></li>
+                                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/study--share-care-positions/early-childhood-coordinator" target="_self">Early Childhood Coordinator</a></li>
+                                                                    <li
+                                                                        class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/study--share-care-positions/early-childhood-teacher" target="_self">Early Childhood Teacher</a></li>
+                                                            </ul>
+                                                    </li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/disability-ministry-positions">Disability Ministry Positions</a>
+                                                        <ul class="ews_menu_container">
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/disability-ministry-positions/buddy">Buddy</a></li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/disability-ministry-positions/conquerors-class-teacher">Conquerors Class Teacher</a></li>
+                                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/job-descriptions/disability-ministry-positions/conquerors-class-assistant">Conquerors Class Assistant</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    </ul>
+                                            </li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/volunteer-handbook">Volunteer Handbook</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/training">Training</a>
+                                                <ul class="ews_menu_container">
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/training/mandatory-reporting-sign-in">Mandatory Reporting Sign-In</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/training/check-in-volunteer-kiosk-training-video">Check-in Volunteer Kiosk Training Video</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/application-for-service">Application For Service</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/volunteers/sunday-nursery--guest-services-team-schedule">Sunday Nursery &amp; Guest Services Team Schedule</a></li>
+                                            </ul>
+                                    </li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/calvary-preschool">Calvary Preschool</a>
+                                        <ul class="ews_menu_container">
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/calvary-preschool/about-us">About Us</a>
+                                                <ul class="ews_menu_container">
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/calvary-preschool/about-us/toddler-staff">Toddler Staff</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/calvary-preschool/about-us/preschool-staff">Preschool Staff</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/calvary-preschool/about-us/pre-k-staff">Pre-K Staff</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/calvary-preschool/about-us/support-staff">Support Staff</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/calvary-preschool/calendar">Calendar</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/calvary-preschool/curriculum">Curriculum</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/calvary-preschool/registration">Registration</a>
+                                                <ul class="ews_menu_container">
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/calvary-preschool/registration/student-application">Student Application</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/calvary-preschool/parent-resources">Parent Resources</a>
+                                                <ul class="ews_menu_container">
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/children/calvary-preschool/parent-resources/newsletter-archive">Newsletter Archive</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    </ul>
+                            </li>
+                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global">Global</a>
+                                <ul class="ews_menu_container">
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/short-term">Short-term</a>
+                                        <ul class="ews_menu_container">
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/short-term/opportunities">Opportunities</a>
+                                                <ul class="ews_menu_container">
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/short-term/opportunities/hungary">Hungary</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/short-term/opportunities/kentucky">Kentucky</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/short-term/opportunities/joni--friends">Joni &amp; Friends</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/short-term/opportunities/moldova--tomorrow-clubs">Moldova  Tomorrow Clubs</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/short-term/opportunities/moldova">Moldova</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/short-term/opportunities/thailand">Thailand</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/short-term/opportunities/haiti">Haiti</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/short-term/opportunities/guatemala">Guatemala</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/short-term/short-term-trips">Short-term Trips</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/short-term/application">Application</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/conference--events">Conference &amp; Events</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/opportunities">Opportunities</a>
+                                        <ul class="ews_menu_container">
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/opportunities/pray">Pray</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/opportunities/friends-ministry">FRIENDS Ministry</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/opportunities/crosstraining">CrossTraining</a>
+                                                <ul class="ews_menu_container">
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/opportunities/crosstraining/middle-distance-training">Middle Distance Training</a></li>
+                                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/opportunities/crosstraining/endurance-training">Endurance Training</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/global/30dop2016">30 Days of Prayer</a></li>
+                                </ul>
+                            </li>
+                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/care-and-support">Care and Support</a>
+                                <ul class="ews_menu_container">
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/care-and-support/support-groups">Support Groups</a>
+                                        <ul class="ews_menu_container">
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/care-and-support/support-groups/divorcecare--dc4k">DivorceCare &amp; DC4K</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/care-and-support/support-groups/griefshare">GriefShare</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/care-and-support/support-groups/mens-purity-group">Men's Purity Group</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/care-and-support/support-groups/minds-renewed">Minds Renewed</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/care-and-support/support-groups/in-the-wildflowers">In the Wildflowers</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/care-and-support/support-groups/surrendering-the-secret">Surrendering the Secret</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/care-and-support/support-groups/widows-ministry">Widows' Ministry</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/care-and-support/adoption-ministry">Adoption Ministry</a>
+                                        <ul class="ews_menu_container">
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/care-and-support/adoption-ministry/about">About</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/care-and-support/adoption-ministry/get-involved">Get Involved</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/care-and-support/adoption-ministry/affording-adoption">Affording Adoption</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/care-and-support/adoption-ministry/funding-contacts">Funding Contacts</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/care-and-support/adoption-ministry/resources">Resources</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/worship">Worship</a></li>
+                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/serving">Serving</a>
+                                <ul class="ews_menu_container">
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/serving/test-drive-sign-up">Test Drive Sign Up</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/serving/serving-positions">Serving Positions</a>
+                                        <ul class="ews_menu_container">
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/serving/serving-positions/childrens-ministry" target="_blank">Children's Ministry</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/serving/serving-positions/global-ministry" target="_blank">Global Ministry</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/serving/serving-positions/guest-services" target="_blank">Guest Services</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/serving/serving-positions/short-term-missions" target="_blank">Short Term Missions</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/serving/serving-positions/student-ministry" target="_blank">Student Ministry</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/serving/serving-positions/worship-ministry" target="_blank">Worship Ministry</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/ministries/serving/discover-calvary-" target="_self">Discover Calvary </a></li>
+                                </ul>
+                            </li>
+                            </ul>
+                            </li>
+                            <li class="ews_menu_item"><a href="http://calvarychurch.org/listen-read">Listen &amp; Read</a>
+                                <ul class="ews_menu_container">
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/listen-read/current-sermon-series">Current Sermon Series</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/listen-read/sermons-podcasts">Sermons &amp; Podcasts</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/listen-read/cd-request-form">CD Request Form</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/listen-read/live-streaming">Live Streaming</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/listen-read/bulletins-notes">Bulletins &amp; Notes</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/listen-read/bible-reading-plans">Bible Reading Plans</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/listen-read/bible-study-resources">Bible Study Resources</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/listen-read/library">Library</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/listen-read/stories">Stories</a></li>
+                                </ul>
+                            </li>
+                            <li class="ews_menu_item"><a href="http://calvarychurch.org/mycalvary">My Calvary</a>
+                                <ul class="ews_menu_container">
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/mycalvary/about-">About </a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/mycalvary/login-">Login </a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/mycalvary/give-now">Give Now</a>
+                                        <ul class="ews_menu_container">
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/mycalvary/give-now/give-now-faq">Give Now FAQ</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/mycalvary/mobile-app">Mobile App</a></li>
+                                </ul>
+                            </li>
+                            <li class="ews_menu_item selected"><a href="http://calvarychurch.org/events">Events</a>
+                                <ul class="ews_menu_container">
+                                    <li class="ews_menu_item selected"><a href="http://calvarychurch.org/events/calendar">Calendar</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/events/discover-calvary-registration">Discover Calvary Registration</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/events/baptism-class-registration">Baptism Class Registration</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/events/membership-class-registration">Membership Class Registration</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/events/child-dedication-registration">Child Dedication Registration</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/events/marriage-enrichment-class">Marriage Enrichment Class</a>
+                                        <ul class="ews_menu_container">
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/events/marriage-enrichment-class/register-online">Register online</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/events/marriage-enrichment-class/marriage-enrichment-class-covenant">Marriage Enrichment Class Covenant</a></li>
+                                            <li class="ews_menu_item"><a href="http://calvarychurch.org/events/marriage-enrichment-class/downloadable-documents">Downloadable documents</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/events/weddings">Weddings</a></li>
+                                    <li class="ews_menu_item"><a href="http://calvarychurch.org/events/facilities-request-form">Facilities Request Form</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </header>
+
+            <div class="main">
+                <!-- Main Content -->
+                <div class="container" id="subcontainer">
+
+                    <div id="contentarea_main" class="contentarea">
+    <!--tix content-->
+    <asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+  
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footercolor">
+                <div id="footer-wrap">
+                    <!-- Footer Content -->
+
+                    <div id="FooterContent" class="contentarea-footer contentarea">
+                        <div id="ctl00_FooterContent_ctl00_ctl00_ctl01" class="ews_container">
+                            <div id="ctl00_FooterContent_ctl00_ctl00_ctl01_ctl01" class="ews_block ews_text ews_text_contentblock">
+
+                                <div id="ctl00_FooterContent_ctl00_ctl00_ctl01_ctl01_wContent" class="ews_content_area" style="background-color:;">
+                                    <p></p>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Footer Rich Content Block with Boilerplate -->
+                    <div id="ctl00_footer" class="ews_block ews_text ews_text_contentblock contentarea-footer">
+
+                        <div id="ctl00_footer_wContent" class="ews_content_area" style="background-color:;">
+                            <p>&#169; 2016 &#149; Calvary Church&nbsp;&#149; <a href="mailto:info@calvarychurch.org">Email Us</a></p>
+                            <p>1051 Landis Valley Rd. Lancaster, Pa 17601<br>Phone: (717) 560-2341</p>
+                            <p>Powered by <a href="http://www.elexio.com/" target="_blank">Elexio</a>.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </footer>
+
+    
+    </div>
+
+</div>
+</form>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+<!--<![endif]-->
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+<script src="https://www.tix.com/clients/tix/js/jquery-1.6.4.min.js" type="text/javascript"></script>
+	 <style>
+		 div,span {
+			 font-size: inherit;
+		 }
+	 </style>
+<script src="https://www.tix.com/clients/tix/js/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="https://www.tix.com/javascript/Tooltip.js"></script>
+
+<style>
+    #arrow {
+        z-index: 999998;
+        display: none;
+        background-color: Transparent;
+        pointer-events: none;
+    }
+
+    #tooltipBox {
+        z-index: 999999;
+        display: none;
+        position: absolute;
+    	background-color: #fff !important;
+        border: 1px solid rgba(120, 120, 120, 0.8);
+        border-radius: 3px;
+        margin: 10px 8px;
+        padding: 5px;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        pointer-events: none;
+    }
+
+    #EventTooltip {
+        background-color: #fff;
+    }
+
+    #EventTooltip table, #EventTooltip tr, #EventTooltip td {
+        border: 0;
+    }
+
+    .tooltip-text {
+        width: 400px;
+        padding: 10px;
+        font-size: 0.85em;
+    }
+</style>
+
+<div id="tooltipBox">
+    <div id="EventTooltip"><img src="https://www.tix.com/images/loading.gif" /></div>
+</div>    
+<div id="arrow"><img src="https://www.tix.com/images/ArrowLeftDown.png" name="arrowimg" /></div>
+	<link rel="stylesheet" href="/clients/dowcorningtennisclassic/images/normalize.css">
+	<link rel="stylesheet" href="/clients/dowcorningtennisclassic/images/main.css">
+	<link href="/clients/dowcorningtennisclassic/images/css.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" async="" src="/clients/dowcorningtennisclassic/images/ga.js"></script><script id="twitter-wjs" src="/clients/dowcorningtennisclassic/images/widgets.js"></script>
+	<script
+					src="/clients/dowcorningtennisclassic/images/modernizr-2.js"></script>
+		<script src="/clients/dowcorningtennisclassic/images/modernizr-2.js"></script>
+		<script charset="utf-8" src="/clients/dowcorningtennisclassic/images/widget.js"></script>
+		<script src="/clients/dowcorningtennisclassic/images/jquery_002.js"></script>
+		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		<script type="text/javascript" charset="utf-8" async="" src="/clients/dowcorningtennisclassic/images/timeline.js"></script></head>
+
+<body >
+	<!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+	<!-- CODE GOES HERE -->
+	<div id="fb-root"></div>
+	<div class="bar"></div>
+	<div class="center">
+		<header alt="Dow Tennis Classic">
+			<h1>Serving Dreams</h1>
+			<img src="/clients/dowcorningtennisclassic/images/dc25.png" alt="Dow Tennis Classic">
+		</header>
+		<nav alt="Navigation">
+			<div class="buttoncontainer">
+				<ul class="menu">
+					<li><a href="http://dowtennisclassic.com/index.html">Home</a></li>
+					<li><a href="#">Tournament</a>
+						<ul>
+							<li><a href="http://dowtennisclassic.com/facility.html">Facility</a></li>
+							<li><a href="http://dowtennisclassic.com/directions.html">Directions</a></li>
+							<li><a href="http://dowtennisclassic.com/history.html">Tournament History</a></li>
+							<li><a href="http://dowtennisclassic.com/champions.html">Past Champions</a></li>
+							<li><a href="http://dowtennisclassic.com/layout.html">Stadium Layout</a></li>
+							<li><a href="http://dowtennisclassic.com/tickets.html">Tickets</a></li>
+							<li><a href="http://dowtennisclassic.com/awards.html">Awards</a></li>
+							<li><a href="http://dowtennisclassic.com/faqsandfun.html">FAQ's and Fun</a></li>
+							<li><a href="http://dowtennisclassic.com/events.html">Special Events</a></li>
+							<li><a href="http://dowtennisclassic.com/outreach.html">Outreach</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Schedule and Scores</a>
+						<ul>
+							<li><a href="http://dowtennisclassic.com/draws.html">Draws, Match Schedules &amp; Results</a></li>
+							<li><a href="http://dowtennisclassic.com/scheduleofevents.html">Schedule Of Events</a></li>
+							<li><a href="http://dowtennisclassic.com/players.html">Meet the Players</a></li>
+						</ul>
+					</li>
+					<li><a href="http://dowtennisclassic.com/gallery.html">Gallery</a></li>
+					<li><a href="http://dowtennisclassic.com/volunteer.html">Volunteers</a></li>
+					<li><a href="#">Sponsors</a>
+						<ul>
+							<li><a href="http://dowtennisclassic.com/companies.html">Sponsor Companies</a></li>
+							<li><a href="http://dowtennisclassic.com/becomeasponsor.html">Become a Sponsor</a></li>
+							<li><a href="http://dowtennisclassic.com/sponsorinfo.html">Sponsor Info</a></li>
+						</ul>
+					</li>
+					<li><a href="http://dowtennisclassic.com/contactus.html">Contact Us</a></li>
+					<li>
+					</li>
+					<div class="clearfix"></div>
+				</ul>
+				<!-- end buttonbar -->
+			</div>
+			<!-- end buttoncontainer -->
+		</nav>
+		<article>
+			<section>
+				<div class="tix-box">
+<!--tix content-->
+
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+				</div>
+
+			<div class="clearfix"></div>
+		</article>
+		<div class="clearfix"></div>
+		<footer>
+			<a href="http://midlandtennis.com/">Greater Midland Tennis Center</a>
+			<a href="http://dowtennisclassic.com/sitemap.html">Site Map</a>
+			<div class="clearfix"></div>
+		</footer>
+	</div>
+	<!-- END MY CODE  -->
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+
+		<script>
+			$(document).ready(function() {
+				$("#MasterContent_TixInnerContent_pnlButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_ButtonPanel").removeAttr("style");
+/* remove extra button defaults
+				$("#MasterContent_TixInnerContent_ctl00_gvSchedule_btnBuyTix_0").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnBackToShopping").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCancelOrder").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCheckout").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_LoginButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CancelOrderButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CompleteButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingBtn").removeAttr("style");*/
+				
+				
+			});
+		</script>
+
+		</div>
+		</form>
+	</body>
+
+	</html>

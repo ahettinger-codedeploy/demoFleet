@@ -1,0 +1,1 @@
+document.write('<a target="_blank" href="http://ad.doubleclick.net/click;h=v8/39fc/0/0/%2a/c;226750222;0-0;0;28501754;3454-728/90;37519305/37537183/1;;~sscs=%3fhttp://cache.boston.com/advertisers/stella/"><img src="http://s0.2mdn.net/viewad/2836116/stella_728x90_july10.jpg" border=0 alt="Click here to find out more!"></a>');

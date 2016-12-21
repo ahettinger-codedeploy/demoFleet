@@ -1,0 +1,233 @@
+/* You may adapt elements of this CSS in your own projects, but the unique combination of images, colors, sizes, typography, and positioning ("the design") is copyright 2009 Gregory Robleto and may not be reproduced. This stylesheet is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 2.5 License. <http://creativecommons.org/licenses/by-nc-nd/2.5/>  */
+
+
+/*******************************************************************************
+=TABULA RASA
+=FONTS
+=BASE TAGS
+=BASE CLASSES
+*******************************************************************************/
+
+
+/*============================================================================
+
+=TABULA RASA - Resetting by removing all browser defaults
+
+============================================================================*/
+
+/* Normalize margin, padding */
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, per, form, fieldset, input, p, blockquote, th, td {
+	margin:0;
+	padding:0;
+	}
+
+/* Normalize font-size for headers */
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	}
+	
+/* Remove list-styles form lists */
+ol, ul {
+	list-style: none;
+	}
+	
+/*Normalize font-style and font-wight to normal */
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-style:normal;
+	font-weight:normal;
+	}
+
+/*Remove table borders */
+table {
+	border-collapse: collapse;
+	border-spacing:0;
+	}
+	
+/*Remove border from fieldset and img */
+fieldset, img {
+	border:0;
+	}
+	
+/* Left-aligns text in caption and th */
+caption, th {
+	text-align:left;
+	}
+	
+/*Removes quotation marks from q */
+q:before, q:after {
+	content: '';
+}
+
+
+
+/*============================================================================
+
+=FONTS - Default font size and type after the reset
+
+============================================================================*/
+
+body {
+	font-family:sans-serif;	
+	font-size: 13px;
+}
+table {
+	font-size:inherit; /* remind tables to inherit */
+}
+pre, code, kbd, samp, tt {
+	font-family:monospace;
+	line-height:100%;
+}
+
+
+
+/*============================================================================
+
+=BASE TAGS - Baseline sizes, colors and padding after the reset
+
+============================================================================*/
+
+
+h1 {
+	font-size:1.8em;	/*24px display*/
+}
+h2 {
+	font-size:1.6em; 	/*18px display*/
+}
+h3 {
+	font-size:1.4em;	/*16px display*/
+}
+h4 {
+	font-size:1.2em;	/*14px display*/
+}
+h5 {
+	font-size:1.2em;	/*12px display*/
+}
+h6 {
+	font-size:1.0em;	/*10px display*/
+}
+h1,h2,h3,h4,h5,h6,strong,legend {
+	font-weight:bold; 
+	line-height: 1.3em;
+}
+h1,h2 {
+	margin: 1em 0em;
+}
+p,dd,fieldset,table,pre {
+	/*so things don't run into each other*/
+	margin-bottom:1em;
+	line-height:1.8em;
+}
+blockquote {
+	margin:1em;	/* ahh, breathing room */
+}
+ol,ul,dl {
+	margin-left:2em;	/* ahh, breathing room */
+}
+ol li {
+	list-style: decimal outside;	/*giving OL's LIs generated numbers*/
+}
+ul li {
+	list-style: disc outside;	/*giving UL's LIs generated disc markers*/
+}
+ol li, 
+ul li {
+	padding-bottom:1.0em;
+}
+em {
+	font-style:italic;
+}
+del {
+	text-decoration:line-through;
+}
+dt {
+	font-weight:bold;
+}
+
+
+caption {
+	/*coordinated margin to match cell's padding*/
+	margin-bottom:.5em;
+	/*centered so it doesn't blend in to other content*/
+	text-align:center;
+}
+fieldset {
+	border:1px solid #DDDDDD;
+	padding:2em;
+}
+legend {
+	font-size:1.6em;	/*16px display*/
+}
+textarea {
+	font-size:1.2em;	/* adjusts to 12px display*/
+}
+a {
+	color:black;
+	text-decoration:none;
+}
+a:link, a:visited {
+	color:#0066AA;
+	text-decoration:underline;
+}
+a:hover {
+	color:#003366;
+	text-decoration:underline;
+}
+a.inactive:hover {
+	color:#0066AA;
+	text-decoration:none;
+}
+
+
+
+/*============================================================================
+
+=BASE CLASSES - Base line classes to be attached to tags
+
+============================================================================*/
+
+
+strong, b { font-weight: bold; }
+
+em, i { font-style: italic; }
+
+.weak { font-size: .9em; font-weight: normal; }
+
+.contextual { font-size: .9em; color: #888; }
+
+.hide { display: none; }
+
+.show { display: block; }
+
+.alt { text-indent: -9999px; cursor: pointer; }
+
+.left {float: left; }
+
+.center { margin: 0 auto;}
+
+.right { float: right; }
+
+.textleft { text-align: center; }
+
+.textcenter { text-align: center; }
+
+.textright { text-align: right;}
+
+.clearfix { clear: both; height: 1px; font-size: 1px; }
+	
+.smtext {	font-size: 80%; }
+
+.onesizedown {	font-size: 90%; }	
+
+.caps { text-transform:capitalize; }
+
+.above { margin-bottom:15px; }
+
+.below { margin-top:15px; }
+
+.flushleft, .flushleft li { list-style: none; padding-left: 0; margin-left: 0px; }
+
+.capitalize { text-transform: capitalize }
+
+.italic { font-style: italic }
+
+.noborder { border: none; }

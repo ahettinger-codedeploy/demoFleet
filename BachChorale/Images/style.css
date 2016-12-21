@@ -1,0 +1,4223 @@
+/*
+		Theme Name: Bach Chorale
+		Description: Bach Chorale is a custom implementation of Dagmar is a child theme created for the Genesis Theme Framework by StudioPress.
+		Author: R World Properties, Inc
+		Author URI: http://rworldproperties.com
+		Tags: one-column, two-column, right-side, left-side, responsive, featured-/clients/BachChorale/Images, theme-options, red, white, tan, gray, blue, orange, green, tan, yellow, purple, pink
+		Version: 1.0.13
+		Copyright 2012 Web Savvy Marketing, LLC. 
+		Template: genesis
+
+*/
+
+
+/* Import Fonts
+------------------------------------------------------------ */
+
+@import url(https://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+
+
+/* Defaults
+------------------------------------------------------------ */
+
+body,
+h1,
+h2,
+h2 a,
+h2 a:visited,
+h3,
+h4,
+h5,
+h6,
+p,
+select,
+textarea {
+	color: #7d7d7d;
+	font-family: "Droid Sans", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 1.5625;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+
+blockquote,
+input,
+select,
+textarea,
+.author-box,
+.sticky,
+.taxonomy-description,
+.wp-caption {
+	background-color: #f5f5f5;
+	border: 1px solid #ddd;
+}
+
+input,
+label,
+select,
+textarea {
+	color: #7d7d7d;
+	font-family: "Droid Sans", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+li,
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ol li {
+	list-style-type: decimal;
+}
+
+
+/* Hyperlinks
+------------------------------------------------------------ */
+
+a,
+a:link {color:#FF0000;}
+a:visited {
+	color: #263B6D;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a img {
+	color: #7D7D7D;
+	border: none;
+}
+
+
+/* Body
+------------------------------------------------------------ */
+
+body,
+body.home.page {
+	background: #F1F1F1 url(/clients/BachChorale/Images/bg-grunge.png) repeat;
+}
+
+body.home {
+	background-color: #131212;
+}
+
+/* Wrap
+------------------------------------------------------------ */
+#wrap,
+.home.page #wrap {
+	background: url(/clients/BachChorale/Images/bg-top-grunge.png) no-repeat center top;
+	margin: 0;
+	width: 100%;
+	overflow: hidden;
+	padding: 0;
+}
+
+.home #wrap {
+	background: url(/clients/BachChorale/Images/bg-top-grunge-home.png) no-repeat center top;
+}
+
+/* Background /clients/BachChorale/Images
+------------------------------------------------------------ */
+#bg-wrap {
+	background: url(/clients/BachChorale/Images/bg-line.png) repeat center top;
+}
+
+/* Header
+------------------------------------------------------------ */
+
+#header {
+	clear: both;
+	margin: 0 auto;
+	min-height: 100px;
+	width: 100%;
+}
+
+#header .wrap {
+	margin: 0 auto;
+	overflow: hidden;
+	width: 1000px;
+}
+
+#title-area {
+	float: left;
+	overflow: hidden;
+	padding: 0;
+	width: 60%;
+}
+
+#title {
+	display: block;
+	float: left;
+	font-family: 'Covered By Your Grace', arial, serif;
+	font-size: 75px;
+	font-weight: 300;
+	letter-spacing: -0.05em;
+	line-height: 1.25;
+	margin: 0 10px 0 0;
+	text-transform: uppercase;
+	text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+}
+
+#title a,
+#title a:hover {
+	color: #b5b5b5;
+	padding: 0 0 0 10px;
+	text-decoration: none;
+}
+
+#description {
+	color: #fdfcfe;
+	font-family: 'Covered By Your Grace', arial, serif;
+	font-size: 20px;
+	padding: 32px 0 0;
+	text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+}
+
+#header .widget-area {
+	float: right;
+	padding: 25px 15px 0 0;
+	width: 38%;
+}
+
+
+/* Image Header - Partial Width
+------------------------------------------------------------ */
+.header-image #title {
+	background: url(/clients/BachChorale/Images/logo.png) no-repeat;
+	margin: 15px 0 0 10px;
+}
+
+.header-image #title,
+.header-image #title a {
+	display: block;
+	float: left;
+	height: 210px;
+	overflow: hidden;
+	padding: 0;
+	text-indent: -9999px;
+	width: 246px;
+}
+
+.header-image #description {
+	display: block;
+	overflow: hidden;
+	padding-left: 5px;
+}
+
+
+/* Image Header - Full Width
+------------------------------------------------------------ */
+.header-full-width #title-area {
+	width: 85%;
+}
+
+.header-full-width #title,
+.header-full-width #title a {
+	width: 250px;
+}
+
+
+/* Header / Primary / Secondary Navigation
+------------------------------------------------------------ */
+
+#nav {
+	margin: 0;
+	width: 100%;
+}
+
+#nav .wrap {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+.menu-primary,
+.menu-secondary,
+#header .menu {
+	clear: both;
+	color: #363636;
+	font-size: 24px;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 100%;
+}
+
+#header .menu {
+	box-sizing: border-box;
+}
+
+.menu-primary li {
+	background: url(/clients/BachChorale/Images/menu-divider.png) no-repeat right center;
+}
+
+.menu-primary li.last-menu-item {
+	background: none;
+}
+
+.menu-secondary {
+	border-bottom: 1px solid #ddd;
+	border-top: none;
+}
+
+.menu-primary ul,
+.menu-secondary ul,
+#header .menu ul {
+	float: left;
+	width: 100%;
+}
+
+.menu-primary li,
+.menu-secondary li,
+#header .menu li {
+	float: left;
+	list-style-type: none;
+}
+
+.menu-primary a,
+.menu-secondary a,
+#header .menu a {
+	color: #363636;
+	display: block;
+	font-family: 'Covered By Your Grace', arial, serif;
+	padding: 7px 20px 6px 10px;
+	position: relative;
+	text-decoration: none;
+}
+
+.menu-primary li a:active,
+.menu-primary li a:hover,
+.menu-primary .current_page_item a,
+.menu-primary .current-cat a,
+.menu-primary .current-menu-item a,
+.menu-secondary li a:active,
+.menu-secondary li a:hover,
+.menu-secondary .current_page_item a,
+.menu-secondary .current-cat a,
+.menu-secondary .current-menu-item a,
+#header .menu li a:active,
+#header .menu li a:hover,
+#header .menu .current_page_item a,
+#header .menu .current-cat a,
+#header .menu .current-menu-item a {
+	color: #959595;
+}
+
+.menu-primary li li a,
+.menu-primary li li a:link,
+.menu-primary li li a:visited,
+.menu-secondary li li a,
+.menu-secondary li li a:link,
+.menu-secondary li li a:visited,
+#header .menu li li a,
+#header .menu li li a:link,
+#header .menu li li a:visited {
+	background: none;
+	background-color: #B5B5B5;
+	border: 1px solid #CCC;
+	border-top: none;
+	color: #363636;
+	font-size: 18px;
+	padding: 9px 10px 8px;
+	position: relative;
+	text-transform: none;
+	width: 178px;
+}
+
+.menu-primary li li a:active,
+.menu-primary li li a:hover,
+.menu-secondary li li a:active,
+.menu-secondary li li a:hover,
+#header .menu li li a:active,
+#header .menu li li a:hover {
+	background-color: #171515;
+	color: #FFF;
+}
+
+.menu-primary li ul,
+.menu-secondary li ul,
+#header .menu li ul {
+	height: auto;
+	left: -9999px;
+	margin: 0 0 0 -1px;
+	position: absolute;
+	width: 200px;
+	z-index: 9999;
+}
+
+.menu-primary li ul a,
+.menu-secondary li ul a,
+#header .menu li ul a {
+	width: 140px;
+}
+
+.menu-primary li ul ul,
+.menu-secondary li ul ul,
+#header .menu li ul ul {
+	margin: -37px 0 0 198px;
+}
+
+.menu li:hover ul ul,
+.menu li.sfHover ul ul {
+	left: -9999px;
+}
+
+.menu li:hover,
+.menu li.sfHover {
+	position: static;
+}
+
+ul.menu li:hover>ul,
+ul.menu li.sfHover ul,
+#header .menu li:hover>ul,
+#header .menu li.sfHover ul {
+	left: auto;
+}
+
+.menu-primary li a.sf-with-ul,
+.menu-secondary li a.sf-with-ul,
+#header .menu li a.sf-with-ul {
+	padding-right: 25px;
+}
+
+.menu li a .sf-sub-indicator {
+	background: url(/clients/BachChorale/Images/icon-arrow-grey.png) no-repeat;
+}
+
+.menu li li a .sf-sub-indicator,
+.menu li li li a .sf-sub-indicator {
+	background: url(/clients/BachChorale/Images/icon-arrow-white.png) no-repeat;
+}
+
+.menu li a .sf-sub-indicator,
+.menu li li a .sf-sub-indicator,
+.menu li li li a .sf-sub-indicator {
+	height: 16px;
+	position: absolute;
+	right: 10px;
+	text-indent: -9999px;
+	top: 15px;
+	width: 16px;
+}
+
+#nav .first-menu-item a {
+	padding-left: 15px;
+}
+
+.menu-primary li a.sf-with-ul {
+	padding-right: 30px;
+}
+
+#wpadminbar li:hover ul ul {
+	left: 0;
+}
+
+
+/* Primary Navigation Extras
+------------------------------------------------------------ */
+
+.menu li.right {
+	float: right;
+	padding: 7px 15px 6px;
+}
+
+.menu li.right a {
+	background: none;
+	border: none;
+	color: #333;
+	display: inline;
+	text-decoration: none;
+}
+
+.menu li.right a:hover {
+	color: #0d72c7;
+	text-decoration: none;
+}
+
+.menu li.search {
+	padding: 0 10px;
+}
+
+.menu li.rss a {
+	background: url(/clients/BachChorale/Images/rss.png) no-repeat center left;
+	margin: 0 0 0 10px;
+	padding: 0 0 0 16px;
+}
+
+.menu li.twitter a {
+	background: url(/clients/BachChorale/Images/twitter-nav.png) no-repeat center left;
+	padding: 0 0 0 20px;
+}
+
+/* Footer Navigation
+------------------------------------------------------------ */
+#footer #footer-nav ul {
+	list-style: none;
+}
+
+#footer #footer-nav ul li {
+	display: block;
+	float: left;
+	margin: 0 15px 0 0;
+}
+
+/* Social Links
+------------------------------------------------------------ */
+#header .wsm-social-widget p {
+	color: #B1120C;
+	font-size: 15px;
+	text-align: right;
+}
+
+#header .social-wrap {
+	float: right;
+	display:block;
+}
+
+.wsm-social-widget {
+	margin: 0 ;
+	overflow: hidden;
+}
+
+.social-wrap {
+	list-style:none;
+}
+
+.social-wrap li {
+	-webkit-box-shadow: 3px 2px 4px -3px #333;
+	-moz-box-shadow: 3px 2px 4px -3px #333;
+	box-shadow: 3px 2px 4px -3px #333;
+	border-bottom: 0;
+	display:block;
+	float:left;
+	height: 24px;
+	margin:0 0 0 10px;
+	padding: 0;
+	width: 23px;
+}
+
+.social-wrap a #fb {
+	background: url(/clients/BachChorale/Images/icon-facebook.png) no-repeat;
+}
+
+.social-wrap a #twit {
+	background: url(/clients/BachChorale/Images/icon-twitter.png) no-repeat;
+}
+
+.social-wrap a #youtube {
+	background: url(/clients/BachChorale/Images/icon-youtube.png) no-repeat;
+}
+
+.social-wrap a #rss {
+	background: url(/clients/BachChorale/Images/icon-rss.png) no-repeat;
+}
+
+
+
+/* Inner
+------------------------------------------------------------ */
+
+#inner,
+.home.page #inner {
+	background: url(/clients/BachChorale/Images/bg-inner-bottom.png) no-repeat bottom left;
+	margin: 0 auto;
+	min-height: 300px;
+	overflow: hidden;
+	padding: 95px 0 10px;
+	width: 100%;
+}
+
+#inner .wrap {
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 15px;
+	width: 970px;
+}
+
+.home #inner {
+	padding: 15px 0 10px;
+}
+
+.home.blog #inner .wrap {
+	padding: 15px 0;
+	width: 100%;
+}
+
+/* Breadcrumb
+------------------------------------------------------------ */
+
+#breadcrumb {
+	color: #363636 !important;
+	font-size: 13px;
+	margin: -10px 0 10px;
+	padding: 5px 10px;
+}
+
+#breadcrumb a {
+	color: #777 !important;
+}
+	
+#breadcrumb .divider {
+	margin: 0 5px;
+}
+
+/* Taxonomy Description
+------------------------------------------------------------ */
+
+.taxonomy-description {
+	background-color: #fff;
+	margin: -10px 0 30px;
+	padding: 0 0 15px;
+}
+
+.taxonomy-description p {
+	font-size: 14px;
+	padding: 15px 15px 0;
+}
+
+
+/* Content-Sidebar Wrap
+------------------------------------------------------------ */
+
+#content-sidebar-wrap {
+	float: left;
+	width: 800px;
+}
+
+.content-sidebar #content-sidebar-wrap,
+.full-width-content #content-sidebar-wrap,
+.sidebar-content #content-sidebar-wrap {
+	width: 100%;
+}
+
+.sidebar-content-sidebar #content-sidebar-wrap,
+.sidebar-sidebar-content #content-sidebar-wrap {
+	float: right;
+}
+
+
+/* Content
+------------------------------------------------------------ */
+
+#content {
+	float: left;
+	padding: 0;
+	width: 475px;
+}
+
+.content-sidebar #content,
+.sidebar-content #content {
+	width: 645px;
+}
+
+.sidebar-content #content,
+.sidebar-sidebar-content #content {
+	float: right;
+}
+
+.full-width-content #content {
+	width: 970px;
+}
+
+.home.full-width-content #content {
+	width: 100%;
+}
+
+.post {
+	margin: 0 0 40px;
+}
+
+.widget-area .post {
+	background: url(/clients/BachChorale/Images/dotted-line.png) repeat-x center bottom;
+	margin: 0 0 8px;
+	padding-bottom: 10px;
+}
+
+#home-top {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+#home-top .widget-area .post {
+	background: url(/clients/BachChorale/Images/dotted-line-light.png) repeat-x center bottom;
+}
+	
+
+.entry-content {
+	clear: both;
+	overflow: hidden;
+}
+
+.entry-content p {
+	color: #363636;
+	margin: 0 0 25px;
+}
+
+.entry-content a.more-link {
+	color: #1f3244;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0 0 0 5px;
+	text-decoration: underline;
+}
+
+.entry-content a:hover.more-link {
+	color: #7D7D7D;
+}
+
+blockquote {
+	background: url(/clients/BachChorale/Images/blockquote.png) no-repeat;
+	border: none;
+	margin: 5px 5px 20px;
+	padding: 25px 30px 5px 70px;
+}
+
+blockquote p {
+	color: #999;
+	font-style: italic;
+}
+
+p.subscribe-to-comments {
+	padding: 20px 0 10px;
+}
+
+.clear {
+	clear: both;
+}
+
+.clear-line {
+	border-bottom: 1px solid #ddd;
+	clear: both;
+	margin: 0 0 25px;
+}
+
+
+/* Home
+------------------------------------------------------------ */
+
+.home-top-left {
+	float: left;
+	width: 310px;
+	color: #d7d7d7;
+}
+
+.home-top-left .widget {
+	margin: 0 0 15px;
+}
+
+.home-top-left .widget p {
+	color: #d7d7d7;
+}
+
+.home-rotator  .bg-cover {
+	background: url(/clients/BachChorale/Images/bg-slider.png) no-repeat center top;
+	height: 462px;
+	position: absolute;
+	width: 644px;
+	z-index: 25;
+}
+
+.home-rotator {
+	height: 462px;
+	float: right;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 644px;
+}
+
+#home-middle {
+	clear: both;
+	margin: 0 auto;
+	padding: 45px 0 25px;
+	overflow: hidden;
+	width: 1000px;
+}
+
+#home-middle .widget-area {
+	-webkit-box-shadow: 0 8px 13px -2px black;
+	-moz-box-shadow: 0 8px 13px -2px black;
+	box-shadow: 0 8px 13px -2px black;
+	background: #545454 url(/clients/BachChorale/Images/bg-home-cta.png) repeat-x;
+	border: 7px solid #FFF;
+	float: left;
+	margin-right: 21px;
+	min-height: 240px;
+	overflow: hidden;
+	padding: 10px 15px;
+	position: relative;
+	width: 265px;
+}
+
+#home-middle .widget-area p {
+	color: #FFF;
+}
+
+#home-middle .home-featured-right {
+	margin: 0;
+}
+
+#home-tagline-area {
+	background: url(/clients/BachChorale/Images/bg-home-tagline.png) repeat-x;
+	height: 162px;
+	margin: 35px 0 25px;
+	padding: 32px 0 0;
+	width: 100%;
+	z-index: 1;
+}
+
+#home-tagline-area .tagline-wrap {
+	margin: 0 auto;
+	width: 1000px;
+}
+
+#home-tagline-area p {
+	font-size: 16px;
+	font-weight: 400;
+}
+
+#home-bottom {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#home-bottom .home-bottom-features {
+	float: left;
+	margin: 30px 0 10px;
+	width: 555px;
+}
+
+.home-bottom-features .widget {
+	clear: both;
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+
+.home-bottom-right-widgets {
+	float: right;
+	width: 295px;
+}
+
+.home-bottom-right-widgets .widget {
+	background: #f5f6ed;
+	border: 3px solid #d8d6ce;
+	margin: 15px 0 25px;
+	padding: 15px;
+}
+
+
+
+/* Soliloquy
+------------------------------------------------------------ */
+.home-rotator .soliloquy {
+	margin: 30px auto 0;
+	width: 594px;
+}
+
+/* Latest Tweets
+------------------------------------------------------------ */
+.latest-tweets ul li {
+	background: url("/clients/BachChorale/Images/dotted-line.png") repeat-x scroll center bottom transparent;
+	font-style: italic;
+	list-style-type: none;
+	margin: 0 0 10px;
+	padding: 0 0 5px;
+}
+
+.latest-tweets ul {
+	overflow: hidden;
+}
+
+.latest-tweets ul:before {
+	background: url(/clients/BachChorale/Images/icon-twitter-widget.png) no-repeat;
+	content: "";
+    height: 60px;
+    float: left;
+	margin: 0 5px 0 0;
+    width: 60px;
+}
+
+
+.latest-tweets ul li span {
+	font-size: 13px !important;
+	font-weight: bold;
+}
+
+/* Gallery View
+------------------------------------------------------------ */
+.galleryview {
+	margin: 0 0 20px;
+}
+
+.galleryview .filmstrip li {
+	list-style: none;
+	margin: 10px 8px 0 0 !important;
+}
+
+.galleryview .pointer {
+	margin-top: 10px;
+}
+
+.galleryview .panel {
+	background: #111;
+	border: 5px solid #7D7D7D;
+}
+
+
+/* HTML5 MP3 Player
+------------------------------------------------------------ */
+#content .ttw-music-player {
+	width: 90%;
+}
+
+.ttw-music-player .buy {
+	line-height: 12px !important;
+}
+
+.widget-area .ttw-music-player,
+#content .widget-area .ttw-music-player {
+	padding: 0;
+	width: 100%;
+}
+
+.widget-area .ttw-music-player .album-cover img,
+.widget-area .ttw-music-player .album-cover,
+.widget-area .ttw-music-player .album-cover .img,
+.widget-area .ttw-music-player .album-cover .highlight {
+	height: 75px;
+	width: 75px;
+}
+
+.widget-area .ttw-music-player .progress-wrapper {
+	width: 175px;
+}
+
+.widget-area .ttw-music-player .track-info {
+	margin: 0 0 0 10px;
+	width: 175px;
+}
+
+.widget-area #myplayer {
+	margin: 0;
+	padding: 0;
+}
+
+.widget-area .ttw-music-player .player:after{
+	clear: none;
+}
+
+.widget-area .ttw-music-player .player-controls {
+	border-radius: 0;
+	margin: 12px 0 10px;
+    width: 100%;
+}
+
+#inner .widget-area .ttw-music-player .player .title,
+#inner .ttw-music-player .player .title {
+	font-family: 'Droid Sans',arial,sans-serif;
+	margin: 0 0 5px !important;
+}
+
+#inner .widget-area .ttw-music-player .player .title {
+	color: #FFF;
+}
+
+#inner .ttw-music-player .player .title {
+	color: #363636;
+}
+
+.ttw-music-player .description.showing {
+	text-shadow: none;
+}
+
+.home .ttw-music-player .description.showing {
+	margin: 0;
+}
+
+#inner .widget-area .ttw-music-player .track-info p,
+#inner .widget-area .ttw-music-player .track-info span,
+#inner .widget-area .ttw-music-player .description {
+	color: #FFF;
+}
+
+#inner .ttw-music-player .track-info p,
+#inner .ttw-music-player .track-info span,
+#inner .ttw-music-player .description {
+	color: #363636;
+	font-size: 13px;
+}
+
+.widget-area .ttw-music-player .tracklist .title {
+	width: 140px;
+}
+
+.widget-area .ttw-music-player .track-info p {
+	margin: 0 0 5px !important;
+}
+
+.home .widget-area .ttw-music-player .tracklist {
+	display: none !important
+}
+
+.widget-area .ttw-music-player .tracklist {
+	border-radius: 0;
+	padding: 0 10px;
+}
+
+#inner .ttw-music-player .tracklist li:hover {
+	color: #1f3244;
+}
+
+#inner .ttw-music-player .tracklist li {
+	margin: 0;
+	overflow: hidden;
+	text-shadow: none;
+}
+
+.widget-area .ttw-music-player .tracklist li {
+	padding: 4px 0;
+}
+
+#content .ttw-music-player .tracklist .rating {
+	right: 140px;
+}
+
+.widget-area  .ttw-music-player .tracklist .rating {
+	top: 8.5px;
+}
+
+.widget-area .ttw-music-player .show-more-button .more {
+	background: none;
+	border-radius: 0;
+	margin: 3px 0;
+	padding: 0;
+	text-align: right;
+	text-shadow: none;
+}
+
+.widget-area .ttw-music-player .show-more-button .more:hover{
+	background: none;
+	box-shadow: none;
+	color: #7B8C60;
+}
+
+#content  .ttw-music-player .buy {
+	background: #7F7F7F;
+	color: #363636;
+	height: auto;
+	line-height: 0;
+	padding: 3px 0;
+	width: 115px;
+}
+
+#content  .ttw-music-player a:hover.buy {
+	background: #363636;
+	color: #FFF;
+}
+
+/* TubePress
+------------------------------------------------------------ */
+#inner .tubepress_normal_embedded_wrapper iframe {
+	border: 8px solid #FFFFFF;
+	margin: 10px auto 20px;
+}
+
+div.tubepress_single_video {
+	margin: 10px 0;
+}
+
+div.tubepress_container div.pagination a,
+.tubepress_embedded_title,
+dd.tubepress_meta_runtime {
+	color: #1f3244;
+}
+
+.widget-area ul.total-control-player,
+.widget-area .total-control-panel,
+.widget-area .total-control-player {
+	width: 100%;
+}
+
+.widget-area .total-position-scrubber {
+	width: 97%;
+}
+
+.widget-area .total-volume-slider {
+	width: 15%;
+}
+
+.widget-area .total-lcd-screen {
+	left: 54px;
+}
+
+#content .tubepress_thumb {
+	margin: 0 15px;
+}
+
+.widget-area iframe.youtube-player {
+	border: 8px solid #FFF;
+	margin: 0;
+	width: 97% !important;
+}
+
+/* Column Classes
+------------------------------------------------------------ */
+
+.five-sixths,
+.four-fifths,
+.four-sixths,
+.one-fifth,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fifths,
+.three-fourths,
+.three-sixths,
+.two-fifths,
+.two-fourths,
+.two-sixths,
+.two-thirds {
+	float: left;
+	margin: 0 0 20px;
+	padding-left: 3%;
+}
+
+.one-half,
+.three-sixths,
+.two-fourths {
+	width: 48%;
+}
+
+.one-third,
+.two-sixths {
+	width: 31%;
+}
+
+.four-sixths,
+.two-thirds {
+	width: 65%;
+}
+
+.one-fourth {
+	width: 22.5%;
+}
+
+.three-fourths {
+	width: 73.5%;
+}
+
+.one-fifth {
+	width: 17.4%;
+}
+
+.two-fifths {
+	width: 37.8%;
+}
+
+.three-fifths {
+	width: 58.2%;
+}
+
+.four-fifths {
+	width: 78.6%;
+}
+
+.one-sixth {
+	width: 14%;
+}
+
+.five-sixths {
+	width: 82%;
+}
+
+.first {
+	clear: both;
+	padding-left: 0;
+}
+
+
+/* Featured Post Grid
+------------------------------------------------------------ */
+
+.genesis-grid-even,
+.genesis-grid-odd {
+	margin: 0 0 20px;
+	padding: 0 0 15px;
+	width: 48%;
+}
+
+.genesis-grid-even {
+	float: right;
+}
+
+.genesis-grid-odd {
+	clear: both;
+	float: left;
+}
+
+
+/* Headlines
+------------------------------------------------------------ */
+
+h1,
+h2,
+h2 a,
+h2 a:visited,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Covered By Your Grace',arial,serif;
+	line-height: 1.5;
+	margin: 0 0 10px;
+}
+
+h1 {
+	color: #000;
+	font-size: 30px;
+}
+
+h1.entry-title {
+	text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+}
+
+h1.entry-title,
+h2.entry-title a,
+h2.entry-title a:visited {
+	color: #7d7d7d;
+	font-size: 36px;
+	line-height: 30px;
+}
+
+h2.entry-title a:hover {
+	color: #363636;
+	text-decoration: none;
+}
+	
+
+.post h1.entry-title {
+	background: url(/clients/BachChorale/Images/blog-title-floral.png) no-repeat right 15px;
+	color: #7d7d7d;
+	display: block;
+	float: left;
+	font-size: 36px;
+	padding-right: 45px;
+}
+
+.taxonomy-description h1 {
+	margin: 0;
+}
+
+h2,
+h2 a,
+h2 a:visited {
+	color: #363636;
+	font-size: 28px;
+}
+
+
+h3 {
+	color: #363636;
+	font-size: 24px;
+}
+
+h4 {
+	color: #363636;
+	font-size: 20px;
+}
+
+
+h5 {
+	color: #363636;
+	font-size: 18px;
+}
+
+.home .widget-area h2,
+.widget-area h2 a {
+	color: #363636;
+	font-family: 'Droid Sans',arial,serif;
+	font-size: 14px;
+	font-weight: 700;
+	margin: 0;
+}
+
+#home-top .widget-area h2 a {
+	color: #d7d7d7;
+}
+
+.widget-area h2 a:hover {
+	color: #304e6a;
+}
+
+h2.entry-title a {
+	background: url(/clients/BachChorale/Images/blog-title-floral.png) no-repeat right 15px;
+	font-size: 30px;
+	line-height: 24px;
+	padding-right: 45px;
+}
+
+#comments h3,
+#respond h3 {
+	color: #363636;
+	font-family: 'Droid Sans',arial,serif;
+}
+
+
+#home-tagline-area h2 {
+	color: #363636;
+	font-family: 'Covered By Your Grace',arial,serif;
+	font-size: 40px;
+	font-weight: 300;
+	margin: 0;
+	text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+}
+
+.taxonomy-description h1,
+.widget-area h4.widgettitle {
+	background: url(/clients/BachChorale/Images/dotted-line.png) repeat-x center bottom;
+	color: #161515;
+	font-family: 'Covered By Your Grace',arial,serif;
+	font-size: 30px;
+	padding: 0;
+}
+
+#home-top .widget-area h4.widgettitle {
+	background: none;
+	color: #FFF;
+	padding: 0;
+	text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+}
+
+#home-middle .widget-area h4.widgettitle {
+	background: none;
+	color: #FFF;
+	text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+}
+
+
+.widget-area .gform_widget h4.widgettitle {
+	background: url(/clients/BachChorale/Images/heading-background-grunge.png) no-repeat left center !important;
+	color: #FFF;
+	line-height: 50px;
+	margin: 0 0 8px;
+	padding: 2px 0 0 15px !important;
+	text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+}
+
+.home-bottom-features.widget-area h4.widgettitle {
+	background: url(/clients/BachChorale/Images/heading-background-grunge.png) no-repeat left center !important;
+	color: #FFF;
+	line-height: 50px;
+	margin: 0 0 15px;
+	padding: 2px 0 0 15px !important;
+	text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+}
+
+#sidebar-alt h4.widgettitle {
+	background: none;
+	padding: 0;
+}
+
+.home-bottom-right-widgets .post  h2,
+.home-bottom-right-widgets .post h2 a {
+	color: #4D4C4B;
+	font-size: 14px;
+	line-height: 18px;
+	margin:  0 5px 0 0;
+	padding: 0;
+}
+	
+.widget-area h4 a {
+	color: #333;
+	text-decoration: none;
+}
+
+#footer-widgets h4 {
+	background: none;
+	border: none;
+	padding: 0;
+}
+
+
+
+/* Ordered / Unordered Lists
+------------------------------------------------------------ */
+
+.entry-content ol,
+.entry-content ul {
+	margin: 0;
+	padding: 0 0 25px;
+}
+
+.archive-page ul li,
+.entry-content ul li {
+	color: #363636;
+	list-style-image: url(/clients/BachChorale/Images/icon-list.png);
+	margin: 0 0 0 30px;
+	padding: 0;
+}
+
+.archive-page ul li li,
+.entry-content ul li li {
+	list-style-image: none;
+	list-style-type: cirle;
+
+}
+
+.entry-content ol li {
+	color: #363636;
+	margin: 0 0 0 35px;
+}
+
+.archive-page ul ul,
+.entry-content ol ol,
+.entry-content ul ul {
+	padding: 0;
+}
+
+
+/* Post Info
+------------------------------------------------------------ */
+
+.post-info {
+	background: url(/clients/BachChorale/Images/bg-post-info.png) repeat-x;
+	clear: both;
+	color: #363636;
+	font-size: 14px;
+	height: 37px;
+	margin: 0 0 15px;
+	padding: 0;
+	width: 100%;
+}
+
+.post-info .date {
+	float: left;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 37px;
+}
+
+.post-info .author {
+	line-height: 37px;
+	font-style: italic;
+	font-weight: 700;
+	padding-left: 10px;
+}
+
+.post-info .author span {
+	color: #7d7d7d;
+	font-style: normal;
+	padding: 0 0 0 5px;
+}
+
+.post-info .post-comments {
+	background:url("/clients/BachChorale/Images/postinfo-divider.png") no-repeat left center;
+	font-size: 12px;
+}
+
+.post-comments a {
+	color: #363636;
+	font-weight: bold;
+}
+
+.widget-area .post-info {
+	background: none;
+	border: 0;
+	color: #4d4c4b;
+	float: left;
+	font-size: 16px;
+	height: auto;
+	margin: 0 10px 0 0;
+	padding: 0;
+	width: auto;
+}
+
+.widget-area .post-info span {
+	background-color: none !important;
+	line-height: 1.25;
+	padding: 0;
+}
+
+.widget-area .post-info .date {
+	background: none;
+	border: 0;
+	font-size: 16px;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+}
+
+.home-bottom-right-widgets .post-info {
+	display: block;
+	width: 100%;
+}
+
+
+/* Post Meta
+------------------------------------------------------------ */
+
+.post-meta {
+	background: #e8e7e7;
+	border: 1px solid #CCC;
+	clear: both;
+	font-size: 14px;
+	overflow: hidden;
+	padding: 5px 10px;
+}
+
+.post-meta .categories {
+	float: left;
+	width: 48%;
+}
+
+.post-meta a {
+	color: #363636;
+	text-decoration: none;
+}
+
+
+/* Woo Commerce
+------------------------------------------------------------ */
+
+#content ul.products li.last {
+	margin: 0 25px 50px 0;
+}
+
+#content ul.products li.first {
+	clear: none;
+}
+
+#content ul.products li.product {
+	margin: 0 25px 50px 0;
+	min-height: 310px;
+	width: 190px;
+}
+
+#content ul.products li.product .price {
+	margin-bottom: 15px;
+}
+
+#content div.product p.price del {
+	color: #999;
+}
+
+#content ul.products li .price,
+#content div.product p.price {
+	color: #363636;
+}
+
+
+.widget-area ul.cart_list li,
+.widget-area ul.product_list_widget li {
+	border-bottom: 1px dotted #BAC1BA;
+}	
+
+ul.products li h3 {
+	color: #7D7D7D;
+	font-family: 'Droid Sans',arial,serif;
+	font-size: 14px !important;
+	font-weight: 700;
+}
+
+div.product div./clients/BachChorale/Images img {
+	-webkit-box-shadow: 0 6px 6px -6px black !important;
+	-moz-box-shadow: 0 6px 6px -6px black !important;
+	box-shadow: 0 6px 6px -6px black !important;
+	}
+	
+div.product .woocommerce_tabs {
+	margin: 0 0 20px;
+}
+
+.product span.onsale,
+.products span.onsale {
+	background: #363636; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#666', endColorstr='#363636'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#363636)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #666,  #363636); /* for firefox 3.6+ */ 
+	color: #FFF;
+	text-shadow: none;
+}
+
+.product .cart a.alt,
+.product button.button.alt,
+.products a.button,
+.products button.button,
+.products input.button,
+.products #review_form #submit {
+	background: #363636; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#666', endColorstr='#363636'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#363636)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #666,  #363636); /* for firefox 3.6+ */ 
+    border: 1px solid #000;
+	color: #FFF;
+	text-shadow: none;
+}
+
+.product .cart a:hover.alt,
+.product button:hover.button.alt,
+.products a:hover.button,
+.products button:hover.button,
+.products input:hover.button,
+.products #review_form #submit {
+	background: #666; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#363636', endColorstr='#666'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#363636), to(#666)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #363636,  #666); /* for firefox 3.6+ */ 
+    border: 1px solid #000;
+}
+
+.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active:after {
+    box-shadow: -2px 2px 0 #363636;
+}
+
+.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active:before {
+    box-shadow: 2px 2px 0 #363636;
+}
+
+.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active {
+    background: #363636;
+    border-bottom-color: #363636;
+}
+
+.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active a {
+    color: #FFFFFF;
+}
+
+.woocommerce #content div.product .woocommerce_tabs ul.tabs li a {
+	text-shadow: none;
+}
+
+
+.product_meta {
+	clear: both;
+}
+
+#content div.product p.cart {
+    clear: both;
+    float: none !important;
+    padding: 20px 0 15px;
+}
+
+
+
+/* NextGen Gallery
+------------------------------------------------------------ */
+.home-bottom-features .ngg-widget img {
+	-webkit-box-shadow: 0 6px 6px -6px black;
+	-moz-box-shadow: 0 6px 6px -6px black;
+	box-shadow: 0 6px 6px -6px black;
+	border: 3px solid #7D7D7D;
+	margin: 0 7px 0;
+	padding: 0;
+}
+
+.home-bottom-features .ngg-widget  a:hover img {
+	border-color: #1f3244;
+}
+
+#content .ngg-imagebrowser h3 {
+	font-size: 20px;
+}
+
+#content .ngg-imagebrowser img {
+	border: 5px solid #7D7D7D;
+	padding: 0;
+	width: 98%;
+}
+
+#content .ngg-imagebrowser  a:hover img {
+	border-color: #1f3244;
+}
+
+#content .ngg-gallery-thumbnail {
+	-webkit-box-shadow: 0 6px 6px -6px black;
+	-moz-box-shadow: 0 6px 6px -6px black;
+	box-shadow: 0 6px 6px -6px black;
+	margin:  0 20px 30px 0;
+}
+
+#content .slideshowlink {
+	margin: 0 0 10px;
+}
+
+#content  .ngg-slideshow {
+	overflow: visible;
+	min-height: 400px;
+}
+
+#content .ngg-slideshow img {
+	position: relative !important;
+	border: 6px solid #FFF;
+	display: block;
+	margin: 0 auto;
+}
+
+#content .ngg-gallery-thumbnail a img {
+	border: 3px solid #7D7D7D;
+	margin: 0;
+	padding: 0;
+	
+}
+
+#content .ngg-gallery-thumbnail  a:hover img {
+	border-color: #7B8C60;
+}
+
+	
+/* WSM Call to Action
+------------------------------------------------------------ */
+
+#sidebar .wsm-cta {
+	padding: 15px 7px 60px;
+}
+
+#sidebar .widget_text {
+	padding: 15px 7px;
+}
+
+#sidebar .wsm-cta,
+#sidebar .widget_text {
+	background: #e4e3e3;
+	border: 7px solid #FFF;
+	margin: 15px 0;
+	position: relative;
+}
+
+.cta-thumbnail {
+	-webkit-box-shadow: 0 6px 6px -6px black;
+	-moz-box-shadow: 0 6px 6px -6px black;
+	box-shadow: 0 6px 6px -6px black;
+	height: 117px;
+	float: left;
+	margin: 0 10px 15px 0;
+	width: 117px;
+}
+
+.widgets .wsm-cta p {
+	font-size: 14px;
+	margin: 0 0 20px;
+}
+
+.wsm-cta .custom-text {
+	margin: 0 0 55px;
+	overflow: hidden;
+}
+
+.wsm-cta .custom-text h2,
+.wsm-cta .custom-text h3,
+.wsm-cta .custom-text h4 {
+	color: #4c4c4c;
+	font-family: 'Droid Sans',arial,serif;
+}
+
+.wsm-cta .more-link {
+	background: url(/clients/BachChorale/Images/buy-button.png) no-repeat;
+	clear: both;
+	margin: 20px auto 0;
+	overflow: hidden;
+	width: 164px;
+	-moz-transform-origin: bottom left;
+	-moz-transform: rotate(-366deg);
+	-o-transform-origin: bottom left;
+	-o-transform: rotate(-366deg);
+	-webkit-transform-origin: bottom left;
+	-webkit-transform: rotate(-366deg);
+    bottom: 10px;
+    position: absolute;
+    right: 40px;
+}
+
+
+.wsm-cta .more-link a {
+	background: url(/clients/BachChorale/Images/buy-arrow.png) no-repeat right center;
+	color: #FFF;
+	display: block;
+	font-size: 15px;
+	line-height: 34px;
+	margin: 0 18px 0 0;
+	padding: 0 10px 0 5px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/* Author Box
+------------------------------------------------------------ */
+
+.author-box {
+	background-color: #FFF;
+	border: 2px solid #7d7d7d;
+	margin: 0 0 40px;
+	overflow: hidden;
+	padding: 10px;
+}
+
+.author-box strong {
+	font-size: 18px;
+}
+
+.author-box p {
+	font-size: 14px;
+}
+
+
+/* Sticky Posts
+------------------------------------------------------------ */
+
+.sticky {
+	background-color: #f5f5f5;
+	margin: -10px 0 40px;
+	padding: 20px;
+}
+
+
+/* Archive Page
+------------------------------------------------------------ */
+
+.archive-page {
+	float: left;
+	padding: 20px 0 0;
+	width: 45%;
+}
+
+
+/* Post Icons
+------------------------------------------------------------ */
+
+.post-comments,
+.tags {
+	margin: 0 0 0 3px;
+	padding: 0 0 0 10px;
+}
+
+/* Widget Extras
+------------------------------------------------------------ */
+
+.widget-area object {
+	width: 100% !important;
+}
+
+/* /clients/BachChorale/Images
+------------------------------------------------------------ */
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+.avatar,
+.featuredpage img,
+.featuredpost img {
+	background-color: #f5f5f5;
+	border: 1px solid #ddd;
+	padding: 4px;
+}
+
+.post-image {
+	border: 3px solid #7d7d7d !important;
+	margin-bottom: 25px !important;
+	padding: 0;
+}
+
+.author-box .avatar {
+	background-color: #fff;
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+.post-image {
+	margin: 0 10px 10px 0;
+}
+
+.comment-list li .avatar {
+	background-color: #fff;
+	float: right;
+	left: -65px;
+	padding: 0;
+	position: absolute;
+	top: 0;
+}
+
+img.centered,
+.aligncenter {
+	display: block;
+	margin: 0 auto 10px;
+}
+
+img.alignnone {
+	display: inline;
+	margin: 0 0 10px;
+}
+
+img.alignleft {
+	border: 4px solid #FFF;
+	display: inline;
+	margin: 5px 15px 8px 0;
+}
+
+img.alignright {
+	border: 4px solid #FFF;
+	display: inline;
+	margin: 5px 0 10px 15px;
+}
+
+.alignleft {
+	float: left;
+	margin: 0 15px 10px 0;
+}
+
+.alignright {
+	float: right;
+	margin: 0 0 10px 15px;
+}
+
+.wp-caption {
+	padding: 5px;
+	text-align: center;
+}
+
+p.wp-caption-text {
+	font-size: 14px;
+	margin: 5px 0;
+}
+
+.wp-smiley,
+.wp-wink {
+	border: none;
+	float: none;
+}
+
+.gallery-caption {
+}
+
+
+/* Post Navigation
+------------------------------------------------------------ */
+
+.navigation {
+	font-size: 14px;
+	overflow: hidden;
+	padding: 20px 0;
+	width: 100%;
+}
+
+.navigation li {
+	display: inline;
+}
+
+.navigation li a,
+.navigation li.disabled,
+.navigation li a:hover,
+.navigation li.active a {
+	border: 1px solid #ddd;
+	padding: 5px 8px;
+}
+
+.navigation li a:hover,
+.navigation li.active a {
+	background-color: #f5f5f5;
+}
+
+
+/* Primary / Secondary Sidebars
+------------------------------------------------------------ */
+
+.sidebar {
+	float: right;
+	font-size: 13px;
+	width: 280px;
+}
+
+#sidebar-alt {
+	float: left;
+	width: 150px;
+}
+
+.sidebar-content #sidebar,
+.sidebar-sidebar-content #sidebar {
+	float: left;
+}
+
+.content-sidebar-sidebar #sidebar-alt {
+	float: right;
+}
+
+.sidebar p {
+	font-size: inherit;
+}
+
+.sidebar .widget {
+	margin: 0 0 20px;
+	padding: 0 0 15px;
+}
+
+.sidebar.widget-area ol,
+.sidebar.widget-area ul,
+.widget-area .textwidget,
+.widget_tag_cloud div div {
+	padding: 0;
+}
+
+.sidebar.widget-area ul li,
+#footer-widgets .widget-area ul li {
+	background: url(/clients/BachChorale/Images/dotted-line.png) repeat-x center bottom;
+	list-style-type: none;
+	margin: 0 0 7px;
+	padding: 0 0 5px;
+	word-wrap: break-word;
+}
+
+.sidebar.widget-area ul li a {
+	color: #7d7d7d;
+}
+
+.sidebar.widget-area .widget_nav_menu ul li a {
+	color: #7d7d7d;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.sidebar.widget-area ul li a:hover, 
+.widget-area .widget_nav_menu ul li a:hover {
+	color: #363636;
+}
+
+.sidebar.widget-area ul ul li {
+	border: none;
+	margin: 0;
+}
+
+
+/* Dropdowns
+------------------------------------------------------------ */
+
+.widget_archive select,
+#cat {
+	display: inline;
+	margin: 5px 15px 0;
+	padding: 3px;
+	width: 85%;
+}
+
+
+/* Featured Page / Post
+------------------------------------------------------------ */
+
+.featuredpage,
+.featuredpost {
+	clear: both;
+	margin: 0 0 15px;
+	overflow: hidden;
+}
+
+.featuredpage .page,
+.featuredpost .post {
+	border-bottom: 1px solid #ddd;
+	margin: 0 0 5px;
+	overflow: hidden;
+	padding: 0 15px 10px;
+}
+
+#footer-widgets .featuredpage .page,
+#footer-widgets .featuredpost .post {
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.more-from-category {
+	padding: 5px 15px 0;
+}
+
+.home-bottom-right-widgets .post p {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+
+/* User Profile
+------------------------------------------------------------ */
+
+.user-profile {
+	overflow: hidden;
+}
+
+.user-profile p {
+	padding: 5px 15px 0;
+}
+
+.user-profile .posts_link {
+	padding: 0 15px;
+}
+
+
+/* Buttons
+------------------------------------------------------------ */
+#content #respond input#submit,
+input[type="button"],
+input[type="submit"] {
+	background: #464646;
+	border: 1px solid #ccc;
+	color: #FFF;
+	cursor: pointer;
+	line-height: 19px;
+	padding: 5px 7px;
+	text-decoration: none;
+	text-shadow: none;
+}
+
+#content #respond input:hover#submit,
+input:hover[type="button"],
+input:hover[type="submit"] {
+	background: #737272;
+	text-decoration: none;
+}
+
+
+/* Search Form
+------------------------------------------------------------ */
+
+#header .searchform {
+	float: right;
+	padding: 12px 0 0;
+}
+
+.sidebar .searchform {
+	padding: 5px 0 0 15px;
+}
+
+.s {
+	margin: 10px -7px 0 0;
+	padding: 6px 5px;
+	width: 180px;
+}
+
+#nav .s {
+	background-color: #fff;
+	margin: 2px -7px 0 0;
+}
+
+
+/* eNews and Update Widget
+------------------------------------------------------------ */
+
+.enews p {
+	padding: 0 15px 5px;
+}
+
+.enews #subscribe {
+	padding: 0 0 0 15px;
+}
+
+.enews #subbox {
+	margin: 5px -7px 0 0;
+	padding: 6px 5px;
+	width: 75%;
+}
+
+
+/* Calendar Widget
+------------------------------------------------------------ */
+
+#wp-calendar {
+	width: 100%;
+}
+
+#wp-calendar caption {
+	font-size: 12px;
+	font-style: italic;
+	padding: 2px 5px 0 0;
+	text-align: right;
+}
+
+#wp-calendar thead {
+	background-color: #f5f5f5;
+	font-weight: bold;
+	margin: 10px 0 0;
+}
+
+#wp-calendar td {
+	background-color: #f5f5f5;
+	padding: 2px;
+	text-align: center;
+}
+
+
+/* Footer Widgets
+------------------------------------------------------------ */
+
+#footer-widgets {
+	background-color: #f5f5f5;
+	border-top: 1px solid #ddd;
+	clear: both;
+	font-size: 14px;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 100%;
+}
+
+#footer-widgets .wrap {
+	overflow: hidden;
+	padding: 20px 30px 10px;
+}
+
+#footer-widgets .widget {
+	background: none;
+	border: none;
+	margin: 0 0 15px;
+	padding: 0;
+}
+
+#footer-widgets .textwidget {
+	padding: 0;
+}
+
+#footer-widgets .widget_tag_cloud div div {
+	padding: 0;
+}
+
+#footer-widgets p {
+	font-size: inherit;
+	margin: 0 0 10px;
+}
+
+#footer-widgets ul {
+	margin: 0;
+}
+
+#footer-widgets ul li {
+	margin: 0 0 0 20px;
+}
+
+#footer-widgets #wp-calendar thead,
+#footer-widgets #wp-calendar td {
+	background: none;
+}
+
+.footer-widgets-1 {
+	float: left;
+	margin: 0 30px 0 0;
+	width: 280px;
+}
+
+.footer-widgets-2 {
+	float: left;
+	width: 280px;
+}
+
+.footer-widgets-3 {
+	float: right;
+	width: 280px;
+}
+
+
+/* Footer
+------------------------------------------------------------ */
+
+#footer {
+	background: #303030 url(/clients/BachChorale/Images/bg-footer.png) repeat-x center top;
+	clear: both;
+	font-size: 13px;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 100%;
+}
+
+#footer .wrap {
+	background: url(/clients/BachChorale/Images/bg-footer-splats.png) repeat center top;
+	min-height: 125px;
+	overflow: hidden;
+	padding: 10px 15px;
+}
+
+#footer .footer-content {
+	margin: 20px auto 0;
+	overflow: hidden;
+	width: 970px;
+}
+
+#footer .wrap-alignleft {
+	float: left;
+	width: 65%;
+}
+
+#footer .wrap-alignright {
+	float: right;
+	width: 30%;
+}
+
+#footer .wrap-alignright p {
+	text-align: right;
+}
+
+.wrap-alignright .credit a {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+#footer p {
+	color: #7d7d7d;
+	font-size: inherit;
+}
+
+#footer a,
+#footer a:visited {
+	color: #7d7d7d;
+}
+
+#footer a:hover {
+	color: #304e6a;
+	text-decoration: none;
+}
+
+#footer .gototop {
+	float: left;
+	width: 200px;
+}
+
+#footer .creds {
+	float: right;
+	text-align: right;
+	width: 650px;
+}
+
+
+/* Comments
+------------------------------------------------------------ */
+
+#comments,
+#respond {
+	margin: 0 0 15px;
+	overflow: hidden;
+}
+
+#author,
+#comment,
+#email,
+#url {
+	margin: 10px 5px 0 0;
+	padding: 5px;
+	width: 250px;
+}
+
+#comment {
+	height: 150px;
+	margin: 10px 0;
+	width: 98%;
+}
+
+.ping-list {
+	margin: 0 0 40px;
+}
+
+
+#comments p,
+#respond p,
+#respond label {
+	color: #363636;
+}
+	
+.comment-list ol,
+.ping-list ol {
+	padding: 10px;
+}
+
+.ping-list li {
+	font-weight: bold;
+	list-style-type: none;
+	margin: 15px 0 5px;
+	padding: 10px 15px;
+}
+
+.comment-list li {
+	background: #FFF;
+	list-style-type: none;
+	margin: 10px 0 0 65px;
+	padding: 10px;
+	position: relative;
+}
+
+.comment-list li:before {
+	background: url(/clients/BachChorale/Images/arrow-white-left.png) no-repeat;
+	content: "";
+	height: 19px;
+	left: -12px;
+	position: absolute;
+	top: 10px;
+	width: 12px;	
+	
+}
+
+
+.comment-list li ul li {
+	list-style-type: none;
+}
+
+.comment-content p {
+	font-size: 14px;
+	margin: 0 0 20px;
+}
+
+.comment-list cite,
+.ping-list cite {
+	font-style: normal;
+}
+
+.comment-list cite {
+	float: left;
+	font-size: 18px;
+	padding: 0 5px 0 0;
+}
+
+.comment-list .says {
+	display: none;
+}
+
+.commentmetadata {
+	font-size: 13px;
+	line-height: 28px;
+	margin: 0 0 5px;
+}
+
+.reply {
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.nocomments {
+	text-align: center;
+}
+
+#comments .navigation {
+	display: block;
+}
+
+.bypostauthor {
+}
+
+.thread-alt,
+.thread-even {
+}
+
+.alt,
+.depth-1,
+.even {
+	border: 1px solid #ddd;
+}
+
+
+/* Gravity Forms
+------------------------------------------------------------ */	
+div.gform_wrapper input,
+div.gform_wrapper select,
+div.gform_wrapper textarea {
+	box-sizing: border-box;
+	font-size: 14px !important;
+	margin: 0;
+	padding: 4px 5px !important;
+}
+
+.gecko div.gform_wrapper input {
+	padding: 3px 5px  !important;
+}
+
+div.gform_footer input.gform_button {
+	color: #333;
+}
+
+div.gform_wrapper .ginput_complex label {
+	font-size: 14px;
+}
+
+div.gform_wrapper li,
+div.gform_wrapper form li {
+	margin: 0 0 10px;
+}
+
+div.gform_wrapper .gform_footer {
+	border: none;
+	bottom: 0;
+	margin: 0;
+	padding: 0;
+	right: 0;
+}
+
+
+.widget-area div.gform_wrapper li,
+.widget-area div.gform_wrapper form li {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+.widget-area .gform_wrapper .left_label .gfield_label {
+	margin: 0 5px 0 0;
+	width: 60px;
+}
+
+.widget-area div.gform_wrapper .gform_footer {
+	padding: 0;
+	position: absolute;
+}
+
+.widget-area div.gform_wrapper form {
+	padding: 0;
+	position: relative;
+}
+
+#inner .widget-area input.gform_button.button {
+	-moz-box-shadow:    0 0 5px #333 inset;
+	-webkit-box-shadow: 0 0 5px #333 inset;
+	box-shadow: 0 0 5px #333 inset;
+	border-radius: 0;
+	background: #7d7d7d url(/clients/BachChorale/Images/arrow-white.png) no-repeat 95% 43%;
+	border: 0;
+    color: #FFF;
+	font-family: 'Covered By Your Grace', arial, serif;
+	font-size: 16px !important;
+	padding: 4px 18px 4px 5px !important;
+	text-shadow: none;
+}
+
+.gecko #inner .widget-area input.gform_button.button {
+    padding: 0 18px 0 4px !important;
+}
+
+.widget-area .gform_wrapper { 
+	margin: 0;
+	max-width: 100%;
+}
+
+.widget-area .gform_wrapper .top_label .gfield_label {
+	display: none;
+	font-weight: normal;
+	margin: 0;
+}
+
+.widget-area .gform_wrapper .ginput_container input {
+	-moz-box-shadow:    0 0 5px #999 inset;
+   -webkit-box-shadow: 0 0 5px #999 inset;
+   box-shadow: 0 0 5px #999 inset;
+	border: 0;
+}
+
+.widget-area .gform_wrapper .top_label input.medium,
+.widget-area .gform_wrapper .top_label select.medium {
+	width:79%;
+}
+
+.gecko .widget-area .gform_wrapper .top_label input.medium,
+.gecko .widget-area .gform_wrapper .top_label select.medium {
+	width: 77%;
+}
+
+.widget-area .gform_wrapper .right_label input.medium,
+.widget-area .gform_wrapper .right_label select.medium,
+.widget-area .gform_wrapper .left_label input.medium,
+.widget-area .gform_wrapper .left_label select.medium {
+	width: 242px;
+}
+
+.gecko .widget-area .gform_wrapper .right_label input.medium,
+.gecko .widget-area .gform_wrapper .right_label select.medium,
+.gecko .widget-area .gform_wrapper .left_label input.medium,
+.gecko .widget-area .gform_wrapper .left_label select.medium {
+	width: 235px;
+}
+
+/* Color Options
+------------------------------------------------------------ */
+
+/**          Light Blue           */
+
+body.dagmar-light-blue.home {
+	background: #88B6CC url(/clients/BachChorale/Images/bg-grunge.png) repeat;
+}
+
+.dagmar-light-blue.home #wrap {
+    background: url("/clients/BachChorale/Images/bg-top-grunge-home.png") no-repeat scroll center top transparent;
+}
+
+.dagmar-light-blue #wrap {
+    background: url("/clients/BachChorale/Images/bg-top-grunge.png") no-repeat scroll center top transparent;
+}
+
+.dagmar-light-blue #inner {
+    background: url("/clients/BachChorale/Images/bg-inner-bottom.png") no-repeat scroll left bottom transparent;
+}
+
+.dagmar-light-blue #title a,
+.dagmar-light-blue #title a:hover {
+	color: #FFF;
+}
+
+.dagmar-light-blue .menu-primary li li a,
+.dagmar-light-blue .menu-primary li li a:link,
+.dagmar-light-blue .menu-primary li li a:visited {
+	background: #E5E7E8;
+	border-color: #FFF;
+	color: #417892;
+}
+
+.dagmar-light-blue .menu-primary li li a:hover {
+	background: #88B6CC;
+	color: #FFF;
+}
+
+.dagmar-light-blue .menu-primary li a:active,
+.dagmar-light-blue .menu-primary li a:hover,
+.dagmar-light-blue .menu-primary .current_page_item a,
+.dagmar-light-blue .menu-primary .current-cat a,
+.dagmar-light-blue .menu-primary .current-menu-item a {
+	color: #417892;
+}
+
+.dagmar-light-blue .widget-area .gform_widget h4.widgettitle,
+.dagmar-light-blue .home-bottom-features.widget-area h4.widgettitle {
+    background: url("/clients/BachChorale/Images/heading-background-grunge.png") no-repeat scroll left center transparent !important;
+	color: #417892;
+	text-shadow: none;
+}
+
+.dagmar-light-blue .sidebar .widget-area .gform_widget h4.widgettitle {
+    background: url("/clients/BachChorale/Images/heading-background-grunge-inner.png") no-repeat scroll left center transparent !important;
+	color: #FFF;
+}
+
+.dagmar-light-blue #sidebar .wsm-cta,
+.dagmar-light-blue #sidebar .widget_text,
+.dagmar-light-blue #home-middle .widget-area {
+    background: url("/clients/BachChorale/Images/bg-home-cta.png") repeat-x scroll 0 0 #548CA8;
+}
+
+.dagmar-light-blue.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active:after {
+    box-shadow: -2px 2px 0 #386D84;
+}
+
+.dagmar-light-blue.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active:before {
+    box-shadow: 2px 2px 0 #386D84;
+}
+
+.dagmar-light-blue.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active {
+    background: #386D84;
+    border-bottom-color: #386D84;
+}
+
+.dagmar-light-blue #content .ttw-music-player .buy:hover,
+.dagmar-light-blue  #content #respond input#submit,
+.dagmar-light-blue  input[type="button"],
+.dagmar-light-blue input[type="submit"] {
+	background: #386D84;
+}
+
+.dagmar-light-blue #inner .ttw-music-player .player .title,
+.dagmar-light-blue .entry-content a.more-link,
+.dagmar-light-blue .post-comments a,
+.dagmar-light-blue .post-info,
+.dagmar-light-blue h1,
+.dagmar-light-blue h2,
+.dagmar-light-blue h3,
+.dagmar-light-blue h4,
+.dagmar-light-blue h5,
+.dagmar-light-blue h2 a,
+.dagmar-light-blue h2 a:visited,
+.dagmar-light-blue h1.entry-title,
+.dagmar-light-blue h2.entry-title a,
+.dagmar-light-blue h2.entry-title a:visited,
+.dagmar-light-blue #home-tagline-area h2,
+.dagmar-light-blue #home-top .widget-area h4.widgettitle {
+	color: #417892;
+	text-shadow: none;
+}
+
+.dagmar-light-blue #inner .widget-area .ttw-music-player .player .title,
+.dagmar-light-blue .wsm-cta p,
+.dagmar-light-blue #sidebar .wsm-cta h4.widgettitle,
+.dagmar-light-blue #home-top .widget-area h2 a,
+.dagmar-light-blue .home-top-left .widget p {
+	color: #FFF;
+}
+
+.dagmar-light-blue #inner .widget-area input.gform_button.button {
+	background-color: #417892;
+	box-shadow: none;
+}
+
+.dagmar-light-blue .widget-area .post-info,
+.dagmar-light-blue .taxonomy-description h1,
+.dagmar-light-blue .widget-area h4.widgettitle {
+	color: #417892;
+}
+
+.dagmar-light-blue .home-bottom-right-widgets a,
+.dagmar-light-blue .home-bottom-right-widgets a:visited,
+.dagmar-light-blue .home-bottom-right-widgets .post h2,
+.dagmar-light-blue .home-bottom-right-widgets .post h2 a {
+	color: #88B6CC;
+}
+
+.dagmar-light-blue .home-bottom-features .ngg-widget img {
+	border-color: #FFF;
+}
+
+.dagmar-light-blue .home-bottom-features .ngg-widget img:hover {
+	border-color: #417892;
+}
+
+.dagmar-light-blue .wsm-cta .more-link a {
+	background: url("/clients/BachChorale/Images/buy-arrow.png") no-repeat scroll right center transparent;
+	color: #417892;
+}
+
+.dagmar-light-blue .wsm-cta .more-link {
+    background: url("/clients/BachChorale/Images/buy-button.png") no-repeat scroll 0 0 transparent;
+}
+
+.dagmar-light-blue #footer {
+    background: url("/clients/BachChorale/Images/bg-footer.png") repeat-x scroll center top #4A7386;
+}
+
+.dagmar-light-blue #footer .wrap {
+    background: url("/clients/BachChorale/Images/bg-footer-splats.png") repeat scroll center top transparent;
+}
+
+.dagmar-light-blue .product span.onsale,
+.dagmar-light-blue .products span.onsale,
+.dagmar-light-blue .product .cart a.alt,
+.dagmar-light-blue .product button.button.alt,
+.dagmar-light-blue .products a.button,
+.dagmar-light-blue .products button.button,
+.dagmar-light-blue .products input.button,
+.dagmar-light-blue .products #review_form #submit {
+	background: #3A85A5; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#518ba7', endColorstr='#3A85A5'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#518ba7), to(#3A85A5)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #518ba7,  #3A85A5); /* for firefox 3.6+ */ 
+    border-color: #518ba7;
+}
+
+.dagmar-light-blue .product .cart a:hover.alt,
+.dagmar-light-blue  .product button:hover.button.alt,
+.dagmar-light-blue .products a:hover.button,
+.dagmar-light-blue  .products button:hover.button,
+.dagmar-light-blue  .products input:hover.button,
+.dagmar-light-blue  .products #review_form #submit {
+	background: #518ba7; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#3A85A5', endColorstr='#518ba7'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#3A85A5), to(#518ba7)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #3A85A5,  #518ba7); /* for firefox 3.6+ */ 
+	
+
+}
+
+.dagmar-light-blue #footer p,
+.dagmar-light-blue #footer a,
+.dagmar-light-blue #footer a:visited {
+	color: #BDCAD0;
+}
+
+.dagmar-light-blue #footer a:hover {
+	color:#1F3244;
+}
+
+
+/**         Red         */
+
+body.dagmar-red.home {
+	background: #131212 url(/clients/BachChorale/Images/bg-grunge.png) repeat;
+}
+
+.dagmar-red.home #wrap {
+    background: url("/clients/BachChorale/Images/bg-top-grunge-home.png") no-repeat scroll center top transparent;
+}
+
+.dagmar-red #wrap {
+    background: url("/clients/BachChorale/Images/bg-top-grunge.png") no-repeat scroll center top transparent;
+}
+
+.dagmar-red #inner {
+    background: url("/clients/BachChorale/Images/bg-inner-bottom.png") no-repeat scroll left bottom transparent;
+}
+
+.dagmar-red #description {
+	color: #b70b11;
+	text-shadow: none;
+}
+
+.dagmar-red #title a,
+.dagmar-red #title a:hover {
+	color: #b70b11;
+}
+
+.dagmar-red .menu-primary li a {
+	color: #FFF;
+}
+
+.dagmar-red .menu-primary li li a,
+.dagmar-red .menu-primary li li a:link,
+.dagmar-red .menu-primary li li a:visited {
+	background: #E5E7E8;
+	border-color: #FFF;
+	color: #626161;
+}
+
+.dagmar-red .menu-primary li li a:hover {
+	background: #b70b11;
+	color: #FFF;
+}
+
+.dagmar-red .menu-primary li a:active,
+.dagmar-red .menu-primary li a:hover,
+.dagmar-red .menu-primary .current_page_item a,
+.dagmar-red .menu-primary .current-cat a,
+.dagmar-red .menu-primary .current-menu-item a {
+	color: #b70b11;
+}
+
+.dagmar-red .widget-area .gform_widget h4.widgettitle,
+.dagmar-red .home-bottom-features.widget-area h4.widgettitle {
+    background: url("/clients/BachChorale/Images/heading-background-grunge.png") no-repeat scroll left center transparent !important;
+	color: #FFF;
+	text-shadow: none;
+}
+
+.dagmar-red .sidebar .widget-area .gform_widget h4.widgettitle {
+    background: url("/clients/BachChorale/Images/heading-background-grunge.png") no-repeat scroll left center transparent !important;
+	color: #FFF;
+}
+
+.dagmar-red #sidebar .wsm-cta,
+.dagmar-red #sidebar .widget_text,
+.dagmar-red #home-middle .widget-area {
+    background: url("/clients/BachChorale/Images/bg-home-cta.png") repeat-x scroll 0 0 #A10308;
+}
+
+.dagmar-red #content .ttw-music-player .buy:hover,
+.dagmar-red  #content #respond input#submit,
+.dagmar-red  input[type="button"],
+.dagmar-red input[type="submit"] {
+	background: #b70b11;
+}
+.dagmar-red a,
+.dagmar-red a:visited,
+.dagmar-red #inner .ttw-music-player .player .title,
+.dagmar-red #home-top .widget-area h2 a,
+.dagmar-red .entry-content a.more-link,
+.dagmar-red h1,
+.dagmar-red h2,
+.dagmar-red h3,
+.dagmar-red h4,
+.dagmar-red h5,
+.dagmar-red h2 a,
+.dagmar-red h2 a:visited,
+.dagmar-red h1.entry-title,
+.dagmar-red h2.entry-title a,
+.dagmar-red h2.entry-title a:visited,
+.dagmar-red #home-tagline-area h2 {
+	color: #b70b11;
+}
+
+.dagmar-red #inner .widget-area .ttw-music-player .player .title,
+.dagmar-red .wsm-cta p,
+.dagmar-red #sidebar .wsm-cta h4.widgettitle,
+.dagmar-red .home-top-left .widget p {
+	color: #FFF;
+}
+
+.dagmar-red #inner .widget-area input.gform_button.button {
+	background-color: #b70b11;
+	box-shadow: none;
+}
+
+.dagmar-red  .widget-area .post-info .date,
+.dagmar-red .post-comments a,
+.dagmar-red .post-info {
+	color: #605F5F;
+}
+
+.dagmar-red .taxonomy-description h1,
+.dagmar-red .widget-area h4.widgettitle {
+	color: #b70b11;
+}
+
+.dagmar-red .home-bottom-right-widgets a,
+.dagmar-red .home-bottom-right-widgets a:visited,
+.dagmar-red .home-bottom-right-widgets .post h2,
+.dagmar-red .home-bottom-right-widgets .post h2 a {
+	color: #5A5A5A;
+}
+
+.dagmar-red .home-bottom-features .ngg-widget img {
+	border-color: #FFF;
+}
+
+.dagmar-red .home-bottom-features .ngg-widget img:hover {
+	border-color: #b70b11;
+}
+
+.dagmar-red .wsm-cta .more-link a {
+	background: url("/clients/BachChorale/Images/buy-arrow.png") no-repeat scroll right center transparent;
+	color: #b70b11;
+}
+
+.dagmar-red .wsm-cta .more-link {
+    background: url("/clients/BachChorale/Images/buy-button.png") no-repeat scroll 0 0 transparent;
+}
+
+.dagmar-red #footer {
+    background: url("/clients/BachChorale/Images/bg-footer.png") repeat-x scroll center top #303030;
+}
+
+.dagmar-red #footer .wrap {
+    background: url("/clients/BachChorale/Images/bg-footer-splats.png") repeat scroll center top transparent;
+}
+
+.dagmar-red .product span.onsale,
+.dagmar-red .products span.onsale,
+.dagmar-red .product .cart a.alt,
+.dagmar-red .product button.button.alt,
+.dagmar-red .products a.button,
+.dagmar-red .products button.button,
+.dagmar-red .products input.button,
+.dagmar-red .products #review_form #submit {
+	background: #A30404; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#B83411', endColorstr='#A30404'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#B83411), to(#A30404)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #B83411,  #A30404); /* for firefox 3.6+ */ 
+    border-color: #B83411;
+}
+
+.dagmar-red .product .cart a:hover.alt,
+.dagmar-red  .product button:hover.button.alt,
+.dagmar-red .products a:hover.button,
+.dagmar-red  .products button:hover.button,
+.dagmar-red  .products input:hover.button,
+.dagmar-red  .products #review_form #submit {
+	background: #B83411; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A30404', endColorstr='#B83411'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#A30404), to(#B83411)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #A30404,  #B83411); /* for firefox 3.6+ */ 
+}
+
+.dagmar-red.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active:after {
+    box-shadow: -2px 2px 0 #A50905;
+}
+
+.dagmar-red.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active:before {
+    box-shadow: 2px 2px 0 #A50905;
+}
+
+.dagmar-red.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active {
+    background: #A50905;
+    border-bottom-color: #A50905;
+}
+
+.dagmar-red #footer p,
+.dagmar-red #footer a,
+.dagmar-red #footer a:visited {
+	color: #BBBBBB;
+}
+
+.dagmar-red #footer a:hover {
+	color: #b70b11;
+}
+
+
+/**        Light Green        */
+
+body.dagmar-light-green.home {
+	background: #a3ba6c url(/clients/BachChorale/Images/bg-grunge.png) repeat;
+}
+
+.dagmar-light-green.home #wrap {
+    background: url("/clients/BachChorale/Images/bg-top-grunge-home.png") no-repeat scroll center top transparent;
+}
+
+.dagmar-light-green #wrap {
+    background: url("/clients/BachChorale/Images/bg-top-grunge.png") no-repeat scroll center top transparent;
+}
+
+.dagmar-light-green #inner {
+    background: url("/clients/BachChorale/Images/bg-inner-bottom.png") no-repeat scroll left bottom transparent;
+}
+
+.dagmar-light-green #description {
+	color: #FFF;
+}
+
+.dagmar-light-green .menu-primary li a,
+.dagmar-light-green #title a,
+.dagmar-light-green #title a:hover {
+	color: #FFF;
+}
+
+.dagmar-light-green .menu-primary li li a,
+.dagmar-light-green .menu-primary li li a:link,
+.dagmar-light-green .menu-primary li li a:visited {
+	background: #E5E7E8;
+	border-color: #FFF;
+	color: #626161;
+}
+
+.dagmar-light-green .menu-primary li li a:hover {
+	background: #778d00;
+	color: #FFF;
+}
+
+.dagmar-light-green .menu-primary li a:active,
+.dagmar-light-green .menu-primary li a:hover,
+.dagmar-light-green .menu-primary .current_page_item a,
+.dagmar-light-green .menu-primary .current-cat a,
+.dagmar-light-green .menu-primary .current-menu-item a {
+	color: #647700;
+}
+
+.dagmar-light-green .widget-area .gform_widget h4.widgettitle,
+.dagmar-light-green .home-bottom-features.widget-area h4.widgettitle {
+    background: url("/clients/BachChorale/Images/heading-background-grunge.png") no-repeat scroll left center transparent !important;
+	color: #FFF;
+	text-shadow: none;
+}
+
+.dagmar-light-green .sidebar .widget-area .gform_widget h4.widgettitle {
+    background: url("/clients/BachChorale/Images/heading-background-grunge.png") no-repeat scroll left center transparent !important;
+	color: #FFF;
+}
+
+.dagmar-light-green #sidebar .wsm-cta,
+.dagmar-light-green #sidebar .widget_text,
+.dagmar-light-green #home-middle .widget-area {
+    background: url("/clients/BachChorale/Images/bg-home-cta.png") repeat-x scroll 0 0 #637500;
+}
+
+.dagmar-light-green #content .ttw-music-player .buy:hover,
+.dagmar-light-green  #content #respond input#submit,
+.dagmar-light-green  input[type="button"],
+.dagmar-light-green input[type="submit"] {
+	background: #778d00;
+}
+
+.dagmar-light-green a,
+.dagmar-light-green a:visited,
+.dagmar-light-green #inner .ttw-music-player .player .title,
+.dagmar-light-green .entry-content a.more-link,
+.dagmar-light-green h1,
+.dagmar-light-green h2,
+.dagmar-light-green h3,
+.dagmar-light-green h4,
+.dagmar-light-green h5,
+.dagmar-light-green h2 a,
+.dagmar-light-green h2 a:visited,
+.dagmar-light-green h1.entry-title,
+.dagmar-light-green h2.entry-title a,
+.dagmar-light-green h2.entry-title a:visited,
+.dagmar-light-green #home-tagline-area h2 {
+	color: #778d00;
+}
+
+.dagmar-light-green #home-top .widget-area h2 a {
+	color: #647700;
+}
+
+.dagmar-light-green #inner .widget-area .ttw-music-player .player .title,
+.dagmar-light-green .wsm-cta p,
+.dagmar-light-green #sidebar .wsm-cta h4.widgettitle,
+.dagmar-light-green .home-top-left .widget p {
+	color: #FFF;
+}
+
+.dagmar-light-green #inner .widget-area input.gform_button.button {
+	background-color: #778d00;
+	box-shadow: none;
+}
+
+.dagmar-light-green  .widget-area .post-info .date,
+.dagmar-light-green .post-comments a,
+.dagmar-light-green .post-info {
+	color: #605F5F;
+}
+
+.dagmar-light-green .taxonomy-description h1,
+.dagmar-light-green .widget-area h4.widgettitle {
+	color: #778d00;
+}
+
+.dagmar-light-green .home-bottom-right-widgets a,
+.dagmar-light-green .home-bottom-right-widgets a:visited,
+.dagmar-light-green .home-bottom-right-widgets .post h2,
+.dagmar-light-green .home-bottom-right-widgets .post h2 a {
+	color: #5A5A5A;
+}
+
+.dagmar-light-green .home-bottom-features .ngg-widget img {
+	border-color: #FFF;
+}
+
+.dagmar-light-green .home-bottom-features .ngg-widget img:hover {
+	border-color: #778d00;
+}
+
+.dagmar-light-green .wsm-cta .more-link a {
+	background: url("/clients/BachChorale/Images/buy-arrow.png") no-repeat scroll right center transparent;
+	color: #778d00;
+}
+
+.dagmar-light-green .wsm-cta .more-link {
+    background: url("/clients/BachChorale/Images/buy-button.png") no-repeat scroll 0 0 transparent;
+}
+
+.dagmar-light-green #footer {
+    background: url("/clients/BachChorale/Images/bg-footer.png") repeat-x scroll center top #505E00;
+}
+
+.dagmar-light-green #footer .wrap {
+    background: url("/clients/BachChorale/Images/bg-footer-splats.png") repeat scroll center top transparent;
+}
+
+.dagmar-light-green .product span.onsale,
+.dagmar-light-green .products span.onsale,
+.dagmar-light-green .product .cart a.alt,
+.dagmar-light-green .product button.button.alt,
+.dagmar-light-green .products a.button,
+.dagmar-light-green .products button.button,
+.dagmar-light-green .products input.button,
+.dagmar-light-green .products #review_form #submit {
+	background: #778d00; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=' #a4c101', endColorstr='#778d00'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from( #a4c101), to(#778d00)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,   #a4c101,  #778d00); /* for firefox 3.6+ */ 
+    border-color: #778d00;
+}
+
+.dagmar-light-green .product .cart a:hover.alt,
+.dagmar-light-green  .product button:hover.button.alt,
+.dagmar-light-green .products a:hover.button,
+.dagmar-light-green  .products button:hover.button,
+.dagmar-light-green  .products input:hover.button,
+.dagmar-light-green  .products #review_form #submit {
+	background: #a4c101; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#778d00', endColorstr='#a4c101'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#778d00), to(#a4c101)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #778d00,  #a4c101); /* for firefox 3.6+ */ 
+}
+
+.dagmar-light-green.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active:after {
+    box-shadow: -2px 2px 0 #778d00;
+}
+
+.dagmar-light-green.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active:before {
+    box-shadow: 2px 2px 0 #778d00;
+}
+
+.dagmar-light-green.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active {
+    background: #778d00;
+    border-bottom-color: #778d00;
+}
+
+.dagmar-light-green #footer p,
+.dagmar-light-green #footer a,
+.dagmar-light-green #footer a:visited {
+	color: #BBBBBB;
+}
+
+.dagmar-light-green #footer a:hover {
+	color: #8CA854;
+}
+
+/**         Orange         */
+
+body.dagmar-orange.home {
+	background: #c29c71 url(/clients/BachChorale/Images/bg-grunge.png) repeat;
+}
+
+.dagmar-orange.home #wrap {
+    background: url("/clients/BachChorale/Images/bg-top-grunge-home.png") no-repeat scroll center top transparent;
+}
+
+.dagmar-orange #wrap {
+    background: url("/clients/BachChorale/Images/bg-top-grunge.png") no-repeat scroll center top transparent;
+}
+
+.dagmar-orange #inner {
+    background: url("/clients/BachChorale/Images/bg-inner-bottom.png") no-repeat scroll left bottom transparent;
+}
+
+.dagmar-orange #description {
+	color: #AC4209;
+}
+
+.dagmar-orange #title a,
+.dagmar-orange #title a:hover {
+	color: #AC4209;
+}
+
+.dagmar-orange .menu-primary li li a,
+.dagmar-orange .menu-primary li li a:link,
+.dagmar-orange .menu-primary li li a:visited {
+	background: #E5E7E8;
+	border-color: #FFF;
+	color: #626161;
+}
+
+.dagmar-orange .menu-primary li li a:hover {
+	background: #AC4209;
+	color: #FFF;
+}
+
+.dagmar-orange .menu-primary li a {
+	color: #FFF;
+}
+
+.dagmar-orange .menu-primary li a:active,
+.dagmar-orange .menu-primary li a:hover,
+.dagmar-orange .menu-primary .current_page_item a,
+.dagmar-orange .menu-primary .current-cat a,
+.dagmar-orange .menu-primary .current-menu-item a {
+	color: #AC4209;
+}
+
+.dagmar-orange .widget-area .gform_widget h4.widgettitle,
+.dagmar-orange .home-bottom-features.widget-area h4.widgettitle {
+    background: url("/clients/BachChorale/Images/heading-background-grunge.png") no-repeat scroll left center transparent !important;
+	color: #FFF;
+	text-shadow: none;
+}
+
+.dagmar-orange .sidebar .widget-area .gform_widget h4.widgettitle {
+    background: url("/clients/BachChorale/Images/heading-background-grunge.png") no-repeat scroll left center transparent !important;
+	color: #FFF;
+}
+
+.dagmar-orange #sidebar .wsm-cta,
+.dagmar-orange #sidebar .widget_text,
+.dagmar-orange #home-middle .widget-area {
+    background: url("/clients/BachChorale/Images/bg-home-cta.png") repeat-x scroll 0 0 #923300;
+}
+
+.dagmar-orange #content .ttw-music-player .buy:hover,
+.dagmar-orange  #content #respond input#submit,
+.dagmar-orange  input[type="button"],
+.dagmar-orange input[type="submit"] {
+	background: #AC4209;
+}
+
+.dagmar-orange a,
+.dagmar-orange a:visited,
+.dagmar-orange #inner .ttw-music-player .player .title,
+.dagmar-orange #home-top .widget-area h2 a,
+.dagmar-orange .entry-content a.more-link,
+.dagmar-orange h1,
+.dagmar-orange h2,
+.dagmar-orange h3,
+.dagmar-orange h4,
+.dagmar-orange h5,
+.dagmar-orange h2 a,
+.dagmar-orange h2 a:visited,
+.dagmar-orange h1.entry-title,
+.dagmar-orange h2.entry-title a,
+.dagmar-orange h2.entry-title a:visited,
+.dagmar-orange #home-tagline-area h2 {
+	color: #AC4209;
+}
+
+.dagmar-orange #inner .widget-area .ttw-music-player .player .title,
+.dagmar-orange .wsm-cta p,
+.dagmar-orange #sidebar .wsm-cta h4.widgettitle,
+.dagmar-orange .home-top-left .widget p {
+	color: #FFF;
+}
+
+.dagmar-orange #inner .widget-area input.gform_button.button {
+	background-color: #AC4209;
+	box-shadow: none;
+}
+
+.dagmar-orange  .widget-area .post-info .date,
+.dagmar-orange .post-comments a,
+.dagmar-orange .post-info {
+	color: #605F5F;
+}
+
+.dagmar-orange .taxonomy-description h1,
+.dagmar-orange .widget-area h4.widgettitle {
+	color: #AC4209;
+}
+
+.dagmar-orange .home-bottom-right-widgets a,
+.dagmar-orange .home-bottom-right-widgets a:visited,
+.dagmar-orange .home-bottom-right-widgets .post h2,
+.dagmar-orange .home-bottom-right-widgets .post h2 a {
+	color: #5A5A5A;
+}
+
+.dagmar-orange .home-bottom-features .ngg-widget img {
+	border-color: #FFF;
+}
+
+.dagmar-orange .home-bottom-features .ngg-widget img:hover {
+	border-color: #AC4209;
+}
+
+.dagmar-orange .wsm-cta .more-link a {
+	background: url("/clients/BachChorale/Images/buy-arrow.png") no-repeat scroll right center transparent;
+	color: #AC4209;
+}
+
+.dagmar-orange .wsm-cta .more-link {
+    background: url("/clients/BachChorale/Images/buy-button.png") no-repeat scroll 0 0 transparent;
+}
+
+.dagmar-orange #footer {
+    background: url("/clients/BachChorale/Images/bg-footer.png") repeat-x scroll center top #863103;
+}
+
+.dagmar-orange #footer .wrap {
+    background: url("/clients/BachChorale/Images/bg-footer-splats.png") repeat scroll center top transparent;
+}
+
+.dagmar-orange .product span.onsale,
+.dagmar-orange .products span.onsale,
+.dagmar-orange .product .cart a.alt,
+.dagmar-orange .product button.button.alt,
+.dagmar-orange .products a.button,
+.dagmar-orange .products button.button,
+.dagmar-orange .products input.button,
+.dagmar-orange .products #review_form #submit {
+	background: #923300; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#AC4209', endColorstr='#923300'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#AC4209), to(#923300)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #AC4209,  #923300); /* for firefox 3.6+ */ 
+    border-color: #AC4209;
+}
+
+.dagmar-orange .product .cart a:hover.alt,
+.dagmar-orange  .product button:hover.button.alt,
+.dagmar-orange .products a:hover.button,
+.dagmar-orange  .products button:hover.button,
+.dagmar-orange  .products input:hover.button,
+.dagmar-orange  .products #review_form #submit {
+	background: #AC4209; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#923300', endColorstr='#AC4209'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#923300), to(#AC4209)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #923300,  #AC4209); /* for firefox 3.6+ */ 
+}
+
+.dagmar-orange.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active:after {
+    box-shadow: -2px 2px 0 #AC4209;
+}
+
+.dagmar-orange.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active:before {
+    box-shadow: 2px 2px 0 #AC4209;
+}
+
+.dagmar-orange.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active {
+    background: #AC4209;
+    border-bottom-color: #AC4209;
+}
+
+.dagmar-orange #footer p,
+.dagmar-orange #footer a,
+.dagmar-orange #footer a:visited {
+	color: #BBBBBB;
+}
+
+.dagmar-orange #footer a:hover {
+	color: #bc6131;
+}
+
+
+/**         Brown        */
+
+body.dagmar-brown.home {
+	background: #9f8868 url(/clients/BachChorale/Images/bg-grunge.png) repeat;
+}
+
+.dagmar-brown.home #wrap {
+    background: url("/clients/BachChorale/Images/bg-top-grunge-home.png") no-repeat scroll center top transparent;
+}
+
+.dagmar-brown #wrap {
+    background: url("/clients/BachChorale/Images/bg-top-grunge.png") no-repeat scroll center top transparent;
+}
+
+.dagmar-brown #inner {
+    background: url("/clients/BachChorale/Images/bg-inner-bottom.png") no-repeat scroll left bottom transparent;
+}
+
+.dagmar-brown #description {
+	color: #56381F;
+	text-shadow: none;
+}
+
+.dagmar-brown #title a,
+.dagmar-brown #title a:hover {
+	color: #56381F;
+}
+
+.dagmar-brown .menu-primary li li a,
+.dagmar-brown .menu-primary li li a:link,
+.dagmar-brown .menu-primary li li a:visited {
+	background: #E5E7E8;
+	border-color: #FFF;
+	color: #626161;
+}
+
+.dagmar-brown .menu-primary li li a:hover {
+	background: #56381F;
+	color: #FFF;
+}
+
+.dagmar-brown .menu-primary li a {
+	color: #FFF;
+}
+
+.dagmar-brown .menu-primary li a:active,
+.dagmar-brown .menu-primary li a:hover,
+.dagmar-brown .menu-primary .current_page_item a,
+.dagmar-brown .menu-primary .current-cat a,
+.dagmar-brown .menu-primary .current-menu-item a {
+	color: #55381F;
+}
+
+.dagmar-brown .widget-area .gform_widget h4.widgettitle,
+.dagmar-brown .home-bottom-features.widget-area h4.widgettitle {
+    background: url("/clients/BachChorale/Images/heading-background-grunge.png") no-repeat scroll left center transparent !important;
+	color: #FFF;
+	text-shadow: none;
+}
+
+.dagmar-brown .sidebar .widget-area .gform_widget h4.widgettitle {
+    background: url("/clients/BachChorale/Images/heading-background-grunge.png") no-repeat scroll left center transparent !important;
+	color: #FFF;
+}
+
+.dagmar-brown #sidebar .wsm-cta,
+.dagmar-brown #sidebar .widget_text,
+.dagmar-brown #home-middle .widget-area {
+    background: url("/clients/BachChorale/Images/bg-home-cta.png") repeat-x scroll 0 0 #412814;
+}
+
+.dagmar-brown #content .ttw-music-player .buy:hover,
+.dagmar-brown  #content #respond input#submit,
+.dagmar-brown  input[type="button"],
+.dagmar-brown input[type="submit"] {
+	background: #56381F;
+}
+
+.dagmar-brown a,
+.dagmar-brown a:visited,
+.dagmar-brown #inner .ttw-music-player .player .title,
+.dagmar-brown #home-top .widget-area h2 a,
+.dagmar-brown .entry-content a.more-link,
+.dagmar-brown h1,
+.dagmar-brown h2,
+.dagmar-brown h3,
+.dagmar-brown h4,
+.dagmar-brown h5,
+.dagmar-brown h2 a,
+.dagmar-brown h2 a:visited,
+.dagmar-brown h1.entry-title,
+.dagmar-brown h2.entry-title a,
+.dagmar-brown h2.entry-title a:visited,
+.dagmar-brown #home-tagline-area h2 {
+	color: #56381F;
+}
+
+.dagmar-brown #inner .widget-area .ttw-music-player .player .title,
+.dagmar-brown .wsm-cta p,
+.dagmar-brown #sidebar .wsm-cta h4.widgettitle,
+.dagmar-brown .home-top-left .widget p {
+	color: #FFF;
+}
+
+.dagmar-brown #inner .widget-area input.gform_button.button {
+	background-color: #56381F;
+	box-shadow: none;
+}
+
+.dagmar-brown  .widget-area .post-info .date,
+.dagmar-brown .post-comments a,
+.dagmar-brown .post-info {
+	color: #605F5F;
+}
+
+.dagmar-brown .taxonomy-description h1,
+.dagmar-brown .widget-area h4.widgettitle {
+	color: #56381F;
+}
+
+.dagmar-brown .home-bottom-right-widgets a,
+.dagmar-brown .home-bottom-right-widgets a:visited,
+.dagmar-brown .home-bottom-right-widgets .post h2,
+.dagmar-brown .home-bottom-right-widgets .post h2 a {
+	color: #5A5A5A;
+}
+
+.dagmar-brown .home-bottom-features .ngg-widget img {
+	border-color: #FFF;
+}
+
+.dagmar-brown .home-bottom-features .ngg-widget img:hover {
+	border-color: #56381F;
+}
+
+.dagmar-brown .wsm-cta .more-link a {
+	background: url("/clients/BachChorale/Images/buy-arrow.png") no-repeat scroll right center transparent;
+	color: #56381F;
+}
+
+.dagmar-brown .wsm-cta .more-link {
+    background: url("/clients/BachChorale/Images/buy-button.png") no-repeat scroll 0 0 transparent;
+}
+
+.dagmar-brown #footer {
+    background: url("/clients/BachChorale/Images/bg-footer.png") repeat-x scroll center top #67482E;
+}
+
+.dagmar-brown #footer .wrap {
+    background: url("/clients/BachChorale/Images/bg-footer-splats.png") repeat scroll center top transparent;
+}
+
+.dagmar-brown .product span.onsale,
+.dagmar-brown .products span.onsale,
+.dagmar-brown .product .cart a.alt,
+.dagmar-brown .product button.button.alt,
+.dagmar-brown .products a.button,
+.dagmar-brown .products button.button,
+.dagmar-brown .products input.button,
+.dagmar-brown .products #review_form #submit {
+	background: #412814; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#56381F', endColorstr='#412814'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#56381F), to(#412814)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #56381F,  #412814); /* for firefox 3.6+ */ 
+    border-color: #412814;
+}
+
+.dagmar-brown .product .cart a:hover.alt,
+.dagmar-brown  .product button:hover.button.alt,
+.dagmar-brown .products a:hover.button,
+.dagmar-brown  .products button:hover.button,
+.dagmar-brown  .products input:hover.button,
+.dagmar-brown  .products #review_form #submit {
+	background: #56381F; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#412814', endColorstr='#56381F'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#412814), to(#56381F)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #412814,  #56381F); /* for firefox 3.6+ */ 
+}
+
+.dagmar-brown.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active:after {
+    box-shadow: -2px 2px 0 #412814;
+}
+
+.dagmar-brown.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active:before {
+    box-shadow: 2px 2px 0 #412814;
+}
+
+.dagmar-brown.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active {
+    background: #412814;
+    border-bottom-color: #412814;
+}
+
+.dagmar-brown #footer p,
+.dagmar-brown #footer a,
+.dagmar-brown #footer a:visited {
+	color: #BBBBBB;
+}
+
+.dagmar-brown #footer a:hover {
+	color: #A68F72;
+}
+
+
+/**         Pink         */
+
+body.dagmar-pink.home {
+	background: #c88ca9 url(/clients/BachChorale/Images/bg-grunge.png) repeat;
+}
+
+.dagmar-pink.home #wrap {
+    background: url("/clients/BachChorale/Images/bg-top-grunge-home.png") no-repeat scroll center top transparent;
+}
+
+.dagmar-pink #wrap {
+    background: url("/clients/BachChorale/Images/bg-top-grunge.png") no-repeat scroll center top transparent;
+}
+
+.dagmar-pink #inner {
+    background: url("/clients/BachChorale/Images/bg-inner-bottom.png") no-repeat scroll left bottom transparent;
+}
+
+.dagmar-pink #description {
+	color: #A65367;
+}
+
+.dagmar-pink #title a,
+.dagmar-pink #title a:hover {
+	color: #A65367;
+}
+
+.dagmar-pink .menu-primary li li a,
+.dagmar-pink .menu-primary li li a:link,
+.dagmar-pink .menu-primary li li a:visited {
+	background: #E5E7E8;
+	border-color: #FFF;
+	color: #626161;
+}
+
+.dagmar-pink .menu-primary li li a:hover {
+	background: #A65367;
+	color: #FFF;
+}
+
+.dagmar-pink .menu-primary li a:active,
+.dagmar-pink .menu-primary li a:hover,
+.dagmar-pink .menu-primary .current_page_item a,
+.dagmar-pink .menu-primary .current-cat a,
+.dagmar-pink .menu-primary .current-menu-item a {
+	color: #A65367;
+}
+
+.dagmar-pink .widget-area .gform_widget h4.widgettitle,
+.dagmar-pink .home-bottom-features.widget-area h4.widgettitle {
+    background: url("/clients/BachChorale/Images/heading-background-grunge.png") no-repeat scroll left center transparent !important;
+	color: #FFF;
+	text-shadow: none;
+}
+
+.dagmar-pink .sidebar .widget-area .gform_widget h4.widgettitle {
+    background: url("/clients/BachChorale/Images/heading-background-grunge.png") no-repeat scroll left center transparent !important;
+	color: #FFF;
+}
+
+.dagmar-pink #sidebar .wsm-cta,
+.dagmar-pink #sidebar .widget_text,
+.dagmar-pink #home-middle .widget-area {
+    background: url("/clients/BachChorale/Images/bg-home-cta.png") repeat-x scroll 0 0 #9B4056;
+}
+
+.dagmar-pink #content .ttw-music-player .buy:hover,
+.dagmar-pink  #content #respond input#submit,
+.dagmar-pink  input[type="button"],
+.dagmar-pink input[type="submit"] {
+	background: #A65367;
+}
+
+.dagmar-pink a,
+.dagmar-pink a:visited,
+.dagmar-pink #inner .ttw-music-player .player .title,
+.dagmar-pink #home-top .widget-area h2 a,
+.dagmar-pink .entry-content a.more-link,
+.dagmar-pink h1,
+.dagmar-pink h2,
+.dagmar-pink h3,
+.dagmar-pink h4,
+.dagmar-pink h5,
+.dagmar-pink h2 a,
+.dagmar-pink h2 a:visited,
+.dagmar-pink h1.entry-title,
+.dagmar-pink h2.entry-title a,
+.dagmar-pink h2.entry-title a:visited,
+.dagmar-pink #home-tagline-area h2 {
+	color: #A65367;
+}
+
+.dagmar-pink #inner .widget-area .ttw-music-player .player .title,
+.dagmar-pink .wsm-cta p,
+.dagmar-pink #sidebar .wsm-cta h4.widgettitle,
+.dagmar-pink .home-top-left .widget p {
+	color: #FFF;
+}
+
+.dagmar-pink #inner .widget-area input.gform_button.button {
+	background-color: #A65367;
+	box-shadow: none;
+}
+
+.dagmar-pink  .widget-area .post-info .date,
+.dagmar-pink .post-comments a,
+.dagmar-pink .post-info {
+	color: #605F5F;
+}
+
+.dagmar-pink .taxonomy-description h1,
+.dagmar-pink .widget-area h4.widgettitle {
+	color: #A65367;
+}
+
+.dagmar-pink .home-bottom-right-widgets a,
+.dagmar-pink .home-bottom-right-widgets a:visited,
+.dagmar-pink .home-bottom-right-widgets .post h2,
+.dagmar-pink .home-bottom-right-widgets .post h2 a {
+	color: #5A5A5A;
+}
+
+.dagmar-pink .home-bottom-features .ngg-widget img {
+	border-color: #FFF;
+}
+
+.dagmar-pink .home-bottom-features .ngg-widget img:hover {
+	border-color: #A65367;
+}
+
+.dagmar-pink .wsm-cta .more-link a {
+	background: url("/clients/BachChorale/Images/buy-arrow.png") no-repeat scroll right center transparent;
+	color: #A65367;
+}
+
+.dagmar-pink .wsm-cta .more-link {
+    background: url("/clients/BachChorale/Images/buy-button.png") no-repeat scroll 0 0 transparent;
+}
+
+.dagmar-pink #footer {
+    background: url("/clients/BachChorale/Images/bg-footer.png") repeat-x scroll center top #904658;
+}
+
+.dagmar-pink #footer .wrap {
+    background: url("/clients/BachChorale/Images/bg-footer-splats.png") repeat scroll center top transparent;
+}
+
+.dagmar-pink .product span.onsale,
+.dagmar-pink .products span.onsale,
+.dagmar-pink .product .cart a.alt,
+.dagmar-pink .product button.button.alt,
+.dagmar-pink .products a.button,
+.dagmar-pink .products button.button,
+.dagmar-pink .products input.button,
+.dagmar-pink .products #review_form #submit {
+	background: #943d52; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A65367', endColorstr='#943d52'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#A65367), to(#943d52)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #A65367,  #943d52); /* for firefox 3.6+ */ 
+    border-color: #A65367;
+}
+
+.dagmar-pink .product .cart a:hover.alt,
+.dagmar-pink  .product button:hover.button.alt,
+.dagmar-pink .products a:hover.button,
+.dagmar-pink  .products button:hover.button,
+.dagmar-pink  .products input:hover.button,
+.dagmar-pink  .products #review_form #submit {
+	background: #A65367; /* for non-css3 browsers */
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#943d52', endColorstr='#A65367'); /* for IE */
+	background: -webkit-gradient(linear, left top, left bottom, from(#943d52), to(#A65367)); /* for webkit browsers */
+	background: -moz-linear-gradient(top,  #943d52,  #A65367); /* for firefox 3.6+ */ 
+}
+
+.dagmar-pink.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active:after {
+    box-shadow: -2px 2px 0 #943d52;
+}
+
+.dagmar-pink.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active:before {
+    box-shadow: 2px 2px 0 #943d52;
+}
+
+.dagmar-pink.woocommerce #content div.product .woocommerce_tabs ul.tabs li.active {
+    background: #943d52;
+    border-bottom-color: #943d52;
+}
+
+.dagmar-pink #footer p,
+.dagmar-pink #footer a,
+.dagmar-pink #footer a:visited {
+	color: #BBBBBB;
+}
+
+.dagmar-pink #footer a:hover {
+	color: #CA8DAB;
+}
+
+
+
+
+
+/* Responsive Design
+------------------------------------------------------------ */
+
+@media only screen and (max-width: 300px) {
+
+	#title {
+		font-size: 65px;
+	}
+	
+	#inner #home-middle .widget-area {
+		width: 85% !important;
+	}
+	
+	.home-bottom-right-widgets {
+		width: 95%;
+	}
+	
+	.ngg-widget,
+	.ngg-widget-slideshow {
+		margin: 0 auto !important;
+		width: 118px;
+	}
+	
+	.home-bottom-features .ngg-widget img {
+		margin: 5px 0;
+	}
+	
+	#content .ttw-music-player .tracklist .title {
+		width: 125px !important;
+	}
+	
+	#content .ttw-music-player .buy {
+		float: left !important;
+		margin: 10px 0 10px 25px !important;
+	}
+	
+	#content .ttw-music-player .tracklist .rating,
+	#content .ttw-music-player .tracklist .duration {
+		display: none;
+	}
+	
+	#content .ttw-music-player .player-controls {
+		width: 200px;
+	}
+	
+	#content .ttw-music-player .progress-wrapper {
+		width: 118px;
+	}
+	
+}
+
+@media only screen and (max-width: 340px) {
+	
+	#content ul.products li.product {
+		float: none;
+		margin: 20px auto !important;
+	}
+	
+	#content .ttw-music-player .track-info {
+		margin: 0;
+	}
+	
+	#content .ttw-music-player .player-controls {
+		margin: 12px 0 0;
+	}
+		
+	#content .ttw-music-player .tracklist .rating {
+		right: 0 !important;
+	}
+	
+	#content  .ttw-music-player .buy {
+		float: right;
+		margin: 10px 0;
+		position: static;
+	}
+	
+		
+	.sidebar {
+		margin: 0 auto;
+		width: 96% !important;
+	}
+		
+
+}
+
+@media only screen and (max-width: 600px) {
+
+	#title-area {
+		width: 100% !important;
+	}
+	
+	.header-image #title,
+	.header-image #title a {
+		float: none;
+		margin: 0 auto !important;
+	}
+	
+	.header-image #description {
+		clear: both;
+		float: none !important;
+	}
+	
+	#header .widget-area {
+		float: none;
+		margin: 0 auto;
+		padding: 10px 0 !important;
+		width: 132px;
+	}
+	
+	#nav {
+		margin: 40px 0 0;
+	}
+	
+	.menu-primary li a {
+		color: #5D5D5D;
+	}
+	
+	.menu-primary li li a {
+		margin: 0;
+	}
+	
+	.menu-primary li a:hover {
+		color: #363636;
+	}
+	
+	.five-sixths,
+	.four-fifths,
+	.four-sixths,
+	.one-fifth,
+	.one-fourth,
+	.one-half,
+	.one-sixth,
+	.one-third,
+	.three-fifths,
+	.three-fourths,
+	.three-sixths,
+	.two-fifths,
+	.two-fourths,
+	.two-sixths,
+	.two-thirds {
+		padding: 0;
+		width: 100%;
+	}
+	
+	#description,
+	#footer .creds,
+	#footer .gototop,
+	#title,
+	#title-area {
+		float: none;
+		text-align: center;
+	}
+	
+	.home-top-left {
+		float: none;
+		margin: 0 auto;
+		width: 95% !important;
+	}
+	
+	.home-rotator {
+		float: none;
+		margin: 0 auto !important;
+		width: 95% !important;
+	}
+	
+	#home-middle {
+		padding: 20px 0;
+	}
+	
+	#home-middle .widget-area {
+		float: none;
+		margin: 20px auto !important;
+		min-height: 240px !important;
+		width: 265px !important;
+	}
+	
+	#home-bottom .home-bottom-features {
+		float: none;
+		width: 100% !important;
+	}
+	
+	.widget-area .gform_widget h4.widgettitle,
+	.home-bottom-features.widget-area h4.widgettitle {
+		background: none !important;
+		color: #363636;
+	}
+	
+	.home-bottom-right-widgets {
+		clear: both;
+		float: none;
+		margin: 0 auto;
+	}
+	
+	.sidebar {
+		clear: both;
+		float: none;
+		margin: 0 auto;
+		width: 80%;
+	}
+	
+	#sidebar-alt,
+	.sidebar-sidebar-content #sidebar,
+	.sidebar-content-sidebar #sidebar,
+	#content-sidebar-wrap,
+	.content-sidebar #content,
+	.sidebar-content #content,
+	.sidebar-content-sidebar #content,
+	.sidebar-sidebar-content #content {
+		width: 100% !important;
+	}	
+	
+}
+
+@media only screen and (max-width: 960px) {
+
+	body {
+		width: 100%;
+		margin: 0 auto;
+	}
+	
+	#title-area {
+		width: 58%;
+	}
+	
+	.header-image #title {
+		margin: 15px 0 0 0;
+	}
+		
+	#header .widget-area {
+		padding: 45px 15px 0 0;
+	}
+	
+	.header-image #description,
+	#description {
+		clear: both;
+		margin: -10px 0 0;
+	}
+	
+	.menu-primary {
+		text-align: center;
+	}
+	
+	.menu-primary li {
+		display: inline-block;
+		float: none;
+		text-align: center;
+	}
+	
+	.menu-primary li a{
+		text-align: center;
+	}
+	
+	#home-middle,
+	#home-tagline-area .tagline-wrap,
+	#home-bottom,
+	#home-top	{
+		width: 99%;
+	}
+	
+	.archive-page,
+	.content-sidebar-sidebar #content,
+	.footer-widgets-1,
+	.footer-widgets-2,
+	.footer-widgets-3,
+	.full-width-content #content,
+	#footer .creds,
+	#footer .gototop,
+	#footer-widgets .wrap,
+	#wrap {
+		width: 100%;
+	}
+	
+	#home-tagline-area {
+		background: #FFF;
+		height: auto;
+		padding: 20px 5px;
+	}
+
+	.home-rotator .bg-cover {
+		display: none;
+	}
+	
+	
+	#wrap {
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		margin: 0;
+	}
+	
+	#header .wrap,
+	#nav .wrap,
+	#footer .wrap,
+	#footer .footer-content,
+	#inner .wrap {
+		width: 96%;
+	}
+
+	#title {
+		float: none;
+		margin: 0;
+	}
+	
+	#title-area {
+		padding: 10px 0;
+	}
+
+	#description,
+	#title a,
+	#title a:hover {
+		padding: 0;
+	}
+
+	
+	#header .searchform {
+		float: none;
+		padding: 0;
+		text-align: center;
+	}
+	
+	.widget-area .ttw-music-player .progress-wrapper {
+		width: 62%;
+	}
+	
+	.ttw-music-player .player-controls .main {
+		width: 30%;
+	}
+
+	#header .s {
+		margin: 0 -7px 0 0;
+	}
+
+	.menu li.right {
+		display: none;
+	}
+
+	#inner {
+		padding: 20px 0 0;
+	}
+	
+	#inner .wrap {
+		padding: 0 5px;
+	}
+
+	.home-rotator {
+		background: none;
+		border: 3px solid #FFF;
+		height: auto;
+		margin: 30px 0;
+		width: 425px;
+	}
+	
+	.home-top-left {
+		width: 300px;
+	}
+	
+	.home-rotator .soliloquy {
+		margin: 0;
+		width: 100%;
+	}
+	
+	#home-middle .widget-area {
+		margin-right: 5px;
+		min-height: 322px;
+		padding: 10px;
+		width: 213px;
+	}
+	
+	#home-tagline-area {
+		margin: 10px 0;
+	}
+	
+	#home-bottom .home-bottom-features {
+		float: left;
+		width: 420px;
+	}
+
+	.breadcrumb,
+	.navigation,
+	.sidebar .widget,
+	.taxonomy-description {
+		margin: 0 20px 20px;
+	}
+	
+	#content-sidebar-wrap {
+		width: 80%;
+	}
+	
+	#content {
+		padding: 0;
+	}
+	
+	.content-sidebar #content,
+	.sidebar-content #content {
+		width: 60%;
+	}
+
+	.sidebar-content-sidebar #content,
+	.sidebar-sidebar-content #content {
+		width: 360px;
+	}
+	
+	#sidebar-alt {
+		width: 145px;
+	}
+	
+	.sidebar-sidebar-content #sidebar,
+	.sidebar-content-sidebar #sidebar {
+		width: 228px;
+	}
+	
+	.home-bottom-features.widget-area h4.widgettitle {
+		background: none;
+	}
+	
+	.page .page,
+	.post,
+	#comments,
+	#respond {
+		padding: 0 5px;
+	}
+
+	.author-box {
+		margin: 0 20px 40px;
+	}
+	
+	#footer-widgets .widget {
+		padding: 20px 20px 0;
+	}
+
+	#footer-widgets .wrap {
+		padding: 0;
+	}
+
+	.footer-widgets-1,
+	.footer-widgets-2,
+	.footer-widgets-3 {
+		margin: 0;
+	}
+	
+	#footer .wrap-alignleft,
+	#footer .wrap-alignright {
+		float: none;
+		overflow: hidden;
+		text-align: center;
+		width: 100%;
+	}
+	
+	#footer .wrap {
+		margin: 0 auto;
+		padding: 10px 0 !important;
+	}
+	
+	#footer .footer-content {
+		width: 100%;
+	}
+	
+	#footer .wrap-alignright p {
+		text-align: center;
+	}
+	
+	#menu-footer-menu {
+		text-align: center;
+	}
+	
+	#footer #footer-nav ul li {
+		display: inline-block;
+		float: none;
+		text-align: center;
+	}
+	
+	#footer #footer-nav ul li a {
+		text-align: center;
+	}
+
+	#content .ttw-music-player .tracklist .title {
+		width: 130px;
+	}
+	
+	#content .ttw-music-player .tracklist .rating {
+		right: 123px;
+	}
+
+}

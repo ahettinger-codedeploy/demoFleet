@@ -1,0 +1,1173 @@
+<%
+'CHANGELOG
+'LSP 12/22/15 - initial development
+%>
+<!DOCTYPE html>
+<html lang="en-US">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://cowboyfestival.org/xmlrpc.php">
+	<title>Schedule | Cowboy Festival</title>
+	<link rel="alternate" type="application/rss+xml" title="Cowboy Festival » Feed" href="http://cowboyfestival.org/feed/">
+	<link rel="alternate" type="application/rss+xml" title="Cowboy Festival » Comments Feed" href="http://cowboyfestival.org/comments/feed/">
+
+<link href='https://fonts.googleapis.com/css?family=Droid+Sans|Ubuntu:400,300,700|Open+Sans:400,300,700|Oswald' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" id="contact-form-7-css" href="/clients/cowboyfestival/images/styles.css" type="text/css" media="all">
+	<link rel="stylesheet" id="tempera-fonts-css" href="/clients/cowboyfestival/images/fontfaces.css" type="text/css" media="all">
+		<link rel="stylesheet" href="/clients/cowboyfestival/images/elusive-icons.css" type="text/css" media="all">
+	<link rel="stylesheet" id="tempera-style-css" href="/clients/cowboyfestival/images/style.css" type="text/css" media="all">
+	<script type="text/javascript" src="/clients/cowboyfestival/images/jquery_002.js"></script>
+	<script type="text/javascript" src="/clients/cowboyfestival/images/jquery-migrate.js"></script>
+	<script type="text/javascript" src="/clients/cowboyfestival/images/frontend.js"></script>
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://cowboyfestival.org/xmlrpc.php?rsd">
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cowboyfestival.org/wp-includes/wlwmanifest.xml">
+
+	<link rel="canonical" href="http://cowboyfestival.org/schedule/">
+	<link rel="shortlink" href="http://cowboyfestival.org/?p=4558">
+	<script src="/clients/cowboyfestival/images/a.htm" type="text/javascript"></script>
+	<style type="text/css" id="custom-background-css">
+		body.custom-background {
+			background-color: #451e0d;
+			background-image: url('/clients/cowboyfestival/images/Cowboy-bg.jpg');
+			background-repeat: repeat-x;
+			background-position: top left;
+			background-attachment: fixed;
+		}
+	</style>
+	<script type="text/javascript">
+		(function(url) {
+			if (/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)) {
+				return;
+			}
+			var addEvent = function(evt, handler) {
+				if (window.addEventListener) {
+					document.addEventListener(evt, handler, false);
+				} else if (window.attachEvent) {
+					document.attachEvent('on' + evt, handler);
+				}
+			};
+			var removeEvent = function(evt, handler) {
+				if (window.removeEventListener) {
+					document.removeEventListener(evt, handler, false);
+				} else if (window.detachEvent) {
+					document.detachEvent('on' + evt, handler);
+				}
+			};
+			var evts = 'contextmenu dblclick drag dragend dragenter dragleave dragover dragstart drop keydown keypress keyup mousedown mousemove mouseout mouseover mouseup mousewheel scroll'.split(' ');
+			var logHuman = function() {
+				var wfscr = document.createElement('script');
+				wfscr.type = 'text/javascript';
+				wfscr.async = true;
+				wfscr.src = url + '&r=' + Math.random();
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(wfscr);
+				for (var i = 0; i < evts.length; i++) {
+					removeEvent(evts[i], logHuman);
+				}
+			};
+			for (var i = 0; i < evts.length; i++) {
+				addEvent(evts[i], logHuman);
+			}
+		})('//cowboyfestival.org/?wordfence_logHuman=1&hid=4B3CC7F37A4A9BF9DAA4209868D2985D');
+	</script>
+	<style type="text/css">
+		#header,
+		#main,
+		#topbar-inner {
+			max-width: 960px;
+		}
+
+		#container.one-column {}
+
+		#container.two-columns-right #secondary {
+			width: 280px;
+			float: right;
+		}
+
+		#container.two-columns-right #content {
+			width: 590px;
+			float: left;
+		}
+		/*fallback*/
+
+		#container.two-columns-right #content {
+			width: calc(100% - 310px);
+			float: left;
+		}
+
+		#container.two-columns-left #primary {
+			width: 280px;
+			float: left;
+		}
+
+		#container.two-columns-left #content {
+			width: 590px;
+			float: right;
+		}
+		/*fallback*/
+
+		#container.two-columns-left #content {
+			width: -moz-calc(100% - 310px);
+			float: right;
+			width: -webkit-calc(100% - 310px);
+			width: calc(100% - 310px);
+		}
+
+		#container.three-columns-right .sidey {
+			width: 140px;
+			float: left;
+		}
+
+		#container.three-columns-right #primary {
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+
+		#container.three-columns-right #content {
+			width: 560px;
+			float: left;
+		}
+		/*fallback*/
+
+		#container.three-columns-right #content {
+			width: -moz-calc(100% - 340px);
+			float: left;
+			width: -webkit-calc(100% - 340px);
+			width: calc(100% - 340px);
+		}
+
+		#container.three-columns-left .sidey {
+			width: 140px;
+			float: left;
+		}
+
+		#container.three-columns-left #secondary {
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+
+		#container.three-columns-left #content {
+			width: 560px;
+			float: right;
+		}
+		/*fallback*/
+
+		#container.three-columns-left #content {
+			width: -moz-calc(100% - 340px);
+			float: right;
+			width: -webkit-calc(100% - 340px);
+			width: calc(100% - 340px);
+		}
+
+		#container.three-columns-sided .sidey {
+			width: 140px;
+			float: left;
+		}
+
+		#container.three-columns-sided #secondary {
+			float: right;
+		}
+
+		#container.three-columns-sided #content {
+			width: 560px;
+			float: right;
+			/*fallback*/
+			width: -moz-calc(100% - 340px);
+			float: right;
+			width: -webkit-calc(100% - 340px);
+			float: right;
+			width: calc(100% - 340px);
+			float: right;
+			margin: 0 170px 0 -900px;
+		}
+
+		body {
+			font-family: Open Sans;
+		}
+
+		#content h1.entry-title a,
+		#content h2.entry-title a,
+		#content h1.entry-title,
+		#content h2.entry-title {
+			font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
+		}
+
+		.widget-title,
+		.widget-title a {
+			line-height: normal;
+			font-family: Open Sans;
+		}
+
+		.entry-content h1,
+		.entry-content h2,
+		.entry-content h3,
+		.entry-content h4,
+		.entry-content h5,
+		.entry-content h6,
+		#comments #reply-title,
+		.nivo-caption h2,
+		#front-text1 h1,
+		#front-text2 h1,
+		.column-header-image {
+			font-family: Palatino, serif;
+		}
+
+		#site-title span a {
+			font-family: Yanone Kaffeesatz Regular;
+		}
+
+		#access ul li a,
+		#access ul li a span {
+			font-family: Arial Black, Gadget, sans-serif;
+		}
+
+		body {
+			color: #320200;
+			background-color: #171717
+		}
+
+		a {
+			color: #db4500;
+		}
+
+		a:hover,
+		.entry-meta span a:hover,
+		.comments-link a:hover {
+			color: #2f1806;
+		}
+
+		#header {
+			background-color: ;
+		}
+
+		#site-title span a {
+			color: #1693A5;
+		}
+
+		#site-description {
+			color: #999999;
+		}
+
+		.socials a {
+			background-color: #2f1806;
+		}
+
+		.socials-hover {
+			background-color: #ff9f24;
+		}
+		/* Main menu top level */
+
+		#access a,
+		#nav-toggle span {
+			color: #d54728;
+		}
+
+		#access,
+		#nav-toggle {
+			background-color: ;
+		}
+
+		#access > .menu > ul > li > a > span {
+			border-color: ;
+			-moz-box-shadow: 1px 0 0;
+			-webkit-box-shadow: 1px 0 0;
+			box-shadow: 1px 0 0;
+		}
+
+		#access a:hover {
+			background-color: ;
+		}
+
+		#access ul li.current_page_item > a,
+		#access ul li.current-menu-item > a,
+		#access ul li.current_page_ancestor > a,
+		#access ul li.current-menu-ancestor > a {
+			background-color: ;
+		}
+		/* Main menu Submenus */
+
+		#access > .menu > ul > li > ul:before {
+			border-bottom-color: #652f15;
+		}
+
+		#access ul ul ul:before {
+			border-right-color: #652f15;
+		}
+
+		#access ul ul li {
+			background-color: #652f15;
+			border-top-color: #733d23;
+			border-bottom-color: #5a240a
+		}
+
+		#access ul ul li a {
+			color: #ff9f24
+		}
+
+		#access ul ul li a:hover {
+			background: #733d23
+		}
+
+		#access ul ul li.current_page_item > a,
+		#access ul ul li.current-menu-item > a,
+		#access ul ul li.current_page_ancestor > a,
+		#access ul ul li.current-menu-ancestor > a {
+			background-color: #733d23;
+		}
+
+		#topbar {
+			display: none;
+		}
+
+		.topmenu ul li a {
+			color: #CCCCCC;
+		}
+
+		.topmenu ul li a:hover {
+			color: #EEEEEE;
+			border-bottom-color: #2f1806;
+		}
+
+		#main {
+			background-color: #f3eddd;
+		}
+
+		#author-info,
+		#entry-author-info,
+		.page-title {
+			border-color: #2f1806;
+			background: #F7F7F7;
+		}
+
+		#entry-author-info #author-avatar,
+		#author-info #author-avatar {
+			border-color: #EEEEEE;
+		}
+
+		.sidey .widget-container {
+			color: #333333;
+			background-color: ;
+		}
+
+		.sidey .widget-title {
+			color: #666666;
+			background-color: #F7F7F7;
+			border-color: #cfcfcf;
+		}
+
+		.sidey .widget-container a {
+			color: ;
+		}
+
+		.sidey .widget-container a:hover {
+			color: ;
+		}
+
+		.entry-content h1,
+		.entry-content h2,
+		.entry-content h3,
+		.entry-content h4,
+		.entry-content h5,
+		.entry-content h6 {
+			color: #320200;
+		}
+
+		.sticky .entry-header {
+			border-color: #2f1806
+		}
+
+		.entry-title,
+		.entry-title a {
+			color: #320200;
+		}
+
+		.entry-title a:hover {
+			color: #000000;
+		}
+
+		#content h3.entry-format {
+			color: #d54728;
+			background-color: ;
+		}
+
+		#footer {
+			color: #da9753;
+			background-color: #652f15;
+		}
+
+		#footer2 {
+			color: #da9753;
+			background-color: #652f15;
+		}
+
+		#footer a {
+			color: #d54728;
+		}
+
+		#footer a:hover {
+			color: ;
+		}
+
+		#footer2 a,
+		.footermenu ul li:after {
+			color: #ff9f24;
+		}
+
+		#footer2 a:hover {
+			color: ;
+		}
+
+		#footer .widget-container {
+			color: #da9753;
+			background-color: #652f15;
+		}
+
+		#footer .widget-title {
+			color: #ff9f24;
+			background-color: #652f15;
+			border-color: #3d0700
+		}
+
+		a.continue-reading-link,
+		#cryout_ajax_more_trigger {
+			color: #d54728 !important;
+			background: ;
+			border-bottom-color: #2f1806;
+		}
+
+		a.continue-reading-link:after {
+			background-color: #ff9f24;
+		}
+
+		a.continue-reading-link i.icon-right-dir {
+			color: #2f1806
+		}
+
+		a.continue-reading-link:hover i.icon-right-dir {
+			color: #ff9f24
+		}
+
+		.page-link a,
+		.page-link > span > em {
+			border-color: #CCCCCC
+		}
+
+		.columnmore a {
+			background: #ff9f24;
+			color: #F7F7F7
+		}
+
+		.columnmore a:hover {
+			background: #2f1806;
+		}
+
+		.file,
+		.button,
+		#respond .form-submit input#submit,
+		input[type=submit],
+		input[type=reset] {
+			background-color: #f3eddd;
+			border-color: #CCCCCC;
+			box-shadow: 0 -10px 10px 0 #F7F7F7 inset;
+		}
+
+		.file:hover,
+		.button:hover,
+		#respond .form-submit input#submit:hover {
+			background-color: #F7F7F7;
+		}
+
+		.entry-content tr th,
+		.entry-content thead th {
+			color: #320200;
+		}
+
+		.entry-content fieldset,
+		#content tr td,
+		#content tr th,
+		#content thead th {
+			border-color: #CCCCCC;
+		}
+
+		#content tr.even td {
+			background-color: #F7F7F7 !important;
+		}
+
+		hr {
+			background-color: #CCCCCC;
+		}
+
+
+		.entry-content code {
+			border-color: #CCCCCC;
+			border-bottom-color: #2f1806;
+		}
+
+		.entry-content pre {
+			border-color: #CCCCCC;
+			background-color: #F7F7F7;
+		}
+
+		.entry-content blockquote {
+			border-color: #EEEEEE;
+		}
+
+		abbr,
+		acronym {
+			border-color: #320200;
+		}
+
+		.comment-meta a {
+			color: #320200;
+		}
+
+		#respond .form-allowed-tags {
+			color: #da9753;
+		}
+
+		.reply a {
+			background-color: #F7F7F7;
+			border-color: #EEEEEE;
+		}
+
+		.reply a:hover {
+			background-color: ;
+			color: #db4500;
+		}
+
+		.entry-meta .icon-metas:before {
+			color: #CCCCCC;
+		}
+
+		.entry-meta span a,
+		.comments-link a {
+			color: #666666;
+		}
+
+		.entry-meta span a:hover,
+		.comments-link a:hover {
+			color: ;
+		}
+
+		.nav-next a:hover {}
+
+		.nav-previous a:hover {}
+
+		.pagination {
+			border-color: #ededed;
+		}
+
+		.pagination span,
+		.pagination a {
+			background: #F7F7F7;
+			border-left-color: #dddddd;
+			border-right-color: #ffffff;
+		}
+
+		.pagination a:hover {
+			background: #ffffff;
+		}
+
+		#searchform input[type="text"] {
+			color: #da9753;
+		}
+
+		.caption-accented .wp-caption {
+			background-color: rgba(47, 24, 6, 0.8);
+			color: #f3eddd
+		}
+
+		.tempera-image-one .entry-content img[class*='align'],
+		.tempera-image-one .entry-summary img[class*='align'],
+		.tempera-image-two .entry-content img[class*='align'],
+		.tempera-image-two .entry-summary img[class*='align'] {
+			border-color: #2f1806;
+		}
+
+		#content p,
+		#content ul,
+		#content ol,
+		#content,
+		#frontpage blockquote {
+			text-align: Default;
+		}
+
+		#content p,
+		#content ul,
+		#content ol,
+		.widget-area,
+		.widget-area a,
+		table,
+		table td {
+			font-size: 15px;
+			word-spacing: Default;
+			letter-spacing: Default;
+		}
+
+		#content p,
+		#content ul,
+		#content ol,
+		.widget-area,
+		.widget-area a {
+			line-height: 1.4em;
+		}
+
+		#content h1.entry-title,
+		#content h2.entry-title {
+			font-size: 34px;
+		}
+
+		.widget-title,
+		.widget-title a {
+			font-size: 18px;
+		}
+
+		#content .entry-content h1 {
+			font-size: 32px;
+		}
+
+		#content .entry-content h2 {
+			font-size: 28px;
+		}
+
+		#content .entry-content h3 {
+			font-size: 24px;
+		}
+
+		#content .entry-content h4 {
+			font-size: 20px;
+		}
+
+		#content .entry-content h5 {
+			font-size: 16px;
+		}
+
+		#content .entry-content h6 {
+			font-size: 12px;
+		}
+
+		#site-title span a {
+			font-size: 38px;
+		}
+
+		#access ul li a {
+			font-size: 18px;
+		}
+
+		#access ul ul ul a {
+			font-size: 16px;
+		}
+
+		.nocomments,
+		.nocomments2 {
+			display: none;
+		}
+
+		#header-container > div {
+			margin: 10px 0 0 0px;
+		}
+
+		#content p,
+		#content ul,
+		#content ol,
+		#content dd,
+		#content pre,
+		#content hr {
+			margin-bottom: 0.7em;
+		}
+
+		#access > .menu {
+			float: right;
+		}
+
+		#access > .menu > ul > li > a > span {
+			border-left: 1px solid;
+			-moz-box-shadow: -1px 0 0;
+			-webkit-box-shadow: -1px 0 0;
+			box-shadow: -1px 0 0;
+			border-right: 0;
+		}
+
+		#nav-toggle {
+			text-align: right;
+		}
+
+		#toTop {
+			background: #f3eddd;
+			margin-left: 1110px;
+		}
+
+		#toTop:hover .icon-back2top:before {
+			color: #ff9f24;
+		}
+
+		#main {
+			margin-top: 0px;
+		}
+
+		#forbottom {
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+
+		#header-widget-area {
+			width: 33%;
+		}
+
+		#branding {
+			height: 170px;
+		}
+	</style>
+	<style type="text/css">
+		/* Tempera Custom CSS */
+		/* Remove Menu Top Padding */
+
+		#access {
+			display: block;
+			float: left;
+			margin: 0 auto;
+			width: 100%;
+		}
+		/* Remove Homepage Post Top Padding */
+
+		.slider-wrapper {
+			display: block;
+			float: none;
+			clear: both;
+			margin: 0 auto;
+		}
+		/* Hide Tempera and Wordpress footer links */
+
+		#footer2>span {
+			display: none !important;
+		}
+		/* Widget Header Style */
+
+		.sidey .widget-title {
+			color: #fff;
+			font-size: 1.2em;
+			font-weight: bolder;
+			border-color: #fff;
+			background-image: url("http://107.22.173.238/cowboyfestival/files/2015/11/headerbg.jpg");
+		}
+		/* Hide "More Posts" Button on Home Page */
+
+		#cryout_ajax_more_trigger {
+			color: #ff9f24 !important;
+			background: #2f1806;
+			border-bottom-color: #2f1806;
+			display: none;
+		}
+		/* No Margin on h1 */
+
+		h1,
+		.entry-content h2,
+		.entry-content h3,
+		.entry-content h4,
+		.entry-content h5,
+		.entry-content h6 {
+			line-height: 1.5em;
+			margin: 0px;
+		}
+
+		@media screen and (max-width: 700px) {
+			#mobile {
+				float: center;
+				width: 100% !important;
+			}
+			#mobile2 {
+				clear: both;
+				float: center;
+				width: 100% !important;
+			}
+			/* Nav BG Color on Mobile */
+			#access,
+			#nav-toggle {
+				background-color: #e3d8c6;
+			}
+			.sidebar {
+				float: center !important;
+				height: 100%;
+				width: 100% !important;
+				padding-left: 10px;
+				margin-left: 10px;
+				border-bottom: 2px solid #d0b195 !important;
+				text-align: center;
+			}
+		}
+		/*--------------------- Moving Menu Above ----------------------*/
+
+		@media screen and (min-width: 700px) {
+			/* Move Menu to Top */
+			#access {
+				/* display: block; */
+				/* float: left; */
+				/* margin: 0 auto; */
+				width: 960px;
+				position: absolute;
+				top: 32px;
+			}
+			/* Lower Header */
+			#branding {
+				display: block;
+				float: left;
+				clear: both;
+				height: 75px;
+				padding-top: 38px;
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+			}
+			/* Header Image Height Resize */
+			#branding {
+				display: block;
+				float: left;
+				clear: both;
+				height: 170px;
+				padding-top: 0px;
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+			}
+			/* Lower Logo */
+			#header-container > div {
+				margin: 10px 0 0 0px;
+			}
+			/* Remove Menu Borders */
+			#access > .menu > ul > li > a > span {
+				border-left: 0px solid transparent;
+				border-right: 0 none;
+				box-shadow: -1px 0 0 transparent;
+			}
+		}
+		/*--------------------- End Moving Menu Above ----------------------*/
+		/* Footer Widget Styling */
+
+		#footer .widget-title {
+			background-color: transparent;
+			border-color: transparent;
+			font-weight: bolder;
+			padding-left: 0px !important;
+		}
+		/* Bottom Border on Page Headers */
+
+		#content h2.entry-title a,
+		#content h1.entry-title,
+		#content h2.entry-title {
+			font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
+			border-bottom: 4px solid #d0b195;
+		}
+		/* Exclude Bottom Border on Home Page Header */
+
+		body.home.page.page-id-4535.page-template-default.logged-in.admin-bar.custom-background.tempera-image-none.caption-dark.customize-support .entry-title {
+			border-bottom: 0px !important;
+		}
+		/* Main Content Texture BG */
+
+		#main {
+			background: url("http://107.22.173.238/cowboyfestival/files/2015/11/Cowboy-content-bg.jpg") repeat-x;
+			background-color: #f3eddd;
+		}
+		/* Hide Table Borders */
+
+		tr td,
+		#content tr th,
+		#content thead th {
+			border-color: transparent !important;
+		}
+
+		hr {
+			height: 2px;
+			border: 0;
+			background: #da9753;
+			color: #da9753;
+			width: 96%;
+			text-align: left;
+			margin-left: 0;
+		}
+		/* Performers Sidebar Div Class */
+
+		.sidebar {
+			float: right;
+			width: 30%;
+			padding-left: 10px;
+			margin-left: 10px;
+			border-left: 2px solid #d0b195;
+		}
+	</style>
+	<link rel="stylesheet" id="tempera_style_mobile" href="/clients/cowboyfestival/images/style-mobile.css" type="text/css" media="all">
+	<script type="text/javascript">
+		var cryout_global_content_width = 680;
+		var cryout_toTop_offset = 960;
+	</script>
+	<!--[if lt IE 9]>
+<script>
+document.createElement('header');
+document.createElement('nav');
+document.createElement('section');
+document.createElement('article');
+document.createElement('aside');
+document.createElement('footer');
+</script>
+<![endif]-->
+	<script type="text/javascript">
+		function makeDoubleDelegate(function1, function2) {
+			/* concatenate functions */
+			return function() {
+				if (function1) function1();
+				if (function2) function2();
+			}
+		}
+
+		function tempera_onload() {
+			/* Add responsive videos */
+			jQuery(".entry-content").fitVids();
+		}; // tempera_onload
+
+		jQuery(document).ready(function() {
+			/* enable mobile menu handle */
+			tempera_mobilemenu_init();
+		});
+
+		// make sure not to lose previous onload events
+		window.onload = makeDoubleDelegate(window.onload, tempera_onload);
+	</script>
+	<script src="/clients/cowboyfestival/images/a" async="" type="text/javascript"></script>
+</head>
+
+<body class="page page-id-4558 page-parent page-template-default custom-background tempera-image-none caption-dark">
+
+
+	<div id="wrapper" class="hfeed">
+		<div id="topbar">
+			<div id="topbar-inner"> </div>
+		</div>
+
+		<div id="header-full">
+			<header id="header">
+				<div id="masthead">
+					<div id="branding" role="banner">
+						<img id="bg_image" alt="" title="" src="/clients/cowboyfestival/images/Cowboy-Header1.jpg">
+						<div id="header-container">
+							<div>
+								<a id="logo" href="http://cowboyfestival.org/">
+									<img title="" alt="" src="/clients/cowboyfestival/images/Header_Image_Logix_and_Date_Banner.png">
+								</a>
+							</div>
+						</div>
+						<div style="clear:both;"></div>
+					</div>
+					<!-- #branding -->
+					<a id="nav-toggle">
+						<span>&nbsp;</span>
+					</a>
+					<nav id="access" role="navigation">
+						<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+						<div class="menu">
+							<ul id="prime_nav" class="menu">
+								<li id="menu-item-4316" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-4316">
+									<a href="http://cowboyfestival.org/">
+										<span>Home</span>
+									</a>
+								</li>
+								<li id="menu-item-4560" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4558 current_page_item menu-item-4560">
+									<a href="http://cowboyfestival.org/schedule/">
+										<span>Schedule</span>
+									</a>
+								</li>
+								<li id="menu-item-4557" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4557">
+									<a href="http://cowboyfestival.org/performers/">
+										<span>Performers</span>
+									</a>
+								</li>
+								<li id="menu-item-4359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4359">
+									<a href="http://cowboyfestival.org/venues/">
+										<span>Venues</span>
+									</a>
+								</li>
+								<li id="menu-item-4566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4566">
+									<a href="http://cowboyfestival.org/visit/">
+										<span>Visit</span>
+									</a>
+								</li>
+								<li id="menu-item-4565" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4565">
+									<a  href="http://cowboyfestival.org/about/">
+										<span>About</span>
+									</a>
+									<ul style="display: none;">
+										<li id="menu-item-4920" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4920">
+											<a href="http://cowboyfestival.org/about#contact">
+												<span>Contact</span>
+											</a>
+										</li>
+										<li id="menu-item-4573" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4573">
+											<a href="http://cowboyfestival.org/faq/">
+												<span>FAQ</span>
+											</a>
+										</li>
+										<li id="menu-item-4927" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4927">
+											<a href="http://cowboyfestival.org/about/vendors/">
+												<span>Vendors</span>
+											</a>
+										</li>
+										<li id="menu-item-5062" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5062">
+											<a href="http://www.santaclaritavolunteers.com/">
+												<span>Volunteers</span>
+											</a>
+										</li>
+										<li id="menu-item-5159" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5159">
+											<a href="http://cowboyfestival.org/about/press-room/">
+												<span>Press Room</span>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<!-- #access -->
+				</div>
+				<!-- #masthead -->
+			</header>
+			<!-- #header -->
+		</div>
+		<!-- #header-full -->
+
+		<div style="clear:both;height:0;"> </div>
+
+		<div id="main">
+			<div id="toTop"><i class="icon-back2top"></i> </div>
+			<div id="forbottom">
+
+				<div style="clear:both;"> </div>
+
+				<section id="container" class="one-column">
+
+					<div id="content" role="main">
+<!--tix content-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+
+						<!-- #comments -->
+
+					</div>
+					<!-- #content -->
+				</section>
+				<!-- #container -->
+
+
+				<div style="clear:both;"></div>
+			</div>
+			<!-- #forbottom -->
+
+
+			<footer id="footer" role="contentinfo">
+				<div id="colophon">
+
+
+
+					<div id="footer-widget-area" role="complementary" class="footertwo">
+
+						<div id="first" class="widget-area">
+							<ul class="xoxo">
+								<li id="text-2" class="widget-container widget_text">
+
+									<div class="textwidget">
+										<!-- Begin MailChimp Signup Form -->
+										<div class="enotify-formular" style="text-align: left;">
+
+											<!--End mc_embed_signup-->
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- #first .widget-area -->
+
+						<div id="second" class="widget-area">
+							<ul class="xoxo">
+								<li id="text-3" class="widget-container widget_text">
+									<h3 class="widget-title">Cowboy Festival</h3>
+									<div class="textwidget">
+										<p>April 20 - 24, 2016
+											<br>
+											<a href="mailto:cowboy@santa-clarita.com">cowboy@santa-clarita.com</a>
+											<br> 661-250-3735
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- #second .widget-area -->
+
+
+					</div>
+					<!-- #footer-widget-area -->
+
+				</div>
+				<!-- #colophon -->
+
+				<div id="footer2">
+
+					<div id="site-copyright">&#169;City of Santa Clarita.</div>
+					<div class="socials" id="sfooter">
+						<a target="_blank" rel="nofollow" href="https://www.facebook.com/CowboyFestival/" class="socialicons social-Facebook" title="Facebook">
+							<img alt="Facebook" src="/clients/cowboyfestival/images/Facebook.png">
+							<div class="socials-hover"></div>
+						</a>
+						<a target="_blank" rel="nofollow" href="https://www.flickr.com/photos/cityofsantaclarita/collections/72157630654104338/" class="socialicons social-Flickr" title="Flickr">
+							<img alt="Flickr" src="/clients/cowboyfestival/images/Flickr.png">
+							<div class="socials-hover"></div>
+						</a>
+						<a target="_blank" rel="nofollow" href="https://twitter.com/CowboyFestSC" class="socialicons social-Twitter" title="Twitter">
+							<img alt="Twitter" src="/clients/cowboyfestival/images/Twitter.png">
+							<div class="socials-hover"></div>
+						</a>
+					</div>
+					<span style="display:block;float:right;text-align:right;padding:5px 20px 5px;text-transform:uppercase;font-size:11px;">
+						Powered by <a target="_blank" href="http://www.cryoutcreations.eu/" title="Tempera Theme by Cryout Creations">Tempera</a> &amp; <a target="_blank" href="http://wordpress.org/" title="Semantic Personal Publishing Platform">  WordPress.		</a>
+					</span>
+					<!-- #site-info -->
+
+				</div>
+				<!-- #footer2 -->
+
+			</footer>
+			<!-- #footer -->
+
+		</div>
+		<!-- #main -->
+	</div>
+	<!-- #wrapper -->
+
+
+	<script type="text/javascript" src="/clients/cowboyfestival/images/jquery.js"></script>
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		var _wpcf7 = {
+			"loaderUrl": "http:\/\/cowboyfestival.org\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif",
+			"recaptchaEmpty": "Please verify that you are not a robot.",
+			"sending": "Sending ...",
+			"cached": "1"
+		};
+		/* ]]> */
+	</script>
+	<script type="text/javascript" src="/clients/cowboyfestival/images/scripts.js"></script>
+	<script type="text/javascript" src="/clients/cowboyfestival/images/comment-reply.js"></script>
+</div>
+</form>
+</body>
+</html>

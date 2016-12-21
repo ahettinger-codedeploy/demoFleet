@@ -1,0 +1,288 @@
+<%
+'changelog'
+'LSP 07/28/16 - initial develompent'
+%>
+<!DOCTYPE html>
+
+<html prefix="og: http://ogp.me/ns#" lang="en-US">
+<!--<![endif]-->
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+	<!-- / Yoast SEO plugin. -->
+
+	<link rel="alternate" type="application/rss+xml" title="Arizona Repertory Singers » Feed" href="http://www.arsingers.org/feed/">
+	<link rel="alternate" type="application/rss+xml" title="Arizona Repertory Singers » Comments Feed" href="http://www.arsingers.org/comments/feed/">
+	<link rel="alternate" type="application/rss+xml" title="Arizona Repertory Singers » 2016 Holiday Concerts Comments Feed" href="http://www.arsingers.org/2016-holiday-concerts/feed/">
+
+	<link rel="stylesheet" id="scap.flashblock-css" href="/clients/arsingers/images/flashblock.css" type="text/css" media="all">
+	<link rel="stylesheet" id="scap.player-css" href="/clients/arsingers/images/player.css" type="text/css" media="all">
+	<link rel="stylesheet" id="category-posts-css" href="/clients/arsingers/images/cat-posts.css" type="text/css" media="all">
+	<link rel="stylesheet" id="cff-css" href="/clients/arsingers/images/cff-style.css" type="text/css" media="all">
+
+	<link rel="stylesheet" id="twentytwelve-fonts-css" href="/clients/arsingers/images/css.css" type="text/css" media="all">
+	<link rel="stylesheet" id="twentytwelve-style-css" href="/clients/arsingers/images/style.css" type="text/css" media="all">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentytwelve-ie-css'  href='http://www.arsingers.org/wp-content/themes/twentytwelve/css/ie.css?ver=20121010' type='text/css' media='all' />
+<![endif]-->
+	<script type="text/javascript" src="/clients/arsingers/images/soundmanager2-nodebug-jsmin.js"></script>
+	<script type="text/javascript" src="/clients/arsingers/images/jquery.js"></script>
+	<script type="text/javascript" src="/clients/arsingers/images/jquery-migrate.js"></script>
+	<link rel="https://api.w.org/" href="http://www.arsingers.org/wp-json/">
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.arsingers.org/xmlrpc.php?rsd">
+	<meta name="generator" content="WordPress 4.5.3">
+	<link rel="shortlink" href="http://www.arsingers.org/?p=1803">
+	<link rel="alternate" type="application/json+oembed" href="http://www.arsingers.org/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.arsingers.org%2F2016-holiday-concerts%2F">
+	<link rel="alternate" type="text/xml+oembed" href="http://www.arsingers.org/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.arsingers.org%2F2016-holiday-concerts%2F&amp;format=xml">
+	<!-- <meta name="NextGEN" version="2.1.0" /> -->
+
+	<style type="text/css" id="twentytwelve-header-css">
+		.site-title,
+		.site-description {
+			position: absolute;
+			clip: rect(1px 1px 1px 1px);
+			/* IE7 */
+			clip: rect(1px, 1px, 1px, 1px);
+		}
+	</style>
+	<style type="text/css" id="custom-background-css">
+		body.custom-background {
+			background-image: url('/clients/arsingers/images/Background1.png');
+			background-repeat: repeat-x;
+			background-position: top center;
+			background-attachment: fixed;
+		}
+	</style>
+	<style type="text/css">
+		.wpaudio-container {
+			display: inline-block;
+			font-family: Sans-serif;
+			line-height: 1;
+			*display: inline;
+			zoom: 1;
+			margin: 0;
+			border: 0;
+			padding: 0;
+		}
+		
+		.wpaudio-container a {
+			color: #24f;
+			text-decoration: none;
+			margin: 0;
+			border: 0;
+			padding: 0;
+		}
+		
+		.wpaudio-container .wpaudio {
+			font-family: Sans-serif;
+			font-size: 14px;
+			font-weight: normal;
+			letter-spacing: normal;
+			margin: 0;
+			border: 0;
+			padding: 0;
+		}
+		
+		.wpaudio-play {
+			margin: 0 5px 0 0;
+			width: 14px;
+			height: 13px;
+			background: #ccc;
+			vertical-align: baseline;
+			border: 0;
+			padding: 0;
+		}
+		
+		.wpaudio-slide {
+			display: none;
+			margin: 0;
+			border: 0;
+			padding: 0;
+		}
+		
+		.wpaudio-bar {
+			position: relative;
+			margin: 2px 0 0 19px;
+			height: 5px;
+			font-size: 1px;
+			background: #eee;
+			border: 0;
+			padding: 0;
+		}
+		
+		.wpaudio-bar-playable {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 100%;
+			height: 5px;
+			z-index: 11;
+			background: #ccc;
+			margin: 0;
+			border: 0;
+			padding: 0;
+		}
+		
+		.wpaudio-bar-position {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 100%;
+			height: 5px;
+			z-index: 12;
+			background: #46f;
+			margin: 0;
+			border: 0;
+			padding: 0;
+		}
+		
+		.wpaudio-bar-click {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 5px;
+			z-index: 13;
+			cursor: pointer;
+			margin: 0;
+			border: 0;
+			padding: 0;
+		}
+		
+		.wpaudio-meta {
+			margin: 3px 0 0 19px;
+			font-size: 11px;
+			color: #aaa;
+			border: 0;
+			padding: 0;
+		}
+		
+		.wpaudio-download {
+			float: right;
+			margin: 0;
+			border: 0;
+			padding: 0;
+		}
+		
+		.wpaudio-container a:visited {
+			color: #24f;
+			margin: 0;
+			border: 0;
+			padding: 0;
+		}
+		
+		.wpaudio-container a:hover {
+			color: #02f;
+			margin: 0;
+			border: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+
+<body class="single single-post postid-1803 single-format-standard custom-background custom-font-enabled single-author">
+	<div id="page" class="hfeed site">
+		<header id="masthead" class="site-header" role="banner">
+			<hgroup>
+				<h1 class="site-title"><a href="http://www.arsingers.org/" title="Arizona Repertory Singers" rel="home">Arizona Repertory Singers</a></h1>
+				<h2 class="site-description">Since 1984</h2>
+			</hgroup>
+
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<button class="menu-toggle">Menu</button>
+				<a class="assistive-text" href="#content" title="Skip to content">Skip to content</a>
+				<div class="menu-main-menu-container">
+					<ul id="menu-main-menu" class="nav-menu">
+						<li id="menu-item-763" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-763"><a href="http://www.arsingers.org/">Home</a></li>
+						<li id="menu-item-124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-124"><a href="http://www.arsingers.org/about-the-arizona-repertory-singers/">About</a>
+							<ul class="sub-menu">
+								<li id="menu-item-1843" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1843"><a href="http://www.arsingers.org/ars-announces-new-music-director/">Elliot Jones – Music Director</a></li>
+								<li id="menu-item-154" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-154"><a href="http://www.arsingers.org/about-the-arizona-repertory-singers/board-directors-2015-16/">Board of Directors</a></li>
+								<li id="menu-item-949" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-949"><a href="http://www.arsingers.org/30-years-at-a-glance/">30 Years at a Glance</a>
+									<ul class="sub-menu">
+										<li id="menu-item-1566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1566"><a href="http://www.arsingers.org/thomas-e-lerew-interim-music-director/">Thomas E. Lerew, DMA – Interim Music Director</a></li>
+									</ul>
+								</li>
+								<li id="menu-item-128" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-128"><a href="http://www.arsingers.org/about-the-arizona-repertory-singers/audience-feedback/">Audience Feedback</a></li>
+								<li id="menu-item-1482" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1482"><a href="http://www.arsingers.org/jeffry-jahn-tribute-2/">Jeffry Jahn Tribute</a>
+									<ul class="sub-menu">
+										<li id="menu-item-1485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1485"><a href="http://www.arsingers.org/jeffry-jahn-tribute/">In His Own Words</a></li>
+										<li id="menu-item-1545" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1545"><a href="http://www.arsingers.org/dr-jeffry-a-jahn/can-keep-singing/">How Can We Keep From Singing?</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li id="menu-item-786" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-786"><a href="#">Concerts and Events</a>
+							<ul class="sub-menu">
+								<li id="menu-item-1805" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-1805"><a href="http://www.arsingers.org/2016-holiday-concerts/">2016 Holiday Concerts</a></li>
+								<li id="menu-item-138" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-138"><a href="http://www.arsingers.org/category/past-concerts/">Past Concerts</a></li>
+								<li id="menu-item-216" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-216"><a href="http://www.arsingers.org/category/conductors-corner/">Conductor’s Corner</a></li>
+							</ul>
+						</li>
+						<li id="menu-item-122" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-122"><a href="http://www.arsingers.org/cds/">CDs</a></li>
+						<li id="menu-item-497" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-497"><a href="http://arsingers.org/">Multimedia</a>
+							<ul class="sub-menu">
+								<li id="menu-item-121" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-121"><a href="http://www.arsingers.org/video/">Video</a></li>
+								<li id="menu-item-336" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-336"><a href="http://www.arsingers.org/photos/">Photos</a></li>
+							</ul>
+						</li>
+						<li id="menu-item-127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-127"><a href="http://www.arsingers.org/singers/">Singers</a>
+							<ul class="sub-menu">
+								<li id="menu-item-1577" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1577"><a href="https://arsmembers.wordpress.com/">Singer Login</a></li>
+							</ul>
+						</li>
+						<li id="menu-item-432" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-432"><a href="http://www.arsingers.org/auditions/">Auditions</a></li>
+						<li id="menu-item-123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-123"><a href="http://www.arsingers.org/support-ars/">Support ARS</a></li>
+						<li id="menu-item-376" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-376"><a href="http://www.arsingers.org/sponsors/">Sponsors</a></li>
+					</ul>
+				</div>
+			</nav>
+			<!-- #site-navigation -->
+
+			<a href="http://www.arsingers.org/"><img src="/clients/arsingers/images/Arizona-Repertory-Singers-33-Years.jpg" class="header-image" alt="Arizona Repertory Singers" height="198" width="940"></a>
+		</header>
+		<!-- #masthead -->
+
+		<div id="main" class="wrapper">
+<!--tix content-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+		</div>
+		<!-- #main .wrapper -->
+		<footer id="colophon" role="contentinfo">
+			<div class="site-info">
+				<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform">Proudly powered by WordPress</a>
+			</div>
+			<!-- .site-info -->
+		</footer>
+		<!-- #colophon -->
+	</div>
+	<!-- #page -->
+
+	<!-- ngg_resource_manager_marker -->
+
+	<script type="text/javascript" src="/clients/arsingers/images/cff-scripts.js"></script>
+	<script type="text/javascript" src="/clients/arsingers/images/navigation.js"></script>
+	<script type="text/javascript" src="/clients/arsingers/images/wp-embed.js"></script>
+
+	<!-- WP Audio player plugin v1.9.4 - https://www.tipsandtricks-hq.com/wordpress-audio-music-player-plugin-4556/ -->
+
+</div>
+</form>
+</body>
+</html>

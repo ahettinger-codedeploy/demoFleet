@@ -1,0 +1,198 @@
+@charset "utf-8";
+	
+/* Normalizing/Tearing/Zeroing */
+#panel ol, #panel h1 {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	}
+#panel a img {
+	border-width: 0;
+	}
+	
+/* Content Styles */
+#panel, #panel input {
+	font: 16px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	}
+h1#heading-print {
+	width: 65px;
+	height: 24px;
+	background: url(../images/title.png) no-repeat 6px 3px;
+	padding: 3px 0 0 6px;
+	margin-bottom: 4px;
+	}
+	
+#panel li:hover {
+	background-color: #e2e8ed;
+	}
+#panel li {
+	cursor: pointer;
+	}
+#panel li.panel-disabled {
+	cursor: default;
+	color: #808080;
+	}
+#panel li.panel-disabled:hover {
+	background-color: transparent;
+	}
+	
+.checklist1 li { /*If this has the #panel id before it, rollover colors are overwritten */
+	padding: 1px 7px 2px 24px;
+	background: url(../images/gif/checkbox-off.gif) no-repeat 6px 0px; /*6px 2px*/
+	}
+#panel .checklist1 li.selected {
+	background-image: url(../images/gif/checkbox-on.gif);
+	}
+
+.radiolist1 li { /*See .checklist li notes */
+	padding: 3px 7px 3px 31px;
+	background: url(../images/gif/radiobutton-off.gif) no-repeat 6px 3px;
+	}
+#panel .radiolist1 li.selected {
+	background-image: url(../images/gif/radiobutton-on.gif);
+	}
+	
+#panel #yearspecific {
+	/*height: 16px;*/
+	text-align: right;
+	}
+#panel select#yearpicker {
+	display: inline;
+	font-size: 12px;
+	}
+#panel #yearselectall {
+	display: inline;
+	font-size: 12px;
+}
+
+#panel #otherprefs {
+/*	float: right; */
+	width: 200px;
+	margin: 8px 8px 0 8px;
+}
+
+#panel #otherprefs input {
+	/*color: #7a7c7d;*/
+	color: #7F7F7F;
+	border-width: 1px;
+	border-color: #bec6cc;
+	border-style: none none dotted;
+	background-color: transparent;
+/*	background-color: red;*/
+	width: 240px;
+	margin: 0 0 0 0;
+	padding: 0;
+}
+#panel #otherprefs .selected input {
+	color: #000;
+}
+
+#panel #buttons #cancel {
+	float: left;
+	}
+#panel #buttons #ok {
+	float: right;
+	}
+#panel #buttons em {
+	float: right;
+	font-size: 12px;
+	margin: 6px 15px 0 0;
+	color: #003663;
+	}
+
+/* DIV Styles */
+
+#panel h1 span {
+	display: none;
+	}
+#panel #col1 {
+	padding: 0 19px 0 14px;
+	}
+#panel #col1, #panel #col2, #panel #preview {
+	float: left;
+	}
+#panel #col2 {
+	border-left: 1px #bec6cc solid;
+}
+#panel .panel-section {
+	/*padding: 12px 0 12px 19px;*/
+	padding: 10px 0 10px 19px;
+	border-width: 1px;
+	border-color: #bec6cc;
+	border-style: solid none none none;
+	}
+#panel #firstChild {
+	border-top: none;
+	padding-top: 0;
+	}
+#panel #lastChild {
+	padding-bottom: 0;
+	}
+#panel #buttons {
+	clear: both;
+	padding: 8px 0 0;
+	height: 25px;
+	}
+#panel #preview {
+	background: url(../images/sunken.png) no-repeat;
+	margin: 0 8px 0 19px;
+	float: right;
+	}
+#panel #preview, #panel #previewLoading, #panel #previewInner, #panel #previewSheet {
+	width: 390px;
+	height: 300px;
+	}
+#panel #previewLoading {
+	background: url(../images/loading_white.gif) no-repeat 166px 139px;
+	}
+#panel #previewSheet {
+	background: url(../images/blankpage.gif) no-repeat 0 -300px;
+	}
+
+
+/* Background Styles */
+#panel-scroller {
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.2);
+	overflow: auto;
+	z-index: 4;
+	}
+#panel {
+	max-width: 800px; /* 768px */
+	min-width: 580px;
+/*	float: left;*/
+/*	position: absolute;*/
+	position: absolute;
+	top: 150px;
+	left: 75px;
+	z-index: 5;
+	}
+#panel .panel-bg {
+	background-repeat:no-repeat;
+	margin:0;
+	}
+#panel #topright {
+	background-image:url(../images/topright.png);
+	}
+#panel #topleft {
+	background-image:url(../images/topleft.png);
+	padding: 15px 0 0 15px;
+	}
+#panel #bottomleft {
+	clear: left;
+	background-image:url(../images/bottomleft.png);
+	height: 21px;
+	}
+#panel #bottomright {
+	background-image:url(../images/bottomright.png);
+	height: 21px;
+	}
+#panel #bottomright, #topright {
+	background-position: top right;
+	padding-right: 21px;
+	}

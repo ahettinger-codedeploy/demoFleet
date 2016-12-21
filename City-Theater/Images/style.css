@@ -1,0 +1,889 @@
+/*
+Theme Name: City Theater Company
+Theme URI: http://underscores.me/
+Author: Adam J. Wahlberg
+Author URI: http://wahlbergwebsite.com
+Description: A theme for the most awesomest theater company around: CTC!
+Version: 1.0-wpcom
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: city-theater
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ City Theater Company is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Reset
+2.0 Typography
+3.0 Elements
+4.0 Forms
+5.0 Navigation
+	5.1 Links
+	5.2 Menus
+6.0 Accessibility
+7.0 Alignments
+8.0 Clearings
+9.0 Widgets
+10.0 Content
+	10.1 Posts and pages
+	10.2 Asides
+	10.3 Comments
+11.0 Infinite scroll
+12.0 Media
+	12.1 Captions
+	12.2 Galleries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 Reset
+--------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li{
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+
+html {
+	overflow-y: scroll; /* Keeps page centered in all browsers regardless of content height */
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust:     100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+
+*,
+*:before,
+*:after { /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+	-webkit-box-sizing: border-box; /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
+	-moz-box-sizing:    border-box; /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
+	box-sizing:         border-box;
+}
+
+body {
+	background:url('/clients/City-theater/Images/bg.jpg') repeat;
+	position:relative;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+	display: block;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	quotes: "" "";
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+
+
+/*--------------------------------------------------------------
+2.0 Typography
+--------------------------------------------------------------*/
+
+body{
+	color:#abeaf8;
+	font-family: "Yanone Kaffeesatz", sans-serif;
+	font-size: 14px;
+	font-size: 1.4rem;
+	font-weight:200;
+	line-height: 1.5;
+	letter-spacing:0.017em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	clear: both;
+}
+
+h1 {
+	font-size: 2.6rem;
+}
+h2 {
+	font-size: 2.3rem;
+}
+h3 {
+	font-size: 2rem;
+}
+h4 {
+	font-size: 1.8rem;
+}
+h5 {
+	font-size: 1.6rem;
+}
+h6 {
+	font-size: 1.4rem;
+}
+
+p {
+	margin-bottom: 1.5rem;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+small {
+	font-size: 75%;
+}
+
+big {
+	font-size: 125%;
+}
+
+/*--------------------------------------------------------------
+3.0 Elements
+--------------------------------------------------------------*/
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ol, ul {
+	margin-bottom:1em;
+}
+
+ol {
+	list-style: decimal inside;
+}
+legend
+{color:#ffffff;}
+li > ul,
+li > ol {
+	margin-bottom: 0;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	 /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+/* Tix Override */
+
+/* remove small gap on tooltip */
+img {
+  border: 0; display: block;} 
+
+/* remove bullets on pricing */
+ul
+{
+    list-style-type: none;
+}
+
+
+
+
+figure {
+	margin: 0;
+}
+
+
+/*--------------------------------------------------------------
+4.0 Forms
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+4.5 Header
+--------------------------------------------------------------*/
+.site-branding {
+	padding:0;
+	position:absolute;
+	left:50%;
+}
+
+@media screen and (max-width:450px) {
+	.main-navigation {
+		margin-top:100px;
+	}
+
+	.site-branding {
+		margin-left:-145px;
+	}
+}
+@media screen and (min-width:451px) and (max-width:1500px) {
+	.main-navigation {
+		margin-top:150px;
+	}
+
+	.site-branding {
+		margin-left:-225px;
+	}
+}
+@media screen and (min-width:1501px) {
+	.main-navigation {
+		margin-top:200px;
+	}
+
+	.site-branding {
+		margin-left:-300px;
+	}
+}
+/*--------------------------------------------------------------
+5.0 Navigation
+--------------------------------------------------------------*/
+
+
+/*--------------------------------------------------------------
+5.1 Links
+--------------------------------------------------------------*/
+a {
+	color: royalblue;
+	text-decoration:none;
+}
+
+a:visited {
+	color: blueviolet;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+/*--------------------------------------------------------------
+5.2 Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	clear: both;
+	display:block;
+	text-align:center;
+	position:relative;
+	text-transform:uppercase;
+}
+#menu-primary-menu li {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+#menu-primary-menu > li {
+	position: relative;
+	border-right:1px solid #000;
+	display:inline-block;
+	border-top: 1px solid rgba(52, 49, 67, 0.6);
+	background: #353446;
+	background: -moz-linear-gradient(top,  #353446 0%, #242337 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#353446), color-stop(100%,#242337));
+	background: -webkit-linear-gradient(top,  #353446 0%,#242337 100%);
+	background: -o-linear-gradient(top,  #353446 0%,#242337 100%);
+	background: -ms-linear-gradient(top,  #353446 0%,#242337 100%);
+	background: linear-gradient(to bottom,  #353446 0%,#242337 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#353446', endColorstr='#242337',GradientType=0 );
+	-moz-box-shadow:     0 1px 2px #07070b;
+  	-webkit-box-shadow:  0 1px 2px #07070b;
+  	box-shadow:          0 1px 2px #07070b;
+  	font-size:1.6rem;
+}
+#menu-primary-menu > li:first-child {
+	border-radius:5px 0 0 5px;
+}
+#menu-primary-menu > li:last-child {
+	border-radius:0 5px 5px 0;
+}
+#menu-primary-menu > li:hover {
+	background: #242337;
+	background: -moz-linear-gradient(top, #242337 0%, #353446 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#242337), color-stop(100%,#353446));
+	background: -webkit-linear-gradient(top, #242337 0%,#353446 100%);
+	background: -o-linear-gradient(top, #242337 0%,#353446 100%);
+	background: -ms-linear-gradient(top, #242337 0%,#353446 100%);
+	background: linear-gradient(to bottom, #242337 0%,#353446 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242337', endColorstr='#353446',GradientType=0 );
+}
+.main-navigation a {
+	display:block;
+	text-decoration: none;
+	padding:.5em 1em;
+	text-decoration:none;
+	line-height:.8em;
+	color: #000;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.12);
+	font-weight:300;
+	text-align:center;
+}
+#menu-primary-menu > li:hover > a, .main-navigation .current_page_item > a {
+	color: #7ecdde;
+	text-shadow: 0 1px 1px #000;
+	text-decoration: none;
+}
+
+.sub-menu {
+	background: #262538;
+	-moz-box-shadow:    inset 0 2px 6px rgba(7, 7, 11, 0.6);
+  	-webkit-box-shadow: inset 0 2px 6px rgba(7, 7, 11, 0.6);
+  	box-shadow:         inset 0 2px 6px rgba(7, 7, 11, 0.6);
+  	border-bottom: 1px solid rgba(52, 49, 67, 0.6);
+  	border-top: none;
+  	float: left;
+	position: absolute;
+	left: -999em;
+	z-index: 99999;
+	text-transform:none;
+	background: #262538;
+  	width:100%;
+}
+
+#menu-primary-menu > li:hover > .sub-menu {
+	left: 0;
+}
+.sub-menu li {
+	border-top: 1px solid #302e41;
+	border-bottom: 1px solid #121026;
+	font-size:1.1rem;
+	line-height:1.3em;
+}
+.sub-menu li:hover a {
+	color: #7ecdde;
+	text-shadow: 0 1px 1px #000;
+	text-decoration: none;
+}
+.sub-menu li:first-child {
+	border-top:none;
+}
+.sub-menu li:last-child {
+	border-bottom:none;
+}
+.sub-menu a {
+	line-height:1.3em;
+	color:#000;
+}
+
+
+
+.main-navigation ul ul li:hover > ul {
+	left: 100%;
+}
+
+@media (max-width:833px) {
+
+	#content {
+		margin-top:8rem;
+	}
+
+	#responsive-menu .sub-menu {
+	  	float: none;
+		position: static;
+		width:93%;
+	}
+	#responsive-menu .sub-menu li {
+		border:none;
+		font-size:inherit;
+		line-height:inherit;
+	}
+
+}
+
+.site-main .comment-navigation,
+.site-main .paging-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.paging-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.paging-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+6.0 Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/*--------------------------------------------------------------
+7.0 Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+8.0 Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: '';
+	display: table;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+9.0 Widgets
+--------------------------------------------------------------*/
+.widget {
+	background:rgba(255,255,255,0.05);
+	border-radius:5px;
+	margin:10px 0;
+	padding:10px;
+}
+.widget-title {
+	text-align:center;
+}
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget */
+.widget_search .search-submit {
+	display: none;
+}
+#fearless-promo {
+	width:248px;
+	height:348px;
+	background:url('/clients/City-theater/Images/fearless.jpg');
+	border:1px solid #42607d;
+	-webkit-box-shadow: 0 10px 6px -6px #000;
+	-moz-box-shadow: 0 10px 6px -6px #000;
+	box-shadow: 0 10px 6px -6px #000;
+	margin:1em auto;
+}
+
+/*--------------------------------------------------------------
+10.0 Content
+--------------------------------------------------------------*/
+.container {
+	max-width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+	padding-left:20px;
+	padding-right:20px;
+}
+#masthead {
+	margin-bottom:2em;
+}
+.easingsliderlite-shadow {
+	position:absolute;
+	z-index:-5;
+}
+.home #primary, .home #secondary {
+	margin-top:4em;
+}
+#primary {
+	width:65%;
+	float:left;
+	padding-right:4%;
+}
+#secondary {
+	width:35%;
+	float:left;
+}
+@media (max-width:790px) {
+
+	#primary, #secondary {
+	float:none;
+	width:100%;
+}
+
+}
+.buy-tix {
+	display:block;
+	width:202px;
+	height:45px;
+	background:url('/clients/City-theater/Images/buy-tix.png');
+	margin:1em auto;
+}
+#paypal {
+	width:202px;
+	height:45px;
+	background:url('/clients/City-theater/Images/paypal.png');
+	display:block;
+	margin:1em auto;
+}
+.fearless-facebook {
+	width:202px;
+	height:45px;
+	background:url('/clients/City-theater/Images/fearless-facebook.png');
+	display:block;
+	margin:1em auto;
+}
+
+.buy-tix:hover, #paypal:hover, .fearless-facebook:hover {
+	background-position:0 -45px;
+}
+.entry-title {
+	margin: 0 0 0.5em;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+}
+
+/*--------------------------------------------------------------
+10.1 Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+10.2 Asides
+--------------------------------------------------------------*/
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+10.3 Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+11.0 Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .paging-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+12.0 Media
+--------------------------------------------------------------*/
+.page-content /clients/City-theater/Images.wp-smiley,
+.entry-content /clients/City-theater/Images.wp-smiley,
+.comment-content /clients/City-theater/Images.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+12.1 Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption /clients/City-theater/Images[class*="wp-image-"] {
+	display: block;
+	margin: 0 auto;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+/*--------------------------------------------------------------
+12.2 Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+
+
+
+/*--------------------------------------------------------------
+12.3 Misc
+--------------------------------------------------------------*/
+
+.logos {
+	background-color: #364e66;
+	margin:30px 0 0 0;
+	padding:10px;
+	box-shadow:0 5px 5px rgba(0,0,0,0.25) inset;
+}.logos h4 {
+	text-align:center;
+}
+
+/*------
+Facebook Like Box
+--------*/
+#fb-root {
+    display: none;
+}
+
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+    width: 100% !important;
+}
+#text-4 {
+	padding:0;
+}

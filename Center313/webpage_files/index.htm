@@ -1,0 +1,602 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<title>Player Frame</title>
+		
+			<script src="home_data/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="webpage_files/jquery-1.js"></script>
+			<script type="text/javascript" src="index_data/jquery_002.js"></script>
+			<script type="text/javascript" src="index_data/jquery.js"></script>
+			<script type="text/javascript" src="index_data/zoogle-player.js"></script>
+			
+			<link type="text/css" href="index_data/jquery-ui-1.css" rel="stylesheet">
+			<script type="text/javascript" src="index_data/jquery-ui-1.js"></script>
+			<style type="text/css">
+                .ui-slider .ui-slider-handle {
+                   color: white; position: absolute; z-index: 2; width: 0.2em; height: 1em; cursor: pointer;
+                 }
+                .ui-state-default, .ui-widget-content .ui-state-default {
+                   background:white;
+                   color: white;
+                }
+                
+				.ui-slider-horizontal { height: .7em; }
+				.ui-slider-horizontal .ui-slider-handle { top: -.2em; margin-left: 0; }
+				.ui-slider-horizontal .ui-slider-range { top: 0; height: 100%; }
+				.ui-slider-horizontal .ui-slider-range-min { left: 0; }
+				.ui-slider-horizontal .ui-slider-range-max { right: 0; }
+				#player_container.small a.ui-slider-handle { width: 4px; height: 16px; }
+			</style>
+
+			
+			<style type="text/css">
+				.audioplayer {
+					background: url("http://assets.sitezoogle.com/common/images/player/gradient.png?1327000252") 0 0 repeat-x;
+				}
+				
+				#player_container {
+					width:740px;
+					height:30px;
+				}
+				#player_container.small {
+					position: relative;
+					background-color:#666;
+					width:320px;
+					height:80px;
+					margin: 0px;
+					-moz-border-radius-topleft: 6px;
+					-webkit-border-top-left-radius: 6px;
+					-moz-border-radius-topright: 6px;
+					-webkit-border-top-right-radius: 6px;
+				}
+				
+				#player_container  ul#player_controls {
+					list-style-type:none;
+					padding:0;
+					margin: 0;
+				}
+				#player_container  ul#player_controls li {
+					overflow:hidden;
+					text-indent:-9999px;
+				}
+				
+				#player_play,
+				#player_pause {
+					display: block;
+					position: absolute;
+					left:24px;
+					top:2px;
+					width:30px;
+					height:30px;
+					cursor: pointer;
+				}
+				#player_play {
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") 0 0 no-repeat;
+				}
+				#player_play.jqjp_hover {
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") -41px 0 no-repeat;
+				}
+				#player_pause {
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") 0 -42px no-repeat;
+				}
+				#player_pause.jqjp_hover {
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") -41px -42px no-repeat;
+				}
+				
+				#ctrl_next {
+					position: absolute;
+					left:53px;
+					top:2px;
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") 0 -141px no-repeat;
+					width:28px;
+					height:28px;
+					cursor: pointer;
+				}
+				#ctrl_next:hover {
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") -29px -141px no-repeat;
+				}
+				#ctrl_next.disabled {
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") -58px -141px no-repeat;
+					cursor:default;
+				}
+				
+				
+				#player_stop {
+					position: absolute;
+					left:80px;
+					top:2px;
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") 0 -83px no-repeat;
+					width:28px;
+					height:28px;
+					cursor: pointer;
+					display: none;
+				}
+				#player_stop.jqjp_hover {
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") -29px -83px no-repeat;
+				}
+				
+				#player_current_track {
+					position: absolute;
+					left:165px;
+					top:2px;
+				    color: white;
+					width:222px;
+					height:14px;
+					font-size: 11px;
+					font-weight: bold;
+					font-family: arial,helvetica;
+					overflow: hidden;
+				}
+				
+				#player_container.small #player_current_track {
+					left:10px;
+					top:10px;
+					width: 220px;
+					line-height: 14px !important;
+				}
+				
+				
+				#player_current_track span {
+					white-space: nowrap;
+				}
+				
+				#ctrl_prev {
+					position: absolute;
+					left:0px;
+					top:2px;
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") 0 -112px no-repeat;
+					width:28px;
+					height:28px;
+					cursor: pointer;
+				}
+				#ctrl_prev:hover {
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") -26px -112px no-repeat;
+				}
+				#ctrl_prev.disabled {
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") -58px -112px no-repeat;
+					cursor:default;
+				}
+				#player_container.small {
+					height: 70px;
+				}
+				
+				
+				#player_container.small #player_play, #player_container.small #player_pause {
+					display: block;
+					position: absolute;
+					left:28px;
+					top:32px;
+					width:40px;
+					height:40px;
+					cursor: pointer;
+				}
+				#player_container.small #ctrl_prev {
+					position: absolute;
+					left:2px;
+					top:33px;
+				}
+				
+				#player_container.small #ctrl_next {
+					position: absolute;
+					left:60px;
+					top:32px;
+				}
+				
+				
+				#player_container.small #player_stop {
+					position: absolute;
+					left:90px;
+					top:32px;
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") 0 -83px no-repeat;
+					width:28px;
+					height:28px;
+					cursor: pointer;
+				}
+				
+				#player_volume_min {
+					position: absolute;
+					left:95px;
+					top:8px;
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") 0 -170px no-repeat;
+					width:18px;
+					height:28px;
+					cursor: pointer;
+				}
+				
+				#player_volume_min:hover {
+					position: absolute;
+					left:95px;
+					top:8px;
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") 0 -193px no-repeat;
+					width:18px;
+					height:28px;
+					cursor: pointer;
+				}
+				
+				#player_container.small #player_volume_min {
+					position: absolute;
+					left: 591px;
+					top: 33px;
+					margin-left: 30px;
+				}
+				
+				#player_container.small #player_volume_max {
+					position: absolute;
+					left: 591px;
+					top: 33px;
+					margin-left: 30px;
+				}
+				
+				#player_volume_bar {
+					position: absolute;
+					left:120px;
+					top:10px;
+					width:35px;
+					height:12px;
+					cursor: pointer;
+					background: url("http://assets.sitezoogle.com/common/images/player/volume_bar_white.gif?1327000252") 0 2px no-repeat;
+				}
+				
+				#player_volume_bar_value {
+					background: url("http://assets.sitezoogle.com/common/images/player/volume_bar_white.gif?1327000252") no-repeat 2px left;
+					width: 60px;
+					height:15px;
+					-webkit-border-bottom-left-radius: 0 0 !important;
+					-webkit-border-bottom-right-radius: 0 0 !important;
+				}
+				
+				
+				#player_container.small #player_volume_bar {
+					left:270px;
+					top:42px;
+				}
+				
+				
+				#play_time, #total_time {
+					position: absolute;
+					left:165px;
+					top:17px;
+					width:85px;
+					font-size:.7em;
+					font-family: monospace;
+				    color: white;
+				}
+				#total_time {
+					text-align: right;
+					display: none;
+				}
+				#player_container.small #play_time, #player_container.small #play_time {
+					left: 280px;
+					top:12px;
+					width:30px;
+					font-size:.8em;
+					line-height: 10px !important;
+				}
+				
+				#download_link {
+					position: absolute;
+					left: 410px;
+					top: 6px;
+					width: 65px;
+					font-size:.8em;
+				    color: #f2f2f2;
+				    text-align: center;
+				    background: rgba(0, 0, 0, 0.2);
+				    padding: 3px;
+				    border: 1px solid rgba(255, 255, 255, 0.5);;
+				    -webkit-border-radius: 3px;
+					-moz-border-radius: 3px;
+					border-radius: 3px
+				}
+				.small #download_link {
+					top: 10px;
+					left: 230px;
+				}
+				
+				#download_link a {
+					color: #f2f2f2;
+					font-family: arial,helvetica;
+					font-size:.7em;
+					text-transform: capitalize;
+					text-decoration: none;
+				}
+				
+				.small #download_link a {
+					font-size: 1.0em;
+				}
+				
+				#download_link a:hover { 
+					text-decoration: underline;
+				}
+				
+				.jScrollPaneContainer {
+				background: #efefef url(http://assets.sitezoogle.com/common/images/player/playlist_bg.png?1327000252) 0 0 repeat;
+				}
+				
+				.jScrollPaneTrack {
+					-moz-border-radius-topleft: 3px;
+					-webkit-border-top-left-radius: 3px;
+					-moz-border-radius-topright: 3px;
+					-webkit-border-top-right-radius: 3px;
+					-moz-border-radius-bottomleft: 3px;
+					-webkit-border-bottom-left-radius: 3px;
+					-moz-border-radius-bottomright: 3px;
+					-webkit-border-bottom-right-radius: 3px;
+				}
+				
+				.jScrollPaneDrag {
+					-moz-border-radius-topleft: 3px;
+					-webkit-border-top-left-radius: 3px;
+					-moz-border-radius-topright: 3px;
+					-webkit-border-top-right-radius: 3px;
+					-moz-border-radius-bottomleft: 3px;
+					-webkit-border-bottom-left-radius: 3px;
+					-moz-border-radius-bottomright: 3px;
+					-webkit-border-bottom-right-radius: 3px;
+				}
+				
+				#playlist_list {
+					width: 320px;
+					//height: 80px;
+					-moz-border-radius-bottomleft: 6px;
+					-webkit-border-bottom-left-radius: 6px;
+					-moz-border-radius-bottomright: 6px;
+					-webkit-border-bottom-right-radius: 6px;
+				}
+				
+				#playlist_list_bar {
+					height: 8px;
+					width: 320px;
+					-moz-border-radius-bottomleft: 6px;
+					-webkit-border-bottom-left-radius: 6px;
+					-moz-border-radius-bottomright: 6px;
+					-webkit-border-bottom-right-radius: 6px;
+				}
+				
+				#playlist_list ul{
+					list-style-type:none;
+					padding:5px 10px 10px 10px;
+					margin:0 0 10px 0;
+					border-top:none;
+					width:300px;
+					font-size:.9em;
+					-moz-border-radius-bottomleft: 6px;
+					-webkit-border-bottom-left-radius: 6px;
+					-moz-border-radius-bottomright: 6px;
+					-webkit-border-bottom-right-radius: 6px;
+				}
+				#playlist_list li{
+					padding: 2px 0 2px 0;
+					border-bottom:1px solid #e3e3e3;
+					cursor: pointer;
+					color: #666;
+					font-size: 11px;
+				}
+				
+				#playlist_list li:last-child {
+					border: none;
+				}
+				
+				#playlist_list li a {
+				  	position: absolute;
+					left: 255px;
+					font-weight: normal !important;
+					text-decoration: none;
+					text-transform: capitalize;
+					color: #666 !important;
+				}
+				
+				#playlist_list li a:hover {
+					color: #0D88C1 !important;
+				}
+				
+				#playlist_list li.playlist_current {
+					color:#0d88c1;
+					cursor: default;
+					font-weight: bold;
+				}
+				
+				#playlist_list li.playlist_hover {
+					color:#0d88c1;
+				}
+
+				#player_progress {
+					position: absolute;
+					left:200px;
+					top:19px;
+					background: url("http://assets.sitezoogle.com/common/images/player/progress-bg.png?1327000252") 0 0 repeat;
+					height:5px;
+					width:200px;
+
+				}
+				.small #player_progress {
+					left:10px;
+					top:26px;
+					width:300px;
+				}
+				#player_progress_load_bar {
+					background: url("http://assets.sitezoogle.com/common/images/player/bar_load.png?1327000252") 0 0 repeat;
+					width:0px;
+					height:5px;
+					cursor: pointer;
+				}
+				#player_progress_load_bar.jqjp_buffer {
+					background: url("http://assets.sitezoogle.com/common/images/player/bar_buffer.gif?1327000252")  top left repeat-x;
+				}
+				#player_progress_play_bar {
+					background: url("http://assets.sitezoogle.com/common/images/player/bar_play.gif?1327000252") top left repeat-x ;
+					width:0px;
+					height:5px;
+				}
+				
+				#player_volume_min, #player_volume_max {
+					position: absolute;
+					left:95px;
+					top:8px;
+					width:18px;
+					height:14px;
+					cursor: pointer;
+				}
+				#player_container.small #player_volume_min, #player_container.small #player_volume_max {
+					left:221px;
+					top:42px;
+				}
+				
+				#player_volume_min {
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") 0 -170px no-repeat;
+				}
+				#player_volume_max {
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") 0 -194px no-repeat;
+					display: none;
+				}
+				
+				#player_volume_min:hover {
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") -20px -170px no-repeat;
+					height: 14px;
+				}
+				#player_volume_max:hover {
+					background: url("http://assets.sitezoogle.com/common/images/player/spirites-white.png?1327000252") -20px -194px no-repeat;
+					height: 14px;
+				}
+			</style>
+		
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+
+			_gaq.push(['_setAccount','UA-37926563-1']);
+			_gaq.push(['_trackPageview', 'musicplayer frame']);
+
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	
+
+	</head>
+
+   
+	<body class="audioplayer" style="background-color: #000000">
+	
+		<table align="center" cellspacing="0">
+		<tbody><tr>
+		<td>
+			
+			<div id="player_container" class=" musicplayer-swmp">
+			
+				<ul id="player_controls">
+					<li id="player_play">play</li>
+					<li style="display: none;" id="player_pause">pause</li>
+					<li id="player_stop">stop</li>
+			
+					<li id="player_volume_min">min volume</li>
+					<li id="player_volume_max">max volume</li>
+					<li id="ctrl_prev">previous</li>
+					<li id="ctrl_next">next</li>
+				</ul>
+			
+				<div id="player_current_track"><span class="scroll-text">otherside</span></div>
+				<div id="play_time">00:00</div>
+				<div id="total_time">02:50</div>
+		        <div id="player_progress">
+					<div style="width: 0%;" id="player_progress_load_bar">
+						<div style="width: 0%;" id="player_progress_play_bar"></div>
+					</div>
+				</div>
+
+				<div class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" id="player_volume_bar">
+					<div style="width: 28px;" id="player_volume_bar_value"></div>
+				<a style="left: 80%;" class="ui-slider-handle ui-state-default ui-corner-all" href="#"></a></div>
+			
+			
+				<div style="display: none;" id="download_link"></div>
+		    
+			</div><div style="position: absolute; top: 0px; left: -9999px;" id="player_container_jplayer" zplayer="1"><audio preload="none" id="jqjp_audio_0"></audio><div style="text-indent: -9999px;" id="jqjp_force_0">0.6719308665064283</div></div>
+			
+		<script type="text/javascript">
+			function stopPlayer(id) {
+                        if ( typeof(id) === "undefined" ) {
+ 			  jQuery("[zplayer]").jPlayer("pause");
+                        }
+                        else {
+  			  jQuery("[zplayer]:not(" + id + ")").jPlayer("pause");
+                        }
+			}
+
+		jQuery(document).ready(function($){
+
+		  // add a scrolling effect to the track title if it's too wide to display
+		  $("#player_current_track").bind('marquee', function() {
+			var boxWidth = $(this).width();
+			var textWidth = $('.scroll-text', $(this)).width();
+			if (textWidth > boxWidth) {
+			  var animSpeed = (textWidth - boxWidth) * 40; // 50 pix per sec
+			  $(this)
+				// don't scroll for a second
+				.animate({dummy: 1}, 1000)
+				.animate({scrollLeft: textWidth - boxWidth + 20}, animSpeed)
+				.animate({scrollLeft: -20}, animSpeed / 2, function() {
+				  $(this).trigger('marquee');
+				});
+			}
+		  }).trigger('marquee');
+
+			
+			var myPlayList = [
+			{
+				name: 'otherside',
+				mp3: "/media/musicplayer/otherside-dress-rehearsal-96.mp3",
+				duration : 170 
+			, onPlay : function() { _gaq.push(['_trackEvent', 'Tracks', 'Plays', 'otherside']); }
+			, onSkip : function(played) {
+				if(typeof(_gaq) != "undefined") {
+					// skips are less than 10% of the track
+					if ( played < 10 ) {
+						_gaq.push(['_trackEvent', 'Tracks', 'Skips', 'otherside']);
+					}
+					// partials are less than 80% of the track
+					else if ( played < 80 ) {
+						_gaq.push(['_trackEvent', 'Tracks', 'Partial', 'otherside']);
+					}
+				}
+			}
+		
+			}
+			,
+			{
+				name: 'Our God and Your Love',
+				mp3: "/media/musicplayer/Our-god-and-your-love-96.mp3",
+				duration : 819 
+			, onPlay : function() { _gaq.push(['_trackEvent', 'Tracks', 'Plays', 'Our God and Your Love']); }
+			, onSkip : function(played) {
+				if(typeof(_gaq) != "undefined") {
+					// skips are less than 10% of the track
+					if ( played < 10 ) {
+						_gaq.push(['_trackEvent', 'Tracks', 'Skips', 'Our God and Your Love']);
+					}
+					// partials are less than 80% of the track
+					else if ( played < 80 ) {
+						_gaq.push(['_trackEvent', 'Tracks', 'Partial', 'Our God and Your Love']);
+					}
+				}
+			}
+		
+			}
+			];
+			jQuery("#player_container").initMusicPlayer({
+			
+				data:myPlayList,
+				autoplay: false 
+				, shuffle: true
+			
+			});
+			
+		  });
+		</script>
+		
+	
+
+
+
+</td></tr></tbody></table></body></html>

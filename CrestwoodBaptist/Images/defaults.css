@@ -1,0 +1,507 @@
+#ViewUserMessages {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;    
+    background: #E6F2FF;
+    border: solid 1px #0052A0;
+    padding: 10px 10px 10px 10px;
+    color: black;
+}
+
+#ViewUserMessages h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: black;
+}
+
+#ViewUserMessages ul{
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+#ViewUserMessages li {
+    margin-left: 15px;
+    font-weight: normal;
+}
+
+#ViewUserMessages li span {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#ViewUserMessages li span.error{
+   color: red;
+}
+
+#ViewUserMessages li span.warning{
+   color: #998300;
+}
+
+#ViewUserMessages li span.notice{
+   color: black;
+}
+
+/******************* TABLE GENERATOR *********************/
+
+table.dataTable {
+    width: 100%;
+    margin: 0px;
+    color: black;
+}
+
+table.dataTable th, table.dataTable td.dataTableRowEven, table.dataTable td.dataTableRowOdd {
+    padding: 2px;
+    margin: 0px;
+}
+
+table.dataTable td.dataTableRowEven, table.dataTable td.dataTableRowOdd {
+    vertical-align: top;
+}
+
+table.dataTable th {
+    font-weight: bold;
+    color: black;
+    background-color: rgb(211, 220, 227);
+    text-align: center;
+    border-bottom: solid 1px white;
+    border-right: solid 1px white;
+    border-top: solid 1px white;
+}
+
+table.dataTable a, table.dataTable a:visited {
+    color: blue;
+    text-decoration: underline;
+}
+
+table.dataTable a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+table.dataTable td {
+    border-bottom: solid 1px white;
+    border-right: solid 1px white;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+table.dataTable td.dataTableRowEven {
+    background-color: #d5d5d5;
+}
+
+table.dataTable td.dataTableRowOdd {
+    background-color: #e5e5e5;
+}
+
+table.dataTable div.dataTableImageWrap {
+    width: 100%;
+    text-align: center;
+}
+
+table.dataTable div.dataTableCrowdedCell {
+    margin-bottom: 2px;
+}
+
+table.dataTable .dg_first_column {
+    border-left: solid 1px white;
+}
+
+
+/******************* FORM GENERAL *********************/
+
+form            { margin: 0px; 
+                  padding: 0px; }
+
+.form-error {
+    color: red;
+    font-weight: bold;
+    line-height: 1.5em;
+    padding: 0 5px 0 5px;
+}
+p.formError{
+    color: red;
+    font-weight: bold;
+}
+.form-required, .requiredFieldsStar {
+    color: red;
+    width: 18px;
+    float: left;
+}
+
+/******************* SYSTEM FORM DEFAULTS *********************/
+div.row-label-wrapper {
+     width: 150px;
+}
+
+div.elementDescription {
+    /* Margin should equal the row-label-wrapper width
+       plus the .form-required width */
+    margin: 0 0 0 168px;
+    /* Width should be the same as the row-element below */
+    width: 300px;
+}
+
+div.row-element, div.group-row-element{
+    width: 300px;
+}
+
+form.dynamicForm a, form.dynamicForm a:visited {
+    color: blue;
+    text-decoration: underline;
+}
+
+form.dynamicForm a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+form.dynamicForm div.rowOdd, 
+form.dynamicForm div.rowOddFirst {
+                        background-color: #F6F6F6;
+                        color: black;
+                    }
+
+
+form.dynamicForm div.rowEven, 
+form.dynamicForm div.rowEvenFirst{
+                        background-color: #fff;
+                        color: black;
+                    }
+                    
+form.dynamicForm div.rowOddFirst, 
+form.dynamicForm div.rowEvenFirst { border: solid 1px #CCCCCC; }
+
+form.dynamicForm div.rowEven,
+form.dynamicForm div.rowOdd {
+                        border: solid 1px #CCCCCC;
+                        border-top: none;
+                    }
+
+#UsersProfileForm-passwordHelp-row div.row-label-wrapper {
+    display: none;
+}
+
+#UsersProfileForm-passwordHelp-row div.row-element {
+    width: 90%;
+}
+
+#UserLoginForm div.row-label-wrapper {
+     width: 95px;
+}
+
+#UserLoginForm div.row-element {
+    width: 300px;
+}
+
+
+/******************* CSS BASED FORMS *********************/
+
+input {
+margin: 0;
+padding: 0;
+}
+
+textarea {
+    width: 242px;
+    height: 200px;
+}
+
+form div.header {
+   border: none;
+   padding-left: 3px;
+}
+
+div.row, div.rowEven, div.rowOdd,
+div.rowEvenFirst, div.rowOddFirst {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 1%;
+  clear: both;
+}
+
+/* This rule causes the row box to expand and contain the floated divs when 
+used for groups.  IE does not recognize this, but wrongly contains floated divs 
+anyway */
+div.row:after, div.rowEven:after, div.rowOdd:after,
+div.rowEvenFirst:after, div.rowOddFirst:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility:hidden;
+}
+
+
+div.form-required {
+    width: 18px;
+    float: left;
+}
+
+div.row-label-wrapper {
+    float: left;
+}
+
+div.row-element, div.group-row-element {
+    float: left;
+    margin-left: 3px;
+}
+
+/* hack to fix IE problems where
+   elements appear 3px right
+   http://www.positioniseverything.net/explorer/threepxtest.html
+*/
+* html div.row-element input,
+* html div.row-element textarea {
+    margin-left: -3px;
+}
+
+div.elementDescription {
+    clear: both;
+    padding: .2em 0 0 1.5em;
+    text-indent: -1.5em;
+}
+
+div.elementDescription p {
+    margin: .1em 0 0 0;
+    padding: 0;
+    font-size: .9em;
+}
+
+div.elementDescription ul {
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+    padding: 0;
+}
+
+div.group-row-element div.group{
+    float : left;
+    margin-right: 5px;
+}
+
+div.row-element label {
+    margin-left: 1em;
+}
+
+div.group-row-element div.group label {
+    float: left;
+    text-align: left;
+    padding-left: 3px;
+}
+
+/****************** START FORM STYLES ****************************/
+
+input.button        {   padding: 1px 3px 1px 3px;
+                        border: 1px solid #999999;
+                        background-color: #EEEEEE;
+                        margin-top: 15px;
+                    }
+                    
+.formControlButtons {
+                        margin-top: 15px;
+                    }
+                    
+.formControlButtons input {
+                        padding: 1px 3px 1px 3px;
+                        border: 1px solid #999999;
+                        background-color: #EEEEEE;
+                    }                    
+
+.dynamicForm div.rowOdd, 
+.dynamicForm div.rowOddFirst {
+                        background-color: #F6F6F6;
+                    }
+                    
+
+.dynamicForm div.rowOddFirst, 
+.dynamicForm div.rowEvenFirst { border: solid 1px #CCCCCC; }
+
+.dynamicForm div.rowEven,
+.dynamicForm div.rowOdd {
+                        border: solid 1px #CCCCCC;
+                        border-top: none;
+                    }
+
+.dynamicForm h2 {   font-weight: bold;
+                    font-size: 1em;
+                    border-bottom: dashed 1px black;
+                    margin-bottom: 10px;
+                }
+
+/******************  CONTROL PANEL **************************/
+
+#controlPanelWrapper {
+    border: solid 1px black;
+    margin: 0 0 10px 0;
+    color: white;
+    background: white;
+    font-weight: normal;
+}
+
+#controlPanelWrapper a {
+    color: blue;
+}
+
+#controlPanelWrapper h2{
+    margin: 0px;
+    padding-left: 5px;
+    background-color: black;
+    float: left;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+#controlPanelWrapper .header {
+    height: 1%;
+    background-color: black;
+    margin-bottom: 5px;
+    padding: 2px 0 2px 0;
+    font-weight: bold;
+}
+
+/* This rule causes the row box to expand and contain the floated divs when 
+used for groups.  IE does not recognize this, but wrongly contains floated divs 
+anyway */ 
+#controlPanelWrapper .header:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility:hidden;
+}
+
+#controlPanelWrapper form {
+    text-align: right;
+    margin-top: .3em;
+    padding-right: 5px;
+}
+
+#controlPanelWrapper dl.navigationMenu {
+    width: 97%;
+    margin: 0;
+    padding: 0 0 5px 2%;
+    overflow: hidden;
+}
+
+#controlPanelWrapper dl.navigationMenu dt {
+    float: left;
+    clear: left;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    font-size: .9em;
+    color: black;
+    font-weight: bold;
+}
+
+#controlPanelWrapper dl.navigationMenu dd {
+    float: left;
+    margin: 0 0 0 10px;
+    padding: 0;
+}
+
+#controlPanelWrapper dl.navigationMenu ul {
+    margin: 0;
+    padding: 0;
+    height: 1%;
+}
+
+/* This rule causes the row box to expand and contain the floated divs when 
+used for groups.  IE does not recognize this, but wrongly contains floated divs 
+anyway */ 
+#controlPanelWrapper dl.navigationMenu ul:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility:hidden;
+}
+
+#controlPanelWrapper dl.navigationMenu ul li{
+    padding: 0 5px 0 0;
+    margin: 0 5px 0 0;
+    line-height: 1.1em;
+    float: left;
+    list-style: none;
+    font-size: .9em;
+    border-right: 1px dotted #AAA;
+}
+
+#controlPanelWrapper dl.navigationMenu ul li.navigationLinkLast{
+    border: none;
+}
+
+#controlPanelWrapper dl.navigationMenu ul li a {
+    text-decoration: underline;
+}
+
+#controlPanelWrapper dl.navigationMenu ul li a:hover {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+/******************** PAGER STYLES **********************************/
+
+form.data_pager, #bottom_pager_controls {
+    text-align: right;
+    background: #BFC9D4;
+    border: solid 1px #012A6C;
+    color: black;
+    margin: 1em 0 1em 0;
+}
+
+form.data_pager a, #bottom_pager_controls a {
+    color: blue;
+    text-decoration: underline;
+}
+
+form.data_pager a:hover, #bottom_pager_controls a:hover {
+    text-decoration: none;
+}
+
+form.data_pager {
+    padding: 10px;
+}
+
+form.data_pager h2 {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0 0 .5em 0;
+    text-align: left;
+}
+form.data_pager input.button {
+    margin: 0;
+}
+
+form.data_pager label {
+    margin: 0 0 0 .7em;
+    font-size: 1.1em;
+}
+
+form.data_pager input {
+    font-size: 1.1em;
+}
+
+#bottom_pager_controls {
+    padding: 5px;
+    font-weight: normal;
+}
+#bottom_pager_controls a {
+    margin: 0 0 0 .5em;
+    font-size: 1.1em;
+    font-weight: normal;
+}
+
+form.data_pager p.note {
+    margin: 0 0 .5em 0;
+    font-size: .8em;
+    padding: 0;
+    text-align: left;
+}
+form.data_pager p.remove_filter {
+    margin: 0 4em 0 0;
+    padding: 0;
+    font-size: .8em;
+}

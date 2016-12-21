@@ -1,0 +1,359 @@
+
+/**
+ * dmxBox (Dmxzone Lightbox) Style
+ */
+
+#dmxBoxWrapper {
+	position   : fixed;
+	width      : 100%;
+	height     : 100%;
+	top        : 0px;
+	left       : 0px;
+	margin     : 0px;
+	padding    : 0px;
+	z-index    : 10000;
+	text-align : center;
+	zoom       : 1;
+  -moz-user-select:none;
+  -webkit-user-select:none;
+  -webkit-user-select:ignore;
+	-khtml-user-select:ignore;
+	-moz-user-select:-moz-none;
+	-o-user-select:none;
+	user-select:none;
+	user-focus:ignore;
+	-moz-user-focus:ignore;
+  cursor:default;
+	text-rendering: optimizeSpeed;
+}
+ 
+#dmxLightboxOverlay {
+	position : absolute;
+	width    : 100%;
+	height   : 100%;
+	top      : 0px;
+	left     : 0px;
+	margin   : 0px;
+	padding  : 0px;
+	z-index  : 0;
+}
+
+#dmxBoxWrapper .rounded {
+	font-family : Tahoma, Arial, sans-serif;
+	font-size   : 11px;
+	text-align  : left;
+	zoom        : 1; 
+	width       : auto;
+	-moz-box-shadow   : 5px 5px 15px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+	-khtml-box-shadow : 5px 5px 15px rgba(0, 0, 0, 0.5);
+	box-shadow        : 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+#dmxBoxWrapper .rounded iframe {
+	margin  : 0px;
+	padding : 0px;
+	/*display : inline-block !important;*/
+}
+
+#dmxBoxWrapper .rounded .c {
+	text-align:left !important;
+	font-size:0;
+}
+
+#dmxBoxWrapper #dmxLightboxContentsWrapper {
+	display:inline-block;
+	width:auto;
+}
+
+#dmxBoxWrapper .rounded .t,
+#dmxBoxWrapper .rounded .b {
+	font-size  : 1px;
+	line-height: 1px;
+	width      : auto;
+	zoom       : 1;
+	position   : relative;
+	z-index    : 93;
+	padding    : 0px;
+	display    : block;
+	float      : none;
+}
+
+#dmxBoxWrapper .rounded a {
+	text-decoration:none;
+    outline: 0px transparent none;
+}
+
+#dmxBoxWrapper .rounded a:hover {
+	text-decoration:underline;
+}
+
+#dmxBoxWrapper .progress {
+	background-image:url(progress.gif);
+	background-position: center center; 
+	background-repeat:no-repeat;
+	height  : 10px;
+	width   : 64px;
+	display : block;
+	position: absolute;
+	z-index : 99;
+	top     : 50%;
+	left    : 50%;
+	margin-top : -5px;
+	margin-left: -32px;
+	cursor     : default;
+}
+
+/* -------------------- The Title ------------------------- */
+#dmxBoxWrapper div.toparea {
+	font-family : Arial, "Trebuchet MS", sans-serif;
+	font-size   : 15px;
+	position    : absolute;
+	bottom      : 0px;
+	overflow    : hidden;
+	left        : 0px;
+	right       : 0px;
+	z-index     : 2;
+	text-align  : left;
+	line-height : 106%;
+	width       : 100%;
+	padding     : 4px 0px;
+}
+
+#dmxBoxWrapper span.toparea {
+	-webkit-text-shadow: 1px 1px 2px #000;
+	text-shadow: 1px 1px 2px #000;
+	text-align : left;
+	overflow   : hidden;
+	white-space: nowrap;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6), -1px -1px 2px rgba(150, 150, 150, 0.5);
+	line-height: 102%;
+}
+
+
+
+#dmxBoxWrapper .extraToolbar {
+	position  : absolute;
+	font-size : 11px;
+	z-index   : 2;
+	zoom      : 1;
+	right     : 0px;
+	top       : 0px;
+	line-height:110%;
+	padding   : 4px 0px;
+	overflow  : hidden;
+	max-width : 45%;
+	text-align: right;
+	height    :26px;
+	white-space : nowrap;
+	/*width:48px;
+	background:url(toolbar.png) top right no-repeat;*/
+}
+
+#dmxBoxWrapper .prefsLink {
+	width:24px;
+	height:24px;
+	display:inline-block;
+	background:url(config_btn.png) no-repeat;
+}
+#dmxBoxWrapper .prefsLink:hover {
+ background:url(config_btn_hover.png) no-repeat;
+}
+
+#dmxBoxWrapper .indexLink {
+	width:24px;
+	height:24px;
+	display:inline-block;
+	background:url(index_btn.png) no-repeat;
+}
+#dmxBoxWrapper .indexLink:hover {
+	background:url(index_btn_hover.png) no-repeat;
+}
+
+#dmxBoxWrapper .aboutLink {
+	width:24px;
+	height:24px;
+	display:inline-block;
+	background:url(about_btn.png) no-repeat;
+}
+#dmxBoxWrapper .aboutLink:hover {
+	background:url(about_btn_hover.png) no-repeat;
+}
+
+#dmxBoxWrapper * div.bottomarea {
+	position   : absolute;
+	text-align : left;
+	overflow   : hidden;
+	z-index    : 2;
+	left       : 0px;
+	top        : 0px;
+    height     : 16px;
+	padding    : 4px 0px;
+	width  : 45%;
+    font-size  : 12px !important;
+    zoom       : 1;
+}
+
+#dmxBoxWrapper * span.bottomarea {
+	text-align : left;
+	font-size  : 12px !important;	
+	line-height: 120%;
+  zoom       : 1;
+  overflow   : hidden;
+}
+
+
+/* -------------------- Prev Button ------------------------- */
+#dmxBoxWrapper .prevbtn {
+	background:url(buttons.png) 0px -43px no-repeat;
+	height  : 43px;
+	width   : 42px;
+	display : block;
+	position: absolute;
+	z-index : 96;
+	top     : 50%;
+	left    : 6px;
+	margin-top : -22px;
+	cursor    : default;
+	zoom:1;
+	text-decoration:none;
+}
+
+#dmxBoxWrapper .prevbtn:hover {
+	background:url(buttons.png) 0px 0px no-repeat;
+}
+
+
+/* -------------------- Next Button ------------------------- */
+#dmxBoxWrapper .nextbtn {
+	background:url(buttons.png) -42px -43px no-repeat;
+	height  : 43px;
+	width   : 42px;
+	display : block;
+	position: absolute;
+	z-index : 96;
+	top     : 50%;
+	right   : 6px;
+	margin-top: -22px;
+	cursor    : default;
+	zoom:1;
+	text-decoration:none;
+}
+
+#dmxBoxWrapper .nextbtn:hover {
+	background:url(buttons.png) -42px 0px no-repeat;
+}
+
+
+/* -------------------- Play Button ------------------------- */
+#dmxBoxWrapper .playbtn {
+	background:url(buttons.png) -84px -43px no-repeat;
+	height  : 43px;
+	width   : 42px;
+	display : block;
+	position: absolute;
+	z-index : 96;
+	top     : 100%;
+	left    : 50%;
+	margin-top : -49px;
+	margin-left: -21px;
+	cursor     : default;
+	zoom:1;
+	text-decoration:none;
+}
+
+#dmxBoxWrapper .playbtn:hover {
+	background:url(buttons.png) -84px 0px no-repeat;
+}
+
+#dmxBoxWrapper .playbtn.playing {
+	background:url(buttons.png) -126px -43px no-repeat;
+}
+
+#dmxBoxWrapper .playbtn.playing:hover {
+	background:url(buttons.png) -126px 0px no-repeat;
+}
+
+#dmxBoxWrapper.closed .playbtn,
+#dmxBoxWrapper.closed .nextbtn,
+#dmxBoxWrapper.closed .prevbtn,
+#dmxBoxWrapper.closed div.bottomarea,
+#dmxBoxWrapper.closed div.toparea,
+#dmxBoxWrapper.closed div.extraToolbar {
+	visibility:hidden;
+}
+
+/*
+Animated is a special temporary class, existing only while 
+the LB is animated (resized or dragged).
+This is used to temporary disable the "heavy" properties.
+*/
+#dmxBoxWrapper.animated .rounded {
+	-moz-border-radius    : 0    !important;
+	-moz-box-shadow       : none !important;
+	-webkit-border-radius : 0    !important;
+	-webkit-box-shadow    : none !important;
+	-khtml-border-radius  : 0    !important;
+	-khtml-box-shadow     : none !important;
+  border-radius         : 0    !important;
+	box-shadow            : none !important;
+	image-rendering       : optimizeSpeed    !important; /* Firefox 3.6 */
+  -ms-interpolation-mode: nearest-neighbor !important; /* IE 7+ */
+}
+
+#dmxBoxWrapper.animated span.toparea {
+	text-shadow: none !important;
+}
+
+#dmxBoxWrapper .tl {
+	left     : 0;
+	top      : 0;
+	margin   : 0px auto auto 0px;
+	position : absolute;
+	z-index  : 93;
+}
+		
+#dmxBoxWrapper .tr {
+	top      : 0; 
+	margin   : 0;
+	right    : 0;
+	position : absolute;
+	z-index  : 93;
+}
+    
+#dmxBoxWrapper .closeButton {
+	margin   : 0;
+	height   : 20px;
+	width    : 20px;
+	position : absolute;
+	z-index  : 94;
+}
+    
+#dmxBoxWrapper .b  {
+}
+    
+#dmxBoxWrapper .bl { 
+	top      : 0;
+	left     : 0;
+	position : absolute;
+	z-index  : 93;
+}
+    
+#dmxBoxWrapper .br {
+	top      : 0;
+	right    : 0;
+	position : absolute;
+	z-index  : 93;
+}
+    
+#dmxBoxWrapper .c {
+	margin         : 0;
+	border-style   : solid;
+	padding-top    : 0;
+	padding-bottom : 0;
+	z-index        : 93;
+}
+    
+#dmxBoxWrapper .content {
+	margin: 0;
+}

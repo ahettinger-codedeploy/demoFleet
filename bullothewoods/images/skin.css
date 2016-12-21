@@ -1,0 +1,325 @@
+﻿/*----- Language -----*/
+
+    .language{
+	    float:right;
+	    margin:0;
+	    padding:0;
+    }
+    .language .language-object span{
+	    float:right;
+	    padding: 5px 8px;
+	    margin:0 0 0 5px;
+	    border-radius: 100%;
+	    box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.1);
+	    -moz-border-radius: 100%;
+	    -webkit-border-radius: 100%;
+	    background-color:#fff;
+    }
+    .language .language-object span img{
+	    height:12px; 
+	    width:17px;
+	    opacity:0.4;
+	     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
+        filter: gray; /* IE6-9 */
+        -webkit-filter: grayscale(100%); /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+    }
+    .language .language-object span:hover img{opacity:1;}
+    .language .language-object .Language.selected img{
+	    opacity:1;
+	    border-color:#222;
+	    -webkit-border-radius: 2px;
+	    border-radius: 2px; 
+	    -webkit-box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.8);
+	    box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.8); 
+	     filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+        -webkit-filter: grayscale(0%);
+    }
+
+/*----- Social Icons -----*/
+
+header.colored.flat-menu.darken-top-border div.search,
+header.clean-top.center div.search
+{
+     margin-bottom:0;}
+     
+
+/* LOGIN */
+/*------------------------------------------------*/
+    #login{	float:right; margin:0; position:relative; top:-50px;}
+	
+	#login .registerGroup, 
+	#login .registerGroup *, 
+	#login .loginGroup, 
+	#login .loginGroup * {	display:block; }	
+
+	#login .registerGroup,
+	#login .loginGroup {
+		float:left;
+		padding:0;
+		margin:0;		
+	} 
+	
+	#login .registerGroup li:first-child:hover {border-left:#222;}
+	
+	/* Register Group Styles */
+	
+	#login .registerGroup li { 	float:left; }
+	#login .registerGroup .buttonGroup {margin:0; padding: 0 0 0 10px; }
+	
+	#login .registerGroup a,
+	#login .loginGroup a, 
+	#login a.SkinObject, 
+	#login a.LoginLink {
+		position:relative;	 
+		font-size:11px;
+		text-transform:uppercase;
+	}
+	
+	#login .registerGroup a {
+	    height:32px;
+	    padding:10px 16px;
+	    line-height:16px;
+    }
+	
+	#login a.SkinObject, 
+	#login a.LoginLink {
+	    padding: 7px 14px;
+	}
+	
+	#login .userMessages a:hover,
+	#login .userNotifications a:hover {
+	     background:#666;
+    }
+	
+	#login .userDisplayName a:hover,
+	#login .loginGroup a:hover {
+	     color:#000
+    }
+	     
+	#login .registerGroup a:hover,
+	#login .loginGroup a:hover { text-decoration:none; }
+	
+	#login .registerGroup a strong,
+	#login .loginGroup a strong {
+		display:block;
+		position:absolute;
+		left:0; top:0;
+		width:100%;
+		overflow:hidden;
+		font-size:11px;
+		text-indent:-9999px;
+	}
+	
+	#login .userMessages a,
+	#login .userNotifications a { background-color: #ccc; }	
+	
+	#login .userMessages a {
+	   margin-right:5px; 
+	}
+	
+	#login .userProfileImg img,
+	#login .registerGroup a,
+	#login .loginGroup a, 
+	#login a.SkinObject, 
+	#login a.LoginLink {
+	    border-radius:20px;
+	}
+	
+	#login .userMessages strong { 
+		height: 100%;
+		background: url('Resources/img/icon_message.png') no-repeat center center;
+	}
+	
+	#login .userNotifications strong { 
+		height: 100%;
+		background: url('Resources/img/icon_notification.png') no-repeat center center;
+	}
+	
+	#login .registerGroup a span {
+		display:inline-block;
+		position:absolute;
+		right:2px; top:-9px;
+		min-width:7px;
+		margin-right:3px;
+		background: rgb(59,150,182); /* Old browsers */
+		
+		text-align:center;
+		font-size:11px;
+		color:#fff;
+		text-shadow: 0px 1px 0px #333333;
+	}
+	
+	#login .registerGroup .userProfileImg a{
+		min-width:25px;
+		min-height: 32px;
+		padding:0;
+		background:none;
+	}
+	
+	#login .registerGroup a img{
+		height:32px; width:32px;
+		background:#333;
+	}
+	
+	/* Number of message next to the message icon*/
+	#login .userMessages  a  span,
+	#login .userNotifications   a  span	{ 
+		display: inline-block; 
+		margin-top: 9px; 
+		margin-right: 0px; 
+		background-color: transparent;
+		font-size: 10px;
+	}
+
+.layout_trigger {
+	position:fixed;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+	z-index:-2;
+	background-size:cover;
+}
+
+.body .dnnSortable {min-height:0px !important;}
+.body .dnnDropEmptyPanes {min-height:110px !important; outline: 1px dashed #ccc !important;}
+.body ul.dnnAdminTabNav, .body ul.dnnActions, #dnnModuleDigitalAssetsBreadcrumb ul {padding-left:0;}
+.body ul.dnnAdminTabNav li {line-height:normal;}
+
+header.flat-menu.clean-top div.social-icons, header.colored.flat-menu div.social-icons, header.clean-top.center div.social-icons {
+    float:left;
+    margin:0;
+    clear:none;
+}
+
+header.flat-menu.clean-top .header-top div.container, header.colored.flat-menu .header-top div.container, header.clean-top.center .header-top div.container {
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+#ControlBar,
+div.body .mdMemberList * ,
+div.body .dnnDropDownList .selected-item a,
+.dnnDocumentViewerBackground div,
+#dnnModuleDigitalAssetsMainToolbar,
+#dnnModuleDigitalAssetsSelectionToolbar {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+.icon-search {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.DnnModule {
+    z-index: inherit !important;
+}
+
+.console {
+    width: 250px;
+	height: auto;
+	background-color: #484848; /* Menu Background Color */
+}
+
+.console-none div {  
+	cursor: pointer;
+	cursor: hand;
+	float:left; 
+	height: auto; 
+	width: 250px;
+	padding:0px; 
+	margin:0px;  
+	text-align:left; 	
+}
+
+.console-none h3 {
+    padding:10px 8px 10px 40px; 
+	margin: 0; 	   
+	border-bottom: solid 1px #fff; 
+	background: url('Resources/img/arrow_2.png') 18px center no-repeat;
+	color: #eee;  
+	font-size:13px; 
+	line-height: 1; 
+	font-weight: bold;
+}
+
+.console-none div div { display:none; }
+.console-mouseon { background-color:#70b1c7; }
+    
+#UserProfileImg img {
+	width: 100px;
+	height: auto;
+	border: solid 3px #fff;
+}
+
+.UserProfileControls ul {
+	margin: 15px 0;
+	padding: 0;
+}
+
+.UserProfileControls ul li {
+	list-style-type: none;
+	margin-bottom: 3px;
+}
+
+blockquote p {
+    font-style:normal;
+    font-family:"Open Sans",Arial,sans-serif;
+}
+
+.dnnEditState .DnnModule {
+    opacity: 1;
+}
+
+.DNNEmptyPane {
+    width: auto;
+}
+
+.dnnFormMessage {
+    max-width: 100%;
+}
+
+.btn-primary:visited, 
+.btn-primary:visited:hover {
+	color: #fff;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+        
+        .LoginPanel{
+		    width: 100%;
+		    padding:0;
+		}
+		
+		.dnnLoginService input[type="text"], .dnnLoginService input[type="password"]{
+		    min-width: 100%;
+            width: 100%;
+		}
+		
+		.dnnFormItem > label.dnnFormLabel, .dnnLabel{
+		    width: auto;
+		}
+		
+		div.dnnRegistrationForm{
+		    min-width: 100%;
+            width: 100%;
+		}
+		
+		.dnnFormItem input[type="text"], .dnnFormItem input[type="password"], .dnnFormItem input[type="email"], .dnnFormItem input[type="tel"], .dnnFormItem select, .dnnFormItem textarea{
+		    max-width: 100%;
+            width: 100%;
+		}
+		
+		.dnnFormMessage{
+		    max-width: 100%;
+		}
+		
+		div.dnnRegistrationForm .dnnForm{
+		    width:100%;
+		}
+}

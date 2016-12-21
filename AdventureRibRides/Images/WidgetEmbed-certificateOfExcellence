@@ -1,0 +1,184 @@
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+  
+
+if (window.taValidate == undefined) {
+   window.taOnLoad   = window.onload;
+   window.taValList  = Array();
+   window.taValIndex = 0;
+   window.taValidate = function () {
+      if (window.taOnLoad != null) {
+         try {
+         window.taOnLoad();
+         } catch (err) { }
+      }
+      for (ii = 0; ii < window.taValIndex; ii=ii+1) {
+         fname = window.taValList[ii]
+         fname();
+      }
+   }
+   window.taAddValidator = function (fname) {
+      window.taValList[window.taValIndex] = fname;
+      window.taValIndex                   = window.taValIndex + 1;
+      }
+   window.onload = window.taValidate
+}
+window.taAddValidator (injectcertificateOfExcellence1936)
+
+                  if(document.createStyleSheet) {
+        document.createStyleSheet("http://c1.tacdn.com/css2/widget/cdswidCOE-v1345917238b.css");
+      } else {
+        var stylesImport = "@import url(' http://c1.tacdn.com/css2/widget/cdswidCOE-v1345917238b.css ');";
+        var newSS=document.createElement('link');
+        newSS.rel='stylesheet';
+        newSS.href='data:text/css,'+escape(stylesImport);
+        if (document.getElementsByTagName("head")[0]) {
+            document.getElementsByTagName("head")[0].appendChild(newSS);
+        } else {             document.write('<link rel="stylesheet" href="data:text/css,' + escape(stylesImport) + '"/>');
+        }
+      }
+                       if(document.createStyleSheet) {
+        document.createStyleSheet("http://c1.tacdn.com/css2/widget/cdswidFRR-v968959094b.css");
+      } else {
+        var stylesImport = "@import url(' http://c1.tacdn.com/css2/widget/cdswidFRR-v968959094b.css ');";
+        var newSS=document.createElement('link');
+        newSS.rel='stylesheet';
+        newSS.href='data:text/css,'+escape(stylesImport);
+        if (document.getElementsByTagName("head")[0]) {
+            document.getElementsByTagName("head")[0].appendChild(newSS);
+        } else {             document.write('<link rel="stylesheet" href="data:text/css,' + escape(stylesImport) + '"/>');
+        }
+      }
+        
+      var newJs = document.createElement('script');
+    newJs.setAttribute('type', 'text/javascript');
+    newJs.setAttribute('src', 'http://c1.tacdn.com/js3/widget/cdswidgets_min-c-v2372348857b.js');
+    document.getElementsByTagName("head")[0].appendChild(newJs);
+  
+var validityRegEx = [
+    new RegExp('https?://([^/]+\.|)tripadvisor\.(com\.ar|ca|com|jp|co\.uk|de|dk|ie|fr|com\.mx|co\.id|com\.my|it|com\.br|com\.tr|com\.eg|se|in|co\.kr|com\.gr|com\.sg|com\.au|ru|es|com\.tw|nl)/.*')
+  ,  new RegExp('https?://([^/]+\.|)daodao\.(com)/.*')
+];
+
+function injectcertificateOfExcellence1936() {
+    var container = document.getElementById('TA_certificateOfExcellence101');
+  if (container == null) {
+        var scriptTags = document.getElementsByTagName("script");
+    for (var i=0; i<scriptTags.length; i++)
+    {
+      if (scriptTags[i] != null && scriptTags[i].src != null &&
+          scriptTags[i].src.indexOf("certificateOfExcellence?uniq=101") >= 0)
+      {
+        var msgElem = document.createElement('div');
+        if (msgElem != null && msgElem != 'undefined')
+        {
+          msgElem.style.margin='8px';
+          msgElem.style.color='red';
+          msgElem.innerHTML="Please check the TripAdvisor code and install again.";
+          var parentElem = scriptTags[i].parentNode;
+          if (parentElem != null && parentElem != 'undefined')
+          {
+            parentElem.appendChild(msgElem);
+          }
+          break;
+        }
+      }
+    }
+    return;
+  }
+
+        var valid = true;
+  var linksNum = 0;
+      var links = container.getElementsByTagName("a");
+    for (var i=0; i<links.length; i++) {
+    var taLink = links[i];
+    var taLinkStr = taLink.href;
+    if (taLinkStr.search(/(daodao|tripadvisor)/) != -1) {
+      linksNum = linksNum + 1;
+      if (typeof(taLink.rel) != 'undefined' && taLink.rel.toLowerCase().indexOf('nofollow') >= 0) {
+        valid = false;
+        continue;
+      }
+            var linkValid = false;
+      for (var x=0; x<validityRegEx.length; x++){
+        if (taLinkStr.match(validityRegEx[x])) {
+          linkValid = true;
+          break;
+        }
+      }
+      if (!linkValid) {
+        continue;
+      }
+    }
+  }
+  if (linksNum == 0) {
+    valid = false;
+  }
+  if (!valid) {
+    var tmpStr = '<dl><dt>' + "Please check the TripAdvisor code and install again." + '</dt></dl>';
+    container.innerHTML = tmpStr;
+  } else {
+    container.innerHTML = '<div id="CDSWIDCOE" class="widCOE"> '+
+'<div class="widCOEIntro"> '+
+'Winner '+
+'</div> '+
+'<div class="widCOETitle"> '+
+'Certificate of Excellence '+
+'</div> '+
+'<div class="widCOEDate"> '+
+'<span class="widCOEDateText">2011</span> '+
+'</div> '+
+'<div class="widCOELink"> '+
+'<a target="_blank" onclick="ta.cds.handleTALink(14348,this);return true;" href=http://www.tripadvisor.com/Attraction_Review-g60750-d1549448-Reviews-Adventure_Rib_Rides-San_Diego_California.html>Adventure Rib Rides</a> '+
+'</div> '+
+'<span> '+
+'<img class="widCOEImg" id="CDSWIDCOELOGO" src="http://www.tripadvisor.com/img/cdsi/img2/branding/COE_Badge_Logo-14348-2.png"/> '+
+'</span> '+
+'</div><!--/ #CDSWIDCOE--> '+
+'';
+  }  
+}
+

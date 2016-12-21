@@ -1,0 +1,461 @@
+<%
+'CHANGELOG'
+'LSP 11/03/14 - initial development'
+'LSP 11/17/16 - initial develompent'
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+	<link media="all" type="text/css" rel="stylesheet" href="/clients/ChurchoftheRock/Images/all.css">
+	<link media="all" type="text/css" rel="stylesheet" href="/clients/ChurchoftheRock/Images/superfish.css">
+	<link media="all" type="text/css" rel="stylesheet" href="/clients/ChurchoftheRock/Images/colorbox.css">
+	<link rel="shortcut icon" href="/clients/ChurchoftheRock/Images/layout/favicon.ico">
+	<script src="/clients/ChurchoftheRock/Images/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="/clients/ChurchoftheRock/Images/main.js"></script>
+
+
+	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+	<script type="text/javascript" src="/clients/ChurchoftheRock/Images/jquery.js"></script>
+	<script type="text/javascript" src="/clients/ChurchoftheRock/Images/jquery-1.js"></script>
+
+
+	<script type="text/javascript" src="/clients/ChurchoftheRock/Images/jquery_003.js"></script>
+	<script type="text/javascript" src="/clients/ChurchoftheRock/Images/superfish.js"></script>
+
+
+	<script type="text/javascript" src="/clients/ChurchoftheRock/Images/jquery_004.js"></script>
+	<!--<script type="text/javascript" src="/js/jquery.colorbox-min.js"></script>-->
+
+	
+
+	<script type="text/javascript" src="/clients/ChurchoftheRock/Images/jquery_002.js"></script>
+	<script type="text/javascript">
+	  var mega_is_down = false;
+		jQuery.noConflict();
+		jQuery(function($){
+			$('#nav ul.dropdown').superfish({ delay: 200 });
+			$('li.level-0').each(function() {jQuery(this).find('a.sf-with-ul').first().click(function(event) { event.preventDefault(); }); });
+			$(".link-default a.colorbox").colorbox({width:"80%", height:"80%", iframe:true});
+			$("li.ministries a").click(function(event) { jQuery('ul.sub_menu:visible').slideUp(); if (mega_is_down) { jQuery('#ministries-mega').slideUp(); mega_is_down = false; } else { jQuery('#ministries-mega').slideDown(); mega_is_down = true; } event.stopPropagation(); });
+			$('#ministries-mega').click(function(event) { event.stopPropagation(); })
+			$(document).click(function() { if (mega_is_down) { jQuery('#ministries-mega').slideUp(); mega_is_down = false; } });
+			$('#main').click(function() { jQuery('ul.sub_menu:visible').slideUp(); });
+			$('.info-box').click(function() { jQuery('ul.sub_menu:visible').slideUp(); });
+			$('#upcoming-ministry-events a.colorbox').each(function() {
+				var id = $(this).attr('id');
+				$(this).colorbox({inline:true, href:"#details-event-"+id, innerWidth: 400})
+			});
+			$('.calendar-box .post a.colorbox').each(function() {
+				var id = $(this).attr('id');
+				$(this).colorbox({inline:true, href:"#details-event-"+id, innerWidth: 400})
+			});
+			$('form textarea#details').NobleCount('#count-details', {max_chars: 1500});
+			$('form textarea#thank-the-lord').NobleCount('#count-thank-the-lord', {max_chars: 1500});
+			$('#maps-link').colorbox({iframe: true, innerWidth:780, innerHeight:580});
+			$('li.blogs > a').click(function() { return false; });
+			$('li.links > a').click(function() { return false; });
+		});
+	</script>
+	<script type="text/javascript">
+		
+			function getParameterByName( name )
+			{
+				name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+				var regexS = "[\\?&]"+name+"=([^&#]*)";
+				var regex = new RegExp( regexS );
+				var results = regex.exec( window.location.href );
+				if( results == null )
+					return "";
+				else
+					return decodeURIComponent(results[1].replace(/\+/g, " "));
+			}
+			
+			jQuery(function($)
+			{
+				var forms = new Array( 'online-prayer-request', 'request-prayer', 'volunteer-form', 'praise-report', 'request-visit', 'request-visit', 'donor-information' );
+				
+				$('form').
+				each
+				(
+					function()
+					{
+						for( var i = 0 ; i < forms.length ; i++ )
+						{
+							if( $(this).attr('name') == forms[i] )
+							{
+
+
+								var submitBtn = $(this).find('input[type="submit"]'),
+									veccode = '<div class="ver_img" style="margin-bottom:20px">' +
+										'<strong>Security Image</strong><hr /><br />Please type the security code you see in the image below:<br /><input class="special upper" type="text" style="width:100px;" name="uservec" />' +
+										'<input type="hidden" name="vec" value="vuyfsax991" />' +
+										'<br /><img src="vec_image.php?vec=991" />' +
+										'</div>';
+
+								if(!submitBtn.length)									
+									$(this).append(veccode);
+								else
+									submitBtn.parent().prepend(veccode);
+								
+								
+								//give values to these form elements...
+								$(this).find('input').each
+								(
+									function()
+									{
+										if( $(this).attr('name') != 'uservec' && $(this).attr('name') != 'vec' )
+										{
+											var value = getParameterByName( $(this).attr('name') );
+											if( value )
+											{
+												$(this).val(value);
+											}
+										}
+									}
+								);
+								
+								$(this).find('textarea').each
+								(
+									function()
+									{
+										var value = getParameterByName( $(this).attr('name') );
+										if( value )
+										{
+											$(this).val(value);
+										}
+									}
+								);
+								
+								var error = getParameterByName('error');
+								if( error )
+								{
+									$(this).prepend( '<div style="color:red;font-size:120%">' + error.replace(/[<>]/g,'') + '</div>' );
+								}
+								
+								break;
+							}
+						}
+						
+					}
+				);
+
+				
+				
+			});
+	</script>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="keywords" content="Major Events Calendar">
+<meta name="description" content="Major Events Calendar">
+</head>
+<body class="calendar">
+	<div id="wrapper">
+		<div class="w1">
+			<div id="header">
+				<div class="header-holder">
+					<div class="header-frame">
+
+			
+						<style type="text/css">
+							#churchonline_counter { 
+								cursor: pointer;
+								overflow: auto; 
+								padding: 10px 5px 10px 10px; 
+
+								min-width: 428px;
+								background-color: #050505;
+								position: absolute;
+								right: 0;
+								top: -17px;
+								z-index: 100;
+
+								-webkit-border-radius: 4px;
+								-moz-border-radius: 4px;
+								border-radius: 4px;
+							}
+
+							#churchonline_counter .next-in {
+								float: left;
+								text-transform: uppercase;
+								display: inline-block;
+								font-weight: bold;
+								font-size: 0.8em;
+								color: #bebebe;
+								line-height: 2;
+								padding-top: 5px;
+								padding-right: 10px;
+
+
+							}
+
+
+							#churchonline_counter .description, 
+							#churchonline_counter .time li .label,
+							#churchonline_counter .next-in { 
+								font-size: 0.8em; 
+								color: #bebebe;
+							}
+							#churchonline_counter .time { 
+								list-style: none; 
+								padding: 0; 
+								margin: 0 0 0 0; 
+						    position: relative;
+						    /*right: 0px;*/
+						    float: right;
+							}
+							#churchonline_counter .time li { 
+								/*float: left; */
+								
+								position: relative;
+								min-width: 32px;
+								background-color: #2e2e2e;
+								background-image: url(counter-bg.gif);
+								background-repeat: repeat-x;
+								background-position: 100% 100%;
+								color: #c8c8c8;
+								margin-right: 5px;
+								-webkit-border-radius: 4px;
+								-moz-border-radius: 4px;
+								border-radius: 4px;
+								padding: 4px 10px 2px;
+								display: inline-block;
+							}
+
+							#churchonline_counter .time li:last-of-type {
+								margin-right: 0px;
+							}
+
+							#churchonline_counter .time li span.timedata { 
+								display: inline-block;
+								color: white;
+								margin-right: 20px;
+							}
+
+							#churchonline_counter .time li span.label { 
+								right: 3px;
+								position: absolute;
+								bottom: 3px;
+								text-transform: uppercase;
+								font-size: 9.2px;
+								font-weight: bold;
+								color: #919191;
+							}
+
+
+
+							/*#churchonline_counter .time li:first-child { padding-left: 0; }*/
+							#churchonline_counter .time li span { font-size: 1.2em; }
+							#churchonline_counter .live { 
+								display: none; 
+								font-weight: bold; 
+								color: white;
+								text-transform: uppercase;
+								font-style: italic;
+
+								position: relative;
+								top: -5px;
+								font-size: 18px;
+								padding-left: 58px;
+
+							}
+
+
+
+							#churchonline_counter .join-us {
+								display: none;
+								font-weight: bold;
+								font-size: 13px;
+								color: rgb(226, 226, 226);
+								text-align: center;
+								padding-left: 100px;
+							}
+						</style>
+						
+
+
+
+						<div class="info-box">
+							<a href="http://www.churchoftherock.ca/"><img src="/clients/ChurchoftheRock/Images/logo.png"></a>
+
+						</div>
+						<div id="nav">
+											<ul class="dropdown sf-js-enabled sf-shadow">
+															<li class="first-menu-item level-0 about-us"><a href="http://www.churchoftherock.ca/about-us" class="sf-with-ul">About Us<span class="sf-sub-indicator"> »</span></a><ul class="sub_menu" style="display: none; visibility: hidden;"><li class="
+											 level-1 who-we-are"><a href="http://www.churchoftherock.ca/who-we-are">Who We Are</a></li><li class="
+											 level-1 about-mark-and-kathy"><a href="http://www.churchoftherock.ca/about-mark-and-kathy">About Mark and Kathy</a></li><li class="
+											 level-1 meet-our-staff"><a href="http://www.churchoftherock.ca/meet-our-staff">Meet Our Staff</a></li><li class="
+											 level-1 faq"><a href="http://www.churchoftherock.ca/faq">Common Questions</a></li><li class="
+											 level-1 contact"><a href="http://www.churchoftherock.ca/contact">Contact Us</a></li></ul></li><li class="level-0 locations-times"><a href="http://www.churchoftherock.ca/locations-times" class="sf-with-ul">Locations/Times<span class="sf-sub-indicator"> »</span></a><ul class="sub_menu" style="display: none; visibility: hidden;"><li class="
+											 level-1 bpc"><a href="http://www.churchoftherock.ca/bpc">Bronx Park Campus</a></li><li class="
+											 level-1 nec"><a href="http://www.churchoftherock.ca/nec">North End Campus</a></li><li class="
+											 level-1 31"><a href="http://live.churchoftherock.ca">Online Church</a></li><li class="
+											 level-1 wsc"><a href="http://www.churchoftherock.ca/wsc">Winnipeg South Campus</a></li><li class="
+											 level-1 wwc"><a href="http://www.churchoftherock.ca/wwc">*NEW Winnipeg West Campus</a></li><li class="
+											 level-1 offices"><a href="http://www.churchoftherock.ca/offices">Offices</a></li></ul></li><li class="level-0 events"><a href="http://www.churchoftherock.ca/events" class="sf-with-ul">Events<span class="sf-sub-indicator"> »</span></a><ul class="sub_menu" style="display: none; visibility: hidden;"><li class="
+											 level-1 bulletin"><a href="http://www.churchoftherock.ca/bulletin">Church Bulletins</a></li><li class="
+											 level-1 full-calendar"><a href="http://www.churchoftherock.ca/full-calendar">Event Calendar</a></li><li class="
+											 level-1 church-wide-calendar"><a href="http://www.churchoftherock.ca/church-wide-calendar">Major Events</a></li><li class="
+											 level-1 christmas"><a href="http://www.churchoftherock.ca/christmas">Christmas Events 2016</a></li><li class="
+											 level-1 sask-tour"><a href="http://www.churchoftherock.ca/sask-tour">in Saskatchewan NOV 19-20</a></li></ul></li><li class="level-0 watch"><a href="http://www.churchoftherock.ca/watch" class="sf-with-ul">Watch<span class="sf-sub-indicator"> »</span></a><ul class="sub_menu" style="display: none; visibility: hidden;"><li class="
+											 level-1 tv-schedule"><a href="http://www.churchoftherock.ca/tv-schedule">Channel Listings</a></li><li class="
+											 level-1 watch-online"><a href="http://www.churchoftherock.ca/watch-online">Watch Online</a></li><li class="
+											 level-1 mobile-app"><a href="http://www.churchoftherock.ca/mobile-app">Mobile App</a></li><li class="
+											 level-1 podcasts"><a href="http://www.churchoftherock.ca/podcasts">Podcasts</a></li><li class="
+											 level-1 28"><a href="http://live.churchoftherock.ca">Online Services</a></li><li class="
+											 level-1 rightnowmedia"><a href="http://www.churchoftherock.ca/rightnowmedia">Rightnow Media</a></li></ul></li><li class="level-0 store-donate"><a href="http://www.churchoftherock.ca/store-donate" class="sf-with-ul">Store/Donate<span class="sf-sub-indicator"> »</span></a><ul class="sub_menu" style="display: none; visibility: hidden;"><li class="
+											 level-1 7"><a href="http://shop.churchoftherock.ca/home">Purchase Online</a></li><li class="
+											 level-1 13"><a href="http://www.churchoftherock.ca/donate">Donate Online</a></li></ul></li><li class="level-0 blogs-links"><a href="http://www.churchoftherock.ca/blogs-links" class="sf-with-ul">Blogs<span class="sf-sub-indicator"> »</span></a><ul class="sub_menu" style="display: none; visibility: hidden;"><li class="level-1 blogs"><a href="http://www.churchoftherock.ca/blogs" class="sf-with-ul">Blogs<span class="sf-sub-indicator"> »</span></a><ul class="sub_menu" style="display: none; visibility: hidden;"><li class="
+											 level-2 12"><a href="http://churchoftherock.ca/blog/category/news">Latest News and Events</a></li><li class="
+											 level-2 2"><a href="http://www.churchoftherock.ca/blog/category/pastor-mark">Pastor Mark's Blog</a></li><li class="
+											 level-2 25"><a href="http://www.churchoftherock.ca/blog/category/pastor-keith">Pastor Keith's Blog</a></li><li class="
+											 level-2 32"><a href="http://blog.churchoftherock.ca/category/pastor-steve">Pastor Steve's Blog</a></li><li class="
+											 level-2 14"><a href="http://www.churchoftherock.ca/blog/category/ministries/adopt-a-block">Adopt-a-Block Blog</a></li><li class="
+											 level-2 27"><a href="http://blog.churchoftherock.ca/category/ministries/discovery-online">Discovery Online</a></li><li class="
+											 level-2 18"><a href="http://www.churchoftherock.ca/blog/category/ministries/missions-news">Missions News</a></li><li class="
+											 level-2 11"><a href="http://blog.churchoftherock.ca/category/ministries/hsm">High School Ministry Blog</a></li><li class="
+											 level-2 26"><a href="http://www.churchoftherock.ca/blog/category/ministries/overcomers">Celebrate Recovery Blog</a></li><li class="
+											 level-2 17"><a href="http://blog.churchoftherock.ca/category/ministries/parenting-teens">Parenting Teens Blog</a></li><li class="
+											 level-2 6"><a href="http://churchoftherock.ca/blog/category/ministries/threshold-jr">Threshold Jr Blog</a></li><li class="
+											 level-2 33"><a href="http://blog.churchoftherock.ca/category/ministries/engage">Engage (Young Adults)</a></li><li class="
+											 level-2 20"><a href="http://blog.churchoftherock.ca/category/ministries/wow-newsletter">Women of Worth</a></li><li class="
+											 level-2 rss"><a href="http://www.churchoftherock.ca/rss">RSS Feeds</a></li></ul></li><li class="level-1 links"><a href="http://www.churchoftherock.ca/links" class="sf-with-ul">Links<span class="sf-sub-indicator"> »</span></a><ul class="sub_menu" style="display: none; visibility: hidden;"><li class="
+											 level-2 3"><a href="http://www.facebook.com/churchoftherock">Facebook</a></li><li class="
+											 level-2 4"><a href="http://twitter.com/cofr">Twitter</a></li><li class="
+											 level-2 5"><a href="http://www.youtube.com/CotRWinnipeg">YouTube</a></li><li class="
+											 level-2 24"><a href="http://itunes.apple.com/ca/podcast/church-rock-weekend-messages/id514477567">Audio Podcast</a></li><li class="
+											 level-2 21"><a href="http://www.cotrcalgary.ca/">Church of the Rock Calgary</a></li></ul></li></ul></li><li class="level-0 ministries sfHover"><a href="#">Ministries<span class="sf-sub-indicator"> »</span></a></li>							</ul>
+						
+						</div><!-- #nav -->
+						<br clear="all">
+					</div>
+										<div class="mega-menu" style="background: url(/clients/ChurchoftheRock/Images/mega-bg.jpg) repeat-x; display: none; font-size: 12px; text-align: center; padding: 15px 0 20px;" id="ministries-mega">
+						<div style="width: 960px; margin: 0 auto; text-align: left;">
+
+												</div>
+						<br clear="all">
+					</div>
+				</div>
+			</div>
+			<div id="main">
+				<div class="main-box">
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+				</div>
+				<div class="pillars-box">
+					<div class="pillars-holder">
+						<div class="pillars-frame">
+							<div class="columns">
+								<div class="holder">
+									<div class="frame">
+										<div class="box">
+											<div class="image">
+												<img src="/clients/ChurchoftheRock/Images/pillar-one.jpg" alt="About">
+											</div>
+											<ul>
+<li><a href="http://www.churchoftherock.ca/locations">Locations</a></li>
+<li><a href="http://www.churchoftherock.ca/faq">Common Questions</a></li>
+<li><a href="http://www.churchoftherock.ca/vision-and-values">Vision and Values</a></li>
+</ul>										</div>
+										<div class="box">
+											<div class="image">
+												<img src="/clients/ChurchoftheRock/Images/pillar-two.jpg" alt="Interact">
+											</div>
+											<ul>
+<li><a href="http://www.churchoftherock.ca/discovery">Discovery</a></li>
+<li><a href="http://www.churchoftherock.ca/group-link-home">Grouplink</a></li>
+<li><a href="http://www.churchoftherock.ca/ministries-grow-foundations">Foundations of the Rock</a></li>
+<li><a href="http://www.churchoftherock.ca/volunteer-home">Volunteer</a></li>
+<li><a href="http://www.churchoftherock.ca/esl">EAL/ESL Program</a></li>
+</ul>										</div>
+										<div class="box">
+											<div class="image">
+												<img src="/clients/ChurchoftheRock/Images/pillar-three.jpg" alt="Connect">
+											</div>
+											<ul>
+<li><a href="http://www.churchoftherock.ca/baby-rocks">Baby Rocks</a></li>
+<li><a href="http://www.churchoftherock.ca/kidzrock">KidzRock</a></li>
+<li><a href="http://www.churchoftherock.ca/threshold-jr">Threshold Jr</a></li>
+<li><a href="http://www.churchoftherock.ca/threshold">Threshold</a></li>
+<li><a href="http://www.churchoftherock.ca/engage">Young Adults</a></li>
+</ul>
+<div style="position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow-x: hidden; overflow-y: hidden;" class="mcePaste" id="_mcePaste"><a href="http://www.churchoftherock.ca/">http://churchoftherock.ca</a></div>										</div>
+										<div class="box">
+											<div class="image">
+												<img src="/clients/ChurchoftheRock/Images/pillar-four.jpg" alt="Information">
+											</div>
+											<ul>
+<li><a href="http://www.churchoftherock.ca/tv-schedule">TV Schedule</a></li>
+<li><a href="http://www.churchoftherock.ca/watch-online">Watch Online</a></li>
+<li><a href="http://www.churchoftherock.ca/podcasts">Podcasts</a></li>
+<li><a href="http://shop.churchoftherock.ca/home">E-Store</a></li>
+<li><a href="http://shop.churchoftherock.ca/product;item,19">Donate Online</a></li>
+</ul>										</div>
+										<div class="box">
+											<div class="image">
+												<img src="/clients/ChurchoftheRock/Images/pillar-five.jpg" alt="Help">
+											</div>
+											<ul>
+<li><a href="http://churchoftherock.ca/request-prayer">Request Prayer</a></li>
+<li><a href="http://www.churchoftherock.ca/request-visit">Request a Visit</a></li>
+<li><a href="http://churchoftherock.ca/contact">Contact Us</a></li>
+</ul>										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer">
+				<div class="footer-holder">
+					<div class="footer-box">
+						<div class="contact-box">
+							
+							<address>
+								<p>Phone (204) 261-0070<br>
+								Fax (204) 261-0066<br>
+								Toll Free 1-877-700-ROCK (7625)</p>
+							</address>
+
+							<ul class="social-networks">
+								<li><a class="facebook" href="http://www.facebook.com/churchoftherock" title="Follow us on Facebook!">facebook</a></li>
+								<li><a class="twitter" href="http://twitter.com/cofr" title="Follow us on Twitter!">twitter</a></li>
+								<li><a class="mail" href="http://www.churchoftherock.ca/contact" title="Contact us!">mail</a></li>
+								<li><a class="rss" href="http://www.churchoftherock.ca/rss" title="List of RSS Feeds">rss</a></li>
+								<li><a class="podcast" href="http://www.churchoftherock.ca/podcasts" title="Our Podcast">podcast</a></li><!--http://itunes.apple.com/ca/podcast/church-rock-weekend-messages/id514477567-->
+							</ul>
+						</div>
+						<p class="copyright">Church of the Rock Inc.® ©2014 all rights reserved (<a href="http://www.churchoftherock.ca/privacy-policy">Privacy Policy</a> and <a href="http://www.churchoftherock.ca/terms-of-use">Terms of Use</a>)</p>
+						<span class="link cws-plug">Design by <a href="http://www.metricmarketing.ca/" rel="nofollow">Metric Marketing</a></span>
+					</div>
+					<strong class="footer-logo"><a href="http://www.churchoftherock.ca/">Church of the Rock</a></strong>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">// <![CDATA[
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19505582-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+// ]]></script>
+	
+<script type="text/javascript">
+	jQuery(function($){
+		
+	});
+</script>
+
+
+<div style="display: none;" id="cboxOverlay"></div><div style="display: none;" tabindex="-1" role="dialog" class="" id="colorbox"><div id="cboxWrapper"><div><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div style="float: left;" id="cboxTitle"></div><div style="float: left;" id="cboxCurrent"></div><button id="cboxPrevious" type="button"></button><button id="cboxNext" type="button"></button><button id="cboxSlideshow"></button><div style="float: left;" id="cboxLoadingOverlay"></div><div style="float: left;" id="cboxLoadingGraphic"></div><button id="cboxClose" type="button"></button></div><div style="float: left;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></div>
+</form>
+</body>
+</html>

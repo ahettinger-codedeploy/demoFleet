@@ -1,0 +1,271 @@
+<SCRIPT language=JavaScript>
+  var Order = 5;
+  var ADV1 = new Image(); ADV1 = "/PrivateLabel/CypressGardens/Images/passport06.jpg";
+  var ADV2 = new Image(); ADV2 = "/PrivateLabel/CypressGardens/Images/2nddayfree.jpg";
+  var ADV3 = new Image(); ADV3 = "/PrivateLabel/CypressGardens/Images/passport06_plat.jpg";
+  var ADV4 = new Image(); ADV4 = "/PrivateLabel/CypressGardens/Images/grouprates.jpg";
+  var ADV5 = new Image(); ADV5 = "/PrivateLabel/CypressGardens/Images/adcg_tickets.jpg";
+  var ADV6 = new Image(); ADV6 = "/PrivateLabel/CypressGardens/Images/adcg_splashisland.jpg";
+  var ADV7 = new Image(); ADV7 = "/PrivateLabel/CypressGardens/Images/adcg_preferredhotels.jpg";
+  var LNK1 = "http://cypressgardens.com/pricing.asp#Passport06";
+  var LNK2 = "http://cypressgardens.com/pricing.asp#SecondDay";
+  var LNK3 = "http://cypressgardens.com/pricing.asp#PlatPassport06";
+  var LNK4 = "http://cypressgardens.com/pricing.asp#GroupRates";
+  var LNK7 = "http://cypressgardens.com/preferredhotel.asp";
+  var rOrd = 1;
+  var rIMG1 = new Image(); rIMG1 = "/PrivateLabel/CypressGardens/Images/concerts/fp_1.gif";
+  var rIMG2 = new Image(); rIMG2 = "/PrivateLabel/CypressGardens/Images/fp_2.gif";
+  var rIMG3 = new Image(); rIMG3 = "/PrivateLabel/CypressGardens/Images/fp_3.gif";
+  var rIMG4 = new Image(); rIMG4 = "/PrivateLabel/CypressGardens/Images/fp_4.gif";
+  function RotateImages(){
+   if(rOrd==1){document.rIMG.src = rIMG1;rOrd=2;}
+   else if(rOrd==2){document.rIMG.src = rIMG2;rOrd=3;}
+   else if(rOrd==3){document.rIMG.src = rIMG3;rOrd=4;}
+   else if(rOrd==4){document.rIMG.src = rIMG4;rOrd=1;}
+   setTimeout("RotateImages()",5000);
+  }
+  function Get_Concert(){
+   if (document.forms[0].sCONCERT.options[document.forms[0].sCONCERT.selectedIndex].value == "" ){
+    window.status='Done';
+    document.forms[0].sCONCERT.selectedIndex = 0;
+   }else if (document.forms[0].sCONCERT.options[document.forms[0].sCONCERT.selectedIndex].value == "PRINT" ){
+    window.open("print_concerts.asp", "PrintConcerts");
+    window.status='Done';
+    document.forms[0].sCONCERT.selectedIndex = 0;
+   }else{
+    document.forms[0].CONCERT.value = document.forms[0].sCONCERT.options[document.forms[0].sCONCERT.selectedIndex].value;
+    document.forms[0].sCONCERT.selectedIndex = 0;
+    window.location.href = "concerts.asp?load=" + document.forms[0].CONCERT.value;
+   }
+  }
+ function popup(WDT, HGT, SRC, NUM){
+  var windef;
+  windef = "height=" + HGT + ",width=" + WDT + ",location=no,scrollbars=no,menubars=no,toolbars=no,resizable=no";
+  window.open("view.asp?src=concerts/" + SRC, NUM, windef);
+ }
+ function PopPrint(SRC){
+  window.open("http://cypressgardens.com/print_concert.asp?sConcert=" + SRC, "PrintConcerts");
+ }
+  function LoadAds(){
+        if(Order==1){document.IMG1.src=ADV1;document.IMG2.src=ADV2;document.IMG3.src=ADV3;Order=2;}
+   else if(Order==2){document.IMG1.src=ADV2;document.IMG2.src=ADV3;document.IMG3.src=ADV4;Order=3;}
+   else if(Order==3){document.IMG1.src=ADV3;document.IMG2.src=ADV4;document.IMG3.src=ADV5;Order=4;}
+   else if(Order==4){document.IMG1.src=ADV4;document.IMG2.src=ADV5;document.IMG3.src=ADV6;Order=5;}
+   else if(Order==5){document.IMG1.src=ADV5;document.IMG2.src=ADV6;document.IMG3.src=ADV7;Order=6;}
+   else if(Order==6){document.IMG1.src=ADV6;document.IMG2.src=ADV7;document.IMG3.src=ADV1;Order=7;}
+   else if(Order==7){document.IMG1.src=ADV7;document.IMG2.src=ADV1;document.IMG3.src=ADV2;Order=1;}
+   setTimeout("LoadAds()",5000);
+  }
+  function LaunchAd(varIn){
+        if(Order==1&&varIn==1){window.location.href=LNK7}
+   else if(Order==1&&varIn==2){window.location.href=LNK1}
+   else if(Order==1&&varIn==3){window.location.href=LNK2}
+   else if(Order==2&&varIn==1){window.location.href=LNK1}
+   else if(Order==2&&varIn==2){window.location.href=LNK2}
+   else if(Order==2&&varIn==3){window.location.href=LNK3}
+   else if(Order==3&&varIn==1){window.location.href=LNK2}
+   else if(Order==3&&varIn==2){window.location.href=LNK3}
+   else if(Order==3&&varIn==3){window.location.href=LNK4} 
+   else if(Order==4&&varIn==1){window.location.href=LNK3}
+   else if(Order==4&&varIn==2){window.location.href=LNK4}
+   else if(Order==4&&varIn==3){window.open("http://webstore.adventureparksgroup.com");} 
+   else if(Order==5&&varIn==1){window.location.href=LNK4}
+   else if(Order==5&&varIn==2){window.open("http://webstore.adventureparksgroup.com");}
+   else if(Order==5&&varIn==3){window.open("http://splashisland.cypressgardens.com");}
+   else if(Order==6&&varIn==1){window.open("http://webstore.adventureparksgroup.com");}
+   else if(Order==6&&varIn==2){window.open("http://splashisland.cypressgardens.com");}
+   else if(Order==6&&varIn==3){window.location.href=LNK7}
+   else if(Order==7&&varIn==1){window.open("http://splashisland.cypressgardens.com");}
+   else if(Order==7&&varIn==2){window.location.href=LNK7}
+   else if(Order==7&&varIn==3){window.location.href=LNK1}
+  }
+  function SignUp(){
+   if (document.forms[0].Newsletter.value==""){
+    alert('Please Enter Your Email Address Before Signing Up!');
+   }else{
+    window.location.href = 'newsletter.asp?email=' + document.forms[0].Newsletter.value;
+   }
+  }
+ </SCRIPT>
+
+<!--<META content="MSHTML 6.00.2900.2802" name=GENERATOR></HEAD>
+<BODY text=#000000 vLink=#000000 aLink=#33cc99 link=#000000 leftMargin=0 
+background="/PrivateLabel/CypressGardens/Images/site.gif" topMargin=0 
+onload=LoadAds() rightMargin=0 marginheight="0" marginwidth="0">
+<FORM method=post>-->
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=0 width=750 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD width=750 colSpan=5 height=252><MAP name=cgheader><AREA shape=RECT 
+        target=_self alt="Whats New" coords=364,57,494,75 
+        href="http://cypressgardens.com/new.asp"><AREA shape=RECT target=_self 
+        alt=Rides coords=364,75,494,92 
+        href="http://cypressgardens.com/rides.asp"><AREA shape=RECT target=_self 
+        alt="Concerts &amp; Events" coords=364,92,494,109 
+        href="http://cypressgardens.com/concerts.asp"><AREA shape=RECT 
+        target=_self alt="Jubilee Junction" coords=364,109,494,126 
+        href="http://cypressgardens.com/jubilee.asp"><AREA shape=RECT 
+        target=_self alt=Gardens coords=364,126,494,144 
+        href="http://cypressgardens.com/gardens.asp"><AREA shape=RECT 
+        target=_self alt=Shows coords=364,144,494,161 
+        href="http://cypressgardens.com/shows.asp"><AREA shape=RECT target=_self 
+        alt=Animals coords=364,161,494,179 
+        href="http://cypressgardens.com/animals.asp"><AREA shape=RECT 
+        target=_self alt="Park Rules" coords=508,37,618,54 
+        href="http://cypressgardens.com/rules.asp"><AREA shape=RECT target=_self 
+        alt="Park Hours" coords=508,54,618,70 
+        href="http://cypressgardens.com/calendar.asp"><AREA shape=RECT 
+        target=_self alt="Park Map" coords=508,70,618,88 
+        href="http://cypressgardens.com/map.asp"><AREA shape=RECT target=_self 
+        alt=Pricing coords=508,88,618,104 
+        href="http://cypressgardens.com/pricing.asp"><AREA shape=RECT 
+        target=_self alt="Press Room" coords=508,104,618,121 
+        href="http://cypressgardens.com/press.asp"><AREA shape=RECT target=_self 
+        alt=Lodging coords=508,121,618,138 
+        href="http://cypressgardens.com/lodging.asp"><AREA shape=RECT 
+        target=_self alt=Directions coords=508,138,618,155 
+        href="http://cypressgardens.com/directions.asp"><AREA shape=RECT 
+        target=_self alt="Eats &amp; Treats" coords=508,155,618,174 
+        href="http://cypressgardens.com/food.asp"><AREA shape=RECT target=_self 
+        alt="Contact Us" coords=624,127,736,144 
+        href="http://cypressgardens.com/contact.asp"><AREA shape=RECT 
+        target=_self alt=Jobs coords=624,144,736,159 
+        href="http://cypressgardens.com/jobs.asp"><AREA shape=RECT target=_self 
+        alt=FAQs coords=624,159,736,176 
+        href="http://cypressgardens.com/faq.asp"><AREA shape=RECT target=_self 
+        alt=Shows coords=30,108,129,172 
+        href="http://cypressgardens.com/shows.asp"><AREA shape=RECT target=_self 
+        alt=Rides coords=131,111,227,177 
+        href="http://cypressgardens.com/rides.asp"><AREA shape=RECT target=_self 
+        alt=Gardens coords=230,83,330,162 
+        href="http://cypressgardens.com/gardens.asp"><AREA shape=RECT 
+        target=_self alt=Animals coords=5,179,93,234 
+        href="http://cypressgardens.com/animals.asp"><AREA shape=RECT 
+        target=_self alt=Concerts coords=94,176,187,246 
+        href="http://cypressgardens.com/concerts.asp"><AREA shape=POLY 
+        target=_self alt="Jubilee Junction" 
+        coords=192,182,233,182,234,167,303,168,301,239,201,240 
+        href="http://cypressgardens.com/jubilee.asp"><AREA shape=RECT 
+        target=_self alt=Home coords=11,2,221,106 
+        href="http://cypressgardens.com/welcome.asp"><AREA shape=RECT 
+        target=_self alt=Home coords=701,7,746,28 
+        href="http://cypressgardens.com/welcome.asp"></MAP><IMG height=252 
+      src="/PrivateLabel/CypressGardens/Images/cgheader_120705.jpg" 
+      width=750 useMap=#cgheader border=0> </TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=750 align=center border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width=10><IMG 
+      src="/PrivateLabel/CypressGardens/Images/blank.gif" 
+width=10></TD>
+    <TD vAlign=top width=190>
+      <TABLE cellSpacing=0 cellPadding=0 width=190 
+      background="/PrivateLabel/CypressGardens/Images/block.gif" 
+      border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=15 height=382><IMG height=382 
+            src="/PrivateLabel/CypressGardens/Images/block.gif" 
+            width=15></TD>
+          <TD align=middle width=160 height=382><A 
+            href="javascript:LaunchAd(1);"><IMG height=96 
+            src="/PrivateLabel/CypressGardens/Images/blank.jpg" 
+            width=160 border=0 name=IMG1></A><BR><A 
+            href="javascript:LaunchAd(2);"><IMG height=96 
+            src="/PrivateLabel/CypressGardens/Images/blank.jpg" 
+            width=160 border=0 name=IMG2></A><BR><A 
+            href="javascript:LaunchAd(3);"><IMG height=96 
+            src="/PrivateLabel/CypressGardens/Images/blank.jpg" 
+            width=160 border=0 name=IMG3></A><BR><IMG height=8 
+            src="/PrivateLabel/CypressGardens/Images/block.gif" 
+            width=160><BR><!--<IMG height=26 
+            src="/PrivateLabel/CypressGardens/Images/adventuremail.gif" 
+            width=160><BR><INPUT name=Newsletter><BR><INPUT onclick=javascript:SignUp() type=button value=" Sign Up! "><BR><IMG 
+            height=4 
+            src="/PrivateLabel/CypressGardens/Images/block.gif" 
+            width=160>--><BR><A href="http://cypressgardens.com/calendar.asp"><IMG 
+            height=40 
+            src="/PrivateLabel/CypressGardens/Images/ophours.jpg" 
+            width=160 border=0></A><BR><IMG height=7 
+            src="/PrivateLabel/CypressGardens/Images/block.gif" 
+            width=160><BR><A title="Designed and Hosted by PlanetBoogie.com" 
+            href="http://www.planetboogie.com/" target=_blank><IMG height=43 
+            src="/PrivateLabel/CypressGardens/Images/miniboogie.gif" 
+            width=64 border=0></A><IMG height=43 
+            src="/PrivateLabel/CypressGardens/Images/block.gif" 
+            width=96></TD>
+          <TD vAlign=top width=15 height=382><IMG height=382 
+            src="/PrivateLabel/CypressGardens/Images/block.gif" 
+            width=15></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top width=10><IMG 
+      src="/PrivateLabel/CypressGardens/Images/blank.gif" 
+width=10></TD>
+    <TD vAlign=top width=530>
+      <TABLE cellSpacing=0 cellPadding=0 width=530 border=0>
+        <TBODY>
+        <TR>
+          <TD width=530 colSpan=3 height=53><IMG height=53 
+            src="/PrivateLabel/CypressGardens/Images/concerts.jpg" 
+            width=530><INPUT type=hidden name=CONCERT></TD></TR>
+        <TR>
+          <TD width=15 height=45><IMG height=45 
+            src="/PrivateLabel/CypressGardens/Images/block.gif" 
+            width=15></TD>
+          <TD vAlign=center align=middle width=500 
+          background="/PrivateLabel/CypressGardens/Images/concerts.gif" 
+          height=45><!--<SELECT 
+            style="FONT-WEIGHT: normal; BACKGROUND: #ffffff; COLOR: #000000; FONT-FAMILY: Arial" 
+            onchange=Get_Concert() size=1 name=sCONCERT> <OPTION value="" 
+              selected>Choose from 29 Concerts &amp; Events!</OPTION><OPTION 
+              value=PRINT>Show Printable List (All Concerts)</OPTION><OPTION 
+              value=106>Now thru March : Jubilee Junction 
+              Entertainment</OPTION><OPTION value=111>Weekly thru 04/02/06 : 
+              Lowrey Organ Giveaway</OPTION><OPTION value=72>02/11/2006 : Don 
+              Williams</OPTION><OPTION value=81>02/12/2006 : Terry Myers Tribute 
+              to Benny Goodman</OPTION><OPTION value=113>02/17 -04/02/2006 : 
+              BLOOMS &amp; BLOSSOMS</OPTION><OPTION value=50>02/18/2006 : An 
+              Afternoon with the Grand Ole Opry</OPTION><OPTION 
+              value=92>02/19/2006 : Gary Puckett</OPTION><OPTION 
+              value=66>02/25/2006 : The Temptations</OPTION><OPTION 
+              value=99>02/26/2006 : The Lettermen</OPTION><OPTION 
+              value=88>03/04/2006 : Ronnie Milsap</OPTION><OPTION 
+              value=90>03/05/2006 : The Four Freshmen</OPTION><OPTION 
+              value=96>03/11/2006 : Paul Anka</OPTION><OPTION 
+              value=91>03/12/2006 : John Conlee</OPTION><OPTION 
+              value=85>03/18/2006 : Sinatra Sings Sinatra</OPTION><OPTION 
+              value=101>03/19/2006 : Big Comfy Couch</OPTION><OPTION 
+              value=93>03/25/2006 : Yesterday – A Tribute to the 
+              Beatles</OPTION><OPTION value=68>03/26/2006 : Frankie Avalon, 
+              Bobby Rydell &amp; Fabian</OPTION><OPTION value=83>04/02/2006 : 
+              Merle Haggard</OPTION><OPTION value=108>04/08/2006 : Three Dog 
+              Night</OPTION><OPTION value=107>04/15/2006 : The Beach 
+              Boy's</OPTION><OPTION value=103>04/22/2006 : Montgomery 
+              Gentry</OPTION><OPTION value=89>04/29/2006 : Blake 
+              Shelton</OPTION><OPTION value=95>05/13/2006 : Trisha 
+              Yearwood</OPTION><OPTION value=100>05/28/2006 : Hank Williams 
+              Jr.</OPTION><OPTION value=102>07/15/2006 : The Nashville Star 
+              Tour</OPTION><OPTION value=104>09/16/2006 : Jo Dee 
+              Messina</OPTION><OPTION value=112>09/29 - 13/31/2006 : 
+              PHOBIA</OPTION><OPTION value=78>11/12/2006 : George 
+              Jones</OPTION><OPTION value=94>12/16/2006 : Lee Greenwood &amp; 
+              Crystal 
+              Gayle</OPTION><OPTION></OPTION><OPTION>==============================</OPTION><OPTION>Reoccurring 
+              Special 
+              Events!</OPTION><OPTION>==============================</OPTION><OPTION 
+              value=-101>09/29/2006 – 10/31/2006 : Phobia</OPTION></SELECT>--></TD>
+          <TD width=15 height=45><IMG height=45 
+            src="/PrivateLabel/CypressGardens/Images/block.gif" 
+            width=15></TD></TR>
+        <TR>
+          <TD vAlign=top width=15><IMG height=100 
+            src="/PrivateLabel/CypressGardens/Images/block.gif" 
+            width=15></TD>
+          <TD vAlign=top width=500 
+          background="/PrivateLabel/CypressGardens/Images/concerts(1).gif">
+            
+            <TABLE cellSpacing=0 cellPadding=0 width=500 height=500 border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign="top" width=100% background="/PrivateLabel/CypressGardens/Images/blank.gif">
+                  

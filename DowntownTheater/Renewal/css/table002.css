@@ -1,0 +1,117 @@
+/* =====================
+TABLE STYLES
+===================== */
+
+/* table - header cell style  */ 
+
+.table > thead > tr > th, 
+.table > tbody > tr > th, 
+.table > tfoot > tr > th
+{
+background-color: #333333;
+color: rgb(204, 204, 204);
+border-bottom: 1px solid #F3F3F3;
+border-top: 1px solid #F3F3F3 !important;
+border-left: 0px;
+border-right: 0px;
+line-height: 1.42857;
+padding: 8px;
+vertical-align: top;
+font-size: 16px;
+font-weight: 700;
+}
+
+/* table - data cell style  */ 
+
+.table > thead > tr > td, 
+.table > tbody > tr > td, 
+.table > tfoot > tr > td 
+{
+border-top: 1px solid #ffffff;
+border-left: 0px;
+border-right: 0px;
+line-height: 1.42857;
+padding: 8px;
+vertical-align: top;
+background-color: #ffffff;
+font-size: 14px;
+font-weight: 400;
+}
+
+
+/* table footer - border */ 
+
+.table > tfoot > tr > th
+{
+border-top: 2px solid #dddddd;
+}
+
+/* table columns - center first/last columns */ 
+
+.table > thead > tr > th:first-child,
+.table > thead > tr > th:last-child,
+
+.table > tbody > tr > td:first-child,
+.table > tbody > tr > td:last-child
+{
+text-align: center;
+vertical-align: middle; 
+padding: 0px;
+}
+
+/* table columns - change cursor over sortable columns */ 
+
+.table > thead > tr > th.sorting,  
+.table > thead > tr > th.sorting_desc,
+.table > thead > tr > th.sorting_asc
+{
+cursor: pointer;
+}
+
+/* table - active row fade in */ 
+
+.table.table-fade.dataTable.no-footer tbody tr:hover.odd td,
+.table.table-fade.dataTable.no-footer tbody tr:hover.even td,
+
+.table.table-fade.dataTable.no-footer tbody tr.active:hover.odd td,
+.table.table-fade.dataTable.no-footer tbody tr.active:hover.even td,
+
+.table tbody tr.active td, 
+.table tbody tr.active th,
+
+.table tbody tr.active:hover td,
+.table tbody tr.active:hover th
+{
+color: #000000;
+border-color: white;
+background-color: rgba(27, 126, 90, 0.3) !important;
+-webkit-transition: all 1s ease-in;
+-moz-transition: all 1s ease-in;
+-o-transition: all 1s ease-in;
+-ms-transition: all 1s ease-in;
+transition: all 1s ease-in;
+}
+
+
+/* table - active row  fade out */ 
+
+.table.table-fade.dataTable.no-footer tbody tr.odd,
+.table.table-fade.dataTable.no-footer tbody tr.even,
+ 
+ .table.table-fade.dataTable.no-footer tbody tr:hover.odd td,
+ .table.table-fade.dataTable.no-footer tbody tr:hover.even td,
+
+.table tbody tr td, 
+.table tbody tr th,
+
+.table tbody tr:hover td,
+.table tbody tr:hover th
+{
+border-color: #e0e0e0;
+-webkit-transition: all 1s ease-out;
+-moz-transition: all 1s ease-out;
+-o-transition: all 1s ease-out;
+-ms-transition: all 1s ease-out;
+transition: all 1s ease-out;
+}
+

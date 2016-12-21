@@ -1,0 +1,420 @@
+<%
+'changelog
+'LSP 03/29/16 - remove .js references to fix overlay issue
+%>
+
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+    <!-- Favicons -->
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+    <!-- Helpers -->
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/backgrounds.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/boilerplate.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/border-radius_002.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/grid.css">
+
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/spacing.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/typography.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/utils.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/colors.css">
+    <!-- Elements -->
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/badges.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/buttons.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/content-box.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/dashboard-box.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/forms.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/images.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/info-box.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/invoice.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/loading-indicators.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/menus.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/panel-box.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/response-messages.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/responsive-tables.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/ribbon.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/social-box.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/tables.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/tile-box.css">
+    <!-- Fonts/Icons -->
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/css_002.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/fontawesome.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/linecons.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/spinnericon.css">
+    <!-- Plugins -->
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/accordion.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/calendar.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/carousel.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/chosen.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/dialog.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/dropdown.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/dropzone.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/fileinput.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/inputswitch.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/inputswitch-alt.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/ionrangeslider.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/jgrowl.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/loadingbar.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/vectormaps.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/markdown.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/modal.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/multiselect.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/fileupload.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/nestable.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/noty.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/popover.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/prettyphoto.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/progressbar.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/rangeslider.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/slidebars.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/slider.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/tabs.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/timepicker.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/tocify.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/tooltip.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/touchspin.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/uniform.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/wizard.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/xeditable.css">
+    <!-- Snippets -->
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/files-box.css">
+
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/notification-box.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/progress-box.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/user-profile.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/mobile-navigation.css">
+    <!-- Admin theme -->
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/layout.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/default.css">
+    <!-- Components theme -->
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/default_002.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/border-radius.css">
+    <!-- Admin responsive -->
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/responsive-elements.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/admin-responsive.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/navbar.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/layout-custom.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/global.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/footable_002.css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/footable.css">
+
+    <link href="/clients/cbaweb/images/css.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/clients/cbaweb/images/faq.css">
+
+
+
+
+
+</head>
+
+<body class="boxed-layout">
+    <div class="header-bar row">
+        <div class="container">
+            <div class="col-md-12 top-links">
+
+                <a href="https://www.cbaweb.org/News/Breakdown">Bluegrass Breakdown</a>
+                <a href="https://www.cbaweb.org/About/WorkingWithTheCBA">Advertise</a>
+
+                <a href="https://www.cbaweb.org/About/Contact">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-wrapper">
+
+        <!--Start Header-->
+        <div id="page-header" class="row ng-scope" ng-controller="headerController">
+            <div class="col-xs-12 col-sm-6">
+                <a href="https://www.cbaweb.org/" class="home">
+                    <img src="/clients/cbaweb/images/logo.png">
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <!-- ngIf: sponsor7.url.length > 10 --><div class="top-right-ad ng-scope" ng-if="sponsor7.url.length &gt; 10">
+                    <a href="https://www.cbaweb.org/news/article/12221" ng-href="https://www.cbaweb.org/news/article/12221"><img src="/clients/cbaweb/images/sponsor_20150910145401986.png" ng-src="/Images/sponsors/sponsor_20150910145401986.png" class="responsive-img"></a>
+                </div><!-- end ngIf: sponsor7.url.length > 10 -->
+                <!-- ngIf: sponsor7.url.length < 10 -->
+            </div>
+        </div>
+        <!--End Header-->
+
+        <!--Start Nav-->
+        <nav class="navbar navbar-default">
+    <div class="container-fluid">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+        </div>
+
+        <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="nav navbar-nav">
+
+                <li id="navhome" class=""><a href="https://www.cbaweb.org/">Home</a></li>
+
+                <li id="navabout" class="dropdown">
+                    <a href="https://www.cbaweb.org/About" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About the CBA <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="https://www.cbaweb.org/About/WorkingWithTheCBA">Working with the CBA</a></li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="https://www.cbaweb.org/About/Volunteering">Volunteering&nbsp;&nbsp;</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://www.cbaweb.org/About/HowToVolunteer">How To Volunteer</a></li>
+                                <li><a href="https://www.cbaweb.org/About/RunningForTheBoard">Become a Board Member</a></li>
+                                <li><a href="https://www.cbaweb.org/About/VolunteerCoordinators">Volunteer Coordinators</a></li>
+                                <li><a href="https://www.cbaweb.org/About/VolunteerFAQ">Festival Volunteer FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://www.cbaweb.org/About/Join">Join the CBA</a></li>
+                        <li><a href="https://www.cbaweb.org/About/MemberGiving">Member Giving</a></li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="https://www.cbaweb.org/About/Organization">CBA Organization&nbsp;&nbsp;</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://www.cbaweb.org/About/Elections">Elections</a></li>
+                                <li><a href="https://www.cbaweb.org/About/BoardMtgCalendar">Board Meeting Calendar</a></li>
+                                <li><a href="https://www.cbaweb.org/About/Board">Board of Directors</a></li>
+                                <li><a href="https://www.cbaweb.org/About/AreaVPs">Area Vice Presidents</a></li>
+                                <li><a href="https://www.cbaweb.org/About/Staff">Officers, Coordinators, Teams</a></li>
+                                <li><a href="https://www.cbaweb.org/About/AssociationDocs">Association Documents</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="https://www.cbaweb.org/About/CBAHistory">CBA History&nbsp;&nbsp;</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://www.cbaweb.org/About/LifetimeMembers">Lifetime Members</a></li>
+                                <li><a href="https://www.cbaweb.org/About/BluegrassPioneers">CA Bluegrass Pioneers</a></li>
+                                <li><a href="https://www.cbaweb.org/About/BluegrassHistory">CA Bluegrass History</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://www.cbaweb.org/About/CBALogoItems">CBA Logo Items</a></li>
+                    </ul>
+                </li>
+
+                <li id="navresources" class="dropdown">
+                    <a href="https://www.cbaweb.org/Resources" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Musician Resources <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="https://www.cbaweb.org/Resources/BandSelection">CBA Band Selection Process</a></li>
+                        <li><a href="https://www.cbaweb.org/Resources/Luthiers">Luthiers</a></li>
+                        <li><a href="https://www.cbaweb.org/Resources/Bands">California Bands</a></li>
+                        <li><a href="https://www.cbaweb.org/Resources/CaliforniaOrganizations">California Organizations</a></li>
+                    </ul>
+                </li>
+
+                <li id="navlearning" class="dropdown">
+                    <a href="https://www.cbaweb.org/Learning" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Learning <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="https://www.cbaweb.org/Learning/MusicCamp">CBA Music Camp</a></li>
+                        <li><a href="https://www.cbaweb.org/Learning/YouthPrograms">CBA Youth Programs</a></li>
+                        <li><a href="https://www.cbaweb.org/Learning/LendingLibrary">Instrument Lending Library</a></li>
+                        <li><a href="https://www.cbaweb.org/Learning/Teachers">Music Teachers</a></li>
+                        <li><a href="https://www.cbaweb.org/Learning/RulesForJamming">Rules for Jamming</a></li>
+                        <li><a href="https://www.cbaweb.org/Learning/InstructionalMaterials">Instructional Materials</a></li>
+                    </ul>
+                </li>
+
+                <li id="navevents" class="dropdown active">
+                    <a href="https://www.cbaweb.org/Events" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Events <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-submenu">
+                            <a tabindex="-1" href="https://www.cbaweb.org/Events">CBA Events&nbsp;&nbsp;</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="https://www.cbaweb.org/Events/Great48">Great 48</a></li>
+                                <li><a href="https://www.cbaweb.org/Events/NightAtTheGrange">Night at the Grange</a></li>
+                                <li><a href="https://www.cbaweb.org/Events/Sonoma">Sonoma County Folk Festival</a></li>
+                                <li><a href="https://www.cbaweb.org/Events/SpringCampout">CBA Spring Campout</a></li>
+                                <li><a href="https://www.cbaweb.org/Events/MusicCamp">CBA Music Camp</a></li>
+                                <li><a href="https://www.cbaweb.org/Events/FathersDayFestival">Fathers Day Festival</a></li>
+                                <li><a href="https://www.cbaweb.org/Events/YouthAcademy">CBA Youth Academy</a></li>
+                                <li><a href="https://www.cbaweb.org/Events/GoldenOldTimeCampout">Golden Old Time Campout</a></li>
+                                <li><a href="https://www.cbaweb.org/Events/FallCampout">CBA Fall Campout</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://www.cbaweb.org/Events/Tickets">Online Tickets</a></li>
+                        <li><a href="https://www.cbaweb.org/Events/Calendar">Event Calendar</a></li>
+                        <li><a href="https://www.cbaweb.org/Events/Add">Add an Event</a></li>
+                        <li><a href="https://www.cbaweb.org/Events/ThompsonsList">Thompson's 2015 Festival List</a></li>
+                    </ul>
+                </li>
+
+                <li id="navmessageboard"><a href="https://www.cbaweb.org/MessageBoard">Message Board</a></li>
+
+                <li class="dropdown">
+                    <a href="https://www.cbaweb.org/Features" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">News Features <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="https://www.cbaweb.org/Welcome/Archive">Welcome Column</a></li>
+                        <li><a href="https://www.cbaweb.org/News/Archive/1">News</a></li>
+                        <li><a href="https://www.cbaweb.org/News/Archive/6">Old Time Rambler</a></li>
+                        <li><a href="https://www.cbaweb.org/News/Archive?category=Regional">Regional Newsletters</a></li>
+                        <li><a href="https://www.cbaweb.org/News/Archive/2">Hooked on Bluegrass</a></li>
+                        <li><a href="https://www.cbaweb.org/News/Archive?category=JD">J.D.'s Kitchen</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown" id="navgallaries">
+                    <a href="https://www.cbaweb.org/Galleries" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Media <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="https://www.cbaweb.org/Galleries/Photos">Photo Galleries</a></li>
+                        <li><a href="https://www.cbaweb.org/Galleries/Tshirt">CBA Tshirt Gallery</a></li>
+
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</nav>
+        <!--Start Nav-->
+
+        <div id="page-content-wrapper">
+            <div id="page-content">
+
+
+
+<div class="row">
+    <div class="col-md-12">
+        <img src="/clients/cbaweb/images/1.png" class="responsive-img banner">
+    </div>
+    <div class="col-md-12 breadcrumbs">
+        <a href="https://www.cbaweb.org/Events">Events</a> : Online Tickets
+</div>
+</div>
+
+<div class="row ng-scope" ng-controller="ticketsController">
+
+    <div class="col-md-9">
+        <div class="content-left-container">
+            <div class="section-title">
+                <h1>Online Tickets</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                  <!--TIX CONTENT-->
+                  <asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+
+                </div>
+            </div>
+
+
+
+            <section class="cd-faq">
+
+                <ul class="cd-faq-group">
+                    <!-- ngRepeat: row in tickets -->
+                </ul>
+                <a href="#" class="cd-close-panel">Close</a>
+
+            </section>
+
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="content-right-container">
+            <div class="right-nav-title">
+    <h2>Our Sponsors</h2>
+</div>
+<div class="right-col-img-container ng-scope" ng-controller="sponsorController">
+    <div class="right-col-img">
+        <a href="https://www.cbaweb.org/news/article/12276" ng-href="https://www.cbaweb.org/news/article/12276" target="_blank"><img src="/clients/cbaweb/images/sponsor_20150919162006561.png" width="90%"></a>
+    </div>
+    <div class="right-col-img">
+        <a href="http://thebrombies.com/" ng-href="http://thebrombies.com/" target="_blank"><img src="/clients/cbaweb/images/sponsor_20150723152122519.png" width="90%"></a>
+    </div>
+    <div class="right-col-img">
+        <a href="http://www.guglielmowinery.com/" ng-href="http://www.guglielmowinery.com/" target="_blank"><img src="/clients/cbaweb/images/sponsor_20150723151232165.png" width="90%"></a>
+    </div>
+</div>
+
+
+        </div>
+    </div>
+
+</div>
+
+
+            </div>
+        </div>
+
+        <div style="clear:both;height: 30px;"></div>
+
+        <!--Start Footer-->
+        <div class="footer">
+            <div class="row">
+                <div class="container" style="padding-top:20px;">
+
+                    <div class="col-md-6" id="footer-links">
+                        <ul>
+
+                            <li class="li-advertise">
+                                <a href="https://www.cbaweb.org/About/WorkingWithTheCBA">Advertise with the CBA</a>
+                            </li>
+
+                            <li class="li-breakdown">
+                                <a href="https://www.cbaweb.org/News/Breakdown">Download the Bluegrass Breakdown</a>
+                            </li>
+                            <li class="li-contact">
+                                <a href="https://www.cbaweb.org/About/Contact">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-3 footer-social">
+                        <p class="footer-sub-title">CONNECT WITH US ON:</p>
+                        <a href="https://www.facebook.com/californiabluegrass" class="btn btn-lg bg-facebook" target="_blank">
+                            <span class="glyph-icon icon-separator">
+                                <i class="fa fa-facebook fa-lg"></i>
+                            </span>
+                            <span class="button-content" style="font-size: 20px;">
+                                Facebook
+                            </span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3 footer-social">
+                        <p class="footer-sub-title">CBA MEMBERSHIP:</p>
+                        <a href="https://www.cbaweb.org/About/Join" class="btn btn-lg bg-google">
+                            <span class="glyph-icon icon-separator">
+                                <i class="fa fa-user-plus fa-lg"></i>
+                            </span>
+                            <span class="button-content" style="font-size: 20px;">
+                                Join or Renew
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--End Footer-->
+
+    </div>
+
+
+
+
+  </div>
+  </form>
+  </body>
+  </html>

@@ -1,0 +1,107 @@
+/*******************************************************\
+ * You can change this file to make different nav layouts
+ * using the markers below.
+ *
+ * Markers:
+ *
+ *
+ * Right align the top nav
+ * -------------------------
+ * m1 - change to [float: right;]
+ *
+\*******************************************************/
+
+/* top nav items */
+#headernav .navtop
+{
+	/* recommended styles */
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	float: right; 
+	text-transform: uppercase;
+	font-size: 10px;
+}
+#headernav .navtop li
+{
+	/* recommended styles */
+	float: left;
+}
+#headernav .navtop li a
+{
+	/* recommended styles */
+
+	/* add custom styles here */
+	color: #939393;
+	padding: 0 5px 36px 5px;
+	display: block;
+	text-decoration: none;
+}
+#headernav .navtop li a:hover
+{
+	color: #ffffff;
+}
+
+/* dropdown nav items */
+#headernav .navtop li ul
+{
+	/* recommended styles */
+	display: none;
+	position: absolute;
+	list-style: none;
+	margin: 0;
+	padding: 0 5px 5px 5px;
+
+	/* add custom styles here */
+	margin-left: -1px;
+	background-color: #000000;
+	border-bottom: 1px solid #231f20;
+	border-left: 1px solid #231f20;
+	border-right: 1px solid #231f20;
+}
+#headernav .navtop li:hover ul,
+#headernav .navtop li.hover ul
+{
+	/* recommended styles */
+	display: block;
+}
+
+/* needed for safari if drop down is going over flash
+ * without this, the drop down flickers or even becomes invisible
+ * when you mouse over it.
+ * This is a hack that causes safari to redraw the drop down nav on top of the flash
+ */
+#headernav .navtop li:hover ul.redraw,
+#headernav .navtop li.hover ul.redraw
+{
+	/* recommended styles */
+	border-bottom: 1px solid #231f20;
+}
+
+#headernav .navtop li ul li
+{
+	/* recommended styles */
+	float: left;
+	clear: left;
+	position: relative;
+
+	/* add custom styles here */	
+	width: 150px;
+}
+#headernav .navtop li ul li a
+{
+	padding: 2px 10px;
+	background-color: #231f20;
+}
+#headernav .navtop li ul li.last a
+{
+	padding: 2px 10px 10px 10px;
+}
+
+
+/* sub nav styles */
+.navsub
+{
+	list-style: none;
+	margin: 20px;
+}

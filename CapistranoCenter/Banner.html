@@ -1,0 +1,351 @@
+
+<link rel="shortcut icon" href="http://www.capistranocenter.com/icon.ico">
+<script type="text/javascript" src="/clients/CapistranoCenter/Images/jquery-1.js"></script>
+<script type="text/javascript" src="/clients/CapistranoCenter/Images/main.js"></script>
+<script type="text/javascript" src="/clients/CapistranoCenter/Images/swfformfix2.js"></script>
+<style type="text/css" media="all">
+@import url('/clients/CapistranoCenter/Images/reset.css');
+</style>
+<style type="text/css" media="all">
+@import url('/clients/CapistranoCenter/Images/screen.css');
+</style>
+<!--[if IE 7]>
+<style type="text/css" media="all">
+@import url('scripts/ie7.css?v=2.5.0');
+</style>
+<![endif]--><!--[if lt IE 7]>
+<style type="text/css" media="all">
+@import url('scripts/ie.css?v=2.5.0');
+</style>
+<![endif]--><!--[if IE 6]>
+<style type="text/css" media="all">
+@import url('scripts/ie6.css?v=2.5.0');
+.style1 {
+	margin-top: 199px;
+	margin-right: 182px;
+}
+.style2 {
+	text-align: center;
+}
+.style3 {
+	text-align: left;
+	color: #CC0000;
+}
+.style5 {
+	font-size: x-small;
+}
+.style7 {
+	font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	color: #CC0000;
+}
+.style9 {
+	color: #707070;
+}
+</style>
+<![endif]-->
+<script type="text/javascript" language="javascript" src="/clients/CapistranoCenter/Images/datestamp.js"></script>
+
+<style type="text/css"> 
+
+.style17 {
+	line-height:  ;
+	margin-top: 5px;
+}
+
+.style20 {
+	text-align: left;
+	color: #7A7A7A;
+	line-height: 150%;
+	margin-left: 10px;
+}
+
+.style21 {
+	color: #CC0000;
+}
+
+.style23 {
+	text-align: justify;
+}
+
+.style24 {
+	color: #000000;
+}
+
+.style25 {
+	text-align: left;
+	color: #7A7A7A;
+	font-size: xx-small;
+}
+
+.style26 {
+	text-align: left;
+	color: #CC0000;
+	font-size: x-large;
+}
+
+.style27 {
+	color: #313131;
+}
+
+.style29 {
+	color: #666666;
+}
+
+.style30 {
+	text-align: right;
+}
+
+</style>
+
+<script type="text/javascript">
+<!--
+function dynAnimation() {}
+function clickSwapImg() {}
+//-->
+</script>
+
+<script type="text/javascript">
+/***********************************************
+* Ultimate Fade-In Slideshow : © Dynamic Drive
+***********************************************/
+ 
+var fadeimages=new Array()
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages[0]=["banner/1.jpg",]
+fadeimages[1]=["banner/2.jpg",]
+fadeimages[2]=["banner/3.jpg", "http://www.capistranocenter.com/thecenter.htm", ""]
+fadeimages[3]=["banner/4.jpg",]
+fadeimages[4]=["banner/5.jpg",]
+fadeimages[5]=["banner/6.jpg", "http://www.capistranocenter.com/capistranomelodrama.htm", ""]
+fadeimages[6]=["banner/7.jpg",]
+fadeimages[7]=["banner/8.jpg",]
+fadeimages[8]=["banner/9.jpg", "http://www.capistranocenter.com/caminorealplayhouse.htm", ""]
+fadeimages[9]=["banner/10.jpg",]
+fadeimages[10]=["banner/11.jpg",]
+fadeimages[11]=["banner/12.jpg", "http://www.capistranocenter.com/caminorealplayhouse.html", ""]
+fadeimages[12]=["banner/13.jpg",]
+fadeimages[13]=["banner/14.jpg",]
+fadeimages[14]=["banner/15.jpg", "http://www.capistranocenter.com/events.htm", ""]
+fadeimages[15]=["banner/16.jpg",]
+fadeimages[16]=["banner/17.jpg",]
+fadeimages[17]=["banner/18.jpg", "http://www.capistranocenter.com/capistranoactingacademy.htm", ""]
+fadeimages[18]=["banner/19.jpg",]
+fadeimages[19]=["banner/20.jpg",]
+fadeimages[20]=["banner/21.jpg", "http://www.capistranocenter.com/capistranoshakespeare.htm", ""]
+
+var fadebgcolor="white"
+ 
+////NO need to edit beyond here/////////////
+ 
+var fadearray=new Array() //array to cache fadeshow instances
+var fadeclear=new Array() //array to cache corresponding clearinterval pointers
+ 
+var dom=(document.getElementById) //modern dom browsers
+var iebrowser=document.all
+ 
+function fadeshow(theimages, fadewidth, fadeheight, borderwidth, delay, pause, displayorder){
+this.pausecheck=pause
+this.mouseovercheck=0
+this.delay=delay
+this.degree=10 //initial opacity degree (10%)
+this.curimageindex=0
+this.nextimageindex=1
+fadearray[fadearray.length]=this
+this.slideshowid=fadearray.length-1
+this.canvasbase="canvas"+this.slideshowid
+this.curcanvas=this.canvasbase+"_0"
+if (typeof displayorder!="undefined")
+theimages.sort(function() {return 0.5 - Math.random();}) //thanks to Mike (aka Mwinter) :)
+this.theimages=theimages
+this.imageborder=parseInt(borderwidth)
+this.postimages=new Array() //preload images
+for (p=0;p<theimages.length;p++){
+this.postimages[p]=new Image()
+this.postimages[p].src=theimages[p][0]
+}
+ 
+var fadewidth=fadewidth+this.imageborder*2
+var fadeheight=fadeheight+this.imageborder*2
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers (ie: Firefox)
+document.write('<div id="master'+this.slideshowid+'" style="position:relative;width:'+fadewidth+'px;height:'+fadeheight+'px;overflow:hidden;"><div id="'+this.canvasbase+'_0" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);-moz-opacity:10;-khtml-opacity:10;background-color:'+fadebgcolor+'"></div><div id="'+this.canvasbase+'_1" style="position:absolute;width:'+fadewidth+'px;height:'+fadeheight+'px;top:0;left:0;filter:progid:DXImageTransform.Microsoft.alpha(opacity=10);-moz-opacity:10;background-color:'+fadebgcolor+'"></div></div>')
+else
+document.write('<div><img name="defaultslide'+this.slideshowid+'" src="'+this.postimages[0].src+'"></div>')
+ 
+if (iebrowser&&dom||dom) //if IE5+ or modern browsers such as Firefox
+this.startit()
+else{
+this.curimageindex++
+setInterval("fadearray["+this.slideshowid+"].rotateimage()", this.delay)
+}
+}
+
+function fadepic(obj){
+if (obj.degree<100){
+obj.degree+=10
+if (obj.tempobj.filters&&obj.tempobj.filters[0]){
+if (typeof obj.tempobj.filters[0].opacity=="number") //if IE6+
+obj.tempobj.filters[0].opacity=obj.degree
+else //else if IE5.5-
+obj.tempobj.style.filter="alpha(opacity="+obj.degree+")"
+}
+else if (obj.tempobj.style.MozOpacity)
+obj.tempobj.style.MozOpacity=obj.degree/101
+else if (obj.tempobj.style.KhtmlOpacity)
+obj.tempobj.style.KhtmlOpacity=obj.degree/100
+}
+else{
+clearInterval(fadeclear[obj.slideshowid])
+obj.nextcanvas=(obj.curcanvas==obj.canvasbase+"_0")? obj.canvasbase+"_0" : obj.canvasbase+"_1"
+obj.tempobj=iebrowser? iebrowser[obj.nextcanvas] : document.getElementById(obj.nextcanvas)
+obj.populateslide(obj.tempobj, obj.nextimageindex)
+obj.nextimageindex=(obj.nextimageindex<obj.postimages.length-1)? obj.nextimageindex+1 : 0
+setTimeout("fadearray["+obj.slideshowid+"].rotateimage()", obj.delay)
+}
+}
+ 
+fadeshow.prototype.populateslide=function(picobj, picindex){
+var slideHTML=""
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML='<a href="'+this.theimages[picindex][1]+'" target="'+this.theimages[picindex][2]+'">'
+slideHTML+='<img src="'+this.postimages[picindex].src+'" border="'+this.imageborder+'px">'
+if (this.theimages[picindex][1]!="") //if associated link exists for image
+slideHTML+='</a>'
+picobj.innerHTML=slideHTML
+}
+ 
+fadeshow.prototype.rotateimage=function(){
+if (this.pausecheck==1) //if pause onMouseover enabled, cache object
+var cacheobj=this
+if (this.mouseovercheck==1)
+setTimeout(function(){cacheobj.rotateimage()}, 100)
+else if (iebrowser&&dom||dom){
+this.resetit()
+var crossobj=this.tempobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+crossobj.style.zIndex++
+fadeclear[this.slideshowid]=setInterval("fadepic(fadearray["+this.slideshowid+"])",50)
+this.curcanvas=(this.curcanvas==this.canvasbase+"_0")? this.canvasbase+"_1" : this.canvasbase+"_0"
+}
+else{
+var ns4imgobj=document.images['defaultslide'+this.slideshowid]
+ns4imgobj.src=this.postimages[this.curimageindex].src
+}
+this.curimageindex=(this.curimageindex<this.postimages.length-1)? this.curimageindex+1 : 0
+}
+ 
+fadeshow.prototype.resetit=function(){
+this.degree=10
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+if (crossobj.filters&&crossobj.filters[0]){
+if (typeof crossobj.filters[0].opacity=="number") //if IE6+
+crossobj.filters(0).opacity=this.degree
+else //else if IE5.5-
+crossobj.style.filter="alpha(opacity="+this.degree+")"
+}
+else if (crossobj.style.MozOpacity)
+crossobj.style.MozOpacity=this.degree/101
+else if (crossobj.style.KhtmlOpacity)
+crossobj.style.KhtmlOpacity=obj.degree/100
+}
+  
+fadeshow.prototype.startit=function(){
+var crossobj=iebrowser? iebrowser[this.curcanvas] : document.getElementById(this.curcanvas)
+this.populateslide(crossobj, this.curimageindex)
+if (this.pausecheck==1){ //IF SLIDESHOW SHOULD PAUSE ONMOUSEOVER
+var cacheobj=this
+var crossobjcontainer=iebrowser? iebrowser["master"+this.slideshowid] : document.getElementById("master"+this.slideshowid)
+crossobjcontainer.onmouseover=function(){cacheobj.mouseovercheck=1}
+crossobjcontainer.onmouseout=function(){cacheobj.mouseovercheck=0}
+}
+this.rotateimage()
+}
+</script>
+
+
+
+</head><body><a name="top"></a>
+<div id="Container" style="left: 0px; top: -81px;">
+	<div id="Header" style="height: 162px;">
+		<div id="Logo" style="left: 151px; top: 22px; width: 843px; height: 91px;">
+			<img alt="header" src="/clients/CapistranoCenter/Images/toplogo.jpg">
+		</div>
+		<div id="LoginBox" style="right: 54px; top: 90px; width: 244px;">
+			<span class="style9">
+			</span><span class="style5">The Future Starts Today - <script type="text/javascript" language="javascript">
+					dateStamp();</script></span>&nbsp;</div>
+		<div id="Navigation" style="left: 152px; top: 117px; width: 806px;">
+			<div class="roundCorner top left">
+				<img src="/clients/CapistranoCenter/Images/corner-top-left.gif" alt=""></div>
+			<div class="roundCorner bottom left">
+				<img src="/clients/CapistranoCenter/Images/corner-bottom-left.gif" alt=""></div>
+			<div class="roundCorner top right">
+				<img src="/clients/CapistranoCenter/Images/corner-top-right.gif" alt=""></div>
+			<div class="roundCorner bottom right">
+				<img src="/clients/CapistranoCenter/Images/corner-bottom-right.gif" alt=""></div>
+			<ul id="TopNavigationList">
+				<li class="first-child"><a href="http://www.capistranocenter.com/index.htm" class="active">Home</a></li>
+				<li class="second-child"><a href="http://www.capistranocenter.com/thecenter.htm" class="">About The Center<img src="/clients/CapistranoCenter/Images/arrow-down.gif" alt=""></a>
+				<ul style="">
+					<li class="first-child"><a href="http://www.capistranocenter.com/thecenter.htm">Discover the CCPA </a></li>
+					<li class="second-child"><a href="http://www.capistranocenter.com/board.htm">Our Board of Directors </a></li>
+					<li><a href="http://www.capistranocenter.com/sponsors.htm">Our Sponsors &amp; Contributors </a></li>
+					<li class="last-child"><a href="http://www.capistranocenter.com/gallery.htm">The Past, Present &amp; Future </a></li>
+				</ul>
+				</li>
+				<li><a href="http://www.capistranocenter.com/index.htm" class="">Programs &amp; Events<img src="/clients/CapistranoCenter/Images/arrow-down.gif" alt=""></a>
+				<ul style="">
+					<li class="first-child"><a href="http://www.capistranocenter.com/caminorealplayhouse.htm">The Camino Real Playhouse </a></li>
+					<li class="second-child"><a href="http://www.capistranocenter.com/capistranoactingacademy.htm">Capistrano Acting Academy - Youth </a></li>
+					<li><a href="http://www.capistranocenter.com/capistranoactingacademyforadults.htm">Capistrano Acting Academy - Adults </a></li>
+					<li><a href="http://www.capistranocenter.com/capistranoshakespeare.htm">Capistrano Shakespeare Festival </a></li>
+					<li><a href="http://www.capistranocenter.com/capistranomelodrama.htm">Capistrano Melodrama Theatre</a></li>
+					<li class="last-child"><a href="http://www.capistranocenter.com/events.htm">Upcoming Special Events </a></li>
+				</ul>
+				</li>
+				<li><a href="http://www.capistranocenter.com/donations.htm" class="">Donations &amp; Sponsorship<img src="/clients/CapistranoCenter/Images/arrow-down.gif" alt=""></a>
+				<ul style="">
+					<li class="first-child"><a href="http://www.capistranocenter.com/donations.htm">Making a Donation to Support Growth </a></li>
+					<li class="last-child second-child"><a href="http://www.capistranocenter.com/community.htm">Making a Difference for All Children </a></li>
+				</ul>
+				</li>
+				<li class="last-child">
+				<a href="http://www.capistranocenter.com/contact.htm">
+				<span class="style7">Contact Us</span></a></li>
+			</ul>
+		</div>
+		<!--googleon: index--></div>
+	<div id="Content">
+		<div id="LeftColumn">
+			<div id="Page">
+				<!--googleoff: index-->
+				<div id="SubNavigation">
+					<ul style="width: 600px; height: 25px;">
+						<li class="first-child">
+						<a class="" title="Your Entertainment Destination" href="http://www.capistranocenter.com/caminorealplayhouse.htm">
+						<strong>Camino Real Playhouse</strong></a></li>
+						<li class="second-child">
+						<a class="" title="Children and Adult Acting Programs" href="http://www.capistranocenter.com/capistranoactingacademy.htm">
+						<strong>Capistrano Acting Academy</strong></a></li>
+						<li>
+						<a class="" title="Shakespeare Under The Stars - CapoShakes" href="http://www.capistranocenter.com/capistranoshakespeare.htm">
+						<strong>Shakespeare Festival </strong> </a></li>
+						<li class="last-child">
+						<a class="" title="Reinventing American Melodrama" href="http://www.capistranocenter.com/capistranomelodrama.htm">
+						<strong>Melodrama Theatre</strong></a></li>
+					</ul>
+				</div>
+				<!--googleon: index-->
+				<div id="RSSBox">
+				</div>
+				
+				<div class="page-title-hr">
+				</div>
+				<div id="TwoColumns">
+					
+
+
+					<div id="WideColumn" class="style1">
+<!--TIX DATA START-->
+

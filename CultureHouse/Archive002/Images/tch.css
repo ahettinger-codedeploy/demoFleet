@@ -1,0 +1,495 @@
+/* There are 3 basic DIVs with 3 others in the content section (container, header, footer, left menu, right menu, intro text)
+The main DIV CONTAINER holds all the others. It has a white repeating graphic that creates the full columns. 
+The border widths of the content area create the dark grey lines between sections.
+
+DIV Text-Intro controls the vertical size of the content. This is used so that the left and right borders go
+all the way down to the footer. There is a graphic placed at the bottom of this column so that the full height
+is displayed.\*/
+
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	margin:0;
+	background-color: #FFFFFF;
+}
+html {font-size:100%}/*this makes the em size equal to points\*/
+body {
+	font-size:8pt;
+
+
+
+tahoma, arial, sans-serif; 			margin:0px;
+	padding:0px;
+	background-color:#000000;
+	line-height: normal;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+a:link {color:#2C3365; text-decoration: none;}
+a:visited {color:#2C3365; text-decoration: none;}
+a:hover {text-decoration:underline;}
+a:active {color:#2C3365; text-decoration: none;}
+
+h6 {font-size:100%; }
+h2 {font-size:2 em;
+	color:#000000;}
+
+table {
+
+	}	
+	
+/* this section contains all divs\*/
+
+
+/* Academy Buttons in left column \*/
+
+	a.homepage  {
+		width:190px;
+		height:32px; 
+		border-top:3px solid;
+		border-color:#000000;
+		background-image:url(/clients/culturehouse/images/academy_buttons_homepage.jpg); 
+		background-position: 0px 0px; 
+		background-repeat: no-repeat; 
+		background-color: #000; 
+		float:left;
+		}
+	div.dept a.homepage:link {background-position: 0px 0px; }
+	div.dept a.homepage:visited {background-position: 0px 0px; }
+	div.dept a.homepage:hover {background-position: 0px -32px; }
+	div.dept a.homepage:active {background-position: 0px -32px; }
+
+	a.music  {
+		width:190px;
+		height:32px; 
+		background-image:url(/clients/culturehouse/images/academy_buttons_music.jpg); 
+		background-position: 0px 0px; 
+		background-repeat: no-repeat; 
+		background-color: #000; 
+		float:left;
+		}
+	div.dept a.music:link {background-position: 0px 0px; }
+	div.dept a.music:visited {background-position: 0px 0px; }
+	div.dept a.music:hover {background-position: 0px -32px; }
+	div.dept a.music:active {background-position: 0px -32px; }
+	
+	a.dance  {
+		width:190px;
+		height:32px; 
+		border-top: 3px solid black;
+		background-image:url(/clients/culturehouse/images/academy_buttons_dance.jpg); 
+		background-position: 0px 0px; 
+		background-repeat: no-repeat; 
+		background-color: #000; 
+		float:left;
+		}
+	div.dept a.dance:link {background-position: 0px 0px; }
+	div.dept a.dance:visited {background-position: 0px 0px; }
+	div.dept a.dance:hover {background-position: 0px -32px; }
+	div.dept a.dance:active {background-position: 0px -32px; }
+	
+	a.theater  {
+		width:190px;
+		height:32px; 		
+		border-top: 3px solid black;				
+		border-bottom: 3px solid black;
+		background-image:url(/clients/culturehouse/images/academy_buttons_theater.jpg); 
+		background-position: 0px 0px; 
+		background-repeat: no-repeat; 
+		background-color: #000; 
+		float:left;
+		}
+	div.dept a.theater:link {background-position: 0px 0px; }
+	div.dept a.theater:visited {background-position: 0px 0px; }
+	div.dept a.theater:hover {background-position: 0px -32px; }
+	div.dept a.theater:active {background-position: 0px -32px; }
+
+	
+
+div#banner{/* this contains BANNER space & graphic	\*/
+	width:575px;
+	border-left:0px solid;
+	border-right:3px solid;
+	border-bottom:0px solid;
+	border-color:#000000;
+	background-color:#000000;
+	
+	}
+	div#banner p {
+		font-size:1.2em;
+		color:#000000;
+		padding:4px;
+		}
+	div#banner p strong span{/* This makes paragraph text with "strong span" larger point size text and caps first letter\*/
+		font-size:1.4em;
+		text transform: capitalize;
+		}	
+	
+div#calendar{/*this defines the space for calendar header	border-top:3px solid black;\*/ 
+	height: 30px;
+	width:190px;
+	border-bottom:0px; border-bottom-color:#000000;
+	}
+	
+div#center_img {/*this centers an image or text in a column\*/
+	text-align:center;
+	}	
+
+div#donate {
+	margin-top:10px;
+	width:180px;
+	height:65px;
+	margin-left:5px;	
+	}
+
+	
+div#events{	/*events section in left column\*/
+	width:190px;
+	margin-left:0px;
+	border-top-width: 3px;
+	border-right-width: 3px;
+	border-bottom-width: 3px;
+	border-left-width: 3px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: black;
+	border-right-color: #000000;
+	border-bottom-color: black;
+	border-left-color: #FFFFFF;
+	background-color: #000000;
+	}
+	div#events p{
+		font-size:1.1em;
+		line-height:1.1em;
+		margin-bottom:5px;/* This adjusts the space between options\*/
+		margin-left:3px;
+		margin-right:5px;
+		padding:3px;
+		background-color:#CCCCCC;
+		}
+.email_form {
+	background-color:#CCCCCC}		
+.form {/* This is the text on email form\*/
+	font-size:1.0 em;
+	color:#333333;
+	margin-left:5px;
+	}
+	
+.form_header{/* This is the headertext on email form\*/
+	font-size:1.9 em;
+	color:#333333;
+	margin-left: 5px;
+	}
+	
+	
+div#global_footer{/* box for footer where sponsors & ads appear\*/
+	width:771px;
+	border-top:5px; 
+	border-top-color:#000000;
+	background-color:#FFFFFF; 
+	margin:0;
+	float:left;
+	text-align:center;
+	}	
+	.ad_spacing span{/* This adjusts the space between the ads \*/
+	border-top:3px;
+	border-color:#FFFFFF;
+	margin-left:4px;	
+	}	
+	
+	.sponsor_spacing span{/* This adjusts the space between the sponsors \*/
+	margin-left:5px;	
+	}	
+	
+
+			
+div#global_menu { /* this includes all attributes of the top navigation area \*/
+	width:578px;
+	height:134px;
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	border-top-color:#000000;
+	background-color:#000000;
+	}
+	
+	a.welcome  {
+		width:92px;
+		height:134px; 
+		background-image:url(/clients/culturehouse/images/global_menu_welcome.jpg); 
+		background-position: 0px 0px; 
+		background-repeat: no-repeat; 
+		background-color: #000; 
+		float:left;
+		}
+	div.dept a.welcome:link {background-position: 0px 0px; }
+	div.dept a.welcome:visited {background-position: 0px 0px; }
+	div.dept a.welcome:hover {background-position: 0px -134px; }
+	div.dept a.welcome:active {background-position: 0px 0px; }
+	
+	a.storling  {
+		width:92px;
+		height:134px; 
+		margin-left: 5px;
+		background-image:url(/clients/culturehouse/images/global_menu_storling.jpg); 
+		background-position: 0px 0px; 
+		background-repeat: no-repeat; 
+		background-color: #000; 
+		float:left;
+		}
+	div.dept a.storling:link {background-position: 0px 0px; }
+	div.dept a.storling:visited {background-position: 0px 0px; }
+	div.dept a.storling:hover {background-position: 0px -134px; }
+	div.dept a.storling:active {background-position: 0px 0px; }
+	
+	
+	a.studios  {
+		width:92px;
+		height:134px; 
+		margin-left: 5px;
+		background-image:url(/clients/culturehouse/images/global_menu_studios.jpg); 
+		background-position: 0px 0px; 
+		background-repeat: no-repeat; 
+		background-color: #000; 
+		float:left;
+		}
+	div.dept a.studios:link {background-position: 0px 0px; }
+	div.dept a.studios:visited {background-position: 0px 0px; }
+	div.dept a.studios:hover {background-position: 0px -134px; }
+	div.dept a.studios:active {background-position: 0px 0px; }
+	
+	a.academy  {
+		width:92px;
+		height:134px; 
+		margin-left: 5px;
+		background-image:url(/clients/culturehouse/images/global_menu_academy.jpg); 
+		background-position: 0px 0px; 
+		background-repeat: no-repeat; 
+		background-color: #000; 
+		float:left;
+		}
+	div.dept a.academy:link {background-position: 0px 0px; }
+	div.dept a.academy:visited {background-position: 0px 0px; }
+	div.dept a.academy:hover {background-position: 0px -134px; }
+	div.dept a.academy:active {background-position: 0px 0px; }
+	
+	a.star  {
+		width:92px;
+		height:134px; 		
+		margin-left: 5px;
+		background-image:url(/clients/culturehouse/images/global_menu_star.jpg); 
+		background-position: 0px 0px; 
+		background-repeat: no-repeat; 
+		background-color: #000; 
+		float:left;
+		}
+	div.dept a.star:link {background-position: 0px 0px; }
+	div.dept a.star:visited {background-position: 0px 0px; }
+	div.dept a.star:hover {background-position: 0px -134px; }
+	div.dept a.star:active {background-position: 0px 0px; }
+	
+	a.arsandculture  {
+		width:92px;
+		height:134px;
+ 		margin-left: 5px;
+		background-image:url(/clients/culturehouse/images/global_menu_arts_culture.jpg); 
+		background-position: 0px 0px; 
+		background-repeat: no-repeat; 
+		background-color: #000; 
+		float:left;
+		}
+	div.dept a.arsandculture:link {background-position: 0px 0px; }
+	div.dept a.arsandculture:visited {background-position: 0px 0px; }
+	div.dept a.arsandculture:hover {background-position: 0px -134px; }
+	div.dept a.arsandculture:active {background-position: 0px 0px; }
+
+
+div#global_logo{width:190;	}/* this defines space for TCH logos on each page\*/
+	
+
+		
+	
+div#menu-left {/* All attributes of navigation box for LEFT MENU....................... \*/
+	width:200px;}
+
+	div#menu-left p{/* text attributes of left menu\*/
+		font-size:1.1em;
+		line-height:1.8em;
+		margin-left:5px;
+		padding:8px;/* This adjusts the space between listed options in a paragraph tag (menu at top of column)\*/
+		background-color:#FFFFFF;
+		}
+	.arrow_left { /*this makes the dots under the menu items & includes the arrow \*/
+	border-bottom-color:#CCCCCC;
+	border-bottom-style:dotted;
+	border-bottom-width:1px;
+	margin-top:0px; /* This adjusts the space between options\*/
+	margin-left:10px; margin-right:15px;
+	padding:2px 0 5px 0;
+	}
+	p.arrow_left sup {vertical-align:3px; font-size:50%;} /*this moves the arrow up or down \*/
+	
+	.menu_text_left a:hover {/*Makes menu items underline on mouseover\*/
+	color:#393939; 
+	text-decoration:underline;
+	}
+	.menu_text_left {/* this sets the distance between the arrows and the text\*/
+	margin-left:5px;
+	}	
+	.menu_text_left_dropdown {/* this sets the attributes for drop down menus\*/
+	margin-left:15px;
+	}	
+	
+		
+div#menu-right {/* All attributes for navigation box for RIGHT MENU....................... \*/
+	width:180px;
+	margin-left:0px;
+	margin-top:0px;
+	} 
+	div#menu-right p{/*text properties for right menu paragraph\*/
+		font-size:1.1em; line-height:1.1em;
+		margin-left:5px;
+		margin-bottom:3px;/* This adjusts the space between options\*/
+		margin-top:4px;
+		}		
+	.menu_text_right a:hover {/*Makes menu items underline on mouseover\*/
+	color:#000000; text-decoration:underline;
+	}
+	.arrow_right { /*this defines attributes for the right menu text line \*/
+	background-color:#E9E9E9;
+	margin-left:3px; margin-right:3px;
+	padding:0 0 5px 0;
+	}
+	p.arrow_right sup {/*this moves the arrow up or down \*/
+	vertical-align:10%; 
+	margin-left:3px; margin-right:5px;
+	} 
+
+
+div#google_search{/* this is the space for the search box	\*/
+	width:578px;
+	height:30px; 
+	border-left:0px solid;
+	border-bottom:0px solid;
+	border-color:#000000;
+	background-color:#32435F;
+	}
+div#search p {
+	font-size:2.0em;
+	padding:4px;
+	}
+	
+div#storling_google_search{/* this is the space for the search box	\*/
+	width:578px;
+	height:30px; 
+	border-left:0px solid;
+	border-bottom:0px solid;
+	border-color:#000000;
+	background-color:#5B716F;
+	}
+div#search p {
+	font-size:2.0em;
+	padding:4px;
+	}
+
+div#storling_subhead{ /* text attributes for subheader under Storling logo\*/
+	font-size:2em;
+	letter-spacing:.5em;
+	width: 770px;
+	color:#5B716F; 
+	background-color:#FFFFFF;
+	text-align:center;
+	}
+
+div#text-intro {/* all attributes for box for articles in CENTER COLUMN TEXT\*/
+	background-color:#FFFFFF;
+	width:550px;
+	margin-left:5px;
+	margin-top:5px;
+	float:left;
+	text-align:center;
+	font-size:12pt;
+
+	}
+	div#text-intro p{/*this adjusts the space between paragraphs in News section  \*/
+	font-size:12px;
+	line-height:17px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+		}
+	div#text-intro p strong span{/* This makes "Intro from Christiane" larger point size text and caps first letter\*/
+		font-size:1.2em;
+		text transform: capitalize;
+		}
+	div#text-intro p span{/* This makes the titles on Staff pages not bold\*/
+	font-size:12px;
+	line-height: 18px;
+		}
+	div#text-intro img{/* This moves the photo up or down\*/
+		margin-top:0px;
+
+		}
+	div#text-intro a:hover {/*Makes link underline on mouseover in News section\*/
+	color:#000000;
+	text-decoration:underline;
+	font-size: 12px;
+		}
+
+
+
+div#text-intro-wide {/* text that is center column and right column width\*/
+	background-color:#FFFFFF;
+	width:530px;
+	margin-left:5px;
+	margin-top:5px;
+
+	float:left;
+	text-align:left;
+	}
+	div#text-intro-wide p{/*this adjusts the space between paragraphs  \*/
+		font-size:1.1em; 
+		line-height:1.5em;
+		}
+	div#text-intro-wide p strong span{/* This makes text a larger point size text and caps first letter\*/
+		font-size:1.2em;
+		text transform: capitalize;
+		}
+
+
+
+
+
+/*lists\*/
+
+ul, ol {display:block; margin:5px 0 5px 20px; padding:0;}
+
+ol {list-style-type:square;}
+
+li {display:list-item; margin:1em 0em 1em 0em; padding:0;text-indent:0em; font-size:1.1em;}
+
+ul ul, ul ol, ol ol, ol ul {margin: 0 0 0 20px;}
+
+
+
+/*misc items used throughout...........\*/	
+	
+.divider_top {/*adds a "divider" border to the top of an item\*/
+	border-top:3px solid;
+	border-color:#000000;
+	}	
+
+
+.wrap_img {float:left; margin:4px 4px 2px 0px;}/*this wraps text around an image in a paragraph\*/	
+
+
+div.clearfloats {clear:both;}
+
+
+/* next a fix for the dreaded Guillotine bug in IE6 */
+
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+#text-intro h1 {
+}

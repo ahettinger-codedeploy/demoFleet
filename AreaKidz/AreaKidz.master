@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+<meta property="og:image" content="http://www.tix.com/clients/tix/images/tixlogoitstheticket.gif" />
+<link rel="stylesheet" type="text/css" href="/clients/AreaKidz/Images/style.css" media="all">
+
+<script type="text/javascript" src="/clients/AreaKidz/Images/jquery-1.js"></script>
+<script type="text/javascript" src="/clients/AreaKidz/Images/ddsmoothmenu.js"></script>
+<script type="text/javascript" src="/clients/AreaKidz/Images/scripts.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">
+<!--
+body {
+	background-image: url(/clients/AreaKidz/Images/background.gif);
+	background-repeat: no-repeat;
+	background-attachment:fixed;
+	background-position:center;
+}
+.style1 {color: #888888}
+a:link {
+	color: #FF6600;
+}
+a:visited {
+	color: #33CCFF;
+}
+-->
+</style>
+</head>
+<body>
+<div id="container"> 
+  <!-- Begin Header Wrapper -->
+  <div id="page-top">
+    <div id="header-wrapper"> 
+      <!-- Begin Header -->
+      <div id="header">
+        <div id="logo"><a href="http://areakidz.com/index.html"><img src="/clients/AreaKidz/Images/323_logo.png" alt="323"></a></div>
+        <!-- Logo --> 
+        <!-- Begin Menu -->
+      <div id="menu-wrapper">
+        <div id="smoothmenu1" class="ddsmoothmenu">
+          <ul>
+            <li><a href="http://areakidz.com/index.html">Home</a>
+            </li>
+            <li><a href="http://areakidz.com/aboutus.html" class="selected">About Us</a>
+            </li>
+            <li><a href="http://areakidz.com/eventphoto.html">Event Photo</a>
+            </li>
+            <li><a href="http://areakidz.com/eventvideo.html">Event Video</a></li>
+            <li><a href="http://areakidz.com/sponsorship.html">Sponsorship</a>
+            </li>
+            <li><a href="http://areakidz.com/contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- End Menu --> 
+      </div>
+      <!-- End Header --> 
+    </div>
+  </div>
+  <!-- End Header Wrapper --> 
+  
+  <!-- Begin Wrapper -->
+  <div id="wrapper">
+
+	<!--TIX DATA START-->
+	<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+   
+    <div class="clear"></div>
+  </div>
+  <!-- End Wrapper -->
+  
+  <div class="clearfix"></div>
+  <div class="push"></div>
+</div>
+
+<!-- Begin Footer -->
+<div id="footer-wrapper">
+  <div id="footer">
+    <div id="footer-content"> 
+      
+      <!-- Begin Copyright -->
+      <div id="copyright">
+        <p>&#169; Copyright 2014 | 3-23 AREA KIDZ | 3-23 MAIN ARMY</p>
+      </div>
+      <!-- End Copyright --> 
+      
+      <!-- Begin Social Icons -->
+      <div id="socials">
+        <ul>
+          <li><a href="https://www.youtube.com/user/323AREAMEDIA" target="_blank"><img src="/clients/AreaKidz/Images/icon-youtube.png" alt=""></a></li>
+          <li><a href="https://www.facebook.com/pages/3-23-AREA-KIDZ/126580144026744" target="_blank"><img src="/clients/AreaKidz/Images/icon-facebook.png" alt=""></a></li>
+          <li><a href="https://twitter.com/323AREAKIDZ" target="_blank"><img src="/clients/AreaKidz/Images/icon-twitter.png" alt=""></a></li>
+          <li><a href="http://instagram.com/323areakidz" target="_blank"><img src="/clients/AreaKidz/Images/icon-instagram.png" alt=""></a></li>
+        </ul>
+      </div>
+      <!-- End Social Icons --> 
+      
+    </div>
+  </div>
+</div>
+<!-- End Footer --> 
+
+<script type="text/javascript">
+
+$(document).ready(function() {	
+  //Get all the LI from the #tabMenu UL
+  $('#tab-menu > li').click(function(){
+    //remove the selected class from all LI    
+    $('#tab-menu > li').removeClass('selected');
+    //Reassign the LI
+    $(this).addClass('selected');
+    //Hide all the DIV in .tab-content
+    $('.tab-content div.tab').slideUp('slow');
+    //Look for the right DIV in boxBody according to the Navigation UL index, therefore, the arrangement is very important.
+    $('.tab-content div.tab:eq(' + $('#tab-menu > li').index(this) + ')').slideDown('slow');
+  }).mouseover(function() {
+    //Add and remove class, Personally I dont think this is the right way to do it, anyone please suggest    
+    $(this).addClass('mouseover');
+    $(this).removeClass('mouseout');   
+  }).mouseout(function() {
+    //Add and remove class
+    $(this).addClass('mouseout');
+    $(this).removeClass('mouseover');    
+  });
+});
+
+
+$(function() {
+            var offset = $("#tab-menu").offset();
+            var topPadding = 15;
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > offset.top) {
+                    $("#tab-menu").stop().animate({
+                        marginTop: $(window).scrollTop() - offset.top + topPadding
+                    });
+                } else {
+                    $("#tab-menu").stop().animate({
+                        marginTop: 0
+                    });
+                };
+            });
+});
+</script>
+</div>
+</form>
+</body>
+</html>

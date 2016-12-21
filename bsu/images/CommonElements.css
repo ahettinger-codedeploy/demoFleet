@@ -1,0 +1,296 @@
+﻿/* _________________________________________________
+
+Ball State 320 and up Design
+
+Author: Brandon Coppernoll
+Version: 0.1
+Credit: Andy Clarke
+URL: http://stuffandnonsense.co.uk/projects/320andup/
+_____________________________________________________
+
+1.FONTS
+2.ROOT
+3.HEADINGS
+4.TYPOGRAPHY
+5.LINKS
+6.FIGURES & IMAGES
+7.TABLES
+8.FORMS
+9.BILLBOARD
+10.NAVIGATION nav[role="navigation"]
+11.CONTENT
+12.MAIN div[role="main"]
+13.COMPLIMENTARY div[role="complementary"]
+14.CONTENTINFO footer[role="contentinfo"]
+15.GLOBAL OBJECTS
+
+FONTS
+*/
+@import url(/Components/Design/CSS/BallStateWebFonts.css);
+
+/**************************************************
+**  ROOT    ***************************************
+**************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    border: 0;
+}
+    
+table, caption, tbody, tfoot, thead, tr, th, td
+{
+    position: relative;
+}
+
+table { z-index: 100; }
+
+/* HTML5 items we may need later */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+display : block; }
+
+abbr[title] { }
+
+/* Body */
+body
+{
+    margin: 0 auto;
+	/* color: #000; */
+	color: #555;
+	font-family: LucidaGrande, 'Lucida Sans Unicode' , 'Lucida Grande' , 'Lucida Sans-Serif' , Geneva, Arial, Helvetica, Tahoma, Sans-Serif;
+	font-size: 10pt;
+}
+
+/**************************************************
+**  HEADINGS    ***********************************
+**************************************************/
+h1, h2, h3, h4, h5, h6
+{
+	margin: 5px 0px 5px 0px;
+	padding: 0;
+}
+
+h1
+{
+	margin: 12px 0 14px 0;
+	font-size: 19.5pt;
+	line-height: 1em;
+	
+	/* 
+	color: #CC0000;
+	text-transform: uppercase;
+	font-family: 'NewsGothicBT-Bold';
+    */
+}
+
+h2 
+{ 
+    font-size: 14pt;
+    /* 
+    color: #000;
+    font-family: 'NewsGothicBT-Bold';
+    text-transform: uppercase;
+    */
+}
+
+h3 
+{ 
+    font-size: 12pt; 
+    /* color: #000;
+    font-family: 'NewsGothicBT-Bold';
+    text-transform: uppercase; */
+}
+
+h4, h5, h6 { font-size: 10pt; }
+
+h4 
+{
+    /* color: #CC0000;
+    font-family: 'NewsGothicBT-Roman';
+    text-transform: uppercase; */
+}
+
+/* Classes */
+
+h1 .newsGothBlue 
+{
+    font-family: 'NewsGothicBT-Roman';
+    font-size: 28pt; 
+    text-transform: uppercase; 
+    font-weight: normal;
+    color: #061A4A;
+    line-height: 1.1em;
+}
+
+h1 .newsGothRedBold
+{
+    font-family: 'NewsGothicBT-Bold';
+    color: #CC0000; 
+    line-height: 1.1em;
+}
+
+h1 .bold { font-weight: bold; }
+
+h2.big { font-size: 18pt; }
+
+/**************************************************
+**  TYPOGRAPHY    *********************************
+**************************************************/
+/* Paragraph */
+p, ol, ul, dl, address
+{
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+
+/* Ordered and Unordered List */
+ol, ul { padding: 0 0 0 3em; margin: 0 0 1em 0; }
+
+/* Horizontal Rule */
+hr { height: 1px; border: 1px solid #555555; }
+html>/**/body hr { height: 1px; background-color: #555555; border: none; }
+
+.black { color: #221F20; }
+
+/**************************************************
+**  LINKS    **************************************
+**************************************************/
+/* Anchor Tags */
+a, a:visited  
+{
+    color: #CC0000; text-decoration: underline; 
+}
+
+a:hover 
+{
+    color: #334455;
+}
+
+a:active, a:focus { }
+
+.containerBlue a { color: #FFF; }
+
+/**************************************************
+**  FIGURES & IMAGES    ***************************
+**************************************************/
+figure { }
+
+figure img,
+figure object,
+figure embed { }
+
+figcaption { }
+
+/**************************************************
+**  TABLES    *************************************
+**************************************************/
+table 
+{ 
+    margin-bottom : 10px; 
+}
+
+th { font-weight : bold; }
+
+th, td, caption { }
+
+tfoot { }
+
+caption { background-color : transparent; }
+
+/**************************************************
+**  TABLES    *************************************
+**************************************************/
+/* FORMS */
+form { margin: 0px; padding: 0px; }
+
+fieldset
+{
+	padding: 0;
+	margin: 0;
+}
+
+/**************************************************
+**  BANNER    *************************************
+**************************************************/
+
+/**************************************************
+**  NAVIGATION    *********************************
+**************************************************/
+
+/**************************************************
+**  CONTENT    ************************************
+**************************************************/
+.contentImage 
+{
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/**************************************************
+**  MAIN    ************************************
+**************************************************/
+
+/**************************************************
+**  COMPLIMENTARY    ******************************
+**************************************************/
+
+/**************************************************
+**  CONTENTINFO    ********************************
+**************************************************/
+
+/**************************************************
+**  GLOBAL OBJECTS    *****************************
+**************************************************/
+
+/* Clear */
+.clear
+{
+	clear: both;
+}
+
+/* Hide for screenreaders and visual browsers */
+.hidden 
+{ 
+    display : none; 
+    visibility : hidden; 
+}
+
+/* Hide but maintain layout */
+.invisible { visibility : hidden; }
+
+/* Align left or right */
+.left { float: left; }
+.right { float: right; }
+
+.containerBlue 
+{
+    padding: 5px 5px; 
+    background-color: #061a4a;
+    color: #FFF;
+    margin-bottom: 1em;
+}
+
+.containerGray 
+{
+    padding: 5px 5px;
+    background-color: #e2e8ee;
+    margin-bottom: 1em;
+}
+    
+/*960px __________________________________________________________________________________________________________ */
+/* @media only screen and (max-width: 960px) { */
+    body {} 
+/* }  */ /* mediaquery */

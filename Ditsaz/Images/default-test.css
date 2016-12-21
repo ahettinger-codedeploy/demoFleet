@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+/** 
+ * Default CSS Drop-Down Menu Theme
+ *
+ * @file		default.css
+ * @name		Default
+ * @version		0.1.1
+ * @type		transitional
+ * @browsers	Windows: IE5+, Opera7+, Firefox1+
+ *				Mac OS: Safari2+, Firefox2+
+ *
+ * @link		http://www.lwis.net/
+ * @copyright	2008 Live Web Institute
+ *
+ * Module Classes: *.dir {} *.on {} *.open {} li.hover {} li.first {} li.last {}
+ * Expected directory tag - li
+ *
+ */
+
+
+/*-------------------------------------------------/
+ * @section		Base Drop-Down Styling
+ * @structure	ul (unordered list)
+ *				ul li (list item)
+ *				ul li a (links)
+ *				/*\.class|(li|a):hover/
+ * @level sep	ul
+ */
+
+
+ul.dropdown {
+ text-transform: capitalize;
+ font: bold 19px "Trebuchet MS";
+}
+
+ul.dropdown li {
+	text-indent: -9999px;
+/* USE PADDING-LEFT TO ADJUST MENU ITEM WIDTH */
+	padding: 7px 39px 2px 42px; 
+	border-style: solid;
+	border-width: 3px 3px 3px 1px;
+	border-color: #42290c;
+	background-color: #bb782b;
+	background-image: none;
+	color: #000;
+}
+
+ul.dropdown li a {
+	display: block;
+	height: 32px;
+}
+
+ul.dropdown li#menu-item-166 a:hover,
+ul.dropdown li#menu-item-167 a:hover,
+ul.dropdown li#menu-item-183 a:hover,
+ul.dropdown li#menu-item-177 a:hover,
+ul.dropdown li#menu-item-174 a:hover,
+ul.dropdown li#menu-item-173 a:hover,
+ul.dropdown li#menu-item-172 a:hover,
+ul.dropdown li#menu-item-838 a:hover
+{
+	background-color: #ca9f4e;
+}
+
+/* HOME button 166 */
+ul.dropdown li#menu-item-166 a {
+	background: url(/clients/Ditsaz/Images/menu_home.png) no-repeat center center;
+	width: 53px;
+}
+
+/* ABOUT button 167 */
+ul.dropdown li#menu-item-167 a {
+	background: url(/clients/Ditsaz/Images/menu_about.png) no-repeat center center;
+	width: 58px;
+}
+
+/* SCHOOL button 183 */
+ul.dropdown li#menu-item-183 a {
+	background: url(/clients/Ditsaz/Images/menu_school.png) no-repeat center center;
+	width: 63px;
+}
+
+/* SHOWS button 838 */
+ul.dropdown li#menu-item-838 a {
+	background: url(/clients/Ditsaz/Images/menu_shows.png) no-repeat center center;
+	width: 64px;
+}
+
+/* PRESS button 177 */
+ul.dropdown li#menu-item-177 a {
+	background: url(/clients/Ditsaz/Images/menu_press.png) no-repeat center center;
+	width: 55px;
+}
+
+/* GALLERY button 174 */
+ul.dropdown li#menu-item-174 a {
+	background: url(/clients/Ditsaz/Images/menu_gallery.png) no-repeat center center;
+	width: 69px;
+}
+
+/* DONATE button 173 */
+ul.dropdown li#menu-item-173 a {
+	background: url(/clients/Ditsaz/Images/menu_donate.png) no-repeat center center;
+	width: 68px;
+}
+
+/* CONTACT button 172 */
+ul.dropdown li#menu-item-172 a {
+	background: url(/clients/Ditsaz/Images/menu_contact.png) no-repeat center center;
+	width: 75px;
+}
+
+
+ul.dropdown li.hover,
+ul.dropdown li:hover {
+ background-color: #ca9f4e;
+ color: #000;
+}
+
+ul.dropdown a:link,
+ul.dropdown a:visited	{ color: #42290c; text-decoration: none; }
+ul.dropdown a:hover		{ color: #42290c; }
+ul.dropdown a:active	{ color: #ffa500; }
+
+
+/* -- level mark -- */
+
+ul.dropdown ul {
+ font: bold 16px "Trebuchet MS", Arial;
+ width: 200px;
+ margin-top: 1px;
+}
+
+ul.dropdown li#menu-item-167 ul a,
+ul.dropdown li#menu-item-183 ul a,
+ul.dropdown li#menu-item-177 ul a,
+ul.dropdown li#menu-item-174 ul a,
+ul.dropdown li#menu-item-173 ul a,
+ul.dropdown li#menu-item-172 ul a,
+ul.dropdown li#menu-item-838 ul a
+{
+	width: auto;
+	text-indent: 0px;
+	background: none;
+}
+
+ul.dropdown ul li {
+	font-weight: normal;
+}
+		
+ul.dropdown ul a {
+	margin-left: -30px;
+}
+
+
+
+/*-------------------------------------------------/
+ * @section		Support Class `dir`
+ * @level sep	ul, .class
+ */
+
+
+ul.dropdown *.dir {
+ padding-right: 20px;
+ background-image: url(/clients/Ditsaz/Images/default/nav-arrow-down.png);
+ background-position: 100% 50%;
+ background-repeat: no-repeat;
+}
+
+
+/* -- Components override -- */
+
+ul.dropdown-horizontal ul *.dir {
+ padding-right: 15px;
+ background-image: url(/clients/Ditsaz/Images/default/nav-arrow-right.png);
+ background-position: 100% 50%;
+ background-repeat: no-repeat;
+}
+
+ul.dropdown-upward *.dir {
+ background-image: url(/clients/Ditsaz/Images/default/nav-arrow-top.png);
+}
+
+ul.dropdown-vertical *.dir,
+ul.dropdown-upward ul *.dir {
+ background-image: url(/clients/Ditsaz/Images/default/nav-arrow-right.png);
+}
+
+ul.dropdown-vertical-rtl *.dir {
+ padding-right: 10px;
+ padding-left: 15px;
+ background-image: url(/clients/Ditsaz/Images/default/nav-arrow-left.png);
+ background-position: 0 50%;
+}

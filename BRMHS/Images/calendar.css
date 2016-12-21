@@ -1,0 +1,69 @@
+/* Required */
+table.calendar, .calendar table {border-collapse:collapse; border-spacing:0px;}
+table.calendar td {padding:0px;}
+.calendar a {display:block; height:100%; text-decoration:none;}
+.calendar td, .calendar td font {text-align:center; font-family:Arial, sans-serif;}
+
+/* Month */
+.row-month {background:#A4180A url(/clients/BRMHS/Images/bg-bar.png);}
+.row-month div,
+.row-month a {color:#FFF;}
+.row-month td {font-weight:bold;}
+.row-month a, .row-month font {padding:40% 0; height:100%; background:#A4180A url(/clients/BRMHS/Images/bg-bar-nav.png); font-family:Georgia, Cambria, sans-serif; font-weight:bold;}
+
+/* Week */
+.row-week td {background:#F1F1F1; color:#888; text-transform:uppercase;}
+.row-week div {padding:15% 0;}
+.row-week .day-sun {border-left:1px solid #D8D8D8;}
+.row-week .day-sat {border-right:1px solid #D8D8D8;}
+
+/* Weeks */
+.row-week, .row-weeks {background:#E5E5E5;}
+.row-weeks td {border:1px solid #D8D8D8;}
+.row-weeks a font, .row-weeks font {border:1px solid #EEE; padding:20% 0; color:#222;}
+.row-weeks font{display:block;}
+.row-weeks a.inactive, .row-weeks .inactive font {background:#DCDCDC;}
+.row-weeks a:hover, .row-weeks a:hover font  {background:#F2F2F2; border:1px solid EEE;}
+.row-weeks .has-event {background:#FFD2D1;}
+
+/* Calendar Font scaling */
+td.row-month div, td.row-month a {font-size:120%;}
+td.row-week div {font-size:100%;}
+td.row-weeks a, td.row-weeks font{font-size:100%;}
+
+/* Small View */
+table.calendar {width:200px;}
+table.calendar td, table.calendar div, table.calendar a, table.calendar font {font-size:10px;}
+
+/* Large View */
+/*table.calendar {width:600px; height:450px;}
+table.calendar td, table.calendar div, table.calendar a {font-size:15px;}
+td.row-weeks a {text-align:left;}*/
+
+/* Rounded Corners */
+.row-month {
+	-moz-border-radius-topleft:5px;
+	-moz-border-radius-topright:5px;
+	-moz-border-radius-bottomright:0px;
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-radius:5px 5px 0px 0px;
+	border-radius:5px 5px 0px 0px;	
+}
+
+.row-month .month-prev a {
+	-moz-border-radius-topleft:5px;
+	-moz-border-radius-topright:0px;
+	-moz-border-radius-bottomright:0px;
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-radius:5px 0px 0px 0px;
+	border-radius:5px 0px 0px 0px;	
+}
+
+.row-month .month-next a {
+	-moz-border-radius-topleft:0px;
+	-moz-border-radius-topright:5px;
+	-moz-border-radius-bottomright:0px;
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-radius:0px 5px 0px 0px;
+	border-radius:0px 5px 0px 0px;
+}

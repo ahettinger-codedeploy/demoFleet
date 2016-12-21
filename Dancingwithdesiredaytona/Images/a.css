@@ -1,0 +1,2355 @@
+/* Soft Light Theme (Default) */
+/*
+ * @title: Soft Light
+ * @authors: Noah Chase
+ */
+/*
+.ie6, .ie7, .ie8 {
+	.htc() {
+		background: red !important;
+		//behavior: url('/clients/DancingwithDesireDaytona/Images/ie-css3.htc');
+		behavior: url('http://10.1.0.136/webstatic/static/projects/finch/themes/ie-css3.htc');
+	}
+}
+*/
+/* new clearfix */
+* html .clearfix {
+  zoom: 1;
+}
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+/* IE */
+/*
+ * @title : Default App Styles
+ * @author : Nick Swider
+ * @requires : @theme, @title_color, @text_color
+ */
+/************ Standard Padding For All Pages, temporarily put here so all themes get it ************/
+.webs-container {
+  padding: 10px;
+}
+.webs-text p {
+  padding: 0;
+}
+/**************************************************************************************************/
+/* Fixing sign-in form font problems */
+
+.webs-content .fw-message,
+.webs-content .fw-flash {
+  border-color: #cccccc;
+  background-color: #ededed;
+  color: #212121;
+}
+.webs-content .fw-message h2,
+.webs-content .fw-flash h2 {
+  color: #6f5151;
+}
+.webs-content .fw-message a,
+.webs-content .fw-flash a {
+  color: #8c8c8c;
+}
+.webs-content .fw-message a:hover,
+.webs-content .fw-flash a:hover {
+  color: #a6a6a6;
+}
+.webs-content table.fw-fixed td {
+  vertical-align: top;
+}
+.webs-content .fw-even {
+  border-color: #cccccc;
+}
+.webs-content .webs-body .fw-tabs {
+  height: 35px;
+}
+.webs-content .webs-body .fw-tabs .fw-tab-item {
+  background: #ffffff;
+  border-color: #999999;
+}
+.webs-content .webs-body .fw-tabs .fw-tab-item a {
+  color: #ffffff;
+}
+.webs-content .webs-title .pageTitle {
+  margin-bottom: 10px !important;
+  margin-right: 10px;
+}
+.webs-content #fw-menubar_aux {
+  border: none !important;
+}
+.webs-content .fw-button {
+  background: #a1a1a1 !important;
+  border: 1px solid #7d7d7d !important;
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
+  padding: .5em .9em !important;
+  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.2), inset 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 1px rgba(0, 0, 0, 0.4);
+  color: #fff !important;
+  opacity: 1 !important;
+  filter: none !important;
+}
+.webs-content .fw-button:hover {
+  background: #8c8c8c !important;
+}
+.webs-content .w-button-sb2_default a.w-button {
+  background: #a1a1a1;
+  border: 1px solid #7d7d7d;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding: .5em .9em;
+  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.2), inset 0 2px 1px rgba(255, 255, 255, 0.2), 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+.webs-content .w-button-sb2_default a.w-button:hover {
+  background: #8c8c8c;
+}
+.webs-content .w-button-sb2_default a.w-button .w-button-text {
+  color: #fff;
+}
+.webs-content .fw-editor-label {
+  padding: 5px !important;
+}
+.webs-content .fw-searchContainer {
+  width: 225px;
+  position: relative;
+  border: 0;
+  background: none;
+  padding: 4px 0;
+  /* clearfix */
+
+  zoom: 1;
+}
+.webs-content .fw-searchContainer .fw-searchbox {
+  width: 100%;
+  float: left;
+}
+.webs-content .fw-searchContainer .fw-searchSubmit {
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  margin-top: -12px !important;
+  z-index: 1;
+  border: none;
+  background-image: url('static.websimages.com/static/projects/finch/themes/app_search_ie.png');
+  background-image: url('data:image/svg+xml;charset=iso-8859-1, %3Csvg%20version%3D%221.1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%2216px%22%20height%3D%2216px%22%20viewBox%3D%220%200%2016%2016%22%20enable-background%3D%22new%200%200%2016%2016%22%20xml%3Aspace%3D%22preserve%22%3E%3Cg%3E%3Ccircle%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%222%22%20cx%3D%226.099%22%20cy%3D%226.1%22%20r%3D%224.999%22/%3E%3Cline%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20x1%3D%229.828%22%20y1%3D%229.828%22%20x2%3D%2214.9%22%20y2%3D%2214.9%22/%3E%3C/g%3E%3C/svg%3E');
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 24px;
+  height: 24px;
+  text-indent: -9999px;
+  cursor: pointer;
+}
+.webs-content .fw-searchContainer:before,
+.webs-content .fw-searchContainer:after {
+  content: "";
+  display: table;
+}
+.webs-content .fw-searchContainer:after {
+  clear: both;
+}
+.webs-content #blogFields td {
+  padding: 1px 0;
+}
+.webs-content .fwcalendar {
+  border-collapse: collapse;
+}
+.webs-content .weekdayHeader {
+  border-color: #ffffff;
+}
+.webs-content .weekdayHeader:first-child {
+  border-color: #ffffff;
+}
+.webs-content .weekdayHeader:last-child {
+  border-color: #ffffff;
+}
+.webs-content .albumTitle {
+  display: inline;
+}
+.webs-content .webs-text .fw-album_meta {
+  list-style: none;
+}
+.webs-content .fw-button-paypal {
+  position: relative;
+}
+.webs-content .fw-button-paypal:after {
+  content: "";
+  margin: 2px 0;
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  display: inline-block;
+  background: transparent url("/clients/DancingwithDesireDaytona/Images/paypal_24.png") no-repeat left top;
+  width: 77px;
+  padding: 0;
+  height: 20px;
+  margin-top: -9px;
+}
+.webs-content .categoryLinks .link {
+  list-style-type: none;
+}
+.webs-content .webs-module-undefined,
+.webs-content .webs-module-null {
+  color: #ffffff;
+  font-weight: normal;
+  font-family: 'Cardo', serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+.webs-content .webs-module-undefined a,
+.webs-content .webs-module-null a {
+  color: #ffffff;
+}
+.webs-content .webs-module-undefined a:hover,
+.webs-content .webs-module-null a:hover {
+  color: #ffffff;
+}
+.webs-content .webs-module-undefined .fw-list-grid,
+.webs-content .webs-module-null .fw-list-grid {
+  width: 100%;
+}
+.webs-content .webs-module-undefined .icon-link,
+.webs-content .webs-module-null .icon-link {
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  padding-bottom: 2px;
+  padding-left: 20px;
+  padding-top: 2px;
+}
+.webs-content .webs-module-undefined #item-manage-website a.icon-link,
+.webs-content .webs-module-null #item-manage-website a.icon-link {
+  background-image: url('/clients/DancingwithDesireDaytona/Images/page_edit.png');
+}
+.webs-content .webs-module-undefined img.fw-photo,
+.webs-content .webs-module-null img.fw-photo {
+  border: 1px solid #ccc;
+  padding: 2px;
+  background-color: #fff;
+}
+.webs-content .webs-module-undefined .fw-list-grid,
+.webs-content .webs-module-null .fw-list-grid {
+  width: 100%;
+}
+.webs-content .webs-module-undefined .fw-list-grid img.fw-profile-pic,
+.webs-content .webs-module-null .fw-list-grid img.fw-profile-pic {
+  border: 1px solid #ccc;
+  padding: 2px;
+  background-color: #fff;
+  width: 60px !important;
+  height: 60px !important;
+}
+.webs-content .webs-module-undefined .fw-list-list,
+.webs-content .webs-module-null .fw-list-list {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style-type: none !important;
+}
+.webs-content .webs-module-undefined .fw-list-list li,
+.webs-content .webs-module-null .fw-list-list li {
+  clear: both;
+}
+.webs-content form .whiteBox {
+  color: #ffffff;
+  background: none;
+}
+.webs-content .theme-color-text {
+  color: #ffffff;
+}
+/*
+ * This is the correct way to calculate which color to use ... but we can't do this because
+ * luma isn't supported in our version of less.js.  When we move to node and are using the latest
+ * less.js, we can use this methods directly over calculating the correct luma values in javascript
+.determineColorLegibleFromTextColor (@input_color) when (abs(luma(@text_color) - luma(@input_color)) > 43%) {
+	color: @text_color;
+}
+.determineColorLegibleFromTextColor (@input_color) when (abs(luma(@text_color) - luma(@input_color)) <= 43%) {
+	color: @input_color;
+}
+*/
+.webs-outer.fw-persistent-cart-header {
+  margin: -8px -8px 0;
+  padding: 16px 0 8px;
+  background: #000;
+  position: relative;
+  z-index: 100;
+}
+.webs-outer.fw-persistent-cart-header .fw-pcart-container {
+  width: 960px;
+  margin: 0 auto;
+}
+.webs-outer.fw-persistent-cart-header .fw-pcart-container .fw-pcart-button-container {
+  display: inline-block;
+  text-align: right;
+  width: 100%;
+}
+.webs-outer.fw-persistent-cart-header .fw-pcart-container .fw-pcart-button-container .fw-pcart-button {
+  color: #000;
+  color: rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  padding: .5em .9em;
+  background-color: #ffffff;
+  text-decoration: none;
+  font-family: "Helvetica", Arial, Sans-Serif;
+  font-weight: 300;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  line-height: 14px;
+}
+.webs-outer.fw-persistent-cart-header .fw-pcart-container .fw-pcart-button-container .fw-pcart-button:hover {
+  background-color: #ffffff;
+}
+.ie7 .webs-content .fw-searchContainer .fw-searchSubmit,
+.ie8 .webs-content .fw-searchContainer .fw-searchSubmit,
+.ie9 .webs-content .fw-searchContainer .fw-searchSubmit {
+  background-image: url('/clients/DancingwithDesireDaytona/Images/app_search_ie.png');
+}
+/* --- base variables --- */
+.webs-nav {
+  color: #877272;
+  font-weight: normal;
+  font-family: 'Antic', sans-serif;
+  font-size: 15px;
+  line-height: 15px;
+}
+.webs-nav a {
+  color: #7d7d7d;
+}
+.webs-nav a:hover {
+  color: #7d7d7d;
+}
+.webs-title {
+  color: #6f5151;
+  font-weight: normal;
+  font-family: 'Cardo', serif;
+  font-size: 20px;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+.webs-title a {
+  color: #ffffff;
+}
+.webs-title a:hover {
+  color: #ffffff;
+}
+.w-header-text-container .w-header-title {
+  font-family: 'Antic', sans-serif;
+}
+.w-header-text-container .w-header-subtitle {
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+body a,
+.webs-text a,
+.w-header-text a,
+
+body a:hover,
+
+.footer-wrap,
+.footer-wrap .webs-text,
+.footer-wrap,
+.footer-wrap input[type=text],
+.footer-wrap input[type=email],
+.footer-wrap input[type=password],
+.footer-wrap textarea {
+  color: #cccccc;
+  font-weight: normal;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+.footer-wrap a,
+.footer-wrap .webs-text a,
+.footer-wrap a,
+.footer-wrap input[type=text] a,
+.footer-wrap input[type=email] a,
+.footer-wrap input[type=password] a,
+.footer-wrap textarea a {
+  color: #ffffff;
+}
+.footer-wrap a:hover,
+.footer-wrap .webs-text a:hover,
+.footer-wrap a:hover,
+.footer-wrap input[type=text] a:hover,
+.footer-wrap input[type=email] a:hover,
+.footer-wrap input[type=password] a:hover,
+.footer-wrap textarea a:hover {
+  color: #ffffff;
+}
+.footer-wrap .webs-title {
+  color: #ffffff;
+  font-weight: normal;
+  font-family: 'Raleway', sans-serif;
+  font-size: 19px;
+  line-height: 20px;
+}
+.footer-wrap .webs-title a {
+  color: #ffffff;
+}
+.footer-wrap .webs-title a:hover {
+  color: #ffffff;
+}
+/* --- layout --- */
+.header-wrap {
+  position: relative;
+  z-index: 4;
+  background: #95abae;
+  background-image: url("/clients/DancingwithDesireDaytona/Images/footer-tile.jpg");
+  box-shadow: 0 3px 10px rgba(102, 102, 102, 0.4);
+}
+.header-wrap:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -moz-radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.58) 0%, rgba(255, 255, 255, 0) 40%);
+  background: -webkit-gradient(radial, center top, 0px, center top, 40%, color-stop(0%, rgba(255, 255, 255, 0.58)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background: -webkit-radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.58) 0%, rgba(255, 255, 255, 0) 40%);
+  background: -o-radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.58) 0%, rgba(255, 255, 255, 0) 40%);
+  background: -ms-radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.58) 0%, rgba(255, 255, 255, 0) 40%);
+  background: radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.58) 0%, rgba(255, 255, 255, 0) 40%);
+}
+.webs-subheader {
+  margin: 0 auto;
+  width: 960px;
+}
+.main-wrap {
+  position: relative;
+  z-index: 3;
+  background: #ffffff;
+  background-image: url("/clients/DancingwithDesireDaytona/Images/footer-tile.jpg");
+  box-shadow: 0 3px 5px rgba(51, 51, 51, 0.8);
+}
+.webs-main {
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 960px;
+  min-height: 350px;
+}
+.webs-main-sidebar .webs-body {
+  width: 650px;
+}
+.webs-main-sidebar .webs-sidebar {
+  position: relative;
+  margin-bottom: 10px;
+  width: 280px;
+  border: 0 solid #D6D6D6;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+.webs-main-sidebar .webs-sidebar:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  display: block;
+  height: 100%;
+  border: 0 solid #fff;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.webs-main-sidebar-left .webs-body {
+  padding-left: 5px;
+  float: right;
+}
+.webs-main-sidebar-left .webs-sidebar {
+  padding-right: 5px;
+  float: left;
+  border-right-width: 1px;
+}
+.webs-main-sidebar-left .webs-sidebar:before {
+  right: 0;
+  border-right-width: 1px;
+}
+.webs-main-sidebar-right .webs-body {
+  padding-right: 5px;
+  float: left;
+}
+.webs-main-sidebar-right .webs-sidebar {
+  padding-left: 5px;
+  float: right;
+  border-left-width: 1px;
+}
+.webs-main-sidebar-right .webs-sidebar:before {
+  left: 0;
+  border-left-width: 1px;
+}
+.footer-wrap {
+  position: relative;
+  z-index: 2;
+  padding: 20px 0;
+  background: #676767;
+  background-image: url("/clients/DancingwithDesireDaytona/Images/footer-tile.jpg");
+  overflow: hidden;
+}
+.footer-wrap:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: -moz-radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 40%);
+  background: -webkit-gradient(radial, center top, 0px, center top, 40%, color-stop(0%, rgba(255, 255, 255, 0.45)), color-stop(100%, rgba(255, 255, 255, 0)));
+  background: -webkit-radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 40%);
+  background: -o-radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 40%);
+  background: -ms-radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 40%);
+  background: radial-gradient(top, ellipse cover, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 40%);
+}
+#footer {
+  margin: 0 auto;
+  width: 960px;
+}
+/* --- header --- */
+#webs-header {
+  position: relative;
+  margin: 0 auto;
+  width: 960px;
+}
+#webs-header .site-title .w-header-area {
+  position: relative;
+  z-index: 1;
+  height: 130px;
+}
+#webs-header .site-title .w-header-title {
+  font-size: 38px;
+  font-weight: normal;
+  color: #f5f5f5;
+}
+#webs-header .site-title .w-header-subtitle {
+  font-size: 14px;
+  font-weight: normal;
+  color: #f5f5f5;
+}
+#webs-header .site-title a {
+  color: #f5f5f5;
+}
+/* --- nav --- */
+#webs-header nav {
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+  z-index: 100;
+  margin-bottom: -22px;
+  height: 44px;
+  text-align: left;
+  /* -- level 1 -- */
+
+}
+#webs-header nav > ul {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  padding: 0 10px;
+  max-width: 640px;
+  list-style: none;
+  white-space: nowrap;
+  background: #ffffff;
+  background-image: -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 50%, #e3e3e3 51%, #f2f2f2 100%);
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2 50%, #e3e3e3 51%, #f2f2f2 100%);
+  background-image: -o-linear-gradient(top, #ffffff 0%, #f2f2f2 50%, #e3e3e3 51%, #f2f2f2 100%);
+  background-image: -ms-linear-gradient(top, #ffffff 0%, #f2f2f2 50%, #e3e3e3 51%, #f2f2f2 100%);
+  background-image: linear-gradient(top, #ffffff 0%, #f2f2f2 50%, #e3e3e3 51%, #f2f2f2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f2f2f2', GradientType=0);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+#webs-header nav > ul:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+#webs-header nav > ul li {
+  position: relative;
+  display: block;
+}
+#webs-header nav > ul li:hover > ul {
+  display: block;
+}
+#webs-header nav > ul > li {
+  float: left;
+  padding-right: 14px;
+  padding-left: 20px;
+  height: 100%;
+  line-height: 44px;
+  /* -- level 1 + n -- */
+
+}
+#webs-header nav > ul > li:last-child > ul {
+  border-radius: 0 10px 10px 10px;
+}
+#webs-header nav > ul > li:last-child > ul li:first-child {
+  border-radius: 0 10px 10px 10px;
+}
+#webs-header nav > ul > li:last-child > ul li ul {
+  right: 100%;
+  left: auto;
+  border-radius: 10px 0 0 10px;
+}
+#webs-header nav > ul > li:only-child {
+  border-radius: 10px;
+}
+#webs-header nav > ul > li:only-child:hover {
+  border-radius: 10px 10px 0 0;
+}
+#webs-header nav > ul > li.active,
+#webs-header nav > ul > li:hover {
+  border-radius: 0;
+  background: #e6e6e6;
+  background: rgba(204, 204, 204, 0.3);
+}
+#webs-header nav > ul > li a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+#webs-header nav > ul > li > a span.title {
+  display: block;
+}
+#webs-header nav > ul > li.active > a span.title,
+#webs-header nav > ul > li:hover > a span.title {
+  color: #7d7d7d;
+}
+#webs-header nav > ul > li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  margin-left: -20px;
+  padding: 0;
+  min-width: 220px;
+  font-size: 14px;
+  font-weight: normal;
+  text-align: left;
+  line-height: 1;
+  background-color: #ffffff;
+  background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #e6e6e6));
+  background-image: -webkit-linear-gradient(#ffffff, #e6e6e6);
+  background-image: linear-gradient(top, #ffffff, #e6e6e6);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', endColorStr='#e6e6e6');
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+#webs-header nav > ul > li ul > li {
+  padding: 10px;
+}
+#webs-header nav > ul > li ul > li a {
+  padding: 6px 15px;
+  color: #7d7d7d;
+  border-radius: 5px;
+}
+#webs-header nav > ul > li ul > li:hover > a {
+  color: #7d7d7d;
+  background: #d9d9d9;
+  background: rgba(179, 179, 179, 0.4);
+}
+#webs-header nav > ul > li ul > li ul {
+  top: 0;
+  left: 100%;
+  z-index: -1;
+  margin-left: 0;
+  border-radius: 0 10px 10px 0;
+}
+#webs-header nav > ul > li > ul > li:first-child {
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+/* --- pagetitle --- */
+.pagetitle-wrapper {
+  background: #ffffff;
+}
+.pagetitle-wrapper .webs-pagetitle {
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 960px;
+  color: #6f5151;
+}
+.pagetitle-wrapper .webs-pagetitle .webs-title {
+  font-size: 2.4em;
+}
+/* --- main --- */
+.webs-main .webs-text {
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+/* --- footer --- */
+#footer {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+#footer .webs-title {
+  text-shadow: none;
+}
+
+
+
+/* Frames */
+/* new clearfix */
+* html .clearfix {
+  zoom: 1;
+}
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+/* IE */
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: bold;
+}
+div.webs-align-center {
+  margin: 0 auto;
+  display: block;
+}
+div.webs-align-left {
+  float: left;
+}
+div.webs-align-right {
+  float: right;
+}
+div.webs-frame {
+  display: table;
+}
+div.webs-frame .webs-hasframe {
+  margin: 0;
+  float: none;
+}
+.webs-bin-active .webs-frame:hover .covering {
+  display: none;
+}
+div.webs-frame-default {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+div.webs-frame-default .webs-frame-container {
+  position: relative;
+  margin: 4px;
+}
+div.webs-frame-thickborder {
+  background-color: #e1e1e1;
+}
+div.webs-frame-thickborder .webs-frame-container {
+  position: relative;
+  margin: 6px;
+}
+div.webs-frame-u_shadow {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  outline: none;
+}
+div.webs-frame-u_shadow .webs-frame-container {
+  margin: 4px;
+  position: relative;
+}
+div.webs-frame-u_shadow div.webs-frame-shadow {
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+}
+div.webs-frame-u_shadow div.webs-frame-shadow > span.webs-frame-shadow-tile {
+  display: block;
+  margin: 0 50px;
+  height: 100%;
+  background: transparent url('../images/frames/u_shadow.png') repeat-x 0 -6px;
+}
+div.webs-frame-u_shadow div.webs-frame-shadow:before,
+div.webs-frame-u_shadow div.webs-frame-shadow:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 3px;
+  width: 50px;
+  background: transparent url('../images/frames/u_shadow.png') 0 0;
+}
+div.webs-frame-u_shadow div.webs-frame-shadow:before {
+  left: 0;
+}
+div.webs-frame-u_shadow div.webs-frame-shadow:after {
+  right: 0;
+  background-position: 0 -3px;
+}
+div.webs-frame-inner_opacity {
+  position: relative;
+}
+div.webs-frame-inner_opacity .webs-frame-top,
+div.webs-frame-inner_opacity .webs-frame-bottom {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 7px;
+}
+div.webs-frame-inner_opacity .webs-frame-top:after,
+div.webs-frame-inner_opacity .webs-frame-bottom:after {
+  content: "";
+  display: block;
+  margin: 0 7px;
+  height: 7px;
+}
+div.webs-frame-inner_opacity .webs-frame-top {
+  top: 0;
+}
+div.webs-frame-inner_opacity .webs-frame-bottom {
+  bottom: 0;
+}
+div.webs-frame-inner_opacity .webs-frame-left,
+div.webs-frame-inner_opacity .webs-frame-right {
+  position: absolute;
+  top: 0;
+  width: 7px;
+  height: 100%;
+}
+div.webs-frame-inner_opacity .webs-frame-left {
+  left: 0;
+}
+div.webs-frame-inner_opacity .webs-frame-right {
+  right: 0;
+}
+div.webs-frame-inner_opacity-light .webs-frame-top:after,
+div.webs-frame-inner_opacity-light .webs-frame-bottom:after,
+div.webs-frame-inner_opacity-light .webs-frame-left,
+div.webs-frame-inner_opacity-light .webs-frame-right {
+  background: rgba(255, 255, 255, 0.3);
+}
+div.webs-frame-inner_opacity-dark .webs-frame-top:after,
+div.webs-frame-inner_opacity-dark .webs-frame-bottom:after,
+div.webs-frame-inner_opacity-dark .webs-frame-left,
+div.webs-frame-inner_opacity-dark .webs-frame-right {
+  background: rgba(0, 0, 0, 0.4);
+}
+div.webs-frame-double_contrast {
+  background-color: #333;
+}
+div.webs-frame-double_contrast .webs-frame-container1 {
+  position: relative;
+  margin: 7px;
+  background: #fff;
+  border: 1px solid #1f1f1f;
+}
+div.webs-frame-double_contrast .webs-frame-container2 {
+  margin: 4px;
+  -moz-box-shadow: inset 0 0 3px #000000;
+  -webkit-box-shadow: inset 0 0 3px #000000;
+  box-shadow: inset 0 0 3px #000000;
+}
+div.webs-frame-paper div.webs-frame-container {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 6px;
+  position: relative;
+}
+div.webs-frame-paper div.webs-frame-container > div.webs-frame-paper-shade {
+  height: 8px;
+  width: 100%;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+}
+div.webs-frame-paper div.webs-frame-container > div.webs-frame-paper-shade > span.webs-frame-paper-tile {
+  display: block;
+  margin: 0 34px;
+  height: 100%;
+  background: transparent url('../images/frames/papershade.png') repeat-x 0 -8px;
+}
+div.webs-frame-paper div.webs-frame-container > div.webs-frame-paper-shade:before,
+div.webs-frame-paper div.webs-frame-container > div.webs-frame-paper-shade:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 8px;
+  width: 34px;
+  background: transparent url('../images/frames/papershade.png') 0 0;
+}
+div.webs-frame-paper div.webs-frame-container > div.webs-frame-paper-shade:before {
+  left: 0;
+}
+div.webs-frame-paper div.webs-frame-container > div.webs-frame-paper-shade:after {
+  right: 0;
+  background-position: 0 100%;
+}
+div.webs-frame-tape {
+  position: relative;
+  padding: 6px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+div.webs-frame-tape div.webs-frame-tape-left,
+div.webs-frame-tape div.webs-frame-tape-right {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -35px;
+  z-index: 1;
+  background: transparent url('../images/frames/tape.png') no-repeat 0 0;
+}
+div.webs-frame-tape div.webs-frame-tape-left-container {
+  position: absolute;
+}
+div.webs-frame-tape div.webs-frame-tape-right-container {
+  position: relative;
+}
+div.webs-frame-tape div.webs-frame-tape-left {
+  left: -35px;
+}
+div.webs-frame-tape div.webs-frame-tape-right {
+  right: -35px;
+  background-position: 100% 0;
+}
+div.webs-frame-album {
+  position: relative;
+  padding: 20px 15px 20px 43px;
+  background: #71789f url('../images/frames/album-noise.png') 0 0;
+  box-shadow: inset 30px 1px 1px rgba(255, 255, 255, 0.5), inset -1px -1px 0 rgba(0, 0, 0, 0.1), 4px 4px 0 rgba(0, 0, 0, 0.5), 3px 3px 0 rgba(0, 0, 0, 0.15), 2px 2px 0 rgba(0, 0, 0, 0.15), 1px 1px 0 rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+}
+div.webs-frame-album div.webs-frame-album-bind {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  background: #222222 url('../images/frames/album-binder.png') repeat-y 0 0;
+}
+div.webs-frame-album div.webs-frame-album-container {
+  border: 1px solid #aaa;
+  outline: 1px solid #333;
+  box-shadow: 0 0 4px #000;
+}
+div.webs-frame-thumbtack {
+  position: relative;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #aaa;
+}
+div.webs-frame-thumbtack div.webs-frame-thumbtack-pin {
+  position: absolute;
+  left: 50%;
+  top: -29px;
+  width: 31px;
+  height: 40px;
+  margin-left: -10px;
+  background: url('../images/frames/thumbtack.png') no-repeat 0 0;
+}
+div.webs-frame-thumbtack div.webs-frame-thumbtack-container {
+  border: 1px solid #aaa;
+  outline: 1px solid #888;
+}
+div.webs-frame-photocorners {
+  position: relative;
+  padding: 6px;
+  background: #fff;
+  border: 1px solid #273531;
+}
+div.webs-frame-photocorners div.webs-frame-pc-all {
+  position: absolute;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  background: url('../images/frames/photo-corners.png') no-repeat 0 0;
+}
+div.webs-frame-photocorners div.webs-frame-pc-tl {
+  background-position: 0 0;
+  left: -4px;
+  top: -4px;
+}
+div.webs-frame-photocorners div.webs-frame-pc-tr {
+  background-position: 100% 0;
+  right: -4px;
+  top: -4px;
+}
+div.webs-frame-photocorners div.webs-frame-pc-bl {
+  background-position: 0 100%;
+  left: -4px;
+  bottom: -4px;
+}
+div.webs-frame-photocorners div.webs-frame-pc-br {
+  background-position: 100% 100%;
+  right: -4px;
+  bottom: -4px;
+}
+
+
+
+/* Module Styles */
+
+
+/* Module: header_editor, Style: default */
+.w-header-layer {
+  position: absolute;
+}
+.webs-frame .w-header-layer {
+  position: static;
+}
+.w-header-text {
+  white-space: nowrap;
+  width: auto;
+}
+.w-header-layer-delete,
+.w-header-layer-overlap {
+  display: none;
+}
+.w-header-layer-align-left .w-header-text {
+  text-align: left;
+}
+.w-header-layer-align-right .w-header-text {
+  text-align: right;
+}
+.w-header-layer-centered {
+  right: auto;
+  left: 50%;
+}
+.w-header-layer-centered .w-header-layer-container {
+  position: relative;
+  left: -50%;
+}
+.w-header-layer-align-center .w-header-text {
+  text-align: center;
+}
+.w-header-layer-image .w-header-image {
+  width: 100%;
+  height: 100%;
+}
+#webs-header .webs-container,
+.webs-content-header .webs-container {
+  padding: 0;
+}
+
+
+/* Module: horizontal_rule, Style: base */
+.webs-module-horizontal_rule {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+*:first-child + html .webs-hr .webs-hr-rule .webs-hr-container {
+  position: absolute;
+}
+*:first-child + html .webs-hr .webs-hr-rule .webs-hr-left-container {
+  left: 0;
+}
+*:first-child + html .webs-hr .webs-hr-rule .webs-hr-left-spacer-container {
+  left: 20%;
+}
+*:first-child + html .webs-hr .webs-hr-rule .webs-hr-center-container {
+  left: 40%;
+}
+*:first-child + html .webs-hr .webs-hr-rule .webs-hr-right-spacer-container {
+  right: 20%;
+}
+*:first-child + html .webs-hr .webs-hr-rule .webs-hr-right-container {
+  right: 0;
+}
+* html .webs-hr .webs-hr-rule .webs-hr-container {
+  position: absolute;
+}
+* html .webs-hr .webs-hr-rule .webs-hr-left-container {
+  left: 0;
+}
+* html .webs-hr .webs-hr-rule .webs-hr-left-spacer-container {
+  left: 20%;
+}
+* html .webs-hr .webs-hr-rule .webs-hr-center-container {
+  left: 40%;
+}
+* html .webs-hr .webs-hr-rule .webs-hr-right-spacer-container {
+  right: 20%;
+}
+* html .webs-hr .webs-hr-rule .webs-hr-right-container {
+  right: 0;
+}
+.webs-hr .webs-hr-rule {
+  position: relative;
+  display: table;
+  width: 100%;
+}
+.webs-hr .webs-hr-rule .webs-hr-container {
+  display: table-cell;
+  vertical-align: top;
+  width: 20%;
+  position: relative;
+  top: 0px;
+}
+.webs-hr .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-color: transparent;
+}
+
+
+/* Module: horizontal_rule, Style: dark */
+.w-horizontal_rule-dark-1 .webs-hr-rule {
+  height: 25px;
+}
+.w-horizontal_rule-dark-1 .webs-hr-rule .webs-hr-container {
+  height: 25px;
+}
+.w-horizontal_rule-dark-1 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/light-1-sprite.png");
+}
+.w-horizontal_rule-dark-1 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-dark-1 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-dark-1 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg,
+.w-horizontal_rule-dark-1 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 1px;
+  background-position: center 1px;
+  position: relative;
+  top: 8px;
+}
+.w-horizontal_rule-dark-1 .webs-hr-rule .webs-hr-center-container {
+  min-width: 36px;
+}
+.w-horizontal_rule-dark-1 .webs-hr-rule .webs-hr-center-container .webs-hr-bg {
+  height: 25px;
+  background-position: center 0;
+}
+.w-horizontal_rule-dark-2 .webs-hr-rule {
+  height: 44px;
+}
+.w-horizontal_rule-dark-2 .webs-hr-rule .webs-hr-container {
+  height: 44px;
+}
+.w-horizontal_rule-dark-2 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/light-2-sprite.png");
+}
+.w-horizontal_rule-dark-2 .webs-hr-rule .webs-hr-left-container,
+.w-horizontal_rule-dark-2 .webs-hr-rule .webs-hr-right-container {
+  min-width: 48px;
+}
+.w-horizontal_rule-dark-2 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-dark-2 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 6px;
+  position: relative;
+  top: 13px;
+}
+.w-horizontal_rule-dark-2 .webs-hr-rule .webs-hr-left-container .webs-hr-bg {
+  background-position: left 20px;
+}
+.w-horizontal_rule-dark-2 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  background-position: right 13px;
+}
+.w-horizontal_rule-dark-2 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-dark-2 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg {
+  height: 1px;
+  background-position: center 1px;
+  position: relative;
+  top: 15px;
+}
+.w-horizontal_rule-dark-2 .webs-hr-rule .webs-hr-center-container {
+  min-width: 63px;
+}
+.w-horizontal_rule-dark-2 .webs-hr-rule .webs-hr-center-container .webs-hr-bg {
+  height: 44px;
+  background-position: center 0;
+}
+.w-horizontal_rule-dark-3 .webs-hr-rule {
+  height: 12px;
+}
+.w-horizontal_rule-dark-3 .webs-hr-rule .webs-hr-container {
+  height: 12px;
+}
+.w-horizontal_rule-dark-3 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/light-3-sprite.png");
+}
+.w-horizontal_rule-dark-3 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-dark-3 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-dark-3 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg,
+.w-horizontal_rule-dark-3 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 1px;
+  background-position: center 1px;
+  position: relative;
+  top: 5px;
+}
+.w-horizontal_rule-dark-3 .webs-hr-rule .webs-hr-center-container {
+  min-width: 55px;
+}
+.w-horizontal_rule-dark-3 .webs-hr-rule .webs-hr-center-container .webs-hr-bg {
+  height: 12px;
+  background-position: center 0;
+}
+.w-horizontal_rule-dark-4 .webs-hr-rule {
+  height: 29px;
+}
+.w-horizontal_rule-dark-4 .webs-hr-rule .webs-hr-container {
+  height: 29px;
+}
+.w-horizontal_rule-dark-4 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/light-4-sprite.png");
+}
+.w-horizontal_rule-dark-4 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-dark-4 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-dark-4 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg,
+.w-horizontal_rule-dark-4 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 1px;
+  background-position: center 1px;
+}
+.w-horizontal_rule-dark-4 .webs-hr-rule .webs-hr-center-container {
+  min-width: 128px;
+}
+.w-horizontal_rule-dark-4 .webs-hr-rule .webs-hr-center-container .webs-hr-bg {
+  height: 29px;
+  background-position: center 0;
+}
+.w-horizontal_rule-dark-5 .webs-hr-rule {
+  height: 7px;
+}
+.w-horizontal_rule-dark-5 .webs-hr-rule .webs-hr-container {
+  height: 7px;
+}
+.w-horizontal_rule-dark-5 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/light-5-sprite.png");
+}
+.w-horizontal_rule-dark-5 .webs-hr-rule .webs-hr-left-container,
+.w-horizontal_rule-dark-5 .webs-hr-rule .webs-hr-right-container {
+  min-width: 52px;
+}
+.w-horizontal_rule-dark-5 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-dark-5 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 7px;
+}
+.w-horizontal_rule-dark-5 .webs-hr-rule .webs-hr-left-container .webs-hr-bg {
+  background-position: left 0;
+}
+.w-horizontal_rule-dark-5 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-dark-5 .webs-hr-rule .webs-hr-center-container .webs-hr-bg,
+.w-horizontal_rule-dark-5 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg {
+  height: 1px;
+  background-position: center 1px;
+  position: relative;
+  top: 3px;
+}
+.w-horizontal_rule-dark-5 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  background-position: right 15px;
+}
+.w-horizontal_rule-dark-6 .webs-hr-rule {
+  height: 40px;
+}
+.w-horizontal_rule-dark-6 .webs-hr-rule .webs-hr-container {
+  height: 40px;
+}
+.w-horizontal_rule-dark-6 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/light-6-sprite.png");
+}
+.w-horizontal_rule-dark-6 .webs-hr-rule .webs-hr-left-container,
+.w-horizontal_rule-dark-6 .webs-hr-rule .webs-hr-right-container {
+  min-width: 40px;
+}
+.w-horizontal_rule-dark-6 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-dark-6 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 40px;
+}
+.w-horizontal_rule-dark-6 .webs-hr-rule .webs-hr-left-container .webs-hr-bg {
+  background-position: left 71px;
+}
+.w-horizontal_rule-dark-6 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-dark-6 .webs-hr-rule .webs-hr-center-container .webs-hr-bg,
+.w-horizontal_rule-dark-6 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg {
+  height: 2px;
+  background-position: center 2px;
+  position: relative;
+  top: 19px;
+}
+.w-horizontal_rule-dark-6 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  background-position: right 0px;
+}
+.w-horizontal_rule-dark-7 .webs-hr-rule {
+  height: 19px;
+}
+.w-horizontal_rule-dark-7 .webs-hr-rule .webs-hr-container {
+  height: 19px;
+}
+.w-horizontal_rule-dark-7 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/light-7-sprite.png");
+}
+.w-horizontal_rule-dark-7 .webs-hr-rule .webs-hr-left-container,
+.w-horizontal_rule-dark-7 .webs-hr-rule .webs-hr-right-container {
+  min-width: 28px;
+}
+.w-horizontal_rule-dark-7 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-dark-7 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 19px;
+}
+.w-horizontal_rule-dark-7 .webs-hr-rule .webs-hr-left-container .webs-hr-bg {
+  background-position: left 24px;
+}
+.w-horizontal_rule-dark-7 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-dark-7 .webs-hr-rule .webs-hr-center-container .webs-hr-bg,
+.w-horizontal_rule-dark-7 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg {
+  height: 1px;
+  background-position: center 1px;
+  position: relative;
+  top: 9px;
+}
+.w-horizontal_rule-dark-7 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  background-position: right 0px;
+}
+.w-horizontal_rule-dark-8 .webs-hr-rule {
+  height: 17px;
+}
+.w-horizontal_rule-dark-8 .webs-hr-rule .webs-hr-container {
+  height: 17px;
+}
+.w-horizontal_rule-dark-8 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/light-8-sprite.png");
+}
+.w-horizontal_rule-dark-8 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-dark-8 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-dark-8 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg,
+.w-horizontal_rule-dark-8 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 3px;
+  background-position: center 3px;
+  position: relative;
+  top: 12px;
+}
+.w-horizontal_rule-dark-8 .webs-hr-rule .webs-hr-center-container {
+  min-width: 55px;
+}
+.w-horizontal_rule-dark-8 .webs-hr-rule .webs-hr-center-container .webs-hr-bg {
+  height: 17px;
+  background-position: center 0;
+}
+.w-horizontal_rule-dark-9 .webs-hr-rule {
+  height: 20px;
+}
+.w-horizontal_rule-dark-9 .webs-hr-rule .webs-hr-container {
+  height: 20px;
+}
+.w-horizontal_rule-dark-9 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/light-9-sprite.png");
+}
+.w-horizontal_rule-dark-9 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-dark-9 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 4px;
+  position: relative;
+  top: 8px;
+}
+.w-horizontal_rule-dark-9 .webs-hr-rule .webs-hr-left-container .webs-hr-bg {
+  background-position: left 18px;
+}
+.w-horizontal_rule-dark-9 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  background-position: right 12px;
+}
+.w-horizontal_rule-dark-9 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-dark-9 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg {
+  height: 2px;
+  background-position: center 2px;
+  position: relative;
+  top: 9px;
+}
+.w-horizontal_rule-dark-9 .webs-hr-rule .webs-hr-center-container {
+  min-width: 63px;
+}
+.w-horizontal_rule-dark-9 .webs-hr-rule .webs-hr-center-container .webs-hr-bg {
+  height: 20px;
+  background-position: center 0;
+}
+.w-horizontal_rule-dark-10 .webs-hr-rule {
+  height: 12px;
+}
+.w-horizontal_rule-dark-10 .webs-hr-rule .webs-hr-container {
+  height: 12px;
+}
+.w-horizontal_rule-dark-10 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/light-10-sprite.png");
+}
+.w-horizontal_rule-dark-10 .webs-hr-rule .webs-hr-left-container,
+.w-horizontal_rule-dark-10 .webs-hr-rule .webs-hr-right-container {
+  min-width: 3px;
+}
+.w-horizontal_rule-dark-10 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-dark-10 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 3px;
+  position: relative;
+  top: 2px;
+}
+.w-horizontal_rule-dark-10 .webs-hr-rule .webs-hr-left-container .webs-hr-bg {
+  background-position: left 16px;
+}
+.w-horizontal_rule-dark-10 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  background-position: right 10px;
+}
+.w-horizontal_rule-dark-10 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-dark-10 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg {
+  height: 1px;
+  background-position: center 1px;
+  position: relative;
+  top: 3px;
+}
+.w-horizontal_rule-dark-10 .webs-hr-rule .webs-hr-center-container {
+  min-width: 63px;
+}
+.w-horizontal_rule-dark-10 .webs-hr-rule .webs-hr-center-container .webs-hr-bg {
+  height: 12px;
+  background-position: center 0;
+}
+.w-horizontal_rule-dark-11 .webs-hr-rule {
+  height: 1px;
+}
+.w-horizontal_rule-dark-11 .webs-hr-rule > div {
+  background: #fff;
+  opacity: .15;
+}
+.w-horizontal_rule-dark-12 .webs-hr-rule {
+  height: 2px;
+}
+.w-horizontal_rule-dark-12 .webs-hr-rule > div {
+  background: #fff;
+  opacity: .15;
+}
+.w-horizontal_rule-dark-13 .webs-hr-rule {
+  height: 3px;
+}
+.w-horizontal_rule-dark-13 .webs-hr-rule > div {
+  background: #fff;
+  opacity: .15;
+}
+
+
+/* Module: horizontal_rule, Style: light */
+.w-horizontal_rule-light-1 .webs-hr-rule {
+  height: 25px;
+}
+.w-horizontal_rule-light-1 .webs-hr-rule .webs-hr-container {
+  height: 25px;
+}
+.w-horizontal_rule-light-1 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/dark-1-sprite.png");
+}
+.w-horizontal_rule-light-1 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-light-1 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-light-1 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg,
+.w-horizontal_rule-light-1 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 1px;
+  background-position: center 61px;
+  position: relative;
+  top: 8px;
+}
+.w-horizontal_rule-light-1 .webs-hr-rule .webs-hr-center-container {
+  min-width: 36px;
+}
+.w-horizontal_rule-light-1 .webs-hr-rule .webs-hr-center-container .webs-hr-bg {
+  height: 25px;
+  background-position: center 0;
+}
+.w-horizontal_rule-light-2 .webs-hr-rule {
+  height: 44px;
+}
+.w-horizontal_rule-light-2 .webs-hr-rule .webs-hr-container {
+  height: 44px;
+}
+.w-horizontal_rule-light-2 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/dark-2-sprite.png");
+}
+.w-horizontal_rule-light-2 .webs-hr-rule .webs-hr-left-container,
+.w-horizontal_rule-light-2 .webs-hr-rule .webs-hr-right-container {
+  min-width: 48px;
+}
+.w-horizontal_rule-light-2 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-light-2 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 6px;
+  position: relative;
+  top: 13px;
+}
+.w-horizontal_rule-light-2 .webs-hr-rule .webs-hr-left-container .webs-hr-bg {
+  background-position: left 22px;
+}
+.w-horizontal_rule-light-2 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  background-position: right 13px;
+}
+.w-horizontal_rule-light-2 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-light-2 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg {
+  height: 1px;
+  background-position: center 1px;
+  position: relative;
+  top: 15px;
+}
+.w-horizontal_rule-light-2 .webs-hr-rule .webs-hr-center-container {
+  min-width: 63px;
+}
+.w-horizontal_rule-light-2 .webs-hr-rule .webs-hr-center-container .webs-hr-bg {
+  height: 44px;
+  background-position: center 0;
+}
+.w-horizontal_rule-light-3 .webs-hr-rule {
+  height: 12px;
+}
+.w-horizontal_rule-light-3 .webs-hr-rule .webs-hr-container {
+  height: 12px;
+}
+.w-horizontal_rule-light-3 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/dark-3-sprite.png");
+}
+.w-horizontal_rule-light-3 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-light-3 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-light-3 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg,
+.w-horizontal_rule-light-3 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 1px;
+  background-position: center 61px;
+  position: relative;
+  top: 5px;
+}
+.w-horizontal_rule-light-3 .webs-hr-rule .webs-hr-center-container {
+  min-width: 55px;
+}
+.w-horizontal_rule-light-3 .webs-hr-rule .webs-hr-center-container .webs-hr-bg {
+  height: 12px;
+  background-position: center 0;
+}
+.w-horizontal_rule-light-4 .webs-hr-rule {
+  height: 29px;
+}
+.w-horizontal_rule-light-4 .webs-hr-rule .webs-hr-container {
+  height: 29px;
+}
+.w-horizontal_rule-light-4 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/dark-4-sprite.png");
+}
+.w-horizontal_rule-light-4 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-light-4 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-light-4 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg,
+.w-horizontal_rule-light-4 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 1px;
+  background-position: center 1px;
+}
+.w-horizontal_rule-light-4 .webs-hr-rule .webs-hr-center-container {
+  min-width: 128px;
+}
+.w-horizontal_rule-light-4 .webs-hr-rule .webs-hr-center-container .webs-hr-bg {
+  height: 29px;
+  background-position: center 0;
+}
+.w-horizontal_rule-light-5 .webs-hr-rule {
+  height: 7px;
+}
+.w-horizontal_rule-light-5 .webs-hr-rule .webs-hr-container {
+  height: 7px;
+}
+.w-horizontal_rule-light-5 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/dark-5-sprite.png");
+}
+.w-horizontal_rule-light-5 .webs-hr-rule .webs-hr-left-container,
+.w-horizontal_rule-light-5 .webs-hr-rule .webs-hr-right-container {
+  min-width: 52px;
+}
+.w-horizontal_rule-light-5 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-light-5 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 7px;
+}
+.w-horizontal_rule-light-5 .webs-hr-rule .webs-hr-left-container .webs-hr-bg {
+  background-position: left 0;
+}
+.w-horizontal_rule-light-5 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-light-5 .webs-hr-rule .webs-hr-center-container .webs-hr-bg,
+.w-horizontal_rule-light-5 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg {
+  height: 1px;
+  background-position: center 1px;
+  position: relative;
+  top: 3px;
+}
+.w-horizontal_rule-light-5 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  background-position: right 12px;
+}
+.w-horizontal_rule-light-6 .webs-hr-rule {
+  height: 40px;
+}
+.w-horizontal_rule-light-6 .webs-hr-rule .webs-hr-container {
+  height: 40px;
+}
+.w-horizontal_rule-light-6 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/dark-6-sprite.png");
+}
+.w-horizontal_rule-light-6 .webs-hr-rule .webs-hr-left-container,
+.w-horizontal_rule-light-6 .webs-hr-rule .webs-hr-right-container {
+  min-width: 40px;
+}
+.w-horizontal_rule-light-6 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-light-6 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 40px;
+}
+.w-horizontal_rule-light-6 .webs-hr-rule .webs-hr-left-container .webs-hr-bg {
+  background-position: left 0;
+}
+.w-horizontal_rule-light-6 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-light-6 .webs-hr-rule .webs-hr-center-container .webs-hr-bg,
+.w-horizontal_rule-light-6 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg {
+  height: 2px;
+  background-position: center 2px;
+  position: relative;
+  top: 19px;
+}
+.w-horizontal_rule-light-6 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  background-position: right 50px;
+}
+.w-horizontal_rule-light-7 .webs-hr-rule {
+  height: 19px;
+}
+.w-horizontal_rule-light-7 .webs-hr-rule .webs-hr-container {
+  height: 19px;
+}
+.w-horizontal_rule-light-7 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/dark-7-sprite.png");
+}
+.w-horizontal_rule-light-7 .webs-hr-rule .webs-hr-left-container,
+.w-horizontal_rule-light-7 .webs-hr-rule .webs-hr-right-container {
+  min-width: 28px;
+}
+.w-horizontal_rule-light-7 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-light-7 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 19px;
+}
+.w-horizontal_rule-light-7 .webs-hr-rule .webs-hr-left-container .webs-hr-bg {
+  background-position: left 0;
+}
+.w-horizontal_rule-light-7 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-light-7 .webs-hr-rule .webs-hr-center-container .webs-hr-bg,
+.w-horizontal_rule-light-7 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg {
+  height: 1px;
+  background-position: center 1px;
+  position: relative;
+  top: 9px;
+}
+.w-horizontal_rule-light-7 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  background-position: right 24px;
+}
+.w-horizontal_rule-light-8 .webs-hr-rule {
+  height: 17px;
+}
+.w-horizontal_rule-light-8 .webs-hr-rule .webs-hr-container {
+  height: 17px;
+}
+.w-horizontal_rule-light-8 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/dark-8-sprite.png");
+}
+.w-horizontal_rule-light-8 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-light-8 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-light-8 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg,
+.w-horizontal_rule-light-8 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 3px;
+  background-position: center 3px;
+  position: relative;
+  top: 12px;
+}
+.w-horizontal_rule-light-8 .webs-hr-rule .webs-hr-center-container {
+  min-width: 55px;
+}
+.w-horizontal_rule-light-8 .webs-hr-rule .webs-hr-center-container .webs-hr-bg {
+  height: 17px;
+  background-position: center 0;
+}
+.w-horizontal_rule-light-9 .webs-hr-rule {
+  height: 20px;
+}
+.w-horizontal_rule-light-9 .webs-hr-rule .webs-hr-container {
+  height: 20px;
+}
+.w-horizontal_rule-light-9 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/dark-9-sprite.png");
+}
+.w-horizontal_rule-light-9 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-light-9 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 4px;
+  position: relative;
+  top: 8px;
+}
+.w-horizontal_rule-light-9 .webs-hr-rule .webs-hr-left-container .webs-hr-bg {
+  background-position: left 18px;
+}
+.w-horizontal_rule-light-9 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  background-position: right 10px;
+}
+.w-horizontal_rule-light-9 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-light-9 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg {
+  height: 2px;
+  background-position: center 2px;
+  position: relative;
+  top: 9px;
+}
+.w-horizontal_rule-light-9 .webs-hr-rule .webs-hr-center-container {
+  min-width: 63px;
+}
+.w-horizontal_rule-light-9 .webs-hr-rule .webs-hr-center-container .webs-hr-bg {
+  height: 20px;
+  background-position: center 0;
+}
+.w-horizontal_rule-light-10 .webs-hr-rule {
+  height: 12px;
+}
+.w-horizontal_rule-light-10 .webs-hr-rule .webs-hr-container {
+  height: 12px;
+}
+.w-horizontal_rule-light-10 .webs-hr-rule .webs-hr-container .webs-hr-bg {
+  background-image: url("/clients/DancingwithDesireDaytona/Images/dark-10-sprite.png");
+}
+.w-horizontal_rule-light-10 .webs-hr-rule .webs-hr-left-container,
+.w-horizontal_rule-light-10 .webs-hr-rule .webs-hr-right-container {
+  min-width: 3px;
+}
+.w-horizontal_rule-light-10 .webs-hr-rule .webs-hr-left-container .webs-hr-bg,
+.w-horizontal_rule-light-10 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  height: 3px;
+  position: relative;
+  top: 2px;
+}
+.w-horizontal_rule-light-10 .webs-hr-rule .webs-hr-left-container .webs-hr-bg {
+  background-position: left 15px;
+}
+.w-horizontal_rule-light-10 .webs-hr-rule .webs-hr-right-container .webs-hr-bg {
+  background-position: right 9px;
+}
+.w-horizontal_rule-light-10 .webs-hr-rule .webs-hr-left-spacer-container .webs-hr-bg,
+.w-horizontal_rule-light-10 .webs-hr-rule .webs-hr-right-spacer-container .webs-hr-bg {
+  height: 1px;
+  background-position: center 1px;
+  position: relative;
+  top: 3px;
+}
+.w-horizontal_rule-light-10 .webs-hr-rule .webs-hr-center-container {
+  min-width: 63px;
+}
+.w-horizontal_rule-light-10 .webs-hr-rule .webs-hr-center-container .webs-hr-bg {
+  height: 12px;
+  background-position: center 0;
+}
+.w-horizontal_rule-light-11 .webs-hr-rule {
+  height: 1px;
+}
+.w-horizontal_rule-light-11 .webs-hr-rule > div {
+  background: #000;
+  opacity: .15;
+}
+.w-horizontal_rule-light-12 .webs-hr-rule {
+  height: 2px;
+}
+.w-horizontal_rule-light-12 .webs-hr-rule > div {
+  background: #000;
+  opacity: .15;
+}
+.w-horizontal_rule-light-13 .webs-hr-rule {
+  height: 3px;
+}
+.w-horizontal_rule-light-13 .webs-hr-rule > div {
+  background: #000;
+  opacity: .15;
+}
+
+
+/* Module: horizontal_rule, Style: dark-1 */
+
+
+/* Module: horizontal_rule, Style: dark-2 */
+
+
+/* Module: horizontal_rule, Style: dark-3 */
+
+
+/* Module: horizontal_rule, Style: dark-4 */
+
+
+/* Module: horizontal_rule, Style: dark-5 */
+
+
+/* Module: horizontal_rule, Style: dark-6 */
+
+
+/* Module: horizontal_rule, Style: dark-7 */
+
+
+/* Module: horizontal_rule, Style: dark-8 */
+
+
+/* Module: horizontal_rule, Style: dark-9 */
+
+
+/* Module: horizontal_rule, Style: dark-10 */
+
+
+/* Module: horizontal_rule, Style: dark-11 */
+
+
+/* Module: horizontal_rule, Style: dark-12 */
+
+
+/* Module: horizontal_rule, Style: dark-13 */
+
+
+/* Module: horizontal_rule, Style: light-1 */
+
+
+/* Module: horizontal_rule, Style: light-2 */
+
+
+/* Module: horizontal_rule, Style: light-3 */
+
+
+/* Module: horizontal_rule, Style: light-4 */
+
+
+/* Module: horizontal_rule, Style: light-5 */
+
+
+/* Module: horizontal_rule, Style: light-6 */
+
+
+/* Module: horizontal_rule, Style: light-7 */
+
+
+/* Module: horizontal_rule, Style: light-8 */
+
+
+/* Module: horizontal_rule, Style: light-9 */
+
+
+/* Module: horizontal_rule, Style: light-10 */
+
+
+/* Module: horizontal_rule, Style: light-11 */
+
+
+/* Module: horizontal_rule, Style: light-12 */
+
+
+/* Module: horizontal_rule, Style: light-13 */
+
+
+/* Module: html, Style: base */
+.w-custom-html b,
+.w-custom-html strong {
+  font-weight: bolder;
+}
+.w-custom-html u {
+  text-decoration: underline;
+}
+.w-custom-html i,
+.w-custom-html em {
+  font-style: italic;
+}
+.w-custom-html strike,
+.w-custom-html del {
+  font-style: strikethrough;
+}
+.w-custom-html big {
+  font-size: bigger;
+}
+.w-custom-html small {
+  font-size: smaller;
+}
+.w-custom-html p {
+  margin: 1em 0;
+}
+.w-custom-html blockquote {
+  margin: 1em 40px;
+}
+.w-custom-html h1 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0.67em 0;
+}
+.w-custom-html h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0.83em 0;
+}
+.w-custom-html h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+  margin: 1em 0;
+}
+.w-custom-html h4 {
+  font-weight: bold;
+  margin: 1.33em 0;
+}
+.w-custom-html h5 {
+  font-size: 0.83em;
+  font-weight: bold;
+  margin: 1.67em 0;
+}
+.w-custom-html h6 {
+  font-size: 0.67em;
+  font-weight: bold;
+  margin: 2.33em 0;
+}
+.w-custom-html pre {
+  white-space: pre;
+  margin: 1em 0;
+}
+
+.w-custom-html sub {
+  vertical-align: sub;
+  font-size: smaller;
+  line-height: normal;
+}
+.w-custom-html sup {
+  vertical-align: super;
+  font-size: smaller;
+  line-height: normal;
+}
+.w-custom-html ul,
+.w-custom-html menu,
+.w-custom-html dir {
+  list-style-type: disc;
+  padding-left: 40px;
+}
+.w-custom-html ol {
+  list-style-type: decimal;
+  margin: 1em 0;
+}
+.w-custom-html ul ul,
+.w-custom-html ul ol,
+.w-custom-html ul dir,
+.w-custom-html ul menu,
+.w-custom-html ul dl,
+.w-custom-html ol ul,
+.w-custom-html ol ol,
+.w-custom-html ol dir,
+.w-custom-html ol menu,
+.w-custom-html ol dl,
+.w-custom-html dir ul,
+.w-custom-html dir ol,
+.w-custom-html dir dir,
+.w-custom-html dir menu,
+.w-custom-html dir dl,
+.w-custom-html menu ul,
+.w-custom-html menu ol,
+.w-custom-html menu dir,
+.w-custom-html menu menu,
+.w-custom-html menu dl,
+.w-custom-html dl ul,
+.w-custom-html dl ol,
+.w-custom-html dl dir,
+.w-custom-html dl menu,
+.w-custom-html dl dl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.w-custom-html ol ul,
+.w-custom-html ul ul,
+.w-custom-html menu ul,
+.w-custom-html dir ul,
+.w-custom-html ol menu,
+.w-custom-html ul menu,
+.w-custom-html menu menu,
+.w-custom-html dir menu,
+.w-custom-html ol dir,
+.w-custom-html ul dir,
+.w-custom-html menu dir,
+.w-custom-html dir dir {
+  list-style-type: circle;
+}
+.w-custom-html ol ol ul,
+.w-custom-html ol ul ul,
+.w-custom-html ol menu ul,
+.w-custom-html ol dir ul,
+.w-custom-html ol ol menu,
+.w-custom-html ol ul menu,
+.w-custom-html ol menu menu,
+.w-custom-html ol dir menu,
+.w-custom-html ol ol dir,
+.w-custom-html ol ul dir,
+.w-custom-html ol menu dir,
+.w-custom-html ol dir dir,
+.w-custom-html ul ol ul,
+.w-custom-html ul ul ul,
+.w-custom-html ul menu ul,
+.w-custom-html ul dir ul,
+.w-custom-html ul ol menu,
+.w-custom-html ul ul menu,
+.w-custom-html ul menu menu,
+.w-custom-html ul dir menu,
+.w-custom-html ul ol dir,
+.w-custom-html ul ul dir,
+.w-custom-html ul menu dir,
+.w-custom-html ul dir dir,
+.w-custom-html menu ol ul,
+.w-custom-html menu ul ul,
+.w-custom-html menu menu ul,
+.w-custom-html menu dir ul,
+.w-custom-html menu ol menu,
+.w-custom-html menu ul menu,
+.w-custom-html menu menu menu,
+.w-custom-html menu dir menu,
+.w-custom-html menu ol dir,
+.w-custom-html menu ul dir,
+.w-custom-html menu menu dir,
+.w-custom-html menu dir dir,
+.w-custom-html dir ol ul,
+.w-custom-html dir ul ul,
+.w-custom-html dir menu ul,
+.w-custom-html dir dir ul,
+.w-custom-html dir ol menu,
+.w-custom-html dir ul menu,
+.w-custom-html dir menu menu,
+.w-custom-html dir dir menu,
+.w-custom-html dir ol dir,
+.w-custom-html dir ul dir,
+.w-custom-html dir menu dir,
+.w-custom-html dir dir dir {
+  list-style-type: square;
+}
+
+
+/* Module: text_image, Style: default */
+.webs-text-image .webs-submodule-image .webs-align-right {
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+.webs-text-image .webs-submodule-image .webs-align-left {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.webs-text-image .webs-submodule-image .webs-hasframe {
+  margin: 0;
+}
+
+
+/* Module: image, Style: default */
+.webs-image-wrapper-1 {
+  display: inline-block;
+  position: relative;
+}
+.webs-image-crop {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.webs-image-crop img {
+  width: 100%;
+}
+.webs-module-image .webs-align-left,
+.webs-module-image .webs-align-center,
+.webs-module-image .webs-align-right {
+  font-size: 0;
+}
+/* alignment */
+.webs-image-left {
+  float: left;
+  display: block;
+  width: auto;
+}
+.webs-image-right {
+  float: right;
+  display: block;
+  width: auto;
+}
+.webs-image-center {
+  float: none;
+  margin: 0 auto;
+  display: block;
+}
+.w-image-default--height_broken-SITEBUILDER-1938 .lightbox-link {
+  -webkit-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+  -o-transition: opacity 1s ease-in;
+  transition: opacity 1s ease-in;
+}
+.w-image-default--height_broken-SITEBUILDER-1938 .lightbox-link:before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -33px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font: 900 60px/1em sans-serif;
+  color: white;
+  z-index: 2;
+  opacity: 0;
+}
+.w-image-default--height_broken-SITEBUILDER-1938 .lightbox-link:after {
+  content: "+";
+  text-indent: -9999px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: black;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font: 900 30px/1em sans-serif;
+  color: white;
+  z-index: 1;
+  opacity: 0;
+}
+.w-image-default--height_broken-SITEBUILDER-1938 .lightbox-link:hover {
+  text-decoration: none;
+  width: 500%;
+}
+.w-image-default--height_broken-SITEBUILDER-1938 .lightbox-link:hover:before {
+  opacity: .8;
+}
+.w-image-default--height_broken-SITEBUILDER-1938 .lightbox-link:hover:after {
+  opacity: .3;
+}
+
+
+/* Module: title, Style: default */
+.webs-title {
+  line-height: normal;
+}
+.webs-title.webs-title-align-left {
+  text-align: left;
+}
+.webs-title.webs-title-align-right {
+  text-align: right;
+}
+.webs-title.webs-title-align-center {
+  text-align: center;
+}
+.webs-title.webs-title-align-justify {
+  text-align: justify;
+}
+.webs-title .w-text {
+  display: block;
+  word-wrap: break-word;
+}
+.webs-title.webs-title-has_icon .w-text {
+  display: inline;
+}
+
+
+/* Module: spacer, Style: default */
+.webs-container.w-spacer-default {
+  padding: 0;
+}
+
+
+
+/* Theme Module Styles */
+/*
+.ie6, .ie7, .ie8 {
+	.htc() {
+		background: red !important;
+		//behavior: url('/clients/DancingwithDesireDaytona/Images/ie-css3.htc');
+		behavior: url('http://10.1.0.136/webstatic/static/projects/finch/themes/ie-css3.htc');
+	}
+}
+*/
+/* new clearfix */
+* html .clearfix {
+  zoom: 1;
+}
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+/* IE */
+.w-email_list-soft_light_default .w-email_list-ul .w-email_list-li label {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Cardo', serif;
+  color: #6f5151;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+.w-email_list-soft_light_default .w-email_list-ul .w-email_list-li .w-email_list-field {
+  border-width: 1px;
+  border-color: #ebebeb;
+  border-radius: 5px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.footer-wrap .w-email_list-ul .w-email_list-li label {
+  color: #ffffff;
+}
+/*
+.ie6, .ie7, .ie8 {
+	.htc() {
+		background: red !important;
+		//behavior: url('/clients/DancingwithDesireDaytona/Images/ie-css3.htc');
+		behavior: url('http://10.1.0.136/webstatic/static/projects/finch/themes/ie-css3.htc');
+	}
+}
+*/
+/* new clearfix */
+* html .clearfix {
+  zoom: 1;
+}
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+/* IE */
+.subheader-wrapper {
+  margin: 0 auto;
+  width: 940px;
+}
+.subheader-wrapper .w-carousel-soft_light_default .w-carousel {
+  padding-bottom: 31px;
+  text-align: center;
+  background: url("/clients/DancingwithDesireDaytona/Images/bg_carousel_shadow.png") bottom no-repeat;
+}
+.subheader-wrapper .w-carousel-soft_light_default .w-carousel .w-carousel-list-wrapper .w-carousel-description {
+  position: absolute;
+  top: auto;
+  left: 0;
+  bottom: 15%;
+  width: 33%;
+  min-height: 10%;
+  text-align: left;
+  background: #000;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.subheader-wrapper .w-carousel-soft_light_default .w-carousel .w-carousel-list-wrapper .w-carousel-description .w-carousel-title {
+  margin: 0 6px 6px;
+  font-family: 'Cardo', serif;
+  font-size: 22px;
+  color: #fff;
+}
+.subheader-wrapper .w-carousel-soft_light_default .w-carousel .w-carousel-list-wrapper .w-carousel-description .w-carousel-text {
+  margin: 0 6px 6px;
+  font-family: 'Cardo', serif;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #fff;
+}
+.subheader-wrapper .w-carousel-soft_light_default .w-carousel .w-carousel-list-wrapper .w-carousel-description .w-text::selection {
+  color: #000;
+  background: #fff;
+}
+.subheader-wrapper .w-carousel-soft_light_default .w-carousel .w-carousel-prev,
+.subheader-wrapper .w-carousel-soft_light_default .w-carousel .w-carousel-next {
+  display: none;
+}
+.subheader-wrapper .w-carousel-soft_light_default .w-carousel.single_slide .w-carousel-indices {
+  display: none;
+}
+.subheader-wrapper .w-carousel-soft_light_default .w-carousel .w-carousel-indices {
+  position: relative;
+  display: inline-block;
+  margin-top: -17px;
+  padding: 10px 50px;
+  height: 15px;
+  background: #ffffff;
+  background-image: -moz-linear-gradient(top, #ffffff 0%, #f2f2f2 50%, #e3e3e3 51%, #f2f2f2 100%);
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #f2f2f2 50%, #e3e3e3 51%, #f2f2f2 100%);
+  background-image: -o-linear-gradient(top, #ffffff 0%, #f2f2f2 50%, #e3e3e3 51%, #f2f2f2 100%);
+  background-image: -ms-linear-gradient(top, #ffffff 0%, #f2f2f2 50%, #e3e3e3 51%, #f2f2f2 100%);
+  background-image: linear-gradient(top, #ffffff 0%, #f2f2f2 50%, #e3e3e3 51%, #f2f2f2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f2f2f2', GradientType=0);
+  box-shadow: 0 1px 3px #111;
+  border-radius: 5px;
+}
+.subheader-wrapper .w-carousel-soft_light_default .w-carousel .w-carousel-indices li {
+  position: static;
+  width: auto;
+  height: 15px;
+  margin: 0 2px;
+  float: left;
+}
+.subheader-wrapper .w-carousel-soft_light_default .w-carousel .w-carousel-indices li a.w-carousel-index {
+  display: inline-block;
+  margin: 0;
+  width: 14px;
+  height: 14px;
+  text-indent: -9999px;
+  background-image: none;
+  background: #c2c2c2;
+  background-clip: content-box;
+  border-radius: 50%;
+  box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+.subheader-wrapper .w-carousel-soft_light_default .w-carousel .w-carousel-indices li a.w-carousel-index span {
+  display: block;
+  position: relative;
+}
+.subheader-wrapper .w-carousel-soft_light_default .w-carousel .w-carousel-indices li a.w-carousel-index span:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.subheader-wrapper .w-carousel-soft_light_default .w-carousel .w-carousel-indices li a.w-carousel-index span:hover:after {
+  background-color: #000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+}
+.subheader-wrapper .w-carousel-soft_light_default .w-carousel .w-carousel-indices li.active a.w-carousel-index span:after {
+  background-color: #000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+}
+.subheader-wrapper .webs-bin-active .w-carousel {
+  margin-bottom: 30px;
+}
+.subheader-wrapper .webs-bin-active .w-carousel .w-carousel-indices {
+  margin: 17px 0;
+}
+/*
+.ie6, .ie7, .ie8 {
+	.htc() {
+		background: red !important;
+		//behavior: url('/clients/DancingwithDesireDaytona/Images/ie-css3.htc');
+		behavior: url('http://10.1.0.136/webstatic/static/projects/finch/themes/ie-css3.htc');
+	}
+}
+*/
+/* new clearfix */
+* html .clearfix {
+  zoom: 1;
+}
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+/* IE */
+.w-button-soft_light_default .w-button {
+  padding: 10px 28px;
+  background: #ffffff;
+  border-width: 0;
+  border-radius: 20px;
+  text-shadow: 0 -1px 1px #666666;
+}
+.w-button-soft_light_default .w-button:hover {
+  background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(0, 0, 0, 0.1)), color-stop(1, rgba(0, 0, 0, 0.1)));
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  background-image: -ms-linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
+}
+/*
+.ie6, .ie7, .ie8 {
+	.htc() {
+		background: red !important;
+		//behavior: url('/clients/DancingwithDesireDaytona/Images/ie-css3.htc');
+		behavior: url('http://10.1.0.136/webstatic/static/projects/finch/themes/ie-css3.htc');
+	}
+}
+*/
+/* new clearfix */
+* html .clearfix {
+  zoom: 1;
+}
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1;
+}
+/* IE */
+.w-contact_form-soft_light_default .w-contact_form-ul .w-contact_form-li label {
+  font-size: 16px;
+  font-weight: normal;
+  font-family: 'Cardo', serif;
+  color: #6f5151;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+.w-contact_form-soft_light_default .w-contact_form-ul .w-contact_form-li .w-contact_form-field {
+  border-width: 1px;
+  border-color: #ebebeb;
+  border-radius: 5px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.footer-wrap .w-contact_form-ul .w-contact_form-li label {
+  color: #ffffff;
+}

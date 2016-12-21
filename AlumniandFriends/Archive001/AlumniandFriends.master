@@ -1,0 +1,220 @@
+<%
+'CHANGELOG
+'LSP 10/22/12 - initial development
+'LSP 12/17/13 - minor edits to remove IE information.
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"   "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+  <style type="text/css" media="all">@import url("/clients/AlumniandFriends/Images/system.base.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/system.menus.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/system.messages.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/system.theme.css?mbxxvm");</style>
+<style type="text/css" media="all">@import url("/clients/AlumniandFriends/Images/calendar_multiday.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/comment.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/date.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/datepicker.1.7.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/field.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/logintoboggan.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/node.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/search.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/user.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/views.css?mbxxvm");</style>
+<style type="text/css" media="all">@import url("/clients/AlumniandFriends/Images/ckeditor.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/colorbox_default_style.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/ctools.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/nice_menus.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/nice_menus_default.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/panels.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/views_slideshow.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/views_slideshow_cycle.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/threecol_33_34_33_stacked.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/deprecate.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/civicrm.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/extras.css?mbxxvm");</style>
+<style type="text/css" media="all">@import url("/clients/AlumniandFriends/Images/html-reset.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/wireframes.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/layout-fixed.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/page-backgrounds.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/tabs.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/pages.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/blocks.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/navigation.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/views-styles.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/nodes.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/comments.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/forms.css?mbxxvm");
+@import url("/clients/AlumniandFriends/Images/fields.css?mbxxvm");</style>
+<style type="text/css" media="print">@import url("/clients/AlumniandFriends/Images/print.css?mbxxvm");</style>
+
+
+  <script src="/clients/AlumniandFriends/Images/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="/clients/AlumniandFriends/Images/jquery_006.js"></script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/jquery_003.js"></script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/drupal.js"></script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/jquery.js"></script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/colorbox.js"></script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/colorbox_default_style.js"></script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/superfish.js"></script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/jquery_002.js"></script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/jquery_005.js"></script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/nice_menus.js"></script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/panels.js"></script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/views_slideshow.js"></script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/jquery_004.js"></script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/views_slideshow_cycle.js"></script>
+<script type="text/javascript" src="/clients/AlumniandFriends/Images/googleanalytics.js"></script>
+
+
+<body class="html front not-logged-in no-sidebars page-home page-panels"><div style="display: none;" id="cboxOverlay"></div><div class="" id="colorbox" style="padding-bottom: 25px; padding-right: 30px; display: none;"><div style="" id="cboxWrapper"><div style=""><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div class="" style="width: 0px; height: 0px; overflow: hidden;" id="cboxLoadedContent"></div><div class="" style="" id="cboxLoadingOverlay"></div><div class="" style="" id="cboxLoadingGraphic"></div><div class="" style="" id="cboxTitle"></div><div class="" style="" id="cboxCurrent"></div><div class="" style="" id="cboxNext"></div><div class="" style="" id="cboxPrevious"></div><div class="" style="" id="cboxSlideshow"></div><div class="" style="" id="cboxClose"></div></div><div style="float: left;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div>
+
+    
+<div id="page-wrapper"><div id="page">
+
+  <div id="header"><div class="section clearfix">
+
+          <a href="https://alumniandfriends.org/" title="Home" rel="home" id="logo"><img src="/clients/AlumniandFriends/Images/laGuardia.png" alt="Home"></a>
+    
+    
+    
+      <div class="region region-header">
+    <div id="block-menu-block-2" class="block block-menu-block  first odd">
+
+      
+  <div class="content">
+    <div class="menu-block-wrapper menu-block-2 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="first leaf has-children menu-mlid-640"><a href="https://alumniandfriends.org/about-us" title="About Us pages" class="yellow">About Us</a></li>
+<li class="leaf has-children menu-mlid-1000"><a href="https://alumniandfriends.org/give" class="pink">Give</a></li>
+<li class="leaf has-children menu-mlid-643"><a href="https://alumniandfriends.org/laguardia-arts-alumni" class="darkblue">Alumni</a></li>
+<li class="leaf menu-mlid-1752"><a href="https://alumniandfriends.org/forms-and-applications" class="green">Forms</a></li>
+<li class="last leaf has-children menu-mlid-645"><a href="https://alumniandfriends.org/news" class="grey">News+Events</a></li>
+</ul></div>
+  </div>
+
+</div><!-- /.block -->
+<div id="block-search-form" class="block block-search  even">
+
+      
+  <div class="content">
+ </div>
+
+</div><!-- /.block -->
+<div id="block-block-2" class="block block-block userlinks last odd">
+
+      
+  <div class="content">
+    <a href="https://alumniandfriends.org/" class="active">Home</a> |</div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+
+  </div></div><!-- /.section, /#header -->
+
+  <div id="main-wrapper"><div id="main" class="clearfix">
+
+    <div id="content" class="column"><div class="section">
+                  <a id="main-content"></a>
+                                                  <div class="region region-content">
+    <div id="block-system-main" class="block block-system  first last odd">
+
+      
+  <div class="content">
+    <div class="panel-display panel-3col-33-stacked  clearfix">
+      <div class="panel-panel panel-col-top">
+      <div class="inside"><div class="panel-pane pane-custom pane-1">
+  
+      
+  
+  <div class="pane-content">
+    <div class="tophomeblock frontlogo">
+<img src="/clients/AlumniandFriends/Images/logo.png">
+</div>
+<div class="tophomeblock blue">
+<h2 class="block-title">Music &amp; Art</h2>
+<img src="/clients/AlumniandFriends/Images/home_music_and_art.jpg">
+</div>
+<div class="tophomeblock darkblue">
+<h2 class="block-title">Performing Arts</h2>
+<img src="/clients/AlumniandFriends/Images/home_performing_arts.jpg">
+</div>
+<div class="tophomeblock pink">
+<h2 class="block-title">LaGuardia</h2>
+<img src="/clients/AlumniandFriends/Images/home_laguardia.jpg">
+</div>
+<div class="cboth">&nbsp;</div>  </div>
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-custom pane-2 front-becomemember">
+  
+      
+
+
+  
+  </div>
+<div class="panel-separator"></div><div class="panel-pane pane-views pane-front-page-slideshow">
+  
+      
+  
+  <div class="pane-content">
+    <div class="view view-front-page-slideshow view-id-front_page_slideshow view-display-id-block view-dom-id-2">
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>  </div>
+
+  
+  </div>
+</div>
+    </div>
+  
+  <div class="center-wrapper">
+<!--TIX DATA START-->
+<div style="width: 825px; text-align: center;">
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+</div>
+
+<!--TIX DATA END-->
+  </div>
+
+  </div>
+  </div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+          </div></div><!-- /.section, /#content -->
+
+    
+    
+    
+  </div></div><!-- /#main, /#main-wrapper -->
+
+    <div class="region region-footer">
+    <div id="block-block-1" class="block block-block  first last odd">
+
+      
+  <div class="content">
+    <p>Copyright &#169; 2003-2011 Alumni and Friends of LaGuardia High 
+School. All rights reserved. A&amp;F is a non-profit, 501 (c) 3 
+organization. Our EIN is 13-3166108.&nbsp;<br><strong>Alumni and Friends of Fiorello H. Laguardia High School of Music and Art and Performing Arts</strong><br>
+	You may examine our filings with the New York State Department of Law <a href="http://www.charitiesnys.com/RegistrySearch/show_details.jsp?id=%7B44C00134-8DBA-499D-AD01-3F910D484FFC%7D">here</a>. |<a href="https://alumniandfriends.org/privacy-policy"> </a><a href="http://alumniandfriends.org/privacy-policy">Privacy Policy</a></p>
+  </div>
+
+</div><!-- /.block -->
+  </div><!-- /.region -->
+
+</div></div><!-- /#page, /#page-wrapper -->
+</div>
+</form>
+</body>
+</html>

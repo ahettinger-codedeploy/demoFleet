@@ -1,0 +1,3306 @@
+/**************************/
+/* Import Global CSS */
+
+@import "/css/global.css?time=7";
+
+
+/**************************/
+/* Gobal CSS */
+
+body {
+	background:url(/redesign/images/boston/bg_body.gif) top left repeat-x;
+	padding:0px;
+	margin:0px;
+	font-family:verdana,Arial;
+	font-size:11px;
+	background-color:white;
+}
+
+a {
+	text-decoration:none;
+}
+
+.elink {
+	cursor:pointer;
+}
+
+a:hover {
+	text-decoration:underline;
+}
+
+a.arrow_down {
+	padding-right:10px;
+	background:url(/redesign/images/boston/arrow_down.gif) top right no-repeat;;
+}
+
+.red {
+	color:#FF0000;
+}
+
+.red li {
+	list-style-type:none;
+}
+
+table {
+	margin:0px;
+	padding:0px;
+}
+
+table td {
+	margin:0px;
+	padding:0px;
+	font-size:11px;
+}
+
+table.table_padd td {
+	padding-left:5px;
+}
+
+form {
+	padding:0px;
+	margin:0px;
+}
+
+.vert_ads {
+	text-align:center;
+}
+
+.box_ads {
+	text-align:center;
+	background-color:#EBF3F0;
+	padding:10px 0px;
+	margin-bottom:10px;
+}
+
+h1 { padding:0px; margin:0px; }
+h2 { padding:0px; margin:0px; }
+h3 { padding:0px; margin:0px; }
+h4 { padding:0px; margin:0px; }
+h5 { padding:0px; margin:0px; }
+h6 { padding:0px; margin:0px; }
+
+a.more {
+	color:#009DDC;
+}
+
+.left_align {
+	float:left;
+}
+
+.right_align {
+	float:right;
+}
+
+.right_align a {
+	color:#019CDC;
+}
+
+/* UL Inline */
+ul.inline {
+	list-style-type:none;
+	padding:0px;
+	margin:0px;
+}
+
+ul.inline li {
+	float:left;
+	padding-right:10px;
+}
+
+.clearAll {
+	clear:both;
+	line-height:1px;
+	font-size:1px;
+	height:1px;
+}
+
+.input_style {
+	color:#94A09C;
+}
+
+select.input_style {
+	height:20px;
+	border:1px solid #94A09C;
+}
+
+.misc_content {
+	line-height:17px;
+}
+
+.misc_content a {
+	color:#019CDC;
+}
+
+h2.title_two {
+	color:#231F20;
+	font-size:13px;
+	text-transform:uppercase;
+	margin-bottom:10px;
+	margin-top:15px;
+	font-family:Arial, Verdana;
+}
+
+/**************************/
+/* Layout Containers */
+
+div#container {
+	width:980px;
+	text-align:left;
+}
+
+/* Top Nav */
+
+div#top-nav {
+	height:42px;
+	font-size:9px;
+	color:#414744;
+}
+
+div#top-nav ul {
+	padding-top:20px;
+	float:left;
+}
+
+div#top-nav ul li a {
+	color:#414744;
+}
+
+a#top-right-mag {
+	display:block;
+	float:right;
+	width:230px;
+	height:30px;
+	overflow:hidden;
+	background:url( '/redesign/images/boston/boston_sub.gif?' ) top left no-repeat;
+}
+
+a#top-right-mag img {
+	margin-left:150px;
+	margin-top:5px;
+}
+
+/* Logo Bar */
+
+div#logo_bar {
+	height:91px;
+}
+
+div#logo_bar .logo {
+	width:476px;
+	float:left;
+	text-align:center;
+}
+
+div#logo_bar .logo_ad {
+	float:left;
+	width:252px;
+	text-align:center;
+}
+
+div#logo_bar .sub_logo {
+	float:left;
+}
+
+div#logo_bar .sub_leaderboard {
+	float:left;
+	width:728px;
+	height:90px;
+	overflow:hidden;
+}
+
+/* Main Nav */
+div.main_nav_rule {
+	display:none;
+}
+
+div.main_nav {
+	color:white;
+	padding:0px;
+	width:980px;
+}
+
+div.main_nav * {
+	margin:0px;
+	padding:0px;
+}
+
+div.main_nav li {
+	list-style-type:none;
+}
+
+div.nav_cell_box {
+	position:relative;
+	height:26px;
+}
+
+div.main_nav .single_spacer {
+	display:none;
+}
+
+html>body div.main_nav .single_spacer {
+	height:5px;
+	display:block;
+}
+
+div.box_top {
+	position:relative;
+	height:2px;
+	width:0px;
+	background-color:#CCCCCC;
+	z-index:300;
+	top:0px;
+	left:0px;
+}
+
+ul.nav_tab {
+	position:absolute;
+	background-color:#FFFFFF;
+	list-style-type:none;
+	margin:0px;
+	padding:0px 10px 0px 10px;
+	border-right:2px solid #CCCCCC;
+	border-bottom:2px solid #CCCCCC;
+	border-left:2px solid #CCCCCC;
+	display:none;
+	text-align:left;
+}
+
+ul.nav_tab {
+	left:-2px;
+	width:160px;
+	top:29px;
+}
+
+div.main_nav table {
+	height:34px;
+	background-color:#414744;
+}
+
+ul.nav_tab li {
+	padding:5px 0px 5px 0px;
+	text-align:left;
+	border-bottom:1px solid #CCCCCC;
+}
+
+ul.nav_tab li a {
+	color:#000000;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+ul.nav_tab li.last {
+	border-bottom:none;
+}
+
+div.main_nav td {
+	text-align:center;
+}
+
+div.main_nav td.vert_line {
+	width:1px;
+}
+
+div.main_nav td.vert_line div {
+	height:33px;
+	background-color:#CCCCCC;
+	padding:0px;
+	margin:0px;
+	border:none;
+	width:1px;
+}
+
+ul.nav_tab li.primary_break {
+	height:1px;
+	border-top:1px solid #CCCCCC;
+	border-bottom:none;
+	font-size:1px;
+	line-height:1px;
+	width:5px;
+	padding:0px;
+}
+
+div.main_nav a.primary {
+	color:#FFFFFF;
+	font-weight:bold;
+	text-decoration:none;
+	font-size:10px;
+}
+
+div.main_nav .active_tab a.primary {
+	color:#000000;
+}
+
+.inactive_tab {
+	border-top:2px solid #414744;
+	border-right:2px solid #414744;
+	border-left:2px solid #414744;
+}
+
+.inactive_tab_red {
+	border-top:2px solid #D71E00;
+	border-right:2px solid #D71E00;;
+	border-left:2px solid #D71E00;;
+	background-color: #D71E00;
+}
+
+.active_tab {
+	border-top:2px solid #CCCCCC;
+	border-right:2px solid #CCCCCC;
+	border-left:2px solid #CCCCCC;
+	background-color:#FFFFFF;
+}
+
+.main_nav, 
+.main_nav td, 
+.main_nav td div.nav_cell_box,
+.main_nav td ul,
+.main_nav td ul li {
+	z-index:100;
+}
+
+/* Main Nav Quick Links */
+
+div#quick_links div.main_nav table {
+	background-color:#FFFFFF;
+	height:15px;
+}
+
+div#quick_links div.main_nav table td {
+	padding:0px 6px;
+}
+
+div#quick_links .inactive_tab {
+	border-top:2px solid #FFFFFF;
+	border-right:2px solid #FFFFFF;
+	border-left:2px solid #FFFFFF;
+}
+
+div#quick_links ul.nav_tab {
+	left:-8px;
+	top:26px;
+}
+
+div#quick_links ul.nav_tab li a {
+	font-weight:normal;
+	color:#414744;
+}
+
+div#quick_links a.primary {
+	font-weight:normal;
+	padding-right:10px;
+	color:#414744;
+}
+
+div#quick_links .active_tab {
+	border-top:2px solid #CCCCCC;
+	border-right:2px solid #CCCCCC;
+	border-left:2px solid #CCCCCC;
+	background-color:#FFFFFF;
+}
+
+div#quick_links .main_nav, 
+div#quick_links .main_nav td, 
+div#quick_links .main_nav td div.nav_cell_box,
+div#quick_links .main_nav td ul,
+div#quick_links .main_nav td ul li {
+	z-index:200;
+}
+
+/* Breadcrumb */
+div#bread_crumb {
+	height:28px;
+}
+
+div#bread_crumb .nav {
+	float:left;
+	margin-top:10px;
+	font-size:10px;
+	color:#93A09A;
+}
+
+div#bread_crumb a {
+	color:#93A09A;
+}
+
+div#bread_crumb .search {
+	float:       right;
+	text-align:  right;
+	white-space: nowrap;
+	width:       270px;
+	padding:     3px 0px 0px 0px;
+}
+
+div#bread_crumb .search form .title {
+	float:left;
+}
+
+div#bread_crumb .search #user_login
+{
+	/* IMPORTANT! BOSTON has a login above the man nav so the one that appears here is an extra */
+	display: none; 
+	visibility: hidden;
+	height: 0;
+	width: 0;
+}
+
+
+form input#keywords {
+	float:left;
+	border:1px solid #C2C9C6;
+	color:#93A09A;
+	width:135px;
+	margin:2px 5px 0px 0px;
+}
+
+div#bread_crumb .search form .go {
+	float:left;
+}
+
+div#bread_crumb .search form input#keywords {
+	height:15px;
+}
+
+div#bread_crumb .search #user_login {
+	display:none;
+}
+
+/**************************/
+/* Home Page Template */
+
+div.home_left_col {
+	width:642px;
+	float:left
+}
+
+div.home_left_col a {
+	color:#009DDC;
+}
+
+div.home_right_col {
+	width:328px;
+	float:right;
+}
+
+div.home_left_col .left_left {
+	float:left;
+	width:170px;
+	border-right:1px solid #C2C9C6;
+}
+
+div.home_left_col .left_right {
+	float:right;
+	width:463px;
+}
+
+/* Find a Listing */
+.listings {
+	display:none;
+}
+
+.listing_content .website_link {
+	width:300px;
+	overflow:hidden;
+}
+
+.listings #default_close {
+	display:none;
+}
+
+.listings .listings_box {
+	padding-right:5px;
+}
+
+.listings div.search_form {
+	margin:4px 0px 12px 0px;
+}
+
+.listings div.search_form input#listings_keywords {
+	width:120px;
+	float:left;	
+	border:1px solid #C2C9C6;
+	color:#93A09A;
+	font-size:10px;
+	margin-right:3px;
+	height:18px;
+}
+
+.listings div.search_form .image {
+	float:right;
+}
+
+.listings .title h4 {
+	height:15px;
+	background-color:#414744;
+}
+
+.listings h4 {
+	margin:0px;
+	padding:1px 0px 0px 4px;
+	font-size:11px;
+	color:white;
+}
+
+.listings .title_type {
+	height:15px;
+	cursor:pointer;
+}
+
+.listings .title_type_arrow_down {
+	background:url(/redesign/images/boston/bg_listing_h5_arrow_down.gif) top left no-repeat;
+}
+
+.listings .title_type_arrow_right {
+	background:url(/redesign/images/boston/bg_listing_h5_arrow_right.gif) top left no-repeat;
+}
+
+.listings h5 {
+	margin:0px;
+	padding:1px 0px 0px 15px;
+	font-size:11px;
+	color:white;
+}
+
+.listings h5 a {
+	color:white;
+}
+
+.listings ul li div.gl_lines {
+	color:#231F20;
+	font-weight:bold;
+	cursor:pointer;
+}
+
+.listings .gl_content {
+	margin-top:6px;
+}
+
+.listings ul {
+	margin:0px 0px 0px 5px;
+	padding:0px 0px 0px 0px;
+}
+
+.listings ul li {
+	line-height:16px;
+}
+
+.listings ul li a {
+	color:#414744;
+}
+
+.listings ul li.arrow_down {
+	list-style-image:url(/redesign/images/boston/arrow_down_ul.gif);
+}
+
+.listings ul li.arrow_right {
+	list-style-image:url(/redesign/images/boston/arrow_right_ul.gif);
+}
+
+.listings ul li {
+	margin:0px 0px 0px 0px;
+	padding:0px;
+	list-style-type:none;
+	margin-left:24px;
+	padding-left:0px;
+}
+
+.listings ul.lines {
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+	list-style-image:url(/redesign/images/boston/line_ul.gif);
+}
+
+.listings ul.lines li.lines_more {
+	list-style-image:none;
+}
+
+.listings ul.lines li.lines_more a {
+	color:#006699;	
+}
+
+a.all_link {
+	padding-left:10px;
+	color:#029DDD;
+}
+
+#listing_review h2 a {
+	color:#019CDC;
+}
+
+/* Slideshow */
+
+.slideshow {
+	margin-bottom:0px;
+	float: right;
+}
+
+.slideshow_single {
+	background-color:#414745;
+	width:463px;
+	overflow:hidden;
+}
+
+.slideshow_single .single_slide {
+	padding:5px;
+}
+
+/* Home Page Tabs */
+
+.tabs {
+	width:327px;
+	height:230px;
+	overflow-x:auto;
+	overflow-y:hidden;
+}
+
+.tabs .tab {
+	width:108px;
+	color:#414744;
+	float:left;
+	margin-right:1px;
+}
+
+.tabs .tab .tab_content {
+	padding-right:10px;
+}
+
+.tabs .tab a {
+	color:#414744;
+}
+
+.tabs .tab .title {
+	background-color:#00445E;
+	font-weight:bold;
+	text-align:center;
+	color:white;
+	padding:0px 0px 3px 0px;
+}
+
+.tabs .tab .title span {
+	display:block;
+	padding-top:3px;
+}
+
+.tabs .tab .title span a {
+	color:white;
+}
+
+.tabs .tab b {
+	display:block;
+	font-weight:bold;
+	color:black;
+	margin-bottom:2px;
+}
+
+.tabs .image {
+	border:1px solid #C2C9C6;
+	padding:4px;
+	margin:2px 0px 6px 0px;
+}
+
+.tabs .image .party {
+	width:98px;
+	height:98px;
+	overflow:hidden;
+}
+
+
+/**************************/
+/* Footer */ 
+
+div#page_footer {
+	margin:20px 0px;
+}
+
+div#page_footer .top {
+	background-color:#87C4DC;
+	height:20px;
+	margin-bottom:2px;
+}
+
+div#page_footer .top h4 {
+	margin:0px;
+	padding:4px 0px 0px 10px;
+	color:white;
+	font-size:10px;
+}
+
+div#page_footer .footer_links {
+	background-color:#EBF3F0;
+	margin-bottom:10px;
+}
+
+div#page_footer table td a {
+	color:#414744;
+}
+
+div#page_footer table td {
+	padding:10px 20px 10px 10px;
+	font-size:10px;
+	border-right:1px solid white;
+}
+
+div#page_footer h3 {
+	font-size:10px;
+	margin-bottom:4px;
+}
+
+div#page_footer ul.lines {
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+	list-style-image:url(/redesign/images/boston/line_ul.gif);
+}
+
+div#page_footer ul.lines li {
+	margin-left:20px;
+	padding:0px;
+	line-height:15px;
+}
+
+div#page_footer table td a.more {
+	display:block;
+	color:#009DDC;
+	margin-top:5px;
+}
+
+div#copyright {
+	background:url(/redesign/images/boston/bg_copyright.gif) top left;
+	height:80px;
+}
+
+div#copyright .links {
+	width:980px;
+	text-align:left;
+	padding:15px 0px 0px 0px;
+	font-size:10px;
+}
+
+div#copyright .links a {
+	padding-right:10px;
+	color:#231F20;
+	letter-spacing:-.03em;
+}
+
+div#copyright .links b {
+	display:block;
+	font-weight:normal;
+	color:#93A09A;
+	margin-top:5px;
+}
+
+
+
+/**************************/
+/* tout_standard */ 
+
+.tout_standard {
+	border-bottom:2px solid #414744; 
+	background:url(/redesign/images/boston/bg_tout.gif) top left no-repeat;
+	margin-bottom:15px;
+}
+
+.tout_standard .right a {
+	color:black;
+}
+
+.tout_standard h4 {
+	color:#009DDC;
+	font-size:11px;
+	padding-left:14px;
+	text-transform: uppercase;
+}
+
+.tout_standard h4 a {
+	color:#009DDC;
+}
+
+.tout_standard .right {
+	float:right;
+	width:140px;
+}
+
+.tout_standard .right b {
+	color:#231F20;
+}
+
+.tout_standard .right span {
+	display:block;
+	margin-bottom:10px;
+	color:#414744;
+}
+
+.tout_standard .right .guide_select {
+	width:100%;
+	margin:0px 0px 5px 0px;
+	color:#C2C9C6;
+}
+
+.tout_standard .right .guide_keyword {
+	width:97%;
+	margin:0px 0px 10px 0px;
+	color:#C2C9C6;
+}
+
+.tout_standard .right .more {
+	color:#009DDC;
+	font-weight:bold;
+}
+
+.tout_standard .left {
+	width:311px;
+	float:left;
+	color:#414744;
+	padding-top:6px;
+}
+
+.tout_standard .left h2 {
+	font-size:11px;
+	font-weight:normal;
+	line-height:19px;
+	padding-left:2px;
+}
+
+.tout_standard .left h3 {
+	font-family:Arial, Verdana;
+	font-size:22px;
+	padding-bottom:3px;
+	color:#231F20;
+	text-transform: uppercase;
+}
+
+.tout_standard .left h3 a {
+	color:#231F20;
+}
+
+.tout_standard .left .by_line {
+	margin:8px 0px 0px 0px;
+	color:#000000;
+	font-weight:bold;
+	font-size:10px;
+}
+
+.tout_standard .left span {
+	display:block;
+	font-weight:bold;
+	color:#234F20;
+	margin:10px 0px 10px 2px;
+	text-transform: uppercase;
+}
+
+.tout_standard .left .tout_left_padd {
+	padding-right:10px;
+	padding-left:14px;
+}
+
+.tout_standard .left .image {
+	float:right;
+	margin-left:10px;
+	border: none;
+}
+
+.tout_standard .left .image img {
+	border: 1px solid #C2C9C6;
+	padding: 4px;
+	width: 98px;
+	height: 98px;
+}
+
+/* tout vertical */ 
+.tout_vertical {
+	border-bottom:2px solid #414744; 
+	background:url(/redesign/images/boston/bg_tout.gif) top left no-repeat;
+	margin-bottom:15px;
+}
+
+.tout_vertical h4 {
+	color:#009DDC;
+	font-size:11px;
+	padding-left:14px;
+	text-transform: uppercase;
+}
+
+.tout_vertical h4 a {
+	color:#009DDC;
+}
+
+.tout_vertical .right {
+	float:right;
+	width:140px;
+}
+
+.tout_vertical .right b {
+	color:#231F20;
+}
+
+.tout_vertical .right span {
+	display:block;
+	margin-bottom:10px;
+	color:#414744;
+}
+
+.tout_vertical .left {
+	width:311px;
+	float:left;
+	color:414744#;
+	padding-top:6px;
+}
+
+.tout_vertical .left h2 {
+	font-size:11px;
+	font-weight:normal;
+	line-height:19px;
+	padding-left:2px;
+}
+
+.tout_vertical .left h2 a {
+	color:#009EDF;
+}
+
+.tout_vertical .left h3 {
+	font-family:Arial, Verdana;
+	font-size:22px
+	padding-bottom:3px;
+	color:#231F20;
+	text-transform: uppercase;
+}
+
+.tout_vertical .left h3 a {
+	color:#231F20;
+}
+
+.tout_vertical .left span {
+	display:block;
+	font-weight:bold;
+	color:#234F20;
+	margin:10px 0px 10px 2px;
+	text-transform: uppercase;
+}
+
+.tout_vertical .left .tout_left_padd {
+	padding-right:10px;
+	padding-left:14px;
+}
+
+.tout_vertical .right img {
+	margin-left:10px;
+	border: none;
+}
+
+.tout_vertical .right img {
+	border: 1px solid #C2C9C6;
+	padding: 4px;
+	width: 98px;
+	height: 98px;
+}
+
+.tout_vertical .right .image img {
+	padding: 4px;
+	width: 98px;
+	height: 98px;
+}
+
+/* tout vertical real estate */ 
+.tout_vertical_real_estate {
+	padding-bottom:10px;
+	border-bottom:1px solid #414744; 
+	margin-bottom:10px;
+}
+
+.tout_vertical_real_estate h4 {
+	color:#009DDC;
+	font-size:18px;
+	font-weight:normal;
+	padding-bottom:6px;
+	font-family:Georgia;
+}
+
+.tout_vertical_real_estate h4 a {
+	color:#009DDC;
+}
+
+.tout_vertical_real_estate .right {
+	float:right;
+	width:140px;
+}
+
+.tout_vertical_real_estate .right b {
+	color:#231F20;
+}
+
+.tout_vertical_real_estate .right span {
+	display:block;
+	margin-bottom:10px;
+	color:#414744;
+}
+
+.tout_vertical_real_estate .left {
+	width:311px;
+	float:left;
+	padding-top:6px;
+}
+
+.tout_vertical_real_estate .left h2 {
+	font-size:11px;
+	font-weight:normal;
+	line-height:15px;
+}
+
+.tout_vertical_real_estate .left h2 p {
+	margin:0px;
+	padding:0px;
+}
+
+.tout_vertical_real_estate .left h2 a {
+	color:#009EDF;
+}
+
+.tout_vertical_real_estate .left h3 {
+	font-family:Arial, Verdana;
+	padding-bottom:6px;
+	color:#231F20;
+}
+
+.tout_vertical_real_estate .left h3 a {
+	color:#231F20;
+}
+
+.tout_vertical_real_estate .left span {
+	display:block;
+	font-weight:bold;
+	color:#234F20;
+	margin:10px 0px 10px 0px;
+	text-transform: uppercase;
+}
+
+.tout_vertical_real_estate .left .tout_left_padd {
+	padding-right:10px;
+	padding-left:14px;
+}
+
+.tout_vertical_real_estate .right img {
+	margin-left:10px;
+	margin-top:20px;
+	border: none;
+}
+
+.tout_vertical_real_estate .right img {
+	border:1px solid #414744;
+	width: 89px;
+	height: 89px;
+}
+
+.tout_vertical_real_estate .right .image img {
+	padding: 4px;
+	width: 89px;
+	height: 89px;
+}
+
+.thumb {
+	float:left;
+	border:1px solid #C2C9C6;
+	padding:2px;
+	margin-bottom:5px;
+}
+
+.img_left {
+	margin-right:8px;
+}
+
+/* 3 Cols */
+.tout_3cols {
+	border-bottom:2px solid #414744; 
+	margin-bottom:15px;
+	padding-left:13px;
+}
+
+.tout_3cols .col {
+	float:left;
+	width:150px;
+}
+
+.tout_3cols td.col3_content {
+	background:url(/redesign/images/boston/bg_3col.gif) top left no-repeat;
+	padding:3px 10px 10px 0px;
+	color:#343434;
+}
+
+.tout_3cols .cols_padd {
+	padding:0px 5px;
+}
+
+.tout_3cols .col3 {
+	float:left;
+	width:150px;
+	background:url(/redesign/images/boston/bg_3col_right.gif) top left no-repeat;
+}
+
+.tout_3cols b, .tout_3cols b a {
+	display:block;
+	color:#009DDC;
+	text-transform:uppercase;
+}
+
+.tout_3cols h5 {
+	font-size:17px;
+	font-weight:bold;
+	color:#231F20;
+	line-height:18px;
+	margin-top:4px;
+	text-transform:uppercase;
+}
+
+.tout_3cols h5 a {
+	color:#231F20;
+}
+
+.tout_3cols h6 {
+	font-weight:normal;
+	line-height:17px;
+	font-size:11px;
+	margin:10px 0px;
+}
+
+.tout_3cols span {
+	display:block;
+	margin:5px 0px 10px 0px;
+	font-weight:bold;
+	font-size:10px;
+}
+
+
+
+/**************************/
+/* Buzzworthy */ 
+
+.buzzworthy {
+	background-color:#EBF3F0;
+	margin-bottom:10px;
+}
+
+.buzzworthy h2 {
+	background: transparent url("/redesign/images/boston/title_buzz.gif") no-repeat top left;
+	height: 35px;
+	width: 328px;
+}
+
+.buzzworthy h2 div {
+	display: none;
+}
+
+.buzzworthy .buzz {
+	padding:10px;
+	background:url(/redesign/images/boston/bg_buzz.gif) bottom left no-repeat;
+}
+
+.buzzworthy .buzz h3, .buzzworthy .buzz h3 a {
+	font-size:15px;
+	color:#231F20;
+	font-family:Arial, Verdana;
+	text-transform:uppercase;
+}
+
+.buzzworthy .buzz a {
+	color:#009DDC;
+}
+
+.buzzworthy .buzz .image {
+	float:left;
+	margin-right:10px;
+	background-color:white;
+}
+
+.buzzworthy .buzz .image img {
+	width:60px;
+	height:60px;
+}
+
+.buzzworthy .buzz .buzz_content {
+	line-height:17px;
+	float:left;
+	width:215px;
+	text-align:left;
+}
+
+/**************************/
+/* Event Search Module */ 
+
+.event_search_module {
+	margin-bottom:10px;
+}
+
+.event_search_module img {
+	width:330px;
+}
+
+.event_search_module .php_small_calendar {
+	margin:0px 2px 10px 2px;
+	width:307px;
+	overflow: hidden;
+}
+
+.event_search_module .php_small_calendar .month_year {
+	width:298px;
+}
+
+.event_search_module .php_small_calendar .day_header,
+.event_search_module .php_small_calendar .day_of_week {
+	width:40px;
+}
+
+.event_search_module .form {
+	display:block;
+	background:url(/redesign/images/boston/bg_sub.gif) top left; 
+	font-family:Arial;
+	padding:0px 8px;
+	margin:0px;
+}
+
+.event_search_module .form .form_border {
+	border-left:1px solid #BAB9B6;
+	border-right:1px solid #BAB9B6;
+	border-bottom:1px solid #BAB9B6;
+	background:url(/redesign/images/boston/bg_sub_form.gif) top left;	
+	padding:0px;
+	margin:0px;
+}
+
+.event_search_module .form div.field {
+	margin:10px;
+}
+
+.event_search_module .form input#event_keyword {
+	width:96%;	
+}
+
+/**************************/
+/* Susbscribe */ 
+
+.subscribe {
+	margin-bottom:10px;
+	color:#BAB9B6;
+}
+
+.subscribe .form {
+	display:block;
+	background:url(/redesign/images/boston/bg_sub.gif) top left; 
+	font-family:Arial;
+	padding:0px 8px;
+}
+
+.subscribe .form form {
+	border-left:1px solid #BAB9B6;
+	border-right:1px solid #BAB9B6;
+	border-bottom:1px solid #BAB9B6;
+	background:url(/redesign/images/boston/bg_sub_form.gif) top left;	
+	padding:9px;
+}
+
+.subscribe .form form .img {
+	float:left;
+	padding-right:10px;
+}
+
+.subscribe .form form .form_fields {
+	width:165px;
+	float:left;
+}
+
+.subscribe .form form .form_fields input, .subscribe .form form select {
+	height:21px;
+	border:1px solid #BAB9B6;
+	color:#BAB9B6;
+	margin-bottom:2px;
+}
+
+.subscribe .form form .form_fields input.full, .subscribe .form form .form_fields input.filled {
+	width:160px;
+}
+
+.subscribe .form form .form_fields input.city, .subscribe .form form .form_fields input.country {
+	width:60px;
+}
+
+.subscribe .form form .form_fields input.zip {
+	width:46px;
+}
+
+.subscribe .form form .form_fields select {
+	width:45px;
+	height:21px;
+}
+
+.subscribe .form form .form_fields .submit {
+	float:right;
+}
+
+.subscribe .form form .submit input {
+	border:none;
+	margin-right:10px;
+}
+
+.subscribe .form a {
+	color:#009DDC;
+}
+
+.subscribe .form b {
+	color:#00445E;
+	display:block;
+	margin-bottom:10px;
+}
+
+.subscribe .form table.options td b {
+	margin-bottom:3px;
+}
+
+.subscribe .form form td {
+	color:#2F2F2F;
+}
+
+.subscribe .form form td b {
+	display:block;
+	font-weight:bold;
+	margin-bottom:5px;
+	color:#00455B;
+	font-size:11px;
+}
+
+
+
+/**************************/
+/* Newsletter Signup */ 
+
+.sign_up {
+	margin-bottom:10px;
+}
+
+
+
+/**************************/
+/* Blue Header */ 
+
+div.heading {
+	height:34px;
+	background:url(/redesign/images/boston/bg_listings_header.gif) top left no-repeat;
+	text-align:center;
+	border:1px solid #00445E; 
+}
+
+div.heading_wide {
+	background:url(/redesign/images/boston/bg_listings_header_wide.gif) top left no-repeat;
+	text-align:center;
+}
+
+div.heading table {
+	background-color:#01445F;
+}
+
+div.heading table td { 
+	padding:0px 10px;
+}
+
+div.heading h2 {
+	display:block;
+	font-family:Georgia, Verdana, Arial;
+	font-size:16px;
+	color:white;
+	margin-top:6px;
+}
+
+div.heading h2 b {
+	background-color:#00445E;
+	padding:0px 10px;
+}
+
+div.sub_heading {
+	background-color:#EAF3F0;
+	margin-top:3px;
+	padding:3px;
+	color:#231F20;
+}
+
+div.heading .heading_right {
+	float:right;
+}
+
+div.heading .heading_right form {
+	margin-top:4px;
+}
+
+div.left_right div#search_results {
+	clear:both;
+	border-top:1px solid #EAF3F0;
+	padding-top:10px;;
+}
+
+/**************************/
+/* Per Page Select Box */ 
+
+select#num_results {
+	font-size:9px;
+}
+
+
+
+/**************************/
+/* Search Results */ 
+
+div.page_nav {
+	margin-left:-6px;
+	margin-bottom:10px;
+}
+
+div.page_nav a {
+	color:#009DDC;
+}
+
+div#searchResults table tr th, div#searchResults table tr th a {
+	font-weight:bold;
+	color:#009DDC;
+}
+
+div#searchResults table tr td {
+	border-bottom:1px solid #C3C9C7;
+}
+
+div#searchResults table tr td {
+	padding:10px 10px 10px 0px;
+	color:#414544;
+}
+
+div#searchResults table tr td a {
+	display:block;
+	padding-bottom:3px;
+	color:#242021;
+	font-weight:bold;
+}
+
+div#searchResults table tr td p {
+	padding:0px;
+	margin:0px;
+}
+
+div#searchResults table {
+	width:463px;
+}
+
+div.home_right_col div#searchResults table {
+	width:100%;
+}
+
+/**************************/
+/* Misc Title */ 
+
+div.left_col_pad {
+	padding-right:10px;
+	margin-bottom:10px;
+}
+
+div.left_col_pad ol {
+	padding:0px 0px 0px 25px;
+	margin:0px;
+	list-style-type:none;
+	list-style-image:url(/redesign/images/boston/arrow_right_ul.gif);
+	margin-bottom:10px;
+}
+
+div.left_col_pad ol li a {
+	color:#414544;
+}
+
+div.left_col_pad ol li nobr {
+	color:#B9C1BD;
+}
+
+div.title_small {
+	background-color:#93A099;
+}
+
+div.title_small h5 {
+	color:white;
+	padding:1px 2px;
+	font-size:10px;
+}
+
+div.neighborhoods_title {
+	background-color:#404644;
+	color:white;
+	margin-bottom:10px;
+}
+
+div.neighborhoods_title h4 {
+	padding:3px;
+	color:white;
+	font-size:11px;
+}
+
+
+/**************************/
+/* Best of CSS */ 
+
+#main_col_title {
+	background-color:#EAF3F0;
+	padding:5px;
+	border-bottom:2px solid black;
+}
+
+#main_col_title h2 {
+	font-size:12px;
+	font-weight:bold;
+	color:#009BDB;
+}
+
+.main_col_lists {
+	padding:10px;
+}
+
+.main_col_lists ul {
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+
+.main_col_lists ul li.main_cat {
+	margin:0px;
+	padding:0px;
+	margin:5px 0px 3px 0px;
+	color:#009DDA;
+	font-weight:bold;
+	text-transform:uppercase;
+	border-bottom:1px solid #C3C9C7;
+}
+
+.main_col_lists ul li.award {
+	line-height:16px;
+	background:url(/redesign/images/boston/arrow_right_ul.gif) top left no-repeat;
+	padding-left:15px;;
+}
+
+.main_col_lists ul li  a {
+	color:#737776;
+	text-transform:none;
+	font-weight:normal;
+}
+
+
+/****************************/
+/* Issue Archives */
+
+.issue_archive {
+}
+
+.issue_archive .archive_month_nav_item {
+	float:left;
+	width:315px;
+}
+
+.issue_archive .archive_month_nav_item h3 {
+	font-size:11px;
+	color:#019CDC;
+	text-transform:uppercase;
+	border-bottom:1px solid #C3C9C7;
+	margin-left:10px;
+}
+
+.issue_archive .archive_month_nav_item h3 a {
+	color:#019CDC;
+}
+
+.issue_archive .archive_month_issue_image {
+	border-right:1px solid #C3C9C7;
+	border-bottom:2px solid black;
+	margin-bottom:10px;
+}
+
+.issue_archive .archive_month_issue_image img {
+	float:right;
+}
+
+.issue_archive .padding {
+	padding:10px;
+}
+
+.issue_archive .heading_wide, .issue_archive .heading {
+    text-align:left;
+}
+
+.issue_archive .feature_list {
+	margin-bottom:10px;
+}
+
+.issue_archive .feature_list a {
+	display:block;
+	color:#333333;
+	padding:0px 10px 0px 15px;
+	background:url(/redesign/images/boston/line_ul.gif) top left no-repeat;
+	margin-bottom:5px;
+}
+
+/* Active Issue */
+
+.active_issue {
+	border-bottom:2px solid black;
+	margin-bottom:10px;
+	color:#333333;
+}
+
+.active_issue .issue_image {
+	float:right;
+}
+
+.active_issue h3 {
+	font-size:20px;
+	text-transform:uppercase;
+	margin-bottom:10px;
+	font-weight:normal;
+}
+
+.active_issue h4 {
+	text-transform:uppercase;
+	margin:10px 0px 3px 0px;
+	font-size:11px;
+	color:#009EDD;
+}
+
+.active_issue a {
+	font-size:11px;
+	color:#333333;
+	line-height:16px;
+}
+
+.active_issue a h3 {
+	text-transform:none;
+	color:black;
+	font-size:11px;
+	font-weight:bold;
+	margin:0px;
+	padding:0px;
+}
+
+.active_issue .article_line {
+	float:left;
+	width:312px;
+}
+
+.active_issue .article_line .image {
+	float:right;
+	border:1px solid #C3C9C7
+	padding:4px;
+	background-color:white;
+}
+
+.active_issue .article_line .image img {
+	width:98px;
+	height:98px;
+}
+
+.active_issue .article_line a {
+	display:block;
+	padding:10px 5px 0px 3px;
+	margin-bottom:5px;
+	border-top:1px solid #C3C9C7;
+	border-right:1px solid #C3C9C7;
+}
+
+.active_issue .article_line b {
+	text-transform:uppercase;
+	padding-top:3px;
+}
+
+
+.archive_results .issue {
+	background-color:#EAF3F0;
+	padding:5px 0px 0px 10px;
+	margin-bottom:5px;
+}
+
+.archive_results .issue .issue_title, archive_results .issue h3 {
+	color:#333333;
+}
+
+.archive_results .issue .story {
+	line-height:16px;
+}
+
+.archive_results .issue .cover_image {
+	float:right;
+	height:200px;
+	overflow:hidden;
+	border-left:1px solid white;
+	border-top:1px solid white;
+}
+
+.archive_results .issue .cover {
+	text-transform:uppercase;
+	text-size:9px;
+	font-weight:bold;
+}
+
+.archive_results .issue .title {
+	font-weight:bold;
+	font-size:13px;
+}
+
+
+
+/****************************/
+/* Find Forms */
+
+dl.new {
+	display:block;
+	padding:0px;
+	margin:0px;
+	margin-bottom:20px;
+}
+
+dl.new dt {
+	display:block;
+	height:34px;
+	background:url(/redesign/images/boston/bg_article_header.gif) top left no-repeat;
+	text-align:center;
+	margin-bottom:10px;
+	text-transform: uppercase;
+	text-align:center;
+}
+
+dl.new dt span.header {
+	font-family:Georgia, Verdana, Arial;
+	font-size:16px;
+	font-weight:bold;
+	color:white;
+	line-height:35px;
+	padding:0px 10px;
+	background-color:#01445E;
+}
+
+dl.new span a {
+	color:white;
+	text-decoration:none;
+}
+
+dl.new dd {
+	display:block;
+	margin:0px;
+	padding:0px;
+	line-height:17px;
+}
+
+dl.new dd a {
+	color:#009DDC;
+}
+
+dl.new dd label {
+	display:none;
+}
+
+dl.new dd dl dd {
+	margin-bottom:7px;
+}
+
+dl.new dd dl dd input.filled {
+	width:457px;
+}
+
+dl.new dd dl dd input.notfilled {
+	width:457px;
+}
+
+dl.new dd dl dd.align_left {
+	text-align:left;
+}
+
+dl.new dd dt {
+	font-family:Georgia,"Times New Roman",Times,serif;
+	font-weight:bold;
+	background:none;
+	border:none;
+	border-top:1px dotted #0069D6;
+	font-size:14px;
+	text-align:center;
+	margin-top:15px;
+	padding-top:15px;
+	text-transform:none;
+}
+
+/****************************/
+/* Grey Goose Styles */
+
+dl.new_goose {
+	display:block;
+	padding:0px;
+	margin:0px;
+	margin-bottom:20px;
+}
+
+dl.new_goose dt {
+	display:block;
+	height:34px;
+	background:url(/redesign/images/boston/bg_article_header_goose.gif) top left no-repeat;
+	text-align:center;
+	margin-bottom:10px;
+	text-transform: uppercase;
+	text-align:center;
+}
+
+dl.new_goose dt span.header {
+	font-family:Gotham;
+	font-size:16px;
+	font-weight:bold;
+	color:white;
+	line-height:35px;
+	padding:0px 10px;
+}
+
+dl.new_goose span a {
+	color:white;
+	text-decoration:none;
+}
+
+
+/****************************/
+/* Search Results */
+
+/* Featured Results */
+
+.search_features {
+	background-color:#EAF3F0;
+	padding:5px;
+	border-top:1px solid #C3C9C7;
+	border-bottom:1px solid #C3C9C7; 
+	margin-bottom:10px;
+}
+
+.search_features h3 {
+	font-weight:normal;
+	color:#94A19A;
+	font-size:10px;
+}
+
+.search_features .featured_item {
+	border-bottom:1px solid white;
+	padding:5px 0px;
+}
+.search_features .featured_item a {
+	display:block;
+	color:black;
+	font-weight:bold;
+}
+
+div#searchResults .search_features table {
+	width:450px;
+}
+
+div#searchResults .search_features table td {
+	border-bottom:none;
+	padding:0px 5px 0px 0px;
+}
+
+div#searchResults .search_features table td.line {
+	padding:0px;
+	width:1px;
+	background-color:white;
+	font-size:1px;
+}
+
+div#searchResults .search_features table td.cuisine {
+	color:#009DDE;
+	font-weight:bold;
+	width:65px;
+	padding:0px 5px;
+}
+
+div#searchResults .search_features table td.neighborhoods {
+	color:#009DDE;
+	font-weight:bold;
+	width:75px;
+	padding:0px 5px;
+}
+
+div#searchResults .search_features table td.content {
+	width:260px;
+}
+
+.search_features table td {
+	padding:0px;
+	margin:0px;
+	border:none;
+	color:#3E4744;
+}
+
+.search_features .featured_item .desc {
+	margin-top:10px;
+}
+
+.search_features .featured_item .img {
+	border:1px solid #C2C8C6;
+	padding:4px;
+	background-color:white;
+	margin-right:5px;
+	float:left;
+}
+
+.search_features .featured_item .img img {
+	width:98px;
+	height:98px;
+}
+
+div.icons {
+	margin-top:5px;
+}
+
+div.icons .icon {
+	float:left;
+	margin-right:3px;
+	}
+
+
+/* Search Results Column Headers */
+
+.search_cols {
+	padding:0px 5px;
+	font-weight:bold;
+	color:#019CDC;
+}
+
+.search_cols a {
+	color:#019CDC;
+}
+
+.search_cols .one {
+	width:270px;
+	float:left;
+}
+
+.search_cols .two {
+	float:left;
+	width:77px;
+}
+
+.search_cols .three {
+	float:left;
+}
+
+/* Icons */
+.photo { background:url(/images/boston/sm_icons/photo.gif) top left no-repeat; }
+.gallery { background:url(/images/boston/sm_icons/gallery.gif) top left no-repeat; }
+.print { background:url(/images/boston/sm_icons/print.gif) top left no-repeat; }
+.email { background:url(/images/boston/sm_icons/email.gif) top left no-repeat; } 
+.facebook { background:url(/images/boston/sm_icons/facebook.gif) top left no-repeat; } 
+.text { background:url(/images/boston/sm_mobile.gif) top left no-repeat; } 
+.menu { background:url(/images/boston/sm_menu.gif) top left no-repeat; } 
+.map { background:url(/images/boston/sm_maps.gif) top left no-repeat; } 
+.website { background:url(/images/boston/sm_website.gif) top left no-repeat; } 
+.rating { background:url(/images/boston/sm_ratings.gif) top left no-repeat; } 
+.reviews { background:url(/images/boston/sm_reviews.gif) top left no-repeat; } 
+.write { background:url(/images/boston/sm_write.gif) top left no-repeat; } 
+
+/* Search Results */
+div#searchResults .results_table {
+	width:100%;
+}
+
+div#searchResults .results_table td a {
+	color:#00455E;
+}
+
+div.left_right div#searchResults table.results_table td.start {
+	padding:5px;
+	width:260px;
+	border-bottom:none;
+}
+
+div.left_right div#searchResults table.results_table td.middle {
+	padding:5px;
+	border-left:1px solid #EAF3F0;
+	border-bottom:none;
+}
+
+div.left_right div#searchResults table.results_table td.end {
+	padding:5px;
+	border-left:1px solid #EAF3F0;
+	border-bottom:none;
+}
+
+div#searchResults .search_seperator {
+	font-size:1px;
+	line-height:1px;
+	background-color:#C3C9C7;
+}
+
+/****************************/
+/* Best Of */
+
+.best_of_categories {
+	padding:5px;
+}
+
+.best_of_categories .best_of_entry {
+	width:150px;
+	float:left;
+	margin-bottom:10px;
+}
+
+.best_of_entry .best_of_padd {
+	padding-right:10px;
+}
+
+.best_of_entry span {
+	font-size:11px;
+	line-height:16px;
+}
+
+.best_of_entry .image {
+	padding:4px;
+	border:1px solid black;
+	background-color:white;
+	float:left;
+}
+
+.best_of_entry .image img {
+	width:131px;
+	height:109px;
+}
+
+.best_of_entry h2 {
+	font-size:13px;
+	font-family:Georgia;
+	margin-bottom:5px;
+}
+
+/* PHP CALENDAR */
+#php_calendar_container {
+	margin: 0px 0px 10px 0px;
+}
+
+ul.php_small_calendar {
+	background: white;
+	list-style: none;
+	width:134px;
+	border: 1px solid white;
+	margin: 0px;
+	padding: 0px;
+	font-size: 10px;
+}
+
+dl.new dd ul.php_small_calendar {
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+ul.php_small_calendar a {
+	text-decoration: none;
+}
+
+ul.php_small_calendar li {
+	margin: 1px 0px 0px 1px;
+	border: 1px solid #d0d0d0;
+	width: 16px;
+	float: left;
+	letter-spacing: 0px;
+	text-align: center;
+	font-size: 10px;
+}
+
+dl.new dd ul.php_small_calendar li {
+	margin: 1px 0px 0px 1px;
+}
+
+ul.php_small_calendar li.selected {
+	background: #a9a9a9;
+	color: white;
+	cursor: pointer;
+}
+
+ul.php_small_calendar .month_year {
+	position: relative;
+	width:130px;
+	padding: 0px;
+	margin: 1px 0px 0px 1px;
+}
+
+ul.php_small_calendar .month_year .prev_month {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	padding: 0px 0px 0px 2px;
+}
+
+ul.php_small_calendar .month_year .next_month {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 0px 2px 0px 0px;
+}
+
+ul.php_small_calendar .month_year .prev_month a {
+	color:#009DDC;
+}
+
+ul.php_small_calendar .month_year .next_month a {
+	color:#009DDC;
+}
+
+ul.php_small_calendar .month_year a {
+	text-decoration: none;
+}
+
+#col1 ul.php_small_calendar {
+	font-size: 8px;
+	width: 130px;
+}
+
+#col1 ul.php_small_calendar .month_year {
+	width: 117px;
+}
+
+#col1 ul.php_small_calendar li {
+	width: 14px;
+}
+
+#col1 #event_keyword {
+	width: 115px;
+}
+
+/* EVENT SEARCH - EVENT RESULTS - EVENT DETAILS */
+
+dl.event_search dd {
+	padding:5px 0px;
+}
+
+dl.event_search input#event_keyword {
+	width:97%;
+}
+
+#event_asset #main_article {
+	padding: 0px;
+	border:1px solid #CCCCCC;
+}
+
+#event_asset #main_article .col {
+	padding: 5px 5px 5px 5px;
+	background:#EBF3F0;
+	width: 215px;
+	float: left;
+}
+
+#event_asset #main_article .col_right {
+	background: white;
+}
+
+#event_asset #main_article .col dl dt.first {
+	font-family:Georgia,"Times New Roman",Times,serif;
+	font-size:1.4em;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1;
+	margin:0pt 1pt 0.5em;
+}
+
+/* Featured Article */
+
+/*Wedding Announcements*/
+
+#wedding_announcement_view {
+	text-align:left;
+}
+
+#wedding_announcement_view dl.new {
+	padding-top:20px;
+	background: url(/images/boston/bubbles.jpg) no-repeat;
+	background-color:#FFFFFF;
+	width:465px;
+}
+
+#wedding_announcement_view #view_more {
+	float:right;
+	background:transparent url(/images/boston/rings.gif) no-repeat scroll 0% 50%;
+	height:30px;
+	padding-top:10px;
+	padding-left:40px;
+}
+
+#wedding_announcement_view #congratulations {
+	clear:both;
+	padding:0px 0px 5px 40px;
+	margin:0px 0px 0px 0px;
+	color:#4C3618;
+	font-size:16px;
+}
+
+#wedding_announcement_view #couples_name {
+	text-align:center;
+	color:#047391;
+	font-size:22px;
+	font-weight:bold;
+}
+
+#wedding_announcement_view #wedding_date {
+	margin:0px 0px 10px 0px;
+	color:#4C3618;
+	font-family:"trebuchet ms",arial,helvetica,sans-serif;
+	text-align:center;
+}
+
+#wedding_announcement_view #how_met {
+	margin:10px 0px;
+}
+
+#wedding_announcement_view #announcement_image {
+	text-align:center;
+}
+
+#wedding_announcement_view #how_met .title, 
+#wedding_announcement_view #proposal .title {
+	text-align:left;
+	color:#047391;
+	font-size:14px;
+	font-weight:bold;
+	background-color:transparent;
+}
+
+#wedding_announcement_view #how_met, #wedding_announcement_view #proposal {
+	color:#4C3618;
+	font-family:"trebuchet ms",arial,helvetica,sans-serif;
+	font-size:12px;
+	line-height:16px;
+	margin:10px 30px 20px;
+	text-align:justify;
+}
+
+#wedding_announcement_archive dl {
+	text-align:left;
+}
+
+#wedding_announcement_archive dl.new {
+	padding-top:20px;
+	background: url(/images/boston/bubbles.jpg) no-repeat;
+	background-color:#FFFFFF;
+}
+
+#wedding_announcement_archive .archive_item {
+	border:1px solid #CCCCCC;
+	padding:10px;
+	margin:5px 0px;
+}
+
+#wedding_announcement_archive .archive_item img {
+	border:none;
+}
+
+#wedding_announcement_archive div.title {
+	display:inline;
+	color:#047391;
+	font-size:16px;
+	font-weight:bold;
+}
+
+#wedding_announcement_archive div.congratulations {
+	display:inline;
+	font-weight:bold;
+	color:#4C3618;
+	font-size:14px;
+	background:transparent;
+}
+
+#wedding_announcement_archive .view_more {
+	background:transparent url(/images/boston/rings.gif) no-repeat scroll 0% 50%;
+	height:30px;
+	padding-top:8px;
+	padding-left:40px;
+}
+
+#wedding_announcement_form dl.new {
+	margin-top:20px;
+}
+
+#wedding_announcement_form #complete_announcement {
+	background:transparent url(/images/boston/rings.gif) no-repeat scroll 0% 50%;
+	color:#047391;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	line-height:40px;
+	margin:0px;
+	text-align:left;
+}
+
+#wedding_announcement_form table td {
+	padding:3px;
+}
+
+#wedding_announcement_form table .label {
+	font-weight:bold;	
+	text-align:right;
+}
+
+/****************************/
+/* Buzzworthy */
+
+.marketing_page h3 {
+	border-top:21px solid #00445E;
+}
+
+.marketing_page h3 span {
+	display:none;
+}
+
+.marketing_page .logo {
+	height:100px;
+	width:642px;
+	background:url(/redesign/images/Buzzworthy_Header.gif) top left no-repeat;
+	border-bottom:3px solid black;
+}
+
+.marketing_page table {
+	margin-top:15px;
+}
+
+.marketing_page table td.content {
+	width:300px;
+	background:url(/redesign/images/boston/bg_buzz_border.gif) top left no-repeat;
+	border-bottom:2px solid black;
+	padding-bottom:10px;
+	color:#333333;
+	margin-bottom:10px;
+}
+
+.marketing_page table td.content a {
+	color:#029DDD;
+}
+
+.marketing_page table td.spacer {
+	width:40px;
+}
+
+.marketing_page table td h2 {
+	color:#019CDF;
+	font-size:11px;
+	text-transform:uppercase;
+	margin-bottom:10px;
+}
+
+.marketing_page td .entry {
+	margin-bottom:10px;
+}
+
+.marketing_page td .entry b {
+	display:block;
+	text-transform:uppercase;
+	font-size:12px;
+	color:#333333;
+	margin-bottom:5px;
+}
+
+.marketing_page td .entry b a {
+	color:#333333;
+}
+
+.marketing_page td .image {
+	float:right;
+	margin-left:10px;
+	margin-right:10px;
+}
+
+.marketing_page td .image img {
+	width:93px;
+	height:93px;
+}
+
+/* Guides */
+
+.guides_teaser {
+	border-bottom:3px solid #414743;
+	background-color:#EAF3F0;
+	padding:0px;
+	margin:0px 0px 10px 0px;
+}
+
+.guides_teaser dl.new dt {
+    background: transparent url(/redesign/images/boston/bg_guides_header.gif) no-repeat top left;
+}
+
+.guides_teaser .header .text {
+	width:100%;
+}
+
+.guides_teaser .header .text .title {
+	font-family:Georgia, Verdana, Arial;
+	font-size:16px;
+	font-weight:bold;
+	color:white;
+	line-height:35px;
+	padding:0px 10px;
+	background-color:#01445E;
+	text-transform: uppercase;
+}
+
+.guides_teaser .header .last {
+	padding:0px 5px;
+	background-color:#00445E;
+}
+
+.guides_teaser .content {
+	padding:10px 10px 10px 10px;;	
+	color:#333333;
+}
+
+.guides_teaser .content .title {
+	font-size:18px;
+	text-transform:uppercase;
+	font-weight:bold;
+	margin:0px 0px 5px 0px;
+}
+
+.guides_teaser .content .title a {
+	color:#11A2E1;
+}
+
+.guides_teaser .content .subtitle {
+	font-size:14px;
+	font-weight:bold;
+	margin:0px 0px 5px 0px;
+}
+
+.guides_teaser .content .image {
+	float:right;
+	margin-left:10px;
+	border: none;
+	margin:2px 0px 2px;
+}
+
+.guides_teaser .content .image img {
+	border: 1px solid #C2C9C6;
+	padding: 4px;
+}
+
+.guides .tout_standard .right {
+	text-align:center;
+}
+
+.guides .tout_standard .right .image {
+	width:98px;
+	margin-left:10px;
+}
+
+.guides_archive {
+	padding:0px 5px;
+	margin-bottom:10px;
+}
+
+.guides_archive .header {
+	background-color:#414745;
+	color:#FFFFFF;
+	font-weight:bold;
+	padding:3px 0px 3px 5px;
+}
+
+.guides_archive li {
+	list-style-type:none;
+}
+
+.guides_archive ul {
+	list-style-type:none;
+	margin:0px;
+	padding:0px 0px 0px 5px;
+}
+
+.guides_archive ul li {
+	color:#414745;
+	margin:5px 0px 0px 0px;
+	padding-left:10px;
+	background:url(/redesign/images/boston/line_ul.gif) top left no-repeat;
+}
+
+.guides_archive ul li a {
+	color:#414745;
+}
+
+.guides_archive .cat {
+	background-color:#93A09A;
+	margin-top:10px;
+	color:white;
+	padding:2px;
+	font-weight:bold;
+}
+
+/* Misc Left Headers */
+
+.left_misc_nav {
+	padding:0px 5px;
+	margin-bottom:10px;
+}
+
+.left_misc_nav .header {
+	background-color:#414745;
+	color:#FFFFFF;
+	font-weight:bold;
+	padding:3px 0px 3px 5px;
+}
+
+.left_misc_nav ul {
+	list-style-type:none;
+	margin:0px;
+	padding:0px 0px 0px 5px;
+}
+
+.left_misc_nav ul li {
+	color:#414745;
+	margin:5px 0px 0px 0px;
+}
+
+.left_misc_nav ul li a {
+	color:#414745;
+}
+
+/*Recipe Search*/
+
+.recipe_search dd.submit {
+	margin:10px 0px;
+}
+
+.recipe_search dd.field input {
+	width:99%;	
+}
+
+.recipe_search dd.field select {
+	width:100%;	
+}
+
+#Book_Review_Finder dd.field input {
+	width:99%;	
+	margin-bottom:10px;
+}
+
+/*Book Review Finder Search */
+
+
+
+/* Ask Expert */
+
+#ask_expert img {
+	float:right;
+	margin:3px;
+}
+
+#ask_expert ul.error_list {
+	margin:10px 10px 10px 10px;
+	padding:0px;
+}
+
+#ask_expert ul.error_list li {
+	color:#FF0000;
+}
+
+#ask_expert dl dd h3 {
+	margin-bottom:5px;
+}
+
+.elink {
+	color: #069;
+	cursor:pointer;
+}
+
+/* Question UGC Tabs */
+
+.question_tabs {
+	position:relative;
+	padding:0px;
+	margin:0px;
+}
+
+.question_tabs table {
+	list-style: none;
+}
+
+.question_tabs table td {
+	color:#414744;
+}
+
+.question_tabs table td .tabCategory {
+	font-size:12px;
+	padding:7px;
+	border-left:1px solid white;
+}
+
+.question_tabs table td .tabCategory a, 
+.question_tabs table td .tabCategory a.visited, 
+.question_tabs table td .tabCategory a.active {
+	color:#414744;
+}
+
+.question_tabs table td.tabActive {
+	background-color:white;
+	color:#414744;
+}
+
+.question_tabs table td.tabActive a {
+	color:#414744;
+}	
+
+.question_tabs .question_container {
+	background-color:white;
+	padding:10px 0px;
+	font-size:12px;
+}
+
+.question_tabs .question_container .line {
+	border-bottom: 1px dotted #069;
+	padding-bottom:5px;
+	margin-bottom:5px;
+}
+
+.question_tabs .question_container .viewLink {
+	float:right;
+}
+
+.question_form .row {
+	margin:5px 0px;
+}
+
+/* Misc Modules */
+
+#music_club dd dl {
+	width:150px;
+	float:left;
+	line-height:18px;
+}
+
+#music_club .artist {
+	display:block;
+	text-align:center;
+	text-transform: uppercase;
+	font-weight:bold;
+}
+
+#music_club .artist a {
+	color:#019CDC;
+}
+
+#main_article {
+	margin-bottom:20px;
+}
+
+/* ARTICLE TOOLS */
+#article .article_content .article_tools_cnt {
+	padding: 4px 0px 3px 0px;
+	background-color: #eaf3f0;
+	border: 1px solid #c3c9c7;
+	border-right: none;
+	border-left: none;
+}
+
+#article .article_content .article_tools_cnt table tr td img {
+	border: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#article .article_content .article_tools_cnt table tr td.pointer {
+	padding-right: 10px;
+	cursor: pointer;
+}
+
+/*****************************/
+/* Real Estate Results */
+
+.rl_image {
+	margin-right:10px;
+	float:left;
+}
+
+.rl_details {
+	float:left;
+}
+
+.rl_directions {
+	margin-top:5px;
+	color:#029EDB;
+}
+
+.rl_directions a {
+	color:#029EDB;
+}
+
+
+/*****************************/
+/* Real Estate Results */
+
+.article_comment {
+	line-height:16px;
+	width:450px;
+}
+
+/*  Home Page News Header */
+body#home #bread_crumb .nav, 
+body#test #bread_crumb .nav {
+	margin-top:0px;
+}
+
+#homeWeatherNews {
+	padding:5px;
+	margin:0px;
+	width:600px;
+}
+
+#homeWeatherNews ul {
+	list-style-type:none;
+	padding:0px;
+	margin:0px;
+	color:#414744;
+	width:150px;
+}
+
+#homeWeatherNews ul li {
+	float:left;	
+}
+
+div#homeWeatherNews ul li#city { 
+	font-weight: bold; 
+}
+
+div#homeWeatherNews ul li#temperature { 
+	white-space: nowrap; 
+}
+
+
+/*****************************/
+/* Submit Party */
+
+div.submit_party{
+	background-color:#EAF3F0;	
+	margin-bottom:15px;
+}
+
+#event_submit_form ul.error_list {
+	display:none;
+}
+
+div.submit_party .event_submit_header {
+	background:url(/images/header_submit_party_bg.gif);
+	background-repeat: repeat-x;
+}
+
+.ad_upload {
+	padding:5px;
+}
+
+.ad_upload .errors {
+	margin:5px;
+}
+
+.ad_upload .errors li {
+	color:#FF0000;
+	list-style-type:none;
+	padding:2px;
+}
+
+/*****************************/
+/* Best of Nomination */
+
+div.submit_party div.best_of_nomination {
+	background:url(/images/boston_nominate.gif) top left no-repeat;
+	height:52px;
+}
+
+div.submit_party div.best_of_nomination h3 {
+	display:none;
+}
+
+
+/*****************************/
+/* Form Elements */
+
+div.form_element {
+	margin-bottom:5px;
+}
+
+div.button {
+	margin-top:10px;
+}
+
+div.button input.button, div.button a.button {
+	border:1px solid #00445E;
+	background-color:#059CDC;
+	padding:3px;
+	color:white;
+	font-weight:bold;
+	font-size:11px;
+}
+
+.form_errors {
+	color:red;
+}
+
+
+/*****************************/
+/* User Login / Register Links */
+
+#user_registration {
+	float:right;
+	padding-top:10px;;
+	color:#414544;
+}
+
+#user_registration a {
+	color:#009EDF;
+}
+
+
+/****************************/
+/* Design Home */
+
+div#design_home_flash {
+	background-color:#E5E5D7;
+}
+
+
+
+/*****************************/
+/* Gallery */
+
+.party_pix_container h1 {
+	color:#333333;
+	font-size:18px;
+	text-transform:uppercase;
+	margin-top:10px;
+}
+
+.party_pix_container h2 {
+	color:#333333;
+	font-size:11px;
+	margin-bottom:15px;
+	margin-top:2px;
+	font-weight:normal;
+}
+
+
+
+/******************************/
+/* Flash Maps */
+
+.flash_map {
+	width:642px;
+}
+
+.flash_map h1 {
+	font-family:Georgia,Verdana,Arial;
+	font-size:26px;
+	padding:7px 20px 7px 15px;
+	background-color:white;
+	color:#009ACC;
+	width:390px;
+	font-weight:normal;
+}
+
+.flash_map h1 span {
+	color:#FE0002;
+}
+
+.flash_map .title {
+	background: url( '/images/flash_maps/title_rule.gif' ) top left;
+	height:34px;
+	color:white;
+	text-align:center;
+}
+
+.flash_map .links {
+	width:282px;
+	float:left;
+	padding:10px 0px 0px 10px;
+	line-height:35px;
+}
+
+.flash_map .links .link {
+	padding:0px 0px 0px 20px;
+	color:#0099CD;
+	font-size:13px;
+	font-weight:bold;
+}
+
+.flash_map .links .intro {
+	line-height:18px;
+	font-size:12px;
+	padding-top:20px;
+}
+
+.flash_map .links .link a {
+	color:#0099CD;
+}
+
+.links .trip_ideas {
+	 font-size:13px;
+	 line-height:14px;
+	 margin-bottom:4px;
+}
+
+
+.flash_map .links .right {
+	background:url( '/images/flash_maps/arrowRight.gif' ) top left no-repeat;
+}
+
+.flash_map .links .down {
+	background:url( '/images/flash_maps/arrowDown.gif' ) top left no-repeat;
+}
+
+.flash_map .map {
+	width:350px;
+	float:left;
+}
+
+.map_results {
+	border-top:1px solid #EFEFEF;
+	padding-top:5px;
+}
+
+.map_results h2 {
+	margin:0px;
+	padding:0px;
+	font-size:22px;
+	color:#333333;
+	font-weight:normal;
+}
+
+.map_results .children h3 {
+	font-size:15px;
+	padding:0px;
+	margin:0px;
+	text-transform:capitalize;
+	font-style:italic;
+	font-family:Georgia, Verdana, Arial;
+	color:#333333;
+	font-weight:normal;
+}
+
+.map_results .area_cities {
+	font-size:15px;
+	padding:0px;
+	margin:0px;
+	text-transform:capitalize;
+	font-style:italic;
+	font-family:Georgia, Verdana, Arial;
+	color:#333333;
+}
+
+.map_results .area_cities a {
+	color:#333333;
+}
+
+.map_results .area_cities a:hover {
+	color:#009ACC;
+}
+
+.map_results .children h3 a {
+	color:black;
+	text-decoration:none;
+}
+
+.map_results .children h3 a:hover {
+	color:#009ACC;
+	text-decoration:underline;
+}
+
+.map_results .categories {
+	margin-top:10px;
+}
+
+.map_results .categories h4 {
+	background-color:#E5E5E5;
+	padding:5px;
+	margin:10px 0px;
+	color:#009ACC;
+	font-size:15px;
+	font-weight:normal;
+}
+
+.map_results .best_of_img {
+	float:right;
+}
+
+.map_results .categories h4 a {
+	color:#009ACC;
+	font-weight:bold;
+}
+
+.map_results .listings {
+	line-height:19px;
+	padding:0px 10px;
+}
+
+.map_results .listings .listing {
+	width:300px;
+	float:left;
+	font-size:14px;
+	margin-bottom:10px;
+}
+
+.map_results .enhanced_list .listings .listing {
+	width:auto;
+}
+
+.map_results .listings .listing .enhanced_img {
+	border:1px solid #C2C8C6;
+	width:104px;
+	margin:0px 10px;
+	float:left;
+}
+
+.map_results .listings .listing a {
+	display:block;
+	padding-left:18px;
+	color:#009ACC;
+}
+
+.map_results .listings .listing .overview a {
+	display:inline;
+	padding:0px;
+}
+
+.map_results .listings .listing .overview {
+	padding-left:18px;
+	line-height:15px;
+	font-size:11px;
+}
+
+.map_results .enhanced_list .listings .listing .overview {
+	font-size:12px;
+}
+
+.map_results .enhanced_list .listings .listing a {
+	padding-left:4px;
+}
+
+.map_results .enhanced_list .listings .listing .overview  {
+	padding-left:4px;
+}
+
+.map_results .enhanced_list .listings .listing a.bestof_ne, .map_results .enhanced_list .listings .listing a.bestof {
+	background:none;
+}
+
+.map_results .listings .listing a:hover {
+	text-decoration:underline;
+}
+
+.map_results .listings .listing a.bestof {
+	background:url( '/images/flash_maps/bestof_star.gif' ) top left no-repeat;
+}
+
+.map_results .listings .listing a.bestof_ne {
+	background:url( '/images/flash_maps/bestof_ne_star.gif' ) top left no-repeat;
+}
+
+.map_results .listing bestof {
+	paddning-left:15px;
+}
+
+.map_results .listings .more {
+	float:right;
+	padding-right:20px;
+	font-weight:bold;
+}
+
+.map_results .listings .more a {
+	color:#009ACC;
+	font-style:italic;
+	text-decoration:none;
+}
+
+.map_results .listings .more a:hover {
+	text-decoration:underline;
+}
+
+.map_results .states {
+	margin-top:15px;
+}
+
+.map_results .states .entry {
+	width:300px;
+	line-height:18px;
+	float:left;
+	margin-bottom:20px;
+	background:url( '/images/flash_maps/rule.gif' ) top left;
+	background-repeat: repeat-x;
+}
+
+.map_results .states .entry h3 {
+	font-size:15px;
+	font-weight:bold;
+	padding-bottom:3px;
+	margin:0px 10px 10px 0px;
+}
+
+.map_results .states .entry .area {
+	font-size:12px;
+	margin-bottom:10px;
+	line-height:16px;
+	padding-right:15px;
+}
+
+.map_results .states .entry .area .cities, .map_results .cities {
+	text-transform:capitalize;
+	font-size:11px;
+}
+
+.map_results .states .entry .area .cities a {
+	font-weight:normal;
+	display:inline
+}
+
+.map_results .states .entry .area a {
+	display:block;
+	color:#636363;
+	font-weight:bold;
+}
+
+.map_results .states .entry .area a.all_cities {
+	color:#BFBFBF;
+}
+
+.map_results .enhanced_list {
+	float:right;
+	width:260px;
+	background:url( '/redesign/images/bg_enhanced.gif' ) top left no-repeat;
+	text-align:left;
+}
+
+.marquee_static {
+	width:463px;
+	height:230px;
+}
+
+.marquee_static_headline {
+	background-color:#2d2d2d;
+	text-align:center;
+	overflow:hidden;
+	padding:10px 0px 0px 0px;
+}
+
+.marquee_static_headline .image {
+
+}
+
+.marquee_static_headline .headline {
+	font-size:24px;
+	font-weight:bold;
+	color:#FFFFFF;
+	margin:5px 0px 0px 0px;
+}
+
+.marquee_static_headline .subhead {
+	color:#FFFFFF;
+	font-size:12px;
+	margin:5px 0px 10px 0px;
+}
+
+
+#newsletter_form {
+	color:#343434; 
+}
+
+#newsletter_form dl.new dt {
+	background:transparent url(/redesign/images/boston/newsletter_bg_boston.gif) no-repeat scroll left top;
+	width:460px;
+}
+
+#newsletter_form dl.new dt .header {
+	background-color:#0099CB;
+}
+
+#newsletter_form .field_labels b {
+	color:#0099CB;
+}
+
+.paystop {
+	width:450px;
+	margin:5px 0px 30px 0px;
+	border:1px solid #CCCCCC;
+}
+
+.paystop .paystop_subscribe {
+	padding:15px 0px 15px 0px;
+	text-align:center;
+}
+
+.paystop .paystop_login_register {
+	padding:15px 0px 15px 0px;
+	text-align:center;
+}
+
+.paystop #paystop_login_register {
+	padding:10px 5px;
+	text-align:left;
+}
+
+.paystop .paystop_form {
+	border:1px solid #CCCCCC;
+	padding:5px;
+	margin-bottom:10px;
+}
+
+
+/*** Facebook ***/
+.home_right_col .facebook {
+	background: url( '/redesign/images/boston/bg_sub.gif' ) top left;
+	text-align:center;
+	padding-top:8px;
+}
+
+.home_right_col .facebook_bottom {
+	margin-bottom:20px;
+	line-height:1px;
+	height:8px;
+}
+
+.home_right_col .facebook_top {
+	margin-top:10px;
+	line-height:1px;
+}
+
+
+.home_right_col .facebook .facebook_logo {
+	background-color:#0154A0;
+	width:300px;
+	margin-bottom:3px;
+}
+
+.home_right_col .facebook .facebook_content {
+	width:300px;
+}
+
+.home_right_col .facebook .facebook_content .fb_border {
+	border:1px solid #9CA1B7;
+	background-color:#EFEFF1;
+	text-align:left;
+	padding:10px;
+}
+
+.home_right_col .facebook .facebook_content .fb_border td {
+	color:#455589;
+	font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size:11px;
+	line-height:15px;
+}
+
+.home_right_col .facebook .facebook_content .fb_border td a {
+	color:#455589;
+}
+
+.home_right_col .facebook .facebook_content .fb_border td a:hover {
+	text-decoration:underline;
+}
+
+.home_right_col .facebook .facebook_content .fb_border td a b {
+	font-size:14px;
+	font-weight:bold;
+}
+
+
+/*** Centro Ad ***/
+.centro_ad {
+	line-height:1px;
+	font-size:1px;
+}
+

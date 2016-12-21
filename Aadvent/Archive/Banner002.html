@@ -1,0 +1,255 @@
+<LINK href="/PrivateLabel/Aadvent/Images/styleNN.css" type=text/css rel=StyleSheet>
+<STYLE type=text/css>@import url( /PrivateLabel/Aadvent/Images/style.css );</STYLE>
+<SCRIPT src="/PrivateLabel/Aadvent/Images/showimages.js" type=text/javascript></SCRIPT>
+<SCRIPT src="/PrivateLabel/Aadvent/Images/openwindow.js" type=text/javascript></SCRIPT>
+<SCRIPT type=text/javascript>
+
+/***********************************************
+* IFrame SSI script II- © Dynamic Drive DHTML code library (http://www.dynamicdrive.com)
+* Visit DynamicDrive.com for hundreds of original DHTML scripts
+* This notice must stay intact for legal use
+***********************************************/
+
+//Input the IDs of the IFRAMES you wish to dynamically resize to match its content height:
+//Separate each ID with a comma. Examples: ["myframe1", "myframe2"] or ["myframe"] or [] for none:
+var iframeids=["postwrap-content"]
+
+//Should script hide iframe from browsers that don't support this script (non IE5+/NS6+ browsers. Recommended):
+var iframehide="yes"
+
+function resizeCaller() {
+var dyniframe=new Array()
+for (i=0; i<iframeids.length; i++){
+if (document.getElementById)
+resizeIframe(iframeids[i])
+//reveal iframe for lower end browsers? (see var above):
+if ((document.all || document.getElementById) && iframehide=="no"){
+var tempobj=document.all? document.all[iframeids[i]] : document.getElementById(iframeids[i])
+tempobj.style.display="block"
+}
+}
+}
+
+function resizeIframe(frameid){
+var currentfr=document.getElementById(frameid)
+if (currentfr && !window.opera){
+currentfr.style.display="block"
+if (currentfr.contentDocument && currentfr.contentDocument.body.offsetHeight) //ns6 syntax
+currentfr.height = currentfr.contentDocument.body.offsetHeight; 
+else if (currentfr.Document && currentfr.Document.body.scrollHeight) //ie5+ syntax
+currentfr.height = currentfr.Document.body.scrollHeight;
+if (currentfr.addEventListener)
+currentfr.addEventListener("load", readjustIframe, false)
+else if (currentfr.attachEvent){
+currentfr.detachEvent("onload", readjustIframe) // Bug fix line
+currentfr.attachEvent("onload", readjustIframe)
+}
+}
+}
+
+function readjustIframe(loadevt) {
+var crossevt=(window.event)? event : loadevt
+var iframeroot=(crossevt.currentTarget)? crossevt.currentTarget : crossevt.srcElement
+if (iframeroot)
+resizeIframe(iframeroot.id);
+}
+
+function loadintoIframe(iframeid, url){
+if (document.getElementById)
+document.getElementById(iframeid).src=url
+}
+
+if (window.addEventListener)
+window.addEventListener("load", resizeCaller, false)
+else if (window.attachEvent)
+window.attachEvent("onload", resizeCaller)
+else
+window.onload=resizeCaller
+
+</SCRIPT>
+</HEAD>
+
+<TABLE style="WIDTH: 100%" cellSpacing=0 cellPadding=4 border=0>
+  <TBODY>
+  <TR>
+    <TD style="BACKGROUND-COLOR: #ffffff">
+      <TABLE style="WIDTH: 100%; BACKGROUND-COLOR: #ffffff" cellSpacing=0 
+      cellPadding=3 border=0>
+        <TBODY>
+        <TR>
+          <TD><A href="http://www.aadvent.org/index.php"><IMG 
+            alt="Welcome to aadvent.org" 
+            src="/PrivateLabel/Aadvent/Images/logo.png"></A> </TD>
+          <TD align=right>
+            <FORM action=http://www.aadvent.org/modules.php method=post>
+            <DIV><INPUT type=hidden value=Search name=name><INPUT type=hidden 
+            value=index name=file><INPUT type=hidden value=modload 
+            name=op><INPUT type=hidden value=search name=action><INPUT 
+            type=hidden value=1 name=overview><INPUT type=hidden value=1 
+            name=active_stories><INPUT type=hidden value=AND name=bool><INPUT 
+            type=hidden name=stories_cat><INPUT type=hidden name=stories_topics>
+            <DIV style="TEXT-ALIGN: right"><SPAN 
+            class=pn-normal>Search&nbsp;</SPAN><INPUT class=pn-text 
+            name=q>&nbsp; </DIV></DIV></FORM></TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD style="WIDTH: 100%; BACKGROUND-COLOR: #ffffff" vAlign=top>
+      <TABLE style="WIDTH: 100%" cellSpacing=0 cellPadding=2 border=0>
+        <TBODY>
+        <TR>
+          <TD style="WIDTH: 150px; BACKGROUND-COLOR: #ffffff" vAlign=top>
+            <TABLE style="WIDTH: 100%; BACKGROUND-COLOR: #000000" cellSpacing=1 
+            cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=3 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=pn-title 
+                        style="BACKGROUND-COLOR: #ffffff">AADVENT Project</TD></TR>
+                    <TR>
+                      <TD class=pn-normal 
+                        style="BACKGROUND-COLOR: #ffffff"><FONT 
+                        style="FONT-WEIGHT: bold" size=4><A title="" 
+                        style="COLOR: midnightblue" 
+                        href="http://www.aadvent.org/modules.php?op=modload&amp;name=Sections&amp;file=index&amp;req=listarticles&amp;secid=4" 
+                        target="">Young Adult Conference 
+                        </A><BR><BR></FONT><FONT style="FONT-WEIGHT: bold" 
+                        size=4><A style="COLOR: midnightblue" 
+                        href="http://www.aadvent.org/modules.php?op=modload&amp;name=Sections&amp;file=index&amp;req=listarticles&amp;secid=1">Taste 
+                        of Seminary</A><BR><BR></FONT><FONT 
+                        style="FONT-WEIGHT: bold" size=4><A 
+                        style="COLOR: midnightblue" 
+                        href="http://www.aadvent.org/modules.php?op=modload&amp;name=Sections&amp;file=index&amp;req=listarticles&amp;secid=2">Mentoring 
+                        Pastors</A><BR><BR></FONT><FONT 
+                        style="FONT-WEIGHT: bold" size=4><A 
+                        style="COLOR: midnightblue" 
+                        href="http://www.aadvent.org/modules.php?op=modload&amp;name=Sections&amp;file=index&amp;req=listarticles&amp;secid=3">Advisory 
+                        Team</A></FONT>
+                        <UL></UL></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+            <TABLE style="WIDTH: 100%; BACKGROUND-COLOR: #000000" cellSpacing=1 
+            cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=3 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=pn-title 
+                        style="BACKGROUND-COLOR: #ffffff">Login</TD></TR>
+                    <TR>
+                      <TD class=pn-normal style="BACKGROUND-COLOR: #ffffff">
+                        <FORM action=http://www.aadvent.org/user.php method=post>
+                        <DIV><SPAN class=pn-normal>&nbsp;<LABEL for=uname>User 
+                        name</LABEL><BR><INPUT id=uname 
+                        onblur="if(this.value=='')this.value='User name';" 
+                        onfocus="if(this.value=='User name')this.value='';" 
+                        tabIndex=0 maxLength=25 size=14 value="User name" 
+                        name=uname><BR><LABEL 
+                        for=pass>Password</LABEL><BR><INPUT id=pass tabIndex=0 
+                        type=password maxLength=20 size=14 name=pass><BR><INPUT 
+                        id=rememberme tabIndex=0 type=checkbox value=1 
+                        name=rememberme> &nbsp;<LABEL for=rememberme>Remember 
+                        me</LABEL> <BR><INPUT type=hidden value=NS-User 
+                        name=module> <INPUT type=hidden value=login name=op> 
+                        <INPUT type=hidden 
+                        value=/modules.php?op=modload&amp;name=Sections&amp;file=index 
+                        name=url> 
+                        <INPUT type=submit value=Log-in><BR><BR>&nbsp;<A 
+                        href="http://www.aadvent.org/user.php?op=lostpassscreen&amp;module=NS-LostPassword">Log 
+                        in Problems?</A><BR>&nbsp;New User? <A 
+                        href="http://www.aadvent.org/user.php">Sign 
+                        Up!</A></SPAN></DIV></FORM></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+            <TABLE style="WIDTH: 100%; BACKGROUND-COLOR: #000000" cellSpacing=1 
+            cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=3 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=pn-title 
+                        style="BACKGROUND-COLOR: #ffffff">Resource Menu</TD></TR>
+                    <TR>
+                      <TD class=pn-normal 
+                        style="BACKGROUND-COLOR: #ffffff"><STRONG><BIG>·</BIG></STRONG>&nbsp;<A 
+                        class=pn-normal title="AADVENT Sections" 
+                        href="http://www.aadvent.org/modules.php?op=modload&amp;name=Sections&amp;file=index">AADVENT 
+                        Projects</A><BR><STRONG><BIG>·</BIG></STRONG>&nbsp;<A 
+                        class=pn-normal title="Current News" 
+                        href="http://www.aadvent.org/modules.php?op=modload&amp;name=News&amp;file=index">Current 
+                        News</A><BR><STRONG><BIG>·</BIG></STRONG>&nbsp;<A 
+                        class=pn-normal title="Calendar of Events" 
+                        href="http://www.aadvent.org/modules.php?op=modload&amp;name=TotalCalendar&amp;file=index">Calendar 
+                        of Events</A><BR><STRONG><BIG>·</BIG></STRONG>&nbsp;<A 
+                        class=pn-normal title="Message Boards" 
+                        href="http://www.aadvent.org/modules.php?op=modload&amp;name=PNphpBB2&amp;file=index">Message 
+                        Boards</A><BR><STRONG><BIG>·</BIG></STRONG>&nbsp;<A 
+                        class=pn-normal title="Photo Albums" 
+                        href="http://www.aadvent.org/index.php?module=pnCPG&amp;func=main">Photo 
+                        Albums</A><BR><STRONG><BIG>·</BIG></STRONG>&nbsp;<A 
+                        class=pn-normal title="View or Submit your own links" 
+                        href="http://www.aadvent.org/modules.php?op=modload&amp;name=Web_Links&amp;file=index">Links 
+                        of Interest</A><BR><STRONG><BIG>·</BIG></STRONG>&nbsp;<A 
+                        class=pn-normal title="Download Forms and Files" 
+                        href="http://www.aadvent.org/modules.php?op=modload&amp;name=Downloads&amp;file=index">Download 
+                        Forms</A><BR><STRONG><BIG>·</BIG></STRONG>&nbsp;<A 
+                        class=pn-normal title="Current and Archived Newsletter" 
+                        href="http://www.aadvent.org/modules.php?op=modload&amp;name=blog&amp;file=index">AADVENT 
+                        Newsletter</A><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+            <TABLE style="WIDTH: 100%; BACKGROUND-COLOR: #000000" cellSpacing=1 
+            cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=3 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=pn-title style="BACKGROUND-COLOR: #ffffff">My 
+                        Menu</TD></TR>
+                    <TR>
+                      <TD class=pn-normal 
+                        style="BACKGROUND-COLOR: #ffffff"><STRONG><BIG>·</BIG></STRONG>&nbsp;<A 
+                        class=pn-normal title="Back to the home page.." 
+                        href="http://www.aadvent.org/index.php">Home</A><BR><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+            <TABLE style="WIDTH: 100%; BACKGROUND-COLOR: #000000" cellSpacing=1 
+            cellPadding=0 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=3 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=pn-title 
+                        style="BACKGROUND-COLOR: #ffffff">Site Menu</TD></TR>
+                    <TR>
+                      <TD class=pn-normal 
+                        style="BACKGROUND-COLOR: #ffffff"><BR>
+                        <DIV style="TEXT-ALIGN: center">
+                        <FORM action=index.php method=post>
+                        <DIV><SELECT class=pn-text 
+                        onchange=top.location.href=this.options[this.selectedIndex].value 
+                        name=newlanguage><OPTION 
+                          selected>-----</OPTION><OPTION 
+                          value=http://www.aadvent.org/modules.php?op=modload&amp;name=FAQ&amp;file=index>FAQ</OPTION><OPTION 
+                          value=http://www.aadvent.org/modules.php?op=modload&amp;name=Topics&amp;file=index>Topics</OPTION><OPTION 
+                          value=http://www.aadvent.org/modules.php?op=modload&amp;name=Members_List&amp;file=index>Members</OPTION><OPTION 
+                          value=http://www.aadvent.org/modules.php?op=modload&amp;name=Recommend_Us&amp;file=index>Recommendation</OPTION><OPTION 
+                          value=http://www.aadvent.org/modules.php?op=modload&amp;name=Search&amp;file=index>Search</OPTION><OPTION 
+                          value=http://www.aadvent.org/modules.php?op=modload&amp;name=legal&amp;file=index>Legal 
+                          Documents</OPTION></SELECT></DIV></FORM></DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR><IMG 
+            height=1 alt="" 
+            src="/PrivateLabel/Aadvent/Images/pix.gif" width="100%"> 
+          </TD>
+          <TD>&nbsp;&nbsp;</TD>
+          <TD vAlign=top>
+            <TABLE style="BACKGROUND-COLOR: #cccccc" cellSpacing=1 cellPadding=0 
+            width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE style="BACKGROUND-COLOR: #ffffff" cellSpacing=1 
+                  cellPadding=8 width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>

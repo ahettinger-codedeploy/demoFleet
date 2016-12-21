@@ -1,0 +1,684 @@
+@import 'reset.css';
+/* CSS Document */
+html,
+body {
+	color: #bab596;
+	font-size: 13px;
+	line-height: 1.35;
+	margin:0;
+	padding:0;
+	height:100%;
+}
+legend
+{color: #fff;}
+h1 {
+	color: #ffce9b;
+	font-family: 'Georgia', 'Times New Roman', serif;
+	font-size: 24px;
+	font-variant: small-caps;
+	margin: 0 0 15px;
+}
+h2 {
+	color: #bab596;
+	font-size: 18px;
+	margin-bottom: 5px;
+}
+h3 {
+	color: #bab596;
+	font-size: 14px;
+	margin-bottom: 5px;
+}
+a {
+	color: #fffbe5;
+	text-decoration: underline;
+}
+	a:hover {
+		text-decoration: none;
+	}
+p, ul {
+	color: #bab596;
+	margin: 0 0 10px;
+}
+ul {
+	margin: 0 0 10px 15px;
+}
+ul li {
+	background: transparent url("/clients/CarsonValleyInn/Images/bullet-content.gif") no-repeat left 6px;
+	padding: 0 0 0 15px;
+}
+.ml8 {
+	margin-left:8px !important;
+}
+.googlemap {
+	margin: 0 0 10px;
+}
+#container {
+   min-height:100%;
+   min-width: 960px;
+
+
+}
+.logo {
+	background: transparent url("/clients/CarsonValleyInn/Images/carson-logo.png") no-repeat left top;
+	height: 112px;
+	font-size: 0;
+	left: 100px;
+	position: absolute;
+	text-indent: -1000px;
+	top: 10px;
+	width: 195px;
+	cursor:pointer;
+	overflow:hidden;
+}
+* html .logo {
+	background: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://hebsdev.com/Carson_Valley_Inn/buildout/webpage_files/carson-logo.png');
+}
+#wrap {
+	background: transparent url(/clients/CarsonValleyInn/Images/bodybg_3.jpg) repeat-y center top;
+	padding-bottom: 130px;		/* Height of the footer */
+}
+#footer {
+	background-image: url(/clients/CarsonValleyInn/Images/footerbg.jpg);
+   position:absolute;
+   bottom:0;
+   overflow: hidden;
+   width:100%;
+   height: 130px;   /* Height of the footer */
+}
+#footer .footerbox {
+	display:block;
+	height:129px;
+	background-image: url(/clients/CarsonValleyInn/Images/footerbg2.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+#footer .footerbox .inner {
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 20px 25px 20px 205px;
+	width: 730px;
+}
+body {
+	background-image: url(/clients/CarsonValleyInn/Images/bodybg_0.jpg);
+	background-repeat: repeat;
+	color: #bab596;
+	font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;
+}
+.bg_header {
+	background-image: url(/clients/CarsonValleyInn/Images/bodybg_2.gif);
+	background-repeat: repeat-x;
+	display: block;
+	height: 472px;
+	width: 100%;
+	position:relative;
+}
+.photo {
+	display: block;
+	height: 472px;
+	width: 1150px;
+	position:relative;
+	z-index:10;
+	overflow: hidden;
+	margin:0 auto;
+	left:50%;
+	margin-left:-575px;
+}
+.photomask {
+	display: block;
+	height: 472px;
+	width: 1150px;
+	background-image: url(/clients/CarsonValleyInn/Images/photo_mask.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	position:absolute;
+	z-index:500;
+	left:50%;
+	margin-left:-575px;
+	overflow:hidden;
+}
+.reservation-btn {
+	background:url("/clients/CarsonValleyInn/Images/reservation-btn.png") no-repeat 0 0;
+	cursor: pointer;
+	display: block;
+	height: 38px;
+	position: absolute;
+	text-indent: -10000px;
+	left: 50%;
+	top:0;
+	width: 220px;
+	z-index: 1000;
+	overflow:hidden;
+	margin-left:257px;
+}
+* html .reservation-btn {
+	background-image: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://hebsdev.com/Carson_Valley_Inn/buildout/webpage_files/reservation-btn.png');
+}
+#booking {
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	left: 50%;
+	text-align: center;
+	top: -200px;
+	width: 203px;
+	z-index: 600;
+	margin-left:266px;
+}
+	#booking .inner {
+		background:url("/clients/CarsonValleyInn/Images/booking-bg.png") 0 100% no-repeat;
+		overflow: hidden;
+		padding: 10px 0px 15px;
+		width: 203px;
+		height:178px;
+		position:relative;
+	}
+	* html #booking .inner {
+		background:#3f0f00;
+	}
+	#booking form {
+		position:relative;
+		z-index:900;
+	}
+	#booking fieldset {
+		display: block;
+		margin: 0 0 5px;
+		position: relative;
+		z-index: 1000;
+	}
+	#booking legend {
+		display: none;
+	}
+	#booking label {
+		color: #f2e9d6;
+		display: block;
+		font-size: 10px;
+		text-align: center;
+		width: 100%;
+	}
+	#booking input.text {
+		background-color: #f2edc7;
+		border: 1px solid #414141;
+		color: #370808;
+		font-size: 12px;
+		height: 17px;
+		margin: 0 0 0px 50px;
+		padding: 2px 10px 3px;
+		position: relative;
+		width: 90px;
+	}
+	#booking input.button {
+		background: transparent url("/clients/CarsonValleyInn/Images/booking-btn.png") no-repeat left top;
+		cursor: pointer;
+		display: block;
+		font-size: 0;
+		line-height: 0;
+		height: 22px;
+		border: 0px;
+		margin: 0 auto 5px;
+		text-indent: -1000px;
+		width: 81px;
+		z-index: 250;
+		line-height:0;
+	}
+	* html #booking input.button {
+		background: none;
+	    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://hebsdev.com/Carson_Valley_Inn/buildout/webpage_files/booking-btn.png');
+	}
+	#booking a {
+		color: #eed493;
+		display: block;
+		font-family: 'Georgia', 'Times New Roman', serif;
+		text-decoration: none;
+		text-transform: uppercase;
+		z-index: 250;
+	}
+	#booking a:hover {
+		color: #f2e9d6;
+	}
+	#booking .two {
+		padding: 0px 18px 0px 20px;
+	}
+	#booking .fl {
+		display: inline;
+		float: left;
+		margin: 0 10px 10px 0;
+		width: 45px;
+	}
+	#booking .fl label {
+		display: block;
+		width: 45px;
+	}
+	#booking .fl select {
+	float: left;
+		width: 45px;
+	}
+* html div.photomask {
+	background: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://hebsdev.com/Carson_Valley_Inn/buildout/webpage_files/photo_mask.png');
+}
+.sto {
+	height:auto !important;
+	height:100%;
+	min-height:100%;
+	width:831px;
+	position:absolute;
+	z-index:510;
+	left:50%;
+	margin-left:-1280px;
+	background-image: url(/clients/CarsonValleyInn/Images/bgshadowleft.png);
+	background-repeat: repeat-y;
+	background-position: right top;
+}
+* html div.sto {
+	background: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://hebsdev.com/Carson_Valley_Inn/buildout/webpage_files/bgshadowleft.png');
+}
+.sto2 {
+	height: 100%;
+	width:861px;
+	position:absolute;
+	z-index:550;
+	left:50%;
+	margin-left:480px;
+	background-image: url(/clients/CarsonValleyInn/Images/bgshadowright.png);
+	background-repeat: repeat-y;
+	background-position: left top;
+}
+* html div.sto2 {
+	background: none;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://hebsdev.com/Carson_Valley_Inn/buildout/webpage_files/bgshadowright.png');
+}
+.bodymain {
+	height: 100%;
+	width:100%;
+	overflow:hidden;
+	clear:both;
+}
+.mainmenudiv {
+	height: 44px;
+	width:1800px;
+	position:absolute;
+	z-index:300;
+	overflow:hidden;
+	background-image: url(/clients/CarsonValleyInn/Images/bgmenudiv.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	top:472px;
+	left:50%;
+	margin-left:-900px;
+	vertical-align: top;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+		color:#FFF;
+}
+.bodyarea {
+	display:block;
+	width:950px;
+	overflow: hidden;
+	position: relative;
+	margin:0 auto;
+	margin-top:45px;
+	
+}
+.left {
+	display:block;
+	width:200px;
+	float:left;
+	color:#FFF;
+	overflow:hidden;
+}
+.center {
+	display:block;
+	width:700px;
+	float:left;
+		color:#FFF;
+		
+}
+	.center .inner {
+		padding: 20px 25px;
+	}
+.right {
+	display:block;
+	width:213px;
+	float:left;
+	color:#FFF;
+	overflow:hidden;
+}
+
+#topmenu {
+	display: block;
+	margin: 15px auto 0;
+	padding: 0px 0 0 15px;
+	position: relative;
+	overflow: hidden;
+	width: 960px;
+	z-index: 10000;
+}
+	#topmenu li {
+		background: none;
+		display: block;
+		float: left;
+		padding: 0;
+        position:relative;
+	}
+	#topmenu li.first a {
+		width: 175px;
+	}
+		#topmenu li a {
+			color: #fcdd9f;
+			display: block;
+			font-family: 'Georgia', 'Times New Roman', serif;;
+			font-size: 12px;
+			line-height: 27px;
+			padding: 0 0 0 25px;
+			text-align: left;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+		#topmenu li a.active, #topmenu li a:hover {
+			color: #fffee6;
+		}
+#mainmenu {
+	display: block;
+	margin: 15px auto 0;
+	padding: 0px 0 0 20px;
+	position: relative;
+	overflow: hidden;
+	width: 185px;
+	z-index: 900;
+}
+	#mainmenu li {
+		background: none;
+		display: block;
+		float: left;
+		padding: 0;
+		width: 100%;
+	}
+		#mainmenu li a {
+			color: #fcdd9f;
+			display: block;
+			font-family: 'Georgia', 'Times New Roman', serif;
+			font-size: 12px;
+			line-height: 25px;
+			margin: 0px 0px 0px 5px;
+			text-align: left;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+		#mainmenu li.active a, #mainmenu li a:hover {
+			color: #ffffff;
+		}
+		#mainmenu li ul {
+			display: none;
+			margin: 0;
+		}
+		#mainmenu li.active ul {
+			display: block;
+		}
+			#mainmenu li ul li {
+				background: none;
+				display: block;
+				padding: 0;
+			}
+				#mainmenu li ul li a, #mainmenu li.active ul li a {
+					background: transparent url(/clients/CarsonValleyInn/Images/bullet.gif) no-repeat 15px center;
+					color: #DFD0A7;
+					font-size: 11px;
+					line-height: 22px;
+					margin: 0;
+					padding: 0 0 0 30px;
+					text-transform: none;
+				}
+				#mainmenu li ul li a:hover, #mainmenu li ul li a.active {
+					color: #fff;
+				}
+.signup {
+	background: transparent url("/clients/CarsonValleyInn/Images/signup-bg.png") no-repeat left bottom;
+	color: #988570;
+	font-family: Arial;
+	font-size: 11px;
+	margin: 75px 10px 0;
+}
+	.signup .inner {
+		background: transparent url("/clients/CarsonValleyInn/Images/signup-bg.png") no-repeat left top;
+		padding: 15px 10px;
+	}
+	.signup h3 {
+		color: #efbe7f;
+		font-family: 'Georgia', 'Times New Roman', serif;
+		font-size: 12px;
+		margin: 0 0 5px;
+		padding: 0;
+		text-transform: uppercase;
+	}
+	.signup form {
+		width: 160px;
+	}
+	.signup p {
+		color: #988570;
+	}
+	.signup legend {
+		display: none;
+	}
+	.signup input.text {
+		background: #471210;
+		color: #988570;
+		border: 1px solid #533217;
+		height: 16px;
+		float: left;
+		padding: 2px 3px;
+		width: 90px;
+	}
+	.signup .button {
+		background: transparent url("/clients/CarsonValleyInn/Images/signup-btn.png") no-repeat left top;
+		border: 0px;
+		cursor: pointer;
+		float: left;
+		font-size: 0;
+		height: 22px;
+		text-indent: -100px;
+		width: 61px;
+	}
+	.signup .button:hover {
+		background-position: left -30px;
+	}
+div.title {
+	margin: 65px 0 15px;
+}
+.features {
+	margin: 0 0 15px;
+}
+	.features a.more, .flash_banner a#tour {
+		background: transparent url("/clients/CarsonValleyInn/Images/read-arr.gif") no-repeat right center;
+		color: #bd9371;
+		display: block;
+		font-family: 'Georgia', 'Times New Roman', serif;
+		font-size: 12px;
+		font-variant: small-caps;
+		line-height: 10px;
+		margin: 5px 0px;
+		padding: 0px 12px 0px 0px;
+		text-align: right;
+		text-decoration: none;
+	}
+	.features a.more:hover, .flash_banner a#tour:hover {
+		color: #fffee6;
+	}
+#footermenu {
+
+	height: 25px;
+	margin: 0;
+	width: 100%;
+	
+}
+	#footermenu li {
+		background: none;
+		display: inline;
+		float: left;
+		padding: 0 0 0 25px;
+	}
+		#footermenu li a {
+			color: #d7b97e;
+			display: block;
+			font-size: 11px;
+			font-family: 'Georgia', 'Times New Roman', serif;
+			text-decoration: none;
+			text-transform: uppercase;
+			white-space: nowrap;
+		}
+		#footermenu li a.active, #footermenu li a:hover {
+			color: #fffee6;
+		}
+#social {
+	display: none;
+	float: left;
+}
+	#social li {
+		background: none;
+		display: inline;
+		float: left;
+		margin: 0 10px 0 0;
+		padding: 0;
+	}
+		#social li a {
+			background: transparent url("/clients/CarsonValleyInn/Images/social-icons.png") no-repeat left top;
+			display: block;
+			padding: 0 0 0 25px;
+		}
+		#social li.twitter a {
+			background-position: left -20px;
+		}
+#footer .info p {
+	color: #a2907c;
+	clear: both;
+	display: block;
+	font-size: 11px;
+	margin: 0 0 0 25px;
+}
+#footer .info p.copyright {
+	color: #9b9285;
+	margin: 10px 0 0 25px;
+}
+	#footer .info p.copyright a {
+		color: #9b9285;
+}
+
+/* GALLERY */
+
+.gallery {
+	margin:20px 0;
+	margin-left:-15px;
+}
+.gallery li {
+	padding:0;
+	background:none;
+	float:left;
+	margin-left:13px;
+	margin-bottom:10px;
+}
+.gallery img {
+	border:2px solid #ff9a44;
+}
+.gallery a:hover img {
+	border-color:#fff;
+}
+
+/*Flash Tour Image*/
+.flash_banner{
+	margin: 0 0 15px; background-image: url("/clients/CarsonValleyInn/Images/flash_bg.png"); background-repeat: no-repeat; width:213px; height:101px; display:block; overflow: hidden; cursor: pointer;
+}
+
+.flash_banner div{
+	margin-top: 7px; margin-left: 8px; margin-bottom: 12px; border: none; cursor: pointer; position: relative; z-index: 1; width: 198px; height: 72px;
+}
+
+.flash_banner div a{
+	 border: none; cursor: pointer; position: relative; z-index: 1000; display: block; width: 198px; height: 72px;
+}
+
+.flash_banner div object{
+	position: relative; z-index: 0; cursor: pointer; display: inline-block;
+}
+
+.flash_banner div object embed{
+	position: relative; z-index: 0; cursor: pointer;
+}
+
+.flash_banner a#banner_link {
+    display: block;
+    height: 72px;
+    position: relative;
+    width: 198px;
+    z-index: 10000;
+	cursor: pointer;
+}
+
+.tour_wrapper {
+    display: block;
+    height: 85px;
+    left: 738px;
+    position: absolute;
+    top: 18px;
+    width: 211px;
+    z-index: 10000;
+}
+
+.tour_wrapper a{
+	display: block;
+    height: 85px;
+	 width: 211px;
+	 position: relative;
+	 z-index: 10000;
+	 text-decoration: none;
+}
+
+
+/**SOCIAL**/
+
+.social {
+	float:left;
+	position:relative;
+	overflow:hidden;
+	left:20px;
+	top:-2px;
+	z-index: 100000;
+}
+.social li a{
+	display:block;
+	height:50px;
+	text-indent:-1000em;
+
+}
+.social li.fb a {
+	background:url(/clients/CarsonValleyInn/Images/socialsprite.png) no-repeat 0px 2px;
+	height:27px
+	
+}
+.social li.fb a:hover {
+	background:url(/clients/CarsonValleyInn/Images/socialsprite.png) no-repeat 0px -24px;
+	height:30px
+}
+
+.social li.tw a {
+	background:url(/clients/CarsonValleyInn/Images/socialsprite.png) no-repeat -30px 2px;
+	margin-left:10px;
+	height:27px
+}
+.social li.tw a:hover {
+	background:url(/clients/CarsonValleyInn/Images/socialsprite.png) no-repeat -30px -24px;
+	height:30px
+}
+
+.social li.gg a {
+	background:url(/clients/CarsonValleyInn/Images/socialsprite.png) no-repeat -60px 2px;
+	margin-left:10px;
+	height:27px
+}
+.social li.gg a:hover {
+	background:url(/clients/CarsonValleyInn/Images/socialsprite.png) no-repeat -60px -24px;
+	height:30px
+}
+

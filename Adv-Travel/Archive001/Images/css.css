@@ -1,0 +1,3642 @@
+@CHARSET "UTF-8";
+
+html#ecwid_html body#ecwid_body HTML { /* Workaround for GWT issue 1932 */
+  margin: 0px !important;
+  border: none !important;
+}
+
+html#ecwid_html body#ecwid_body .dragdrop-handle {
+  cursor: move;
+  user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: -moz-none;
+}
+
+html#ecwid_html body#ecwid_body .dragdrop-draggable {
+  zoom: 1; /* IE gain hasLayout */
+}
+
+html#ecwid_html body#ecwid_body .dragdrop-dragging {
+  zoom: normal; /* remove artifacts */
+}
+
+html#ecwid_html body#ecwid_body .dragdrop-positioner {
+  border: 1px dashed #1E90FF; /* blue */
+  margin: 0px !important;
+  zoom: 1; /* IE gain hasLayout */
+  z-index: 100;
+}
+
+html#ecwid_html body#ecwid_body .dragdrop-flow-panel-positioner {
+  color: #1E90FF; /* blue */
+  display: inline;
+  text-align: center;
+  vertical-align: middle;
+}
+
+html#ecwid_html body#ecwid_body .dragdrop-proxy {
+  background-color: #77AAFF; /* light blue */
+}
+html#ecwid_html body#ecwid_body .dragdrop-selected,html#ecwid_html body#ecwid_body .dragdrop-dragging,html#ecwid_html body#ecwid_body .dragdrop-proxy {
+  filter: alpha(opacity = 30);
+  opacity: 0.3;
+}
+
+html#ecwid_html body#ecwid_body .dragdrop-movable-panel {
+  z-index: 200;
+  margin: 0px !important;
+  border: none !important;
+}
+
+/******************************************************************************/
+/******************************* Common classes *******************************/
+/******************************************************************************/
+
+/* Container for all Ecwid stuff */
+html#ecwid_html body#ecwid_body .ecwid {
+    margin: 0px;
+    font: normal 14px tahoma, geneva, verdana, sans-serif;
+    color: #1e2c38;
+}
+html#ecwid_html body#ecwid_body .dragdrop-movable-panel {
+	z-index: 1010;
+}
+/* clear styles */
+html#ecwid_html body#ecwid_body .ecwid div, html#ecwid_html body#ecwid_body .ecwid span, html#ecwid_html body#ecwid_body .ecwid pre, html#ecwid_html body#ecwid_body .ecwid a, html#ecwid_html body#ecwid_body .ecwid img, html#ecwid_html body#ecwid_body .ecwid form, html#ecwid_html body#ecwid_body .ecwid label,
+html#ecwid_html body#ecwid_body .ecwid table, html#ecwid_html body#ecwid_body .ecwid tbody, html#ecwid_html body#ecwid_body .ecwid tfoot, html#ecwid_html body#ecwid_body .ecwid thead, html#ecwid_html body#ecwid_body .ecwid tr, html#ecwid_html body#ecwid_body .ecwid th, html#ecwid_html body#ecwid_body .ecwid td {
+    position: static;
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	outline: none;
+	z-index: auto;
+    background-color: transparent;
+    float: none;
+}
+html#ecwid_html body#ecwid_body .ecwid label {
+    display: inline;
+}
+html#ecwid_html body#ecwid_body .ecwid td {
+    vertical-align: middle;
+}
+html#ecwid_html body#ecwid_body .ecwid table {
+    border-collapse: collapse;
+    width: auto;
+}
+html#ecwid_html body#ecwid_body .ecwid input, html#ecwid_html body#ecwid_body .ecwid button, html#ecwid_html body#ecwid_body .ecwid textarea, html#ecwid_html body#ecwid_body .ecwid select {
+    width: auto;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+	outline: none;
+}
+html#ecwid_html body#ecwid_body .ecwid button::-moz-focus-inner {
+    border: none;
+}
+html#ecwid_html body#ecwid_body .ecwid ul {
+    list-style: disc;
+    list-style-position: outside;
+    list-style-image: none;
+}
+
+* html body {
+	margin: 0px; /* ie6 hack */
+    /* fixes floating minicart in ie6 */
+    background: url(blank.gif) fixed;
+}
+
+html#ecwid_html body#ecwid_body .ecwid-EcwidHintingLink {
+    color: #009dde;
+    font: normal 13px tahoma, geneva, verdana, sans-serif;
+    outline: none;
+    cursor: default;
+    text-decoration: none;
+}
+html#ecwid_html body#ecwid_body .ecwid-EcwidHintingLink-Popup {
+	font: normal 13px tahoma, geneva, verdana, sans-serif;
+	background-color: #ffffff;
+	border: 1px solid #cccccc;
+	padding: 10px;
+	color: #464646;
+}
+html#ecwid_html body#ecwid_body div.ecwid-EcwidHintingLink-shadow {
+    background-color: #000000;
+    -moz-opacity: 0.1;
+    opacity: 0.10;
+    filter: alpha(opacity=10);
+}
+
+/* This style is used internally by Ecwid, please don't modify it */
+div.ecwid-cssLoadObserver {
+    height: 1px;
+}
+
+/******************************************************************************/
+/************* Categories (horizontal and vertical) Widget classes ************/
+/******************************************************************************/
+
+html#ecwid_html body#ecwid_body div.ecwid-categories table {
+    border-collapse: separate;
+}
+
+/* First level category links */
+html#ecwid_html body#ecwid_body span.ecwid-categories-category {
+    font: normal 25px "trebuchet MS", helvetica, verdana, sans-serif;
+    color: #4b4b4b;
+    white-space: nowrap;
+}
+
+/* Second level category links */
+html#ecwid_html body#ecwid_body div.ecwid-categoriesMenuBar span.ecwid-categories-category {
+    font-size: 21px;
+}
+
+/* 3rd, 4th, etc level category links */
+html#ecwid_html body#ecwid_body div.ecwid-categories-MenuBarPopup div.ecwid-categoriesMenuBar span.ecwid-categories-category {
+    font: normal 16px tahoma, geneva, verdana, sans-serif;
+}
+
+/* Current category links */
+html#ecwid_html body#ecwid_body div.ecwid-categoriesMenuBar td.gwt-MenuItem-selected span.ecwid-categories-category,
+html#ecwid_html body#ecwid_body div.ecwid-categoriesMenuBar td.gwt-MenuItem-current span.ecwid-categories-category,
+html#ecwid_html body#ecwid_body td.ecwid-categories-vertical-table-cell-selected span.ecwid-categories-category,
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar table.gwt-TabBarItem-selected span.ecwid-categories-category {
+    color: #009dde;
+}
+
+/* Popup container of the 3rd, 4th, etc level categories menus */
+html#ecwid_html body#ecwid_body div.ecwid-categories-MenuBarPopup {
+    background-color: #ffffff;
+    border: solid 1px #cbced1;
+    padding: 2px 12px 10px 7px;
+    z-index: 45;
+}
+
+/* 3rd, 4th, etc level category loading item */
+html#ecwid_html body#ecwid_body div.ecwid-categories-MenuBarPopup div.ecwid-categoriesMenuBar span.ecwid-categories-loading {
+	background: url(icons/ajax-loader.gif) no-repeat 0px 5px;
+	padding-left: 30px;
+    font: normal 16px tahoma, geneva, verdana, sans-serif;
+}
+
+/* Bottom-bordered elements */
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar div.gwt-TabBarFirst,
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar div.gwt-TabBarRest,
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar table.gwt-TabBarItem,
+html#ecwid_html body#ecwid_body div.ecwid-categories-horizontal-menuBarContainer,
+html#ecwid_html body#ecwid_body td.ecwid-categories-vertical-table-cell,
+html#ecwid_html body#ecwid_body div.ecwid-categories-MenuBarPopup div.menuSeparatorInner
+{
+    border: none;
+    border-bottom: 1px solid #cbced1;
+}
+
+/* Categories submenu icon */
+html#ecwid_html body#ecwid_body div.ecwid-categoriesMenuBar-vertical td.subMenuIcon {
+    padding: 5px;
+    background: transparent url(icons/arrow-subcategories-menu.gif) no-repeat center center;
+}
+
+/* First level vertical categories */
+html#ecwid_html body#ecwid_body td.ecwid-categories-vertical-table-cell table.ecwid-categories-vertical-table-cell-categoryLink {
+    margin: 10px 20px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-categories-vertical-table-lastVisibleCell {
+    border-bottom: none;
+}
+
+/* First level horizontal categories */
+html#ecwid_html body#ecwid_body div.ecwid-categories-horizontal {
+	margin-top: 4px;
+}
+
+/* Second level vertical categories */
+html#ecwid_html body#ecwid_body div.ecwid-categories-vertical div.ecwid-categoriesMenuBar {
+    margin: 2px 12px 4px 0px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-categories-vertical td.gwt-MenuItem {
+    padding: 0px 40px 0px 30px;
+    width: 100%;
+}
+
+/* First level horizontal categories */
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabPanel,
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar {
+    width: 100%;
+}
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar div.tabMiddleCenterInner {
+    padding: 0px 6px 6px 6px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar div.gwt-TabBarFirst {
+    width: 0px;
+    height: 50px !important;
+}
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar div.gwt-TabBarRest {
+    height: 1px !important;
+}
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar table.gwt-TabBarItem-selected,
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar table.gwt-TabBarItem-selected:focus {
+    padding-bottom: 1px;
+    border-bottom: none;
+}
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar table.gwt-TabBarItem-selected td.tabTopLeft {
+    background: url(icons/tab.gif) no-repeat;
+    height: 11px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar tr.tabTop,
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar td.tabTopCenter {
+    height: 11px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar table.gwt-TabBarItem-selected td.tabTopCenter {
+    background: url(icons/tab.gif) repeat-x -11px 0;
+    height: 11px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar table.gwt-TabBarItem-selected td.tabTopRight {
+    background: url(icons/tab.gif) no-repeat -589px 0;
+    height: 11px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar table.gwt-TabBarItem-selected td.tabMiddleLeft {
+    background: url(icons/tab.gif) repeat-y 0 -11px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar table.gwt-TabBarItem-selected td.tabMiddleRight {
+    background: url(icons/tab.gif) repeat-y -589px -11px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar table.gwt-TabBarItem div.tabMiddleRightInner,
+html#ecwid_html body#ecwid_body table.ecwid-categoriesTabBar table.gwt-TabBarItem div.tabMiddleLeftInner {
+    width: 11px;
+}
+
+/* Second level horizontal categories */
+html#ecwid_html body#ecwid_body div.ecwid-categories-horizontal-menuBarContainer {
+    padding: 6px 15px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-categories-horizontal td.gwt-MenuItem {
+    padding: 1px 5px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-categories-horizontal td.gwt-MenuItemSeparator div.menuSeparatorInner {
+    width: 25px;
+}
+
+/* 3rd, 4th, etc level categories */
+html#ecwid_html body#ecwid_body div.ecwid-categories-MenuBarPopup td.gwt-MenuItem {
+    padding: 3px 40px 3px 10px;
+    width: 100%;
+}
+
+
+
+/******************************************************************************/
+/***************************** Bag Widget classes *****************************/
+/******************************************************************************/
+
+/* Main container of the Bag widget */
+html#ecwid_html body#ecwid_body div.ecwid-minicart {
+    background: transparent url(icons/minicart.png) no-repeat;
+    filter: expression(fixPNG_crop(this));
+    background-position: top left;
+    width: 159px;
+    height: 156px;
+    text-align: center;
+    display: inline-block;
+    z-index: 50;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+	overflow: hidden;
+}
+
+/* Widget caption */
+html#ecwid_html body#ecwid_body div.ecwid-minicart-caption {
+    position: relative;
+    left: 0px;
+    top: 84px;
+    width: 159px;
+    text-align: center;
+    font: normal 16px tahoma, geneva, verdana, sans-serif;
+    color: #4b5660;
+}
+
+/* Drag and drop tip label */
+html#ecwid_html body#ecwid_body div.ecwid-minicart-label {
+    position: relative;
+    left: 0px;
+    top: 86px;
+    width: 159px;
+    text-align: center;
+    line-height: 10px;
+}
+html#ecwid_html body#ecwid_body span.ecwid-minicart-label-text {
+    font: 11px/13px helvetica, arial, verdana, sans-serif;
+    color: #b4b8bc;
+}
+
+/* A link to open bag */
+html#ecwid_html body#ecwid_body div.ecwid-minicart-link {
+    position: relative;
+    left: 0px;
+    top: 82px;
+    width: 159px;
+    text-align: center;
+}
+html#ecwid_html body#ecwid_body div.ecwid-minicart-link * {
+    text-decoration: underline;
+    cursor: pointer;
+    font: 11px/20pt helvetica, arial, verdana, sans-serif;
+    color: #1e7ec8;
+}
+
+/* Items counter */
+html#ecwid_html body#ecwid_body div.ecwid-minicart-counter {
+    position: absolute;
+    left: 61px;
+    top: 36px;
+    width: 28px;
+    font: normal 20px tahoma, geneva, verdana, sans-serif;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    zoom: 1;
+}
+
+/* Click area over the bag icon */
+html#ecwid_html body#ecwid_body div.ecwid-minicart-clickArea {
+    position: absolute;
+    left: 47px;
+    width: 65px;
+    top: 15px;
+    height: 70px;
+    cursor: pointer;
+    zoom: 1;
+}
+
+/* Styles indicating that a product is being moved over the widget */
+html#ecwid_html body#ecwid_body div.ecwid-minicart-dropTargetEngage {
+    background-position: bottom right;
+}
+html#ecwid_html body#ecwid_body div.ecwid-minicart-dropTargetEngage span.ecwid-minicart-label-text {
+    background-color: #f1ffa6;
+}
+
+/* Bag in a facebook app */
+html#ecwid_html body#ecwid_body div.ecwid-minicart-mini-rolloverContainer {
+    display: none;
+}
+html#ecwid_html body#ecwid_body div.ecwid-minicart-mini-rollover {
+	z-index: 20;
+	border: solid 1px #dae1e7;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	white-space: nowrap;
+	padding: 4px 9px;
+	left: -10px;
+	top: -5px;
+	background: white;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-minicart-mini {
+    width: 220px;
+}
+html#ecwid_html body#ecwid_body .ecwid-minicart-mini-count {
+	color: #2583AD;
+	font: 13px tahoma,geneva,verdana,sans-serif;
+} 
+html#ecwid_html body#ecwid_body .ecwid-minicart-mini-overlay-count, html#ecwid_html body#ecwid_body .ecwid-minicart-mini-items, html#ecwid_html body#ecwid_body div.ecwid-minicart-mini-total {
+	font: 11px tahoma,geneva,verdana,sans-serif;
+	color: #858585;
+}
+html#ecwid_html body#ecwid_body span.ecwid-minicart-mini-overlay-count {
+	margin-left: 7px;
+	margin-right: 7px;
+}
+html#ecwid_html body#ecwid_body span.ecwid-minicart-mini-total-label {
+	margin-right: 7px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-minicart-mini-total {
+	text-align: right; margin-top: 3px; }
+
+
+/******************************************************************************/
+/************************** Search Box Widget classes *************************/
+/******************************************************************************/
+
+/* Container of the search box */
+html#ecwid_html body#ecwid_body div.ecwid-SearchPanel {
+}
+
+/* Search box input field */
+html#ecwid_html body#ecwid_body input.ecwid-SearchPanel-field {
+    margin-right: 10px;
+}
+
+/* Search button */
+html#ecwid_html body#ecwid_body button.ecwid-SearchPanel-button {
+}
+
+
+
+/******************************************************************************/
+/*********************** Product Browser Widget classes ***********************/
+/******************************************************************************/
+
+/*-------------------------------------*/
+/*---- Common or singular elements ----*/
+/*-------------------------------------*/
+
+/* The topmost container of the Product Browser widget */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser {
+    padding: 0px 10px 20px 10px;
+}
+
+/* The topmost container of the Product Browser widget in Facebook */
+html#ecwid_html body#ecwid_body div.ecwid_facebook_app div.ecwid-productBrowser {
+    min-height: 600px;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-ProductBrowserPopup {
+	z-index: 900;
+}
+html#ecwid_html body#ecwid_body div.ecwid-ProductBrowserPopup-content {
+	width: 850px;
+	height: 550px;
+}
+
+/* Ecwid links */
+html#ecwid_html body#ecwid_body .ecwid a, html#ecwid_html body#ecwid_body .ecwid a:active, html#ecwid_html body#ecwid_body .ecwid a:visited {
+    font: normal 13px tahoma, geneva, verdana, sans-serif;
+    color: #2583ad;
+    background-color: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Ecwid buttons */
+html#ecwid_html body#ecwid_body button.gwt-Button, html#ecwid_html body#ecwid_body #wrapper button.gwt-Button {
+    background: transparent url(icons/back_normal.gif) repeat-x;
+    border: solid 1px #d3d4d6;
+    outline: none;
+    vertical-align: baseline;
+    text-decoration: none;
+    cursor: pointer;
+    color: #1e7ec8;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    height: 24px;
+    font: normal 12px helvetica, arial, verdana, sans-serif;
+    white-space: nowrap;
+    padding: 0 5px;
+}
+html#ecwid_html body#ecwid_body button.gwt-Button[type] { /* for everything but ie */
+	min-width: 75px;
+	min-width: 0 \0/IE9;	/* ie9 */
+	padding: 0 15px \0/IE9; /* ie9 */
+}
+html#ecwid_html body#ecwid_body button.gwt-Button:active, html#ecwid_html body#ecwid_body #wrapper button.gwt-Button:active {
+    background: transparent url(icons/back_on.gif) repeat-x;
+    border: solid 1px #a0a4aa;
+    font: normal 12px helvetica, arial, verdana, sans-serif;
+    color: #ffffff;
+    outline: none;
+}
+html#ecwid_html body#ecwid_body button.gwt-Button[disabled], html#ecwid_html body#ecwid_body button.gwt-Button[disabled]:active,
+html#ecwid_html body#ecwid_body #wrapper button.gwt-Button[disabled], html#ecwid_html body#ecwid_body #wrapper button.gwt-Button[disabled]:active {
+    background: transparent url(icons/back_normal.gif) repeat-x;
+    border: solid 1px #d3d4d6;
+    outline: none;
+    color: #cccccc;
+}
+
+/* Input elements */
+html#ecwid_html body#ecwid_body input.gwt-TextBox, html#ecwid_html body#ecwid_body input.gwt-PasswordTextBox, html#ecwid_html body#ecwid_body select.gwt-ListBox, html#ecwid_html body#ecwid_body textarea.gwt-TextArea, html#ecwid_html body#ecwid_body input.gwt-DateBox {
+    padding: 3px 5px;
+    font: normal 15px tahoma, geneva, verdana, sans-serif;
+    color: #4b4b4b;
+    outline: none;
+    -moz-user-select: text;
+}
+html#ecwid_html body#ecwid_body input.gwt-TextBox[disabled], html#ecwid_html body#ecwid_body input.gwt-PasswordTextBox[disabled], html#ecwid_html body#ecwid_body select.gwt-ListBox[disabled], html#ecwid_html body#ecwid_body textarea.gwt-TextArea[disabled], html#ecwid_html body#ecwid_body input.gwt-DateBox[disabled] {
+    background-color: #ddd; 
+}
+
+html#ecwid_html body#ecwid_body span.gwt-RadioButton input {
+    margin-right: 7px;
+}
+
+html#ecwid_html body#ecwid_body input.ecwid-DateBox-formatError {
+    border: solid 2px #b80000;
+}
+
+html#ecwid_html body#ecwid_body div.gwt-SuggestBoxPopup {
+    background-color: #ffffff;
+    color: #4b4b4b;
+	border: 1px solid #898989;
+    z-index: 10000001;
+}
+html#ecwid_html body#ecwid_body div.gwt-SuggestBoxPopup .item-selected {
+    color: #ffffff;
+    background-color: #3574de;
+}
+html#ecwid_html body#ecwid_body div.gwt-SuggestBoxPopup table {
+	width: 100%;
+	border-collapse: separate;
+}
+html#ecwid_html body#ecwid_body div.gwt-SuggestBoxPopup-ie6ie7 table {
+	width: auto;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-TermsPopup a {
+	font: 14px tahoma, verdana, geneva, sans-serif;
+}
+html#ecwid_html body#ecwid_body div.ecwid-TermsPopup div.ecwid-popup-headLabel {
+	font-size: 24px;
+	margin: 6px 0px 18px -4px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-TermsPopup div.ecwid-popup-content {
+	padding: 5px 42px 22px 33px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-TermsPopup-terms {
+	border: solid 1px #999999;
+	overflow: auto;
+	padding: 8px;
+	width: 600px;
+	height: 275px;
+	text-align: left;
+}
+
+/* Head labels */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-head {
+    font: normal 20px helvetica, arial, verdana, sans-serif;
+    color: #1e2c38;
+    text-align: left;
+}
+
+/* Ecwid forms */
+html#ecwid_html body#ecwid_body div.ecwid-note {
+	font: normal 11px tahoma, geneva, verdana, sans-serif;
+    color: #1e2c38;
+    display: block;
+	text-align: right;
+}
+html#ecwid_html body#ecwid_body div.ecwid-form {
+    background-color: #eaf3fa;
+    padding: 20px;
+}
+html#ecwid_html body#ecwid_body label.ecwid-fieldLabel {
+    font: normal 14px tahoma, geneva, verdana, sans-serif;
+    color: #1e2c38;
+    display: block;
+}
+html#ecwid_html body#ecwid_body div.ecwid-fieldWrapper {
+    padding-bottom: 2px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-fieldWrapper label.ecwid-fieldLabel {
+    margin-top: 7px;
+    float: left;
+    white-space: nowrap;
+}
+html#ecwid_html body#ecwid_body div.ecwid-fieldWrapper table.ecwid-fieldEnvelope {
+    float: left;
+}
+html#ecwid_html body#ecwid_body .ecwid-fieldWrapper-clear {
+    clear: left;
+    display: block;
+}
+
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-auth-mini {
+	width: 100%;	
+}
+/* 'Sign In' or 'Hello, <name> Sign Out' labels at the top of the product browser */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-auth {
+	position: relative;
+	text-align: right;
+	margin: 7px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-ProductBrowser-auth-anonim, html#ecwid_html body#ecwid_body div.ecwid-ProductBrowser-auth-logged {	
+	top: 2px;
+	margin-right: 190px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-ProductBrowser-auth-anonim-mini, html#ecwid_html body#ecwid_body div.ecwid-ProductBrowser-auth-logged-mini {
+	margin-right: 0px;
+}
+html#ecwid_html body#ecwid_body span.ecwid-ProductBrowser-auth-space {
+    padding: 0px 7px;
+}
+
+/* The backgrounded panel on the right of some pages */
+/* (product details or the shopping bag pages for example) */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-backgroundedPanel {
+    background-color: #ececec;
+}
+
+/* Bbreadcrumbs in catalog */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-categoryPath {
+    font: 13px helvetica, arial, verdana, sans-serif;
+    color: #39434c;
+    padding-top: 5px;
+    text-align: left;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-categoryPath a,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-categoryPath a:active,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-categoryPath a:visited {
+    color: #1e7ec8;
+}
+
+/* Product name links */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productNameLink a,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productNameLink a:active,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productNameLink a:visited {
+    font: normal 18px helvetica, arial, verdana, sans-serif;
+    color: #1e2c38;
+    text-decoration: underline;
+}
+
+/* Product sku */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-sku {
+    font: normal 13px tahoma, geneva, verdana, sans-serif;
+    color: #1e2c38;
+    white-space: nowrap;
+}
+
+/* Product price */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-price {
+    font: normal 24px tahoma, geneva, verdana, sans-serif;
+    color: #a20505;
+    white-space: nowrap;
+}
+
+/* The top panel, containing the result items count and the sort by dropdown */
+html#ecwid_html body#ecwid_body div.ecwid-results-topPanel div {
+    font: normal 11px tahoma, geneva, verdana, sans-serif;
+    color: #000000;
+    white-space: nowrap;
+    display: inline;
+}
+html#ecwid_html body#ecwid_body td.ecwid-results-topPanel-itemsCountLabel-cell {
+	width: 100%;
+}
+html#ecwid_html body#ecwid_body div.ecwid-results-topPanel div.ecwid-results-topPanel-itemsCountLabel {
+    color: #4b4b4b;
+    padding-right: 10px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-results-topPanel div.ecwid-results-topPanel-viewAsPanel {
+    padding-right: 20px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-results-topPanel div.ecwid-results-topPanel-viewAsPanel-link {
+    color: #1e7ec8;
+    cursor: pointer;
+    text-decoration: underline;
+    margin: 0px 4px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-results-topPanel div.ecwid-results-topPanel-viewAsPanel-current {
+    font-weight: bold;
+    margin: 0px 4px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-results-topPanel-sortByPanel select.gwt-ListBox {
+    font: 12px tahoma, geneva, verdana, sans-serif;
+    color:  #000000;
+    margin-left: 5px;
+}
+
+/* The pager in ProductBrowser */
+html#ecwid_html body#ecwid_body div.ecwid-pager {
+    font: 12px helvetica, arial, verdana, sans-serif;
+    color: #1e2c38;
+    margin: 0px 5px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-pager span.ecwid-pager-link {
+    padding: 0px 3px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-pager span.ecwid-pager-link-enabled {
+    cursor: pointer;
+    color: #1e7ec8;
+}
+html#ecwid_html body#ecwid_body div.ecwid-pager span.ecwid-pager-link-enabled span {
+    text-decoration: underline;
+}
+html#ecwid_html body#ecwid_body div.ecwid-pager span.ecwid-pager-link-disabled {
+    cursor: default;
+    color: #1e2c38;
+}
+html#ecwid_html body#ecwid_body div.ecwid-pager-hasTopSeparator {
+    border-top: solid 1px #b8bdc1;
+    padding-top: 10px;
+}
+
+html#ecwid_html body#ecwid_body .ecwid div.ecwid-pager a.ecwid-poweredBy {
+	margin-top: -10px;
+}
+
+html#ecwid_html body#ecwid_body .ecwid a.ecwid-poweredBy {
+	float: right;
+	margin-right: 7px;
+	font: 10px Tahoma, geneva, verdana, sans-serif;
+	color: #9a9fa4;
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* The empty shopping bag and order failed components */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-emptyCartPanel,
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-orderFailed {
+    padding: 25px 5px 0px 5px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-emptyCartPanel div.ecwid-form,
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-orderFailed div.ecwid-form {
+    padding: 45px;
+    text-align: center;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-emptyCartPanel button.gwt-Button,
+html#ecwid_html body#ecwid_body #wrapper div.ecwid-productBrowser-cart-emptyCartPanel button.gwt-Button,
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-orderFailed button.gwt-Button,
+html#ecwid_html body#ecwid_body #wrapper div.ecwid-Checkout-orderFailed button.gwt-Button {
+	margin: 30px 10px 0px 10px;
+}
+
+/* The form for entering shipping or billing addresses */
+html#ecwid_html body#ecwid_body div.ecwid-AddressForm div.ecwid-form {
+    width: 485px;
+    padding: 15px 18px;
+}
+html#ecwid_html body#ecwid_body input.ecwid-AddressForm-name, html#ecwid_html body#ecwid_body input.ecwid-AddressForm-address1, html#ecwid_html body#ecwid_body input.ecwid-AddressForm-address2,
+html#ecwid_html body#ecwid_body input.ecwid-AddressForm-company-name {
+	width: 290px;
+}
+html#ecwid_html body#ecwid_body input.ecwid-AddressForm-city {
+	width: 175px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-AddressForm-state input {
+	width: 175px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-AddressForm-state select {
+	max-width: 290px;
+}
+html#ecwid_html body#ecwid_body input.ecwid-AddressForm-zip {
+	width: 145px;
+}
+html#ecwid_html body#ecwid_body select.ecwid-AddressForm-country {
+	width: 275px;
+}
+html#ecwid_html body#ecwid_body input.ecwid-AddressForm-phone {
+	width: 145px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AddressForm div.ecwid-fieldWrapper label.ecwid-fieldLabel {
+    width: 160px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AddressForm-buttonsPanel {
+    padding: 10px 0px 10px 162px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AddressForm-secureLockIcon {
+    background: transparent url(icons/lock.gif) no-repeat;
+    width: 42px;
+    height: 42px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AddressForm-SSLencryptedPopup {
+    background: transparent url(icons/SSLencrypted.png) no-repeat;
+    width: 196px;
+    height: 116px;
+    z-index: 1001;
+}
+
+/* The address book */
+html#ecwid_html body#ecwid_body div.ecwid-AddressBook-blockContainer {
+	display: -moz-inline-box;
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+    padding: 0px 50px 30px 0px;
+	vertical-align: top;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AddressBook-block {
+    border: solid 1px #b3b7ba;
+    padding: 5px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AddressBook-addButton {
+    background: transparent url(icons/addNewAddress.gif) no-repeat;
+    width: 238px;
+    height: 260px;
+    cursor: pointer;
+    text-align: center;
+    font: normal 30px "trebuchet MS", helvetica, verdana, sans-serif;
+    color: #629cc8;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AddressBook-addButton div {
+    position: relative;
+    top: 60px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AddressBook-item {
+    background: #eaf3fa;
+    width: 238px;
+    min-height: 260px;
+    position: relative;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AddressBook-shipToButton {
+    padding: 15px 20px 0px 20px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AddressBook-itemDescription {
+    font: 14px tahoma, geneva, verdana, sans-serif;
+    color: #000000;
+    padding: 15px 20px 65px 20px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AddressBook-buttonsPanel {
+    position: absolute;
+    bottom: 0px;
+    padding: 0px 19px;
+    width: 200px;
+    height: 50px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AddressBook-item div.ecwid-Person-name {
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AddressBook-item div.ecwid-Person-phone {
+    padding-top: 15px;
+}
+
+/* The box asking visitor to sign in */
+html#ecwid_html body#ecwid_body table.ecwid-LoginBox {
+    border: solid 10px #efefef;
+    margin-top: 30px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-LoginBox-content {
+    padding: 40px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-LoginForm div.ecwid-form {
+    width: 310px;
+    padding: 35px 25px 25px 25px;
+    text-align: center;
+}
+html#ecwid_html body#ecwid_body div.ecwid-LoginForm div.ecwid-fieldWrapper {
+    text-align: center;
+}
+html#ecwid_html body#ecwid_body div.ecwid-LoginForm div.ecwid-fieldWrapper label.ecwid-fieldLabel {
+    float: none;
+    margin-bottom: 3px;
+    font-size: 16px;
+    color: #4b4b4b;
+}
+html#ecwid_html body#ecwid_body div.ecwid-LoginForm div.ecwid-fieldWrapper input {
+    width: 220px;
+    margin-bottom: 18px;
+    float: none;
+}
+html#ecwid_html body#ecwid_body div.ecwid-LoginForm button, html#ecwid_html body#ecwid_body #wrapper div.ecwid-LoginForm button {
+    display: inline;
+    margin: 0px auto 30px auto;
+}
+html#ecwid_html body#ecwid_body div.ecwid-LoginForm-links {
+    text-align: right;
+}
+html#ecwid_html body#ecwid_body div.ecwid-LoginForm-links table {
+    margin-left: auto;
+}
+
+/* Shipping option */
+html#ecwid_html body#ecwid_body span.ecwid-shippingOption input {
+    display: block;
+    float: left;
+    width: 15px;
+	margin-right: 7px;
+    margin-top: 3px;
+}
+
+html#ecwid_html body#ecwid_body span.ecwid-shippingOption label {
+	display: block;
+    font-size: 14px;
+    float: left;
+    width: 277px;
+}
+
+html#ecwid_html body#ecwid_body span.ecwid-shippingOption label.ecwid-shippingOption-label-ie7 {
+	display: block;
+    font-size: 14px;
+    float: left;
+    width: 280px;
+	margin-top: 3px;
+}
+html#ecwid_html body#ecwid_body span.ecwid-shippingOption-days {
+	white-space: nowrap;
+}
+html#ecwid_html body#ecwid_body span.ecwid-shippingOption-rate {
+    margin-left: 15px;
+	font-weight: bold;
+	visibility: hidden;
+    white-space: nowrap;
+}
+html#ecwid_html body#ecwid_body span.ecwid-shippingOption-checked span.ecwid-shippingOption-rate {
+    visibility: visible;
+}
+
+/* Button-like component (used mostly on checkout) */
+html#ecwid_html body#ecwid_body td.ecwid-PseudoButton-left {
+    background: transparent url(icons/pseudo_button_left.gif) no-repeat 1px 0px;
+    width: 11px;
+    height: 26px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-PseudoButton-center {
+    background: transparent url(icons/pseudo_button_center.gif) repeat-x;
+    height: 26px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-PseudoButton-center,
+html#ecwid_html body#ecwid_body td.ecwid-PseudoButton-center div {
+    font-size: 12px;
+    color: #ffffff;
+}
+html#ecwid_html body#ecwid_body td.ecwid-PseudoButton-right {
+    background: transparent url(icons/pseudo_button_right.gif) no-repeat -1px 0px;
+    width: 11px;
+    height: 26px;
+}
+
+/* Field envelope to display error messages */
+html#ecwid_html body#ecwid_body table.ecwid-fieldEnvelope {
+	margin-left: -2px; /* compensate the extra padding keep fields aligned */
+	margin-right: -2px;
+    width: 1px; /* prevent the envelope from being wider than the wrapped component */
+}
+html#ecwid_html body#ecwid_body div.ecwid-fieldEnvelope-label {    
+	font: normal 11px/13px "trebuchet MS", helvetica, verdana, sans-serif;
+	color: #b80000;
+    text-align: right;
+    min-height: 13px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-fieldEnvelope-hidden div.ecwid-fieldEnvelope-around {
+	padding: 2px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-fieldEnvelope-error div.ecwid-fieldEnvelope-around {
+    border: solid 2px #b80000;
+}
+
+/* Placeholders for missing product or category images */
+html#ecwid_html body#ecwid_body div.ecwid-noimage {
+	background: transparent url(icons/noimage.gif) no-repeat scroll 0 0;
+	height: 100px;
+	width: 100px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-noimage-small {
+	background: transparent url(icons/noimage-small.gif) no-repeat;
+	height: 80px;
+	width: 80px;
+}
+
+/* A component that floats to left */
+html#ecwid_html body#ecwid_body div.ecwid-floatLeftPanel {
+    float: left;
+}
+
+/* The egoods component */
+html#ecwid_html body#ecwid_body div.ecwid-EgoodsComponent {
+    padding: 10px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-EgoodsComponent-downloadLabel {
+    font: 17px "trebuchet MS", helvetica, verdana, sans-serif;
+    color: #1e7ec8;
+	padding-bottom: 5px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-EgoodsComponent-separator {
+    height: 15px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-EgoodsComponent-egoodRow {
+	vertical-align:bottom;
+}
+html#ecwid_html body#ecwid_body tr.ecwid-EgoodsComponent-egoodRow .ecwid-EgoodsComponent-descrCell {
+	display: block;
+	padding-bottom: 3px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-EgoodsComponent-description {
+    font: 14px tahoma, geneva, verdana, sans-serif;
+    color: #000000;
+    padding: 0px 2px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-EgoodsComponent-cell {
+	float: left;
+	font: 14px tahoma, geneva, verdana, sans-serif;
+}
+html#ecwid_html body#ecwid_body div.ecwid-EgoodsComponent-iconCell {
+	position: absolute;
+}
+html#ecwid_html body#ecwid_body div.ecwid-EgoodsComponent-iconCell-expired {
+	opacity: 0.7;
+}
+html#ecwid_html body#ecwid_body div.ecwid-EgoodsComponent-linkCell {
+	position: relative;
+	left: 0px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-EgoodsComponent a, html#ecwid_html body#ecwid_body div.ecwid-EgoodsComponent a:active, html#ecwid_html body#ecwid_body div.ecwid-EgoodsComponent a:visited {
+    font: 14px tahoma, geneva, verdana, sans-serif;
+    color: #2d87cc;
+    text-decoration: underline;
+}
+html#ecwid_html body#ecwid_body tr.ecwid-EgoodsComponent-egoodRow-expired div.ecwid-EgoodsComponent-description,
+html#ecwid_html body#ecwid_body tr.ecwid-EgoodsComponent-egoodRow-expired a, html#ecwid_html body#ecwid_body tr.ecwid-EgoodsComponent-egoodRow-expired a:active, html#ecwid_html body#ecwid_body tr.ecwid-EgoodsComponent-egoodRow-expired a:visited {
+    color: #7b7b7b;
+    cursor: auto;
+    text-decoration: none;
+}
+html#ecwid_html body#ecwid_body span.ecwid-EgoodsComponent-filesize {
+    font: 14px tahoma, geneva, verdana, sans-serif;
+    color: #7b7b7b;
+	white-space:nowrap;
+}
+html#ecwid_html body#ecwid_body span.ecwid-EgoodsComponent-expires {
+    font: normal 12px tahoma, geneva, verdana, sans-serif;
+    color: #4b4b4b;
+}
+html#ecwid_html body#ecwid_body span.ecwid-EgoodsComponent-expires span {
+    font-weight: bold;
+    color: #56b03d;
+    white-space: nowrap;
+}
+html#ecwid_html body#ecwid_body span.ecwid-EgoodsComponent-expired {
+    font: bold 12px tahoma, geneva, verdana, sans-serif;
+    color: #aa1f1f;
+}
+
+/* Styles for formatting person name, address and phone */
+html#ecwid_html body#ecwid_body div.ecwid-Person {
+    font: normal 14px tahoma,geneva,verdana,sans-serif;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Person-name {
+    padding-bottom: 10px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Person-phone {
+    padding-top: 5px;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-DownloadError {
+    padding: 65px;
+    text-align: center;
+}
+html#ecwid_html body#ecwid_body div.ecwid-DownloadError-head {
+    font: normal 35px georgia, "times new roman", times, serif;
+    color: #416785;
+}
+html#ecwid_html body#ecwid_body div.ecwid-DownloadError-content {
+    font: normal 16px "trebuchet MS", helvetica, verdana, sans-serif;
+    padding-top: 55px;
+    color: #000000;
+}
+html#ecwid_html body#ecwid_body div.ecwid-DownloadError-content a, html#ecwid_html body#ecwid_body div.ecwid-DownloadError-content a:active, html#ecwid_html body#ecwid_body div.ecwid-DownloadError-content a:visited {
+    font: normal 16px "trebuchet MS", helvetica, verdana, sans-serif;
+}
+
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-warning-icon {
+    background: transparent url(icons/iconWarning.gif) no-repeat top right;
+    width: 19px;
+    min-height: 16px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-warning-text {
+    font: normal 13px/14px tahoma,geneva,verdana,sans-serif;
+    padding-left: 8px;
+}
+
+/*--------------------------*/
+/*---- Popup components ----*/
+/*--------------------------*/
+
+/* Main Ecwid popups */
+html#ecwid_html body#ecwid_body div.ecwid-popup {
+    border: solid 18px #d2d2d2;
+    background-color: #ffffff;
+    padding: 5px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-popup div.Caption {
+    padding-bottom: 5px;
+    cursor: move;
+}
+html#ecwid_html body#ecwid_body hr.ecwid-popup-hr {
+	border: none;
+    width: 100%;
+    height: 1px;
+    color: #dadada;
+    background-color: #dadada;
+    margin: 0px 0px 12px 0px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-overlay {
+    background-color:#000;
+    opacity:0.6;
+    filter:alpha(opacity=60);
+    -moz-opacity: 0.6;
+}
+html#ecwid_html body#ecwid_body div.ecwid-overlay-png {
+    background: transparent url(icons/transparent_black.png) repeat scroll 0 0;
+    filter: expression(fixPNG_crop(this));
+}
+html#ecwid_html body#ecwid_body div.ecwid-loadingIndicator-overlay {
+    background: transparent url(icons/transparent_white.png) repeat scroll 0 0;
+    filter: expression(fixPNG_crop(this));
+}
+html#ecwid_html body#ecwid_body div.ecwid-loadingIndicator-cursor {
+    background: transparent url(icons/spacer.gif) repeat scroll 0 0;
+	cursor: wait;
+}
+
+/* The close button in the right upper corner of Ecwid popup */
+html#ecwid_html body#ecwid_body button.ecwid-popup-closeButton {
+    cursor: pointer;
+    background: transparent url(icons/popup_close.png) no-repeat center center;
+    filter: expression(fixPNG_crop(this));
+    border: none;
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+}
+
+/* The head label of Ecwid popup */
+html#ecwid_html body#ecwid_body div.ecwid-popup-headLabel {
+    font: 30px georgia, "times new roman", times, serif;
+    color: #666;
+    margin: 0px 0px 12px 0px;
+}
+
+/* The message box popup */
+html#ecwid_html body#ecwid_body div.ecwid-MessageBox {
+    border: solid 10px #d2d2d2;
+    background-color: #ffffff;
+    z-index: 1001;
+}
+html#ecwid_html body#ecwid_body div.ecwid-MessageBox-msg {
+    font: 15px tahoma, geneva, verdana, sans-serif;
+    color: #303030;
+    width: 360px;
+    padding: 0px 50px 0px 30px;
+    overflow: hidden;
+    text-align: left;
+}
+html#ecwid_html body#ecwid_body div.ecwid-MessageBox-msg-info {
+    background: transparent url(icons/msg_info.gif) no-repeat 0px 0px;
+    margin-left: 30px;
+    width: 33px;
+    height: 33px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-MessageBox-msg-question {
+    background: transparent url(icons/msg_quest.gif) no-repeat 0px 0px;
+    margin-left: 30px;
+    width: 33px;
+    height: 33px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-MessageBox-msg-warning {
+    background: transparent url(icons/msg_warning.gif) no-repeat 0px 0px;
+    margin-left: 30px;
+    width: 33px;
+    height: 33px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-MessageBox-msg-error {
+    background: transparent url(icons/msg_error.gif) no-repeat 0px 0px;
+    margin-left: 30px;
+    width: 33px;
+    height: 33px;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-ShadowedPopupPanel-content {
+    background-color: #ffffff;
+    position: relative;
+}
+html#ecwid_html body#ecwid_body div.ecwid-ShadowedPopupPanel-shadow {
+    background-color: #000000;
+    -moz-opacity: 0.1;
+    opacity: 0.10;
+    filter: alpha(opacity=10);
+}
+
+/* Service message */
+html#ecwid_html body#ecwid_body div.ecwid-ServiceMessage-container div.ecwid-ShadowedPopupPanel-content {
+    padding: 17px 45px;
+    position: relative;
+	max-width: 700px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-ServiceMessage-container div.ecwid-ShadowedPopupPanel-content,
+html#ecwid_html body#ecwid_body div.ecwid-ShadowedPopupPanel-content {
+    background-color: #def6ff;
+}
+html#ecwid_html body#ecwid_body div.ecwid-ServiceMessage-container div.ecwid-ShadowedPopupPanel-content,
+html#ecwid_html body#ecwid_body div.ecwid-ServiceMessage div.ecwid-ShadowedPopupPanel-shadow {
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+}
+html#ecwid_html body#ecwid_body .ecwid-ServiceMessage-message {
+    font: normal 14px tahoma, geneva, verdana, sans-serif;
+    color: #000000;
+    padding-right: 10px;
+}
+html#ecwid_html body#ecwid_body a.ecwid-ServiceMessage-message-openCart,
+html#ecwid_html body#ecwid_body a.ecwid-ServiceMessage-message-openCart:visited,
+html#ecwid_html body#ecwid_body a.ecwid-ServiceMessage-message-openCart:active {
+	font-size: 14px;
+}
+html#ecwid_html body#ecwid_body button.ecwid-ServiceMessage-closeButton {
+    background: transparent url(icons/connection-error-close.gif) no-repeat center center;
+    border: none;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+}
+html#ecwid_html body#ecwid_body div.ecwid-ConnectionProblemMessagePopup div.ecwid-ServiceMessage-container div.ecwid-ShadowedPopupPanel-content {
+	max-width: 1000px;
+}
+
+/* Informational message popups, disappearing after few seconds */
+html#ecwid_html body#ecwid_body div.ecwid-DisappearingMessage {
+    border: solid #d2d2d2 10px;
+    background-color: #ffffff;
+    padding: 20px 40px;
+    z-index: 20002;
+}
+html#ecwid_html body#ecwid_body div.ecwid-DisappearingMessage-content {
+    text-align: center;
+    font-size: 17px;
+    color: #212121;
+}
+html#ecwid_html body#ecwid_body div.ecwid-DisappearingMessage-content span {
+    font-size: 19px;
+    color: #1a5d30;
+}
+
+/* Form popups */
+html#ecwid_html body#ecwid_body div.ecwid-FormPopup {
+}
+html#ecwid_html body#ecwid_body div.ecwid-popup-content {
+    padding: 5px 30px 30px 30px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-FormPopup-fieldWrapper {
+    text-align: center;
+}
+html#ecwid_html body#ecwid_body div.ecwid-FormPopup-fieldWrapper label.ecwid-fieldLabel {
+	margin: 0px 0px 3px 0px;
+    font-size: 16px;
+    color: #4b4b4b;
+}
+
+/* Login and register popups */
+html#ecwid_html body#ecwid_body div.ecwid-login-popup div.ecwid-form,
+html#ecwid_html body#ecwid_body div.ecwid-register-popup div.ecwid-form {
+    text-align: center;
+    padding: 20px 40px;
+} 
+html#ecwid_html body#ecwid_body div.ecwid-login-popup input.gwt-TextBox,
+html#ecwid_html body#ecwid_body div.ecwid-login-popup input.gwt-PasswordTextBox,
+html#ecwid_html body#ecwid_body div.ecwid-register-popup input.gwt-TextBox,
+html#ecwid_html body#ecwid_body div.ecwid-register-popup input.gwt-PasswordTextBox {
+	width: 225px;
+}
+
+/* Edit person popup */
+html#ecwid_html body#ecwid_body div.ecwid-EditPersonPopup {
+	width: 611px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-EditPersonPopup div.ecwid-popup-content {
+    padding: 5px 50px 20px 40px;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-SelectOptionsPopup div.ecwid-productBrowser-details-rightPanel {
+	padding-top: 0px;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-SelectOptionsPopup div.ecwid-productBrowser-details-thumbnail {
+	padding: 23px 0px 35px 15px;
+}
+
+/*---------------------------*/
+/*---- Date range picker ----*/
+/*---------------------------*/
+
+/* The box to choose a range of dates */
+html#ecwid_html body#ecwid_body table.ecwid-DateRangeBox {
+    border: solid 1px #eeeeee;
+    border-collapse: collapse
+}
+html#ecwid_html body#ecwid_body td.ecwid-DateRangeBox-range {
+    font: normal 18px helvetica, arial, verdana, sans-serif;
+    color: #333333;
+    padding: 5px 10px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-DateRangeBox-icon {
+    border-left: solid 1px #eeeeee;
+    background: #f7f7f7 url(icons/arrow-south.gif) no-repeat center center;
+    width: 20px;
+}
+
+/* The popup window to choose a range of dates in a date range box */
+html#ecwid_html body#ecwid_body div.ecwid-DateRangePopup {
+    background-color: #f7f7f7;
+    border: solid 1px #aaaaaa;
+    padding: 15px 20px;
+    z-index: 1001;
+}
+html#ecwid_html body#ecwid_body div.ecwid-DateRangePopup input.gwt-DateBox {
+    font: normal 10px helvetica, arial, verdana, sans-serif;
+    width: 100px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-DateRangePopup button.gwt-Button {
+    margin: 0px 10px;
+}
+html#ecwid_html body#ecwid_body button.ecwid-DateRangePopup-calendarIcon {
+    background: url(icons/calendar.png) no-repeat center center;
+    width: 16px;
+    height: 15px;
+    margin-left: 3px;
+    vertical-align: middle;
+}
+html#ecwid_html body#ecwid_body div.ecwid-DateRangePopup-DateRangeLabel {
+    font: normal 13px "trebuchet MS", helvetica, verdana, sans-serif;
+    white-space: nowrap;
+    padding-right: 15px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-DateRangePopup-dash {
+    font: normal 13px "trebuchet MS", helvetica, verdana, sans-serif;
+    padding: 0px 10px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-DateRangePopup-PresetsPanel {
+    margin: 15px 0px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-DateRangePopup-PresetsPanel a,
+html#ecwid_html body#ecwid_body table.ecwid-DateRangePopup-PresetsPanel a:visited,
+html#ecwid_html body#ecwid_body table.ecwid-DateRangePopup-PresetsPanel a:active {
+    display: block;
+    color: #1e7ec8;
+    margin: 0px 15px 5px;
+}
+
+/* Popup windows with calendar */
+html#ecwid_html body#ecwid_body div.dateBoxPopup {
+    background-color: #f7f7f7;
+    border: solid 1px #aaaaaa;
+    padding: 10px 10px 0px 10px;
+    z-index: 10000001;
+}
+html#ecwid_html body#ecwid_body div.dateBoxPopup table.gwt-DatePicker {
+    cursor: default;
+}
+html#ecwid_html body#ecwid_body div.dateBoxPopup div.ecwid-MonthSelector {
+    background-color: #dddddd;
+    padding: 2px;
+    font: normal 12px helvetica, arial, verdana, sans-serif;
+    color: #333333;
+}
+html#ecwid_html body#ecwid_body div.dateBoxPopup div.ecwid-MonthSelector-monthPrev,
+html#ecwid_html body#ecwid_body div.dateBoxPopup div.ecwid-MonthSelector-monthNext {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+html#ecwid_html body#ecwid_body div.dateBoxPopup div.ecwid-MonthSelector-monthPrev {
+    background: url(icons/month_prev.gif) no-repeat center center;
+}
+html#ecwid_html body#ecwid_body div.dateBoxPopup div.ecwid-MonthSelector-monthNext {
+    background: url(icons/month_next.gif) no-repeat center center;
+}
+html#ecwid_html body#ecwid_body div.dateBoxPopup div.ecwid-MonthSelector-yearPrev,
+html#ecwid_html body#ecwid_body div.dateBoxPopup div.ecwid-MonthSelector-yearNext {
+    width: 5px;
+    height: 3px;
+    padding: 2px;
+    cursor: pointer;
+}
+html#ecwid_html body#ecwid_body div.dateBoxPopup div.ecwid-MonthSelector-mouseover div.ecwid-MonthSelector-yearPrev {
+    background: url(icons/year_prev.gif) no-repeat center center;
+}
+html#ecwid_html body#ecwid_body div.dateBoxPopup div.ecwid-MonthSelector-mouseover div.ecwid-MonthSelector-yearNext {
+    background: url(icons/year_next.gif) no-repeat center center;
+}
+html#ecwid_html body#ecwid_body div.dateBoxPopup div.ecwid-MonthSelector-mouseover td.ecwid-MonthSelector-inversable {
+    background-color: #1c2273;
+    color: #ffffff;
+}
+html#ecwid_html body#ecwid_body div.dateBoxPopup table.datePickerDays {
+    border-collapse: collapse;
+    font: normal 10px helvetica, arial, verdana, sans-serif;
+    color: #333333;
+}
+html#ecwid_html body#ecwid_body div.dateBoxPopup td.datePickerWeekdayLabel, html#ecwid_html body#ecwid_body div.dateBoxPopup td.datePickerWeekendLabel {
+    border: solid 1px #cccccc;
+    font-weight: bold;
+    padding: 1px 2px;
+    text-align: center;
+}
+html#ecwid_html body#ecwid_body div.dateBoxPopup td.datePickerDay {
+    border: solid 1px #eeeeee;
+    padding: 1px 2px;
+    text-align: center;
+    cursor: pointer;
+}
+html#ecwid_html body#ecwid_body div.dateBoxPopup td.datePickerDayIsToday {
+    background-color: #c8f4f1;
+}
+html#ecwid_html body#ecwid_body div.dateBoxPopup td.datePickerDayIsValue {
+    background-color: #4fabef;
+    color: #ffffff;
+}
+html#ecwid_html body#ecwid_body div.dateBoxPopup td.datePickerDayIsHighlighted {
+    background-color: #0077cc;
+    color: #ffffff;
+}
+html#ecwid_html body#ecwid_body div.dateBoxPopup td.datePickerDayIsFiller {
+    border: solid 1px #f8f8f8;
+    color: #999999;
+}
+html#ecwid_html body#ecwid_body div.dateBoxPopup div.ecwid-TodayLabel {
+	font: normal 10px helvetica, arial, verdana, sans-serif;
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
+    padding: 2px 0px;
+}
+
+
+/*--------------------------------*/
+/*---- Product images gallery ----*/
+/*--------------------------------*/
+
+/* The thumbnails panel */
+html#ecwid_html body#ecwid_body div.ecwid-gallery-thumbnailsPanel {
+    padding: 10px;
+    margin: 15px;
+	text-align: center;
+    background-color: #ececec;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-gallery-imageDescription {
+    text-align: center;    
+	font: normal 14px helvetica, arial, verdana, sans-serif;
+    color: #333333;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-gallery-imageDescription-top {
+	padding: 0px 0px 0px 0px;
+	display:none;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-gallery-imageDescription-bottom {
+	padding: 10px 0px 10px 0px;
+	display: block;
+}
+
+/* The thumbnail images */
+html#ecwid_html body#ecwid_body table.ecwid-gallery-thumbnail {
+    cursor: pointer;
+    border: 3px solid #e9edef;
+}
+html#ecwid_html body#ecwid_body table.ecwid-gallery-thumbnail-selected {
+    cursor: default;
+    border: 3px solid #777777;
+}
+html#ecwid_html body#ecwid_body img.ecwid-gallery-image {
+    cursor: pointer;
+	border: 0px;
+}
+
+/* The navigation buttons panel */
+html#ecwid_html body#ecwid_body table.ecwid-gallery-buttonsPanel {
+    width: 50%;
+}
+
+/* The previous image button */
+html#ecwid_html body#ecwid_body button.ecwid-gallery-prevButton {
+    cursor: pointer;
+    background: url(icons/gallery_prev.gif) no-repeat center center;
+    border: none;
+    width: 32px;
+    height: 32px;
+}
+html#ecwid_html body#ecwid_body button.ecwid-gallery-prevButton-disabled {
+    background: url(icons/gallery_prev_off.gif) no-repeat center center;
+}
+
+/* The next image button */
+html#ecwid_html body#ecwid_body button.ecwid-gallery-nextButton {
+    cursor: pointer;
+    background: url(icons/gallery_next.gif) no-repeat center center;
+    border: none;
+    width: 32px;
+    height: 32px;
+}
+html#ecwid_html body#ecwid_body button.ecwid-gallery-nextButton-disabled {
+    background: url(icons/gallery_next_off.gif) no-repeat center center;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-gallery-arrow {
+	background-color: #ffffff;
+	width: 46px;
+	height: 42px;
+}
+/* The previous image arrow */
+html#ecwid_html body#ecwid_body button.ecwid-gallery-prevArrow {
+    cursor: pointer;
+    background: url(icons/gallery_prev_arrow.gif) no-repeat center center;
+    border: none;
+    width: 32px;
+    height: 32px;
+    margin-top: 5px;
+}
+/* The next image arrow */
+html#ecwid_html body#ecwid_body button.ecwid-gallery-nextArrow {
+    cursor: pointer;
+    background: url(icons/gallery_next_arrow.gif) no-repeat center center;
+    border: none;
+    width: 32px;
+    height: 32px;
+    margin-top: 5px;
+}
+
+/* Detailed image panel */
+html#ecwid_html body#ecwid_body div.ecwid-gallery-imagePanel {
+    margin: 10px 0px;
+    cursor: default;
+}
+html#ecwid_html body#ecwid_body div.ecwid-gallery-imagePanel-navleft {
+    /* IE does not work properly with relative path to custom cursor */ 
+    cursor: url(icons/gallery_prev.cur), url(https://app.ecwid.com/icons/gallery_prev.cur), pointer;
+}
+html#ecwid_html body#ecwid_body div.ecwid-gallery-imagePanel-navright {
+    /* IE does not work properly with relative path to custom cursor */ 
+    cursor: url(icons/gallery_next.cur), url(https://app.ecwid.com/icons/gallery_next.cur), pointer;
+}
+
+html#ecwid_html body#ecwid_body img.ecwid-gallery-imagePanel-zoomButton-image {
+    cursor: pointer;
+    background: url(icons/gallery_zoom_button.png) no-repeat center center;
+}
+html#ecwid_html body#ecwid_body div.ecwid-gallery-imagePanel-zoomButton,
+html#ecwid_html body#ecwid_body img.ecwid-gallery-imagePanel-zoomButton-image {
+    width: 32px;
+    height: 32px;
+}
+
+/*----------------------------------*/
+/*---- Order invoice components ----*/
+/*----------------------------------*/
+
+/* Order invoice */
+html#ecwid_html body#ecwid_body div.ecwid-Invoice {
+    border: solid 1px #b3b7ba;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-block {
+    font: 14px tahoma, geneva, verdana, sans-serif;
+    color: #000000;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-blockTitle {
+    font: bold 14px tahoma, geneva, verdana, sans-serif;
+    color: #000000;
+    padding-bottom: 10px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-Invoice-cell {
+    background-color: #eaf3fa;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-cell-title {
+    background-color: #1865a0;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 10px 20px;
+    white-space: nowrap;
+    text-align: center;
+}
+html#ecwid_html body#ecwid_body td.ecwid-Invoice-edgeCell {
+    background-color: #d8e6f1;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-Header {
+    padding: 15px 20px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-Invoice-Header-OrderId {
+    font: 24px tahoma, geneva, verdana, sans-serif;
+    color: #1e2c38;
+}
+html#ecwid_html body#ecwid_body td.ecwid-Invoice-Header-OrderId-long {
+	font-size: 16px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-Invoice-Header-OrderId-very-long {
+	font-size: 11px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-Invoice-Header-OrderId span {
+    color: #1e7ec8;
+}
+html#ecwid_html body#ecwid_body td.ecwid-Invoice-Header-timestamp {
+    font: 18px tahoma, geneva, verdana, sans-serif;
+    color: #1e2c38;
+    white-space: nowrap;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-ShippingDetails {
+    padding: 20px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-PaymentDetails {
+    padding: 20px;
+    width: 190px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-SummaryContainer {
+	padding: 10px 0px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-Summary-label,
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-Summary-value {
+    font: 14px tahoma, geneva, verdana, sans-serif;
+    color: #000000;
+    white-space: nowrap;
+    padding: 5px 10px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-Summary-label {
+    padding-left: 20px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-Summary-value {
+    padding-right: 20px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-Summary-label-price,
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-Summary-value-price {
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-Summary-value-price {
+    color: #a20505;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-productName,
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-productName a,
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-productName a:active,
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-productName a:visited {
+    font: 18px tahoma, geneva, verdana, sans-serif;
+    color: #1e7ec8;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-productDescr {
+    font: 13px tahoma, geneva, verdana, sans-serif;
+    padding-bottom: 5px;
+    color: #4b4b4b;
+}
+html#ecwid_html body#ecwid_body span.ecwid-Invoice-productDescr-separator {
+    padding: 0px 8px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-productPrice {
+    font: bold 14px tahoma, geneva, verdana, sans-serif;
+    color: #1e2c38;
+    padding-bottom: 12px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice div.ecwid-EgoodsComponent {
+    background-color: #ffffff;
+    margin-bottom: 20px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-footer-placeOrder {
+    padding: 15px 20px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-footer-placeOrder div.gwt-Label,
+html#ecwid_html body#ecwid_body td.ecwid-Invoice-footer-orderConfirmation-text {
+    font: normal 15px helvetica, arial, verdana, sans-serif;
+    color: #1e2c38;
+}
+html#ecwid_html body#ecwid_body td.ecwid-Invoice-footer-orderConfirmation-text {
+    vertical-align: bottom;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Invoice-footer-orderConfirmation {
+    padding: 15px 20px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-Invoice-footer-orderConfirmation-text a,
+html#ecwid_html body#ecwid_body td.ecwid-Invoice-footer-orderConfirmation-text a:active,
+html#ecwid_html body#ecwid_body td.ecwid-Invoice-footer-orderConfirmation-text a:visited {
+    font: normal 15px helvetica, arial, verdana, sans-serif;
+    color: #1e7ec8;
+    text-decoration: underline;
+}
+html#ecwid_html body#ecwid_body td.ecwid-Invoice-footer-orderConfirmation-space {
+    width: 20px;
+}
+
+/* Printable order invoice */
+html#ecwid_html body#ecwid_body div.ecwid-PrintableInvoice {
+    margin: 0px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PrintableInvoice-header {
+    padding-bottom: 10px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PrintableInvoice-header-invoiceLabel {
+    font: normal 24px georgia, "times new roman", times, serif;
+    color: #1e2c38;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PrintableInvoice-header div.ecwid-Person {
+    font: normal 12px helvetica, arial, verdana, sans-serif;
+    color: #363f47;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PrintableInvoice-header div.ecwid-Person-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PrintableInvoice-header div.ecwid-Person-phone {
+    padding-top: 15px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PrintableInvoice-header span.ecwid-Person-phone-number {
+    font-weight: bold;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PrintableInvoice-header-email,
+html#ecwid_html body#ecwid_body div.ecwid-PrintableInvoice-header-url {
+    font: normal 16px "trebuchet MS", helvetica, verdana, sans-serif;
+    color: #1e7ec8;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PrintableInvoice-customer-email {    
+	color: #1e7ec8;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PrintableInvoice div.ecwid-Invoice {
+    border: solid 2px #6a9cc2;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PrintableInvoice td.ecwid-Invoice-cell {
+    background-color: #ffffff;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PrintableInvoice div.ecwid-Invoice-cell-title {
+    background-color: #ffffff;
+    border-top: 2px solid #1865a0;
+    border-bottom: 2px solid #1865a0;
+    color: #1865a0;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PrintableInvoice td.ecwid-Invoice-edgeCell {
+    background-color: #ffffff;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PrintableInvoice div.ecwid-Invoice-SummaryContainer,
+html#ecwid_html body#ecwid_body div.ecwid-PrintableInvoice div.ecwid-Invoice-Summary-label-price, 
+html#ecwid_html body#ecwid_body div.ecwid-PrintableInvoice div.ecwid-Invoice-Summary-value-price {
+	padding-bottom: 0px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PrintableInvoice-thankYouForOrder {
+    font: bold 18px helvetica, arial, verdana, sans-serif;
+    color: #1e2c38;
+    border-top: 1px solid #6599c0;
+    padding: 20px 25px;
+}
+
+
+/*------------------------------*/
+/*---- Product details page ----*/
+/*------------------------------*/
+
+/* The left panel */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-leftPanel {
+    width: auto;
+    padding-top: 20px;
+}
+
+/* The product image */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-thumbnail {
+    text-align: center;
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+/* Product description */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-descr {
+    padding: 5px;
+    margin-right: 5px;
+    text-align: left;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-descr a, html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-descr a:active, html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-descr a:visited {
+	font-size: 14px;
+}
+
+/* Category description */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-categoryDescription {
+    text-align: left;
+	margin: 25px 0px 25px 0px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-categoryDescription a, html#ecwid_html body#ecwid_body div.ecwid-productBrowser-categoryDescription a:active, html#ecwid_html body#ecwid_body div.ecwid-productBrowser-categoryDescription a:visited {
+	font-size: 14px;
+}
+
+/* Egoods component */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details div.ecwid-EgoodsComponent {
+    display: inline-block;
+    padding: 15px 40px 20px 15px;
+    border: solid 3px transparent;
+}
+
+/* The right panel */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-rightPanel {
+    padding-top: 20px;
+    padding-left: 20px;
+    float: right;
+	margin-bottom: 20px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-rightPanel div.ecwid-productBrowser-backgroundedPanel {
+    min-width: 175px;
+    max-width: 250px;
+    *max-width: 350px; /* hack for IE7: it requires more space for german language */
+    padding: 10px 20px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-rightPanel div.ecwid-productBrowser-backgroundedPanelInner {
+	position: relative; /* workaround for a bug in IE6 */
+}
+
+/* Product sku */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-rightPanel div.ecwid-productBrowser-sku {
+    padding-bottom: 12px;
+	white-space: normal;
+	word-wrap: break-word;
+	width: 175px;
+}
+
+/* The "In stock" and "Out of stock" labels */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-inStockLabel,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-outOfStockLabel {
+    font: bold 14px tahoma, geneva, verdana, sans-serif;
+    padding-bottom: 12px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-inStockLabel {
+    color: #116220;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-outOfStockLabel {
+    color: #a20505;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-outOfStockLabel-allInBag {
+    color: #1e2c38;
+}
+
+/* Product price */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details div.ecwid-productBrowser-price {
+    padding-bottom: 12px;
+}
+
+/* Product taxes */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-taxes {
+	padding-bottom: 15px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-priceIncludesTaxesLabel {
+    color: #000000;
+    font: bold 14px tahoma, geneva, verdana, sans-serif;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-priceIncludesTaxesLabel a,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-priceIncludesTaxesLabel a:active,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-priceIncludesTaxesLabel a:visited {
+	font-size: 14px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-tax {
+    font: 13px helvetica, arial, verdana, sans-serif;
+    padding-top: 5px;
+}
+html#ecwid_html body#ecwid_body span.ecwid-productBrowser-details-taxName {
+    color: #000000;
+    padding-right: 10px;
+}
+html#ecwid_html body#ecwid_body span.ecwid-productBrowser-details-taxValue {
+    color: #1e7ec8;
+}
+
+/* Product options */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-optionPanel {
+    padding-bottom: 12px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-optionPanel label.ecwid-fieldLabel {
+    font-weight: bold;
+    color: #000000;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-optionPanel-noError,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-optionPanel-error {
+	padding: 0px 7px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-optionPanel-errorLabel {
+	text-align: left;
+}
+html#ecwid_html body#ecwid_body span.ecwid-productBrowser-details-optionRadioButton {
+	margin: 5px;
+    display: block;
+    font: 13px helvetica, arial, verdana, sans-serif;
+}
+html#ecwid_html body#ecwid_body select.ecwid-productBrowser-details-optionSelectBox,
+html#ecwid_html body#ecwid_body input.ecwid-productBrowser-details-optionTextField,
+html#ecwid_html body#ecwid_body textarea.ecwid-productBrowser-details-optionTextArea {
+    width: 100%;
+}
+html#ecwid_html body#ecwid_body input.ecwid-productBrowser-details-optionTextField,
+html#ecwid_html body#ecwid_body textarea.ecwid-productBrowser-details-optionTextArea {
+	*width: 94%; /* hack for IE7 */
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-details-datePicker-box input {
+    width: 110px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-details-datePicker-button button {
+    background: url(icons/calendar.png) no-repeat center center;
+    width: 16px;
+    height: 15px;
+    margin-left: 3px;
+    vertical-align: middle;
+}
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-details-optionError {
+	width: 100%;
+	margin: 0px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-details-optionError div.ecwid-fieldEnvelope-around {
+	text-align: center;
+	padding: 0px;
+}
+html#ecwid_html body#ecwid_body .ecwid-productBrowser-details-optionClassFiles-mobileWarning {
+	font-size: 10px;
+}
+html#ecwid_html body#ecwid_body .ecwid-productBrowser-details-optionUploadFiles,
+html#ecwid_html body#ecwid_body .ecwid-productBrowser-details-optionUploadFiles a,
+html#ecwid_html body#ecwid_body .ecwid-productBrowser-details-optionUploadFiles a:active,
+html#ecwid_html body#ecwid_body .ecwid-productBrowser-details-optionUploadFiles a:visited,
+html#ecwid_html body#ecwid_body .ecwid-productBrowser-details-optionUploadFiles .ecwid-EcwidHintingLink,
+html#ecwid_html body#ecwid_body .ecwid-productBrowser-details-optionUploadFiles-filesize{
+	font: 11px helvetica, arial, verdana, sans-serif;
+	white-space: nowrap;
+}
+html#ecwid_html body#ecwid_body .ecwid-productBrowser-details-optionUploadFiles-filesize{
+	color: #1e2c38;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-optionUploadFiles-removeButton {
+    background: transparent url(icons/remove_file.gif) no-repeat center center;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-hint {
+    font: normal 11px tahoma, geneva, verdana, sans-serif;
+    color: #c4c4c4;
+    text-align: left;
+}
+
+html#ecwid_html body#ecwid_body .ecwid-productBrowser-details-optionUploadFiles-button {
+	white-space: nowrap;
+}
+html#ecwid_html body#ecwid_body .ecwid-productBrowser-details-optionUploadFiles-widget .ecwid-fieldEnvelope-label {
+	text-align: left;
+}
+
+html#ecwid_html body#ecwid_body .ecwid-productBrowser-details-optionUploadFiles-Popup-ImageContainer {
+	border: 5px solid #D2D2D2;
+	font-size: 0px;
+	padding: 0px;
+}
+
+/* Upload files popup */
+html#ecwid_html body#ecwid_body form.ecwid-uploadPopup-mainPanel {
+    padding: 40px;
+    padding-top: 20px;
+    text-align: left;
+    font-size: 30px;
+    color: #1e2c38;
+}
+html#ecwid_html body#ecwid_body table.ecwid-uploadPopup-mainPanel-fileListPanel {
+    color: #224466;
+    background-color: #eaf3fa;
+    text-align: right;
+    vertical-align: top;
+    font-weight: bolder;
+    font-size: 15px;
+    color: #224466;
+    border-collapse: separate;
+    margin: 0 0 0 4px;
+    padding: 10px 29px 32px 7px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-uploadPopup-mainPanel-fileListPanel td {
+	vertical-align: top;
+	text-align: left;
+}
+html#ecwid_html body#ecwid_body table.ecwid-uploadPopup-mainPanel-fileListPanel span {
+    font: normal 12px helvetica, arial, verdana, sans-serif;
+    color: #7a7e80;
+}
+html#ecwid_html body#ecwid_body button.ecwid-uploadPopup-addButton {
+	cursor: pointer;
+	background: url("icons/boxAdd.gif") no-repeat scroll center center transparent;
+	border: medium none;
+	width: 25px;
+	height: 24px;
+	vertical-align: top;
+}
+html#ecwid_html body#ecwid_body button.ecwid-uploadPopup-addButton-disabled {
+	background: url("icons/boxAddDisabled.gif") no-repeat scroll center center transparent;
+	cursor: auto;
+}
+html#ecwid_html body#ecwid_body button.ecwid-uploadPopup-deleteButton {
+	background: url("icons/boxDelete.gif") no-repeat scroll center center transparent;
+	border: medium none;
+	width: 25px;
+	height: 24px;
+	vertical-align: top;
+	margin-left: 4px;
+}
+html#ecwid_html body#ecwid_body button.ecwid-uploadPopup-deleteButton-disabled {
+	background: url("icons/boxDeleteDisabled.gif") no-repeat scroll center center transparent;
+}
+
+/* Inside Product HTML Code */ 
+html#ecwid_html body#ecwid_body .ecwid-Product select.ecwid-productBrowser-details-optionSelectBox,
+html#ecwid_html body#ecwid_body .ecwid-Product input.ecwid-productBrowser-details-optionTextField,
+html#ecwid_html body#ecwid_body .ecwid-Product textarea.ecwid-productBrowser-details-optionTextArea {
+	width: 250px;
+}
+
+/* The panel, containing the "Qty" label and the quantity box */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-qtyPanel {
+    padding-bottom: 12px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-qtyPanel table.ecwid-fieldEnvelope {
+	margin: 0px;
+	font: inherit;
+	color: inherit;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-qtyPanel div.ecwid-fieldEnvelope-around {
+	padding: 0px;
+    white-space: nowrap;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-qtyPanel table.ecwid-fieldEnvelope-error div.ecwid-fieldEnvelope-around {
+	padding: 2px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-qtyPanel div.ecwid-fieldEnvelope-label {
+	white-space: normal;
+}
+
+/* The "Qty" label */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-qtyLabel {
+    display: inline;
+    font: bold 14px tahoma, geneva, verdana, sans-serif;
+    color: #000000;
+    vertical-align: middle;
+    margin-right: 3px;
+}
+
+/* The "(N available)" label (near the "Qty" one) */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-qtyAvailInfo {
+    display: inline;
+    font: 13px helvetica, arial, verdana, sans-serif;
+    vertical-align: middle;
+}
+
+/* The quantity textbox */
+html#ecwid_html body#ecwid_body input.ecwid-productBrowser-details-qtyTextField {
+    width: 25px;
+    margin-left: 8px;
+    vertical-align: middle;
+    border: solid 1px #898989;
+}
+
+/* The "In the bag" icon and text */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-inTheBag {
+	position: relative; /* workaround for a bug in IE6 */
+    background: transparent url(icons/bag.png) no-repeat left center;
+    filter: expression(fixPNG_crop(this));
+    height: 56px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-inTheBag div {
+    position: relative;
+    top: 15px;
+    left: 37px;
+	width: 140px;
+    font: normal 18px tahoma, geneva, verdana, sans-serif;
+    color: #2e87cb;
+    white-space: nowrap;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-inTheBag-largeNum div {
+    top: 4px;
+    font: normal 18px/1 tahoma, geneva, verdana, sans-serif;
+}
+
+/* Main style for the "Add to bag" button */
+html#ecwid_html body#ecwid_body div.ecwid-AddToBagButton,
+html#ecwid_html body#ecwid_body div.ecwid-AddToBagButton-ie6 {
+    width: 168px;
+    height: 39px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* The "Add to bag" button in up state */
+html#ecwid_html body#ecwid_body div.ecwid-AddToBagButton-up, html#ecwid_html body#ecwid_body div.ecwid-AddToBagButton-up-hovering,
+html#ecwid_html body#ecwid_body div.ecwid-AddToBagButton-ie6-up, html#ecwid_html body#ecwid_body div.ecwid-AddToBagButton-ie6-up-hovering {
+    background: transparent url(icons/add_to_bag.png) no-repeat top center;
+}
+
+/* The "Add to bag" button in down state */
+html#ecwid_html body#ecwid_body div.ecwid-AddToBagButton-down, html#ecwid_html body#ecwid_body div.ecwid-AddToBagButton-down-hovering,
+html#ecwid_html body#ecwid_body div.ecwid-AddToBagButton-ie6-down, html#ecwid_html body#ecwid_body div.ecwid-AddToBagButton-ie6-down-hovering {
+    background: transparent url(icons/add_to_bag.png) no-repeat bottom center;
+}
+
+/* The "Add to bag" button in IE6 (hack) */
+html#ecwid_html body#ecwid_body div.ecwid-AddToBagButton-ie6-up, html#ecwid_html body#ecwid_body div.ecwid-AddToBagButton-ie6-up-hovering,
+html#ecwid_html body#ecwid_body div.ecwid-AddToBagButton-ie6-down, html#ecwid_html body#ecwid_body div.ecwid-AddToBagButton-ie6-down-hovering {
+    background-image: url(icons/add_to_bag.gif);
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-AddToBagButton-up-disabled, html#ecwid_html body#ecwid_body div.ecwid-AddToBagButton-down-disabled,
+html#ecwid_html body#ecwid_body div.ecwid-AddToBagButton-ie6-up-disabled, html#ecwid_html body#ecwid_body div.ecwid-AddToBagButton-ie6-down-disabled {
+    background-image: none;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    cursor: default;
+    font: bold 15px tahoma, geneva, verdana, sans-serif;
+    color: #7d7d7d;
+}
+
+/* Main style for the "Continue Shopping" button on product details page */
+html#ecwid_html body#ecwid_body div.ecwid-ContinueShoppingButton,
+html#ecwid_html body#ecwid_body div.ecwid-ContinueShoppingButton-ie6 {
+    width: 168px;
+    height: 39px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* The "Continue Shopping" button in up state */
+html#ecwid_html body#ecwid_body div.ecwid-ContinueShoppingButton-up, html#ecwid_html body#ecwid_body div.ecwid-ContinueShoppingButton-up-hovering,
+html#ecwid_html body#ecwid_body div.ecwid-ContinueShoppingButton-ie6-up, html#ecwid_html body#ecwid_body div.ecwid-ContinueShoppingButton-ie6-up-hovering {
+    background: transparent url(icons/continue_shopping.png) no-repeat top center;
+}
+
+/* The "Continue Shopping" button in down state */
+html#ecwid_html body#ecwid_body div.ecwid-ContinueShoppingButton-down, html#ecwid_html body#ecwid_body div.ecwid-ContinueShoppingButton-down-hovering,
+html#ecwid_html body#ecwid_body div.ecwid-ContinueShoppingButton-ie6-down, html#ecwid_html body#ecwid_body div.ecwid-ContinueShoppingButton-ie6-down-hovering {
+    background: transparent url(icons/continue_shopping.png) no-repeat bottom center;
+}
+
+/* The "Continue Shopping" button in IE6 (hack) */
+html#ecwid_html body#ecwid_body div.ecwid-ContinueShoppingButton-ie6-up, html#ecwid_html body#ecwid_body div.ecwid-ContinueShoppingButton-ie6-up-hovering,
+html#ecwid_html body#ecwid_body div.ecwid-ContinueShoppingButton-ie6-down, html#ecwid_html body#ecwid_body div.ecwid-ContinueShoppingButton-ie6-down-hovering {
+    background-image: url(icons/continue_shopping.gif);
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details div.ecwid-ContinueShoppingButton,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details div.ecwid-ContinueShoppingButton-ie6 {
+    margin-top: 15px;
+}
+
+/* The thumbnail images panel, below the backgrounded panel */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-GalleryPanel {
+    width: 218px;
+    margin: 8px 3px 8px 4px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-GalleryPanel-imageContainer {
+    border: solid 2px #e9edef;
+    margin: 2px;
+    cursor: pointer;
+    float: left;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-GalleryPanel-linkContainer {
+    padding: 5px;
+    clear: left;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-GalleryPanel-linkContainer div {
+    font: normal 13px tahoma, geneva, verdana, sans-serif;
+    color: #000000;
+}
+
+
+/*-----------------------------------*/
+/*---- Category and search pages ----*/
+/*-----------------------------------*/
+
+/* The topmost container of the category page */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-category {
+    padding-top: 20px;
+}
+
+/* The table of subcategories on category page */
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-subcategories-mainTable {
+    margin: 20px auto 0px auto;
+    width: 100%;
+}
+
+/* Category names in subcategories list */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-subcategories-categoryName {
+    font: normal 19px "trebuchet MS", helvetica, verdana, sans-serif;
+    color: #4b4b4b;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Space cell below a category */
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-subcategories-cellSpace {
+    width: 1px;
+    height: 50px;
+}
+
+/* The search panel on search results page */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-search-SearchPanel {
+    padding: 20px 0px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-search-SearchPanel input.gwt-TextBox {
+    margin: 0px 7px 0px 5px;
+    width: 345px;
+}
+
+/* The "No matching results" label on search results page */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-search-noResultsLabel {
+    text-align: center;
+    padding: 60px 50px;
+}
+
+/* Container of the "Continue shopping" button on search results page */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-search-ContinueShoppingButtonContainer {
+    text-align: right;
+    padding-top: 20px;
+}
+
+
+/*-------------------------------*/
+/*---- Grid view of products ----*/
+/*-------------------------------*/
+
+/* The table of products */
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-productsGrid-mainTable {
+    margin: 10px auto;
+    width: 100%;
+}
+
+/* Product dragdrop handle */
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-productsGrid-mainTable .dragdrop-handle {
+    cursor: default;
+}
+
+/* Product cell */
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-productsGrid-cell {
+    padding: 0px 20px;
+}
+
+/* Space cell below a product */
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-productsGrid-cellSpace {
+    width: 1px;
+    height: 50px;
+}
+
+/* The panel containing the top fragment of a product */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsGrid-productTopFragment {
+    text-align: center;
+    margin: 1px;
+    margin-bottom: 0px;
+    border: none;
+    padding-top: 10px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsGrid-productTopFragment-mouseover {
+    border: solid 1px #b4b8bc;
+    border-bottom: none;
+    margin: 0px;
+}
+
+/* The "Drag & Drop Me to the Bag" label above a product */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productDragLabel {
+    font: normal 10px helvetica, arial, verdana, sans-serif;
+    color: #cecece;
+    text-align: right;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productDragLabel-invisible {
+    visibility: hidden;
+}
+
+/* The panel containing the bottom fragment of a product */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsGrid-productBottomFragment {
+    padding: 15px 5px 10px 5px;
+    font: 13px tahoma, geneva, verdana, sans-serif;
+    margin: 0px 1px 1px 1px;
+    border: none;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsGrid-productBottomFragment-mouseover {
+    border: solid 1px #b4b8bc;
+    border-top: none;
+    margin: 0px;
+}
+
+/* The ticks showing that a product is in the bag */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsGrid-inTheBagTick {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    width: 21px;
+    height: 21px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsGrid-productTopFragment-inTheBag div.ecwid-productBrowser-productsGrid-inTheBagTick {
+    background: url(icons/tick.png) no-repeat center center;
+    filter: expression(fixPNG(this));
+}
+
+/* Product name links */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsGrid-productBottomFragment div.ecwid-productBrowser-productNameLink {
+    text-align: left;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsGrid-productBottomFragment div.ecwid-productBrowser-productNameLink a,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsGrid-productBottomFragment div.ecwid-productBrowser-productNameLink a:active,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsGrid-productBottomFragment div.ecwid-productBrowser-productNameLink a:visited {
+    font: normal 17px tahoma, geneva, verdana, sans-serif;
+}
+
+/* Product sku */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsGrid-productBottomFragment div.ecwid-productBrowser-sku {
+    text-align: left;
+}
+
+/* Product price */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsGrid-productBottomFragment div.ecwid-productBrowser-price {
+    text-align: center;
+    margin: 5px 0px 0px 0px;
+}
+
+
+/*-------------------------------*/
+/*---- List view of products ----*/
+/*-------------------------------*/
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsList {
+    padding: 10px 10px 25px 10px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsList .dragdrop-handle {
+    cursor: default;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsList-thumbnail {
+    padding: 5px 2px 6px 10px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-productsList-thumbnailCell {
+	text-align: center;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsList-inTheBagTick {
+    background: url(icons/tick.png) no-repeat center center;
+    filter: expression(fixPNG_crop(this));
+    width: 21px;
+    height: 21px;
+    margin-top: 5px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsList-details {
+    padding: 5px 10px 6px 14px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsList-details div.ecwid-productBrowser-productNameLink a,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsList-details div.ecwid-productBrowser-productNameLink a:active,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsList-details div.ecwid-productBrowser-productNameLink a:visited {
+    font-size: 22px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsList-details div.ecwid-productBrowser-sku {
+    color: #000000;
+    padding: 2px 0px 10px 2px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsList-descr {
+    font: normal 14px helvetica, arial, verdana, sans-serif;
+    color: #4b4b4b;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsList-details div.ecwid-productBrowser-price {
+    font-size: 22px;
+    padding: 8px 0px 0px 2px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-productsList-mouseover {
+    border-color: #b4b8bc;
+}
+
+
+/*--------------------------------*/
+/*---- Table view of products ----*/
+/*--------------------------------*/
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsTable {
+    padding: 20px 0px 10px 0px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-productsTable-table {
+    border-collapse: collapse;
+}
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-productsTable-cell {
+    border: solid 1px #cbd3d4;
+    padding: 15px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-productsTable-cellOdd {
+    background-color: #f6f6f6;
+}
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-productsTable-cellEven {
+    background-color: #ffffff;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsTable div.ecwid-productBrowser-sku {
+    font: normal 18px helvetica, arial, verdana, sans-serif;
+    color: #727273;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsTable div.ecwid-productBrowser-productNameLink {
+    padding-right: 30px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsTable div.ecwid-productBrowser-price {
+    font-size: 20px;
+    text-align: right;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsTable-inTheBagTick {
+    background: transparent url(icons/tick.png) no-repeat center center;
+    filter:expression(fixPNG_crop(this));
+    width: 21px;
+    height: 21px;
+    margin-right: 5px;    
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsTable-addToBagLink {
+    font: normal 16px tahoma, geneva, verdana, sans-serif;
+    color: #1e7ec8;
+    cursor: pointer;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsTable-emptyStock {
+    font: normal 16px tahoma, geneva, verdana, sans-serif;
+    white-space: nowrap;
+}
+
+
+/*---------------------------*/
+/*---- Shopping Bag page ----*/
+/*---------------------------*/
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart {
+	margin-bottom: 10px;
+}
+
+/* The backgrounded panel on the right */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart div.ecwid-productBrowser-backgroundedPanel {
+    min-width: 185px;
+    max-width: 250px; /* for large prices */
+    padding: 25px 23px;
+    margin-bottom: 5px;
+}
+
+/* The table, containing the bag items */
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-cart-itemsTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-cart-itemsTable-cell {
+    padding: 10px 9px;
+    border-bottom: solid 1px #c4c4c4;
+}
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-cart-itemsTable-cell-last {
+    border-bottom-color: transparent;
+}
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-cart-itemsTable-cell-thumbnail,
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-cart-itemsTable-cell-descr,
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-cart-itemsTable-headerCell-descr {
+    vertical-align: top;
+    text-align: left;
+}
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-cart-itemsTable-cell-qty,
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-cart-itemsTable-headerCell-qty,
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-cart-itemsTable-headerCell-price,
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-cart-itemsTable-headerCell-subtotal {
+    vertical-align: middle;
+    text-align: center;
+}
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-cart-itemsTable-cell-price,
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-cart-itemsTable-cell-subtotal {
+    vertical-align: middle;
+    text-align: right;
+}
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-cart-itemsTable-cell-subtotal {
+    padding-right: 15px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-cart-itemsTable-headerCell {
+    font: normal 14px tahoma, geneva, verdana, sans-serif;
+    padding: 0px 20px;
+    color: #999;
+    border-bottom: solid 1px #c4c4c4;
+}
+html#ecwid_html body#ecwid_body tr.ecwid-productBrowser-cart-itemsTable-row-selected,
+/* workaround for IE7: the background-color does not work properly for TR */
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-cart-itemsTable-cell-selected {
+    background-color: #eaf3fa;
+    border-bottom: solid 1px #c4c4c4;
+}
+html#ecwid_html body#ecwid_body tr.ecwid-productBrowser-cart-itemsTable-row-selected-last,
+html#ecwid_html body#ecwid_body td.ecwid-productBrowser-cart-itemsTable-cell-selected-last {
+    border-bottom-color: transparent;
+}
+
+/* Item price */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart div.ecwid-productBrowser-price {
+    font: normal 16px tahoma, geneva, verdana, sans-serif;
+    color: #1e2c38;
+}
+
+/* Envelope around item quantity textbox */
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-cart-qtyEnvelope {
+	margin-left: auto;
+	margin-right: auto;
+}
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-cart-itemsTable-compact table.ecwid-productBrowser-cart-qtyEnvelope {
+	margin-right: 0px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-cart-qtyEnvelope div.ecwid-fieldEnvelope-around {
+	padding: 0px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-cart-qtyEnvelope div.ecwid-fieldEnvelope-label {
+	position: relative;
+	min-height: 0px;
+	line-height: 10px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-cart-qtyEnvelope div.ecwid-fieldEnvelope-label div {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+/* The item quantity textbox */
+html#ecwid_html body#ecwid_body input.ecwid-productBrowser-cart-qtyTextField {
+    font: 16px helvetica, arial, verdana, sans-serif;
+    width: 35px;
+}
+
+/* Product name link */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart div.ecwid-productBrowser-productNameLink a,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart div.ecwid-productBrowser-productNameLink a:active,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart div.ecwid-productBrowser-productNameLink a:visited {
+    color: #666666;
+}
+
+/* Item sku */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart div.ecwid-productBrowser-sku {
+    font-size: 14px;
+    color: #4b4b4b;
+    display: inline;
+}
+
+/* Item weight */
+html#ecwid_html body#ecwid_body span.ecwid-productBrowser-cart-weight {
+    font: 14px tahoma, geneva, verdana, sans-serif;
+    color: #4b4b4b;
+    white-space: nowrap;
+    padding-left: 15px;
+}
+
+/* Discount Coupon box */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-EnterCouponBox {
+	background-color: #f5f5f5;
+	border: 1px solid #c7c7c7;
+	padding-top: 12px;
+	padding-left: 18px;
+	padding-right: 18px;
+	padding-bottom: 12px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-EnterCouponBox .gwt-Label {
+	font: 16px "trebuchet MS", helvetica, verdana, sans-serif;
+}
+
+/* The product options panel */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-optionsList {
+    font: 14px tahoma, geneva, verdana, sans-serif;
+    color: #4b4b4b;
+    padding-top: 15px;
+    vertical-align: middle;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-optionsList button.gwt-Button,
+html#ecwid_html body#ecwid_body #wrapper div.ecwid-productBrowser-cart-optionsList button.gwt-Button {
+    margin-left: 15px;
+    vertical-align: middle;
+}
+
+/* The "remove item" buttons */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-removeItemButton {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: transparent url(icons/remove_item.gif) no-repeat center center;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+html#ecwid_html body#ecwid_body tr.ecwid-productBrowser-cart-itemsTable-row-selected div.ecwid-productBrowser-cart-removeItemButton {
+    display: block;
+}
+html#ecwid_html body#ecwid_body tr.ecwid-productBrowser-cart-itemsTable-lastrow-selected div.ecwid-productBrowser-cart-removeItemButton {
+    display: block;
+}
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-cart-rightPanel {
+	margin-left: 15px;
+}
+/* The amount labels and values in the backgrounded panel */
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-cart-subtotalAmountPanel td,
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-cart-shippingAmountPanel td,
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-cart-taxAmountPanel td {
+    padding-bottom: 10px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-cart-totalAmountPanel td {
+    padding: 15px 0px 25px 0px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-subtotalLabel,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-shippingLabel,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-taxLabel {
+    font: 14px tahoma, geneva, verdana, sans-serif;
+    color: #4b4b4b;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-totalLabel {
+    font: 20px tahoma, geneva, verdana, sans-serif;
+    color: #4b4b4b;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-subtotalAmount,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-shippingAmount,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-taxAmount {
+    font: 15px tahoma, geneva, verdana, sans-serif;
+    color: #1e2c38;
+    white-space: nowrap;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-totalAmount {
+    font: 20px tahoma, geneva, verdana, sans-serif;
+    color: #a20505;
+    white-space: nowrap;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-shippingAmount-waiting {
+	background: url(icons/ajax-loader.gif) no-repeat 0px 2px;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-asterisk {
+    color: #009dde;
+    font: bold 15px tahoma, geneva, verdana, sans-serif;
+}
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-cart-shippingAmountPanel span.ecwid-EcwidHintingLink {
+	font-size: 14px;
+}
+
+/* The shipping and tax note below the backgrounded panel */
+html#ecwid_html body#ecwid_body table.ecwid-productBrowser-cart-estimation {
+    width: 230px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-estimationNote {
+    font: 14px tahoma, geneva, verdana, sans-serif;
+    color: #4b4b4b;
+    padding-bottom: 4px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-estimationNote span {
+    color: #1e7ec8;
+}
+
+/* The "Checkout" button on the shopping bag view */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-checkoutButton,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-checkoutButton-ie6 {
+    text-align: center;
+    width: 168px;
+    height: 39px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* The "Checkout" button in up state */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-checkoutButton-up, html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-checkoutButton-up-hovering,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-checkoutButton-ie6-up, html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-checkoutButton-ie6-up-hovering {
+    background: transparent url(icons/checkout.png) no-repeat top center;
+}
+
+/* The "Checkout" button in down state */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-checkoutButton-down, html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-checkoutButton-down-hovering,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-checkoutButton-ie6-down, html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-checkoutButton-ie6-down-hovering {
+    background: transparent url(icons/checkout.png) no-repeat bottom center;
+}
+
+/* The "Checkout" button in IE6 (hack) */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-checkoutButton-ie6-up, html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-checkoutButton-ie6-up-hovering,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-checkoutButton-ie6-down, html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-checkoutButton-ie6-down-hovering {
+    background-image: url(icons/checkout.gif);
+}
+
+/* The "or use" separator between the checkout options */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-checkoutOptionsSeparator {
+    font: 12px tahoma, geneva, verdana, sans-serif;
+    padding: 10px;
+}
+
+/* The "Terms and condition" box after the checkout options */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-termsAndConditions {
+	padding-top: 15px;
+	text-align: center;
+	font: 13px tahoma,geneva,verdana,sans-serif;
+}
+
+/* The "Google Checkout" button */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-googleCheckoutButton {
+    width: 160px;
+    height: 43px;
+}
+
+/* The "Paypal Express Checkout" button */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-paypalExpressCheckoutButton {
+    width: 145px;
+    height: 42px;
+}
+
+/* The "VK Merchant API" button */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-vkPaymentCheckoutButton {
+    width: 145px;
+    height: 22px;
+}
+
+/* Change product options popup */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-changeOptionsPopup div.ecwid-form {
+	width: 220px;
+    padding: 20px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-changeOptionsPopup table.ecwid-fieldEnvelope {
+	width: auto;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-changeOptionsPopup div.ecwid-productBrowser-details-optionPanel-textfield table.ecwid-fieldEnvelope,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-changeOptionsPopup div.ecwid-productBrowser-details-optionPanel-textarea table.ecwid-fieldEnvelope,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-changeOptionsPopup div.ecwid-productBrowser-details-optionPanel-select table.ecwid-fieldEnvelope {
+	width: 100%;
+}
+
+/* The "Choose location & shipping" popup */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-chooseLocationPopup {
+	width: 620px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-chooseLocationPopup div.ecwid-popup-content {
+    padding: 5px 50px 20px 40px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-chooseLocationPopup div.ecwid-form {
+    padding: 20px 40px 40px 40px;
+    margin: 6px 5px 10px 5px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-chooseLocationPopup select.gwt-ListBox,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-chooseLocationPopup input.gwt-TextBox {
+    width: 300px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-chooseLocationPopup label.ecwid-fieldLabel {
+    font-size: 16px;
+    color: #1e7ec8;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-chooseLocationPopup-deliveryMethodLabel {
+    font-size: 19px;
+    color: #1e7ec8;
+}
+html#ecwid_html body#ecwid_body button.ecwid-productBrowser-cart-chooseLocationPopup-cancelButton {
+    margin-left: 15px;
+}
+html#ecwid_html body#ecwid_body button.ecwid-productBrowser-cart-chooseLocationPopup-getQuoteButton {
+    margin: 2px 0px 25px 0px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-chooseLocationPopup span.ecwid-shippingOption {
+	margin-left: 7px;
+    font: normal 16px tahoma, geneva, verdana, sans-serif;
+    color: #1e2c38;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-chooseLocationPopup span.ecwid-shippingOption label,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-chooseLocationPopup span.ecwid-shippingOption label.ecwid-shippingOption-label-ie7 {
+    width: 410px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-chooseLocationPopup span.ecwid-shippingOption-rate {
+    color: #720909;
+}
+
+/*------------------------*/
+/*---- Checkout pages ----*/
+/*------------------------*/
+
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-QIWI-payment-logo {
+	background: url(icons/QIWIlogo_small.png) no-repeat transparent;
+	width: 86px;
+	height: 41px;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-QIWI-phone-icon {
+	background: url(icons/phone.png) no-repeat transparent;
+	width: 23px;
+	height: 34px;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-QIWI-plus-seven {
+	color: #1e7ec8;
+	font: 18px bold helvetica, arial, verdana, sans-serif;
+}
+
+/* Order invoice on checkout pages */
+html#ecwid_html body#ecwid_body div.ecwid-Checkout div.ecwid-Invoice {
+    margin: 30px;
+}
+
+/* The delivery method block */
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-DeliveryMethod div.ecwid-form {
+    width: 303px;
+    padding: 15px 30px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-DeliveryMethod table.ecwid-ButtonEnvelope,
+html#ecwid_html body#ecwid_body #wrapper div.ecwid-Checkout-DeliveryMethod table.ecwid-ButtonEnvelope {
+	margin: 20px 20px;
+}
+
+/* Titles of the blocks on checkout */
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-blockTitle, html#ecwid_html body#ecwid_body table.ecwid-Checkout-blockTitle {
+    margin: 30px 5px 15px 5px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-blockTitle, html#ecwid_html body#ecwid_body table.ecwid-Checkout-blockTitle div.gwt-Label {
+    font: normal 20px helvetica, arial, verdana, sans-serif;
+    color: #1e7ec8;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-blockTitle button.gwt-Button {
+	vertical-align: top;
+}
+
+/* The form for entering e-mail on checkout */
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-EmailBlock div.ecwid-form {
+    padding: 20px;
+    width: 475px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-EmailBlock div.ecwid-fieldWrapper label.ecwid-fieldLabel {
+    width: 92px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-EmailBlock div.ecwid-fieldWrapper input.gwt-TextBox {
+    width: 310px;
+}
+
+/* The form for entering password on checkout */
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-PasswordBlock-tip {
+    font: 15px helvetica, arial, verdana, sans-serif;
+    color: #83898f;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-PasswordBlock div.ecwid-form {
+    padding: 20px;
+    width: 475px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-PasswordBlock div.ecwid-fieldWrapper label.ecwid-fieldLabel {
+    width: 122px;
+    padding-right: 10px;
+    white-space: normal;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-PasswordBlock div.ecwid-fieldWrapper input.gwt-PasswordTextBox {
+    width: 310px;
+}
+
+/* The top of the "Enter shipping address" form */
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-ShippingAddress-top {
+	background-color: #d7e8f5;
+	text-align: right;
+	padding: 10px 20px;
+}
+
+/* The block for choosing a payment method and enterring data associated with it */
+html#ecwid_html body#ecwid_body div.ecwid-PaymentMethodSelector {
+    width: 380px;
+    margin-right: 20px;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-PaymentMethodsBlock div.ecwid-form {
+    padding: 15px 13px;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-PaymentCommentsBlock div.ecwid-form {
+    padding: 15px 13px;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-PaymentMethodsBlock table.ecwid-fieldEnvelope {
+    width: auto;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PaymentMethodsBlock-PaymentOption {
+    padding: 3px 0px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PaymentMethodsBlock-PaymentOption span.gwt-RadioButton {
+    font-weight: bold;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PaymentMethodsBlock-PaymentOption-instructions {
+    padding: 3px 0px 2px 30px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PaymentMethodsBlock-PaymentOption-htmlBlock {
+    padding: 3px 0px 2px 20px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PaymentMethodDetailsBlock div.ecwid-form {
+    padding: 15px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PaymentMethodDetailsBlock-fields {
+    padding: 5px 0px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PaymentMethodDetailsBlock-fields div.gwt-Label {
+    font-size: 14px;
+    color: #1e2c38;
+    padding-left: 5px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PaymentMethodDetailsBlock-fields input.gwt-TextBox {
+    width: 310px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PaymentInstructions div.ecwid-form {
+    padding: 20px 15px;
+}
+/* iDEAL Mollie Banks */
+html#ecwid_html body#ecwid_body div.ecwid-PaymentMethodExtraDetailsBlockIDEALBanks div.ecwid-form {
+    padding: 15px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PaymentMethodExtraDetailsBlockIDEALBanks-panel {
+    padding-left: 20px;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    padding-right: 12px;
+    background-color: #d7e8f5;
+}
+html#ecwid_html body#ecwid_body span.ecwid-PaymentMethodExtraDetailsBlockIDEALBanks-RadioButton input {
+    margin-right: 0px;
+    margin-top: 4px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-PaymentMethodExtraDetailsBlockIDEALBanksBank {
+    cursor: pointer;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PaymentMethodExtraDetailsBlockIDEALBanksLbl {
+    font: 11px Tahoma;
+    color: #4e4e4e;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PaymentMethodExtraDetailsBlockIDEALBanksLbl-over {
+    font: 11px Tahoma;
+    color: #1e7ec8;
+}
+html#ecwid_html body#ecwid_body img.ecwid-PaymentMethodExtraDetailsBlockIDEALBanksImg {
+    border: 1px solid #a2a2a2;
+}
+html#ecwid_html body#ecwid_body img.ecwid-PaymentMethodExtraDetailsBlockIDEALBanksImg-over {
+    border: 1px solid #1e7ec8;
+}
+html#ecwid_html body#ecwid_body img.ecwid-PaymentMethodExtraDetailsBlockIDEALBanksImg-selected {
+    border: 4px solid #1e7ec8;
+}
+html#ecwid_html body#ecwid_body div.ecwid-PaymentMethodExtraDetailsBlockIDEALBanks-fieldEnvelope-label {
+    margin-bottom: -15px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-PaymentMethodExtraDetailsBlockIDEALBanks-fieldEnvelope {
+    margin-left: 0px;
+    width: 100%;
+    height: 100%;
+}
+/* --- iDEAL Mollie Banks --- */
+
+/* The "Place Order" button */
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-placeOrderButton,
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-placeOrderButton-ie6 {
+    width: 168px;
+    height: 39px;
+    cursor: pointer;
+    outline: none;
+}
+
+/* The "Place Order" button in up state */
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-placeOrderButton-up, html#ecwid_html body#ecwid_body div.ecwid-Checkout-placeOrderButton-up-hovering,
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-placeOrderButton-ie6-up, html#ecwid_html body#ecwid_body div.ecwid-Checkout-placeOrderButton-ie6-up-hovering {
+    background: transparent url(icons/place_order.png) no-repeat top center;
+}
+
+/* The "Place Order" button in down state */
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-placeOrderButton-down, html#ecwid_html body#ecwid_body div.ecwid-Checkout-placeOrderButton-down-hovering,
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-placeOrderButton-ie6-down, html#ecwid_html body#ecwid_body div.ecwid-Checkout-placeOrderButton-ie6-down-hovering {
+    background: transparent url(icons/place_order.png) no-repeat bottom center;
+}
+
+/* The "Place Order" button in IE6 (hack) */
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-placeOrderButton-ie6-up, html#ecwid_html body#ecwid_body div.ecwid-Checkout-placeOrderButton-ie6-up-hovering,
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-placeOrderButton-ie6-down, html#ecwid_html body#ecwid_body div.ecwid-Checkout-placeOrderButton-ie6-down-hovering {
+    background-image: url(icons/place_order.gif);
+}
+
+/* The breadcrumbs on checkout */
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-BreadCrumbs-link {
+    font: 13px "trebuchet MS", helvetica, verdana, sans-serif;
+    color: #64707a;
+    cursor: default;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 0px;
+	margin-left: 10px;	
+	margin-right: 10px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-BreadCrumbs-link-current {
+    color: #1e7ec8;
+    border-bottom: 3px solid #1ec8aa;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-BreadCrumbs-link-visited {
+    color: #1e7ec8;
+    cursor: pointer;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-BreadCrumbs-point {
+    background: transparent url(icons/checkout_point_not_visited.png) no-repeat;
+    filter:expression(fixPNG_crop(this));
+    width: 13px;
+    height: 13px;
+    cursor: default;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-BreadCrumbs-point-visited {
+    background: transparent url(icons/checkout_point_visited.png) no-repeat;
+    filter:expression(fixPNG_crop(this));
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-BreadCrumbs-point-current {
+    background: transparent url(icons/checkout_point_current.png) no-repeat;
+    filter:expression(fixPNG_crop(this));
+    width: 13px;
+    height: 13px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-BreadCrumbs-section {
+    background: transparent url(icons/checkout_section_not_visited.gif) repeat-x;    
+    height: 13px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Checkout-BreadCrumbs-section-visited {
+    background: transparent url(icons/checkout_section_visited.gif) repeat-x;    
+    height: 13px;
+}
+
+
+/*--------------------------------*/
+/*---- "Your Account" section ----*/
+/*--------------------------------*/
+
+/* The common parts of the "Your Account" section */
+html#ecwid_html body#ecwid_body div.ecwid-Account div.ecwid-productBrowser-head {
+    padding-bottom: 20px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Account table.ecwid-categoriesTabBar table.gwt-TabBarItem a span {
+    font-size: 21px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Account table.ecwid-categoriesTabBar div.tabMiddleCenterInner {
+    padding-bottom: 3px;
+    position: relative;
+    top: -2px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Account-content {
+    padding: 20px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Account-ContinueShoppingButtonContainer {
+    text-align: right;
+}
+
+/* Address book in the "Your account" section */
+html#ecwid_html body#ecwid_body div.ecwid-Account-AddressBook div.ecwid-Account-ContinueShoppingButtonContainer {
+    padding-top: 15px;
+    margin-right: 50px;
+    margin-top: 5px;
+    border-top: solid 1px #c4c4c4;
+}
+
+/* "Account settings" subsection */
+html#ecwid_html body#ecwid_body button.ecwid-AccountSettings-SaveButton,
+html#ecwid_html body#ecwid_body #wrapper button.ecwid-AccountSettings-SaveButton {
+    margin: 15px 0px 30px 0px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AccountSettings div.ecwid-Account-ContinueShoppingButtonContainer {
+    padding-top: 15px;
+    margin-top: 5px;
+    border-top: solid 1px #c4c4c4;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AccountSettings div.ecwid-form {
+    width: 455px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AccountSettings-NameAndEmail div.ecwid-fieldWrapper label.ecwid-fieldLabel {
+    width: 85px;
+    white-space: normal;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AccountSettings-NameAndEmail input.gwt-TextBox {
+    width: 305px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AccountSettings-Password div.ecwid-fieldWrapper label.ecwid-fieldLabel {
+    width: 160px;
+    padding-right: 10px;
+    white-space: normal;
+}
+html#ecwid_html body#ecwid_body div.ecwid-AccountSettings-Password input.gwt-PasswordTextBox {
+    width: 220px;
+}
+
+/* The "Orders" subsection */
+html#ecwid_html body#ecwid_body div.ecwid-Orders {
+    max-width: 1000px;
+	width: 100%;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Orders div.ecwid-Account-ContinueShoppingButtonContainer {
+    padding-top: 20px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Orders-SearchPanel {
+    margin-bottom: 15px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Orders-SearchPanel input.gwt-TextBox,
+html#ecwid_html body#ecwid_body div.ecwid-Orders-SearchPanel button.gwt-Button,
+html#ecwid_html body#ecwid_body #wrapper div.ecwid-Orders-SearchPanel button.gwt-Button {
+    margin: 0px 4px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Orders div.ecwid-results-topPanel-itemsCountLabel {
+    position: relative;
+    left: 5px;
+    top: -5px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-Orders-EmptyList {
+    background-color: #eaf3fa;
+    text-align: center;
+    padding: 45px;
+}
+html#ecwid_html body#ecwid_body table.ecwid-OrdersList-OrderBox {
+    border-collapse: collapse;
+    border: solid 1px #cbd3d4;
+    margin-bottom: 30px;
+    text-align: center;
+	width: 100%;
+}
+html#ecwid_html body#ecwid_body td.ecwid-OrdersList-OrderBox-header {
+    background-color: #eaf3fa;
+    color: #2f2f2f;
+    font-size: 17px;
+    padding: 10px 15px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-OrdersList-OrderBox-header-orderdescr {
+    color: #1e2c38;
+    text-align: left;
+}
+html#ecwid_html body#ecwid_body td.ecwid-OrdersList-OrderBox-header-orderdescr div {
+    white-space: nowrap;
+    float: left;
+    padding-right: 20px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-OrdersList-OrderBox-header-orderdescr span {
+    color: #1e7ec8;
+}
+html#ecwid_html body#ecwid_body td.ecwid-OrdersList-OrderBox-footer {
+    background-color: #f6f6f6;
+    padding: 10px 15px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-OrdersList-OrderBox-cell {
+    border: solid 1px #cbd3d4;
+    padding: 10px 15px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-OrdersList-OrderBox-cellEven {
+    background-color: #f6f6f6;
+}
+html#ecwid_html body#ecwid_body td.ecwid-OrdersList-OrderBox-cellOdd {
+    background-color: #ffffff;
+}
+html#ecwid_html body#ecwid_body td.ecwid-OrdersList-OrderBox-thumbnail {
+    padding: 10px;
+    vertical-align: top;
+}
+html#ecwid_html body#ecwid_body td.ecwid-OrdersList-OrderBox-thumbnail img {
+    cursor: pointer;
+}
+html#ecwid_html body#ecwid_body td.ecwid-OrdersList-OrderBox-itemdescr {
+    text-align: left;
+    vertical-align: top;
+}
+html#ecwid_html body#ecwid_body td.ecwid-OrdersList-OrderBox-itemdescr div.ecwid-EgoodsComponent {
+    margin: 7px 0px;
+    background-color: #ffffff;
+}
+html#ecwid_html body#ecwid_body td.ecwid-OrdersList-OrderBox-qty {
+    font-size: 16px;
+    padding: 10px 15px;
+	text-align:center;
+}
+html#ecwid_html body#ecwid_body td.ecwid-OrdersList-OrderBox-price {
+    font-size: 16px;
+    text-align: right;
+    color: #1e7ec8;
+    padding: 10px;
+    white-space: nowrap;
+}
+html#ecwid_html body#ecwid_body div.ecwid-OrdersList-OrderBox-sku {
+    font-size: 12px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-OrdersList-OrderBox-product {
+    padding-top: 5px;
+	color: #1e2c38;
+	font: normal 17px tahoma, geneva, verdana, sans-serif;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-OrdersList-OrderBox-product a,
+html#ecwid_html body#ecwid_body div.ecwid-OrdersList-OrderBox-product a:active,
+html#ecwid_html body#ecwid_body div.ecwid-OrdersList-OrderBox-product a:visited {
+    font: normal 17px tahoma, geneva, verdana, sans-serif;
+    color: #1e2c38;
+    text-decoration: underline;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-OrdersList-OrderBox-options {
+    padding: 5px 1px;
+    font: normal 13px tahoma, geneva, verdana, sans-serif;
+    color: #4b4b4b;
+}
+html#ecwid_html body#ecwid_body div.ecwid-OrdersList-OrderBox-status,
+html#ecwid_html body#ecwid_body table.ecwid-OrdersList-OrderBox-totals {
+    font: normal 17px tahoma, geneva, verdana, sans-serif;
+    color: #2f2f2f;
+}
+html#ecwid_html body#ecwid_body table.ecwid-OrdersList-OrderBox-totals {
+    white-space: nowrap;
+}
+html#ecwid_html body#ecwid_body div.ecwid-OrdersList-OrderBox-status span {
+    color: #0e766d;
+}
+html#ecwid_html body#ecwid_body td.ecwid-OrdersList-OrderBox-totals-price {
+    font-size: 16px;
+    color: #1e7ec8;
+    text-align: right;
+    padding-left: 20px;
+}
+html#ecwid_html body#ecwid_body tr.ecwid-OrdersList-OrderBox-totals-total td {
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-MaskableWidget {
+	position: relative;
+}
+html#ecwid_html body#ecwid_body div.ecwid-MaskableWidget .ecwid-mask {
+    z-index: 20000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -moz-opacity: 0.8;
+    opacity: 0.80;
+    filter: alpha(opacity=80);
+    background-color: #7f7f7f;
+    width: 100%;
+    height: 100%;
+    zoom: 1;
+}
+html#ecwid_html body#ecwid_body div.ecwid-MaskableWidget .ecwid-animask {
+    position: absolute;
+	z-index: 20001;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background: url(icons/loadingAnimation.gif) center no-repeat;
+    zoom: 1;
+}
+
+/* The message box displayed when the storefront is closed */
+html#ecwid_html body#ecwid_body div.ecwid-maintenance-popup {
+	border: 8px solid #ececec;
+    font: normal 17px tahoma, geneva, verdana, sans-serif;
+	background-color: #ffffff;
+    color: #4b4b4b;
+	padding: 35px 45px;
+    margin: 60px;
+	text-align: center;
+}
+html#ecwid_html body#ecwid_body div.ecwid-maintenance-staff-text {
+	margin: 5px 0 0 0;
+}
+html#ecwid_html body#ecwid_body div.ecwid-maintenance-staff-message {
+	color: #224466;
+}
+
+/*--------------------------------*/
+/*---- "Share" popup classes -----*/
+/*--------------------------------*/
+
+html#ecwid_html body#ecwid_body div.ecwid-SharePopup {
+    width: 250px;
+    z-index: 1001;
+}
+html#ecwid_html body#ecwid_body td.ecwid-SharePopup-header-left {
+    border-bottom: solid 1px #d3d4d6;
+    width: 10%;
+}
+html#ecwid_html body#ecwid_body td.ecwid-SharePopup-header-center {
+    text-align: center;
+}
+html#ecwid_html body#ecwid_body td.ecwid-SharePopup-header-center div {
+    background-color: #ffffff;
+    border: solid 1px #d3d4d6;
+    border-bottom: none;
+    height: 18px;
+    font: normal 12px helvetica, arial, verdana, sans-serif;
+    color: #1e7ec8;
+    padding: 3px 8px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-SharePopup-header-right {
+    border-bottom: solid 1px #d3d4d6;
+    width: 90%;
+}
+html#ecwid_html body#ecwid_body div.ecwid-SharePopup-main {
+    background-color: #ffffff;
+    border: solid 1px #d3d4d6;
+    border-top: none;
+    padding: 11px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-SharePopup-content {
+    background-color: #ececec;
+}
+html#ecwid_html body#ecwid_body div.ecwid-SharePopup-checkboxes {
+    padding: 15px 20px 0px 15px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-SharePopup-checkboxes span.gwt-CheckBox {
+    display: block;
+    font: normal 12px helvetica, arial, verdana, sans-serif;
+    color: #000000;
+    padding-bottom: 10px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-SharePopup-checkboxes span.gwt-CheckBox label {
+    padding-left: 5px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-SharePopup-checkboxes span.gwt-CheckBox label span {
+    font-weight: bold;
+    color: #1e7ec8;
+}
+html#ecwid_html body#ecwid_body div.ecwid-SharePopup-friends {
+    padding: 0px 5px 13px 5px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-SharePopup-noteLabel {
+	font: normal 11px/13px "trebuchet MS", helvetica, verdana, sans-serif;
+    color: #6f6f6f;
+}
+html#ecwid_html body#ecwid_body div.ecwid-SharePopup-content textarea.gwt-TextArea {
+    height: 45px;
+    width: 194px;
+    overflow: auto;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-FriendsList {
+    border: solid 1px #a9aaaa;
+    background-color: #ffffff;
+}
+html#ecwid_html body#ecwid_body input.ecwid-FriendsList-searchBox {
+    width: 100%;
+	background: url(icons/minisearch.gif) no-repeat right center;
+}
+html#ecwid_html body#ecwid_body div.ecwid-FriendsList-scrollPanel {
+    height: 215px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-FriendsList-loading div.ecwid-FriendsList-scrollPanel {
+	background: url(icons/ajax-loader.gif) no-repeat center center;
+}
+html#ecwid_html body#ecwid_body div.ecwid-FriendsList-emptyListLabel {
+    text-align: center;
+    padding: 50px 20px;
+    font: normal 12px "trebuchet MS", helvetica, verdana, sans-serif;
+    color: #474747;
+}
+html#ecwid_html body#ecwid_body div.ecwid-FriendsList-friend {
+    font: normal 10px tahoma, geneva, verdana, sans-serif;
+    color: #2b587a;
+    padding: 2px;
+    margin: 2px;
+    float: left;
+    text-align: center;
+    cursor: default;
+}
+html#ecwid_html body#ecwid_body div.ecwid-FriendsList-friend-selected {
+    background-color: #1e7ec8;
+    color: #ffffff;
+}
+
+/******************************************************************************/
+/************************ Compact Gadget Widget classes ***********************/
+/******************************************************************************/
+
+html#ecwid_html body#ecwid_body table.ecwid-CompactGadget {
+    border: solid 1px #d4d0c8;
+    background-color: #ffffff;
+}
+html#ecwid_html body#ecwid_body td.ecwid-CompactGadget-left {
+    width: 16px;
+    cursor: pointer;
+}
+html#ecwid_html body#ecwid_body td.ecwid-CompactGadget-left-mouseover {
+    background: url(icons/gadget_over_left.gif) repeat-y left center;
+}
+html#ecwid_html body#ecwid_body td.ecwid-CompactGadget-left-disabled {
+    background: none;
+    cursor: default;
+}
+html#ecwid_html body#ecwid_body div.ecwid-CompactGadget-left-arrow {
+    position: relative;
+    left: -1px;
+    height: 19px;
+    background: url(icons/gadget_left_arrow.gif) no-repeat left center;
+}
+html#ecwid_html body#ecwid_body td.ecwid-CompactGadget-left-disabled div.ecwid-CompactGadget-left-arrow {
+    background: none;
+}
+html#ecwid_html body#ecwid_body td.ecwid-CompactGadget-right {
+    width: 16px;
+    cursor: pointer;
+}
+html#ecwid_html body#ecwid_body td.ecwid-CompactGadget-right-mouseover {
+    background: url(icons/gadget_over_right.gif) repeat-y right center;
+}
+html#ecwid_html body#ecwid_body td.ecwid-CompactGadget-right-disabled {
+    background: none;
+    cursor: default;
+}
+html#ecwid_html body#ecwid_body div.ecwid-CompactGadget-right-arrow {
+    position: relative;
+    right: -1px;
+    height: 19px;
+    background: url(icons/gadget_right_arrow.gif) no-repeat right center;
+}
+html#ecwid_html body#ecwid_body td.ecwid-CompactGadget-right-disabled div.ecwid-CompactGadget-right-arrow {
+    background: none;
+}
+html#ecwid_html body#ecwid_body div.ecwid-CompactGadget-header {
+    text-align: center;
+    padding-top: 8px;
+    font: bold 14px tahoma, geneva, verdana, sans-serif;
+    color: #1e2c38;
+}
+html#ecwid_html body#ecwid_body div.ecwid-CompactGadget-openStoreButton {
+    padding-bottom: 12px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-CompactGadget-openStoreButton-left {
+    background: url(icons/gadget_button_left.gif);
+    width: 16px;
+    height: 23px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-CompactGadget-openStoreButton-center {
+    background: url(icons/gadget_button_center.gif) repeat-x;
+    height: 23px;
+    font: bold 14px tahoma, geneva, verdana, sans-serif;
+    color: #1e8fbf;
+}
+html#ecwid_html body#ecwid_body td.ecwid-CompactGadget-openStoreButton-right {
+    background: url(icons/gadget_button_right.gif);
+    width: 16px;
+    height: 23px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-CompactGadget-price {
+    font-family: tahoma, geneva, verdana, sans-serif;
+    font-weight: bold;
+    color: #a20505;
+}
+
+html#ecwid_html body#ecwid_body table.ecwid-CompactGadget-grid div.ecwid-CompactGadget-price {
+    font-size: 14px;
+    padding: 10px;
+}
+
+html#ecwid_html body#ecwid_body table.ecwid-CompactGadget-table {
+    border-collapse: collapse;
+}
+html#ecwid_html body#ecwid_body td.ecwid-CompactGadget-table-header {
+    font: bold 12px tahoma, geneva, verdana, sans-serif;
+    background-color: #5f5f5f;
+    color: #ffffff;
+    padding: 2px;
+}
+html#ecwid_html body#ecwid_body td.ecwid-CompactGadget-table-cell {
+    border: solid 1px #cbd3d4;
+    padding: 6px 8px;
+}
+html#ecwid_html body#ecwid_body tr.ecwid-CompactGadget-table-oddRow {
+    background-color: #ffffff;
+}
+html#ecwid_html body#ecwid_body tr.ecwid-CompactGadget-table-evenRow {
+    background-color: #f6f6f6;
+}
+html#ecwid_html body#ecwid_body div.ecwid-CompactGadget-table-productNameLink {
+    display: inline;
+    font: normal 13px tahoma, geneva, verdana, sans-serif;
+    color: #1e2c38;
+    text-decoration: underline;
+    cursor: pointer;
+}
+html#ecwid_html body#ecwid_body table.ecwid-CompactGadget-table div.ecwid-CompactGadget-price {
+    font-size: 13px;
+    padding-right: 5px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-CompactGadget-table-bagIcon {
+    background: url(icons/gadget_bag.gif) no-repeat center center;
+    width: 19px;
+    height: 17px;
+    cursor: pointer;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-termsCheckbox-rollover {
+    background-color: #ffd03f;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-termsCheckbox {
+    padding: 7px 3px;
+    font: 12px helvetica, arial, verdana, sans-serif;
+    text-align: center;
+    margin: 0px -15px 9px -15px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-termsCheckbox span.gwt-CheckBox input {
+    margin-right: 5px;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-cart-termsCheckbox span.gwt-CheckBox label {
+    vertical-align: baseline;
+}
+
+html#ecwid_html body#ecwid_body .ecwid div.ecwid-productBrowser-cart-termsCheckbox a, 
+html#ecwid_html body#ecwid_body .ecwid div.ecwid-productBrowser-cart-termsCheckbox a:active,
+html#ecwid_html body#ecwid_body .ecwid div.ecwid-productBrowser-cart-termsCheckbox a:visited {
+    font: 12px helvetica, arial, verdana, sans-serif;
+}
+
+/* Facebook Social Plugins styles */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsGrid-like {
+	padding-top: 13px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsGrid-like div.ecwid-productBrowser-likeButton {
+	text-align: center;
+	padding-left: 10px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsList-like {
+	padding-bottom: 10px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-productsList-like div.ecwid-productBrowser-likeButton {
+	padding-left: 5px;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-like {
+	padding-bottom: 10px;
+}
+
+/* Adjustments to facebook popup elements */
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-likeButton span.fb_edge_comment_widget {
+    position: absolute;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-like span.fb_edge_comment_widget {
+    margin-left: -192px;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-like span.fb_send_button_form_widget {
+    margin-left: -282px;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid_facebook_app div.ecwid-productBrowser-productsGrid-like .fb_edge_widget_with_comment span.fb_edge_comment_widget iframe.fb_ltr {
+	/* hide fb popups in the grid view to avoid horizontal scrolling within fb app */
+    display: none !important;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-commentsWidget {
+	padding-top: 20px;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-nav {
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	position: relative;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-nav div.ecwid-productBrowser-backgroundedPanel {
+	margin: 0px;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 22px;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-rightPanel .ecwid-productBrowser-likeButton iframe,
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-rightPanel .ecwid-productBrowser-likeButton div {
+	width: 0px;
+}
+
+html#ecwid_html body#ecwid_body a.ecwid-productBrowser-nav-left {
+    position: absolute;
+    left: 0;
+    right: 50%;
+}
+html#ecwid_html body#ecwid_body a.ecwid-productBrowser-nav-right {
+    position: absolute;
+    left: 50%;
+    right: 0;
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-nav-hidden {
+	visibility: hidden;
+	cursor: default;
+}
+
+html#ecwid_html body#ecwid_body a.ecwid-productBrowser-nav-left, html#ecwid_html body#ecwid_body a.ecwid-productBrowser-nav-right {
+	display: inline-block;
+	vertical-align: middle;
+	height: 22px;
+}
+
+html#ecwid_html body#ecwid_body a.ecwid-productBrowser-nav-left {
+	background: url(icons/prevnext.png) center -22px no-repeat;
+}
+
+html#ecwid_html body#ecwid_body a.ecwid-productBrowser-nav-right {
+	background: url(icons/prevnext.png) center -66px no-repeat;	
+}
+
+html#ecwid_html body#ecwid_body a.ecwid-productBrowser-nav-left:hover, html#ecwid_html body#ecwid_body a.ecwid-productBrowser-nav-left:active {
+	background: url(icons/prevnext.png) center 0px no-repeat;
+}
+
+html#ecwid_html body#ecwid_body a.ecwid-productBrowser-nav-right:hover, html#ecwid_html body#ecwid_body a.ecwid-productBrowser-nav-right:active {
+	background: url(icons/prevnext.png) center -44px no-repeat;
+}
+
+
+/* root categories, first level category links */
+html#ecwid_html body#ecwid_body span.ecwid-categories-category {
+font-size:16px;
+}
+/* subcategories, second level category links */
+html#ecwid_html body#ecwid_body div.ecwid-categoriesMenuBar span.ecwid-categories-category {
+font-size:14px;
+}
+/* 3rd, 4th, etc level category links */
+html#ecwid_html body#ecwid_body div.ecwid-categories-MenuBarPopup div.ecwid-categoriesMenuBar span.ecwid-categories-category {
+
+font-size:13px;
+
+}
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-auth { 
+     display: none;
+}
+html#ecwid_html body#ecwid_body div.ecwid-results-topPanel-sortByPanel {
+     display:none !important;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-sku, html#ecwid_html body#ecwid_body td.ecwid-productBrowser-productsTable-sku {
+    display:none !important;
+}
+
+html#ecwid_html body#ecwid_body span.ecwid-Invoice-productDescr-sku {
+    display:none !important;
+}
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-details-inStockLabel { display:none; }
+
+html#ecwid_html body#ecwid_body div.ecwid-productBrowser-categoryPath { display:none; }

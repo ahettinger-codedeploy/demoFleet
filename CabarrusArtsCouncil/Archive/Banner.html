@@ -1,0 +1,188 @@
+<CSSCRIPTDICT>
+<SCRIPT type=text/javascript><!--
+
+function newImage(arg) {
+	if (document.images) {
+		rslt = new Image();
+		rslt.src = arg;
+		return rslt;
+	}
+}
+function changeImagesArray(array) {
+	if (preloadFlag == true) {
+		var d = document; var img;
+		for (var i=0; i<array.length; i+=2) {
+			img = null; var n = array[i];
+			if (d.images) {img = d.images[n];}
+			if (!img && d.getElementById) {img = d.getElementById(n);}
+			if (img) {img.src = array[i+1];}
+		}
+	}
+}
+function changeImages() {
+	changeImagesArray(changeImages.arguments);
+}
+
+// --></SCRIPT>
+</CSSCRIPTDICT><CSACTIONDICT>
+<SCRIPT type=text/javascript><!--
+var preloadFlag = false;
+function preloadImages() {
+	if (document.images) {
+		pre_calendar02 = newImage('/PrivateLabel/CabarrusArtsCouncil/Images/calendar02.jpg');
+		pre_staff02 = newImage('/PrivateLabel/CabarrusArtsCouncil/Images/staff02.jpg');
+		pre_photogallery02 = newImage('/PrivateLabel/CabarrusArtsCouncil/Images/photogallery02.jpg');
+		pre_home02 = newImage('/PrivateLabel/CabarrusArtsCouncil/Images/home02.jpg');
+		pre_about02 = newImage('/PrivateLabel/CabarrusArtsCouncil/Images/about02.jpg');
+		pre_news02 = newImage('/PrivateLabel/CabarrusArtsCouncil/Images/news02.jpg');
+		pre_programs02 = newImage('/PrivateLabel/CabarrusArtsCouncil/Images/programs02.jpg');
+		pre_grants02 = newImage('/PrivateLabel/CabarrusArtsCouncil/Images/grants02.jpg');
+		pre_volunteers02 = newImage('/PrivateLabel/CabarrusArtsCouncil/Images/volunteers02.jpg');
+		pre_contributions02 = newImage('/PrivateLabel/CabarrusArtsCouncil/Images/contributions02.jpg');
+		pre_comments02 = newImage('/PrivateLabel/CabarrusArtsCouncil/Images/comments02.jpg');
+		pre_links02 = newImage('/PrivateLabel/CabarrusArtsCouncil/Images/links02.jpg');
+		pre_contact02 = newImage('/PrivateLabel/CabarrusArtsCouncil/Images/contact02.jpg');
+		preloadFlag = true;
+	}
+}
+preloadImages();
+// --></SCRIPT>
+</CSACTIONDICT>
+<table>
+<tr><td height=8 colspan=2><IMG SRC="/Images/clear.gif" height=8></td></tr>
+<tr><td width=3><IMG SRC="/Images/clear.gif"></td>
+<td>
+<TABLE height=775 cellSpacing=0 cellPadding=0 width=717 align=left 
+background="/PrivateLabel/CabarrusArtsCouncil/Images/bkgd.jpg" border=0 showgridy="showgridy" 
+showgridx="showgridx" gridy="8" gridx="8" cool="cool">
+  <TBODY>
+  <TR height=194>
+    <TD width=1 height=774 rowSpan=6></TD>
+    <TD width=7 height=194></TD>
+    <TD vAlign=top align=left width=708 colSpan=4 height=194 xpos="8">
+      <TABLE cellSpacing=0 cellPadding=0 width=577 
+      background="/PrivateLabel/CabarrusArtsCouncil/Images/background.jpg" border=0>
+        <TBODY>
+        <TR>
+          <TD><IMG height=193 alt="" 
+            src="/PrivateLabel/CabarrusArtsCouncil/Images/hdr_01.jpg" width=187 border=0></TD>
+          <TD><IMG height=193 alt="" 
+            src="/PrivateLabel/CabarrusArtsCouncil/Images/hdr_02.jpg" width=259 border=0></TD>
+          <TD vAlign=top><IMG height=193 alt="" 
+            src="/PrivateLabel/CabarrusArtsCouncil/Images/hdr_03.jpg" width=262 
+        border=0></TD></TR></TBODY></TABLE></TD>
+    <TD width=1 height=194><SPACER height="194" width="1" type="block"></TD></TR>
+  <TR height=21>
+    <TD vAlign=top align=left width=215 colSpan=3 height=455 rowSpan=3 
+      xpos="1"><TABLE cellSpacing=0 cellPadding=0 width=64 border=0>
+        <TBODY>
+        <TR>
+          <TD><A 
+            onmouseover="changeImages('home01','/PrivateLabel/CabarrusArtsCouncil/Images/home02.jpg');return true" 
+            onmouseout="changeImages('home01','/PrivateLabel/CabarrusArtsCouncil/Images/home01.jpg');return true" 
+            href="http://cabarrusartscouncil.org/index.html"><IMG id=home01 
+            height=35 alt="" src="/PrivateLabel/CabarrusArtsCouncil/Images/home01.jpg" 
+            width=194 border=0 name=home01></A></TD></TR>
+        <TR>
+          <TD><A 
+            onmouseover="changeImages('about01','/PrivateLabel/CabarrusArtsCouncil/Images/about02.jpg');return true" 
+            onmouseout="changeImages('about01','/PrivateLabel/CabarrusArtsCouncil/Images/about01.jpg');return true" 
+            href="http://cabarrusartscouncil.org/pages/aboutus.html"><IMG 
+            id=about01 height=35 alt="" 
+            src="/PrivateLabel/CabarrusArtsCouncil/Images/about01.jpg" width=194 border=0 
+            name=about01></A></TD></TR>
+        <TR>
+          <TD><A 
+            onmouseover="changeImages('news01','/PrivateLabel/CabarrusArtsCouncil/Images/news02.jpg');return true" 
+            onmouseout="changeImages('news01','/PrivateLabel/CabarrusArtsCouncil/Images/news01.jpg');return true" 
+            href="http://cabarrusartscouncil.org/pages/news.html"><IMG id=news01 
+            height=35 alt="" src="/PrivateLabel/CabarrusArtsCouncil/Images/news01.jpg" 
+            width=194 border=0 name=news01></A></TD></TR>
+        <TR>
+          <TD><A 
+            onmouseover="changeImages('calendar01','/PrivateLabel/CabarrusArtsCouncil/Images/calendar02.jpg');return true" 
+            onmouseout="changeImages('calendar01','/PrivateLabel/CabarrusArtsCouncil/Images/calendar01.jpg');return true" 
+            href="http://cabarrusartscouncil.org/pages/calendar.html"><IMG 
+            id=calendar01 height=35 alt="" 
+            src="/PrivateLabel/CabarrusArtsCouncil/Images/calendar01.jpg" width=194 border=0 
+            name=calendar01></A></TD></TR>
+        <TR>
+          <TD><A 
+            onmouseover="changeImages('programs01','/PrivateLabel/CabarrusArtsCouncil/Images/programs02.jpg');return true" 
+            onmouseout="changeImages('programs01','/PrivateLabel/CabarrusArtsCouncil/Images/programs01.jpg');return true" 
+            href="http://cabarrusartscouncil.org/pages/programs.html"><IMG 
+            id=programs01 height=35 alt="" 
+            src="/PrivateLabel/CabarrusArtsCouncil/Images/programs01.jpg" width=194 border=0 
+            name=programs01></A></TD></TR>
+        <TR>
+          <TD><A 
+            onmouseover="changeImages('staff01','/PrivateLabel/CabarrusArtsCouncil/Images/staff02.jpg');return true" 
+            onmouseout="changeImages('staff01','/PrivateLabel/CabarrusArtsCouncil/Images/staff01.jpg');return true" 
+            href="http://cabarrusartscouncil.org/pages/staff.html"><IMG 
+            id=staff01 height=35 alt="" 
+            src="/PrivateLabel/CabarrusArtsCouncil/Images/staff01.jpg" width=194 border=0 
+            name=staff01></A></TD></TR>
+        <TR>
+          <TD><A 
+            onmouseover="changeImages('grants01','/PrivateLabel/CabarrusArtsCouncil/Images/grants02.jpg');return true" 
+            onmouseout="changeImages('grants01','/PrivateLabel/CabarrusArtsCouncil/Images/grants01.jpg');return true" 
+            href="http://cabarrusartscouncil.org/pages/grants.html"><IMG 
+            id=grants01 height=35 alt="" 
+            src="/PrivateLabel/CabarrusArtsCouncil/Images/grants01.jpg" width=194 border=0 
+            name=grants01></A></TD></TR>
+        <TR>
+          <TD><A 
+            onmouseover="changeImages('volunteers01','/PrivateLabel/CabarrusArtsCouncil/Images/volunteers02.jpg');return true" 
+            onmouseout="changeImages('volunteers01','/PrivateLabel/CabarrusArtsCouncil/Images/volunteers01.jpg');return true" 
+            href="http://cabarrusartscouncil.org/pages/volunteers.html"><IMG 
+            id=volunteers01 height=35 alt="" 
+            src="/PrivateLabel/CabarrusArtsCouncil/Images/volunteers01.jpg" width=194 
+            border=0 name=volunteers01></A></TD></TR>
+        <TR>
+          <TD><A 
+            onmouseover="changeImages('contributions01','/PrivateLabel/CabarrusArtsCouncil/Images/contributions02.jpg');return true" 
+            onmouseout="changeImages('contributions01','/PrivateLabel/CabarrusArtsCouncil/Images/contributions01.jpg');return true" 
+            href="http://cabarrusartscouncil.org/pages/contributions.html"><IMG 
+            id=contributions01 height=35 alt="" 
+            src="/PrivateLabel/CabarrusArtsCouncil/Images/contributions01.jpg" width=194 
+            border=0 name=contributions01></A></TD></TR>
+        <TR>
+          <TD><A 
+            onmouseover="changeImages('photogallery01','/PrivateLabel/CabarrusArtsCouncil/Images/photogallery02.jpg');return true" 
+            onmouseout="changeImages('photogallery01','/PrivateLabel/CabarrusArtsCouncil/Images/photogallery01.jpg');return true" 
+            href="http://cabarrusartscouncil.org/pages/photogallery.html"><IMG 
+            id=photogallery01 height=35 alt="" 
+            src="/PrivateLabel/CabarrusArtsCouncil/Images/photogallery01.jpg" width=194 
+            border=0 name=photogallery01></A></TD></TR>
+        <TR>
+          <TD><A 
+            onmouseover="changeImages('comments01','/PrivateLabel/CabarrusArtsCouncil/Images/comments02.jpg');return true" 
+            onmouseout="changeImages('comments01','/PrivateLabel/CabarrusArtsCouncil/Images/comments01.jpg');return true" 
+            href="http://cabarrusartscouncil.org/pages/comments.html"><IMG 
+            id=comments01 height=35 alt="" 
+            src="/PrivateLabel/CabarrusArtsCouncil/Images/comments01.jpg" width=194 border=0 
+            name=comments01></A></TD></TR>
+        <TR>
+          <TD><A 
+            onmouseover="changeImages('links01','/PrivateLabel/CabarrusArtsCouncil/Images/links02.jpg');return true" 
+            onmouseout="changeImages('links01','/PrivateLabel/CabarrusArtsCouncil/Images/links01.jpg');return true" 
+            href="http://cabarrusartscouncil.org/pages/links.html"><IMG 
+            id=links01 height=35 alt="" 
+            src="/PrivateLabel/CabarrusArtsCouncil/Images/links01.jpg" width=194 border=0 
+            name=links01></A></TD></TR>
+        <TR>
+          <TD><A 
+            onmouseover="changeImages('contact01','/PrivateLabel/CabarrusArtsCouncil/Images/contact02.jpg');return true" 
+            onmouseout="changeImages('contact01','/PrivateLabel/CabarrusArtsCouncil/Images/contact01.jpg');return true" 
+            href="http://cabarrusartscouncil.org/pages/contactus.html"><IMG 
+            id=contact01 height=35 alt="" 
+            src="/PrivateLabel/CabarrusArtsCouncil/Images/contact01.jpg" width=194 border=0 
+            name=contact01></A></TD></TR></TBODY></TABLE></TD>
+    <TD width=500 colSpan=2 height=21></TD>
+    <TD width=1 height=21><SPACER height="21" width="1" type="block"></TD></TR>
+  <TR height=1>
+    <TD vAlign=top align=left width=500 colSpan=2 height=1 xpos="216">&nbsp;</TD>
+    <TD width=1 height=1><SPACER height="1" width="1" type="block"></TD></TR>
+  <TR height=362>
+    <TD width=4 height=362></TD>
+    <TD vAlign=top align=left width=496 height=362 xpos="220">

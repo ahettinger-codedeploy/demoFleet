@@ -1,0 +1,179 @@
+/*
+// +----------------------------------------------------------------------+
+// | editEase 1.5ish - ok I give up on versioning 						  |
+// | $date:  03 November 2009                                             |
+// +----------------------------------------------------------------------+
+// | By Stephen Neate (http://code.google.com/p/editease/)                |
+// | Copyright (c) 2007/2009 Stephen Neate                                |
+// | Licensed under the MIT License:                                      |
+// | -- http://www.opensource.org/licenses/mit-license.php                |
+// +----------------------------------------------------------------------+
+// | editEase REQUIREMENTS (TESTED WITH)                                  |
+// +----------------------------------------------------------------------+
+// | PHP  (5.1.2 - 5.2+)                                                  /
+// | Apache (1.3.7 - 1.3.9, 2.2+)                                         /
+// | jQuery (1.2.6+)    *required                                         /
+// +----------------------------------------------------------------------+
+
+Primary Colours: (easy find / replace)
+Colour 01:  #001932 - near black
+Colour 02:  #D02B2B - reddish
+Colour 03:  #7F7F7F - greyish
+Colour 04:  #A3DBF0 - light blue
+Colour 05:  #92C1D3 - grey blue
+Colour 06:  #F2FBFF - very pale blue
+Colour 07:  #E4F0F4 - dark grey blue
+Colour 08:  #C9E0E9 - darker grey blue
+
+*/
+
+/* login link - customise to suit*/
+a.eelgn {border:0;} /* this leaves the text link of 'Admin' on the page */
+/* image replacement link - turned off atm */
+/* a.eelgn {border:0;height:12px;width:21px;overflow:hidden;display:block;background:url(/_ee/img/ee-logo-small.png) no-repeat;} a.eelgn span {}*/
+
+/* end login link */
+
+/* #### START eePanel */
+* {margin:0;padding:0;}
+#eepanel {font-size:12px;margin:0;padding:0;display:block;position:absolute;z-index:99;top:-40px;height:31px;border-bottom:1px solid #E4F0F4;background:#92c1d3;width:100%;font-size:12px;line-height:15px;font-family:Verdana, Arial, Helvetica, sans-serif;color:#000;text-align:left;}
+#eepanelWrap {display:none;padding:7px 10px 0 10px;}
+#eepanel .ec {display:block;}
+#eepanel .eeimg {margin:2px 4px 0 4px;float:left;display:block;}
+#eepanel .eeimgs {margin:2px 4px 0 4px;float:right;display:block;}
+#eepanel strong {font-weight:bold;color:#D02B2B;}
+#eepanel em {font-style:italic}
+#eepanel select {position:absolute;margin:-3px 0 0 4px;}
+#eepanel option {color:#D02B2B;padding:1px 3px;}
+#eepanel .small {font-size:80%}
+#eepanel img {border:0;}
+#eepanel a,#eepanel a:visited {font-weight:bold;border:0;}
+#eepanel a:hover {font-weight:bold;color:#D02B2B;text-decoration:underline;border:0;}
+#eepanel h1 {padding:3px 0;margin:3px 0;letter-spacing:.05em;font-family:Verdana, Arial, Helvetica, sans-serif;}
+#eepanel h2 {padding:0 0 5px 0;line-height:1.5em;letter-spacing:.05em;font-family:Verdana, Arial, Helvetica, sans-serif;}
+#eepanel p{line-height:15px;color:#000;padding:5px 0;}
+/* #### END eePanel */
+
+/* #### START CustomDialog */
+#eelogout, #eelogin {display:none;font-size: 1.1em;position:relative;}
+.customDialog {width: 300px;padding-bottom: 12px;font-family: Arial, sans-serif;text-align: center;}
+.customDialog h1{margin: 0 0 15px 0;border-bottom: 1px solid #001932;padding: 5px 8px;font-size: 140%;color: #000;text-align: left;height:auto;left:0px;}
+.customDialog .text {display:block;min-height: 35px;margin: 0 0 15px 0;padding-right: 8px;padding-left: 50px;background-image: url(img/dialog_choice.gif);background-repeat: no-repeat;background-position: 8px 3px;text-align: left;}
+.customDialog button {margin: 0 5px;border: 3px double #FFFFFF;border-right-color: #7F7F7F;border-bottom-color: #7F7F7F;padding: 0 5px;background-color: #BBBCBC;background-image: url(img/dialog_button.gif);background-repeat: repeat-x;}
+.customDialog img {display:block;float:right;}
+.customDialog input {display:block;float:right;}
+.customDialog label {display:block;font-weight:bold;float:left;margin:3px 0;clear:both;}
+.customDialog form {background:none;border:0;padding:0;}
+.customDialog fieldset {background:none;display:block;margin:5px 10px 0px 0;border:0;padding:0;}
+.customDialog .warning {display:none;color:#D02B2B;margin:2px 0 8px 0;font-weight:bold;text-align:center;}
+.customDialog .success {color:#25701D;}
+#eelogin .text {display:block;min-height: 35px;margin: 0 0 15px 0;padding-right: 8px;padding-left: 50px;background-image: url(img/ee-logo.png);background-repeat: no-repeat;background-position: 8px 3px;text-align: left;}
+#eesbt {display:block;font-weight:bold;float:left;margin:7px 0 0 57px;clear:both;}
+/* #### END CustomDialog */
+
+/* #### START inline editing areas */
+.emask {background:#A3DBF0 url(img/ajax-loader.gif) no-repeat center;display:block;position:absolute;z-index:91;}
+.emask2 {background:#A3DBF0;display:block;position:absolute;z-index:91;}
+#eefiles,#eehelp,#eeinfo {display:none;position:absolute;top:32px;width:100%;z-index:-1;}
+.eedata {display:block;padding:20px;background:#F2FBFF;border-bottom:2px solid #92C1D3;min-height:250px;}
+.eedata h1 {color:#92C1D3;font-size:22px;border-bottom:2px solid #92C1D3;}
+.eedata h2 {color:#92C1D3;font-size:17px;padding:0 0 2px 0;margin:0 0 3px 0;border-bottom:1px solid #92C1D3;}
+.eedata ul {margin-left:20px;}
+.eedata li {margin-left:10px;}
+.edata {width:100%;position:relative;}
+.edataleft{float:left;width:49%;}
+.edataright{float:right;width:49%;}
+.edatapading {padding:10px 20px;}
+.editactive {border:2px dashed #92C1D3;display:block;}
+.edithover {border:2px solid #92C1D3;background:#F2FBFF;}
+.edithoverActive {border:2px solid #92C1D3;background:#F2FBFF;}
+.eeClick, .eeClickEdit {cursor:pointer;border:2px solid #92C1D3;background:#F2FBFF;position:absolute;margin:-26px 0 0 -9px;padding:2px 7px 3px 5px;color:#D02B2B;font-weight:bold;z-index:50;font-size:12px;font-family:Verdana, Arial, Helvetica, sans-serif;}
+.eeClick img {position:relative;top:2px;z-index:99;}
+.eeClick span {position:relative;top:-2px;z-index:99;}
+.eeClickEdit img {position:relative;top:2px;z-index:99;}
+.eeClickEdit span {position:relative;top:-2px;z-index:99;}
+.eeClickEdit div {display:inline;}
+/* #### END inline editing areas */
+
+#simplemodal-container {position:relative;}
+#simplemodal-container a {color:#ddd;}
+#simplemodal-container a.modalCloseImg {background:url(img/x.png) no-repeat; width:25px; height:29px; display:inline; z-index:3200; position:absolute; top:-23px; right:-24px; cursor:pointer;}
+
+
+/**
+// +----------------------------------------------------------------------+
+// | fsLib see config.php file for more details 										      |
+// +----------------------------------------------------------------------+
+ *
+ * fslib ** came about as a nice drop and go solution that is ordered by name and can be used
+ * anywhere with very little config required at all.
+ * The upload files uses the SWFUpload http://www.swfupload.org/ code to make life easy which
+ * is also under the MIT License (included in the directory for swfupload
+ *
+**/
+
+/* #### START File System */
+#fileSystem {border:2px solid #92C1D3;background:#F5FBFE;position:relative;}
+#filePanel {background:#92C1D3;color:#fff;padding:5px 5px 0 5px;height:29px;overflow:hidden;}
+.fileSystemWrap {min-height:200px;}
+#fileSystem #dir-files {width:100%;background:#fff;}
+#fileSystem #dir-files th{padding:2px 3px;color:#000;background:#C9E0E9;}
+#fileSystem #dir-files td{padding:1px;}
+#fileSystem ul{list-style-type:none;margin:0;padding:0;}
+#fileSystem ul ul{list-style-type:none;margin:0;padding:0;min-height:20px;display:block;}
+#fileSystem #dir-files li{list-style-type:none;height:20px;margin:0;clear:both;padding:3px 0 1px 26px;font-size:100%;position:relative;background:#fff;}
+#fileSystem #dir-folder li img{top:3px;left:3px;}
+#fileSystem #dir-files li img{position:absolute;left:3px;}
+#fileSystem th {text-align:left;}
+#fileSystem .size {text-align:right;}
+#fileSystem th .size {text-align:center;}
+#fileSystem .options {text-align:left;}
+#fileSystem th .options {text-align:center;}
+#fileSystem .modTime {text-align:center;}
+#fileSystem #dir-files tr.stripe{background:#E4F0F4;}
+#fileSystem #dir-files tr.hover{background:#C9E0E9;}
+#fileSystem a {border:0;outline:0;color:#000;text-decoration:none;font-weight:bold;}
+#fileSystem a img {border:0;outline:0;}
+#filePanel a {color:#fff;}
+#fileSystem :focus {outline:0;}
+#fileSystem .dir-clear {clear:both;}
+
+#fileSystem .pathDisplay {display:block;clear:both;font-size:11px;}
+#fileSystem .none{display:none;}
+
+#dirCreate, #uploadFile {position:absolute;top:34px;left:0;width:100%;height:0px;background:#C9E0E9;color:#000;}
+#fileSystem .inner {padding:20px;}
+#fileSystem form, #flashTarget {margin:15px;color:#000;}
+#fileSystem fieldset {border:1px solid #000;background:#C9E0E9;}
+#fileSystem legend {border:1px solid #000;margin-left:13px;padding:2px 5px;color:#000;}
+#fileSystem label, #responseDir {font-weight:bold;}
+#cancelDir,#cancelFile {float:right;cursor:pointer;}
+/* #### END File System */
+
+/*Start swfUpload*/
+#fileSystem .likeParent{font:inherit;color:inherit;text-decoration:inherit;}
+#fileSystem  .flash {padding:12px 25px 20px 20px;color:#F2FBFF;}
+#fileSystem a.likeParent, #fileSystem a.likeParent:link, #fileSystem a.likeParent:active, #fileSystem a.likeParent:visited, #fileSystem a.likeParent:hover{font:inherit;color:#000000;text-decoration:none;}
+#fileSystem .progressWrapper{width:50%;overflow:hidden;float:left;position:relative;}
+#fileSystem .progressContainer{margin:5px;padding:4px;border:solid 1px #E8E8E8;background-color:#F7F7F7;overflow:hidden;width:300px;}
+#fileSystem .red /* Error */{border:solid 1px #B50000;background-color:#FFEBEB;}
+#fileSystem .green /* Current */{border:solid 1px #DDF0DD;background-color:#EBFFEB;}
+#fileSystem .blue /* Complete */{border:solid 1px #CEE2F2;background-color:#F0F5FF;}
+#fileSystem .progressName{font-size:8pt;font-weight:bold;color:#92C1D3;width:100%;height:14px;text-align:left;white-space:nowrap;overflow:hidden;}
+#fileSystem .progressBarInProgress,.progressBarComplete,.progressBarError{font-size:0;width:0;height:2px;background-color:#0D820D;margin-top:2px;}
+#fileSystem .progressBarComplete{width:100%;background-color:green;visibility:hidden;}
+#fileSystem .progressBarError{width:100%;background-color:red;visibility:hidden;}
+#fileSystem .progressBarStatus{margin-top:2px;width:315px;font-size:7pt;font-family:Verdana;text-align:left;white-space:nowrap;color:#92C1D3;}
+#fileSystem a.progressCancel, #fileSystem a.progressCancel:link, #fileSystem a.progressCancel:active, #fileSystem a.progressCancel:visited, #fileSystem a.progressCancel:hover{margin-left:285px;font-size:0;display:block;height:16px;width:16px;background-image:url(_fslib/res/cancel.png);background-repeat:no-repeat;position:absolute;}
+/*END swfUpload*/
+
+/* #### START CustomDialog for File System */
+#fslibDialog {display:none;font-size: 1.1em;position:relative;}
+.fslibDialog {width: 300px;padding-bottom: 12px;font-family: Arial, sans-serif;text-align: center;}
+.fslibDialog h1{margin: 0 0 15px 0;border-bottom: 1px solid #001932;padding: 5px 8px;font-size: 140%;color: #000;text-align: left;height:auto;left:0px;}
+.fslibDialog .text{display:block;min-height: 35px;margin: 0 0 15px 0;padding-right: 8px;padding-left: 50px;background-image: url(_fslib/res/dialog_choice.gif);background-repeat: no-repeat;background-position: 8px 3px;text-align: left;}
+.fslibDialog .inputName {display:none; margin:-20px 0 15px 50px;}
+.fslibDialog button {margin: 0 5px;border: 3px double #FFFFFF;border-right-color: #7F7F7F;border-bottom-color: #7F7F7F;padding: 0 5px;background-color: #BBBCBC;background-image: url(_fslib/res/dialog_button.gif);background-repeat: repeat-x;}
+
+
+/* #### END CustomDialog */

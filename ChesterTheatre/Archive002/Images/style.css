@@ -1,0 +1,907 @@
+/*
+Theme Name: CHESTER THEATRE COMPANY
+Theme URI: http://cdeVision.com
+Author: cdeVision
+Author URI: http://cdeVision.com/
+Description: Custom theme for CHESTER THEATRE COMPANY
+Version: 1.0
+License: No copy or re-use
+*/
+
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+html {-webkit-text-size-adjust:none}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend{
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+:focus {/* remember to define focus styles! */
+	outline: 0;
+}
+body {
+	background: #fff;
+	line-height: 20px;
+	font-size:14px;
+}
+ol, ul {
+	list-style: none;
+	line-height: 20px;
+	font-size:14px;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a img {
+	border: 0;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+
+.clearfloats {clear:both; line-height:0px; height:0px; font-size:0px;}
+
+/* =Fonts
+-------------------------------------------------------------- */
+
+body {font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#333333; background:#1A1A1A url(/clients/ChesterTheatre/Images/back_page.png) 0 50px repeat-x; }
+
+p {font-family:Arial, Helvetica, sans-serif; font-size:14px; line-height:20px; color:#333333; margin:0 0 15px 0; padding:0; }
+	.intro {font-size:16px; line-height:20px; }
+	.intro p {font-size:16px; line-height:20px; }
+	.small {font-size:12px; line-height:16px; }
+	.small p {font-size:12px; line-height:16px; }
+	
+a { color:#000; text-decoration:underline; font-weight:normal; }
+a:hover { color:#000; text-decoration:none; }
+
+a.pdf, .pdf a {background:url(/clients/ChesterTheatre/Images/icon_pdf.png) right center no-repeat; padding:0 40px 0 0; }
+	a.yellow { text-transform:uppercase; font-size:12px; line-height:20px; background:#D29402; padding:4px 6px 4px 6px; text-decoration:none; color:#FFFFFF; }
+		a.yellow:hover { background:#C88C02; }
+	a.yellow.bar { float:right; margin:-36px 0 0 0; display:inline-block;  padding:0 6px 0 6px; }
+	
+	
+b, strong { font-weight:bold; }
+i, em { font-style:italic; }
+
+@font-face {
+    font-family: 'CallunaRegular';
+    src: url('fonts/Calluna-Regular-webfont.eot');
+    src: url('fonts/Calluna-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Calluna-Regular-webfont.woff') format('woff'),
+         url('fonts/Calluna-Regular-webfont.ttf') format('truetype'),
+         url('fonts/Calluna-Regular-webfont.svg#CallunaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {margin:0; padding:0; font-family:'CallunaRegular', Georgia, "Times New Roman", Times, serif; font-weight:normal; color:#333333; }
+h1 { font-size:24px; line-height:28px; margin:0 0 12px 0; }
+h2 { font-size:20px; line-height:24px; margin:0 0 10px 0; padding:0 0 6px 0; border-bottom:1px solid #ccc;}
+h3 { font-size:18px; line-height:22px; margin:0 0 6px 0;}
+h4 { font-size:16px; line-height:20px; margin:0 0 6px 0;}
+h5 { font-size:14px; line-height:20px; margin:0 0 6px 0;}
+
+
+h1.entry-title, h1.page-title { font-size:32px; line-height:36px; margin:0 0 12px 0; padding:0;}
+h2.newstitle {margin:30px 0 10px 0; }
+
+/* =Structure
+-------------------------------------------------------------- */
+
+#page {
+	display: block;
+	
+}
+
+#branding {
+	clear:both;
+	margin: 0 auto;
+	width: 925px;
+	position:relative;
+	height:182px;
+}
+
+#main {
+	margin: 0 auto;
+	width: 925px;
+	margin-bottom:10px;
+	background:url(/clients/ChesterTheatre/Images/back_primary.png) repeat-y;
+}
+
+#primary {
+	float: left;
+	width: 680px;
+}
+#content {
+	margin:0;
+	padding: 20px;
+}
+.home #content {
+	margin:0;
+	padding: 30px 20px 20px 20px;
+}
+#secondary {
+	float:right;
+	width:240px;
+}
+
+
+
+/* Text meant only for screen readers */
+.screen-reader-text,
+.assistive-text {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+}
+.alignright {
+	display: inline;
+	float: right;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* =Columns
+-------------------------------------------------------------- */
+
+.col-1-2-left { float:left; width:310px; margin-right:10px; }
+.col-1-2-right { float:right; width:310px; margin-left:10px; }
+.col-1-3-left { float:left; width:220px; margin-right:10px; }
+.col-2-3-right { float:left; width:400px; margin-left:10px; }
+
+/* =Header
+-------------------------------------------------------------- */
+
+#site-title {
+	font-size: 30px;
+	font-weight: bold;
+	margin: 0;
+	position:absolute;
+	left:0;
+	top:10px;
+	width:210px;
+	height:162px;
+}
+#site-title a {
+	width:210px;
+	height:162px;
+	text-indent:-4000px;
+	display:block;
+	background:url(/clients/ChesterTheatre/Images/logo.png) no-repeat;
+}
+#site-description {
+	font-size: 32px;
+	font-weight: normal;
+	font-family: 'CallunaRegular', Georgia, "Times New Roman", Times, serif;
+	margin: 0;
+	position:absolute;
+	left:245px;
+	top:78px;
+	width:400px;
+	height:35px;
+	color:#FFFFFF;
+	border:none;
+}
+#site-location {
+	font-size: 16px;
+	font-weight: normal;
+	margin: 0;
+	position:absolute;
+	left:245px;
+	top:110px;
+	width:550px;
+	height:25px;
+	color:#FFFFFF;
+}
+
+/* =Menu
+-------------------------------------------------------------- */
+
+#access {
+	background: #2C2C2D;
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	height:50px;
+}
+#access ul {
+	list-style: none;
+	margin: 0 auto;
+	width: 925px;
+	height:50px;
+	border-left:2px solid #3A3A3A;
+}
+#access li {
+	float: left;
+	position: relative;
+}
+#access a {
+	display: block;
+	font-size:14px;
+	line-height: 50px;
+	padding: 0 22px;
+	text-decoration: none;
+	color:#FFFFFF;
+	font-weight:normal;
+	border-right:2px solid #3A3A3A;
+}
+#access ul ul {
+	display: none;
+	float: left;
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	width:200px;
+	z-index: 99999;
+	padding-top:2px;
+	border:none;
+}
+#access ul ul ul {
+	left: 224px;
+	top: -2px;
+	padding-left:2px;
+}
+#access ul ul a {
+	background: #2C2C2D;
+	line-height: 20px;
+	padding: 10px 0px 8px 22px !important;
+	width: 200px;
+	border-right:none;
+	height:auto;
+}
+#access li:hover > a,
+#access ul ul :hover > a {
+	background: #2C2C2D;
+	color:#999999;
+}
+#access ul ul a:hover {
+	background: #2C2C2D;
+	color:#999999;
+}
+#access ul li:hover > ul {
+	display: block;
+}
+
+
+/* =Home
+-------------------------------------------------------------- */
+
+#chester {
+	background:#5B5B00;
+	width:925px;
+	height:250px;
+	margin:0 auto 10px auto;
+	color:#FFFFFF;
+	position:relative;
+}
+	#chester aside {
+		color:#FFFFFF;
+		position:absolute;
+		top:20px;
+		left:20px;
+		z-index:999;
+		width:500px;
+	}
+	#chester aside h1 {
+		color:#FFFFFF;
+	}
+	#chester aside p {
+		color:#FFFFFF;
+		width:340px;
+		font-size:14px;
+	}
+	
+	#chester .subpages {
+		position:absolute;
+		top:58px;
+		left:385px;
+		z-index:1000;
+		margin:0 !important;
+		padding:0 !important;
+	}
+	#chester .subpages li {
+		color:#FFFFFF;
+		margin:0 0 4px 0 !important;
+		padding:0 !important;
+		list-style:none;
+	}
+	#chester .subpages li a {
+		color:#FFFFFF;
+		text-decoration:underline;
+		font-size:14px !important;
+		line-height:20px !important;
+		display:block;
+		margin:0 !important;
+		padding:0 !important;
+	}
+	#chester .subpages li a:hover {
+		color:#FFFFFF;
+		text-decoration:none;
+	}
+	
+	.chesterfade {
+		position:absolute;
+		top:0;
+		right:280px;
+		width:150px;
+		height:250px;
+		z-index:900;
+		background:url(/clients/ChesterTheatre/Images/chesterfade.png) no-repeat;
+	}
+	
+	#chesterwrap {
+		position:absolute;
+		right:0;
+		top:0;
+		width:430px;
+		height:250px;
+	}
+
+		#slidechester {width:430px; height:250px; margin:0; padding:0; list-style:none; overflow:hidden; position:absolute;}
+			#slidechester li {width:430px; height:250px; margin:0; padding:0; list-style:none; position:relative;}
+			#slidechester li img {position:absolute; left:0; top:0; z-index:50; display:block; width:430px; height:250px; }
+			#chesterwrap .bx-pager {position:absolute; bottom:6px; right:6px; z-index:99999;}
+			#chesterwrap a.pager-link { text-indent:-4000px; width:14px; height:14px; background:url(/clients/ChesterTheatre/Images/icon_pagerc.png) no-repeat; display:block; float:left; margin:0; padding:0;}
+			#chesterwrap a.pager-active, #chesterwrap a.pager-link:hover { background-position:0 -14px; }
+			
+			
+			
+	#slideshowwrap {
+		width:925px;
+		height:460px;
+		margin:0 auto 10px auto;
+		position:relative;
+	}
+		#slideshowwrap .descback {position:absolute; left:0; bottom:0; z-index:10; display:block; width:680px; height:60px; background:#E1E1E1; }
+		#slideshowwrap .bx-pager {position:absolute; right:0; bottom:0; z-index:200;}
+			#slideshowwrap .bx-pager a { display:block; width:60px; height:60px; float:left; margin:0; padding:0;}
+			#slideshowwrap .bx-pager a.pager-active img, #slideshowwrap .bx-pager a:hover img { opacity:0.5; filter:alpha(opacity=50); /* For IE8 and earlier */ margin:0; padding:0; }
+			#slideshowwrap .bx-pager a img { display:block; margin:0; padding:0;}
+			
+		#slideshowhome {width:925px; height:460px; margin:0; padding:0; list-style:none; overflow:hidden;}
+			#slideshowhome li {width:925px; height:460px; margin:0; padding:0; list-style:none; position:relative;}
+			#slideshowhome li h1 {position:absolute; left:0; bottom:60px; z-index:100; display:inline-block; background: url(/clients/ChesterTheatre/Images/back_homebanner.png) no-repeat; color:#FFFFFF; font-size:34px; line-height:64px; margin:0; padding:0 20px 0 20px; }
+			#slideshowhome li img {position:absolute; left:0; top:0; z-index:50; display:block; width:925px; height:400px; }
+			#slideshowhome li .desc {position:absolute; left:0; bottom:0; z-index:50; display:block; width:680px; height:60px; }
+				#slideshowhome li .desc .pad { margin:10px 0 0 20px; overflow:hidden; width:580px; height:40px; }
+				#slideshowhome li .desc .pad p { padding:0; margin:0; font-size:13px; line-height:18px; }
+			#slideshowhome li .yellow { position:absolute; left:620px; bottom:20px; z-index:100; display:inline-block; padding:0 6px 0 6px; }
+			#slideshowhome .bx-pager {position:absolute; bottom:0px; right:0px; z-index:99999;}
+			#slideshowhome a.pager-link { text-indent:-4000px; width:14px; height:14px; background:url(/clients/ChesterTheatre/Images/icon_pagerc.png) no-repeat; display:block; float:left; margin:0; padding:0;}
+			#slideshowhome a.pager-active, #slideshowhome a.pager-link:hover { background-position:0 -14px; }
+			
+			
+
+.newswrap {margin:0 0 0 -17px; }
+	.newsitem { float:left; margin:0 0 0 17px; width:202px; }
+		.newsitem a { text-decoration:none; }
+			.newsitem a:hover img { border:1px solid #000;}
+		.newsitem img { display:block; border:1px solid #999999; padding:0; margin:0; }
+		.newsitem h4 { font-family:Arial, Helvetica, sans-serif; font-size:13px !important; line-height:16px !important; color:#000000 !important; padding:8px 0 6px 0; margin:0; }
+		.newsitem .date { font-family:Arial, Helvetica, sans-serif; font-size:12px !important; line-height:14px !important; color:#333 !important; margin:0; padding:0; }
+
+/* =Content
+-------------------------------------------------------------- */
+
+#content {}
+	#content ul {margin:0 0 15px  30px; padding:0;}
+		#content ul li {margin:0 0 6px 0; padding:0; list-style:disc; }
+
+
+
+.postwrap { margin-bottom:20px;}
+.postthumb { float:left; width:220px; }
+		.postthumb img { display:block; }
+	.postcontent { float:right; width:420px; }
+	.postcontent .entry-header h3 { }
+		.postcontent .entry-header h3 a { text-decoration:none !important; }
+	
+	.entry-meta { font-size:12px; line-height:16px; margin-bottom:6px; }
+	#nav-below {padding-top:10px; }		
+
+#eventheader { position:relative; width:680px; height:312px; }
+	#eventheader h1 {position:absolute; left:0; bottom:0; z-index:100; display:inline-block; background: url(/clients/ChesterTheatre/Images/back_homebanner.png) no-repeat; color:#FFFFFF; font-size:32px; line-height:47px; margin:0; padding:0 20px 0 20px; }
+	#eventheader img { display:block; position:absolute; top:0; left:0; }
+	.eventdata {margin-bottom:15px; clear:both; }
+
+
+h3.subpagestitle { background:#D29402; color:#FFFFFF; font-size:18px; line-height:45px; padding-left:12px; font-family:Georgia, "Times New Roman", Times, serif; }
+	ul.subpages { margin:0; padding:0; }
+		ul.subpages li { margin:0; padding:0; list-style:none; }
+		ul.subpages li a { margin:0; padding:10px 5px 10px 12px; list-style:none; font-size:14px; line-height:18px; color:#FFFFFF; text-decoration:none; display:block; }
+			ul.subpages li a:hover, ul.subpages li.current_page_item a  { color:#999;  }
+
+.gallery-item { margin-top:0 !important; }
+	.gallery-item img { border:1px solid #999999 !important; }
+	.gallery-item a:hover img { border:1px solid #000 !important;}
+
+#c_feature-2 {
+}
+
+	.cfeature {
+		width:240px;
+		height:120px;
+		color:#FFFFFF;
+		background:#D29402;
+	}
+		.cfeature a {
+			width:240px;
+			height:120px;
+			display:block;
+			color:#FFFFFF;
+			text-decoration:none;
+			position:relative;
+		}
+			.cfeature a:hover { background:#C88C02; }
+		.cfeature h4 {
+			font-family:Georgia, "Times New Roman", Times, serif;
+			font-size:32px;
+			line-height:34px;
+			color:#FFFFFF;
+			margin:0;
+			padding:0;
+			position:absolute;
+			top:8px;
+			left:20px;
+		}
+		.cfeature h2 {
+			font-family:Georgia, "Times New Roman", Times, serif;
+			font-size:50px;
+			line-height:50px;
+			color:#FFFFFF;
+			margin:0;
+			padding:0;
+			position:absolute;
+			top:40px;
+			left:20px;
+			border:none;
+		}
+		.cfeature p {
+			font-family:Arial, Helvetica, sans-serif;
+			font-size:14px;
+			line-height:18px;
+			color:#FFFFFF;
+			margin:0;
+			padding:0;
+			position:absolute;
+			top:90px;
+			right:20px;
+		}
+		.cfeature img {
+			display:block;
+		}
+		
+	
+	
+	
+#actionlinks { margin:0; padding:0;}
+	#actionlinks li { list-style:none; margin:0; padding:0; background:url(/clients/ChesterTheatre/Images/back_actionlinks.png) repeat-x; height:55px; }
+	#actionlinks a { display:block; font-size:16px; line-height:55px; padding:0 0 0 52px; color:#EBF0F0; text-decoration:none; }
+		#actionlinks a.buy { background:url(/clients/ChesterTheatre/Images/icon_buy.png) 12px 0 no-repeat; }
+		#actionlinks a.donations { background:url(/clients/ChesterTheatre/Images/icon_donations.png) 12px 0 no-repeat; }
+		#actionlinks a.facebook { background:url(/clients/ChesterTheatre/Images/icon_facebook.png) 12px 0 no-repeat; }
+		#actionlinks a.contact { background:url(/clients/ChesterTheatre/Images/icon_contact.png) 12px 0 no-repeat; }
+		#actionlinks a.signup { background:url(/clients/ChesterTheatre/Images/icon_signup.png) 12px 0 no-repeat; }
+		#actionlinks a.press { background:url(/clients/ChesterTheatre/Images/icon_press.png) 12px 0 no-repeat; }
+		#actionlinks a.share { background:url(/clients/ChesterTheatre/Images/icon_share.png) 12px 0 no-repeat; }
+		
+		#actionlinks a:hover { background-position: 12px -55px; color:#999999; }
+
+
+
+a.bannerboxes { display:block; position:relative; text-decoration:none; margin:5px 0 0 0; padding:0; }
+	a.bannerboxes img { display:block; width:240px; }
+	a.bannerboxes h4 { 
+		position:absolute; 
+		bottom:0; 
+		left:0; 
+		font-size:20px; 
+		line-height:40px; 
+		font-weight:normal;
+		font-family:Georgia, "Times New Roman", Times, serif;
+		color:#FFFFFF; 
+		padding:0 12px 0 12px; 
+		margin:0; 
+		background: url(/clients/ChesterTheatre/Images/back_banner.png) no-repeat;
+		text-decoration:none;
+	}
+	a.bannerboxes:hover h4 { text-decoration:none; color:#FFF; background:#000;}
+
+
+.sticky {
+}
+.entry-meta {
+	clear: both;
+	display: block;
+}
+.single-author .entry-meta .byline {
+	display: none;
+}
+#content nav {
+	display: block;
+	overflow: hidden;
+}
+#content nav .nav-previous {
+	float: left;
+	width: 50%;
+}
+#content nav .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+#content #nav-above {
+	display: none;
+}
+.paged #content #nav-above,
+.single #content #nav-above {
+	display: block;
+}
+#nav-below {
+	margin: 1em 0 0;
+}
+.page-link {
+	clear: both;
+	margin: 0 0 1em;
+}
+.page .edit-link {
+	clear: both;
+	display: block;
+}
+
+/* 404 page */
+.error404 .widget {
+	float: left;
+	width: 33%;
+}
+.error404 .widget .widgettitle,
+.error404 .widget ul {
+	margin-right: 1em;
+}
+.error404 .widget_tag_cloud {
+	clear: both;
+	float: none;
+	width: 100%;
+}
+
+/* Notices */
+.post .notice,
+.error404 #searchform {
+	background: #eee;
+	display: block;
+	padding: 1em;
+}
+
+/* Image Attachments */
+.image-attachment div.entry-meta {
+	float: left;
+}
+.image-attachment nav {
+	float: right;
+	margin: 0 0 1em 0;
+}
+.image-attachment .entry-content {
+	clear: both;
+}
+.image-attachment .entry-content .entry-attachment {
+	background: #eee;
+	margin: 0 0 1em;
+	padding: 1em;
+	text-align: center;
+}
+.image-attachment .entry-content .attachment {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* Aside Posts */
+.format-aside .entry-header {
+	display: none;
+}
+.single .format-aside .entry-header {
+	display: block;
+}
+.format-aside .entry-content,
+.format-aside .entry-summary {
+	padding-top: 1em;
+}
+.single .format-aside .entry-content,
+.single .format-aside .entry-summary {
+	padding-top: 0;
+}
+
+/* Gallery Posts */
+.format-gallery .gallery-thumb {
+	float: left;
+	margin: 0 1em 0 0;
+}
+
+/* Image Posts */
+.format-image .entry-header {
+	display: none;
+}
+.single .format-image .entry-header {
+	display: block;
+}
+.format-image .entry-content,
+.format-image .entry-summary {
+	padding-top: 1em;
+}
+.single .format-image .entry-content,
+.single .format-image .entry-summary {
+	padding-top: 0;
+}
+
+
+/* =/clients/ChesterTheatre/Images
+-------------------------------------------------------------- */
+
+a img {
+	border: none;
+}
+p img {
+	margin-bottom: 0.5em; /* a small bottom margin prevents content floating under /clients/ChesterTheatre/Images */
+}
+/*
+Resize /clients/ChesterTheatre/Images to fit the main content area.
+- Applies only to /clients/ChesterTheatre/Images uploaded via WordPress by targeting size-* classes.
+- Other /clients/ChesterTheatre/Images will be left alone. Use "size-auto" class to apply to other /clients/ChesterTheatre/Images.
+*/
+img.size-auto,
+img.size-full,
+img.size-large,
+img.size-medium,
+.attachment img,
+.widget-area img,
+.wp-caption {
+	max-width: 100%; /* When /clients/ChesterTheatre/Images are too wide for containing element, force them to fit. */
+	height: auto; /* Override height to match resized width for correct aspect ratio. */
+}
+img.alignleft {
+	margin-right: 1em;
+}
+img.alignright {
+	margin-left: 1em;
+}
+.wp-caption {
+	text-align: center;
+	background:#E1E1E1;
+	font-size:12px;
+	line-height:16px;
+}
+.wp-caption img {
+	display:block;
+}
+.wp-caption .wp-caption-text {
+	padding: 10px;
+	font-size:12px;
+	line-height:16px;
+}
+.gallery-caption {
+}
+.wp-smiley {
+	margin: 0;
+}
+
+.wp-caption.alignright { margin:0 0 15px 15px; }
+.wp-caption.alignleft { margin:0 15px 15px 0; }
+
+
+/* =Forms
+-------------------------------------------------------------- */
+
+#searchform label {
+	display: none;
+}
+#searchform input#s {
+	width: 60%;
+}
+input[type=text],
+input#s {
+	margin: 0 1em 0 0;
+	width: 60%;
+}
+textarea {
+	width: 80%;
+}
+
+/* Class for labelling required form items */
+.required {
+	color: #cc0033;
+}
+
+
+/* =Comments
+-------------------------------------------------------------- */
+
+article.comment {
+	display: block;
+}
+#respond input[type=text] {
+	display: block;
+	width: 60%;
+}
+#respond textarea {
+	display: block;
+	margin: 0 0 1em;
+	width: 80%;
+}
+#respond .form-allowed-tags {
+	clear: both;
+	width: 80%;
+}
+#respond .form-allowed-tags code {
+	display: block;
+}
+
+
+/* =Widgets
+-------------------------------------------------------------- */
+
+.widget {
+	display: block;
+}
+.widget-area .widget_search {
+	overflow: hidden;
+}
+.widget-area .widget_search input {
+	float: left;
+}
+
+
+/* =Footer
+-------------------------------------------------------------- */
+
+#colophon {
+	clear:both;
+	background:#2D2D2D;
+	margin: 0 auto;
+	width: 925px;
+	height:105px;
+	position:relative;
+}
+#site-title-footer {
+	font-size: 30px;
+	font-weight: bold;
+	margin: 0;
+	position:absolute;
+	left:0;
+	top:0;
+	width:136px;
+	height:105px;
+}
+#site-title-footer a {
+	width:136px;
+	height:105px;
+	text-indent:-4000px;
+	display:block;
+	background:url(/clients/ChesterTheatre/Images/logo_footer.png) no-repeat;
+}
+
+#colophon aside { 
+	position:absolute;
+	top:30px;
+	color:#CCCCCC;
+	font-size:14px;
+	line-height:18px;
+}
+	#colophon aside p { 
+		color:#CCCCCC;
+		font-size:14px;
+		line-height:18px;
+		padding:0;
+		margin:0;
+	}
+	#colophon aside a { 
+		color:#CCCCCC;
+		text-decoration:underline;
+		font-weight:normal;
+	}
+		#colophon aside a:hover { 
+		color:#CCCCCC;
+		text-decoration:none;
+		}
+	#colophon .widget-title { display:none;}
+	#black-studio-tinymce-2 {
+		left:160px;
+		width:145px;
+	}
+	#black-studio-tinymce-3 {
+		left:330px;
+		width:185px;
+	}
+	#black-studio-tinymce-4 {
+		left:528px;
+		width:255px;
+	}
+	
+	a.footer_buy, a.footer_directions {
+		position:absolute;
+		left:790px;
+		color:#EBF0F0;
+		font-size:16px;
+		line-height:25px;
+		font-weight:normal;
+		text-decoration:none;
+		padding:0 0 0 30px;
+	}
+	a.footer_buy:hover, a.footer_directions:hover {
+		position:absolute;
+		background-position: 0 -25px;
+		color:#999999;
+	}
+	a.footer_buy {
+		top:30px;
+		background:url(/clients/ChesterTheatre/Images/icon_footer_buy.png) 0 0 no-repeat;
+	}
+	a.footer_directions {
+		top:60px;
+		background:url(/clients/ChesterTheatre/Images/icon_footer_directions.png) 0 0 no-repeat;
+	}
+
+
+#bottom {
+	margin: 0 auto 20px auto;
+	width: 925px;
+}
+
+.copy {
+	float:left;
+	color:#797979;
+	font-size:12px;
+}
+	.copy p {
+	font-size:11px;
+	color:#797979;
+	padding:12px;
+	margin:0;
+	}
+	.copy a {
+	font-size:11px;
+	color:#797979;
+	}
+	.copy a:hover {
+	font-size:11px;
+	color:#FFF;
+	}
+	
+.sponsors { float:right;padding:12px;}
+	.sponsors a {display:block; float:right; height:50px; margin-left:20px; text-indent:-4000px;}
+		.sponsors a.actorsequity {width:42px; background:url(/clients/ChesterTheatre/Images/actorsequity.png) 0 0 no-repeat;}
+		.sponsors a.tcg {width:100px; background:url(/clients/ChesterTheatre/Images/tcg.png) 0 0 no-repeat;}
+		.sponsors a.massculturalcouncil {width:80px; background:url(/clients/ChesterTheatre/Images/massculturalcouncil.png) 0 0 no-repeat;}
+	
+	

@@ -1,0 +1,617 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+
+
+
+<title>
+	Chamberlayne Actors Theatre - 'Kitchen Witches' opens May 28
+</title>
+<meta name="google-site-verification" content="7j9_w2_ZxQtsX_yt980RKqOU-PhyYtkbvY8nA6qe3p0">
+<link href="/clients/CatTheatre/Images/StyleSheet.css" rel="stylesheet" type="text/css">
+    
+<script language="javascript" type="text/javascript">
+var EditID;
+var PopupBehaviorID;
+var Data;
+var valWidth;
+var valHeight;
+valWidth = 450;
+valHeight = 545;
+var X;
+var Y;
+X = 0;
+Y = 0;
+function getInput(inTitle) {
+    var response = prompt(inTitle, "");
+    alert("hi");
+}
+function cancelInit() {
+    alert("cancelInit() called!");
+}
+function checkParam() {
+    var qs = new Querystring();
+    var ticketID = qs.get("ticketid", "0")
+    viewTicket(null, ticketID);
+}
+function clearInit() {
+    hiddenField = document.getElementById("ctl00_HiddenFieldInitializing");
+    hiddenField.value = "N";
+}
+function edit(e, inID, inBehavior, popWidth,inControl,isModal) {
+    //alert(obj.offsetLeft);
+    //alert(inID);
+    
+    if (!e) {
+        e = event;
+    }
+    
+    PopupBehaviorID = inBehavior;
+
+    //dataPanel = document.getElementById("ctl00_ContentPlaceHolder2_PanelData");
+    //dataPanel.style.visibility = "hidden";
+
+    hiddenField = document.getElementById("ctl00_HiddenFieldCurrentID");
+    hiddenField.value = inID;
+   
+    hiddenField = document.getElementById("ctl00_HiddenFieldPopupPanelErrorMessage");
+    hiddenField.value = "";
+   
+    hiddenField = document.getElementById("ctl00_HiddenFieldSaving");
+    hiddenField.value = "";
+   
+    hiddenField = document.getElementById("ctl00_HiddenFieldInitializing");
+    hiddenField.value = "Y";
+
+    //Set_Cookie("HFInit", "Y", "", "", "", "");
+   
+    X = e.clientX;
+    Y = e.clientY;
+    //X = 300;
+    //Y = 100;
+    var w = 0, h = 0;
+    
+   
+
+    if (document.all) {
+        /* the following is only available after onLoad */
+        w = document.body.clientWidth;
+        h = document.body.clientHeight;
+    }
+    else if (document.layers) {
+        w = window.innerWidth;
+        h = window.innerHeight;
+    }
+
+    var popW = popWidth, popH = 400;
+
+    var leftPos = (w - popW) / 2, topPos = (h - popH) / 2;
+
+
+    //PopupBehaviorID = "BehaviorViewTicket"
+    var postbackControl = document.getElementById(inControl);
+    __doPostBack(postbackControl.id);
+
+    //showPopup(inID, X + 10, Y + 13);
+
+    if (isModal == 1) {
+        showModalPopup(0, parseInt(leftPos), 100);
+    }
+    else {
+        showPopup(0, parseInt(leftPos), 100);
+    }
+   
+    e.cancelBubble = true;
+    return false;
+}
+function messagebox(inTitle,inMessage) {
+    //alert(obj.offsetLeft);
+    //alert(inID);
+
+    hiddenFieldTitle = document.getElementById("ctl00_HiddenFieldMessageBox_Title");
+    hiddenFieldTitle.value = inTitle;
+    hiddenFieldMessage = document.getElementById("ctl00_HiddenFieldMessageBox_Message");
+    hiddenFieldMessage.value = inMessage;
+        
+        e = event;
+   
+
+    PopupBehaviorID = "BehaviorMessageBox";
+
+    X = e.clientX;
+    Y = e.clientY;
+    var w = 0, h = 0;
+
+    if (document.all) {
+        /* the following is only available after onLoad */
+        w = document.body.clientWidth;
+        h = document.body.clientHeight;
+    }
+    else if (document.layers) {
+        w = window.innerWidth;
+        h = window.innerHeight;
+    }
+
+    var popW = 300, popH = 400;
+    var leftPos = (w - popW) / 2, topPos = (h - popH) / 2;
+
+    var postbackControl = document.getElementById('ctl00_HiddenFieldRefresh_MessageBox');
+    __doPostBack(postbackControl.id);
+    //showPopup(inID, X + 10, Y + 13);
+
+    showPopup(0, parseInt(leftPos), 100);
+
+
+    e.cancelBubble = true;
+    return false;
+}
+function showModalPopup(inID, varx, vary) {
+    //EditID = inID;
+    $find(PopupBehaviorID).show();
+    //$find(PopupBehaviorID + "PopupBehavior").set_y(vary);
+    //$find(PopupBehaviorID + "PopupBehavior").set_x(varx + 1);
+}
+function showPopup(inID, varx, vary) {
+    //EditID = inID;
+    $find(PopupBehaviorID).showPopup();
+    $find(PopupBehaviorID + "PopupBehavior").set_y(vary);
+    $find(PopupBehaviorID + "PopupBehavior").set_x(varx + 1);
+}
+function hidePopup() {
+    //AjaxControlToolkit.PopupControlBehavior.__VisiblePopup.hidePopup();
+    $find(PopupBehaviorID).hidePopup();
+    return true;
+}
+function hideModalPopup() {
+    //AjaxControlToolkit.PopupControlBehavior.__VisiblePopup.hidePopup();
+    $find(PopupBehaviorID).hide();
+    return false;
+}
+function rowRollOver(obj) {
+    obj.style.backgroundColor = "#FFEBCD";
+}
+function rowRollOut(obj, rowNumber) {
+    if (rowNumber % 2 == 0) {
+        obj.style.backgroundColor = "#e0e0e0";
+    }
+    else {
+        obj.style.backgroundColor = "#ffffff";
+    }
+}
+function saveChanges() {
+    hiddenField = document.getElementById("ctl00_HiddenFieldSaveChanges");
+    hiddenField.value = "YES";
+
+    //        var hiddenAction = document.getElementById("ctl00_ContentPlaceHolder2_DDLAction");
+    //        var hiddenUser = document.getElementById("ctl00_ContentPlaceHolder2_DDLUser");
+
+    //        if (hiddenUser.value == "0" && hiddenAction.value != "") {
+    //            alert("Please select a User for this Action.");
+    //            return false;
+    //        }
+    //        else {
+    //            return true;
+    //        }
+}
+function Set_Cookie(name, value, expires, path, domain, secure) {
+    // set time, it's in milliseconds
+    var today = new Date();
+    today.setTime(today.getTime());
+
+    /*
+    if the expires variable is set, make the correct
+    expires time, the current script below will set
+    it for x number of days, to make it for hours,
+    delete * 24, for minutes, delete * 60 * 24
+    */
+    if (expires) {
+        expires = expires * 1000 * 60 * 60 * 24;
+    }
+    var expires_date = new Date(today.getTime() + (expires));
+
+    document.cookie = name + "=" + escape(value) +
+((expires) ? ";expires=" + expires_date.toGMTString() : "") +
+((path) ? ";path=" + path : "") +
+((domain) ? ";domain=" + domain : "") +
+((secure) ? ";secure" : "");
+}
+// this deletes the cookie when called
+function Delete_Cookie(name, path, domain) {
+    if (Get_Cookie(name)) document.cookie = name + "=" +
+((path) ? ";path=" + path : "") +
+((domain) ? ";domain=" + domain : "") +
+";expires=Thu, 01-Jan-1970 00:00:01 GMT";
+}
+function Get_Cookie(check_name) {
+    // first we'll split this cookie up into name/value pairs
+    // note: document.cookie only returns name=value, not the other components
+    var a_all_cookies = document.cookie.split(';');
+    var a_temp_cookie = '';
+    var cookie_name = '';
+    var cookie_value = '';
+    var b_cookie_found = false; // set boolean t/f default f
+
+    for (i = 0; i < a_all_cookies.length; i++) {
+        // now we'll split apart each name=value pair
+        a_temp_cookie = a_all_cookies[i].split('=');
+
+
+        // and trim left/right whitespace while we're at it
+        cookie_name = a_temp_cookie[0].replace(/^\s+|\s+$/g, '');
+
+        // if the extracted name matches passed check_name
+        if (cookie_name == check_name) {
+            b_cookie_found = true;
+            // we need to handle case where cookie has no value but exists (no = sign, that is):
+            if (a_temp_cookie.length > 1) {
+                cookie_value = unescape(a_temp_cookie[1].replace(/^\s+|\s+$/g, ''));
+            }
+            // note that in cases where cookie is initialized but no value, null is returned
+            return cookie_value;
+            break;
+        }
+        a_temp_cookie = null;
+        cookie_name = '';
+    }
+    if (!b_cookie_found) {
+        return null;
+    }
+}			
+</script>
+    
+</head><body id="ctl00_bodytag" style="background-image: url(/clients/CatTheatre/Images/CATBackgroundGradient.png);">
+  
+
+
+<script src="/clients/CatTheatre/Images/WebResource.js" type="text/javascript"></script>
+
+
+<script src="/clients/CatTheatre/Images/ScriptResource_002.js" type="text/javascript"></script>
+<script src="/clients/CatTheatre/Images/ScriptResource.js" type="text/javascript"></script>
+<script src="/clients/CatTheatre/Images/Default.js" type="text/javascript"></script>
+<div>
+
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDQK47N/VCwLssvLQAwLHhbKJBALG/5cwApnk3K4NAoDiyWMCg+LJYwKC4sljAv3hyWMCipCPSwLk7YucDwKUscWSAgKy4KjaDuAV16Of8Un8Cb+A72nm++4Bgtbt" type="hidden">
+</div>
+    <div>
+
+
+    
+        <center>
+        <!-- HEADING -->
+        <table cellpadding="0" cellspacing="0" width="900">
+        <tbody><tr>
+        <td align="left">
+            <table cellpadding="0" cellspacing="0" width="100%">
+            <tbody><tr>
+            <td style="padding-bottom: 10px;"><input name="ctl00$ImageButton1" id="ctl00_ImageButton1" src="/clients/CatTheatre/Images/CATHeading_FineHand.png" style="border-width: 0px;" type="image"></td>
+            <td align="right">
+                
+            </td>
+            </tr>
+            </tbody></table>
+            
+        </td>
+        </tr>
+        <tr>
+        <td valign="top">
+            <!-- MENU FRAME -->
+            <div id="ctl00_PanelMenuFrame" style="padding: 0pt; background-color: transparent; height: 28px; width: 900px; text-align: left; margin-top: 0px; vertical-align: top;"><div style="overflow: hidden; background-color: White; margin-left: 5px; margin-right: 5px; height: 1px; font-size: 1px;"></div><div style="overflow: hidden; background-color: White; margin-left: 2px; margin-right: 2px; height: 1px; font-size: 1px;"></div><div style="overflow: hidden; background-color: White; margin-left: 1px; margin-right: 1px; height: 1px; font-size: 1px;"></div><div style="overflow: hidden; background-color: White; margin-left: 0px; margin-right: 0px; height: 1px; font-size: 1px;"></div><div style="overflow: hidden; background-color: White; margin-left: 0px; margin-right: 0px; height: 1px; font-size: 1px;"></div><div id="" style="border-style: none; background-color: White; height: 18px; width: 100%; text-align: left; padding-left: 0px;">
+	
+                <table cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td width="8"></td><td>
+                
+    <span id="ctl00_ContentPlaceHolder2_Label14" style="font-family: tahoma,arial; font-size: 9pt;">
+    <center>
+
+    </center>
+    </span>
+            
+                </td><td width="8"></td></tr></tbody></table>
+            
+</div><div style="overflow: hidden; background-color: White; margin-left: 0px; margin-right: 0px; height: 1px; font-size: 1px;"></div><div style="overflow: hidden; background-color: White; margin-left: 0px; margin-right: 0px; height: 1px; font-size: 1px;"></div><div style="overflow: hidden; background-color: White; margin-left: 1px; margin-right: 1px; height: 1px; font-size: 1px;"></div><div style="overflow: hidden; background-color: White; margin-left: 2px; margin-right: 2px; height: 1px; font-size: 1px;"></div><div style="overflow: hidden; background-color: White; margin-left: 5px; margin-right: 5px; height: 1px; font-size: 1px;"></div></div>
+            
+
+            <!-- MAIN PANEL -->
+            <div id="ctl00_PanelMainFrame" style="padding: 0pt; background-color: transparent; width: 900px; text-align: left; margin-top: 5px; vertical-align: top;"><div style="border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); overflow: hidden; background-color: rgb(153, 153, 153); margin-left: 5px; margin-right: 3px; height: 1px; font-size: 1px;"></div><div style="border-left: 3px solid rgb(153, 153, 153); border-right: 3px solid rgb(153, 153, 153); overflow: hidden; background-color: White; margin-left: 2px; margin-right: 0px; height: 1px; font-size: 1px;"></div><div style="border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); overflow: hidden; background-color: White; margin-left: 1px; margin-right: -1px; height: 1px; font-size: 1px;"></div><div style="border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); overflow: hidden; background-color: White; margin-left: 0px; margin-right: -2px; height: 1px; font-size: 1px;"></div><div style="border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); overflow: hidden; background-color: White; margin-left: 0px; margin-right: -2px; height: 1px; font-size: 1px;"></div><div id="" style="border-style: none solid; border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); overflow: auto; background-color: White; width: 100%; text-align: left;">
+	            
+                <table cellpadding="9" cellspacing="0"><tbody><tr><td>
+                
+
+<script language="javascript" type="text/javascript">
+    var BehaviorID;
+    function showPerformances(e) {
+
+        var w = pageWidth();
+        var h = pageHeight();
+        var popW = 300, popH = 200;
+        var leftPos = (w - popW) / 2, topPos = (h - popH) / 2;
+        topPos = 150;
+        
+        BehaviorID = "GetPerformancesPopup"
+      
+        if (!e) e = window.event;
+        var behavior = $find('GetPerformances');
+        behavior.populate('HELLO');
+        e.cancelBubble = true;
+        $find('GetPerformancesPopup').showPopup();
+        $find('GetPerformancesPopup' + "PopupBehavior").set_y(parseInt(topPos));
+        $find('GetPerformancesPopup' + "PopupBehavior").set_x(parseInt(leftPos));
+        return false;
+    }
+    function showSeason(e,seasonID) {
+
+        var w = pageWidth();
+        var h = pageHeight();
+        var popW = 400, popH = 200;
+        var leftPos = (w - popW) / 2, topPos = (h - popH) / 2;
+        topPos = 150;
+
+        BehaviorID = "GetSeasonPopup"
+
+        if (!e) e = window.event;
+        var behavior = $find('GetSeason');
+        behavior.populate(seasonID);
+        e.cancelBubble = true;
+        $find(BehaviorID).showPopup();
+        $find(BehaviorID + "PopupBehavior").set_y(parseInt(topPos));
+        $find(BehaviorID + "PopupBehavior").set_x(parseInt(leftPos));
+        return false;
+    }
+    function showCast(e) {
+
+        var w = pageWidth();
+        var h = pageHeight();
+        var popW = 400, popH = 200;
+        var leftPos = (w - popW) / 2, topPos = (h - popH) / 2;
+        topPos = 150;
+
+        BehaviorID = "GetCastPopup"
+
+        if (!e) e = window.event;
+        var behavior = $find('GetCast');
+        behavior.populate('HELLO');
+        e.cancelBubble = true;
+        $find('GetCastPopup').showPopup();
+        $find('GetCastPopup' + "PopupBehavior").set_y(parseInt(topPos));
+        $find('GetCastPopup' + "PopupBehavior").set_x(parseInt(leftPos));
+        return false;
+    }
+    function showShow(e,showID) {
+
+        var w = pageWidth();
+        var h = pageHeight();
+        var popW = 400, popH = 200;
+        var leftPos = (w - popW) / 2, topPos = (h - popH) / 2;
+        topPos = 150;
+
+        BehaviorID = "GetAuditionPopup"
+
+        if (!e) e = window.event;
+        var behavior = $find('GetAudition');
+        behavior.populate(showID);
+        e.cancelBubble = true;
+        $find('GetAuditionPopup').showPopup();
+        $find('GetAuditionPopup' + "PopupBehavior").set_y(parseInt(topPos));
+        $find('GetAuditionPopup' + "PopupBehavior").set_x(parseInt(leftPos));
+        return false;
+    }
+
+    function hidePopup() {
+        $find(BehaviorID).hidePopup();
+        return false;
+    }
+
+    var fadein;
+    var fadeout;
+
+    function pageLoadX() {
+        var ss = $find("ss1");
+        ss.add_slideChanging(onChanging);
+
+        var ae = $find("ae");
+        var be = ae.get_OnLoadBehavior();
+        var an = be.get_animation();
+        fadein = an.get_animations()[1];
+        fadeout = an.get_animations()[0];
+
+        fadein.set_duration(0.5);
+        fadeout.set_duration(0.5);
+    }
+    function onChanging(sender, args) {
+        fadein.play();
+        window.setTimeout("fadeout.play()", 4000);
+    }
+    
+    
+</script>
+<script type="text/javascript" src="/clients/CatTheatre/Images/PageFunctions.js"></script>
+
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    
+    <tbody><tr>
+        <td valign="top">
+                
+<!--TIX DATA START-->
+
+<!--TIX DATA END-->
+
+        </td>
+    </tr>
+    
+    </tbody></table>
+
+    <input name="ctl00$ContentPlaceHolder1$ButtonDummy" value="Button" id="ctl00_ContentPlaceHolder1_ButtonDummy" style="display: none;" type="submit">
+    
+    <!-- Performance List Popup -->
+    
+    
+    
+    
+    <div id="ctl00_ContentPlaceHolder1_PanelShowSchedulePopup" style="border: 1px solid rgb(0, 0, 0); padding: 10px; background-color: rgb(239, 239, 239); width: 300px; display: none; position: absolute;">
+		    
+        <div id="ctl00_ContentPlaceHolder1_PanelShowSchedule" style="font-family: tahoma,arial; font-size: 10pt;">
+			    
+        
+		</div>
+        <br>
+        <center><input name="ctl00$ContentPlaceHolder1$Button1" value="Cancel" onclick="return hidePopup();" id="ctl00_ContentPlaceHolder1_Button1" type="submit"></center>
+        
+    
+	</div> 
+    
+    <!-- Cast Popup -->
+    
+    
+    
+    
+    <div id="ctl00_ContentPlaceHolder1_PanelCast" style="border: 1px solid rgb(0, 0, 0); padding: 10px; background-color: rgb(239, 239, 239); height: 510px; width: 400px; display: none; position: absolute;">
+		    
+    <center><span id="ctl00_ContentPlaceHolder1_Label2" style="font-family: tahoma,arial; font-size: 14pt; font-weight: bold;">Meet the Cast</span></center>
+    <table cellpadding="0" cellspacing="0" height="5"><tbody><tr><td></td><td></td></tr></tbody></table>
+    <div id="ctl00_ContentPlaceHolder1_Panel1" style="overflow: auto; height: 440px;">
+			    
+        <div id="ctl00_ContentPlaceHolder1_PanelCastInfo" style="font-family: tahoma,arial; font-size: 10pt;">
+				    
+            <img id="ctl00_ContentPlaceHolder1_Image1" src="/clients/CatTheatre/Images/ajax-loader.gif" style="border-width: 0px;">
+        
+			</div>
+        <br><br>
+        
+		</div> 
+        <br>
+        <center><input name="ctl00$ContentPlaceHolder1$Button2" value="Close" onclick="return hidePopup();" id="ctl00_ContentPlaceHolder1_Button2" type="submit"></center>
+        <br><br>
+       
+    
+	</div> 
+    
+    <!-- Audition Popup -->
+    
+    
+    
+    
+    <div id="ctl00_ContentPlaceHolder1_PanelAudition" style="border: 1px solid rgb(0, 0, 0); padding: 10px; background-color: rgb(239, 239, 239); height: 510px; width: 400px; display: none; position: absolute;">
+		    
+    <table cellpadding="0" cellspacing="0" height="5"><tbody><tr><td></td><td></td></tr></tbody></table>
+    <div id="ctl00_ContentPlaceHolder1_Panel3" style="overflow: auto; height: 440px;">
+			    
+        <div id="ctl00_ContentPlaceHolder1_PanelAuditionInfo" style="font-family: tahoma,arial; font-size: 10pt;">
+				    
+            <img id="ctl00_ContentPlaceHolder1_Image3" src="/clients/CatTheatre/Images/ajax-loader.gif" style="border-width: 0px;">
+        
+			</div>
+        <br><br>
+        
+		</div> 
+        <br>
+        <center><input name="ctl00$ContentPlaceHolder1$Button3" value="Close" onclick="return hidePopup();" id="ctl00_ContentPlaceHolder1_Button3" type="submit"></center>
+        <br><br>
+       
+    
+	</div> 
+    
+    <!-- Season Popup -->
+    
+    
+    
+    
+    <div id="ctl00_ContentPlaceHolder1_PanelSeason" style="border: 1px solid rgb(0, 0, 0); padding: 10px; background-color: rgb(239, 239, 239); height: 510px; width: 400px; display: none; position: absolute;">
+		    
+    <table cellpadding="0" cellspacing="0" height="5"><tbody><tr><td></td><td></td></tr></tbody></table>
+    <div id="ctl00_ContentPlaceHolder1_Panel4" style="overflow: auto; height: 440px;">
+			    
+        <div id="ctl00_ContentPlaceHolder1_PanelSeasonInfo" style="font-family: tahoma,arial; font-size: 10pt;">
+				    
+            <img id="ctl00_ContentPlaceHolder1_Image4" src="/clients/CatTheatre/Images/ajax-loader.gif" style="border-width: 0px;">
+        
+			</div>
+        <br><br>
+        
+		</div> 
+        <br>
+        <center><input name="ctl00$ContentPlaceHolder1$Button4" value="Close" onclick="return hidePopup();" id="ctl00_ContentPlaceHolder1_Button4" type="submit"></center>
+        <br><br>
+       
+    
+	</div> 
+    
+    
+    
+
+                </td></tr></tbody></table>
+            
+</div><div style="border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); overflow: hidden; background-color: White; margin-left: 0px; margin-right: -2px; height: 1px; font-size: 1px;"></div><div style="border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); overflow: hidden; background-color: White; margin-left: 0px; margin-right: -2px; height: 1px; font-size: 1px;"></div><div style="border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); overflow: hidden; background-color: White; margin-left: 1px; margin-right: -1px; height: 1px; font-size: 1px;"></div><div style="border-left: 3px solid rgb(153, 153, 153); border-right: 3px solid rgb(153, 153, 153); overflow: hidden; background-color: White; margin-left: 2px; margin-right: 0px; height: 1px; font-size: 1px;"></div><div style="border-left: 1px solid rgb(153, 153, 153); border-right: 1px solid rgb(153, 153, 153); overflow: hidden; background-color: rgb(153, 153, 153); margin-left: 5px; margin-right: 3px; height: 1px; font-size: 1px;"></div></div>
+            
+
+            <!-- FOOTER FRAME -->
+            <div id="ctl00_PanelFooterFrame" style="padding: 0pt; background-color: transparent; height: 50px; width: 900px; margin-top: 5px; vertical-align: top;"><div style="overflow: hidden; background-color: White; margin-left: 5px; margin-right: 5px; height: 1px; font-size: 1px;"></div><div style="overflow: hidden; background-color: White; margin-left: 2px; margin-right: 2px; height: 1px; font-size: 1px;"></div><div style="overflow: hidden; background-color: White; margin-left: 1px; margin-right: 1px; height: 1px; font-size: 1px;"></div><div style="overflow: hidden; background-color: White; margin-left: 0px; margin-right: 0px; height: 1px; font-size: 1px;"></div><div style="overflow: hidden; background-color: White; margin-left: 0px; margin-right: 0px; height: 1px; font-size: 1px;"></div><div id="" style="border-style: none; background-color: White; height: 40px; width: 100%;">
+	
+            <center>
+            <span id="ctl00_Label2" style="font-family: tahoma,arial; font-size: 9pt;">
+            <b>Chamberlayne Actors Theatre</b> • P.O. Box 15513, Richmond, Virginia 23227 • (804) 262-9760 • Playhouse: 319 North Wilkinson Road        
+            <a id="ctl00_HyperLink1" href="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=319+North+Wilkinson+Road,+23227&amp;sll=37.0625,-95.677068&amp;sspn=46.677964,58.183594&amp;ie=UTF8&amp;hq=&amp;hnear=319+N+Wilkinson+Rd,+Richmond,+Henrico,+Virginia+23227&amp;z=16" target="directions">Get Directions</a></span> 
+            <table cellpadding="0" cellspacing="0" height="4"><tbody><tr><td></td></tr></tbody></table>
+
+                <a id="ctl00_HyperLink2" href="http://www.facebook.com/home.php?#%21/pages/Richmond-VA/Chamberlayne-Actors-Theatre/10651622687?ref=ts" target="facebook"><img id="ctl00_Image1" src="/clients/CatTheatre/Images/facebook.png" style="border-width: 0px; width: 80px;"></a> 
+            </center>
+            
+</div><div style="overflow: hidden; background-color: White; margin-left: 0px; margin-right: 0px; height: 1px; font-size: 1px;"></div><div style="overflow: hidden; background-color: White; margin-left: 0px; margin-right: 0px; height: 1px; font-size: 1px;"></div><div style="overflow: hidden; background-color: White; margin-left: 1px; margin-right: 1px; height: 1px; font-size: 1px;"></div><div style="overflow: hidden; background-color: White; margin-left: 2px; margin-right: 2px; height: 1px; font-size: 1px;"></div><div style="overflow: hidden; background-color: White; margin-left: 5px; margin-right: 5px; height: 1px; font-size: 1px;"></div></div>
+            
+
+        </td>
+        </tr>
+        </tbody></table>
+        
+        </center>
+       
+            
+        <input name="ctl00$HiddenFieldCurrentID" id="ctl00_HiddenFieldCurrentID" type="hidden">
+        <input name="ctl00$HiddenFieldPopupPanelErrorMessage" id="ctl00_HiddenFieldPopupPanelErrorMessage" type="hidden">
+        <input name="ctl00$HiddenFieldSaving" id="ctl00_HiddenFieldSaving" type="hidden">
+        <input name="ctl00$HiddenFieldInitializing" id="ctl00_HiddenFieldInitializing" type="hidden">
+        
+        
+    </div>
+    
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {$get('ctl00_ToolkitScriptManager1_HiddenField').value = '';Sys.Application.remove_init(fn);};Sys.Application.add_init(fn);})();Sys.Application.initialize();
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.RoundedCornersBehavior, {"Color":"White","id":"ctl00_RoundedCornersExtender3"}, null, null, $get("ctl00_PanelMenuFrame"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.DynamicPopulateBehavior, {"PopulateTriggerID":"","ServiceMethod":"GetPerformances","ServicePath":"/Default.aspx","UpdatingCssClass":"updating","id":"GetPerformances"}, null, null, $get("ctl00_ContentPlaceHolder1_PanelShowSchedule"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.PopupControlBehavior, {"PopupControlID":"ctl00_ContentPlaceHolder1_PanelShowSchedulePopup","dynamicServicePath":"/Default.aspx","id":"GetPerformancesPopup"}, null, null, $get("ctl00_ContentPlaceHolder1_ButtonDummy"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.DynamicPopulateBehavior, {"PopulateTriggerID":"","ServiceMethod":"GetCast","ServicePath":"/Default.aspx","UpdatingCssClass":"updating","id":"GetCast"}, null, null, $get("ctl00_ContentPlaceHolder1_PanelCastInfo"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.PopupControlBehavior, {"PopupControlID":"ctl00_ContentPlaceHolder1_PanelCast","dynamicServicePath":"/Default.aspx","id":"GetCastPopup"}, null, null, $get("ctl00_ContentPlaceHolder1_ButtonDummy"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.DynamicPopulateBehavior, {"ContextKey":"169","PopulateTriggerID":"","ServiceMethod":"GetShowInfo","ServicePath":"/Default.aspx","UpdatingCssClass":"updating","id":"GetAudition"}, null, null, $get("ctl00_ContentPlaceHolder1_PanelAuditionInfo"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.PopupControlBehavior, {"PopupControlID":"ctl00_ContentPlaceHolder1_PanelAudition","dynamicServicePath":"/Default.aspx","id":"GetAuditionPopup"}, null, null, $get("ctl00_ContentPlaceHolder1_ButtonDummy"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.DynamicPopulateBehavior, {"ContextKey":"169","PopulateTriggerID":"","ServiceMethod":"GetSeasonInfo","ServicePath":"/Default.aspx","UpdatingCssClass":"updating","id":"GetSeason"}, null, null, $get("ctl00_ContentPlaceHolder1_PanelSeasonInfo"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.PopupControlBehavior, {"PopupControlID":"ctl00_ContentPlaceHolder1_PanelSeason","dynamicServicePath":"/Default.aspx","id":"GetSeasonPopup"}, null, null, $get("ctl00_ContentPlaceHolder1_ButtonDummy"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.RoundedCornersBehavior, {"BorderColor":"#999999","Color":"White","id":"ctl00_RoundedCornersExtender2"}, null, null, $get("ctl00_PanelMainFrame"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.RoundedCornersBehavior, {"Color":"White","id":"ctl00_RoundedCornersExtender1"}, null, null, $get("ctl00_PanelFooterFrame"));
+});
+//]]>
+</script>
+<input name="hiddenInputToUpdateATBuffer_CommonToolkitScripts" id="hiddenInputToUpdateATBuffer_CommonToolkitScripts" value="1" type="hidden"></form>
+</body></html>

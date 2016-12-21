@@ -1,0 +1,225 @@
+/* VERSIONS
+/* 6_0: Module Framework
+/* 6_1: Managed Calendar Pages Update [Author: Nick Hall]
+
+
+/* CALENDAR STYLES
+----------------------------------------------------------------------------- */
+dl.calendar-day dd h4, 
+dl.calendar-day dd h4 a { color: #000; }
+dl.calendar-day dd h4 a:hover { color: #5f5f5f; }
+dl.calendar-day dd h5, 
+dl.calendar-day dd h6 { text-transform: none; color: #5F5F5F; }
+dl.calendar-day dd span { display: block; }
+dl.calendar-day dd span.time { text-transform: lowercase; color: #5F5F5F; }
+
+/* 
+-----------------------------------------------------------------------------
+ =BUTTONS
+----------------------------------------------------------------------------- */	
+.controls{ position: relative; margin-bottom: 1.2em; }
+	
+	.controls .paging, .controls .views,
+	.month .paging, .month .views { float: left; margin-right: 2em; height: auto; }
+		.controls .paging a, .controls .views a,
+		.month .paging a, .month .views a { float: left; margin-right: 5px; position: static; }
+
+	.calendar .hd .controls div.customize,
+		.calendar .hd .controls div.customize a.customize{ float: right; position: relative; }
+		.calendar .controls div.customize .sc{ position: absolute; z-index: 32; right: 0; top: 2em; width: 220px; }
+			.calendar .controls div.customize .sc .module{  }
+
+.views {}
+	.views span.label {}
+	.views a {}
+		.views a.view-list {}
+		.views a.view-month {}	
+		.views a.view-week {}
+		.views a.view-oneweek {}
+		.views a.view-twoweek {}
+		.views a.view-print {}
+
+/* 
+-----------------------------------------------------------------------------
+ =CALENDAR-LIST
+----------------------------------------------------------------------------- */
+.calendar .list{}
+.calendar .list .hd .paging { margin-bottom: 1.2em; }
+.calendar .bd { clear: both; }
+	.calendar .list dl.calendar-day {	 
+		min-height: 70px;
+		}
+		.calendar .list dl.calendar-day dt {
+			display: block;
+			float: left;
+			height: 53px;
+			position: relative;
+			width: 53px;
+			text-align: center;
+			margin-top: 5px;
+			text-transform: lowercase;
+			}
+			.calendar .list dl.calendar-day dt span {
+				display: block; 
+				text-align: center; 
+				color: #000; 
+				font-family: '2DumbRegular', Arial, Helvetica, sans-serif; 
+				line-height: 1.0em; 
+				width: 55px;
+				}
+			.calendar .list dl.calendar-day dt span.month { font-size: 1.5em; }
+			.calendar .list dl.calendar-day dt span.date { font-size: 2.5em; }
+		.calendar .list dl.calendar-day dd { margin-left: 60px; }
+			.calendar .list dl.calendar-day dd h4 { font-size: 14px; line-height: 18px }
+				.calendar .list .readmore { text-transform: lowercase; font-family: '2DumbRegular', Arial, Helvetica, sans-serif; }
+
+/* 
+-----------------------------------------------------------------------------
+ =CALENDAR-TABLES Mini-block, Block, Week
+ 
+ Available Classes:
+ table.month#
+ table th.first-child / last-child
+ table tr.first-child / last-child / week#
+ table td.first-child / last-child / other-month / other-month-day# / day# / today
+ table dl dd.first-child / last-child / only-child / alt
+----------------------------------------------------------------------------- */
+.table-container{ margin-bottom: .75em; clear: both; }
+	.table-container table {
+		border-collapse: collapse;
+		border: 1px solid #d1d1d1; 
+		border-right: 0;
+		width: 100%;
+		}
+		.table-container table th{
+			color: #fff;
+			background-color: #922786; 
+			text-shadow: 0 -1px #853913;
+			-webkit-box-shadow: inset 0 -1px 0 #a24c98;
+			-moz-box-shadow: inset 0 -1px 0 #a24c98;
+			box-shadow: inset 0 -1px 0 #a24c98;
+			text-align: center;
+			font-weight: normal;
+			text-decoration: none;
+			}
+		.table-container table td{
+			background-color: #FFF;
+			border: 1px solid #d1d1d1; 
+			border-left: 0;
+			vertical-align: top;
+			}
+		.table-container table td.other-month{ background-color: #f5f5f5; }
+		.table-container table td.today{}
+		.table-container table td.event{}
+			.table-container table td span{ /* other month */ }
+			.table-container table td a{}
+			.table-container table td.today a{}
+			.table-container table td.event a{}
+
+/* 
+-----------------------------------------------------------------------------
+ =CALENDAR-MINI
+----------------------------------------------------------------------------- */
+.calendar .miniblock {}
+	.calendar .miniblock .paging{ float: left; width: 100%; height: auto; margin: 0 0 1em 0; }
+		.calendar .miniblock .paging a { position: static; display: block; }
+		.calendar .miniblock .paging a.previous { float: left; }
+		.calendar .miniblock .paging a.next { float: right; }
+	
+	.calendar .miniblock select {
+		margin: 6px auto;
+		width: 100%;
+		}
+	.calendar .miniblock table {}
+		.calendar .miniblock table th{ font-weight: normal;}
+		.calendar .miniblock table td{
+			text-align: center;
+			width: 12%;
+			padding: 1px 0;
+			font: normal 1.1em/1.6em '2DumbRegular', Arial, Helvetica, sans-serif;
+			color: #000; 
+			}
+		.calendar .miniblock table td.other-month{ color: #ccc; }
+		.calendar .miniblock table td.event{ color: #00aeef; }
+		.calendar .miniblock table td.today { color: #000; background: url(/images/calendar/mini-today.png) top center no-repeat; }
+			.calendar .miniblock table td span{}
+			.calendar .miniblock table td a{
+				text-decoration: none;
+				display: block;
+				color: #000;
+				}
+			.calendar .miniblock table td.event a{ color: #00aeef; }
+			.calendar .miniblock table td.today a{ color: #00aeef; }
+
+/*
+-----------------------------------------------------------------------------
+=CUSTOMIZE LIST
+----------------------------------------------------------------------------- */
+ul.calendar-formlist li { background-image: none; padding-left: 0; }
+	ul.calendar-formlist li input { margin-right: 4px; }
+
+/* 
+-----------------------------------------------------------------------------
+ =MONTH/WEEK CALENDAR
+----------------------------------------------------------------------------- */
+.calendar .month{ position: relative; }
+	.month .table-container{ padding-top: 1.2em; clear: both; }
+	.calendar .month .month-select { width: 160px; position: absolute; top: 0; right: 0; }
+	
+	.calendar .month table {
+		width: 100%;
+		}
+		.calendar .month table th{
+			padding: 0.4em;
+			text-align: left;
+			}
+		.calendar .month table td{ width: 16%; }
+		.calendar .month table td.other-month{}
+		.calendar .month table td.today{}
+		.calendar .month table td.event{}
+			.calendar .month table td span{}
+			.calendar .month table td a{}
+			.calendar .month table td.today a{}
+			.calendar .month table td.event a{}
+		.calendar .month table td dl.calendar-day{}
+			.calendar .month table td dl.calendar-day dt{ padding: 3px 10px; margin-bottom: 0.6em; font: normal 1.6em/32px '2DumbRegular', Arial, Helvetica, sans-serif; }
+		    .calendar .month table td.other-month dl.calendar-day dt { color: #ccc; }
+		    .calendar .month table td.event dl.calendar-day dt { color: #00aeef; }
+		    .calendar .month table td.today dl.calendar-day dt { color: #000; background: url(/images/calendar/block-today.png) 0 0 no-repeat; }
+			.calendar .month table td dl.calendar-day dd{ padding: 0 0 9px 4px; }
+				.calendar .month table td dl.calendar-day dd h4 { }
+					.calendar .month table td .readmore { text-transform: lowercase; font-family: '2DumbRegular', Arial, Helvetica, sans-serif; }
+				
+/* 
+-----------------------------------------------------------------------------
+ =ICAL	(Controls styles [customarily found] on /calendars/ical/index.aspx)
+----------------------------------------------------------------------------- */
+.ical-team { }
+	.ical-team-search { margin-bottom: 1.5em; }
+	.ical-team-list {
+		height: 200px;
+		overflow: auto;
+		margin-bottom: 1.5em;
+		border: 1px solid #d0d0d0;
+		}
+		.module .bd .ical-team-list ul { margin: 10px 0 10px 10px; }
+
+.ical-feeds { display: block; position: relative; margin-bottom: 1.5em; }
+	.ical-feeds.active a.ical-trigger { }
+	.pc .ical-feeds .inner {
+		position: absolute;
+		display: none;
+		border: 1px solid #999;
+		padding: 10px;
+		background-color: #fff;
+		width: 90%;
+		z-index: 10;
+		top: 20px;
+		}
+	.pc .ical-feeds.active .inner { display: block; }
+		.ical-buttons a.button {
+			display: block;
+			float: left;
+			margin: 0 1em .5em 0;
+			}
+			#InternetCalendarLinkButton4 { width: 80%; }

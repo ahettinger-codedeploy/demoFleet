@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="gecko win js" xmlns="http://www.w3.org/1999/xhtml" style="background-image: none; background-color: Transparent"><head id="Head1">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+
+</title>
+
+    <script type="text/javascript" src="webpage_files/conditional_css.js">
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="webpage_files/reset.css">
+
+    <script type="text/javascript" language="javascript">
+        function setTargetValueForElements() {
+            elementsArrays = [document.forms, document.links];
+            for (var j = 0; j < elementsArrays.length; j++) {
+                eArray = elementsArrays[j];
+                for (var i = 0; i < eArray.length; i++) {
+                    var targetValue = eArray[i].target;
+                    if (targetValue == "_blank" || targetValue == "_self") {
+                        //do nothing this is assumed valid
+                    } else {
+                        eArray[i].target = "_top";
+                    }
+                }
+            }
+        }
+
+        function setIFrameHeightToContentHeight(ifrmelement) {
+            h = 500;
+            if (ifrmelement) {
+                if (ifrmelement.contentDocument) {//Most Browsers case
+                    h = ifrmelement.contentDocument.body.clientHeight;
+                } else if (ifrmelement.Document) { //IE7 case
+                    h = ifrmelement.Document.body.clientHeight;
+                }
+            }
+            ifrmelement.height = h;
+            ifrmelement.style.height = h;
+        }
+    </script>
+
+<link id="website_css" href="webpage_files/chocolate.css" rel="stylesheet" type="text/css"></head>
+<body onload="setTargetValueForElements();setIFrameHeightToContentHeight(this.frameElement)" style="background-color: Transparent; background-image: none;">
+    <div class="custom_content">
+        <form target="_blank" method="post" action="https://www.paypal.com/cgi-bin/webscr" style="text-align: center;"><input value="_s-xclick" name="cmd" type="hidden"><input value="4044498" name="hosted_button_id" type="hidden"><input src="page_ifrm_data/btn_donateCC_LG.gif" alt="PayPal - The safer, easier way to pay online!" name="submit" border="0" type="image"><img src="page_ifrm_data/pixel.gif" alt="" border="0" height="1" width="1"></form>
+<p><br>
+    </p></div>
+
+
+</body></html>

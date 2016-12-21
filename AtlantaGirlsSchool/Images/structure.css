@@ -1,0 +1,245 @@
+/* VERSIONS
+/* 1_0: Primary Site Structure
+/* 1_1: Changed default colors and site width
+/* 1_2: Updated to Sticky Footers, added tertiary-content [Author: Landon Durnan]
+/* 1_3: General Cleanup; text-indent/overflow modifications [Author: Nick & Alex]
+/* 1_4: Shared Images [Author: Nick Hall]
+----------------------------------------------------------------------------- */
+
+/*
+-----------------------------------------------------------------------------
+ =MAIN POSITIONING STYLES
+----------------------------------------------------------------------------- */
+html, body{ }
+html{ background-color: #efefef; }
+body { text-align: center; background: url(/clients/AtlantaGirlsSchool/Images/bg-body.gif) left bottom repeat-x; }
+#container { background: url(/clients/AtlantaGirlsSchool/Images/bg-html.gif) left top repeat-x; }
+#inner-container,
+#footer {
+	height: 100%;
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+	text-align: left;
+	}
+#inner-container{ width: 100%; }
+#content {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	height: 100%;
+	width: 1000px;
+	word-wrap: break-word;
+	background: url(/clients/AtlantaGirlsSchool/Images/bg-content.png) center top repeat-y;
+	}
+
+/*
+-----------------------------------------------------------------------------
+ =HEADER
+----------------------------------------------------------------------------- */
+#header {
+	z-index: 100;
+	text-align: center;
+	margin: 0;
+	padding: 0 0 20px 0;
+	width: 100%;
+	background: url(/clients/AtlantaGirlsSchool/Images/bg-header.png) top center no-repeat;
+	}
+	#header #header-inner {
+		position: relative;
+		text-align: left;
+		margin: 0 auto;
+		width: 1000px;
+		}
+		#masthead {
+			position: relative;
+			display: block;
+			width: 442px;
+			height: 71px;
+			left: 20px;
+			top: 25px;
+			}
+		#masthead #site-name { }
+			#masthead #site-name a {
+				background: url(/clients/AtlantaGirlsSchool/Images/bg-masthead.png) no-repeat;
+				display: block;
+				text-decoration: none;
+				width: 442px;
+				height: 61px;
+				text-indent: 101%;
+				white-space: nowrap;
+				overflow: hidden;
+				}
+		#masthead #best-place { position: absolute; right: 0; bottom: 0; }
+			#masthead #best-place a {
+				background: url(/clients/AtlantaGirlsSchool/Images/bg-masthead-best.png) 0 0 no-repeat;
+				display: block;
+				text-decoration: none;
+				height: 20px;
+				width: 182px;
+				text-indent: 101%;
+				white-space: nowrap;
+				overflow: hidden;
+				}
+				#masthead #best-place a:hover { background-position: 0 -20px; }
+
+
+/*
+-----------------------------------------------------------------------------
+ =CONTENT
+----------------------------------------------------------------------------- */
+#primary-content,
+#secondary-content,
+#tertiary-content{
+	color: #000;
+	float: left;
+	position: relative;
+	min-height: 630px;
+	font-size: 1.2em;
+	line-height: 1.5em;
+	display: inline; /* blast you IE6 */
+	}
+#primary-content {
+	margin-right: 30px;
+	width: 400px;
+	}
+#secondary-content {
+	clear: right;
+	width: 240px;
+	}
+#tertiary-content{
+	margin-right: 30px;
+	margin-left: 30px;
+	width: 240px;
+	}
+
+/*
+-----------------------------------------------------------------------------
+ =FOOTER
+----------------------------------------------------------------------------- */
+#footer-container { background: url(/clients/AtlantaGirlsSchool/Images/bg-footer.png) top center no-repeat; height: 248px; padding-bottom: 20px; position: relative; font-size: 1.2em; }
+	#footer-container #footer { background: url(/clients/AtlantaGirlsSchool/Images/bg-content-bot.png) center top no-repeat; width: 1000px; }
+		#footer .columns { position: absolute; top: 55px; left: 50px; width: 900px; background: url(/clients/AtlantaGirlsSchool/Images/ftr-divider.png) 0px 0px no-repeat; }
+			#footer .columns .col1, #footer .columns .col2, #footer .columns .col3 { float: left; height: auto; margin: 0; color: #ddd; }
+				#footer .columns .col1 { width: 295px; }
+				#footer .columns .col2 { width: 321px; padding: 0 32px; }
+				#footer .columns .col3 { width: 188px; padding: 0 0 0 32px; }
+					#footer .columns .name h2, #footer .columns .contact h2, #footer .columns .resources h2 { font-weight: normal; font-size: 14px; color: #ddd; text-transform: uppercase; margin: 0 0 6px 0; padding: 0; }
+					#footer .columns .name { }
+						#footer .columns .name strong { display: block; width: 266px; height: 18px; background: url(/clients/AtlantaGirlsSchool/Images/ftr-name.png) left top no-repeat; text-decoration: none; text-indent: 101%; white-space: nowrap; overflow: hidden; }
+					#footer .columns .contact { line-height: 2.0em; }
+						#footer .columns .contact span.phones { float: right; }
+						#footer .columns .contact address { }
+		#footer a.finalsite-powered {
+
+			display: block;
+			width: 132px;
+			height: 21px;
+			background-image: url(/_infrastructure/clients/AtlantaGirlsSchool/Images/poweredbyfinalsite.png) ;
+			float:left;
+			overflow: hidden;
+			text-indent: 200%;
+			white-space: nowrap;
+			position: relative;
+			top: 101px;
+			left: 52px;
+}
+			#footer a.finalsite-powered:hover { opacity: 0.8;}
+/*
+-----------------------------------------------------------------------------
+ =STRUCTURE
+----------------------------------------------------------------------------- */
+/* One Column
+----------------------------------------------------------------------------- */
+body.layout-n0-p1-s0 #nav-sub { margin-left: -30px; }
+body.layout-n0-p1-s0 #primary-content { width: 900px; margin-left: 50px; }
+
+/* Two Column A
+----------------------------------------------------------------------------- */
+body.layout-n1-p1-s0 #primary-content { width: 650px; }
+body.layout-n1-p1-s0 #tertiary-content { }
+
+/* Two Column B
+----------------------------------------------------------------------------- */
+body.layout-n0-p1-s1 #primary-content { margin-left: 40px; width: 650px; }
+body.layout-n0-p1-s1 #secondary-content { }
+
+/* Two Column C (custom)
+----------------------------------------------------------------------------- */
+body.layout-n1-p1-s0-c #primary-content { width: 650px; }
+body.layout-n1-p1-s0-c #tertiary-content { }
+body.layout-n1-p1-s0-c .float-container { }
+
+/* Three Column
+----------------------------------------------------------------------------- */
+body.layout-n1-p1-s1 #primary-content { width: 400px; }
+body.layout-n1-p1-s1 #secondary-content { }
+body.layout-n1-p1-s1 #tertiary-content { }
+
+/* Three Column Top (custom)
+----------------------------------------------------------------------------- */
+body.layout-n1-p1-s1-top #primary-content { width: 400px; }
+body.layout-n1-p1-s1-top #secondary-content { }
+body.layout-n1-p1-s1-top #tertiary-content { }
+body.layout-n1-p1-s1-top #TopZone { margin: 0 30px; padding: 1px 0 0 0; width: 940px; font-size: 1.2em; line-height: 1.5em; }
+
+/* No Header No Footer (custom)
+----------------------------------------------------------------------------- */
+body.layout-n0-p1-s0-noheaderfooter { background-image: none; }
+body.layout-n0-p1-s0-noheaderfooter #container { background-image: none; }
+body.layout-n0-p1-s0-noheaderfooter #primary-content { width: 920px; padding: 20px 40px; padding-left: 40px; background: url(/clients/AtlantaGirlsSchool/Images/bg-content.png) center top repeat-y; }
+
+/* Hidden Columns
+----------------------------------------------------------------------------- */
+body.layout-n0-p1-s0 #tertiary-content,
+body.layout-n0-p1-s0 #secondary-content,
+body.layout-n1-p1-s0 #secondary-content,
+body.layout-n0-p1-s1 #tertiary-content,
+body.layout-n1-p1-s0-c #secondary-content { display: none; }
+
+/* Columns for use in any layout
+----------------------------------------------------------------------------- */
+div.columns { }
+div.columns:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	}
+div.columns div.col1 {
+	margin-right: 3%;
+	}
+div.columns div.col1,
+div.columns div.col2 {
+	float: left;
+	width: 47%;
+	}
+
+/* Float Container (custom)
+----------------------------------------------------------------------------- */
+body.layout-n1-p1-s0 .float-container,
+body.layout-n1-p1-s0-c .float-container {
+	width: 240px; /* Same width as #tertiary-content */
+	margin: 0 0 1.5em 30px;
+	}
+
+/* No Script Message
+----------------------------------------------------------------------------- */
+#noscriptmessage {
+	position: absolute; /* for IE */
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 0;
+	background: #f9f9f9;
+	z-index: 200;
+	width: 100%;
+	color: #000;
+	font-size: 1.1em;
+	text-align: center;
+	opacity: 0.8;
+	-moz-opacity: 80%;
+	filter: alpha(opacity=80);
+	}
+	#noscriptmessage a { color: #666; text-decoration: underline; }

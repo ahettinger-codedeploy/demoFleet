@@ -1,0 +1,1380 @@
+/*
+Theme Name: Desmond
+Theme URI: http://desmondgv.com
+Author: Northlight Advertising
+Author URI: http://northlightadv.com
+Description: Website theme for the desmond
+Version: 1.1.2
+
+*/
+
+@import url( /clients/DesmondHotels/Images/bootstrap-wp.css );
+@import url( /clients/DesmondHotels/Images/navbar.css );
+@import url(https://fonts.googleapis.com/css?family=Karma:400,700,300|Fjalla+One|Great+Vibes);
+body {
+	word-wrap: break-word;
+	font-family: 'Karma', Georgia, Times, serif;
+	color:#000;
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+.site-header {
+	padding-top:10px;
+}
+
+/* Images and wp-captions should always fit and be responsive */
+img {
+	display: inline-block;
+	
+	max-width: 100%;
+}
+img[class*="wp-image-"] {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.wp-caption {
+	margin-bottom: 10px;
+	max-width: 100%;
+	/* border: 1px solid #ccc; */
+	border-radius: 4px;
+	padding: 0 10px;
+}
+.wp-caption.aligncenter {
+	margin-bottom: 10px;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+}
+.wp-caption .wp-caption-text {
+	text-align: center;
+	margin-top: 10px;
+}
+
+/* WP Gallery */
+.gallery {
+	margin-bottom: 1.5em;
+}
+.gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+.gallery dd {
+	margin: 0;
+}
+
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+
+/* Content */
+.main-content {
+	padding-top: 10px;
+}
+.main-content-inner {
+	padding-bottom: 1.5em;
+}
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+
+/* Clearing */
+.clear {
+	clear: both;
+}
+
+
+/* Here some needed widget styles
+ * Most widgets are adapted in the file bootstrap-wp.js - and REALLY easy to modify! ;) */
+.widget { margin-bottom: .2em; }
+.widget_nav_menu ul.sub-menu li, .widget_pages ul.children li { padding-left: 15px; }
+
+/* Hiding the search widget's button in widgets. thats just too old-skool. :) but if you want it back, just delete the next line.
+ * Note: you can change the whole appearance of the search_form() function in our searchform.php */
+.search-form input[type="submit"] { display: none; }
+
+.search-field { width:200px; padding:6px; line-height:2.45em; text-indent: 20px;}
+
+.search { position: relative; }
+.search input {  }
+.search .fa-search { 
+  position: absolute;
+  top: 9px;
+  left: 7px;
+  font-size: 15px;
+  color:grey;
+}
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Nested comments? They are threaded and nested already, you just need to add your own styling to finalize!
+ * For example with some margin, like the line below ;) Delete, modify, change classes in HTML if you desire another style */
+ .comment .children { margin-left: 1.5em; }
+
+/*
+ == Quick CSS styling tips ==
+
+ You can start off in a rough direction with some minimal styles.
+ See below for some tips. ;)
+
+
+ == Want to have the whole site wrapped? ==
+
+ Just fill the .container class with some background color to have a the whole site "wrapped".
+ This works so easy because every main part is wrapped only once into a container class by bootstrap.
+ Try out by decommenting the next line and go from there.
+
+ .container { background: #f9f9f9; border-right: 1px solid #eee; border-left: 1px solid #eee; }
+
+
+ == Want to wrap just the content and sidebar in Bootstrap style? ==
+
+ That one is a great example to show that some things are much cleaner and easier to do via just adding some HTML classes.
+ In this case, we will add just one CSS class "panel", look for example at the beginning in content.php!
+*/
+
+body {
+	background:#ffffff url(/clients/DesmondHotels/Images/site-bg.jpg) top center repeat-y;
+	background-size: 100% auto;
+}
+
+#masthead, .site-navigation, .main-content, #colophon{
+	background:#ffffff;
+	max-width:1200px;
+	margin:0 auto;
+}
+
+.page-title span
+{
+background:none !important;
+}
+
+h2.centered, h1.page-title {
+ border:none !important;
+}
+
+.page-title {
+/* 	font-weight:bold; */
+	font-size:1.75em;
+}
+
+h1, .h1, h2, .h2, h3, .h3 {
+	font-family: 'Karma', Arial, Verdana, sans-serif;
+/* 	text-transform:uppercase; */
+	margin:0;
+	font-size:.9em;
+}
+
+h2, .h2 {
+	font-size:1.0em;
+}
+
+h3, .h3 {
+	font-size:1.1em;
+}
+
+.page-header {
+padding-bottom: 5px;
+margin: 0 0 20px;
+border-bottom: 1px solid #eee;
+}
+
+#page-post {
+margin-top:0;
+
+}
+
+article .entry-content p {
+margin: 0 0 20px;
+}
+
+#w_pack h2 {
+	border-bottom:2px solid #eee;
+}
+
+#w_pack h2, h3, h4 {
+/* 
+	padding:0 !important;
+	margin:0;
+ */
+}
+
+#w_pack_table_options {
+	font-size:.78em;
+	line-height:2em;
+	border:2px solid #eee;
+}
+
+#w_pack_table_options td {
+	border-right:1px solid black;
+}
+
+#w_pack_table_options td:last-child {
+	border:none;
+}
+
+article .entry-content h2 {
+display: block;
+font-size: 1.3em;
+line-height: 37px;
+margin: 0 0 20px 0;
+font-weight: 600;
+}
+
+h2.centered:before, h1.page-title:before {
+	background:none !important;
+}
+
+header#header {
+	background: #fff url(header-bg.jpg) top center no-repeat !important;
+}
+
+
+#top .shell , #header .shell, footer .shell, #page-post { width:95%; margin:0 auto; }
+
+footer { padding:12px; height:auto !important; float:none;}
+
+footer section.left {
+	padding:0;
+	float:none;
+	font-size:.875em;
+	line-height:1.45em;
+	color:#777 !important;
+}
+
+footer section.left a, footer section.left a:hover {
+	color:#777 !important;
+	text-decoration:none;
+	
+}
+
+#portrait_slider_in_post {
+	display:block;
+	clear:left;
+	float:right;
+}
+
+#dslc-content {
+    padding-bottom: 80px;
+}
+
+h1.page_title {}
+
+#page-post article.left, #page-post article.right { width:900px; }
+
+#page-post aside.left, #page-post aside.right { width:230px; }
+
+#page-post aside.left .menu { margin-top:60px; }
+
+.tp-caption {
+	font-family: 'Noto Sans', Arial, sans-serif !important;
+}
+
+.current-menu-item a {
+	font-weight:bold !important;
+}
+
+
+
+
+
+.widget_nav_menu a {
+
+}
+
+.left .widget {
+	border-bottom:1px dashed #e1f2f1;
+}
+
+.left .widget:last-child {
+	border:none;
+}
+
+
+.widget article {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.widget_nav_menu a:hover {
+	color:#06233d;
+}
+
+ article .entry-content p#breadcrumbs { margin:10px 0 10px 0; }
+
+nav#main-nav.right > ul > li > a:hover { background:none; }
+
+
+
+.wpcf7 {
+	max-width:500px;
+}
+
+.wpcf7 fieldset {
+	padding:20px;
+	border:2px solid #eee;
+	margin-bottom:20px;
+}
+
+.required {
+	color:#be1c1c;
+}
+
+.tec-calendar {
+background-color:#00ff00;
+}
+
+.featureblock-events {
+	display:block;
+	padding:10px;
+	font-size:.89em;
+}
+
+section.social-search a.social {
+	opacity: 0.6;
+}
+
+#ctas article {
+	top:0; 
+	margin:0 0 0 20px; 
+	width:300px; height:360px;
+	background-color:#fff;
+}
+
+.logo_home {
+	background-color:#fff;
+	margin: 0 auto;
+	width:220px;
+	border:0;
+	display:block;
+}
+
+
+
+
+
+#DateIn_Year_ID {
+	padding:0px;
+	text-align:center;
+	margin:0 10px 0 10px;
+}
+
+
+.em-events-search {
+	display:none;
+}
+
+.testimonial {
+	display:block;
+	background:#e1f2f1 url(images/desmond-testimonial.png) top left no-repeat;
+	border: 2px solid #effffe;
+	color:#000;
+	font-weight:normal;
+	padding:10px;
+	margin:0;
+	width:100%;
+	margin-bottom:10px;
+	padding-left:80px;
+	font-style:italic;
+}
+
+.testimonial p {
+	margin:0 !important;
+}
+
+.testimonial h2 {
+	font-weight:bold;
+}
+
+.reservation a {
+	/* color:#b01717; */
+}
+
+.menu-block {
+	margin: 0 auto;
+	width:100%;
+	max-width:800px;
+	margin-bottom:30px;
+	font-size:14px;
+	
+}
+
+.sunsetgrille td h3 {
+	line-height:16px !important;	
+	font-weight:normal;
+}
+
+.fox-and-hounds {
+	max-width:700px;
+	margin-top:10px;
+}
+
+.fox-and-hounds td {
+	padding:10px;
+	border:1px double #1e7671;	
+}
+
+td.item {
+	vertical-align:top;
+	padding:5px;
+}
+
+td.price {
+	background-color:#eeeeee;
+}
+
+td.item  h3 {
+	color:#000000 !important;	
+	font-size:13px !important;
+	font-weight:bold !important;
+}
+
+.per-dozen {
+	
+	display:block;
+	font-size:.8em;
+	font-style:italic;	
+	margin:0;
+	margin-top:-5px;
+	position:relative;
+}
+
+#room-wrapper {
+	display:block;
+	width:100%;
+	padding:10px;
+	clear:left;
+}
+
+#room-wrapper .room {
+	display:block;
+	width:100%;
+	max-width:300px;
+	height:200px;
+	float:left;
+	font-size:.9em;
+	margin: 0 20px 20px 0;
+	border:1px solid #eee;
+	padding:10px;
+	line-height:16px;
+}
+
+#room-wrapper .room h3 {
+
+
+}
+
+#room-wrapper .room .ngg-galleryoverview {
+	float:left;
+	margin:0;
+	width:110px;
+}
+
+
+hr {
+	background-color:#eeeeee;
+	color:#eeeeee;
+	border:1px solid #eeeeee;
+}
+
+.shell {
+	margin:0 auto !important;
+}
+
+.textwidget img {
+	display:block;
+	margin:0 auto;
+}
+
+@media (min-width: 768px) {
+	.textwidget img {
+		display:inline-block;
+	}
+}
+
+
+@media only screen and (min-width: 992px) {
+
+.room_columns {
+
+}
+
+#bell {
+	display:block;
+	width:100%;
+	min-height:160px;
+	background: url(images/desmond-bell.jpg) top left no-repeat;
+	background-size: auto 90%;
+}
+
+#logo_home {
+	position:absolute;
+	float:left;
+	z-index:99999;
+	background-color:#fff;
+	top:0;
+	margin-left:-10px;
+	width:200px;
+	border:2px solid black;
+	border-top:0;
+}
+
+.submenu_btn {
+	padding: 10px !important;
+	text-align: center;
+	margin-left: -20px !important;
+	background: #f6f8f9; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f8f9), color-stop(50%,#e5ebee), color-stop(51%,#d7dee3), color-stop(100%,#f5f7f9)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f8f9', endColorstr='#f5f7f9',GradientType=0 ); /* IE6-9 */
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+
+}
+
+.rewards-btn-home {
+	display:block;
+	width:100%;
+	margin:5px 0;
+	font-size:18px;
+	color:#000000;
+	text-decoration:none;
+	background-color:#a1a99e;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	padding:10px;
+	font-style:italic;
+	text-align:center;
+}
+
+.rewards-btn-home .sm_wht {
+	color:#ffffff;
+	font-size:.8em;
+}
+
+#location_times {
+	padding:10px;
+	margin:0 auto;
+}
+
+#location_times td {
+	padding:10px;
+
+}
+
+.submenu_btn {
+margin-left: 0;
+}
+
+.meeting_brochure_btn a {
+color:red;
+}
+
+.rp 
+{
+	list-style-type:disc;
+	margin:0 0 20px 20px !important;
+	padding:0;
+}
+
+.rp li {
+	margin-left:.23em;
+	font-size:.9em;
+	line-height:1.6em;
+}
+
+.rp li .detail {
+	font-size:.875em;
+}
+
+
+
+.rp .title {
+	
+	text-transform:uppercase;
+	border-bottom:1px solid #eee;
+	font-weight:bold;
+	margin:.5em 0; margin-left:-1em;
+	display:inline-block;
+}
+
+
+
+
+
+p.rp .title {
+
+	border:none;
+}
+
+
+
+.margin_bottom {
+	margin-bottom:10px !important;
+}
+
+
+.home_content_pane {
+
+width:100%;
+background: rgb(255,255,255); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 80%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(80%,rgba(246,246,246,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 80%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 80%,rgba(237,237,237,1) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 80%,rgba(237,237,237,1) 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 80%,rgba(237,237,237,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+span.phone_home {
+float:right;
+display:block;
+color:#000;
+font-size:1.065em;
+background: url('images/icon_phone_home.png') no-repeat 0 6px;
+padding: 5px 0 3px 25px;
+line-height:1.12em;
+
+}
+
+span.phone_home a, span.phone_home a:hover {
+	text-decoration:none;
+	color:#000;
+	
+}
+
+.widget_text article {
+	margin: 0 !important;
+}
+
+
+.narrative {
+	padding:15px 0;
+	line-height:1.45em;
+}
+
+p.narrative::first-letter
+{ 
+font-size:240%;
+}
+
+
+/* Accordion Styles */
+.accordion {
+    border-bottom: 1px solid #dbdbdb;
+}
+.accordion-title {
+    border-top: 1px solid #dbdbdb;
+    margin: 0;
+    padding: 8px 5px 5px 5px;
+    cursor: pointer;
+    font-size:0.975em !important;
+    background-color:#eee;
+}
+.accordion-title:hover {}
+.accordion-title:first-child {border: none;}
+.accordion-title.open {cursor: default;}
+.accordion-content .rp {display:block;margin-top:1.3em;}
+.accordion-content {
+	display:block;
+	padding:1%;
+	background-color:#f4f4f4; /* new */
+}
+
+.accordion .accordion-title {
+    background-image: url(images/closed.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+}
+
+.accordion .accordion-title.open {
+    background-image: url(images/open.png);
+}
+
+.header_address {
+	font-size:1.12em;
+}
+
+.header_address h3 {
+	text-transform:uppercase;
+	font-size:.875em;
+}
+
+.header_address p {
+	margin: .375em 0 .05em; 0;
+}
+
+.header_address a {
+	text-decoration:none;
+}
+
+.header_address a:hover {
+	text-decoration:none;
+}
+
+.check_availability {
+	background-color:#eeeeee;
+	border:2px solid #ccc;
+	padding:4px;
+	text-align:center;
+	font-size:.9em;
+	margin-right:-10px;
+	min-height:143px;
+	
+}
+
+.check_availability_mobile {
+	background-color:#eeeeee;
+	border:2px solid #ccc;
+	padding:4px;
+	text-align:center;
+	
+}
+
+.check_availability h5 {
+	text-transform:uppercase;
+	font-size:.875em;
+	font-weight:bold;
+		font-weight:bold;
+	text-transform:uppercase;
+	font-family: 'Fjalla One', Arial, Verdana, sans-serif;
+	margin:0;
+}
+
+.check_availability .cal {
+	text-align:center;
+}
+
+.check_availability  input[type="submit"], .check_availability  input[type="button"]{
+font-family:verdana, sans-serif;
+}
+
+#bookitdone > div > table {
+	width:60% !important;
+	margin:0 auto;
+	
+}
+
+table.cal2 {
+	min-width:140px !important;
+}
+
+#DateIn_DayTable_ID {
+	display:block;
+	padding:4px;
+	width:148px !important;
+	text-align:center;
+}
+
+.book_room_btn{
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9) );
+	background:-moz-linear-gradient( center top, #f9f9f9 5%, #e9e9e9 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9');
+	background-color:#f9f9f9;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0px;
+	border:2px solid #dcdcdc;
+	display:inline-block;
+	color:#666666;
+	font-family:Verdana;
+	font-size:17px;
+	font-weight:bold;
+	font-style:normal;
+	height:40px;
+	line-height:20px;
+	width:100%;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #ffffff;
+	margin-top:10px;
+}
+
+.book_room_btn:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9) );
+	background:-moz-linear-gradient( center top, #e9e9e9 5%, #f9f9f9 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9');
+	background-color:#e9e9e9;
+}
+
+.book_room_btn:active {
+	position:relative;
+	top:1px;
+}
+
+
+.rfp_btn {
+	  background: #e81e1e;
+  background-image: -webkit-linear-gradient(top, #e81e1e, #d11b1b);
+  background-image: -moz-linear-gradient(top, #e81e1e, #d11b1b);
+  background-image: -ms-linear-gradient(top, #e81e1e, #d11b1b);
+  background-image: -o-linear-gradient(top, #e81e1e, #d11b1b);
+  background-image: linear-gradient(to bottom, #e81e1e, #d11b1b);
+  -webkit-border-radius: 14;
+  -moz-border-radius: 14;
+  border-radius: 14px;
+  color: #ffffff;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+	font-family:Verdana;
+	font-size:17px;
+	font-weight:bold;
+	font-style:normal;
+	line-height:40px;
+	width:100%;
+	max-width:400px;
+	text-align:center;
+	display:block;
+	margin:0 auto;
+}
+
+.rfp_btn:hover {
+  background: #cc1d1d;
+  background-image: -webkit-linear-gradient(top, #cc1d1d, #9e2020);
+  background-image: -moz-linear-gradient(top, #cc1d1d, #9e2020);
+  background-image: -ms-linear-gradient(top, #cc1d1d, #9e2020);
+  background-image: -o-linear-gradient(top, #cc1d1d, #9e2020);
+  background-image: linear-gradient(to bottom, #cc1d1d, #9e2020);
+  text-decoration: none;
+  color:#ffffff;
+  }
+
+
+.accom-room-image {
+	margin-left:-15px;
+}
+
+.menu-add-on {
+	display:block;
+	margin:0 auto;
+/* 	max-width:220px; */
+	width:100%;
+	text-align:center;
+}
+
+
+.menu-add-on .btn {
+	/* min-width:220px; */
+}
+
+
+#TA_cdsratingsonlynarrow173 {
+width:200px; margin-top:10px;
+}
+
+
+.winelist {
+	margin:0;
+}
+
+.winelist .col-md-6 {
+	padding:0;
+}
+
+.winelist h3 {
+	margin: 10px 20px 10px 0;
+	display:block;
+}
+
+.winelist table {
+	margin: 0 0 30px 0;
+	width:90%;
+	border-top: 1px solid #ccc;
+}
+
+.winelist table td {
+	vertical-align:top;
+	padding-bottom:5px;
+	padding-top:5px;
+	font-size:.975em;
+}
+
+.winelist table td:first-child {
+	width:10%;
+	text-align:left;
+}
+
+.winelist table td:last-child {
+	width:10%;
+	text-align:right;
+}
+
+#CDSRATINGWIDGET173 {
+    margin: 0 auto;
+}
+
+@media (max-width: 992px){
+
+.winelist table, .winelist h3 {
+	margin: 20px;
+}
+
+
+#TA_cdsratingsonlynarrow173 {
+width:100%;
+padding-bottom:15px;
+}
+
+	.header_address {
+		margin:0 auto;
+		padding:0;
+		text-align:center;
+	}
+	
+	.site-branding {
+		margin:0 auto;
+		padding:0;
+		text-align:center;
+		margin: 10px 0 10px 0;
+	}	
+	
+	.check_availability {
+		margin:0 auto;
+		padding:10px;
+		text-align:center;
+		margin: 10px;
+	}	
+	
+	.widget_nav_menu {
+		width:100%;
+	}
+	
+	
+	.widget_nav_menu ul li, .widget_nav_menu h3, #main-menu li {
+		text-align:center;
+	}
+	
+	
+	.desmond-giftcard {
+		margin:0 auto;
+	}
+	
+	.search-field { width:100%;}
+
+}
+
+
+
+@media (min-width:992px) {
+	.widget_nav_menu {
+		width:240px;
+	}
+	
+	.menu-add-on {
+		display:block;
+		margin:0;
+		max-width:220px;
+		text-align:center;
+	}
+	
+}
+
+
+.chart {
+	display:table;
+	border: 2px solid #eee;
+	width:100%;
+}
+
+.chart td{
+	padding: 5px;
+}
+
+.chart th{
+	text-transform:uppercase;
+	padding:5px;
+	font-family: 'Karma', Arial, Verdana, sans-serif;
+	background-color:#e5eeb5;
+}
+
+
+#guest_room_list {
+	margin-left:10px;
+	display:block;
+}
+
+#guest_room_list li {
+	margin-bottom:10px;
+	
+}
+
+#guest_room_list li table {
+	display:block;
+	margin-left:20px;
+	width:100%;
+}
+
+#guest_room_list li table td {
+	padding:10px 20px;
+}
+
+.desmond_cursive {
+	font-family: 'Great Vibes', cursive;
+	text-transform:none;
+	font-size:1.7em !important; line-height:1.5em !important;
+}
+
+
+#bell {
+
+}
+
+#bell h2 {
+	margin-bottom:0;
+}
+
+#bell #check_in_out {
+	margin:0;
+	padding:0;
+	font-size:.8em;
+	
+}
+
+#bell #check_in_out td {
+	text-align:left;
+	padding-right:20px;
+}
+
+#bell #check_in_out td:last-child {
+	text-align:right;
+}
+
+.desmond-giftcard {
+	display:block;
+	text-align:center;
+	width:100%;
+	max-width:200px;
+	background:#fefefe;
+	font-family:sans-serif;
+	font-size:.8em;
+	border-radius:8px;
+	padding:10px;
+	text-decoration:none;
+	color:black;
+}
+
+.desmond-giftcard:hover {
+	color:black;
+	text-decoration:none;
+	background:#e4eef5;
+}
+
+.special_offer_box {
+	display:block;
+	padding:20px;
+	text-align:center;
+	width:100%;
+	border:3px solid #eee;
+	background: rgb(255,255,255); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(47%,rgba(246,246,246,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(246,246,246,1) 47%,rgba(237,237,237,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+
+}
+
+.ez_pass_holders {
+	font-style:italic;
+	font-size:.8em;
+	font-weight:bold;
+}
+
+.entry-content h2, .entry-content h3{
+	font-family: 'Karma', Georgia, Times, serif !important;
+	font-weight:bold;
+	text-transform:none;
+
+}
+
+#DateIn_ID_Link {
+	display:block;	
+}
+
+img.calendar-icon-header {
+	min-width:26px !important;
+	min-height:26px !important;
+}
+
+.search-result {
+	display:block;
+	padding:1%;
+	border-bottom:2px solid #eeeeee;
+}
+
+.results-found {
+	text-align:center;
+	padding:20px;
+	font-style:italic;
+}
+
+.menus_list {
+	width:100%;
+	padding-bottom:10px;
+}
+
+.featured_offers_btn_mobile {
+	display:block;
+	float:right;
+	background:#ffffff;
+	padding:10px;
+	border:2px solid #eee;
+	border-radius:4px;
+}
+
+#featured_mobile {
+	border-bottom:2px solid #eee;
+	padding: 10px 0;
+	display:block;
+}
+
+.wedding_btn {
+	display:block;
+	margin: 0 auto;
+	text-align:center;
+	padding:4px;
+	font-size:1.2em;
+}
+
+.more_dominant {
+	font-size:1.2em;
+}
+
+.column_title {
+	min-height:60px;
+	height:60px;
+	display:block;
+	text-align:center;
+}
+
+table.hours {
+	margin:0 auto;
+	width:80%;
+}	
+
+table.hours td, table.hours th {
+	padding:1%;
+	text-align:center;
+}
+
+table.hours th {
+	text-decoration:underline;
+	background-color:#eee;
+}
+
+h4.restaurants {
+	border-bottom:1px solid #000;
+}
+
+.btn-ot {
+	background-color:#e20000 !important;
+	border:none!important;
+	padding-bottom: 3px !important;
+}
+
+.rfp_wrapper {
+	text-align: center;
+	width: 100%;
+	margin:10px auto;
+}
+
+#conference_area_pdfs {
+	margin:0 auto;
+	display:block;
+	text-align:center;
+}
+
+#conference_area_pdfs li {
+	list-style-type:none;
+	display:inline-block;	
+	padding:15px;
+}
+
+#conference_area_data h4 {
+	color:#000;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+#conference_area_data hr {
+	border-color:#fff;
+	background-color:#fff;
+}
+
+table.room_capacity  {
+	font-size:.9em;
+	border:1px solid #eee;
+}
+
+table.room_capacity th {
+	text-align:center;
+	color:#fff;
+	font-family:arial, sans-serif;
+	text-transform:uppercase;
+	border-bottom:1px solid #eee;
+	font-size:.85em;
+	background:#000;
+}
+
+table.room_capacity td {
+	text-align:center;
+	font-weight:bold;	
+	padding:8px;
+	border-bottom:1px solid #eee;
+}
+
+.wp-image-3772 {
+	margin:0 !important;
+}
+
+.legal {
+	font-style:italic;
+	font-size:.83em;
+	display:block;
+	clear:left;
+	padding:10px 0;
+}
+
+.meeting_logos {
+	width:80%;
+	display:block;
+}
+
+.meeting_logos img {
+	width:100%;
+	max-width:250px;
+	margin:0 auto;
+}
+
+.custom-press-feed {
+	border-top: 2px solid black;
+	padding-top:20px;
+}
+
+.custom-press-feed .category-press {
+	clear:both !important;
+	border-bottom:3px solid #e8e4c9;
+	margin-bottom:2em;
+	min-height:150px;
+	overflow:hidden;
+}
+
+.custom-press-feed .category-press img {
+max-height:100px;
+width:auto;
+margin:0 10px 0 0 !important;
+}
+
+
+.custom-press-feed .category-press .page-header {
+	border-bottom:none;
+}
+
+.custom-press-feed .category-press .entry-meta {
+display:none;
+}
+
+.social_brand_icons {
+	font-size:2.2em;
+}
+
+.footer-icons img {
+	float:right;
+	max-height:70px;
+}
+
+.small-copy {
+	font-size:.9em;
+}
+
+.widget_nav_menu a {
+	font-size:.97em;
+}
+
+h2.small {
+	font-size:1em !important;
+	margin-bottom:5px !important;
+}
+
+h3.large {
+	font-size:1.2em !important;
+		margin-bottom:10px;
+}

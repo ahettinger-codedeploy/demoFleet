@@ -1,0 +1,243 @@
+/* VERSIONS
+/* 1_0: Primary Site Navigations
+/* 1_1: Switched to sibling CSS selector [Author: Nick Hall]
+/* 1_2: Shared Images [Author: Nick Hall]
+----------------------------------------------------------------------------- */
+
+/*
+-----------------------------------------------------------------------------
+ =NAVIGATION
+----------------------------------------------------------------------------- */
+
+/* Default Navigation - Primarily used for navigation in #content
+----------------------------------------------------------------------------- */
+.nav { }
+	div.nav ul { margin: 0; padding: 0; list-style: none; }
+		div.nav ul li { margin: 0; padding: 0; background-image: none; }
+			.nav ul li a { display: block; }
+			.nav ul ul { display: none; }
+				.nav ul li.lock { background: url(/_infrastructure/images/icons/default/lock_closed.png) center right no-repeat; }
+				.nav li.showall.open li.more * { display: block !important; }
+
+/*
+-----------------------------------------------------------------------------
+ =NAV-MAIN
+----------------------------------------------------------------------------- */
+#nav-main {
+	position: absolute;
+	top: 118px;
+	left: 35px;
+	font-size: 1.4em;
+	line-height: 1.0em;
+	z-index: 100;
+	}
+	#nav-main > ul { height: 45px; }
+		#nav-main > ul > li {
+			position: relative;
+			float: left;
+			}
+		#nav-main > ul > li.lock { background-image: none; }
+			#nav-main > ul > li > a {
+				height: 45px;
+				text-decoration: none;
+				text-indent: 101%;
+				white-space: nowrap;
+				overflow: hidden;
+				background-image: url(/clients/AtlantaGirlsSchool/Images/main.png);
+				}
+				#nav-main > ul > li:hover > a,
+				#nav-main > ul > li.hover > a,
+				#nav-main > ul > li > a:hover,
+				#nav-main > ul > li > a.hover,
+				#nav-main > ul > li > a.active { background-image: url(/clients/AtlantaGirlsSchool/Images/main.png); background-repeat: no-repeat; }
+					#nav-main #nav-link-about { width: 118px; background-position: 0px 0; }
+					#nav-main #nav-link-admissions { width: 136px; background-position: -118px 0; }
+					#nav-main #nav-link-academics { width: 131px; background-position: -254px 0; }
+					#nav-main #nav-link-student-life { width: 145px; background-position: -385px 0; }
+					#nav-main #nav-link-athletics { width: 112px; background-position: -530px 0; }
+					#nav-main #nav-link-technology { width: 138px; background-position: -642px 0; }
+					#nav-main #nav-link-support_ags { width: 153px; background-position: -780px 0; }
+						#nav-main #nav-li-about:hover > a, #nav-main #nav-li-about.hover > a, #nav-main #nav-link-about:hover { background-position: 0px -90px; }
+						#nav-main #nav-li-admissions:hover > a, #nav-main #nav-li-admissions.hover > a, #nav-main #nav-link-admissions:hover { background-position: -118px -90px; }
+						#nav-main #nav-li-academics:hover > a, #nav-main #nav-li-academics.hover > a, #nav-main #nav-link-academics:hover { background-position: -254px -90px; }
+						#nav-main #nav-li-student-life:hover > a, #nav-main #nav-li-student-life.hover > a, #nav-main #nav-link-student-life:hover { background-position: -385px -90px; }
+						#nav-main #nav-li-athletics:hover > a, #nav-main #nav-li-athletics.hover > a, #nav-main #nav-link-athletics:hover { background-position: -530px -90px; }
+						#nav-main #nav-li-technology:hover > a, #nav-main #nav-li-technology.hover > a,  #nav-main #nav-link-technology:hover { background-position: -642px -90px; }
+						#nav-main #nav-li-support_ags:hover > a, #nav-main #nav-li-support_ags.hover > a, #nav-main #nav-link-support_ags:hover { background-position: -780px -90px; }
+							#nav-main #nav-link-about.active { background-position: 0px -45px !important; }
+							#nav-main #nav-link-admissions.active { background-position: -118px -45px !important; }
+							#nav-main #nav-link-academics.active { background-position: -254px -45px !important; }
+							#nav-main #nav-link-student-life.active { background-position: -385px -45px !important; }
+							#nav-main #nav-link-athletics.active { background-position: -530px -45px !important; }
+							#nav-main #nav-link-technology.active { background-position: -642px -45px !important; }
+							#nav-main #nav-link-support_ags.active { background-position: -780px -45px !important; }
+			#nav-main ul li ul {
+				width: 190px;
+				position: absolute;
+				z-index: 200;
+				background: url(/clients/AtlantaGirlsSchool/Images/main-drop.gif) left top #1a1a1a;
+				width: 980px;
+				}
+					#nav-main #nav-li-about ul { margin-left: -25px; }
+					#nav-main #nav-li-admissions ul { margin-left: -143px; }
+					#nav-main #nav-li-academics ul { margin-left: -279px; }
+					#nav-main #nav-li-student-life ul { margin-left: -410px; }
+					#nav-main #nav-li-athletics ul { margin-left: -555px; }
+					#nav-main #nav-li-technology ul { margin-left: -667px; }
+					#nav-main #nav-li-support_ags ul { margin-left: -805px; }
+			#nav-main ul li.hover ul,
+			#nav-main ul li:hover ul { display: none;}
+				#nav-main ul li.open:hover ul { display: none; } /* hide dropdown for current section */
+					#nav-main ul ul li { float: left; position: relative; width: 48%; }
+						#nav-main ul ul li a {
+							position: relative;
+							left: 0;
+							color: #fff;
+							text-decoration: none;
+							padding: 10px;
+							margin: 0;
+							}
+					#nav-main ul ul li a:hover { color: #ffde00; }
+					/* mega nav */
+					#nav-main .spotlight-group{ position: relative; float: left; height: 240px; width: 320px; padding: 10px 0 0 260px; overflow: hidden; margin: 10px; background: #ffea00; }
+							#nav-main .spotlight-group img.spotlight-image { position: absolute; top: 10px; left: 10px; border: 5px solid #ec008c; }
+						#nav-main .spotlight-group li{ position: relative; text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.7); width: 100%; margin: 0; padding: 0; }
+							#nav-main .spotlight-group li a { font: normal 18px/18px 'TeXGyreAdventorBold'; color: #000; text-transform: uppercase; margin: 10px 20px 2px 20px; padding: 0; }
+								#nav-main .spotlight-group li a:hover{ color: #5f5f5f; }
+						#nav-main .spotlight-group span.main-text { font: normal 13px/18px 'TeXGyreAdventorRegular'; color: #000; display: block; width: auto; margin: 0 20px; padding: 0; }
+							#nav-main .spotlight-group span.main-text a { display: inline; font: normal 13px/18px 'TeXGyreAdventorRegular'; color: #5f5f5f; text-transform: none; text-decoration: underline; margin: 0; padding: 0; }
+								#nav-main .spotlight-group span.main-text a:hover { color: #000; }
+					#nav-main .link-group{ padding-top: 18px; float: left; width: 380px; }
+						#nav-main .link-group h2 { font: normal 18px/18px 'TeXGyreAdventorRegular'; color: #6d6e71; text-align: center; margin-botton: 20px; }
+							#nav-main .link-group li{ width: 180px !important; font: normal 12px/16px 'TeXGyreAdventorRegular'; text-transform: uppercase; }
+								#nav-main .link-group span{ clear: both; display: block; width: 380px;}
+
+/*
+-----------------------------------------------------------------------------
+ =NAV-TIER2
+--------------------------------------------------------------------------- */
+#nav-tier2 { z-index: 300; font-size: 1.4em; line-height: 1.0em; width: 980px; margin: 107px 10px 0 10px !important; padding: 0;  overflow: auto; background: url(/clients/AtlantaGirlsSchool/Images/tier2.png) left bottom no-repeat; }
+	#nav-tier2 > ul { padding: 12px 18px 20px 18px; margin: 0 0 20px 0; text-align:center; }
+		#nav-tier2 ul li { position: relative; display: inline-block; padding: 0; margin: 0 0 0 14px; text-transform: uppercase; }
+			#nav-tier2 ul li a { color: #000; text-decoration: none; padding: 10px; margin: 0; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; }
+			#nav-tier2 ul li a:hover { color: #ec008c; }
+			#nav-tier2 li.open > a,
+			#nav-tier2 li.active > a { background-color: #ec008c; color: #fff; }
+				#nav-tier2 li.open > a:hover,
+				#nav-tier2 li.active > a:hover { color: #fff; }
+
+/*
+-----------------------------------------------------------------------------
+ =NAV-TIER3
+--------------------------------------------------------------------------- */
+#nav-tier3 { font-size: 1.2em; line-height: 1.2em; }
+	#nav-tier3 > ul { margin: 0 10px 1.2em 10px; }
+		#nav-tier3 ul li { }
+			#nav-tier3 ul li a { color: #ec008c; text-decoration: none; text-transform: uppercase; padding: 10px 0; margin: 0; }
+			#nav-tier3 ul li a:hover { color: #cfcfcf; }
+		    #nav-tier3 ul ul { }
+		    #nav-tier3 li.more ul { display: none; }
+		    #nav-tier3 li.active > ul,
+		    #nav-tier3 li.open > ul { display: block; }
+			#nav-tier3 li.open > a,
+			#nav-tier3 li.active > a { color: #922786; }
+				#nav-tier3 ul ul { }
+					#nav-tier3 ul ul li a { padding: 5px 0; }
+						#nav-tier3 ul ul ul { }
+							#nav-tier3 ul ul ul ul { }
+
+/*
+-----------------------------------------------------------------------------
+ =NAV-CONST
+----------------------------------------------------------------------------- */
+#nav-const { line-height: 1.0em;  z-index: 100; position: absolute; top: 0; right: 30px; width: 226px; border-top: 3px solid #8ce63f; font-size: 1.85em; line-height: 1.0em; }
+	#nav-const > ul { padding: 12px 20px 0 20px; margin: 0; }
+		#nav-const > ul > li { position: relative; float: left; margin-bottom: 10px; }
+			#nav-const #nav-link-parents,
+			#nav-const #nav-link-facultystaff { width: 104px; margin-right: 12px; }
+			#nav-const #nav-link-students,
+			#nav-const #nav-link-alumnae { width: 70px; }
+			#nav-const > ul > li > a { text-decoration: none; color: #bebebe; font-family: '2DumbRegular', Arial, Helvetica, sans-serif; }
+				#nav-const > ul > li > a:hover,
+				#nav-const > ul > li > a.active { color: #8ce63f; }
+			#nav-const ul ul { display: none; }
+
+/*
+-----------------------------------------------------------------------------
+ =NAV-SOCIAL
+----------------------------------------------------------------------------- */
+#nav-social { line-height: 1.0em; z-index: 100; position: absolute; top: 0; right: 260px; width: 183px; border-top: 3px solid #00aeef; }
+	#nav-social> ul { padding: 12px 20px 0 20px; margin: 0; }
+		#nav-social > ul > li { position: relative; float: left; }
+			#nav-social > ul > li > a { height: 33px; text-decoration: none; text-indent: 101%; white-space: nowrap; overflow: hidden; }
+			#nav-social > ul > li > a,
+			#nav-social > ul > li:hover > a,
+			#nav-social > ul > li.hover > a,
+			#nav-social > ul > li > a:hover,
+			#nav-social > ul > li > a.hover,
+			#nav-social > ul > li > a.active { background-image: url(/clients/AtlantaGirlsSchool/Images/social.png); background-repeat: no-repeat; }
+				#nav-social #nav-link-search-toggle, #nav-social #nav-link-search { width: 37px; background-position: 0px 0; }
+				#nav-social #nav-link-eye { width: 37px; background-position: -37px 0; }
+				#nav-social #nav-link-facebook { width: 37px; background-position: -74px 0; }
+				#nav-social #nav-link-twitter { width: 32px; background-position: -111px 0; }
+					#nav-social #nav-li-search-toggle:hover > a, #nav-social #nav-li-search-toggle.hover > a,
+					#nav-social #nav-link-search-toggle.active, #nav-social #nav-link-search-toggle:hover,
+					#nav-social #nav-li-search:hover > a, #nav-social #nav-li-search.hover > a,
+					#nav-social #nav-link-search.active, #nav-social #nav-link-search:hover { background-position: 0px -33px; }
+					#nav-social #nav-li-eye:hover > a, #nav-social #nav-li-eye.hover > a,
+					#nav-social #nav-link-eye.active, #nav-social #nav-link-eye:hover { background-position: -37px -33px; }
+					#nav-social #nav-li-facebook:hover > a, #nav-social #nav-li-facebook.hover > a,
+					#nav-social #nav-link-facebook.active, #nav-social #nav-link-facebook:hover { background-position: -74px -33px; }
+					#nav-social #nav-li-twitter:hover > a, #nav-social #nav-li-twitter.hover > a,
+					#nav-social #nav-link-twitter.active, #nav-social #nav-link-twitter:hover { background-position: -111px -33px; }
+			#nav-social ul ul { display: none; }
+
+/*
+-----------------------------------------------------------------------------
+ =NAV-UTIL
+----------------------------------------------------------------------------- */
+#nav-util { font-size: 1.0em; line-height: 1.2em; }
+	#nav-util > ul { padding-top: 5px; }
+		#nav-util > ul > li {
+			position: relative;
+			float: left;
+			margin: 0;
+			width: 49%;
+			}
+			#nav-util > ul > li > a {
+				color: #8ce63f;
+				text-decoration: none;
+				padding: 0 0 10px 0; margin: 0;
+				}
+				#nav-util > ul > li > a:hover,
+				#nav-util > ul > li > a.active{ color: #ffde00; }
+			#nav-util ul ul { display: none; }
+
+/*
+-----------------------------------------------------------------------------
+ =BREADCRUMBS
+----------------------------------------------------------------------------- */
+#breadcrumbs { display: none; }
+
+/*
+-----------------------------------------------------------------------------
+ =LOGIN-NAV
+----------------------------------------------------------------------------- */
+#nav-login { }
+    #nav-login h2 { }
+    #nav-login ul.login-list  { }
+        #nav-login ul.login-list li  { }
+        #nav-login ul.login-list li.first-child  { }
+        #nav-login ul.login-list li.last-child  { }
+            #nav-login ul.login-list li a  { }
+            #nav-login ul.login-list li a.my-messages  { }
+            #nav-login ul.login-list li a.new  { font-style: italic; }
+            #nav-login ul.login-list li a.my-profile  { }
+            #nav-login ul.login-list li a.my-pictures  { }
+            #nav-login ul.login-list li a.my-friends  { }
+            #nav-login ul.login-list li a.my-groups  { }
+            #nav-login ul.login-list li a.my-customize  { }
+            #nav-login ul.login-list li a.login  { }
+            #nav-login ul.login-list li a.forgotpw  { }
+            #nav-login ul.login-list li a.changepw  { }
+            #nav-login ul.login-list li a.logout  { }

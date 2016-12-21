@@ -1,0 +1,570 @@
+<html manifest="cache.appcache"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Countdown</title>
+        <meta name="description" content="Countdown."> 
+        <meta name="robots" content="index, follow"> 
+        <meta name="revisit-after" content="2 days"> 
+        <meta name="copyright" content="Copyright © 2013 Luis Perez"> 
+        <meta name="publisher" content="Luis Perez"> 
+        <meta name="Author" content="Luis Perez - Applications Developer"> 
+        <meta name="rating" content="general"> 
+        <meta name="distribution" content="Global"> 
+        <meta name="resource-type" content="document"> 
+        <meta name="owns" content="Luis Perez"> 
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">-->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-startup-image" media="screen and (orientation: portrait)" href="http://ipadstopwatch.com/Default.png">
+        <link rel="apple-touch-startup-image" media="screen and (orientation: landscape)" href="http://ipadstopwatch.com/Default-Landscape.png">
+        <link rel="apple-touch-icon" href="http://ipadstopwatch.com/iphoneicon114.png">
+        <link rel="apple-touch-icon" sizes="59x59" href="http://ipadstopwatch.com/iphoneicon59.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="http://ipadstopwatch.com/iphoneicon72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="http://ipadstopwatch.com/iphoneicon114.png">
+        <link rel="apple-touch-icon" sizes="129x129" href="http://ipadstopwatch.com/iphoneicon129.png">
+        <script src="countdown-clock-embed_data/ga.js" async="" type="text/javascript"></script><script type="text/javascript">
+            var IsIPhone = false;
+
+            if ('standalone' in navigator && !navigator.standalone && (/iphone|ipod|ipad/gi).test(navigator.platform) && (/Safari/i).test(navigator.appVersion)) {
+                IsIPhone = (/iphone/gi).test(navigator.platform);
+            }
+
+            if (!IsIPhone) {
+                document.write('<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">');
+            }
+        </script><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+        <script type="text/javascript">
+
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-27797950-3']);
+            _gaq.push(['_setDomainName', 'ipadstopwatch.com']);
+            _gaq.push(['_setAllowLinker', true]);
+            _gaq.push(['_trackPageview']);
+
+            (function () {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+
+        </script>
+        <script type="text/javascript" src="countdown-clock-embed_data/jquery-1.js"></script>
+
+        <!-- Adjust Size -->
+        <script>
+            var g_AdjustingSize = false;
+
+            function AdjustSize() {
+                g_AdjustingSize = true;
+                $('#TimeTable').hide();
+                g_AdjustSizeSync_InitialCall = true;
+                AdjustSizeSync();
+            }
+
+            var g_AdjustSizeSync_InitialCall;
+            function AdjustSizeSync() {
+                var FontSize = 30;
+
+                if (g_AdjustSizeSync_InitialCall) {
+                    g_AdjustSizeSync_InitialCall = false;
+                    SetFontSize(FontSize);
+                    setTimeout(AdjustSizeSync, 250);
+                    return;
+                }
+
+                var ChangeBy = 30; // initial chanbe by 30
+                var MinChangeBy = 8;
+
+                while (true) {
+                    SetFontSize(FontSize);
+
+                    var IsTableTooWide = $('#TimeTable').width() > getAvailableWidth();
+                    var IsTableTooTall = $('#TimeTable').height() > getAvailableHeight();
+                    
+                    if (IsTableTooWide || IsTableTooTall) {
+                        FontSize -= ChangeBy;
+
+                        if (ChangeBy == MinChangeBy) break;
+
+                        ChangeBy /= 2;
+
+                        if (ChangeBy < MinChangeBy) {
+                            ChangeBy = MinChangeBy;
+                        }
+                    }
+
+                    FontSize += ChangeBy;
+                }
+
+                g_AdjustingSize = false;
+                $('#TimeTable').show();
+            }
+
+            function getAvailableWidth() {
+                return $('body').width() - 40;
+            }
+
+            function getAvailableHeight() {
+                return $('body').height() - 30;
+            }
+
+            function SetFontSize(pFontSize) {
+                $('#TimeTable').css('fontSize', pFontSize); // 110
+                //$('.Time').css('fontSize', pFontSize); // 110
+            }
+
+            function GetWidthAndHeightString() {
+                var oWindow = $(window);
+                function Round(pNumber) {
+                    return Math.round(pNumber / 10) * 10;
+                }
+                var WidthAndHeight = Round(oWindow.width()) + "x" + Round(oWindow.height());
+                return WidthAndHeight;
+            }
+
+            var g_TrackWindowSizeId;
+            function TrackWindowSize() {
+                _gaq.push(['_trackEvent', 'Countdown Clock Embed', 'Resized', GetWidthAndHeightString(), undefined, true]);
+            }
+
+            $(function () {
+                _gaq.push(['_trackEvent', 'Countdown Clock Embed', 'InitialSize', GetWidthAndHeightString(), undefined, true]);
+            });
+            
+            $(window).resize(function () {
+                AdjustSize();
+                
+                if(g_TrackWindowSizeId != undefined) {
+                    clearTimeout(g_TrackWindowSizeId);
+                }
+                
+                g_TrackWindowSizeId = setTimeout(TrackWindowSize, 1000);
+            });
+        </script>
+
+        <!-- DisplayTime() -->
+        <script language="javascript">
+            var g_Days;
+            var g_Hours;
+            var g_Minutes;
+            var g_Seconds;
+
+            function MillisToTime(ElapsedMilliseconds) {
+                var Milliseconds = ElapsedMilliseconds % 1000;
+                var TotalSeconds = (ElapsedMilliseconds - Milliseconds) / 1000;
+                var Seconds = TotalSeconds % 60;
+                var TotalMinutes = (TotalSeconds - Seconds) / 60;
+                var Minutes = TotalMinutes % 60;
+                var TotalHours = (TotalMinutes - Minutes) / 60;
+                var Hours = TotalHours % 24;
+                var Days = (TotalHours - Hours) / 24;
+                
+                return { Days: Days, Hours: Hours, Minutes: Minutes, Seconds: Seconds, Milliseconds: Milliseconds };
+            }
+            
+            function DisplayTime(ElapsedMilliseconds) {
+                var Time = MillisToTime(ElapsedMilliseconds);
+            
+                var Milliseconds = Time.Milliseconds;
+                var Seconds = Time.Seconds;
+                var Minutes = Time.Minutes;
+                var Hours = Time.Hours;
+                var Days = Time.Days;
+
+                var bDaysChanged = false;
+                if (g_Days != Days) {
+                    bDaysChanged = true;
+                    g_Days = Days;
+                    
+                    var sDays = (Days == 1) ? " day" : " days";
+                    $('#Days').html(Days + "<span style='font-size:50%;'>" + sDays + "</span>");
+                }
+
+                var bHoursChanged = false;
+                if (g_Hours != Hours) {
+                    bHoursChanged = true;
+                    g_Hours = Hours;
+
+                    var sHours;
+                    if(g_Days == 0) {
+                         sHours = Hours;
+                    } else {
+                         sHours = AddZeroPadding(Hours);
+                    }
+                    
+                    $('#Hours').html(sHours);
+                }
+
+                var bMinutesChanged = false;
+                if (g_Minutes != Minutes) {
+                    bMinutesChanged = true;
+                    g_Minutes = Minutes;
+                    
+                    var sMinutes;
+                    if(g_Days == 0 && g_Hours == 0) {
+                         sMinutes = Minutes;
+                    } else {
+                         sMinutes = AddZeroPadding(Minutes);
+                    }
+                    
+                    $('#Minutes').html(sMinutes);
+                }
+
+                var bSecondsChanged = false;
+                if (g_Seconds != Seconds) {
+                    bSecondsChanged = true;
+                    g_Seconds = Seconds;
+                    
+                    var sSeconds;
+                    if(g_Days == 0 && g_Hours == 0 && g_Minutes == 0) {
+                         sSeconds = Seconds;
+                    } else {
+                         sSeconds = AddZeroPadding(Seconds);
+                    }
+                    
+                    $('#Seconds').html(sSeconds);
+                }
+
+                //$('#Milliseconds').html(AddZeroPadding3(Milliseconds));
+
+                if(Days == 0) {
+                    if(bDaysChanged) {
+                        $('#Days').addClass("TimeZero");
+                        AdjustSize();
+                    }
+                }
+                
+                if (Days == 0 && Hours == 0) {
+                    if (bHoursChanged) {
+                        $('#Hours').addClass("TimeZero");
+                        $('#HoursSeperator').hide();
+                        AdjustSize();
+                    }
+
+                    if (Minutes == 0) {
+                        if (bMinutesChanged) {
+                            $('#Minutes').addClass("TimeZero");
+                            $('#MinutesSeperator').hide();
+                            AdjustSize();
+                        }
+
+                        if (bSecondsChanged) {
+                            if (Seconds == 0) {
+                                //$('#Seconds').addClass("TimeZero");
+                            } else {
+                                $('#Seconds').removeClass("TimeZero");
+                            }
+                        }
+                    } else {
+                        if (bMinutesChanged) {
+                            $('#Minutes').removeClass("TimeZero");
+                        }
+                        if (bSecondsChanged) {
+                            $('#Seconds').removeClass("TimeZero");
+                        }
+                    }
+                } else {
+                    if (bHoursChanged) {
+                        $('#Hours').removeClass("TimeZero");
+                    }
+
+                    if (bMinutesChanged) {
+                        $('#Minutes').removeClass("TimeZero");
+                    }
+
+                    if (bSecondsChanged) {
+                        $('#Seconds').removeClass("TimeZero");
+                    }
+                }
+            }
+
+            function AddZeroPadding(pNumber) {
+                if (pNumber < 10) return "0" + pNumber;
+                return pNumber;
+            }
+
+            function AddZeroPadding3(pNumber) {
+                if (pNumber < 10) return "00" + pNumber;
+                if (pNumber < 100) return "0" + pNumber;
+                return pNumber;
+            }
+        </script>
+
+        <!-- Step(), UpdateTimeDisplay(), GetTimeLeft() -->
+        <script language="javascript">
+            var Now = new Date();
+            var Seconds = 1000;
+            var Minutes = Seconds * 60;
+            var Hours = Minutes * 60;
+            var Days = Hours * 24;
+            
+            var g_TargetDate;
+            //var g_TargetDate = new Date(Now.getFullYear(), 12 - 1, 25).getTime(); // 0 based month (TargetMonth - 1)
+            
+            var ShowIPadStopwatch = true;
+            
+            function GetTimeLeft() { // this is the time that gets displayed
+                var Time = g_TargetDate - new Date().getTime() + 1000;
+                if (Time < 0) {
+                    Time = 0;
+                }
+                return Time;
+            }
+
+            var g_Running = true;
+            
+            var g_StartBlink_FirstTime = true;
+            function StartBlink() {
+                if(!g_StartBlink_FirstTime) {
+                    if($("#FinalMessageRow").css("color") == "black") {
+                        $("#FinalMessageRow").css({ color: "white" });
+                    } else {
+                        $("#FinalMessageRow").css({ color: "black" });
+                    }
+                }
+            
+                g_StartBlink_FirstTime = false;
+                setTimeout(arguments.callee, 750);
+            }
+            
+            function UpdateTimeDisplay() {
+                var Time = GetTimeLeft();
+                
+                if(Time == 0) {
+                    $("#TimeTable tr").hide();
+                    $("#FinalMessageRow").show();
+
+                    if(ShowIPadStopwatch) {
+                        $(".oIPadStopwatch").show();
+                    }
+
+                    AdjustSize();
+                    StartBlink();
+                    g_Running = false;
+                } else {
+                    DisplayTime(Time);
+                }
+            }
+
+            function Step() {
+                if(!g_Running) return;
+                UpdateTimeDisplay();
+                // millis = 1000 / fps
+                // 84 = 12 fps
+                setTimeout(arguments.callee, 42);
+            }
+        </script>
+
+        <!-- Entry Point -->
+        <script language="javascript">
+            function getQueryVariable(variable) {
+                var query = window.location.hash.substring(1);
+                var vars = query.split('&');
+                for (var i = 0; i < vars.length; i++) {
+                    var pair = vars[i].split('=');
+                    if (decodeURIComponent(pair[0]) == variable) {
+                        var value = decodeURIComponent(pair[1]);
+                        return value.replace(/\+/g, " ");
+                    }
+                }
+                console.log('Query variable %s not found', variable);
+            }
+
+            $(function () {
+                var targetDateMillis = getQueryVariable("date");
+
+                if (targetDateMillis == undefined) {
+                    $("#CountdownFormContainer").show();
+                    $("#Countdown").hide();
+                } else {
+                    AdjustSize();
+                }
+
+                var title = getQueryVariable("title") || "sample countdown";
+                var msg = getQueryVariable("msg") || "Done!";
+
+                var backgroundColor = getQueryVariable("bgcol") || "000000";
+                $("body").css({ backgroundColor: "#" + backgroundColor });
+
+                g_TargetDate = parseInt(targetDateMillis);
+                $("#FinalMessage").text(msg);
+                $("#title").text(title);
+                try {
+                    _gaq.push(['_trackEvent', 'Countdown Clock Embed', 'Info', "title: " + title + ", finalMsg: " + msg + ", tm: " + targetDateMillis, undefined, true]);
+                    _gaq.push(['_trackEvent', 'Countdown Clock Embed', 'Hostname', document.referrer, undefined, true]);
+                } catch(ex) {
+                    // do nothing
+                }
+                Step();
+
+                $("#CreateCountdown").click(function () {
+                    $("#CountdownError").hide();
+                    var dateTimeString = $("#CountdownDateTime").val();
+                    var title = $("#CountdownTitle").val();
+                    var msg = $("#CountdownMessage").val();
+
+                    try {
+                        var dateTimeMillis = Date.parse(dateTimeString);
+                        g_TargetDate = parseInt(dateTimeMillis);
+                        $("#FinalMessage").text(msg);
+                        $("#title").text(title);
+                    } catch (ex) {
+                        $("#CountdownError").show();
+                        return;
+                    }
+
+                    $("#CountdownFormContainer").hide();
+                    $("#Countdown").show();
+
+                    var hash = $.param({ date: dateTimeMillis, title: title, msg: msg });
+                    window.location.hash = hash;
+
+                    AdjustSize();
+                });
+            });
+        </script>
+        <style>
+* {
+    font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+    line-height:100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    background: black;
+    color: white;
+}
+        </style>          
+        <style type="text/css">
+            #TimeTable {
+                font-size: 110pt; /* TODO: Use relative font size */
+            }
+            
+            .Time {
+                text-align: center;
+            }
+            
+            .TimeZero {
+                display: none;
+            }
+            
+            .Seperator {
+                color: #333;
+            }
+
+            #CountdownForm {
+                color: black;
+            }
+
+            #CountdownForm .field {
+                padding-right:10px;
+                color: black;
+            }
+
+            #CountdownForm input {
+                border: solid 1px #aaa;
+                padding: 5px;
+                width: 200px;
+            }
+
+            #CountdownForm button {
+                border: none;
+                padding: 10px;
+                background: #c00;
+                color:white;
+                padding: 10px 20px;
+                cursor: pointer;
+            }
+
+            #CountdownFormContainer {
+                display: none;
+            }
+        </style>
+        <script type="text/javascript">
+            preventScrolling = function (event) {
+                // Prevent scrolling on this element
+                event.preventDefault();
+            }
+        </script>	
+    </head>
+    <body style="margin: 0px; background-color: rgb(0, 0, 0);">
+        <div id="CountdownFormContainer" style="text-align:center;margin-top:40px;">
+        <span id="CountdownForm" style="margin-left:20px;background:#eee;padding:15px 40px;display:inline-block;margin-left:auto;margin-right:auto;">
+            <table style="border:none;padding:0;" cellpadding="0" cellspacing="0">
+                <tbody><tr>
+                    <td colspan="2"><div style="text-align:center;color:black;font-size:140%;padding-bottom:30px;">Create Your own Countdown</div></td>
+                </tr>
+                <tr>
+                    <td class="field">Countdown to</td>
+                    <td><input id="CountdownDateTime" value="December 31 2013 12:59 pm"></td>
+                </tr>
+                <tr>
+                    <td class="field">Title</td>
+                    <td><input id="CountdownTitle" value="New Year Countdown"></td>
+                </tr>
+                <tr>
+                    <td class="field">Final Message</td>
+                    <td><input id="CountdownMessage" value="Happy New Year!"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align:center;"><button id="CreateCountdown" style="font-size:140%;margin-top:20px;">Create Countdown</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="color:black;text-align:center;">
+                        <div style="color:black;margin-top:40px;">
+                            <div style="margin-bottom:10px;color:#999;">Check out some of our other services:</div>
+                            <a href="http://ipadstopwatch.com/" style="color:#06C;text-decoration:underline;">Stopwatch</a>
+                            <span style="margin: 0 4px;">|</span><a href="http://ipadstopwatch.com/timer.html" style="color:#06C;text-decoration:underline;">Timer</a>
+                            <span style="margin: 0 4px;">|</span><a href="http://ipadstopwatch.com/clock.html" style="color:#06C;text-decoration:underline;">Clock</a>
+                            <span style="margin: 0 4px;">|</span><a href="http://ipadstopwatch.com/countdown-widget-generator.html" style="color:#06C;text-decoration:underline;">Countdown Widget</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody></table>
+        </span>
+        </div>
+
+        <div id="Countdown" style="width:100%;height:100%;" ontouchmove="preventScrolling(event);">
+            <table style="width:100%;height:100%;"><tbody><tr><td>
+                <table id="TimeTable" style="font-weight: bold; margin: auto; display: table; font-size: 53px;" border="0" cellpadding="0" cellspacing="0">
+                    <tbody><tr><td colspan="5" style="font-size:40%;font-weight:normal;text-align:center;" id="title"> )º(    &lt;3</td></tr>
+                    <tr>
+                        <td colspan="5"><div class="Time" style="font-size:150%;white-space:nowrap;" id="Days">57<span style="font-size:50%;"> days</span></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="Time" id="Hours">11</div></td>
+                        <td><div class="Time Seperator" id="HoursSeperator">:</div></td>
+                        <td><div class="Time" id="Minutes">43</div></td>
+                        <td><div class="Time Seperator" id="MinutesSeperator">:</div></td>
+                        <td><div class="Time" id="Seconds">17</div></td>
+                        <!-- <td><div class="Time" id="Milliseconds"></div></td> -->
+                    </tr>
+                    <tr id="FinalMessageRow" style="display:none;text-align:center;">
+                        <td>
+                            <span id="FinalMessage">Gather with your friends!  It is time to watch the Man BURN!!</span>
+                        </td>
+                    </tr>
+                </tbody></table>
+
+            </td></tr></tbody></table>
+        </div>
+        <div id="byIpadStopwatch" style="position: absolute; bottom: 0px; background-color: black; padding-left: 5px; padding-bottom: 2px; font-size: 80%; color: rgb(102, 102, 102); display: none;">countdown provided by <a href="http://ipadstopwatch.com/" target="_blank">iPadStopwatch.com</a></div>
+        <script>
+            $(function () {
+                $("body").mouseenter(function () {
+                    $("#byIpadStopwatch").fadeIn();
+                }).mouseleave(function () {
+                    $("#byIpadStopwatch").hide();
+                });
+
+            });
+        </script>
+    
+</body></html>

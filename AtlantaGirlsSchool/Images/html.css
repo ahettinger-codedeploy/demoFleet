@@ -1,0 +1,270 @@
+/* VERSIONS
+/* 1_0: General HTML Styles (inc. Lists, Tables, Images, Modules, Forms, Tabs)
+/* 1_1: Changed default styles for Lists [Author: Landon Durnan]
+/* 1_2: Changed headings, moved module style and SC styles, block image widths [Author: Landon Durnan]
+/* 1_3: Changed default styles for Tabs [Author: Nick Hall]
+/* 1_4: Shared Images [Author: Nick Hall]
+/* 1_5: TC list styles, TC blockquote styles [Author: Nick Hall]
+/* 1_6: H#, strong and em for @font-face delcarations [Author: Alex Bradley]
+----------------------------------------------------------------------------- */
+
+/*
+-----------------------------------------------------------------------------
+ =HTML Styles
+----------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6,
+.alpha, .beta, .gamma,
+.delta, .epsilon, .zeta  { line-height: 1.2em; margin-bottom: 0.2em; text-transform: uppercase; }
+h1, .alpha { font-size: 3.2em; color: #922786; margin-bottom: 0.4em; }
+h2, .beta { font-size: 1.8em; color: #922786; }
+h3, .gamma { font-size: 1.5em; color: #00aeef; text-transform: none; }
+h4, .delta { font-size: 1.35em; color: #000; text-transform: none; }
+h5, .epsilon { font-size: 1.2em; color: #922786; }
+h6, .zeta { font-size: 1.0em; }
+
+.sc h2, .tc h2 { font-size: 1.2em; color: #000; margin: -10px -10px 10px -10px; padding: 16px 10px 20px 10px; text-align: center; background: url(../webpage_files/hdr-mod.png) center bottom no-repeat; -webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px; -moz-border-radius-topleft: 4px; -moz-border-radius-topright: 4px; border-top-left-radius: 4px; border-top-right-radius: 4px; }
+.sc h3, .tc h3 { font-size: 1.35em; color: #922786; text-transform: uppercase;}
+.sc h4, .tc h4 { font-size: 1.35em; color: #000; }
+.sc h5, .tc h5 { font-size: 1.2em; color: #922786; }
+.sc h6, .tc h6 { font-size: 1em; color: #000; }
+
+a:link, a:visited { color: #ec008c; text-decoration: none; }
+a:hover, a:active, a:focus { color: #cfcfcf; }
+
+/* Include @font-face bold and italic weights if available *//*
+strong { font-weight: normal; font-family: ; }
+em { font-style: normal; font-family: ; }
+strong em,
+em strong { font-style: normal; font-weight: normal; font-family: ; }
+*/
+
+.pc blockquote,
+.sc blockquote,
+.tc blockquote { font: normal 1.5em/1.2em '2DumbRegular', Arial, Helvetica, sans-serif; color: #000; margin-bottom: 1.2em; padding: 5px; background: url(../webpage_files/border-image.gif) left top #fff; }
+	.pc blockquote .blockquote-wrapper,
+	.sc blockquote .blockquote-wrapper,
+	.tc blockquote .blockquote-wrapper { display: block; margin: 0; padding: 10px; background: #00aeef; border: 1px solid #fff; }
+		.sc blockquote,
+		.tc blockquote { text-align: center; }
+		.pc blockquote p,
+		.sc blockquote p,
+		.tc blockquote p { background: #00aeef; padding: 10px; margin: 0; line-height: 1.4em; }
+		blockquote cite { font-style: normal; display: block; text-align: right; background: #00aeef; font: normal 0.7em/1.0em 'TeXGyreAdventorRegular', Arial, Helvetica, sans-serif; text-transform: uppercase; margin: 0; padding: 0 10px 10px 0; }
+		.pc blockquote.callout .blockquote-wrapper  { background: url(../webpage_files/bg-blockquote.png) left center no-repeat #00aeef; padding-left: 75px; min-height: 90px; }
+		.sc blockquote.callout .blockquote-wrapper,
+		.tc blockquote.callout .blockquote-wrapper { background: url(../webpage_files/bg-blockquote.png) top center no-repeat #00aeef; padding-top: 75px; }
+
+.lead-in { font-size: 1.5em; line-height: 1.4em; color: #000; }
+
+/*
+-----------------------------------------------------------------------------
+ =Lists
+----------------------------------------------------------------------------- */
+
+ul { list-style: outside disc; margin: 0 0 1.8em 0; }
+ol { list-style: outside decimal; margin: 0 0 1.8em 1.8em; }
+	ul ul, ol ol,
+	ul ol, ol ul { margin-bottom: 0; }
+
+	.pc ul li, .sc ul li, .tc ul li,
+	.pc ol li, .sc ol li, .tc ol li { margin-bottom: .6em; }
+	.pc ul li, .sc ul li, .tc ul li { list-style: none; padding-left: 20px; background: url(../webpage_files/bullet.gif) no-repeat 0 3px; }
+	.pc ul ol li, .sc ul ol li, .tc ul ol li { padding-left: 0; background-image: none; }
+
+.pc ul ul, .sc ul ul, .tc ul ul,
+.pc ol ul, .sc ol ul, .tc ol ul,
+.pc ol ol, .sc ol ol, .tc ol ol,
+.pc ul ol, .sc ul ol, .tc ul ol { margin-top: .6em; }
+
+ul.plain { margin-left: 0; list-style: none; }
+	ul.plain li { padding-left: 0; background-image: none; }
+ol.plain { margin-left: 0; list-style: none; }
+	ol.plain ol { list-style: none; }
+
+/*
+-----------------------------------------------------------------------------
+ =Tables
+----------------------------------------------------------------------------- */
+table.styled {
+	margin-bottom: 1.8em;
+	width: 100%;
+	border-collapse: collapse;
+	border-bottom: 1px solid #ccc;
+	}
+    table.styled tr { }
+	    table.styled th {
+			font-weight: normal;
+			font-size: 1.2em;
+			text-decoration: none;
+			text-transform: uppercase;
+			padding: 12px;
+			color: #fff;
+			border-bottom: 1px solid #761e6c;
+			background-color: #922786;
+			text-shadow: 0 -1px #853913;
+			-webkit-box-shadow: inset 0 -1px 0 #a24c98;
+			-moz-box-shadow: inset 0 -1px 0 #a24c98;
+			box-shadow: inset 0 -1px 0 #a24c98;
+			}
+        table.styled td {
+	        background-color: #fff;
+	        border-bottom: 1px solid #d1d1d1;
+	        padding: 8px 12px 6px 12px;
+	        vertical-align: top;
+			}
+        table.styled tr.alt td {
+	        background-color: #f5f5f5;
+	        }
+
+.sc table.styled { }
+
+/*
+-----------------------------------------------------------------------------
+ =Images
+----------------------------------------------------------------------------- */
+.wide { float: none; margin: 0 auto .8em auto; }
+.left { float: left; margin: 0 .8em .8em 0; }
+.right { float: right; margin: 0 0 .8em .8em; }
+
+.image { margin-bottom: 1.2em; position: relative; }
+	.image dt { position: relative; z-index: 0; padding: 18px 0; }
+		.image dt:before {
+			display: block;
+			position: absolute;
+			z-index: 10;
+			content: "";
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: url(../webpage_files/bg-photo-top.png) center center no-repeat;
+			height: 28px;
+			top: 0;
+			}
+		.image dt:after {
+			display: block;
+			position: absolute;
+			z-index: 10;
+			content: "";
+			width: 100%;
+			left: 0;
+			background: url(../webpage_files/bg-photo-bot.png) center center no-repeat;
+			height: 28px;
+			bottom: 0;
+			}
+		.image dt img { display: block; }
+	.image dd {
+		padding: 2px 4px;
+		margin: 0;
+		font-size: 0.9em;
+		line-height: normal;
+		color: #666;
+		text-align: center;
+		}
+		.sc .image dd, .tc .image dd { padding: 5px 10px; text-align: left; }
+			.image dd strong { display: block; }
+
+/* Do a simplified style based on .image dt */
+.thumb {
+	background-color: #fff;
+	border: 1px solid #922786;
+	padding: 5px;
+	}
+	.thumb a { display: block; }
+		.thumb img { display: block; width: 130px; }
+
+.block1 { width: 130px; } /* width of SC - 40px + (image padding + borders) */
+.block2 { width: 240px; } /* width of SC + (image padding + borders) */
+.block3 { width: 400px; } /* width of 3 Column PC - 60px + (image padding + borders) */
+.block4 { width: 650px; } /* width of 3 Column PC + (image padding + borders) */
+.block5 { width: 900px; } /* width of 2 Column A PC + (image padding + borders) */
+
+.sc .image { }
+
+/*
+-----------------------------------------------------------------------------
+ =Forms
+----------------------------------------------------------------------------- */
+
+fieldset { border: 1px solid #ccc; }
+legend { background: #fff; }
+textarea, input[type='text'], input[type='password'], select { border: 1px solid #ccc; background: #fff; }
+textarea:hover, input[type='text']:hover, input[type='password']:hover, select:hover { border-color: #aaa; }
+textarea:focus, input[type='text']:focus, input[type='password']:focus, select:focus { border-color: #888; outline: 2px solid #ddd; }
+input[type='button'], input[type='submit'], input[type='checkbox'], input[type='image'], input[type='radio'], input[type='reset'], select, button { cursor: pointer; }
+input[type='hidden'] { display:none; }
+fieldset { padding: 0 1em 1em 1em; margin: 1.6em 0; } /* padding-top is margin-top for fieldsets in Opera */
+legend { padding-left: .8em; padding-right: .8em; }
+legend+* { margin-top: 1em; } /* compensates for the opera margin bug */
+textarea, input { padding: .3em .4em .15em .4em; }
+select { padding: .1em .2em 0 .2em; }
+option { padding: 0 .4em .1em; }
+
+/*
+-----------------------------------------------------------------------------
+ =Tabs
+----------------------------------------------------------------------------- */
+
+.tab-row { clear: both; overflow: auto; }
+	.tab-row ul,
+	.module .bd .tab-row ul {
+		list-style: none;
+		margin: 1.0em 0 1.2em 0;
+		padding: 0 0 1px 2%;
+		float: left;
+		width: 98%;
+		background: url(../webpage_files/bg-tab-border.gif) repeat 0 0;
+		}
+		.tab-row ul li,
+		.module .bd .tab-row ul li {
+			float: left;
+			margin: 0 3px 10px 0;
+			padding: 0;
+			white-space: nowrap;
+			background-image: none;
+			border: 0;
+			}
+		.tab-row ul li.label,
+		.module .bd .tab-row ul li.label {
+			color: #666;
+			background-color: transparent;
+			border: none;
+			padding: 10px 6px 0 0;
+			}
+			.tab-row ul li a {
+				display: block;
+				padding: 9px 10px 0 10px;
+				color: #5f5f5f;
+				border: 1px solid #c8c6c6;
+				border-bottom: 0;
+				text-shadow: 0 1px #e0e0e0;
+				font-weight: normal;
+				text-decoration: none;
+				outline: none;
+				height: 27px;
+				-webkit-border-top-left-radius: 6px;
+				-webkit-border-top-right-radius: 6px;
+				-moz-border-radius-topleft: 6px;
+				-moz-border-radius-topright: 6px;
+				border-top-left-radius: 6px;
+				border-top-right-radius: 6px;
+				-webkit-box-shadow: inset 0 -1px 0 #e0e0e0;
+				-moz-box-shadow: inset 0 -1px 0 #e0e0e0;
+				box-shadow: inset 0 -1px 0 #e0e0e0;
+				background: #cfcfcf;
+				}
+		.tab-row ul li.selected,
+		.tab-row ul li.active { }
+			.tab-row ul li a:hover { color: #000; }
+			.tab-row ul li.selected a,
+			.tab-row ul li.active a {
+				height: 28px;
+				margin-bottom: -1px;
+				color: #000;
+				text-shadow: 0 1px #f966bd;
+				border-color: #df5e1f;
+				background-color: #ec008c;
+				-webkit-box-shadow: inset 0 -1px 0 #f79e72;
+				-moz-box-shadow: inset 0 -1px 0 #f79e72;
+				box-shadow: inset 0 -1px 0 #f79e72;
+				}

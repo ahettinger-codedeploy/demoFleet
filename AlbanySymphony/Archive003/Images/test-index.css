@@ -1,0 +1,126 @@
+@charset "utf-8";
+body  {
+	margin: 0; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+	background-image: url(/clients/AlbanySymphony/Images/background.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size: 100%;
+}
+.twoColFixRtHdr #container {
+	width: 900px;
+	text-align: left;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	padding-top: 30px;
+} 
+.twoColFixRtHdr #header {
+	padding-top: 0;
+	padding-right: 0px;
+	padding-bottom: 0;
+	padding-left: 0px;
+} 
+.twoColFixRtHdr #header h1 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	padding: 10px 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+}
+.twoColFixRtHdr #cse-search-form {
+	float: right; /* since this element is floated, a width must be given */
+	width: 25%; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
+	background: #ffffff;
+	position: relative;
+	top: 25px;
+	left: 75px;
+}
+.twoColFixRtHdr #headersidebar {
+	float: right; /* since this element is floated, a width must be given */
+	width: 75px; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
+	background: #ffffff;
+}
+.twoColFixRtHdr #headerlinks {
+	float: right; /* since this element is floated, a width must be given */
+	width: 25%; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
+	background: #ffffff;
+	position: relative;
+	top: 50px;
+	left: 300px;
+}
+
+
+
+.twoColFixRtHdr #sidebar1 {
+	float: right; /* since this element is floated, a width must be given */
+	width: 165px; /* the actual width of this div, in standards-compliant browsers, or standards mode in Internet Explorer will include the padding and border in addition to the width */
+	background: #ffffff;
+	padding-top: 5px;
+	padding-right: 10px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+}
+.twoColFixRtHdr #mainContent {
+	background-color: #FFF;
+	width: 900px;
+	margin-top: 10px;
+	
+	margin-bottom: 15px;
+	margin-left: 0;
+
+} 
+.twoColFixRtHdr #leftcontent {
+	background-color: #FFF;
+	width: 325px;
+	float: left;
+	position: relative;
+	height: 350px;
+	background-image: url(images/content-frame.jpg);
+	background-repeat: no-repeat;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 0px;
+	clear: none;
+	overflow: auto;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+	text-align: center;
+}
+.twoColFixRtHdr #rightcontent {
+	background-color: #FFF;
+	width: 0px;
+	float: right;
+	position: relative;
+	height: 350px;
+	background-image: url(images/content-frame.jpg);
+	background-repeat: no-repeat;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 0px;
+	text-align: center;
+}
+
+
+.twoColFixRtHdr #footer {
+	width:900px;
+	padding: 0 10px 0 20px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background:#333;
+	color: #FFF;
+} 
+.twoColFixRtHdr #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}

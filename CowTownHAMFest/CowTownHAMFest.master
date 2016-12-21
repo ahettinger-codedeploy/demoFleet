@@ -1,0 +1,480 @@
+<%
+'changelog'
+'LSP 12/19/16 - initial development'
+%>
+<!DOCTYPE html>
+<html dir="ltr" data-tcc-ignore="" lang="en"> 
+
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+<script src="https://www.tix.com/clients/tix/js/jquery-1.6.4.min.js" type="text/javascript"></script>
+	 <style>
+		 div,span {
+			 font-size: inherit;
+		 }
+	 </style>
+<script src="https://www.tix.com/clients/tix/js/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="https://www.tix.com/javascript/Tooltip.js"></script>
+
+<style>
+    #arrow {
+        z-index: 999998;
+        display: none;
+        background-color: Transparent;
+        pointer-events: none;
+    }
+
+    #tooltipBox {
+        z-index: 999999;
+        display: none;
+        position: absolute;
+    background-color: #fff !important;
+        border: 1px solid rgba(120, 120, 120, 0.8);
+        border-radius: 3px;
+        margin: 10px 8px;
+        padding: 5px;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        pointer-events: none;
+    }
+
+    #EventTooltip {
+        background-color: #fff;
+    }
+
+    #EventTooltip table, #EventTooltip tr, #EventTooltip td {
+        border: 0;
+    }
+
+    .tooltip-text {
+        width: 400px;
+        padding: 10px;
+        font-size: 0.85em;
+    }
+</style>
+
+<div id="tooltipBox">
+    <div id="EventTooltip"><img src="https://www.tix.com/images/loading.gif" /></div>
+</div>    
+<div id="arrow"><img src="https://www.tix.com/images/ArrowLeftDown.png" name="arrowimg" /></div>
+            <link rel="stylesheet" type="text/css" href="/clients/cowtownhamfest/images/css_002.css">
+            <link rel="stylesheet" type="text/css" href="/clients/cowtownhamfest/images/css.css">
+            <link rel="stylesheet" type="text/css" href="/clients/cowtownhamfest/images/site.css">
+                <link
+                    rel="shortcut icon" href="http://nebula.phx3.secureserver.net/d3d182afb4444f756e2732406c882fee?AccessKeyId=531F2E056F01A4ABA8FB&amp;disposition=0&amp;alloworigin=1">
+                    <meta http-equiv="Content-Location" content="sales-and-tickets.html">
+                    <meta name="generator" content="Starfield Technologies; Go Daddy Website Builder 7.0.5350">
+                    <meta name="description" content="We are Cowtown Hamfest of Fort Worth. We take pride in providing opportunities for Amateur Radio Operators to attend education programs, testing, and a quality sale of new and used equipment.">
+                    <meta property="og:type" content="website">
+                    <meta property="og:title" content="SALES AND TICKETS">
+                    <meta property="og:site_name" content="COWTOWN HAMFEST FORT WORTH">
+                    <meta property="og:url" content="http://cowtownhamfest.com/sales-and-tickets.html">
+                    <meta property="og:description" content="We are Cowtown Hamfest of Fort Worth. We take pride in providing opportunities for Amateur Radio Operators to attend education programs, testing, and a quality sale of new and used equipment.">
+                    <meta property="og:image" content="//nebula.wsimg.com/c97d187571c7193a9ad70a318f9c1bf4?AccessKeyId=531F2E056F01A4ABA8FB&amp;disposition=0&amp;alloworigin=1">
+                    <meta property="og:locale" content="en_GB">
+                                    <link rel="stylesheet" type="text/css" _curl_movable="true" href="/clients/cowtownhamfest/images/app.css">
+                        </head>
+
+<body>
+    <style type="text/css">
+        #wsb-element-f573ea8f-725b-4ef8-97b2-d6648852046c {
+            top: 205px;
+            left: 705px;
+            position: absolute;
+            z-index: 64
+        }
+        
+        #wsb-element-f573ea8f-725b-4ef8-97b2-d6648852046c .wsb-share-f573ea8f-725b-4ef8-97b2-d6648852046c {
+            width: 400px;
+            height: 50px
+        }
+        
+        #wsb-element-cc4e66cb-f2b8-47f6-9d4e-9329620da929 {
+            top: 10.84px;
+            left: 406px;
+            position: absolute;
+            z-index: 8
+        }
+        
+        #wsb-element-cc4e66cb-f2b8-47f6-9d4e-9329620da929 .wsb-image-inner {}
+        
+        #wsb-element-cc4e66cb-f2b8-47f6-9d4e-9329620da929 .wsb-image-inner div {
+            width: 205px;
+            height: 107.16px;
+            position: relative;
+            overflow: hidden
+        }
+        
+        #wsb-element-cc4e66cb-f2b8-47f6-9d4e-9329620da929 img {
+            position: absolute
+        }
+        
+        #wsb-element-a32c2517-a9f7-4d40-ac69-10658b4dbf33 {
+            top: 18px;
+            left: 18.5px;
+            position: absolute;
+            z-index: 32
+        }
+        
+        #wsb-element-a32c2517-a9f7-4d40-ac69-10658b4dbf33 .txt {
+            width: 954px;
+            height: 20px
+        }
+        
+        #wsb-element-a19ddc3a-d2ba-4092-be21-0ffe21509fd2 {
+            top: 16px;
+            left: 870px;
+            position: absolute;
+            z-index: 33
+        }
+        
+        #wsb-element-a19ddc3a-d2ba-4092-be21-0ffe21509fd2 .wsb-image-inner {}
+        
+        #wsb-element-a19ddc3a-d2ba-4092-be21-0ffe21509fd2 .wsb-image-inner div {
+            width: 98px;
+            height: 35px;
+            position: relative;
+            overflow: hidden
+        }
+        
+        #wsb-element-a19ddc3a-d2ba-4092-be21-0ffe21509fd2 img {
+            position: absolute
+        }
+        
+        #wsb-element-8e1ecdba-8743-4808-bc39-2a59ea73bbc2 {
+            top: -2px;
+            left: 1px;
+            position: absolute;
+            z-index: 31
+        }
+        
+        #wsb-element-8e1ecdba-8743-4808-bc39-2a59ea73bbc2 .wsb-shape {
+            width: 993px;
+            height: 61px;
+            padding: 0px;
+            background: #be1c19;
+            box-sizing: content-box;
+            -moz-box-sizing: content-box
+        }
+        
+        #wsb-element-84cdde06-430c-40fc-a311-9a60d9424617 {
+            top: 22px;
+            left: 6px;
+            position: absolute;
+            z-index: 6
+        }
+        
+        #wsb-element-84cdde06-430c-40fc-a311-9a60d9424617 .txt {
+            width: 962px;
+            height: 20px
+        }
+        
+        #wsb-element-5b735151-d4f9-4cd4-82d8-725ceda41340 {
+            top: 154px;
+            left: 8px;
+            position: absolute;
+            z-index: 13
+        }
+        
+        #wsb-element-5b735151-d4f9-4cd4-82d8-725ceda41340 {
+            width: 973px;
+            height: 17px
+        }
+        
+        #wsb-element-5359a3b0-c7fe-4775-8ddc-1486f3ef44dc {
+            top: 144px;
+            left: 0px;
+            position: absolute;
+            z-index: 11
+        }
+        
+        #wsb-element-5359a3b0-c7fe-4775-8ddc-1486f3ef44dc .wsb-shape {
+            width: 991px;
+            height: 41px;
+            box-sizing: content-box;
+            -moz-box-sizing: content-box
+        }
+        
+        #wsb-element-054e10ad-906e-41c7-9693-5c365379a771 {
+            top: 134px;
+            left: -1px;
+            position: absolute;
+            z-index: 12
+        }
+        
+        #wsb-element-054e10ad-906e-41c7-9693-5c365379a771 .wsb-line-element {
+            width: 991px;
+            height: 20px
+        }
+        
+        #wsb-element-f3b1dc58-ada6-4308-997b-83d51366d693 {
+            top: 186px;
+            left: 1px;
+            position: absolute;
+            z-index: 100
+        }
+        
+        #wsb-element-f3b1dc58-ada6-4308-997b-83d51366d693>div {
+            width: 990px;
+            height: 452px
+        }
+        
+        #wsb-element-ef4d0134-a994-4aa6-985d-67a266930264 {
+            top: 701px;
+            left: 70px;
+            position: absolute;
+            z-index: 109
+        }
+        
+        #wsb-element-ef4d0134-a994-4aa6-985d-67a266930264 .wsb-image-inner {}
+        
+        #wsb-element-ef4d0134-a994-4aa6-985d-67a266930264 .wsb-image-inner div {
+            width: 134px;
+            height: 90px;
+            position: relative;
+            overflow: hidden
+        }
+        
+        #wsb-element-ef4d0134-a994-4aa6-985d-67a266930264 img {
+            position: absolute
+        }
+        
+        #wsb-element-ede5af2b-4fa8-4042-9a93-0b8f65421af0 {
+            top: 631px;
+            left: 33px;
+            position: absolute;
+            z-index: 105
+        }
+        
+        #wsb-element-ede5af2b-4fa8-4042-9a93-0b8f65421af0 .wsb-shape {
+            width: 240px;
+            height: 595px;
+            box-sizing: content-box;
+            -moz-box-sizing: content-box
+        }
+        
+        #wsb-element-cdf45d75-61e5-42e1-bc74-328e2628a4b1 {
+            top: 628px;
+            left: 291px;
+            position: absolute;
+            z-index: 99
+        }
+        
+        #wsb-element-cdf45d75-61e5-42e1-bc74-328e2628a4b1 .wsb-shape {
+            width: 697px;
+            height: 73px;
+            padding: 0px;
+            background: #bf0000;
+            box-sizing: content-box;
+            -moz-box-sizing: content-box
+        }
+        
+        #wsb-element-c97fb68d-a753-4f89-89f2-488cbe3b7acb {
+            top: 652px;
+            left: 93px;
+            position: absolute;
+            z-index: 106
+        }
+        
+        #wsb-element-c97fb68d-a753-4f89-89f2-488cbe3b7acb .txt {
+            width: 101px;
+            height: 20px
+        }
+        
+        #wsb-element-b26d843f-0c89-495a-8aaa-5acfc3fd3ecc {
+            top: 652px;
+            left: 313px;
+            position: absolute;
+            z-index: 101
+        }
+        
+        #wsb-element-b26d843f-0c89-495a-8aaa-5acfc3fd3ecc .txt {
+            width: 655px;
+            height: 20px
+        }
+        
+        #wsb-element-a2715c5b-13b7-45e0-b9b8-4df7379b784a {
+            top: 815px;
+            left: 85px;
+            position: absolute;
+            z-index: 110
+        }
+        
+        #wsb-element-a2715c5b-13b7-45e0-b9b8-4df7379b784a .wsb-button {
+            width: 82px;
+            height: 32px
+        }
+        
+        #wsb-element-2acc2018-0f9e-4845-b2d0-810683ef7352 {
+            top: 879px;
+            left: 52px;
+            position: absolute;
+            z-index: 107
+        }
+        
+        #wsb-element-2acc2018-0f9e-4845-b2d0-810683ef7352 .txt {
+            width: 204px;
+            height: 20px
+        }
+        
+        #wsb-element-1727d02d-a4be-4771-a70c-264e19a1404d {
+            top: 720px;
+            left: 300px;
+            position: absolute;
+            z-index: 104
+        }
+        
+        #wsb-element-1727d02d-a4be-4771-a70c-264e19a1404d .txt {
+            width: 463px;
+            height: 20px
+        }
+        
+        #wsb-element-0d1ca43d-2d77-4c4a-8c28-0e29bfe7793b {
+            top: 200px;
+            left: 0px;
+            position: absolute;
+            z-index: 103
+        }
+        
+        #wsb-element-0d1ca43d-2d77-4c4a-8c28-0e29bfe7793b .txt {
+            width:900px;
+            height: 20px
+        }
+    </style>
+    <div class="wsb-canvas body" style="filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e6e9',GradientType=0 ); background-image: ; background: -moz-linear-gradient(top, #ffffff 0%, #e5e6e9 100%);; background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e6e9)); background: -webkit-linear-gradient(top, #ffffff 0%, #e5e6e9 100%); background: -o-linear-gradient(top, #ffffff 0%,#e5e6e9 100%); background: -ms-linear-gradient(top, #ffffff 0%,#e5e6e9 100%); background: linear-gradient(to bottom, #ffffff 0%,#e5e6e9 100%); background-position-x: center; background-position-y: top; background-position: center top; background-repeat: no-repeat; position: fixed; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%; overflow: hidden;">
+        <div class="wsb-canvas-page-container" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%; overflow: auto;">
+            <div id="wsb-canvas-template-page" class="wsb-canvas-page page" style="height: 1550px; margin: auto; width: 991px; background-color: #ffffff; position: relative; margin-top: 0px">
+                <div id="wsb-canvas-template-container" style="position: absolute;">
+                    <div id="wsb-element-f573ea8f-725b-4ef8-97b2-d6648852046c" class="wsb-element-share" data-type="element">
+                        <div class="wsb-share-f573ea8f-725b-4ef8-97b2-d6648852046c ">
+                       
+                    </div>
+                
+                </div>
+                <div id="wsb-element-cc4e66cb-f2b8-47f6-9d4e-9329620da929" class="wsb-element-image" data-type="element">
+                    <div class="wsb-image-inner ">
+                        <div class="img"><img src="/clients/cowtownhamfest/images/9e35dede4de1b4337bffb2aba7060c5e.jpg" style="vertical-align:middle;width:205px;height:107px;"></div>
+                    </div>
+                </div>
+                <div id="wsb-element-84cdde06-430c-40fc-a311-9a60d9424617" class="wsb-element-text" data-type="element">
+                    <div class="txt ">
+                        <div style="text-align: center;"><span class="editor_logo">COWTOWN&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; </span>
+                            <span
+                                class="editor_logo">HAMFEST<br></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="wsb-element-5b735151-d4f9-4cd4-82d8-725ceda41340" class="wsb-element-navigation" data-type="element">
+                    <div style="width: 973px; height: 17px;" class="wsb-nav nav_theme nav-text-center nav-horizontal nav-btn-left wsb-navigation-rendered-top-level-container"
+                        id="wsb-nav-5b735151-d4f9-4cd4-82d8-725ceda41340">
+                        <style>
+                            #wsb-nav-5b735151-d4f9-4cd4-82d8-725ceda41340.wsb-navigation-rendered-top-level-container ul>li:hover,
+                            #wsb-nav-5b735151-d4f9-4cd4-82d8-725ceda41340.wsb-navigation-rendered-top-level-container ul>li:hover>a,
+                            #wsb-nav-5b735151-d4f9-4cd4-82d8-725ceda41340.wsb-navigation-rendered-top-level-container ul>li.active:hover,
+                            #wsb-nav-5b735151-d4f9-4cd4-82d8-725ceda41340.wsb-navigation-rendered-top-level-container ul>li.active>a:hover,
+                            #wsb-nav-5b735151-d4f9-4cd4-82d8-725ceda41340.wsb-navigation-rendered-top-level-container ul>li.active .nav-subnav li:hover,
+                            #wsb-nav-5b735151-d4f9-4cd4-82d8-725ceda41340.wsb-navigation-rendered-top-level-container ul>li.active .nav-subnav li:hover>a {
+                                background-color: !important;
+                                color: !important;
+                            }
+                        </style>
+                        <ul class="wsb-navigation-rendered-top-level-menu ">
+                            <li style="width: auto"><a href="http://www.cowtownhamfest.com/home-1.html" target="" data-title="HOME" data-pageid="00000000-0000-0000-0000-000000394358"
+                                    data-url="home-1.html">HOME</a></li>
+                            <li style="width: auto"><a href="http://www.cowtownhamfest.com/about-us-1.html" target="" data-title="ABOUT US" data-pageid="00000000-0000-0000-0000-000000394359"
+                                    data-url="about-us-1.html">ABOUT US</a></li>
+                            <li style="width: auto"><a href="http://www.cowtownhamfest.com/contact-us.html" target="" data-title="CONTACT US" data-pageid="00000000-0000-0000-0000-000000394360"
+                                    data-url="contact-us.html">CONTACT US</a></li>
+                            <li style="width: auto" class="active"><a href="http://www.cowtownhamfest.com/sales-and-tickets.html" target="" data-title="SALES AND TICKETS"
+                                    data-pageid="45c18c43-7062-4925-8195-84f3963ffe9e" data-url="sales-and-tickets.html">SALES AND TICKETS</a></li>
+                            <li
+                                style="width: auto"><a href="http://www.cowtownhamfest.com/info.html" target="" data-title="INFO" data-pageid="00827955-2378-4b5f-ae69-524df0dbd18c"
+                                    data-url="info.html">INFO</a></li>
+                                <li style="width: auto"><a href="http://www.cowtownhamfest.com/education.html" target="" data-title="EDUCATION" data-pageid="fe52bc0f-cc4f-4600-8386-c46a9bbd2fe7"
+                                        data-url="education.html">EDUCATION</a></li>
+                                <li style="width: auto"><a href="http://www.cowtownhamfest.com/testing.html" target="" data-title="TESTING" data-pageid="76c56325-05ad-4405-8d2e-84d09c0d6a19"
+                                        data-url="testing.html">TESTING</a></li>
+                                <li style="width: auto"><a href="http://www.cowtownhamfest.com/email-list.html" target="" data-title="EMAIL LIST"
+                                        data-pageid="9a326bf3-3ef0-485d-ad58-a277fc42bc5e" data-url="email-list.html">EMAIL LIST</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="wsb-element-5359a3b0-c7fe-4775-8ddc-1486f3ef44dc" class="wsb-element-shape" data-type="element">
+                    <div class="wsb-shape shape_whitegrey "></div>
+                </div>
+
+                <div id="wsb-element-0d1ca43d-2d77-4c4a-8c28-0e29bfe7793b" class="wsb-element-text" data-type="element">
+                    <div class="txt ">
+                     <!--tix content-->
+                  <asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="wsb-canvas-template-footer" class="wsb-canvas-page-footer footer" style="margin: auto; min-height:100px; height: 100px; width: 991px; position: relative;">
+            <div id="wsb-canvas-template-footer-container" class="footer-container" style="position: absolute">
+                <div id="wsb-element-a32c2517-a9f7-4d40-ac69-10658b4dbf33" class="wsb-element-text">
+                    <div class="txt ">
+                        <div><span class="editor_footer"></span><span class="editor_footer"></span><span class="editor_footer">Copyright&nbsp;© </span>
+                            <span
+                                style="color: rgb(255, 255, 255);">Cowtown Hamfest.</span><span class="editor_footer">&nbsp;All rights reserved. The Hamfest is appproved and sponsored by ARRL. www.cowtownhamfest.com</span><br></div>
+                    </div>
+                </div>
+                <div id="wsb-element-a19ddc3a-d2ba-4092-be21-0ffe21509fd2" class="wsb-element-image">
+                    <div class="wsb-image-inner ">
+                        <div class="img">
+                            <a href="https://www.godaddy.com/websites/website-builder?cvosrc=assets.wsb_badge.wsb_badge" target="_blank"
+                                rel=""><img src="/clients/cowtownhamfest/images/66286f4f70d7b4317015100584d2be02.png" style="vertical-align:middle;width:98px;height:35px;"></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="wsb-element-8e1ecdba-8743-4808-bc39-2a59ea73bbc2" class="wsb-element-shape">
+                    <div class="wsb-shape shape_red customStyle "></div>
+                </div>
+            </div>
+        </div>
+        <div class="view-as-mobile" style="padding:10px;position:relative;text-align:center;display:none;"><a href="#" onclick="return false;">View on Mobile</a></div>
+    </div>
+    </div>
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+
+		<script>
+			$(document).ready(function() {
+				$("#MasterContent_TixInnerContent_pnlButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_ButtonPanel").removeAttr("style");
+/* remove extra button defaults
+				$("#MasterContent_TixInnerContent_ctl00_gvSchedule_btnBuyTix_0").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnBackToShopping").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCancelOrder").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCheckout").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_LoginButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CancelOrderButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CompleteButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingBtn").removeAttr("style");*/
+				
+				
+			});
+		</script>
+
+		</div>
+		</form>
+	</body>
+
+	</html>

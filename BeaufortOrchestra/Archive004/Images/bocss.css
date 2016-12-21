@@ -1,0 +1,334 @@
+  
+.bpalogo {
+	position: absolute;
+	bottom: 15px;
+	right: 20px;
+}
+
+/* Alert Box Styles */
+#modalContainer {
+	background-color: transparent;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	z-index: 10000;
+	background-image: url(/clients/BeaufortOrchestra/Images/empty.gif); 
+}
+
+#alertBox {
+	position: relative;
+	bottom: 200px;
+	width: 400px;
+	min-height: 170px;
+	border: 2px solid #000;
+	background-color: #FFF;
+	background-image: url(/clients/BeaufortOrchestra/Images/bsoemb2.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 30px;
+	/*visibility:hidden;*/
+}
+
+#modalContainer > #alertBox {
+	position: fixed;
+}
+
+#alertBox h1 {
+	margin: 0;
+	font: bold 1.1em tahoma, arial, helvetica, sans-serif;
+	background-color: #B83140;
+	color: #FFF;
+	border-bottom: 1px solid #000;
+	padding: 2px 0 2px 5px;
+}
+
+#alertBox p {
+	font: 0.9em verdana,arial;
+	height: 55px;
+	padding-left: 10px;
+	margin-left: 25px;
+	padding-right: 10px;
+	margin-right: 20px;
+}
+
+#alertBox #closeBtn {
+	display: block;
+	position: relative;
+	margin: 5px auto;
+	padding: 3px;
+	border: 2px solid #000;
+	width: 70px;
+	font: bold 0.8em verdana,arialtahoma, arial, helvetica, sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	color: #FFF;
+	background-color: #B83140;
+	text-decoration: none;
+}
+
+html, body, ol, ul, li, dl, dt, dd, img {
+	margin: 0; 
+	padding: 0;
+	border: 0;
+	list-style: none;
+}
+p, h1, h2, h3, h4 {
+	line-height: 130%;
+}
+/* Jello */
+body {
+	padding: 0 370px 0 370px; /* these side paddings together determine the natural min-width */
+	font-family: tahoma, arial, helvetica, sans-serif;
+	font-size: 95%;
+	text-align: center; /* this centers the wrappers in older IEwin versions */
+	background: #B83140;
+	height: 100%;
+}
+		
+#sizer {
+	margin: 0 auto 0 auto; /* this centers the wrappers in standards browsers */
+	padding: 0;
+	width: 60%; /* here is the critical value for customizing the Jello behavior */
+	max-width: 370px;  /* version for IE is at the bottom of this style block */
+}
+
+#expander {
+	background: white;
+	margin: 0 -370px 0 -370px; /* these side margins should be the same or slightly less than body paddings */
+	min-width: 740px; /* This prevents Safari from losing the negative margins in narrow windows */
+	position: relative;
+	min-height: 1px;
+}
+
+/* Holly hack for IE. Must be zero, not the usual 1% value, due to IE bug \*/
+* html #expander { height: 0; }
+/* */
+
+/* helps IE get the child percentages right. */
+#wrapper { width: 100%; } 
+
+#sidebar {
+	width: 22%;
+	float: left;
+	display: inline; /* IEwin doubled margin bug fix */
+	text-align: left;
+	margin-left: 3%;
+	color: #253f6b;
+	padding-top: 3em;
+	padding-bottom: 6em;
+	background: url(/clients/BeaufortOrchestra/Images/bgn.jpg) 100% 0 repeat-y;
+}
+
+#content {
+	width: 68%;
+	margin-right: 3%;
+	text-align: left;
+	float: right;
+	display: inline; /* IEwin doubled margin bug fix */
+	padding-bottom: 4em;
+	padding-top: 2em;
+}
+
+#footer { 
+	clear: both; 
+	width: 90%;
+  	padding: 0.5em 0 0.5em 0; 
+	margin: 1em 5% 1em 5%; 
+	border-top: 3px solid #253f6b; 
+	font-size: x-small;
+	color: #253f6b;
+}
+	
+.sidenav li a {
+	display: block; 
+	border: 2px solid #dcd3c2;
+	text-decoration: none;
+	background: url(/clients/BeaufortOrchestra/Images/butn.jpg);
+	padding: 4px 5px 4px 10px;
+	font-family: tahoma, arial, sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	min-height: 1%;
+}
+
+.sidenav li a:hover {
+	border-color: #fef5e4 #d4cab9 #c2b9a8 #ece3d2;
+	background-position: -1px -1px;
+	padding: 3px 6px 5px 9px;
+}
+
+.sidenav li a:active {
+	border-width: 3px 1px 1px 3px;
+	border-color: #c2b9a8 #ece3d2 #fef5e4 #d4cab9;
+	background-position: 0 0;
+	padding: 4px 5px 4px 10px;
+}
+.textpadder {
+	padding: 8px;
+}
+
+
+/* http://positioniseverything.net/easyclearing */
+
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+.clearfix {display: inline-table;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+/* \*/
+* html #wrapper,
+* html .sidenav li a {height: 1%;}
+/* Holly hack */
+
+h1, h2, h3, h4, h5, h6	{
+	font-family: tahoma, arial, helvetica, sans-serif;
+}
+
+
+img.left {
+	float: left;
+	margin-right: 6px;
+}
+img.rite {
+	float: right;
+	margin-left: 6px;
+}
+img.centerd {
+	float: right;
+	margin-left: 6px;
+	margin-right: 98px;
+}
+br.imgclr {
+	clear: both;
+}
+.fltrt {
+	float: right;
+	margin-left: 6px;
+}
+.algrt {
+	text-align: right;
+	margin-left: 6px;
+}
+.toprow {
+	font-weight: bold;
+	text-align: center;
+}
+.3row {
+	width: 33%;
+}
+.4row {
+	width: 25%;
+}
+.1row {
+	width: 9%;
+}
+.strike {
+	text-decoration: line-through;
+}
+.green {
+	color: #32689b;
+}
+.dkblu {
+	color: #253f6b;
+}
+.red {
+	color: #bb3140;
+}
+.tan {
+	color: #D2B480;
+}
+.sien {
+	color: #666633;
+}
+.yell {
+	color: #fcb131;
+}
+.hide {
+	display: none;
+}
+.u {
+	text-decoration: underline;
+}
+.b {
+	font-weight: bold;
+}
+.lg {
+	font-size: 120%;
+}
+.hg {
+	font-size: 150%;
+}
+.sm {
+	font-size: 80%;
+}
+.sml {
+	font-size: 80%;
+	font-weight: lighter;
+}
+.smb {
+	font-size: 80%;
+	font-weight: bold;
+	line-height: 140%;
+}
+
+.wind {
+	line-height: 140%;
+}
+.numb {
+	line-height: 160%;
+}
+.cent {
+	text-align: center;
+}
+.left {
+	text-align: left;
+}
+.rite {
+	text-align: right;
+}
+.back {
+	background: #666633;
+	padding: 6px;
+}
+.blck {
+	margin-right: 36px;
+}
+.blck2 {
+	margin-left: 36px;
+}
+.blck3 {
+	margin-right: 400px;
+}
+.blck4 {
+	margin-right: 72px;
+	margin-left: 72px;
+}
+a:link { 
+	color: #bb3140; 
+}
+a:visited { 
+	color: #E08122; 
+}
+a:hover { 
+	color: #F77979; 
+}
+a.white:link { 
+	color: #FFFFFF; 
+}
+a.white:visited { 
+	color: #D2B480; 
+}
+a.white:hover { 
+	color: #F77979; 
+}

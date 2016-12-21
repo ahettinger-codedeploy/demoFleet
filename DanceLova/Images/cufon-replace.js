@@ -1,0 +1,1 @@
+Cufon.replace('#extra-wrapper ul li a i, .info-box strong, ul.list-1 li strong span', { fontFamily: 'A Little Pot', hover: 'true' });

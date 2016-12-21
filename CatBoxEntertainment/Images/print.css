@@ -1,0 +1,350 @@
+/*
+-----------------------------------------------------------------------------------------
+CSS document: ImageCafe Template Styles
+Created: 02/08/2006
+Last Modified: 02/08/2006
+NOTE: Template styles included here cannot be changed by the customer
+-------------------------------------------------------------------------------------- */
+* {margin:0;padding:0;}  /* zero out everything */
+body {
+	width:100%;
+	font-family:verdana, arial, sans-serif;
+	font-size:11px;
+	color:#555;
+	text-align:center;
+	background-image:url(../images/ic_038_body_bg.jpg);
+	background-repeat:repeat-x;
+	position:0 0;
+}
+
+/*
+-----------------------------------------------------------------------------------------
+Global
+-------------------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {margin:10px;}
+h1#website-title {margin:0;}
+h2#website-slogan {margin:0;}
+#navcontainer div h3 {margin:0;}
+ul, ol {
+	margin:10px;
+	padding:0 0 0 20px;
+}
+ol {padding:0 0 0 30px;}
+blockquote {margin:10px 10px 10px 40px;}
+.clearer {clear:both;}
+.accent-none {display:none;}
+
+/*
+-----------------------------------------------------------------------------------------
+General Layout Structure
+-------------------------------------------------------------------------------------- */
+* html #printwrap {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+#nav-top, #nav-left, #nav-right {
+	margin:0 auto;
+	width:750px;
+	text-align:left;
+}
+#inner {
+	float:left;
+	width:750px;
+}
+#website-title {
+	float:left;
+	padding:70px 0 0 10px;
+	background:url(../images/ic_038_header_bg.png) no-repeat top left;
+	width:740px;
+	height:41px;
+}
+	* html #website-title {background-image:none;}
+#website-slogan {
+	float:left;
+	padding:10px;
+	width:730px;
+}
+.accent {
+	float:left;
+	width:490px;
+	height:174px;
+}
+
+/*
+-----------------------------------------------------------------------------------------
+NAV-TOP
+-------------------------------------------------------------------------------------- */
+
+/*------------------ Layout ------------------*/	
+#nav-top #navcontainer {
+	float:left;
+	width:748px;
+	border:1px solid #595959;
+	z-index:1000;
+}
+	#nav-top #nav-pattern {display:none;}
+#nav-top #content {
+	float:left;
+	width:750px;
+	padding:15px;
+}
+#nav-top #footer {
+	clear:left;
+	padding:10px;
+	border-top:1px solid #fff;
+	color:#fff;
+}
+
+/*------------------ Navigation Elements ------------------*/	
+#nav-top #navcontainer div, #nav-top #navcontainer div h3 {
+	float:left;
+	display:block;
+}
+	#nav-top #navcontainer div a:link, #nav-top #navcontainer div a:active, #nav-top #navcontainer div a:visited {
+		/*width:74px;*/
+		/*height:24px;*/
+		padding:5px;
+		text-decoration:none;
+		display:table-cell;
+		border-right:1px solid #595959;
+	}
+	#nav-top #navcontainer div a:hover {border-right:1px solid #595959;}
+		* html #nav-top #navcontainer div a:link, * html #nav-top #navcontainer div a:active, * html #nav-top #navcontainer div a:visited  {
+			float:left;
+			cursor:pointer;
+		}
+		#nav-top #navcontainer div div.submenu, 
+		#nav-top #navcontainer div div.submenu h3 {
+			float:left;
+			display:block;
+		}
+		#nav-top #navcontainer div div.submenu {
+			position:absolute;
+			top:0;
+			left:0;
+			visibility: hidden;
+			width:165px;
+		}
+			#nav-top #navcontainer div div.submenu div {display:block;}
+			#nav-top #navcontainer div div.submenu a:link, 
+			#nav-top #navcontainer div div.submenu a:active, 
+			#nav-top #navcontainer div div.submenu a:visited {
+				float:left;
+				width:145px;
+				padding:10px 10px 5px 10px;
+				text-decoration:none;
+				border-top:1px solid #595959;
+				border-right:0;
+			}
+			#nav-top #navcontainer div div.submenu a:hover {
+				padding-bottom:5px;
+			}
+
+/*------------------ Table Structures ------------------*/		
+#nav-top #content-table {
+	float:left;
+	width:490px;
+}
+	#nav-top #content-table-main {width:100%;}
+		#nav-top #content-table-main p {margin:10px 0;}
+
+/*
+-----------------------------------------------------------------------------------------
+NAV-LEFT
+-------------------------------------------------------------------------------------- */
+
+/*------------------ Layout ------------------*/	
+#nav-left #navcontainer {
+	float:left;
+	width:188px;
+	z-index:1000;
+}
+#nav-left #nav-pattern {
+	float:left;
+	width:188px;
+	height:20px;
+	background-image:url(../images/ic_038_pattern.gif);
+	filter: alpha(opacity=50);
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	-moz-opacity: 0.50; /* for older versions of Moz/FF */
+	opacity:0.50;
+}
+#nav-left #content {
+	float:right;
+	width:532px;
+	padding:0 15px;
+}
+#nav-left #footer {
+	clear:both;
+	width:750px;
+	border-top:1px solid #fff;
+	color:#fff;
+}
+	#nav-left #footer p {padding:10px;}
+
+/*------------------ Navigation Elements ------------------*/	
+#nav-left #navcontainer div {
+	display:block;
+	float:left;
+	width:188px;
+}
+	#nav-left #navcontainer div a:link, #nav-left #navcontainer div a:active, #nav-left #navcontainer div a:visited  {
+		float:left;
+		width:168px;
+		padding:10px 0 10px 20px;
+		text-decoration:none;
+		border-bottom:1px solid #595959;
+		word-wrap: break-word;
+	}
+	#nav-left #navcontainer div a:hover {border-bottom:1px solid #595959;}
+	#nav-left #navcontainer div div.submenu, 
+	#nav-left #navcontainer div div.submenu h3 {
+		float:left;
+		display:block;
+	}
+	#nav-left #navcontainer div div.submenu {
+		position:absolute;
+		top:0;
+		left:0;
+		visibility: hidden;
+		width:188px;
+	}
+		#nav-left #navcontainer div div.submenu div {display:block;}
+		#nav-left #navcontainer div div.submenu a:link, 
+		#nav-left #navcontainer div div.submenu a:active, 
+		#nav-left #navcontainer div div.submenu a:visited {
+			float:left;
+			width:168px;
+			padding:10px 0 10px 20px;
+			text-decoration:none;
+			border-bottom:1px solid #595959;
+			word-wrap: break-word;
+		}
+		#nav-left #navcontainer div div.submenu a:hover {
+			padding-bottom:10px;
+		}
+
+/*------------------ Table Structures ------------------*/		
+#nav-left #content-table {
+	width:490px;
+	float:left;
+}
+	#nav-left #content-table-main {width:100%;}
+		#nav-left #content-table-main p {margin:10px 0;}
+
+/*
+-----------------------------------------------------------------------------------------
+NAV-RIGHT
+-------------------------------------------------------------------------------------- */
+/*------------------ Layout ------------------*/	
+#nav-right #navcontainer {
+	float:right;
+	width:188px;
+	z-index:1000;
+}
+#nav-right #nav-pattern {
+	float:left;
+	width:188px;
+	height:20px;
+	background-image:url(../images/ic_038_pattern.gif);
+	filter: alpha(opacity=50);
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	-moz-opacity: 0.50; /* for older versions of Moz/FF */
+	opacity:0.50;
+}
+#nav-right #content {
+	float:left;
+	width:532px;
+	padding:0 15px;
+}
+#nav-right #footer {
+	clear:both;
+	width:750px;
+	border-top:1px solid #fff;
+	color:#fff;
+}
+	#nav-right #footer p {padding:10px;}
+
+/*------------------ Navigation Elements ------------------*/	
+#nav-right #navcontainer div {
+	display:block;
+	float:left;
+	width:188px;
+}
+	#nav-right #navcontainer div a:link, #nav-right #navcontainer div a:active, #nav-right #navcontainer div a:visited  {
+		float:left;
+		width:168px;
+		padding:10px 0 10px 20px;
+		text-decoration:none;
+		border-bottom:1px solid #595959;
+	}
+	#nav-right #navcontainer div a:hover {border-bottom:1px solid #595959;}
+	#nav-right #navcontainer div a:hover {border-bottom:1px solid #595959;}
+	#nav-right #navcontainer div div.submenu, 
+	#nav-right #navcontainer div div.submenu h3 {
+		float:left;
+		display:block;
+	}
+	#nav-right #navcontainer div div.submenu {
+		position:absolute;
+		top:0;
+		left:0;
+		visibility: hidden;
+		width:188px;
+	}
+		#nav-right #navcontainer div div.submenu div {display:block;}
+		#nav-right #navcontainer div div.submenu a:link, 
+		#nav-right #navcontainer div div.submenu a:active, 
+		#nav-right #navcontainer div div.submenu a:visited {
+			float:left;
+			width:168px;
+			padding:10px 0 10px 20px;
+			text-decoration:none;
+			border-bottom:1px solid #595959;
+			word-wrap: break-word;
+		}
+		#nav-right #navcontainer div div.submenu a:hover {
+			padding-bottom:10px;
+		}
+
+/*------------------ Table Structures ------------------*/		
+#nav-right #content-table {
+	width:490px;
+	float:left;
+}
+	#nav-right #content-table-main {width:100%;}
+		#nav-right #content-table-main p {margin:10px 0;}
+
+		
+/*
+-----------------------------------------------------------------------------------------
+WIDE LAYOUT STYLES
+-------------------------------------------------------------------------------------- */
+body#wide #nav-top,
+body#wide #nav-left,
+body#wide #nav-right {width:990px;}
+body#wide #inner {width:990px;}
+body#wide #website-title {
+	background:url(../images/ic_038_header_bg_wide.png) no-repeat top left;
+	width:980px;
+}
+	* html body#wide #website-title {background-image:none;}
+body#wide #website-slogan {width:970px;}
+
+/*------------------------------------ NAV-TOP ------------------------------------*/
+body#wide #nav-top #navcontainer {width:988px;}
+body#wide #nav-top #content {width:960px;}
+body#wide #nav-top #content-table {width:960px;}
+
+/*------------------------------------ NAV-LEFT ------------------------------------*/
+body#wide #nav-left #content {width:772px;}
+body#wide #nav-left #footer {width:990px;}
+body#wide #nav-left #content-table {width:772px;}
+
+/*------------------------------------ NAV-RIGHT ------------------------------------*/
+body#wide #nav-right #content {width:772px;}
+body#wide #nav-right #footer {width:990px;}
+body#wide #nav-right #content-table {width:772px;}

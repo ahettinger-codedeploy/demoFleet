@@ -1,0 +1,260 @@
+<%
+'CHANGELOG
+'LSP 2/27/14 - initial development
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+<link rel="stylesheet" href="/clients/CenterStageNorth/Images/style.css" type="text/css" media="screen">
+   
+   	<style>#logo h1 a, .desc { text-align:left;}</style>
+   <style type="text/css">
+#masthead .fake{background:#327CCB;}
+#topmenu ul li ul li{background:#327CCB url(/clients/CenterStageNorth/Images/trans_white.png) repeat;}
+
+#midrow{background:#f7f7f7;}
+
+#footer{background:#327CCB;}
+
+.pattern{background: url(/clients/CenterStageNorth/Images/no_pattern.png) repeat;}
+
+
+/*LOGO Color*/
+#logo h1 a, .desc{color:#327CCB;}
+
+
+/*POSTS Colors*/
+#posts, body, .comment-body, #sidebar .widgets ul li a, #respond, .lay1 .post .post_content, .lay1 .page .post_content, .single_page_post .post_wrap .share_this a, .commentlist .comment-meta a, .commentlist .comment-meta a:hover{color:#000000;}
+
+#posts .postitle, #posts .postitle a, .search_term .postsearch, .post_wrap a, .fourofour a, .trt_wgt_tt, #related ul li a, .lay1 .post .postitle a, .lay1 .page .postitle a, ul#tabs li a:hover, #sidebar .widgets .widget ul li .trt_wgt_tt, #sidebar .widgets .widgettitle, #sidebar .widgets .widgettitle a, h3#comments, #newslider h3, h3#comments_ping, h3#reply-title, .lay3 .post_content a, .lay2 .post_content a{color:#327CCB;}
+
+#respond #submit {background:#327CCB;}
+
+.post_wrap a:hover, #posts .post_content .post_foot a:hover, ul#tabs li a.current, .lay3 .post_content p a:hover, .lay3 .post_content a:hover, #sidebar .widgets li a:hover { color:#031b30; }
+
+
+/*TOPMENU Colors*/
+#masthead { color:#d1d9de;}
+#topmenu ul li a{ color:#d1d9de;}
+#topmenu ul li a:hover, #topmenu ul li ul li a, #topmenu ul .current-menu-item a{ color:#ffffff;}
+
+/*MIDROW Colors*/
+#midrow {color:#979797;}
+#midrow .widgets .widget ul li .trt_wgt_tt, #midrow .widgets .widgettitle, #midrow .widgets .widgettitle a{color:#444444;}
+#midrow .widgets .widget ul li a:hover{color:#a53c2e;}
+
+/*FOOTER Colors*/
+#footer{color:#979797;}
+#footer .widgets .widget ul li .trt_wgt_tt, #footer .widgets .widgettitle, #footer .widgets .widgettitle a, #footer a, #copyright a{color:#327CCB;}
+</style>
+	    	<link rel="alternate" type="application/rss+xml" title="Center Stage North » Feed" href="http://centerstagenorth.net/?feed=rss2">
+<link rel="alternate" type="application/rss+xml" title="Center Stage North » Comments Feed" href="http://centerstagenorth.net/?feed=comments-rss2">
+<link rel="alternate" type="application/rss+xml" title="Center Stage North » Current Season Comments Feed" href="http://centerstagenorth.net/?feed=rss2&amp;page_id=10">
+<link rel="stylesheet" id="customfont-css" href="/clients/CenterStageNorth/Images/Lora.css" type="text/css" media="all">
+<link rel="stylesheet" id="collapseomatic-css-css" href="/clients/CenterStageNorth/Images/light_style.css" type="text/css" media="all">
+<link rel="stylesheet" id="thickbox.css-css" href="/clients/CenterStageNorth/Images/thickbox.css" type="text/css" media="all">
+<link rel="stylesheet" id="dashicons-css" href="/clients/CenterStageNorth/Images/dashicons.css" type="text/css" media="all">
+<link rel="stylesheet" id="thickbox-css" href="/clients/CenterStageNorth/Images/thickbox_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="fancybox_css-css" href="/clients/CenterStageNorth/Images/fancybox.css" type="text/css" media="all">
+<script src="/clients/CenterStageNorth/Images/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="/clients/CenterStageNorth/Images/comment-reply.js"></script>
+<script type="text/javascript" src="/clients/CenterStageNorth/Images/jquery.js"></script>
+<script type="text/javascript" src="/clients/CenterStageNorth/Images/jquery-migrate.js"></script>
+<script type="text/javascript" src="/clients/CenterStageNorth/Images/triton.js"></script>
+<script type="text/javascript" src="/clients/CenterStageNorth/Images/other.js"></script>
+<script type="text/javascript" src="/clients/CenterStageNorth/Images/featureList.js"></script>
+<script type="text/javascript" src="/clients/CenterStageNorth/Images/easyslider.js"></script>
+<script type="text/javascript" src="/clients/CenterStageNorth/Images/fancybox.js"></script>
+<script type="text/javascript" src="/clients/CenterStageNorth/Images/calendar.js"></script>
+<script type="text/javascript" src="/clients/CenterStageNorth/Images/calendar-setup.js"></script>
+<script type="text/javascript" src="/clients/CenterStageNorth/Images/calendar_function.js"></script>
+<script type="text/javascript" src="/clients/CenterStageNorth/Images/jscolor.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://centerstagenorth.net/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://centerstagenorth.net/wp-includes/wlwmanifest.xml"> 
+<link rel="next" title="Beached Wails" href="http://centerstagenorth.net/?page_id=12">
+<meta name="generator" content="WordPress 3.8.1">
+<link rel="canonical" href="http://centerstagenorth.net/?page_id=10">
+<link rel="shortlink" href="http://centerstagenorth.net/?p=10">
+  <script>
+    var xx_cal_xx = '&';
+  </script>
+  <style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #fcfcfc; }
+</style>
+     
+</head>
+
+
+<body class="page page-id-10 page-parent page-template page-template-page-no-sidebar-php custom-background">
+
+<!--[if lte IE 6]><script src="/ie6/warning.js"></script><script>window.onload=function(){e("/ie6/")}</script><![endif]-->
+<div class="pattern">
+
+<!--TOPMENU-->
+<div id="masthead">
+	<div class="fake">
+    <div class="center">
+   	 <div id="menu_wrap"><div class="center"><div id="topmenu"><div class="menu-header"><ul id="menu-menu-1" class="menu"><li id="menu-item-4" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-4"><a href="http://centerstagenorth.net/">Home</a></li>
+<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-10 current_page_item menu-item-has-children menu-item-116"><a href="http://centerstagenorth.net/?page_id=10">Current Season</a>
+
+</li>
+<li id="menu-item-117" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-117"><a href="http://centerstagenorth.net/?page_id=87">About Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-140" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-140"><a href="http://centerstagenorth.net/?page_id=89">History</a>
+	<ul class="sub-menu">
+		<li id="menu-item-161" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-161"><a href="http://centerstagenorth.net/?page_id=159">2012 Season</a></li>
+		<li id="menu-item-208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-208"><a href="http://centerstagenorth.net/?page_id=198">2011 Season</a></li>
+		<li id="menu-item-221" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-221"><a href="http://centerstagenorth.net/?page_id=213">2010 Season</a></li>
+		<li id="menu-item-243" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-243"><a href="http://centerstagenorth.net/?page_id=232">2009 Season</a></li>
+		<li id="menu-item-254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-254"><a href="http://centerstagenorth.net/?page_id=245">2008 Season</a></li>
+		<li id="menu-item-265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-265"><a href="http://centerstagenorth.net/?page_id=256">2007 Season</a></li>
+		<li id="menu-item-273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-273"><a href="http://centerstagenorth.net/?page_id=267">2006 Season</a></li>
+		<li id="menu-item-282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-282"><a href="http://centerstagenorth.net/?page_id=275">2005 Season</a></li>
+		<li id="menu-item-291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-291"><a href="http://centerstagenorth.net/?page_id=283">2004 – 2000 Seasons</a></li>
+		<li id="menu-item-297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-297"><a href="http://centerstagenorth.net/?page_id=293">1999 – 1997 Season</a></li>
+	</ul>
+</li>
+	<li id="menu-item-141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141"><a href="http://centerstagenorth.net/?page_id=91">Location</a></li>
+	<li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142"><a href="http://centerstagenorth.net/?page_id=98">Contact</a></li>
+	<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="http://centerstagenorth.net/?page_id=100">Board</a></li>
+</ul>
+</li>
+<li id="menu-item-311" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-311"><a href="http://centerstagenorth.tix.com/Schedule.aspx?OrgNum=4550">Box Office</a>
+<ul class="sub-menu">
+	<li id="menu-item-118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118"><a href="http://centerstagenorth.net/?page_id=104">Season Subscriber</a></li>
+	<li id="menu-item-313" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-313"><a href="http://centerstagenorth.tix.com/Schedule.aspx?OrgNum=4550">Buy Tickets</a></li>
+</ul>
+</li>
+<li id="menu-item-119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-119"><a href="http://centerstagenorth.net/?page_id=106">Auditions</a></li>
+<li id="menu-item-120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-120"><a href="http://centerstagenorth.net/?page_id=108">Media</a>
+<ul class="sub-menu">
+	<li id="menu-item-145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a href="http://centerstagenorth.net/?page_id=110">Photos</a></li>
+	<li id="menu-item-146" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-146"><a href="http://centerstagenorth.net/?page_id=112">Videos</a></li>
+</ul>
+</li>
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="http://centerstagenorth.net/?page_id=102">Volunteer</a></li>
+</ul></div></div><br style="clear:both"></div></div>
+     
+     
+     <!--Social Share-->
+<div class="social_wrap">
+    <div class="social">
+        <ul>
+            <li style="opacity: 0.4;" class="soc_fb"><a title="Facebook" href="https://www.facebook.com/CenterStageNorthTheatre">Facebook</a></li>  
+            <li style="opacity: 0.4;" class="soc_tw"><a title="Twitter" href="https://twitter.com/CStageNorth">Twitter</a></li> 
+             
+             
+                        <li style="opacity: 0.4;" class="soc_rss"><a title="Rss Feed" href="http://centerstagenorth.net/?feed=rss2">RSS</a></li>                    </ul>
+    </div>
+</div>
+    </div>
+    </div>
+</div>
+
+<!--HEADER-->
+<div id="header">
+    <div class="center">
+    	<!--LOGO-->
+       
+        <div id="logo">
+                 <h1><a href="http://centerstagenorth.net/"><img src="/clients/CenterStageNorth/Images/CSN-Logo-Trans-Glow-150x150.png" alt="Center Stage North"></a></h1>
+                <div class="desc">The Online Home For Cobb County's Oldest Community Theatre!</div>        </div>
+    </div>
+</div>
+
+<!--CONTENT-->
+<div id="content" class="no_sidebar">
+
+<div class="center">
+    <div id="posts" class="single_page_post">
+<!--TIX DATA START-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+</div>
+
+</div>
+</div>
+
+
+
+
+<!--MIDROW-->
+<div id="midrow">
+<div class="center">
+<div class="widgets"><ul>          
+         
+        </ul>
+        </div>
+</div>
+</div>
+
+<!--FOOTER-->
+<div id="footer">
+<div class="center">
+<div class="widgets"><ul>          
+         
+        </ul>
+        </div>
+</div>
+
+	<!--COPYRIGHT TEXT-->
+    <div id="copyright">
+    	<div class="center">
+            <div class="copytext">
+                       </div>
+        </div>
+    </div>
+</div>
+
+
+<!--Google Analytics-->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '']);
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowLinker', true]);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</div>
+<script type="text/javascript">
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+</script>	        <script type="text/javascript">
+		/* <![CDATA[ */
+    jQuery(function(){
+	jQuery("#slider").easySlider({
+		auto: true,
+		continuous: true,
+		numeric: true,
+		pause: 3000		});
+	});
+	/* ]]> */
+	</script>
+     
+        
+     
+    <link rel="stylesheet" id="Css-css" href="/clients/CenterStageNorth/Images/calendar-jos.css" type="text/css" media="all">
+<script type="text/javascript" src="/clients/CenterStageNorth/Images/collapse.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/centerstagenorth.net\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/clients/CenterStageNorth/Images/thickbox.js"></script>
+
+
+
+<div id="fancybox-tmp"></div><div id="fancybox-loading"><div></div></div><div id="fancybox-overlay"></div><div id="fancybox-wrap"><div id="fancybox-outer"><div class="fancybox-bg" id="fancybox-bg-n"></div><div class="fancybox-bg" id="fancybox-bg-ne"></div><div class="fancybox-bg" id="fancybox-bg-e"></div><div class="fancybox-bg" id="fancybox-bg-se"></div><div class="fancybox-bg" id="fancybox-bg-s"></div><div class="fancybox-bg" id="fancybox-bg-sw"></div><div class="fancybox-bg" id="fancybox-bg-w"></div><div class="fancybox-bg" id="fancybox-bg-nw"></div><div id="fancybox-content"></div><a id="fancybox-close"></a><div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div></div></div>
+</form>
+</body>
+</html>

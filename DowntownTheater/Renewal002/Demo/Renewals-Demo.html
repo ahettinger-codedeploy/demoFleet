@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<title>TIX Support</title>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge;chrome=1">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900" >
+
+<link rel="stylesheet" type="text/css" href="https://oss.maxcdn.com/icheck/1.0.2/skins/all.min.css" >
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" >
+
+<style>
+
+/* ===============
+GLOBAL SETTINGS 
+=============== */
+
+/* font styles */ 
+
+.TixManagementContent,
+.panel,
+.nav
+{
+font-family: 'Roboto', sans-serif !important;
+}
+
+
+/* tix management section style */ 
+
+.TixManagementContent
+{
+text-align: left !important;
+min-height: 600px !important;
+background-color: #fbfbfb !important;
+padding: 0px !important;
+}
+
+
+/* =====================
+RESET/CLEAR LINKS 
+===================== */
+
+/* links: remove all outlines and underscores */ 
+
+a,     		
+a:active,	
+a:focus, 
+a:hover,
+
+a.btn,     		
+a.btn:active,	
+a.btn:focus, 
+a.btn:hover,
+
+button.btn,     		
+button.btn:active,	
+button.btn:focus, 
+button.btn:hover,
+
+.dropdown-menu li a,
+.dropdown-menu li a:active,
+.dropdown-menu li a:focus,
+.dropdown-menu li a:hover,
+
+.nav-pills li a,
+.nav-pills li a:active,
+.nav-pills li a:focus,
+.nav-pills li a:hover,
+
+.nav-tabs li a,
+.nav-tabs li a:active,
+.nav-tabs li a:focus,
+.nav-tabs li a:hover
+
+ul.nav-tabs li a,
+ul.nav-tabs li a.active,
+ul.nav-tabs li a.focus { outline:0px !important; -webkit-appearance:none;  text-decoration:none; color: #666666;}  
+
+
+/* form input: remove blue glow */ 
+.form-control,
+.form-control:focus 
+{
+box-shadow: none;
+border-width: 1px;
+transition: border-color 0.15s ease-in-out 0s;
+}
+
+</style>
+
+
+<style>
+
+/* ===============
+PANEL STYLES 
+=============== */
+
+/* panel header: title,navbar,tabs,button */ 
+
+div.panel div.panel-heading,
+div.panel div.panel-heading div.panel-title,
+div.panel div.panel-heading div.panel-title .nav-btn,
+div.panel div.panel-heading div.panel-title .nav-tabs,
+div.panel div.panel-heading div.panel-title .navbar,
+div.panel div.panel-heading div.panel-title .navbar .navbar-header
+{ padding: 0; margin: 0; border: 0; min-height: 50px !important; max-height: 50px !important;}
+
+/* navbar-brand */ 
+div.panel div.panel-heading div.panel-title .navbar .navbar-header .navbar-brand
+{
+min-width: 150px;
+margin-right: 50px;
+}
+
+/* panel header */ 
+div.panel div.panel-heading { border-bottom: 1px solid #dddddd; }
+
+
+/* panel tabs */
+div.panel div.panel-heading div.panel-title nav.navbar div.pull-left ul.nav.nav-tabs li a { min-height: 47px !important; max-height: 47px !important;  min-width: 100px; margin-top: 3px; margin-left: 3px; font-size: 14px; -webkit-transition: all 0.25s; -moz-transition: all 0.25s; transition: all 0.25s;}
+
+/* panel tabs hover colors */
+
+ul.nav.nav-tabs li.active a,
+ul.nav.nav-tabs li.active a:hover
+{
+color: #000000;
+}
+
+ul.nav.nav-tabs li a
+{
+color: #999999;
+}
+
+ul.nav.nav-tabs li a:hover
+{
+color: #666666;
+}
+
+
+
+/* panel button */
+div.panel div.panel-heading div.panel-title .nav-btn .btn { min-height: 44px !important; max-height: 44px !important; min-width: 100px; margin-top: 3px; margin-right: 3px; font-size: 14px; border:1px solid #dddddd; -webkit-transition: all 0.25s; -moz-transition: all 0.25s; transition: all 0.25s;}
+div.panel div.panel-heading div.panel-title .nav-btn .btn:focus { background-color: #ffffff;}
+div.panel div.panel-heading div.panel-title .nav-btn .btn:hover { background-color: #eeeeee;}
+
+
+/* panel labels */
+div.panel .icon-label { margin-left: 5px; }
+
+
+/* panel body title*/
+#panel-display .panel-title
+{
+margin-bottom: 20px;
+margin-top: 10px;
+font-size: 24px;
+color: #000000;
+}
+
+
+/* slide down panel */ 
+#panel-parent
+{
+position: relative;
+min-height: 450px;
+}
+
+#panel-options-outer
+{       
+position: absolute;
+z-index: 20;
+overflow: hidden;
+width: 100%;
+padding: 0px .5px 20px .5px;
+}
+
+#panel-options-inner
+{
+background-color: white;
+margin-top: -650px;
+padding: 10px;
+border-radius: 6px;
+border-top-right-radius: 0px;
+border-top-left-radius: 0px;
+box-shadoww: 0 6px 12px rgba(0, 0, 0, 0.176);
+border: 1px solid #dddddd;
+border-top: 0;
+-webkit-box-shadow: 0 10px 6px -6px #999;
+-moz-box-shadow: 0 10px 6px -6px #999;
+box-shadow: 0 10px 6px -6px #999;
+}
+
+/* edit panel vertical tabs */ 
+
+.nav-pills > li.active > a, 
+.nav-pills > li.active > a:hover, 
+.nav-pills > li.active > a:focus 
+{
+background-color: rgb(194, 208, 222);
+}
+
+.nav-pills > li > a
+{
+background-color: rgb(248, 248, 248);
+font-weight: 700;
+}
+
+</style>
+
+<style>
+
+/* =====================
+TABLE STYLES
+===================== */
+
+/* table - header cell style  */ 
+
+.table > thead > tr > th, 
+.table > tbody > tr > th, 
+.table > tfoot > tr > th
+{
+background-color: #333333;
+color: rgb(204, 204, 204);
+border-bottom: 1px solid #F3F3F3;
+border-top: 1px solid #F3F3F3 !important;
+border-left: 0px;
+border-right: 0px;
+line-height: 1.42857;
+padding: 8px;
+vertical-align: top;
+font-size: 16px;
+font-weight: 700;
+}
+
+/* table - data cell style  */ 
+
+.table > thead > tr > td, 
+.table > tbody > tr > td, 
+.table > tfoot > tr > td 
+{
+border-top: 1px solid #ffffff;
+border-left: 0px;
+border-right: 0px;
+line-height: 1.42857;
+padding: 8px;
+vertical-align: top;
+background-color: #ffffff;
+font-size: 14px;
+font-weight: 400;
+}
+
+
+/* table footer - border */ 
+
+.table > tfoot > tr > th
+{
+border-top: 2px solid #dddddd;
+}
+
+/* table columns - center first/last columns */ 
+
+.table > thead > tr > th:first-child,
+.table > thead > tr > th:last-child,
+
+.table > tbody > tr > td:first-child,
+.table > tbody > tr > td:last-child
+{
+text-align: center;
+vertical-align: middle; 
+padding: 0px;
+}
+
+/* table columns - change cursor over sortable columns */ 
+
+.table > thead > tr > th.sorting,  
+.table > thead > tr > th.sorting_desc,
+.table > thead > tr > th.sorting_asc
+{
+cursor: pointer;
+}
+
+/* table - active row fade in */ 
+
+.table.table-fade.dataTable.no-footer tbody tr:hover.odd td,
+.table.table-fade.dataTable.no-footer tbody tr:hover.even td,
+
+.table.table-fade.dataTable.no-footer tbody tr.active:hover.odd td,
+.table.table-fade.dataTable.no-footer tbody tr.active:hover.even td,
+
+.table tbody tr.active td, 
+.table tbody tr.active th,
+
+.table tbody tr.active:hover td,
+.table tbody tr.active:hover th
+{
+color: #000000;
+border-color: white;
+background-color: rgba(27, 126, 90, 0.3) !important;
+-webkit-transition: all 1s ease-in;
+-moz-transition: all 1s ease-in;
+-o-transition: all 1s ease-in;
+-ms-transition: all 1s ease-in;
+transition: all 1s ease-in;
+}
+
+
+/* table - active row  fade out */ 
+
+.table.table-fade.dataTable.no-footer tbody tr.odd,
+.table.table-fade.dataTable.no-footer tbody tr.even,
+ 
+ .table.table-fade.dataTable.no-footer tbody tr:hover.odd td,
+ .table.table-fade.dataTable.no-footer tbody tr:hover.even td,
+
+.table tbody tr td, 
+.table tbody tr th,
+
+.table tbody tr:hover td,
+.table tbody tr:hover th
+{
+border-color: #e0e0e0;
+-webkit-transition: all 1s ease-out;
+-moz-transition: all 1s ease-out;
+-o-transition: all 1s ease-out;
+-ms-transition: all 1s ease-out;
+transition: all 1s ease-out;
+}
+
+
+</style>
+
+<style>
+
+/* =====================
+TOGGLE SWITCH
+===================== */
+
+.switch { height: 34px;  width: 100px; position: relative; display: inline-block; vertical-align: top; width: 103px;  background-color: transparent; cursor: pointer; box-sizing: content-box; overflow: hidden; }
+.switch-input { position: absolute; top: 0px; left: 0px; opacity: 0; }
+.switch-handle {width: 29px; height: 28px; border: 2px solid #c2d0de;  border-radius: 4px; position: absolute; top: 3px; left: 3px;   border-radius: 1px; background: none repeat scroll 0% 0% #c2d0de; transition: left 0.45s ease-out 0s; }
+.switch-label { border: 2px solid #c2d0de; border-radius: 4px; position: relative; display: block; height: inherit; font-size: 15px; text-transform: uppercase; background: none repeat scroll 0% 0% rgb(248, 248, 248); transition: all 0.15s ease-out 0s; }
+
+.switch-label:before, 
+.switch-label:after { position: absolute; top: 50%; margin-top: -0.5em; line-height: 1; transition: inherit; }
+.switch-label:before { content: attr(data-off); right: 11px; color: #c2d0de; }
+.switch-label:after { content: attr(data-on); left: 11px; color: white; opacity: 0; }
+
+.switch-input:checked ~ .switch-label { background: none repeat scroll 0% 0% rgb(248, 249, 250); }
+.switch-input:checked ~ .switch-handle { left: 70px; background-color: white;}
+.switch-input:checked ~ .switch-label:before { opacity: 0; }
+.switch-input:checked ~ .switch-label:after { opacity: 1; }
+
+.switch-success > .switch-input:checked ~ .switch-label { background: none repeat scroll 0% 0% rgb(77, 189, 116); border-color: rgb(58, 157, 93); }
+.switch-success > .switch-input:checked ~ .switch-handle {background: none repeat scroll 0% 0% #ffffff; border-color: #ffffff; }
+
+input.btn.toggle-control.disabled, 
+input.btn.toggle-control[disabled]
+{
+display: none;
+visibility: hidden;
+}
+
+</style>
+
+<style>
+
+/* =====================
+BUTTONS
+===================== */
+
+.btn.btn-ghost
+{
+background: transparent;
+color: #F2F2F2;
+border-width: 2px;
+paddingg: 10px 15px;
+font-weight: 700;
+letter-spacing: 1px;
+text-transform: uppercase;
+
+/* CSS Transition */
+-webkit-transition: background .2s ease-in-out, border .2s ease-in-out;
+-moz-transition: background .2s ease-in-out, border .2s ease-in-out;
+-ms-transition: background .2s ease-in-out, border .2s ease-in-out;
+-o-transition: background .2s ease-in-out, border .2s ease-in-out;
+transition: background .2s ease-in-out, border .2s ease-in-out;
+}
+
+.btn-default.btn-ghost
+{
+color: #333333;
+border-color: #333333;
+}
+
+.btn-default.btn-ghost:hover
+{
+color: #000000;
+border-color: #000000;
+}
+
+.btn-primary.btn-ghost
+{
+color: #337ab7;
+}
+
+.btn-primary.btn-ghost:hover
+{
+color: #2e6da4;
+}
+
+
+.btn-info.btn-ghost
+{
+color: #5bc0de;
+}
+
+.btn-info.btn-ghost:hover
+{
+color: #46b8da;
+}
+
+.btn-success.btn-ghost
+{
+color: #5cb85c;
+}
+
+.btn-success.btn-ghost:hover
+{
+color: #4cae4c;
+}
+
+
+.btn-warning.btn-ghost
+{
+color: #ec971f
+}
+
+.btn-warning.btn-ghost:hover
+{
+color: #d58512;
+}
+
+.btn-danger.btn-ghost
+{
+color: #d9534f;
+}
+
+.btn-danger.btn-ghost:hover
+{
+color: #ac2925;
+}
+
+</style>		
+
+</head>
+
+<body>
+
+	<DIV class="container" style="width:980px; padding-top: 25px;">
+
+		<DIV class="panel panel-default" id="panel-parent">
+		
+			<DIV class="panel-heading" id="panel-header">
+			  
+				<DIV class="panel-title">
+				
+					<NAV class="navbar" role="navigation">
+					
+						<div class="navbar-header">
+							<span class="navbar-brand">Organization Name</span>
+						</div>
+			 
+						<DIV class="pull-left">
+							<ul class="nav nav-tabs">
+								<li class="active" >
+								  <a href="#Tab1" data-toggle="tab">
+								  <i class="glyphicon glyphicon-print"></i>
+								  <span class="icon-label">Letters</span>
+								  </a>
+								</li>
+
+								<li>
+								  <a href="#Tab2" data-toggle="tab">
+								  <i class="glyphicon glyphicon-send"></i>
+								  <span class="icon-label">Emails</span>
+								  </a>
+								</li>
+
+								<li>
+								  <a href="#Tab3" data-toggle="tab">
+								  <i class="glyphicon glyphicon-list"></i>
+								  <span class="icon-label">Reports</span>
+								  </a>
+								</li>
+							</ul>
+						</DIV>
+
+						<DIV class="nav-btn pull-right">
+							<BUTTON class="btn btn-large btn-default" id="btnOptions" type="button" data-placement="top" title="Options">
+								<span class="fa fa-cog"></span>
+								<SPAN class="icon-label">Options</SPAN>
+							</BUTTON>
+						</DIV>
+						
+					</NAV>
+				  
+				</DIV>
+				
+			</DIV>
+		  
+		
+			<!-- panel edit -->  
+			<DIV class="panel-body" id="panel-options-outer">
+				<DIV class="container-fluid" id="panel-options-inner"> 
+								 
+					<ul class="nav nav-pills nav-stacked col-sm-3" style="margin-top: 15px;" style="outline:1px solid red; padding: 15px;">
+						<li  class="active"><a href="#tabA" data-toggle="tab">Test Options</a></li>
+						<li><a href="#tabB" data-toggle="tab">Option B</a></li>
+						<li><a href="#tabC" data-toggle="tab">Option C</a></li>
+						<li><a href="#tabD" data-toggle="tab">Option D</a></li>
+					</ul>
+
+					<div class="tab-content col-sm-9">
+							
+						<div class="tab-pane  active" id="tabA" style="border:1px solid rgb(222, 223, 225); border-radius:4px; padding: 5px; min-height: 250px;">
+							
+							<h4>Testing Options</h4>
+							
+							<form class="form-horizontal" role="form">
+							
+								<fieldset>
+			 
+									<div class="form-group">
+
+										<label class="col-sm-3 control-label">Test Mode</label>
+
+										<div class="col-lg-6">
+
+											<label class="switch switch-success">
+												<input type="checkbox" id="toggle-switch" class="switch-input form control"> 
+												<span class="switch-label" data-on="ON" data-off="OFF"></span>
+												<span class="switch-handle"></span>
+											</label>
+
+										</div>
+
+									</div>
+
+									<div class="form-group">
+
+										<label class="col-sm-3 control-label">Email Address</label>
+										
+										<div class="col-lg-7">
+											<select class="toggle-control form-control">
+												<option>Select Email Address</option>
+												<option>sergio.rodriguez@tix.com</option>
+												<option>sergio@tix.com</option>
+												<option>sergio.rodriguez.delao@gmail.com</option>
+											</select>	
+										</div>
+				 
+									</div>
+
+									<div class="form-group">
+
+										<label class="col-sm-3 control-label">Email Address</label>
+
+										<div class="col-lg-7">
+											<input type="text" class="toggle-control form-control" id="textbox1" placeholder="Toggle Text"></input>
+										</div>
+
+									</div>
+									
+									<div class="form-group">
+
+										<label class="col-sm-3 control-label">Order Count</label>
+
+										<div class="col-lg-3">
+											<input type="text" class="toggle-control form-control" id="textbox1" placeholder="Toggle Text"></input>
+										</div>
+
+									</div>
+
+								</fieldset>
+
+							</form>
+							
+						</div>
+						
+						<div class="tab-pane" id="tabB" style="border:1px solid rgb(222, 223, 225); border-radius:4px; padding: 5px; min-height: 250px;">
+							<h3>Option B</h3>	
+						</div>
+						
+						<div class="tab-pane" id="tabC" style="border:1px solid rgb(222, 223, 225); border-radius:4px; padding: 5px; min-height: 250px;">
+							<h3>Option C</h3>
+						</div>
+						
+						<div class="tab-pane" id="tabD" style="border:1px solid rgb(222, 223, 225); border-radius:4px; padding: 5px; min-height: 250px;">
+							<h3>Option D</h3>
+						</div>
+						
+					</div>
+					
+				</div>
+
+			</div>
+		  
+			<!-- panel body -->
+			<DIV class="panel-body" id="panel-display">
+			
+				<DIV class="tab-content">
+				
+					<DIV class="tab-pane fade in active" id="Tab1">
+				  
+						<H3 class="panel-title">Letters</H3>
+
+						<FORM ACTION="" METHOD="post">
+						
+						<INPUT TYPE="hidden" NAME="FormName" VALUE="PrintLetters">
+							
+						<table class="table table-striped">
+							<THEAD>
+								<TR>
+									<TH>Print</TH>
+									<TH>Subscription</TH>
+									<TH>Venue</TH>
+									<TH>Date/Time</TH>
+									<TH>Ticket Quantity</TH>						
+								</TR>
+							</THEAD>
+							
+							<TBODY>
+								<TR><TD><INPUT TYPE="checkbox" NAME="EventCode" VALUE=588031></TD><TD>Season Subscription (Winter)</TD><TD>Downtown Theater</TD><TD>1/1/2015 12:00 PM</TD><TD>8</TD></TR>
+								<TR><TD><INPUT TYPE="checkbox" NAME="EventCode" VALUE=588031></TD><TD>Season Subscription (Spring)</TD><TD>Downtown Theater</TD><TD>1/1/2015 12:00 PM</TD><TD>8</TD></TR>
+								<TR><TD><INPUT TYPE="checkbox" NAME="EventCode" VALUE=588031></TD><TD>Season Subscription (Summer)</TD><TD>Downtown Theater</TD><TD>1/1/2015 12:00 PM</TD><TD>8</TD></TR>
+								<TR><TD><INPUT TYPE="checkbox" NAME="EventCode" VALUE=588031></TD><TD>Season Subscription (Fall)</TD><TD>Downtown Theater</TD><TD>1/1/2015 12:00 PM</TD><TD>8</TD></TR>
+							</TBODY>
+						</TABLE>
+
+						<p>
+							<input type="submit" class="btn btn-ghost btn-default toggle-submit toggle-control" value="Print" style="width:120px;" /> 
+							<input type="submit" id="toggle-preview"  class="btn btn-ghost btn-danger  toggle-control" value="Preview" style="width:120px;"/> 
+						</p>
+						
+						</FORM>
+						  
+					</div>
+	 
+					<DIV class="tab-pane fade" id="Tab2">
+					  
+						<H3 class="panel-title">Emails</H3>
+
+						<FORM action="" method="post">
+						
+						<INPUT type="hidden" name="FormName" value="PrintTab1">
+
+						<table class="table table-striped">
+							<THEAD>
+								<TR>
+									<TH>Print</TH>
+									<TH>Subscription</TH>
+									<TH>Venue</TH>
+									<TH>Date/Time</TH>
+									<TH>Ticket Quantity</TH>
+									<TH>Order Quantity</TH>
+								</TR>
+							</THEAD>
+
+							<TBODY>
+							  <TR>
+								<TD><INPUT type="checkbox" name="EventCode" value="588031" class="checkbox"></TD>
+								<TD>Season Subscription (Winter)</TD>
+								<TD>Downtown Theater</TD>
+								<TD>1/1/2015 12:00 PM</TD>
+								<TD>8</TD>
+								<TD>4</TD>
+							  </TR>
+
+							  <TR>
+								<TD><INPUT type="checkbox" name="EventCode" value="588031" class="checkbox"></TD>
+								<TD>Season Subscription (Spring)</TD>
+								<TD>Downtown Theater</TD>
+								<TD>1/1/2015 12:00 PM</TD>
+								<TD>8</TD>
+								<TD>4</TD>
+							  </TR>
+
+							  <TR>
+								<TD><INPUT type="checkbox" name="EventCode" value="588031" class="checkbox"></TD>
+								<TD>Season Subscription (Summer)</TD>
+								<TD>Downtown Theater</TD>
+								<TD>1/1/2015 12:00 PM</TD>
+								<TD>8</TD>
+								<TD>4</TD>
+							  </TR>
+
+							  <TR>
+								<TD><INPUT type="checkbox" name="EventCode" value="588031" class="checkbox"></TD>
+								<TD>Season Subscription (Fall)</TD>
+								<TD>Downtown Theater</TD>
+								<TD>1/1/2015 12:00 PM</TD>
+								<TD>8</TD>
+								<TD>4</TD>
+							  </TR>
+							</TBODY>
+						</TABLE>
+
+						<p>
+							<input type="submit" class="btn btn-ghost btn-default  toggle-submit toggle-control" value="Send" style="width:120px;" /> 
+							<input type="submit" id="toggle-test"   class="btn btn-ghost btn-danger  toggle-control" value="Test" style="width:120px;"/> 
+						</p>
+
+						
+						
+
+						</FORM>
+						
+					</DIV>
+
+					<DIV class="tab-pane fade" id="Tab3">
+					
+						<H3 class="panel-title">Reports</H3>
+				
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Select</th>
+									<th>Datesent</th>
+									<th>Email Count</th> 
+									<th>Reply To</th> 
+									<th>Subject</th> 
+									<th>Sample</th>
+								</tr> 
+							</thead>
+							<tbody>
+								<tr><td><input type="radio"  value="C:\Users\Sergio\Documents\My Web Sites\WebSite1\Clients\DowntownTheater\Renewal\data\logs\2015-03-16-0134.xml" name="logfilename"></td><td>3/16/2015 1:34:12 AM</td><td>100</td><td>egestas@loremac.com</td><td>Renewal Today</td><td>Sample</td></tr><tr><td><input type="radio"  value="C:\Users\Sergio\Documents\My Web Sites\WebSite1\Clients\DowntownTheater\Renewal\data\logs\2015-03-16-0134.xml" name="logfilename"></td><td>3/16/2015 1:34:12 AM</td><td>100</td><td>egestas@loremac.com</td><td>Renewal Today</td><td>Sample</td></tr><tr><td><input type="radio"  value="C:\Users\Sergio\Documents\My Web Sites\WebSite1\Clients\DowntownTheater\Renewal\data\logs\2015-03-16-0134.xml" name="logfilename"></td><td>3/16/2015 1:34:12 AM</td><td>100</td><td>egestas@loremac.com</td><td>Renewal Today</td><td>Sample</td></tr><tr><td><input type="radio"  value="C:\Users\Sergio\Documents\My Web Sites\WebSite1\Clients\DowntownTheater\Renewal\data\logs\2015-03-16-0134.xml" name="logfilename"></td><td>3/16/2015 1:34:12 AM</td><td>100</td><td>egestas@loremac.com</td><td>Renewal Today</td><td>Sample</td></tr> 
+							</tbody>
+						</table>
+						
+						<p>
+						<input type="submit" class="btn btn-ghost btn-default" value="View" style="width:120px;" /> 
+						<input type="submit" class="btn btn-ghost btn-default" value="Delete" style="width:120px;" /> 
+						<input type="submit" class="btn btn-ghost btn-default" value="Send" style="width:120px;" /> 
+						</p>
+							
+					</DIV>
+			
+				</DIV>
+				
+			</DIV>
+			
+		</DIV>
+		
+	</DIV>
+
+	<SCRIPT src="https://code.jquery.com/jquery-1.9.1.js" type="text/javascript" language="javascript"></SCRIPT> 
+	<SCRIPT src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js" type="text/javascript" language="javascript"></SCRIPT> 
+	<SCRIPT src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" type="text/javascript" language="javascript"></SCRIPT> 
+	<SCRIPT src="https://cdn.jsdelivr.net/icheck/1.0.2/icheck.min.js" type="text/javascript" language="javascript" ></SCRIPT> 
+	
+	<SCRIPT type="text/javascript" language="javascript">
+	
+		$(function() 
+		{
+		
+			// iCHECK - RADIO BUTTON
+		
+			// set radio button color
+			$("input[type=radio]").iCheck(
+			{
+				radioClass: 'iradio_square-green',
+				increaseArea: '30%'
+			});
+			
+			// activate hightlight for pre-selected radiobuttons
+			$("input[type=radio]:checked").each(function() 
+			{
+				$(this).closest("tr").addClass("active");
+			});
+			
+			// toggle hightlight when radiobutton changes state
+			$("input[type=radio]").on('ifToggled', function(event)
+			{
+				$(this).closest("tr").toggleClass("active")
+			});
+			
+			// iCHECK - CHECKBOX
+			
+			// set checkbox color
+			// ignore toggle switch checkboxes
+			$("input[type=checkbox]:not(.switch-input)").iCheck(
+			{
+				checkboxClass: 'icheckbox_square-green',
+				increaseArea: '30%'
+			});
+
+			// activate hightlight for pre-selected checkboxes
+			$("input[type=checkbox]:checked").each(function() 
+			{
+				$(this).closest("tr").addClass("active");
+			});
+
+			// toggle hightlight when checkbox changes state
+			$("input[type=checkbox]").on('ifToggled', function(event)
+			{
+				$(this).closest("tr").toggleClass("active")
+			});
+		 
+		}); 
+		
+				(function($) 
+		{
+			$.fn.toggleDisabled = function() 
+			{
+				return this.each(function() 
+				{
+					var $this = $(this);
+					if ($this.attr('disabled')) $this.removeAttr('disabled');		
+					
+					else $this.attr('disabled', 'disabled');
+				});
+			};
+		})(jQuery);
+
+		$(function() 
+		{
+			//toggle switch is disabled by default
+			$('#toggle-switch').prop('checked', false);
+			
+			//toggle controls are all disabled by default
+			$('.toggle-control').prop('disabled', true);
+
+			//toggle control submit is enabled by default
+			$('.toggle-submit').prop('disabled', false);
+			
+			//enable toggle controls when toggle switch selected
+			$('#toggle-switch').change(function() 
+			{
+				$('.toggle-control').toggleDisabled();       
+			});
+		});
+
+
+		jQuery.fn.blindToggle = function(speed, easing, callback) 
+		{
+		var h = (this.height() + parseInt(this.css('paddingTop')) + parseInt(this.css('paddingBottom')) + 9);
+		return this.animate({marginTop: parseInt(this.css('marginTop')) < 0 ? 0 : -h}, speed, easing, callback);  
+		};
+ 
+		jQuery.fn.slideFadeToggle = function(speed, easing, callback) 
+		{
+		return this.animate({opacity: 'toggle', height: 'toggle'}, speed, easing, callback);  
+		};
+ 
+		$(function() 
+		{
+			$('#btnOptions').click(function() 
+			{
+				$('#panel-options-inner').blindToggle(1000, 'easeInOutQuart');
+			});    
+		});
+
+	</SCRIPT> 
+	
+
+</BODY>
+</HTML>

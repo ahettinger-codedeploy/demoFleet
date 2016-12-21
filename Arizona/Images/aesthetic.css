@@ -1,0 +1,987 @@
+/**
+ * @version $Id$
+ * @author Michael Tierney
+ * @package Joomla-CFA
+ * @subpackage CFA-Accessible-template
+ * @copyright Copyright (C) 2007 Arizona Board of Regents. All rights reserved.
+ */
+
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: Helvetica, Arial;
+	font-size: 9pt;
+}
+
+#content {
+	background-color: transparent;
+}
+
+table {
+	border-spacing: 0px;
+	font-size: .85em;
+	width: 100%;
+}
+
+th {
+	
+	font-size: .9em;
+	font-family: "News Gothic Std", "News Gothic MT", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+td {
+	
+}
+
+tr:hover, tr:focus {
+	background-color: #dce5ab;
+}
+
+tr:hover th, tr:focus th {
+	background-color: transparent;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: bold;
+	font-family: "News Gothic Std", "News Gothic MT", Helvetica, Arial, sans-serif;
+}
+
+h2 {
+	font-size: 1.5em;
+	color: #b7c732;
+	line-height: 1.286;
+	text-transform: uppercase;
+	letter-spacing: .0125em;
+}
+
+h3 {
+	font-size: 1.25em;
+	color: #634630;
+	line-height: 1.143;
+	letter-spacing: .0125em;
+}
+
+h4 {
+	font-size: 1.125em;
+	color: #000;
+	line-height: 1.5;
+} 
+
+h5 {
+	font-size: 1em;
+	line-height: 0.857;
+} 
+
+h6 {
+	font-size: .95em;
+	color: #634630;
+	line-height: 1.5;
+}
+
+strong, b {
+	font-weight: bold;
+}
+
+em, i {
+	font-style: italic;
+}
+
+p,ul,ol,td,tr,dl,code {
+	font-size: 1em;
+	line-height: 1.5;
+}
+
+li ul li, li ol li{
+	font-size: 1em;
+}
+
+blockquote {
+	font-size: .85em;
+	border-left: 1px solid #585756;
+	border-right: 1px solid #585756;	
+	background-color: #eee;
+}
+
+abbr, acronym {
+	border-bottom: 1px dashed #585756;
+	color: #585756;
+}
+
+a:link, a:visited {
+	color: #634630;
+	border-bottom: 1px dotted #634630;
+	text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+	border-bottom: 1px solid #634630;
+}
+
+dl {
+}
+
+dt {
+	font-family: "News Gothic Std", "News Gothic", Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	color: #585756;
+	border-bottom: 2px solid #634630;	
+}
+
+dd {
+	font-size: .85em;
+}
+input:focus  {
+}
+fieldset {
+}
+legend {
+}
+p {
+}
+
+cite {
+	font-style: italic;
+	font-size: .85em;
+}
+
+code {
+}
+
+/* This should go away, but it'll stay for now */
+#beta_badge {
+}
+
+#copyright {
+}
+
+/* Left column */
+#main_nav {
+	border-right: 1px solid #585756;
+	background-color: #eee;
+}
+
+#main_nav a:link, #main_nav a:visited {
+	border-bottom: 0 none;
+}
+
+/* Main navigation menu */
+#main_nav .moduletable_menu {
+	font-size: .85em;
+}
+
+#main_nav .moduletable_menu .menu li{
+	text-align: right;
+}
+
+
+
+#main_nav ul.menu li a:hover {
+	background-color: #b7c732;
+	border-right: 7px solid #585756;
+	color: #fff;
+}
+
+#main_nav ul.menu li#current a:hover {
+	background:#B7C732;
+	border-right: 0 none;
+	color: #fff;
+}
+
+#main_nav ul.menu  li.active a:hover {
+	background:#B7C732;
+	border-right: 0 none;
+	color: #fff;
+}
+
+
+
+#main_nav ul.menu li#current {
+	background:#B7C732 url(/clients/arizona/images/current-arrow.gif) no-repeat 0 .25em;
+	border-top: 1px solid #585756;
+	border-bottom: 1px solid #585756;
+	color: #fff;
+}
+
+ #main_nav ul.menu li.active {
+ 	background:#B7C732 url(/clients/arizona/images/current-arrow.gif) no-repeat 0 .25em;
+	border-top: 1px solid #585756;
+	border-bottom: 1px solid #585756;
+	
+	color: #fff;
+	
+
+ }
+ 
+
+ 
+#main_nav ul.menu li ul {
+
+
+	
+}
+
+#main_nav ul.menu li ul li a{
+	background-color: #585756;
+	background-image: none;
+	color: #fff;
+	border: none;
+
+}
+
+#main_nav ul.menu li ul li a:hover{
+	background-color: #585756;
+	background-image: none;
+	color: #B7C732;
+	border: 0 none;
+	
+}
+
+#main_nav ul.menu li ul li.active a {
+	background-color: #585756;
+	background-image: none;
+	color: #B7C732;
+	border: 0 none;
+}
+
+#main_nav ul.menu li ul li ul{
+	
+
+}
+
+#main_nav ul.menu li ul li.active ul li#current {
+	border: 0px;
+}
+
+#main_nav ul.menu li ul li.active ul li a {
+	background-color: #999999;
+	color: #fff;
+}
+
+#main_nav ul.menu li ul li.active ul li a:hover {
+	color: #474748;
+}
+
+#main_nav ul.menu li ul li.active ul li#current a {
+	color: #474748;
+}
+
+
+
+
+/* end main navigation menu */
+
+/* CFA Schools Menu */
+#main_nav p {
+	font-size: .75em;
+}
+
+/*end CFA Schools Menu */
+
+
+/* Joomla produced classes */
+.contentheading {
+}
+
+.createdate {
+}
+
+.createdby {
+}
+
+.modifydate {
+}
+
+/* ############# pagination ###################### */
+#main2 .pagination  , #main .pagination
+{
+}
+
+.newitem {
+}
+
+/* ############ CFA Banner ############## */
+#cfa_flag {
+	background: #fff url(/display/webpage_files/cfa_flag_2.gif) right top no-repeat;
+}
+
+/* Center */
+#main_content {
+	background-color: #fff;
+	
+}
+
+#main_content p {
+	font-size: .85em;
+}
+
+.contentImage {
+	
+}
+
+.caption {
+	font-size: .75em;
+	font-style: italic;
+	color: #999;
+	font-weight: normal;
+}
+
+#main_content ul li {
+	font-size: .85em;
+	color: #333;
+	list-style-image: url(/display/webpage_files/bordered_bullet_ltgrey_square_lg.gif);
+}
+
+/* This keeps the lists of lists from getting incredibly small in size (ul li ul li, ol li ol li) --> best example is the Fac/Staff list pre-2007/11 - MT 2007/12/10 */
+#main_content li li {
+	font-size: 1em;
+}
+
+#main_content #inner_left ul li, #main_content #inner_right ul li {
+	list-style-image: none;
+}
+
+#main_content .contentpaneopen ul li {
+	font-size: 1em;
+}
+
+#main_content ol li {
+	font-size: .85em;
+	color: #333;
+	list-style-type: decimal;
+}
+
+#inner_left h3, #inner_right h3 {
+	color: #b7c732;
+	font-size: 1.25em;
+	text-transform: none;
+}
+
+#inner_left h4, #inner_right h4 {
+	color: #634630;
+	font-size: 1.125em;
+	line-height: .75em;
+}
+
+#inner_left h5, #inner_right h5 {
+	color: #634630;
+	border-bottom: 1px solid #634630;
+	width: 100%;
+}
+
+/* Right */
+#secondary_info {
+	background-color: #fff;
+}
+
+#secondary_info h3 {
+	color: #634630;
+}
+
+#secondary_info h4 {
+	color: #b7c732;
+}
+
+#secondary_info p {
+	font-size: .7em;
+}
+
+#secondary_info a[href $='http://'] {
+	font-weight: bold;
+}
+
+#secondary_info a:link, #secondary_info a:visited {
+	text-decoration: none;
+}
+
+
+/* Footer */
+#footer
+{
+	text-align: center;
+	background-color: #fff;
+	border-top: 1px solid #ddd;
+}
+
+#footer .moduletable #breadcrumb {
+	font-size: .75em;
+}
+
+#footer .moduletable #breadcrumb li {
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
+#footer .moduletable #breadcrumb li a {
+	border-bottom: 0 none;
+}
+
+#footer .moduletable #breadcrumb li a:hover, #footer .moduletable #breadcrumb li a:focus {
+	background-color: #ddd;
+}
+
+#footer .moduletable #schools {
+	font-size: .75em;
+}
+
+#footer .moduletable #schools li {
+	border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
+#footer .moduletable #schools li a {
+	border-bottom: 0 none;
+	text-decoration: none;
+}	
+
+#footer .moduletable #schools li a:hover, #footer .moduletable #schools li a:focus {
+	background-color: #ddd;
+}
+
+#footer p {
+	font-size: .75em;
+	line-height: 1.062;
+	color: #999;
+}
+
+#ua_logo {
+	background-color: #fff;
+}
+
+#ua_logo a:link, #ua_logo a:visited, #header {
+	border-bottom: 0 none;
+}
+
+/* Error Message */
+.error
+{
+	color: #000;
+	background-color: #fcbfc4;/* was #fca6ad */
+	border: 1px solid #f00;	
+}
+
+.error h2 {
+	color: #f00;
+	font-size: 1.25em;
+	border-bottom: 1px solid #f00;
+	background-color: #fff;
+}
+
+.error p {
+	font-size: .85em;
+}
+
+.error a {
+	color: #f00;
+	border-bottom: 1px dotted #f00;
+}
+
+.error a:focus, .error a:hover {
+	border-bottom: 1px solid #f00;
+}
+
+/* Newsflash */
+#newsflash {
+}
+
+/*Dean's List stuff*/
+#deans_list_left {
+}
+
+#deans_list_left ul {
+}
+
+#deans_list_left li {
+}
+
+#deans_list_right {
+}
+
+#deans_list_right ul {
+}
+
+#deans_list_right li {
+}
+
+#bio {
+}
+
+#bioPhoto {
+}
+
+
+/*Commented out for now because it's not working consistently.*/
+
+/*p:first-letter {
+	color:#634630;
+	float:left;
+	font-size:1.25em;
+	font-style:normal;
+	font-weight:bold;
+	line-height:100%;
+	text-decoration:none;
+	text-transform:uppercase;
+	vertical-align:top;
+	margin-top: -.005em;
+}
+
+#main_nav p:first-letter, #secondary_info p:first-letter, #footer p:first-letter, h4+p:first-letter, h5+p:first-letter, h6+p:first-letter, p+p:first-letter {
+	color: #333;
+	float:none;
+	font-size:1em;
+	font-style:normal;
+	font-weight:normal;
+	line-height:inherit;
+	text-decoration:none;
+	text-transform:none;
+	vertical-align:none;
+	margin-top: 0;
+}*/
+
+/* The following added for the slick new wire interface */
+/* Mike killed them on 10/29/07 because he hates the Wire and plans to rebuild the interface ... */
+
+/* Form-field hints */
+.hint_form dl {
+	font-size: .85em;
+}
+.hint_form dt {
+	text-align: right;
+	text-transform: capitalize;
+	color: #333;
+	font-size: .8em;
+}
+.hint_form dd {
+	border: 0;
+}
+
+#main_content .hint_form p {
+	font-size: .8em;
+}
+
+.hint_form input, select, checkbox, textarea {
+	border: 1px solid #999;
+	background-color: #eee;
+	font-family: Verdana, Helvetica, Arial;
+}
+
+.hint_form textarea {
+	font-size: .85em;
+}
+
+.hint {
+	border: 1px solid #aaa;
+	background-color: #eee;
+}
+
+.hint .hint-pointer {
+    background: url(/clients/arizona/images/pointer.gif) left top no-repeat;
+}
+
+.hint_form #noborders {
+	border: 0;
+	background-color: #fff;
+}
+
+/* cy adds some small grants stylin' -- 04 sept 07 || Modified by Mike T. -- 05 dec 07 */
+.sg_list form {
+}
+
+.sg_list {
+}
+
+.sg_list .clearcell, .sg_app .clearcell {
+}
+
+.sg_list th {
+}
+
+.sg_applicant, .sg_view {
+}
+
+.sg_view {
+}
+
+.sg_app th {
+}
+
+.sg_app td {
+}
+
+.sg_app textarea {
+}
+
+.sg_funds {
+}
+
+.sg_fundsother {
+}
+
+.sg_smalltext {
+}
+
+.sg_textbutton {
+}
+
+.sg_textbutton:hover {
+}
+
+#secondary_info #search #searchbox {
+	border: 1px solid #585756;
+	color: #999;
+}
+
+#secondary_info #search #searchbox:focus {
+	color: #333;
+}
+
+#secondary_info h3 {
+	text-transform: none;
+	font-size: 1.125em;
+}
+
+/* Subnav */
+#secondary_info .menu {
+	background-color: #eee;
+	border: 1px solid #aaa;
+	font-size: .85em;
+}
+
+#secondary_info .menu a {
+	border-bottom: 0 none;
+}
+
+#secondary_info .menu a:hover, #secondary_info .menu a:focus {
+	background-color: #ddd;
+}
+
+/* second level */
+
+#secondary_info .menu #current a {
+	border-bottom: 0 none;
+	background: #aaa url(/clients/arizona/images/current_arrow_subnav.gif) no-repeat right;
+}
+
+#secondary_info .menu li ul li#current a {
+	border-bottom: 0 none;
+	background: #aaa url(/clients/arizona/images/current_arrow_subnav.gif) no-repeat right;
+}
+
+#secondary_info .menu li.active a {
+	background: #b7c732;
+	color: #fff;
+	border-top: 1px solid #aaa;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#secondary_info .menu li.active ul {
+	border-bottom: 1px solid #aaa;
+}
+
+#secondary_info .menu li.active ul li a {
+	border-top: 0 none;
+	font-weight: normal;
+	text-transform: none;
+	border-top: 0 none;
+	color: #634630;
+	background-color: #ddd;
+}
+
+#secondary_info .menu li.active ul li a:hover, #secondary_info .menu li.active ul li a:focus{
+	background-color: #aaa;
+}
+
+#secondary_info .menu #current ul li a, #secondary_info .menu li ul li a{
+	border-bottom: 0 none;
+	background: #ddd;
+	font-weight: normal;
+}
+
+#secondary_info .menu #current ul li a:hover, #secondary_info .menu #current ul li a:focus {
+	background-color: #aaa;
+}
+
+#secondary_info #search #searchbox:focus {
+	color: #333;
+}
+
+#secondary_info #search #searchbutton {
+	border: 1px solid #585756;
+}
+
+/* To make sure people know what file-type they're downloading, auto-place icons next to the link */
+a[href $='.pdf'] { 
+   background: transparent url(/display/webpage_files/pdf.png) no-repeat center left;
+}
+a[href $='.doc'] { 
+   background: transparent url(/display/webpage_files/doc.png) no-repeat center left;
+}
+
+/*Debugging / error-checking */
+/*img {
+	border: 10px solid #f00;
+}
+
+img[alt] {
+	border: 0 none;
+}
+
+img[alt=""] {
+	border: 10px solid #0CFFFF;
+}*/
+
+.contentpaneopen {
+	font-size: .85em;
+}
+
+/* Event Calendar display */
+
+#bigCal h4 {
+	text-align: center;
+}
+
+#bigCal h4 a {
+	border-bottom: none;
+}
+
+#bigCal table {
+	border-spacing: 0px;
+	text-align: center;
+}
+
+#bigCal th {
+	border-bottom: 1px solid #b7c732;
+	font-size: .9em;
+	font-family: "News Gothic Std", "News Gothic MT", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+#bigCal td {
+	border: 0px solid #ddd;
+	font-size: .806em;
+}
+
+#bigCal tr:hover, #bigCal tr:focus {
+	background-color: transparent;
+}
+
+#bigCal td:hover, #bigCal td:focus {
+	border: 1px solid #b7c732;
+}
+
+#bigCal fieldset td:hover, #bigCal fieldset td:focus {
+	border: 0 none;
+}
+
+
+#bigCal td.nullday:hover, #bigCal td.nullday:focus {
+	border: 0 none;
+	background-color: transparent;
+}
+
+#bigCal fieldset td {
+	border: 0 none;
+}
+
+#bigCal fieldset li {
+	font-size: .85em;
+}
+
+#bigCal td:hover .day a, #bigCal td:focus .day a {
+	background-color: #b7c732;
+	color: #585756;
+	font-weight: bold;
+}
+
+#bigCal .highlight {
+	border: 1px solid #585756;
+}
+
+#bigCal .holiday {
+	background-color: #eee;
+}
+
+#bigCal .nullday {
+	border: 0 none;
+	background-color: transparent;
+}
+
+#bigCal .day {
+	text-align: right;
+}
+
+#bigCal .day a {
+
+	background-color: #634630;
+	color: #fff;
+}
+
+#bigCal fieldset {
+	border: 1px solid #b7c732;
+}
+
+#bigCal legend {
+	border: 1px solid #b7c732;
+	font-size: .9em;
+	font-weight: bold;
+	color: #634630;
+	font-family: "News Gothic Std", "News Gothic", Helvetica, Arial, sans-serif;
+}
+
+/* Faculty/Staff listing styles --> based off of the School of Music's requests */
+#big_peoplelist dt {
+	font-weight: bold;
+	font-size: .9em;
+}
+
+#big_peoplelist h3 {
+	border-bottom: 1px solid #faa61a;
+}
+
+#big_peoplelist h4 {
+	border-bottom: 1px solid #b7c732;
+}
+
+
+.title {
+	font-size: .65em;
+	font-style: italic;
+}
+
+.rank {
+	font-size: .65em;
+}
+
+.area {
+	font-size: .65em;
+	font-weight: bold;
+}
+
+/* Fac/Staff Listing style --> accomodates the older version of listing (pre-11/2007) */
+.peoplespit dt, .peoplespit dt a {
+	border-bottom: 0 none;
+}
+
+.peoplespit dt {
+	font-weight: normal;
+	font-family: "Lucida Grande","Lucida Sans",Helvetica,Arial,sans-serif;
+	font-size: .9em;
+}
+
+.peoplespit dd {
+	border-top: 1px solid #585756;
+	background-color: #eee;
+}
+
+#main_content ul.peoplespit li {
+	list-style-image: none;
+}
+
+.peoplemainarea span {
+	font-weight: bold;
+	font-family: "News Gothic Std", "News Gothic", Helvetica, Arial, sans-serif;
+	color: #000;
+}
+
+.peopleexpand {
+	font-size: .75em;
+	border-bottom: 1px solid #b7c732;
+	vertical-align: .25em;
+}
+
+.peopleexpand a {
+	border: 1px solid #b7c732;
+	border-bottom: 3px solid #b7c732;
+}
+
+/* Biography styles */
+#bio legend {
+	font-family: "News Gothic Std", "News Gothic", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 1em;
+	border-bottom: 2px solid #634630;
+}
+
+#bio fieldset {
+	border-top: 2px solid #634630;
+}
+
+hr {
+	border: 0 none;
+	background-color: #585756;
+	height: 1px;
+}
+
+/* News story */
+#eventlogo {
+	border: 1px solid #aaa;
+	background-color: #efefef;
+}
+
+.byline {
+  font-style: italic;
+  font-size: .85em;
+  color: #999;
+}
+
+fieldset.story_fieldset {
+	background-color: #efefef;
+}
+
+/* CFA ALERT NOTIFIER!! */
+#cfa_critical_alert {
+  background-color: #ffbdbc;
+  border: 1px solid #f00;
+  font-size: .85em;
+}
+
+#cfa_noncritical_alert {
+  background-color: /*#ffcb96*/ #efefef;
+  border: 1px solid /*#ff8800*/ #666;
+  font-size: .85em;
+}
+
+#cfa_critical_alert h3, #cfa_noncritical_alert h3 {
+  color: #000;
+  font-size: 1.3em;
+}
+
+#cfa_critical_alert small, #cfa_noncritical_alert small {
+  text-align: right;
+}
+
+#cfa_critical_alert p, #cfa_noncritical_alert p {
+  font-size: 1.1em;
+}
+
+#cfa_critical_alert a, #cfa_noncritical_alert a {
+  color: #000;
+}
+
+/**
+  *
+  * Font-handling for the metadata info on the "More Info" alert pages
+  *
+  **/
+
+div#main_content p.metadata {
+  margin: -2em 0 0 0;
+  line-height: normal;
+  font-size: .7em;
+  font-style: italic;
+  color: #999;
+}

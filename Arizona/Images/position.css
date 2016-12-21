@@ -1,0 +1,718 @@
+/**
+ * @version $Id$
+ * @author Michael Tierney
+ * @package Joomla
+ * @subpackage CFA-Accessible-template
+ * @copyright Copyright (C) 2007 Arizona Board of Regents. All rights reserved.
+ */
+ 
+/* THIS NEEDS TO BE RESOLVED IN THE CMS INSTEAD OF THE CSS, BUT IT'LL HAVE TO WORK FOR NOW */
+.counter, .pagination, div.componentheading {
+	position: absolute;
+	left: -9999px;
+	display: none;
+} 
+ 
+html {
+	height: 100%;
+}
+
+body {
+	position: relative;
+	height: 100%;
+}
+
+h1 {
+	position: absolute;
+	left: -9999px;
+}
+
+h2 {
+	margin: 1.286em 0;
+}
+
+h3 {
+	margin: 1.143em 0;
+}
+
+h4 {
+	margin: 1em 0;
+}
+
+h5 {
+	margin: 0.857em 0;
+}
+
+h6 {
+	margin: 1.5em 0;
+}
+
+p,ul,ol,td,tr,dl,code {
+	margin:  0;
+}
+
+blockquote {
+	margin: 1.125em 0;
+	padding: 1.125em 1em;
+}
+
+dl {
+}
+
+dt {
+	margin: .5em 0 0 0;
+}
+
+dd {
+	margin: 0 0 .5em 0;
+}
+
+td {
+	padding: 0 ;
+}
+
+#content {
+	position: relative;
+	width: 64em;
+	margin: 0 auto;
+	padding: 42px 0 0 0;
+	overflow:hidden;
+}
+
+label, #noCSS_nav {
+	position: absolute;
+	left: -9999px;
+}
+/* ################ Three column-y gooness, y'all! ################ */
+#main_nav
+{
+	float: left;
+	width: 14em;
+	margin: 0;
+	padding: 0;
+}
+
+#main_nav .menu a:link, #main_nav .menu a:visited {
+	display: block;
+	padding: .125em .5em;
+}
+
+#main_nav .menu #current ul {
+	margin: -.125em 0 0 0;
+	
+}
+
+#main_nav .menu .active ul {
+	margin: -.125em 0 0 0;
+	
+}
+
+#main_nav .menu #current ul li a, #main_nav .menu .active ul li a {
+	display: block;
+	padding: 0 .5em 0 0;
+	margin: 0 0 0 0;
+}
+
+#main_nav .moduletable_menu {
+	margin: 2em 0;
+	padding: 0;
+}
+
+#main_nav .menu #current a {
+	padding-left: 3.75em;
+}
+
+#secondary_info
+{
+	float: right;
+	width: 14em;
+	height: 100%;
+	padding: 1.25em 0 0 0;
+}
+
+#secondary_info #search #searchbox {
+	padding: .125em;
+}
+
+#secondary_info #search #searchbutton {
+	padding: 0 .125em .025em .125em;
+}
+
+#secondary_info .moduletable h3 {
+	margin: 1em 0 -1.05em 0;
+}
+
+#secondary_info .menu {
+	padding: .5em 0;
+}
+
+#secondary_info .menu a {
+	display: block;
+	padding: 0.125em .5em;
+}
+
+#secondary_info .menu #current ul, #secondary_info .menu li ul {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+/* second level */
+
+#secondary_info .menu #current a {
+	display: block;
+	padding: 0.125em .5em;
+}
+
+#secondary_info .menu li ul li#current a {
+	display: block;
+	padding: 0.125em .5em 0.125em 1.5em;
+}
+
+#secondary_info .menu li.active a {
+	display: block;
+	padding: 0.125em .5em;
+}
+
+#secondary_info .menu li.active ul li a {
+	padding: 0.125em 1.5em;
+}
+
+#secondary_info .menu #current ul li a, #secondary_info .menu li ul li a{
+	display: block;
+	padding: 0.125em .5em 0.125em 1.5em;
+}
+
+* html #main_content {
+	display: inline;
+}
+
+#main_content {
+	float: left;
+	margin-left: 1em;
+	width: 34em;
+/*	padding: .125em 15em 6em 0;*/
+}
+
+/* Start Mac IE5 filter - ONE TRUE LAYOUT \*/
+#main_content, #main_nav, #secondary_info {
+	padding-bottom: 1000em !important;
+	margin-bottom: -995em !important;
+}
+/* End Mac IE5 filter */
+
+#main_content ul li {
+	margin-left: 2em;
+}
+
+#main_content ol li {
+	margin-left: 2em;
+}
+
+.contentImage {
+	margin: .5em 1.25em 0 0;
+	float: left;
+	padding: .75em;
+}
+
+.contentImage img {
+	margin-bottom: .5em;
+}
+
+/* ################  Four column effect #######	 */
+#inner_left {
+	position: relative;
+	top: 0;
+	left: 0;
+	float: left;
+	width: 16.5em;
+}
+
+#inner_right {
+/*	position: absolute;
+	top: 297px;
+	right: 15em;*/
+	float: right;
+	width: 16.5em;
+}
+
+#inner_left h4, #inner_right h4 {
+	margin: 1.5em 0 -.5em 0;
+}
+
+#inner_left h5, #inner_right h5 {
+	margin-bottom: 0;
+}
+
+#main_content #inner_left ul li, #main_content #inner_right ul li {
+	margin-left: 0;
+}
+
+/* ################  UA Banner ################  */
+#ua_logo {
+	position: absolute;
+	top: 0;
+	left: -6px;
+	height: 42px;
+	width: 101%;
+}
+
+/* ################ CFA Banner ################# */
+/*IE6-friendly versions of the CFA Flag dealie; the flag disappears when the page is scrolled, and removes the flag from the flow of content */
+#cfa_flag {
+}
+
+/*Nicer version - this keeps the flag in the upper-right corner of the screen while you scroll */
+#cfa_flag {
+	position: absolute;
+	top: -1px;
+	right: 0;
+	height: 724px;
+	width: 40px;
+	z-index: 200;
+}
+
+html > body > #cfa_flag {
+	position: fixed;
+	top: -1px;
+	right: 0;
+	height: 724px;
+	width: 40px;
+	z-index: 200;
+	background-color: transparent;
+}
+
+#cfa_flag p {
+	display: none;
+	position: absolute;
+	right: -999px;
+}
+
+#header {
+	margin-top: 42px;
+}
+
+#footer{
+	position: relative;
+	bottom: 0;
+	margin: 0 auto;
+	padding: 2em 0 0 0;
+	width: 550px;
+	height: 6em;
+}
+
+#footer p {
+	margin-top: 1.062em;
+	margin-bottom: 1.062em;
+}
+
+#footer .moduletable #breadcrumb {
+	position: absolute;
+	top: -1.5em;
+	right: 0;
+}
+
+#footer .moduletable #breadcrumb li {
+	display: block;
+	float: left;
+	margin: 0 0 0 .25em;
+}
+
+#footer .moduletable #breadcrumb li a {
+	display: block;
+	padding: 0 .5em .125em .25em;
+	text-decoration: none;
+}
+
+#footer .moduletable #schools {
+	position: absolute;
+	top: -1.5em;
+	left: 0;
+}
+
+#footer .moduletable #schools li {
+	display: block;
+	float: left;
+	margin: 0 0 0 .25em;
+}
+
+#footer .moduletable #schools li a {
+	display: block;
+	padding: 0 .5em .125em .25em;
+}
+
+#copyright {
+}
+
+#main_nav p {
+	margin-left: .5em;
+}
+
+ul#cfaSchoolNav {
+	display: block;
+	margin-bottom: 5em;
+	margin-top: -1em;
+	margin-left: .45em;
+}
+
+#cfaSchoolNav li {
+	float: left;
+	margin-right: 0.25em;
+}
+
+.moduletable .moduletable {
+	position: relative;
+	bottom: 0;
+	padding: 0 0;
+}
+
+#contactinfo {
+	position: relative;
+	top: 0;
+	padding: 0;
+}
+
+#contactinfo p {
+  margin: 0;
+}
+
+#contactinfo .address, #contactinfo .tel {
+  position: relative;
+  left: 0;
+}
+
+#contactinfo .tel #phone {
+  display: none;
+  text-indent: -9999px;
+}
+
+#beta_badge {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 2em;
+	z-index: 3;
+}
+
+.contentpaneopen {
+	/*height: 100%;*/
+}
+
+
+/* Calendar Styles */
+
+#bigCal h3 {
+	position: absolute;
+	left: -9999px;
+}
+
+#bigCal td {
+	padding: 0 .25em;
+	width: 14%;
+}
+
+#bigCal td .day {
+	display: block;
+	width: 100%;
+	float: right;
+	
+}
+
+#bigCal td .day a {
+	padding: 0 .35em 0 .5em;
+	margin: 0  -0.25em;
+}
+
+#bigCal fieldset {
+	padding: 0 1em;
+}
+
+#cal_options {
+	position: relative;
+}
+
+#cal_navigation {
+	margin: 2em 0;
+	width: 31.8em;
+}
+
+#cal_prefs, #cal_campusCals {
+	margin: 2em 0 0 0;
+	width: 14em;
+}
+
+#cal_campusCals {
+	width: 31.8em;
+/*	commented out until the Calendar navigation is working - this is the only displaying component, and thus doesn't need positioning
+	position: absolute;
+	right: .125em;
+	top: 4.35em;*/
+}
+
+#bigCal fieldset form {
+	margin: 1em 0;
+}
+
+#bigCal legend {
+	padding: .25em;
+	margin: 0;
+}
+
+/* Faculty/Staff listing styles */
+#big_peoplelist {
+	margin-top: -20px;
+}
+
+#big_peoplelist dl {
+	margin: 0;
+	padding: 0;
+}
+
+#big_peoplelist dt {
+	margin: 1.5em 0 0 1.5em;
+	padding: 0;
+}
+
+#big_peoplelist dd {
+	margin: 0 0 1.5em 1.5em;
+	padding: 0;
+	display: block;
+}
+
+#big_peoplelist h3 {
+	margin: 1.25em 0;
+	padding: 0;
+}
+
+#big_peoplelist h4 {
+	margin: 0 0 0 1.5em;
+}
+
+.contact {
+	display: block;
+	position: relative;
+	font-size: .85em;
+}
+
+.email, a.email {
+}
+
+.tel {
+	position: absolute;
+	left: 16em;
+}
+
+#contactinfo .tel {
+	position: relative;
+	left: 0;
+}
+
+#footer .tel, #footer .address {
+  position: relative;
+  left: 0;
+}
+
+.address {
+	position: absolute;
+	left: 25em;
+}
+
+/* bio styles */
+#bioPhoto {
+	height: 170px;
+	width: 120px; /* This really needs to be converted over to an em-based unit, but that'll have to wait until I've finished the re-coding of the Bio pages - MT 11/30/07 */
+	float: left;
+}
+
+#bio {
+	float: left;
+	padding-top: 1.01em;
+	width: 26em;
+	height: auto;
+}
+
+#bio legend {
+	margin-top: -1.01em;
+	font-family: "News Gothic Std", "News Gothic", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	font-size: 1em;
+	border-bottom: 2px solid #634630;
+}
+
+#bio fieldset {
+	border-top: 2px solid #634630;
+	margin-bottom: 1.125em;
+}
+
+/*Small grants-related*/
+#socsec input {
+	width: 30px;
+}
+
+#expiration_day {
+	width: 50px;
+	float: left;
+}
+
+#expiration_month {
+	width: 20px;
+	float: left;
+}
+
+#expiration_year {
+	width: 20px;
+	float: left;
+}
+
+/* cy adds some small grants stylin' -- 04 sept 07 || Modified by Mike T. -- 05 dec 07 */
+.sg_list form {
+}
+
+.sg_list {
+}
+
+.sg_list .clearcell, .sg_app .clearcell {
+}
+
+.sg_list th {
+}
+
+.sg_applicant, .sg_view {
+}
+
+.sg_view {
+}
+
+.sg_app th {
+}
+
+.sg_app td {
+}
+
+.sg_app textarea {
+}
+
+.sg_funds {
+}
+
+.sg_fundsother {
+}
+
+.sg_smalltext {
+}
+
+.sg_textbutton {
+}
+
+.sg_textbutton:hover {
+}
+
+
+/* CSS for displaying form-related hints */
+.hint {
+	display: none;
+	position: absolute;
+	right: -175px;
+	width: 150px;
+	margin-top: -4px;
+	padding: 10px 12px;
+}
+
+.hint .hint-pointer {
+    position: absolute;
+    left: -10px;
+    top: 5px;
+    width: 10px;
+    height: 19px;
+}
+
+.hint_form dl {
+	position: relative;
+	width: 370px;
+}
+
+.hint_form dt {
+	clear: both;
+	float:left;
+	width: 150px;
+	padding: 4px 10px 2px 0;
+}
+
+.hint_form dd {
+	float: left;
+	width: 200px;
+	margin: 0 0 8px 0;
+	padding-left: 6px;
+	padding-bottom: 0;
+}
+
+.hint_form p {
+	margin-top: 0;
+}
+
+.hint_form #noborders {
+	padding-top: 3px;
+}
+
+/* Fac/Staff Listing style --> accomodates the older version of listing (pre-11/2007) */
+.peoplespit dt {
+	margin: 0;
+}
+
+.peoplespit dd {
+	padding: 1em 0 1em 1.25em;
+}
+
+.peoplespit dd ul {
+	margin: 0;
+}
+
+.peoplespit li ul {
+	margin-left: 1.5em;
+}
+
+.peopleexpand a {
+	padding: 0 .25em 0 .25em;
+}
+
+/* To make sure people know what file-type they're downloading, auto-place icons next to the link */
+a[href $='.pdf'] { 
+	padding-left: 20px;
+}
+
+a[href $='.doc'] { 
+   padding-left: 20px;
+}
+
+.error {
+	margin: 1.5em auto 0 auto;
+	padding: 0 1em .5em 1em;
+	width: 49%;
+}
+
+.error h2 {
+	margin: 0 -.8em;
+	padding: .25em 0 0 1em;
+}
+
+.error p {
+}
+
+/* News story handling */
+#eventlogo {
+/*	width: 182px;*/
+	float: left;
+	margin: .35em 1em 0 0;
+	text-align: center;
+	padding: 0.55em;
+}
+
+/* CFA ALERT NOTIFIER!! */
+#cfa_critical_alert, #cfa_noncritical_alert {
+  padding: .5em;
+  width: 38.85em;
+  margin: 1.25em auto;
+}
+
+#cfa_critical_alert small, #cfa_noncritical_alert small {
+  float: right;
+}

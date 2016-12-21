@@ -1,0 +1,14 @@
+var HS = {};
+HS.iJS = function (filepath, test)
+{
+// Only include this js if the test isn't present, or it doesn't exist
+if (!test || !(test in window)) {
+document.write("<script type='text/javascript' src='" + filepath + "'></scr" + "ipt>");
+}
+};
+HS.tURL = "http://trf.intuitwebsites.com/tracking/WebsitesTrafficServlet";
+HS.dErr = "false";
+HS.iJS("http://web4.realtracker.com/netpoll/js/ibc90006.js");
+HS.iJS("/~site/javascript/jQuery-1.4.min.js", "jQuery");
+HS.iJS("/~site/javascript/jquery.cookie.min.js");
+HS.iJS("/~site/javascript/hs_track.js");

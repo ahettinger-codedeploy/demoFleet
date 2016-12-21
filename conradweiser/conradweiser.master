@@ -1,0 +1,331 @@
+<%
+'changelog'
+'LSP 11/09/16 - initial development'
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+<script src="https://www.tix.com/clients/tix/js/jquery-1.6.4.min.js" type="text/javascript"></script>
+	 <style>
+		 div,span {
+			 font-size: inherit;
+		 }
+	 </style>
+<script src="https://www.tix.com/clients/tix/js/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="https://www.tix.com/javascript/Tooltip.js"></script>
+
+<style>
+    #arrow {
+        z-index: 999998;
+        display: none;
+        background-color: Transparent;
+        pointer-events: none;
+    }
+
+    #tooltipBox {
+        z-index: 999999;
+        display: none;
+        position: absolute;
+    background-color: #fff !important;
+        border: 1px solid rgba(120, 120, 120, 0.8);
+        border-radius: 3px;
+        margin: 10px 8px;
+        padding: 5px;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        pointer-events: none;
+    }
+
+    #EventTooltip {
+        background-color: #fff;
+    }
+
+    #EventTooltip table, #EventTooltip tr, #EventTooltip td {
+        border: 0;
+    }
+
+    .tooltip-text {
+        width: 400px;
+        padding: 10px;
+        font-size: 0.85em;
+    }
+</style>
+
+<div id="tooltipBox">
+    <div id="EventTooltip"><img src="https://www.tix.com/images/loading.gif" /></div>
+</div>    
+<div id="arrow"><img src="https://www.tix.com/images/ArrowLeftDown.png" name="arrowimg" /></div>
+
+  <link rel="stylesheet" type="text/css" href="/clients/conradweiser/images/h-menu-2.css">
+  <link rel="stylesheet" type="text/css" href="/clients/conradweiser/images/main.css">
+  <link rel="stylesheet" type="text/css" href="/clients/conradweiser/images/cal.css">
+  <!--[if IE]>
+  <link rel="stylesheet" type="text/css" href="styles/alt-ie.css?refresh=true&time=20161109104047">
+  <link rel='stylesheet' type='text/css' href='styles/cal-ie.css?refresh=true&time=20161109104047'>
+ <![endif]-->
+  <!--[if lt IE 7]>
+  <link rel="stylesheet" type="text/css" href="styles/alt-ie6.css?refresh=true&time=20161109104047">
+  <link rel='stylesheet' type='text/css' href='styles/cal-ie6.css?refresh=true&time=20161109104047'>
+ <![endif]-->
+
+
+<body>
+  <a name="top"></a>
+  <table id="masterLayout" cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+      <tr>
+        <td colspan="4" id="mastheadCell" nowrap="nowrap">
+          <a href="http://www.conradweiser.org/"><img src="/clients/conradweiser/images/cwasd_masthead.gif" id="masthead1"></a>
+
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4" id="navCell" nowrap="nowrap">
+          <div id="mlm">
+            <ul class="slidingmenu">
+              <!-- ** IGNORE TABS-SPACING IN SOURCE CODE !! ** -->
+              <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Parents.php">Parents</a></li>
+              <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/General_Info.php" class=" subheader">General Info</a>
+                <ul id="subMenu-1938">
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Message_from_the_Superintendent.php">Message from the Superintendent</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Events_by_category.php?k=News">News</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Courier.php">Courier</a></li>
+                  <li><a href="https://mail.conradweiser.org/owa" target="_blank">Employee Email</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Sports.php" class=" subheader">Sports</a>
+                    <ul id="subMenu-1949">
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Scouts_Booster_organization.php">Scouts Booster organization</a></li>
+                    </ul>
+                    <!-- END OF SUBMENU-1949 -->
+                  </li>
+                  <li><a href="http://www.mylocker.net/pennsylvania/robesonia/conrad-weiser-high-school/index.html" target="_blank">School Store</a></li>
+                </ul>
+                <!-- END OF SUBMENU-1938 -->
+              </li>
+              <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Schools.php" class=" subheader">Schools</a>
+                <ul id="subMenu-1939">
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/High_School.php" class=" subheader">High School</a>
+                    <ul id="subMenu-1952">
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/files/CW_high_school_planner_2015-16.pdf"
+                          target="_blank">High School Planner</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/CW_Staff_Search.php">High School Faculty</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/files/CONRAD_WEISER_HIGH_SCHOOL.pdf"
+                          target="_blank">High School Profile</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/High_School_Program_of_Studies.php">High School Program of Studies</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/High_School_Library_Media_Center.php">High School Library Media Center</a></li>
+                      <li><a href="http://cwtv.wikispaces.com/?responseToken=0927630724b2c97266dcca0e8ace6c6de" target="_blank">High School Videos</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/High_School_Counseling.php">High School Counseling</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/High_School_Graduation_Projects.php">High School Graduation Projects</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/High_School_Community_Service_Info.php">High School Community Service Info</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/files/Clubs%20Description%202016-17.pdf"
+                          target="_blank">High School Clubs and Activities</a></li>
+                      <li><a href="https://jostens.fulcircle.com/jostens2015/Home.aspx?SchoolId=76141014&amp;CID=137904&amp;PFID=2000101605534595012&amp;GID=#"
+                          target="_blank">Order your High School Yearbook</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/High_School_PTO.php">High School PTO</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/High_School_Keystone_Test_info.php">High School Keystone Test info</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/High_School_Parents.php">High School Parents</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/High_School_Students.php">High School Students</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/High_School_Forms.php">High School Forms</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/High_School_Teachers.php">High School Teachers</a></li>
+                    </ul>
+                    <!-- END OF SUBMENU-1952 -->
+                  </li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Middle_School.php" class=" subheader">Middle School</a>
+                    <ul id="subMenu-1953">
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Music_.php">Music </a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Middle_School_Principals_Message.php">Middle School Principal’s Message</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Middle_School_Forms_and_Documents.php">Middle School Forms and Documents</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Middle_School_Library.php">Middle School Library</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Middle_School_Internet_Safety_and_Computer_Class_Links.php">Middle School Internet Safety and Computer Class Links</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Middle_School_Clubs_and_Activities.php">Middle School Clubs and Activities</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Middle_School_PTO.php">Middle School PTO</a></li>
+                    </ul>
+                    <!-- END OF SUBMENU-1953 -->
+                  </li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/East_Elementary.php" class=" subheader">East Elementary</a>
+                    <ul id="subMenu-1954">
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/_LEFT_COLUMN_FOR_EAST_ELEMENTARY_PAGES.php"> *LEFT COLUMN FOR EAST ELEMENTARY PAGES*</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/East_Elementary_Parent_Info.php">East Elementary Parent Info</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/East_Elementary_Principals_Message.php">East Elementary Principal’s Message</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/East_Elementary_Classes.php">East Elementary Classes</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/East_Elementary_Specialists.php">East Elementary Specialists</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/East_Elementary_Library.php">East Elementary Library</a></li>
+                      <li><a href="http://sharetech.wikispaces.com/East+Elementary+Videos" target="_blank/">East Elementary Video</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/East_Elementary_PTO.php">East Elementary PTO</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Events_by_category.php?k=East%20Elementary">East Elementary Calendar</a></li>
+                    </ul>
+                    <!-- END OF SUBMENU-1954 -->
+                  </li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/West_Elementary.php" class=" subheader">West Elementary</a>
+                    <ul id="subMenu-1955">
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/West_Elementary_Principals_Message.php">West Elementary Principal’s Message</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/CW_Staff_Search.php">West Elementary Faculty</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/West_Elementary_Calendar.php">West Elementary Calendar</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/West_Elementary_Library.php">West Elementary Library</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/West_Elementary_Computer_Lab.php">West Elementary Computer Lab</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/West_Elementary_PTO.php">West Elementary PTO</a></li>
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/West_Elementary_Parent_Info.php">West Elementary Parent Info</a></li>
+                    </ul>
+                    <!-- END OF SUBMENU-1955 -->
+                  </li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Scout_Virtual_Academy.php">Scout Virtual Academy</a></li>
+                </ul>
+                <!-- END OF SUBMENU-1939 -->
+              </li>
+              <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/District_Services.php" class=" subheader">District Services</a>
+                <ul id="subMenu-1940">
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Comprehensive_Plans.php">Comprehensive Plans</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Health_Services.php" class=" subheader">Health Services</a>
+                    <ul id="subMenu-1956">
+                      <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Student_Medications.php">Student Medications</a></li>
+                    </ul>
+                    <!-- END OF SUBMENU-1956 -->
+                  </li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Student_Assistance_Program.php">Student Assistance Program</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Special_Education_Services.php">Special Education Services</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Title_I_Services.php">Title I Services</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Transportation.php">Transportation</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/District_Committees.php">District Committees</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Olweus_Bullying_Prevention_Program.php">Olweus Bullying Prevention Program</a></li>
+                </ul>
+                <!-- END OF SUBMENU-1940 -->
+              </li>
+              <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Administration.php" class=" subheader">Administration</a>
+                <ul id="subMenu-1941">
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Events.php">Calendar</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/files/administrationbio-4.pdf"
+                      target="_blank">Administration Bios</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Business_Offices.php">Business Offices</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Employment_Opportunities.php">Employment Opportunities</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Volunteer_Requirements_and_Documentation.php">Volunteer Requirements and Documentation</a></li>
+                </ul>
+                <!-- END OF SUBMENU-1941 -->
+              </li>
+              <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/School_Board.php" class=" subheader">School Board</a>
+                <ul id="subMenu-1942">
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/school_board_files.php">Board Briefs</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/files/MEMBERS2.pdf" target="_blank">Board Members</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Recently_Approved_Policies.php">Recently Approved Policies</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/school_board_files.php">School Board Agendas</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/school_board_files.php">School Board Minutes</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Events_by_category.php?k=School%20Board">School Board Calendar</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/School_Board_Negotiations.php">School Board Negotiations</a></li>
+                </ul>
+                <!-- END OF SUBMENU-1942 -->
+              </li>
+              <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Skyward.php" class=" subheader">Skyward</a>
+                <ul id="subMenu-1943">
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/files/Parent_Access_Tutorial.pdf"
+                      target="_blank">Family Access tutorial</a></li>
+                  <li><a href="mailto:SkyWebMail@conradweiser.org">Help Desk</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/files/Skylert_Tutorial.pdf" target="_blank">Skylert Tutorial</a></li>
+                  <li><a href="https://skyweb.conradweiser.org:446/scripts/cgiip.exe/WService=wsFam/fwemnu01.w" target="_blank">Skyward Family Access Login</a></li>
+                </ul>
+                <!-- END OF SUBMENU-1943 -->
+              </li>
+              <li><a href="#" class=" subheader">Schoology</a>
+                <ul id="subMenu-1950">
+                  <li><a href="http://schoology.conradweiser.org/login/ldap?&amp;school=86993697" target="_blank">Student Login</a></li>
+                  <li><a href="http://schoology.conradweiser.org/login/" target="_blank">Parent Login</a></li>
+                </ul>
+                <!-- END OF SUBMENU-1950 -->
+              </li>
+              <li><a href="http://www.schoolnutritionandfitness.com/index.php?sid=1505131639262295" target="_blank">Food Services</a></li>
+              <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Community.php" class=" subheader">Community</a>
+                <ul id="subMenu-1945">
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Community_Service_Info.php">Community Service Info</a></li>
+                  <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/CW_Education_Foundation.php">CW Education Foundation</a></li>
+                </ul>
+                <!-- END OF SUBMENU-1945 -->
+              </li>
+              <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Contact_Us.php">Contact Us</a></li>
+              <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/CW_Staff_Search.php">Find a Teacher</a></li>
+              <li><a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/Home.php">Home</a></li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+      <tr>
+  
+        <!-- END COL 1-->
+        <td id="col2" rowspan="2" width="33%" valign="top">
+        <!--tix content-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+        </td>
+        <tr>
+        <!-- END COL 2-->
+        <!-- SKIP COL 3 -->
+        <td id="col4" width="66%" valign="top">
+          <link rel="stylesheet" type="text/css" href="/clients/conradweiser/images/cal_002.css">
+          <!--[if IE]>
+			  <link rel='stylesheet' type='text/css' href='styles/cal-ie.css'>
+			 <![endif]-->
+          <!--[if lt IE 7]>
+			  <link rel='stylesheet' type='text/css' href='styles/cal-ie6.css'>
+			 <![endif]-->
+
+        </td>
+        </tr>
+        <!-- </div>END COL 4 -->
+      </tr>
+
+      <!-- </div>END CONTENT -->
+      <!-- </div>END WRAPPER -->
+      <tr>
+        <td id="bottom" colspan="3" valign="top">
+          <!-- <div id="footer"> -->
+          <a href="http://www.conradweiser.org/" id="footerUrl">www.ConradWeiser.org</a>
+          <!-- <div id='address'> -->
+          44 Big Spring Road, Robesonia PA 19551 &#149; Phone: 610-693-8542 Fax: 610-693-8586 | <a href="http://www.conradweiser.org.php56-24.ord1-1.websitetestlink.com/site_map.php">site map</a>          | <a target="_blank" href="http://www.c4sitefactory.com/Client_Login.php">editor</a>
+     
+         <!-- </div> END ADDRESS -->
+          <!-- </div> END FOOTER -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- END MASTER LAYOUT TABLE -->
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+
+		<script>
+			$(document).ready(function() {
+				$("#MasterContent_TixInnerContent_pnlButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_ButtonPanel").removeAttr("style");
+/* remove extra button defaults
+				$("#MasterContent_TixInnerContent_ctl00_gvSchedule_btnBuyTix_0").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnBackToShopping").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCancelOrder").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCheckout").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_LoginButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CancelOrderButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CompleteButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingBtn").removeAttr("style");*/
+				
+				
+			});
+		</script>
+
+		</div>
+		</form>
+	</body>
+
+	</html>

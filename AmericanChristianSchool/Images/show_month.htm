@@ -1,0 +1,2034 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="stylesheet" type="text/css" href="show_month_data/styles.css">
+<script language="javascript" type="text/javascript" src="show_month_data/prototype.js"></script>
+<!--[if lte IE 6]>
+	<link rel="stylesheet" type="text/css" href="http://www.keepandshare.com/global/styles/graytabs-ie6.css" />
+<![endif]-->
+
+<!-- link rel="stylesheet" type="text/css" href="/global/styles/calendarWithEditor-002.css" / -->
+
+<script type="text/javascript"><!--
+var isTemplate = false;
+// --></script>
+
+<link rel="shortcut icon" href="http://www.keepandshare.com/favicon.ico">
+<script language="javascript" type="text/javascript" src="show_month_data/sharewithdropdown.js"></script><link type="text/css" rel="stylesheet" href="show_month_data/sharewithdropdown.css">
+<link rel="icon" href="http://www.keepandshare.com/favicon.ico">
+
+<script language="JavaScript" src="show_month_data/nav_bar.js" type="text/javascript"></script>
+<script language="JavaScript" src="show_month_data/misc.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+<!--Hide the script from old browsers
+var g_calendar_modified = 'n';  // how to prevent user from leaving calendar app without first saving the calendar
+
+// New sharing support code - this function is used to pop up the friends and groups popup window
+function showFriendsAndGroupsPopUp() {
+	if (typeof g_shareWithDropDownSearchArray != 'undefined' && g_shareWithDropDownSearchArray == null) {
+	  initShareWithDropDown();
+	}
+	if (typeof g_shareWithPopUp == 'undefined' || g_shareWithPopUp == null) {
+	  g_shareWithPopUp = new ShareWithPopUp();
+	}
+	if (!g_shareWithDropDownSearchArray.ready()) {
+	  var waitPopUp = new WaitPopUp();
+	  waitPopUp.delayShow(250);
+	  g_shareWithDropDownSearchArray.addReadyCallback(waitPopUp.hide.bind(waitPopUp));
+	  g_shareWithDropDownSearchArray.addReadyCallback(g_shareWithPopUp.showManageGroups.bind(g_shareWithPopUp));
+	}
+	else {
+	  g_shareWithPopUp.showManageGroups();
+	}
+}
+
+
+// end hiding -->
+</script>
+
+<!-- Ian's Code -->
+<script type="text/javascript">
+<!--Hide the script from old browsers
+
+/*
+	Here we use php to give us a dynamic (but per page static) variable:
+*/
+	var view = "m";
+var numInRow = 7; //Number of days to a row
+var numInCol = 5; //Number of Rows
+		
+/* if true changes how cal is displayed (makes the calendar ignore scroll bar adjustments) */
+var iframe = true;
+
+// end hiding -->
+</script>
+<script type="text/javascript" src="show_month_data/calendarEditor.js"></script><!-- /Ian's Code -->
+
+
+
+<script type="text/javascript" src="show_month_data/save_day.js"></script>
+<script type="text/javascript">
+<!--Hide the script from old browsers
+
+var ownerHasPaidAccount = false; // true if the album owner has a paid account
+
+var g_calendar_modified = 'n';  // used to determine if calendar has been modified.  If yes, then display warning message before leaving the calendar
+
+var formerrormsg="You\'ve attempted to submit the day multiple times.\n Please wait.";
+
+var locale_string_mapping = new Array();function getLocaleText(str) {  var found = locale_string_mapping[str];  if (found == null) {    var s = new String(str);    while (s.charAt(s.length-1) == "_")      s = s.substr(0, s.length-1);    found = s;  }  return found;}function _l(str, params) {  if (params == null)    return getLocaleText(str);  else    return getParameterizedLocaleText(str, params);}function getParameterizedLocaleText(str, params) {  var text = getLocaleText(str);  for (var n in  params) {    var value = params[n];    text = text.replace(n, n.substring(0, 1)=="_" ? value : getLocaleText(value));  }  return text;}
+// When person clicks on a day
+function submit_then_goto_week( switch_to_this_week ){
+//alert( switch_to_this_week );
+  document.form1.switch_to_this_week.value = switch_to_this_week;
+  document.form1.what_button_was_pressed.value = "SwitchToWeek";
+	// The user "has oked" leaving the page, they clicked something
+	userHasOkedLeavingPageAlready = 1;
+
+  document.form1.submit();
+  hold_checksubmit= checksubmit;
+  checksubmit=blocksubmit;
+return false;
+}
+
+// This function prevents a user from clicking a save button more than once
+function checksubmit( buttonpressed ){
+  // Set the hidden field so I'll know which button was pressed
+  /*if( buttonpressed == "PrintableView" )  
+  {
+	document.form1.what_button_was_pressed.value = buttonpressed;
+		alert( "Printer orientation must be Landscape and not Portrait.\n\n" +
+			"In most browsers, click on the File pull down menu, then click\n" + 
+					"on the Page Setup menu item to change printer orientation.\n");
+  }*/
+  if( buttonpressed.length > 0 )
+	document.form1.what_button_was_pressed.value = buttonpressed;
+  else
+	document.form1.what_button_was_pressed.value = "Save";
+  //alert( "testing" );
+
+	// The user "has oked" leaving the page, they clicked something
+	userHasOkedLeavingPageAlready = 1;
+
+  document.form1.submit();
+  hold_checksubmit= checksubmit;
+  checksubmit=blocksubmit;
+return false;
+}
+
+// Used only for the drill down links
+function checksubmit2( buttonpressed, drill_down_url ){
+  if( buttonpressed.length > 0 )
+	document.form1.what_button_was_pressed.value = buttonpressed;
+  else
+	document.form1.what_button_was_pressed.value = "Save";
+  if( drill_down_url.length > 0 )
+	document.form1.drill_down_url.value = drill_down_url;
+	// The user "has oked" leaving the page, they clicked something
+	userHasOkedLeavingPageAlready = 1;
+
+  document.form1.submit();
+return false;
+}
+
+// Apparently this is used by the blue buttons
+function cal_submit( link_href ){
+//alert("testing11");
+  document.form1.what_button_was_pressed.value = "aBlueButton";
+  document.form1.link_href.value = link_href;
+	// The user "has oked" leaving the page, they clicked something
+	userHasOkedLeavingPageAlready = 1;
+
+  document.form1.submit();
+return false;
+}
+
+function blocksubmit(){
+//  alert ( "block test" );
+  checksubmit=hold_checksubmit;
+  //if (typeof formerrormsg!="undefined")
+  //  alert(formerrormsg);
+  return false;
+}
+
+// This function is a place holder, it's not executed
+function hold_checksubmit(){
+  alert( "hold_checksubmit");
+  return false;
+}
+
+// end hiding -->
+</script>
+
+<script type="text/javascript" src="show_month_data/fns_form.js"></script>
+<script type="text/javascript"><!--
+
+function goPrevMonth() {
+	// get the current "day"
+	var theDayStr = document.form1.re_start_date.value;
+	var ymd = theDayStr.split("-");
+	var y = parseInt(ymd[0], 10);
+	var m = parseInt(ymd[1], 10)-1;
+	var d = parseInt(ymd[2], 10);
+
+	if (m == 0) {
+		y = y-1;
+		m = 11;
+	} else {
+		m = m-1;
+	}
+	var newDay = new Date(y, m, 1);
+	updateCalendarDisplayDiv(newDay.format("yyyy-mm-dd"));
+}
+function goPrevMonthSave() {
+	forceAutoSaveWithCallback(goPrevMonth);
+}
+
+function goNextMonth() {
+	// get the current "day"
+	var theDayStr = document.form1.re_start_date.value;
+	var ymd = theDayStr.split("-");
+	var y = parseInt(ymd[0], 10);
+	var m = parseInt(ymd[1], 10)-1;
+	var d = parseInt(ymd[2], 10);
+
+	if (m == 11) {
+		y = y+1;
+		m = 0;
+	} else {
+		m = m+1;
+	}
+	var newDay = new Date(y, m, 1);
+	updateCalendarDisplayDiv(newDay.format("yyyy-mm-dd"));
+}
+function goNextMonthSave() {
+	forceAutoSaveWithCallback(goNextMonth);
+}
+
+function goToday() {
+	var newDay = new Date();
+	updateCalendarDisplayDiv(newDay.format("yyyy-mm")+"-01");
+}
+function goTodaySave() {
+	forceAutoSaveWithCallback(goToday);
+}
+
+function setupDisplay(content) {
+			
+	// main content area
+	if (content != null) {
+		if (content.indexOf("Error:::InvalidAccess") != -1) {
+			// drive the user to the re=login screen
+			location.href="/index_relogin.php?goto=/calendar/show_month.php?i=1282504&date="+document.form1.yyyymmdd_first_day_of_month.value;
+			return;
+		}
+		// Evaluate any script content passed back to us
+		try {
+			content.evalScripts();
+		} catch (err) {
+			; //alert(err.description+ content);
+		}
+		document.getElementById('calendarDisplayDiv').innerHTML=content;
+	}
+	// re-initialize the editor
+	if (edDiv != null) {
+		edDiv.style.display="none"; // hide the editor window, should this be part of initED()?
+		edWindowOpen = false;
+	}
+	initED(); // refreshes the layout
+
+	// re-initialize repeating event popup
+	re_setUpCalendars();
+
+	
+	// date button
+	var startOfTheMonth = document.form1.yyyymmdd_first_day_of_month.value;
+	//alert(startOfTheMonth);
+	var ymd = startOfTheMonth.split("-");
+
+	year = parseInt(ymd[0], 10);	// setup the globals (used by print)
+	month = parseInt(ymd[1], 10);
+	day = parseInt(ymd[2], 10);
+
+	var startDate = new Date(year, month - 1, day);
+
+	var params = new Array();
+	params['[month]'] = startDate.format("mmmm");
+	params['_[year]'] = startDate.format("yyyy");
+	var df = _l('[month] _[year]', params);
+	document.getElementById('dateBtn').innerHTML=df;
+
+	// reset the date on the popup Go To Calendar
+	setupCalendar(startDate.format('yyyy-mm-dd'));
+
+	// reset the year on the print dialog
+	if (document.getElementById('yearpicker') != null) {
+		var index = (year - 2006); // **** Note: 2006 - 2012 is hardcoded into pdf/dialog/javascript.js
+		if (index >= 0 && index <= 6) {
+			document.getElementById('yearpicker').selectedIndex = index;
+		}
+	}
+
+	// clear out the date picker nodes and re-initialize
+	while (document.getElementById('dates').childNodes[0]) {
+    document.getElementById('dates').removeChild(document.getElementById('dates').childNodes[0]);
+	}
+	init();
+}
+
+var session_id = 'anonymous1018133712511789';
+var session_name = 'PHPSESSID';
+
+function checkSessionCookie() {
+	var ca = document.cookie.split(';');
+	var found = false;
+	for (var i = 0; !found && i < ca.length; i++) {
+		var c = new String(ca[i]);
+		c = c.strip();
+		if (c.indexOf(session_name) == 0 &&
+			c.substring(session_name.length + 1, c.length) == session_id) {
+			found = true;
+		}
+	}
+	return found;
+}
+
+<!-- Using versions.php for latest print dialog javascript and css versions -->
+function updateCalendarDisplayDiv(yyyymmddPassedDay) {
+        	var url = "fns_form_month_div.php?r="+Math.random();
+	var body = "search_peopleid="+escape('1282504')+"&readonly="+escape('1')+"&viewingSharedCalendar="+escape('1')+
+									"&sharing_username="+escape('jmgstudio')+"&readdatabase="+escape('ReadDataBase')+"&header="+escape('test') +
+									"&printable="+escape('n')+"&yyyymmddPassedDay="+yyyymmddPassedDay+"&ifr=y";
+	if (checkSessionCookie() !== true) {
+		body = body + "&session_id=" + session_id;
+	}
+	new Ajax.Request( url,
+    {   method:'post',
+				postBody: body,
+        onSuccess: function(transport) {
+					setupDisplay(transport.responseText);
+					gaqTracker('calendar/fns_form_month_div.php');
+				},
+        onFailure: function () {
+            alert('Update failed, please try again. If the error perists, please wait a while before trying again.');
+        },
+				onException: function(tr, e) {
+					alert('Javascript Exception: ' + e.toString() + ', ' + e.name + ', ' + e.fileName + ', ' + e.lineNumber);
+				}
+    } );
+}
+
+
+// --></script>
+
+
+<script type="text/javascript" src="show_month_data/javascript.js"></script>
+
+<script type="text/javascript"><!--
+	var today = new Date();
+	year = 2010;
+	month = 10;
+	day = 18;
+	mode = 'Month';
+    layoutMode = 0;
+	peopleid = 1282504;
+	calendartable = 'calendar';
+	customtitle = "American Chrisitan School";
+    includeWeekends = true;
+    orientationPortrait = false;
+    fontNumber = 0;
+    fontSizeNumber = 2;
+    useHeader = true;
+    useFooter = false;
+    useBetaPrintEngine = true;
+	var storedPrefs = { /*TODO: Replace these with PHP to retreive database preferences */
+		layout : 1,
+		font : 0,
+		size : 1,
+		otherprefs : [true, false, false, true],
+		footertext : 'Printed on '+(today.getMonth()+1)+'/'+today.getDate()+'/'+today.getFullYear(),
+		portrait : false,
+		yearonapage : [false]
+	};
+	
+// --></script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-425614-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+  })();
+
+	function gaqTracker(url) {
+		try{
+			var pageTracker = _gat._getTracker("UA-425614-1");
+			pageTracker._trackPageview(url+"/gaq");
+		} catch(err) {}
+	}
+</script><script src="webpage_files/ga.js" type="text/javascript"></script>
+
+<link rel="stylesheet" type="text/css" media="all" href="show_month_data/theme.css" title="Aqua">
+<!-- adjust the pop-up calendar's z-index so that it doesn't hide behind the print dialog -->
+<link href="show_month_data/popupcalendar.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" type="text/css" media="all" href="show_month_data/monthPicker.css">
+
+<link href="show_month_data/printdialog.css" rel="stylesheet" type="text/css">
+<!--[if lte IE 8]>
+	<link href="../pdf/dialog/css-003/printdialog-ie.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="../pdf/dialog/javascript-010/ie-rollover.js"></script>
+<![endif]-->
+
+<!--[if lte IE 6]>
+	<link href="../pdf/dialog/printdialog-ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+
+<link href="show_month_data/printdialog-iframe.css" rel="stylesheet" type="text/css">
+
+
+
+<script type="text/javascript"><!--
+	re_storedPrefs = {
+		frequency : 2,
+		timeframe : 1,
+		startDate : new Date(),
+		endDate : new Date(),
+		endIsDefined : true,
+		color : 1,
+		firstDay : '2010-10-01',
+		returnTo : 'show_month.php',
+		text : 'This is my event.'
+		};
+	var re_storedLinks = [];
+
+	function checkAction (control) {
+		if (ownerHasPaidAccount) {
+			re_changeAction(control.id, control.value);
+		} else {
+			control.checked = false;
+			showTeaserDialog(control, 'Only a paid account can send copies to shares.');
+		}
+	}
+// --></script>
+
+<script type="text/javascript" src="show_month_data/re-javascript.js"></script><link href="show_month_data/re-dialog-002.css" rel="stylesheet" type="text/css">
+<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" media="all" href="/calendar/repeatingdialog/re-dialog-ie.css" />
+	<script type="text/javascript" src="/calendar/repeatingdialog/re-ie-rollover.js"></script>
+<![endif]-->
+
+<!--[if lte IE 6]>
+	<link rel="stylesheet" type="text/css" media="all" href="/calendar/repeatingdialog/re-dialog-ie6.css" />
+<![endif]-->
+
+<title>American Chrisitan School</title>
+<link href="show_month_data/ui.css" rel="stylesheet"></head><body onload="initED(); RollTip.init();" bgcolor="#ffffff">      <form name="form1" method="post" action="show_month.php?i=1282504">
+    		<table style="width: 100%; height: auto;" border="0" cellpadding="0" cellspacing="0">
+		<tbody><tr style="height: auto;"><td align="left" valign="top">
+		<script type="text/javascript">
+<!--Hide the script from old browsers
+var g_QWebEditorIsBeingUsed = "n";
+
+function is_info_saved()
+{
+  if( g_QWebEditorIsBeingUsed == 'y' )  
+  {
+    if( HtmlEditIsModified( "MyQWeb" ) == true )
+    {
+      // This warning is also in global/javascript/nav_bar.js function NavBarBtnClick()
+      if( window.confirm( "Do you want to save your work before leaving?  \n\n   To save your work, press \"OK\" and then \"Save and Exit\" \n   To leave without saving your work, press \"Cancel\"" ) == true )
+        return( false );
+    }
+  }
+/*  else if( g_calendar_modified == 'y' )
+  // NO LONGER NEEDED!!! Because the cal_submit() in calendar/fns_form.php automatically saves any unsaved info
+  {
+    // This warning is also in global/javascript/nav_bar.js function NavBarBtnClick()
+    if( window.confirm( "Do you want to save your calendar changes before leaving?  \n\n   To save your changes, press \"OK\" and then \"Save\" \n   To leave without saving your changes, press \"Cancel\"" ) == true )
+      return( false );
+  } */
+  return true;
+}
+// end hiding -->
+</script>
+<!--Blue BAR-->
+</td></tr></tbody></table>
+
+<img src="show_month_data/spacer.gif" border="0" height="1" width="1">
+
+<!--</form>-->
+
+
+<!--end of TheChrome--><div style="border-top: 2px solid rgb(255, 170, 0);"></div><a name="menu"></a>
+<!-- Menu Bar - All that lies between the orange line and the Calendar -->
+<div id="menuBar" class="month">
+<table style="" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td>
+  <!-- Button Bar - Leftmost Controls -->
+  <div id="buttonBar">
+    <!-- Save (normally hidden)-->
+    <input class="ButtonSmallKAS ButtonFixKAS" id="saveButton" style="display: none;" onclick="return checksubmit('Save')" value="Save" accesskey="1" title="Save month and then continue to view this calendar. Shortcut key is Alt-1" type="button">
+  	<!-- Print-->
+ 	<input class="ButtonSmallKAS ButtonFixKAS ButtonBoldKAS" onclick="return forceAutoSaveWithCallback(showPrintPanel);" value="Print" title="Save calendar and then open new window just for printing. Shortcut key is Alt-5" type="button">
+    <!-- Go To -->
+ 	<input class="ButtonSmallKAS ButtonFixKAS" id="cal_popup_trigger" value="Go To" title="Select month to view" type="button">
+	<!-- Drop down Calendar View Mode (Month, Week, or Day view) list -->
+	<select class="select Smaller" name="cal_view" onchange="return checksubmit( this.options[this.selectedIndex].value )">
+		<option value="MonthView" selected="selected">Month View</option>
+		<option value="WeekView">Week View</option>
+		<option value="DayView">Day View</option>
+		<option value="EventView">Event View</option>
+		<option value="ThisMonth">This Month</option>
+		<option value="ThisWeek">This Week</option>
+		<option value="ThisDay">This Day</option>
+    </select>
+ 	<!-- Today -->
+ 	<input class="ButtonSmallKAS ButtonFixKAS" id="cal_popup_trigger" value="Today" title="Display today in current view. Shortcut key is Home" onclick="goTodaySave();" type="button">
+  <!-- Search -->
+  <input class="ButtonSmallKAS ButtonFixKAS" onclick="return checksubmit('ColumnView')" value="Search" title="Save calendar and then search" type="button">
+  </div>
+  <!-- /Button Bar -->
+</td></tr>
+<tr><td>
+  <!-- Date Nav - The Displayed Date and it's controls -->
+  <div id="dateNav" style="position: static; float: left;">
+  	<!-- Back Button -->
+    <div id="backBtn" class="dateNavBtn" onclick="goPrevMonthSave()" title="View the previous month. Shortcut key is Left-Arrow" accesskey="2"></div>
+    <!-- Forward Button -->
+    <div id="forwardBtn" class="dateNavBtn" onclick="goNextMonthSave()" title="View the next month. Shortcut key is Right-Arrow" accesskey="3"></div>
+    <!-- Actual Date -->
+    <div id="dateBtn">October 2010</div>
+  </div>
+  <!-- /date Nav -->
+  <!-- Cal Name - User's Name for this Calendar -->
+  <div id="calName">
+    <a id="name">American Chrisitan School</a>
+  </div>
+  <!-- /calName -->
+</td></tr>
+</tbody></table>
+</div>
+<!-- /Menu Bar -->
+<script type="text/javascript">
+	scrollToMenubar();
+</script>
+
+
+
+<table cellpadding="0" cellspacing="0" width="100%">
+	<tbody><tr>
+				<td valign="top" width="100%">
+
+			<div id="calendarDisplayDiv">
+
+			
+<!-- Using versions.php for latest print dialog javascript and css versions -->
+
+<!-- Calendar month -->
+<div class="calpage mm6" id="thePage" style="width: 100%; height: 646px;">
+	<span class="toprow">
+	<script type="text/javascript"> numInCol = 6; </script>
+<div class="col1">
+<div class="daybox old" id="1div" onmousedown="javaScript: activate('1');" style="width: 127px; height: 106px; display: block;">
+	<div style="top: 91px; height: 20px; display: none;" id="1msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-09-26&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-09-26">
+				<a class="otherMonth" id="1date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-09-26&amp;ifr=y')" onclick="return is_info_saved();" style="">Sun 26</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="1up">
+		 	</div>
+</div>
+
+<input id="1hi" name="request1" value="" type="hidden">
+
+</div>
+<div style="width: 127px; height: 106px; display: block;" class="daybox old" id="2div" onmousedown="javaScript: activate('2');">
+	<div style="top: 91px; height: 20px; display: none;" id="2msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-09-27&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-09-27">
+				<a class="otherMonth" id="2date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-09-27&amp;ifr=y')" onclick="return is_info_saved();" style="">Mon 27</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="2up">
+		<p>Picture Day Officer Phil 1:30 gr.K-4</p> 	</div>
+</div>
+
+<input id="2hi" name="request2" value="&lt;p&gt;Picture Day Officer Phil 1:30 gr.K-4&lt;/p&gt;" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox old" id="3div" onmousedown="javaScript: activate('3');">
+	<div style="top: 91px; height: 20px; display: none;" id="3msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-09-28&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-09-28">
+				<a class="otherMonth" id="3date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-09-28&amp;ifr=y')" onclick="return is_info_saved();" style="">Tue 28</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="3up">
+		 	</div>
+</div>
+
+<input id="3hi" name="request3" value="" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox old" id="4div" onmousedown="javaScript: activate('4');">
+	<div style="top: 91px; height: 20px; display: none;" id="4msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-09-29&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-09-29">
+				<a class="otherMonth" id="4date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-09-29&amp;ifr=y')" onclick="return is_info_saved();" style="">Wed 29</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="4up">
+		 	</div>
+</div>
+
+<input id="4hi" name="request4" value="" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox old" id="5div" onmousedown="javaScript: activate('5');">
+	<div style="top: 91px; height: 20px; display: none;" id="5msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-09-30&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-09-30">
+				<a class="otherMonth" id="5date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-09-30&amp;ifr=y')" onclick="return is_info_saved();" style="">Thu 30</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="5up">
+		<p><span style="color: rgb(255, 0, 0);"><span style="background-color: rgb(255, 255, 255);">Due to the weather and lack of parking we will be postponing back to school night until next Thursday, Oct 7th</span></span></p> 	</div>
+</div>
+
+<input id="5hi" name="request5" value="&lt;p&gt;&lt;span style=&quot;color: #ff0000;&quot;&gt;&lt;span style=&quot;background-color: #ffffff;&quot;&gt;Due to the weather and lack of parking we will be postponing back to school night until next Thursday, Oct 7th&lt;/span&gt;&lt;/span&gt;&lt;/p&gt;" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox old" id="6div" onmousedown="javaScript: activate('6');">
+	<div style="top: 91px; height: 20px; display: none;" id="6msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-01&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-01">
+				<a class="" id="6date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-01&amp;ifr=y')" onclick="return is_info_saved();" style="">Fri 1</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="6up">
+		 	</div>
+</div>
+
+<input id="6hi" name="request6" value="" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox old" id="7div" onmousedown="javaScript: activate('7');">
+	<div style="top: 91px; height: 20px; display: none;" id="7msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-02&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-02">
+				<a class="" id="7date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-02&amp;ifr=y')" onclick="return is_info_saved();" style="">Sat 2</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="7up">
+		 	</div>
+</div>
+
+<input id="7hi" name="request7" value="" type="hidden">
+
+			</span>
+<div class="col1">
+<div class="daybox old" id="8div" onmousedown="javaScript: activate('8');" style="width: 127px; height: 106px; display: block;">
+	<div style="top: 91px; height: 20px; display: none;" id="8msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-03&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-03">
+				<a class="" id="8date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-03&amp;ifr=y')" onclick="return is_info_saved();" style="">3</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="8up">
+		 	</div>
+</div>
+
+<input id="8hi" name="request8" value="" type="hidden">
+
+</div>
+<div style="width: 127px; height: 106px; display: block;" class="daybox old" id="9div" onmousedown="javaScript: activate('9');">
+	<div style="top: 91px; height: 20px; display: none;" id="9msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-04&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-04">
+				<a class="" id="9date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-04&amp;ifr=y')" onclick="return is_info_saved();" style="">4</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="9up">
+		 	</div>
+</div>
+
+<input id="9hi" name="request9" value="" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox old" id="10div" onmousedown="javaScript: activate('10');">
+	<div style="top: 91px; height: 20px; display: none;" id="10msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-05&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-05">
+				<a class="" id="10date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-05&amp;ifr=y')" onclick="return is_info_saved();" style="">5</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="10up">
+		<p>&nbsp;</p>
+<p>&nbsp;</p> 	</div>
+</div>
+
+<input id="10hi" name="request10" value="&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox old" id="11div" onmousedown="javaScript: activate('11');">
+	<div style="top: 91px; height: 20px; display: none;" id="11msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-06&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-06">
+				<a class="" id="11date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-06&amp;ifr=y')" onclick="return is_info_saved();" style="">6</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="11up">
+		 	</div>
+</div>
+
+<input id="11hi" name="request11" value="" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox old" id="12div" onmousedown="javaScript: activate('12');">
+	<div style="top: 91px; height: 20px; display: none;" id="12msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-07&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-07">
+				<a class="" id="12date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-07&amp;ifr=y')" onclick="return is_info_saved();" style="">7</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="12up">
+		<p><strong>Back to school night at 7:00 PM</strong></p>
+<p>&nbsp;</p>
+<p>Fire Prevention PK-1</p>
+<p>&nbsp;</p>
+<p>PK3 &amp; PK4 Field Trip</p>
+<p>&nbsp;</p> 	</div>
+</div>
+
+<input id="12hi" name="request12" value="&lt;p&gt;&lt;strong&gt;Back to school night at 7:00 PM&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Fire Prevention PK-1&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;PK3 &amp;amp; PK4 Field Trip&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox old" id="13div" onmousedown="javaScript: activate('13');">
+	<div style="top: 91px; height: 20px; display: none;" id="13msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-08&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-08">
+				<a class="" id="13date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-08&amp;ifr=y')" onclick="return is_info_saved();" style="">8</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="13up">
+		 	</div>
+</div>
+
+<input id="13hi" name="request13" value="" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox old" id="14div" onmousedown="javaScript: activate('14');">
+	<div style="top: 91px; height: 20px; display: none;" id="14msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-09&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-09">
+				<a class="" id="14date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-09&amp;ifr=y')" onclick="return is_info_saved();" style="">9</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="14up">
+		 	</div>
+</div>
+
+<input id="14hi" name="request14" value="" type="hidden">
+
+<div class="col1">
+<div class="daybox old" id="15div" onmousedown="javaScript: activate('15');" style="width: 127px; height: 106px; display: block;">
+	<div style="top: 91px; height: 20px; display: none;" id="15msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-10&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-10">
+				<a class="" id="15date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-10&amp;ifr=y')" onclick="return is_info_saved();" style="">10</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="15up">
+		 	</div>
+</div>
+
+<input id="15hi" name="request15" value="" type="hidden">
+
+</div>
+<div style="width: 127px; height: 106px; display: block;" class="daybox old" id="16div" onmousedown="javaScript: activate('16');">
+	<div style="top: 91px; height: 20px; display: none;" id="16msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-11&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-11">
+				<a class="" id="16date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-11&amp;ifr=y')" onclick="return is_info_saved();" style="">11</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="16up">
+		<div style="color: rgb(255, 0, 0); font-size: 11px;"><p>Columbus Day</p></div><p>&nbsp;</p>
+<p>School Closed</p>
+<p>&nbsp;</p> 	</div>
+</div>
+
+<input id="16hi" name="request16" value="&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;School Closed&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox old" id="17div" onmousedown="javaScript: activate('17');">
+	<div style="top: 91px; height: 20px; display: none;" id="17msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-12&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-12">
+				<a class="" id="17date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-12&amp;ifr=y')" onclick="return is_info_saved();" style="">12</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="17up">
+		 	</div>
+</div>
+
+<input id="17hi" name="request17" value="" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox old" id="18div" onmousedown="javaScript: activate('18');">
+	<div style="top: 91px; height: 20px; display: none;" id="18msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-13&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-13">
+				<a class="" id="18date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-13&amp;ifr=y')" onclick="return is_info_saved();" style="">13</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="18up">
+		 	</div>
+</div>
+
+<input id="18hi" name="request18" value="" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox old" id="19div" onmousedown="javaScript: activate('19');">
+	<div style="top: 91px; height: 20px; display: none;" id="19msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-14&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-14">
+				<a class="" id="19date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-14&amp;ifr=y')" onclick="return is_info_saved();" style="">14</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="19up">
+		 	</div>
+</div>
+
+<input id="19hi" name="request19" value="" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox old" id="20div" onmousedown="javaScript: activate('20');">
+	<div style="top: 91px; height: 20px; display: none;" id="20msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-15&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-15">
+				<a class="" id="20date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-15&amp;ifr=y')" onclick="return is_info_saved();" style="">15</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="20up">
+		 	</div>
+</div>
+
+<input id="20hi" name="request20" value="" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox old" id="21div" onmousedown="javaScript: activate('21');">
+	<div style="top: 91px; height: 20px; display: none;" id="21msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-16&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-16">
+				<a class="" id="21date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-16&amp;ifr=y')" onclick="return is_info_saved();" style="">16</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="21up">
+		 	</div>
+</div>
+
+<input id="21hi" name="request21" value="" type="hidden">
+
+<div class="col1">
+<div class="daybox old" id="22div" onmousedown="javaScript: activate('22');" style="width: 127px; height: 106px; display: block;">
+	<div style="top: 91px; height: 20px; display: none;" id="22msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-17&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-17">
+				<a class="" id="22date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-17&amp;ifr=y')" onclick="return is_info_saved();" style="">17</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="22up">
+		 	</div>
+</div>
+
+<input id="22hi" name="request22" value="" type="hidden">
+
+</div>
+<div style="width: 127px; height: 106px; display: block;" class="daybox today" id="23div" onmousedown="javaScript: activate('23');">
+	<div style="top: 91px; height: 20px; display: none;" id="23msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-18&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-18">
+				<a class="active" id="23date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-18&amp;ifr=y')" onclick="return is_info_saved();" style="color: rgb(255, 113, 0);">18</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="23up">
+		 	</div>
+</div>
+
+<input id="23hi" name="request23" value="" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox " id="24div" onmousedown="javaScript: activate('24');">
+	<div style="top: 91px; height: 20px; display: none;" id="24msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-19&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-19">
+				<a class="" id="24date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-19&amp;ifr=y')" onclick="return is_info_saved();" style="">19</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="24up">
+		 	</div>
+</div>
+
+<input id="24hi" name="request24" value="" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox " id="25div" onmousedown="javaScript: activate('25');">
+	<div style="top: 91px; height: 20px; display: none;" id="25msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-20&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-20">
+				<a class="" id="25date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-20&amp;ifr=y')" onclick="return is_info_saved();" style="">20</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="25up">
+		 	</div>
+</div>
+
+<input id="25hi" name="request25" value="" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox " id="26div" onmousedown="javaScript: activate('26');">
+	<div style="top: 91px; height: 20px; display: none;" id="26msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-21&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-21">
+				<a class="" id="26date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-21&amp;ifr=y')" onclick="return is_info_saved();" style="">21</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="26up">
+		<p>Open Board Meeting 7:00pm</p>
+<p>&nbsp;</p> 	</div>
+</div>
+
+<input id="26hi" name="request26" value="&lt;p&gt;Open Board Meeting 7:00pm&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox " id="27div" onmousedown="javaScript: activate('27');">
+	<div style="top: 91px; height: 20px; display: none;" id="27msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-22&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-22">
+				<a class="" id="27date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-22&amp;ifr=y')" onclick="return is_info_saved();" style="">22</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="27up">
+		<p>6th Grade Field trip</p> 	</div>
+</div>
+
+<input id="27hi" name="request27" value="&lt;p&gt;6th Grade Field trip&lt;/p&gt;" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox " id="28div" onmousedown="javaScript: activate('28');">
+	<div style="top: 91px; height: 20px; display: none;" id="28msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-23&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-23">
+				<a class="" id="28date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-23&amp;ifr=y')" onclick="return is_info_saved();" style="">23</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="28up">
+		 	</div>
+</div>
+
+<input id="28hi" name="request28" value="" type="hidden">
+
+<div class="col1">
+<div class="daybox " id="29div" onmousedown="javaScript: activate('29');" style="width: 127px; height: 106px; display: block;">
+	<div style="top: 91px; height: 20px; display: none;" id="29msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-24&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-24">
+				<a class="" id="29date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-24&amp;ifr=y')" onclick="return is_info_saved();" style="">24</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="29up">
+		 	</div>
+</div>
+
+<input id="29hi" name="request29" value="" type="hidden">
+
+</div>
+<div style="width: 127px; height: 106px; display: block;" class="daybox " id="30div" onmousedown="javaScript: activate('30');">
+	<div style="top: 91px; height: 20px; display: none;" id="30msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-25&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-25">
+				<a class="" id="30date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-25&amp;ifr=y')" onclick="return is_info_saved();" style="">25</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="30up">
+		 	</div>
+</div>
+
+<input id="30hi" name="request30" value="" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox " id="31div" onmousedown="javaScript: activate('31');">
+	<div style="top: 91px; height: 20px; display: none;" id="31msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-26&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-26">
+				<a class="" id="31date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-26&amp;ifr=y')" onclick="return is_info_saved();" style="">26</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="31up">
+		<p>Spelling Bee</p>
+<p>&nbsp;</p>
+<p><img title="Clock" src="show_month_data/clock.png" alt="Clock" border="0">&nbsp;</p>
+<p>Kindergarten Field Trip</p>
+<p>&nbsp;</p> 	</div>
+</div>
+
+<input id="31hi" name="request31" value="&lt;p&gt;Spelling Bee&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;img title=&quot;Clock&quot; src=&quot;http://www.keepandshare.com/graphics/calendar/clipart/clock.png&quot; border=&quot;0&quot; alt=&quot;Clock&quot; /&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Kindergarten Field Trip&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox " id="32div" onmousedown="javaScript: activate('32');">
+	<div style="top: 91px; height: 20px; display: none;" id="32msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-27&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-27">
+				<a class="" id="32date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-27&amp;ifr=y')" onclick="return is_info_saved();" style="">27</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="32up">
+		<p><span style="font-size: medium;"><strong>On-Line Auction Starts Today!</strong></span></p>
+<p>&nbsp;</p> 	</div>
+</div>
+
+<input id="32hi" name="request32" value="&lt;p&gt;&lt;span style=&quot;font-size: medium;&quot;&gt;&lt;strong&gt;On-Line Auction Starts Today!&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox " id="33div" onmousedown="javaScript: activate('33');">
+	<div style="top: 91px; height: 20px; display: none;" id="33msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-28&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-28">
+				<a class="" id="33date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-28&amp;ifr=y')" onclick="return is_info_saved();" style="">28</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="33up">
+		<p>ACS On-Line Auction</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="color: rgb(51, 153, 102);"><strong>Grandparents Day</strong></span><img title="Don't Forget" src="show_month_data/dont.png" alt="Don't Forget" border="0"></p> 	</div>
+</div>
+
+<input id="33hi" name="request33" value="&lt;p&gt;ACS On-Line Auction&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color: #339966;&quot;&gt;&lt;strong&gt;Grandparents Day&lt;/strong&gt;&lt;/span&gt;&lt;img title=&quot;Don't Forget&quot; src=&quot;http://www.keepandshare.com/graphics/calendar/clipart/dont.forget.png&quot; border=&quot;0&quot; alt=&quot;Don't Forget&quot; /&gt;&lt;/p&gt;" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox " id="34div" onmousedown="javaScript: activate('34');">
+	<div style="top: 91px; height: 20px; display: none;" id="34msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-29&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-29">
+				<a class="" id="34date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-29&amp;ifr=y')" onclick="return is_info_saved();" style="">29</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="34up">
+		<p>ACS On-Line Auction</p>
+<p>&nbsp;</p>
+<p><strong>Field Trip grades 1,3,4,5,6,7</strong></p> 	</div>
+</div>
+
+<input id="34hi" name="request34" value="&lt;p&gt;ACS On-Line Auction&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Field Trip grades 1,3,4,5,6,7&lt;/strong&gt;&lt;/p&gt;" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox " id="35div" onmousedown="javaScript: activate('35');">
+	<div style="top: 91px; height: 20px; display: none;" id="35msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-30&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-30">
+				<a class="" id="35date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-30&amp;ifr=y')" onclick="return is_info_saved();" style="">30</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="35up">
+		<p>ACS On-Line Auction</p> 	</div>
+</div>
+
+<input id="35hi" name="request35" value="&lt;p&gt;ACS On-Line Auction&lt;/p&gt;" type="hidden">
+
+	<div class="col1">
+<div class="daybox " id="36div" onmousedown="javaScript: activate('36');" style="width: 127px; height: 106px; display: block;">
+	<div style="top: 91px; height: 20px; display: none;" id="36msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-10-31&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-10-31">
+				<a class="" id="36date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-10-31&amp;ifr=y')" onclick="return is_info_saved();" style="">31</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="36up">
+		<div style="color: rgb(255, 0, 0); font-size: 11px;"><p>Halloween</p></div><div style="color: rgb(0, 136, 0); font-size: 11px;"><p>Reformation Day</p></div> 	</div>
+</div>
+
+<input id="36hi" name="request36" value="" type="hidden">
+
+</div>
+<div style="width: 127px; height: 106px; display: block;" class="daybox " id="37div" onmousedown="javaScript: activate('37');">
+	<div style="top: 91px; height: 20px; display: none;" id="37msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-11-01&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-11-01">
+				<a class="otherMonth" id="37date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-11-01&amp;ifr=y')" onclick="return is_info_saved();" style="">1</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="37up">
+		<p>ACS On-Line Auction</p> 	</div>
+</div>
+
+<input id="37hi" name="request37" value="&lt;p&gt;ACS On-Line Auction&lt;/p&gt;" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox " id="38div" onmousedown="javaScript: activate('38');">
+	<div style="top: 91px; height: 20px; display: none;" id="38msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-11-02&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-11-02">
+				<a class="otherMonth" id="38date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-11-02&amp;ifr=y')" onclick="return is_info_saved();" style="">2</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="38up">
+		<div style="color: rgb(255, 0, 0); font-size: 11px;"><p>Election Day</p></div><p>ACS On-Line Auction</p> 	</div>
+</div>
+
+<input id="38hi" name="request38" value="&lt;p&gt;ACS On-Line Auction&lt;/p&gt;" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox " id="39div" onmousedown="javaScript: activate('39');">
+	<div style="top: 91px; height: 20px; display: none;" id="39msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-11-03&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-11-03">
+				<a class="otherMonth" id="39date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-11-03&amp;ifr=y')" onclick="return is_info_saved();" style="">3</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="39up">
+		<p>ACS On-Line Auction</p> 	</div>
+</div>
+
+<input id="39hi" name="request39" value="&lt;p&gt;ACS On-Line Auction&lt;/p&gt;" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox " id="40div" onmousedown="javaScript: activate('40');">
+	<div style="top: 91px; height: 20px; display: none;" id="40msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-11-04&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-11-04">
+				<a class="otherMonth" id="40date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-11-04&amp;ifr=y')" onclick="return is_info_saved();" style="">4</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="40up">
+		<p>ACS On-Line Auction</p>
+<p>&nbsp;</p>
+<p><span style="color: rgb(51, 153, 102);">School open</span></p> 	</div>
+</div>
+
+<input id="40hi" name="request40" value="&lt;p&gt;ACS On-Line Auction&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color: #339966;&quot;&gt;School open&lt;/span&gt;&lt;/p&gt;" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox " id="41div" onmousedown="javaScript: activate('41');">
+	<div style="top: 91px; height: 20px; display: none;" id="41msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-11-05&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-11-05">
+				<a class="otherMonth" id="41date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-11-05&amp;ifr=y')" onclick="return is_info_saved();" style="">5</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="41up">
+		<p>ACS On-Line Auction</p>
+<p>&nbsp;</p>
+<p><span style="color: rgb(51, 153, 102);">School open</span></p> 	</div>
+</div>
+
+<input id="41hi" name="request41" value="&lt;p&gt;ACS On-Line Auction&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color: #339966;&quot;&gt;School open&lt;/span&gt;&lt;/p&gt;" type="hidden">
+
+<div style="width: 127px; height: 106px; display: block;" class="daybox " id="42div" onmousedown="javaScript: activate('42');">
+	<div style="top: 91px; height: 20px; display: none;" id="42msg" class="daymsg">
+    	<small> <span style="color: blue; cursor: pointer; font-weight: bold;">(<a href="http://www.keepandshare.com/calendar/show_daily.php?i=1282504&amp;date=2010-11-06&amp;ifr=y">more...</a>)</span></small></div>
+	<div style="" class="date" id="2010-11-06">
+				<a class="otherMonth" id="42date" href="javascript:checksubmit2('DrillDown',%20'show.php?i=1282504&amp;date=2010-11-06&amp;ifr=y')" onclick="return is_info_saved();" style="">6</a>	</div>
+			<div class="overlaybox"> <!-- overlay and repeating event logic goes here -->
+    	</div>
+	<div class="textarea" id="42up">
+		<p>ACS On-Line Auction</p> 	</div>
+</div>
+
+<input id="42hi" name="request42" value="&lt;p&gt;ACS On-Line Auction&lt;/p&gt;" type="hidden">
+
+
+		<input name="ht_readonly" id="ht_readonly" value="y" type="hidden">
+		<input name="first_time_for_add" value="notfirsttime" type="hidden">
+		<input name="what_button_was_pressed" value="none" type="hidden">
+		<input name="drill_down_url" value="none" type="hidden">
+		<input name="link_href" type="hidden">
+		<input name="my_id" value="show_month.php?i=1282504" type="hidden">  <!-- used by javascript mysimplecalendar calendar -->
+		<input name="switch_to_this_week" type="hidden">
+		<input name="session_user_name" value="anonymous" type="hidden">
+		<input name="calname" value="American Chrisitan School" type="hidden">
+		<input name="requesteddate" type="hidden">
+		<input name="yyyymmdd_first_day_of_month" value="2010-10-01" type="hidden">
+		<input name="num_of_days_to_display" value="42" type="hidden">
+				<input name="requesteddate" id="cal_popup_input" readonly="1" value="2010-10-01" type="hidden">
+
+
+				<input name="h_startDate" id="h_startDate" type="hidden">
+		<input name="h_endDate" id="h_endDate" type="hidden">
+		<input name="h_timeframe" id="h_timeframe" type="hidden">
+		<input name="h_text" id="h_text" type="hidden">
+		<input name="h_endIsDefined" id="h_endIsDefined" type="hidden">
+		<input name="h_frequency" id="h_frequency" type="hidden">
+		<input name="h_color" id="h_color" type="hidden">
+		<input name="h_emphasis" id="h_emphasis" type="hidden">
+		<input name="h_firstDay" id="h_firstDay" type="hidden">
+		<input name="h_app" id="h_app" type="hidden">
+		<input name="h_returnTo" id="h_returnTo" type="hidden">
+		<input name="h_repeatid" id="h_repeatid" type="hidden">
+		<input name="h_action" id="h_action" type="hidden">
+		<input name="h_monthstyle" id="h_monthstyle" type="hidden">
+		<input name="h_weeknum" id="h_weeknum" type="hidden">
+		<input name="h_dayname" id="h_dayname" type="hidden">
+		<input name="h_notifyenable" id="h_notifyenable" type="hidden">
+		<input name="h_notifyprior" id="h_notifyprior" type="hidden">
+		<input name="h_notifyhour" id="h_notifyhour" type="hidden">
+		<input name="h_notifygmtoffset" id="h_notifygmtoffset" type="hidden">
+		<input name="h_notifyshares" id="h_notifyshares" type="hidden">
+		<input name="h_notifyfriends" id="h_notifyfriends" type="hidden">
+		<input name="h_notifyfriendslist" id="h_notifyfriendslist" type="hidden">
+		<input name="h_image_url" id="h_image_url" type="hidden">
+		<input name="h_occurrence_date" id="h_occurrence_date" type="hidden">
+				<input name="ie_version" id="ie_version" value="unknown" type="hidden">
+		<input name="ie_version_major" id="ie_version_major" value="" type="hidden">
+		<input name="display_ie6_RE_warning" id="display_ie6_RE_warning" value="y" type="hidden">
+
+
+  <input name="nameDay1" value="Sunday" type="hidden">
+  <input name="dateDay1" value="26" type="hidden">
+  <input name="updatecount1" value="1" type="hidden">
+  <input name="yyyymmddDay1" value="2010-09-26" type="hidden">
+  <input name="crcDay1" value="0" type="hidden">
+  <input name="existingRecord1" value="0" type="hidden">
+	<input name="overlayCalendar1" value="" type="hidden">
+  <input name="nameDay2" value="Monday" type="hidden">
+  <input name="dateDay2" value="27" type="hidden">
+  <input name="updatecount2" value="1" type="hidden">
+  <input name="yyyymmddDay2" value="2010-09-27" type="hidden">
+  <input name="crcDay2" value="-614328971" type="hidden">
+  <input name="existingRecord2" value="0" type="hidden">
+	<input name="overlayCalendar2" value="" type="hidden">
+  <input name="nameDay3" value="Tuesday" type="hidden">
+  <input name="dateDay3" value="28" type="hidden">
+  <input name="updatecount3" value="1" type="hidden">
+  <input name="yyyymmddDay3" value="2010-09-28" type="hidden">
+  <input name="crcDay3" value="0" type="hidden">
+  <input name="existingRecord3" value="0" type="hidden">
+	<input name="overlayCalendar3" value="" type="hidden">
+  <input name="nameDay4" value="Wednesday" type="hidden">
+  <input name="dateDay4" value="29" type="hidden">
+  <input name="updatecount4" value="1" type="hidden">
+  <input name="yyyymmddDay4" value="2010-09-29" type="hidden">
+  <input name="crcDay4" value="0" type="hidden">
+  <input name="existingRecord4" value="0" type="hidden">
+	<input name="overlayCalendar4" value="" type="hidden">
+  <input name="nameDay5" value="Thursday" type="hidden">
+  <input name="dateDay5" value="30" type="hidden">
+  <input name="updatecount5" value="4" type="hidden">
+  <input name="yyyymmddDay5" value="2010-09-30" type="hidden">
+  <input name="crcDay5" value="-1799329385" type="hidden">
+  <input name="existingRecord5" value="1" type="hidden">
+	<input name="overlayCalendar5" value="" type="hidden">
+  <input name="nameDay6" value="Friday" type="hidden">
+  <input name="dateDay6" value="1" type="hidden">
+  <input name="updatecount6" value="1" type="hidden">
+  <input name="yyyymmddDay6" value="2010-10-01" type="hidden">
+  <input name="crcDay6" value="0" type="hidden">
+  <input name="existingRecord6" value="0" type="hidden">
+	<input name="overlayCalendar6" value="" type="hidden">
+  <input name="nameDay7" value="Saturday" type="hidden">
+  <input name="dateDay7" value="2" type="hidden">
+  <input name="updatecount7" value="1" type="hidden">
+  <input name="yyyymmddDay7" value="2010-10-02" type="hidden">
+  <input name="crcDay7" value="0" type="hidden">
+  <input name="existingRecord7" value="0" type="hidden">
+	<input name="overlayCalendar7" value="" type="hidden">
+  <input name="nameDay8" value="Sunday" type="hidden">
+  <input name="dateDay8" value="3" type="hidden">
+  <input name="updatecount8" value="1" type="hidden">
+  <input name="yyyymmddDay8" value="2010-10-03" type="hidden">
+  <input name="crcDay8" value="0" type="hidden">
+  <input name="existingRecord8" value="0" type="hidden">
+	<input name="overlayCalendar8" value="" type="hidden">
+  <input name="nameDay9" value="Monday" type="hidden">
+  <input name="dateDay9" value="4" type="hidden">
+  <input name="updatecount9" value="1" type="hidden">
+  <input name="yyyymmddDay9" value="2010-10-04" type="hidden">
+  <input name="crcDay9" value="0" type="hidden">
+  <input name="existingRecord9" value="0" type="hidden">
+	<input name="overlayCalendar9" value="" type="hidden">
+  <input name="nameDay10" value="Tuesday" type="hidden">
+  <input name="dateDay10" value="5" type="hidden">
+  <input name="updatecount10" value="2" type="hidden">
+  <input name="yyyymmddDay10" value="2010-10-05" type="hidden">
+  <input name="crcDay10" value="359814414" type="hidden">
+  <input name="existingRecord10" value="1" type="hidden">
+	<input name="overlayCalendar10" value="" type="hidden">
+  <input name="nameDay11" value="Wednesday" type="hidden">
+  <input name="dateDay11" value="6" type="hidden">
+  <input name="updatecount11" value="1" type="hidden">
+  <input name="yyyymmddDay11" value="2010-10-06" type="hidden">
+  <input name="crcDay11" value="0" type="hidden">
+  <input name="existingRecord11" value="0" type="hidden">
+	<input name="overlayCalendar11" value="" type="hidden">
+  <input name="nameDay12" value="Thursday" type="hidden">
+  <input name="dateDay12" value="7" type="hidden">
+  <input name="updatecount12" value="3" type="hidden">
+  <input name="yyyymmddDay12" value="2010-10-07" type="hidden">
+  <input name="crcDay12" value="1408072108" type="hidden">
+  <input name="existingRecord12" value="1" type="hidden">
+	<input name="overlayCalendar12" value="" type="hidden">
+  <input name="nameDay13" value="Friday" type="hidden">
+  <input name="dateDay13" value="8" type="hidden">
+  <input name="updatecount13" value="1" type="hidden">
+  <input name="yyyymmddDay13" value="2010-10-08" type="hidden">
+  <input name="crcDay13" value="0" type="hidden">
+  <input name="existingRecord13" value="0" type="hidden">
+	<input name="overlayCalendar13" value="" type="hidden">
+  <input name="nameDay14" value="Saturday" type="hidden">
+  <input name="dateDay14" value="9" type="hidden">
+  <input name="updatecount14" value="1" type="hidden">
+  <input name="yyyymmddDay14" value="2010-10-09" type="hidden">
+  <input name="crcDay14" value="0" type="hidden">
+  <input name="existingRecord14" value="0" type="hidden">
+	<input name="overlayCalendar14" value="" type="hidden">
+  <input name="nameDay15" value="Sunday" type="hidden">
+  <input name="dateDay15" value="10" type="hidden">
+  <input name="updatecount15" value="1" type="hidden">
+  <input name="yyyymmddDay15" value="2010-10-10" type="hidden">
+  <input name="crcDay15" value="0" type="hidden">
+  <input name="existingRecord15" value="0" type="hidden">
+	<input name="overlayCalendar15" value="" type="hidden">
+  <input name="nameDay16" value="Monday" type="hidden">
+  <input name="dateDay16" value="11" type="hidden">
+  <input name="updatecount16" value="2" type="hidden">
+  <input name="yyyymmddDay16" value="2010-10-11" type="hidden">
+  <input name="crcDay16" value="-521941129" type="hidden">
+  <input name="existingRecord16" value="1" type="hidden">
+	<input name="overlayCalendar16" value="%3Cdiv+style%3D%27color%3A%23FF0000%3B+font-size%3A11px%3B%27%3E%3Cp%3EColumbus+Day%3C%2Fp%3E%3C%2Fdiv%3E" type="hidden">
+  <input name="nameDay17" value="Tuesday" type="hidden">
+  <input name="dateDay17" value="12" type="hidden">
+  <input name="updatecount17" value="1" type="hidden">
+  <input name="yyyymmddDay17" value="2010-10-12" type="hidden">
+  <input name="crcDay17" value="0" type="hidden">
+  <input name="existingRecord17" value="0" type="hidden">
+	<input name="overlayCalendar17" value="" type="hidden">
+  <input name="nameDay18" value="Wednesday" type="hidden">
+  <input name="dateDay18" value="13" type="hidden">
+  <input name="updatecount18" value="1" type="hidden">
+  <input name="yyyymmddDay18" value="2010-10-13" type="hidden">
+  <input name="crcDay18" value="0" type="hidden">
+  <input name="existingRecord18" value="0" type="hidden">
+	<input name="overlayCalendar18" value="" type="hidden">
+  <input name="nameDay19" value="Thursday" type="hidden">
+  <input name="dateDay19" value="14" type="hidden">
+  <input name="updatecount19" value="1" type="hidden">
+  <input name="yyyymmddDay19" value="2010-10-14" type="hidden">
+  <input name="crcDay19" value="0" type="hidden">
+  <input name="existingRecord19" value="0" type="hidden">
+	<input name="overlayCalendar19" value="" type="hidden">
+  <input name="nameDay20" value="Friday" type="hidden">
+  <input name="dateDay20" value="15" type="hidden">
+  <input name="updatecount20" value="1" type="hidden">
+  <input name="yyyymmddDay20" value="2010-10-15" type="hidden">
+  <input name="crcDay20" value="0" type="hidden">
+  <input name="existingRecord20" value="0" type="hidden">
+	<input name="overlayCalendar20" value="" type="hidden">
+  <input name="nameDay21" value="Saturday" type="hidden">
+  <input name="dateDay21" value="16" type="hidden">
+  <input name="updatecount21" value="1" type="hidden">
+  <input name="yyyymmddDay21" value="2010-10-16" type="hidden">
+  <input name="crcDay21" value="0" type="hidden">
+  <input name="existingRecord21" value="0" type="hidden">
+	<input name="overlayCalendar21" value="" type="hidden">
+  <input name="nameDay22" value="Sunday" type="hidden">
+  <input name="dateDay22" value="17" type="hidden">
+  <input name="updatecount22" value="1" type="hidden">
+  <input name="yyyymmddDay22" value="2010-10-17" type="hidden">
+  <input name="crcDay22" value="0" type="hidden">
+  <input name="existingRecord22" value="0" type="hidden">
+	<input name="overlayCalendar22" value="" type="hidden">
+  <input name="nameDay23" value="Monday" type="hidden">
+  <input name="dateDay23" value="18" type="hidden">
+  <input name="updatecount23" value="1" type="hidden">
+  <input name="yyyymmddDay23" value="2010-10-18" type="hidden">
+  <input name="crcDay23" value="0" type="hidden">
+  <input name="existingRecord23" value="0" type="hidden">
+	<input name="overlayCalendar23" value="" type="hidden">
+  <input name="nameDay24" value="Tuesday" type="hidden">
+  <input name="dateDay24" value="19" type="hidden">
+  <input name="updatecount24" value="1" type="hidden">
+  <input name="yyyymmddDay24" value="2010-10-19" type="hidden">
+  <input name="crcDay24" value="0" type="hidden">
+  <input name="existingRecord24" value="0" type="hidden">
+	<input name="overlayCalendar24" value="" type="hidden">
+  <input name="nameDay25" value="Wednesday" type="hidden">
+  <input name="dateDay25" value="20" type="hidden">
+  <input name="updatecount25" value="1" type="hidden">
+  <input name="yyyymmddDay25" value="2010-10-20" type="hidden">
+  <input name="crcDay25" value="0" type="hidden">
+  <input name="existingRecord25" value="0" type="hidden">
+	<input name="overlayCalendar25" value="" type="hidden">
+  <input name="nameDay26" value="Thursday" type="hidden">
+  <input name="dateDay26" value="21" type="hidden">
+  <input name="updatecount26" value="1" type="hidden">
+  <input name="yyyymmddDay26" value="2010-10-21" type="hidden">
+  <input name="crcDay26" value="-1908725153" type="hidden">
+  <input name="existingRecord26" value="1" type="hidden">
+	<input name="overlayCalendar26" value="" type="hidden">
+  <input name="nameDay27" value="Friday" type="hidden">
+  <input name="dateDay27" value="22" type="hidden">
+  <input name="updatecount27" value="1" type="hidden">
+  <input name="yyyymmddDay27" value="2010-10-22" type="hidden">
+  <input name="crcDay27" value="931990872" type="hidden">
+  <input name="existingRecord27" value="1" type="hidden">
+	<input name="overlayCalendar27" value="" type="hidden">
+  <input name="nameDay28" value="Saturday" type="hidden">
+  <input name="dateDay28" value="23" type="hidden">
+  <input name="updatecount28" value="1" type="hidden">
+  <input name="yyyymmddDay28" value="2010-10-23" type="hidden">
+  <input name="crcDay28" value="0" type="hidden">
+  <input name="existingRecord28" value="0" type="hidden">
+	<input name="overlayCalendar28" value="" type="hidden">
+  <input name="nameDay29" value="Sunday" type="hidden">
+  <input name="dateDay29" value="24" type="hidden">
+  <input name="updatecount29" value="1" type="hidden">
+  <input name="yyyymmddDay29" value="2010-10-24" type="hidden">
+  <input name="crcDay29" value="0" type="hidden">
+  <input name="existingRecord29" value="0" type="hidden">
+	<input name="overlayCalendar29" value="" type="hidden">
+  <input name="nameDay30" value="Monday" type="hidden">
+  <input name="dateDay30" value="25" type="hidden">
+  <input name="updatecount30" value="1" type="hidden">
+  <input name="yyyymmddDay30" value="2010-10-25" type="hidden">
+  <input name="crcDay30" value="0" type="hidden">
+  <input name="existingRecord30" value="0" type="hidden">
+	<input name="overlayCalendar30" value="" type="hidden">
+  <input name="nameDay31" value="Tuesday" type="hidden">
+  <input name="dateDay31" value="26" type="hidden">
+  <input name="updatecount31" value="4" type="hidden">
+  <input name="yyyymmddDay31" value="2010-10-26" type="hidden">
+  <input name="crcDay31" value="1610891720" type="hidden">
+  <input name="existingRecord31" value="1" type="hidden">
+	<input name="overlayCalendar31" value="" type="hidden">
+  <input name="nameDay32" value="Wednesday" type="hidden">
+  <input name="dateDay32" value="27" type="hidden">
+  <input name="updatecount32" value="8" type="hidden">
+  <input name="yyyymmddDay32" value="2010-10-27" type="hidden">
+  <input name="crcDay32" value="1839572219" type="hidden">
+  <input name="existingRecord32" value="1" type="hidden">
+	<input name="overlayCalendar32" value="" type="hidden">
+  <input name="nameDay33" value="Thursday" type="hidden">
+  <input name="dateDay33" value="28" type="hidden">
+  <input name="updatecount33" value="3" type="hidden">
+  <input name="yyyymmddDay33" value="2010-10-28" type="hidden">
+  <input name="crcDay33" value="746368302" type="hidden">
+  <input name="existingRecord33" value="1" type="hidden">
+	<input name="overlayCalendar33" value="" type="hidden">
+  <input name="nameDay34" value="Friday" type="hidden">
+  <input name="dateDay34" value="29" type="hidden">
+  <input name="updatecount34" value="4" type="hidden">
+  <input name="yyyymmddDay34" value="2010-10-29" type="hidden">
+  <input name="crcDay34" value="-2109320574" type="hidden">
+  <input name="existingRecord34" value="1" type="hidden">
+	<input name="overlayCalendar34" value="" type="hidden">
+  <input name="nameDay35" value="Saturday" type="hidden">
+  <input name="dateDay35" value="30" type="hidden">
+  <input name="updatecount35" value="1" type="hidden">
+  <input name="yyyymmddDay35" value="2010-10-30" type="hidden">
+  <input name="crcDay35" value="664721516" type="hidden">
+  <input name="existingRecord35" value="1" type="hidden">
+	<input name="overlayCalendar35" value="" type="hidden">
+  <input name="nameDay36" value="Sunday" type="hidden">
+  <input name="dateDay36" value="31" type="hidden">
+  <input name="updatecount36" value="1" type="hidden">
+  <input name="yyyymmddDay36" value="2010-10-31" type="hidden">
+  <input name="crcDay36" value="0" type="hidden">
+  <input name="existingRecord36" value="0" type="hidden">
+	<input name="overlayCalendar36" value="%3Cdiv+style%3D%27color%3A%23FF0000%3B+font-size%3A11px%3B%27%3E%3Cp%3EHalloween%3C%2Fp%3E%3C%2Fdiv%3E%3Cdiv+style%3D%27color%3A%23008800%3B+font-size%3A11px%3B%27%3E%3Cp%3EReformation+Day%3C%2Fp%3E%3C%2Fdiv%3E" type="hidden">
+  <input name="nameDay37" value="Monday" type="hidden">
+  <input name="dateDay37" value="1" type="hidden">
+  <input name="updatecount37" value="1" type="hidden">
+  <input name="yyyymmddDay37" value="2010-11-01" type="hidden">
+  <input name="crcDay37" value="664721516" type="hidden">
+  <input name="existingRecord37" value="1" type="hidden">
+	<input name="overlayCalendar37" value="" type="hidden">
+  <input name="nameDay38" value="Tuesday" type="hidden">
+  <input name="dateDay38" value="2" type="hidden">
+  <input name="updatecount38" value="1" type="hidden">
+  <input name="yyyymmddDay38" value="2010-11-02" type="hidden">
+  <input name="crcDay38" value="664721516" type="hidden">
+  <input name="existingRecord38" value="1" type="hidden">
+	<input name="overlayCalendar38" value="%3Cdiv+style%3D%27color%3A%23FF0000%3B+font-size%3A11px%3B%27%3E%3Cp%3EElection+Day%3C%2Fp%3E%3C%2Fdiv%3E" type="hidden">
+  <input name="nameDay39" value="Wednesday" type="hidden">
+  <input name="dateDay39" value="3" type="hidden">
+  <input name="updatecount39" value="1" type="hidden">
+  <input name="yyyymmddDay39" value="2010-11-03" type="hidden">
+  <input name="crcDay39" value="664721516" type="hidden">
+  <input name="existingRecord39" value="1" type="hidden">
+	<input name="overlayCalendar39" value="" type="hidden">
+  <input name="nameDay40" value="Thursday" type="hidden">
+  <input name="dateDay40" value="4" type="hidden">
+  <input name="updatecount40" value="5" type="hidden">
+  <input name="yyyymmddDay40" value="2010-11-04" type="hidden">
+  <input name="crcDay40" value="160566144" type="hidden">
+  <input name="existingRecord40" value="1" type="hidden">
+	<input name="overlayCalendar40" value="" type="hidden">
+  <input name="nameDay41" value="Friday" type="hidden">
+  <input name="dateDay41" value="5" type="hidden">
+  <input name="updatecount41" value="4" type="hidden">
+  <input name="yyyymmddDay41" value="2010-11-05" type="hidden">
+  <input name="crcDay41" value="160566144" type="hidden">
+  <input name="existingRecord41" value="1" type="hidden">
+	<input name="overlayCalendar41" value="" type="hidden">
+  <input name="nameDay42" value="Saturday" type="hidden">
+  <input name="dateDay42" value="6" type="hidden">
+  <input name="updatecount42" value="1" type="hidden">
+  <input name="yyyymmddDay42" value="2010-11-06" type="hidden">
+  <input name="crcDay42" value="664721516" type="hidden">
+  <input name="existingRecord42" value="1" type="hidden">
+	<input name="overlayCalendar42" value="" type="hidden">
+  <input name="num_of_days_in_month" value="31" type="hidden">
+  <input name="email_date" value="2010-10-03" type="hidden">
+	<input name="display_calendar2_message" value="" type="hidden">
+  <input name="r_t" id="r_t" value="show_month.php" type="hidden">
+  <input name="app" id="app" value="calendar" type="hidden">
+	<input name="re_start_date" id="re_start_date" value="2010-10-01" type="hidden">
+	<input name="ifr" id="ifr" value="y" type="hidden">
+
+
+<!-- /Calendar month -->
+</div>
+
+			</div> <!-- id="calendarDisplayDiv" -->
+		</td>
+			</tr>
+</tbody></table>
+
+</form>
+
+
+<div id="panel-scroller">
+
+	<div id="panel">
+	<div class="panel-bg" id="topright"><div class="panel-bg" id="topleft" style="font-size: 12px;">
+
+		<h1 id="heading-print"><span>Print</span></h1>
+
+		<div id="col1">
+			<ol id="dates" class="checklist1"><li class="">January '10</li><li class="">February</li><li class="">March</li><li class="">April</li><li class="">May</li><li class="">June</li><li class="">July</li><li class="">August</li><li class="">September</li><li class="selected">October</li><li class="">November</li><li class="">December '10</li></ol>
+			<div style="margin-top: 4px;">
+				<input class="" id="yearselectall" value="All 12 months" onclick="return selectAllYears();" type="button">
+			</div>
+			<div id="yearspecific" style="text-align: left; margin-top: 4px;">
+				<select class="" id="yearpicker" onchange="setYear();"><option>2007</option><option>2008</option><option>2009</option><option selected="selected">2010</option><option>2011</option><option>2012</option><option>2013</option><option>2014</option></select>
+			</div>
+		</div>
+
+		<div id="col2">
+			<div id="firstChild" class="panel-section">
+				<table cellpadding="1" cellspacing="0"><tbody><tr>
+				<td valign="top">
+					<div style="margin-bottom: 4px;">
+						<ol id="layout" class="radiolist1"><li class="">Layout 1</li><li class="selected">Layout 2</li></ol>
+					</div>
+					<div id="yearspecific2" style="border-bottom: 1px solid silver; margin-left: 2px; margin-bottom: 4px; padding-bottom: 4px;">
+						<ol id="yearonapage" class="checklist1"><li>Year on a page</li></ol>
+					</div>
+					<div style="margin-top: 4px;">
+						<ol id="portrait" class="radiolist1"><li class="selected">Landscape</li><li class="">Portrait</li></ol>
+					</div>
+				</td>
+				<td><div style="width: 10px;"></div></td>
+				<td valign="top">
+					<div style="border-left: 1px solid silver;"><div style="margin-left: 6px;"><ol id="font" class="radiolist1"><li class="selected">Frutiger</li><li class="">Kepler</li><li class="">Kabel</li><li class="">Verdana</li></ol></div></div>
+				</td>
+				<td><div style="width: 10px;"></div></td>
+				<td valign="top"><div style="border-left: 1px solid silver;">
+					<div style="margin-left: 6px;"><ol id="size" class="radiolist1"><li class="">Smaller font</li><li class="selected">Normal font</li><li class="">Larger font</li><li class="">Very large font</li></ol></div></div>
+				</td>
+				</tr></tbody></table>
+			</div>
+			<div id="lastChild" class="panel-section">
+				<div style="text-align: left; margin-left: -16px;">
+					<ol id="otherprefs" class="checklist1"><li class="selected">Print color as black and white</li><li class="">Header: <input value="American Chrisitan School" disabled="disabled" class="textbox" id="headertext" onclick="ignoreNextToggle=true;" type="text"></li><li class="">Footer: <input value="Printed on 10/18/2010" disabled="disabled" class="textbox" id="footertext" onclick="ignoreNextToggle=true;" type="text"></li><li class="selected">Include weekends</li><li class="">Beta Print</li></ol>
+				</div>
+			</div>
+		</div>
+		<div id="preview" style="display: none;"><div style="background-position: 0pt -300px;" id="previewSheet"><div id="previewLoading"><div style="background: transparent url(/pdf/dialog/images/thumbs_Month.gif) no-repeat scroll 0pt 0px; -moz-background-clip: border; -moz-background-origin: padding; -moz-background-inline-policy: continuous;" id="previewInner"></div></div></div></div>
+		<div id="buttons">
+			<a href="#" onclick="return setPanelVisibility('hidden')" id="cancel" class="buttons"><img src="show_month_data/button_cancel.png" alt="Cancel" height="25" width="60"></a>
+			<a href="#" onclick="return validateAndGo()" id="ok" class="buttons"><img src="show_month_data/button_ok.png" alt="OK" height="25" width="60"></a>
+			<em>A PDF will be generated.</em>
+		</div>
+	</div></div>
+	<div class="panel-bg" id="bottomright"><div class="panel-bg" id="bottomleft"></div></div>
+	</div>
+
+</div>
+
+
+
+<div class="readonlypopup month" id="edWindowpop">
+  <div class="titleBox"><input class="Smaller" id="closeButton" value="CLOSE" onclick="closeEd()" title="Close the edit window" type="button"><div class="title" id="popName">ERROR: Editor Initialization error, please report this to KeepandShare at <a href="mailto:support@keepandshare.com">support@keepandshare.com</a>.</div></div>
+  <div id="edContent" class="popup_content">
+    <form method="post" action="javascript: changeText()">
+  <!-- Gets replaced with TinyMCE, remember HTML in a textarea should be encoded -->
+  <textarea class="mce" id="edWindowmce" name="edWindowmce" rows="15" cols="80" style="width: auto; height: 200px; display: none;">    
+  </textarea><span class="mceEditor defaultSkin" id="edWindowmce_parent"><table style="width: 100%; height: 200px;" class="mceLayout" id="edWindowmce_tbl" cellpadding="0" cellspacing="0"><tbody><tr class="mceFirst mceLast"><td class="mceIframeContainer mceFirst mceLast"><iframe style="width: 100%; height: 200px;" src='javascript:""' id="edWindowmce_ifr" frameborder="0"></iframe></td></tr></tbody></table></span>
+</form>
+
+  </div>
+</div>
+
+<script type="text/javascript" src="show_month_data/tiny_mce.js"></script>
+<script type="text/javascript">
+
+	var isChromeOrSafari = false;
+	<!--Hide the script from old browsers
+	tinyMCE.init({
+		language : "en",
+		mode : "textareas",
+		theme : "advanced",
+		theme_advanced_buttons1 : "bold,italic,underline,strikethrough,removeformat,clipart,image,forecolor,backcolor,bullist,numlist,fontselect,fontsizeselect,link,unlink", //removed: "|,undo,redo," as undo carred between day loads
+		//theme_advanced_buttons1 : "bold,italic,underline,strikethrough,removeformat,|,clipart,image,|,forecolor,backcolor,|,bullist,numlist,|,fontselect,fontsizeselect,|,link,unlink", //removed: "|,undo,redo," as undo carred between day loads
+		theme_advanced_buttons2 : "",
+		theme_advanced_buttons3 : "",
+		theme_advanced_resizing : true,
+		theme_advanced_toolbar_location : "top",
+		onchange_callback : "autoSave",
+		oninit : "onTinyMCEInitComplete",
+		width : "100%",
+		content_css : "../global/styles/mceContentStyle.css",
+		editor_selector : "mce",
+		plugins: "paste, clipart",
+		paste_preprocess: function(pl, o) {
+			var str = o.content;
+			if (!str.blank()) {
+				// whitelist for tags we'll keep, somewhat case insensitive
+
+				// fix for chrome / safari paste problem
+				if (isChromeOrSafari) {
+					str = str.replace(/<p style="margin-top: 0px; margin-bottom: 0px;">/g, "<p>");
+				}
+				str = str.replace(/<(br|BR)>/g, "&lt;br&gt;");
+				str = str.replace(/<(br|BR)\/>/g, "&lt;br/&gt;");
+				str = str.replace(/<(p|P)/g, "&lt;p");
+				str = str.replace(/<(p|P)\/>/g, "&lt;p/&gt;");
+				str = str.replace(/<\/(p|P)>/g, "&lt;/p&gt;");
+
+				str = str.replace(/<(b|B)>/g, "&lt;b&gt;");
+				str = str.replace(/<\/(b|B)>/g, "&lt;/b&gt;");
+				str = str.replace(/<(strong|STRONG)>/g, "&lt;strong&gt;");
+				str = str.replace(/<\/(strong|STRONG)>/g, "&lt;/strong&gt;");
+				str = str.replace(/<(i|I)>/g, "&lt;i&gt;");
+				str = str.replace(/<\/(i|I)>/g, "&lt;/i&gt;");
+				str = str.replace(/<(u|U)>/g, "&lt;u&gt;");
+				str = str.replace(/<\/(u|U)>/g, "&lt;/u&gt;");
+				str = str.replace(/<(ol|OL)>/g, "&lt;ol&gt;");
+				str = str.replace(/<\/(ol|OL)>/g, "&lt;/ol&gt;");
+				str = str.replace(/<(ul|UL)>/g, "&lt;ul&gt;");
+				str = str.replace(/<\/(ul|UL)>/g, "&lt;/ul&gt;");
+				str = str.replace(/<(li|LI)>/g, "&lt;li&gt;");
+				str = str.replace(/<\/(li|LI)>/g, "&lt;/li&gt;");
+				str = str.replace(/<(img|IMG)/g, "&lt;img");
+				str = str.replace(/<(span|SPAN)/g, "&lt;span");
+				str = str.replace(/<\/(span|SPAN)>/g, "&lt;/span&gt;");
+				str = str.replace(/<(em|EM)>/g, "&lt;em&gt;");
+				str = str.replace(/<\/(em|EM)>/g, "&lt;/em&gt;");
+				str = str.replace(/<(strike|STRIKE)>/g, "&lt;strike&gt;");
+				str = str.replace(/<\/(strike|STRIKE)>/g, "&lt;/strike&gt;");
+				str = str.replace(/<(a|A)/g, "&lt;a");
+				str = str.replace(/<\/(a|A)>/g, "&lt;/a&gt;");
+
+				str = str.stripScripts().stripTags();
+
+				str = str.replace(/&lt;br&gt;/g, "<br>");
+				str = str.replace(/&lt;br\/&gt;/g, "<br/>");
+				str = str.replace(/&lt;p/g, "<p");
+				str = str.replace(/&lt;p\/&gt;/g, "<p/>");
+				str = str.replace(/&lt;\/p&gt;/g, "</p>");
+
+				str = str.replace(/&lt;b&gt;/g, "<b>");
+				str = str.replace(/&lt;\/b&gt;/g, "</b>");
+				str = str.replace(/&lt;strong&gt;/g, "<strong>");
+				str = str.replace(/&lt;\/strong&gt;/g, "</strong>");
+				str = str.replace(/&lt;i&gt;/g, "<i>");
+				str = str.replace(/&lt;\/i&gt;/g, "</i>");
+				str = str.replace(/&lt;u&gt;/g, "<u>");
+				str = str.replace(/&lt;\/u&gt;/g, "</u>");
+				str = str.replace(/&lt;ol&gt;/g, "<ol>");
+				str = str.replace(/&lt;\/ol&gt;/g, "</ol>");
+				str = str.replace(/&lt;ul&gt;/g, "<ul>");
+				str = str.replace(/&lt;\/ul&gt;/g, "</ul>");
+				str = str.replace(/&lt;li&gt;/g, "<li>");
+				str = str.replace(/&lt;\/li&gt;/g, "</li>");
+				str = str.replace(/&lt;img/g, "<img");
+				str = str.replace(/&lt;\/span&gt;/g, "</span>");
+				str = str.replace(/&lt;span/g, "<span");
+				str = str.replace(/&lt;em&gt;/g, "<em>");
+				str = str.replace(/&lt;\/em&gt;/g, "</em>");
+				str = str.replace(/&lt;strike&gt;/g, "<strike>");
+				str = str.replace(/&lt;\/strike&gt;/g, "</strike>");
+				str = str.replace(/&lt;a/g, "<a");
+				str = str.replace(/&lt;\/a&gt;/g, "</a>");
+				
+				o.content = str;
+			}
+		},
+		relative_urls : false,
+		document_base_url : "http://www.keepandshare.com",
+		remove_script_host : false,
+		//paste_remove_styles_if_webkit: true,
+		readonly : 1,
+		search_peopleid : '1282504' // used by the clipart plugin to pass in the URL for the popup
+	});
+	// end hiding -->
+</script><script type="text/javascript" src="show_month_data/en.js" onload="tinymce.dom.ScriptLoader._onLoad(this,'http://www.keepandshare.com/global/javascript/tiny_mce/3.2.5/tiny_mce/langs/en.js',0);"></script><script type="text/javascript" src="show_month_data/editor_template.js" onload="tinymce.dom.ScriptLoader._onLoad(this,'http://www.keepandshare.com/global/javascript/tiny_mce/3.2.5/tiny_mce/themes/advanced/editor_template.js',1);"></script><script type="text/javascript" src="show_month_data/en_002.js"></script><script type="text/javascript" src="show_month_data/editor_plugin_002.js" onload="tinymce.dom.ScriptLoader._onLoad(this,'http://www.keepandshare.com/global/javascript/tiny_mce/3.2.5/tiny_mce/plugins/paste/editor_plugin.js',2);"></script><script type="text/javascript" src="show_month_data/editor_plugin.js" onload="tinymce.dom.ScriptLoader._onLoad(this,'http://www.keepandshare.com/global/javascript/tiny_mce/3.2.5/tiny_mce/plugins/clipart/editor_plugin.js',3);"></script>
+
+<!-- /TinyMCE -->
+
+
+<script type="text/javascript">
+
+	function re_showImageMenu(ctrl) {
+		if (isIE7 || isIE6) {
+			// need to re-position the menu in IE7, IE6 relative to the dialog box, not the screen
+			$('re_imageMenu').style.top = "60px";
+			$('re_imageMenu').style.left= "10px";
+		}
+		$('re_imageMenu').style.display="block";
+		$('re_imageMenu').style.visibility="visible";
+		new Ajax.Request( 'clipartmenu.php?r='+Math.random(),
+			{   method:'post',
+					postBody: '',
+					onSuccess: function(transport) {
+						$('re_imageMenu').innerHTML=transport.responseText;
+					},
+					onFailure: function () {
+							alert('failed');
+					},
+					onException: function(tr, e) {
+						alert('Javascript Exception: '+e.toString());
+					}
+			} );
+
+	}
+	function re_hideImageMenu() {
+		$('re_imageMenu').style.display="none";
+		$('re_imageMenu').style.visibility="hidden";
+	}
+	function re_chooseImage(url, title, clearImage) {
+		re_changeAction('image_url', (clearImage ? '' : url));
+		re_hideImageMenu();
+	}
+	function re_choosePaidImage(url, title, clearImage) {
+					$('ca_teaserPopup').style.display = "block";
+			}
+	function re_hideTeaser() {
+			$('ca_teaserPopup').style.display = "none";
+	}
+</script>
+<!-- repeating event dialog -->
+<script type="text/javascript" src="show_month_data/friendswithdropdown.js"></script>
+<style type="text/css">
+
+</style>
+
+<div id="re_panel" style="width: 500px;">
+<div class="panel-bg" id="topright"><div class="panel-bg" id="topleft">
+	<h1 id="heading_repeating"><span>Event</span></h1>
+
+	<div style="display: inline; float: left;"><img id="image_url" src="webpage_files/show_month.htm" alt="none" title="Click to select a calendar sticker for this event." onclick="re_showImageMenu(this)" border="0"></div>
+
+	<div id="re_imageMenu" style="border: 1px solid black; background-color: white; position: absolute; display: none; width: 470px; min-height: 130px;">
+	</div>
+
+	<div id="text"><textarea rows="2" wrap="virtual" id="textarea" onblur="re_changeAction('text', this.value)"></textarea>
+		<div style="font-size: 11px;">Enter event time as "7:15 am" or "4:30 pm" in text (<a href="http://www.keepandshare.com/htm/help3/calendar/help3_02-2.php#addatimetoevent" target="'_blank'">help</a>)</div>
+	</div>
+
+	<div id="colorpicker"><img src="show_month_data/colorpicker_brown.png" alt="Black" onclick="re_changeAction('color',0)"><img src="show_month_data/colorpicker_green.png" alt="Green" onclick="re_changeAction('color',3)"><img src="show_month_data/colorpicker_hotpink.png" alt="Red" onclick="re_changeAction('color',1)"><img src="show_month_data/colorpicker_blue.png" alt="Blue" onclick="re_changeAction('color',4)"><img src="show_month_data/colorpicker_orange.png" alt="Orange" onclick="re_changeAction('color',2)"><img src="show_month_data/colorpicker_purple.png" alt="Purple" onclick="re_changeAction('color',5)"></div>
+
+	<div id="col1">
+		<ol id="timeframe" class="radiolist"><li>Annually</li><li>Monthly</li><li>Weekly</li><li>Daily</li></ol>
+	</div>
+
+	<div id="col2">
+		<div>Starting on <input class="datebox" id="startDate" readonly="readonly" type="text"> <img src="show_month_data/calendar-pulldown.png" class="cal-pulldown" alt="Calendar" title="Start date" id="startdateicon"></div>
+		<div>Every <input id="frequency" value="1" size="2" maxlength="2" onkeyup="re_changeAction(this.id, this.value)" type="text"> <span id="frequencylabel"></span></div>
+		<div id="monthstyle_table">
+			<div><div><span>On the&nbsp;</span></div>
+				<ol class="radiolist" id="monthstyle"><li>a</li><li>b</li></ol>
+			</div></div>
+		<div>Ending on <input class="datebox" id="endDate" value="&lt;none&gt;" readonly="readonly" type="text"> <img src="show_month_data/calendar-pulldown.png" class="cal-pulldown" alt="Calendar" title="End date" id="enddateicon"> <a href="#" onclick="return re_clearEndDate()"><img src="show_month_data/delete.png" alt="Delete" title="Clear end date"></a></div>
+		<div id="highlighter" style="text-align: left; margin-top: 8px; margin-left: -4px;">
+			<nobr><input name="emphasis" id="noemphasis" onclick="re_changeAction('emphasis', 'N')" type="radio">None&nbsp;&nbsp;&nbsp;<input name="emphasis" id="boldemphasis" onclick="re_changeAction('emphasis', 'B')" type="radio">Bold&nbsp;&nbsp;&nbsp;<input name="emphasis" id="highlightemphasis" onclick="re_changeAction('emphasis', 'H')" type="radio">Highlight</nobr>
+		</div>
+		<div style="text-align: left; margin-top: 8px; margin-left: -4px;">
+			<input value="Y" name="notifyenable" id="notifyenable" onclick="re_changeAction(this.id, this.value)" type="checkbox"> Email me
+			<select name="notifyprior" id="notifyprior" onchange="re_changeAction(this.id, this.value)">
+				<option selected="selected" value="0">the same day
+				</option><option value="1">1 day in advance
+				</option><option value="2">2 days in advance
+				</option><option value="3">3 days in advance
+				</option><option value="4">4 days in advance
+				</option><option value="5">5 days in advance
+				</option><option value="6">6 days in advance
+				</option><option value="7">7 days in advance
+			</option></select>
+			at
+			<select name="notifyhour" id="notifyhour" onchange="re_changeAction(this.id, this.value)">
+				<option selected="selected" value="0">12 am
+				</option><option value="1"> 1 am
+				</option><option value="2"> 2 am
+				</option><option value="3"> 3 am
+				</option><option value="4"> 4 am
+				</option><option value="5"> 5 am
+				</option><option value="6"> 6 am
+				</option><option value="7"> 7 am
+				</option><option value="8"> 8 am
+				</option><option value="9"> 9 am
+				</option><option value="10">10 am
+				</option><option value="11">11 am
+				</option><option value="12">12 pm
+				</option><option value="13"> 1 pm
+				</option><option value="14"> 2 pm
+				</option><option value="15"> 3 pm
+				</option><option value="16"> 4 pm
+				</option><option value="17"> 5 pm
+				</option><option value="18"> 6 pm
+				</option><option value="19"> 7 pm
+				</option><option value="20"> 8 pm
+				</option><option value="21"> 9 pm
+				</option><option value="22">10 pm
+				</option><option value="23">11 pm
+			</option></select>
+		</div>
+		<div style="text-align: left; margin-top: 8px; margin-left: 16px;">
+			<input value="Y" name="notifyshares" id="notifyshares" onclick="checkAction(this)" type="checkbox">Send a copy to all shares<br>
+			<input value="Y" name="notifyfriends" id="notifyfriends" onclick="checkAction(this)" type="checkbox">Send a copy to my friends <span id="notifyfriends_editlink" style="display: none;">( <a href="javascript:void(0)" class="base2link_lite_blue_small" onclick="re_showShareEdit()">edit</a> )</span>
+			<input id="notifyfriendslist" name="notifyfriendslist" value="" type="hidden">
+		</div>
+	</div>
+
+	<div id="buttons">
+			<button id="cancel" onclick="return re_setPanelVisibility('hidden')">Cancel</button>
+		<button id="delete" onclick="is_info_saved(); return re_delete()" title="Delete all occurrences">Delete</button>
+		<button id="delete_day" onclick="is_info_saved(); return re_delete(true)" title="Delete this occurrence">Delete this Day</button>
+		<button id="ok" style="width: 82px;" onclick="is_info_saved(); return re_doSubmit()">OK</button>
+		<a href="http://www.keepandshare.com/htm/help3/calendar/help3_02-2.php" target="_blank" id="help">Help</a>
+		</div>
+
+</div></div>
+<div class="panel-bg" id="bottomright"><div class="panel-bg" id="bottomleft"></div></div>
+</div>
+
+<script type="text/javascript">
+	function fd_findPos(obj) {
+		var cleft = 0;
+		var ctop = 0;
+		if (obj.offsetParent) {
+			do {
+				cleft += obj.offsetLeft;
+				ctop += obj.offsetTop;
+			} while (obj = obj.offsetParent);
+		}
+		return [ctop,cleft];
+	}
+	function showTeaserDialog(ctrl, text) {
+		var pos = fd_findPos(ctrl);
+		$('teaserText').innerHTML = text;
+		var teaser = $('teaserDialog');
+		teaser.style.visibility = "visible";
+		teaser.style.display="block";
+		teaser.style.top = ""+(pos[0])+"px";
+		teaser.style.left = ""+(pos[1])+"px";
+	}
+	function hideTeaserDialog() {
+		var teaser = $('teaserDialog');
+		teaser.style.visibility = "hidden";
+		teaser.style.display="none";
+	}
+</script>
+<div id="teaserDialog" style="border: 2px solid silver; position: absolute; visibility: hidden; display: none; background-color: white; z-index: 1000000;">
+<table cellpadding="2" cellspacing="2">
+<tbody><tr>
+<td class="base2" align="center"><span id="teaserText"></span><br>Click <a href="http://www.keepandshare.com/business/membership_details.php?emp=calendar" target="_blank">here</a> for details.</td>
+<td style="border-left: 1px solid silver; background-color: silver;" align="right"><a href="javascript:void(0)" onclick="hideTeaserDialog()" class="Smaller">Close</a></td>
+</tr>
+</tbody></table>
+</div>
+
+
+<div id="notifyfriends_dialog" style="display: none;">
+	<div>
+		<b>Choose your friends that should receive a notification:</b>
+	</div>
+	<div id="sharewithcontainer" style="width: 220px; text-align: left;">
+		<div id="sharewithreplace" style="position: relative;"></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	var g_friendsWithInputBox = null;
+	var MyDialogClass = null;
+	function re_showShareEdit() {
+		if (g_friendsWithInputBox == null) {
+			initShareWithDropDown();
+
+			g_friendsWithInputBox = new FriendsWithInputBox($('sharewithreplace'), $('notifyfriendslist').value);
+
+			MyDialogClass = Class.create(PopUp, {
+				initialize: function($super) {
+					$super();
+					this.setContent($('notifyfriends_dialog'));
+					var okButton = new Element('button', { 'class': 'kasBtn kasBtnGreen' }).update("OK");
+					this.addButton(okButton);
+					Event.observe(okButton, 'click', this.okButtonClick.bindAsEventListener(this));
+					this.content.show();
+				},
+				okButtonClick: function(e) {
+					this.hide();
+				}
+			});
+		}
+
+		var myDialog = new MyDialogClass();
+		myDialog.show();
+	}
+</script>
+
+<!--script type="text/javascript" src="/global/ajax/prototype/prototype.js"></script -->
+<!-- script type="text/javascript" src="/global/sharewithdropdown/sharewithdropdown.js"></script -->
+<!-- Popup Calendar - used by print dialog and goto  -->
+<script type="text/javascript" src="show_month_data/calendar.js"></script>
+<script type="text/javascript" src="show_month_data/calendar-en.js"></script>
+<script type="text/javascript" src="show_month_data/calendar-setup.js"></script>
+
+
+<script type="text/javascript" src="show_month_data/dateToolkit.js"></script>
+<script type="text/javascript" src="show_month_data/printdialog.js"></script>
+
+<script type="text/javascript">
+	var PrintDialog = null;
+
+	function showPrintPanel() {
+		var startDate = new Date(year, month-1, day);
+				if (PrintDialog == null) {
+			PrintDialog = new KasPrintDialogClass(0);
+			PrintDialog.initPrintDialog(startDate, layoutMode, includeWeekends, orientationPortrait,
+                fontNumber, fontSizeNumber, useHeader, customtitle,
+                useFooter, storedPrefs.footertext, useBetaPrintEngine);
+		} else {  // Just reuse all of the other settings from the prev usage (session only settings)
+			PrintDialog.initPrintDialogStartDate(startDate, layoutMode);
+		}
+		PrintDialog.show();
+	}
+</script>
+
+<script type="text/javascript" src="show_month_data/monthPicker.js"></script>
+<script type="text/javascript"><!--
+if( document.form1.display_calendar2_message.value == 'y' )
+	alert ("You have clicked on the \"2\" tab for the Calendar application, bringing you to your Calendar #2.\r\nIn KeepandShare your account has 9 calendars, and you can easily turn the display of the tabs for these \r\ncalendars ON and OFF by clicking on the \"Customize\" command on the blue bar while looking at your calendar.");
+// --></script>
+
+<script type="text/javascript"><!--
+var weekStart = 0;
+re_setUpCalendars();
+// --></script>
+
+<script type="text/javascript"><!--
+function LZ(x) {return(x<0||x>9?"":"0")+x}
+  
+function calendarGoToMonthCallback(date) {
+	updateCalendarDisplayDiv(date);
+}
+
+function calendarGoToMonth(calendar_yyyymmdd)
+{
+	var ymd = calendar_yyyymmdd.split("-");
+	var y = parseInt(ymd[0], 10);
+	var m = parseInt(ymd[1], 10);
+	var d = parseInt(ymd[2], 10);
+	var theDay = new Date(y, m-1, d);
+	forceAutoSaveWithCallback(function() { calendarGoToMonthCallback(theDay.format("yyyy-mm-dd")); });
+}
+
+var myMonthPicker = null;
+
+function setupCalendar(newDate) {
+	if (newDate != null) {
+		document.getElementById('cal_popup_input').value = newDate;
+	}
+	if (myMonthPicker == null) {
+		myMonthPicker = new MonthPicker('cal_popup_input', 'cal_popup_trigger', calendarGoToMonth);
+	} else {
+		myMonthPicker.initialize('cal_popup_input', 'cal_popup_trigger', calendarGoToMonth); // reset the calendar month
+	}
+}
+
+function processArrowKeys(ev) {
+	if ($('re_panel').style.visibility == "visible") {
+		return true; // don't process if the panel is showing
+	}
+	ev = (ev ? ev : ((window.event ? event: null)));
+	if (ev != null) {
+		if (ev.keyCode == 37) {
+			// left arrow
+			goPrevMonthSave();
+		} else if (ev.keyCode == 39) {
+			// right arrow
+			goNextMonthSave();
+		} else if (ev.keyCode == 36) {
+			//home key
+			goTodaySave();
+		}
+	}
+	return true;
+}
+document.onkeydown = processArrowKeys; /**/
+
+// --></script>
+
+
+
+<script src="show_month_data/rolltip_lib.js" type="text/javascript"></script>
+
+		<!--[if IE 6]>
+		<script type="text/javascript"> 
+			// IE6 can't deal with the onResize event, so we will make the calendar resize once on page load
+            isResize = true; //prevents reSize from ever being called
+            isIE6 = true;
+		</script>
+		<![endif]-->
+		<!--[if IE 7]>
+		<script type="text/javascript">
+            isIE7 = true;
+		</script>
+		<![endif]-->
+
+<script type="text/javascript"><!--
+
+/*  Checking to see if run within iFrame */
+if (isFramed())  {
+	document.form1.ifr.value = 'y';
+}
+// restore the ad counter setting from the session
+restoreAdCounters('');
+setupDisplay(null);
+setupCalendar(null);
+// --></script>
+    <div style="clip: rect(0pt, 0pt, 0pt, 0pt); visibility: visible;" id="rolltipDiv"></div></body></html>

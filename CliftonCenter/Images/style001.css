@@ -1,0 +1,673 @@
+/*   
+Theme Name: Clifton Center
+Theme URI: http://cliftoncenter.org
+Description: This is a custom theme for Clifton Center
+Author: DBS>Interactive
+Author URI: http://dbswebsite.com
+Version: 1
+*/
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+body, button, input, select, textarea { font-family: MyriadMM, Verdana, Geneva, sans-serif; color: #222; }
+
+::-moz-selection { background: #cc9900; color: #fff; text-shadow: none; }
+::selection { background: #cc9900; color: #fff; text-shadow: none; }
+
+a { color: #cc9900; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+ul, ol { margin: 0 0; padding:0; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+
+
+
+
+/* ==|== primary styles =====================================================
+   Author: 
+   ========================================================================== */
+.clear
+{
+clear:both;
+}
+
+p {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #000;
+	line-height: 22px;
+}
+#sidebar h2 {
+	color:#cc9900;
+	font-size:24px;
+	font-family: Myriad, Verdana, Geneva, sans-serif;
+	text-align:left;
+}
+#sidebar .widget_text h2 {display:none;}
+body {
+	background-color: #002f65;
+}
+
+#page-wrap {
+	background: #002f65;
+	color:#fff;
+	width: 1024px;
+	margin: 0 auto;
+	position:relative;
+}
+
+#main {
+	background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 10px 10x 0 0;
+	-webkit-border-top-left-radius: 16px;
+	-webkit-border-top-right-radius: 16px;
+	-moz-border-radius-topleft: 16px;
+	-moz-border-radius-topright: 16px;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+	width: 1024px;
+	height: auto	;
+	margin: 9px 0 auto;
+	clear:both;
+	overflow: hidden;
+	position: relative;
+	z-index: 5;
+}
+
+#header {
+	background-image:url(/clients/CliftonCenter/Images/header-bg.jpg);
+	background-repeat:no-repeat;
+	display: block;
+	width: 1024px;
+	height: 239px;
+	margin: 0 auto;
+}
+h1 {
+	margin:0;
+	padding-top:65px;
+	}
+	h1 a {
+		display:block;
+		background-image:url(/clients/CliftonCenter/Images/logo.png);
+		width: 259px;
+		height: 92px;
+		margin:0 auto;
+		text-indent:-9999px;
+	}
+	
+#searchform {
+	position:absolute;
+	top:10px;
+	right:0;
+	}
+	#s {
+		background: none repeat scroll 0 0 transparent;
+    	border: 1px solid #FFFFFF;
+    	color:#CC9900;
+		}
+		#searchsubmit {
+			background: none repeat scroll 0 0 transparent;
+		    border: medium none;
+		    color: #FFFFFF;
+			}
+.screen-reader-text {display:none;}
+
+ul#menu-main-menu {
+	list-style: none outside none;
+    margin: 63px auto 10px;
+	padding-left: 77px;
+	position: relative;
+	z-index: 10;
+}
+
+	ul#menu-main-menu li {
+		display:inline;
+		background-image:url(/clients/CliftonCenter/Images/nav-bg.png);
+		background-repeat:no-repeat;
+		background-position:right;
+		padding-right:35px;
+		position: relative;
+	}
+		ul#menu-main-menu > li:hover ul.sub-menu {
+			display: none;	
+	}
+	ul#menu-main-menu li:last-child {
+		background:none;
+	}
+		ul#menu-main-menu li a{
+			text-decoration:none;
+			font-size:13px;
+			color:#fff;
+			padding-bottom: 16px;
+		}
+		ul#menu-main-menu > li > a:hover, ul#menu-main-menu > li.current-menu-item > a {
+			background-image:url(/clients/CliftonCenter/Images/nav-bg-hover.png);
+			background-position:bottom center;
+			background-repeat: no-repeat;
+		}
+	ul.sub-menu {
+		display: none;
+		background: #EBDCB4;
+		width: auto;
+		float: left;
+		padding: 10px 20px;
+		-webkit-border-top-right-radius: 20px;
+		-webkit-border-bottom-left-radius: 20px;
+		-moz-border-radius-topright: 20px;
+		-moz-border-radius-bottomleft: 20px;
+		border-top-right-radius: 20px;
+		border-bottom-left-radius: 20px;
+		-webkit-box-shadow: 0 2px 7px rgba(0,0,0,0.75);
+		-moz-box-shadow: 0 2px 7px rgba(0,0,0,0.75);
+		box-shadow: 0 2px 7px rgba(0,0,0,0.75);
+		position: absolute;
+		top:32px;
+		left:0;
+	}
+		ul#menu-main-menu ul.sub-menu li {
+		background: none;
+		display: block;
+    	height: 27px;
+    	width: auto;
+    	white-space: nowrap;
+	}
+		ul#menu-main-menu ul.sub-menu li a {
+		color: #011B39;
+		display: block;
+	}
+		ul#menu-main-menu ul.sub-menu li a:hover {
+		background: none;
+		color: #002f65;
+	}
+
+#intro {
+	overflow: hidden;
+}
+
+#intro-left {
+	float:left;
+	background-image:url(/clients/CliftonCenter/Images/main-center-entrance.jpg);
+	width:269px;
+	height:249px;
+	margin: 26px 0 0 58px;
+}
+
+#intro-center {
+	float: left;
+	width: 329px;
+	padding: 8px 17px 0 17px;
+}
+
+
+#intro-right {
+	float: left;
+	background-image:url(/clients/CliftonCenter/Images/main-concert.jpg);
+	width:269px;
+	height:249px;
+	margin-top:26px;
+
+}
+
+
+#events {
+	background-image: url("/clients/CliftonCenter/Images/events-bg.jpg");
+    background-repeat: no-repeat;
+    margin: 19px auto 10px;
+    overflow: hidden;
+    width: 998px;
+}
+	
+
+	h2 {
+		text-align: center;
+		color:#002f65;
+		display: block;
+    	margin: 10px auto 27px;
+	}
+		a.tickets {
+			color:#cc9900;
+			text-decoration:none;
+		}
+		
+	ul#upcoming {
+		display: block;
+		list-style-type:none;
+		margin: 0 auto;
+		width: 920px;
+	}
+		ul#upcoming li {
+			background-position:top center;
+			background-repeat:no-repeat;
+			float: left;
+   			text-align: center;
+			/* added by chase to fix overlay issue */
+			width: 182px;
+			margin:0 24px;
+			/* -- /chase --*/
+			cursor: pointer;
+			overflow:hidden;
+		}
+			ul#upcoming li h3 {
+				background:#fff;
+				margin:0;
+				padding:1em 0;
+				font-size: 12px;
+				color:#002f65;
+				text-align: center;
+			}
+				ul#upcoming li span {
+					display: block;
+					background:#fff;
+					color:#002f65;
+					font-size:9px;
+					margin-top: -10px;
+					text-align:center;
+				}
+				ul#upcoming li a {
+					color:#cc9900;
+					text-decoration:none;
+					font-size: 9px;
+					display:block;
+					background:#fff;
+				}
+	#sponsors {
+	display: block;
+	clear: both;
+	width: 963px;
+	height: auto;
+	border: solid 1px #ccd6e0;
+	-webkit-box-shadow: inset 0 0 10px rgba(0,51,102,0.3);
+	-moz-box-shadow: inset 0 0 10px rgba(0,51,102,0.3);
+	box-shadow: inset 0 0 10px rgba(0,51,102,0.3);
+	margin: 0 auto 30px;
+	padding-bottom: 14px;
+}
+	h4 {
+	font-family:Arial, Helvetica, sans-serif;
+	color:#002f65;
+	font-size: 16px;
+	text-align: center;
+	}
+		ul#sponsor-list {
+			padding: 0;
+			list-style-type: none;
+			display:inline;
+			text-indent: -9999px;
+			clear: both;
+		}
+			ul#sponsor-list li {
+				padding-left: 26px;
+				margin: -15px 0 0 27dpx;
+				display: inline;
+
+			}
+			
+	ul#sponsor-title {
+		display: block;
+   		list-style-type: none;
+    	padding: 0 0 0 12px;
+    	text-align: left;
+	}
+		ul#sponsor-title li {
+			display: block;
+			float: left;
+			margin-left: 10px;
+		}
+		ul#sponsor-title img {
+			margin-top: 21px;
+		}
+		
+ul#social {
+	display: block;
+    float: right;
+    list-style-type: none;
+    margin-right: 11px;
+}
+	ul#social li {
+		float: right;
+    	padding: 41px 5px 0 0;
+			}
+
+
+#footer {
+	margin: 20px 0;
+	text-align: right;
+	font-size: 11px;
+}
+
+.clear {
+	clear: both;
+}
+
+/*--- Interior Page Styles -------------------------------------------------*/					
+		
+.alignleft size-full wp-image-69 {
+	display: block;
+    margin-top: -53px;
+}
+
+ul#social-content {
+	display: block;
+    float: right;
+    list-style-type: none;
+    margin: -38px 249px 18px 0;
+    padding: 0;
+}
+	ul#social-content li {
+		float: right;
+		display: inline;
+    	padding: 53px 5px 0 0;
+	}
+			
+			
+
+
+#sidebar {
+	width: 322px;
+	float: left;
+	padding:0 20px;
+}
+	#sidebar ul.menu {
+		list-style-type: none;
+		margin: -15px 0 20px;
+	}
+		#sidebar ul.menu li {
+			display: block;
+			margin: 2px 0 0 0;
+		}
+			
+				#sidebar ul.menu li a {
+					color:#002f65;
+					font-size: 14px;
+					text-decoration: none;
+					font-weight: bold;
+					padding-left: 17px;
+					padding-bottom: 3px;
+					display: block;
+					
+				}
+					#sidebar ul.menu li a:hover, #sidebar ul.menu li.current-menu-item a {
+						background-image:url(/clients/CliftonCenter/Images/subnav-bg-hover.png);
+						background-position:-3px 4px;
+						background-repeat:no-repeat;
+					}
+	
+	img.wp-image-124 {
+		vertical-align: bottom;
+	}
+	
+	#content {
+		width:1000px;
+		float:left;
+		background-image:url(/clients/CliftonCenter/Images/round-corner-left.png);
+		background-position:top left;
+		background-repeat:no-repeat;
+		margin: 16px 0 0;	
+		}
+		#content-wrapper {
+			background-image: url("/clients/CliftonCenter/Images/round-corner-bottom-right.png");
+   			background-position: right bottom;
+    		background-repeat: no-repeat;
+    		margin: 0 auto 30px;
+    		padding: 30px;
+    		width: 586px;
+		}
+			#content-wrapper p {
+				padding-right: 20px;
+			}
+	
+	h2.title {
+		text-align:left;
+		margin: 36px 25px 0 2px;
+	}
+	h2.title span.big {
+		font-size:34px;
+		margin-left: 84px;
+	}
+		h2.title span.ideas {
+			font-size:34px;
+		}
+		h2.title span.big-gold {
+			color: #cc9900;
+			font-size: 34px;
+		}
+		h2.title span.third-line {
+			display: inline block;
+			margin-left: 190px;
+		}
+
+
+	.page-id-12 ul#tour li h2 {
+		float: left;
+		text-align:left;
+		font-size:15px;
+		margin: 0;
+		display: block;
+		width: 430px;
+	}
+		.page-id-12 ul#tour li img {
+			float:left;
+			padding-right:15px;
+		}
+
+		.page-id-12 ul#tour li p a.more{
+			float:left;
+			font-size: 11px;
+		}
+		.page-id-12 ul#tour li p.description{
+			font-size:13px;
+			float: left;
+			display: block;
+			width: 430px;
+		}
+		.page-id-12 a {
+			color:#cc9900;
+			text-decoration: none;
+		}
+		.page-id-12 ul#tour li {
+			clear:both;
+			list-style: none outside none;
+		}
+		
+.page-id-14 p a img.sponsor-list {
+	float:left;
+	padding-right: 19px;
+}
+
+
+.page-id-14 ul#upcoming {
+	width: 550px;	
+}
+
+
+.page-id-14 ul#upcoming li {
+	margin-top:41px;
+	height:inherit;
+	width: 182px;
+}
+
+
+.page-id-14 ul#upcoming li:nth-child(2n+1) {
+  clear: left;
+}
+
+
+
+/* CForms Styles ------------------------------------------------------------------ */
+
+.cform label span {
+	color:#002F65;
+}
+span.reqtxt, span.emailreqtxt {
+	color:#cc9900;
+}
+
+.linklove {
+	display:none;
+}
+div .cform textarea {
+    width: 446px;
+}
+body .cform input {
+    width: 270px;
+}
+
+body .cform {
+	margin:10px 0;
+	width: 600px;
+}
+
+body .cform input.backbutton, body .cform input.resetbutton,body .cform input.sendbutton {
+	margin: 10px 46px 0 5px;
+	background: #002F65;
+    border: medium none;
+    color: #FFFFFF;
+}
+body ol.cf-ol li {
+	margin: 12px 0!important;
+}
+
+
+#content {color:#000;}
+
+#content .gce-list-title {
+	color:#002F65;
+	}
+#content .gce-page-list .gce-list .gce-list-event {
+	background-color:#CC9900;
+	color:#fff;
+	padding:2px 2px 2px 5px;
+	}
+.gce-list > li {
+	list-style:none;
+	padding:10px 0;
+	}
+	
+body .gce-page-grid .gce-calendar .gce-month-title { 
+	display: block;
+    float: none;
+    height: 14px;
+    width: 100%;
+}	
+.gce-page-grid {position:relative;}
+
+/* Other event */
+#content .gce-page-grid .gce-calendar .gce-has-events {
+	color:#7f88a8;
+	}
+#content .gce-page-list .gce-list .gce-feed-2 .gce-list-event {
+	background-color:#c7cbde;
+	}
+#content .gce-page-grid .gce-calendar .gce-feed-1 {
+	color:#CC9900;
+	}	
+body .gce-page-grid .gce-calendar .gce-next {
+	display:block;
+	text-indent:-9999px;
+	overflow:hidden;
+	height:24px;
+	width:68px;
+	position:absolute; top:10px; right:0;
+	}
+	.gce-page-grid .gce-calendar .gce-prev a {
+		display:block;
+		text-indent:-9999px;
+		overflow:hidden;
+		height:24px;
+		width:68px;
+		background-image:url(/clients/CliftonCenter/Images/Prev-Btn.jpg);
+		}
+body .gce-page-grid .gce-calendar .gce-prev {
+	display:block;
+	text-indent:-9999px;
+	overflow:hidden;
+	height:24px;
+	width:68px;
+	position:absolute; top:10px; left:0;
+	}		
+	#content .gce-page-grid .gce-calendar .gce-next a {
+		background-image:url(/clients/CliftonCenter/Images/Next-Btn.jpg);
+		float:right;
+		text-indent:-9999px;
+		overflow:hidden;
+		height:24px;
+		width:68px;
+		display:block;
+		}			
+
+.alignleft {float:left; padding: 0 10px 5px 0;}
+.alignright {float:right; padding: 0 0 5px 10px;}
+.aligncenter {float:none; padding: 0 0 5px 0; margin:0 auto;}
+
+/* ==|== non-semantic helper classes ======================================== */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+/* ==|== media queries ====================================================== */
+
+@media only screen and (min-width: 480px) {
+
+
+}
+
+@media only screen and (min-width: 768px) {
+
+}
+
+
+
+/* ==|== print styles ======================================================= */
+ 
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } 
+  a, a:visited { text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; } 
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+
+#wpadminbar {display:none;}

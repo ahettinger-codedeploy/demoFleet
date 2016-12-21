@@ -1,0 +1,174 @@
+@import url("/_infrastructure/css/module/gallery.css");
+
+/* VERSIONS
+/* 6_0: Module Framework Update - Check Shared CSS for default styles
+/* 6_1: Default Managed Attachment Styles [Author: Nick Hall]
+/* 6_2: Reorganized for Web Parts [Author: Nick Hall]
+----------------------------------------------------------------------------- */
+.gallery .list { }
+	.gallery .hd { }
+	.gallery .bd { }
+		.gallery .images { position: relative; }
+			.gallery .images li { border: none; background: none; padding-left: 0; }	
+				.sc .gallery .images .thumb, 
+				.tc .gallery .images .thumb { position: relative; z-index: 0; padding: 18px 0; margin: 0 -10px !important; background-color: transparent; border: none; }
+					.sc .gallery .images .thumb:before, 
+					.tc .gallery .images .thumb:before { display: block; position: absolute; z-index: 10; content: ""; top: 0; left: 0; width: 100%; height: 100%; background: url(/images/common/bg-photo-top.png) center center no-repeat; height: 28px; top: 0; }
+					.sc .gallery .images .thumb:after, 
+					.tc .gallery .images .thumb:after { display: block; position: absolute; z-index: 10; content: ""; width: 100%; left: 0; background: url(/images/common/bg-photo-bot.png) center center no-repeat; height: 28px; bottom: 0; }
+					.gallery .images .thumb img { width: 100%; }
+						.gallery .images .caption { clear: both; padding: 0px 10px; font-weight: bold; font-size: 0.9em; line-height: normal; color: #666; }		
+						.gallery .images .description { clear: both; padding: 0px 10px; font-size: 0.9em; line-height: normal; color: #666; clear: both;  }
+							.gallery .images .description p { } 
+					.gallery .images .total { clear: both; padding: 0px 10px; font-size: 0.9em; color: #922786; clear: both; }
+					.gallery .images .publishdate { font-size: 0.9em; clear: both; }
+			.gallery .paging { }
+					
+/* 
+-----------------------------------------------------------------------------
+ =Gallery List (List View)
+----------------------------------------------------------------------------- */
+.gallery .list { }
+	.gallery .list .hd { }
+	.gallery .list .bd { }
+		.gallery .list .images { }
+			.gallery .list .images li { }
+				.gallery .list .images .thumb { }
+					.gallery .list .images .thumb a { }
+					.gallery .list .images .thumb a.file { }
+						.gallery .list .images .thumb img { }
+				.gallery .list .images .caption { }
+				.gallery .list .images .description { }
+					.gallery .list .images .description p { }
+				.gallery .list .images .total { }
+				.gallery .list .images .publishdate { }
+		.gallery .list .paging { }
+
+/* 
+-----------------------------------------------------------------------------
+ =Gallery List (File List)
+----------------------------------------------------------------------------- */
+.gallery .list dl.file { margin-bottom: 0; padding-bottom: 0; border: 0; }
+	.gallery .list dl.file dd { margin-bottom: 0; padding-bottom: 0; border: 0; }
+		.gallery .list dl.file dl { }
+			.gallery .list dl.file dl dt { }
+			.gallery .list dl.file dl dd { }	
+				.gallery .list dl.file ul { }
+				.gallery .list dl.file ul li { }
+					.gallery .list dl.file ul li a { }
+					.gallery .list dl.file ul li p { }
+
+/* 
+-----------------------------------------------------------------------------
+ =Gallery List (Grid View)
+----------------------------------------------------------------------------- */
+.gallery .grid { }
+	.gallery .grid .hd { }
+	.gallery .grid .bd { }
+		.gallery .grid .images { }
+			.gallery .grid .images li { float: left; }
+				.gallery .grid .images .thumb { }
+					.gallery .grid .images .thumb a { }
+					.gallery .grid .images .thumb a.file { }
+						.gallery .grid .images .thumb img { }
+				.gallery .grid .images .caption { }
+				.gallery .grid .images .description { }
+					.gallery .grid .images .description p { }
+				.gallery .grid .images .total { }
+				.gallery .grid .images .publishdate { }
+		.gallery .grid .paging { }
+
+/* 
+-----------------------------------------------------------------------------
+ =Gallery Teaser
+----------------------------------------------------------------------------- */
+.gallery .teaser { margin-left: -10px; margin-right: -10px; }
+	.gallery .teaser .hd { }
+	.gallery .teaser .bd { }
+		.gallery .teaser dl.image { }
+			.gallery .teaser dl.image dt { }
+				.gallery .teaser dl.image dt a { }
+					.gallery .teaser dl.image dt img { width: 100%; }
+			.gallery .teaser dl.image dd { padding-bottom: 0; }
+				.gallery .teaser dl.image dd h3 { }
+				.gallery .teaser dl.image dd div { }
+					.gallery .teaser dl.image dd p { margin-bottom: 0; }
+		.gallery .teaser p { }
+			.gallery .teaser p a { }
+		.gallery .teaser select { margin-bottom: 1.5em; }
+
+/* 
+-----------------------------------------------------------------------------
+ =Attachments
+----------------------------------------------------------------------------- */
+.attachments { margin-left: -10px; margin-right: -10px; }
+
+/* Photo attachments */
+.attachments .photos {}
+	.attachments .photos .hd {}
+	.attachments .photos .bd {}
+	.attachments .photos .scroll {}
+		.attachments .photos .paging {
+			height: auto;
+			float: left;
+			width: 100%;
+			margin-bottom: 1em;
+			}
+			.attachments .photos .paging a {}
+			.attachments .photos .paging a:hover {}
+			.attachments .photos .paging .previous { float: left; position: static; }
+			.attachments .photos .paging .next { float: right; position: static; }
+		.attachments .photos ul.images { clear: both; }
+			.attachments .photos .images li {}
+				.attachments .photos .images .thumb { margin-bottom: 1em; } /* Suggest using .image dt styles */
+					.attachments .photos .images .thumb a {}
+					.attachments .photos .images .thumb a:hover {}
+						.attachments .photos .images .thumb img { width: 100%; }
+				.attachments .photos .images .caption {} /* Suggest using .sc h3 styles */
+				.attachments .photos .images .description {}
+
+/* File attachments */
+.attachments .files {}
+	.attachments .files .hd {}
+	.attachments .files .bd {}
+		.attachments .files dl.file-list {}
+			.attachments .files .file-list dd {}
+				.attachments .files .file-list ul {}
+					.attachments .files .file-list li {}
+						.attachments .files .file-list li a {}
+						.attachments .files .file-list li a:hover {}
+						.attachments .files .file-list li p {}
+
+/* Video attachments */
+.attachments .videos {}
+	.attachments .videos .hd {}
+	.attachments .videos .bd {}
+		.attachments .videos dl.file-list {}
+			.attachments .videos .file-list dd {}
+				.attachments .videos .file-list ul {}
+					.attachments .videos .file-list li {}
+						.attachments .videos .file-list li a {}
+						.attachments .videos .file-list li a:hover {}
+						.attachments .videos .file-list li p {}
+
+/* Audio attachments */
+.attachments .audio {}
+	.attachments .audio .hd {}
+	.attachments .audio .bd {}
+		.attachments .audio dl.file-list {}
+			.attachments .audio .file-list dd {}
+				.attachments .audio .file-list ul {}
+					.attachments .audio .file-list li {}
+						.attachments .audio .file-list li a {}
+						.attachments .audio .file-list li a:hover {}
+						.attachments .audio .file-list li p {}
+
+/* 
+-----------------------------------------------------------------------------
+ =Linked Legacy
+----------------------------------------------------------------------------- */
+.gallery-attachment .gallery-directional { float: left; width: 100%; margin-bottom: 1em; }
+	.gallery-attachment .gallery-directional a { display: block; }
+		.gallery-attachment .gallery-directional .gallery-previous a { float: left; }
+		.gallery-attachment .gallery-directional .gallery-next a { float: right; }
+.gallery-attachment dl.image { clear: both; }

@@ -1,0 +1,259 @@
+<%
+'CHANGELOG
+'LSP 07/31/14 - initial development
+%>
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US"><!-- ### BEGIN HEAD ####  --><head>
+
+<!-- Meta -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- Title -->
+<title>  Tickets  Carnegie Concert Series</title>
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="http://carnegieroom.wpengine.com/wp-content/uploads/2014/05/piano-favicon-136x150.jpg">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="/clients/CarnegieConcerts/Images/css.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/clients/CarnegieConcerts/Images/style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/clients/CarnegieConcerts/Images/css_options.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/clients/CarnegieConcerts/Images/responsive.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/clients/CarnegieConcerts/Images/dark.css" type="text/css" media="screen">
+
+<!-- Wordpress functions -->	
+<link rel="alternate" type="application/rss+xml" title="Carnegie Concert Series » Tickets Comments Feed" href="http://www.carnegieconcerts.org/tickets/feed/">
+<link rel="stylesheet" id="flick-css" href="/clients/CarnegieConcerts/Images/flick.css" type="text/css" media="all">
+<link rel="stylesheet" id="mailchimpSF_main_css-css" href="/clients/CarnegieConcerts/Images/a.css" type="text/css" media="all">
+<!--[if IE]>
+<link rel='stylesheet' id='mailchimpSF_ie_css-css'  href='http://www.carnegieconcerts.org/wp-content/plugins/mailchimp/css/ie.css?ver=3.9' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="prettyPhoto-css" href="/clients/CarnegieConcerts/Images/prettyPhoto.css" type="text/css" media="all">
+<link rel="stylesheet" id="shortcodes-css" href="/clients/CarnegieConcerts/Images/shortcodes.css" type="text/css" media="all">
+<script style="" type="text/javascript" src="/clients/CarnegieConcerts/Images/jquery_003.js"></script>
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/jquery-migrate.js"></script>
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/scrollTo.js"></script>
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/jquery_002.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var mailchimpSF = {"ajax_url":"http:\/\/www.carnegieconcerts.org\/"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/mailchimp.js"></script>
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/jquery.js"></script>
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/datepicker.js"></script>
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/cycle.js"></script>
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/audioauto.js"></script>
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/mosaic.js"></script>
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/p.js"></script>
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/backstretch.js"></script>
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/gmap.js"></script>
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/idTabs.js"></script>
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/selectnav.js"></script>
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/respond.js"></script>
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/script.js"></script>
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/dark.js"></script>
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/js"></script><script src="/clients/CarnegieConcerts/Images/main.js" type="text/javascript"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.carnegieconcerts.org/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.carnegieconcerts.org/wp-includes/wlwmanifest.xml"> 
+<link rel="next" title="Membership" href="http://www.carnegieconcerts.org/membership/">
+<link rel="canonical" href="http://www.carnegieconcerts.org/tickets/">
+<link rel="shortlink" href="http://www.carnegieconcerts.org/?p=9">
+	<script type="text/javascript">
+		jQuery(function($) {
+			$('.date-pick').each(function() {
+				var format = $(this).data('format') || 'mm/dd/yyyy';
+				format = format.replace(/yyyy/i, 'yy');
+				$(this).datepicker({
+					autoFocusNextInput: true,
+					constrainInput: false,
+					changeMonth: true,
+					changeYear: true,
+					beforeShow: function(input, inst) { $('#ui-datepicker-div').addClass('show'); },
+					dateFormat: format.toLowerCase(),
+				});
+			});
+			d = new Date();
+			$('.birthdate-pick').each(function() {
+				var format = $(this).data('format') || 'mm/dd';
+				format = format.replace(/yyyy/i, 'yy');
+				$(this).datepicker({
+					autoFocusNextInput: true,
+					constrainInput: false,
+					changeMonth: true,
+					changeYear: false,
+					minDate: new Date(d.getFullYear(), 1-1, 1),
+					maxDate: new Date(d.getFullYear(), 12-1, 31),
+					beforeShow: function(input, inst) { $('#ui-datepicker-div').removeClass('show'); },
+					dateFormat: format.toLowerCase(),
+				});
+
+			});
+
+		});
+	</script>
+	<link type="text/css" media="screen" rel="stylesheet" href="/clients/CarnegieConcerts/Images/fbf_facebook_page_feed.css">
+
+
+     
+<script src="/clients/CarnegieConcerts/Images/commonutilstats.js" charset="UTF-8" type="text/javascript"></script><script src="/clients/CarnegieConcerts/Images/AuthenticationService.Authenticate" charset="UTF-8" type="text/javascript"></script></head>
+
+<!-- Begin Body -->
+<body class="page page-id-9 page-template-default"> 
+
+<!-- Background Image -->
+<script>
+jQuery(document).ready(function($){
+    $.backstretch("http://carnegieroom.wpengine.com/wp-content/uploads/2014/05/carnegie-sepia_cooler-950x747.png");
+});
+</script>
+
+<!-- Header -->
+<div id="header"> 			
+  <div class="header-row fixed">		
+    <div id="logo">					
+
+      <a href="http://www.carnegieconcerts.org/"><img src="/clients/CarnegieConcerts/Images/carnegie-logo_gold.png" alt="logo"></a>    </div><!-- end #logo -->
+	
+    <div id="main">
+	  <div id="btn-menu">MENIU</div>
+      <div class="main-navigation">
+				<div id="clubbmenu" class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children has-sub"><a href="http://www.carnegieconcerts.org/about/">About</a>
+<ul>
+	<li id="menu-item-229" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.carnegieconcerts.org/rental/">Rental</a></li>
+	<li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.carnegieconcerts.org/contact-us/">Contact Us</a></li>
+</ul>
+</li>
+<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.carnegieconcerts.org/upcoming-events/">Events</a></li>
+<li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-9 current_page_item active"><a href="http://www.carnegieconcerts.org/tickets/">Tickets</a></li>
+<li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.carnegieconcerts.org/membership/">Membership</a></li>
+<li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.carnegieconcerts.org/donate/">Donate</a></li>
+<li id="menu-item-230" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.carnegieconcerts.org/livestream/">Livestream</a></li>
+</ul></div>	
+
+      </div><!-- end .main-navigation -->			
+    </div><!-- end #main -->
+  </div><!-- end .header-row fixed -->           
+</div><!-- end #header -->
+
+<!-- Wrap -->
+<div id="wrap">
+<!--TIX DATA START-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+</div><!-- end #wrap -->
+
+<!-- Footer -->
+<div id="footer">
+  <div class="footer-row fixed">
+			
+    <div class="footer-col">
+
+ 
+    </div><!-- end .footer-col -->
+				
+    <div class="footer-col">
+  
+    </div><!-- end .footer-col -->
+				
+    <div class="footer-col">
+    
+    </div><!-- end .footer-col -->
+				
+    <div class="footer-col">
+    
+    </div><!-- end .footer-col -->	
+  </div><!-- end .footer-row fixed -->			
+</div><!-- end #footer -->
+
+<div class="footer-bottom"> 
+  <div class="footer-row">
+    <div class="footer-bottom-copyright">
+&#169;
+2014
+Carnegie Concert Series. All Rights Reserved.
+    </div><!-- end .footer-bottom-copyright -->
+    <div class="footer-bottom-social">
+      <ul id="footer-social">
+        
+        <li class="facebook footer-social"><a href="https://www.facebook.com/carnegieroom" target="_blank"></a></li>
+        <li class="twitter footer-social"><a href="https://twitter.com/carnegieconcert" target="_blank"></a></li>
+
+        <li class="youtube footer-social"><a href="https://www.youtube.com/user/carnegieconcerts" target="_blank"></a></li>
+
+
+
+
+
+
+
+        <li class="google footer-social"><a href="https://plus.google.com/b/103086765084703037234/103086765084703037234/posts" target="_blank"></a></li>
+
+
+
+
+
+
+      </ul>
+    </div><!-- end .footer-bottom-social -->
+  </div><!-- end .footer-row -->
+</div><!-- end .footer-bottom -->
+
+
+<script type="text/javascript">
+jQuery(document).ready(function($){
+   if (jQuery().prettyPhoto) {
+      	    jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({
+            animation_speed: 'fast',
+			slideshow: 5000,
+			opacity: 0.80,
+			show_title: true,
+			allow_resize: true,
+			default_width: 540,
+			default_height: 344,
+			counter_separator_label: '/',
+			theme: 'pp_default',
+			horizontal_padding: 20,
+			autoplay: true,		
+			ie6_fallback: true,
+			social_tools: false,
+		});
+   }
+   
+   if (jQuery().prettyPhoto) {
+      	    jQuery("a[data-rel^='prettyPhoto-widget']").prettyPhoto({
+            animation_speed: 'fast',
+			slideshow: 5000,
+			opacity: 0.80,
+			show_title: true,
+			allow_resize: true,
+			default_width: 540,
+			default_height: 344,
+			counter_separator_label: '/',
+			theme: 'pp_default',
+			horizontal_padding: 20,
+			autoplay: true,		
+			ie6_fallback: true,
+			social_tools: false,
+		});
+   }
+   
+   });
+</script> 
+
+<script type="text/javascript" src="/clients/CarnegieConcerts/Images/comment-reply.js"></script>
+
+
+<div style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; z-index: -999999; position: fixed; width: 1663px; height: 891px;" class="backstretch"><img src="/clients/CarnegieConcerts/Images/carnegie-sepia_cooler-950x747.png" style="position: absolute; margin: 0px; padding: 0px; border: medium none; max-width: none; z-index: -999999; width: 1663px; height: 1307.64px; left: 0px; top: -208.322px;"></div>
+</div>
+</form>
+</body>
+</html>

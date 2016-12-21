@@ -1,0 +1,93 @@
+<%
+'changelog'
+'LSP 10/12/16 - initial development'
+%>
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+
+ <script src="https://www.tix.com/clients/tix/js/jquery-1.6.4.min.js" type="text/javascript"></script>
+
+
+		<!-- bootstrap-->
+	<link rel="stylesheet" href="/clients/cchsperformingarts/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/clients/cchsperformingarts/assets/css/bootstrap-theme.min.css">
+	<!--font awesome-->
+	<link rel="stylesheet" href="/clients/cchsperformingarts/assets/css/font-awesome.css">
+		<link rel="stylesheet" href="/clients/cchsperformingarts/assets/css/font-awesome.min.css">
+
+	<!--custom css-->
+	<link rel="stylesheet" href="/clients/cchsperformingarts/assets/style.css">
+</head>
+
+<body>
+<header>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<img  class="img-responsive" src="/clients/cchsperformingarts/assets/images/nav.png" border="0" USEMAP="#NotNamed"/>
+		
+<map name="NotNamed">
+  <area shape="rect" coords="16,111,80,129" href="http://www.cchsperformingarts.com/"  alt="" title="">
+  <area shape="rect" coords="246,110,315,126" href="http://www.cchsperformingarts.com/about"  alt="" title="">
+  <area shape="rect" coords="480,109,579,132" href="http://www.cchsperformingarts.com/the-cast"  alt="" title="">
+  <area shape="rect" coords="744,106,832,133" href="http://www.cchsperformingarts.com/tickets"  alt="" title="">
+</map>
+		</div>
+	</div>
+</div>
+</header>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 content">
+				<!--tix content-->
+	<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+			
+			</div>
+		</div>
+	</div>
+</section>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="/clients/cchsperformingarts/assets/js/bootstrap.min.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				$("#MasterContent_TixInnerContent_pnlButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_ButtonPanel").removeAttr("style");
+/* remove extra button defaults
+				$("#MasterContent_TixInnerContent_ctl00_gvSchedule_btnBuyTix_0").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnBackToShopping").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCancelOrder").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCheckout").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_LoginButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CancelOrderButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CompleteButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingBtn").removeAttr("style");*/
+				
+				
+			});
+		</script>
+
+		</div>
+		</form>
+	</body>
+
+	</html>

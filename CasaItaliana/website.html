@@ -1,0 +1,456 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0028)http://www.casaitaliana.org/ -->
+<HTML><HEAD><TITLE>Casa Italiana Opera Company Home Page</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="Andrew Jordan" name=Author>
+<META content="MSHTML 6.00.5730.11" name=GENERATOR>
+<STYLE type=text/css>A:link:unknown {
+	COLOR: blue
+}
+A:visited:unknown {
+	COLOR: blue
+}
+A:hover {
+	COLOR: red; TEXT-DECORATION: underline
+}
+A.menulink {
+	TEXT-DECORATION: none
+}
+B.menulink {
+	FONT-SIZE: 10pt
+}
+A.textlink {
+	TEXT-DECORATION: none
+}
+</STYLE>
+<!---<bgsound src="http://www.opera.it/Midi/diqpira.mid" loop="1">---><!---<bgsound src="Greeting%20Casa.wav" loop="1">---><!--- <bgsound src="Casa.mario.wav" loop="1"> --->
+<SCRIPT language=JavaScript> 
+
+<!----
+// Script to generate proper tags for MIDI playing, preferably with Crescendo.
+// Note: spaces inside quotes *are* significant and should not be deleted.
+// Version 1.2 -- See http://www.liveupdate.com/playmidi.html.
+
+function PlayMIDI(SongURL) // Copyright (C) 1996, 1997 LiveUpdate division of LABTECH 
+                           // Permission for use granted to all music lovers on the net 
+                           // Now including playlist & other Crescendo Version 3.0 support
+{
+  var WriteLegend = "yes"        //  Change to "no" if you don't want legend.
+  var PlayIfNoCrescendo = "no"   // Change to "yes" to try to play if Crescendo is not present.
+  var NotCrescendo = "You don't have Crescendo, the <B>only</B><BR>" +
+        "streaming MIDI player for the web.<BR>" +
+        "<B><A HREF='http://www.liveupdate.com/dl.html'>Download Crescendo now</A> -- it's free!</B>"
+  var CrescendoIsPresent = "no"
+  var CrescendoIndex = 0
+  var SongIndex = 1
+  var CrescendoVersion = ""
+  var Legend = ""
+  var DocString = ""
+  var args = PlayMIDI.arguments
+
+  document.open();
+  if (navigator.appName == "Netscape") {                  // Find out if the browser is Navigator.
+    var NSMajorVersion = navigator.appVersion.charAt(0)   // Find major version number.
+    if (NSMajorVersion > "2") {                           // Is major version greater than 2?
+      // This is version 3 of Netscape (or greater).
+      // See if Crescendo is present.
+      for (var i = 0; i < navigator.plugins.length; i++) {
+        if (navigator.plugins[i].name.substring(0,20) == "LiveUpdate Crescendo") {
+          CrescendoIsPresent = "yes"
+          CrescendoIndex = i
+          CrescendoVersion = 
+            navigator.plugins[i].name.substring(21,navigator.plugins[i].name.length)
+          break
+          }
+      }
+      if (CrescendoIsPresent == "yes") {
+        if (navigator.plugins[CrescendoIndex][0].type == "music/crescendo") {
+          // This is version 2.3 of Crescendo or greater.
+          DocString = '<EMBED TYPE="music/crescendo" '
+          // Set the following to to "true" _only_ if you need to control Crescendo 
+          // through LiveConnect.  In most cases, this should be left as "false".
+          DocString = DocString + 'JAVA="false" ' 
+          DocString = DocString + 'RANDOM="false" '
+          DocString = DocString + 'SONG="' + SongURL + '" '
+          if (args.length > 1)
+              for (var i = 0; i < args.length; i++) {
+                 DocString = DocString + "SONG" + (i+1) + "=" + '"' + args[i] + '" ' }
+          Legend = "This is Crescendo " + CrescendoVersion
+                   //  " running on Netscape " + NSMajorVersion
+          if (CrescendoVersion.length > 5)
+             Legend = Legend + " with auto-detach."
+        } else {
+          // This is a pre-2.3 version of Crescendo.
+          DocString = '<EMBED SRC="' + SongURL + '" '
+          Legend = "This is a pre-2.3 version of Crescendo -" +
+            " running on Netscape " + NSMajorVersion + ".<BR>" +
+            "<B><A HREF='http://www.liveupdate.com/dl.html'>Upgrade Crescendo now</A> -- it's free!</B>"
+        }
+      } else {
+        if (PlayIfNoCrescendo == "yes") {
+          // This is some other plug-in besides Crescendo, so use MIME type to load the first
+          // MIDI plug-in that matches the file's MIME type or, if the file MIME type is 
+          // not matched by any plug-in, Mplayer.exe will be OLE-embedded on Windows.
+          DocString = '<EMBED SRC="' + SongURL + '" '
+        }
+        Legend = NotCrescendo
+      }
+    } else {
+      // This is version 2 of Netscape, so use MIME type to load the first
+      // MIDI plug-in that matches the file's MIME type or, if the file MIME type is 
+      // not matched by any plug-in, Mplayer.exe will be OLE-embedded on Windows.
+      DocString = DocString + 'SRC="' + SongURL + '" '
+      // Legend = "This could be any MIDI plug-in, or the Windows Media Player."
+      Legend = NotCrescendo
+    }
+    if (DocString.substring(0,6) == "<EMBED") {
+      DocString = DocString + 'PLUGINSPAGE="http://www.liveupdate.com/dl.html" ' 
+      DocString = DocString + 'HEIGHT=55 WIDTH=200 '   // Use HEIGHT=2 WIDTH=0 for invisible.
+      // Optional Crescendo parmeters -- See http://www.liveupdate.com//cpauth.html for docs.
+       DocString = DocString + 'AUTOSTART="false" ' // Uncomment this for no autostart.
+       DocString = DocString + 'DELAY=5 '           // Uncomment this for start delay (5 s).
+      // DocString = DocString + 'BGCOLOR="#000000" ' // Uncomment this for black color.
+      // DocString = DocString + 'DETACH="true" '     // Uncomment this for auto-detach.
+      DocString = DocString + '>'
+    }
+
+  } else {   // Find out if the browser is Microsoft Internet Explorer 3.0 or greater.
+    if (navigator.appName == "Microsoft Internet Explorer") {
+       // Load the ActiveX version of Crescendo or Crescendo PLUS if it's installed.
+          DocString = '<OBJECT ID=Crescendo '
+          DocString = DocString + 'CLASSID="clsid:0FC6BF2B-E16A-11CF-AB2E-0080AD08A326" '
+    	  var NSMajorVersion = navigator.appVersion.charAt(0)   // Find major version number.
+          if (NSMajorVersion > "3") {                           // Is major version greater than 3?
+              DocString = DocString + 'CODEBASE="http://activex.liveupdate.com/controls/cres.cab#Version=3,0,0,70" ' }           
+          else {
+              DocString = DocString + 'CODEBASE="http://activex.liveupdate.com/controls/cres.cab#Version=2,3,0,35" ' }
+          DocString = DocString + 'HEIGHT=55 '
+          DocString = DocString + 'WIDTH=200 '
+          DocString = DocString + '<PARAM NAME="RANDOM" VALUE="false">'
+          DocString = DocString + '<PARAM NAME="Song" VALUE="' + SongURL + '">'
+          if (args.length > 1)
+              for (var i = 0; i < args.length; i++) {
+                 DocString = DocString + '<PARAM NAME="SONG' + (i+1) + '" VALUE="' + args[i] + '"> ' }
+          // Optional parmeters -- See http://www.liveupdate.com//cpauth.html for docs.
+           DocString = DocString + '<PARAM NAME="AUTOSTART" VALUE="false">'
+           DocString = DocString + '<PARAM NAME="DELAY" VALUE="5">'
+          // DocString = DocString + '<PARAM NAME="BGCOLOR" VALUE="#000000">'
+          // DocString = DocString + '<PARAM NAME="DETACH" VALUE="true">'
+
+          // If the ActiveX Crescendo is not installed, this EMBED tag will cause MSIE
+          // to load any Netscape plug-in that is associated with *.MID files.
+          // The browser will only "see" this EMDED tag if the ActiveX Crescendo is not 
+          // registered.  This is for versions of MSIE that don't see <OBJECT> but do see <EMBED>.
+          DocString = DocString + '<EMBED SRC="' + SongURL + '" '
+          DocString = DocString + 'PLUGINSPAGE="http://www.liveupdate.com/dl.html" '
+          DocString = DocString + 'HEIGHT=55 WIDTH=200>'
+          DocString = DocString + '</OBJECT>'  // Close the OBJECT tag.
+        Legend = "This is Crescendo - running on Microsoft with auto-detach."
+    } else {
+
+      // The browser may be Netscape 1.x, or MSIE 2.0, or some other browser.  For MSIE 2.0,
+      DocString = DocString + '<BGSOUND SRC="' + SongURL + '">' + '<BR>'
+      }
+  }
+  DocString = DocString + "\n"
+  document.write(DocString)
+  // Write legend.
+  if (WriteLegend == "yes")  document.write("<BR><FONT SIZE=-1>" + Legend + "</FONT>")
+  document.close()
+}
+----->
+</SCRIPT>
+<!--- <body background="http://www2.netcom.com/drp/backgrounds/paper1.gif">  ---></HEAD>
+<BODY background=website_files/paper1.gif>
+<H1 style="MARGIN: 0px; WORD-SPACING: 0px; TEXT-INDENT: 0px; LINE-HEIGHT: 100%" 
+align=center><BIG>Casa Italiana Opera Company </BIG></H1>
+<H1 style="MARGIN: 0px; WORD-SPACING: 0px; TEXT-INDENT: 0px; LINE-HEIGHT: 100%" 
+align=center><SMALL><SMALL><SMALL><SMALL><A 
+href="http://www.casaitaliana.org/">http://www.casaitaliana.org/</A></SMALL></SMALL></SMALL></SMALL></H1>
+<H1 style="MARGIN: 0px; WORD-SPACING: 0px; TEXT-INDENT: 0px; LINE-HEIGHT: 100%" 
+align=center><SMALL><SMALL><SMALL><SMALL><IMG height=50 alt="Italian Flag" 
+hspace=0 src="website_files/italywt.gif" width=68 align=left> <IMG height=50 
+alt="Italian Flag" hspace=0 src="website_files/italywt.gif" width=68 
+align=right></SMALL>A Professional Workshop</SMALL></SMALL></SMALL></H1>
+<H1 align=center><STRONG><FONT face="Lucida Calligraphy" 
+size=6>PRESENTS</FONT></STRONG></H1>
+<HR width="40%" SIZE=4>
+
+<H1 align=center><A 
+href="http://rick.stanford.edu/opera/Mascagni/Cavalleria/main.html">Cavalleria 
+Rusticana</A> <BR>&nbsp;by <A href="http://www.mascagni.org/">Mascagni</A> </H1>
+<H1 align=center>- and -</H1>
+<H1 align=center><A 
+href="http://rick.stanford.edu/opera/Leoncavallo/Pagliacci/main.html">Pagliacci<BR></A>by 
+<A 
+href="http://rick.stanford.edu/opera/Leoncavallo/main.html">Leoncavallo</A></H1>
+<H2 align=center>Sunday, March 4, 2007 </H2>
+<P align=center> </P>
+<DIV align=center>
+<CENTER>
+<TABLE width=589 border=0>
+  <TBODY>
+  <TR>
+    <TD width=179 height=99>
+      <H1 align=right><STRONG><BIG>Tickets:</BIG></STRONG></H1></TD>
+    <TD width=19 height=99></TD>
+    <TD width=371>
+      <P 
+      style="MARGIN: 0px; WORD-SPACING: 0px; TEXT-INDENT: 0px; LINE-HEIGHT: 100%" 
+      align=left><STRONG><BIG>Dinner and Opera (2:30 p.m.) ................ 
+      $48</BIG></STRONG></P>
+      <P 
+      style="MARGIN: 0px; WORD-SPACING: 0px; TEXT-INDENT: 0px; LINE-HEIGHT: 100%" 
+      align=right><STRONG><FONT size=3>by advance sale 
+    only</FONT></STRONG></P></TD></TR></TBODY></TABLE></CENTER></DIV>
+<P align=center><FONT size=3><STRONG>All operas are performed at the<BR>Casa 
+Italiana Cultural Center of St. Peter's Parish<BR>1051 N. Broadway<BR>Los 
+Angeles, California 90012-1429<BR>Three free guarded parking 
+lots</STRONG></FONT></P>
+<P align=center>&nbsp;</P><BIG>
+<P align=center><STRONG>For tickets, reservations, and further information, 
+please contact:<BR></STRONG></BIG><STRONG><BR><BIG><BIG><A 
+href="mailto:pelliott@commontech.com?cc=mario@casaitaliana.org&amp;subject=Casa Italiana Opera Company">Mario 
+Leonetti - Director</A><BR></BIG></BIG><FONT size=3>248 N. Pass Ave.<BR>Burbank, 
+CA 91505<BR>(818) 559-8696 </FONT></STRONG></P>
+<HR width="40%" SIZE=4>
+
+<H2 align=center><A 
+href="http://www.casaitaliana.org/">http://www.casaitaliana.org/</A></H2>
+<P>&nbsp;</P>
+<P align=center><B><A href="http://www.casaitaliana.org/Casa.mario.wav">CLICK 
+HERE FOR VOICE GREETING FROM MARIO LEONETTI (123k)</A></B></P>
+<P align=center><A 
+href="http://www.casaitaliana.org/ticket_order.htm"><BIG><BIG>HTML Ticket Order 
+Form (for printing and mailing)</BIG></BIG></A><BR><BIG><BIG><A 
+href="http://www.casaitaliana.org/mario_envelope_and_casa_ticket_order_form.doc">MS 
+Word Envelope to Mario and Ticket Order Form</A><BR><A 
+href="http://www.casaitaliana.org/mario_envelope_and_casa_ticket_order_form.txt">ASCII 
+version of MS Word File</A><BR></BIG></BIG></P>
+<P class=MsoNormal 
+style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; WORD-SPACING: 0px; LINE-HEIGHT: 100%; TEXT-ALIGN: center" 
+align=center>&nbsp;</P>
+<P class=MsoNormal 
+style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; WORD-SPACING: 0px; LINE-HEIGHT: 100%; TEXT-ALIGN: center" 
+align=center>&nbsp;</P>
+<P class=MsoNormal style="mso-layout-grid-align: none" align=center><B><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: 'Times.New.Roman.Bold0150'; mso-bidi-font-family: 'Times.New.Roman.Bold0150'"><A 
+href="http://www.casaitaliana.org/Opera%20VFV%20order.doc">“VOLUNTEERS FOR 
+VERDI”<BR></A></SPAN><A 
+href="http://www.casaitaliana.org/Opera%20VFV%20order.doc"><SPAN 
+style="FONT-FAMILY: 'Times.New.Roman.Bold0100'; mso-bidi-font-family: 'Times.New.Roman.Bold0100'">IS 
+NOW AVAILABLE FOR THE FIRST TIME ON DVD<BR></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: 'Times.New.Roman.Bold0100'; mso-bidi-font-family: 'Times.New.Roman.Bold0100'; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">in 
+a special Casa Italiana Opera Company Limited Edition of the award-winning, 87 
+minute feature presentation of the behind the scenes story of the Casa Italiana 
+Opera Company’s 30th Anniversay production of Verdi's DON 
+CARLO<BR></SPAN></A></B><A 
+href="http://www.casaitaliana.org/Opera%20VFV%20order.doc"><B><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: Times.New.Roman.Bold0100; mso-bidi-font-family: Times.New.Roman.Bold0100; mso-fareast-font-family: Times New Roman; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA">Click 
+this link for more information and order form</SPAN></B></A></P>
+<P class=MsoNormal 
+style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; WORD-SPACING: 0px; LINE-HEIGHT: 100%; TEXT-ALIGN: center" 
+align=center>&nbsp;</P>
+<P class=MsoNormal 
+style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; WORD-SPACING: 0px; LINE-HEIGHT: 100%; TEXT-ALIGN: center" 
+align=center>&nbsp;</P>
+<P class=MsoNormal 
+style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; WORD-SPACING: 0px; LINE-HEIGHT: 100%; TEXT-ALIGN: center" 
+align=center><B><A 
+href="http://www.italoamericano.com/los%20angeles/gala%20comme%20leonetti.htm">ARTICLE</A> 
+and <A href="http://www.casaitaliana.org/OPERA%20program%2035th.doc">PROGRAM</A> 
+from the Casa's 35th Anniversary Celebration</B></P>
+<P class=MsoNormal 
+style="MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px; WORD-SPACING: 0px; LINE-HEIGHT: 100%; TEXT-ALIGN: center" 
+align=center>&nbsp;</P>
+<HR>
+
+<H1 align=center>Next Opera:</H1>
+<H1 align=center>Il Trovatore (Verdi)</H1>
+<H1 align=center>May 27, 2007</H1>
+<P align=center>&nbsp;</P>
+<HR>
+
+<P align=center><BIG><BIG>The Casa Italiana Opera Company<BR>is a professional 
+workshop located at:</BIG></BIG></P>
+<H2 align=center><A 
+href="http://maps.google.com/maps?q=1051+N.+Broadway,+los+angeles,+ca&amp;spn=0.028673,0.040443&amp;iwloc=A&amp;hl=en">St. 
+Peter's Parish Casa Italiana<BR>1051 N. Broadway<BR>Los Angeles, California 
+90012-1429<BR><BR>Click here for a scalable map to the Casa</A> </H2>
+<P align=center><A href="http://www.casaitaliana.org/"><FONT 
+size=4>www.casaitaliana.org</FONT></A></P>
+<HR style="VERTICAL-ALIGN: top" align=center width="75%" SIZE=3>
+
+<P><STRONG>The operas performed at the Casa are fully staged with orchestra and 
+chorus. </STRONG></P>
+<BLOCKQUOTE>
+  <BLOCKQUOTE>
+    <BLOCKQUOTE>
+      <DL>
+        <DD><STRONG>Dinner at 2:30 pm.<BR>Opera at 4:30 pm.<BR>Dinner and Opera 
+        (2:30 p.m.) ................ $48<BR>&nbsp;&nbsp;&nbsp; by advance sale 
+        only</STRONG> </DD></DL></BLOCKQUOTE></BLOCKQUOTE></BLOCKQUOTE>
+<BLOCKQUOTE>
+  <P><STRONG>For reservations, call&nbsp; (818) 559-8696 or (310) 451-6012. 
+  <BR>For advertisements in our program, please call (818) 559-8696 or (310) 
+  451-6012.</STRONG></P></BLOCKQUOTE>
+<BLOCKQUOTE><STRONG>
+  <P>&nbsp;</P></STRONG>
+  <H3 align=center><A 
+  href="http://www.casaitaliana.org/OPERA%20Brochure%202005.doc"><BIG><BIG>COMPANY 
+  INFORMATION</BIG></BIG></A></H3></BLOCKQUOTE>
+<BLOCKQUOTE>
+  <P align=center><A 
+  href="http://www.casaitaliana.org/auditions.html"><BIG><BIG>CHORUS CALL AND 
+  AUDITION INFORMATION</BIG><BR>openings in all voice 
+  categories.</BIG><BR><BIG>Click here for more 
+  information</BIG></A><BIG>.</BIG></P>
+  <P align=center><BIG><A 
+  href="http://www.casaitaliana.org/opera_chorus.htm">Additional Opera Chorus 
+  Information</A></BIG></P>
+  <P align=center><BIG>&nbsp;&nbsp;&nbsp;&nbsp; <STRONG>OR 
+  CALL</STRONG>:</BIG><BR><BIG><BIG><A 
+  href="mailto:pelliott@commontech.com?cc=mario@casaitaliana.org&amp;subject=Casa Italiana Opera Company">Mario 
+  Leonetti</A>: (818) 559-8696</BIG></BIG></P></BLOCKQUOTE>
+<P align=center>&nbsp;</P>
+<HR width="50%" SIZE=4>
+
+<H3 align=center>2007 Casa operas.</H3>
+<BLOCKQUOTE><FONT size=4>
+  <P>Scheduled for 2007:</P>
+  <P style="MARGIN-LEFT: 150px">March 
+  4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Cavalleria 
+  Rusticana &nbsp;(Mascagni) and Pagliacci (Leoncavallo)</P>
+  <P style="MARGIN-LEFT: 150px">May 
+  27&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Il 
+  Trovatore (Verdi)</P>
+  <P style="MARGIN-LEFT: 150px">September 9&nbsp;&nbsp;&nbsp;&nbsp; Les Contes 
+  d’Hoffmann (Offenbach)</P>
+  <P style="MARGIN-LEFT: 150px">November 11&nbsp;&nbsp; Tosca (Puccini)</P>
+  <P style="MARGIN-LEFT: 150px"></P>
+  <P style="MARGIN-LEFT: 150px">PLUS at New Horizons, July, 
+  2007:&nbsp;&nbsp;&nbsp;&nbsp; Turandot (Puccini)</P></FONT></BLOCKQUOTE>
+<P style="MARGIN-LEFT: 150px">&nbsp;</P>
+<HR align=center>
+
+<P 
+align=center><BIG><BIG><BIG><STRONG><U>RESOURCES</U></STRONG></BIG></BIG></BIG></P>
+<P>For more great opera links, visit the <A 
+href="http://www.yahoo.com/Arts/Performing_Arts/Opera/">Yahoo! opera site</A>. 
+</P><A href="http://operabase.com/corpus/index.html">
+<P>CORPUS Opera Resource Pages</A></P>
+<P>Click here for the <A href="http://www.casaitaliana.org/archive.htm">Casa 
+Italiana archives</A></P>
+<HR>
+
+<P align=center><A href="http://home.earthlink.net/~chrisden/chrisden.htm" 
+target=contents>The Casa thanks<BR><IMG height=26 
+src="website_files/chrisdn3.gif" width=304><BR>for all its support</A></P>
+<P align=center><A 
+href="http://www.casaitaliana.org/casa_boheme_photo_cast_3a_mvc-0001a.jpg"><IMG 
+height=75 src="website_files/casa_boheme_photo_cast_3a_mvc-0001_thumb.jpg" 
+width=101 align=center></A><BR><BIG><A 
+href="http://www.casaitaliana.org/casa_boheme_photo_cast_3a_mvc-0001a.jpg">La 
+Bohème Curtain Call - September 12, 1999</A></BIG></P>
+<P align=center><FONT color=#005599 size=+2><B><A 
+href="http://home.earthlink.net/~chrisden/chrisden.htm">ChrisDen Productions 
+Video and Audio Services</A></B></FONT></P>
+<HR align=center>
+
+<P align=center>Also, list server and other group services are available through 
+Yahoo/eGroups.com.<BR>Send an email to <A 
+href="mailto:casaitaliana-subscribe@egroups.com">casaitaliana-subscribe@egroups.com</A> 
+and automatically subscribe. </P>
+<FORM action=http://www.egroups.com/subscribe method=get><INPUT type=hidden 
+value=casaitaliana name=listname><INPUT type=hidden value=Subscribe 
+name=SubmitAction>
+<DIV align=center>
+<CENTER>
+<TABLE cellSpacing=0 cellPadding=3 width=407 bgColor=#e0e0e0 border=0>
+  <TBODY>
+  <TR>
+    <TD align=middle width=399 colSpan=2><LARGE><B>Subscribe to Casa Italiana 
+      Opera Company eGroup</B></LARGE> </TD></TR>
+  <TR>
+    <TD width=399 colSpan=2>Enter your e-mail address: </TD></TR>
+  <TR>
+    <TD align=middle width=262><INPUT size=34 value="your e-mail" 
+      name=emailaddr> </TD>
+    <TD width=129><INPUT type=image height=31 
+      alt="Click here to join casaitaliana" width=88 
+      src="website_files/join.gif" border=0 
+      name="Click here to join casaitaliana"> </TD></TR>
+  <TR>
+    <TD width=399 colSpan=2>Home Page: <A 
+      href="http://www.egroups.com/group/casaitaliana">http://www.egroups.com/group/casaitaliana</A><BR>Archives: 
+      <A href="http://www.egroups.com/group/casaitaliana/">casaitaliana 
+      archives</A> </TD></TR>
+  <TR>
+    <TD width=399 colSpan=2>An e-group hosted by <A 
+      href="http://www.egroups.com/">eGroups.com</A> 
+</TD></TR></TBODY></TABLE></CENTER></DIV></FORM><!----<blockquote>  <p>&nbsp;</p>  <p><font size="3">To join the first Casa Italiana list server, <a  href="http://www.topica.com/perl/create.pl?subscribe=1&amp;list=10005841">subscribe here</a>,  or send an email to <a href="mailto:casaitaliana-subscribe@topica.com">casaitaliana-subscribe@topica.com</a>.  <br>  </font>You may also join our email list to keep posted of Casa events by email.<br>  To join the Casa Italiana list server, <a  href="http://www.topica.com/perl/create.pl?subscribe=1&amp;list=10005841" target="Content">subscribe</a>  here, or send an email to <a href="mailto:casaitaliana-subscribe@topica.com">casaitaliana-subscribe@topica.com</a><br>  To post a message to the list server, send mail to '<a  href="mailto:casaitaliana@topica.com">casaitaliana@topica.com</a>'</p></blockquote>---->
+<HR align=center>
+
+<P align=center>The Casa thanks the following Internet organizations for making 
+their resources available. Grazie! </P>
+<DIV align=center>
+<CENTER>
+<TABLE border=0>
+  <TBODY>
+  <TR>
+    <TD align=middle><!-- Begin Yahoo Search Form -->
+      <FORM action=http://search.yahoo.com/bin/search method=get>
+      <TABLE border=0>
+        <TBODY>
+        <TR>
+          <TD align=middle>
+            <P align=center><A href="http://www.yahoo.com/"><IMG height=21 
+            alt="[ Yahoo! ]" src="website_files/1yahoo.gif" width=104 align=top 
+            border=0></A> </P></TD></TR>
+        <TR>
+          <TD align=middle>
+            <P align=center><INPUT size=18 value=opera name=p> </P></TD></TR>
+        <TR>
+          <TD align=middle>
+            <P 
+            align=center><INPUT type=submit value="Submit Query" name=name></P></TD></TR>
+        <TR>
+          <TD align=middle>
+            <P align=center><FONT size=1><A 
+            href="http://www.yahoo.com/search.html">options</A> 
+        </FONT></P></TD></TR></TBODY></TABLE></FORM></TD>
+    <TD align=middle>
+      <P align=center></P></TD>
+    <TD align=middle>
+      <P align=center><A href="http://www.egroups.com/"><IMG height=80 
+      alt="egroups_logo_home.gif (2410 bytes)" 
+      src="website_files/egroups_logo_home.gif" width=200 border=0><BR><IMG 
+      height=18 alt="egroups_tagline2.gif (2107 bytes)" 
+      src="website_files/egroups_tagline2.gif" width=240 border=0></A></P></TD></TR>
+  <TR>
+    <TD align=middle><!-- Begin Small Box -->
+      <P align=center> </P></TD>
+    <TD align=middle>
+      <P align=center></P></TD>
+    <TD align=middle>
+      <P align=center><A href="http://www.photoloft.com/"><IMG height=54 src="" 
+      width=100 border=0></A> </P></TD></TR></TBODY></TABLE></CENTER></DIV>
+<HR align=center>
+
+<P align=center>&nbsp;</P>
+<P align=center><STRONG>Comments and indications of broken links gratefully 
+accepted. Please <A 
+href="mailto:webmaster@casaitaliana.org?subject=Casa Italiana Message">email the 
+Casa Webmaster</A>.<BR><BR></STRONG></P>
+<HR align=center>
+
+<P><A href="http://www.google.com/search?q=free+web+space">Click here for a 
+Google! search for free web space.</A><BR><A 
+href="http://www.casaitaliana.org/policies.html">Web page policies</A><BR><A 
+href="http://www.casaitaliana.org/documentation.htm">Web page 
+information/documentation</A> 
+<P style="MARGIN: 0px; TEXT-INDENT: 0px; LINE-HEIGHT: 100%"> 
+<P style="MARGIN: 0px; TEXT-INDENT: 0px; LINE-HEIGHT: 100%"> 
+<P style="MARGIN: 0px; TEXT-INDENT: 0px; LINE-HEIGHT: 100%">&nbsp;This page last 
+edited on <!--webbot bot="Timestamp" s-type="REGENERATED" s-format="%m/%d/%y" startspan -->12/04/06<!--webbot bot="Timestamp" endspan i-checksum="13041" --> 
+</P></BODY></HTML>

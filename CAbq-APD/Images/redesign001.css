@@ -1,0 +1,258 @@
+
+body {
+	font-family:"Lucida Grande", Verdana, Helvetica, Arial, sans-serif;
+	color:#303030;
+	background-color:#c4c595;	
+}
+.hiddenStructure {
+	display: none;
+}
+	/* Link Colors */
+a {	color: #004eb3; }
+a:visited { color: #892b12;}
+a:hover { background-color:#892b12; color:#f1f0e3;}
+/* HEADER */
+	/* Dimensions */
+#logo {
+	background: url(/clients/CABQ-apd/Images/head_short.jpg) no-repeat;
+}
+#logo a {
+	width: 478px;
+    padding: 95px 0 0 0; /* Distance link extends to curve */
+}
+#searchbox {
+	background: url(/clients/CABQ-apd/Images/banner.jpg) no-repeat;
+	width: 482px;
+}
+#hd, #searchbox, #logo {
+	height: 154px; /* Height of header - must be same as height of images */
+}
+#globalnav {
+	top:110px; /* Position of global navigation bar = (height of header - 44) */
+	width: 910px; /* Prevents nav links from wrapping when window gets smaller - should be windowWidth - paddingLeft */
+	overflow: hidden;
+	height: 50px; /* Hiding overflow and setting height to about 50 px prevents nav links from wrapping onto body content */
+}
+#doc {
+	width: 960px; /* Width of page - must be sum of two header images */
+}
+	/* Other */
+#searchbox {
+	float: right;
+	background-color: transparent;
+	text-align: right;
+	white-space: nowrap;
+}
+#logo {
+	float: left;
+	background-color: transparent;
+}
+#logo a {
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    border: 0;
+    margin: 0;
+    height: 0px !important;
+    cursor: pointer;
+}
+#logo a:hover { background-color: transparent; }
+#hd {
+	background-color: #E6D5A9;
+}
+#hd ul li a { 
+	cursor:pointer;
+}
+#searchform {
+	margin: 5px 5px 0 10px;
+}
+#q {
+border: 1px solid #7D270E;
+height: 18px;
+}
+#btnG, #q {
+vertical-align: middle;
+}
+	/* Global Navigation */
+#globalnav, #globalnav li a {
+	color:#dcd7ab;
+}
+#globalnav {
+	font-family: Palatino, Georgia, "Times New Roman", "Times Roman", serif;
+	position:absolute;
+	margin:0 auto;
+	text-align:center;
+	clear: both;
+	font-size: 90%;
+	padding-left: 50px; /* Left-indentation of global navigation links */
+}
+#globalnav li {
+	float:left;
+	margin:0 2.5em 0 0;
+	padding:0 0 0 2.5em;
+	list-style:none;
+	background: url(/clients/CABQ-apd/Images/dot.gif) 0 50% no-repeat;
+	text-align:center;
+}
+#globalnav li#home-nav {
+	background:transparent;
+}
+#globalnav li a {
+	float:left; 
+	display:block;
+	font-weight:bold;
+	padding:14px 7px 3px; /* LSM: middle number controls spacing between global navigation links */
+	text-decoration:none;
+	text-transform:uppercase;
+	height:27px;
+	background:url(/clients/CABQ-apd/Images/hoverbug.gif) 50% -8px no-repeat;
+}
+#globalnav li a:hover { 
+	/* background:url(/clients/CABQ-apd/Images/hoverbug.gif) 50% bottom no-repeat; */
+	background:url(/clients/CABQ-apd/Images/hoverbug.gif) 50% bottom no-repeat;
+}
+#globalnav li a i { text-transform:none; font-style:normal; }
+#globalnav span { display:block; float:left; padding:2px 3px 0px;}			
+#globalnav span:hover { background-color:#dbd6aa; color:#892b12; }
+/* BODY */
+#doc {
+	background-color: white;
+}
+	/* Topic Navigation */
+#topicnavcontainer {
+	background-color: #F1F0E3;
+	margin: 0 0 0 0;
+}
+#topicnavcontainer p {
+	font-family:Arial, Helvetica, Verdana, sans-serif;
+	font-size: 90%;
+	padding: 4px 8px 10px 8px;
+}
+#topicnavcontainer h3 {
+	background-color: #7D270E;
+	color: white;
+	font-family:Georgia, Palatino, "Times New Roman", "Times Roman", serif;
+	font-weight: bold;
+	font-size: 95%;
+	padding: 3px 4px 3px 4px;
+	text-transform: none;
+} 
+	/* Content */
+b, strong { font-weight: bold; }
+
+#yui-main h1, #yui-main h2, #yui-main h3 {
+	color: #762514;
+	font-family: Georgia, Palatino, "Times New Roman", "Times Roman", serif;
+	font-weight:normal;
+}
+#yui-main h1 {
+	margin-bottom: 1em;
+	font-size: 175%;
+}
+#yui-main h2 {
+font-size: 135%;
+margin: 1em 0 0.5em 0;
+}
+#yui-main h3 {
+font-size: 135%;
+font-weight: normal;
+border-bottom: 1px solid #d6bfb0;
+margin: 1em 0 0.5em 0;
+}
+#yui-main h3 a {
+text-decoration: none; /* AMS: remove underline from h3 links because h3s have bottom border set */
+}
+#yui-main p {
+margin: 0.5em 0 0.5em 0;
+}
+#bd {
+margin-right: 15px;
+margin-left: 15px;
+}
+#yui-main ul {
+	list-style-image: url(/clients/CABQ-apd/Images/regularbullet.gif);
+	padding-left: 3em;
+	margin: 1em 0 1em 0;
+}
+#yui-main ul ul {
+	margin: 0;
+}
+a.aboutpdf:hover, a.externallink:hover {
+background-color: transparent; /* AMS: remove background color effect when hovering over pdf and external link icons */
+}
+/* FOOTER */
+#ft {
+	background: #242323 url(/clients/CABQ-apd/Images/footbg.gif) 0 0 repeat-x;
+	text-align:center;
+}
+#ft ul li { display:inline; margin:0px; padding:0px; }
+#ft ul li a {
+	border-right:1px solid #656565; 
+	margin-right:1px; padding-right: 5px;
+}
+#ft li.last a { border-width:0;}
+#ft, #ft a:link { color:#969696; }
+#ft a:hover { background: transparent; color:#fff; }
+#ft a:visited { color:#eee;}
+#ft { padding: 10px 10px 10px 10px; }
+#ft #copyright { margin-top: 10px; }
+	/* footer translations */
+#ft #footerTranslations {
+margin-bottom: 10px;
+}
+#ft #footerTranslations ul,
+#ft #footerTranslations h3 {
+display: inline;
+}
+#ft #footerTranslations h3 {
+font-weight: bold;
+display: inline;
+margin-right: 0.5em;
+}
+/* Table styles for backwards compatability */
+th.living, th.visiting, th.business, table.living, table.visiting, table.business
+{
+background-color: #E4E3CA;
+}
+td.living, th.living, table.living
+{
+border-color: #D0D2B6;
+}
+td.home, th.home, table.home, td.living, th.living, table.living, td.visiting, th.visiting, table.visiting, td.business, th.business, table.business
+{
+border-style: solid;
+border-width: 1px;
+padding: 5px;
+}
+/* UPDATE THESE!!! Search Results Page */
+.searchresline
+{
+margin-bottom: 0.9em;
+}
+.searchresline dt
+{
+margin-bottom: 0.1em;
+}
+.searchresline dd
+{
+margin-top: 0;
+font-size: 90%;
+}
+.searchreslineurl
+{
+color: rgb(0,128,0);
+}
+#searchbestbets li a
+{
+font-size: 122%;
+}
+.searchresline dt a, .searchctrl, .bigtext, .pagectrl
+{
+font-size: 110%;
+}
+.searchctrl, .pagectrl
+{
+font-weight: bold;
+text-align: center;
+margin-top: 1.5em;
+}

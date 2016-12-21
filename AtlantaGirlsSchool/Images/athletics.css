@@ -1,0 +1,291 @@
+/* VERSIONS
+/* 4_5: Initial css version, with most recent production improvements
+/* 5_0: Organize new defaults and process, improve cascade [Author: Landon Durnan]
+/* 5_1: Shared Images [Author: Nick Hall]
+/* 6_0: Blown up and rewritten for managed web parts [Author: Nick Hall]
+
+
+/* 
+-----------------------------------------------------------------------------
+ =Scoreboard
+----------------------------------------------------------------------------- */
+.scoreboard { margin: 0 -10px; }
+	.scoreboard h2 { }
+	.scoreboard .date-range { }
+	.scoreboard .scoreboard-day { border-bottom: none !important; }
+		.scoreboard .scoreboard-day dt { font-weight: normal; font-size: 1.2em; text-decoration: none; text-transform: uppercase; padding: 5px 10px; color: #fff; border-bottom: 1px solid #761e6c; background-color: #922786; text-shadow: 0 -1px #853913; -webkit-box-shadow: inset 0 -1px 0 #a24c98; -moz-box-shadow: inset 0 -1px 0 #a24c98; box-shadow: inset 0 -1px 0 #a24c98; }
+		.scoreboard dl.scoreboard-day dd { margin: 0; padding: 0; border: 0; }
+		.scoreboard .scoreboard-day .cancelled { text-decoration: line-through; }
+		.scoreboard .scoreboard-day .tie { }
+		.scoreboard .scoreboard-day .win { }
+		.scoreboard .scoreboard-day .loss { }
+			.scoreboard .scoreboard-day table { width: 100%; margin: 0; padding: 0; border-bottom: none !important; }
+				.scoreboard .scoreboard-day table tr { }
+					.scoreboard .scoreboard-day table td { border-bottom: 1px solid #d1d1d1; padding: 8px 12px 6px 12px; vertical-align: top; }
+						.scoreboard .scoreboard-day table td table.styled tr.alt td { background-color: #f5f5f5; }
+					.scoreboard .scoreboard-day table td.team { }
+					.scoreboard .scoreboard-day table td.score { }
+					.scoreboard .scoreboard-day table td.result { }
+					.scoreboard .scoreboard-day table td.details { }
+					.scoreboard .scoreboard-day table td.score,
+					.scoreboard .scoreboard-day table td.result,
+					.scoreboard .scoreboard-day table td.details { width: 1.2em; white-space: nowrap; }
+
+/* Scoreboard Vertical: Set Layout Orientation WPP to "Vertical"
+----------------------------------------------------------------------------- */
+.scoreboard .vertical {}
+	.scoreboard .vertical h2 {}
+	.scoreboard .vertical .date-range {}
+	.scoreboard .vertical .scoreboard-day {}
+		.scoreboard .vertical .scoreboard-day dt {}
+		.scoreboard .vertical dl.scoreboard-day dd {}
+		.scoreboard .vertical .scoreboard-day .cancelled {}
+		.scoreboard .vertical .scoreboard-day .tie {}
+		.scoreboard .vertical .scoreboard-day .win {}
+		.scoreboard .vertical .scoreboard-day .loss {}
+			.scoreboard .vertical .scoreboard-day table {}
+				.scoreboard .vertical .scoreboard-day table tr {}
+					.scoreboard .vertical .scoreboard-day table td {}
+					.scoreboard .vertical .scoreboard-day table td.team {}
+					.scoreboard .vertical .scoreboard-day table td.score {}
+					.scoreboard .vertical .scoreboard-day table td.result {}
+					.scoreboard .vertical .scoreboard-day table td.details {}
+					.scoreboard .vertical .scoreboard-day table td.score,
+					.scoreboard .vertical .scoreboard-day table td.result,
+					.scoreboard .vertical .scoreboard-day table td.details {}
+
+/* Scoreboard Horizontal: Set Layout Orientation WPP to "Horizontal"
+----------------------------------------------------------------------------- */
+.scoreboard .horizontal {}
+	.scoreboard .horizontal h2 {}
+	.scoreboard .horizontal .date-range {}
+	.scoreboard .horizontal .scoreboard-day { float: left; width: 25%; }
+		.scoreboard .horizontal .scoreboard-day dt {}
+		.scoreboard .horizontal dl.scoreboard-day dd {}
+		.scoreboard .horizontal .scoreboard-day .cancelled {}
+		.scoreboard .horizontal .scoreboard-day .tie {}
+		.scoreboard .horizontal .scoreboard-day .win {}
+		.scoreboard .horizontal .scoreboard-day .loss {}
+			.scoreboard .horizontal .scoreboard-day table {}
+				.scoreboard .horizontal .scoreboard-day table tr {}
+					.scoreboard .horizontal .scoreboard-day table td {}
+					.scoreboard .horizontal .scoreboard-day table td.team {}
+					.scoreboard .horizontal .scoreboard-day table td.score {}
+					.scoreboard .horizontal .scoreboard-day table td.result {}
+					.scoreboard .horizontal .scoreboard-day table td.details {}
+					.scoreboard .horizontal .scoreboard-day table td.score,
+					.scoreboard .horizontal .scoreboard-day table td.result,
+					.scoreboard .horizontal .scoreboard-day table td.details {}
+
+/* Scoreboard By Team
+----------------------------------------------------------------------------- */
+.scoreboard .by-team ul.scoreboard-day { list-style: none; }
+	.scoreboard .by-team ul.scoreboard-day li {
+		padding-bottom: 0;
+		border: 0;
+		background-image: none;
+		}
+		.scoreboard .by-team .scoreboard-day table {}
+			.scoreboard .by-team .scoreboard-day table tr {}
+			.scoreboard .by-team .scoreboard-day table tr.cancelled {}
+			.scoreboard .by-team .scoreboard-day table tr.tie {}
+			.scoreboard .by-team .scoreboard-day table tr.win {}
+			.scoreboard .by-team .scoreboard-day table tr.loss {}
+				.scoreboard .by-team .scoreboard-day table td {}
+				.scoreboard .by-team .scoreboard-day table td.date {}
+				.scoreboard .by-team .scoreboard-day table td.opponent {}
+				.scoreboard .by-team .scoreboard-day table td.score {}
+
+
+/* 
+-----------------------------------------------------------------------------
+ =Team Details
+----------------------------------------------------------------------------- */
+.team-info {}
+	.team-info .name {}
+	.team-info .coach {}
+	.team-info .description {}
+	.team-info .level {}
+		.team-info .label {}
+		.team-info .coach .label {}
+		.team-info .description .label {}
+
+
+/* 
+-----------------------------------------------------------------------------
+ =Team Gallery
+----------------------------------------------------------------------------- */
+.gallery {}
+	.gallery .teaser {}
+		.gallery .teaser .hd {}
+		.gallery .teaser .bd {}
+			.gallery .teaser .image {}
+				.gallery .teaser .image dt {}
+					.gallery .teaser .image dt a {}
+						.gallery .teaser .image dt img {}
+				.gallery .teaser .image dd {}
+			.gallery .teaser a.button {}
+
+
+/* 
+-----------------------------------------------------------------------------
+ =Team Navigation Bar
+----------------------------------------------------------------------------- */
+.team-nav {}
+	.team-nav .tab-row {}
+	.team-nav .primary-tabs {}
+	.team-nav .secondary-tabs {}
+		.team-nav .tabs .tab-row {}
+
+
+/* 
+-----------------------------------------------------------------------------
+ =Team News
+----------------------------------------------------------------------------- */
+.news {}
+	.news .list {}
+		.news .list .hd {}
+		.news .list .bd {}
+			.news .list ul.news {}
+				.news .list ul.news li {}
+					.news .list ul.news .caption {}
+
+
+/* 
+-----------------------------------------------------------------------------
+ =Team Schedule
+----------------------------------------------------------------------------- */
+.team-schedule h3.record {
+	float: right;
+	border: 1px solid #999;
+	background-color: #cfcfcf;
+	padding: .5em;
+	}
+	.team-schedule h3.record span {}
+.pc .team-schedule h3.record { float: right; } 
+.sc .team-schedule h3.record,
+.tc .team-schedule h3.record {}
+.fullschedule h3.record { display: none; } /* Print Version */
+
+.team-schedule .schedule-legend {}
+
+.team-schedule table {}
+	.team-schedule table tr {}
+	.team-schedule table .home {}
+	.team-schedule table .away {}
+	.team-schedule table .not-applicable {}
+		.team-schedule table th {}
+		.team-schedule table td {}
+		.team-schedule table .team-schedule-date {}
+		.team-schedule table .team-schedule-opponent {}
+		.team-schedule table .team-schedule-away {}
+		.team-schedule table .team-schedule-dismissal {}
+		.team-schedule table .team-schedule-start { white-space: nowrap; }
+		.team-schedule table .team-schedule-end {}
+		.team-schedule table .team-schedule-return {}
+		.team-schedule table .team-schedule-result {}
+		.team-schedule table .team-schedule-more {}
+
+		.team .home-highlighted,
+		.team-schedule table .home .team-schedule-opponent,
+		.team-schedule table .home .team-schedule-away,
+		.team-schedule table .home .team-schedule-start,
+		.team-schedule table .home .team-schedule-end { font-weight: bold; }
+
+			.team-schedule table .contest-type {}
+			.team-schedule table .contest-type:before { content: "("; }
+			.team-schedule table .contest-type:after { content: ")"; }
+			.team-schedule table .result {}
+
+.team-schedule .print-schedule a,
+.team-schedule .directions a {
+	float: right;
+	margin-left: 1em;
+	padding-left: 18px;
+	background-position: 0 2px;
+	background-repeat: no-repeat;
+	}
+.team-schedule .print-schedule a { background-image: url(/_infrastructure/images/icons/default/schedule.png); }
+.team-schedule .directions a { background-image: url(/_infrastructure/images/icons/default/directions.png); }
+
+
+/* 
+-----------------------------------------------------------------------------
+ =Team List
+----------------------------------------------------------------------------- */
+.teamlist dl.team { margin: 0 0 1em 0; }
+	.teamlist dl.team dt {
+		border-bottom: 0;
+		margin-bottom: .6em;
+		}
+		.teamlist dl.team dt h4 {}
+	.teamlist dl.team dd { border-bottom: 0; padding-bottom: 0; }
+		.teamlist dl.team ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			}
+			.teamlist dl.team ul li {
+				background: none;
+				margin: 0 0 .6em 0;
+				padding: 0;
+				border-bottom: 0;
+				}
+
+.yearselect { margin-bottom: 1.8em; }
+	.yearselect span {}
+		.yearselect select {}
+
+/* Team List Tabs: Set Display Style WPP to "Tabs"
+----------------------------------------------------------------------------- */
+.teamlist .tabs dl.team { width: 48%; float: left; }
+	.teamlist .tabs dl.team dt {}
+		.teamlist .tabs dl.team dt h4 {}
+	.teamlist .tabs dl.team dd {}
+		.teamlist .tabs dl.team ul {}
+			.teamlist .tabs dl.team ul li {}
+
+/* Team List: Set Display Style WPP to "List"
+----------------------------------------------------------------------------- */
+.teamlist .list dl.team {}
+	.teamlist .list dl.team dt {}
+		.teamlist .list dl.team dt h4 {}
+	.teamlist .list dl.team dd {}
+		.teamlist .list dl.team ul {}
+			.teamlist .list dl.team ul li {}
+
+/* Team List Dropdown: Set Display Style WPP to "Dropdown"
+----------------------------------------------------------------------------- */
+.teamlist .dropdown .team_select {}
+
+/* Team List Dropdown: Set Display Style WPP to "Rich Dropdown"
+----------------------------------------------------------------------------- */
+.teamlist .dropdown a.button {}
+.teamlist .dropdown a.button.active {}
+.teamlist .dropdown .content-wrap {}
+	.teamlist .dropdown .content-group {}
+		.teamlist .dropdown dl.team {}
+			.teamlist .dropdown dl.team dt {}
+				.teamlist .dropdown dl.team dt h4 {}
+			.teamlist .dropdown dl.team dd {}
+				.teamlist .dropdown dl.team ul {}
+					.teamlist .dropdown dl.team ul li {}
+
+
+/* 
+-----------------------------------------------------------------------------
+ =Upcoming Games
+----------------------------------------------------------------------------- */
+.calendar.upcoming-games {}
+	.calendar.upcoming-games .tab-row {}
+	.calendar.upcoming-games #filter-games {}
+	.upcoming-games .list dl.calendar-day {	min-height: auto; }
+		.upcoming-games .list dl.calendar-day dt { display: block; float: none; height: auto; position: relative; width: auto; text-align: left; margin-top: 0; text-transform: uppercase; font-weight: bold; }
+			.upcoming-games .list dl.calendar-day dt span { }
+			.upcoming-games .list dl.calendar-day dt span.month { }
+			.upcoming-games .list dl.calendar-day dt span.date { }
+				.upcoming-games .list dl.calendar-day dd { margin-left: 0; }
+					.calendar.upcoming-games #filter-games dl.calendar-day dd.home {}
+					.calendar.upcoming-games #filter-games dl.calendar-day dd.away {}
+			
+			

@@ -1,0 +1,674 @@
+<%
+'CHANGELOG
+'LSP 01/10/13 - intial development
+%>
+
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+xmlns:og="http://ogp.me/ns#"
+xmlns:fb="http://www.facebook.com/2008/fbml"
+xml:lang="en-gb" lang="en-gb" dir="ltr" >
+<head>
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY BGCOLOR=#FFFFFF LINK=#333383 ALINK=#008400 VLINK=#333383 leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+  <meta name="description" content="ChicagoPlays.com is your Chicago theatre information source. The League of Chicago Theatres is an alliance of 200 Chicago theaters that supports promotes and advocates for Chicago theater locally, nationally and internationally.">
+  <meta property="og:title" content="Chicago Plays - Your Source For Theatre In Chicago - League of Chicago Theatres">
+  <meta property="og:url" content="http://www.chicagoplays.com/component/show/">
+  <meta property="og:site_name" content="Chicagoplays">
+  <meta property="og:description" content="ChicagoPlays.com is your Chicago theatre information source. The League of Chicago Theatres is an alliance of 200 Chicago theaters that supports promotes and advocates for Chicago theater locally, nationally and internationally.">
+  <link href="http://www.chicagoplays.com/templates/chicagoplays/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <link rel="stylesheet" href="/clients/ChicagoPlays/Images/modal.css" type="text/css">
+  <script type="text/javascript" src="/clients/ChicagoPlays/Images/mootools.js"></script>
+  <script type="text/javascript" src="/clients/ChicagoPlays/Images/modal.js"></script>
+  <script type="text/javascript">
+		window.addEvent('domready', function(){ var JTooltips = new Tips($$('.hasTip'), { maxTitleChars: 50, fixed: false}); });
+
+		window.addEvent('domready', function() {
+
+			SqueezeBox.initialize({});
+
+			$$('a.modal').each(function(el) {
+				el.addEvent('click', function(e) {
+					new Event(e).stop();
+					SqueezeBox.fromElement(el);
+				});
+			});
+		});
+  </script>
+
+	<link href="/clients/ChicagoPlays/Images/template.css" rel="stylesheet" type="text/css">
+	<link href="/clients/ChicagoPlays/Images/position.css" rel="stylesheet" type="text/css">
+	<link href="/clients/ChicagoPlays/Images/layout.css" rel="stylesheet" type="text/css">
+	<link href="/clients/ChicagoPlays/Images/print.css" rel="stylesheet" type="text/css">
+	<link href="/clients/ChicagoPlays/Images/general.css" rel="stylesheet" type="text/css">
+	<link href="/clients/ChicagoPlays/Images/style.css" rel="stylesheet" type="text/css">
+	<!--[if lte IE 7]>
+	<link href="/templates/chicagoplays/css/ie6only.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<!-- top menu start -->
+	<link href="/clients/ChicagoPlays/Images/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css">
+	<script src="/clients/ChicagoPlays/Images/SpryMenuBar.js" type="text/javascript"></script>
+	<!-- top menu end -->
+	<!-- slider start -->
+	<script type="text/javascript">
+	var as_json=as_json1='';
+	</script>
+	<link rel="stylesheet" type="text/css" href="/clients/ChicagoPlays/Images/slidedeck.css" media="screen">
+	<script type="text/javascript" src="/clients/ChicagoPlays/Images/jquery-1.js"></script>
+	<script type="text/javascript" src="/clients/ChicagoPlays/Images/jquery_002.js"></script>
+	
+	<script type="text/javascript" src="/clients/ChicagoPlays/Images/effects.js"></script>
+	<script type="text/javascript" src="/clients/ChicagoPlays/Images/effects_002.js"></script>
+	<script type="text/javascript" src="/clients/ChicagoPlays/Images/jquery.js"></script>
+	
+	<script type="text/javascript" src="/clients/ChicagoPlays/Images/bsn.js"></script>
+	<script type="text/javascript" src="/clients/ChicagoPlays/Images/topnav.js"></script>
+	<link rel="stylesheet" href="/clients/ChicagoPlays/Images/autosuggest_inquisitor.css" type="text/css" media="screen" charset="utf-8">
+
+	<script type="text/javascript">
+	//<![CDATA[
+	var jsbaseurl = "";
+	jQuery.noConflict();
+	jQuery.preloadImages = function()
+	{
+		for(var i = 0; i<arguments.length; i++)
+		{
+			img = new Image();
+			img.src = arguments[i];
+		}
+	}
+
+	if(false){ var console = {} }
+	
+	
+	
+jQuery(document).ready(function($) {
+
+jQuery('div.big_pic div.pic_title').css('opacity','0');
+
+jQuery.preloadImages("/templates/chicagoplays/images/ajax-loader.gif");
+jQuery('body').css("background",'url("/clients/ChicagoPlays/Images/bg.jpg") repeat scroll left top transparent');
+
+
+jQuery('div.nav ul').navMenu()
+jQuery('ul.listing').css('display','block')
+
+var options = {
+		script:"http://www.chicagoplays.com/index.php?option=com_theatre&view=theatresearch&layout=suggest&json=true&format=raw&",
+		varname:"input",
+		json:true,
+		shownoresults:true, //to show noresults make it false
+		maxresults:6,
+		colorclass:'blue',
+		callback: function (obj){ 
+			
+			//made change ishit:20100820
+			var frm = document.search1;
+			
+			if(frm.searchaddress.value=="Address")
+			frm.searchaddress.value='';
+	
+			if(frm.searchcity.value=='City')
+			frm.searchcity.value='';
+	
+			document.search1.submit(); //directly submit theatre seach navigation after selecting value
+			
+		}
+	};
+
+as_json = new bsn.AutoSuggest('searchword12', options);
+
+var options2 = {
+		script:"http://www.chicagoplays.com/index.php?option=com_show&view=showsearch&layout=suggest&json=true&format=raw&",
+		varname:"input",
+		json:true,
+		shownoresults:true, //to show noresults make it false
+		maxresults:6,
+		colorclass:'yellow',
+		callback: function (obj){ 
+		
+			//made change ishit:20100820
+			document.search2.submit(); //directly submit theatre seach navigation after selecting value
+		
+		}
+	};
+
+
+as_json1 = new bsn.AutoSuggest('quickfind12', options2); //changed id as its not working in IE7 [ishit:20101021]
+//var as_json = new bsn.AutoSuggest('searchzip', options);
+//alert(jQuery('div.nav ul').html())
+   
+   	jQuery('#search2').keypress(function(e) {
+	 if(e.keyCode == 13) {
+ 			document.search2.submit(); 
+			return false;
+	    }
+      });
+   
+	jQuery('#quickfind').keypress(function(e) {
+	 if(e.keyCode == 13) {
+ 			document.search2.submit(); 
+	    }
+      });
+	//jQuery('#showarwimg').bind('keypress',function(e){ alert('lkjlk')})
+	
+  /*$('.headerimages111').cycle({
+		fx: 'curtainX' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+	});*/
+//  	alert(jQuery('#dateselect').selectbox)
+	jQuery('#dateselect').selectbox({
+		inputClass: 'dateselectbox1',
+		groupClass: 'liclass',
+		onChangeCallback: myFunction
+		
+	});
+	jQuery('#genreprimary_id').selectbox({
+		inputClass: 'genreselectbox1',
+		groupClass: 'liclass',
+		onChangeCallback: myFunction
+		
+	});
+	jQuery('#neighborselect').selectbox({
+		inputClass: 'neighborselectbox1',
+		groupClass: 'neighborliclass',
+		onChangeCallback: myFunctionneighbor
+		
+	});
+
+});
+
+
+/**/
+function submittheatre(frm){
+	
+	if(frm.searchaddress.value=="Address")
+	frm.searchaddress.value='';
+	
+	if(frm.searchcity.value=='City')
+	frm.searchcity.value='';
+	
+	
+	//alert(frm.searchaddress.value)
+	//alert(frm.searchcity.value)
+
+}
+
+/**/
+	function myFunction(args)
+	{
+		//alert(args.selectedVal)
+		//jQuery('span.change').append(args.selectedVal);
+		//document.getElementById('search_hidden_top').value=args.selectedVal
+		//document.getElementById('search_mini_form').submit();
+	}
+	
+	function myFunctionneighbor(args)
+	{
+		var val = args.selectedVal;
+		if(val != 0)
+		{
+			var array = val.split("_");
+			
+			var hiddentag = document.getElementById('search2');
+			
+			// for session neighborhood_id
+			var neighborhood = document.createElement('input');
+			neighborhood.setAttribute("type", "hidden");
+			neighborhood.setAttribute("name", "neighborhood_id");
+			neighborhood.setAttribute("id", "neighborhood_id");
+			neighborhood.setAttribute("value", array[0]);
+			
+			// for session flag
+			var flag = document.createElement('input');
+			flag.setAttribute("type", "hidden");
+			flag.setAttribute("name", "flag");
+			flag.setAttribute("id", "flag");
+			flag.setAttribute("value", array[1]);
+
+			hiddentag.appendChild(neighborhood);
+			hiddentag.appendChild(flag);
+		}
+	}
+
+	//]]>
+	
+	</script>
+		<script type="text/javascript">
+	var comflag = '';
+	var calflag = 'mod';
+	</script>
+		
+</head>
+<body style="background: url(&quot;/clients/ChicagoPlays/Images/bg.jpg&quot;) repeat scroll left top transparent;">
+<div id="all">
+	    
+	<!-- start header -->
+	<div id="header">
+		
+    	<div class="inner">
+    		<h1 id="logo">
+			<a id="logourl" href="http://www.chicagoplays.com/index.php"><img id="chicago_logo" src="/clients/ChicagoPlays/Images/logo.png" alt=""></a>
+			</h1>
+			
+      		<div class="top">
+        		<ul>
+          			<li class="login">
+												    <p style="margin-top:-1px;"><a href="http://www.chicagoplays.com/community.html">Login</a><a href="http://www.chicagoplays.com/ways-to-donate.html">SUPPORT</a><a href="http://chicagoplays.com/press.html">PRESS</a></p>
+											</li>
+					<li class="top_twitter" style="padding-left:50px;">
+					<a href="http://www.facebook.com/chicagoplays" target="_blank" style="cursor:pointer"><img src="/clients/ChicagoPlays/Images/facebook_color.gif" alt="Facebook" width="16" height="16">BECOME A FAN</a> 
+					
+					<a href="http://www.twitter.com/chicagoplays" target="_blank" style="cursor:pointer; z-index:9999"><img src="/clients/ChicagoPlays/Images/twitter_color.gif" alt="Twitter" width="16" height="16">FOLLOW</a>
+					
+					</li>
+          			<li class="search_box">
+            										
+
+
+						          			</li>
+        		</ul>
+      		</div>
+      		<div class="nav">
+									<ul><li><a alt="0" href="http://www.chicagoplays.com/component/theatre/?view=searchlist"><span>THEATRES</span></a></li><li></li><li><a alt="1" href="http://www.chicagoplays.com/component/show/?view=searchlist&amp;showstatus=1"><span>Shows AND Tickets</span></a></li><li></li><li class="nav_pad"><a alt="2" href="javascript:void(0)"><span>About Us</span></a></li><li></li><li><a alt="3" href="javascript:void(0)"><span>COMMUNITY</span></a></li><li></li><li><a alt="4" href="http://www.chicagoplays.com/component/eventlist/eventlanding/57.html"><span>EVENTS</span></a></li><li></li>
+</ul>				      		</div>
+			
+			
+      		<div class="wrap">&nbsp;</div>
+    	</div>
+		<style type="text/css">
+		h1.logo2{
+			margin:-108px 0 0 406px;
+			position:absolute;
+			z-index:99999999;
+		}
+		</style>
+		<div id="menuDiv" style="display:block; margin:53px auto;width:1000px; height:400px">
+				<div class="one" style="display:none">
+					<h1 class="logo2">
+						<a id="logourl" href="http://www.chicagoplays.com/index.php"><img id="chicago_logo" src="/clients/ChicagoPlays/Images/logo.png" alt=""></a>
+					</h1>
+					
+					<div class="innerpage">
+					<div class="inner">
+				
+						</div>
+					</div>
+					
+						
+				</div>
+				<div class="one" style="display:none">
+				<h1 class="logo2">
+						<a id="logourl" href="http://www.chicagoplays.com/index.php"><img id="chicago_logo" src="/clients/ChicagoPlays/Images/logo.png" alt=""></a>
+					</h1>
+					
+				<div class="innerpage">
+					<div class="inner">
+			
+					</div>			
+				</div>
+				</div>
+				<div class="one" style="display:none">
+				<h1 class="logo2">
+						<a id="logourl" href="http://www.chicagoplays.com/index.php"><img id="chicago_logo" src="/clients/ChicagoPlays/Images/logo.png" alt=""></a>
+					</h1>
+					<div class="innerpage">
+          				<div class="inner">
+            <div class="col_l left" style="margin-left:25px">
+              <h1>League of Chicago Theatres</h1>
+              <div class="text1">The League of Chicago Theatres is proud
+ to serve a membership of more than 200 theaters, a rich and varied 
+theater community ranging from storefront, non-union theaters with 
+budgets under $10,000 to major cultural centers with multi-million 
+dollar shows. No other theater service organization in the country has 
+such a diverse theater membership. Whether you call yourself a Chicagoan
+ or are just visiting for the weekend, the League of Chicago Theatres is
+ your source for Chicago theater.</div>
+              <div>&nbsp;</div>
+              <!-- put link for register... Rohan 13/7/2010 -->
+			  <!--<div class="left" style="padding-top:20px;"><a href="/register.html"><img src="/templates/chicagoplays/images/btn_join.png" width="119" height="29" alt="" /></a></div>-->
+       		<!-- put link for register... Rohan 13/7/2010 -->       
+            </div>
+            <div class="col_r right" style="width:260px">
+              <div class="box2 left">
+                <h4>QUICK LINKS</h4>
+                <ul style="display: block;" class="listing">
+                  <li><a href="http://www.chicagoplays.com/staff.html?views=article">Staff</a></li>
+                  <li><a href="http://www.chicagoplays.com/board-of-directors.html">Board of Directors</a></li>
+                  <li><a href="http://www.chicagoplays.com/member-list.html">Member List</a></li>
+				  <li><a href="http://www.chicagoplays.com/industry-professionals.html">Industry Professionals</a></li>
+				 <!-- <li><a href="/component/virtuemart/?page=shop.cart&product_id=7&Itemid=83">Play Money</a></li>-->
+			      <li><a href="http://www.chicagoplays.com/component/virtuemart/?page=shop.browse&amp;category_id=1&amp;Itemid=117&amp;option=com_virtuemart">Play Money</a></li> 
+                 <!-- made change for support link-->
+                <!-- <li><a href="/support.html">Support</a></li>-->
+				 <li><a href="http://www.chicagoplays.com/ways-to-donate.html">Support</a></li>
+                </ul>
+              </div>
+              <div class="box4 left" style="width:250px">
+                <h4>CONTACT US</h4>
+                <div> League of Chicago Theatres<br> 17 N. Wabash, Suite #520<br> Chicago, IL 60602 <br>312-554-9800</div>
+                
+              </div>
+            </div>
+          </div>
+         				 <div class="wrap"></div>
+       					 </div>	
+				</div>
+				<div class="one" style="display:none">
+				<h1 class="logo2">
+						<a id="logourl" href="http://www.chicagoplays.com/index.php"><img id="chicago_logo" src="/clients/ChicagoPlays/Images/logo.png" alt=""></a>
+					</h1>
+					<div class="innerpage" style="height:265px">
+          <div class="inner">
+            <div class="col_l left" style="margin-left:25px">
+              <h1>Ways to Participate</h1>
+              <div class="text1">Explore the Chicago theatre scene, 
+interact with fellow theatre-goers, follow your favorite theatre 
+company, and recommend that amazing show you saw last weekend. Free and 
+open to anyone - be part of the Chicagoplays community!</div>
+              <div>
+                <div class="box left"><span><a href="http://www.chicagoplays.com/component/show/?view=searchlist"><img src="/clients/ChicagoPlays/Images/icon_star.png" alt="" width="49" height="46"></a></span> <strong><a href="http://www.chicagoplays.com/component/show/?view=searchlist" style="text-decoration:none;color:#FFFFFF;">LIKE A SHOW</a></strong> Seen a good show? Let us know by finding the show and selecting "Like."</div>
+                                <div class="box left"><span><img src="/clients/ChicagoPlays/Images/icon_reminder.png" alt="" width="50" height="50"></span> <strong>SET REMINDERS</strong>  Receive notifications when your favorite shows open or close.</div>
+                <div class="box left"><span><a href="http://www.chicagoplays.com/component/theatre/?view=searchlist"><img src="/clients/ChicagoPlays/Images/icon_fav.png" alt="" width="42" height="45"></a></span> <strong><a href="http://www.chicagoplays.com/component/theatre/?view=searchlist" style="text-decoration:none;color:#FFFFFF;">FAVORITE THEATRES</a></strong> Choose your favorite companies and keep up to date with their information.</div>
+              </div>
+              <div class="wrap"></div>
+            <!-- put link for register... Rohan 13/7/2010 -->
+            <div class="left"><a href="http://www.chicagoplays.com/register.html"><img src="/clients/ChicagoPlays/Images/btn_join.png" alt="" width="119" height="29"></a></div>
+              <!-- put link for register... Rohan 13/7/2010 -->
+              <div class="left log_account">- or - <a href="http://www.chicagoplays.com/community.html">Log in to your account</a></div>
+            </div>
+            <div class="col_r right" style="width:260px">
+              <div class="box2 left">
+                <h4>QUICK LINKS</h4>
+                <ul style="display: block;" class="listing">
+                  <li><a href="http://www.chicagoplays.com/component/idoblog/">Backstage With</a></li>
+                   <li><a href="http://www.chicagoplays.com/the-front-page-news.html">The Front Page News</a></li>  
+                  				  <!-- Hide Chimes at midnight ... Rohan. 18112011 -->
+                  <li><a href="http://www.chicagoplays.com/all-buzz.html">Buzz</a></li>
+                </ul>
+              </div>
+              <div class="box4 left" style="padding-left:37px">
+                <h4>BE SOCIAL</h4>
+                <div class="fan"><a href="http://www.facebook.com/chicagoplays" target="_blank"><img src="/clients/ChicagoPlays/Images/facebook_color.gif" alt="" width="16" height="16"> Become a fan</a></div>
+                <div class="fan"><a href="http://www.twitter.com/chicagoplays" target="_blank"><img src="/clients/ChicagoPlays/Images/twitter_color.gif" alt="" width="16" height="16"> Follow</a></div>
+              </div>
+			  <script type="text/javascript">
+					function mseout(id,val)
+					{
+						
+						if(document.getElementById(id).value == "")
+						{
+							document.getElementById(id).value = val;
+						}
+							
+					}
+			  </script>
+			  
+			  <script type="text/javascript">
+			  //added ishit:20110814
+				var usertype = '';
+				var user_id = '0';				
+			  </script>
+			  
+              <div class="box5 left">
+                <h4>Join Our Mailing Lists</h4>
+                <div class="mail">
+             
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wrap"></div>
+        </div>
+				</div>
+				<div class="one" style="display:none">
+				<h1 class="logo2">
+						<a id="logourl" href="http://www.chicagoplays.com/index.php"><img id="chicago_logo" src="/clients/ChicagoPlays/Images/logo.png" alt=""></a>
+					</h1>
+						<div class="innerpage" style="height:305px">
+          <div class="inner">
+            <div class="col_l left" style="margin-left:25px">
+			              <h1>Theater Thursdays</h1>
+              <div class="text1"><span style="float:left; height:50px;"><img src="/clients/ChicagoPlays/Images/theater-icon.jpg" alt="" width="65" height="73"> </span>Each
+ week, check out one of the hottest shows in town. Enjoy cocktails and 
+appetizers and a chance to schmooze with the cast or go behind the 
+scenes. </div><br><br>
+              <div class="text-find" id="shownav_thursdayev">
+				<p>Upcoming Theater Thursday event<br>
+								
+				<span><a href="http://www.chicagoplays.com/component/eventlist/eventdetail/164408.html">Other Desert Cities</a></span><br>Thursday. January 17  |  6:00&nbsp;PM | Tickets: $39.00 |  <span><a href="http://www.chicagoplays.com/component/eventlist/eventdetail/164408.html">More Info</a></span></p>
+							</div>
+              
+<!--              <div class="wrap"></div>
+-->              <div class="left" style="padding-top:25px"><a href="http://www.chicagoplays.com/component/eventlist/thursdayevent/83/2.html"><img src="/clients/ChicagoPlays/Images/view-all.png" alt=""></a></div>
+            </div>
+            <div class="col_r right" style="width:260px">
+              <div class="box2 left">
+                <h4>QUICK LINKS</h4><br>
+               <div>
+			   						   <span class="yello-head"><a href="http://www.chicagoplays.com/august-wilson-monologue-competition.html" class="yello-head" style="text-decoration:none;">August Wilson Monologue Competition</a></span><br>
+				   Open to Chicago high school students, the competition provides an
+ opportunity to explore August Wilson’s Century Cycle.                  
+        
+<br><br>
+				   				   <span class="yello-head"><a href="http://www.chicagoplays.com/league-annual-gala.html" class="yello-head" style="text-decoration:none;">Annual League Gala</a></span><br>
+				   Join us for this annual event in support of the entire Chicago theatre community. 
+<br><br>
+				   				   			   </div>
+              </div>
+            </div>
+          </div>
+          <div class="wrap"></div>
+        </div>
+				</div>
+			</div>
+		
+  	</div>
+	
+  	<!-- end header -->
+		
+	
+	<div id="contentarea2">
+	
+	
+	    	<div id="wrapper">
+											        		<div class="inner">
+									
+																									
+					<!--<script type="text/javascript" src="/includes/js/joomla.javascript.js"></script>-->
+<link type="text/css" href="/clients/ChicagoPlays/Images/ui.css" rel="stylesheet">
+<script type="text/javascript" src="/clients/ChicagoPlays/Images/ui.js"></script>
+<link type="text/css" href="/clients/ChicagoPlays/Images/demos.css" rel="stylesheet">
+<script type="text/javascript">
+var searchurl = '/component/show/?view=searchlist&amp;linktype=';
+var flagdetail = 0;
+jQuery(function() {
+	jQuery("#datepicker").datepicker({showOn: 'button', buttonText: 'Pick a Date', buttonImage: '/templates/chicagoplays/images/pick_date.jpg', buttonImageOnly: true});
+	jQuery("#datepickerlink").datepicker();
+});
+</script>
+<BR><BR><BR><BR><BR><BR>
+<!--TIX DATA START-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+<!--TIX DATA END-->
+<script type="text/javascript">
+function showorderby()
+{
+	document.search.submit();
+}
+function rollover(obj,url,price,lowprice,highprice,startdate,enddate,likeshow,end1)
+{
+   var left = jQuery(obj).offset().left
+   var top = jQuery(obj).offset().top
+   
+   var favstyle = '<div onmouseout="rollout(this)" style="position:absolute;left:'+left+'px;top:'+top+'px;width:208px;height:173px;background:#000;opacity:0.8;filter:alpha(opacity=80)">';
+   favstyle+='<div><div class="left price_box" style="padding-left:14px; margin-top:5px;padding-top:14px;font-size:14px;color:#F8F6F7;font-style:italic;font-weight:bold;font-family:Times New Roman,Times,serif;"><img alt="" src="/templates/chicagoplays/images/star_white.png"/>&nbsp;'+likeshow+' Likes</div></div>';
+  
+   if(price=='free' || price=='tbd')
+ 	{
+	       favstyle+='<div  style="clear:both;=margin-bottom:-20px"><div class="left price_box" style="padding-left:14px;font-size:12px;font-weight:bold;text-transform:uppercase;color:#6FF3FF;">';
+
+    	favstyle+= 'PRICE: <strong style="color:#A4A5A0;">'+price+'</strong></div></div>';
+    }
+	else if(price != '')
+	{
+	     favstyle+='<div  style="clear:both;=margin-bottom:-20px"><div class="left price_box" style="padding-left:14px;font-size:12px;font-weight:bold;text-transform:uppercase;color:#6FF3FF;">';
+
+    	favstyle+= 'PRICE: <strong style="color:#A4A5A0;">'+price+'</strong></div></div>';
+	}
+	if(startdate == end1)
+	{
+		favstyle+='<div  style="clear:both;=height:6px;"><div class="left price_box" style="padding-left:14px;font-size:12px;font-weight:bold;text-transform:uppercase;color:#6FF3FF;">RUN: <strong style="color:#A4A5A0;">'+enddate+'</strong></div></div>';
+	}
+	else
+	{
+   		favstyle+='<div  style="clear:both;=height:6px;"><div class="left price_box" style="padding-left:14px;font-size:12px;font-weight:bold;text-transform:uppercase;color:#6FF3FF;">RUN: <strong style="color:#A4A5A0;">'+startdate+' - '+enddate+'</strong></div></div>';
+	}
+   favstyle+='<div><div class="left price_box" style="padding-left:14px;font-size:12px;color:#FFCC00;font-weight:bold;padding-top:60px;=padding-top:40px;"><img alt="" src="/templates/chicagoplays/images/arrow_white.png" style="vertical-align:middle;"/>&nbsp;<a href="'+url+'" style="color:#FFCC00;text-decoration:none;">Learn More</a></div></div>';
+   favstyle+='</div>';
+   
+   
+   //var favstyle = '<div onmouseout="rollout(this)" style="position:absolute;left:'+left+'px;top:'+top+'px;width:208px;height:173px;background:#000;opacity:0.8;filter:alpha(opacity=80)">'+likeshow+'</div>';
+   
+   
+   
+   jQuery("body").append(favstyle);
+   
+}
+function rollout(obj)
+{
+  jQuery(obj).remove();
+}
+
+</script>
+					          			<div class="wrap"></div>
+          			<div class="col-3 shadow" style="padding-top:0px;">
+												            			          			</div>
+          			<div class="wrap"></div>
+          			<div class="col-3">
+          																<div class="wrap"></div>
+            				            			<div class="wrap"></div>
+          									
+					</div>
+					
+        		</div>
+				
+							      		<div class="wrap"></div>
+    	</div>
+    	<!-- wrapper -->
+  	</div>
+  	<!-- footer -->
+						<div class="moduletable">
+					<div id="footer">
+<div class="inner">
+<p class="syndicate"><a href="https://www.facebook.com/chicagoplays" target="_blank"><img src="/clients/ChicagoPlays/Images/facebook_bw.gif" alt="" border="0">BECOME A FAN</a> | <a href="https://www.twitter.com/chicagoplays" target="_blank"><img src="/clients/ChicagoPlays/Images/twitter_bw.gif" alt="" border="0">FOLLOW</a> | <a href="https://www.chicagoplays.com/staff.html">CONTACT US</a> | <a href="https://www.chicagoplays.com/index.php?option=com_content&amp;view=article&amp;id=74">Privacy Policy</a>| <a href="https://www.chicagoplays.com/index.php?option=com_jmsitemap&amp;view=sitemap">Sitemap</a></p>
+<p class="syndicate"><br>THE LEAGUE MOST GRATEFULLY ACKNOWLEDGES <a href="https://www.cct.org/" target="_blank" style="color: #c4c4c4; font-weight: normal; font-size: 12px;">THE CHICAGO COMMUNITY TRUST</a> FOR THEIR SUPPORT OF THIS WEBSITE.<br><br>League of Chicago Theatres 17 N. Wabash, Suite #520 Chicago, IL 60602 312-554-9800<br>&#169; 2012, League of Chicago Theatres All rights reserved. Website designed and developed by <a href="http://www.klearsky.com/" style="color: #c4c4c4; font-weight: normal; text-transform: none; text-decoration: underline; font-size: 12px;">KlearSky</a>.</p>
+</div>
+</div>		</div>
+	
+		  	<!-- footer -->
+</div>
+<script type="text/javascript">
+<!--
+	var MenuBar2 = new Spry.Widget.MenuBar("MenuBar2", {imgDown:"/templates/chicagoplays/SpryAssets/SpryMenuBarDownHover.gif", imgRight:"/templates/chicagoplays/SpryAssets/SpryMenuBarRightHover.gif"});
+//-->
+
+window.onload=function(){
+	var myurl = "index.php?option=com_show&task=thursdayupcomingevent&controller=show";
+	jQuery.post(myurl, function(theResponse){
+		jQuery("#thursevent").html(theResponse);
+	});
+	
+
+	/*added ishit:20100718 */
+		var myurl = "index.php?option=com_show&task=thursdayupcomingevent&controller=show&for=shownav";
+		jQuery.post(myurl, function(theResponse){
+			jQuery("#shownav_thursdayev").html(theResponse);
+		});
+	/*added ishit:20100718 */
+}
+
+
+function findPos(obj) {
+
+	var curleft = curtop = 0;
+	if (obj.offsetParent) {
+	do {
+			curleft += obj.offsetLeft;
+			curtop += obj.offsetTop;
+	} while (obj = obj.offsetParent);
+	
+	return [curleft,curtop];
+}
+}
+
+function fnewsletter(e)
+{
+	if(trim(document.getElementById('email').value) == '' || document.getElementById('email').value=='Email')
+	{
+	  alert('Please enter the email address.');
+	  return false;
+	}
+	ev = (e) ? e : window.event;
+
+	SqueezeBox.initialize({});
+
+   document.getElementById('anewsletter').href ='index.php?option=com_user&view=newsletter&tmpl=component&emailid='+ document.getElementById('email').value;
+	//document.getElementById('anewsletter1212').rel="{handler: 'iframe', size: {x: 700, y: 500}}"
+	//$('anewsletter1212').addEvent('click', function(e) {
+	//alert(222)
+		new Event(ev).stop();
+		SqueezeBox.fromElement($('anewsletter'));
+//	});
+	  	
+}
+function fnewsletter2(e)
+{
+  	if(trim(document.getElementById('email2').value) == '' || document.getElementById('email2').value=='Email')
+	{
+	  alert('Please enter the email address.');
+	  return false;
+	}
+
+	ev = (e) ? e : window.event;
+
+	SqueezeBox.initialize({});
+
+   document.getElementById('anewsletter2').href ='index.php?option=com_user&view=newsletter&tmpl=component&emailid='+ document.getElementById('email2').value;
+	//document.getElementById('anewsletter1212').rel="{handler: 'iframe', size: {x: 700, y: 500}}"
+	//$('anewsletter1212').addEvent('click', function(e) {
+	//alert(222)
+		new Event(ev).stop();
+		SqueezeBox.fromElement($('anewsletter2'));
+//	});
+	  	
+}
+function trim(str)
+{
+   s = str.replace(/^(\s)*/, '');
+   s = s.replace(/(\s)*$/, '');
+   return s;
+}
+
+</script>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="/clients/ChicagoPlays/Images/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-5377366-1");
+pageTracker._trackPageview();
+</script> 
+
+
+
+<div style="position: absolute; top: 0px; left: 0px; visibility: hidden;" class="tool-tip"><div></div></div><div style="display: none; z-index: 65555; position: fixed; top: 0px; left: 0px; visibility: hidden; opacity: 0;" id="sbox-overlay"></div><div style="display: none; z-index: 65557; position: fixed; top: 50%; left: 50%;" id="sbox-window"><a href="#" id="sbox-btn-close"></a><div style="visibility: hidden; opacity: 0;" id="sbox-content"></div></div><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-helper-hidden-accessible"></div></div>
+</form>
+</body>
+</html>

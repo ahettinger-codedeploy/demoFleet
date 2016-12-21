@@ -1,0 +1,192 @@
+/* RadMenu Mac skin */
+
+.RadMenu_PMenu
+{
+	border: solid 1px #dadada;
+	border-bottom: 0px;
+}
+
+.RadMenu_PMenu .rmLink
+{
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+	line-height: 22px;
+    border-bottom-color: #d7d7d7;
+   /*	background: #e9e9e9 url(Menu/MainItemBackground.gif) repeat-x;   */
+    background: #e9e9e9 url('Menu/bottom.gif') right center no-repeat;
+}
+
+.RadMenu_PMenu_Context
+{
+	background: none;
+	border: 0;
+}
+
+.RadMenu_PMenu .rmLink:hover,
+.RadMenu_PMenu .rmFocused,
+.RadMenu_PMenu .rmExpanded
+{
+	color: White;
+	/* background: #4291ec url(Menu/MainItemBackgroundHvr.gif) repeat-x;  */
+    background: #4291ec url('Menu/InvertedBottom.gif') right center no-repeat;
+}
+
+.RadMenu_PMenu .rmText
+{
+	font-size: 11px;
+	padding: 0px 9px;
+	font-family: Arial, Verdana, Sans-Serif;
+}
+
+.RadMenu_PMenu .rmGroup
+{
+	background: white url(Menu/MenuItemBackground.gif);
+	border: solid 1px #dadada;
+}
+
+.RadMenu_PMenu .rmGroup .rmLink
+{
+	background: none;
+	float: left;
+	_width: 160px; /* IE6 */
+	min-width: 160px; /* IE7, Mozilla, Opera */
+	text-align: left;
+	color: #333;
+}
+
+.RadMenu_PMenu .rmGroup .rmText
+{
+	padding-left: 25px;
+}
+
+.RadMenu_PMenu .rmGroup .rmLink:hover,
+.RadMenu_PMenu .rmGroup .rmFocused,
+.RadMenu_PMenu .rmGroup .rmExpanded
+{
+	background: #326dc8 url(Menu/MenuItemBackgroundHvr.gif) repeat-x;
+	color: white;
+}
+
+.RadMenu_PMenu .rmLeftArrow,
+.RadMenu_PMenu .rmRightArrow,
+.RadMenu_PMenu .rmTopArrow,
+.RadMenu_PMenu .rmBottomArrow,
+.RadMenu_PMenu .rmLeftArrowDisabled,
+.RadMenu_PMenu .rmRightArrowDisabled,
+.RadMenu_PMenu .rmTopArrowDisabled,
+.RadMenu_PMenu .rmBottomArrowDisabled
+{
+	background: #326dc8 url(Menu/left.gif) center center no-repeat;
+	width: 15px;
+	text-decoration:none;
+	color:#326dc8;
+}
+
+.RadMenu_PMenu .rmTopArrow,
+.RadMenu_PMenu .rmTopArrowDisabled
+{
+	background-image:url(Menu/top.gif);
+	width: 100%;
+	text-decoration:none;
+	color:#326dc8;
+	height: 10px;
+}
+
+.RadMenu_PMenu .rmBottomArrow,
+.RadMenu_PMenu .rmBottomArrowDisabled
+{
+	background-image:url(Menu/bottom.gif);
+	width:100%;
+	height: 10px;
+}
+
+.RadMenu_PMenu .rmRightArrow,
+.RadMenu_PMenu .rmLeftArrow
+{
+	height:100%;
+}
+
+.RadMenu_PMenu .rmRightArrow,
+.RadMenu_PMenu .rmRightArrowDisabled
+{
+	background-image: url(Menu/right.gif);
+}
+
+.RadMenu_PMenu .rmVertical .rmSeparator
+{
+	padding: 0;
+	background:	#d0d2d4;
+	font-size: 1px;
+	line-height: 1px;
+	height: 1px;
+	border-top: 0;
+	border-bottom:0;
+}
+
+.RadMenu_PMenu .rmRootGroup .rmSeparator .rmText
+{
+	display: none;
+}
+
+.RadMenu_PMenu .rmExpandLeft,
+.RadMenu_PMenu .rmExpandRight
+{
+	background:transparent url(Menu/groupImage.gif) right center no-repeat;
+}
+
+.RadMenu_PMenu .rmLink:hover .rmExpandLeft,
+.RadMenu_PMenu .rmLink:hover .rmExpandRight,
+.RadMenu_PMenu .rmFocused .rmExpandLeft,
+.RadMenu_PMenu .rmFocused .rmExpandRight,
+.RadMenu_PMenu .rmExpanded .rmExpandLeft,
+.RadMenu_PMenu .rmExpanded .rmExpandRight
+{
+	background:transparent url(Menu/invertedGroupImage.gif) right center no-repeat;
+}
+
+.RadMenu_PMenu .rmRootGroup .rmDisabled,
+.RadMenu_PMenu .rmRootGroup .rmDisabled:hover
+{
+    color:#999;
+}
+
+.RadMenu_PMenu .rmRootGroup .rmDisabled:hover
+{
+    background:#E9E9E9 url(Menu/MainItemBackground.gif) repeat-x;
+}
+
+.RadMenu_PMenu .rmGroup .rmDisabled,
+.RadMenu_PMenu .rmGroup .rmDisabled:hover
+{
+    background: transparent;
+    border: none;
+    color: #999;
+}
+
+/* right to left */
+
+.RadMenu_PMenu_rtl *
+{
+    text-align:right !important;
+}
+
+.RadMenu_PMenu_rtl .rmRootGroup
+{
+    width:100%;
+}
+
+.RadMenu_PMenu_rtl .rmVertical .rmLink:hover .rmExpandLeft,
+.RadMenu_PMenu_rtl .rmVertical .rmLink:hover .rmExpandRight,
+.RadMenu_PMenu_rtl .rmVertical .rmFocused .rmText,
+.RadMenu_PMenu_rtl .rmVertical .rmExpanded .rmText
+{
+	background:transparent url(Menu/invertedGroupImageRTL.gif) left center no-repeat;
+	margin: 0px;
+}
+
+.RadMenu_PMenu_rtl .rmExpandLeft,
+.RadMenu_PMenu_rtl .rmExpandRight
+{
+	background: transparent url(Menu/left.gif) left center no-repeat;
+}

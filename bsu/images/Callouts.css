@@ -1,0 +1,997 @@
+﻿/* _________________________________________________
+
+Ball State Design - Callouts
+_____________________________________________________
+
+1.CALLOUTS
+2.IMAGECALLOUT
+3.LINKSCALLOUT
+4.FEATUREHOMECALLOUT
+5.FEATUREPROFILECALLOUT
+6.FEATUREWIDECALLOUT
+7.VIDEOCALLOUT
+8.RELATEDITEMS
+9.FACEBOOKLIKE
+10.CALENDAR
+11.NEWS
+12.TWITTERFEED
+
+CALLOUTS
+*/
+.callout.standard, .callout.solid, .callout.clear
+{
+	margin: 0;
+	padding: 0;
+}
+    
+.callouts.right { float: none; }
+.callouts.left { float: none; }
+    
+.callout.standard .top, .callout.solid .top, .callout.clear .top
+{
+	min-height: 22px;
+}
+    
+.callout.standard, .callout.solid
+{
+    background-color: #6A7D8F;
+    color: #FFFFFF;
+}
+    
+.callout.clear { background-color: transparent; }
+
+.callout.standard .top { }
+
+.callout.solid .top { }
+
+.callout.clear .top { }
+
+.callout.standard .top h4, .callout.solid .top h4, .callout.clear .top h4
+{  
+	font-size: 10pt;
+	line-height: 1.2em;
+}
+    
+.callout.standard .middle, .callout.solid .middle, .callout.clear .middle
+{
+	display: block;
+	font-size: 10pt;
+}
+    
+#column1.secondary.multi .callout { margin: 0 0 25px; }
+    
+#column2.secondary .callout { margin: 0 0 15px; }
+    
+#column3.secondary.multi .callout { margin: 0 0 15px; }
+
+/* SUB CALENDARS */
+#column2.secondary .callout.calendars { margin-bottom: 0; }
+
+/* Top */
+.callout .top h4 a { color: #FFFFFF; }
+.callout .top h4 a:hover { color: #FFFFFF; text-decoration: none; }
+
+/* Related */
+.related .callout { float: left; margin: 0 12px 0 0; width: 200px; }
+.related .callout.clear { clear: none; }
+.related .callout.last { margin: 0; }
+
+.related.full .callout { width: 100%; }
+.related.half .callout { width: 300px; }
+
+/**************************************************
+**  IMAGE CALLOUT    ******************************
+**************************************************/
+.callout.image 
+{
+    padding: 0;
+    background-color: #B2BBC4;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.callout.clear.image  
+{
+    border-top: none;
+    border-bottom: none;
+    background-color: transparent;
+}
+
+#column1.secondary .callout.image 
+{
+    background-color: transparent;
+}
+    
+/* Head */
+.callout.image .title 
+{
+    font-size: 13pt;
+    padding: 10px 10px 5px 10px;
+    color: #000;
+}
+
+#column1.secondary .callout.image .title
+{
+    font-size: 10pt;
+    padding: 10px 0 5px 0;
+    color: #C00;
+}
+    
+.callout.image .title a { color: #000; text-decoration: none; }
+    
+.callout.image .title a:hover 
+{
+    color: #000;
+    text-decoration: underline;
+}
+
+#column1.secondary .callout.image .title a, #column1.secondary .callout.image .title a:hover { color: #C00; }
+
+/* Thumbnail */
+.callout.image .thumbnail 
+{
+    clear: both;
+    margin: 0;
+}
+
+.callout.image .thumbnail img  
+{
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+}
+
+/* Copy */
+.callout.image .copy 
+{
+    padding: 0 10px 10px 10px;
+    font-size: 9pt;
+    line-height: 1.2em;
+    color: #333;
+}
+
+#column1.secondary .callout.image .copy { padding: 0 0 10px 0; }
+
+.callout.image .copy.notitle 
+{
+    padding-top: 10px;
+}
+
+/* Learn More */
+.callout.image a.learnMore  
+{
+    font-weight: bold; 
+    text-decoration: none; 
+    color: #06C;
+}
+    
+.callout.image a.learnMore:hover 
+{
+    color: #06C;
+    text-decoration: underline;
+}
+
+/* Featured Item */
+.featuredItem .callout.image 
+{
+    padding: 0 0 10px;
+    background-color: transparent;
+    border-top: none;
+    border-bottom: none;
+}
+
+.featuredItem .callout.image .title 
+{
+    font-size: 18pt;
+    font-weight: bold;
+    padding: 0 0 5px;
+    color: #221F20;
+}
+    
+.featuredItem .callout.image .title a { color: #221F20; }
+    
+.featuredItem .callout.image .title a:hover { color: #221F20; }
+    
+.featuredItem .callout.image .thumbnail  
+{
+    clear: none;
+    width: 320px; 
+    float: left;
+    margin: 5px 20px 5px 0;
+}
+
+.featuredItem .callout.image .thumbnail img
+{
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+}
+
+.featuredItem .callout.image .copy 
+{
+    margin-bottom: 5px;
+    padding: 0;
+    font-size: 11pt;
+    line-height: 1.2em;
+}
+
+.featuredItem .callout.image .learnMore { font-weight: bold; font-size: 11pt; }
+
+/* Related Items */
+.relatedItems .related .callout.image 
+{ 
+    background-color: transparent;
+    border-top: none;
+    border-bottom: none; 
+}
+
+.relatedItems .related .callout.image .thumbnail  
+{
+    clear: both; 
+    float: none;
+    text-align: center;
+    margin: 0 auto 5px auto;
+    overflow: hidden;
+    height: 113px;
+}
+
+.relatedItems .related.full .callout.image .thumbnail 
+{
+    float: left;
+    width: 300px;
+    height: auto;
+    margin: 0 10px 5px 0;
+}
+
+.relatedItems .related.half .callout.image .thumbnail 
+{
+    width: auto;
+    height: 169px;
+}
+
+.relatedItems .related .callout.image .thumbnail img
+{
+    height: auto;
+    width: 200px;
+    padding: 0 !important;
+}
+
+.relatedItems .related.full .callout.image .thumbnail img
+{
+    width: 300px;
+}
+
+.relatedItems .related.half .callout.image .thumbnail img 
+{
+    width: 300px;
+    height: auto;
+}
+
+.relatedItems .related .callout.image a.learnMore { display: none; font-weight: bold; }
+
+/* Related Item News */
+.relatedItems.news h3 { margin-top: 0; }
+.relatedItems.news .related .callout.image .copy  
+{
+    display: none;
+    color: #221F20; 
+    font-size: 9.5pt; 
+    padding: 0;
+}
+
+.relatedItems.news .related .callout.image .title { font-size: 11pt; color: #221F20; font-weight: bold; padding: 0 0 5px 0; line-height: 1.2em; }
+.relatedItems.news .related .callout.image .title a, 
+.relatedItems.news .related .callout.image .title a:hover { color: #221F20; }
+
+/* Related Item In The Know */
+.relatedItems.in-the-know h3 { margin-top: 0; }
+.relatedItems.in-the-know .related .callout.image .copy  
+{
+    color: #221F20; 
+    font-size: 9.5pt; 
+    padding: 0;
+}
+
+.relatedItems.in-the-know .related .callout.image .title { font-size: 11pt; color: #221F20; font-weight: bold; padding: 0 0 5px 0; line-height: 1.2em; }
+.relatedItems.in-the-know .related .callout.image .title a, 
+.relatedItems.in-the-know .related .callout.image .title a:hover { color: #221F20; }
+
+/* Related Item Calendar */
+.relatedItems.calendar h3 { margin-top: 0; }
+.relatedItems.calendar .related .callout.image .copy  
+{
+    color: #221F20; 
+    font-size: 9.5pt; 
+    padding: 0;
+}
+
+.relatedItems.calendar .related .callout.image .title { font-size: 11pt; color: #221F20; font-weight: bold; padding: 0 0 5px 0; line-height: 1.2em; }
+.relatedItems.calendar .related .callout.image .title a, 
+.relatedItems.calendar .related .callout.image .title a:hover { color: #221F20; }
+
+/* Related Item Media Gallery */
+.relatedItems.mediaGallery h3 { margin-top: 0; }
+.relatedItems.mediaGallery .related .callout.image .copy  
+{
+    color: #221F20; 
+    font-size: 9.5pt; 
+    padding: 0;
+}
+
+.relatedItems.mediaGallery .related .callout.image .title { font-size: 11pt; color: #221F20; font-weight: bold; padding: 0 0 5px 0; line-height: 1.2em; }
+.relatedItems.mediaGallery .related .callout.image .title a, 
+.relatedItems.mediaGallery .related .callout.image .title a:hover { color: #221F20; }
+
+/* Featured Item News */
+
+.featuredItem.news .callout.image .title h3 { font-size: 18pt; }
+.featuredItem.news .callout.image .copy { line-height: 1.5em; }
+
+/* Featured Item Media Gallery */
+
+.featuredItem.mediaGallery .callout.image .title h3 { font-size: 18pt; }
+.featuredItem.mediaGallery .callout.image .copy { line-height: 1.5em; }
+    
+/**************************************************
+**  LINKS CALLOUT    ******************************
+**************************************************/
+.callout.links 
+{
+    padding: 10px 10px 20px 10px;
+    background-color: #6A7D8F;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+    
+.callout.links .top h4 
+{
+    color: #FFFFFF;
+}
+    
+.callout.links ul
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 5px 0 0 0;
+	color: #FFFFFF;
+}
+
+.callout.links li 
+{
+    padding: 0 0 0 15px;
+    background-image: url(/Components/Design/Images/Display/sidebar-bullet-point-arrow.png);
+    background-repeat: no-repeat;
+    background-position: 0 3px;
+}
+
+.callout.links li a
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+    
+.callout.links li a:hover
+{
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+/** Calendar */
+.callout.links li .rss, .callout.links li .iCal 
+{
+    top: 2px;
+    margin-left: 6px;
+}
+
+.callout.links li .rss img, .callout.links li .iCal img 
+{
+    width: 12px;
+    height: auto;
+}
+       
+/**************************************************
+**  FEATURE HOME CALLOUT    ***********************
+**************************************************/
+.featureHome { }
+    
+.featureHome .image 
+{
+	float: left;
+	margin-right: 10px;
+}
+
+.featureHome .image img 
+{
+    padding: 0 !important;
+}
+
+.featureHome .content 
+{
+    float: left;
+    width: 207px;
+}
+    
+.featureHome .content h3
+{
+	color: #333333;
+	font-size: 12pt;
+	margin: 0;
+	padding: 0;
+}
+    
+.featureHome .copy
+{
+	color: #555555;
+	font-size: 11pt;
+}
+    
+.featureHome a
+{
+	color: #CC0000;
+	text-decoration: none;
+}
+    
+.featureHome a:hover { text-decoration: underline; }
+
+#column2.secondary .featureHome, #column3.secondary.multi .featureHome { display: none; }
+    
+/**************************************************
+**  FEATURE PROFILE CALLOUT    ********************
+**************************************************/  
+.callout.featureProfile
+{
+	border-bottom: 1px solid #cccbb9;
+	border-top: 1px solid #cccbb9;
+	background-color: transparent;
+}
+    
+.callout.featureProfile .top  
+{
+    border-bottom: 5px solid #cccbb9; 
+}
+    
+.callout.featureProfile .top h4  
+{
+    margin: 0;
+    padding: 5px 10px 5px 10px;
+    color: #555555;
+	font-weight: bold;
+	font-size: 12pt; 
+	line-height: 1.3em;
+}
+    
+.callout.featureProfile .copy
+{
+	padding: 5px 10px 5px 10px;
+	background-position: right bottom;
+	background-repeat: no-repeat;
+	color: #999999;
+	font-size: 9pt;
+	line-height: 1.5em;
+	font-weight: bold;
+}
+    
+.callout.featureProfile .copy a
+{
+	color: #cc0000;
+	font-size: 9pt;
+	font-weight: bold;
+	text-decoration: none;
+}
+    
+.callout.featureProfile .copy a:hover
+{
+	color: #cc0000;
+	font-size: 9pt;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+#column2.secondary .featureProfile, #column3.secondary.multi .featureProfile { display: none; }
+    
+/**************************************************
+**  FEATURE WIDE CALLOUT    ***********************
+**************************************************/
+#column2.secondary .callout.first.featureWide, #column3.secondary.multi .callout.first.featureWide { margin-top: 15px; }
+    
+.callout.featureWide
+{
+	background-color: #B2BBC4;
+	border-top: 1px solid #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+}
+    
+.callout.featureWide img 
+{
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+}
+    
+.callout.featureWide .head
+{
+	color: #000000;
+	padding: 10px 10px 0 10px;
+	font-size: 13pt;
+}
+    
+#column1.secondary.multi .callout.featureWide .head
+{
+	font-size: 11pt;
+}
+    
+.callout.featureWide .copy
+{
+	color: #333333;
+	padding: 0 10px 10px 10px;
+	font-size: 9pt;
+}
+    
+.callout.featureWide a
+{
+	color: #0066cc;
+	text-decoration: none;
+	font-size: 9pt;
+}
+	
+.callout.featureWide a:hover
+{
+	color: #0066cc;
+	text-decoration: underline;
+}
+	
+/**************************************************
+**  VIDEO CALLOUT    ******************************
+**************************************************/
+.callout.video 
+{
+    padding: 0 0 10px;
+    background-color: #B2BBC4;
+    border-top: 1px solid #FFF;
+    border-bottom: 1px solid #FFF;
+}
+    
+/* Head */
+.callout.video .title 
+{
+    font-size: 13pt;
+    padding: 5px 10px 0 10px;
+    color: #000;
+}
+    
+.callout.video .title a { color: #000; text-decoration: none; }
+    
+.callout.video .title a:hover 
+{
+    color: #000;
+    text-decoration: underline;
+}
+
+/* Thumbnail */
+.callout.video .thumbnail 
+{
+    clear: both;
+    margin: 0 0 5px 0;
+}
+
+.callout.video .thumbnail img  
+{
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+}
+
+.callout.video .thumbnail a .videoOverlay 
+{
+    position: absolute;
+    z-index: 100;
+    bottom: 5px;
+    left: 0;
+    width: 64px;
+    height: 64px;
+}
+
+.callout.video .thumbnail a .videoOverlay img
+{
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+}
+
+/* Caption */
+.callout.video .caption 
+{
+    padding: 0 10px 10px 10px;
+    font-size: 9pt;
+    line-height: 1.2em;
+    color: #333;
+}
+
+/* Learn More */
+.callout.video a.learnMore  
+{
+    font-weight: bold; 
+    text-decoration: none; 
+    color: #06C;
+}
+    
+.callout.video a.learnMore:hover 
+{
+    color: #06C;
+    text-decoration: underline;
+}
+
+/* Featured Item */
+.featuredItem .callout.video 
+{
+    padding: 0 0 10px;
+    background-color: transparent;
+    border-top: none;
+    border-bottom: none;
+}
+
+.featuredItem .callout.video .head 
+{
+    font-size: 18pt;
+    font-weight: bold;
+    padding: 0 0 5px;
+    color: #CC0000;
+}
+
+.featuredItem .callout.video .title { padding: 0 0 5px 0; }
+    
+.featuredItem .callout.video .head a { color: #221F20; }
+.featuredItem .callout.video .head a:hover { color: #221F20; }
+
+.featuredItem .callout.video .title a { color: #221F20; }
+.featuredItem .callout.video .title a:hover { color: #221F20; }
+    
+.featuredItem .callout.video .thumbnail  
+{
+    clear: none;
+    width: 320px; 
+    float: left;
+    margin: 5px 20px 5px 0;
+}
+
+.featuredItem .callout.video .thumbnail img
+{
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+}
+
+.featuredItem .callout.video .thumbnail a .videoOverlay 
+{
+    position: absolute;
+    z-index: 100;
+    bottom: 5px;
+    left: 0;
+    width: 96px;
+    height: 96px;
+}
+
+.featuredItem .callout.video .thumbnail a .videoOverlay img
+{
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+}
+
+.featuredItem .callout.video .caption 
+{
+    margin-bottom: 5px;
+    padding: 0;
+    font-size: 11pt;
+    line-height: 1.2em;
+}
+
+.featuredItem .callout.video .learnMore { font-weight: bold; font-size: 11pt; }
+
+.relatedItems .related .callout.video
+{
+    background-color: transparent;
+    border-top: none;
+    border-bottom: none;
+}
+
+.relatedItems .related .callout.video .thumbnail  
+{
+    clear: both; 
+    float: none;
+    text-align: center;
+    margin: 0 auto 5px auto;
+    overflow: hidden;
+    height: 113px;
+}
+
+.relatedItems .related .callout.video .thumbnail a .videoOverlay 
+{
+    position: absolute;
+    z-index: 100;
+    bottom: 5px;
+    left: 0;
+    width: 64px;
+    height: 64px;
+}
+
+.relatedItems .related .callout.video .thumbnail a .videoOverlay img
+{
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+}
+
+.relatedItems .related .callout.video .thumbnail img
+{
+    height: auto;
+    width: 100%;
+    padding: 0 !important;
+}
+
+.relatedItems .related .callout.video a.learnMore { display: none; font-weight: bold; }
+
+/* Related Item News */
+.relatedItems.news .related .callout.video .caption 
+{
+    display: none;
+    color: #221F20; 
+    font-size: 9.5pt; 
+}
+
+.relatedItems.news .related .callout.video .title { font-size: 11pt; color: #221F20; font-weight: bold; padding: 0 0 5px 0; line-height: 1.2em; }
+.relatedItems.news .related .callout.video .title a, 
+.relatedItems.news .related .callout.video .title a:hover { color: #221F20; }
+
+/* Related Item In The Know */
+.relatedItems.in-the-know .related .callout.video .caption 
+{
+    color: #221F20; 
+    font-size: 9.5pt; 
+}
+
+.relatedItems.in-the-know .related .callout.video .title { font-size: 11pt; color: #221F20; font-weight: bold; padding: 0 0 5px 0; line-height: 1.2em; }
+.relatedItems.in-the-know .related .callout.video .title a, 
+.relatedItems.in-the-know .related .callout.video .title a:hover { color: #221F20; }
+
+/* Related Item Calendar */
+.relatedItems.calendar .related .callout.video .caption 
+{
+    color: #221F20; 
+    font-size: 9.5pt; 
+}
+
+.relatedItems.calendar .related .callout.video .title { font-size: 11pt; color: #221F20; font-weight: bold; padding: 0 0 5px 0; line-height: 1.2em; }
+.relatedItems.calendar .related .callout.video .title a, 
+.relatedItems.calendar .related .callout.video .title a:hover { color: #221F20; }
+
+/* Related Item Media Gallery */
+.relatedItems.mediaGallery .related .callout.video .caption 
+{
+    color: #221F20; 
+    font-size: 9.5pt; 
+    padding: 0;
+}
+
+.relatedItems.mediaGallery .related .callout.video .title { font-size: 11pt; color: #221F20; font-weight: bold; padding: 0 0 5px 0; line-height: 1.2em; }
+.relatedItems.mediaGallery .related .callout.video .title a, 
+.relatedItems.mediaGallery .related .callout.video .title a:hover { color: #221F20; }
+
+/* Featured Item News */
+.featuredItem.news .callout.video .title h3 { font-size: 18pt; }
+
+.featuredItem.news .callout.video .caption { line-height: 1.5em; }
+    
+/* Featured Item Media Gallery */    
+.featuredItem.mediaGallery .callout.video .title h3 { font-size: 18pt; }
+.featuredItem.mediaGallery .callout.video .caption { line-height: 1.5em; }
+
+/**************************************************
+**  RELATED ITEMS    ******************************
+**************************************************/
+.relatedItems { padding: 10px 0 0 0; }
+
+.relatedItems h3 
+{
+    font-size: 12pt;
+    font-weight: bold;
+    padding: 0 0 5px;
+    color: #221F20;
+    text-transform: uppercase;
+}
+
+/* Related Items */
+.relatedItems.news, .relatedItems.in-the-know, .relatedItems.calendar, .relatedItems.mediaGallery
+{ 
+    width: 625px;
+}
+
+.relatedItems.calendar { margin-bottom: 10px; }
+
+.relatedItems.calendar.none { display: none; }
+
+/**************************************************
+**  FACEBOOK LIKE    ******************************
+**************************************************/
+.callout.facebooklike 
+{
+    background-color: #FFF;
+    height: 400px;
+    margin-bottom: 0;
+}
+
+/**************************************************
+**  CALENDAR    ***********************************
+**************************************************/
+
+#column2.secondary .callout.calendar 
+{
+    color: #000;
+    background-color: #FFF;
+    text-decoration: none;
+}
+    
+#column2.secondary .callout.last.calendar
+{
+    margin: 0;
+    border-bottom: none;
+}
+
+#column2.secondary .callout.calendar .top 
+{
+    margin: 0;
+    padding: 10px 10px;
+    background-color: #CC0000;
+}
+
+#column2.secondary .callout.calendar .top h4
+{
+    font-family: 'NewsGothicBT-Bold';
+    color: #FFFFFF;
+    font-weight: normal;
+    padding: 0;
+    font-size: 14pt;
+}
+
+#column2.secondary .callout.calendar .top h4 a 
+{
+    color: #FFF;
+    text-decoration: none;
+}
+
+#column2.secondary .callout.calendar .top h4 a:hover 
+{
+    color: #FFF;
+    text-decoration: underline;
+}
+    
+#column2.secondary .callout.calendar .middle 
+{
+    padding: 10px 10px;
+    background-color: #FFF;
+    font-weight: bold;
+}
+    
+#column2.secondary .callout.calendar .middle  .eventItem
+{
+    clear: both;
+    margin: 5px 0;
+}
+
+#column2.secondary .callout.calendar .middle  .eventItem .eventDate
+{
+    text-align: left;
+    color: #000;
+    width: 40px;
+    margin-right: 20px;
+    font-size: 10.5pt;
+}
+
+#column2.secondary .callout.calendar .middle  .eventItem .eventLink
+{
+    text-align: left;
+    width: 195px;
+}
+
+#column2.secondary .callout.calendar .middle .eventLink a 
+{
+    color: #CC0000;
+    text-decoration: none;
+}
+
+#column2.secondary .callout.calendar .middle .eventLink a:hover 
+{
+    color: #CC0000;
+    text-decoration: underline;
+}
+
+/**************************************************
+**  NEWS    ***************************************
+**************************************************/
+
+#column2.secondary .callout.news
+{
+    color: #000;
+    background-color: #FFF;
+    text-decoration: none;
+}
+    
+#column2.secondary .callout.last.news
+{
+    margin: 0;
+    border-bottom: none;
+}
+
+#column2.secondary .callout.news .top 
+{
+    margin: 0;
+    padding: 10px 10px;
+    background-color: #CC0000;
+}
+
+#column2.secondary .callout.news .top h4
+{
+    font-family: 'NewsGothicBT-Bold';
+    color: #FFFFFF;
+    font-weight: normal;
+    padding: 0;
+    font-size: 14pt;
+}
+
+#column2.secondary .callout.news .top h4 a 
+{
+    color: #FFF;
+    text-decoration: none;
+}
+
+#column2.secondary .callout.news .top h4 a:hover 
+{
+    color: #FFF;
+    text-decoration: underline;
+}
+    
+#column2.secondary .callout.news .middle 
+{
+    padding: 10px 10px;
+    background-color: #FFF;
+    font-weight: bold;
+}
+
+#column2.secondary .callout.news .middle ul 
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+    
+#column2.secondary .callout.news .middle ul li
+{
+    margin: 5px 0;
+}
+
+#column2.secondary .callout.news .middle ul li a 
+{
+    color: #CC0000;
+    text-decoration: none;
+}
+
+#column2.secondary .callout.news .middle ul li a:hover 
+{
+    color: #CC0000;
+    text-decoration: underline;
+}
+
+/**************************************************
+**  TWITTER FEED     ******************************
+**************************************************/
+.callout.twitterfeed 
+{
+    background-color: #FFF;
+    height: 400px;
+    margin-bottom: 0;
+}
+
+/*960px __________________________________________________________________________________________________________ */
+/* @media only screen and (max-width: 960px) { */
+    body {}
+/* } */

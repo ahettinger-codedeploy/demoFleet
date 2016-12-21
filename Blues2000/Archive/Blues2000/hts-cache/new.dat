@@ -1,0 +1,921 @@
+9
+CACHE-1.43
+4044
+404016
+Object Not Found9
+text/html0
+29
+Sat, 01 May 2004 03:04:54 GMT0
+0
+0
+17
+www.blues2000.com11
+/robots.txt0
+3
+HTS4
+4040<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html dir=ltr>
+
+<head>
+<style>
+a:link			{font:8pt/11pt verdana; color:FF0000}
+a:visited		{font:8pt/11pt verdana; color:#4e4e4e}
+</style>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX">
+
+<title>The page cannot be found</title>
+
+<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+</head>
+
+<script> 
+function Homepage(){
+<!--
+// in real bits, urls get returned to our script like this:
+// res://shdocvw.dll/http_404.htm#http://www.DocURL.com/bar.htm 
+
+	//For testing use DocURL = "res://shdocvw.dll/http_404.htm#https://www.microsoft.com/bar.htm"
+	DocURL = document.URL;
+		
+	//this is where the http or https will be, as found by searching for :// but skipping the res://
+	protocolIndex=DocURL.indexOf("://",4);
+	
+	//this finds the ending slash for the domain server 
+	serverIndex=DocURL.indexOf("/",protocolIndex + 3);
+
+		//for the href, we need a valid URL to the domain. We search for the # symbol to find the begining 
+	//of the true URL, and add 1 to skip it - this is the BeginURL value. We use serverIndex as the end marker.
+	//urlresult=DocURL.substring(protocolIndex - 4,serverIndex);
+	BeginURL=DocURL.indexOf("#",1) + 1;
+	
+	urlresult=DocURL.substring(BeginURL,serverIndex);
+				
+	//for display, we need to skip after http://, and go to the next slash
+	displayresult=DocURL.substring(protocolIndex + 3 ,serverIndex);
+
+	InsertElementAnchor(urlresult, displayresult);
+}
+
+function HtmlEncode(text)
+{
+    return text.replace(/&/g, '&amp').replace(/'/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function TagAttrib(name, value)
+{
+    return ' '+name+'="'+HtmlEncode(value)+'"';
+}
+
+function PrintTag(tagName, needCloseTag, attrib, inner){
+    document.write( '<' + tagName + attrib + '>' + HtmlEncode(inner) );
+    if (needCloseTag) document.write( '</' + tagName +'>' );
+}
+
+function URI(href)
+{
+    IEVer = window.navigator.appVersion;
+    IEVer = IEVer.substr( IEVer.indexOf('MSIE') + 5, 3 );
+
+    return (IEVer.charAt(1)=='.' && IEVer >= '5.5') ?
+        encodeURI(href) :
+        escape(href).replace(/%3A/g, ':').replace(/%3B/g, ';');
+}
+
+function InsertElementAnchor(href, text)
+{
+    PrintTag('A', true, TagAttrib('HREF', URI(href)), text);
+}
+
+//-->
+</script>
+
+<body bgcolor="FFFFFF">
+
+<table width="410" cellpadding="3" cellspacing="5">
+
+  <tr>    
+    <td align="left" valign="middle" width="360">
+	<h1 style="COLOR:000000; FONT: 13pt/15pt verdana"><!--Problem-->The page cannot be found</h1>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="400" colspan="2">
+	<font style="COLOR:000000; FONT: 8pt/11pt verdana">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</font></td>
+  </tr>
+  
+  <tr>
+    <td width="400" colspan="2">
+	<font style="COLOR:000000; FONT: 8pt/11pt verdana">
+
+	<hr color="#C0C0C0" noshade>
+	
+    <p>Please try the following:</p>
+
+	<ul>
+      <li>If you typed the page address in the Address bar, make sure that it is spelled correctly.<br>
+      </li>
+	  
+      <li>Open the 
+	  
+	  <script>
+	  <!--
+	  if (!((window.navigator.userAgent.indexOf("MSIE") > 0) && (window.navigator.appVersion.charAt(0) == "2")))
+	  { 
+	  	Homepage();
+	  }
+	  //-->
+	   </script>
+
+	   home page, and then look for links to the information you want.</li>
+	   
+      <li>Click the <a href="javascript:history.back(1)">Back</a> button to try another link.</li>
+    </ul>
+    
+    <h2 style="font:8pt/11pt verdana; color:000000">HTTP 404 - File not found<br>
+    Internet Information Services<BR></h2>
+	 
+	<hr color="#C0C0C0" noshade>
+	
+	<p>Technical Information (for support personnel)</p>
+	
+<ul>
+<li>More information:<br>
+<a href="http://www.microsoft.com/ContentRedirect.asp?prd=iis&sbp=&pver=5.0&pid=&ID=404&cat=web&os=&over=&hrd=&Opt1=&Opt2=&Opt3=" target="_blank">Microsoft Support</a>
+</li>
+</ul> 
+
+    </font></td>
+  </tr>
+  
+</table>
+</body>
+</html>
+3
+2004
+91672
+OK9
+text/html0
+29
+Sat, 24 Apr 2004 16:11:47 GMT21
+"f88a20d8162ac41:9f7"0
+0
+17
+www.blues2000.com29
+/b2k4/ticketsonly/tickets.htm77
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/ticketsonly/tickets.htm3
+HTS4
+9167<html>
+<head>
+<title>B2K4 - Tickets</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Page-Enter" content="blendTrans(duration=2.0)">
+<meta http-equiv="Page-Exit" content="blendTrans(duration=2.0)">
+<link href="../b2k4styles.css" rel="stylesheet" type="text/css">
+
+<script language="JavaScript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+
+</head>
+
+<body bgcolor="#FFFFFF" text="#000000" onLoad="MM_preloadImages('../graphics/bt-rateson.gif','../graphics/bt-homeon.gif','../graphics/bt-perfon.gif','../graphics/bt-buson.gif','../graphics/bt-diron.gif','../graphics/bt-campon.gif','../graphics/bt-schedon.gif')">
+<div align="center"><img src="../graphics/top.jpg" width="670" height="80"><br>
+</div>
+<table width="672" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td valign="top"><img src="../graphics/golddiv672.gif" width="672" height="5"></td>
+  </tr>
+  <tr> 
+    <td valign="top"><a href="../../index.html" onMouseOver="MM_swapImage('Image2','','../graphics/bt-homeon.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../graphics/bt-home.gif" name="Image2" width="84" height="30" border="0" id="Image2"></a><a href="../schedule/schedule.htm" onMouseOver="MM_swapImage('Image8','','../graphics/bt-schedon.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../graphics/bt-sched.gif" name="Image8" width="84" height="30" border="0" id="Image8"></a><a href="../hotel/hotel.htm" onMouseOver="MM_swapImage('Image1','','../graphics/bt-rateson.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../graphics/bt-rates.gif" name="Image1" width="84" height="30" border="0" id="Image1"></a><a href="../performers/performers.htm" onMouseOver="MM_swapImage('Image3','','../graphics/bt-perfon.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../graphics/bt-perf.gif" name="Image3" width="84" height="30" border="0" id="Image3"></a><img src="../graphics/bt-ticketson.gif" name="Image4" width="84" height="30" border="0" id="Image4"><a href="../bluesbus/bluesbus.htm" onMouseOver="MM_swapImage('Image5','','../graphics/bt-buson.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../graphics/bt-bus.gif" name="Image5" width="84" height="30" border="0" id="Image5"></a><a href="../directions/directions.htm" onMouseOver="MM_swapImage('Image6','','../graphics/bt-diron.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../graphics/bt-dir.gif" name="Image6" width="84" height="30" border="0" id="Image6"></a><a href="../camping/camp.htm" onMouseOver="MM_swapImage('Image7','','../graphics/bt-campon.gif',1)" onMouseOut="MM_swapImgRestore()"><img src="../graphics/bt-camp.gif" name="Image7" width="84" height="30" border="0" id="Image7"></a></td>
+  </tr>
+  <tr> 
+    <td valign="top"><img src="../graphics/golddiv672.gif" width="672" height="5"></td>
+  </tr>
+</table>
+
+<table width="600" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr> 
+    <td height="28" valign="top" colspan="2"> <span style="font-size: 16px; color: #0f0; font-weight: bold;"><br>
+      TICKETS FOR NON-HOTEL GUESTS ONLY</span> </td>
+  </tr>
+  <tr> 
+    <td valign="top" colspan="2"> <p class="twelve"><b><span style="font-size: 14px;"><b><img src="../graphics/blueline410.gif" width="410" height="7"><br>
+        &nbsp;&nbsp;&nbsp;$30 Friday <img src="../graphics/orangeball.gif" width="7" height="7"> 
+        $30 Saturday <img src="../graphics/orangeball.gif" width="7" height="7"> 
+        $15 Sunday</span><br>
+        <img src="../graphics/blueline410.gif" width="410" height="7"> <br>
+        Tickets good for all Non-meal shows for day printed on ticket.</b><br>
+        <br>
+        <span style="color: #6FF">Kids 12 and under get in free!</span><br>
+        <br>
+        <br>
+        <a href="http://b2k.tix.com/schedule.asp?venuecode=40"><img src="file:///C|/Sites/B2K3/b2k3/graphics/buytickani.gif" width="172" height="30" border="0"></a><br>
+        <b>All Major Credit Cards Accepted.</b><br>
+        <b><br>
+        or purchase by check or money order:<br>
+        call 845-985-9407 or email <a href="mailto:mmoss@fcc.net">mmoss@fcc.net</a> 
+        for details.</b><br>
+        <br>
+        <b>Tickets also available at gate on day of show.</b><br>
+        <span style="font-size: 10px;">(subject to availability.)</span> <br>
+        <br>
+        <strong>Tickets are non-refundable unless show is cancelled.</strong> 
+        <br>
+        <br>
+        <b><span style="font-size: 12px; color: #f90">For more ticket and festival 
+        information <br>
+        call 845-985-9407</span> </b> </p></td>
+  </tr>
+  <tr> 
+    <td valign="top" colspan="2"> <hr width="598"> <span style="font-size: 12px; color: #6cf"><b>Ala 
+      Carte meal tickets can be purchased at the hotel front desk on the day of 
+      the event<br>
+      or by calling 845-985-9407 or email <a href="mailto:mmoss@fcc.net">mmoss@fcc.net</a><br>
+      <br>
+      </b></span></td>
+  </tr>
+  <tr> 
+    <td height="17" valign="middle" width="24"> <div align="right"><img src="../graphics/orangeball.gif" width="7" height="7"></div></td>
+    <td height="17" valign="top" width="576"><span style="font-size: 12px; font-weight: bold;"> &nbsp;Friday Buffet Dinner $25 </span>
+      </span></td>
+  </tr>
+  <tr> 
+    <td height="17" valign="middle" width="24">&nbsp;</td>
+    <td height="17" valign="top" width="576">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="17" valign="middle" width="24"> <div align="right"><img src="../graphics/blueball.gif" width="7" height="7"></div></td>
+    <td height="17" valign="top" width="576"><span style="font-size: 12px; font-weight: bold;"> &nbsp;Saturday Buffet Breakfast 
+      $10</span></td>
+  </tr>
+  <tr> 
+    <td height="17" valign="middle" width="24"> <div align="right"><img src="../graphics/blueball.gif" width="7" height="7"></div></td>
+    <td height="17" valign="top" width="576"><span style="font-size: 12px; font-weight: bold;">&nbsp;Saturday Outside BBQ Lunch 
+      $15</span></td>
+  </tr>
+  <tr> 
+    <td height="17" valign="middle" width="24"> <div align="right"><img src="../graphics/blueball.gif" width="7" height="7"></div></td>
+    <td height="17" valign="top" width="576"><span style="font-size: 12px; font-weight: bold;">&nbsp;Saturday 
+      Cocktail Party $15</span></td>
+  </tr>
+  <tr> 
+    <td height="17" valign="middle" width="24"> <div align="right"><img src="../graphics/blueball.gif" width="7" height="7"></div></td>
+    <td height="17" valign="top" width="576"><span style="font-size: 12px; font-weight: bold;">&nbsp;Saturday Buffet Dinner $25 
+      </span></td>
+  </tr>
+  <tr> 
+    <td height="17" valign="middle" width="24">&nbsp;</td>
+    <td height="17" valign="top" width="576">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td height="17" valign="middle" width="24"> <div align="right"><img src="../graphics/greenball.gif" width="7" height="7"></div></td>
+    <td height="17" valign="top" width="576"><span style="font-size: 12px; font-weight: bold;">&nbsp;Sunday Buffet Brunch $15</span></td>
+  </tr>
+
+</table>
+
+
+<br>
+<table width="657" border="0" align="center">
+  <tr> 
+    <td valign="top"><img src="../graphics/WHLINE650.gif" width="650" height="3"></td>
+  </tr>
+  <tr> 
+    <td width="647" valign="top"><div align="center"><a class="med" href="../../index.html">Home 
+        </a>| <a class="med" href="../schedule/schedule.htm">Weekend Schedule</a> 
+        | <a class="med" href="../hotel/hotel.htm">Hotel Rates</a> | <a class="med" href="../performers/performers.htm">Performers</a> 
+        | <a class="med" href="../ticketsonly/tickets.htm">Tickets Only</a> | 
+        <a class="med" href="bluesbus.htm">LI Blues Bus</a> | <a class="med" href="../directions/directions.htm">Directions</a> 
+        | <a class="med" href="../camping/camp.htm">Camping</a></div></td>
+  </tr>
+  <tr> 
+    <td height="22" valign="top"><img src="../graphics/WHLINE650.gif" width="650" height="3"></td>
+  </tr>
+</table>
+</body>
+</html>
+2
+3219e0a397542e58ab30835964f514ea3e3
+2004
+18542
+OK8
+text/css0
+29
+Sat, 24 Apr 2004 16:12:13 GMT21
+"28c18ce7162ac41:9f7"0
+0
+17
+www.blues2000.com20
+/b2k4/b2k4styles.css68
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/b2k4styles.css3
+HTS4
+1854BODY {
+	font-family : Verdana, Tahoma, Helvetica, sans-serif;
+	color: #fff;
+	font-weight: bold;
+	font-size: 12px;
+background-color: #000;
+scrollbar-base-color: #506CE4;
+}
+
+.p16 {
+	font-size : 30 px;
+	text-align : center;
+	font-weight: bold;
+	color: Aqua;
+	
+}
+
+.twelve {
+	font-size : 12px;
+	font-family : Verdana, Tahoma, Helvetica, sans-serif;
+	font-weight: bold;
+		
+}
+
+.p11 {
+	font-size : 11px;
+	text-align : center;
+	
+}
+
+.p10 {
+	font-size : 10px;
+	text-align : center;
+	
+}
+
+
+.footer {
+		font-size : 9px;
+}
+
+#cpyrt {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 10px;
+color: #fff;
+	
+}
+
+				
+A:Link, A:Visited, A:Active {
+	text-decoration : none;
+	color : #9F0;
+	font-size: 12px;
+	font-weight: bold;
+	
+}
+
+A:Hover {
+	text-decoration : underline overline;
+	color: #9F0;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+A.blue:Link, A.blue:Visited, A.blue:Active {
+	text-decoration : none;
+	color : #0cf;
+	font-size: 12px;
+	font-weight: bold;
+	
+}
+
+A.blue:Hover {
+	text-decoration : underline overline;
+	color: #0cf;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+A.orange:Link, A.orange:Visited, A.orange:Active {
+	text-decoration : none;
+	color : #f90;
+	font-size: 12px;
+	font-weight: bold;
+	
+}
+
+A.orange:Hover {
+	text-decoration : underline overline;
+	color: #9f0;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+A.med:Link, A.med:Visited, A.med:Active {
+	text-decoration : none;
+	color : #CCC;
+	font-size: 10px;
+	font-weight: bold;
+
+}
+
+A.med:Hover {
+	text-decoration : underline overline;
+	color: #CCC;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+A.small:Link, A.small:Visited, A.small:Active {
+	text-decoration : none;
+	color : #9F0;
+	font-size: 9px;
+}
+
+A.small:Hover {
+	text-decoration : underline overline;
+	color: #9F0;
+	font-size: 9px;
+}		
+		
+3
+2003
+5732
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:47 GMT21
+"f8fe9990162ac41:9f7"0
+0
+17
+www.blues2000.com29
+/b2k4/graphics/bt-rateson.gif77
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/bt-rateson.gif3
+HTS1
+02
+328315167fd98be1c82f4bec014640c52e3
+2003
+4212
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:43 GMT21
+"5ef7e88d162ac41:9f7"0
+0
+17
+www.blues2000.com28
+/b2k4/graphics/bt-homeon.gif76
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/bt-homeon.gif3
+HTS1
+03
+2003
+6412
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:46 GMT21
+"cc522c90162ac41:9f7"0
+0
+17
+www.blues2000.com28
+/b2k4/graphics/bt-perfon.gif76
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/bt-perfon.gif3
+HTS1
+03
+2003
+8172
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:35 GMT20
+"c838689162ac41:9f7"0
+0
+17
+www.blues2000.com27
+/b2k4/graphics/bt-buson.gif75
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/bt-buson.gif3
+HTS1
+03
+2003
+5472
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:39 GMT21
+"5825af8b162ac41:9f7"0
+0
+17
+www.blues2000.com27
+/b2k4/graphics/bt-diron.gif75
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/bt-diron.gif3
+HTS1
+03
+2003
+5332
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:38 GMT21
+"48c74f8b162ac41:9f7"0
+0
+17
+www.blues2000.com28
+/b2k4/graphics/bt-campon.gif76
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/bt-campon.gif3
+HTS1
+03
+2003
+7792
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:50 GMT21
+"78c26392162ac41:9f7"0
+0
+17
+www.blues2000.com29
+/b2k4/graphics/bt-schedon.gif77
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/bt-schedon.gif3
+HTS1
+03
+2003
+9312
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:56 GMT21
+"b0e51396162ac41:9f7"0
+0
+17
+www.blues2000.com29
+/b2k4/graphics/golddiv672.gif77
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/golddiv672.gif3
+HTS1
+03
+2003
+4212
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:42 GMT21
+"fce5b68d162ac41:9f7"0
+0
+17
+www.blues2000.com26
+/b2k4/graphics/bt-home.gif74
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/bt-home.gif3
+HTS1
+03
+2003
+7792
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:48 GMT21
+"c299d590162ac41:9f7"0
+0
+17
+www.blues2000.com27
+/b2k4/graphics/bt-sched.gif75
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/bt-sched.gif3
+HTS1
+03
+2003
+5732
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:47 GMT20
+"d415c90162ac41:9f7"0
+0
+17
+www.blues2000.com27
+/b2k4/graphics/bt-rates.gif75
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/bt-rates.gif3
+HTS1
+03
+2003
+6412
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:43 GMT21
+"82f4268e162ac41:9f7"0
+0
+17
+www.blues2000.com26
+/b2k4/graphics/bt-perf.gif74
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/bt-perf.gif3
+HTS1
+03
+2003
+5812
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:51 GMT21
+"2ebec092162ac41:9f7"0
+0
+17
+www.blues2000.com31
+/b2k4/graphics/bt-ticketson.gif79
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/bt-ticketson.gif3
+HTS1
+03
+2005
+345202
+OK10
+image/jpeg0
+29
+Sat, 24 Apr 2004 16:10:20 GMT20
+"a6464a4162ac41:9f7"0
+0
+17
+www.blues2000.com22
+/b2k4/graphics/top.jpg70
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/top.jpg3
+HTS1
+03
+2003
+8172
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:35 GMT21
+"58cb4c89162ac41:9f7"0
+0
+17
+www.blues2000.com25
+/b2k4/graphics/bt-bus.gif73
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/bt-bus.gif3
+HTS1
+03
+2003
+5472
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:39 GMT21
+"8e8a738b162ac41:9f7"0
+0
+17
+www.blues2000.com25
+/b2k4/graphics/bt-dir.gif73
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/bt-dir.gif3
+HTS1
+03
+2003
+1102
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:35 GMT21
+"8e301189162ac41:9f7"0
+0
+17
+www.blues2000.com30
+/b2k4/graphics/blueline410.gif78
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/blueline410.gif3
+HTS1
+03
+2002
+592
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:10:12 GMT21
+"ec2a399f162ac41:9f7"0
+0
+17
+www.blues2000.com29
+/b2k4/graphics/orangeball.gif77
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/orangeball.gif3
+HTS1
+03
+2002
+522
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:34 GMT20
+"822a188162ac41:9f7"0
+0
+17
+www.blues2000.com27
+/b2k4/graphics/blueball.gif75
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/blueball.gif3
+HTS1
+03
+2002
+522
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:57 GMT21
+"c6bb4a96162ac41:9f7"0
+0
+17
+www.blues2000.com28
+/b2k4/graphics/greenball.gif76
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/greenball.gif3
+HTS1
+03
+2003
+1072
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:10:23 GMT21
+"6ed91fa6162ac41:9f7"0
+0
+17
+www.blues2000.com28
+/b2k4/graphics/WHLINE650.gif76
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/WHLINE650.gif3
+HTS1
+03
+4044
+404016
+Object Not Found9
+text/html0
+29
+Sat, 01 May 2004 03:04:58 GMT0
+0
+0
+17
+www.blues2000.com30
+/b2k4/ticketsonly/bluesbus.htm78
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/ticketsonly/bluesbus.htm3
+HTS4
+4040<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html dir=ltr>
+
+<head>
+<style>
+a:link			{font:8pt/11pt verdana; color:FF0000}
+a:visited		{font:8pt/11pt verdana; color:#4e4e4e}
+</style>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX">
+
+<title>The page cannot be found</title>
+
+<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+</head>
+
+<script> 
+function Homepage(){
+<!--
+// in real bits, urls get returned to our script like this:
+// res://shdocvw.dll/http_404.htm#http://www.DocURL.com/bar.htm 
+
+	//For testing use DocURL = "res://shdocvw.dll/http_404.htm#https://www.microsoft.com/bar.htm"
+	DocURL = document.URL;
+		
+	//this is where the http or https will be, as found by searching for :// but skipping the res://
+	protocolIndex=DocURL.indexOf("://",4);
+	
+	//this finds the ending slash for the domain server 
+	serverIndex=DocURL.indexOf("/",protocolIndex + 3);
+
+		//for the href, we need a valid URL to the domain. We search for the # symbol to find the begining 
+	//of the true URL, and add 1 to skip it - this is the BeginURL value. We use serverIndex as the end marker.
+	//urlresult=DocURL.substring(protocolIndex - 4,serverIndex);
+	BeginURL=DocURL.indexOf("#",1) + 1;
+	
+	urlresult=DocURL.substring(BeginURL,serverIndex);
+				
+	//for display, we need to skip after http://, and go to the next slash
+	displayresult=DocURL.substring(protocolIndex + 3 ,serverIndex);
+
+	InsertElementAnchor(urlresult, displayresult);
+}
+
+function HtmlEncode(text)
+{
+    return text.replace(/&/g, '&amp').replace(/'/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function TagAttrib(name, value)
+{
+    return ' '+name+'="'+HtmlEncode(value)+'"';
+}
+
+function PrintTag(tagName, needCloseTag, attrib, inner){
+    document.write( '<' + tagName + attrib + '>' + HtmlEncode(inner) );
+    if (needCloseTag) document.write( '</' + tagName +'>' );
+}
+
+function URI(href)
+{
+    IEVer = window.navigator.appVersion;
+    IEVer = IEVer.substr( IEVer.indexOf('MSIE') + 5, 3 );
+
+    return (IEVer.charAt(1)=='.' && IEVer >= '5.5') ?
+        encodeURI(href) :
+        escape(href).replace(/%3A/g, ':').replace(/%3B/g, ';');
+}
+
+function InsertElementAnchor(href, text)
+{
+    PrintTag('A', true, TagAttrib('HREF', URI(href)), text);
+}
+
+//-->
+</script>
+
+<body bgcolor="FFFFFF">
+
+<table width="410" cellpadding="3" cellspacing="5">
+
+  <tr>    
+    <td align="left" valign="middle" width="360">
+	<h1 style="COLOR:000000; FONT: 13pt/15pt verdana"><!--Problem-->The page cannot be found</h1>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="400" colspan="2">
+	<font style="COLOR:000000; FONT: 8pt/11pt verdana">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</font></td>
+  </tr>
+  
+  <tr>
+    <td width="400" colspan="2">
+	<font style="COLOR:000000; FONT: 8pt/11pt verdana">
+
+	<hr color="#C0C0C0" noshade>
+	
+    <p>Please try the following:</p>
+
+	<ul>
+      <li>If you typed the page address in the Address bar, make sure that it is spelled correctly.<br>
+      </li>
+	  
+      <li>Open the 
+	  
+	  <script>
+	  <!--
+	  if (!((window.navigator.userAgent.indexOf("MSIE") > 0) && (window.navigator.appVersion.charAt(0) == "2")))
+	  { 
+	  	Homepage();
+	  }
+	  //-->
+	   </script>
+
+	   home page, and then look for links to the information you want.</li>
+	   
+      <li>Click the <a href="javascript:history.back(1)">Back</a> button to try another link.</li>
+    </ul>
+    
+    <h2 style="font:8pt/11pt verdana; color:000000">HTTP 404 - File not found<br>
+    Internet Information Services<BR></h2>
+	 
+	<hr color="#C0C0C0" noshade>
+	
+	<p>Technical Information (for support personnel)</p>
+	
+<ul>
+<li>More information:<br>
+<a href="http://www.microsoft.com/ContentRedirect.asp?prd=iis&sbp=&pver=5.0&pid=&ID=404&cat=web&os=&over=&hrd=&Opt1=&Opt2=&Opt3=" target="_blank">Microsoft Support</a>
+</li>
+</ul> 
+
+    </font></td>
+  </tr>
+  
+</table>
+</body>
+</html>
+3
+2003
+5332
+OK9
+image/gif0
+29
+Sat, 24 Apr 2004 16:09:36 GMT21
+"7650b389162ac41:9f7"0
+0
+17
+www.blues2000.com26
+/b2k4/graphics/bt-camp.gif74
+T:/Clients/Blues2000/Blues2000/www.blues2000.com/b2k4/graphics/bt-camp.gif3
+HTS1
+0

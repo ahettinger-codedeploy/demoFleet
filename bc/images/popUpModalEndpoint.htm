@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link href="popUpModalEndpoint_data/css.css" data-viewport-units-buggyfill="ignore" rel="stylesheet" type="text/css">
+
+    <script src="popUpModalEndpoint_data/keen-tracker.js" async="" type="text/javascript"></script><script src="analytics.js" async="" type="text/javascript"></script><script src="popUpModalEndpoint_data/analytics.js" async="" id="analytics-js" type="text/javascript"></script><script src="popUpModalEndpoint_data/jquery-1.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="popUpModalEndpoint_data/popup-modal.css" media="all">
+    <script src="popUpModalEndpoint_data/popup-modal.js"></script>
+
+    <script type="text/template" id="popupModalTemplate">
+        <div class="popup-modal-bg"></div>
+<div class="_71n7_modal ">
+    <div class="_71n7_modal_content">
+        {{ ^is_display_theme }}
+        <div class="_71n7_modal_close"><a href="" target="blank"><i class="fa fa-angle-down"></i><br><i class="fa fa-angle-up"></i></a></div>
+        <div class="_71n7_modal_right"><a HREF="" target="blank"><i class="fa fa-angle-right"></i></a></div>
+        <div class="_71n7_modal_left"><a HREF="" target="blank"><i class="fa fa-angle-left"></i></a></div>
+        {{ /is_display_theme }}
+
+        {{ #image }}
+        <div class="_71n7_image_holder" {{ ^embed }}{{ #image }}style="background-image: url('{{ image }}')"{{ /image }}{{ /embed }}>
+            {{ #embed }}{{{ embed }}}{{ /embed }}
+            {{ ^embed }}{{ #image }}<img src="{{ original_image}}" class="_71n7_image" alt="" style="visibility: hidden; width: 100%;"/>{{ /image }}{{ /embed }}
+        </div>
+        {{ /image }}
+
+        <div class="_71n7_content_holder {{#has_cta}}_71n7_cta_exists{{/has_cta}}  {{ ^image }}_71n7_content_holder_text_only{{ /image }}">
+            {{ #acct_image }}
+            <a {{ #acct_url }} href="{{ acct_url }}" {{ /acct_url }} target="_blank" class="_71n7_author_image_holder">
+                <img src="{{ acct_image }}" class="_71n7_author_image" />
+            </a>
+            {{ /acct_image }}
+            {{ #acct_name_full }}
+        	<div class="_71n7_author">
+                <div class="_71n7_author_name">
+                    <a class="author_name {{ ^acct_username }}author_no_username{{ /acct_username }}" {{ #acct_url }} href="{{ acct_url }}" {{ /acct_url }} target="_blank">{{ acct_name_full }}</a>
+                    <a class="author_username" {{ #acct_url }} href="{{ acct_url }}" {{ /acct_url }} target="_blank">{{ acct_username_full }}</a>
+                    {{^is_custom}}
+                    <a class="_71n7_social_icon" {{#is_twitter}}href="https://twitter.com" target="_blank"{{/is_twitter}} data-network="{{ source_network }}">
+                        {{#is_twitter}}
+                        <i class="fa fa-twitter "></i>
+                        {{/is_twitter}}
+
+                        {{#is_instagram}}
+                        <i class="fa fa-instagram"></i>
+                        {{/is_instagram}}
+
+                        {{#is_rss}}
+                        <i class="fa fa-rss"></i>
+                        {{/is_rss}}
+
+                        {{#is_facebook}}
+                        <i class="fa fa-facebook"></i>
+                        {{/is_facebook}}
+
+                        {{#is_youtube}}
+                        <i class="fa fa-youtube-play"></i>
+                        {{/is_youtube}}
+
+                        {{#is_pinterest}}
+                        <i class="fa fa-pinterest"></i>
+                        {{/is_pinterest}}
+
+                        {{#is_googleplus}}
+                        <i class="fa fa-google-plus"></i>
+                        {{/is_googleplus}}
+
+                        {{#is_linkedin}}
+                        <i class="fa fa-linkedin"></i>
+                        {{/is_linkedin}}
+
+                        {{#is_vine}}
+                        <i class="fa fa-vine"></i>
+                        {{/is_vine}}
+
+                        {{#is_tumblr}}
+                        <i class="fa fa-tumblr"></i>
+                        {{/is_tumblr}}
+
+                        {{#is_flickr}}
+                        <i class="fa fa-flickr"></i>
+                        {{/is_flickr}}
+                    </a>
+                    {{/is_custom}}
+                </div>
+            </div>
+            {{ /acct_name_full }}
+            <div class="_71n7_title {{ ^acct_image }}_71n7_no_author{{ /acct_image }}">
+                <span>
+                    <a {{#modified_url}}href="{{ modified_url }}"{{/modified_url}} target="_blank">
+                        {{{ modified_title }}}
+                    </a>
+                </span>
+            </div>
+            {{#has_cta}}
+            <div class="_71n7_cta">
+                <button class="_71n7_cta_button btn" style="background-color:#{{ cta.cta_color }}">
+                    <i class="{{ cta.cta_icon }}">
+                        <span data-url="{{ cta.cta_url }}" style="color:#{{ cta.cta_text_color }}">{{ cta.cta_text }}</span>
+                    </i>
+                </button>
+            </div>
+            {{/has_cta}}
+
+            <div class="time-and-share">
+            	<div class="_71n7_author_timeago">
+                    <a {{#modified_url}}href="{{ modified_url }}"{{/modified_url}} target="_blank">
+                        {{ timeago }}
+                    </a>
+                </div>
+                {{ ^is_display_theme }}
+             	<div class="_71n7_modal_share">
+                    {{ #is_twitter }}
+					<a href="https://twitter.com/intent/tweet?in_reply_to={{ tweet_post_id }}" class="accent-color-hover" onclick="return !window.open(this.href, 'Twitter', 'width=500,height=300')" target="blank"><i class="fa fa-reply"></i></a>
+					<a href="https://twitter.com/intent/retweet?tweet_id={{ tweet_post_id }}" class="accent-color-hover" onclick="return !window.open(this.href, 'Twitter', 'width=500,height=300')" target="blank"><i class="fa fa-retweet"></i></a>
+					<a href="https://twitter.com/intent/favorite?tweet_id={{ tweet_post_id }}" class="accent-color-hover" onclick="return !window.open(this.href, 'Twitter', 'width=500,height=300')" target="blank"><i class="fa fa-star"></i></a>
+                    {{ /is_twitter }}
+                    {{{ shareTooltip }}}
+                </div>
+                {{ /is_display_theme }}
+        	</div>
+        </div>
+    </div>
+</div>    </script>
+    <script type="text/template" id="shareTooltipTemplate">
+        <span class="share-options-menu" style="display: none;">
+    <ul class="share-options-menu-list">
+        <li>
+            <a class="post-share-tw-a" href="{{ twurl }}" onclick="_gaq.push(['_trackEvent', 'Engagement', 'Twitter Share Clicked']);return !window.open(this.href, 'Twitter', 'width=665,height=300')" target="_blank">
+                <i class="fa fa-twitter"></i>
+                <span class="network-name">Twitter</span>
+            </a>
+        </li>
+        <li>
+            <a class="post-share-fb-a" href="{{ fburl }}" onclick="_gaq.push(['_trackEvent', 'Engagement', 'Facebook Share Clicked']); return !window.open(this.href, 'Facebook', 'width=665,height=300')" target="_blank">
+                <i class="fa fa-facebook"></i>
+                <span class="network-name">Facebook</span>
+            </a>
+        </li>
+    </ul>
+</span>
+<a class="post-share-open accent-color-hover">
+    <i class="icon-hm-small fa fa-share-alt"></i>
+</a>    </script>
+
+    
+    <script>
+        try{
+            window.analytics=window.analytics||[],window.analytics.methods=["identify","group","track","page","pageview","alias","ready","on","once","off","trackLink","trackForm","trackClick","trackSubmit"],window.analytics.factory=function(t){return function(){var a=Array.prototype.slice.call(arguments);return a.unshift(t),window.analytics.push(a),window.analytics}};for(var i=0;i<window.analytics.methods.length;i++){var key=window.analytics.methods[i];window.analytics[key]=window.analytics.factory(key)}window.analytics.load=function(t){if(!document.getElementById("analytics-js")){var a=document.createElement("script");a.type="text/javascript",a.id="analytics-js",a.async=!0,a.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.io/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n)}},window.analytics.SNIPPET_VERSION="2.0.9",
+            window.analytics.load("sry6ikssk8");
+        } catch(e){
+            console.log('segment had an exception');
+            console.log(e);
+        }
+    </script>
+</head>
+<body class="pop-up-modal-body">
+
+<div></div></body></html>

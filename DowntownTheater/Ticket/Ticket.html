@@ -1,0 +1,127 @@
+﻿ <table width="620" border="0">
+  <tr>
+    <td valign="top">
+        <table width="615" height="240" border="1" background="/Images/ETicketBackground.gif" bgcolor="#FFD718" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="500" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td width="220" height="70" valign="top">
+                        <img src="/Images/ETicketLogo.gif" alt="Tix Logo" />
+                    </td>
+                    <td valign="top" align="right">
+                        <font face="Verdana,Arial,Helvetica" size="1"><% TICKETNUMBER %>&nbsp;&nbsp;&nbsp;&nbsp;<% ORDERNUMBER %> - <% ITEMNUMBER %></font>
+                    </td>
+                  </tr>
+                </table>
+                
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td width="20">
+                        &nbsp;
+                    </td>
+                    <td align="left" valign="top">
+                        <font face="Arial,Helvetica" size="2"><I><% ORGANIZATION %> Presents</I></font><br />
+                        <font face="Arial,Helvetica" size="5"><b><% ACT %></b></font><br />
+                        <font face="Arial,Helvetica" size="3"><b><% VENUE %></b></font><br />
+                        <font face="Arial,Helvetica" size="3"><% LONGDATE %> <% TIME %></font><br /><br />
+                        <font face="Arial,Helvetica" size="2"><% SEATTYPE %>  <% NETPRICE %></font><br />
+                        <font face="Arial,Helvetica" size="2"><b>Section: <% LONGSECTION %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Row: <% ROW %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seat: <% SEAT %></b></font><br />
+                    </td>
+                </tr>
+              </table>
+            </td>
+            <td align="center" valign="middle">
+                <!--<img alt="Barcode Image" src="https://www.tix.com/Barcode.asp?Barcode=<% TICKETNUMBER %>&Rotate=270" alt="Barcode" />&nbsp;-->
+                <!--<img id="Img1" src="https://www.tixtest.com/BarcodeGen.axd?S=DataMatrix&DMF=C36X36&C=<% TICKETNUMBER %>" width="75" height="75" alt="Ticket Barcode" />&nbsp;-->
+                <img id="Img1" src="https://www.tix.com/BarcodeGen.axd?S=Code128&Code128CharSet=Auto&C=<% TICKETNUMBER %>&T=<% TICKETNUMBER %>&Rot=Degree270&TA=BelowCenter" alt="Ticket Barcode" />&nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td align="center" colspan="2" valign="bottom" bgcolor="#000000" height="20">
+                <img src="/Images/ETicketBottomBar.gif" alt="" />
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+</table>
+
+<table width="620" border="0">
+  <tr>
+    <td align="left" valign="top" width = "33%">
+        <font face="Arial, Helvetica" size="2">
+        <b>ORDER INFORMATION</b><br />
+        Order Number:&nbsp;<% ORDERNUMBER %><br />
+        Order Date:&nbsp;<% ORDERDATE %><br />
+        Order Time:&nbsp;<% ORDERTIME %><br />
+        Order Total:&nbsp;&nbsp;<% ORDERTOTAL %><br />
+        <br />
+        <b>BILLING INFORMATION</b><br />
+        <% CUSTOMERFIRSTNAME %>&nbsp;<% CUSTOMERLASTNAME %><br />
+        <% CUSTOMERADDRESS1 %><br />
+        <% CUSTOMERADDRESS2 %><br />
+        <% CUSTOMERCITY %>, <% CUSTOMERSTATE %>&nbsp;<% CUSTOMERPOSTALCODE %><br />
+        <% CUSTOMERCOUNTRY %><br />
+        <br />
+        <b>ATTENDEE INFORMATION</b><br />
+        <% SHIPFIRSTNAME %>&nbsp;<% SHIPLASTNAME %><br />
+        <% SHIPADDRESS1 %><br />
+        <% SHIPADDRESS2 %><br />
+        <% SHIPCITY %>, <% SHIPSTATE %>&nbsp;<% SHIPPOSTALCODE %><br />
+        <% SHIPCOUNTRY %><br />
+        <br />
+        </font>
+    </td>
+    <td align="left" valign="top" width="33%">
+        <font face="Arial, Helvetica" size="2">
+        <b>VENUE INFORMATION</b><br />
+        <% VENUE %><br />
+        <% VENUEADDRESS1 %><br />
+        <% VENUEADDRESS2 %><br />
+        <% VENUECITY %>,&nbsp;<% VENUESTATE %>&nbsp;<% VENUEPOSTALCODE %><br />
+        Phone: <% EVENTPHONENUMBER %><br />
+        <br />
+        <% DRIVINGDIRECTIONS %>
+        </font>
+    </td>
+    <td align="left" valign="top" width="34%">
+        <!--<img alt="Barcode Image" src="https://www.tix.com/Barcode.asp?Barcode=<% TICKETNUMBER %>" /><br />-->
+        <!--<img id="Img2" src="https://www.tixtest.com/BarcodeGen.axd?S=DataMatrix&DMF=C36X36&C=<% TICKETNUMBER %>" width="75" height="75" alt="Ticket Barcode" />&nbsp;-->
+        <img id="Img3" src="https://www.tix.com/BarcodeGen.axd?S=Code128&Code128CharSet=Auto&C=<% TICKETNUMBER %>&T=<% TICKETNUMBER %>&TA=BelowCenter" alt="Ticket Barcode" />&nbsp;
+        <br />
+        <% STREETMAP %>
+    </td>
+  </tr>
+</table>
+
+
+<table width="620" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="left">
+        <font face="Arial, Helvetica" size="2">
+        <b>GENERAL INFORMATION</b><br />
+        </font>
+        <font face="Arial, Helvetica" size="1">
+        <% GENERALINFORMATION %>
+        </font>
+    </td>
+  </tr>
+</table>
+
+<table width="620" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center">
+        <hr />
+    </td>
+  </tr>
+</table>
+
+<table width="620" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center">
+        <% ADVERTISING %>
+    </td>
+  </tr>
+</table>
+

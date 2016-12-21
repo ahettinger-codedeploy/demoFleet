@@ -1,0 +1,209 @@
+@charset "utf-8";
+	
+/* Normalizing/Tearing/Zeroing */
+#re_panel ol, #re_panel h1 {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	}
+#re_panel a img {
+	border-width: 0;
+	}
+	
+/* Content Styles */
+#re_panel, #re_panel input, #re_panel textarea {
+	font: 16px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	}
+#re_panel textarea {
+	font-size: 14px;
+	}
+h1#heading_repeating {
+	width: 230px; /*65*/
+	height: 30px; /*24*/
+	background: url(images/title2.png) no-repeat 6px 3px;
+	padding: 3px 0 0 6px;
+	margin-bottom: 18px;
+	}
+	
+#re_panel li:hover {
+	background-color: #e2e8ed;
+	}
+#re_panel li, #re_panel .cal-pulldown {
+	cursor: pointer;
+	}
+	
+.checklist li { /*If this was "#re_panel .checklist li", rollover colors are overwritten */
+	padding: 1px 7px 2px 24px;
+	background: url(images/gif/checkbox-off.gif) no-repeat 6px 3px; /*6px 2px*/
+	}
+#re_panel .checklist li.selected {
+	background-image: url(images/gif/checkbox-on.gif);
+	}
+
+.radiolist li { /*See .checklist li notes */
+	padding: 3px 3px 3px 31px;
+	background: url(images/gif/radiobutton-off.gif) no-repeat 6px 6px;
+	}
+#re_panel .radiolist li.selected {
+	background-image: url(images/gif/radiobutton-on.gif);
+	}
+	
+#re_panel #textarea {
+	width: 307px;
+	}
+#re_panel #colorpicker img {
+	cursor: pointer;
+	}
+
+	
+/*#re_panel #col2 {
+	font-size: 14px;
+	}*/
+#re_panel #col2 div {
+	margin-bottom: 1px;
+	}
+#re_panel #col2 div img {
+	vertical-align: bottom;
+	margin-bottom: 4px;
+	}
+#re_panel #col2 input {
+	text-align: center;
+	border-width: 1px;
+	border-color: #bec6cc;
+	border-style: none none dotted;
+	background-color: #f5f8fa;
+	}
+#re_panel .datebox {
+	width: 110px;
+	}
+#re_panel #col2 #monthstyle_table {
+	display: none;
+	width: 298px;
+}
+#re_panel #monthstyle_table > div {
+	display: table-row;
+}
+#re_panel #monthstyle_table > div > div {
+	display: table-cell;
+	width: 53px;
+}
+#re_panel #monthstyle_table ol {
+	display: table-cell;
+}
+#re_panel #monthstyle_table li {
+	padding-bottom: 5px;
+}
+
+
+#re_panel #buttons #cancel {
+	color:orange;
+	font-weight:bold;
+	float: left;
+	}
+#re_panel #buttons a#help {
+	float: left;
+	margin-left: 12px;
+	}
+#re_panel #buttons #delete, #re_panel #buttons #delete_day {
+	color:red;
+	font-weight:bold;
+	float: left;
+	margin-left: 12px;
+	}
+
+/*#re_panel #buttons #delete {
+	visibility: hidden;
+	}*/
+#re_panel #buttons #ok {
+	color:green;
+	font-weight:bold;
+	float: right;
+	}
+#re_panel #buttons em {
+	float: right;
+	font-size: 12px;
+	margin: 6px 15px 0 0;
+	color: #003663;
+	}
+
+/* DIV Styles */
+
+div.calendar {
+	z-index: 20000;
+	}
+
+#re_panel h1 span {
+	display: none;
+	}
+	
+#col2 {
+	float: left;
+	}
+	
+#re_panel #col1 {
+	clear: both;
+	float: left;
+	padding: 0 12px 0 6px;
+	}
+
+#re_panel #col2 {
+	padding: 0 6px 0 16px;
+	border-left: 1px #bec6cc solid;
+}
+	
+#re_panel #text {
+	padding: 0px 10px 19px 12px; /*0px 10px 19px 12px*/
+	/*width: 340px;*/
+	float: left;
+	}
+#re_panel #colorpicker {
+	width: 26px;
+	margin: 3px 3px 0 0;
+	float: left;
+	background: blue;
+	display: inline;
+	}
+
+#re_panel #buttons {
+	clear: both;
+	padding: 18px 0 0;
+	height: 25px;
+	}
+
+
+/* Background Styles */
+#re_panel {
+	/*float: left;*/
+	visibility: hidden;
+	position: absolute;
+	top: 200px;
+	left: 100px;
+	z-index: 4;
+	/*max-width: 470px;*/
+	max-width: 500px;
+	}
+#re_panel .panel-bg {
+	background-repeat:no-repeat;
+	margin:0;
+	}
+#re_panel #topright {
+	background-image:url(images/topright.png);
+	}
+#re_panel #topleft {
+	background-image:url(images/topleft.png);
+	padding: 15px 0 0 15px;
+	}
+#re_panel #bottomleft {
+	clear: left;
+	background-image:url(images/bottomleft.png);
+	height: 21px;
+	}
+#re_panel #bottomright {
+	background-image:url(images/bottomright.png);
+	height: 21px;
+	}
+#re_panel #bottomright, #topright {
+	background-position: top right;
+	padding-right: 21px;
+	}
+

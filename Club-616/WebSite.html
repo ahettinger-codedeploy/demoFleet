@@ -1,0 +1,352 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0035)http://club-616.com/reservation.php -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>Club 616</TITLE><!-- InstanceBegin template="/Templates/content.dwt" codeOutsideHTMLIsLocked="false" -->
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><!-- InstanceBeginEditable name="doctitle" --><!-- InstanceEndEditable --><LINK 
+media=all href="WebSite_files/secondary.css" type=text/css rel=stylesheet>
+<META 
+content="Rumors,Rumors Lifestyle Events,RLE,RLE Events,Club-616,Club616,Michigan Swingers,Ohio Swingers,Canada Swingers,Vegas Swingers,California Swingers,Grand Rapids Swingers,National Swingers,Erotic events,Swinger Seminars" 
+name=keywords>
+<META 
+content="Lifestyle Seminars,Lifestyle Class,Swinger Class,adult,adult sex,swinging,amateur swingers,porn,erotica,single,dating,adult dating,sex,Lifestyle,Swingers,Swapping,Swappers,alternative lifestyle" 
+name=keywords>
+<META 
+content="alternative sex,erotic encounters,erotic,erotic lifestyle,erotic swingers,couples,couple,swapping,swingers,adult swingers,swingers clubs,swinger events" 
+name=keywords>
+<META 
+content="swingers,couples,couple,swapping,swingers,adult swingers,swingers clubs,swinger events&#10;lifestyle events,sex friends,swinger friends,social networking,online social networking&#10;national swingers,swinger site,local swingers,swingers personals,swingers personal ads,&#10;swinger classifieds,swingers board,swinger sex,adult site " 
+name=keywords><!-- InstanceBeginEditable name="head" -->
+<SCRIPT language=JavaScript>
+function emailCheck (emailStr) {
+
+/* The following variable tells the rest of the function whether or not
+to verify that the address ends in a two-letter country or well-known
+TLD.  1 means check it, 0 means don't. */
+
+var checkTLD=1;
+
+/* The following is the list of known TLDs that an e-mail address must end with. */
+
+var knownDomsPat=/^(com|net|org|edu|int|mil|gov|arpa|biz|aero|name|coop|info|pro|museum|NET|ORG|US|UK|COM)$/;
+
+/* The following pattern is used to check if the entered e-mail address
+fits the user@domain format.  It also is used to separate the username
+from the domain. */
+
+var emailPat=/^(.+)@(.+)$/;
+
+/* The following string represents the pattern for matching all special
+characters.  We don't want to allow special characters in the address. 
+These characters include ( ) < > @ , ; : \ " . [ ] */
+
+var specialChars="\\(\\)><@,;:\\\\\\\"\\.\\[\\]";
+
+/* The following string represents the range of characters allowed in a 
+username or domainname.  It really states which chars aren't allowed.*/
+
+var validChars="\[^\\s" + specialChars + "\]";
+
+/* The following pattern applies if the "user" is a quoted string (in
+which case, there are no rules about which characters are allowed
+and which aren't; anything goes).  E.g. "jiminy cricket"@disney.com
+is a legal e-mail address. */
+
+var quotedUser="(\"[^\"]*\")";
+
+/* The following pattern applies for domains that are IP addresses,
+rather than symbolic names.  E.g. joe@[123.124.233.4] is a legal
+e-mail address. NOTE: The square brackets are required. */
+
+var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+
+/* The following string represents an atom (basically a series of non-special characters.) */
+
+var atom=validChars + '+';
+
+/* The following string represents one word in the typical username.
+For example, in john.doe@somewhere.com, john and doe are words.
+Basically, a word is either an atom or quoted string. */
+
+var word="(" + atom + "|" + quotedUser + ")";
+
+// The following pattern describes the structure of the user
+
+var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+
+/* The following pattern describes the structure of a normal symbolic
+domain, as opposed to ipDomainPat, shown above. */
+
+var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+
+/* Finally, let's start trying to figure out if the supplied address is valid. */
+
+/* Begin with the coarse pattern to simply break up user@domain into
+different pieces that are easy to analyze. */
+
+var matchArray=emailStr.match(emailPat);
+
+if (matchArray==null) {
+
+/* Too many/few @'s or something; basically, this address doesn't
+even fit the general mould of a valid e-mail address. */
+
+alert("Email address seems incorrect (check @ and .'s)");
+return false;
+}
+var user=matchArray[1];
+var domain=matchArray[2];
+
+// Start by checking that only basic ASCII characters are in the strings (0-127).
+
+for (i=0; i<user.length; i++) {
+if (user.charCodeAt(i)>127) {
+alert("Ths username contains invalid characters.");
+return false;
+   }
+}
+for (i=0; i<domain.length; i++) {
+if (domain.charCodeAt(i)>127) {
+alert("Ths domain name contains invalid characters.");
+return false;
+   }
+}
+
+// See if "user" is valid 
+
+if (user.match(userPat)==null) {
+
+// user is not valid
+
+alert("The username doesn't seem to be valid.");
+return false;
+}
+
+/* if the e-mail address is at an IP address (as opposed to a symbolic
+host name) make sure the IP address is valid. */
+
+var IPArray=domain.match(ipDomainPat);
+if (IPArray!=null) {
+
+// this is an IP address
+
+for (var i=1;i<=4;i++) {
+if (IPArray[i]>255) {
+alert("Destination IP address is invalid!");
+return false;
+   }
+}
+return true;
+}
+
+// Domain is symbolic name.  Check if it's valid.
+ 
+var atomPat=new RegExp("^" + atom + "$");
+var domArr=domain.split(".");
+var len=domArr.length;
+for (i=0;i<len;i++) {
+if (domArr[i].search(atomPat)==-1) {
+alert("The domain name does not seem to be valid.");
+return false;
+   }
+}
+
+/* domain name seems valid, but now make sure that it ends in a
+known top-level domain (like com, edu, gov) or a two-letter word,
+representing country (uk, nl), and that there's a hostname preceding 
+the domain or country. */
+
+if (checkTLD && domArr[domArr.length-1].length!=2 && 
+domArr[domArr.length-1].search(knownDomsPat)==-1) {
+alert("The address must end in a well-known domain or two letter " + "country.");
+return false;
+}
+
+// Make sure there's a host name preceding the domain.
+
+if (len<2) {
+alert("This address is missing a hostname!");
+return false;
+}
+
+// If we've gotten this far, everything's valid!
+return true;
+}
+
+function checkFields() {
+missinginfo = "";
+var1=1;
+string=document.form.schdid.value;
+if  (string.length < 4)
+    {
+	missinginfo=missinginfo + var1 +".No party selected. Please select one to continue.\n";
+    var1 = var1 +1;
+	}
+if  (! emailCheck(document.form.email.value))
+    {
+	missinginfo=missinginfo + var1 +".Email address has wrong format.\n";
+    var1 = var1 +1;
+	}
+if (document.form.email.value != document.form.email2.value)
+  {
+  missinginfo=missinginfo + var1 +".Please reenter validation email address. Email addresses are not the same.\n";
+  var1 = var1 +1;
+  }
+if (! document.form.rules.checked ) 
+  {
+    missinginfo=missinginfo + var1 + ".You have not agreed to the club rules.";
+  }
+if (missinginfo != "") {
+missinginfo ="_____________________________\n" +
+"You failed to correctly fill in these fields:\n" +
+missinginfo + "\n_____________________________" +
+"\nPlease re-enter and submit again!";
+alert(missinginfo);
+return false;
+}
+else return true;
+}
+team= new Array (
+new Array (
+new Array("placeholder",4),
+new Array("3rd Sat Nov 2007-11-17","SCHD20071010192019"),
+new Array("Welcome to 2008! 2008-01-26","SCHD20071010192210")
+),
+new Array (
+new Array("placeholder",4),
+new Array("New Years Eve 2007-12-31","SCHD20071010192129")
+),
+null 
+);
+
+
+function fillSelectFromArray(selectCtrl, itemArray, goodPrompt, badPrompt, defaultItem) {
+
+var i, j;
+
+var prompt;
+
+// empty existing items
+
+for (i = selectCtrl.options.length; i >= 0; i--) {
+
+selectCtrl.options[i] = null; 
+
+}
+
+prompt = (itemArray != null) ? goodPrompt : badPrompt;
+
+if (prompt == null) {
+
+j = 0;
+
+}
+
+else {
+
+selectCtrl.options[0] = new Option(prompt);
+
+j = 1;
+
+}
+
+
+
+if (itemArray != null) {
+
+// add new items
+
+for (i = 1; i < itemArray.length; i++) {
+
+selectCtrl.options[j] = new Option(itemArray[i][0]);
+
+if (itemArray[i][1] != null) {
+
+selectCtrl.options[j].value = itemArray[i][1]; 
+
+}
+
+j++;
+
+}
+
+
+
+// select first item (prompt) for sub list
+
+selectCtrl.options[0].selected = true;
+
+   }
+
+   
+
+}
+
+//  End -->
+</SCRIPT>
+
+<STYLE type=text/css>.style1 {
+	FONT-WEIGHT: bold; COLOR: #ff0000
+}
+.style2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px
+}
+.style3 {
+	FONT-SIZE: 12px
+}
+.style4 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px
+}
+</STYLE>
+<!-- InstanceEndEditable -->
+<META content="MSHTML 6.00.6000.16544" name=GENERATOR></HEAD>
+<BODY>
+<DIV id=bar></DIV>
+<DIV id=subnav><A href="http://club-616.com/welcome.html">Home</A> | <A 
+href="http://club-616.com/contact.html">Contact Us</A><!-- | <a href="/privacy.html">Privacy Policy</a>--></DIV>
+<DIV id=container>
+<DIV id=masthead><BR><BR>
+<H3><IMG src="WebSite_files/logo.jpg"></H3></DIV>
+<DIV id=middle>
+<DIV id=nav>
+<UL><U>Navigation</U> 
+  <LI><A href="http://club-616.com/welcome.php">Home </A>
+  <LI><A href="http://club-616.com/seminar.html">Lifestyle Seminar</A> 
+  <LI><A href="http://club-616.com/events.php">Upcoming Events</A> 
+  <LI><A href="http://club-616.com/reservation.php">Reservations</A> 
+  <LI><A href="http://club-616.com/faq.html">F.A.Q.</A> <!--  NOTE:  commented out temporarily <li><a href="forhereyesonly.html">For Her Eyes Only</a></li> -->
+  <LI><A href="http://club-616.com/vip.html">VIP Program</A> 
+  <LI><A href="http://club-616.com/rules.html">Club Rules</A> 
+  <LI><A href="http://club-616.com/links.html">Fun &amp; Sexy Links</A> 
+  <LI><A href="http://club-616.com/opportunity.html">Business Opportunities </A><!-- <li>Advisory <a href="advisory.html">Board</a></li> -->
+  <LI><A href="http://club-616.com/contact.html">Contact Us</A> </LI></UL></DIV>
+<DIV id=content><!-- InstanceBeginEditable name="photo" --><!-- InstanceEndEditable --><!-- InstanceBeginEditable name="text" -->
+<H1>Tickets</H1>
+
+<P>
+    TixFile</P>
+<P></P>
+<BLOCKQUOTE>
+  <P>
+  <BR>
+  <BR>
+  <BR>
+  <BR>
+  <BR>
+  <BR>
+  <BR><BR>
+  <P>
+      &nbsp;</P>
+  <P></P>
+  </BLOCKQUOTE>
+</DIV></DIV></DIV>
+<DIV id=subbar>
+<H1><A href="http://club-616.com/welcome.html">Home</A> | <A 
+href="http://club-616.com/seminar.html">Seminar</A> | <A 
+href="http://club-616.com/events.html">Events</A> | <A 
+href="http://club-616.com/reservation.php">Reservations</A> | <A 
+href="http://club-616.com/faq.html">FAQ</A> <!-- | <a href="forhereyesonly.html">Her Eyes Only</a> -->| <A 
+href="http://club-616.com/vip.html">VIP</A> | <A 
+href="http://club-616.com/rules.html">Rules</A> | <A 
+href="http://club-616.com/links.html">fun &amp; sexy Links</A> <!--| <a href="advisory.html">Advisory</a>--></H1></DIV>
+<DIV id=footer>Copyright 2007<BR>All Rights Reserved</DIV>
+
+<!-- InstanceEnd --></BODY></HTML>

@@ -1,0 +1,302 @@
+/*
+    AnythingSlider v1.4.1+ Default (base) theme
+
+    By Chris Coyier: http://css-tricks.com
+    with major improvements by Doug Neiner: http://pixelgraphics.us/
+    based on work by Remy Sharp: http://jqueryfordesigners.com/
+*/
+/******* SET DEFAULT DIMENSIONS HERE ********/
+#anythingslidercontainer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  height: 350px;
+  margin-bottom: -10px !important;
+}
+
+#anythingslidersubcontainer {
+  position: relative;
+  left: 50%;
+  width: 1900px;
+  height: 350px;
+}
+
+#anythingslidersub {
+  position: relative;
+  left: -50%;
+  width: 1900px;
+}
+
+div.anythingSlider {
+  margin: 0 auto;
+  overflow: hidden;
+  /* needed for Opera and Safari */
+  width: 1900px;
+  height: 350px;
+}
+
+/******* CONTENT SLIDES ********/
+.content-slide {
+  width: 940px !important;
+  margin: 0 auto;
+  text-align: left;
+  color: #bcbcbc;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.content-slide p {
+  margin-bottom: 24px;
+}
+
+.content-slide h1, .content-slide h2, .content-slide h3, .content-slide h4, .content-slide h5 {
+  color: #fff !important;
+}
+
+.content-slide h2 {
+  font-size: 42px;
+  line-height: 42px;
+  margin-bottom: 10px;
+}
+
+.content-slide h3 {
+  font-size: 38px;
+  line-height: 38px;
+}
+
+.content-slide h4 {
+  font-size: 32px;
+  line-height: 32px;
+}
+
+.content-slide h5 {
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.content-slide h6 {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.content-slide .left-content-slide {
+  float: left;
+  width: 405px;
+  padding: 170px 0 0 50px;
+}
+
+.content-slide .right-content-slide {
+  float: right;
+  width: 455px;
+  padding: 4px 0 0 0;
+}
+
+.content-slide iframe {
+  position: relative;
+  top: 145px;
+  left: 20px;
+}
+
+.content-slide .iframe-bg {
+  position: relative;
+  top: 136px;
+  left: 20px;
+}
+
+.content-slide iframe {
+  background: url(../img/slideshows/iframe-bg.png) bottom center no-repeat;
+  padding-bottom: 29px;
+}
+
+/****** SET COLORS HERE *******/
+/* Default State */
+div.anythingSlider .thumbNav a.cur, div.anythingSlider .thumbNav a {
+  background: #777;
+  color: #000;
+}
+
+/**** DO NOT CHANGE BELOW THIS LINE ****/
+/* anythingSlider viewport window */
+div.anythingSlider .anythingWindow {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* wrapper: 45px right & left padding for the arrows, 28px @ bottom for navigation */
+div.anythingSlider {
+  position: relative;
+}
+
+/* anythingSlider base UL */
+ul.anythingBase {
+  background: transparent;
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+
+ul.anythingBase li.panel {
+  background: transparent;
+  display: block;
+  overflow: hidden;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation Arrows */
+div.anythingSlider .arrow {
+  top: 50%;
+  position: absolute;
+  display: block;
+  z-index: 55;
+}
+
+div.anythingSlider .arrow a {
+  display: block;
+  height: 67px;
+  margin: -20px 0 0 0;
+  width: 25px;
+  text-align: center;
+  outline: 0;
+  background: url(../img/slideshows/arrows-new.png) no-repeat;
+  text-indent: -9999px;
+}
+
+div.anythingSlider .forward, div.anythingSlider .back {
+  display: none;
+}
+
+div.anythingSlider:hover .forward, div.anythingSlider:hover .back {
+  display: block;
+}
+
+div.anythingSlider .forward {
+  right: 180px;
+}
+
+div.anythingSlider .back {
+  left: 180px;
+}
+
+div.anythingSlider .forward a {
+  background-position: -25px 0;
+}
+
+div.anythingSlider .back a {
+  background-position: 0px 0px;
+}
+
+div.anythingSlider .forward.disabled {
+  display: none;
+}
+
+/* disabled arrows, hide or reduce opacity: opacity: .5; filter: alpha(opacity=50); */
+div.anythingSlider .back.disabled {
+  display: none;
+}
+
+/* Navigation Links */
+div.anythingSlider .anythingControls {
+  outline: 0;
+}
+
+div.anythingSlider .thumbNav {
+  z-index: 150;
+  margin: 0;
+  position: relative;
+  top: -50px;
+  display: inline;
+  padding: 2px 6px 5px 17px;
+  text-align: center;
+}
+
+div.anythingSlider .thumbNav li {
+  display: inline;
+}
+
+div.anythingSlider .thumbNav a {
+  margin: 0 12px 0 0;
+  background: url(../img/nav.png) no-repeat center center;
+  font-size: 0px;
+  text-indent: -9999px;
+  line-height: 0px;
+  padding: 5px 5px 5px 5px;
+  text-decoration: none;
+  position: relative;
+  top: -3px;
+}
+
+body:nth-of-type(1) .anythingSlider .thumbNav a {
+  display: inline-block;
+}
+
+/* Active State */
+div.anythingSlider .thumbNav a.cur {
+  background: url(../img/nav_active.png) no-repeat center center;
+}
+
+div.anythingSlider .thumbNav a.active:link, div.anythingSlider .thumbNav a.active:active, div.anythingSlider .thumbNav a.active:visited, div.anythingSlider .thumbNav a.active:hover {
+  background: url(../img/nav_active.png) no-repeat center center;
+}
+
+/* slider autoplay right-to-left, reverse order of nav links to look better */
+div.anythingSlider.rtl .thumbNav a {
+  float: right;
+}
+
+/* reverse order of nav links */
+div.anythingSlider.rtl .thumbNav {
+  float: left;
+}
+
+/* move nav link group to left */
+div.anythingSlider.rtl .anythingWindow {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+
+/* div.anythingSlider.rtl .start-stop { float: right; } */
+/* move start/stop button - in case you want to switch sides */
+/* Autoplay Start/Stop button */
+div.anythingSlider .start-stop {
+  display: none;
+}
+
+span.screen {
+  background: url(../img/screen.gif) repeat;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  z-index: 15;
+}
+
+#hw-shadow-top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 20px;
+  left: 0;
+  background: url(../img/hw-shadow-top.png) repeat-x;
+  z-index: 21;
+}
+
+#hw-shadow-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 20px;
+  left: 0;
+  background: url(../img/hw-shadow.png) repeat-x;
+  z-index: 21;
+}

@@ -1,0 +1,82 @@
+</TD></TR></TBODY></TABLE></TD></TR>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=0 width=760 border=0>
+        <TBODY>
+        <TR>
+          <TD width=716><IMG height=45 src="/PrivateLabel/CatarinaMusic/Images/unten1.gif" 
+            width=716></TD>
+          <TD width=27><IMG height=17 src="/PrivateLabel/CatarinaMusic/Images/unten2.gif" 
+            width=27><A href="http://www.catarinamusic.com/673.html#top"><IMG 
+            height=28 src="/PrivateLabel/CatarinaMusic/Images/totop.gif" width=27 border=0></A></TD>
+          <TD width=17><IMG height=45 src="/PrivateLabel/CatarinaMusic/Images/unten3.gif" 
+          width=17></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></DIV>
+<SCRIPT>
+
+
+for(var i=0; i<document.images.length; i++) {
+if (document.images[i].name.indexOf("CM4all_") == 0) {
+eval(document.images[i].name + "_hi = new Image()");
+eval(document.images[i].name + "_no = new Image()");
+eval(document.images[i].name + "_an = new Image()");
+var thenormsrc;
+var thenormsrcUrl;
+var savedCC = "";
+if (typeof(URL) != "undefined") {
+thenormsrcUrl = new URL(document.images[i].src, true, true);
+} else if (typeof(window.top.URL) != "undefined") {
+thenormsrcUrl = new window.top.URL(document.images[i].src, true, true);
+}
+if (thenormsrcUrl) {
+savedCC = thenormsrcUrl.getParameter("cc", "");
+thenormsrcUrl.removeAllParams();
+thenormsrc = thenormsrcUrl.toString();
+} else {
+thenormsrc = document.images[i].src;
+}
+var fileext = thenormsrc.substring(thenormsrc.length-4);
+eval(document.images[i].name + "_hi.src = '" + thenormsrc.substring(0,thenormsrc.length-6) + "_m" + fileext + "?cc=" + savedCC  + "'");
+eval(document.images[i].name + "_no.src = '" + thenormsrc.substring(0,thenormsrc.length-6) + "_n" + fileext + "?cc=" + savedCC  + "'");
+eval(document.images[i].name + "_an.src = '" + thenormsrc.substring(0,thenormsrc.length-6) + "_h" + fileext + "?cc=" + savedCC  + "'");
+}
+}
+__navi_init_done__ = true;
+
+
+
+function setCompanyName() {
+}
+//setTimeout("setCompanyName()", 1);
+
+</SCRIPT>
+
+<SCRIPT>
+
+new function() {
+	if (typeof(theTemplate) != 'undefined' && theTemplate.hasFlashNavigation == "true") {
+		var anchors = document.links;
+		var url;
+		var base = new URL(document.location.href, true, true);
+		if (anchors) {
+			for (var i = 0 ; i < anchors.length ; i++) {
+				if (!anchors[i].target) {
+					url = new URL(anchors[i].href, true, true);
+					if (url.getParameter("*session*id*key*") != "*session*id*val*") {
+						if (url.protocol != "javascript"
+						 && (base.authority != url.authority || base.port != url.port))
+						{
+							anchors[i].target = "_top";
+						}
+					}
+				}
+			}
+		}
+	}
+}();
+
+</SCRIPT>
+
+<SCRIPT>
+if (typeof(URL) != "undefined") URL.processLinkz();
+</SCRIPT>
+<!-- 10/7/2/56/EN01 -->

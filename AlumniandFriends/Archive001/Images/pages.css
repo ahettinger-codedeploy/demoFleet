@@ -1,0 +1,808 @@
+/**
+ * @file
+ * Page Styling
+ *
+ * Style the markup found in page.tpl.php. Also includes some styling of
+ * miscellaneous Drupal elements that appear in the $content variable, such as
+ * ul.links, .pager, .more-link, etc.
+ */
+
+
+/*
+ * Body
+ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #303030;
+}
+
+
+.cboth{
+  clear: both;
+  height: 0px;
+  line-height: 0px;
+  font-size: 1px;
+}
+
+#page-wrapper {
+  /*border: 1px solid #E2E2E2;
+  border-top: none;*/
+  margin-bottom: 30px;
+}
+
+#page {
+  font-size: 12px;
+}
+
+a{
+  color: #000;
+}
+
+/*
+ * The skip-link link will be completely hidden until a user tabs to the link.
+ * See the element-focusable rule in system.base.css.
+ */
+#skip-link a,
+#skip-link a:visited {
+  display: block;
+  width: 100%;
+  padding: 2px 0 3px 0;
+  text-align: center;
+  background-color: #666;
+  color: #fff;
+}
+
+/*
+ * Header
+ */
+#header {
+}
+
+#header .section {
+}
+
+#logo /* Wrapping link for logo */ {
+  float: left; /* LTR */
+  margin: 5px 0px 0px 0px;
+  padding: 0;
+}
+
+#logo img {
+  vertical-align: bottom;
+}
+
+#name-and-slogan /* Wrapper for website name and slogan */ {
+  float: left;
+}
+
+h1#site-name,
+div#site-name /* The name of the website */ {
+  margin: 0;
+  font-size: 2em;
+  line-height: 1.5em;
+}
+
+#site-name a:link,
+#site-name a:visited {
+  color: #000;
+  text-decoration: none;
+}
+
+#site-name a:hover,
+#site-name a:focus {
+  text-decoration: underline;
+}
+
+#site-slogan /* The slogan (or tagline) of a website */ {
+}
+
+#header{
+ border-right: 1px solid #E2E2E2; 
+ height: 78px; 
+}
+
+.region-header /* Wrapper for any blocks placed in the header region */ {
+  clear: none; /* Clear the logo */
+}
+
+.region-header .block-menu-block{
+ 
+  margin-bottom: 0px;
+}
+
+.region-header .block-menu-block .menu{
+  margin: 0px;
+}
+
+.region-header .block-menu-block .menu li{
+  float: left;
+  list-style-image: none;
+  list-style-type: none;
+  width: 92px;
+  margin-left: 1px;
+}
+
+.region-header .block-menu-block .menu li a{
+  color: #3D3D3D;
+  font-weight: bold;
+  font-size: 10px;
+  text-decoration: none;
+  display: block;
+  margin-top: 1px;
+  border-top: 1px solid transparent;
+}
+
+.region-header .block-menu-block .menu li:hover, .region-header .block-menu-block .menu li:hover a, .region-header .block-menu-block .menu li a:hover{
+  color: #999;
+  border-color: #BFBFBF;
+}
+
+.region-header .block-menu-block .menu li a:hover, .region-header .block-menu-block .menu li a.active:hover, .region-header .block-menu-block .menu li:hover a.active, .region-header .block-menu-block .menu li:hover a{
+  border-top: 1px solid transparent;
+}
+
+
+/* Colors based on the menu !*/
+
+/* Yellow #FFCC00 */
+.menu-mlid-640 {
+  border-top: 8px solid #FFCC00;
+}
+
+.region-header .block-menu-block .menu .menu-mlid-640 a.active, .region-header .block-menu-block .menu .menu-mlid-640 a.active-trail{
+  border-top: 1px solid #FFCC00;
+}
+
+body.yellow h1.title,
+body.yellow h2.node-title  {
+  color: #FFCC00;
+}
+
+
+/* Blue #009BDD */
+.menu-mlid-641 {
+  border-top: 8px solid #009BDD;
+}
+
+.region-header .block-menu-block .menu .menu-mlid-641 a.active, .region-header .block-menu-block .menu .menu-mlid-641 a.active-trail{
+  border-top: 1px solid #009BDD;
+}
+
+body.blue h1.title,
+body.blue h2.node-title,
+.blue h2.block-title  {
+  color: #009BDD;
+}
+
+
+.front .blue h2.block-title {
+  border-top: 8px solid #009BDD;
+}
+
+
+/* Pink #EE2F7D */
+.menu-mlid-642, .menu-mlid-1000 {
+  border-top: 8px solid #EE2F7D;
+}
+
+.region-header .block-menu-block .menu .menu-mlid-642 a.active, .region-header .block-menu-block .menu .menu-mlid-642 a.active-trail{
+  border-top: 1px solid #EE2F7D;
+}
+
+body.pink h1.title,
+body.pink h2.node-title,
+.pink h2.block-title  {
+  color: #EE2F7D;
+}
+
+.front .pink h2.block-title {
+  border-top: 8px solid #EE2F7D;
+}
+
+.views_slideshow_main h3.title{
+  color: #E00028;
+  font-size: 26px;
+}
+
+.views_slideshow_cycle_slide{
+  padding: 10px 20px 20px 20px;
+}
+
+.views_slideshow-controls-bottom{
+  position: relative;
+  bottom: 15px; 
+}
+
+.center-wrapper .panel-panel .inside .pink h2.pane-title{
+  border-bottom: 8px solid #EE2F7D;
+  padding-bottom: 10px;
+}
+
+
+/* Dark Blue #2C2C8E */
+.menu-mlid-643 {
+  border-top: 8px solid #2C2C8E;
+}
+
+.region-header .block-menu-block .menu .menu-mlid-643 a.active, .region-header .block-menu-block .menu .menu-mlid-643 a.active-trail{
+  border-top: 1px solid #2C2C8E;
+}
+
+body.darkblue h1.title,
+body.darkblue h2.node-title,
+.darkblue h2.block-title  {
+  color: #2C2C8E;
+}
+
+.front .darkblue h2.block-title {
+  border-top: 8px solid #2C2C8E;
+}
+
+.center-wrapper .panel-panel .inside .darkblue h2.pane-title{
+  border-bottom: 8px solid #2C2C8E;
+  padding-bottom: 10px;
+}
+
+
+/* Green #A7CF3B */
+.menu-mlid-1785, .menu-mlid-1752 {
+  border-top: 8px solid #A7CF3B; 
+}
+
+.region-header .block-menu-block .menu .menu-mlid-644 a.active, .region-header .block-menu-block .menu .menu-mlid-644 a.active-trail{
+  border-top: 1px solid #A7CF3B;
+}
+
+body.green h1.title,
+body.green h2.node-title  {
+  color: #A7CF3B;
+}
+
+/* Grey #809DAD */
+.menu-mlid-645 {
+  border-top: 8px solid #809DAD;
+}
+
+.region-header .block-menu-block .menu .menu-mlid-645 a.active, .region-header .block-menu-block .menu .menu-mlid-645 a.active-trail{
+  border-top: 1px solid #809DAD;
+}
+
+body.grey h1.title,
+body.grey h2.node-title  {
+  color: #809DAD;
+}
+
+.center-wrapper .panel-panel .inside .grey h2.pane-title{
+  border-bottom: 8px solid #809DAD;
+  padding-bottom: 10px;
+  margin-bottom: 18px;
+}
+
+.grey .views-field-title a{
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.grey .views-field-title a:hover{
+  text-decoration: underline;
+}
+
+.grey .views-field-field-event-date{
+  font-style: italic;
+  font-size: 12px;
+}
+
+.grey .views-field-body p{
+  margin-top: 0px;
+}
+
+.grey .more-link a{
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.grey .more-link a:hover{
+  text-decoration: underline;
+}
+
+.section-news .view-id-news .views-field-title a, .page-events .view-id-events .views-field-title a, .view-id-where_are_we_now .views-field-title a, .view-id-in_memorandum .views-field-title a, .view-id-events .views-field-title a, .view-id-fund_view .views-field-title a {
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.view-id-events ul{
+  margin-top: 5px;
+}
+
+.page-taxonomy-term .region-content .node-title a{
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.page-taxonomy-term .region-content .node-title a:hover{
+  text-decoration: underline;
+}
+
+.page-taxonomy-term .region-content .field-name-body p{
+  margin: 0px;
+}
+
+.page-taxonomy-term .region-content ul.links{
+  margin-top: 0px;
+  font-size: 11px;
+  font-style: italic;
+}
+
+.page-taxonomy-term .region-content ul.links a{
+  text-decoration: none;
+}
+
+.page-taxonomy-term .region-content ul.links a:hover{
+  text-decoration: underline;
+}
+
+.section-news .view-id-news .views-field-title a:hover, .page-events .view-id-events .views-field-title a:hover, .view-id-where_are_we_now .views-field-title a:hover, .view-id-in_memorandum .views-field-title a:hover, .view-id-fund_view .views-field-title a:hover{
+  text-decoration: underline;
+}
+
+
+.view-id-where_are_we_now .views-field-body p, .view-id-in_memorandum .views-field-body p, .view-id-fund_view .views-field-body p{
+  margin: 0px;
+}
+
+.view-id-where_are_we_now .views-field-field-where-are-class, .view-id-in_memorandum .views-field-field-memorandum-class{
+  font-style: italic;
+}
+
+.view-id-where_are_we_now .views-field-field-where-are-class .views-label, .view-id-in_memorandum .views-field-field-memorandum-class .views-label{
+  float: left;
+  margin-right: 5px;
+}
+
+.view-id-where_are_we_now .views-row, .view-id-in_memorandum .views-row, .view-id-fund_view .views-row{
+  margin-bottom: 15px;
+}
+
+.section-news .view-id-news .views-field-field-date{
+  font-style: italic;
+  font-size: 12px;
+}
+
+.page-events .view-id-events .views-field-field-event-date ul{
+  margin-top: 4px;
+}
+
+.view-id-news .views-field-body p{
+  margin-top: 5px;
+}
+
+
+.region-header .block-search{
+  clear: both;
+ 
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.region-header .userlinks{
+ 
+  font-size: 11px;
+  padding-right: 2px;
+  margin-bottom: 0px;
+}
+
+
+/*
+ * Main (container for everything else)
+ */
+#main-wrapper {
+  border: 1px solid #E2E2E2;
+  border-bottom: 0px;
+  border-top: 0px;
+}
+
+#main {
+  padding-top : 36px;
+}
+
+.front #main {
+  padding-top : 0px;
+}
+
+.panel-3col-33-stacked .panel-col-top .inside{
+  margin-bottom: 0px;
+}
+
+.front .front-becomemember{
+ 
+  padding-right: 20px;
+}
+
+.front .pane-front-page-slideshow{
+  width: 670px;
+}
+
+.views-field-field-class .views-label{
+  float: left;
+  padding-right: 6px;
+}
+
+.view-id-gallery .view-content td{
+  padding: 2px;
+}
+
+.view-id-gallery .views-field-field-photo-images a{
+  height: 120px;
+  display: block;
+}
+
+.node-type-funds .field-name-field-funds-paypal{
+  position: absolute;
+  margin-left: 500px;
+}
+
+.node-type-funds .field-name-field-funds-pastrecipients p{
+  margin: 0px;
+}
+
+.views-field-field-news-photo{
+  margin-top: 8px;
+  float: left;
+}
+
+.views-field-field-news-photo img{
+  display: block;
+  margin-right: 5px;
+}
+
+/*
+ * Content
+ */
+#content {
+}
+
+#content .section {
+}
+
+.region-highlighted {
+}
+
+.breadcrumb /* The path to the current page in the form of a list of links */ {
+  padding-bottom: 0; /* Undo system.css */
+}
+
+h1.title, /* The title of the page */
+h2.node-title, /* Title of a piece of content when it is given in a list of content */
+h2.block-title, /* Block title */
+h2.title, /* Comment section heading */
+h2.comment-form, /* Comment form heading */
+h3.title, /* Comment title */
+h2.pane-title {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: normal;
+}
+
+h1.title, /* The title of the page */
+h2.node-title /* Title of a piece of content when it is given in a list of content */ {
+  font-size: 26px;
+}
+
+#content .region-content h1{
+  line-height: 18px;
+}
+
+h2.block-title /* Block title */ {
+  font-size: 19px;
+}
+
+
+tr.even /* Some tables have rows marked even or odd. */ {
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+tr.odd {
+  /* background-color: #eee; */ /* Drupal core uses a #eee background */
+}
+
+div.messages /* Important messages (status, warning, and error) for the user. See also the declarations in messages.css. */ {
+  margin: 1.5em 0; /* Drupal core uses "6px 0" margin */
+}
+
+div.messages ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+div.status /* Normal priority messages */ {
+}
+
+div.warning,
+tr.warning /* Medium priority messages */ {
+  /* border: 1px solid #f0c020; */ /* Drupal core uses: 1px solid #f0c020 */
+}
+
+div.error,
+tr.error /* High priority messages. See also the .error declaration below. */ {
+}
+
+.error /* Errors that are separate from div.messages status messages. */ {
+  /* color: #e55; */ /* Drupal core uses a #e55 background */
+}
+
+.warning /* Warnings that are separate from div.messages status messages. */ {
+  /* color: #e09010; */ /* Drupal core uses a #e09010 background */
+}
+
+div.tabs /* See also the tabs.css file. */ {
+}
+
+.region-help /* Help text on a page */ {
+}
+
+.more-help-link /* Link to more help */ {
+}
+
+.region-content /* Wrapper for the actual page content */ {
+}
+
+ul.links /* List of links */ {
+}
+
+ul.links.inline {
+  display: block; /* Let the links be inline, but the container be a block. */
+}
+
+ul.links li {
+  padding: 0 1em 0 0; /* LTR */
+}
+
+.item-list .pager /* A list of page numbers when more than 1 page of content is available */ {
+  padding: 0;
+}
+
+.item-list .pager li /* Each page number in the pager list */ {
+  padding: 0 0.5em;
+}
+
+.feed-icon /* The link to the RSS or Atom feed for the current list of content */ {
+}
+
+.more-link /* Aggregator, blog, and forum more link */ {
+}
+
+/*
+ * First sidebar (on left in LTR languages, on right in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-first
+ * (see the layout.css file.)
+ */
+.region-sidebar-first ul.menu li, .region-sidebar-first ul.menu{
+  list-style-type: none;
+  list-style-image: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.region-sidebar-first ul.menu li a{
+  color: #858484;
+  font-weight: bold;
+  font-size: 12px;
+  height: 24px;
+  line-height: 24px;
+  display: block;
+  text-decoration: none;
+  border-bottom: 1px solid #E2E2E2;
+  padding-left: 20px; 
+}
+
+.region-sidebar-first ul.menu li a:hover, .region-sidebar-first ul.menu li a.active, .region-sidebar-first ul.menu li a.active-trail{
+  color: #D52820;
+}
+
+.region-sidebar-first .section {
+  padding-top: 6px;
+}
+
+.becomeamember, .emailsubscribe{
+  padding-left: 15px;
+}
+
+.becomeamember .content a{
+  display:block;
+  background-image: url('../images/member.png');
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  height: 45px;
+  line-height: 45px;
+  width: 127px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFF;
+  text-decoration: none;
+  padding-left: 45px;
+}
+
+.becomeamember .content a:hover{
+  background-position: top left;
+  color: #E13C22
+}
+
+.emailsubscribe .content a{
+  display:block;
+  background-image: url('../images/email.png');
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  height: 45px;
+  line-height: 45px;
+  width: 117px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFF;
+  text-decoration: none;
+  padding-left: 45px;
+}
+
+.emailsubscribe .content a:hover{
+  background-position: top left;
+  color: #E13C22;
+}
+
+.tophomeblock{
+  float: left;
+  width: 217px;
+  height: 140px;
+  border-left-color: #E2E2E2;
+  border-left-style: solid;
+  border-left-width: 1px;
+}
+
+.front .frontlogo{
+  width: 218px;
+  border: none;
+}
+
+.front .tophomeblock h2.block-title{
+  font-size: 20px;
+  line-height: 36px;
+  padding-left: 11px;
+}
+
+.front .frontlogo img{
+ margin-top: -15px; 
+}
+
+.center-wrapper .panel-panel .inside{
+  padding: 0px 0px 0px 20px;
+}
+
+div.form-item-class-year-value label, div.form-item-reunion-year-value label{
+  display: none;
+}
+
+.page-news .view-id-news .views-row{
+  margin-bottom: 20px;
+}
+
+.page-news .view-id-news .views-field-body p{
+  margin-bottom: 5px;
+}
+
+.page-news .view-id-news .views-field-view-node a{
+  color: #E33C26;
+}
+
+/*
+ * Second sidebar (on right in LTR languages, on left in RTL)
+ *
+ * Remember to NOT add padding or margin to your .region-sidebar-second
+ * (see the layout.css file.)
+ */
+.region-sidebar-second {
+}
+
+.region-sidebar-second .section {
+}
+
+/*
+ * Footer
+ */
+.region-footer {
+  font-size: 11px;
+  color: #999;
+  line-height: 15px;
+  
+}
+
+.region-footer .content{
+  padding: 14px 22px;
+  border: 1px solid #E2E2E2;
+}
+
+.region-footer .content p{
+  margin: 0px;
+  padding: 0px;
+}
+
+.region-footer .content a{
+  color: #999;
+}
+
+/*
+ * Page bottom
+ */
+.region-bottom /* Wrapper for any blocks placed in the page bottom region */ {
+}
+
+
+
+
+.views-slideshow-pager-fields{
+ 
+  width: auto;
+  padding-right: 40px;
+  margin-bottom: 30px;
+}
+
+.views-slideshow-pager-field-item{
+  float: left;
+}
+
+.views-slideshow-pager-fields .active .views-content-counter{
+  color: #002821;
+}
+
+.views-content-counter {
+  background-color: #D62821;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  height: 22px;
+  margin-left: 1px;
+  padding-top: 4px;
+  text-align: center;
+  text-decoration: none;
+  width: 26px;
+}
+
+
+
+
+
+.not-front.no-sidebars #content .section {
+  padding: 0px 30px;
+}
+
+.panel-3col-33-stacked .panel-col-first .inside{
+  margin: 0px;
+}
+
+.center-wrapper .panel-panel .inside{
+  padding: 0px;
+  margin: 0px;
+}
+
+.panel-3col-33-stacked .panel-col-last{
+  width: 34%;
+}
+
+.center-wrapper .panel-panel .inside h2.pane-title, .center-wrapper .panel-panel .inside .pane-content{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.center-wrapper .panel-panel .inside{
+  border-right: 1px solid #E2E2E2;
+}
+
+
+

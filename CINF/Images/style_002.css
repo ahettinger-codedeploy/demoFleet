@@ -1,0 +1,953 @@
+/*
+Theme Name: New York
+Theme URI: http://fasturtle.com
+Description: FastSite by Fasturtle
+Version: 2.0
+Author: Fasturtle
+Author URI: http://fasturtle.com
+Template: ft-framework
+*/
+
+
+
+
+
+/*------------------------------------*\
+    $CONTENTS
+	Credit: https://github.com/csswizardry/CSS-Guidelines
+\*------------------------------------*/
+
+/**
+ * CONTENTS............You are here! This stylesheet overrides any defaults defined in ft-framework.
+ * FONT-FACE...........Load font files, typography, and base formatting overrides.
+ * COLORS..............Brand colors override, referenced by color name and value.
+ * LAYOUT..............Main structure of site. Includes Header, Nav, Article, Aside, Footer.
+	 * ROTATOR.............Rotating header overrides.
+	 * FEATURES............Featured Callouts overrides.
+	 * LEDE TEXT...........Lede Text formatting overrides.
+ * FORMS...............Override styles for forms and the Contact Form 7 plugin.
+ * MISC................Any leftovers or additions go here.
+ */
+
+
+
+
+
+/*------------------------------------*\
+    $FONT-FACE
+
+	Headlines: Montserrat Bold
+	Subheadings/Accents: Montserrat Light
+	Body Text: Quattrocento Sans
+\*------------------------------------*/
+
+@font-face {
+    font-family: 'quattrocento_sansregular';
+    src: url('fonts/quat-regular-webfont.eot');
+    src: url('fonts/quat-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/quat-regular-webfont.woff2') format('woff2'),
+         url('fonts/quat-regular-webfont.woff') format('woff'),
+         url('fonts/quat-regular-webfont.ttf') format('truetype'),
+         url('fonts/quat-regular-webfont.svg#quattrocento_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'quattrocento_sansitalic';
+    src: url('fonts/quat-italic-webfont.eot');
+    src: url('fonts/quat-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/quat-italic-webfont.woff2') format('woff2'),
+         url('fonts/quat-italic-webfont.woff') format('woff'),
+         url('fonts/quat-italic-webfont.ttf') format('truetype'),
+         url('fonts/quat-italic-webfont.svg#quattrocento_sansitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'quattrocento_sansbold';
+    src: url('fonts/quat-bold-webfont.eot');
+    src: url('fonts/quat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/quat-bold-webfont.woff2') format('woff2'),
+         url('fonts/quat-bold-webfont.woff') format('woff'),
+         url('fonts/quat-bold-webfont.ttf') format('truetype'),
+         url('fonts/quat-bold-webfont.svg#quattrocento_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratlight';
+    src: url('fonts/montserrat-light-webfont.eot');
+    src: url('fonts/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/montserrat-light-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-light-webfont.woff') format('woff'),
+         url('fonts/montserrat-light-webfont.ttf') format('truetype'),
+         url('fonts/montserrat-light-webfont.svg#montserratlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserratbold';
+    src: url('fonts/montserrat-bold-webfont.eot');
+    src: url('fonts/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/montserrat-bold-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-bold-webfont.woff') format('woff'),
+         url('fonts/montserrat-bold-webfont.ttf') format('truetype'),
+         url('fonts/montserrat-bold-webfont.svg#montserratbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	font-family: quattrocento_sansregular, sans-serif;
+	font-size: 100%;
+}
+
+#main > section > article section i,
+#main > section > article section em {
+	font-style: normal;
+	font-family: quattrocento_sansitalic, sans-serif;
+}
+
+#main > section > article section b,
+#main > section > article section strong {
+	font-weight: normal;
+	font-family: quattrocento_sansbold, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: montserratbold, Helvetica, sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+h4, h5, h6,
+#main > section > article section h1, 
+#main > section > article section h2, 
+#main > section > article section h3, 
+#main > section > article section h4, 
+#main > section > article section h5, 
+#main > section > article section h6  {
+	font-family: montserratlight, sans-serif;
+}
+
+#main > section > article section iframe,
+#main > section > article section img {
+	background: #fff;
+	border: 4px double #f3c466;
+	padding: 3px;
+}
+
+
+body.home #main > section > article section iframe,
+body.home #main > section > article section img {
+	max-width: 410px;
+}
+
+body.home #main > section > article section img {
+	height: auto;
+}
+
+blockquote {
+	font-style: normal;
+	font-size: 1.4em;
+	font-family: quattrocento_sansitalic, Helvetica, sans-serif;
+	margin-bottom: 1.5em;
+}
+
+
+
+
+/*------------------------------------*\
+    $COLORS
+
+	Black: #1b1b1b
+	Dark Gold: #d8a43c
+	Light Gold: #f5c667
+	White: #fff
+\*------------------------------------*/
+
+body {
+	color: #1b1b1b;
+}
+
+a, a:link {	
+	color:#c68900;
+}
+
+a:visited {
+	color: #1b1b1b;
+}
+
+a:hover, a:active, a:focus {
+	color:#1b1b1b;
+}
+
+h1, h2, h3, h4, h5, h6{
+	color: #d8a43c;
+}
+
+blockquote {
+	background: #FFF5E3;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $LAYOUT
+	
+	Header
+	Navigation
+	Rotator
+	Features
+	Lede Text
+	Article
+	Aside
+	Footer
+\*------------------------------------*/
+
+body .wrapper, #main {
+	margin:0 auto;
+	position: relative;
+	width: 950px;
+}
+
+#main {
+	
+}
+
+body.home #main {
+	padding-top: 8em;
+	background: transparent;
+}
+
+body.home #main section article section {
+	width: 480px;
+}
+
+body.home #main section article section img
+body.home #main section article section iframe {
+	max-width: 430px;
+}
+
+body.home #main section article section img {
+	height: auto;
+}
+
+h1.archive {
+	padding: 1em 1.5em 0 0;
+}
+
+
+
+
+
+
+/*------------------------------------*\
+    $HEADER
+\*------------------------------------*/
+
+body {
+	background-color: #fff;
+}
+
+body > header {
+	padding: 0;
+	height: 0;
+	z-index: 500;
+}
+#logo {
+	margin: 0;
+	padding: 0;
+	height: 207px;
+	width: 233px;
+	margin-top: -62px;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 357px;
+}
+
+#logo a {
+	background: transparent;
+}
+
+body > header h2#tagline {
+    position: absolute;
+    right: 0;
+	font-size: 1.6em;
+    top: 15px;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $ROTATOR
+\*------------------------------------*/
+
+.subpage-banner .img,
+#rotator li {
+	background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-size:cover !important;
+	width: 100%;
+} 
+
+.subpage-banner {
+	background: #f3c466;
+	height: 250px;
+	position: relative;
+}
+
+.subpage-banner .img,
+.subpage-banner .overlay {
+    height: 250px;
+}
+
+#banner {
+	background: #f3c466 !important;
+	height: 500px;
+	position: relative;
+}
+
+#banner .wrapper {
+	height: 500px;
+}
+	
+#rotator,
+#banner .overlay  {
+    height: 500px;
+	width: 100%;
+}
+
+#rotator li {
+	background: #f3c466;
+	height: 500px;
+}
+
+#banner .overlay,
+.subpage-banner .overlay {
+	background: rgba(227,151,0,0.25);
+	display: block;
+	position: absolute;
+	top:0;
+	left:0;
+	z-index: 100;
+	width: 100%;
+}
+
+#banner .shadow,
+.subpage-banner .shadow {
+	background: url(/clients/CINF/Images/bg-banner-shadow.png) repeat-x center bottom;
+	display: block;
+	top: 350px;
+	position: absolute;
+	z-index: 150;
+	width: 100%;
+	height: 150px;
+}
+
+.subpage-banner .shadow {
+	top: 100px;
+}
+
+
+
+/*------------------------------------*\
+    $LEDE TEXT
+\*------------------------------------*/
+
+.intro-text {
+	background: none;
+	margin-bottom: 2em;
+	width: auto;	
+}
+
+.intro-text .intro-text-body {
+	color: #f0d295;
+	text-transform: uppercase;
+	font-family: montserratlight,sans-serif;
+    font-size: 15px;
+	line-height: 1.5;
+	text-align: center;
+	padding: 0 15px 35px 15px;
+}
+
+.intro-text .intro-text-body a {
+	color: #f0d295;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+.intro-text .intro-text-body a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $NAVIGATION
+\*------------------------------------*/
+
+#nav {
+ 
+	border-top: 10px solid #d8a43c;
+	overflow: visible;
+	height: 38px;
+	padding: 20px 0;
+
+}
+
+#nav .wrapper {
+	overflow: visible;
+	z-index: 9999;
+}
+
+#nav ul li.middle {
+	margin-left: 205px;
+}
+
+#nav ul li.highlight {
+	border: 2px solid #2A2A33;
+	margin-left: 15px;
+}
+
+#nav ul li a, 
+#nav ul li a:link, 
+#nav ul li a:visited,
+#nav ul li ul.sub-menu li a {
+	background: transparent;
+	font-family: montserratbold, sans-serif;
+    color: #fff;
+	text-transform: uppercase;
+	font-size: 13px;
+	text-shadow: 0 0 2px #1b1b1b;
+	padding: 12px;
+}
+
+#nav ul li.menu-item-has-children {
+	background: url(/clients/CINF/Images/bg-nav-dropdown.png) no-repeat center right;	
+	margin-right: 10px;
+}
+
+#nav ul li ul.sub-menu li a {
+	padding: 12px;
+	text-align: center;	
+	width: 136px;
+}
+
+#nav ul li.current_page_item ul li a,
+#nav ul li ul li a:visited {
+    color: #fff;
+}
+
+#nav ul li a:hover, 
+#nav ul li a.over, 
+#nav ul li a:active, 
+#nav ul li.current_page_item ul li a:hover, 
+#nav ul li ul li a:hover, 
+#nav ul li ul li.current_page_item > a {
+    background: transparent;
+    color: #f5c667;
+}
+
+#nav ul > li.current_page_item > a, 
+#nav ul > li.current-page-ancestor > a,
+#nav ul > li.current_page_parent > a,
+#nav ul li ul.sub-menu li.current-page-ancestor a,
+#nav ul li ul.sub-menu li.current_page_item a,
+#nav ul li ul.sub-menu li a:hover {
+	color: #f5c667;
+}
+
+#nav ul li ul.sub-menu {
+    background:#1b1b1b;
+	width: 160px;
+}
+
+#nav ul li ul.sub-menu li ul.sub-menu {
+	background: #1b1b1b;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $ARTICLE
+\*------------------------------------*/
+
+.main-bg {
+	background: url(/clients/CINF/Images/bg-spiral.png), url(/clients/CINF/Images/bg-columns-center-bw.png);
+	background-repeat: no-repeat, repeat-y;						
+	background-position: center left, 44% center;
+	background-attachment: fixed, scroll;
+}
+
+body.home .main-bg {
+	background-position: center left, 46% center;
+}
+
+body.home #main > section > article > header {
+	display: none;
+}
+
+#main > section > article > header h1 {
+	font-size: 2em;
+}
+
+#main > section > article > header h1 a,
+#main article,
+#main article section,
+#main section {
+	background: transparent;
+}
+
+#main article {
+	padding-left: 0;
+}
+
+article nav#posts-nav {
+	border: 1px solid #1b1b1b;
+}
+
+article footer a.addthis_button {
+	background: transparent;
+}
+
+#main > section > article section ul {
+	list-style-type: circle;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $ASIDE
+\*------------------------------------*/
+
+aside {
+	float: left;
+	padding: 3em 0;
+    width: 275px;
+}
+
+body.home #main aside .child-pages {
+	display: none;
+}
+
+#main aside .widget {
+	margin-top: 2em;
+	text-align: center;
+}
+
+#main aside .widget .widget-title {
+	color: #fff;
+	font-size: 24px;
+	text-align: center;	
+	margin-bottom: 0;
+}
+
+#main aside .widget .textwidget h1,
+#main aside .widget .textwidget h2,
+#main aside .widget .textwidget h3,
+#main aside .widget .textwidget h4,
+#main aside .widget .textwidget h5,
+#main aside .widget .textwidget h6,
+#banner .tickets-feature .widget .textwidget h1,
+#banner .tickets-feature .widget .textwidget h2,
+#banner .tickets-feature .widget .textwidget h3,
+#banner .tickets-feature .widget .textwidget h4,
+#banner .tickets-feature .widget .textwidget h5,
+#banner .tickets-feature .widget .textwidget h6 {
+	color: #d8a43c;
+	font-size: 20px;
+	font-family: montserratlight, sans-serif;
+	text-align: center;
+}
+
+#main aside .widget .textwidget,
+#main aside .widget .textwidget p {
+	color: #fff;
+}
+
+#main aside .widget .textwidget ul,
+#main aside .widget .textwidget ol,
+#banner .tickets-feature .widget .textwidget ul,
+#banner .tickets-feature .widget .textwidget ol {
+	list-style-type: none;
+	margin: 1.5em 0 0 0;
+	padding: 0;
+}
+
+#main aside .widget .textwidget ul li {
+	margin-bottom: .25em;
+}
+
+#main aside .widget .textwidget ul li a,
+#banner .tickets-feature .widget .textwidget ul li a {
+	border: 2px solid #4A4A4F;
+	color: #efbe5d;
+	display: block;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family: montserratbold,sans-serif;
+    font-size: 14px;
+	margin: 0 auto;
+    padding: 12px 20px;
+    text-shadow: 0 0 2px #1b1b1b;
+	width: 175px;
+}
+
+#banner .tickets-feature .widget .textwidget ul li a {
+	color: #1b1b1b;
+	border: 1px solid #1b1b1b;
+	text-shadow: none;
+    padding: 15px 20px;
+
+}
+
+#banner .tickets-feature .widget .textwidget ul li {
+	float: left;
+	margin-left: 15px;
+}
+
+#main aside .widget .textwidget ul li a:hover {
+	color: #fff;
+	border-color: #8F7238;
+}
+
+#main aside .widget .textwidget ul li:first-child a,
+#banner .tickets-feature .widget .textwidget ul li:first-child a {
+	background: #efbe5d;
+	border: 4px double #1b1b1b;
+	color: #1b1b1b;	
+	font-size: 15px;
+	text-shadow: none;
+}
+
+#banner .tickets-feature .widget .textwidget ul li:first-child a {
+	border-color: #f3c466;
+	background: #1b1b1b;
+	color: #fff;
+	width: 130px;
+    padding: 12px 20px;
+
+}
+
+#main aside .widget .textwidget ul li:first-child a:hover,
+#banner .tickets-feature .widget .textwidget ul li:first-child a:hover,
+#banner .tickets-feature .widget .textwidget ul li a:hover  {
+	background: #fff;
+	color: #1b1b1b;
+	text-shadow: none;
+}
+
+#banner .tickets-feature .widget .textwidget ul li:first-child a:hover {
+	border-color: #1b1b1b;
+}
+
+#main > aside .youtube-channel {
+	position: relative;
+	margin-bottom: 2em;
+	height: 225px;
+}
+
+#main > aside .youtube-channel iframe {
+	border: 1px solid #1b1b1b;
+	position: absolute;
+	overflow: visible;
+	z-index: 9999;
+	right: 0;
+}
+
+#banner .tickets-wrap {
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	z-index: 200;
+}
+
+#banner .tickets-feature {
+	margin: 0 auto;
+	overflow: auto;
+	text-align: center;
+	width: 950px;
+	position: relative;
+	top: 415px;
+}
+
+#banner .tickets-feature .widget {
+	background: url(/clients/CINF/Images/bg-tickets-feature.png) no-repeat 0 0;
+	margin: 0 auto;
+	text-align: center;
+	overflow: visible;
+	height: 112px;
+	width: 750px;
+	padding: 55px 100px 0 100px;
+}
+
+#banner .tickets-feature .widget .textwidget ul {
+	position: absolute;
+    right: 100px;
+    top: 32px;
+}
+
+#banner .tickets-feature .widget .widget-title,
+#banner .tickets-feature .widget .textwidget h1,
+#banner .tickets-feature .widget .textwidget h2,
+#banner .tickets-feature .widget .textwidget h3,
+#banner .tickets-feature .widget .textwidget h4,
+#banner .tickets-feature .widget .textwidget h5,
+#banner .tickets-feature .widget .textwidget h6  {
+	color: #1b1b1b;
+	text-align: left;
+	font-size: 1.5em;
+}
+
+#banner .tickets-feature .widget .widget-title {
+	font-size: 2em;
+	margin: 0;
+}
+
+
+
+
+/*------------------------------------*\
+    $FOOTER
+\*------------------------------------*/
+
+.thanks {
+	border-top: 10px solid #d8a43c;
+	background: #f3c466;
+	min-height: 60px;
+}
+
+.thanks a {
+	text-decoration: none;
+}
+
+.thanks .footer-widget-1 {
+	overflow: auto;
+	padding: 3em 0 2.5em 0;
+}
+
+.thanks .footer-widget-1 .widget {
+	float: left;
+	width: auto;
+	text-align: center;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.thanks .footer-widget-1 .widget .widget-title {
+	font-family: montserratlight, sans-serif;
+	color: #1b1b1b;
+	text-align: center;
+	font-size: 18px;
+}
+
+.thanks .footer-widget-1 .widget img {
+	max-height: 85px;
+	margin: 0 auto;
+	text-align: center;
+	width: auto !important;
+}
+
+body > footer {	
+	background: #1b1b1b;
+    color: #fff;
+	padding: 3em 0;
+}
+
+body > footer ul li a,
+body > footer ul li a:link,
+body > footer .vcard a,
+a.facebook {
+	color: #fff;
+	text-decoration: none;
+}
+
+body > footer ul li a, 
+body > footer ul li a:visited,
+a.facebook:visited {
+	color:#fff;
+	text-decoration: none;
+	font-size: .8em;
+}
+
+body > footer ul li a:hover,
+a.facebook:hover {
+	color: #f5c667;
+}
+
+body > footer ul li a.credit {
+    background: url(/clients/CINF/Images/ftlogo-donated-white.png) 0 0 no-repeat;
+	position: absolute;
+	top: 2px;
+	right: 0;
+	width: 170px !important;
+}
+
+a.facebook {
+	position: absolute;
+	top: -36px;
+	z-index: 9999;
+	background: url(/clients/CINF/Images/bg-like-bw.png) no-repeat 0 0;
+	display: block;
+	color: #fff;	
+	font-family: montserratbold,Helvetica,sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 1.1em;
+	text-align: center;
+	width: 458px;
+	height: 40px;
+	padding: 12px 0 0 0;
+	margin: 0;
+}
+
+body.home a.facebook {
+	position: inherit;
+	margin-top: 3em;
+}
+
+
+
+
+/*------------------------------------*\
+    $FORMS
+\*------------------------------------*/
+
+span.req {
+	color: #f36b26;
+}
+
+form.wpcf7-form {
+	border-radius: 3px;
+	padding: 1em;
+}
+
+form.wpcf7-form label {
+	font-family: quattrocento_sansbold,Helvetica,sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    left: 11px;
+    position: absolute;
+    top: 17px;
+    z-index: 2;
+}
+
+.wpcf7 span.wpcf7-not-valid-tip-no-ajax, 
+.wpcf7 span.wpcf7-not-valid-tip {
+	top: 10px;
+}
+
+.wpcf7 img#captcha-image {
+    padding: 7px 0 !important;
+}
+
+.wpcf7 input[type="text"], 
+.wpcf7 input[type="email"], 
+.wpcf7 input[type="password"], 
+.wpcf7 input[type="tel"], 
+.wpcf7 input[type="search"], 
+.wpcf7 input[type="range"], 
+.wpcf7 input[type="date"], 
+.wpcf7 input[type="datetime"], 
+.wpcf7 input[type="datetime-local"], 
+.wpcf7 input[type="number"], 
+.wpcf7 input[type="time"], 
+.wpcf7 input[type="week"], 
+.wpcf7 input[type="url"], 
+.wpcf7 textarea {
+	width: 88%;
+	zoom:1;
+}
+
+.wpcf7 textarea{
+	margin-bottom:0 !important;
+}
+
+
+.wpcf7 input#captcha {
+    margin: 0;
+    width: 115px; 
+}
+
+
+body.home form.wpcf7-form {
+	overflow: auto;
+}
+
+body.home .wpcf7 textarea {
+	height: 16px;
+}
+
+body.home .wpcf7 .row {
+	clear: none;
+	float: left;
+	width: 45%;
+	margin-left: 12px;
+}
+
+body.home input#captcha {
+	width: 70px;
+}
+
+body.home .wpcf7 .submit-button {
+	clear: both;
+	margin-top: 15px;
+}
+
+body.home .wpcf7 .form-submit {
+	width: 93%;
+}
+
+body.home .wpcf7 .row-comments, 
+body.home .wpcf7 .row-comments textarea {
+    width: 93%;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $MISC
+\*------------------------------------*/
+
+.intro-text .intro-text-body a,
+#main aside .child-pages a,
+.latest-events header > a,
+.latest-posts header > a,
+#main aside .widget .textwidget ul li:first-child a  {
+	-webkit-transition:background .2s ease-in;
+	-moz-transition:background .2s ease-in;  
+	-o-transition:background .2s ease-in;  
+	transition:background .2s ease-in; 
+}
+
+#main aside .widget .textwidget ul li a,
+.intro-text .intro-text-body a  {
+	-webkit-transition:color .2s ease-in;
+	-moz-transition:color .2s ease-in;  
+	-o-transition:color .2s ease-in;  
+	transition:color .2s ease-in; 
+}
+
+#imageDataContainer #imageDetails p#controls { /* Override plugin defaults */
+	display: none !important;
+}

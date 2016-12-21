@@ -1,0 +1,55 @@
+<%@ Master Language="C#" %>
+
+<script runat="server">
+    //CHANGE LOG
+    //REE 11/23/16 - Created
+
+    protected void Page_Load(object sender, EventArgs e) {
+
+        GlobalClass.ErrorLog("Load PL");
+
+        LoadPL(GlobalClass.SubDomain());
+
+        GlobalClass.ErrorLog("PL Loaded");
+
+        if (string.IsNullOrEmpty(litBanner.Text) && string.IsNullOrEmpty(litFooter.Text) && string.IsNullOrEmpty(litHead.Text))
+        {
+            GlobalClass.ErrorLog("All Empty - Load WWW");
+            LoadPL("www");
+        }
+    }
+
+    protected void LoadPL(string subdomain)
+    {
+        litHead.Text = GlobalClass.GetPLContent(subdomain, "head");
+        litBanner.Text = GlobalClass.GetPLContent(subdomain, "banner");
+        litFooter.Text = GlobalClass.GetPLContent(subdomain, "footer");
+    }
+
+</script>
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head runat="server">
+        <asp:ContentPlaceHolder id="MasterHead" runat="server" />
+        <asp:Literal runat="server" ID="litHead" />
+    </head>
+
+    <body>
+
+        <form id="form1" runat="server">
+
+            <div>
+                <asp:Literal runat="server" ID="litBanner" />
+
+	            <!--tix content-->
+	            <asp:ContentPlaceHolder id="MasterContent" runat="server" />
+
+                <asp:Literal runat="server" ID="litFooter" />
+	        </div>
+
+	    </form>
+
+    </body>
+</html>

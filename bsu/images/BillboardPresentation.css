@@ -1,0 +1,185 @@
+﻿/* _________________________________________________
+
+Ball State Design - Billboard Presentation
+_____________________________________________________
+
+1.BILLBOARDCONTAINER
+2.BILLBOARD
+3.CALLOUTS
+
+BILLBOARDCONTAINER
+*/
+#billboardContainer
+{
+	margin: 0 auto;
+	background-color: #4E5E6D;
+}
+    
+#billboardContainer .billboard.single-column-banner
+{
+	height: 250px; /* For expanding right nav to work, this must be set explicitly, jQuery will double check based on image size */
+}
+    
+/**************************************************
+**  BILLBOARD    **********************************
+**************************************************/
+#billBoard 
+{
+    margin: 0 auto;
+    width: 940px;
+}
+    
+#billBoard.home-page  
+{
+    margin: 0 auto;
+    width: 940px; 
+}
+
+#billBoard.home-page .animated, #billBoard.home-page .random-animated 
+{ 
+    margin: 0 auto;
+    margin-left: -26px;
+    width: 994px;  
+}
+
+/* Billboard */
+.billboard { text-align: left; margin-left: -1px; }
+.billboard.animated, .billboard.random-animated { margin-left: 0; }
+.billboard.single-column-banner.animated, .billboard.single-column-banner.random-animated { width: 664px; margin-left: 0; }
+.billboard .left { width: 664px; }
+.billboard .right
+{
+	width: 275px;
+	color: #FFFFFF;
+}
+    
+.billboard img { border-left: 1px solid #FFFFFF; border-right: 1px solid #FFFFFF; }
+    
+/* Billboard Left Img Slide */
+.billboard .left img.slide
+{
+	border: 0px;
+}
+    
+/* Billboard Random-static */
+.billboard.random-static .left { text-align: left; }
+.billboard.random-static .right { } 
+    
+/* Billboard Single-Column-Banner img */
+.billboard.single-column-banner img 
+{
+    width: 664px;
+    margin-left: 1px;
+    border-left: 1px solid #FFFFFF;
+    border-right: none;
+}
+    
+/* Billboard Animated img */
+.billboard.animated img 
+{
+    width: 100%;
+    border-left: none;
+    border-right: none;
+}
+
+.billboard.animated.single-column-banner img 
+{
+    margin-left: 0;
+}
+    
+/* Billboard Random Animated img */
+.billboard.random-animated img 
+{
+    width: 100%;
+    border-left: none;
+    border-right: none;
+}
+
+/**************************************************
+**  CALLOUTS    ***********************************
+**************************************************/
+.billboard.callout #callouts 
+{
+    padding: 20px 5px;
+}
+
+.billboard.callout #callouts a.calloutLink 
+{
+    display: block;
+}
+
+.billboard.callout #callouts .callout 
+{
+    float: left;
+    padding: 10px 10px;
+    width: 290px;
+    height: 250px;
+    overflow: hidden;
+    
+    transition-property: background-color, color; /* 0.2s linear; */
+    -moz-transition-property: background-color, color; /* 0.2s linear;    /* FF3.7+ */
+    -o-transition: background-color, color; /* 0.2s linear;      /* Opera 10.5 */
+    -webkit-transition: background-color,color; /* 0.2s linear; /* Saf3.2+, Chrome */
+    
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+    
+    -moz-transition-duration: 0.2s;
+    -moz-transition-timing-function: ease-in;
+    
+    -o-transition-duration: 0.2s;
+    -o-transition-timing-function: ease-in;
+    
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in;
+}
+
+.billboard.callout #callouts .callout a, .billboard.callout #callouts .callout a:hover { text-decoration: none; }
+
+.billboard.callout #callouts .callout.white a { color: #4E5E6D; }
+.billboard.callout #callouts .callout.red a { color: #FFF; }
+
+.billboard.callout #callouts .callout.white .description a { color: #555; }
+.billboard.callout #callouts .callout.red a { color: #FFF; }
+
+.billboard.callout #callouts .callout .title
+{
+    font-family: 'NewsGothicBT-Bold';
+    font-size: 16pt;
+    text-transform: uppercase;
+}
+
+.billboard.callout #callouts .callout .description
+{
+    font-size: 10pt;
+}
+
+.billboard.callout #callouts .callout.white 
+{
+    background-color: #FFF;
+}
+
+.billboard.callout #callouts .callout.red 
+{
+    background-color: #CC0000;
+}
+
+.billboard.callout #callouts .callout.red .title, .billboard.callout #callouts .callout.red .description
+{
+    color: #FFFFFF;
+}
+
+.billboard.callout #callouts .callout:hover 
+{
+    color: #FFF;
+    background-color: #061a4a;
+}
+
+.billboard.callout #callouts .callout:hover a, .billboard.callout #callouts .callout:hover .description a { color: #FFF; }
+
+.billboard.callout #callouts img { margin: 5px 0; border-left: none; border-right: none; }
+
+/*960px __________________________________________________________________________________________________________ */
+/* @media only screen and (max-width: 960px) { */
+    body {}
+/* } */

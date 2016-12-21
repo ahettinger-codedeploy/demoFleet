@@ -1,0 +1,719 @@
+#print-button {display:none}
+
+.joomla-nav, .main-nav, .extra-mini, .footer, .btn-green, #hero-container, .extra { display:none}
+ .item-page { width:auto!important}
+.header { height:30px; display:block}
+/* _________________________________________________
+
+VERB Interactive CSS Framework (Change to Site Name)
+
+Author: VERB Interactive
+Version: 2.5
+URL: http://www.verbinteractive.com
+_____________________________________________________
+
+
+DO NOT FORGET TO REMOVE COMMENTS. READ THROUGH THIS
+FILE VERY CAREFULLY AND REMOVE WHATEVER YOU DONT NEED. 
+
+*/
+
+
+
+/* =============================================================================
+   Reset
+   ========================================================================== */
+
+/* This is a modified HTML5 reset. It will reset all 
+elements to have no (or very basic) styling. It also 
+includes some HTML5-specific rules for when or if we 
+ever move in that direction.
+*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var,
+b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; }
+body { line-height:1; }
+ol, ul {list-style:none;}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { display:block; }
+nav ul { list-style:none; }
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; }
+
+:focus, input {outline:0;}
+
+
+
+/* =============================================================================
+   Base
+   ========================================================================== */
+
+/* The following root styles correct font-sizing 
+issues with MSIE and iOS devices. They also help
+to simplify font sizing calculations.
+
+The :: selection rules set the text-highlight 
+color. Modify as appropriate.
+*/
+
+html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body { font: normal 62.5%/1.5 sans-serif; font-family: Verdana, Geneva, sans-serif; color: #231f20 }
+
+::-moz-selection { background: #3399ff; color: #fff; text-shadow: none; }
+::selection { background: #3399ff; color: #fff; text-shadow: none; }
+
+
+
+/* =============================================================================
+   Helper Classes
+   ========================================================================== */
+
+/* For image replacement */
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; *line-height: 0; }
+.ir br { display: none; }
+
+/* Hide from both screenreaders and browsers */
+.hidden { display: none !important; visibility: hidden; }
+
+/* Hide only visually, but have it available for screenreaders */
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible { visibility: hidden; }
+
+/* CLEARFIX! Works 98% of the time. Just add "cf" as
+a class to your collapsed element.
+*/
+.cf:before, .cf:after { content: ""; display: table; }
+.cf:after { clear: both; }
+.cf { *zoom: 1; }
+
+/* Clear Div class, but you shouldn't usually need it if you're using the above */
+.clr {clear:both; margin-bottom:-1px; height:1px; line-height:1px; background:transparent;}
+
+
+
+/* =============================================================================
+   Typography
+   ========================================================================== */
+
+
+/* The below is basic typographic styling, but
+don't forget to review to set anything you might
+still need. READ THROUGH THIS SECTION CAREFULLY!
+
+Note the classes .h1-.h6, for cases where styling
+matches one heading but semantics dicate another.
+
+For example:
+<h2> is appropriate, but <h3> styling is used.
+<h2 class="h3">I'm appropriate</h2>
+*/
+
+
+
+/*font-family:'Bembo MT W01 Bold';
+font-family:'BemboMTW01-BoldItalic';
+font-family:'Bembo MT W01 Extra Bold';
+font-family:'BemboMTW01-ExtraBoldIta';
+font-family:'Bembo MT W01 Italic';
+font-family:'BemboTitlingMTW01-Itali';
+font-family:'Bembo Titling MT W01';*/
+
+
+/*font-family:'Bembo W01';
+font-family:'Bembo MT W01 Bold';
+font-family:'BemboMTW01-BoldItalic';
+font-family:'Bembo MT W01 Extra Bold';
+font-family:'BemboMTW01-ExtraBoldIta';
+font-family:'Bembo MT W01 Italic';
+font-family:'Bembo MT W01 Semibold';
+font-family:'BemboMTW01-SemiboldItal';
+font-family:'BemboTitlingMTW01-Itali';
+font-family:'Bembo Titling MT W01';
+font-family:'Bembo MT W01 SC';
+font-family:'BemboMTW01-SCSemibold';
+font-family:'Bembo MT W02 Italic';
+font-family:'Bembo MT W02 Bold';
+font-family:'BemboMTW02-BoldItalic';
+font-family:'Bembo MT W02 Extra Bold';
+font-family:'BemboMTW02-ExtraBoldIta';*/
+
+
+/* Don't forget! font-weight, margin-bottom */
+h1, .h1 { font-size:26pt; font-family:Georgia; font-weight:normal; line-height: 0.8em;padding-bottom: 5px; font-style:italic}
+.h1-sub { font-size:14pt; font-family:Georgia, "Times New Roman", Times, serif; font-weight:normal; font-style:italic; color:#6eb43f; margin-bottom: 18px; }
+h2, .h2 { font-size:26pt; font-family:Georgia;  font-style:italic; font-weight:normal; background:url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) bottom left repeat-x; margin-bottom:12px; padding-bottom:2px;}
+	h2.alt { background: none; margin: 0; padding: 0; }
+h2.blue { color:#008ed2; background:none; padding:none; margin-bottom:3px; font-size:24pt}
+h3, .h3 { font-size: 15pt;  }
+h4, .h4 { font-size: 14pt; font-family:Georgia;  font-style:italic; font-weight:normal; font-style:italic; color:#6eb43f; padding-bottom:15px; font-weight:bold}
+h5, .h5 { font-size: 13pt; }
+h6, .h6 { font-size: 12pt; }
+
+p { margin-bottom:15px}
+ 
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {color: inherit; text-decoration: none;}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {text-decoration: none;}
+
+/* Set List Styles */
+ul, ol { margin: 0 0 1.5em; padding-left: 24px; list-style-type: disc; }
+ol { list-style-type: decimal; }
+ol ol li {list-style-type: lower-alpha;}
+li ul, li ol { margin: 0; }
+dl, dd { margin: 0 0 1.5em; }
+dt { font-weight: normal; }
+
+/* Set font-size */
+p, li, pre, dl, blockquote, cite { font-size: 13pt; }
+li p, ul li li, ol li li {font-size: 1em;}
+
+/* Misc Typographical Elements */
+abbr[title] { border-bottom: 1px dotted; }
+
+b, strong { font-weight: bold; }
+i, em { font-style: italic; }
+
+blockquote { margin: 1em 40px; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+
+dfn { font-style: italic; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+small { font-size: 85%; }
+
+/* Redeclare monospace font family */
+code, kbd, samp { font-family: monospace, serif; _font-family: 'courier new', monospace; font-size: 1em; }
+
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+
+/* =============================================================================
+   Links (And special link classes)
+   ========================================================================== */
+
+a { color: #008ed2; text-decoration:underline; }
+a:visited { color: #008ed2; }
+a:hover { color: #008ed2; text-decoration:none; }
+a:focus { outline: thin dotted; }
+
+/* Improve readability when focused and hovered in all browsers. */
+a:hover, a:active { outline: 0; };}
+
+/* =============================================================================
+   Forms
+   ========================================================================== */
+
+/* Mostly usability fixes in this section, but also
+some important vendor-specific browser fixes!
+
+This is mostly beta but it *should* all work. If you
+run into any issues, tell Brandon. :)
+*/
+
+label { cursor: pointer; }
+button, input, select, textarea { vertical-align: baseline; *vertical-align: middle; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer; -webkit-appearance: button; *overflow: visible; }
+button[disabled], input[disabled] { cursor: default; }
+
+/* 1. Remove default vertical scrollbar in IE6/7/8/9
+   2. Allow only vertical resizing 
+*/
+textarea { font-family: sans-serif; overflow: auto; vertical-align: top; resize: vertical; }
+
+/* Normalize Browser Styling */
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; *width: 13px; *height: 13px; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+/* Remove inner padding and border in FF3/4 */
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+
+/* Style Placeholder Attribute */
+::-webkit-input-placeholder { color: inherit; }
+input:-moz-placeholder { color: inherit; }
+
+/* Remove Input highlight in Webkit */
+input:focus { outline: 0; }
+
+/* It's all very good, just go with it. */
+button, input { line-height: normal; }
+.ie6 legend,.ie7 legend { margin-left: -7px; }
+.ie6 input { vertical-align: text-bottom; }
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+
+/* Make modern browsers use IE's form box model, padding becomes part of the width! */
+input, textarea  { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box; }
+
+
+/***************
+
+	YOUR FORM STYLES HERE!
+	(Remove comment)
+
+***************/
+
+
+/* =============================================================================
+   Media (Images, Embeddables)
+   ========================================================================== */
+
+/* 1. Improve image quality when scaled in IE7
+   2. Remove the gap between images and borders on image containers
+*/
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+
+
+/* =============================================================================
+   Tables
+   ========================================================================== */
+
+
+.table {border:1px solid #211f20; margin:5px 0 20px}
+.table caption {border:1px solid #211f20; background:#d3ab4b; font-weight:bold; font-size:1.4em; padding:5px 10px;}
+.table th {background:#211f20; font-weight:bold; color:#fff; font-size:1.4em; padding:5px 10px;}
+.table td {background:url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) left bottom repeat-x; font-size:1.3em; padding:5px 10px;}
+
+
+/* =============================================================================
+   Layout (Use for templates only. For things in content, use below sections)
+   ========================================================================== */
+.site-wrapper {min-width:1000px; overflow-x:hidden;}
+
+.header {/*height:617px;*/ background-color:#231f20; position:relative;}
+
+/*.header .hero {width:1000px; height:617px; margin:0 auto 0;}
+.header .hero .inner {background:url(/clients/ATTPBGolf/Images/hero-default.jpg) left top no-repeat; width:1415px; height:617px; margin:0 0 0 -196px;}*/
+
+#hero-container {width:1000px; /*height:617px;*/ margin:0 auto 0;}
+#slider-wrapper,
+#hero-wrapper {width:1415px; /*height:617px;*/ margin:0 0 0 -196px; /*background:url(/clients/ATTPBGolf/Images/hero-default.jpg) left top no-repeat;*/}
+/*img.hero {width:1415px; height:617px;}*/
+
+#slider { position: relative; height: 617px; }
+#slider .slides { position: relative; margin: 0; padding: 0; list-style: none; }
+#slider .slides li { position: absolute; margin: 0; padding: 0; list-style: none; height: 617px; width: 1415px; }
+#slider .slides li a { display: block; height: 617px; width: 1415px; cursor: pointer; }
+
+#slider .arrow-left {position:absolute; left:220px; top:520px; cursor:pointer; width:31px; height:31px; background:url(../images/btn/btn-hero-slider-previous.png) left top no-repeat; text-indent:-9999px; overflow:hidden;}
+#slider .arrow-right {position:absolute; left:255px; top:520px; cursor:pointer; width:31px; height:31px;background:url(../images/btn/btn-hero-slider-next.png) left top no-repeat; text-indent:-9999px; overflow:hidden; }
+#slider .arrow-left:hover { background-position:0 -31px}
+#slider .arrow-right:hover { background-position:0 -31px}
+#slider-wrapper {width:1415px; height:617px; margin:0 0 0 -196px;}
+
+.header .hero-overlay {width:1000px; position:absolute; left:50%; top:0; margin:0 0 0 -500px;}
+.header .hero-overlay .inner {width:1415px; height:136px; display:block; margin:0 0 0 -196px; background:url(/clients/ATTPBGolf/Images/overlay-hero.png) left top repeat-x;}
+
+.header .main {width:1000px; position:absolute; left:50%; top:0; margin:0 0 0 -500px;}
+.header .main p.logo {display:block}
+.header .main p.logo img {display:none;}
+.header .main p.logo a {width:132px; height:100px; display:block; text-indent:-9999px; overflow:hidden; background:url(/clients/ATTPBGolf/Images/logo-attpbnpa.png) left top no-repeat;}
+.header .main .logo-byline p {position:absolute; left:203px; top:37px; font-family:Georgia; font-style:italic; font-size:2.6em; line-height:22px; color:#fefefe;}
+.header .main .logo-byline2 p {position:absolute; left:203px; top:60px; font-family:Georgia; font-style:italic; font-size:1.6em; line-height:22px; color:#fefefe;}
+.header .main p.become-a-sponsor {position:absolute; right:17px; top:39px;}
+
+/*.main-nav {position:absolute; left:0; top:114px; background:#d2ab4a url(/clients/ATTPBGolf/Images/bg-main-nav.gif) left top repeat-x; width:100%;}
+.main-nav ul.richmegamenuul {width:1000px; height:48px; margin:0 auto 0; padding:0; list-style:none; position:relative; overflow:visible;}
+.main-nav ul.richmegamenuul li {list-style:none; margin:0; padding:0 6px 0 6px; float:left; display:block; font-family:"Bembo W01"; font-size:1.6em; text-transform:uppercase; font-weight:normal;}
+.main-nav ul.richmegamenuul li a,
+.main-nav ul.richmegamenuul li a:visited {color:#fefefe; text-decoration:none; display:block; height:48px; line-height:48px; padding:0 20px 0 20px;}
+.main-nav ul.richmegamenuul li a:hover {color:#d2ab4a; text-decoration:none;}
+.main-nav ul.richmegamenuul li span.current-menu a {color:#d2ab4a; text-decoration:none;}
+
+.megarichmenu1 {position:absolute; left:0; top:0;}
+.megarichmenu3 {position:absolute; left:300px; top:0;}
+.megarichmenu4 {position:absolute; left:520px; top:0;}
+.megarichmenu5 {position:absolute; left:692px; top:0;}
+.megarichmenu6 {position:absolute; left:828px; top:0;}*/
+
+.main-nav {position:absolute; left:0; top:114px; background:url(/clients/ATTPBGolf/Images/bg-main-nav.gif) left top repeat-x; width:100%;}
+ul.richmegamenuul {width:1000px; height:48px; margin:0 auto 0; padding:0; list-style:none; position:relative; overflow:visible; font-family:"Bembo W01"; font-size:1.6em; text-transform:uppercase; font-weight:normal;}
+li.megarichmenu {font-size:100%; list-style:none; margin:0; padding:0 1px 0 1px; float:left; display:block;}
+span.megarichmenubutton a {padding:0 20px 0 20px; color:#fefefe; text-decoration:none; display:block; height:48px; line-height:48px;}
+span.megarichmenubutton a:hover {color:#d2ab4a; text-decoration:none;}
+span.current-menu a {color:#d2ab4a; text-decoration:none;}
+/*li.megarichmenu1 {width:292px;}
+li.megarichmenu3 {width:252px;}
+li.megarichmenu4 {width:163px;}
+li.megarichmenu5 {width:124px;}
+li.megarichmenu6 {width:156px;}*/
+span#currentmega {background:url(/clients/ATTPBGolf/Images/bg-main-nav-selected.png) 50% bottom no-repeat; display:block;}
+ul.megarichmenucolumns {display:none; width:4000px; height:40px; margin-left:-2000px; padding:0; list-style:none; background-color:#d2ab4a; position:absolute; left:50%; top:48px;}
+
+li.megarichmenu ul.megarichmenuitemlist {margin:0; padding:0; list-style:none; position:absolute; left:50%; top:0; width:1000px; margin-left:-500px;}
+li.megarichmenu1 ul.megarichmenuitemlist {margin-left:-476px;}
+li.megarichmenu1 ul.megarichmenuitemlist .idval3 {padding-right:13px; background:url(/clients/ATTPBGolf/Images/bg-mega-menu-item.gif) right 15px no-repeat;}
+li.megarichmenu1 ul.megarichmenuitemlist .idval2 {padding-left:12px;}
+li.megarichmenu li.megamenu_link {display:block; float:left;}
+li.megarichmenu li.megamenu_link a {color:#ffffff; text-decoration:none; height:40px; line-height:40px;}
+li.megarichmenu li.megamenu_link a:hover {color:#231f20;}
+
+.content {width:976px; margin:-49px auto 0; padding:30px 24px 30px 24px; border-top:solid 7px #231f20; background-color:#ffffff; position:relative;}
+.content .main {float:left;}
+.content .sub-nav {width:215px; margin:0 24px 0 0; float:left; }
+.content .extra {width:325px; margin:0 0 0 24px; float:right;}
+
+#two-col-mod-left .item-page {width:737px}
+#two-col-mod-right .item-page {width:615px}
+#three-col .item-page {width:388px;}
+#three-col-mini .item-page { width:527px}
+.extra-mini {float:left; width:185px; margin-left: 25px;}
+
+.extra-mini h2 {font-size:2.35em; line-height:26px; padding-bottom:6px;}
+
+.footer {position:relative;}
+
+.footer-main {background:url(/clients/ATTPBGolf/Images/bg-footer-main.gif) left top repeat-x; height:302px;}
+
+.footer-main .main { width:930px; margin:0 auto; position:relative;}
+.footer-main p {color:#fefefe; padding-bottom:16px;}
+.footer-main a {color:#fefefe; text-decoration:underline; font-style:italic;}
+.footer-main a:hover {color:#fefefe; text-decoration:none;}
+.footer-main h3 {color:#fefefe; font:normal 2.3em Bembo MT W01 Italic; padding-bottom:2px;}
+
+
+.footer-main .get-in-touch {background:url(/clients/ATTPBGolf/Images/bg-dotted-seperator.png) right 8px no-repeat; width:175px; position:absolute; left:0; top:40px;}
+.footer-main .stay-connected {background:url(/clients/ATTPBGolf/Images/bg-dotted-seperator.png) right 8px no-repeat; width:215px; position:absolute; left:175px; top:40px; padding:0 38px 0 35px;}
+.footer-main .stay-connected ul {display:block; margin:0; padding:0; list-style:none;}
+.footer-main .stay-connected ul li {display:inline; float:left; margin:0; padding:0 6px 0 0; width:36px; height:36px; list-style:none;}
+.footer-main .stay-connected ul li a {display:block; cursor:pointer; overflow:hidden; text-indent:-9999px; width:36px; height:36px;}
+.footer-main .stay-connected ul li.facebook a {background:url(../images/icon/facebook.png)}
+.footer-main .stay-connected ul li.facebook a:hover { background-position: 0 -36px; }
+.footer-main .stay-connected ul li.twitter a {background:url(../images/icon/twitter.png)}
+.footer-main .stay-connected ul li.twitter a:hover { background-position: 0 -36px; }
+.footer-main .stay-connected form {height:29px;}
+.footer-main .stay-connected input {float:left; margin:0; padding:0;}
+
+.footer-main .stay-connected form { overflow: hidden; display: block; height: 29px; margin: 0 0 10px; }
+.footer-main .stay-connected input.button {background:#6eb43f url(/clients/ATTPBGolf/Images/bg-btn-arrow.png) right center no-repeat; text-indent:-9999px; width:40px; height:29px; border:none; padding:0; margin:0;}
+.footer-main .stay-connected input.button:hover {background-color:#7cbb52;}
+.footer-main .stay-connected input#email_address {border:none; border-bottom:1px solid #a7a5a6; border-left:1px solid #8b8889; font-size:1.1em; color:#828282; padding:7px; width:160px; min-height: 29px;}
+
+.footer-main .mobile-apps {background:url(/clients/ATTPBGolf/Images/bg-dotted-seperator.png) right 8px no-repeat; width:175px; position:absolute; left:463px; top:40px; padding:0 38px 0 34px;}
+.footer-main .mobile-apps ul {margin:0; padding:0; list-style:none;}
+.footer-main .mobile-apps ul li {display:block; margin:0; padding:0; list-style:none; height:36px; margin-top:10px;}
+.footer-main .mobile-apps ul li a {display:block; padding-left:48px; line-height:36px;}
+.footer-main .mobile-apps ul li.android a {background:url(../images/icon/android.png) no-repeat;}
+.footer-main .mobile-apps ul li.appstore a {background:url(../images/icon/appstore.png) no-repeat;}
+
+.footer-main .be-a-hero {width:201px; position:absolute; left:710px; top:40px; padding:0 0 0 30px;}
+.footer-main .be-a-hero a {text-decoration:none; font-style:normal;}
+.footer-main .be-a-hero .btn-basic {width:188px;}
+.footer-main .be-a-hero .btn-blue {margin-top:20px;}
+
+.footer-extra {background:url(/clients/ATTPBGolf/Images/bg-footer-copyright.jpg) left top repeat; height:275px; position:relative;}
+
+.footer-extra .main { width:930px; margin:0 auto; position:relative;}
+
+.footer-extra .sponsors {width:930px; margin:0 auto; height:180px; padding:30px 0 0; position:relative;}
+.footer-extra .sponsors h3 {text-align:center; font:normal 2.3em Bembo MT W01 Italic;}
+.footer-extra .sponsors ul {position:absolute; left:0; top:0; display:block; margin:0; padding:0;}
+.footer-extra .sponsors ul li {position:absolute; display:block; background:none; margin:0; padding:0;}
+.footer-extra .sponsors ul li a {overflow:hidden; display:block; text-indent:-9999px; cursor:pointer;}
+.footer-extra .sponsors ul li.at-and-t {width:140px; height:64px; left:298px; top:102px;}
+.footer-extra .sponsors ul li.at-and-t a {width:140px; height:64px; background:url(/clients/ATTPBGolf/Images/at-and-t.png);}
+.footer-extra .sponsors ul li.e-trade {width:173px; height:26px; left:474px; top:121px;}
+.footer-extra .sponsors ul li.e-trade a {width:173px; height:26px; background:url(/clients/ATTPBGolf/Images/e-trade.png);}
+.footer-extra .sponsors ul li.fedex-cup {width:138px; height:69px; left:135px; top:93px;}
+.footer-extra .sponsors ul li.fedex-cup a {width:138px; height:69px; background:url(/clients/ATTPBGolf/Images/fedex-cup.png);}
+.footer-extra .sponsors ul li.kohler {width:110px; height:25px; left:683px; top:121px;}
+.footer-extra .sponsors ul li.kohler a {width:110px; height:25px; background:url(/clients/ATTPBGolf/Images/kohler.png);}
+.footer-extra .sponsors ul li.mastercard {width:107px; height:64px; left:820px; top:98px;}
+.footer-extra .sponsors ul li.mastercard a {width:107px; height:64px; background:url(/clients/ATTPBGolf/Images/mastercard.png);}
+.footer-extra .sponsors ul li.monterey-peninsula-foundation {width:96px; height:109px; left:0; top:69px;}
+.footer-extra .sponsors ul li.monterey-peninsula-foundation a {width:96px; height:109px; background:url(/clients/ATTPBGolf/Images/monterey-peninsula-foundation.png);}
+
+.footer-extra .joomla-nav {position:absolute; top:210px; right:0; width:930px; display:inline; text-align:right}
+.footer-extra .joomla-nav li {display:inline; color:#231f20; font-size:1.1em; padding:0 7px; border-left:1px solid #231f20;}
+.footer-extra .joomla-nav li.item123 {border:none;}
+.footer-extra .joomla-nav li a {display:inline; color:#231f20;}
+.footer-extra .joomla-nav li a:hover {text-decoration:none;}
+
+.footer-extra .copyright {width:930px; margin:0;}
+.footer-extra .copyright p {font-size:1.1em;}
+
+#our-sites {display:none; background:#231f20; margin:0; padding:0;}
+#our-sites .inner {width:810px; height:125px; margin:0 auto 0; position:relative;}
+#our-sites p {margin:0; padding:0; width:270px; height:125px; float:left; text-align:center; position:relative;}
+#our-sites p a {width:270px; height:125px; display:block; overflow:hidden; margin:0 auto; padding:90px 0 0 0; color:#fefefe; text-decoration:none;}
+#our-sites p a:hover {text-decoration:underline;}
+#our-sites p img {position:absolute; top:10px; left:50%;}
+#our-sites p.mpf a {/*background:url(/clients/ATTPBGolf/Images/logo-our-sites-mpf.png) center center no-repeat; width:100px;*/}
+#our-sites p.mpf img {margin-left:-30px;}
+#our-sites p.attpbnpa a {/*background:url(/clients/ATTPBGolf/Images/logo-our-sites-attpbnpa.png) center center no-repeat; width:129px;*/}
+#our-sites p.attpbnpa img {margin-left:-42px;}
+#our-sites p.fto a {/*background:url(/clients/ATTPBGolf/Images/logo-our-sites-fto.png) center center no-repeat; width:217px;*/}
+#our-sites p.fto img {margin-left:-66px;}
+
+#btn-our-sites {display:block; width:110px; height:40px; margin:0; padding:0 0 0 14px; position:absolute; left:0; top:-6px; color:#fefefe; background:#231f20 url(/clients/ATTPBGolf/Images/bg-our-sites.png) 97px 17px no-repeat; font-family:'Bembo MT W01 Italic'; font-size:2.1em; line-height:40px; cursor:pointer;}
+.active-button { background-position: 97px -34px!important}
+
+
+/* =============================================================================
+   Content
+   ========================================================================== */
+.content ul.reasons-to-sponsor-list { padding:0;}
+.content ul.reasons-to-sponsor-list li { list-style-type:none; padding-bottom:10px; background:none;}
+.content ul.reasons-to-sponsor-list li img { float:left; margin-right:25px}
+.content ul.reasons-to-sponsor-list li span {margin-top: 7px; display: block;}
+
+.content ol { counter-reset:li; margin-left:0; padding-left:0;}
+.content ol > li {position:relative; margin:0 0 10px 34px; padding:0; list-style:none; line-height:26px;}
+.content ol > li:before {content:counter(li); counter-increment:li; position:absolute; top:0; left:-34px; width:26px; height:26px; line-height:26px; margin:0; padding:0; color:#ffffff; background:url(/clients/ATTPBGolf/Images/bg-ol-bullet.png) left top no-repeat; font-family:Arial, Helvetica, sans-serif; font-size:1.6em; font-style:italic; font-weight:normal; text-align:center;}
+.content ol li {*list-style:decimal;}/*IE7 and below fix*/
+.content ol li ol {margin-top:10px;}
+
+.content ul { padding-left:0!important; list-style-type:none!important} 
+.content ul li { background: url(/clients/ATTPBGolf/Images/bg-ul-bullet.png) 0 7px no-repeat; padding-left:14px ;margin-bottom: 10px;}
+.content ul ul {margin-top: 10px; margin-left:10px;}
+.content ul ul li {margin-top: 10px;}
+
+.content ul.green-arrow-list, ul.green-arrow-list ul { padding-left:0!important; list-style-type:none!important} 
+.content ul.green-arrow-list ul {margin-top: 10px;}
+.content ul.green-arrow-list li { background: url(/clients/ATTPBGolf/Images/green-arrow.jpg) 0 1px no-repeat; padding-left:20px ;margin-bottom: 10px;}
+
+p.investment {font-family:Georgia; font-style:italic; font-size:2.6em; line-height:26px; margin-bottom:2px;}
+p.amount {font-family:Georgia; font-size:2.4em; line-height:24px; margin-bottom:4px;}
+p.extras {font-family:Georgia; font-size:1.2em; font-style:italic; margin-bottom:0;}
+p.highlights {font-family:Georgia; font-style:italic; font-size:2.6em; line-height:26px; margin:15px 0 4px 0;}
+p.plus {font-family:Georgia; font-size:1.4em; font-style:italic; color:#81be58; font-weight:bold; margin-bottom:0;}
+p.footnote {font-family:Arial; font-size:1.0em;padding-left: 9px;}
+
+
+
+
+.hospitality-teaser {background:url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) bottom left repeat-x; clear:both; width:974px; padding:0 0 18px 0; margin:0 0 14px 0;}
+.hospitality-teaser p {margin:0; padding:0;}
+.hospitality-teaser .thumb {width:154px; float:left; padding:0 0 0 26px;}
+.hospitality-teaser .thumb img {border: 1px solid #ebdab0; padding: 6px; width:140px; height:140px;}
+.hospitality-teaser .thumb p.btn-basic {width:154px; text-align:right; font-size:1.8em;}
+.hospitality-teaser .thumb p.btn-basic a {padding-top:0; padding:0 53px 0 0;}
+
+.hospitality-teaser .info {width:274px; padding:0 100px 0 20px; float:left; background:url(/clients/ATTPBGolf/Images/bg-hospitality-teaser.png) 320px 64px no-repeat;}
+.hospitality-teaser .info p.title {font-family:Georgia; font-style:italic; font-size:3.0em; line-height:30px; margin-bottom:6px;}
+.hospitality-teaser .info p a {color:#231f20; text-decoration:none;}
+.hospitality-teaser .info p a:hover {color:#231f20; text-decoration:underline;}
+.hospitality-teaser .info p.description {margin-bottom:10px;}
+.hospitality-teaser .info p.investment {font-family:Georgia; font-style:italic; font-size:2.0em; line-height:20px; margin-bottom:4px;}
+.hospitality-teaser .info p.amount {font-family:Georgia; font-size:2.4em; line-height:24px; margin-bottom:12px;}
+.hospitality-teaser .info p.extras {font-family:Georgia; font-size:1.2em; font-style:italic;}
+
+.hospitality-teaser .highlights {float:right; width:400px;}
+.hospitality-teaser .highlights p {font-family:Georgia; font-style:italic; font-size:2.0em; padding:0 0 6px 0;}
+
+.branding-teaser {background:url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) bottom left repeat-x; clear:both; width:974px; padding:0 0 18px 0; margin:0 0 14px 0;}
+.branding-teaser p.title {font-family:Georgia; font-style:italic; font-size:3.0em; line-height:30px; margin-bottom:6px;}
+.branding-teaser p a {color:#231F20; text-decoration:none;}
+.branding-teaser p a:hover {color:#231F20; text-decoration:underline;}
+.branding-teaser p.btn-basic a {color:#fefefe; text-decoration:none; font-size:0.8em}
+.branding-teaser p.description {margin-bottom:10px;}
+.branding-teaser p.investment {font-family:Georgia; font-style:italic; font-size:2.0em; line-height:20px; margin-bottom:4px;}
+.branding-teaser p.amount {font-family:Georgia; font-size:2.4em; line-height:24px; margin-bottom:12px;}
+
+.call-to-talk { clear:both; font-family:Georgia; font-style:italic; font-size:2.5em; text-align:center}
+.call-to-talk span {color:#008ED2}
+
+/* =============================================================================
+   Sidebar
+   ========================================================================== */
+
+.cta-download-sponsorship-pdf {display:none;}
+.main .contact-us-cta a {display:none;}
+
+.sub-nav .joomla-nav { padding:0; margin:0}
+.sub-nav .joomla-nav li { list-style-type:none; background:none; padding:0; margin:0;}
+.sub-nav .joomla-nav ul { padding:0; margin:0 0 10px 0}
+.sub-nav .joomla-nav li a {color: #008ED2;background: none;padding: none; font-family:Georgia; font-style:italic; font-size:1.8em; text-decoration:none; background: url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) bottom left repeat-x; display: block; margin-bottom: 10px; line-height: 0.8em; padding-bottom: 8px;}
+.sub-nav .joomla-nav ul li  a { background: #231F20;color: white;padding: 4px 9px;text-decoration: none; font-weight:bold; font-size:13px; font-family:Arial, Helvetica, sans-serif;line-height: 1.3em; margin-bottom:3px}
+.sub-nav .joomla-nav ul li ul li a { background:#fff; color:#231F20; border-bottom:1px solid #d2d1d2; font-weight:normal; padding:2px 2px}
+.sub-nav .joomla-nav ul li ul li a:hover, .joomla-nav ul li ul li#current a {color: #008ed2}
+
+.cta-play-video { width: 310px; height: 208px; border: 1px solid #EBDAB0; padding: 6px; background: url(/images/cta/cta-play-video.jpg) 6px 6px no-repeat; }
+.play-video-cta { display: block; background: url(/images/cta/att-video-btn.png) center 79px no-repeat; width: 310px; height: 208px; text-indent: -9999em; }
+.play-video-cta:hover { background-position: center -171px; }
+.cta-gallery img {padding:6px; margin-bottom:6px; border: 1px solid #EBDAB0;}
+
+.item106 .separator,
+.item112 .separator,
+.item116 .separator,
+.item120 .separator,
+.item147 .separator,
+.item153 .separator,
+.item160 .separator {background: #231F20;color: white;padding: 4px 9px;text-decoration: none; font-weight:bold; font-size:13px; font-family:Arial, Helvetica, sans-serif;line-height: 1.3em; margin-bottom:3px}
+.separator { background:#d2ab4a; display:block; padding: 2px 9px; font-weight:bold}
+
+/* =============================================================================
+   Modules, Components, Plugins, Bits and Bobs, Whatsits and the occational Who
+   ========================================================================== */
+
+.btn-basic {font-family:Georgia; font-style:italic; font-size:2.1em; line-height:22px; color:#fefefe; height:36px; display:inline-block; /* zoom and *display are to emulate inline-block in IE7 */zoom:1; *display:inline;}
+.btn-basic a {display:block; background:#6eb43f url(/clients/ATTPBGolf/Images/bg-btn-arrow.png) right center no-repeat; padding:7px 33px 7px 11px; color:#fefefe; text-decoration:none; border:solid 1px #6eb43f;}
+.btn-basic a:hover {color:#fefefe; text-decoration:none; background-color:#7cbb52; border-color:#7cbb52;}
+
+.btn-green a {background-color:#6eb43f; border-color:#6eb43f;}
+.btn-green a:hover {color:#fefefe; text-decoration:none; background-color:#7cbb52; border-color:#7cbb52;}
+.btn-blue a {background-color:#008ed2; border-color:#008ed2;}
+.btn-blue a:hover {color:#fefefe; text-decoration:none; background-color:#1999d6; border-color:#1999d6;}
+
+.button-cta a {padding: 21px 45px 20px 25px; font-size: 1.1em;}
+.button-cta  {margin-bottom: 65px;}
+
+.styleGuideDescription {display:none;}
+
+.floatRight {float:right; width:313px; margin:0 0 10px 60px;}
+
+.right {float:right;}
+.left {float:left;}
+
+.col-3-full { clear:both; }
+.col-3-full .col {width:300px; margin: 0 38px 30px 0; float:left;}
+.col-3-full .last {margin-right:0;}
+.col-3-full img {margin-bottom: 20px;}
+.leftCTA {float:left; width:278px; margin:0 10px 10px 0;}
+.rightCTA   {float:right; width:313px; margin:0 0 10px 10px;}
+
+.leftCTA .inner {width:276px;}
+
+
+.leftCTA, .rightCTA {padding:6px; background:#211f20; color:#f9f9f9;}
+.leftCTA .inner {border:1px solid #6d6c6a; text-align:center; padding:18px 0;}
+.leftCTA h3, .rightCTA h3 {font-family:'Bembo MT W01 Italic'; font-weight:normal; font-size:2.4em; line-height:0.9em; padding-bottom:3px;}
+.leftCTA a
+, .rightCTA a
+, .rightCTA a:visited {color:#f9f9f9;}
+.leftCTA p, .rightCTA p {font-size:1.4em; padding:18px 0 0; margin:0;}
+.cta-interested-in-playing .inner p { text-align:center}
+.content .cta-interested-in-playing .inner {padding:13px 13px 35px 13px;}
+.content .cta-interested-in-playing {width: 280px; }
+
+.leftCTA span, .rightCTA span {font-size:0.8em; text-transform:uppercase; font-family:Georgia, "Times New Roman", Times, serif;}
+
+ .rightCTA .inner { padding:13px; border:1px solid #6d6c6a;}
+ .rightCTA .left { float:left}
+ .rightCTA h3 { text-align:center; padding-top:10px}
+.rightCTA .division h3 { text-align:left; clear:both}
+
+.leftCTA .division, .rightCTA .division {background:url(/clients/ATTPBGolf/Images/bg-footer-main.gif) 0 15px repeat-x; text-align:left;}
+.rightCTA .division {padding-top: 35px;clear: both;}
+
+.img-left { float:left; margin: 0 30px 5px 0}
+.site-wrapper .green-cta { background:#6EB43F}
+.site-wrapper .green-cta .inner  { border:1px solid #a0ce82;}
+
+.site-wrapper .green-cta h2 {background:url(/clients/ATTPBGolf/Images/green-w-white-dots) 6px 36px no-repeat;text-align: center;}
+
+.content .quote-italic {font-family: Georgia;
+font-size: 1em;
+font-style: italic;
+margin-bottom: 0; text-transform:none}
+
+.content .quoted { font-style:italic; background: url(/clients/ATTPBGolf/Images/green-quote-left.jpg) no-repeat; padding-left:20px}
+.content .quoter {padding-left:20px; margin-bottom: 10px; font-style:italic; font-size: 1.3em;}
+.content .quoted p { padding-top:0}
+.content .end-quote {background: url(/clients/ATTPBGolf/Images/green-quote-right.jpg) 0 -2px no-repeat; display:inline-block; width:17px; height:11px; margin-left:5px; text-indent:-9999px;}
+
+#show-hidden-copy {color:#008ED2; text-decoration:underline; cursor:pointer}
+#show-hidden-copy:hover { text-decoration:none}
+
+.notes { color: red; font-weight:bold}
+
+.reasons-to-sponsor-list li { clear:both}
+.reasons-to-sponsor-list li img { margin-bottom:20px}
+/*
+.tournament-schedule-list-wrapper p {padding:0; margin:0;}
+.tournament-schedule-list-wrapper .tournament-schedule-list  {background: url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) left 14px repeat-x; margin:0; padding:0; line-height:20px; height:20px;}
+.tournament-schedule-list-wrapper .tournament-schedule-list .text-float { float:left; display:block; clear:both; background:#FFF; padding-right:3px; line-height:20px; height:20px;}
+.tournament-schedule-list-wrapper .tournament-schedule-list .time-float { float:right; display:block; background:#FFF; padding-left:6px; width:120px; text-align:left; line-height:20px; height:20px;}
+.tournament-schedule-list-wrapper h4 { clear:both; padding-top:15px}*/
+.tournament-schedule-list-wrapper .tournament-schedule-list .time-float {font-weight:bold;}
+
+/* Tabs */
+.tabs .tabs-nav-wrapper {background:url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) left bottom repeat-x; margin:0 0 20px 0; padding:0;}
+.tabs .tabs-nav-wrapper li {background:url(/clients/ATTPBGolf/Images/bg-dotted-vertical.png) right top repeat-y; display:inline-block; /* zoom and *display are to emulate inline-block in IE7 */zoom:1; *display:inline; margin:0; padding:4px 12px 6px 12px; cursor:pointer; list-style:none; color:#231f20; font-family:Georgia, "Times New Roman", Times, serif; font-style:italic; font-size:1.6em;}
+.tabs .tabs-nav-wrapper li.selected {background-color:#ffffff; color:#008ed2;}
+.tabs .tab {clear:both;}
+
+#support-your-charity { background:#fff; border: 1px solid #EBDAB0; width: 309px; margin:0;}
+#support-your-charity h3 { color:#231F20; line-height: 1.1em;}
+#support-your-charity p { color:#231F20; padding-top:10px}
+#support-your-charity .division {background: url(/clients/ATTPBGolf/Images/bg-dotted-underline.png) 0 15px repeat-x; padding-top: 22px;}
+#support-your-charity  .inner { border:none}
+#support-your-charity a { color:#008ED2;}
+
+.extra .btn-pro-am {width:325px;}
+.extra .btn-pro-am a {padding-right:35px;}
+
+.single-time { padding-right:62px}
+.tournament-schedule-list-wrapper h4 { padding-bottom:0} 
+#print-page { padding-left:25px; margin:20px 0 5px 0; background: url(../images/icon/print-page.gif) no-repeat; padding-bottom:10px;  display:block; text-decoration:none; color:#231F20; font-family:Georgia; font-style:italic; font-size: 1.2em; line-height: 1.0em;}
+#save-page {padding-left:25px; background: url(../images/icon/save-page.gif) no-repeat; padding-bottom:10px; display:block; text-decoration:none; color:#231F20; font-family:Georgia; font-style:italic; font-size: 1.2em; line-height: 1.0em;}
+#print-page:hover, #save-page:hover { text-decoration:underline}
+#phone-number {font-family: Georgia; }
+.content #email-black {text-decoration:none; color:#231F20; font-family: Georgia; }
+.content #email-black:hover { text-decoration:underline}
+
+.reasons-to-sponsor-list li p { display: block;float: left;width: 475px;}
+.reasons-to-sponsor-list li img { float:left}
+.reasons-to-sponsor-list li {padding-top: 10px;}
+
+.image-preview img {border: 1px solid #EBDAB0;padding: 4px; margin:0 10px 3px 0}
+.image-preview { width:168px; float:left; margin-right: 11px;
+;}
+.content .last-preview { margin-right:0}
+.image-preview a { font-size:1.2em}
+
+
+.content-video-cta { float:right;}
+.content-video-cta img {border: 1px solid #EBDAB0;padding: 4px; margin:0 10px 3px 50px}
+
+
+#hospitality-tabs {clear: both;}
+
+#photo-gallery-cta a { width:276PX; margin-top: -15px;}
+#photo-gallery-cta {margin-bottom: 37px;}
+#photo-gallery-cta-mini a {font-size: 0.8em; padding: 7px 30px 7px 6px;}
+#photo-gallery-cta-mini {margin-top: -15px; display:block}
+
+.item168 { display:none}
+#hospitality-tabs { position:relative; margin: 48px 0 48px; }
+.PDF-in-tab {position: absolute;top: 8px;right: 0;font-size: 1.6em; font-family:Georgia; font-style:italic; display:block; background: url(../images/icon/pdf-icon.jpg) no-repeat; padding-left:20px; }
+.PDF-in-tab a {color:#231F20!important; text-decoration:none}
+.PDF-in-tab a:hover { text-decoration:underline}
+
+
+.sitemap {padding:20px 40px 0 0;}
+
+li.megarichmenu li.megamenu_link a.active {color:#231f20;}
+
+.main #motioncontainer {width: 616px;}
+.branding-teaser .extras {margin-bottom: 10px;
+margin-top: -6px;}
+.tournament-photo-caption { padding-top:23px}
+
+.item188 { display:none}
+
+.inline-sidebar, .keep-sake, #email-schedule, #print-this-page { display:none}
+.schedule-of-events h1 { margin-bottom:15px}

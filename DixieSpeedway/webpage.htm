@@ -1,0 +1,488 @@
+<%
+'CHANGELOG
+'LSP 08/12/14 - initial development
+%>
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+<meta charset="UTF-8">
+
+<!-- Mobile View -->
+<meta name="viewport" content="width=device-width">
+
+<title>Tickets | Dixie Speedway - Woodstock, GA</title>
+<link rel="Shortcut Icon" href="http://www.dixiespeedway.com/wp-content/themes/organic_natural/images/favicon.ico" type="image/x-icon">
+
+<style type="text/css" media="screen">
+		
+	body {
+		-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;	}
+	
+	.container #navigation, .container .menu ul.sub-menu, .container .menu ul.children {
+		background-color: #504741;	}
+	
+	.container a, .container a:link, .container a:visited, #wrap .widget ul.menu li a {
+		color: #ff0008;	}
+	
+	.container a:hover, .container a:focus, .container a:active,
+	#wrap .widget ul.menu li a:hover, #wrap .widget ul.menu li ul.sub-menu li a:hover,
+	#wrap .widget ul.menu .current_page_item a, #wrap .widget ul.menu .current-menu-item a {
+		color: #000000;	}
+	
+	.container h1 a, .container h2 a, .container h3 a, .container h4 a, .container h5 a, .container h6 a,
+	.container h1 a:link, .container h2 a:link, .container h3 a:link, .container h4 a:link, .container h5 a:link, .container h6 a:link,
+	.container h1 a:visited, .container h2 a:visited, .container h3 a:visited, .container h4 a:visited, .container h5 a:visited, .container h6 a:visited {
+		color: #ff0008;	}
+	
+	.container h1 a:hover, .container h2 a:hover, .container h3 a:hover, .container h4 a:hover, .container h5 a:hover, .container h6 a:hover,
+	.container h1 a:focus, .container h2 a:focus, .container h3 a:focus, .container h4 a:focus, .container h5 a:focus, .container h6 a:focus,
+	.container h1 a:active, .container h2 a:active, .container h3 a:active, .container h4 a:active, .container h5 a:active, .container h6 a:active,
+	#slideshow .headline a:hover,#slideshow .headline a:focus, #slideshow .headline a:active {
+		color: #000000;	}
+	
+	#submit:hover, #searchsubmit:hover, .reply a:hover, .gallery a:hover, a.button:hover, .more-link:hover,
+	#comments #respond input#submit:hover, .container .gform_wrapper input.button:hover {
+		background-color: #dd3333 !important;	}
+	
+	.container .flex-control-nav li.flex-active a, .container .flex-control-nav li a.flex-active {
+		border-color: #dd3333;	}
+</style>
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="http://www.dixiespeedway.com/xmlrpc.php">
+
+<!-- Social Buttons -->
+<div class="fit-vids-style">­<style>               .fluid-width-video-wrapper {                 width: 100%;                              position: relative;                       padding: 0;                            }                                                                                   .fluid-width-video-wrapper iframe,        .fluid-width-video-wrapper object,        .fluid-width-video-wrapper embed {           position: absolute;                       top: 0;                                   left: 0;                                  width: 100%;                              height: 100%;                          }                                       </style></div><script src="/clients/DixieSpeedway/Images/all.js" id="facebook-jssdk"></script><script async="" src="/clients/DixieSpeedway/Images/www-widgetapi.js" id="www-widgetapi-script"></script><script async="" src="/clients/DixieSpeedway/Images/cbgapi.loaded_0"></script><script src="/clients/DixieSpeedway/Images/widgets.js" type="text/javascript"></script>
+<script gapi_processed="true" type="text/javascript" src="/clients/DixieSpeedway/Images/plusone.js"></script>
+
+<meta property="og:image" content="http://www.dixiespeedway.com/wp-content/uploads/2014/01/3-300x83.jpg"><link rel="alternate" type="application/rss+xml" title="Dixie Speedway - Woodstock, GA » Feed" href="http://www.dixiespeedway.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Dixie Speedway - Woodstock, GA » Comments Feed" href="http://www.dixiespeedway.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Dixie Speedway - Woodstock, GA » Tickets Comments Feed" href="http://www.dixiespeedway.com/fan-info/tickets/feed/">
+<link rel="stylesheet" id="nextgen_gallery_related_images-css" href="/clients/DixieSpeedway/Images/nextgen_gallery_related_images.css" type="text/css" media="all">
+<link rel="stylesheet" id="tubepress-css" href="/clients/DixieSpeedway/Images/tubepress.css" type="text/css" media="all">
+<link rel="stylesheet" id="boom_bar-frontent-global-css" href="/clients/DixieSpeedway/Images/frontend-global.css" type="text/css" media="all">
+<link rel="stylesheet" id="events-manager-css" href="/clients/DixieSpeedway/Images/events_manager.css" type="text/css" media="all">
+<link rel="stylesheet" id="hupso_css-css" href="/clients/DixieSpeedway/Images/style_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="fontawesome-css" href="/clients/DixieSpeedway/Images/font-awesome_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="natural-style-css" href="/clients/DixieSpeedway/Images/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="natural-style-mobile-css" href="/clients/DixieSpeedway/Images/style-mobile.css" type="text/css" media="all">
+
+<link rel="stylesheet" id="organic-shortcodes-css" href="/clients/DixieSpeedway/Images/organic-shortcodes.css" type="text/css" media="all">
+<link rel="stylesheet" id="organic-shortcodes-ie8-css" href="/clients/DixieSpeedway/Images/organic-shortcodes-ie8.css" type="text/css" media="all">
+<link rel="stylesheet" id="font-awesome-css" href="/clients/DixieSpeedway/Images/font-awesome.css" type="text/css" media="all">
+
+<link rel="stylesheet" id="organicons-css" href="/clients/DixieSpeedway/Images/organicons.css" type="text/css" media="all">
+<link rel="stylesheet" id="montserrat-css" href="/clients/DixieSpeedway/Images/css_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="roboto-css" href="/clients/DixieSpeedway/Images/css.css" type="text/css" media="all">
+<link rel="stylesheet" id="merriweather-css" href="/clients/DixieSpeedway/Images/css_003.css" type="text/css" media="all">
+<link rel="stylesheet" id="milonga-css" href="/clients/DixieSpeedway/Images/css_004.css" type="text/css" media="all">
+<link rel="stylesheet" id="tablepress-default-css" href="/clients/DixieSpeedway/Images/default.css" type="text/css" media="all">
+<script type="text/javascript">
+/* <![CDATA[ */
+var photocrati_ajax = {"url":"http:\/\/www.dixiespeedway.com\/photocrati_ajax","wp_site_url":"http:\/\/www.dixiespeedway.com","wp_site_static_url":"http:\/\/www.dixiespeedway.com"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/ajax.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_008.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery-migrate.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/persist.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/store.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/ngg_store.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/tubepress.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/frontend-global.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_022.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_009.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_016.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_010.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_005.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_006.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_015.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_012.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_020.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_007.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_019.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_003.js"></script>
+
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/events-manager.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/lightbox_context.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_018.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/html5shiv.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/hoverIntent.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/superfish.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/imagesloaded.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_021.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_011.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/retina.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_002.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.dixiespeedway.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.dixiespeedway.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Super Late Models" href="http://www.dixiespeedway.com/points/super-late-models/">
+<link rel="next" title="Directions" href="http://www.dixiespeedway.com/fan-info/directions/">
+<meta name="generator" content="WordPress 3.9.2">
+<link rel="canonical" href="http://www.dixiespeedway.com/fan-info/tickets/">
+<link rel="shortlink" href="http://www.dixiespeedway.com/?p=73">
+
+<!-- This site is using AdRotate v3.10.4 to display their advertisements - https://www.adrotateplugin.com/ -->
+<!-- AdRotate JS -->
+<script type="text/javascript">
+var tracker_url = 'http://www.dixiespeedway.com/wp-content/plugins/adrotate/library/clicktracker.php';
+</script>
+<!-- /AdRotate JS -->
+
+<!-- <meta name="NextGEN" version="2.0.66" /> -->
+        <style type="text/css" media="screen">
+          div.printfriendly {
+            margin: 12px 12px 12px 12px;;
+          }
+          div.printfriendly a, div.printfriendly a:link, div.printfriendly a:visited {
+            text-decoration: none;
+            font-size: 14px;
+            color: #6D9F00;
+            vertical-align: bottom;
+            border: none;
+          }
+
+          .printfriendly a:hover {
+            cursor: pointer;
+          }
+
+          .printfriendly a img  {
+            border: none;
+            padding:0;
+            margin-right: 6px;
+            display:inline-block;
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+          }
+          .printfriendly a span{
+            vertical-align: bottom;
+          }
+          .pf-alignleft {
+            float: left;
+          }
+          .pf-alignright {
+            float: right;
+          }
+          div.pf-aligncenter {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+          }
+        </style>
+        <style type="text/css" media="print">
+          .printfriendly {
+            display: none;
+          }
+        </style>
+
+<script type="text/javascript">var TubePressJsConfig = {"urls":{"base":"http:\/\/www.dixiespeedway.com\/wp-content\/plugins\/tubepress","usr":"http:\/\/www.dixiespeedway.com\/wp-content\/tubepress-content"}};</script>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #333333; background-image: url('/clients/DixieSpeedway/Images/bodybg11.jpg'); background-repeat: no-repeat; background-position: top center; background-attachment: fixed; }
+</style>
+<style type="text/css">			#boom_bar-289 .boom_bar-inner-container, 
+			#boom_bar-289 .boom_bar-inner-container p {
+							}
+			</style><link rel="stylesheet" id="youtube-channel-gallery-css" href="/clients/DixieSpeedway/Images/styles.css" type="text/css" media="all">
+<script src="/clients/DixieSpeedway/Images/printfriendly.js" type="text/javascript"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,.fb_connect_bar_container span,.fb_connect_bar_container a,.fb_connect_bar_container img,.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}.fb_connect_bar a:hover{color:#fff}.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}.fb_connect_bar div a,.fb_connect_bar span,.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style></head>
+
+<body style="margin-top: 50px;" data-twttr-rendered="true" class="page page-id-73 page-child parent-pageid-14 page-template-default custom-background natural-singular natural-background-image boom_bar-fixed-top-no_wpab">
+
+<!-- BEGIN #wrap -->
+<div id="wrap">
+
+	<!-- BEGIN .container -->
+	<div class="container">
+	
+		<!-- BEGIN #header -->
+		<div id="header">
+		
+			<!-- BEGIN .row -->
+			<div class="row">
+				
+				<!-- BEGIN .sixteen columns -->
+				<div class="sixteen columns">
+				
+				
+					
+					
+					
+				
+                
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr>
+    <td rowspan="2" width="30%">
+    
+<div id="custom-header" class="no-logo"><img src="/clients/DixieSpeedway/Images/copy-HeaderLogo.png" alt="Dixie Speedway – Woodstock, GA" height="130" width="310"></div>
+    
+    </td>
+    <td align="right" width="70%"><div class="a-single a-4"><img src="/clients/DixieSpeedway/Images/Racing.png"></div></td>
+  </tr>
+  <tr>
+    <td align="right"><div class="g g-1"><div class="g-single a-3"><a data-track="MywxLDAsMQ==" class="gofollow" href="http://www.dixiespeedway.com/schedule/"><img src="/clients/DixieSpeedway/Images/451.jpg"></a></div></div></td>
+  </tr>
+</tbody></table>
+                
+                
+                
+                
+
+						
+				
+				<!-- END .sixteen columns -->
+				</div>
+			
+			<!-- END .row -->
+			</div>
+		
+		<!-- END #header -->
+		</div>
+		
+		<!-- BEGIN #navigation -->
+		<nav id="navigation" class="navigation-main shadow radius-full" role="navigation">
+		
+			<!-- BEGIN .row -->
+			<div class="row">
+				
+				<h1 class="menu-toggle">Menu</h1>
+	
+				<div class="menu-main-navigatiion-container"><ul id="menu-main-navigatiion" class="menu sf-js-enabled sf-arrows"><li id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28"><a href="http://dixiespeedway.com/">Home</a></li>
+<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="http://www.dixiespeedway.com/schedule/">Schedule</a></li>
+<li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31"><a href="http://www.dixiespeedway.com/results/">Results</a></li>
+<li id="menu-item-299" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-299"><a class="sf-with-ul" href="#">Points</a>
+<ul style="display: none;" class="sub-menu">
+	<li id="menu-item-72" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-72"><a href="http://www.dixiespeedway.com/points/super-late-models/">Super Late Models</a></li>
+	<li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="http://www.dixiespeedway.com/points/steel-head-late-models/">Steel Head Late Models</a></li>
+	<li id="menu-item-67" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="http://www.dixiespeedway.com/points/crate-late-models/">Crate Late Models</a></li>
+	<li id="menu-item-70" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-70"><a href="http://www.dixiespeedway.com/points/super-bombers/">Super Bombers</a></li>
+	<li id="menu-item-71" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-71"><a href="http://www.dixiespeedway.com/points/econo-bombers/">Econo Bombers</a></li>
+	<li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a href="http://www.dixiespeedway.com/points/pony-stocks/">Pony Stocks</a></li>
+	<li id="menu-item-69" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-69"><a href="http://www.dixiespeedway.com/points/street-cruisers/">Street Cruisers</a></li>
+</ul>
+</li>
+<li id="menu-item-298" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-298"><a class="sf-with-ul" href="#">Media</a>
+<ul style="display: none;" class="sub-menu">
+	<li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62"><a href="http://www.dixiespeedway.com/media/news/">News</a></li>
+	<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a href="http://www.dixiespeedway.com/media/photos/">Photos</a></li>
+	<li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64"><a href="http://www.dixiespeedway.com/media/video/">Video</a></li>
+	<li id="menu-item-65" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-65"><a href="http://www.dixiespeedway.com/media/vip-credentials/">Media Credentials</a></li>
+	<li id="menu-item-319" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-319"><a href="https://www.facebook.com/DixieSpeedway">Facebook</a></li>
+	<li id="menu-item-320" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-320"><a href="https://twitter.com/DixieRomeSpdwy">Twitter</a></li>
+	<li id="menu-item-321" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-321"><a href="http://instagram.com/dixieromespdwy">Instagram</a></li>
+</ul>
+</li>
+<li id="menu-item-300" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-300"><a class="sf-with-ul" href="#">Fan Info</a>
+<ul style="display: none;" class="sub-menu">
+	<li id="menu-item-87" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-73 current_page_item menu-item-87"><a href="http://www.dixiespeedway.com/fan-info/tickets/">Tickets</a></li>
+	<li id="menu-item-343" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-343"><a href="http://www.dixiespeedway.com/fan-info/group-tickets/">Group Tickets</a></li>
+	<li id="menu-item-366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-366"><a href="http://www.dixiespeedway.com/fan-info/birthday-packages/">Birthday Packages</a></li>
+	<li id="menu-item-342" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-342"><a href="http://www.dixiespeedway.com/fan-info/track-policies/">Track Info A-Z</a></li>
+	<li id="menu-item-88" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-88"><a href="http://www.dixiespeedway.com/fan-info/directions/">Directions</a></li>
+	<li id="menu-item-341" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-341"><a href="http://www.dixiespeedway.com/fan-info/dining-at-dixie/">Dining At Dixie</a></li>
+	<li id="menu-item-90" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-90"><a href="http://www.dixiespeedway.com/fan-info/lodging/">Lodging</a></li>
+	<li id="menu-item-91" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-91"><a href="http://www.dixiespeedway.com/fan-info/facility-map/">Facility Map</a></li>
+	<li id="menu-item-388" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-388"><a href="http://www.dixiespeedway.com/fan-info/non-cash-donation-form/">Non-Cash Donation Form</a></li>
+	<li id="menu-item-391" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-391"><a href="http://www.dixiespeedway.com/fan-info/special-event-info/">Special Event Info</a></li>
+</ul>
+</li>
+<li id="menu-item-301" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-301"><a class="sf-with-ul" href="#">Driver Info</a>
+<ul style="display: none;" class="sub-menu">
+	<li id="menu-item-100" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-100"><a href="http://www.dixiespeedway.com/driver-info/driver-notes/">Driver Notes</a></li>
+	<li id="menu-item-102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-102"><a href="http://www.dixiespeedway.com/driver-info/rules/">Rules</a></li>
+	<li id="menu-item-504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-504"><a href="http://www.dixiespeedway.com/driver-info/online-registration/">Online Registration</a></li>
+</ul>
+</li>
+<li id="menu-item-302" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-302"><a class="sf-with-ul" href="#">Track Facts</a>
+<ul style="display: none;" class="sub-menu">
+	<li id="menu-item-111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-111"><a href="http://www.dixiespeedway.com/track-facts/history-video/">History Video</a></li>
+	<li id="menu-item-374" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-374"><a href="http://www.dixiespeedway.com/track-facts/facts/">Facts</a></li>
+</ul>
+</li>
+<li id="menu-item-354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-354"><a class="sf-with-ul" href="http://www.dixiespeedway.com/sales/">Sales</a>
+<ul style="display: none;" class="sub-menu">
+	<li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"><a href="http://www.dixiespeedway.com/sales/marketing/">Marketing</a></li>
+	<li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a href="http://www.dixiespeedway.com/sales/sponsors/">Current Sponsors</a></li>
+</ul>
+</li>
+<li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="http://www.dixiespeedway.com/store/">Store</a></li>
+<li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-39"><a href="http://www.dixiespeedway.com/contact/">Contact</a></li>
+</ul></div>				
+			<!-- END .row -->
+			</div>
+		
+		<!-- END #navigation -->
+		</nav>
+<!-- BEGIN .post class -->
+<div class="post-73 page type-page status-publish has-post-thumbnail hentry" id="page-73">
+
+			<div class="feature-img banner shadow radius-full"><img src="/clients/DixieSpeedway/Images/3.jpg" class="attachment-featured-large wp-post-image" alt="3"></div>
+		
+	<!-- BEGIN .row -->
+	<div class="row">
+		
+				
+			<!-- BEGIN .eleven columns -->
+			<div class="eleven columns">
+	
+				<!-- BEGIN .postarea -->
+				<div class="postarea">
+				
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+				<!-- END .postarea -->
+				</div>
+			
+			<!-- END .eleven columns -->
+			</div>
+			
+			<!-- BEGIN .five columns -->
+			<div class="five columns">
+			
+				
+
+	<div class="sidebar">
+	<div id="youtubechannelgallery_widget-2" class="widget youtubechannelgallery ytccf"><h6>Dixie Speedway Videos</h6><div class="ytcplayer-fixwidthwrapper"><div class="ytcplayer-wrapper ytc-player4x3"><iframe id="ytcplayer1" class="ytcplayer" allowfullscreen="" src="/clients/DixieSpeedway/Images/kNctizdD6Wc.htm" frameborder="0"></iframe></div></div><ul class="ytchagallery ytccf ytc-table ytc-columns3 ytc-thumb4x3">
+
+<div class="ytccf ytc-row ytc-r-1 ytc-r-odd ">
+
+
+
+	<li class="ytccell-1 ytccell-first"><div class="ytcliinner"><div class="ytcthumb-cont"><a class="ytcthumb ytclink" href="https://www.youtube.com/watch?v=kNctizdD6Wc" data-playerid="ytcplayer1" data-quality="default" title="Chain Race September 4" style="background-image:url(http://i.ytimg.com/vi/kNctizdD6Wc/default.jpg)" rel="nofollow"><div class="ytcplay"></div></a></div></div></li>
+
+
+
+	<li class="ytccell-2"><div class="ytcliinner"><div class="ytcthumb-cont"><a class="ytcthumb ytclink" href="https://www.youtube.com/watch?v=QR5v-a52qYs" data-playerid="ytcplayer1" data-quality="default" title="Monster Trucks 2012" style="background-image:url(http://i.ytimg.com/vi/QR5v-a52qYs/default.jpg)" rel="nofollow"><div class="ytcplay"></div></a></div></div></li>
+
+
+
+	<li class="ytccell-3 ytccell-last"><div class="ytcliinner"><div class="ytcthumb-cont"><a class="ytcthumb ytclink" href="https://www.youtube.com/watch?v=S8tMHDWc5us" data-playerid="ytcplayer1" data-quality="default" title="Dixie Speedway 6 1 2013 Limited Heat Race" style="background-image:url(http://i.ytimg.com/vi/S8tMHDWc5us/default.jpg)" rel="nofollow"><div class="ytcplay"></div></a></div></div></li>
+
+</div>
+
+
+</ul></div><div id="widget_sp_image-2" class="widget widget_sp_image"><h6>Rome Speedway</h6><img alt="Rome Speedway" class="attachment-full aligncenter" style="max-width: 100%;" src="/clients/DixieSpeedway/Images/Rome.jpg" height="140" width="270"></div><div id="widget_sp_image-3" class="widget widget_sp_image"><h6>The Race Of Life</h6><a href="http://198.154.249.9/%7Edixiespe/fan-info/race-of-life/" target="_self" class="widget_sp_image-image-link" title="The Race Of Life"><img alt="The Race Of Life" class="attachment-full" style="max-width: 100%;" src="/clients/DixieSpeedway/Images/ROC.jpg" height="162" width="270"></a></div><div id="widget_sp_image-4" class="widget widget_sp_image"><h6>Mike Swims 1964-2007</h6><a href="http://198.154.249.9/%7Edixiespe/fan-info/mike-swims/" target="_self" class="widget_sp_image-image-link" title="Mike Swims 1964-2007"><img alt="Mike Swims 1964-2007" class="attachment-full" style="max-width: 100%;" src="/clients/DixieSpeedway/Images/DRO.jpg" height="162" width="270"></a></div><div id="widget_sp_image-5" class="widget widget_sp_image"><h6>Dixie Speedway Historical Video</h6><a href="http://198.154.249.9/%7Edixiespe/track-info/history/" target="_self" class="widget_sp_image-image-link" title="Dixie Speedway Historical Video"><img alt="Dixie Speedway Historical Video" class="attachment-full" style="max-width: 100%;" src="/clients/DixieSpeedway/Images/History.jpg" height="162" width="270"></a></div>	</div>
+
+				
+			<!-- END .five columns -->
+			</div>
+	
+			
+	<!-- END .row -->
+	</div>
+	
+<!-- END .post class -->
+</div>
+
+
+<div class="clear"></div>
+
+<!-- END .container -->
+</div>
+
+<!-- BEGIN .footer -->
+<div class="footer radius-top">
+
+		
+	<!-- BEGIN .row -->
+	<div class="row">
+		
+		<!-- BEGIN .footer-information -->
+		<div class="footer-information">
+		
+			<!-- BEGIN .footer-content -->
+			<div class="footer-content">
+		
+				<div class="align-left">
+					<p>Copyright &#169; 2014 · All Rights Reserved · Dixie Speedway – Woodstock, GA</p>
+					<p><a href="http://www.firethornmarketing.com/" target="_blank">Design</a> by <a href="http://www.firethornmarketing.com.com/" target="_blank">Firethorn Marketing</a></p><a href="http://www.firethornmarketing.com.com/" target="_blank">
+				</a></div><a href="http://www.firethornmarketing.com.com/" target="_blank">
+				
+				</a><div class="align-right"><a href="http://www.firethornmarketing.com.com/" target="_blank">
+					</a>
+				</div>
+		
+			<!-- END .footer-content -->
+			</div>
+		
+		<!-- END .footer-information -->
+		</div>
+	
+	<!-- END .row -->
+	</div>
+
+<!-- END .footer -->
+</div>
+
+<!-- END #wrap -->
+</div>
+
+<!-- ngg_resource_manager_marker --><script type="text/javascript" src="/clients/DixieSpeedway/Images/underscore.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/backbone.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/masonry.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_004.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_013.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_017.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/jquery_014.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/navigation.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/comment-reply.js"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/player_api"></script>
+<script type="text/javascript" src="/clients/DixieSpeedway/Images/scripts.js"></script>
+	<script type="text/javascript">
+				jQuery(function(){
+					if ( ! jQuery('body').hasClass('boom_bar-fixed-top-no_wpab') ) {
+						jQuery('body').addClass('boom_bar-fixed-top-no_wpab');
+						it_boombar_adjust_heights(jQuery('.boom_bar').css('height'));
+						it_boombar_adjust_static_bottom_width();
+					}
+				});
+			</script>
+			      <script type="text/javascript">
+		
+          var pfHeaderImgUrl = 'http://dixiespeedway.com/wp-content/uploads/2014/01/copy-HeaderLogo.png';
+          var pfHeaderTagline = '';
+          var pfdisableClickToDel = '0';
+          var pfHideImages = '0';
+          var pfImageDisplayStyle = 'right';
+          var pfDisableEmail = '0';
+          var pfDisablePDF = '0';
+          var pfDisablePrint = '0';
+          var pfCustomCSS = '';
+		  (function() {
+            var e = document.createElement('script'); e.type="text/javascript";
+		    if('https:' == document.location.protocol) {
+			  js='https://pf-cdn.printfriendly.com/ssl/main.js';
+		    }
+		    else{
+			  js='http://cdn.printfriendly.com/printfriendly.js';
+		    }
+            e.src = js;
+            document.getElementsByTagName('head')[0].appendChild(e);
+	  	  })();
+      </script>
+
+
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=246727095428680";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+</div>
+</form>
+</body>
+</html>

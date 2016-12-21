@@ -1,0 +1,1529 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY BGCOLOR=#FFFFFF LINK=#333383 ALINK=#008400 VLINK=#333383 leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+<link rel="stylesheet" type="text/css" href="/clients/BRMHS/Images/style.css">
+<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="/clients/BRMHS/Images/css/style-ie.css">
+<![endif]-->
+<script type="text/javascript" src="/clients/BRMHS/Images/jquery.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/clients/BRMHS/Images/calendar.css">
+	<!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="/clients/BRMHS/Images/css/calendar-ie.css">
+	<![endif]-->
+	<link rel="stylesheet" href="/clients/BRMHS/Images/nivo-slider.css" type="text/css" media="screen">
+	<script type="text/javascript" src="/clients/BRMHS/Images/jquery_002.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider({
+			directionNav: true, // Next & Prev navigation
+			controlNav: true, // 1,2,3... navigation
+			prevText: '&lsaquo;', // Prev directionNav text
+        	nextText: '&rsaquo;' // Next directionNav text
+		});
+    });
+    </script>
+	<style>
+	#slider{width:1045px; height:315px; overflow:hidden;}
+	.nivo-prevNav, .nivo-nextNav{color:#FFF!important; font-size:50px; text-decoration:none; padding-top:80px;}
+	.nivo-controlNav{padding:20px;}
+	.nivo-control{padding:3px; margin:3px; display:block; float:left; text-indent:-9999px; background:#CCC; border:1px solid #FFF; width:5px; height:5px;}
+	.nivo-controlNav .active{ background:#006fc2;}
+	</style>
+
+<style>
+#slider {position:relative; z-index:1;}
+div.cse-overlay {z-index:99999;}
+</style>
+<!--[if IE 7]>
+<style>
+.nav01 {z-index:2;}
+.search input{float:left; height:20px;}
+</style>
+<![endif]-->
+ 
+<title>Baton Rouge Magnet High School</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+<style type="text/css">
+ .NavItem { font-family: Arial, Helvetica, sans-serif; font-size : 13px; font-weight: bold; text-decoration: none; color: ca300e; }
+ .NavItem:hover { font-family: Arial, Helvetica, sans-serif; font-size : 13px; font-weight: bold; text-decoration: underline; color: ca300e; }
+ .NavItemSelected { font-family: Arial, Helvetica, sans-serif; font-size : 13px; font-weight: bold; text-decoration: none; color: ca300e; }
+ .NavItemSelected:hover { font-family: Arial, Helvetica, sans-serif; font-size : 13px; font-weight: bold; text-decoration: underline; color: ca300e; }
+ .SubNavItem { font-family: Arial, Helvetica, sans-serif; font-size : 11px; font-weight: normal; text-decoration: none; color: ca300e; }
+ .SubNavItem:hover { font-family: Arial, Helvetica, sans-serif; font-size : 11px; font-weight: normal; text-decoration: underline; color: ca300e; }
+ .SubNavItemSelected { font-family: Arial, Helvetica, sans-serif; font-size : 11px; font-weight: normal; text-decoration: none; color: ca300e; }
+ .SubNavItemSelected:hover { font-family: Arial, Helvetica, sans-serif; font-size : 11px; font-weight: normal; text-decoration: underline; color: ca300e; }
+ 
+</style>
+
+<script src="/clients/BRMHS/Images/ValidateEmail.htm"></script>
+<script language="JavaScript">
+<!--
+ // Browser Detection
+isMac = (navigator.appVersion.indexOf("Mac")!=-1) ? true : false;
+NS4 = (document.layers) ? true : false;
+IEmac = ((document.all)&&(isMac)) ? true : false;
+IE4plus = (document.all) ? true : false;
+IE4 = ((document.all)&&(navigator.appVersion.indexOf("MSIE 4.")!=-1)) ? true : false;
+IE5 = ((document.all)&&(navigator.appVersion.indexOf("MSIE 5.")!=-1)) ? true : false;
+ver4 = (NS4 || IE4plus) ? true : false;
+NS6 = (!document.layers) && (navigator.userAgent.indexOf('Netscape')!=-1)?true:false;
+
+// Body onload utility (supports multiple onload functions)
+var gSafeOnload = new Array();
+function SafeAddOnload(f)
+{
+	if (IEmac && IE4)  // IE 4.5 blows out on testing window.onload
+	{
+		window.onload = SafeOnload;
+		gSafeOnload[gSafeOnload.length] = f;
+	}
+	else if  (window.onload)
+	{
+		if (window.onload != SafeOnload)
+		{
+			gSafeOnload[0] = window.onload;
+			window.onload = SafeOnload;
+		}		
+		gSafeOnload[gSafeOnload.length] = f;
+	}
+	else
+		window.onload = f;
+}
+function SafeOnload()
+{
+	for (var i=0;i<gSafeOnload.length;i++)
+		gSafeOnload[i]();
+}
+
+// Call the following with your function as the argument
+//SafeAddOnload(yourfunctioname);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//<redirect>
+function Redirect(contentonly,module,submodule,subcontent,site,user,session,url)
+{
+	if (url)
+		url = "&" + url;
+	else
+		url = "";
+	
+			location.href="/eduWEB2/1000054/ei.cfm?M="+module+"&SM="+submodule+"&SC="+subcontent+"&W=M&P=N&S="+site+"&U="+user+"&SS="+session+url;
+		
+}
+//</redirect>
+function SiteImgRep(page,image,file,obj)
+{
+
+   	document[image].src=file;
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function OpenWindow(url,name,options,canfocus)
+{
+if (name=='preview')
+   {
+   /* if(!preview || preview.closed){ */
+   	 preview=window.open(url,'preview');
+   /* } */
+   preview.focus();
+   }
+else if (name=='eihome')
+   {
+   window.open(url,'eihome');
+   }
+else
+   {
+   window.open(url,name,options);
+   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function NoBlankForm(form)
+{
+	layout = form.Layout.value;
+	msg = "The following information on your form needs to be corrected:\n\n";
+	alertflag = "N";
+	if (layout == "101" || layout == "102" || layout == "103" || layout == "105")
+	{
+		if (form.ema_fname.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * First Name is blank\n";
+		}
+		if (form.ema_lname.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Last Name is blank\n";
+		}
+		if (form.ema_email.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Email is blank\n";
+		}
+	}
+	else if (layout == "104")
+	{
+		if (form.ema_fname.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * First Name is blank\n";
+		}
+		if (form.ema_lname.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Last Name is blank\n";
+		}
+		if (form.ema_addr1.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Address is blank\n";
+		}
+		if (form.ema_city.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * City is blank\n";
+		}
+		if (form.ema_state.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * State is blank\n";
+		}
+		if (form.ema_zip.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Zip is blank\n";
+		}
+		if (form.ema_phone.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Phone is blank\n";
+		}
+		if (form.ema_email.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Email is blank\n";
+		}
+		if (form.ema_amount.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Amount is blank\n";
+		}
+		if (isNaN(form.ema_amount.value))
+		{
+			alertflag = "Y";
+			msg = msg + "  * Amount is not a valid amount\n";
+		}
+		if (form.ema_ccnumb.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Credit Card is blank\n";
+		}
+		if (form.ema_ccfname.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * First Name on Credit Card is blank\n";
+		}
+		if (form.ema_cclname.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Last Name on Credit Card is blank\n";
+		}
+		if (form.ema_baddr1.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Billing Address is blank\n";
+		}
+		if (form.ema_bcity.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Billing City is blank\n";
+		}
+		if (form.ema_bstate.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Billing State is blank\n";
+		}
+		if (form.ema_bzip.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Billing Zip is blank\n";
+		}
+	}
+	if (alertflag == "Y"){
+		   msg = msg + "\nPlease make these corrections and try again";
+		   alert(msg);
+		   return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function NoBlankEnhancedForm(form)
+{
+	layout = form.Layout.value;
+	msg = "The following information on your form needs to be corrected:\n\n";
+	alertflag = "N";
+	if (layout == "101")
+	{
+		if (form.ema_fname.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Primary Contact First Name is blank\n";
+		}
+		if (form.ema_lname.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Primary Contact Last Name is blank\n";
+		}
+		if (form.ema_email.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Primary Contact Email is blank\n";
+		}
+	}
+	else if (layout == "102")
+	{
+		if (form.ema_fname.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * First Name is blank\n";
+		}
+		if (form.ema_lname.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Last Name is blank\n";
+		}
+		if (form.ema_addr1.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Address is blank\n";
+		}
+		if (form.ema_city.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * City is blank\n";
+		}
+		if (form.ema_state.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * State is blank\n";
+		}
+		if (form.ema_zip.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Zip is blank\n";
+		}
+		if (form.ema_phone.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Phone is blank\n";
+		}
+		if (form.ema_email.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Email is blank\n";
+		}
+		if (form.ema_url.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Web Site Address is blank\n";
+		}
+		if (!(form.ema_performance[0].checked) && !(form.ema_performance[1].checked))
+		{
+			alertflag = "Y";
+			msg = msg + "  * You did not indicate if the performance is private or public\n";
+		}
+		if (!(form.ema_sound[0].checked) && !(form.ema_sound[1].checked))
+		{
+			alertflag = "Y";
+			msg = msg + "  * You did not indicate if sound and lights are provided\n";
+		}
+	}
+	else if (layout == "103")
+	{
+		if (form.ema_fname.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * First Name is blank\n";
+		}
+		if (form.ema_lname.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Last Name is blank\n";
+		}
+		if (form.ema_addr1.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Address is blank\n";
+		}
+		if (form.ema_city.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * City is blank\n";
+		}
+		if (form.ema_state.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * State is blank\n";
+		}
+		if (form.ema_zip.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Zip is blank\n";
+		}
+		if (form.ema_phone.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Phone is blank\n";
+		}
+		if (form.ema_email.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Email is blank\n";
+		}
+	}
+	else if (layout == "104")
+	{
+		if (form.ema_ccompan.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Company Name is blank\n";
+		}
+		if (form.ema_fname.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Primary Contact First Name is blank\n";
+		}
+		if (form.ema_lname.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Primary Contact Last Name is blank\n";
+		}
+		if (form.ema_email.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Primary Contact Email is blank\n";
+		}
+	}	
+	else if (layout == "105")
+	{
+		if (form.ema_fname.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * First Name is blank\n";
+		}
+		if (form.ema_lname.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Last Name is blank\n";
+		}
+		if (form.ema_addr1.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Address is blank\n";
+		}
+		if (form.ema_city.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * City is blank\n";
+		}
+		if (form.ema_state.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * State is blank\n";
+		}
+		if (form.ema_zip.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Zip is blank\n";
+		}
+		if (form.ema_phone.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Phone is blank\n";
+		}
+		if (form.ema_email.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Email is blank\n";
+		}
+		if (form.ema_amount.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Amount is blank\n";
+		}
+		if (isNaN(form.ema_amount.value))
+		{
+			alertflag = "Y";
+			msg = msg + "  * Amount is not a valid amount\n";
+		}
+		if (form.ema_howmany.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * How Many is blank\n";
+		}
+		if (isNaN(form.ema_howmany.value))
+		{
+			alertflag = "Y";
+			msg = msg + "  * How Many is not a valid number\n";
+		}
+		if (form.ema_ccnumb.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Credit Card is blank\n";
+		}
+		if (form.ema_ccfname.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * First Name on Credit Card is blank\n";
+		}
+		if (form.ema_cclname.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Last Name on Credit Card is blank\n";
+		}
+		if (form.ema_baddr1.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Billing Address is blank\n";
+		}
+		if (form.ema_bcity.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Billing City is blank\n";
+		}
+		if (form.ema_bstate.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Billing State is blank\n";
+		}
+		if (form.ema_bzip.value=="")
+		{
+			alertflag = "Y";
+			msg = msg + "  * Billing Zip is blank\n";
+		}
+		if (form.DeliveryMethod.value != "Mail")
+		{
+			if (!(form.DeliveryMethod[0].checked) && !(form.DeliveryMethod[1].checked))
+			{
+				alertflag = "Y";
+				msg = msg + "  * You did not indicate if you would like to Print the certificates or have them Mailed.\n";
+			}
+		}
+	}	
+	else
+	{
+		return true;
+	}
+	if (alertflag == "Y"){
+		   msg = msg + "\nPlease make these corrections and try again";
+		   alert(msg);
+		   return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function NoBlankRFP(form)
+{
+	layout = form.Layout.value;
+	msg = "The following information on your form needs to be corrected:\n\n";
+	alertflag = "N";
+	if (form.fee_coname.value=="")
+	{
+		alertflag = "Y";
+		msg = msg + "  * Company Name is blank\n";
+	}
+	if (form.ema_email.value=="")
+	{
+		alertflag = "Y";
+		msg = msg + "  * Email is blank\n";
+	}
+	if (form.use_name.value=="")
+	{
+		alertflag = "Y";
+		msg = msg + "  * Logon is blank\n";
+	}
+	if (form.use_password.value=="")
+	{
+		alertflag = "Y";
+		msg = msg + "  * Password is blank\n";
+	}
+	if ((form.fee_text.value=="") && (form.DocumentUpload.value=="") && (form.HasFile.value==""))
+	{
+		alertflag = "Y";
+		msg = msg + "  * Please enter RFP text or upload a RFP document\n";
+	}
+	
+	if (alertflag == "Y"){
+		   msg = msg + "\nPlease make these corrections and try again";
+		   alert(msg);
+		   return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+function CloseRFP(smod, submod, site, url, feeCode, dataSource)
+{
+	var blnConfirm;
+	blnConfirm = confirm('Are you sure you want to close this RFP?');
+	if (blnConfirm)
+	{
+		top.blank.location.href = "/eduENGINE/CloseRFP.cfm?code=" + feeCode + "&dataSource=" + dataSource + "&site=" + site;
+		Redirect('Y', smod, submod,'100000', site,'1','1', url);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function NoBlankRFPProposal(form)
+{
+	layout = form.Layout.value;
+	msg = "The following information on your form needs to be corrected:\n\n";
+	alertflag = "N";
+	if (form.fee_fname.value=="")
+	{
+		alertflag = "Y";
+		msg = msg + "  * First Name is blank\n";
+	}
+	if (form.fee_fname.value=="")
+	{
+		alertflag = "Y";
+		msg = msg + "  * Last Name is blank\n";
+	}
+	if (form.fee_coname.value=="")
+	{
+		alertflag = "Y";
+		msg = msg + "  * Company Name is blank\n";
+	}
+	if (form.fee_phone.value=="")
+	{
+		alertflag = "Y";
+		msg = msg + "  * Phone number is blank\n";
+	}
+	if (form.fee_email.value=="")
+	{
+		alertflag = "Y";
+		msg = msg + "  * Email is blank\n";
+	}
+	if (form.fee_proposal.value=="")
+	{
+		alertflag = "Y";
+		msg = msg + "  * Proposal is blank\n";
+	}
+	
+
+	if (alertflag == "Y")
+	{
+		   msg = msg + "\nPlease make these corrections and try again";
+		   alert(msg);
+		   return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-->
+</script>
+<script language="JavaScript"><!--
+ x=new Image;x.src="/eduIMAGES/x.gif"; function PreloadTgraphic(){ x=1; } function PreloadNav() { x=new Image;x.src="/eduWEB2/1000054/1000054Nt113.jpg"; n113b=new Image;n113b.src="/eduWEB2/1000054/1000054Nn113b.jpg"; n145a=new Image;n145a.src="/eduWEB2/1000054/1000054Nn145a.jpg"; n135a=new Image;n135a.src="/eduWEB2/1000054/1000054Nn135a.jpg"; n133a=new Image;n133a.src="/eduWEB2/1000054/1000054Nn133a.jpg"; n122a=new Image;n122a.src="/eduWEB2/1000054/1000054Nn122a.jpg"; n166a=new Image;n166a.src="/eduWEB2/1000054/1000054Nn166a.jpg"; n108a=new Image;n108a.src="/eduWEB2/1000054/1000054Nn108a.jpg"; n109a=new Image;n109a.src="/eduWEB2/1000054/1000054Nn109a.jpg"; n163a=new Image;n163a.src="/eduWEB2/1000054/1000054Nn163a.jpg"; n119a=new Image;n119a.src="/eduWEB2/1000054/1000054Nn119a.jpg"; n106a=new Image;n106a.src="/eduWEB2/1000054/1000054Nn106a.jpg"; n164a=new Image;n164a.src="/eduWEB2/1000054/1000054Nn164a.jpg"; n103a=new Image;n103a.src="/eduWEB2/1000054/1000054Nn103a.jpg"; n153a=new Image;n153a.src="/eduWEB2/1000054/1000054Nn153a.jpg"; n111a=new Image;n111a.src="/eduWEB2/1000054/1000054Nn111a.jpg"; n155a=new Image;n155a.src="/eduWEB2/1000054/1000054Nn155a.jpg"; n156a=new Image;n156a.src="/eduWEB2/1000054/1000054Nn156a.jpg"; n157a=new Image;n157a.src="/eduWEB2/1000054/1000054Nn157a.jpg"; n158a=new Image;n158a.src="/eduWEB2/1000054/1000054Nn158a.jpg"; n159a=new Image;n159a.src="/eduWEB2/1000054/1000054Nn159a.jpg"; n160a=new Image;n160a.src="/eduWEB2/1000054/1000054Nn160a.jpg"; n161a=new Image;n161a.src="/eduWEB2/1000054/1000054Nn161a.jpg"; n162a=new Image;n162a.src="/eduWEB2/1000054/1000054Nn162a.jpg"; n165a=new Image;n165a.src="/eduWEB2/1000054/1000054Nn165a.jpg"; n114a=new Image;n114a.src="/eduWEB2/1000054/1000054Nn114a.jpg"; n121a=new Image;n121a.src="/eduWEB2/1000054/1000054Nn121a.jpg"; n117a=new Image;n117a.src="/eduWEB2/1000054/1000054Nn117a.jpg"; n116a=new Image;n116a.src="/eduWEB2/1000054/1000054Nn116a.jpg"; n167a=new Image;n167a.src="/eduWEB2/1000054/1000054Nn167a.jpg"; n142a=new Image;n142a.src="/eduWEB2/1000054/1000054Nn142a.jpg"; n141a=new Image;n141a.src="/eduWEB2/1000054/1000054Nn141a.jpg"; n118a=new Image;n118a.src="/eduWEB2/1000054/1000054Nn118a.jpg"; n124a=new Image;n124a.src="/eduWEB2/1000054/1000054Nn124a.jpg"; n148a=new Image;n148a.src="/eduWEB2/1000054/1000054Nn148a.jpg"; n149a=new Image;n149a.src="/eduWEB2/1000054/1000054Nn149a.jpg"; n120a=new Image;n120a.src="/eduWEB2/1000054/1000054Nn120a.jpg"; } function PreloadNavc() { n113c=new Image;n113c.src="/eduWEB2/1000054/1000054Nn113c.jpg"; n145c=new Image;n145c.src="/eduWEB2/1000054/1000054Nn145c.jpg"; n135c=new Image;n135c.src="/eduWEB2/1000054/1000054Nn135c.jpg"; n133c=new Image;n133c.src="/eduWEB2/1000054/1000054Nn133c.jpg"; n122c=new Image;n122c.src="/eduWEB2/1000054/1000054Nn122c.jpg"; n166c=new Image;n166c.src="/eduWEB2/1000054/1000054Nn166c.jpg"; n108c=new Image;n108c.src="/eduWEB2/1000054/1000054Nn108c.jpg"; n109c=new Image;n109c.src="/eduWEB2/1000054/1000054Nn109c.jpg"; n163c=new Image;n163c.src="/eduWEB2/1000054/1000054Nn163c.jpg"; n119c=new Image;n119c.src="/eduWEB2/1000054/1000054Nn119c.jpg"; n106c=new Image;n106c.src="/eduWEB2/1000054/1000054Nn106c.jpg"; n164c=new Image;n164c.src="/eduWEB2/1000054/1000054Nn164c.jpg"; n103c=new Image;n103c.src="/eduWEB2/1000054/1000054Nn103c.jpg"; n153c=new Image;n153c.src="/eduWEB2/1000054/1000054Nn153c.jpg"; n111c=new Image;n111c.src="/eduWEB2/1000054/1000054Nn111c.jpg"; n155c=new Image;n155c.src="/eduWEB2/1000054/1000054Nn155c.jpg"; n156c=new Image;n156c.src="/eduWEB2/1000054/1000054Nn156c.jpg"; n157c=new Image;n157c.src="/eduWEB2/1000054/1000054Nn157c.jpg"; n158c=new Image;n158c.src="/eduWEB2/1000054/1000054Nn158c.jpg"; n159c=new Image;n159c.src="/eduWEB2/1000054/1000054Nn159c.jpg"; n160c=new Image;n160c.src="/eduWEB2/1000054/1000054Nn160c.jpg"; n161c=new Image;n161c.src="/eduWEB2/1000054/1000054Nn161c.jpg"; n162c=new Image;n162c.src="/eduWEB2/1000054/1000054Nn162c.jpg"; n165c=new Image;n165c.src="/eduWEB2/1000054/1000054Nn165c.jpg"; n114c=new Image;n114c.src="/eduWEB2/1000054/1000054Nn114c.jpg"; n121c=new Image;n121c.src="/eduWEB2/1000054/1000054Nn121c.jpg"; n117c=new Image;n117c.src="/eduWEB2/1000054/1000054Nn117c.jpg"; n116c=new Image;n116c.src="/eduWEB2/1000054/1000054Nn116c.jpg"; n167c=new Image;n167c.src="/eduWEB2/1000054/1000054Nn167c.jpg"; n142c=new Image;n142c.src="/eduWEB2/1000054/1000054Nn142c.jpg"; n141c=new Image;n141c.src="/eduWEB2/1000054/1000054Nn141c.jpg"; n118c=new Image;n118c.src="/eduWEB2/1000054/1000054Nn118c.jpg"; n124c=new Image;n124c.src="/eduWEB2/1000054/1000054Nn124c.jpg"; n148c=new Image;n148c.src="/eduWEB2/1000054/1000054Nn148c.jpg"; n149c=new Image;n149c.src="/eduWEB2/1000054/1000054Nn149c.jpg"; n120c=new Image;n120c.src="/eduWEB2/1000054/1000054Nn120c.jpg";  } function PreloadImages() { x=new Image;x.src="/clients/BRMHS/Images/subtitlefill.gif"; x=new Image;x.src="/clients/BRMHS/Images/subnavfill.gif"; x=new Image;x.src="/clients/BRMHS/Images/infospacer.gif"; x=new Image;x.src="/clients/BRMHS/Images/navspacer.gif"; x=new Image;x.src="/clients/BRMHS/Images/subnavspacer.gif";  PreloadNavc(); PreloadNav();  } SafeAddOnload(PreloadImages);  
+//--></script>
+
+<style type="text/css">
+A {text-decoration: underline; color: #ca300e;}
+A:hover {text-decoration: underline; color: #936745;}
+
+.emaillink {text-decoration: underline; color: #666666;}
+.emaillink:hover {text-decoration: underline; color: #666666;}
+
+.splashcompanyinfo{font-size : xx-small;font-style : normal;font-family : Georgia, Times New Roman, Times, serif;color : #000000;}
+.splash{font-size : xx-small;font-style : normal;font-family : Verdana, Arial, Helvetica, sans-serif;color : #666666;}
+.title{font-size : x-small;font-style : normal;font-family : Georgia, Times New Roman, Times, serif;text-align : Left;color : #000000;}
+.content{font-size : xx-small;font-style : normal;font-family : Verdana, Arial, Helvetica, sans-serif;text-align : Left;color : #666666;}
+.bullet{font-size : xx-small;font-style : normal;font-family : Georgia, Times New Roman, Times, serif;text-align : Left;color : #666666;}
+.caption{font-size : xx-small;font-style : normal;font-family : Georgia, Times New Roman, Times, serif;text-align : Center;color : #666666;}
+</style>
+<style type="text/css">.gsfe_a{border:1px solid #b9b9b9;border-top-color:#a0a0a0;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);}.gsfe_b{border:1px solid #4d90fe;outline:none;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-moz-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gscsep_a{display:none}.gsq_a{padding:0}.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;user-select:none;-moz-user-select:none;white-space:nowrap}.gsst_e{opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-moz-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gssb_a{padding:0 7px}.gssb_e{border:0}.gssb_l{margin:5px 0}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head>
+<body>
+<table width="100%" height="100%">
+	<tbody><tr>
+		<td class="footer_bg" align="center" valign="top" height="1">
+			<div class="head_line"></div>
+			<div class="wrapper site_width">
+				<div class="header logoschool">
+				<table width="100%">
+					<tbody><tr>
+					
+						<td rowspan="2"><div class="logo01 left"><img src="/clients/BRMHS/Images/1000054newlogo9.jpg"></div></td>
+					
+					<!-- Google CSE code begins -->
+
+					<script type="text/javascript" src="/clients/BRMHS/Images/brand"></script>
+
+					
+
+		
+
+					<script src="/clients/BRMHS/Images/api" type="text/javascript"></script><script src="/clients/BRMHS/Images/defaulten.js" type="text/javascript"></script>
+					<script src="/clients/BRMHS/Images/overlay.js"></script>
+					<script type="text/javascript">
+					function OnLoad() {
+						new CSEOverlay("006088999954446852913:2mwjxwv5uyg",
+							document.getElementById("searchbox_006088999954446852913:2mwjxwv5uyg"),
+							document.getElementById("results_006088999954446852913:2mwjxwv5uyg"));
+					}
+					GSearch.setOnLoadCallback(OnLoad);
+					</script>
+					<!-- Google CSE Code ends -->
+					
+						<td align="right" valign="top"><div class="search"></div></td>
+						<td rowspan="2" width="30"></td>
+						</tr>
+						<tr>
+						<td align="right" valign="bottom">
+							<table><tbody><tr><td><div class="links">
+							
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr valign="top">
+<td valign="top" width="100%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td>
+<div align="Left"><font color="666666" face="Georgia, Times New Roman, Times, serif" size="1">
+<li><a href="http://www.ebrschools.org/explore.cfm/districtinformation/contactinformation/" target="_blank">Contact Us</a> 
+</li><li><a href="http://pipeline.ebrschools.org/" target="_blank">Staff</a> 
+</li><li><a href="http://www.ebrschools.org/explore.cfm/sitemap/" target="_blank">Site Map</a> </li> 
+</font></div>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td><img src="/clients/BRMHS/Images/x.gif" width="1" height="1"></td>
+</tr></tbody></table>
+
+							</div></td></tr></tbody></table>
+						</td>
+						
+					
+					</tr>
+					</tbody></table>
+					<div class="clear"></div>
+				</div>
+				<div class="banner">
+					
+				</div>
+				<div class="nav01">
+					<div class="nav02">
+						
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr valign="top">
+<td valign="top" width="100%">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td>
+<div align="Left"><font color="666666" face="Georgia, Times New Roman, Times, serif" size="1">
+<ul class="dropdown">
+<li><a href="http://www.ebrschools.org/">Home</a> 
+</li><li><a href="http://www.ebrschools.org/explore.cfm/districtinformation/" target="_blank">District Info</a> 
+</li><li><a href="http://www.ebrschools.org/explore.cfm/schoolinfo/" target="_blank">Schools&nbsp;</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+</li><li><a href="http://parents.ebrschools.org/" target="_blank">Parents</a> 
+</li><li><a href="http://studentcentral.ebrschools.org/" target="_blank">Students</a> 
+</li><li><a href="http://www.ebrschools.org/explore.cfm/districtinformation/administration/" target="_blank">Departments</a> 
+</li><li><a href="http://news.ebrschools.org/" target="_blank">News</a> 
+</li><li><a href="http://www.ebrschools.org/explore.cfm/districtinformation/communitypartners/" target="_blank">Partners</a> 
+</li><li><a href="https://admin2.applitrack.com/ebrschools/onlineapp/default.aspx" target="_blank">Employment</a> </li></ul> 
+</font></div>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td><img src="/clients/BRMHS/Images/x.gif" width="1" height="1"></td>
+</tr></tbody></table>
+
+					</div>
+				</div>
+				<div class="content">
+					<style>
+					.content{padding:0px!important;}
+					</style>
+					
+					<style>
+					.nav01{position:static!important;}
+					.nav02{top:0px; height:27px!important; background-position:bottom;}
+					.nav02 li a{padding:5px 0px!important;}
+					</style>
+					<table width="100%">
+						<tbody><tr>
+							<td style="padding:20px 0px 0px 0px;" bgcolor="#1a9cd8" valign="top" width="180">
+								<table class="content_nav">
+									
+		<tbody><tr><td>
+		<div>
+		<!--|**START IMENUS**|imenus0,inline-->
+
+
+<!-- ****** Infinite Menus Core CSS [Do Not Modify!] ****** -->
+<style type="text/css">.imcm ul,.imcm li,.imcm div,.imcm span,.imcm a{text-align:left;vertical-align:top;padding:0px;margin:0;list-style:none ox13ide none;border-style:none;background-image:none;clear:none;float:none;display:block;position:static;overflow:visible;line-height:normal;}.imcm span{display:inline;}.imcm .imclear,.imclear{clear:both;height:0px;visibility:hidden;line-height:0px;}.imcm .imsc{position:absolute;}.imcm .imsubc{position:absolute;visibility:hidden;}.imcm li{list-style:none;font-size:1px;float:left;}.imcm ul ul li{width:100%;float:none !important;}.imcm a{display:block;position:relative;}.imcm ul .imsc,.imcm ul .imsubc {z-index:10;}.imcm ul ul .imsc,.imcm ul ul .imsubc{z-index:20;}.imcm ul ul ul .imsc,.imcm ul ul .imsubc{z-index:30;}.imde ul li:hover .imsubc{visibility:visible;}.imde ul ul li:hover  .imsubc{visibility:visible;}.imde ul ul ul li:hover  .imsubc{visibility:visible;}.imde li:hover ul  .imsubc{visibility:hidden;}.imde li:hover ul ul .imsubc{visibility:hidden;}.imde li:hover ul ul ul  .imsubc{visibility:hidden;}.imcm .imea{display:block;position:relative;left:0px;font-size:1px;line-height:0px;height:0px;float:right;}.imcm .imea span{display:block;position:relative;font-size:1px;line-height:0px;}.dvs,.dvm{border-width:0px}/*\*//*/.imcm .imclear,.imclear{font-size:1px;}.imcm .imsc{display:inline-block;position:relative;}/**/ </style><!--[if IE]><style type="text/css">.imcm .imclear,.imclear{display:none;}.imcm{zoom:1;} .imcm .imsc{position:relative;}.imcm li{curosr:pointer;} .imcm ul{zoom:1}.imcm a{zoom:1;}</style><![endif]--><!--[if gte IE 7]><style type="text/css">.imcm .imsubc{background-image:url(ie_css_fix);}</style><![endif]-->
+
+<!-- ****** Infinite Menus CSS Styles ****** -->
+<style id="ssimenus0" type="text/css">
+
+
+	/* --[[ Main Expand Icons ]]-- */
+	#imenus0 .imeam span,#imenus0 .imeamj span {background-image:url(none); width:7px; height:5px; left:0px; top:5px; background-repeat:no-repeat;background-position:top left;}
+	#imenus0 li:hover .imeam span,#imenus0 li a.iactive .imeamj span {background-image:url(none); background-repeat:no-repeat;background-position:top left;}
+
+
+	/* --[[ Sub Expand Icons ]]-- */
+	#imenus0 ul .imeas span,#imenus0 ul .imeasj span {background-image:url(none); width:5px; height:7px; left:0px; top:3px; background-repeat:no-repeat;background-position:top left;}
+	#imenus0 ul li:hover .imeas span,#imenus0 ul li a.iactive .imeasj span {background-image:url(none); background-repeat:no-repeat;background-position:top left;}
+
+
+	/* --[[ Main Container ]]-- */
+	#imouter0 {background-color:transparent; border-style:none; border-color:#EEEEEE; border-width:0px; padding:0px 0px; margin:0px;}
+
+
+	/* --[[ Sub Container ]]-- */
+	#imenus0 li ul {background-color:#FFFFFF; border-style:solid; border-color:/*#EEEEEE*/#666; border-width:0px 0px 1px 0px; padding:0px; margin:0px; }
+
+
+	/* --[[ Main Items ]]-- */
+	#imenus0 li a {background: url(/clients/BRMHS/Images/bullet_b.png) no-repeat 10px 9px; color:/*#000000*/#000; text-align:left; font-family:Arial, Tahoma, Helvetica; font-size:14px; font-weight:normal; font-style:normal; text-decoration:none; border-top:1px solid #FFF; padding:3px 10px 3px 25px;}
+
+		/* [hover] - These settings must be duplicated for IE compatibility.*/
+		#imenus0 li:hover>a {background-color:#FFF; color:/*#000000*/#000; text-decoration:underline; }
+		#imenus0 li a.ihover, .imde imenus0 a:hover {background-color:#FFF; color:/*#000000*/#000; text-decoration:underline; }
+
+		/* [active] */
+		#imenus0 li a.iactive {}
+
+
+	/* --[[ Sub Items ]]-- */
+#imenus0 ul a {background-color:/*#FFFFFF*/ #CCC; /*color:#000000;*/ color:#666; text-align:left; font-family:Arial; font-size:12px; font-weight:normal; font-style:normal; text-decoration:none; border-style:solid; border-color:#EEEEEE; border-width:1px 1px 0px 1px; padding:3px 10px 3px 25px; text-transform: none; text-shadow: 0px 0px #666;}
+
+	/* [hover] - These settings must be duplicated for IE comptatibility.*/
+	#imenus0 ul li:hover>a {background-color:/*#EEEEEE*/ #FFF; /*color:#FFFFFF;*/ color:#666; text-decoration:underline; text-shadow: 0px 0px #666;}
+	#imenus0 ul li a.ihover {background-color:/*#EEEEEE*/ #FFF; /*color:#FFFFFF;*/ color:#666; text-decoration:underline; text-shadow: 0px 0px #666;}
+
+	/* [active] */
+	#imenus0 ul li a.iactive {}
+
+
+</style>
+
+		<div class="imrcmain0 imgl" style="width:180px;z-index:999990;position:relative;"><div class="imcm" id="imouter0"><ul id="imenus0">
+	<li class="" id="ulitem0z0" style="width:180px;white-space:nowrap"><a class="" id="ulaitem0z0" href="http://brmhs.ebrschools.org/explore.cfm/aboutourschool/" target="_top" onmouseover="self.status=unescape('About%20Our%20School');return true;" onmouseout="self.status='';return true;">About Our School</a><div class="imsc"><div class="imsubc" style="width:180px;top:-25px;left:180px;"><ul id="x1ub0z0" style=""><li id="ulitem0z0z0"><a id="ulaitem0z0z0" href="http://brmhs.ebrschools.org/explore.cfm/aboutourschool/schoolcontact/" target="_top" onmouseover="self.status=unescape('School%20Contact');return true;" onmouseout="self.status='';return true;">School Contact</a></li><li id="ulitem0z0z1"><a id="ulaitem0z0z1" href="http://brmhs.ebrschools.org/explore.cfm/aboutourschool/schoolprofile/" target="_top" onmouseover="self.status=unescape('School%20Profile');return true;" onmouseout="self.status='';return true;">School Profile</a></li><li id="ulitem0z0z2"><a id="ulaitem0z0z2" href="http://brmhs.ebrschools.org/explore.cfm/aboutourschool/directionstoschool/" target="_top" onmouseover="self.status=unescape('Directions%20to%20School');return true;" onmouseout="self.status='';return true;">Directions to School</a></li></ul></div></div></li><li id="ulitem0z1" style="width:180px;white-space:nowrap"><a class="" id="ulaitem0z1" href="http://brmhs.ebrschools.org/explore.cfm/admissions/" target="_top" onmouseover="self.status=unescape('Admissions');return true;" onmouseout="self.status='';return true;">Admissions</a></li><li id="ulitem0z2" style="width:180px;white-space:nowrap"><a class="" id="ulaitem0z2" href="http://brmhs.ebrschools.org/explore.cfm/awardsachievement/" target="_top" onmouseover="self.status=unescape('Awards%2FAchievement');return true;" onmouseout="self.status='';return true;">Awards/Achievement</a></li><li id="ulitem0z3" style="width:180px;white-space:nowrap"><a class="" id="ulaitem0z3" href="http://brmhs.ebrschools.org/explore.cfm/calendar/" target="_top" onmouseover="self.status=unescape('Calendar');return true;" onmouseout="self.status='';return true;">Calendar</a></li><li id="ulitem0z4" style="width:180px;white-space:nowrap"><a class="" id="ulaitem0z4" href="http://brmhs.ebrschools.org/explore.cfm/clubs/" target="_top" onmouseover="self.status=unescape('Clubs');return true;" onmouseout="self.status='';return true;">Clubs</a></li><li id="ulitem0z5" style="width:180px;white-space:nowrap"><a class="" id="ulaitem0z5" href="http://brmhs.ebrschools.org/explore.cfm/dailyannouncements/" target="_top" onmouseover="self.status=unescape('Daily%20Announcements');return true;" onmouseout="self.status='';return true;">Daily Announcements</a></li><li id="ulitem0z6" style="width:180px;white-space:nowrap"><a class="" id="ulaitem0z6" href="http://brmhs.ebrschools.org/explore.cfm/departments/" target="_top" onmouseover="self.status=unescape('Departments');return true;" onmouseout="self.status='';return true;">Departments</a></li><li class="" id="ulitem0z7" style="width:180px;white-space:nowrap"><a class="" id="ulaitem0z7" href="http://brmhs.ebrschools.org/explore.cfm/facultystaff/" target="_top" onmouseover="self.status=unescape('Faculty%20%26%20Staff');return true;" onmouseout="self.status='';return true;">Faculty &amp; Staff</a><div class="imsc"><div class="imsubc" style="width:180px;top:-25px;left:180px;"><ul id="x1ub0z7" style=""><li id="ulitem0z7z0"><a id="ulaitem0z7z0" href="http://brmhs.ebrschools.org/explore.cfm/facultystaff/emailateacher/" target="_top" onmouseover="self.status=unescape('Email%20A%20Teacher');return true;" onmouseout="self.status='';return true;">Email A Teacher</a></li></ul></div></div></li><li class="" id="ulitem0z8" style="width:180px;white-space:nowrap"><a class="" id="ulaitem0z8" href="http://brmhs.ebrschools.org/explore.cfm/guidance/" target="_top" onmouseover="self.status=unescape('Guidance');return true;" onmouseout="self.status='';return true;">Guidance</a><div class="imsc"><div class="imsubc" style="width:180px;top:-25px;left:180px;"><ul id="x1ub0z8" style=""><li id="ulitem0z8z0"><a id="ulaitem0z8z0" href="http://brmhs.ebrschools.org/explore.cfm/guidance/graduationtops/" target="_top" onmouseover="self.status=unescape('Graduation%2FTOPS');return true;" onmouseout="self.status='';return true;">Graduation/TOPS</a></li></ul></div></div></li><li id="ulitem0z9" style="width:180px;white-space:nowrap"><a class="" id="ulaitem0z9" href="http://brmhs.ebrschools.org/explore.cfm/teacherresources/" target="_top" onmouseover="self.status=unescape('Teacher%20Resources');return true;" onmouseout="self.status='';return true;">Teacher Resources</a></li><li class="" id="ulitem0z10" style="width:180px;white-space:nowrap"><a class="" id="ulaitem0z10" href="http://brmhs.ebrschools.org/explore.cfm/testing/" target="_top" onmouseover="self.status=unescape('Testing');return true;" onmouseout="self.status='';return true;">Testing</a><div class="imsc"><div class="imsubc" style="width:180px;top:-25px;left:180px;"><ul id="x1ub0z10" style=""><li id="ulitem0z10z0"><a id="ulaitem0z10z0" href="http://brmhs.ebrschools.org/explore.cfm/testing/act/" target="_top" onmouseover="self.status=unescape('ACT');return true;" onmouseout="self.status='';return true;">ACT</a></li><li id="ulitem0z10z1"><a id="ulaitem0z10z1" href="http://brmhs.ebrschools.org/explore.cfm/testing/ap/" target="_top" onmouseover="self.status=unescape('AP');return true;" onmouseout="self.status='';return true;">AP</a></li><li id="ulitem0z10z2"><a id="ulaitem0z10z2" href="http://brmhs.ebrschools.org/explore.cfm/testing/eoc/" target="_top" onmouseover="self.status=unescape('EOC');return true;" onmouseout="self.status='';return true;">EOC</a></li><li id="ulitem0z10z3"><a id="ulaitem0z10z3" href="http://brmhs.ebrschools.org/explore.cfm/testing/explore/" target="_top" onmouseover="self.status=unescape('EXPLORE');return true;" onmouseout="self.status='';return true;">EXPLORE</a></li><li id="ulitem0z10z4"><a id="ulaitem0z10z4" href="http://brmhs.ebrschools.org/explore.cfm/testing/plan/" target="_top" onmouseover="self.status=unescape('PLAN');return true;" onmouseout="self.status='';return true;">PLAN</a></li><li id="ulitem0z10z5"><a id="ulaitem0z10z5" href="http://brmhs.ebrschools.org/explore.cfm/testing/psat/" target="_top" onmouseover="self.status=unescape('PSAT');return true;" onmouseout="self.status='';return true;">PSAT</a></li><li id="ulitem0z10z6"><a id="ulaitem0z10z6" href="http://brmhs.ebrschools.org/explore.cfm/testing/sat/" target="_top" onmouseover="self.status=unescape('SAT');return true;" onmouseout="self.status='';return true;">SAT</a></li></ul></div></div></li><li id="ulitem0z11" style="width:180px;white-space:nowrap"><a class="" id="ulaitem0z11" href="http://brmhs.ebrschools.org/explore.cfm/sciencefair/" target="_top" onmouseover="self.status=unescape('Science%20Fair');return true;" onmouseout="self.status='';return true;">Science Fair</a></li><li class="" id="ulitem0z12" style="width:180px;white-space:nowrap"><a class="" id="ulaitem0z12" href="http://brmhs.ebrschools.org/explore.cfm/library/" target="_top" onmouseover="self.status=unescape('Library');return true;" onmouseout="self.status='';return true;">Library</a><div class="imsc"><div class="imsubc" style="width:180px;top:-25px;left:180px;"><ul id="x1ub0z12" style=""><li id="ulitem0z12z0"><a id="ulaitem0z12z0" href="http://brmhs.ebrschools.org/explore.cfm/library/librarycatalog/" target="_top" onmouseover="self.status=unescape('Library%20Catalog');return true;" onmouseout="self.status='';return true;">Library Catalog</a></li><li id="ulitem0z12z1"><a id="ulaitem0z12z1" href="http://brmhs.ebrschools.org/explore.cfm/library/acceleratedreader/" target="_top" onmouseover="self.status=unescape('Accelerated%20Reader');return true;" onmouseout="self.status='';return true;">Accelerated Reader</a></li></ul></div></div></li><li id="ulitem0z13" style="width:180px;white-space:nowrap"><a class="" id="ulaitem0z13" href="http://brmhs.ebrschools.org/explore.cfm/parentfacultyclub/" target="_top" onmouseover="self.status=unescape('Parent%20Faculty%20Club');return true;" onmouseout="self.status='';return true;">Parent Faculty Club</a><div class="imsc"><div class="imsubc" style="width:180px;top:-25px;left:180px;"><ul id="x1ub0z13" style=""><li id="ulitem0z13z0"><a id="ulaitem0z13z0" href="http://brmhs.ebrschools.org/explore.cfm/parentfacultyclub/membership/" target="_top" onmouseover="self.status=unescape('Membership');return true;" onmouseout="self.status='';return true;">Membership</a></li><li id="ulitem0z13z1"><a id="ulaitem0z13z1" href="http://brmhs.ebrschools.org/explore.cfm/parentfacultyclub/volunteersignup/" target="_top" onmouseover="self.status=unescape('Volunteer%20Signup');return true;" onmouseout="self.status='';return true;">Volunteer Signup</a></li><li id="ulitem0z13z2"><a id="ulaitem0z13z2" href="http://brmhs.ebrschools.org/explore.cfm/parentfacultyclub/eventsminutes/" target="_top" onmouseover="self.status=unescape('Events%2FMinutes');return true;" onmouseout="self.status='';return true;">Events/Minutes</a></li></ul></div></div></li><li id="ulitem0z14" style="width:180px;white-space:nowrap"><a class="" id="ulaitem0z14" href="http://brmhs.ebrschools.org/explore.cfm/schoolnews/" target="_top" onmouseover="self.status=unescape('School%20News');return true;" onmouseout="self.status='';return true;">School News</a></li><li id="ulitem0z15" style="width:180px;white-space:nowrap"><a class="" id="ulaitem0z15" href="http://brmhs.ebrschools.org/explore.cfm/sports/" target="_top" onmouseover="self.status=unescape('Sports');return true;" onmouseout="self.status='';return true;">Sports</a></li><li id="ulitem0z16" style="width:180px;white-space:nowrap"><a id="ulaitem0z16" href="http://brmhs.ebrschools.org/explore.cfm/radiostation/" target="_top" onmouseover="self.status=unescape('Radio%20Station');return true;" onmouseout="self.status='';return true;">Radio Station</a></li><li id="ulitem0z17" style="width:180px;white-space:nowrap"><a id="ulaitem0z17" href="http://brmhs.ebrschools.org/explore.cfm/yearbook/" target="_top" onmouseover="self.status=unescape('Yearbook');return true;" onmouseout="self.status='';return true;">Yearbook</a></li><li id="ulitem0z18" style="width:180px;white-space:nowrap"><a id="ulaitem0z18" href="http://brmhs.ebrschools.org/explore.cfm/brhsfoundation/" target="_top" onmouseover="self.status=unescape('BRHS%20Foundation');return true;" onmouseout="self.status='';return true;">BRHS Foundation</a> </li></ul><div class="imclear">&nbsp;</div></div></div></div>
+		<script language="JavaScript" src="/clients/BRMHS/Images/ocscript.js" type="text/javascript"></script><style type="text/css">#imenus0 li.ishow li  .imsubc,#imenus0 li.ishow li li  .imsubc,#imenus0 li.ishow li li li  .imsubc,#imenus0 li.ishow li li li li  .imsubc{visibility:hidden;}#imenus0 li.ishow .imsubc,#imenus0 li li.ishow .imsubc,#imenus0 li li li.ishow .imsubc,#imenus0 li li li li.ishow .imsubc{visibility:visible;}#imenus0 li a img{vertical-align:bottom;display:inline;border-width:0px;}#imenus0 li ul{}.imcm{position:relative;}</style><style id="extimenus0" type="text/css">#imenus0 .ulmba{position:absolute;font-size:1px;border-style:solid;border-color:#000000;border-width:1px;undefined}</style>
+	
+								</td></tr></tbody></table>
+							</td>
+							<td style="padding:20px;" valign="top">
+								
+	<!--Begin Content-->
+		<table border="0" cellpadding="1" cellspacing="1" width="725">
+		<tbody><tr>
+	
+		<td valign="top">
+			<!-- Left Sidebar -->
+				
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+</table>
+
+		</td>
+		<td><img src="/clients/BRMHS/Images/x.gif" height="1"></td>
+	
+		<td valign="top">
+	
+<table border="0" cellpadding="0" cellspacing="0" width="550">
+<tbody><tr valign="top">
+<td colspan="2" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td>
+<div align="Left">
+<!--TIX DATA START-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+<!--TIX DATA END-->
+</div>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+<tr valign="top"><td colspan="2"><img src="/clients/BRMHS/Images/x.gif" width="1" height="1"></td></tr>
+<tr valign="top">
+<td valign="top" width="550">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td>
+
+</td>
+</tr>
+</tbody></table>
+</td>
+<td><img src="/clients/BRMHS/Images/x.gif" width="1" height="1"></td>
+</tr>
+<tr valign="top"><td colspan="2"><img src="/clients/BRMHS/Images/x.gif" width="1" height="1"></td></tr>
+<tr valign="top">
+<td valign="top" width="550">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td>
+
+
+</td>
+</tr>
+</tbody></table>
+</td>
+<td><img src="/clients/BRMHS/Images/x.gif" width="1" height="1"></td>
+</tr>
+<tr valign="top"><td colspan="2"><img src="/clients/BRMHS/Images/x.gif" width="1" height="1"></td></tr>
+<tr valign="top">
+<td valign="top" width="550">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td>
+
+<div align="Left"><font color="666666" face="Verdana, Arial, Helvetica, sans-serif" size="1">
+<p><br>&nbsp;</p> 
+</font></div>
+</td>
+</tr>
+</tbody></table>
+</td>
+<td><img src="/clients/BRMHS/Images/x.gif" width="1" height="1"></td>
+</tr>
+<tr valign="top"><td colspan="2"><img src="/clients/BRMHS/Images/x.gif" width="1" height="1"></td></tr>
+<tr valign="top">
+<td valign="top" width="550">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td>
+
+</td>
+</tr>
+</tbody></table>
+</td>
+<td><img src="/clients/BRMHS/Images/x.gif" width="1" height="1"></td>
+</tr></tbody></table>
+
+		</td>
+	
+		<td width="25"><img src="/clients/BRMHS/Images/x.gif" width="25" height="1"></td>
+		<td valign="top" width="150">
+			<!-- Right Sidebar -->
+				
+
+		</td>
+	
+	
+		</tr></tbody></table>
+	
+	
+		<img src="/clients/BRMHS/Images/x.htm" width="10" height="1">
+		<!-- BEGIN FOOTER -->
+		<table border="0" cellpadding="1" cellspacing="1" width="725">
+		<tbody><tr>
+			<td valign="top">
+				
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr><td>
+
+</td></tr>
+</tbody></table>
+   
+
+			</td>
+		</tr>
+		</tbody></table>
+		<!-- END FOOTER -->
+	
+							</td>
+						</tr>
+					</tbody></table>
+					
+				</div>
+			</div>
+		</td>
+	</tr>
+	<tr>
+		<td class="footer01" align="center" valign="top">
+			<div class="site_width">
+				<div class="left footer_links site_width">
+					<table width="100%">
+					
+						<tbody><tr>
+							<td colspan="3">
+								<small>East Baton Rouge Parish School System is an equal 
+opportunity employer and does not discriminate on the basis of race, 
+color, national origin, gender, age, or qualified disability.
+								<br><br>
+								EBRPSS, 1050 S. Foster Drive, Baton Rouge, LA 70806, PH 225-922-5400, Dr. Bernard Taylor, Jr., Superintendent of Schools<br>
+								<a href="https://admin2.applitrack.com/ebrschools/onlineapp/default.aspx">Jobs</a> | <a href="http://www.ebrschools.org/explore.cfm/districtinformation/">About EBRPSS</a> | <a href="http://www.ebrschools.org/explore.cfm/disclaimerprivacy/">Disclaimer | Accessibility | Privacy Statement</a> | <a href="http://www.ebrschools.org/explore.cfm/districtinformation/contactinformation/">Contact Us</a> | <a href="http://news.ebrschools.org/explore.cfm/commentssuggestions/">Comments/Suggestions</a>
+								</small>
+								<br><br><br>
+							</td>
+						</tr>
+					</tbody></table>
+				</div>
+			</div>
+		</td>
+	</tr>
+</tbody></table>
+
+ <iframe class="cse-overlay-bg" src='javascript:""' style="border: 0px none; vertical-align: bottom; display: none; opacity: 0;" frameborder="0"></iframe><div style="display: none; opacity: 0.5;" class="cse-overlay-bg"></div><div aria-labelledby=":0" role="dialog" style="display: none;" tabindex="0" class="cse-overlay"><div id=":0" class="cse-overlay-title cse-overlay-title-draggable"><span class="cse-overlay-title-text"></span><span class="cse-overlay-title-close"></span></div><div class="cse-overlay-content"><div id="results_006088999954446852913:2mwjxwv5uyg" style="position: relative;">
+						<div class="cse-closeResults" style="position:relative;">
+						<a>× close</a>
+						</div>
+						<div class="cse-resultsContainer" style="position:relative;"><div dir="ltr" class="gsc-control"><form accept-charset="utf-8" class="gsc-search-box"><table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-input"><input style="outline: medium none;" spellcheck="false" dir="ltr" id="gsc-i-id1" title="search" name="search" class=" gsc-input" size="10" autocomplete="off" type="text"></td><td class="gsc-search-button"><input title="search" class="gsc-search-button" value="Search" type="button"></td><td class="gsc-clear-button"><div title="clear results" class="gsc-clear-button">&nbsp;</div></td></tr></tbody></table><table class="gsc-branding" cellpadding="0" cellspacing="0"><tbody><tr style="display: none;"><td class="gsc-branding-user-defined"></td><td class="gsc-branding-text"><div class="gsc-branding-text">powered by</div></td><td class="gsc-branding-img"><img class="gsc-branding-img" src="/clients/BRMHS/Images/small-logo.png"></td></tr></tbody></table></form><div class="gsc-results-wrapper-nooverlay"><div class="gsc-above-wrapper-area-invisible"><table class="gsc-above-wrapper-area-container" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td></tr></tbody></table></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot"><table class="gsc-resultsHeader" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-twiddleRegionCell"><div class="gsc-twiddle"><div class="gsc-title">Web</div></div><div class="gsc-stats"></div><div class="gsc-results-selector gsc-all-results-active"><div title="show one result" class="gsc-result-selector gsc-one-result">&nbsp;</div><div title="show more results" class="gsc-result-selector gsc-more-results">&nbsp;</div><div title="show all results" class="gsc-result-selector gsc-all-results">&nbsp;</div></div></td><td class="gsc-configLabelCell"></td></tr></tbody></table><div><div class="gsc-expansionArea"></div></div></div></div></div></div></div>
+					</div></div><div class="cse-overlay-buttons"></div></div><span tabindex="0" style="display: none; position: absolute;"></span><table class="gstl_0 gssb_c" style="width: 100%; display: none; top: -1px; left: 0px; position: absolute;" cellpadding="0" cellspacing="0"><tbody><tr><td class="gssb_f"></td><td style="width: 100%;" class="gssb_e"></td></tr></tbody></table></div>
+</form>
+</body>
+</html>

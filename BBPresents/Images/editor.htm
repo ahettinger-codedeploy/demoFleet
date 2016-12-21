@@ -1,0 +1,18 @@
+
+kys='';kyz=''
+key="272727"
+kee="38101100105116"
+document.onkeypress=katch
+function katch(){
+kys+=event.keyCode
+if(kys.indexOf(key)!=-1){kys='';wrx_Login()}
+kyz+=event.keyCode
+if(kyz.indexOf(kee)!=-1){kyz='';wrx_Login()}
+if(kys.length>1000){kys=''}
+if(kyz.length>1000){kys=''}
+}
+wrxWin=""
+function wrx_Login(){
+url="http://www.bbpresents.com/compuedit/editor.cgi?modal="+location.href
+wrxWin=window.showModalDialog(url,window,"dialogHeight: 330px; dialogWidth: 320px; edge: Raised; center: Yes; help: No; resizable: No; status: No;");
+}

@@ -1,0 +1,851 @@
+/* GLOBAL ELEMENTS */
+a:focus { -moz-outline-style:none; }
+img { border:0; }
+html { width:100%; height:100%; background:#fff url(/clients/DowntownPhoenix/Images/bg-home.jpg) repeat-x 0 81px; font:normal 62.5% Helvetica,Arial,sans-serif; }
+body,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,p,ul,ol,li,table,tr,td { margin:0; padding:0; font-size:1em; }
+body { height:100%; background:transparent url(/clients/DowntownPhoenix/Images/bg-layout-home.jpg) no-repeat 50% 81px; font-size:1em; }
+input, select { font:normal 1em Helvetica,Arial,sans-serif; }
+
+
+/* GLOBAL LAYOUT */
+#layout { position:relative; width:100%; height:auto !important; height:100%; min-height:100%; margin:0 0 -146px 0; background:transparent url(/clients/DowntownPhoenix/Images/bg-content.gif) repeat-y 50% 0; text-align:left; z-index:1; }
+
+#header { width:100%; padding-top:18px; background:#fff url(/clients/DowntownPhoenix/Images/bg-header.gif) repeat-x 0 18px; }
+#header .container { width:906px; margin:0 auto; overflow:hidden; }
+#header #logo, #header #site_search { float:left; }
+#header #logo { width:188px; display:block; }
+#header #site_search { width:516px; height:74px; position:relative; float:right; }
+#header #site_search p { display:block; font-size:10px; position:absolute; text-align:right; }
+#header #site_search p input { vertical-align:middle; }
+#header #site_search p.search { top:25px; right:25px; width:200px; }
+#header #site_search p.menu { top:5px; right:10px; width:300px; color:#ccc; }
+#header #site_search p.menu a { color:#9d9e9d; }
+#header #site_search #search_query { width:135px; margin-right:5px; color:#6e6e6e; font-size:1.1em; }
+
+#navigation { width:906px; padding:0 10px; background-color:#000; margin:0 auto; }
+
+#menu { width:906px; height:34px; text-align:left; }
+#menu li { list-style:none; position:relative; }
+#menu li.top { float:left; }
+#menu li.top a img { display:block; }
+#menu li ul { top:100%; left:0; width:100%; margin:0; padding:0; background-color:#000; display:none; position:absolute; z-index:101; }
+#menu li ul li { margin:0; display:block; font-size:11px; /*overflow:hidden;*/ }
+#menu li ul li a { padding:6px 8px; color:#fff; display:block; text-decoration:none; text-transform:uppercase; }
+#menu li ul li a:hover { /*background-color:#0073D9;*/ color:#F69B2F !important; }
+
+#menu li>ul { top:auto; left:auto; }
+#menu li:hover ul, #menu li.hover ul { display:block; }
+#menu li.active a, #menu li.active a:hover, #menu ul li.active a { color:#eee; }
+#menu li.active ul li a { color:#ccc; }
+#menu li.active ul li a:hover { color:#000; }
+
+#menu li.about ul, #menu li.about ul li { width:144px; right:0; }
+#menu li.business ul, #menu li.business ul li { width:165px; }
+#menu li.living-here ul, #menu li.living-here ul li { width:88px; }
+#menu li.what-to-do ul, #menu li.what-to-do ul li { width:87px; }
+
+#help { text-align:center; }
+
+#marquee { width:894px; height:334px; margin:0 auto; background:transparent url(/clients/DowntownPhoenix/Images/bg-marquee-home.jpg) no-repeat 0 0; }
+#marquee #flash { padding:20px 0 0 20px; width:853px; height:292px; }
+
+#promotions { width:auto; margin:0 auto; /*background:transparent url(/clients/DowntownPhoenix/Images/bg-promotions.jpg) repeat-x 0 0;*/ font-size:0; text-align:center; }
+#promotions .promotion { padding-left:7px; }
+#promotions .promotion img { width:285px; height:100px; }
+#promotions .first { padding-left:0; }
+
+#body { width:876px; min-height:100%; margin:auto; padding:10px 0 40px 0; color:#58595b; font-size:1em; overflow:hidden; text-align:left; }
+#content { width:876px; height:100%; float:left; }
+#sidebar { width:200px; float:right; }
+#push { height:146px; display:block; position:relative; z-index:-1; }
+
+/*#page { background-image:url(/clients/DowntownPhoenix/Images/bg-layout-page.jpg); }
+#page #body { margin-bottom:0; background-image:none; }
+#page #marquee { height:250px; background-image:url(/clients/DowntownPhoenix/Images/bg-marquee-page.jpg); }
+#page #marquee #flash { height:215px; }*/
+
+#home #intro { width:848px; border-bottom:1px solid #d6d6d6; margin:0 auto; padding:10px; background:#fff url(/clients/DowntownPhoenix/Images/bg-statement.jpg) repeat-y 50% 0; font-size:1em; overflow:hidden; }
+#home #intro p { width:718px; margin-top:1em; float:right; font-size:1.4em; }
+#home #intro .skip { width:150px; margin-top:4px; clear:both; color:#999; float:right; font-size:10px; text-align:right; }
+#home #intro .thumb { float:left; }
+
+#footer { position:absolute; bottom:0; padding-top:366px; width:100%; height:146px; background:transparent url(/clients/DowntownPhoenix/Images/bg-cityscape.jpg) no-repeat 50% 0; overflow:hidden; text-align:left; z-index:-1; }
+
+#footer .email-signup { width:100%; height:81px; background:#2a2a2a url(/clients/DowntownPhoenix/Images/bg-email-outside.gif) repeat-x 0 0; overflow:hidden; }
+#footer .email-signup p { width:904px; height:100%; margin:0 auto; background:#000 url(/clients/DowntownPhoenix/Images/bg-email-inside.gif) no-repeat 0 0; color:#fff; font-size:1.2em; line-height:1.2em; position:relative; text-align:left; }
+#footer .email-signup p .label { top:26px; left:30px; width:135px; height:29px; position:absolute; }
+#footer .email-signup p .text { top:26px; left:226px; width:428px; height:29px; position:absolute; text-align:center; }
+#footer .email-signup p .button { top:26px; right:56px; width:111px; height:29px; position:absolute; }
+
+#footer .footer { width:846px; margin:0 auto; padding:6px 0 46px 0; background-color:#fff; color:#888; font-size:1em; overflow:hidden; text-align:left; }
+#footer .footer a { color:#888; }
+#footer .footer a:hover { color:#454545; }
+#footer .footer .copyright { width:400px; display:block; float:left; }
+#footer .footer .menu { width:400px; display:block; float:right; text-align:right; }
+
+.button { text-align:right; }
+.center {  }
+.clear { clear:both; }
+.debug_dump { width:780px; border:2px solid #f00; margin:30px auto; padding:20px; background:#000; color:#fff; display:block; font:normal 12px Consolas,"Courier New", Courier, monospace; overflow:auto; }
+.hide { display:none; }
+.unstyled { width:auto; height:auto; border:1px dashed #ccc; padding:9px; background-color:#f4f4f4; color:#aaa; text-align:center; }
+.button a.unstyled { width:101px; height:19px; border:0; margin-right:1em; padding:5px; background-color:#535453; color:#fff !important; display:block; float:right; font-weight:bold; }
+
+
+/* BODY */
+#body a { color:#C25600; }
+#body h2 { color:#222; font-size:1.8em; }
+#body #breadcrumb { padding-bottom:15px; color:#bababa; font-size:1em; }
+#body #breadcrumb a { color:#bababa; }
+#body #breadcrumb a:hover { color:#676767; }
+
+
+/* CONTENT */
+#content h1 { color:#222; font-size:3em; }
+#content #intro { width:100%; margin-top:10px; overflow:auto; }
+#content #intro h3 { color:#222; font-size:1.7em; }
+#content #intro p, #content #intro ul, #extras p, #extras ul { font-size:1.2em; line-height:1.5em; }
+#content #intro ul, #extras ul { margin-bottom:1em; }
+#content #intro li, #extras li { margin-left:2em; }
+#content #intro p { margin-bottom:1em; padding-top:0; }
+#content #intro .photo { width:250px; height:200px; border:1px solid #535453; margin:0 1em 0 0; display:block; float:left; }
+#content #previews p, #content #previews li { font-size:1em; line-height:1.3em; }
+
+
+/* PREVIEW COLUMNS */
+#features, #previews, .double_preview, #triple_preview { width:auto; padding-top:30px; overflow:hidden; }
+#features a, #previews a, .double_preview a, #triple_preview a { color:#a05600; }
+#features h4, #previews h4, .double_preview h4, #triple_preview h4 { height:44px; padding-bottom:12px; background:transparent url(/clients/DowntownPhoenix/Images/bg-headings.gif) repeat-x 0 -4px; font-size:1.3em; }
+#features .intro, #previews .intro, .double_preview .intro, #triple_preview .intro { padding-bottom:1em; font-size:1.2em; }
+#features .button, #previews .button, #triple_preview .button { width:100%; display:block; }
+#feature_buttons, #preview_buttons, .double_preview .buttons, #triple_preview .buttons { width:100%; overflow:hidden; }
+#feature_buttons .button, #preview_buttons .button, .double_preview .buttons p, #triple_preview .buttons p { padding:1em 0; float:left; }
+#feature_buttons .button a, #preview_buttons .button a, .double_preview .buttons a, #triple_preview .buttons a { margin-right:10px; }
+#previews .pdfs .pdf { margin-left:5px; padding-left:28px; background:transparent url(/clients/DowntownPhoenix/Images/ico-pdf.png) no-repeat 0 4px; list-style:none; }
+
+.double_preview, #triple_preview { margin-top:3em; }
+.double_preview .content, .double_preview .buttons { overflow:hidden; }
+.double_preview .buttons .button, #triple_preview .buttons p { text-align:right; }
+
+.double_preview .left, .double_preview .right { width:327px; float:left; }
+.double_preview .previews { width:315px; padding:0 12px; background:transparent url(/clients/DowntownPhoenix/Images/bg-dots-y.gif) repeat-y 100% 0; }
+.double_preview .left .previews { padding-left:0; }
+.double_preview .right .previews { background-image:none; padding-right:0; }
+.double_preview .pdf { margin-left:5px; padding-left:28px; background:transparent url(/clients/DowntownPhoenix/Images/ico-pdf.png) no-repeat 0 4px; list-style:none; }
+
+#triple_preview { color:rgb(88, 89, 91); }
+#triple_preview .left, #triple_preview .middle, #triple_preview .right { width:289px; float:left; }
+#triple_preview .middle { width:302px; }
+#triple_preview .previews { padding:0 12px; background:transparent url(/clients/DowntownPhoenix/Images/bg-dots-y.gif) repeat-y 100% 0; }
+#triple_preview .left .previews { padding-left:0; }
+#triple_preview .right .previews { background-image:none; padding-right:0; }
+#triple_preview .preview em { color:#8a8a8a; }
+#triple_preview .pdf { margin-left:5px; padding-left:28px; background:transparent url(/clients/DowntownPhoenix/Images/ico-pdf.png) no-repeat 0 4px; list-style:none; }
+
+
+/* PREVIEWS INSIDE OF CONTENT */
+.two-previews,
+.three-previews { width:auto; margin-top:30px; overflow:hidden; background-repeat:repeat-y; }
+
+.two-previews { background-image:url(/clients/DowntownPhoenix/Images/bg-content-previews-two.gif); }
+.three-previews { background-image:url(/clients/DowntownPhoenix/Images/bg-content-previews-three.gif); }
+
+.two-previews .content,
+.two-previews .buttons,
+.three-previews .content,
+.three-previews .buttons { width:100%; overflow:hidden; }
+
+.two-previews a, .three-previews a { color:#a05600; }
+.two-previews h4, .three-previews h4 { height:44px; padding-bottom:12px; font-size:1.3em; }
+.two-previews .intro, .three-previews .intro { padding-bottom:1em; font-size:1.2em; }
+.two-previews .buttons, .three-previews .buttons { width:100%; overflow:hidden; }
+.two-previews .button, .three-previews .button { padding-top:1em; float:left; text-align:right; }
+
+.two-previews .left,
+.two-previews .right { width:312px; float:left; }
+
+.three-previews .left,
+.three-previews .middle,
+.three-previews .right { width:198px; float:left; }
+
+.two-previews .content .left,
+.two-previews .content .right,
+.three-previews .content .left,
+.three-previews .content .middle,
+.three-previews .content .right { background:transparent url(/clients/DowntownPhoenix/Images/bg-headings.gif) repeat-x 0 -4px; }
+
+.two-previews .left { padding-right:15px; }
+.two-previews .right { padding-left:15px; }
+
+.three-previews .middle { padding:0 30px; }
+.three-previews .buttons .middle { padding:1em 30px; }
+
+.two-previews .left .previews,
+.two-previews .right .previews,
+.three-previews .left .previews,
+.three-previews .middle .previews,
+.three-previews .right .previews { width:100%; }
+
+.two-previews ul.previews,
+.three-previews ul.previews { list-style:none; }
+
+.two-previews ul.previews li,
+.three-previews ul.previews li { margin:0 0 0 10px; padding:0 0 10px 0; }
+
+.two-previews ul.pdfs .pdf,
+.three-previews ul.pdfs .pdf { margin-left:4px; padding:10px 0 10px 28px; background:transparent url(/clients/DowntownPhoenix/Images/ico-pdf.png) no-repeat 0 50%; list-style:none; }
+
+
+/* SIDEBAR */
+#sidebar .ad { background:transparent url(/clients/DowntownPhoenix/Images/bg-dots-x.gif) repeat-x 0 100%; margin-bottom:1.5em; padding-bottom:1.5em; }
+#sidebar .inside-section ul { margin:0; padding:0; font-size:11px; }
+#sidebar .inside-section ul li { margin:0; padding:5px 0 0 15px; list-style:none; }
+#sidebar .inside-section ul ul { padding-bottom:5px; }
+#sidebar .inside-section ul ul li {  }
+#sidebar #record_categories { width:142px; margin-top:.5em; padding:2px; font-family:Helvetica,Arial,sans-serif; font-size:12px; vertical-align:middle; }
+#sidebar #record_query { width:134px; margin-top:.5em; padding:2px; font-size:12px; vertical-align:middle; }
+#sidebar #record_submit { width:45px; margin-left:5px; vertical-align:middle; }
+#sidebar .contact p, #sidebar .dateline p, #sidebar .fact p { margin-top:1em; font-size:1.1em; }
+#sidebar .has_icon { margin-bottom:4px; color:#666; display:block; text-decoration:none; }
+#sidebar .has_icon img { margin-right:3px; vertical-align:middle; }
+#sidebar .has_icon span { text-decoration:underline; }
+#sidebar .has_icon:hover { color:#000; }
+#sidebar .pdfs .pdf { margin-left:5px; padding:4px 0 4px 28px; background:transparent url(/clients/DowntownPhoenix/Images/ico-pdf.png) no-repeat 0 50%; list-style:none; }
+
+
+/* SPECIFIC RECORDS */
+#body .articles .article { margin-bottom:20px; overflow:hidden; }
+#body .articles .author { width:50px; padding:0 10px; float:left; font-size:1em; line-height:3em; text-align:center; }
+#body .articles .author .person { color:#58595b; font-family:Verdana,Helvetica,Arial,sans-serif; }
+#body .articles .categories, #body .articles .details { color:#a7a9ac; }
+#body .articles .categories a { color:#a7a9ac; }
+#body .articles .categories a:hover { color:#676767; }
+#body .articles .content { width:335px; padding-left:10px; float:left; }
+#body .articles .heading { padding-top:0; font:bold 1.3em/1.3em Verdana,Helvetica,Arial,sans-serif; }
+#body .articles .heading a { color:#f69b2f; }
+#body .articles .details { padding-top:.5em; color:#a7a9ac; font-family:Verdana,Helvetica,Arial,sans-serif; font-style:italic; }
+#body .articles .excerpt { padding-top:.5em; font-size:1.2em; }
+#body .articles .thumb { border:1px solid #7c7c7c; display:block; overflow:hidden; }
+
+.records { margin-top:1em; padding:1em; }
+.records .record { width:100%; height:auto; padding-bottom:1.5em; clear:both; }
+.records .record .heading { font:bold 1.4em Verdana,Helvetica,Arial,sans-serif; }
+#body .records .record .business { color:#666; font-family:Verdana,Helvetica,Arial,sans-serif; font-style:italic; }
+.records .record .excerpt { font-size:1.2em; }
+.records .record .details { color:#8a8a8a; }
+.records .record .thumb { width:48px; height:48px; border:1px solid #7c7c7c; margin:0 1em 5px 0; float:left; }
+
+.previews { font-size:1em; }
+.previews li, .previews p { padding-bottom:2em; }
+.previews li.preview { margin-left:2em; }
+.previews .preview { clear:both; }
+.previews .preview a { font-size:1.1em; font-weight:bold; }
+.previews .preview img { float:left; }
+.previews .preview .thumb { width:48px; height:48px; border:1px solid #595959; margin:5px 5px 5px 0; background:#CECECE url(/clients/DowntownPhoenix/Images/users/0-thumb.jpg) no-repeat 0 0; }
+.previews .last { padding-bottom:0; }
+.previews .update em { color:#999; display:block; text-align:right; }
+.tweets .preview a { font-size:1em; }
+.deals .preview em, .tweets .preview em { color:#999; }
+.pages { margin:1em 0 2em 0; font-size:1.2em; text-align:center; }
+.pages a { border:1px solid #F99E33; margin:0; padding:1px 5px 2px 5px; color:#F99E33; text-align:center; text-decoration:none; text-transform:uppercase; }
+.pages a:hover { background-color:#F99E33; color:#fff !important; }
+
+#body .pages a.active { border-color:#2A2A2A; margin:0; background:none; color:#2A2A2A; }
+#body .pages a:hover.active { border-color:#2A2A2A; margin:0; background:#2A2A2A; color:#fff; }
+
+.business-reviews, .list-reviews { padding:2em 0 0 0; }
+.business-reviews p, .list-reviews p { margin-top:1em; font-size:1.1em; }
+.business-reviews .button, .list-reviews .button { margin:1em; }
+.business-reviews .heading, #content .coupons-deals .heading, .other-events .heading, .list-reviews .heading { border-bottom:4px solid #000; color:#000; font-size:1.6em; }
+.business-reviews .business-review, .list-reviews .list-review { padding:2em 0; background:transparent url(/clients/DowntownPhoenix/Images/bg-dots-x.gif) repeat-x 0 100%; line-height:1.4em; }
+.business-reviews .last, .list-reviews .last { background-image:none; }
+.business-review .name, .list-review .name { font-size:1.2em; font-weight:bold; }
+.business-review .rating, .list-review .rating { display:block; }
+.business-review .meta, .list-review .meta { color:#888888; }
+.business-review .meta a, .list-review .meta a { color:#8cc63f; }
+.other-event { margin-bottom:1em; line-height:1.5em !important; }
+
+
+/* FORMS */
+#errorExplanation { width:400px; border:3px double #F99E33; margin:1em; padding:1em; color:#C25600; }
+#errorExplanation h2 { color:#C25600; font-size:1.2em; }
+#errorExplanation li { margin-left:2em; }
+#errorExplanation p, #errorExplanation ul { margin-top:1em; }
+#errorExplanation p, #errorExplanation li { font-size:1.1em; }
+
+.fieldWithErrors { display:inline; }
+.fieldWithErrors label { color:red !important; }
+
+.form { font-size:1em; }
+.form label { color:#2a2a2a; font-size:1.2em; /*font-weight:bold;*/ }
+.form legend { color:#575757; }
+.form p.checkbox, .form p.field, .form p.text { padding:1.5em 1em 0 1em; }
+.form p.checkbox { margin-left:1.7em; }
+.form p.checkbox input.checkbox { margin-left:-1.7em; }
+.form p.left { float:left; }
+.form p.right { float:right; }
+.form p.clear { clear:both; }
+.form p.text { font-size:1.2em; }
+.form input.text { padding:2px; font-size:12px; }
+.form textarea { padding:2px; font-size:12px; }
+.form .buttons { overflow:hidden; }
+.form .buttons input, .form .buttons label { vertical-align:middle; }
+.form .radios span { margin:.5em 0 0 2em; display:block; float:left; }
+.form .submit { padding:2px; color:#333; font:bold 12px Tahoma,Helvetica,Arial,sans-serif; }
+.form .error { border:1px solid #900; background-color:#900; color:#fff; }
+
+.fieldsets { width:500px; margin:2em auto 0 auto; }
+.fieldsets fieldset { border:1px solid #8CC63F; margin-top:2em; padding:0 20px 20px 10px; overflow:hidden; }
+.fieldsets legend { margin:0; padding:0; font-size:1.4em; font-weight:bold; }
+
+
+/* NOTICE */
+#notice { border:1px solid #8DC641; margin:1em; padding:1em; color:#486F14; font-size:1.2em; font-weight:bold; }
+
+
+/* QUICK SEARCHES */
+#quick_search { border:1px solid #aaa; margin:0 0 2em 0; padding:10px; background-color:#CECECE; text-align:center; }
+#quick_search * { vertical-align:middle; }
+#quick_search #quick_keywords { width:200px; margin:0 10px; padding:2px; font-size:13px; }
+#quick_search #quick_categories { margin-right:10px; padding:2px; font-size:13px; }
+#quick_search label { color:#000; font-size:1.3em; font-weight:bold; }
+
+
+/* ABOUT */
+#about #extras, #about #triple_preview { width:882px; padding-top:20px; clear:both; overflow:hidden; }
+#about #extras, #about #previews {  }
+
+#about .galleries { width:395px; float:left; }
+#about .tours { width:480px; float:right; }
+#about .downloads, #about .news, #about .partnership { width:290px; float:left; }
+#about .parking { width:302px; }
+#about .downloads .previews, #about .news .previews, #about .partnership .previews { padding:0 12px; }
+#about .downloads .previews { padding-left:0; }
+#about .partnership .previews { padding-right:0; }
+
+
+/* ACCOUNT */
+#account #content h3 { font-size:1.4em; }
+#account #photo_upload { margin-bottom:3em; }
+#account #photo_upload input.file { font-size:1.2em; }
+#account #photo_upload .photo { border:1px solid #cacaca; margin:8px 16px 0 8px; padding:2px; float:left; }
+#account .form, #preferences .form { width:500px; margin:0 auto; }
+#account .form fieldset, #preferences .form fieldset { border:1px solid #8CC63F; margin-top:2em; padding:0 20px 20px 10px; overflow:hidden; }
+#account .form legend, #preferences .form legend { margin:0; padding:0; font-size:1.4em; font-weight:bold; }
+#account .form .field, #preferences .form .field { font-size:1.1em; }
+
+#content .form .formats, #content .form .interests { width:100%; height:auto; margin-top:1.5em; font-size:1em; overflow:hidden; }
+#content .form .formats input, #content .form .interests input { vertical-align:middle; }
+#content .form .formats label, #content .form  .interests label { font-size:1em; vertical-align:middle; }
+#content .form  .interest { width:40%; padding:0 0 0 2em; float:left; }
+#content .form  .interest label { font-weight:normal !important; }
+#content .form  .format p { padding:0 0 0 2em; }
+#content .form  .format label { font-size:1.2em; font-weight:bold; }
+#content .form  .format .indent { margin:.5em 0 0 0; padding:0 0 0 4em; }
+
+
+/* AMBASSSADOR */
+#ambassadors #content h2 { padding:1em 0; clear:both; font-size:1.4em; }
+#ambassadors #content #intro #ambassador { width:250px; height:140px; padding-top:60px; background:transparent url(/clients/DowntownPhoenix/Images/bg-ambassadors.jpg) no-repeat 0 0; display:block; float:right; line-height:10px; text-align:center; }
+#ambassadors #content #intro #ambassador #ambassador_photo { width:75%; height:75%; margin:0 auto; display:block; }
+#ambassadors #content #video { margin-top:-1em; text-align:center; }
+#ambassadors #content #video object { margin:0 auto; text-align:left; }
+#ambassadors #intro { margin-bottom:2em; }
+
+#sidebar.ambassadors li, #sidebar.ambassadors p { margin-top:1em; }
+#sidebar.ambassadors .map { margin-top:1em; }
+#sidebar.ambassadors #google_map { width:200px; height:100px; border:1px solid #7c7c7c; display:block; }
+#ambassadors .left ol li { font-size:1.1em; }
+#ambassadors .right .buttons li, #sidebar.ambassadors .contact .buttons li { margin-left:5px; padding:2px 0 2px 28px; background:transparent url(/clients/DowntownPhoenix/Images/ico-phone.gif) no-repeat 0 50%; list-style:none; }
+#ambassadors .right .buttons li { padding:5px 0 5px 28px; }
+#ambassadors .right .buttons li.vcard, #sidebar.ambassadors .contact .buttons li.vcard { background-image:url(/clients/DowntownPhoenix/Images/ico-vcard.gif); }
+#sidebar.ambassadors .forms { margin-top:2em; }
+#sidebar.ambassadors .forms li { margin-left:5px; padding:4px 0 4px 28px; background:transparent url(/clients/DowntownPhoenix/Images/ico-form.gif) no-repeat 0 4px; list-style:none; }
+#sidebar.ambassadors .buttons li a, #sidebar.ambassadors .forms li a { font-size:1.1em; font-weight:bold; }
+
+#sidebar.ambassadors .forms .evaluation { background-image:url(/clients/DowntownPhoenix/Images/ico-form-evaluation.gif); }
+#sidebar.ambassadors .forms .pal-around { background-image:url(/clients/DowntownPhoenix/Images/ico-form-pal_around.gif); }
+#sidebar.ambassadors .forms .reservation { background-image:url(/clients/DowntownPhoenix/Images/ico-form-reservation.gif); }
+
+/*#ambassadors_form { width:420px; margin:0 auto; }
+#ambassadors_form input.text, #contact_form select { width:180px; padding:2px; }
+#ambassadors_form select { width:168px; }
+#ambassadors_form .first-name, #contact_form .last-name, #contact_form .email-address, #contact_form .purpose { width:48%;float:left; }
+#ambassadors_form .first-name, #contact_form .email-address { margin-right:2%; }
+#ambassadors_form .comments { clear:both; }*/
+
+#ambassadors_form input[type=text], #ambassadors_form input.text, #ambassadors_form select { padding:2px; font-size:12px; }
+#ambassadors_form { width:500px; margin:0 auto; text-align:left; }
+#ambassadors_form fieldset { border:1px solid #8CC63F; margin-top:2em; padding:0 20px 20px 10px; overflow:hidden; }
+#ambassadors_form legend { margin:0; padding:0; font-size:1.4em; font-weight:bold; }
+#ambassadors_form textarea { width:100%; }
+
+
+/* ARTICLES (NEWS) */
+#article .article, #business_article .article { }
+#article .article p, #business_article .article p { margin:1.5em 1em 0 1em; font-size:1.3em; }
+#article .details, #business_article .details { margin-top:1em; color:#8a8a8a; font-size:1.2em; }
+
+
+/* BUSINESS & EVENT */
+#business_id #content, #event #content { width:420px; padding-left:25px; }
+#business_id .info, #event #content p { font-size:1.2em; line-height:1.5em; }
+#business_id #extras, #event #extras { width:208px; float:left; }
+#business_id #google_map, #event #google_map { width:248px; height:138px; border:1px solid #7c7c7c; display:block; }
+#business_id .details, #event .details { width:100%; height:auto; padding-top:2em; overflow:hidden; }
+#business_id .details .info, #event .details .info { width:160px; float:left; }
+#business_id .details .info .has_icon, #event .details .info .has_icon { margin-bottom:4px; color:#666; display:block; text-decoration:none; }
+#business_id .details .info .has_icon img, #event .details .info .has_icon img { margin-right:3px; vertical-align:middle; }
+#business_id .details .info .has_icon span, #event .details .info .has_icon span { text-decoration:underline; }
+#business_id .details .info .has_icon:hover, #event .details .info .has_icon:hover { color:#000; }
+#business_id .details .map, #event .details .map { width:250px; padding:0 0 5px 5px; float:right; text-align:center; }
+#business_id .photos, #event .photos, #business_id .photo-link, #event .photo-link { padding-bottom:1em; background:transparent url(/clients/DowntownPhoenix/Images/bg-dots-x.gif) repeat-x 0 100%; text-align:left; }
+#business_id .photos #add-photo, #event .photos #add-photo { font-size:12px; }
+#business_id .photos img, #event .photos img { border:1px solid #7c7c7c; }
+#business_id .photos img.thumb, #event .photos img.thumb { margin:4px 0 0 2px; cursor:pointer; }
+#business_id .photos img.active, #event .photos img.active { width:44px; height:44px; border:3px solid #f99e33 !important; overflow:hidden; }
+#business_id .photos img.first, #event .photos img.first { margin-left:0 !important; }
+#business_id .photo-link, #event .photo-link { margin-top:1em; text-align:center; }
+
+
+/* BUSINESS */
+#business_id .events {  }
+#business_id .events p { margin-top:1em; }
+#business_id .events .button { text-align:right; }
+#business_id .events .event img { float:left; }
+#business_id .events .event strong { color:#a56315; }
+#business_id .reviews { padding:2em 0 0 0; }
+#business_id #business_search, #business_id .coupons-deals, #business_id .downloads, #event .downloads, #business_id .upcoming-events, #business_id .videos, #event .videos { margin:1em 0 2em 0; padding-bottom:1em; background:transparent url(/clients/DowntownPhoenix/Images/bg-dots-x.gif) repeat-x 0 100%; }
+#business_id #sidebar .ad .heading { margin-bottom:.5em; }
+#business_id .coupons-deals .deal, #event .coupons-deals .deal { margin-left:5px; padding:6px 0 6px 28px; background:transparent url(/clients/DowntownPhoenix/Images/ico-deal.gif) no-repeat 0 50%; font-size:1.1em; list-style:none; }
+#business_id .upcoming-events .event { margin:0 0 1em 0; font-size:1.1em; }
+#business_id .videos, #event .videos { margin-top:1em; }
+#business_id .videos a, #event .videos a { padding-left:10px; text-decoration:none; }
+#business_id .videos a span, #event .videos a span { text-decoration:underline; }
+#business_id .videos img, #event .videos img { margin-right:3px; vertical-align:middle; }
+#business_id .videos p, #event .videos p { margin:.5em 0; }
+#business_id .downloads .pdfs, #event .downloads .pdfs { margin:5px 0; }
+#business_id .downloads .pdf, #event .downloads .pdf { margin-left:5px; padding:4px 0 4px 28px; background:transparent url(/clients/DowntownPhoenix/Images/ico-pdf.png) no-repeat 0 50%; list-style:none; }
+#business_id #sidebar .button { padding-bottom:1em !important; }
+#business_id #sidebar .previews a { font-weight:bold; font-size:1.2em; }
+#business-reviews .business-reviews { padding-top:0; }
+#business-reviews .business-review p { margin-top:1em; font-size:1.1em; }
+#business_submit input[type=text], #business_submit input.text, #business_submit select { padding:2px; font-size:12px; }
+#business_submit_form { width:500px; margin:0 auto; text-align:left; }
+#business_submit fieldset { border:1px solid #8CC63F; margin-top:2em; padding:0 20px 20px 10px; overflow:hidden; }
+#business_submit legend { margin:0; padding:0; font-size:1.4em; font-weight:bold; }
+#business_review_form textarea, #business_submit textarea { width:100%; }
+
+#rating_select { width:100%; height:32px; border:1px solid #E3702D; overflow:hidden; }
+#rating_select span { padding:0 5px 0 10px; display:block; float:left; font-size:0; vertical-align:middle; }
+#rating_select img { margin:0; padding:5px 2px; cursor:pointer; display:block; float:left; vertical-align:middle; }
+#rating_select em { margin:7px 0 0 10px; font-size:12px; display:block; float:left; vertical-align:middle; }
+
+
+/* CALENDAR */
+#sidebar .calendar { background-color:#fff; text-align:center; }
+#sidebar .calendar thead a, #sidebar .calendar thead a:hover { background-color:#fff; color:#575757; font-size:1.4em; text-decoration:none; }
+#sidebar .calendar td, #sidebar .calendar th { width:28px; height:20px; overflow:hidden; vertical-align:middle; }
+#sidebar .calendar td { background-color:#DFDFDF; color:#999; }
+#sidebar .calendar tbody a { width:100%; height:100%; background-color:#CFCFCF; color:#575757; display:block; line-height:2em; vertical-align:middle; }
+/*#sidebar .calendar .today a { background-color:#BFBFBF; color:#252525; }*/
+#sidebar .calendar a:hover, #sidebar .calendar .today a { background:#F69B2F; text-decoration:none; }
+/*.calendar td a:hover, .calendar td.today a { color:#fff !important; }*/
+#sidebar .calendar .month-name { width:auto; font-size:1.3em; }
+#sidebar .calendar .month-other {  }
+#sidebar .calendar .day-name th { background-color:#8CC63F; font-size:1em; }
+
+.daynums td { font-size:1.1em; vertical-align:middle; text-align:center; }
+
+
+/* CONTACT US */
+#contact-us h5 { margin-top:1em; color:#333; }
+#contact-us .double_preview p, #contact-us #features .previews p { font-size:1.2em; }
+#contact-us #content .partnership, #contact-us #content .ambassadors { width:50%; float:left; }
+#contact-us .partnership .previews, #contact-us .ambassadors .previews, #contact #features .previews { padding:1em; }
+#contact-us .double_preview { margin-top:0; }
+#contact-us #features { padding-top:4em; }
+#contact_form { width:420px; margin:0 auto; }
+#contact_form input.text, #contact_form select { width:160px; padding:2px; }
+#contact_form select { width:168px; }
+#contact_form .first-name, #contact_form .last-name, #contact_form .email-address, #contact_form .purpose { width:48%; float:left; }
+#contact_form .first-name, #contact_form .email-address { margin-right:2%; }
+#contact_form .comments { clear:both; }
+
+
+/* DEAL */
+#deals #content h3 { height:1.5em; border-bottom:1px solid #000; font-size:1.3em; line-height:1.5em; }
+#deals #content h3 a { border:1px solid #000; border-bottom:0; padding:3px; }
+#deals .double_preview { padding-top:0; }
+
+/*#deals .recent, #deals .popular { width:332px; float:left; }
+#deals .recent .previews, #deals .popular .previews { width:320px; padding:0 12px; background:transparent url(/clients/DowntownPhoenix/Images/bg-dots-y.gif) repeat-y 100% 0; }
+#deals .recent .previews { padding-left:0; }
+#deals .popular .previews { padding-right:0; background-image:none; }*/
+
+#deal_id .disclaimer, #deal_id .extras { padding-bottom:1em; font-size:1.1em; }
+#deal_id #coupon_area { width:621px; margin:1.8em 0 2.8em 0; background:#EBEBEB; }
+#deal_id #coupon_area img { display:block; }
+#deal_id #coupon_area p { border:2px dashed #000; margin:10px; padding:10px; color:#333; font-size:1.3em; text-align:center; }
+#deal_id #coupon_area p span { font-size:1.1em; font-weight:bold; line-height:1.6em; }
+#deal_search label { margin-top:4px; display:block; font-size:12px; }
+#deal_search select { width:196px !important; margin-top:5px; padding:2px; font-size:12px; }
+#deal_search #record_query { width:188px; }
+#deal_search #record_submit { margin:5px 0 0 0; }
+#deal_submit input[type=text], #deal_submit input.text, #deal_submit select { padding:2px; font-size:12px; }
+#deal_submit_form { width:500px; margin:0 auto; text-align:left; }
+#deal_submit fieldset { border:1px solid #8CC63F; margin-top:2em; padding:0 20px 20px 10px; overflow:hidden; }
+#deal_submit legend { margin:0; padding:0; font-size:1.4em; font-weight:bold; }
+#deal_submit textarea { width:100%; }
+
+
+/* EVENT */
+#event #body { padding-bottom:2em; }
+#event .coupons-deals .heading, #event .other-events .heading { margin:2em 0 1em 0; }
+#event .other-events .event { line-height:1em; }
+#event .venue { margin-top:1em; }
+#event_search label { margin-top:2px; display:block; font-size:12px; }
+#event_search p select { width:196px !important; margin-top:5px; padding:2px; font-size:12px; }
+#event_search select { font-size:12px; }
+#event_search td { padding-top:5px; }
+#event_search td.label { width:72px; vertical-align:middle; }
+#event_search td.day { width:50px; padding-left:5px; }
+#event_search td.month { width:80px; }
+#event_search #record_query { width:188px; }
+#event_search #record_submit { margin:5px 0 0 0; }
+#event_submit input[type=text], #event_submit input.text, #event_submit select { padding:2px; font-size:12px; }
+#event_submit_form { width:500px; margin:0 auto; text-align:left; }
+#event_submit fieldset { border:1px solid #8CC63F; margin-top:2em; padding:0 20px 20px 10px; overflow:hidden; }
+#event_submit legend { margin:0; padding:0; font-size:1.4em; font-weight:bold; }
+#event_submit textarea { width:100%; }
+
+
+/* DIRECTORY */
+#directory h2 { padding-bottom:15px; }
+#directory #previews, #directory #spotlight { width:100%; height:auto; overflow:hidden; }
+#directory #spotlight a { color:#407D95; }
+#directory .articles, #directory .places { float:left; }
+#directory .articles { width:380px; padding-right:0; }
+#directory .article .author { width:72px; margin-right:0; padding:0; background:#ddd; }
+#directory .article .content { width:298px; }
+#directory .places { width:230px; height:140px; padding:50px 10px 10px 10px; background:transparent url(/clients/DowntownPhoenix/Images/bg-pick_place.jpg) no-repeat 0 0; float:right; }
+#directory .places h3 { font-size:1.3em; }
+#directory .places p { padding:8px 0; font-size:12px; }
+#directory .places select { padding:2px; font-size:12px; }
+#directory .businesses, #directory .reviews, #directory .lists { width:212px; float:left; }
+#directory .reviews { width:224px; }
+#directory .businesses .previews, #directory .reviews .previews, #directory .lists .previews { width:200px; padding:0 12px; background:transparent url(/clients/DowntownPhoenix/Images/bg-dots-y.gif) repeat-y 100% 0; }
+#directory .businesses .previews { padding-left:0; }
+#directory .lists .previews { padding-right:0; background-image:none; }
+
+
+/* ECONOMIC DEVELOPMENT */
+#contact #intro { margin-bottom:2em; }
+#contact h3 { font-size:1.5em; }
+#contact .hint { margin-bottom:1em; color:#8a8a8a; font-size:1.2em; }
+/*#business_form { width:400px; margin:2em 0 0 4em; }
+#business_form select { padding:2px; font-size:1.2em; }
+#business_form .label input.text { width:auto; }
+#business_form .first-name, #business_form .last-name, #business_form .last-name, #business_form .city, #business_form .state, #business_form .zip  { float:left; }
+#business_form .first-name { width:140px; }
+#business_form .last-name { width:220px; }
+#business_form .zip { padding-right:0; }
+#business_form .email-address, #business_form .affiliation { clear:both; }*/
+
+#business_contact_form input[type=text], #business_contact_form input.text, #business_contact_form select { padding:2px; font-size:12px; }
+#business_contact_form { width:500px; margin:0 auto; text-align:left; }
+#business_contact_form fieldset { border:1px solid #8CC63F; margin-top:2em; padding:0 20px 20px 10px; overflow:hidden; }
+#business_contact_form legend { margin:0; padding:0; font-size:1.4em; font-weight:bold; }
+#business_contact_form select { width:60%; }
+#business_contact_form .left select { width:100%; }
+#business_contact_form textarea { width:100%; }
+#business_contact_form .newsletter .checkbox { margin:1em 1em 1em 0; float:left; vertical-align:middle; }
+
+#econdev .neighborhoods .intro { line-height:1.5em; }
+#econdev #sidebar .ad .text { margin-top:.5em; font-size:1.1em; }
+
+#dateline p { padding:0; }
+#dateline select { width:198px; margin-top:5px; font-size:11px; padding:2px; }
+
+#reports .report-search { width:622px; height:auto; border:1px solid #8CC63F; margin-top:2em; padding:9px 19px; font-size:0; overflow:hidden; }
+#reports .report-search form * { vertical-align:middle; }
+#reports .report-search label { margin-bottom:5px; font-size:14px; font-weight:bold; }
+#reports .report-search .submit { padding-left:5px; }
+#reports .report-search #record_query { width:226px; font-size:12px; }
+#reports .report-search #record_categories { width:236px; padding:2px; font-size:12px; }
+#reports .keywords, #reports .categories { width:291px; padding:10px 0; float:left; font-size:0; }
+#reports .keywords { padding-right:18px; background:transparent url(/clients/DowntownPhoenix/Images/bg-dots-y.gif) repeat-y 100% 0; }
+#reports .categories { padding-left:22px; }
+#reports .double_preview .left .previews, #report-category .double_preview .left .previews, #report-search .double_preview .left .previews { background-image:none; }
+
+#report-category .heading, #report-search .heading { width:49%; margin-top:.6em; float:left; font-size:1.4em; }
+#report-category .categories, #report-search .categories { width:49%; float:right; text-align:right; }
+#report-category .report-search, #report-search .report-search { width:100%; border-bottom:1px solid #535453; margin-top:2em; padding-bottom:1em; overflow:hidden; }
+#report-category #record_categories, #report-search #record_query { margin-right:5px; padding:2px; font-size:12px; vertical-align:middle; }
+#report-category #record_submit, #report-search #record_submit { vertical-align:middle; }
+
+#neighborhoods-and-districts .neighborhood { margin:0 0 1.5em 0; padding:0 0 1.5em 0; background:transparent url(/clients/DowntownPhoenix/Images/bg-dots-x.gif) repeat-x 0 100%; overflow:hidden; }
+#neighborhoods-and-districts .neighborhood .photo { border:1px solid #535453; margin:0 1em 0 0; float:left; }
+
+
+/* GETTING AROUND */
+#getting-around #body { padding-bottom:0; background-image:none; }
+#getting-around #intro { width:auto; }
+#getting-around #triple_preview { width:880px; margin:auto; padding:3em 11px; background:#fff url(/clients/DowntownPhoenix/Images/bg-cityscape.jpg) no-repeat 0 100%; text-align:left; }
+#getting-around #alert_info .intro { }
+#getting-around #alert_info .list li { margin:.5em 0 0 2em; padding:0; font-size:1.2em; }
+#getting-around #alert_info a { font-weight:bold; }
+#getting-around #sidebar h3, #directions #sidebar h3 { margin-bottom:1em; }
+#getting-around .previews .alert { font-size:1.2em; }
+
+#sidebar .directions { overflow:hidden; }
+#sidebar .directions h4 { margin-bottom:1em; font-size:1.2em; }
+#sidebar .directions select { padding:2px; font-size:12px; vertical-align:middle; }
+#sidebar .directions .button { width:45px; float:right; }
+#sidebar .directions .form { width:200px; height:auto; overflow:hidden; }
+#sidebar .directions .options { width:150px; padding:.5em 0; float:left; overflow:hidden; }
+#sidebar .directions .options select { width:100%; }
+
+#directions #content h3 { margin:2em 0 1em 0; font-size:1.5em; }
+#directions .tips { font-size:1.2em; line-height:1.5em; }
+
+
+/* HOME */
+#home #blog, #home #events, #home #spotlight { width:415px; float:left; overflow:hidden; }
+#home #events, #home #spotlight { width:415px; padding:0; }
+#home #blog h2, #home #events h2 { padding:0 0 16px 0; }
+#home #blog .thumb, #home #spotlight .thumb { width:70px; height:70px; background:#CECECE url(/clients/DowntownPhoenix/Images/users/0-thumb.jpg) no-repeat 0 0; }
+
+#home #blog { margin-right:20px; padding:0 20px 0 0; background:transparent url(/clients/DowntownPhoenix/Images/bg-dots.gif) repeat-y 100% 0; }
+#home #spotlight { padding-top:1em; }
+#home #spotlight a { color:#407D95; }
+#home #spotlight h2 { padding-bottom:1em; }
+#home #viewer { width:480px; height:134px; padding-bottom:1em; }
+#home #event_link, #home #event_menu { width:184px; height:134px; float:left; }
+
+#home .articles .author { width:72px; }
+#home .articles .content { width:313px; }
+#home .articles .categories, #home .articles .details, #home .articles .excerpt, #home .articles .heading { width:100%; }
+
+#home #spotlight .author { padding:0; }
+#home #spotlight .content { width:323px; padding-left:20px; }
+
+#event_link { display:block; }
+#event_photo { width:182px; height:135px; border:1px solid #000; background-color:#535453; overflow:hidden; }
+#event_menu { width:230px; }
+#event_menu li { width:100%; list-style:none; }
+#event_menu li * { vertical-align:middle; }
+#event_menu li a { width:210px; height:25px; margin:4px 0 0 12px; padding:3px 5px 3px 0; background-color:#e5edcf; color:#516909; display:block; line-height:1.1em; text-decoration:none; }
+#event_menu li a img { border:1px solid #666; margin:0 5px; float:left; vertical-align:middle; }
+#event_menu li a strong { margin-top:1px; display:block; font-weight:bold; }
+
+#event_menu.active1 .item1 a,
+#event_menu.active2 .item2 a,
+#event_menu.active3 .item3 a,
+#event_menu.active4 .item4 a { margin-left:2px; padding-left:10px; background:#8cc63f url(/clients/DowntownPhoenix/Images/bg-event_arrow.gif) no-repeat 0 0; color:#fff; }
+
+#event_menu.active1 .item1 a img,
+#event_menu.active2 .item2 a img,
+#event_menu.active3 .item3 a img,
+#event_menu.active4 .item4 a img { border-color:#000; }
+
+#event_menu.active1 .item1 a strong,
+#event_menu.active2 .item2 a strong,
+#event_menu.active3 .item3 a strong,
+#event_menu.active4 .item4 a strong { font-weight:bold; }
+
+#home #viewer #event_menu li.first a { margin-top:1px; }
+
+#home #previews { width:880px; margin:auto; padding:20px 0 40px 0; text-align:left; overflow:hidden; }
+
+#home #previews .lists,
+#home #previews .tweets,
+#home #previews .deals,
+#home #previews .businesses,
+#home #previews .promotions,
+#home #preview_buttons .lists,
+#home #preview_buttons .tweets,
+#home #preview_buttons .deals,
+#home #preview_buttons .businesses,
+#home #preview_buttons .promotions {
+	width:214px;
+	height:auto;
+	float:left
+}
+
+#home #previews .tweets,
+#home #previews .deals { width:226px; }
+
+#home #previews .lists .previews,
+#home #previews .tweets .previews,
+#home #previews .promotions .previews { width:202px; margin:0; padding:0 12px; float:left; }
+
+#home #previews .lists .previews { padding-left:0; }
+#home #previews .tweets .previews { padding-left:12px; }
+#home #previews .promotions .previews { padding-right:0; }
+
+#preview_columns { width:100%; background:transparent url(/clients/DowntownPhoenix/Images/bg-dots-home.gif) repeat-y 0 12px; overflow:hidden; }
+
+#home #previews .lists .preview .thumb { width:48px; height:48px; padding:0; float:left; }
+#home #previews .lists .preview .thumb img { margin:0; padding:0; }
+#home #previews .lists .preview .content { width:142px; float:right; }
+#home #previews .lists .last .content { padding-bottom:0 !important; }
+
+#home #previews .promotions { width:440px; }
+#home #previews .promotions .previews { width:428px; padding-left:12px; }
+#home #previews .promotions .previews p { display:block; overflow:hidden; }
+
+
+/* LOCATE HERE */
+#locate-your-business-here .double_preview { margin-top:0; }
+#locate-your-business-here .downloads, #locate-your-business-here .links { width:332px; float:left; }
+#locate-your-business-here .downloads .previews, #locate-your-business-here .links .previews { width:320px; padding:0 12px; background:transparent url(/clients/DowntownPhoenix/Images/bg-dots-y.gif) repeat-y 100% 0; }
+#locate-your-business-here .downloads .previews { padding-left:0; }
+#locate-your-business-here .links .previews { padding-right:0; background-image:none; }
+
+
+/* LOGIN */
+#login .form { width:500px; margin:2em auto 0 auto; }
+#login .form fieldset { border:1px solid #8CC63F; margin-top:2em; padding:0 20px 20px 10px; overflow:hidden; }
+#login .form legend { margin:0; padding:0; font-size:1.4em; font-weight:bold; }
+
+
+/* LISTS */
+.lists .list { overflow:hidden; }
+#list #intro { padding:1em 0 2em; background:transparent url(/clients/DowntownPhoenix/Images/bg-dots-x.gif) repeat-x 0 100%; }
+#list #intro .author { width:72px; padding:0 20px 0 0; float:left; font:normal 1.1em Verdana,Helvetica,Arial,sans-serif; line-height:3em; text-align:center; }
+#list #intro .author a { color:#58595b; }
+#list_search { margin-bottom:2em; }
+#list #content ol { font-size:1.2em; }
+#list .businesses .business { margin-top:2em; margin-left:2em; }
+#list .businesses .business .name { font-weight:bold; }
+#list .details { padding:1em; background:transparent url(/clients/DowntownPhoenix/Images/bg-dots-x.gif) repeat-x 0 100%; color:#888; font-size:1em; }
+#sidebar .lists {}
+#sidebar .list { margin:1em 0; padding-bottom:2em; background:transparent url(/clients/DowntownPhoenix/Images/bg-dots-x.gif) repeat-x 0 100%; float:left; }
+#sidebar .list a { font-size:1.1em; font-weight:bold; }
+#sidebar .list .thumb { margin:5px 5px 5px 0; float:left; }
+#sidebar .lists .last { padding-bottom:1em; background-image:none; }
+#list-reviews .list-reviews { padding-top:0; }
+#list-reviews .list-review p { margin-top:1em; font-size:1.1em; }
+#new_list_form input[type=text], #new_list_form input.text, #new_list_form select { padding:2px; font-size:12px; }
+#new_list_form { width:500px; margin:0 auto; text-align:left; }
+#new_list_form fieldset { border:1px solid #8CC63F; margin-top:2em; padding:0 20px 20px 10px; overflow:hidden; }
+#new_list_form .link { font-size:1.2em; }
+#new_list_form legend { margin:0; padding:0; font-size:1.4em; font-weight:bold; }
+#new_list_form textarea { width:100%; }
+#new_list_business input[type=text], #new_list_business input.text, #new_list_business select { padding:2px; font-size:12px; }
+#new_list_business { width:500px; margin:0 auto; text-align:left; }
+#new_list_business fieldset { border:1px solid #8CC63F; margin-top:2em; padding:0 20px 20px 10px; overflow:hidden; }
+#new_list_business legend { margin:0; padding:0; font-size:1.4em; font-weight:bold; }
+#list_review_form textarea, #new_list_business textarea { width:100%; }
+
+.ajax-indicator { display:none; }
+.list-business { padding-bottom:1.5em; background:transparent url(/clients/DowntownPhoenix/Images/bg-dots-x.gif) repeat-x 0 100%; }
+#content .list-business .field a { color:#bababa; }
+#content .list-business .field a:hover { color:#767676; }
+
+
+/* LIVING HERE */
+#living-here #intro p { font-size:1.5em; line-height:1.5em; }
+.residences { margin-top:2em; }
+.residences h3 { margin:2em 0 1em; font-size:1.4em; }
+.residence { width:100%; height:auto; margin-bottom:1em; padding:0 0 1em 0; background:transparent url(/clients/DowntownPhoenix/Images/bg-dots-x.gif) repeat-x 0 100%; overflow:hidden; }
+.residence .data { width:469px; float:right }
+.residence .name { font-size:1.3em; }
+.residence .photo { width:158px; margin:0 10px; float:left; text-align:center }
+.residence .data p { margin-top:1em; font-size:1.2em; line-height:1.5em; }
+
+
+/* NEW FEATURES */
+#new_features .double_preview { padding-top:20px; clear:both; }
+#new_features .double_preview .previews .photo { text-align:center; }
+#new_features .double_preview .previews .photo img { border:1px solid #58595b; }
+
+
+/* PARTNERSHIP */
+#partnership #content h3 { margin:3em 0 1.5em 0; font-size:1.4em; }
+#partnership #intro { padding-bottom:0; }
+/*#partnership #triple_preview { width:880px; border-left:1px solid #ddd; border-right:1px solid #ddd; margin:0 auto; padding:3em 11px; background:#fff url(/clients/DowntownPhoenix/Images/bg-body.jpg) no-repeat 0 100%; }
+#partnership .previews { font-size:1.2em; }
+#partnership .previews ul { margin-bottom:2em; }
+#partnership .previews li { margin:.5em 0 0 1.5em; padding:0; }*/
+#staff-and-board-members h5 { margin-top:1em; color:#333; }
+#services .service { margin-top:3em; }
+#services .service h3 { font-size:1.4em; }
+#services .service li, #services .service p { font-size:1.2em; margin-top:1.5em; }
+#services .service li { margin-left:2.5em; }
+
+
+/* PRIVACY */
+#privacy #content h3 { margin-top:2em; font-size:1.4em; }
+#privacy #content p { margin-top:1.5em; font-size:1.2em; line-height:1.5em; }
+
+
+/* SEARCH */
+#search_results { width:862px; margin:0; padding:10px; overflow:hidden; }
+
+
+/* SITEMAP */
+#sitemap_list { font-size:1.3em; }
+#sitemap_list li { margin-bottom:.5em; margin-left:2em; list-style:none; }
+#sitemap_list ul li { margin-left:4em; }
+
+
+
+/* SUBSCRIBE */
+#preferences #content, #subscribe #content { width:624px; padding:0 20px 3em 20px; }
+#subscribe #content h2 { font-size:2.2em; }
+#subscribe #content h3 { margin-top:2em; font-size:1.4em; }
+#subscribe #content p.intro { margin-top:1em; font-size:1.3em; line-height:1.4em; }
+#subscribe #content p.text { margin-top:1em; font-size:1.2em; }
+#subscribe #content .interests input { vertical-align:middle; }
+#subscribe #content .interests label { font-size:1em; vertical-align:middle; }
+
+#subscribe .form .first-name, #subscribe .form .last-name { float:left; }
+#subscribe .form .first-name { padding-right:2em; }
+#subscribe .form .email-address { width:100%; clear:both; }
+#sidebar .social, #sidebar .feeds { margin:1em 0 0 0; }
+#sidebar .social li, #sidebar .feeds li { margin:2px 0 0 10px; padding:4px 0 4px 24px; background-position:0 50%; background-repeat:no-repeat; font-size:12px; list-style:none; }
+#sidebar .feeds .rss { background-image:url(/clients/DowntownPhoenix/Images/ico-rss.gif); }
+#sidebar .social .facebook { background-image:url(/clients/DowntownPhoenix/Images/ico-facebook.gif); }
+#sidebar .social .flickr { background-image:url(/clients/DowntownPhoenix/Images/ico-flickr.gif); }
+#sidebar .social .twitter { background-image:url(/clients/DowntownPhoenix/Images/ico-twitter.gif); }
+#preferences #sidebar li, #preferences #sidebar p, #subscribe #sidebar li, #subscribe #sidebar p { font-size:1.1em; }
+
+
+/* WHAT TO DO */
+#what-to-do .events { margin-top:0; overflow:hidden; }
+#what-to-do .event { width:100%; margin-bottom:1em; }
+
+#what-to-do #previews { padding-top:2em; }
+#what-to-do #preview_buttons { padding-top:1em; }
+
+
+/* WRITERS */
+/*#writers_form select { padding:2px; font-size:1.2em; }
+#writers_form .label input.text { width:auto; }
+#writers_form .first-name, #writers_form .last-name, #writers_form .last-name, #writers_form .city, #writers_form .state, #writers_form .zip  { float:left; }
+#writers_form .first-name { width:140px; }
+#writers_form .last-name { width:220px; }
+#writers_form .zip { padding-right:0; }
+#writers_form .email-address, #writers_form .affiliation { clear:both; }*/
+
+#writers_form input[type=text], #writers_form input.text, #writers_form select { padding:2px; font-size:12px; }
+#writers_form { width:500px; margin:0 auto; text-align:left; }
+#writers_form fieldset { border:1px solid #8CC63F; margin-top:2em; padding:0 20px 20px 10px; overflow:hidden; }
+#writers_form label { color:#2a2a2a; font-size:1.2em; /*font-weight:bold;*/ }
+#writers_form legend { margin:0; padding:0; font-size:1.4em; font-weight:bold; }
+#writers_form select { width:60%; }
+#writers_form textarea { width:100%; }
+#writers_form p { padding:1.5em 1em 0 1em; }
+#writers_form p.notice { font-size:1.1em; }
+#writers_form p.text { font-size:1.2em; }
+#writers_form p em { color:#575757; }
+#writers_form .left select { width:100%; }
+#writers_form .newsletter .checkbox { margin:1em 1em 1em 0; float:left; vertical-align:middle; }
+#writers_form .error { border:1px solid #900; background-color:#900; color:#fff; }
+
+#writers_form .checkboxes { }
+#writers_form .checkboxes .checkbox { width:49%; float:left; margin:0; padding:1em 0 0 0; }
+#writers_form .checkboxes .left { width:55%; }
+#writers_form .checkboxes .right { width:43%; }

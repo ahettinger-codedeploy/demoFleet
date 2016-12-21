@@ -1,0 +1,730 @@
+/* layout */
+
+body {
+	margin: 0;
+	padding: 0;
+	padding-top: 5px;
+	padding-bottom: 20px;
+	/*background-color: #41597D;*/
+}
+
+#page {
+	margin: 0 auto;
+	width: 95%;
+	border: thin solid #663;
+	padding: 3px;
+	
+}
+
+#main {
+  padding: 6px;
+  margin: 6px;
+  
+}
+
+#section1 {
+   padding: 3px;
+   border: 1px solid #ccc;
+}
+
+#section2 {
+  
+}
+
+#sidebar-left, #sidebar-right {
+  width: 16em;
+  padding: 4px;
+  margin: 0;
+  vertical-align: top;
+  border: 1px solid #ccc 
+}
+#header, #content {
+	width: 100%;
+}
+
+table.sections {
+	width: 95%;
+	padding: 0;
+}
+
+td.section {
+	padding: 8px 8px;
+}
+
+td.section.width49 {
+	width: 49%;
+}
+
+td.section.width33 {
+	width: 33%;
+}
+
+#content {
+   margin: 2px;
+   padding: 2px
+}
+
+/* various overrides */
+tbody {
+   border: none;
+}
+
+/* typography */
+
+body {
+	font-size: 80%;
+	font-family:  Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	line-height: inherit;
+}
+
+tr.odd td, tr.even td {
+  padding: 0.3em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5em;
+  line-height: 110%;
+}
+
+h1, h1 a, h1 a:hover {
+	font-size: 1.4em;
+	font-weight: 900;
+	font-family: "Palatino Linotype", Georgia, Times New Roman, Times, serif;
+	color: #366603;
+}
+h2, h2 a, h2 a:hover {
+	font-size: 1.2em;
+	font-family: "Palatino Linotype", Georgia, Times New Roman, Times, serif;
+	color: #020055;
+	font-weight: 900;
+}
+
+h3, .block h3, .block h3 a{
+	font-size: 120%;
+	color: #333;
+	font-family: "Palatino Linotype", Georgia, Times New Roman, Times, serif;
+	font-weight: 900;
+	font-variant: normal;
+}
+
+h4 {
+	font-size: 110%;
+	color: #333;
+	font-family: "Palatino Linotype", Georgia, Times New Roman, Times, serif;
+	font-style: normal;
+	font-weight: 600;
+	font-variant: normal;
+	text-transform: none;
+}
+
+h5 {
+	font-size: 100%;
+	color: #333;
+	font-family: "Palatino Linotype", Georgia, Times New Roman, Times, serif;
+	font-style: normal;
+	font-weight: 600;
+	font-variant: normal;
+}
+
+h6 {
+	font-size: 100%;
+	font-family: "Palatino Linotype", Georgia, Times New Roman, Times, serif;
+}
+
+#main h2.title, .main h2.title {
+	font-size: 1.2em;
+	font-family: "Palatino Linotype", Georgia, Times New Roman, Times, serif;
+	font-style: normal;
+	font-weight: bolder;
+	font-variant: normal;
+	color: #3F4D74;
+	border-bottom-width: thin;
+	border-bottom-style: solid;
+	border-bottom-color: #999;
+}
+
+p {
+  margin-top: 0.6em;
+  margin-bottom: 0.6em;
+}
+
+/* links */
+a {
+	text-decoration: none;
+	color: #0040B6;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #973335;
+}
+
+#section2 a:hover {
+	text-decoration: underline;
+	color: #7672A5;
+}
+
+/* elements */
+fieldset {
+  border: 1px solid #ccc;
+}
+
+pre {
+  background-color: #eee;
+  padding: 0.75em 1.5em;
+  font-size: 12px;
+  border: 1px solid #ddd;
+}
+
+table {
+  font-size: 1em;
+}
+
+.form-item label {
+  font-size: 1em;
+  color: #222;
+}
+
+.item-list .title {
+  font-size: 1em;
+  color: #222;
+}
+
+.item-list ul li {
+margin:0pt 0pt 0.25em 0;
+}
+
+.links {
+  margin-bottom: 0;
+}
+
+.comment .links {
+	margin-bottom: 0;
+}
+.clr {
+	clear: both;
+}
+
+#logo {
+  /*vertical-align: middle;*/
+  border: 0;
+  /*background-image: url(images/newsflash_logo.jpg);
+  background-repeat: repeat;
+  background-attachment:fixed;
+  background-position: top right*/
+}
+#logo img {
+	float: left;
+	/*padding: 0 1em;*/
+	border: 0;
+	width: 984px;
+	height: 100px;
+}
+
+#menu {
+	padding: 0.5em 0.5em 0 0.5em;
+    text-align: right;
+    vertical-align: middle;
+}
+
+#navlist {
+  font-size: 1em;
+  /*padding: 0 0.8em 1.2em 0;*/
+ 
+}
+#navlist a {
+  font-weight: bold;
+  color: #fff;
+}
+#subnavlist a {
+  font-weight: bold;
+}
+
+ul.links li {
+  border-left: 1px solid #333;
+}
+ul.links li.first {
+  border: none;
+  padding-left: 0;
+}
+
+#mission {
+  margin:0pt 3px;
+  padding: 1.5em 2em;
+  color: #fff;
+}
+#mission a, #mission a:visited {
+  color: #9cf;
+  font-weight: bold;
+}
+.site-name {
+  margin: 0.6em 0 0 20px;
+  padding: 0;
+  font-size: 2em;
+}
+.site-name a:link, .site-name a:visited {
+  color: #fff;
+}
+.site-name a:hover {
+  text-decoration: underline;
+}
+.site-slogan {
+  font-size: 1em;
+  color: #eee;
+  display: block;
+  /*margin: 0 0 0.6em 20px;*/
+  font-style: italic;
+  font-weight: bold;
+}
+#help {
+  font-size: 0.9em;
+  margin-bottom: 1em;
+}
+.breadcrumb {
+  margin-bottom: .5em;
+}
+.messages {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 0.3em;
+  margin-bottom: 1em;
+}
+.error {
+  border-color: red;
+}
+
+#footer {
+  background-color: #fff;
+  font-size: 0.8em;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+/*.title, .title a {
+	font-weight: 600;
+	font-size: 1.5em;
+	color: #FF9933;
+	margin: 0 auto;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	line-height: 100%;
+	font-variant: normal;
+	text-transform: none;
+}*/
+.submitted {
+  color: #8E6126;
+  font-size: 0.8em;
+}
+.links {
+  color: #779933;
+}
+.links a {
+  font-weight: normal;
+}
+a.print {
+background-repeat: no-repeat;
+background-position: left center;
+display: block;
+background-image: url(images/blue/printer.png); 
+padding-left: 18px;
+padding-right: 15px;
+font-weight: normal;
+}
+
+.block, .box {
+   padding: 0 0 1.5em 0;
+}
+
+.block {
+	padding-bottom: 0.75em;
+    margin-bottom: 1.5em;	
+}
+
+.section .block,
+.section .box {
+	padding: 0;
+	padding-bottom: 0;
+	margin-bottom: 0;	
+}
+
+.block .title {
+  margin-bottom: .25em;
+}
+.box .title {
+  font-size: 1.1em;
+}
+.node {
+   margin: 0px 6px 3px 0px;
+   padding: 3px 10px;
+}
+.sticky {
+  padding: .6em;
+  margin: 0 .1em 0 .1em;
+  background-color: #fff;
+  border: solid 1px #663;
+}
+.node .content, .comment .content {
+  margin: .5em 0 .5em 0;
+}
+
+hr {
+  	height: 1px;
+	background-color: #ccc;
+	color: #ccc;
+	border: none;
+	padding: 0;
+	margin: 1em 0;
+}
+
+.node .taxonomy {
+	font-size: 0.8em;
+	/* padding-left: 1.5em; */
+	color: #CCCCCC;
+}
+.node .picture {
+  border: 1px solid #ccc;
+  float: left;
+  margin: 0.5em;
+}
+.comment {
+  border: 1px solid #abc;
+  padding: .5em;
+  margin-bottom: 1em;
+}
+/*Moira added icons here to display for comments, readmore, etc.*/
+li.comment_add a, li.comment_comments a {
+  background: url(images/blue/mini-comment.png) no-repeat 0 1px;
+  padding-left: 15px;
+  font-weight: normal;
+}
+
+li.node_read_more a {
+  background: url(images/blue/mini-readmore.png) no-repeat 0 2px;
+  padding-left: 15px;
+  font-weight: normal;
+}
+
+li.upload_attachments a {
+  background: url(images/blue/mini-attachment.png) no-repeat 0 2px;
+  padding-left: 15px;
+  font-weight: normal;
+}
+
+li.comment_delete a {
+  background: url(images/blue/mini-trash.png) no-repeat 0 0;
+  padding-left: 15px;
+  font-weight: normal;
+}
+
+li.comment_edit a {
+  background: url(images/blue/mini-edit.png) no-repeat 0 0;
+  padding-left: 15px;
+  font-weight: normal;
+}
+
+li.comment_reply a {
+  background: url(images/blue/mini-comment.png) no-repeat 0 0;
+  padding-left: 15px;
+}
+.comment .title a {
+  font-size: 1.0em;
+  font-weight: normal;
+}
+.comment .new {
+  text-align: right;
+  font-weight: normal;
+  font-size: 0.6em;
+  float: right;
+  color: red;
+}
+.comment .picture {
+  border: 1px solid #abc;
+  float: right;
+  margin: 0.5em;
+}
+
+#aggregator .feed-source {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+#forum table {
+  width: 100%;
+}
+#forum td {
+  padding: 0.5em;
+}
+#forum td.forum, #forum td.posts {
+  background-color: #eee;
+}
+#forum td.topics, #forum td.last-reply {
+  background-color: #ddd;
+}
+#forum td.container {
+  background-color: #ccc;
+}
+#forum td.container a {
+  color: #555;
+}
+#forum td.statistics, #forum td.settings, #forum td.pager {
+  height: 1.5em;
+  border: 1px solid #bbb;
+}
+#forum td .name {
+}
+#forum td .links {
+  padding-top: 0.7em;
+  font-size: 0.9em;
+}
+#profile .profile {
+  clear: both;
+  border: 1px solid #abc;
+  padding: .5em;
+  margin: 1em 0em;
+}
+#profile .profile .name {
+  padding-bottom: 0.5em;
+}
+.block-forum h3 {
+  margin-bottom: .5em;
+}
+div.admin-panel .description {
+  color: #8E6126;
+}
+div.admin-panel .body {
+  background: #f4f4f4;
+}
+div.admin-panel h3 {
+  color: #fff;
+  padding: 5px 8px 5px;
+  margin: 0;
+}
+/*Image display with alignment & border*/
+
+.leftimg {
+  float: left;
+  padding: 2px;
+  border: 1px solid #ccc;
+  margin-right: 5px;
+  margin-bottom:5px;
+}
+.clear {
+  clear: both;
+}
+.rightimg {
+  float: right;
+  padding: 1px;
+  border: 1px solid #ccc;
+  margin-left: 5px;
+  margin-bottom:5px;
+}
+.clear {
+  clear: both;
+}
+
+/*Image display as album */
+#albumlist {
+list-style-type: none;
+width: 160px;
+}
+#albumlist li {
+float: left;
+margin-right: 3px;
+margin-bottom: 6px;
+font: bold 0.8em "Trebuchet MS", Verdana, Helvetica, Sans Serif;
+color: #333333;
+}
+#albumlist img {
+display: block;
+border: 1px solid #cccccc;
+}
+
+/* Additions for iGuide formatting */
+#iguide-resource, #iguide-local, #iguide-global {
+  width: 30%;
+  padding: 4px;
+  border: 1px solid #ccc;
+  margin: 4px;
+  float: left;
+}
+
+#iguide-featured-stories {
+  width: 33%;
+  padding: 2px;
+  border: 1px solid #663;
+  margin: 1px;
+  float: right;
+}
+
+#main .ntype-link h2.title, .main .ntype-link h2.title, .ntype-link h2.title a {
+	font-size: .9em;
+}
+
+.ntype-iguide .view-content-taxonomy-term .ntype-link {
+  margin: 0;
+}
+
+.feed-icon {
+  display: none;
+}
+
+/* Additions for Branch Formatting */
+.content .quickstats {
+	float: right;
+	margin: 4px;
+	border-left: 1px solid #663;
+	width: 180px;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 8px;
+}
+
+/* Additions for Signature Events Formatting */
+.content .reserve {
+	float: right;
+	margin: 4px;
+	border: 1px solid #663;
+	width: 80px;
+	padding: 3px;
+	background-color: #E8E9E4;
+
+}
+.content .reserve .field-field-sponsor-event {
+     background: url(/files/images/money.png) no-repeat 0 0;
+     padding-left: 17px;
+     font-weight: normal;
+}
+.content .reserve .field-field-evanced-link {
+	background: url(/files/images/date.png) no-repeat 0 0;
+	padding-left: 17px;
+	font-weight: normal;
+	
+}
+
+#aggregator .feed-item-title, .feed-item-title-link {
+	font-size: 1em;
+	background: #ddd;
+}
+
+#aggregator .feed-item-meta {
+  display: none;
+}
+
+.left {
+  float: left;
+  margin: 4px;
+}
+
+.right {
+  float: right;
+  margin: 4px;
+}
+
+Frontpage styling 
+#front-secondary .node {
+  width: 30%;
+  padding: 3px 6px 0 6px;
+  border: 1px solid #ccc;
+  margin: 0 3px 0 3px;
+  float: left;
+}
+/* Close gap under primary story on front page */
+#front-primary .node {
+  margin: 0 2px;
+  padding: 0 4px;
+}
+
+
+.block .form-select {
+  width: 170px;
+}
+
+/* login form for library databases */
+#database-login-form {
+  width: 320px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  padding: 10px;
+ 
+}
+
+.taxonomy .links a {
+  font-weight: normal;
+}
+
+
+/*
+ * Tabs styling for on the database page
+ *
+ * Default tabs styling is set in tabs.css in the jstools/tabs module
+ */
+#tabs-tabset .anchors .tabs-selected a {
+  padding-bottom: 0;
+}
+
+#tabs-tabset ul.primary li.active a {
+  border-bottom: 1px;
+}
+
+#tabs-tabset ul.primary {
+  margin: 0 5px;
+}
+
+#tabs-tabset ul.primary li a {
+  background-color: #ffffff;
+}
+
+#tabs-tabset .anchors .tabs-selected a,
+#tabs-tabset .anchors a:hover,
+#tabs-tabset .anchors a:focus,
+#tabs-tabset .anchors a:active,
+#tabs-tabset .fragment {
+  background:#E8E9E4 none repeat scroll 0%;
+}
+
+/* Favorites formatting */
+#block-dcl_tracking-0 ul.links {
+  list-style-type: disc;
+}
+
+#block-dcl_tracking-0 ul.links li {
+  list-style-type: disc;
+  display: list-item;
+  border: 0;
+  padding: 0 0.5em;
+}
+
+/* Main search form */
+#list_menu {
+  width: auto;
+}
+
+#dcl-search-form .search-box {
+	width: 340px;
+	height: 60px;
+	margin-top: 5px;
+	border: 1px #333;
+	display: inline;	
+}
+
+#dcl-search-form .form-text  {
+background-color: #FBF8CE;
+border: thin px dotted ;
+font-family: arial;
+font-weight: bold;
+}
+
+#dcl-search-form .form-submit {
+  background: transparent url(/files/images/b-go-red.gif) no-repeat top left;
+  width: 29px;
+  height: 22px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+#dcl-search-form .form-item {
+  margin: 1px 0;
+}

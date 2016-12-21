@@ -1,0 +1,901 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url(leaders.css);
+
+/* CSS RESETS */
+
+html, body, div, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p,
+pre, form, fieldset, table, th, td { margin: 0; padding: 0; }
+
+img, table { border: none; }
+
+a:focus { outline: none; }
+
+/* DEFAULT HTML TAGS */
+
+html, body {
+	height: 100%;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	color: #717171;
+}
+
+body {
+	background: url(http://abrs.dev.flipp.ca/images/body_bg.gif) repeat-x #fff top center ;
+	line-height:19px;
+	height:100%;
+}
+
+
+p {
+	margin: 0px 0px 18px 0px;
+	
+}
+
+a {
+/*	text-decoration: underline;*/
+	color: #9d1d1d;
+}
+
+a:hover {
+	color:#b41617;
+	text-decoration:underline;
+}
+
+
+h1 {
+	text-transform: uppercase;
+	font-family: HelveticaNeue;
+	font-weight: 700;
+	font-size: 28px;
+	color: #2e2e2e;
+	margin-bottom: 3px;
+}
+
+h2 {
+	text-transform: uppercase;
+	font-family: HelveticaNeue;
+	font-weight: 700;
+	color: #9d1d1d;
+	font-size: 26px;
+	margin-bottom: 8px;
+}
+
+h3 {
+	text-transform: uppercase;
+	font-family: HelveticaNeue;
+	font-weight: 500;
+	color: #c41819;
+	font-size: 18px;
+
+}
+
+h4 {
+	text-transform: uppercase;
+	font-family: HelveticaNeue;
+	font-weight: 500;
+	color: #323232;
+	font-size: 16px;
+	margin-bottom: -3px;
+}
+
+h5 {
+	font-size: 16px;
+	color: #3d3d3d;
+	font-weight: bold;
+	padding: 0;
+	margin: 5px 0;
+}
+
+
+hr {
+	border-top: 1px solid #dbdbdb;
+}
+
+.thick_hr {
+	clear: both;
+	border-top: 4px solid #dbdbdb;
+	margin: 10px 0;
+}
+
+.thin_hr {
+	clear: both;
+	border-top: 1px solid #dbdbdb;
+	margin: 20px 0;
+}
+
+
+ul,ol{
+
+}
+
+li{
+	
+}
+
+.li {
+	background: url(http://abrs.dev.flipp.ca/images/accessory_callout_grey.gif) no-repeat left;
+	padding-left: 10px;
+	color: #444;
+	font-size: 13px;
+	font-weight: bold;
+	font-style:italic;
+}
+
+/* structure */
+
+#container {
+	background: url(http://abrs.dev.flipp.ca/images/content_bg.png) repeat-y center;
+	width: 100%;
+	display: block;
+	min-height: 100%;
+	height: 100%;
+	height: auto !important;
+	margin:0 auto -206px auto;/* the bottom margin is the negative value of the footer's height */
+}
+
+.page {
+	background: #fff;
+	width: 994px;
+	min-height: 200px;
+}
+
+.page_space {
+	margin-top: 18px;
+}
+
+.push {	
+	height:206px; 
+	clear: both;
+}
+
+#content {
+	background: #fff;
+	margin: 0 auto;
+	width: 994px;
+	height:100%;
+	min-height:100%;
+}
+
+#home_content{
+	padding:25px 18px 35px 18px;
+}
+
+.aBlock {
+	display: block;
+	text-indent: -9999px;
+	text-align: left;
+}
+
+.logo {
+	background: url(http://abrs.dev.flipp.ca/images/abrc_logo.gif) no-repeat;
+	width: 215px;
+	height: 50px;
+	margin: 2px 10px;
+}
+
+#header {
+	padding: 4px 10px 2px;
+}
+
+/*footer*/
+
+#footer {
+	text-transform: uppercase;
+	line-height: 14px;
+	height: 206px;
+	width: 100%;
+}
+
+#footer div.content {
+	margin: 0 auto;
+	padding: 18px 0;
+	background: url(http://abrs.dev.flipp.ca/images/footer_bg.jpg) bottom center;
+	height: 170px;
+	width: 994px;
+	font-size: 10px;
+}
+
+#footer div.col {
+	font-style:italic;
+	width: 155px; 
+	float: left;
+	margin: 0 25px;	
+}
+
+#footer div.col a {
+	color: #717171;
+}
+#footer div.col strong {
+	color: #929292;
+	font-style:normal;
+	line-height: 15px;
+	font-size: 12px;
+}
+
+
+#footer a {
+	color: #929292;
+	text-decoration: none;
+}
+
+#footer a:hover {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.btn_facebook {
+	background: url(http://abrs.dev.flipp.ca/images/btn_facebook.gif);
+	width: 119px;
+	height: 29px;
+	margin: 10px 5px;
+}
+
+.btn_twitter {
+	background: url(http://abrs.dev.flipp.ca/images/btn_twitter.gif);
+	width: 99px;
+	height: 29px;
+	margin: 10px 5px;
+}
+
+.btn_flipp {
+	background: url(http://abrs.dev.flipp.ca/images/btn_flipp.gif);
+	width: 58px;
+	height: 29px;
+	margin: 10px 5px;
+}
+
+.rss {
+	padding-top: 2px;
+	background: url(http://abrs.dev.flipp.ca/images/btn_rss.gif) no-repeat left;
+	padding-left: 18px;
+}
+
+/* end footer */
+
+.mini_social {
+	float: right;
+	background: #f2f2f2;
+	padding: 3px 10px 3px 0px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.mini_social a {
+	font-size: 9px;
+	padding: 3px 0 3px 20px;
+	margin-left: 10px;
+	text-decoration: none;
+	color: #898989;	
+}
+
+.mini_share,.addthis_button_compact {
+	background: url(http://abrs.dev.flipp.ca/images/icon_share.gif) no-repeat top left;
+	margin-left: 0;
+}
+
+.addthis_button_compact span{
+	background-image:none;
+	width:13px;
+}
+
+.mini_twitter {
+	background: url(http://abrs.dev.flipp.ca/images/icon_twitter.gif) no-repeat left;
+}
+
+.mini_facebook {
+	background: url(http://abrs.dev.flipp.ca/images/icon_facebook.gif) no-repeat left;
+
+}
+
+/*navigation*/
+
+#nav {
+	background: url(http://abrs.dev.flipp.ca/images/nav_bg.gif) repeat-x;
+	width: 994px;
+	height: 36px;
+	font-family: HelveticaNeue;
+	text-align: center;
+	overflow: hidden;
+	letter-spacing: -0.1em;
+}
+
+
+#nav a.main {
+	float: left;
+	display: block;
+	color:#bcbcbd;
+	font-size: 14px;
+	height: 36px;
+	text-decoration: none;
+	padding: 12px 35px 0 35px;
+	*padding: 10px 35px 0 35px;
+	line-height: 100%;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	font-weight: 500;
+}
+
+#nav a.main:hover,#nav a.on, body.race_school a#nav_race_school, body.programs a#nav_programs, body.tracks a#nav_tracks, body.group_events a#nav_group_events, body.contact a#nav_contact {
+	background: url(http://abrs.dev.flipp.ca/images/nav_bg_on.gif) repeat-x;
+	border-left: 1px solid #871111;
+	border-right: 1px solid #861010;
+	text-shadow: #00000 4px 4px 0;
+	padding: 12px 34px 0 34px;
+	*padding: 10px 34px 0 34px;
+	color: #fff;
+}
+
+#nav a.bump:hover {
+	padding-left: 33px;
+	*padding: 10px 33px 0 33px;
+}
+
+#nav a.bump,body.race_school a#nav_race_school:hover {
+	padding-left: 34px;
+	*padding: 10px 34px 0 34px;
+}
+
+.nav_register {
+	margin-top: 4px;
+	background: url(http://abrs.dev.flipp.ca/images/nav_register.gif);
+	width: 174px;
+	height: 31px;
+	margin-right: 15px;
+}
+
+.nav_register:hover {
+	background: url(http://abrs.dev.flipp.ca/images/nav_register_on.gif);
+}
+
+body.register a.nav_register,body.register a.nav_register:hover{
+	background: url(http://abrs.dev.flipp.ca/images/nav_bg_on.gif) repeat-x;
+	border-left: 1px solid #871111;
+	border-right: 1px solid #861010;
+	text-shadow: #00000 4px 4px 0;
+	padding: 12px 32px 0 32px;
+	*padding: 10px 32px 0 32px;
+	color: #fff;
+	text-indent:0px;
+	text-transform:uppercase;
+	font-size:14px;
+	margin:0px;
+}
+
+.subnav {
+	height: 34px;
+	background: #870303;
+	line-height: 34px;
+	text-align: center;
+	font-size: 11px;
+}
+
+.subnav a {
+	text-decoration: none;
+	text-transform:uppercase;
+	color: #dc9898;
+	margin: 0 20px;
+}
+
+.subnav a:hover {
+	color: #fff;
+}
+
+div.formula a#sub_formula,div.kart a#sub_kart,div.road_car a#sub_road_car,div.driving_simulator a#sub_driving_simulator,div.driver_safety a#sub_driver_safety {
+	color: #fff;
+}
+
+div.calgary a#sub_calgary,div.palmsprings a#sub_palmsprings,div.edmonton a#sub_edmonton {
+	color: #fff;
+}
+
+
+.sidenav_holder {
+	background: url(http://abrs.dev.flipp.ca/images/sidenav_bg.gif) top left no-repeat;	
+	float: left;
+	margin-left: 15px;
+	width: 319px;
+	min-height: 400px;
+}
+
+.sidenav_on,.sidenav {
+	display: block;
+	width: 319px;
+	height: 36px;
+	text-decoration: none;
+	text-indent: 20px;
+	line-height: 36px;
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: bold;
+	
+}
+
+.sidenav_on,a.sidenav:hover,.sidenav_on:hover {
+	background: url(http://abrs.dev.flipp.ca/images/sidenav_on.gif);
+	color: #fff;
+	text-decoration: none;
+}
+
+.sidenav {
+	background: url(http://abrs.dev.flipp.ca/images/sidenav_item_bg.gif) no-repeat left bottom;
+	color: #999999;
+
+}
+
+/* End Navigation */
+
+/* General Styles */
+
+
+.main_page {
+	margin-top: 18px;
+	background: #fff;
+	padding: 7px 38px 40px 22px;
+	width: 597px;
+	float: left;
+}
+
+.main_page ul {
+	margin-left: 25px;
+}
+
+.main_page img {
+	-moz-box-shadow: 2px 2px 2px #888;
+	-webkit-box-shadow: 2px 2px 2px #888;
+	box-shadow: 2px 2px 2px #888;
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#88888')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135,Color='#888888');
+
+}
+
+.news .main_page img {
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	box-shadow: none;
+}
+
+
+img.right,.img_right {
+	float: right;
+	margin-left: 30px;
+	margin-bottom: 10px;
+	font-size:10px;
+	font-style:italic;
+	text-align: right;
+}
+
+.img_right img,.img_left img {
+	margin-bottom: 10px;
+}
+
+img.left,.img_left {
+	float: left;
+	margin-right: 30px;
+	margin-bottom: 10px;
+	font-size:10px;
+	font-style:italic;	
+}
+
+.fifty {
+	width: 48%;
+	padding: 0 1%;
+	float: left;
+}
+
+.quote {
+	background: url(http://abrs.dev.flipp.ca/images/quote_bg.gif) no-repeat top left #f5f5f5;
+	padding: 30px 30px 30px 55px;
+	margin-top: 10px;
+	font-style:italic;
+	color:#7f7f7f;
+}
+
+.quote strong {
+	color: #000;
+}
+
+.news_item {
+	background: url(http://abrs.dev.flipp.ca/images/news_bg.gif) repeat-x;
+	width: 445px;
+	height: 97px;
+	padding: 7px;
+	color: #808080;
+	margin-bottom:5px;
+}
+
+.news_item img {
+	border: 3px solid #c4c4c4;
+	margin: 0 16px 0 1px;
+	float: left;
+	font-size: 12px;
+}
+
+.news_item em,.sidenav_news em {
+	font-size: 10px;
+	text-transform:uppercase;
+	text-decoration: none;
+	
+}
+
+.news_item strong,.sidenav_news strong {
+	font-size: 13px;
+	text-transform:uppercase;
+}
+
+.news_item_sm {
+	background: url(http://abrs.dev.flipp.ca/images/accessory_callout.gif) no-repeat 13px right;
+	display: block;
+	font-size: 12px;
+	padding: 10px 0;
+	color: #808080;
+	border-bottom: 1px solid #e9e9e9;
+	text-transform:uppercase;
+	text-decoration: none;
+}
+
+.sidenav_news a {
+	display: block;
+	padding: 10px 0 10px 19px;
+	background: url(http://abrs.dev.flipp.ca/images/sidenav_item_bg.gif) no-repeat left bottom;
+	color: #808080;
+	text-decoration: none;
+	line-height:16px;
+}
+
+.sidenav_news strong.on {
+	color: #808080;
+	text-decoration: none;
+}
+
+
+.news_copy{
+	line-height:16px;
+}
+
+.news_copy strong{
+	color:#4c4c4c;
+}
+
+
+a.news_item_sm{
+	text-decoration:none;
+}
+.news_item_sm em {
+	font-size: 10px;
+	float: left;
+	display: block;
+	width: 80px;
+	padding: 0 10px;
+}
+
+a.news_item_sm:hover em {
+	color:#808080;
+}
+
+
+.news_item_sm strong {
+	width: 330px;
+}
+
+
+
+/*buttons*/
+
+a.btn_red,a.btn_sm_red,a.btn_gray {
+	color: #fff;
+	text-decoration: none;
+	background-image: url(http://abrs.dev.flipp.ca/images/accessory_callout_white.gif);
+	background-repeat: no-repeat;
+	background-position: right;
+	text-transform: uppercase;
+	font-family: HelveticaNeue;
+	font-weight: 500;	
+}
+
+a.btn_red,a.btn_sm_red {
+	border: 1px solid #ad0000;
+	background-color: #cc0000;
+}
+
+
+a.btn_gray {
+	border: 1px solid #000;
+	background-color: #212121;
+}
+
+a.btn_track_gallery {
+	position: absolute;
+	bottom: 15px;
+	right: 20px;
+	background:url(http://abrs.dev.flipp.ca/images/btn_media_gallery.png);
+	width: 174px; 
+	height: 51px;
+}
+
+a.btn_red,a.btn_gray {
+	padding: 8px 25px 8px 10px;
+	display: block;
+	float: left;
+}
+
+a.btn_sm_red {
+	padding: 3px 20px 5px 10px;
+}
+
+
+a.flip {
+	background-position: left;
+	background-image: url(http://abrs.dev.flipp.ca/images/accessory_callout_left_white.gif);
+	padding: 8px 10px 8px 25px;
+}
+
+a.btn_register{
+	margin:25px auto 0;
+	float:none;
+	width:345px;
+}
+
+a.btn_tix{
+	display:block;
+	margin:10px auto;
+	background:url(/images/logo_tix.gif) no-repeat top left;
+	width: 117px; 
+	height: 41px;
+	text-indent:-9999px;
+}
+
+
+
+
+.sm_title,.sm_title_ac{
+	font-size:14px;
+	color:#393939;
+	font-weight:bold;
+}
+
+.sm_title_ac{
+	text_transform:uppercase;
+}
+
+.med_title{
+	font-size:17px;
+	color:#393939;
+	font-weight:bold;
+}
+
+.careers .med_title{
+	display:block;
+	margin-bottom:6px;
+}
+
+.careers .li{
+	display:block;
+	margin-top:-12px;
+}
+
+
+.asterix{
+	font-size:11px;
+	font-style:italic;
+	color:#b0b0b0;
+	text-align:center;
+}
+
+.contact_social{
+	background:#f7f6f4;
+	border:solid 1px #f2f1ee;
+	padding:10px 8px 10px 15px;
+	height:18px;
+	margin-top:35px;
+	line-height:18px;
+}
+
+.contact_social a{
+	color:#989797;
+	font-size:11px;
+	text-decoration:none;
+	padding-left:18px;
+	display:block;
+	height:21px;
+	line-height:21px;
+	text-align:left;
+}
+
+.contact_social a:hover{
+	text-decoration:underline;
+}
+
+.contact_social a.mini_twitter{
+	width:65px;
+	margin-left:10px
+}
+
+.contact_social a.mini_facebook{
+	width:85px;
+}
+
+.btn_learnmore {
+	margin-top: 4px;
+	float: left;
+	background: url(http://abrs.dev.flipp.ca/images/btn_learnmore.gif);
+	width: 84px;
+	height: 19px;
+}
+
+.hp_leader_newsletter {
+	margin: 20px 0;
+	width: 459px;
+	height: 59px;
+	background: url(http://abrs.dev.flipp.ca/images/hp_leader_newsletter.gif) no-repeat right;
+}
+
+.hp_leader {
+	background: url(http://abrs.dev.flipp.ca/images/hp_leader_palmsprings.gif) no-repeat left;
+	height: 52px;
+	padding: 7px 0;
+	border-bottom: 1px solid #dedede;
+}
+
+.hp_leader:hover{
+	opacity:0.8;
+	/*ie*/
+	filter:alpha(opacity=80);
+}
+
+.hp_leader_palmsprings {
+	background: url(http://abrs.dev.flipp.ca/images/hp_leader_palmsprings.gif) no-repeat left;
+	border-top: 1px solid #dedede;
+	margin-top: 7px;
+}
+
+.hp_leader_calgary {
+	background: url(http://abrs.dev.flipp.ca/images/hp_leader_calgary.gif) no-repeat left;
+}
+
+.hp_leader_edmonton {
+	background: url(http://abrs.dev.flipp.ca/images/hp_leader_edmonton.gif) no-repeat left;
+}
+
+
+/* TABLE CELL LAYOUT */
+
+.oneof3 img,.twoof3 img,.threeof3 img,.oneof2 img,.twoof2 img {
+	margin-bottom: 15px;
+}
+
+.threeof3 {
+	width: 175px;
+	float: left;
+}
+
+.oneof3,.twoof3 {
+	width: 183px;
+	padding-right: 6px;
+	margin-right: 21px;
+	border-right: 1px solid #dbdbdb;
+	height: 284px;
+	float: left;
+}
+
+.oneof2 {
+	width: 275px;
+	padding-right:18px;
+	margin-right: 28px;
+	border-right: 1px solid #dbdbdb;
+	float: left;
+}
+.twoof2 {
+	width: 275px;
+	float: left;
+}
+
+
+
+
+
+table.timetable {
+
+	border-top: 3px solid #ccc;
+	border-collapse:collapse;
+	width:100%;
+}
+
+table.timetable td {
+	border-top: none;
+	border-bottom: 1px solid #ccc;
+	vertical-align: top;
+	padding: 10px;
+	margin: 0;
+}
+
+table.timetable td.col1 {
+	border-right: 1px solid #CCC;
+	vertical-align:middle;
+	text-align: center;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+table.events {
+	width: 100%;
+	border-collapse:collapse;
+	font-weight: bold;
+}
+
+table.events td {
+	padding: 6px;
+}
+
+table.events tbody tr {
+	border-bottom: 1px solid #ccc;
+}
+
+thead th {
+	background: url(http://abrs.dev.flipp.ca/images/th_bg.gif) repeat-x;
+	padding: 1px 0;
+	height: 40px;
+	color: #fff;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-shadow: #000 1px 1px 1px;
+}
+
+td.center {
+	text-align: center;	
+}
+
+td.sold_out {
+	text-align: center;
+	color:#9d1d1d;
+}
+
+
+/*Forms*/
+
+input[type=text] {
+	border: 2px solid #bbb;
+	font-size: 13px;
+	line-height: 24px;
+	margin: 0;
+	width: 245px;
+}
+
+textarea {
+	font-size: 13px;
+	border: 2px solid #bbb;
+}
+
+.form_contact{
+	width:545px;
+	margin:0 auto;
+}
+
+.form_contact .left{
+	width:272px;
+	}
+
+/*general classes*/
+
+.center{
+	margin:0 auto;
+}
+
+.left {
+	float: left;
+	display: inline;
+}
+
+.right {
+	float: right;
+	display: inline;
+}
+
+.both {
+	line-height:0px;
+	height: 0px;
+	clear: both;
+}
+

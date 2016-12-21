@@ -1,0 +1,154 @@
+<!--CHANGELOG-->
+<!--LSP 9/16/11 - Initial Developments-->
+<link rel="stylesheet" href="/clients/AVitalTours/Images/screen.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="/clients/AVitalTours/Images/print.css" type="text/css" media="print">
+	<!--[if IE]>
+	<script src="/clients/AvitalTours/Images/html5.js"></script>
+<![endif]-->	
+
+<!--[if lt IE 8]>
+  <link rel="stylesheet" /clients/AVitalTours/Images/ie.css" type="text/css" media="screen, projection">
+  <link rel="stylesheet" href="/clients/AVitalTours/Images/ie2.css" type="text/css" media="screen, projection">
+<![endif]-->
+<link rel="stylesheet" href="/clients/AVitalTours/Images/common.css" type="text/css" media="screen, projection">
+<link href="/clients/AVitalTours/Images/classic-081711.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+  #mc_embed_signup, #mc_embed_signup form{margin:0; padding:0}
+	#mc_embed_signup .mc-field-group .asterisk{font-size: 100%;top:7px;color:#BDBDBD}
+	#mc_embed_signup .mc-field-group{min-height:30px;}
+	#mc_embed_signup .half-size .mc-field-group{float:left;width:49%;clear:none;}
+		#mc_embed_signup .half-size .mc-field-group input{width:96%;}
+       /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+          We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+</style>
+<script src="/clients/AVitalTours/Images/ga.js" async="" type="text/javascript"></script><script language="javascript" src="/clients/AVitalTours/Images/jquery-1.js" type="text/javascript"></script>
+<script language="javascript" src="/clients/AVitalTours/Images/jquery.js" type="text/javascript"></script>
+<script type="text/javascript" src="/clients/AVitalTours/Images/jquery_002.js"></script>
+<!-- <script src="scripts/jquery.placeholder.1.1.min.js" type="text/javascript" charset="utf-8"></script> -->
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	$('.email').dcSpamless();
+	// $.Placeholder.init();
+	// popup window
+  $('.tour_map a').live('click', function(e) {
+    e.preventDefault();
+  });
+	var mapCallBack = '';	
+	$('.tour_map a').live({
+    "mouseover": function(e) {
+			if(mapCallBack) {
+				clearTimeout(mapCallBack);
+		  }			
+     	AVUtil.showMapTooltip($(this));
+    },
+    "mouseout": function(e) {
+			// timeout function... delay a bit and see if its still there.
+			mapCallBack = setTimeout('AVUtil.hideMapTooltip($(this))', 500);
+		}
+  });
+	$('#map_tool_tip').live({
+    "mouseover": function(e) {
+			if(mapCallBack) {
+				clearTimeout(mapCallBack);
+		  }
+    },
+    "mouseout": function(e) {
+			// timeout function... delay a bit and see if its still there.
+			mapCallBack = setTimeout('AVUtil.hideMapTooltip($(this))', 500);
+		}
+  });
+});
+var AVUtil = new (function(){
+	var self = this;
+	
+	this.showMapTooltip = function(elem){
+		list = elem.closest('li');
+		tooltip = $('#map_tool_tip');
+
+		// check if it exists
+	 if (tooltip.length == 0){
+			// create tool tip
+			AVUtil.createMapTooltip(list);
+			tooltip = $('#map_tool_tip');
+		} else {
+			// check if the name is the same
+			if (tooltip.data('title') != list.data('title')) {
+				// if not create it 
+				AVUtil.updateMapTooltip(list);
+			}
+		}		
+		// now place it....
+		bubble_space = 0;
+		if ((elem.offset().left - tooltip.width() - bubble_space) > 0 ) {
+			// box goes on left side
+			left_postion = elem.offset().left - tooltip.width() - bubble_space;
+			tooltip.removeClass('right');
+		} else {
+			// box is on right side
+			left_postion = elem.offset().left + elem.width() + bubble_space;
+			tooltip.addClass('right');
+		}		
+		tooltip.css({'top' : (elem.offset().top -  (tooltip.height() / 2 ) + (elem.height() / 2)), 'left' : left_postion});
+		tooltip.find('i').css({'top' : ((tooltip.height() / 2 ) - 16)});		
+		tooltip.show();
+	};
+	this.createMapTooltip = function(elem){		
+		html = '<div id="map_tool_tip" class="tooltip" data-name="'+elem.data('title')+'"><i></i>';
+		html += '<div class="inner">';
+		html += '<h3>'+elem.data('title')+'</h3>';
+		html += '<p class="address">'+elem.data('address')+'</p>';		
+		html += '<p class="type">'+elem.data('type')+'</p>';				
+		html += '</div></div>';
+		$('body').append(html);		
+	};
+	this.updateMapTooltip = function(elem){		
+		$('#map_tool_tip').data('name', (elem.data('title')));
+		$('#map_tool_tip h3').text(elem.data('title'));
+		$('#map_tool_tip p.address').text(elem.data('address'));
+ 		$('#map_tool_tip p.type').text(elem.data('type'));
+	};
+	this.hideMapTooltip = function(elem){
+			$('#map_tool_tip').hide();             
+	};	
+});
+
+jQuery(function($){
+   $(".tweet .bd").tweet({
+       username: "avitaltours",
+       join_text: "auto",
+       avatar_size: 32,
+       count: 2,
+		template: "{text} <span class='time'>{time}</span>",
+       loading_text: "loading tweets..."
+   });
+});
+</script></head>
+<body>
+	<div class="container">
+		
+	<header class="span-20 append-4 last">
+		<h1><a href="http://avitaltours.com/index.php">Avital Tours <span>&#8482;</span></a></h1>
+		<h2 class="alt">Food, Art &amp; Wine</h2>
+	</header>
+	<div id="sidebar" class="span-4">
+		<ul class="list">
+			<li><a href="http://avitaltours.com/index.php">Home</a></li>
+			<li><a href="http://avitaltours.com/eats.php"><u><i>AVITAL</i><b>Eats</b></u></a></li>
+			<li><a href="http://avitaltours.com/recomendations.php">Recommendations</a>
+				<!-- <ul>
+					<li><a href="recomendations.php">Restaurants</a></li>
+					<li><a href="recomendations.php">Books</a></li>					
+				</ul> -->
+			</li>
+			<li class="active"><a href="#">Buy Tickets</a></li>
+			<li><a href="#">Gift Certificates</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="http://avitaltours.com/events.php">Private Events</a></li>
+			<li><a href="http://avitaltours.com/about.php">Bio/Contact</a></li>
+		</ul>
+	</div>
+	<div id="bd" class="body span-19 last">
+	<!--TIX DATA START-->
+
+	
+	

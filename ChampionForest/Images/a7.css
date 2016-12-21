@@ -1,0 +1,1020 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	color: black;
+	line-height: 1.7em;
+}
+
+a {
+	color: #051aba;
+}
+
+	a:active {
+		color: #e20000;
+	}
+	
+	a:visited {
+		color: #4c4c4c;
+	}
+
+	a:hover {
+		color: #6d3005;
+	}
+	
+table {
+	width: 100%;
+	clear: both;
+}
+
+iframe {
+	width: 100%;
+	height: 500px;
+	border: none;
+}
+
+h2 {
+	font-size: 30px;
+	line-height: 34px;
+	clear: both;
+}
+
+h3 {
+	color: #772224;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 20px;
+	font-weight: normal;
+	font-style: italic;
+	margin: 14px 0 4px 0;
+}
+
+	h3.subhead {
+		margin: 0 0 14px 0;
+		font-size: 16px;
+	}
+
+h4 {
+	color: #772224;
+	font-size: 18px;
+}
+
+h5 {
+	color: #772224;
+	font-size: 14px;
+	margin: 10px 0 3px 0;
+}
+
+h6 {
+	color: #772224;
+	font-size: 12px;
+}
+
+
+ul {
+	margin: 5px 0 10px 15px;
+	padding: 0;
+	list-style-type: circle;
+}
+
+ol {
+	margin: 5px 0 10px 25px;
+	padding: 0;
+	line-height: 1.4em;
+}
+
+	ol li {
+		margin: 1px 0 2px 0;
+	}
+
+/* START DESIGN */
+
+#bkg {
+	background: white url(/clients/championforest/images/bkg.gif) repeat-x 0 0;
+}
+
+#container {
+	background: url(/clients/championforest/images/bkg_page.gif) no-repeat 0 36px;
+}
+
+	.home {
+		background: url(/clients/championforest/images/promobox.gif) no-repeat 0 36px !important;
+	}
+
+#logo {
+	float: right;
+	width: 470px;
+	height: 186px;
+	padding: 36px 0 0 0;
+}
+
+	#logo h1 {
+		padding: 33px 0 0 59px;
+	}
+	
+		#logo h1 a {
+			display: block;
+			width: 325px;
+			height: 95px;
+			text-decoration: none;
+			text-indent: -9999px;
+			background: url(/clients/championforest/images/logo.png) no-repeat 0 0;
+		}
+		
+	#logo h2 {
+		display: none;
+	}
+	
+#frontads {
+	clear: right;
+	float: right;
+	height: 76px;
+	background: #e7e9ea;
+	width: 473px;
+	padding: 15px 7px 0 0;
+}
+
+	#frontads a {
+		float: left;
+		border: 1px solid #869097;
+		padding: 5px;
+		width: 50px;
+		height: 50px;
+		background: white;
+		margin: 0 7px 0 8px;
+	}
+	
+		#frontads a img {
+			opacity: .6;
+		}
+		
+		#frontads a:hover {
+			border-color: #046556;
+		}
+		
+			#frontads a:hover img {
+				opacity: 1;
+			}
+				
+#frontbody {
+	width: 480px;
+	height: 270px;
+	padding: 43px 7px 7px;
+}
+
+
+
+	#frontbody a:hover img {
+		opacity: .7;
+	}
+
+/* START SLIDER
+
+*/
+
+#slider {
+	width: 960px;
+	padding: 30px 0 0 7px;
+	clear: both;
+	font-family: Tahoma;
+	font-size: 11px;
+}
+
+	ul#slidernav {
+		float: left;
+		width: 120px;
+		height: 100px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	
+		ul#slidernav li {
+			height: 26px;
+			width: 75px;
+			padding: 0 0 0 20px;
+		}
+		
+			ul#slidernav li a {
+				display: block;
+				text-indent: -9999px;
+				width: 75px;
+				height: 14px;
+				padding: 5px 0 5px 0;
+				background-repeat: no-repeat;
+				background-position: 0 5px;
+			}
+			
+				#sl-new a {
+					background-image: url(/clients/championforest/images/new.gif);
+				}
+				
+				#sl-thisweek a {
+					background-image: url(/clients/championforest/images/services.gif);
+				}
+				
+				#sl-devotionals a {
+					background-image: url(/clients/championforest/images/devotionals.gif);
+				}
+				
+				#sl-sermons a {
+					background-image: url(/clients/championforest/images/sermons.gif);
+				}
+
+				ul#slidernav li a:hover {
+					background-position: -150px 5px;
+				}
+				
+				#slidernav li.paged {
+					background: url(/clients/championforest/images/yellow.gif) no-repeat 0 7px;
+				}
+				
+					#slidernav li.paged a, #slidernav li.paged a:hover {
+						background-position: -75px 5px;
+					}
+				
+	#sliderContent {
+		width: 840px;
+		float: left;
+		height: 190px;
+		overflow: hidden;
+		position: relative;
+		z-index: 1 !important;
+	}
+	
+	#sliderMover {
+			position: absolute;
+			width: 3800px;
+			height: 180px;
+		}
+	
+		.sliderBox {
+			width: 840px;
+			height: 180px;
+			float: left;
+			display: block;
+		}
+	
+		.sliderThirds a {
+			display: block;
+			width: 250px;
+			padding: 10px 15px 10px 15px;
+			height: 60px;
+			float: left;
+			color: black;
+			text-decoration: none;
+			line-height: 1.2em;
+		}
+		
+			.sliderThirds a img {
+				display: block;
+				width: 50px;
+				height: 50px;
+				border: 1px solid #a2aaaf;
+				padding: 4px;
+				margin: 0 10px 0 0px;
+				float: left;
+				background: white;
+			}
+			
+			.sliderThirds a strong {
+				display: block;
+				padding: 0 0 3px 0;
+			}
+			
+			.sliderThirds a em {
+				font-style: normal;
+			}
+			
+				.sliderThirds a:hover {
+					background: #eceeef;
+				}
+				
+	.sliderText {
+		padding: 10px;
+		float: left;
+		width: 540px;
+	}
+	
+		.sliderText h6 {
+			font-size: 12px;
+			font-weight: bold;
+		}
+		
+			.sliderText h6 em {
+				float: right;
+				font-weight: normal;
+				font-style: normal;
+				font-size: 10px;
+			}
+			
+		.sliderText p {
+			text-align: justify;
+		}
+	
+	.sliderList {
+		padding: 10px;
+		width: 248px;
+		float: left;
+		border: 1px solid #d0d3d6;
+		background: #e7e9ea;
+		margin: 12px 0 0 10px;
+		line-height: 13px;
+	}
+	
+		.sliderList h6 {
+			font-size: 11px;
+			color: black;
+			font-weight: bold;
+			margin: 0 0 5px 0;
+			padding: 0;
+			line-height: 13px;
+		}
+		
+		.sliderList p {
+			display: block;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 10px;
+		}
+	
+		.sliderList ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			border-top: 1px solid #a2aaaf;
+		}
+		
+			.sliderList ul li {
+				border-bottom: 1px solid #a2aaaf;
+			}
+			
+				.sliderList ul li a {
+					color: black;
+					display: block;
+					padding: 3px 8px 3px 8px;
+					color: #772224;
+				}
+				
+					.sliderList ul li a:hover {
+						background: #eceeef;
+						color: black;
+					}
+					
+		.sliderMore {
+			display: block;
+		}
+		
+			.sliderMore a {
+				display: block;
+				padding: 5px 10px 5px 0;
+				font-weight: bold;
+			}
+			
+
+	.sliderTables, .sliderSvc {
+		float: left;
+		padding: 10px;
+		width: 260px;
+		line-height: 1.4em;
+	}
+	
+		.sliderTables h6 {
+			font-weight: bold;
+			font-size: 11px;
+		}
+		
+			.sliderTables table {
+				margin: 3px 0 0 0;
+				padding: 0;
+				border-top: 1px solid #eceeef;
+			}
+			
+				.sliderTables table tr th, .sliderTables table tr td {
+					text-align: left;
+					padding: 3px 3px 3px 0;
+					border-bottom: 1px solid #eceeef;
+				}
+				
+					.sliderTables table tr th {
+						font-size: 10px;
+					}
+					
+						.sliderTables tr td .mp3, .sliderTables tr td .video, .sliderTables tr td .notes, .sliderTables tr td .videob, .sliderTables tr td .videoa {
+							display: block;
+							float: left;
+							margin: 0 6px 0 0;
+							width: 22px;
+							height: 22px;
+							text-decoration: none;
+							text-indent: -9999px;
+						}
+	
+	
+	.sliderServices {
+		line-height: 1.4em;
+	}
+	
+		.sliderWeekend, .sliderMidweek {
+			clear: both;
+		}
+		
+		.sliderMidweek {
+			padding-top: 12px;
+			border-top: 1px solid #eceeef;
+		}
+		
+			.sliderServices a {
+				display: block;
+				width: 250px;
+				padding: 50px 15px 10px 15px;
+				height: 25px;
+				float: left;
+				text-decoration: none;
+				text-align: center;
+				color: black;
+			}
+			
+			.sliderServices a#serv-gathering {
+				background: url(/clients/championforest/images/services/titles/thegathering.png) no-repeat 50% 14px;
+			}
+			
+			.sliderServices a#serv-encounter {
+				background: url(/clients/championforest/images/services/titles/encounter.png) no-repeat 50% 10px;
+			}
+			
+			.sliderServices a#serv-espanol {
+				background: url(/clients/championforest/images/services/titles/espanol.png) no-repeat 50% 10px;
+			}
+			
+			.sliderServices a#serv-elevate {
+				background: url(/clients/championforest/images/services/titles/elevate.png) no-repeat 50% 3px;
+			}
+			
+			.sliderServices a#serv-wednesday {
+				background: url(/clients/championforest/images/services/titles/wednesday.png) no-repeat 50% 10px;
+			}
+			
+			.sliderServices a#serv-element {
+				background: url(/clients/championforest/images/services/titles/element.png) no-repeat 50% 3px;
+			}
+			
+			.sliderServices a#serv-remnant {
+				background: url(/clients/championforest/images/services/titles/remnant.png) no-repeat 50% 3px;
+			}
+			
+				.sliderServices a:hover {
+					background-color: #eceeef !important;
+				}
+		
+	
+	.sliderWaiting {
+		width: 840px;
+		height: 180px;
+		float: left;
+		display: block;
+		background: url(/i/loading.gif) no-repeat 50% 50%;
+	}
+	
+	#sliderSunday {
+		display: block;
+		width: 374px;
+		background: red;
+		height: 15px;
+		margin: 0 0 0 10px;
+		padding: 0 0 0 86px;
+		background: url(/clients/championforest/images/sunday.gif) no-repeat 0 0;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 14px;
+		color: #772224;
+		font-family: Georgia, "Times New Roman", Times, serif;
+	}	
+	
+	#sliderWednesday {
+		display: block;
+		width: 120px;
+		height: 15px;
+		margin: 0 0 0 10px;
+		padding: 0 0 0 123px;
+		background: url(/clients/championforest/images/wednesday.gif) no-repeat 0 0;
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 14px;
+		color: #772224;
+		font-family: Georgia, "Times New Roman", Times, serif;
+	}
+	
+	.sl-moreinfo {
+		padding: 12px 0 0 0;
+		font-weight: bold;
+		font-size: 11px;
+	}
+
+
+
+
+/*
+END NAV
+
+START PAGE
+
+*/
+	
+#body {
+	width: 480px;
+	padding: 43px 0 0 7px;
+	line-height: 2em;
+	float: left;
+}
+
+	#body p {
+		margin: 5px 0 12px 0;
+	}
+	
+	#content {
+		padding: 25px 25px 25px 25px;
+	}
+	
+	#bodyClear {
+		height: 1px;
+		clear: both;
+		padding: 0;
+		margin: 0;
+		visibility: hidden;
+	}	
+
+#sidenav {
+	width: 480px;
+	float: right;
+	clear: right;
+	padding: 0 7px 0 0;
+	font-family: Tahoma;
+	font-size: 11px;
+}
+
+	#breadcrumb {
+		width: 480px;
+		height: 40px;
+		background: url(/clients/championforest/images/breadcrumb.gif) no-repeat 0 0;
+	}
+	
+		#breadcrumb ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+			#breadcrumb ul li {
+
+				float: left;
+			}
+	
+		#breadcrumb ul li a {
+			border-right: 1px solid #f2f3f4;
+			height: 12px;
+			line-height: 12px;
+			padding: 14px 28px 14px 14px;
+			background: url(/clients/championforest/images/arrow_off.gif) no-repeat 100% 0;
+			color: black;
+			display: inline-block;
+		}
+		
+			#breadcrumb a:hover {
+				background: url(/clients/championforest/images/breadcrumb_paged.gif) repeat-x 100% 0;
+				text-decoration: underline;
+				color: #772224;
+			}
+			
+			#breadcrumb a.paged {
+				background: url(/clients/championforest/images/breadcrumb_paged.gif) repeat-x 100% 0;
+			}
+	
+		#breadcrumb ul li a#blHome {
+			background: url(/i/icons/cficon.gif) no-repeat 50% 50%;
+			text-indent: -9999px;
+			width: 10px;
+			padding: 14px;
+			display: block;
+		}
+		
+			#breadcrumb ul li a#blHome:hover {
+				background: url(/clients/championforest/images/breadcrumb_hover1.gif) no-repeat 0 0;
+			}
+	
+	#morelinks {
+		width: 480px;
+		background: url(/clients/championforest/images/links_mid.gif) repeat-y 0 0;
+	}
+	
+		#mlData {
+			width: 480px;
+			padding: 5px 0 0 0;
+			clear: both;
+		}
+		
+			#mlData a {
+				color: #465560;
+				text-decoration: underline;
+				display: inline-block;
+				width: 195px;
+				padding: 5px 15px 5px 15px;
+				margin: 0 5px 0 5px;
+				float: left;
+
+			}
+			
+				#mlData a.paged {
+					background: white;
+					color: black;
+					text-decoration: none;
+				}
+			
+				#mlData a:hover {
+					color: #772224;
+					text-decoration: none;
+					background: white;
+					border: 1px solid #dee1e3;
+					padding: 4px 14px 4px 14px;
+				}
+				
+			#mlClear {
+				width: 480px;
+				height: 5px;
+				clear: both;
+				border-bottom: 1px solid #f0f2f2;
+			}
+
+
+			.mlOff {
+				display: none;
+			}
+
+/* Footer */
+
+#footer {
+	width: 100%;
+	min-width: 974px;
+	background: url(/clients/championforest/images/footer.gif) repeat-x 0 0;
+	padding: 20px 0 20px 0;
+	font-size: 11px;
+	font-family: Tahoma;
+	line-height: 1.3em;
+	color: #363636;
+	clear: both;
+}
+
+	#fbody {
+		width: 960px;
+		margin: 0 auto;
+	}
+
+	#footer a {
+		color: #363636;
+		border-bottom: 1px dotted #363636;
+		text-decoration: none;
+	}
+	
+		#footer a:hover {
+			color: #772224;
+			border-bottom: 1px solid #772224;
+		}
+
+		#fright {
+			float: right;
+			text-align: right;
+			padding-bottom: 2px;
+			width: 400px;
+		}
+		
+		#fbody p {
+			padding: 10px 0 0 0;
+			font-size: 10px;
+		}
+		
+			#fright p {
+				float: right;
+				padding: 14px 0 0 0;
+				margin: 0;
+			}
+			
+				#fright p a {
+					float: right;
+					display: block;
+					border: none;
+					text-indent: -9999px;
+					text-align: left;
+					height: 21px;
+				}
+			
+				#fright p a.l-impact {
+					width: 98px;
+					background: url(/clients/championforest/images/nav/impact2.png) no-repeat 50% 50%;
+				}
+				
+				#fright p a.l-facebook {
+					width: 62px;
+					background: url(/clients/championforest/images/nav/facebook.png) no-repeat 50% 50%;
+					margin: 0 16px 0 0;
+				}
+				
+				#fright p a.l-prayer {
+					width: 98px;
+					background: url(/clients/championforest/images/nav/prayer.png) no-repeat 50% 50%;
+					margin: 0 16px 0 0;
+				}
+				
+					#fright p a:hover {
+						border: none;
+						background-color: white;
+					}
+		
+/* MSG */
+
+.msg, .msgerror, .msgsuccess, .msgno {
+	padding: 12px 15px 12px 36px;
+	border: 1px dotted #727272;
+	line-height: 1.4em;
+	margin-bottom: 15px;
+	font-family: Tahoma;
+	font-size: 11px;
+	background-color: #f5f5f5;
+	background-repeat: no-repeat;
+	background-position: 12px 12px;
+}
+
+.msg {
+	background-image: url(/i/icons/information.gif);
+}
+
+.msgerror {
+	background-image: url(/i/icons/cancel.gif);
+	border-color: #e20000;
+}
+
+.msgsuccess {
+	background-image: url(/i/icons/accept.gif);
+	border: 1px dotted #73cb00;
+	background-color: #eaf7d9;
+}
+
+.msgno {
+	padding: 12px 15px 12px 15px;
+	background: white;
+	border: 1px dotted #c3c3c3;
+	background: #f5f5f5;
+}
+
+	.msgno div {
+		float: right;
+		text-align: right;
+	}
+	
+	.msgno h3, .msg h3 {
+		margin: 0 0 10px 0;
+		font-size: 16px;
+	}
+	
+	.msgno p, .msg p {
+		margin: 5px 0 4px 0 !important;
+	}
+
+		
+/* SPECIFIC PAGE CODING */
+
+#map {
+	width: 428px;
+	height: 350px;
+	font-family: Tahoma;
+	font-size: 11px;
+	line-height: 1.2em;
+	border: 1px solid #d0d3d6;
+}
+
+/* IMAGES */
+
+.right, .flash {
+	float: right;
+	margin: 0 0 5px 5px;
+}
+
+/* Tabular */
+
+table.tabular {
+	border-collapse: collapse;
+	margin: 5px 0 13px 0;
+	line-height: 1.45em;
+}
+
+table.tabular tr td, table.tabular tr th {
+	border: 1px solid #e6e6e6;
+	text-align: left;
+	padding: 6px;
+}
+
+
+	table.tabular tr td.tRight, table.tabular tr th.tRight {
+		text-align: right;
+	}
+
+	table.tabular tr th.title {
+		font-size: 14px;
+		color: #772224;
+	}
+	
+	table.tabular tr td.totalTitle {
+		text-transform: uppercase;
+		font-size: 10px;
+		font-weight: bold;
+		background: #f5f5f5;
+	}
+	
+	table.tabular tr td.totalAmount {
+		text-align:right;
+		background: #dcdcdc;
+		font-weight: bold;
+	}
+	
+	table.tabular tr td.key, table.tabular tr th.key {
+		font-size: 10px;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	
+	table.tabular tr td.empty-bottom {
+		border-bottom: none;
+	}
+	
+	table.tabular tr td.empty-bt {
+		border-bottom: none;
+		border-top: none;
+	}
+	
+table.tabular tr td.choiricons {
+
+	}
+	
+		table.tabular tr td.choiricons img {
+			border: none !important;
+			float: left;
+			margin: 0 8px 0 0;
+		}
+		
+		table.tabular tr th.empty-sides {
+			border-left: none;
+			border-right: none;
+			padding-bottom: 18px;
+		}
+		
+/* LARGE LINKS */
+
+.largelinks {
+	margin: 20px 0 0 0;
+	line-height: normal;
+}
+
+
+	.largelinks a {
+		display: block;
+		border: 1px dotted #dfe2e4;
+		padding: 10px;
+		color: #3351b9;
+		text-decoration: none;
+		margin: 0 0 10px 0;
+		clear: both;
+		height: 50px
+	}
+	
+		.largelinks a em {
+			display: block;
+			width: 50px;
+			height: 50px;
+			float: right;
+			margin: 0 0 0 20px;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+		}
+	
+		.largelinks a strong {
+			display: block;
+			margin: 0 0 4px 0;
+			font-family: Arial;
+			font-weight: bold;
+			font-size: 14px;
+		}
+		
+	.largelinks a:hover {
+		border: 1px solid #dfe2e4;
+		background: #f1f2f2;
+		
+	}
+	
+/* Newsletters */
+
+.newslist {
+	clear: both;
+}
+
+	.newslist h5 {
+		margin: 0 0 5px 0;
+	}
+
+.columnList {
+	margin: 5px 0 10px 0;
+	padding: 0;
+	list-style: none;
+	border-top: 1px dotted #dfe2e4;
+}
+
+	.columnList li {
+		display: block;
+		border-bottom: 1px dotted #dfe2e4;
+	}
+	
+		.columnList li a {
+			display: block;
+			padding: 5px;
+			border: none;
+			background: url(/i/icons/acrobat.gif) no-repeat 98% 50%;
+		}
+		
+			.columnList li a:hover {
+				background-color: #f0f1f2;
+			}
+			
+/* LINKS */
+
+.linkList {
+	clear: both;
+	height: 22px;
+	padding: 2px 0 15px 0;
+}
+
+.topPad {
+	padding-top: 12px;
+}
+
+	.linkList a {
+		display: block;
+		text-decoration: none;
+		float: left;
+		width: 205px;
+		text-indent: -9999px;
+		height: 22px;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+	}
+	
+		.moreinfo {
+			margin: 0 20px 0 0;
+			background-image: url(/clients/championforest/images/events/moreinfo.png);
+		}
+		
+			.esp-mi {
+				background-image: url(/clients/championforest/images/events/masinfo.png);
+			}
+		
+		.eventinfo {
+			margin: 0 20px 0 0;
+			background-image: url(/clients/championforest/images/events/eventinfo.png);
+		}
+		
+		.classinfo {
+			margin: 0 20px 0 0;
+			background-image: url(/clients/championforest/images/events/classinformation.png);
+		}
+		
+		.onlinereg {
+			margin: 0 0 0 0;
+			background-image: url(/clients/championforest/images/events/onlineregistration.png);
+		}
+		
+			.linkList a.hovered, .linkList a.hovered:hover {
+				background-position: 0 -44px;
+			}
+			
+			.linkList a:hover {
+				background-position: 0 -22px;
+			}
+			
+/* EVENTS */
+
+.ev1, .ev2 {
+	border-bottom: 1px solid #e6e8ea;
+	clear: both;
+	margin: 0 0 20px 0;
+}
+
+.ev1 h6, .ev2 h6 {
+	font-family: Tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	float: right;
+	color: #465560;
+}
+
+.hide {
+	display: none;
+}
+
+.clearit {
+	clear: both;
+}

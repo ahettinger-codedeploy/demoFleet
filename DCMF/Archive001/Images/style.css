@@ -1,0 +1,478 @@
+ /*
+Theme Name: DCMF Website
+Theme URI: http://www.dcmf.org
+Author Name: Kevin B.
+Author URI: 
+Version: 1.0
+
+*/
+
+/*
+----- Table of Contents ----- 
+
+1a. Color Reference
+1b. @Font-Face Fonts
+1c. Resets
+2a. Header / Navigation
+2b. Body
+2c. Footer
+3a. Extra
+
+*/
+
+
+/* ----- 1a. Color Reference -----  */
+
+/*
+
+Background color: #ac9882
+Font Color: #000
+Banner color: #7d1514
+Banner Corner Shadow: #481412
+Banner text, Image Border: #fff
+Body color: #cec1b2
+Body Shadow: #afa497
+Link: 
+Link Hover:
+Link Visited:
+
+*/
+
+/* ----- 1b. @font-face fonts ----- */
+
+
+
+
+
+
+/* ----- 1c. Resets ----- */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 16px;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	background: url(/clients/DCMF/Images/background.png) #ac9882;
+	color: #000;
+	font-family: Arial, sans-serif;
+	font-size:  0.755em;
+	line-height: 1;
+	
+	
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	color: #481412;
+	font-family:  'Crimson Text', Georgia, Serif;
+}
+
+h1 {
+	font-size: 2.65em;
+}
+
+h2 {
+	font-size: 2em;
+	margin-bottom: .12em;
+}
+
+h3 {
+	font-size: 1.5em;
+	margin-bottom: .1em;
+}
+
+.wrapper {
+	width: 980px;
+	margin-left: 45%;
+	margin-right: auto;
+
+}
+
+p {
+	margin-bottom: 1.25em;
+	line-height: 1.25em;
+}
+
+a,
+a:visited {
+	color: #961918;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
+}
+
+br {
+	margin-bottom: 10px;
+}
+
+
+/* ----- 2a. Header  / Navigation ----- */ 
+
+div.header h1>a {
+	background: url(/clients/DCMF/Images/header.png) no-repeat ;
+	display: block;
+	width: 606px;
+	height: 123px;
+	text-indent: -999999px;
+	margin-left: 391px;
+	margin-top: 5px;
+}
+
+div.header a.facebook {
+	background: url(/clients/DCMF/Images/facebook.png) no-repeat;
+	position: absolute;
+	display: block;
+	width: 48px;
+	height: 48px;
+	text-indent: -99999px;
+	top: 80px;
+	
+}
+
+div.header a.facebook:hover,
+div.header a.facebook:active {
+	background: url(/clients/DCMF/Images/facebook_hover.png) no-repeat;
+}
+
+div.nav-wrapper {
+	width: 980px;
+	background: #7d1514;
+	margin-bottom: 5px;
+}
+
+div.nav-banner {
+	width: 960px;
+	-moz-box-shadow: 0px 5px 0px #afa497;
+	-webkit-box-shadow: 0px 5px 0px #afa497;
+	box-shadow: 0px 5px 0px #afa497;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	z-index: 9999;
+
+}
+
+
+
+div.nav ul li {
+	float: left;
+	position: relative;
+}
+
+div.nav ul li a {
+	color: #fff;
+	display: block;
+	font-family: 'Crimson Text', Georgia, Serif;
+	font-size: 1.15em;
+	font-weight: bold;
+	padding: 18px;
+	text-decoration: none;
+	-moz-transition: all .75s;
+	-webkit-transition: all .75s;
+	-o-transition: all .75s;
+	transition: all .75s;
+	position: relative;
+	z-index: 500;
+
+}
+
+div.nav ul li a:hover,
+div.nav ul li a:active {
+	background: #481412;
+}
+
+
+
+
+div.nav ul li>ul {
+	position: absolute;
+	display: block;
+	width: 160px;
+	margin-left: -99999px;
+
+}
+
+div.nav ul li:hover>ul,
+div.nav ul li:active>ul {
+	position: absolute;
+	display: block;
+	z-index: 1000;
+	top: 100%;
+	margin: 0;
+}
+
+
+div.nav ul li ul li:first-child {
+	border-top: 5px solid #afa497;
+}
+
+
+div.nav ul li ul li a {	
+	background: #7d1514;
+	display:block;
+	width: 150px;
+}
+
+
+div.left-shadow {
+	width: 10px;
+	height: 10px;
+	background: url(/clients/DCMF/Images/left-shadow.png) no-repeat;
+	position: absolute;
+	left: -10px;
+	bottom: -10px;
+}
+
+div.right-shadow {
+	width: 10px;
+	height: 10px;
+	background: url(/clients/DCMF/Images/right-shadow.png) no-repeat;
+	position: absolute;
+	right: -10px;
+	bottom: -10px;
+}
+
+	
+
+
+div.nav ul li.hover a:hover,
+div.nav ul li.hover a:active {
+	background: #7d1514;
+}
+
+div.nav ul li:hover ul li a:hover {
+	background: #481412;
+}
+
+
+/* ----- 2b. Body ----- */ 
+
+div.body-wrapper {
+	background: #cec1b2;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 35px;
+	padding-bottom: 40px;
+	width: 960px;
+	position:relative;
+	z-index: 0;
+}
+
+div.width-540 img,
+
+
+div.width-540 {
+	margin-left: auto;
+	margin-right:auto;
+	width: 740px;
+
+}
+
+
+a.artists,
+a.artists:hover {
+	text-decoration: none;
+}
+
+div.width-640 {
+	width: 720px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+
+div.width-640 h3 ~ ul li {
+	margin-left: 15px;
+}
+
+div.width-640 ul li:last-child {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+h1.season { 
+	text-align: right;
+	display: block;
+	width: 100%;
+	border-bottom: 2px solid #481412;
+	-box-shadow: 0px 3px 0px rgba(0,0,0,0.25);
+	margin-bottom: 5px;
+} 
+
+div.width-640 ul:last-child { 
+	border-bottom: 2px solid #481412;
+}
+
+div.body-bottom {
+	width: 960px;
+	height: 12px;
+	background: url(/clients/DCMF/Images/body-bottom.png) no-repeat;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1em;
+}
+
+
+#artists img {
+	margin: 0px 8px 5px 0px;
+	float: left;
+}
+
+
+#artists img:nth-of-type(odd) {
+	float: right;
+	margin: 0px 0px 5px 8px;
+}
+
+#artists div.width-640 p {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #481412;
+	min-height:  200px;
+}
+
+#artists img:after {
+	clear: both;
+}
+
+#links div.width-640 ul li {
+	display: block;
+	width: 360px;
+	float: left;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#links div.width-640 ul li:nth-of-type(even) {
+	float: right;
+}
+
+#links div.width-640 ul:after {
+	content: ' ';
+	display: block;
+	width: 500;
+	clear: both;
+	
+}
+
+#outreach img {
+	float: left;
+	margin: 2px;
+}
+	
+
+
+
+#outreach h2 ~ ul:after {
+	content: ' ';
+	display: block;
+	width: 500;
+	clear: both;
+	padding-top: 10px;
+	
+}	
+
+
+#user-details {
+	float: left;
+	width: 208px;
+	font-family:  'Crimson Text', Georgia, Serif;
+	font-size: 2em;
+}
+
+#user-message { 
+	float: right;
+	width: 508px;
+	font-family:  'Crimson Text', Georgia, Serif;
+	font-size: 2em;
+}
+
+textarea {
+	width: 508px;
+	height: 175px;
+	min-height: 175px;
+	max-width: 508px;
+	min-width: 508px;
+	max-height: 300px;
+}
+
+form {
+	float: left;
+	width: 720px;
+}
+	
+
+/* ----- 2c. Footer -----  */
+	
+div.footer p {
+	margin-bottom: .5em;
+	font-family: 'Crimson Text', Georgia, Serif;
+	text-align: center;
+}
+.footerboxleft {
+	float: left;
+	width: 165px;
+	clear: none;
+	padding-top: 0;
+	padding-right: 5px;
+	padding-bottom: 0;
+	padding-left: 0;
+	margin: 0px;
+}
+.footerbox {
+	width: 620px;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+.footerboxright {
+	font-size: 10px;
+	color: #000;
+	text-decoration: none;
+	float: left;
+	width: 450px;
+	text-align: left;
+}

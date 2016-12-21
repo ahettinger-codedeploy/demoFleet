@@ -1,0 +1,1272 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><style type="text/css">
+    
+body, th, td
+{
+    font-family: "arial", "helvetica", Sans-Serif;
+	font-size: 12px;
+    line-height: 1 em;
+}
+th, td
+{
+    text-align: left;
+}
+</style>
+
+</head><body><b>Begin CASTROLDPS 2017 - 10/7/2016 4:27:38 PM</b><br><br><table><tbody><tr> 
+<td colspan="3"><b>Renewal Events</b></td></tr>
+<tr><td>Old Event:</td><td>796486</td><td>DRAG PIT STALL-ANNUAL RENTAL</td></tr><tr><td>New Event:</td><td>899970</td><td>DRAG PIT STALL-ANNUAL RENTAL</td></tr></tbody></table><br> 
+<u><b>Price Records - Missing Section/SeatTypes</b></u><br>
+<table><tbody><tr><th>Section Code</th><th>Section</th><th>Seat Type Code</th><th>Seat Type</th></tr>
+<tr><td colspan="4">No Missing Price Records</td></tr>
+</tbody></table><br><br>
+<u><b>Seat Records - Missing Seats</b></u><br>
+<table><tbody><tr><th>Section Code</th><th>Section</th><th>Row</th><th>Seat</th></tr>
+<tr><td colspan="4">No Missing Seats</td></tr>
+</tbody></table><br><br><hr>
+<b><u>Begin Renewal</u></b><br><br>
+SELECT OrderLine.OrderNumber, OrderLine.LineNumber, Seat.EventCode, 
+Section.Section, Seat.SectionCode, Seat.Row, Seat.Seat, 
+OrderLine.SeatTypeCode, OrderLine.ShipFirstName, OrderLine.ShipLastName,
+ OrderLine.ShipAddress1, OrderLine.ShipAddress2, OrderLine.ShipCity, 
+OrderLine.ShipState, OrderLine.ShipCountry, OrderLine.ShipPostalCode, 
+OrderHeader.CustomerNumber FROM Seat (NOLOCK) INNER JOIN Section 
+(NOLOCK) ON Seat.EventCode = Section.EventCode AND Seat.SectionCode = 
+Section.SectionCode INNER JOIN OrderLine (NOLOCK) ON Seat.ItemNumber = 
+OrderLine.ItemNumber INNER JOIN OrderHeader (NOLOCK) ON Seat.OrderNumber
+ = OrderHeader.OrderNumber WHERE Seat.EventCode IN (796486) AND 
+Seat.StatusCode = 'S' AND OrderLine.ItemType IN ('Seat', 
+'SubFixedEvent') AND OrderHeader.OrderTypeNumber &lt;&gt; 5  AND 
+OrderHeader.OrderNumber &gt; 0 ORDER BY OrderLine.OrderNumber, 
+OrderLine.LineNumber<br><br>Old Order Number = 19367382 - New Order Number: 22905532<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 19367382 | 
+NewOrderNumber = 22905532 | ItemNumber = 241769190 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Dave', ShipLastName = 
+'Wiltshire', ShipAddress1 = '#49-51047, RR 221', ShipAddress2 = '', 
+ShipCity = 'Sherwood Park', ShipState = 'AB', ShipPostalCode = 'T8E 
+1G8', ShipCountry = 'Canada' WHERE OrderNumber = 22905532 AND LineNumber
+ = 1<br><br>Old Order Number = 20745362 - New Order Number: 22905533<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745362 | 
+NewOrderNumber = 22905533 | ItemNumber = 241769100 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Dan', ShipLastName = 'Bold', 
+ShipAddress1 = 'Box 1917, ', ShipAddress2 = '', ShipCity = 'Rimby', 
+ShipState = 'AB', ShipPostalCode = 'T0C 2J0', ShipCountry = 'Canada' 
+WHERE OrderNumber = 22905533 AND LineNumber = 1<br>OldEventCode = 796486
+ | NewEventCode = 899970 | OldOrderNumber = 20745362 | NewOrderNumber = 
+22905533 | ItemNumber = 241769101 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode = 54615, 
+ShipCode = 13, ShipFirstName = 'Dan', ShipLastName = 'Bold', 
+ShipAddress1 = 'Box 1917, ', ShipAddress2 = '', ShipCity = 'Rimby', 
+ShipState = 'AB', ShipPostalCode = 'T0C 2J0', ShipCountry = 'Canada' 
+WHERE OrderNumber = 22905533 AND LineNumber = 2<br><br>Old Order Number = 20745363 - New Order Number: 22905534<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745363 | 
+NewOrderNumber = 22905534 | ItemNumber = 241769171 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Mitchell', ShipLastName = 
+'Otto', ShipAddress1 = '50209 RR #221', ShipAddress2 = '', ShipCity = 
+'Leduc County', ShipState = 'AB', ShipPostalCode = 'T0B 3M2', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905534 AND LineNumber = 1<br><br>Old Order Number = 20745365 - New Order Number: 22905535<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745365 | 
+NewOrderNumber = 22905535 | ItemNumber = 241769218 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Mona', ShipLastName = 
+'LaHaie', ShipAddress1 = '140, 23449 TOWNSHIP ROAD 505', ShipAddress2 = 
+'', ShipCity = 'LEDUC COUNTY', ShipState = 'Alberta', ShipPostalCode = 
+'T4X0S1', ShipCountry = 'Canada' WHERE OrderNumber = 22905535 AND 
+LineNumber = 1<br>OldEventCode = 796486 | NewEventCode = 899970 | 
+OldOrderNumber = 20745365 | NewOrderNumber = 22905535 | ItemNumber = 
+241769219 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 250, Surcharge = 2.5, SeatTypeCode = 54615, ShipCode = 13, 
+ShipFirstName = 'Mona', ShipLastName = 'LaHaie', ShipAddress1 = '140, 
+23449 TOWNSHIP ROAD 505', ShipAddress2 = '', ShipCity = 'LEDUC COUNTY', 
+ShipState = 'Alberta', ShipPostalCode = 'T4X0S1', ShipCountry = 'Canada'
+ WHERE OrderNumber = 22905535 AND LineNumber = 2<br>OldEventCode = 
+796486 | NewEventCode = 899970 | OldOrderNumber = 20745365 | 
+NewOrderNumber = 22905535 | ItemNumber = 241769220 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Mona', ShipLastName = 
+'LaHaie', ShipAddress1 = '140, 23449 TOWNSHIP ROAD 505', ShipAddress2 = 
+'', ShipCity = 'LEDUC COUNTY', ShipState = 'Alberta', ShipPostalCode = 
+'T4X0S1', ShipCountry = 'Canada' WHERE OrderNumber = 22905535 AND 
+LineNumber = 3<br><br>Old Order Number = 20745366 - New Order Number: 22905536<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745366 | 
+NewOrderNumber = 22905536 | ItemNumber = 241769117 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Rod', ShipLastName = 'Boivin',
+ ShipAddress1 = '67 Lake Ere Estates', ShipAddress2 = '', ShipCity = 
+'Calgary', ShipState = 'AB', ShipPostalCode = 'T2P2G7', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905536 AND LineNumber = 1<br><br>Old Order Number = 20745367 - New Order Number: 22905537<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745367 | 
+NewOrderNumber = 22905537 | ItemNumber = 241769125 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Lawrence', ShipLastName = 
+'Pudlowski', ShipAddress1 = '13 Kingswood DR', ShipAddress2 = '', 
+ShipCity = 'St. Albert', ShipState = 'AB', ShipPostalCode = 'T8N 5M8', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905537 AND LineNumber = 1<br><br>Old Order Number = 20745368 - New Order Number: 22905538<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745368 | 
+NewOrderNumber = 22905538 | ItemNumber = 241769050 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Lorne', ShipLastName = 
+'Esplin', ShipAddress1 = '2516-149 Avenue', ShipAddress2 = '', ShipCity =
+ 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T5Y 1X3', ShipCountry =
+ 'Canada' WHERE OrderNumber = 22905538 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745368 | 
+NewOrderNumber = 22905538 | ItemNumber = 241769049 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Lorne', ShipLastName = 
+'Esplin', ShipAddress1 = '2516-149 Avenue', ShipAddress2 = '', ShipCity =
+ 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T5Y 1X3', ShipCountry =
+ 'Canada' WHERE OrderNumber = 22905538 AND LineNumber = 2<br><br>Old Order Number = 20745369 - New Order Number: 22905539<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745369 | 
+NewOrderNumber = 22905539 | ItemNumber = 241769241 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Shawn', ShipLastName = 
+'Loblick', ShipAddress1 = '3718 50 St', ShipAddress2 = '', ShipCity = 
+'Gibbons,', ShipState = 'AB', ShipPostalCode = 'T0A 1N0', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905539 AND LineNumber = 1<br><br>Old Order Number = 20745370 - New Order Number: 22905540<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745370 | 
+NewOrderNumber = 22905540 | ItemNumber = 241769140 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Brad', ShipLastName = 'Davis',
+ ShipAddress1 = '5916 Tipton Rd NW', ShipAddress2 = '', ShipCity = 
+'Edmonton', ShipState = 'AB', ShipPostalCode = 'T2K 3L2', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905540 AND LineNumber = 1<br><br>Old Order Number = 20745372 - New Order Number: 22905541<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745372 | 
+NewOrderNumber = 22905541 | ItemNumber = 241769167 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Bill', ShipLastName = 
+'Taylor', ShipAddress1 = '4611-104 Ave', ShipAddress2 = '', ShipCity = 
+'Edmonton', ShipState = 'AB', ShipPostalCode = 'T6A 0X3', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905541 AND LineNumber = 1<br><br>Old Order Number = 20745374 - New Order Number: 22905542<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745374 | 
+NewOrderNumber = 22905542 | ItemNumber = 241769159 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Warren', ShipLastName = 
+'Neitsch', ShipAddress1 = '10366 145 st', ShipAddress2 = '', ShipCity = 
+'edmonton', ShipState = '', ShipPostalCode = 't5n2x7', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905542 AND LineNumber = 1<br><br>Old Order Number = 20745378 - New Order Number: 22905543<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745378 | 
+NewOrderNumber = 22905543 | ItemNumber = 241769209 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Mike', ShipLastName = 
+'lauterwald', ShipAddress1 = '4736-105 A Street ', ShipAddress2 = '', 
+ShipCity = 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T6H 2P3', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905543 AND LineNumber = 1<br><br>Old Order Number = 20745379 - New Order Number: 22905544<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745379 | 
+NewOrderNumber = 22905544 | ItemNumber = 241769161 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Robert', ShipLastName = 
+'White', ShipAddress1 = '12 Deerbrook Rd. S.E.', ShipAddress2 = '', 
+ShipCity = 'Calgary', ShipState = 'AB', ShipPostalCode = 'T2J 6L6', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905544 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745379 | 
+NewOrderNumber = 22905544 | ItemNumber = 241769162 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Robert', ShipLastName = 
+'White', ShipAddress1 = '12 Deerbrook Rd. S.E.', ShipAddress2 = '', 
+ShipCity = 'Calgary', ShipState = 'AB', ShipPostalCode = 'T2J 6L6', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905544 AND LineNumber = 2<br><br>Old Order Number = 20745387 - New Order Number: 22905545<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745387 | 
+NewOrderNumber = 22905545 | ItemNumber = 241769201 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Roger', ShipLastName = 'Bouw',
+ ShipAddress1 = '10  51422 rr rd 261', ShipAddress2 = '', ShipCity = 
+'spruce grove', ShipState = 'AB', ShipPostalCode = 'T7Y 1B4', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905545 AND LineNumber = 1<br><br>Old Order Number = 20745390 - New Order Number: 22905546<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745390 | 
+NewOrderNumber = 22905546 | ItemNumber = 241769229 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Mark', ShipLastName = 
+'venance', ShipAddress1 = 'Box 8, ', ShipAddress2 = '', ShipCity = 
+'Streamtown', ShipState = 'AB', ShipPostalCode = 'T0B 4G0', ShipCountry =
+ 'Canada' WHERE OrderNumber = 22905546 AND LineNumber = 1<br><br>Old Order Number = 20745394 - New Order Number: 22905547<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745394 | 
+NewOrderNumber = 22905547 | ItemNumber = 241769047 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Ron', ShipLastName = 
+'Stennes', ShipAddress1 = '52164 RR 214', ShipAddress2 = '', ShipCity = 
+'Sherwood Park', ShipState = 'AB', ShipPostalCode = 'T8E 1A3', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905547 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745394 | 
+NewOrderNumber = 22905547 | ItemNumber = 241769048 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Ron', ShipLastName = 
+'Stennes', ShipAddress1 = '52164 RR 214', ShipAddress2 = '', ShipCity = 
+'Sherwood Park', ShipState = 'AB', ShipPostalCode = 'T8E 1A3', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905547 AND LineNumber = 2<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745394 | 
+NewOrderNumber = 22905547 | ItemNumber = 241769216 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Ron', ShipLastName = 
+'Stennes', ShipAddress1 = '52164 RR 214', ShipAddress2 = '', ShipCity = 
+'Sherwood Park', ShipState = 'AB', ShipPostalCode = 'T8E 1A3', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905547 AND LineNumber = 3<br><br>Old Order Number = 20745397 - New Order Number: 22905548<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745397 | 
+NewOrderNumber = 22905548 | ItemNumber = 241769179 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Sid', ShipLastName = 'Deitch',
+ ShipAddress1 = '4607- 102 A Ave', ShipAddress2 = '', ShipCity = 
+'Edmonton', ShipState = 'AB', ShipPostalCode = 'T6A 0P9', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905548 AND LineNumber = 1<br><br>Old Order Number = 20745398 - New Order Number: 22905549<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745398 | 
+NewOrderNumber = 22905549 | ItemNumber = 241769178 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'robert', ShipLastName = 
+'arndt', ShipAddress1 = '#121   51149', ShipAddress2 = 'rg rd 231', 
+ShipCity = 'sherwoodpark', ShipState = 'ab', ShipPostalCode = 't8b1k5', 
+ShipCountry = 'CANADA' WHERE OrderNumber = 22905549 AND LineNumber = 1<br><br>Old Order Number = 20745400 - New Order Number: 22905550<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745400 | 
+NewOrderNumber = 22905550 | ItemNumber = 241769130 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Dwight', ShipLastName = 
+'Alfrey', ShipAddress1 = '387, 52304 Range Road 233', ShipAddress2 = '',
+ ShipCity = 'Sherwood Park', ShipState = 'AB', ShipPostalCode = 'T8B 
+1C9', ShipCountry = 'CANADA' WHERE OrderNumber = 22905550 AND LineNumber
+ = 1<br><br>Old Order Number = 20745403 - New Order Number: 22905551<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745403 | 
+NewOrderNumber = 22905551 | ItemNumber = 241769062 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 400, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Tom', ShipLastName = 'McEvoy',
+ ShipAddress1 = '13808-155 AVe #3', ShipAddress2 = '', ShipCity = 
+'Edmonton', ShipState = 'AB', ShipPostalCode = 'T6V 1T8', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905551 AND LineNumber = 1<br><br>Old Order Number = 20745406 - New Order Number: 22905552<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745406 | 
+NewOrderNumber = 22905552 | ItemNumber = 241769103 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Roger', ShipLastName = 
+'Camilli', ShipAddress1 = '000', ShipAddress2 = '', ShipCity = 
+'Edmonton', ShipState = 'AB', ShipPostalCode = 'T1T 1T1', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905552 AND LineNumber = 1<br><br>Old Order Number = 20745407 - New Order Number: 22905553<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745407 | 
+NewOrderNumber = 22905553 | ItemNumber = 241769104 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Paul', ShipLastName = 
+'Bouchard', ShipAddress1 = '10212 Wapati Drive SE', ShipAddress2 = '', 
+ShipCity = 'Calgary', ShipState = 'AB', ShipPostalCode = 'T2J 1J4', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905553 AND LineNumber = 1<br><br>Old Order Number = 20745409 - New Order Number: 22905554<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745409 | 
+NewOrderNumber = 22905554 | ItemNumber = 241769060 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 400, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Bob -', ShipLastName = 'Ebertz
+ Bros Racing', ShipAddress1 = '1651 70 Ave', ShipAddress2 = '', ShipCity
+ = 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T6P 1N5', ShipCountry
+ = 'Canada' WHERE OrderNumber = 22905554 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745409 | 
+NewOrderNumber = 22905554 | ItemNumber = 241769068 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 400, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Bob -', ShipLastName = 'Ebertz
+ Bros Racing', ShipAddress1 = '1651 70 Ave', ShipAddress2 = '', ShipCity
+ = 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T6P 1N5', ShipCountry
+ = 'Canada' WHERE OrderNumber = 22905554 AND LineNumber = 2<br><br>Old Order Number = 20745410 - New Order Number: 22905555<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745410 | 
+NewOrderNumber = 22905555 | ItemNumber = 241769155 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Tony', ShipLastName = 
+'Redelback', ShipAddress1 = '5209 50 Ave', ShipAddress2 = '', ShipCity =
+ 'Red Deer', ShipState = 'Alberta', ShipPostalCode = 'T4n 4b4', 
+ShipCountry = 'CANADA' WHERE OrderNumber = 22905555 AND LineNumber = 1<br><br>Old Order Number = 20745415 - New Order Number: 22905556<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745415 | 
+NewOrderNumber = 22905556 | ItemNumber = 241769131 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Dave', ShipLastName = 
+'Hanasyk', ShipAddress1 = '1027 75 st', ShipAddress2 = '', ShipCity = 
+'edmon ton', ShipState = 'ab', ShipPostalCode = 't6k 2s5', ShipCountry =
+ 'Canada' WHERE OrderNumber = 22905556 AND LineNumber = 1<br><br>Old Order Number = 20745417 - New Order Number: 22905557<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745417 | 
+NewOrderNumber = 22905557 | ItemNumber = 241769109 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Jeff', ShipLastName = 
+'Wutzke', ShipAddress1 = 'RR 1 Station Main', ShipAddress2 = '', 
+ShipCity = 'Strathmore', ShipState = 'AB', ShipPostalCode = 'T1P 1J6', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905557 AND LineNumber = 1<br><br>Old Order Number = 20745436 - New Order Number: 22905558<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745436 | 
+NewOrderNumber = 22905558 | ItemNumber = 241769163 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Andy', ShipLastName = 'Scheu',
+ ShipAddress1 = '18-1259-46ave s.e.', ShipAddress2 = '', ShipCity = 
+'Calgary', ShipState = 'AB', ShipPostalCode = 'T2G5M2', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905558 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745436 | 
+NewOrderNumber = 22905558 | ItemNumber = 241769164 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Andy', ShipLastName = 'Scheu',
+ ShipAddress1 = '18-1259-46ave s.e.', ShipAddress2 = '', ShipCity = 
+'Calgary', ShipState = 'AB', ShipPostalCode = 'T2G5M2', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905558 AND LineNumber = 2<br><br>Old Order Number = 20745437 - New Order Number: 22905559<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745437 | 
+NewOrderNumber = 22905559 | ItemNumber = 241769227 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'David', ShipLastName = 
+'Boucher', ShipAddress1 = '3124 138 ave', ShipAddress2 = '', ShipCity = 
+'Edmonton ', ShipState = 'AB', ShipPostalCode = 'T5Y 1M3', ShipCountry =
+ 'Canada' WHERE OrderNumber = 22905559 AND LineNumber = 1<br><br>Old Order Number = 20745438 - New Order Number: 22905560<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745438 | 
+NewOrderNumber = 22905560 | ItemNumber = 241769196 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Shawn', ShipLastName = 
+'Lachambre', ShipAddress1 = 'Box 125', ShipAddress2 = '', ShipCity = 
+'Pilot Butte', ShipState = 'SK', ShipPostalCode = 'S0G 3Zo', ShipCountry
+ = 'Canada' WHERE OrderNumber = 22905560 AND LineNumber = 1<br><br>Old Order Number = 20745441 - New Order Number: 22905561<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745441 | 
+NewOrderNumber = 22905561 | ItemNumber = 241769215 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Kim', ShipLastName = 
+'Gustafson', ShipAddress1 = '62 Alderwood Cres.', ShipAddress2 = '', 
+ShipCity = 'Sherwood Park', ShipState = 'AB', ShipPostalCode = 'T8A 
+0K3', ShipCountry = 'Canada' WHERE OrderNumber = 22905561 AND LineNumber
+ = 1<br><br>Old Order Number = 20745442 - New Order Number: 22905562<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745442 | 
+NewOrderNumber = 22905562 | ItemNumber = 241769065 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 400, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Joe', ShipLastName = 'Graves',
+ ShipAddress1 = '16516-69 st', ShipAddress2 = '', ShipCity = 'Edmonton',
+ ShipState = 'AB', ShipPostalCode = 'T5z 3v5', ShipCountry = 'Canada' 
+WHERE OrderNumber = 22905562 AND LineNumber = 1<br><br>Old Order Number = 20745443 - New Order Number: 22905563<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745443 | 
+NewOrderNumber = 22905563 | ItemNumber = 241769066 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 400, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Dean', ShipLastName = 
+'Hartley', ShipAddress1 = 'Box 10 Site 16 RR2', ShipAddress2 = '', 
+ShipCity = 'Red Deer', ShipState = 'Alta', ShipPostalCode = 'T4N-5E2', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905563 AND LineNumber = 1<br><br>Old Order Number = 20745447 - New Order Number: 22905564<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745447 | 
+NewOrderNumber = 22905564 | ItemNumber = 241769105 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Gary &amp; Karen', 
+ShipLastName = 'Tomiak', ShipAddress1 = 'Box 3357', ShipAddress2 = '', 
+ShipCity = 'Vermilion', ShipState = 'AB', ShipPostalCode = 'T9X 2B3', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905564 AND LineNumber = 1<br><br>Old Order Number = 20745464 - New Order Number: 22905565<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745464 | 
+NewOrderNumber = 22905565 | ItemNumber = 241769154 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Shelley &amp; Len', 
+ShipLastName = 'Tschritter', ShipAddress1 = '387 Douglas Woods Drive 
+SE', ShipAddress2 = '', ShipCity = 'Calgary', ShipState = 'AB', 
+ShipPostalCode = 'T2Z 2H1', ShipCountry = 'Canada' WHERE OrderNumber = 
+22905565 AND LineNumber = 1<br><br>Old Order Number = 20745466 - New Order Number: 22905566<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745466 | 
+NewOrderNumber = 22905566 | ItemNumber = 241769144 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Kelly', ShipLastName = 
+'Ritchie', ShipAddress1 = '133, 53038 RR#225', ShipAddress2 = '', 
+ShipCity = 'Sherwood Park', ShipState = 'AB', ShipPostalCode = 'T8A 
+4T7', ShipCountry = 'CANADA' WHERE OrderNumber = 22905566 AND LineNumber
+ = 1<br><br>Old Order Number = 20745468 - New Order Number: 22905567<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745468 | 
+NewOrderNumber = 22905567 | ItemNumber = 241769128 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Tom ', ShipLastName = 
+'Skjonsberg', ShipAddress1 = '79 towers close', ShipAddress2 = '', 
+ShipCity = 'Red Deer', ShipState = 'AB', ShipPostalCode = 't4p 0k7', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905567 AND LineNumber = 1<br><br>Old Order Number = 20745473 - New Order Number: 22905568<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745473 | 
+NewOrderNumber = 22905568 | ItemNumber = 241769141 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Ed', ShipLastName = 
+'Matiejewski', ShipAddress1 = '#68, 23333 Wye rd', ShipAddress2 = '', 
+ShipCity = 'Sherwood Park', ShipState = 'AB', ShipPostalCode = 
+'T8B-1K4', ShipCountry = 'Canada' WHERE OrderNumber = 22905568 AND 
+LineNumber = 1<br><br>Old Order Number = 20745475 - New Order Number: 22905569<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745475 | 
+NewOrderNumber = 22905569 | ItemNumber = 241769261 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Brad', ShipLastName = 
+'Spilak', ShipAddress1 = 'Box 1399', ShipAddress2 = '', ShipCity = 
+'Slave Lale', ShipState = 'Ab', ShipPostalCode = 'T0G2A0', ShipCountry =
+ 'Canada' WHERE OrderNumber = 22905569 AND LineNumber = 1<br><br>Old Order Number = 20745476 - New Order Number: 22905570<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745476 | 
+NewOrderNumber = 22905570 | ItemNumber = 241769262 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Fred', ShipLastName = 
+'Hartum', ShipAddress1 = 'Box 2291', ShipAddress2 = '', ShipCity = 
+'Slave Lake', ShipState = 'AB', ShipPostalCode = 'T0G 2A0', ShipCountry =
+ 'Canada' WHERE OrderNumber = 22905570 AND LineNumber = 1<br><br>Old Order Number = 20745482 - New Order Number: 22905571<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745482 | 
+NewOrderNumber = 22905571 | ItemNumber = 241769208 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Kalim', ShipLastName = 
+'Menzel', ShipAddress1 = '7 Lawrence Crescent', ShipAddress2 = '', 
+ShipCity = 'St. Albert', ShipState = 'AB', ShipPostalCode = 'T8N1S9', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905571 AND LineNumber = 1<br><br>Old Order Number = 20745502 - New Order Number: 22905572<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745502 | 
+NewOrderNumber = 22905572 | ItemNumber = 241769057 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 400, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Darryn', ShipLastName = 
+'OConnor', ShipAddress1 = '10508-90st', ShipAddress2 = '', ShipCity = 
+'Fort ST John', ShipState = 'BC', ShipPostalCode = 'V1J 4Y4', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905572 AND LineNumber = 1<br><br>Old Order Number = 20745506 - New Order Number: 22905573<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745506 | 
+NewOrderNumber = 22905573 | ItemNumber = 241769271 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Damon', ShipLastName = 
+'Robinson', ShipAddress1 = '30 Aspen Glen', ShipAddress2 = '', ShipCity =
+ 'Spruce Grove', ShipState = 'AB', ShipPostalCode = '*', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905573 AND LineNumber = 1<br><br>Old Order Number = 20745508 - New Order Number: 22905574<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745508 | 
+NewOrderNumber = 22905574 | ItemNumber = 241769156 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'James', ShipLastName = 
+'Knight', ShipAddress1 = '9845 - 184 street', ShipAddress2 = '', 
+ShipCity = 'Edmonton', ShipState = 'Alberta', ShipPostalCode = 'T5T 
+4L5', ShipCountry = 'CANADA' WHERE OrderNumber = 22905574 AND LineNumber
+ = 1<br><br>Old Order Number = 20745520 - New Order Number: 22905575<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745520 | 
+NewOrderNumber = 22905575 | ItemNumber = 241769273 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Tim', ShipLastName = 'Bartel',
+ ShipAddress1 = 'PO Box 2312', ShipAddress2 = '', ShipCity = 'Stoney 
+PLain', ShipState = 'AB', ShipPostalCode = 'T7Z 1X8', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905575 AND LineNumber = 1<br><br>Old Order Number = 20745522 - New Order Number: 22905576<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745522 | 
+NewOrderNumber = 22905576 | ItemNumber = 241769067 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 400, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Dave', ShipLastName = 'Senio',
+ ShipAddress1 = '23338 TwnShip Rd. 495', ShipAddress2 = '', ShipCity = 
+'Leduc County', ShipState = 'AB', ShipPostalCode = 'T4X 0Y4', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905576 AND LineNumber = 1<br><br>Old Order Number = 20745536 - New Order Number: 22905577<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745536 | 
+NewOrderNumber = 22905577 | ItemNumber = 241769112 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Patrick', ShipLastName = 
+'McNally', ShipAddress1 = '3 Ormandy Place', ShipAddress2 = '', ShipCity
+ = 'St. Albert', ShipState = 'Ab', ShipPostalCode = 'T8N 6E4', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905577 AND LineNumber = 1<br><br>Old Order Number = 20745537 - New Order Number: 22905578<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20745537 | 
+NewOrderNumber = 22905578 | ItemNumber = 241769180 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Carey ', ShipLastName = 
+'Borchuk', ShipAddress1 = '5613-56 str', ShipAddress2 = '', ShipCity = 
+'Beaumont', ShipState = 'AB.', ShipPostalCode = 'T4x-1A6', ShipCountry =
+ 'Canada' WHERE OrderNumber = 22905578 AND LineNumber = 1<br><br>Old Order Number = 20969883 - New Order Number: 22905579<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 20969883 | 
+NewOrderNumber = 22905579 | ItemNumber = 241769207 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Larry', ShipLastName = 
+'Menzel', ShipAddress1 = '7 Lawrence Cresent', ShipAddress2 = '', 
+ShipCity = 'St. Albert', ShipState = 'AB', ShipPostalCode = 'T8N 1S9', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905579 AND LineNumber = 1<br><br>Old Order Number = 21007592 - New Order Number: 22905580<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21007592 | 
+NewOrderNumber = 22905580 | ItemNumber = 241769145 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'GNS', ShipLastName = 
+'Trailer', ShipAddress1 = '11747 231 St', ShipAddress2 = 'c/o Howard 
+Bootsma', ShipCity = 'Edmonton,', ShipState = 'AB', ShipPostalCode = 
+'T5S 2C5', ShipCountry = 'Canada' WHERE OrderNumber = 22905580 AND 
+LineNumber = 1<br><br>Old Order Number = 21032595 - New Order Number: 22905581<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21032595 | 
+NewOrderNumber = 22905581 | ItemNumber = 241769230 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Gary', ShipLastName = 
+'Battle', ShipAddress1 = '320-50448 Rge Rd 221', ShipAddress2 = '', 
+ShipCity = 'Leduc County', ShipState = 'AB', ShipPostalCode = 'T0B 3M2',
+ ShipCountry = 'Canada' WHERE OrderNumber = 22905581 AND LineNumber = 1<br><br>Old Order Number = 21055790 - New Order Number: 22905582<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21055790 | 
+NewOrderNumber = 22905582 | ItemNumber = 241769063 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 400, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Peter', ShipLastName = 
+'Saruga', ShipAddress1 = '139 Peterson Lane', ShipAddress2 = '', 
+ShipCity = 'Fort McMurray', ShipState = 'AB', ShipPostalCode = 'T9K 
+0B1', ShipCountry = 'Canada' WHERE OrderNumber = 22905582 AND LineNumber
+ = 1<br><br>Old Order Number = 21060387 - New Order Number: 22905583<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21060387 | 
+NewOrderNumber = 22905583 | ItemNumber = 241769231 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Martin', ShipLastName = 
+'Wiles', ShipAddress1 = 'Box 53 ', ShipAddress2 = '', ShipCity = 
+'Marwayne', ShipState = 'AB', ShipPostalCode = 'T0B 2X0', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905583 AND LineNumber = 1<br><br>Old Order Number = 21112636 - New Order Number: 22905584<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21112636 | 
+NewOrderNumber = 22905584 | ItemNumber = 241769151 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Colleen', ShipLastName = 
+'Allison', ShipAddress1 = 'Box 403', ShipAddress2 = 'NITRO RATZ 
+ASSOCIATION', ShipCity = 'Legal', ShipState = 'AB', ShipPostalCode = 
+'T0G 1L0', ShipCountry = 'CANADA' WHERE OrderNumber = 22905584 AND 
+LineNumber = 1<br>OldEventCode = 796486 | NewEventCode = 899970 | 
+OldOrderNumber = 21112636 | NewOrderNumber = 22905584 | ItemNumber = 
+241769152 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 250, Surcharge = 2.5, SeatTypeCode = 54615, ShipCode = 13, 
+ShipFirstName = 'Colleen', ShipLastName = 'Allison', ShipAddress1 = 'Box
+ 403', ShipAddress2 = 'NITRO RATZ ASSOCIATION', ShipCity = 'Legal', 
+ShipState = 'AB', ShipPostalCode = 'T0G 1L0', ShipCountry = 'CANADA' 
+WHERE OrderNumber = 22905584 AND LineNumber = 2<br><br>Old Order Number = 21129683 - New Order Number: 22905585<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21129683 | 
+NewOrderNumber = 22905585 | ItemNumber = 241769181 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'DOUG', ShipLastName = 
+'GROVES', ShipAddress1 = 'BOX 147', ShipAddress2 = '', ShipCity = 'ALDER
+ FLATS', ShipState = 'AB', ShipPostalCode = 'T0C 0A0', ShipCountry = 
+'CANADA' WHERE OrderNumber = 22905585 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21129683 | 
+NewOrderNumber = 22905585 | ItemNumber = 241769182 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'DOUG', ShipLastName = 
+'GROVES', ShipAddress1 = 'BOX 147', ShipAddress2 = '', ShipCity = 'ALDER
+ FLATS', ShipState = 'AB', ShipPostalCode = 'T0C 0A0', ShipCountry = 
+'CANADA' WHERE OrderNumber = 22905585 AND LineNumber = 2<br><br>Old Order Number = 21130964 - New Order Number: 22905586<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21130964 | 
+NewOrderNumber = 22905586 | ItemNumber = 241769248 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Dave', ShipLastName = 
+'Rutherford', ShipAddress1 = '352 Norseman Road NW', ShipAddress2 = '', 
+ShipCity = 'Calgary', ShipState = 'AB', ShipPostalCode = 'T2K 5M5', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905586 AND LineNumber = 1<br><br>Old Order Number = 21133253 - New Order Number: 22905587<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21133253 | 
+NewOrderNumber = 22905587 | ItemNumber = 241769240 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Greg', ShipLastName = 
+'McLellan', ShipAddress1 = '66 Danfield', ShipAddress2 = '', ShipCity = 
+'Spruce Grove', ShipState = 'AB', ShipPostalCode = 'T7X 0E6', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905587 AND LineNumber = 1<br><br>Old Order Number = 21134050 - New Order Number: 22905588<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21134050 | 
+NewOrderNumber = 22905588 | ItemNumber = 241769136 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'John', ShipLastName = 
+'Schmidt', ShipAddress1 = '52073 RR 221', ShipAddress2 = 'Smittys 
+Automotive Center', ShipCity = 'Sherwood Park', ShipState = 'AB', 
+ShipPostalCode = 'T8E 1C6', ShipCountry = 'Canada' WHERE OrderNumber = 
+22905588 AND LineNumber = 1<br>OldEventCode = 796486 | NewEventCode = 
+899970 | OldOrderNumber = 21134050 | NewOrderNumber = 22905588 | 
+ItemNumber = 241769137 | ReturnCode = 0<br>UPDATE OrderLine WITH 
+(ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode = 54615, 
+ShipCode = 13, ShipFirstName = 'John', ShipLastName = 'Schmidt', 
+ShipAddress1 = '52073 RR 221', ShipAddress2 = 'Smittys Automotive 
+Center', ShipCity = 'Sherwood Park', ShipState = 'AB', ShipPostalCode = 
+'T8E 1C6', ShipCountry = 'Canada' WHERE OrderNumber = 22905588 AND 
+LineNumber = 2<br>OldEventCode = 796486 | NewEventCode = 899970 | 
+OldOrderNumber = 21134050 | NewOrderNumber = 22905588 | ItemNumber = 
+241769139 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 250, Surcharge = 2.5, SeatTypeCode = 54615, ShipCode = 13, 
+ShipFirstName = 'John', ShipLastName = 'Schmidt', ShipAddress1 = '52073 
+RR 221', ShipAddress2 = 'Smittys Automotive Center', ShipCity = 
+'Sherwood Park', ShipState = 'AB', ShipPostalCode = 'T8E 1C6', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905588 AND LineNumber = 3<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21134050 | 
+NewOrderNumber = 22905588 | ItemNumber = 241769138 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'John', ShipLastName = 
+'Schmidt', ShipAddress1 = '52073 RR 221', ShipAddress2 = 'Smittys 
+Automotive Center', ShipCity = 'Sherwood Park', ShipState = 'AB', 
+ShipPostalCode = 'T8E 1C6', ShipCountry = 'Canada' WHERE OrderNumber = 
+22905588 AND LineNumber = 4<br><br>Old Order Number = 21135032 - New Order Number: 22905589<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21135032 | 
+NewOrderNumber = 22905589 | ItemNumber = 241769118 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Tyler', ShipLastName = 
+'Holmgren', ShipAddress1 = '10820-50th Street', ShipAddress2 = '', 
+ShipCity = 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T6A 2E4', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905589 AND LineNumber = 1<br><br>Old Order Number = 21135212 - New Order Number: 22905590<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21135212 | 
+NewOrderNumber = 22905590 | ItemNumber = 241769126 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Derek', ShipLastName = 'Rose',
+ ShipAddress1 = '9 Akins Drive', ShipAddress2 = '', ShipCity = 'St 
+Albert', ShipState = 'AB', ShipPostalCode = 'T8N  2H6', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905590 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21135212 | 
+NewOrderNumber = 22905590 | ItemNumber = 241769127 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Derek', ShipLastName = 'Rose',
+ ShipAddress1 = '9 Akins Drive', ShipAddress2 = '', ShipCity = 'St 
+Albert', ShipState = 'AB', ShipPostalCode = 'T8N  2H6', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905590 AND LineNumber = 2<br><br>Old Order Number = 21136956 - New Order Number: 22905591<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21136956 | 
+NewOrderNumber = 22905591 | ItemNumber = 241769239 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Jody', ShipLastName = 
+'Hurdman', ShipAddress1 = '#24 16806 118 Ave', ShipAddress2 = '', 
+ShipCity = 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T5V 1M8', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905591 AND LineNumber = 1<br><br>Old Order Number = 21143495 - New Order Number: 22905592<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21143495 | 
+NewOrderNumber = 22905592 | ItemNumber = 241769204 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Mike/Brenda', ShipLastName = 
+'Priddle', ShipAddress1 = '45 Ash Cres.', ShipAddress2 = '', ShipCity = 
+'St. Albert', ShipState = 'AB', ShipPostalCode = 'T8N 3J6', ShipCountry =
+ 'Canada' WHERE OrderNumber = 22905592 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21143495 | 
+NewOrderNumber = 22905592 | ItemNumber = 241769205 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Mike/Brenda', ShipLastName = 
+'Priddle', ShipAddress1 = '45 Ash Cres.', ShipAddress2 = '', ShipCity = 
+'St. Albert', ShipState = 'AB', ShipPostalCode = 'T8N 3J6', ShipCountry =
+ 'Canada' WHERE OrderNumber = 22905592 AND LineNumber = 2<br><br>Old Order Number = 21144051 - New Order Number: 22905593<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21144051 | 
+NewOrderNumber = 22905593 | ItemNumber = 241769197 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Robert', ShipLastName = 
+'Schentag', ShipAddress1 = '218 Somerglen Way SW', ShipAddress2 = '', 
+ShipCity = 'Calgary', ShipState = 'AB', ShipPostalCode = 'T2Y 4B3', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905593 AND LineNumber = 1<br><br>Old Order Number = 21157678 - New Order Number: 22905594<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21157678 | 
+NewOrderNumber = 22905594 | ItemNumber = 241769247 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Ross', ShipLastName = 
+'Sutherland', ShipAddress1 = '12339-130 St', ShipAddress2 = '', ShipCity
+ = 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T5L 1K9', ShipCountry
+ = 'Canada' WHERE OrderNumber = 22905594 AND LineNumber = 1<br><br>Old Order Number = 21158689 - New Order Number: 22905595<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21158689 | 
+NewOrderNumber = 22905595 | ItemNumber = 241769170 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Norm', ShipLastName = 'Bosse',
+ ShipAddress1 = '8810 99 ave', ShipAddress2 = '', ShipCity = 
+'morinville', ShipState = 'AB', ShipPostalCode = 't8r1s8', ShipCountry =
+ 'Canada' WHERE OrderNumber = 22905595 AND LineNumber = 1<br><br>Old Order Number = 21159637 - New Order Number: 22905596<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21159637 | 
+NewOrderNumber = 22905596 | ItemNumber = 241769133 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Ryan', ShipLastName = 
+'Baskerville', ShipAddress1 = '145 51559 RR 225', ShipAddress2 = '', 
+ShipCity = 'Sherwood Park', ShipState = 'AB', ShipPostalCode = 'T8C 
+1H5', ShipCountry = 'Canada' WHERE OrderNumber = 22905596 AND LineNumber
+ = 1<br>OldEventCode = 796486 | NewEventCode = 899970 | OldOrderNumber =
+ 21159637 | NewOrderNumber = 22905596 | ItemNumber = 241769134 | 
+ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price = 250, 
+Surcharge = 2.5, SeatTypeCode = 54615, ShipCode = 13, ShipFirstName = 
+'Ryan', ShipLastName = 'Baskerville', ShipAddress1 = '145 51559 RR 225',
+ ShipAddress2 = '', ShipCity = 'Sherwood Park', ShipState = 'AB', 
+ShipPostalCode = 'T8C 1H5', ShipCountry = 'Canada' WHERE OrderNumber = 
+22905596 AND LineNumber = 2<br><br>Old Order Number = 21159711 - New Order Number: 22905597<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21159711 | 
+NewOrderNumber = 22905597 | ItemNumber = 241769200 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Steve', ShipLastName = 
+'Connelly', ShipAddress1 = '219 Westridge Road', ShipAddress2 = '', 
+ShipCity = 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T5T 1B9', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905597 AND LineNumber = 1<br><br>Old Order Number = 21160224 - New Order Number: 22905598<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21160224 | 
+NewOrderNumber = 22905598 | ItemNumber = 241769157 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Adolph', ShipLastName = 
+'Sabourin', ShipAddress1 = '140 50472 RR 232', ShipAddress2 = '', 
+ShipCity = 'Leduc County', ShipState = 'AB', ShipPostalCode = 'T4X 0L1',
+ ShipCountry = 'Canada' WHERE OrderNumber = 22905598 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21160224 | 
+NewOrderNumber = 22905598 | ItemNumber = 241769158 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Adolph', ShipLastName = 
+'Sabourin', ShipAddress1 = '140 50472 RR 232', ShipAddress2 = '', 
+ShipCity = 'Leduc County', ShipState = 'AB', ShipPostalCode = 'T4X 0L1',
+ ShipCountry = 'Canada' WHERE OrderNumber = 22905598 AND LineNumber = 2<br><br>Old Order Number = 21160337 - New Order Number: 22905600<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21160337 | 
+NewOrderNumber = 22905600 | ItemNumber = 241769194 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Jan', ShipLastName = 
+'Pokorski', ShipAddress1 = '9323-177th Ave', ShipAddress2 = '', ShipCity
+ = 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T5Z 2H3', ShipCountry
+ = 'Canada' WHERE OrderNumber = 22905600 AND LineNumber = 1<br><br>Old Order Number = 21162372 - New Order Number: 22905601<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21162372 | 
+NewOrderNumber = 22905601 | ItemNumber = 241769106 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Rob', ShipLastName = 
+'Frattin', ShipAddress1 = 'Box 1598 ', ShipAddress2 = '', ShipCity = 
+'Gibbons', ShipState = 'Ab', ShipPostalCode = 'T0A 1N0', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905601 AND LineNumber = 1<br><br>Old Order Number = 21162922 - New Order Number: 22905602<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21162922 | 
+NewOrderNumber = 22905602 | ItemNumber = 241769059 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 400, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Lorne', ShipLastName = 
+'Purcha', ShipAddress1 = 'Box 49', ShipAddress2 = '', ShipCity = 
+'Thorsby', ShipState = 'AB', ShipPostalCode = 'T0C 2P0', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905602 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21162922 | 
+NewOrderNumber = 22905602 | ItemNumber = 241769061 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 400, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Lorne', ShipLastName = 
+'Purcha', ShipAddress1 = 'Box 49', ShipAddress2 = '', ShipCity = 
+'Thorsby', ShipState = 'AB', ShipPostalCode = 'T0C 2P0', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905602 AND LineNumber = 2<br><br>Old Order Number = 21163180 - New Order Number: 22905603<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21163180 | 
+NewOrderNumber = 22905603 | ItemNumber = 241769123 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Mike &amp; Tracy', 
+ShipLastName = 'Ferstl', ShipAddress1 = '368 Sunlake Road', ShipAddress2
+ = '', ShipCity = 'Calgary SE', ShipState = 'AB', ShipPostalCode = 'T2X 
+3H4', ShipCountry = 'Canada' WHERE OrderNumber = 22905603 AND LineNumber
+ = 1<br><br>Old Order Number = 21163246 - New Order Number: 22905604<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21163246 | 
+NewOrderNumber = 22905604 | ItemNumber = 241769166 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Shawn', ShipLastName = 
+'Tracy', ShipAddress1 = '432-52458 RR223', ShipAddress2 = '', ShipCity =
+ 'Sherwood Park', ShipState = 'AB', ShipPostalCode = 'T8A 5V1', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905604 AND LineNumber = 1<br><br>Old Order Number = 21164571 - New Order Number: 22905605<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21164571 | 
+NewOrderNumber = 22905605 | ItemNumber = 241769244 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Dennis', ShipLastName = 
+'Reilander', ShipAddress1 = '4303-57 Ave', ShipAddress2 = '', ShipCity =
+ 'Innisfail', ShipState = 'AB', ShipPostalCode = 'T4G1K7', ShipCountry =
+ 'Canada' WHERE OrderNumber = 22905605 AND LineNumber = 1<br><br>Old Order Number = 21167541 - New Order Number: 22905606<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21167541 | 
+NewOrderNumber = 22905606 | ItemNumber = 241769121 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Jason', ShipLastName = 
+'Miller', ShipAddress1 = '10911- Alaska Rd', ShipAddress2 = '', ShipCity
+ = 'Fort St.John', ShipState = 'BC', ShipPostalCode = 'B1J 6P3', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905606 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21167541 | 
+NewOrderNumber = 22905606 | ItemNumber = 241769122 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Jason', ShipLastName = 
+'Miller', ShipAddress1 = '10911- Alaska Rd', ShipAddress2 = '', ShipCity
+ = 'Fort St.John', ShipState = 'BC', ShipPostalCode = 'B1J 6P3', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905606 AND LineNumber = 2<br><br>Old Order Number = 21167997 - New Order Number: 22905607<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21167997 | 
+NewOrderNumber = 22905607 | ItemNumber = 241769099 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Andy', ShipLastName = 
+'Beauchemin', ShipAddress1 = '52108- Rg Rd 220', ShipAddress2 = '', 
+ShipCity = 'Sherwood Park', ShipState = 'AB', ShipPostalCode = 'T8E 
+1C2', ShipCountry = 'Canada' WHERE OrderNumber = 22905607 AND LineNumber
+ = 1<br>OldEventCode = 796486 | NewEventCode = 899970 | OldOrderNumber =
+ 21167997 | NewOrderNumber = 22905607 | ItemNumber = 241769110 | 
+ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price = 250, 
+Surcharge = 2.5, SeatTypeCode = 54615, ShipCode = 13, ShipFirstName = 
+'Andy', ShipLastName = 'Beauchemin', ShipAddress1 = '52108- Rg Rd 220', 
+ShipAddress2 = '', ShipCity = 'Sherwood Park', ShipState = 'AB', 
+ShipPostalCode = 'T8E 1C2', ShipCountry = 'Canada' WHERE OrderNumber = 
+22905607 AND LineNumber = 2<br><br>Old Order Number = 21168466 - New Order Number: 22905608<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21168466 | 
+NewOrderNumber = 22905608 | ItemNumber = 241769064 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 400, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'greg', ShipLastName = 
+'morton', ShipAddress1 = '9008 101ave', ShipAddress2 = '', ShipCity = 
+'fort st john', ShipState = 'BC ', ShipPostalCode = 'V1J2A6', 
+ShipCountry = 'CANADA' WHERE OrderNumber = 22905608 AND LineNumber = 1<br><br>Old Order Number = 21169283 - New Order Number: 22905609<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21169283 | 
+NewOrderNumber = 22905609 | ItemNumber = 241769074 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 400, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Richard Spargo', ShipLastName =
+ 'Shoppers', ShipAddress1 = '9837 - 187 Street', ShipAddress2 = '', 
+ShipCity = 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T5T 3E7', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905609 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21169283 | 
+NewOrderNumber = 22905609 | ItemNumber = 241769075 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 400, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Richard Spargo', ShipLastName =
+ 'Shoppers', ShipAddress1 = '9837 - 187 Street', ShipAddress2 = '', 
+ShipCity = 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T5T 3E7', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905609 AND LineNumber = 2<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21169283 | 
+NewOrderNumber = 22905609 | ItemNumber = 241769076 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 400, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Richard Spargo', ShipLastName =
+ 'Shoppers', ShipAddress1 = '9837 - 187 Street', ShipAddress2 = '', 
+ShipCity = 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T5T 3E7', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905609 AND LineNumber = 3<br><br>Old Order Number = 21173304 - New Order Number: 22905610<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21173304 | 
+NewOrderNumber = 22905610 | ItemNumber = 241769238 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Chad', ShipLastName = 
+'Huffman', ShipAddress1 = '20 Chaparal Drive', ShipAddress2 = ' ', 
+ShipCity = 'Valley View SE', ShipState = 'AB', ShipPostalCode = 'T2X 
+0M2', ShipCountry = 'Canada' WHERE OrderNumber = 22905610 AND LineNumber
+ = 1<br><br>Old Order Number = 21173724 - New Order Number: 22905611<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21173724 | 
+NewOrderNumber = 22905611 | ItemNumber = 241769233 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Dan &amp; Keela', ShipLastName
+ = 'Coss', ShipAddress1 = '14 Meadowood Cres', ShipAddress2 = '', 
+ShipCity = 'sherwood park', ShipState = 'Ab', ShipPostalCode = 'T8A 
+0L7', ShipCountry = 'Canada' WHERE OrderNumber = 22905611 AND LineNumber
+ = 1<br>OldEventCode = 796486 | NewEventCode = 899970 | OldOrderNumber =
+ 21173724 | NewOrderNumber = 22905611 | ItemNumber = 241769234 | 
+ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price = 250, 
+Surcharge = 2.5, SeatTypeCode = 54615, ShipCode = 13, ShipFirstName = 
+'Dan &amp; Keela', ShipLastName = 'Coss', ShipAddress1 = '14 Meadowood 
+Cres', ShipAddress2 = '', ShipCity = 'sherwood park', ShipState = 'Ab', 
+ShipPostalCode = 'T8A 0L7', ShipCountry = 'Canada' WHERE OrderNumber = 
+22905611 AND LineNumber = 2<br><br>Old Order Number = 21174037 - New Order Number: 22905612<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21174037 | 
+NewOrderNumber = 22905612 | ItemNumber = 241769206 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Joseph', ShipLastName = 
+'Schultenkamper', ShipAddress1 = '21338 TWP 540', ShipAddress2 = '', 
+ShipCity = 'Adrossan', ShipState = 'AB', ShipPostalCode = 'T8G 2A1', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905612 AND LineNumber = 1<br><br>Old Order Number = 21174307 - New Order Number: 22905613<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21174307 | 
+NewOrderNumber = 22905613 | ItemNumber = 241769187 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Kelly', ShipLastName = 
+'Wilson', ShipAddress1 = '24- 52224 RR 275', ShipAddress2 = '', ShipCity
+ = 'Stony Plain', ShipState = 'AB', ShipPostalCode = 'T7Z 1Z3', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905613 AND LineNumber = 1<br><br>Old Order Number = 21174369 - New Order Number: 22905614<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21174369 | 
+NewOrderNumber = 22905614 | ItemNumber = 241769160 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Morris', ShipLastName = 
+'Kimball', ShipAddress1 = '16152 109 Ave', ShipAddress2 = ' ', ShipCity =
+ 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T5P 1B8', ShipCountry =
+ 'Canada' WHERE OrderNumber = 22905614 AND LineNumber = 1<br><br>Old Order Number = 21174771 - New Order Number: 22905615<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21174771 | 
+NewOrderNumber = 22905615 | ItemNumber = 241769146 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Dwayne', ShipLastName = 
+'Wipf', ShipAddress1 = '9455a 116 st', ShipAddress2 = '', ShipCity = 
+'Grande Prairie', ShipState = 'ab', ShipPostalCode = 't8v 6s7', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905615 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21174771 | 
+NewOrderNumber = 22905615 | ItemNumber = 241769147 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Dwayne', ShipLastName = 
+'Wipf', ShipAddress1 = '9455a 116 st', ShipAddress2 = '', ShipCity = 
+'Grande Prairie', ShipState = 'ab', ShipPostalCode = 't8v 6s7', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905615 AND LineNumber = 2<br><br>Old Order Number = 21174857 - New Order Number: 22905616<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21174857 | 
+NewOrderNumber = 22905616 | ItemNumber = 241769132 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Randy', ShipLastName = 
+'Modersohn', ShipAddress1 = '220 Homestead Cres', ShipAddress2 = '', 
+ShipCity = 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T5A 4J4', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905616 AND LineNumber = 1<br><br>Old Order Number = 21174998 - New Order Number: 22905617<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21174998 | 
+NewOrderNumber = 22905617 | ItemNumber = 241769120 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'WESTERN', ShipLastName = 
+'CAMP', ShipAddress1 = '7668 69 St', ShipAddress2 = 'WESTERN CAMP       
+        SUITE 1B', ShipCity = 'Edmonton', ShipState = 'AB', 
+ShipPostalCode = 'T6B 2J7', ShipCountry = 'Canada' WHERE OrderNumber = 
+22905617 AND LineNumber = 1<br><br>Old Order Number = 21175365 - New Order Number: 22905618<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21175365 | 
+NewOrderNumber = 22905618 | ItemNumber = 241769188 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'James', ShipLastName = 
+'Elliott', ShipAddress1 = '18- Menlow CRes', ShipAddress2 = '', ShipCity
+ = 'Sherwood Park', ShipState = 'Ab', ShipPostalCode = 'T8A 0R9', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905618 AND LineNumber = 1<br><br>Old Order Number = 21192591 - New Order Number: 22905619<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21192591 | 
+NewOrderNumber = 22905619 | ItemNumber = 241769246 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Mike', ShipLastName = 'Mesi', 
+ShipAddress1 = '38-52059 Rge Rd 220', ShipAddress2 = '', ShipCity = 
+'Sherwood Park', ShipState = 'AB', ShipPostalCode = 'T8E 1B9', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905619 AND LineNumber = 1<br><br>Old Order Number = 21194299 - New Order Number: 22905620<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21194299 | 
+NewOrderNumber = 22905620 | ItemNumber = 241769270 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Allan &amp; Terry', 
+ShipLastName = 'Hein', ShipAddress1 = '264 Galland Close NW', 
+ShipAddress2 = '', ShipCity = 'Edmonton', ShipState = 'AB', 
+ShipPostalCode = 'T5T 6P6', ShipCountry = 'Canada' WHERE OrderNumber = 
+22905620 AND LineNumber = 1<br><br>Old Order Number = 21194383 - New Order Number: 22905621<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21194383 | 
+NewOrderNumber = 22905621 | ItemNumber = 241769193 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Rod', ShipLastName = 'Hymas', 
+ShipAddress1 = 'Box 275', ShipAddress2 = '', ShipCity = 'Standard', 
+ShipState = 'AB', ShipPostalCode = 'T0J 3G0', ShipCountry = 'Canada' 
+WHERE OrderNumber = 22905621 AND LineNumber = 1<br><br>Old Order Number = 21198930 - New Order Number: 22905622<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21198930 | 
+NewOrderNumber = 22905622 | ItemNumber = 241769195 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Ritchie', ShipLastName = 
+'Ketcheson', ShipAddress1 = '10612 - 205 Street', ShipAddress2 = '', 
+ShipCity = 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T5S1Z1', 
+ShipCountry = 'CANADA' WHERE OrderNumber = 22905622 AND LineNumber = 1<br><br>Old Order Number = 21198970 - New Order Number: 22905623<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21198970 | 
+NewOrderNumber = 22905623 | ItemNumber = 241769102 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Darren', ShipLastName = 
+'Williams', ShipAddress1 = '2624 Garland Street SW', ShipAddress2 = '', 
+ShipCity = 'Calgary', ShipState = 'AB', ShipPostalCode = 'T3E 4E3', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905623 AND LineNumber = 1<br><br>Old Order Number = 21201097 - New Order Number: 22905624<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21201097 | 
+NewOrderNumber = 22905624 | ItemNumber = 241769237 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Howard', ShipLastName = 
+'Lawrence', ShipAddress1 = '4420 26A St', ShipAddress2 = '', ShipCity = 
+'Lloydminster', ShipState = 'SK', ShipPostalCode = 'S9V 2E3', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905624 AND LineNumber = 1<br><br>Old Order Number = 21201163 - New Order Number: 22905625<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21201163 | 
+NewOrderNumber = 22905625 | ItemNumber = 241769228 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Mark', ShipLastName = 
+'venance', ShipAddress1 = 'Box 8, ', ShipAddress2 = 'For-Dwayne 
+Maxwell', ShipCity = 'Streamtown', ShipState = 'AB', ShipPostalCode = 
+'T0B 4G0', ShipCountry = 'Canada' WHERE OrderNumber = 22905625 AND 
+LineNumber = 1<br><br>Old Order Number = 21204882 - New Order Number: 22905626<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21204882 | 
+NewOrderNumber = 22905626 | ItemNumber = 241769214 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'VINCE', ShipLastName = 
+'GAREAU', ShipAddress1 = '1403 8 STREET ', ShipAddress2 = '', ShipCity =
+ 'NISKU', ShipState = 'AB', ShipPostalCode = 'T9E7M5', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905626 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21204882 | 
+NewOrderNumber = 22905626 | ItemNumber = 241769213 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'VINCE', ShipLastName = 
+'GAREAU', ShipAddress1 = '1403 8 STREET ', ShipAddress2 = '', ShipCity =
+ 'NISKU', ShipState = 'AB', ShipPostalCode = 'T9E7M5', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905626 AND LineNumber = 2<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21204882 | 
+NewOrderNumber = 22905626 | ItemNumber = 241769212 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'VINCE', ShipLastName = 
+'GAREAU', ShipAddress1 = '1403 8 STREET ', ShipAddress2 = '', ShipCity =
+ 'NISKU', ShipState = 'AB', ShipPostalCode = 'T9E7M5', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905626 AND LineNumber = 3<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21204882 | 
+NewOrderNumber = 22905626 | ItemNumber = 241769211 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'VINCE', ShipLastName = 
+'GAREAU', ShipAddress1 = '1403 8 STREET ', ShipAddress2 = '', ShipCity =
+ 'NISKU', ShipState = 'AB', ShipPostalCode = 'T9E7M5', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905626 AND LineNumber = 4<br><br>Old Order Number = 21211016 - New Order Number: 22905627<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21211016 | 
+NewOrderNumber = 22905627 | ItemNumber = 241769183 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Robin', ShipLastName = 
+'Derose', ShipAddress1 = '10319-113 Ave', ShipAddress2 = '', ShipCity = 
+'Fort St John', ShipState = 'BC', ShipPostalCode = 'V1J 6C5', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905627 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21211016 | 
+NewOrderNumber = 22905627 | ItemNumber = 241769184 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Robin', ShipLastName = 
+'Derose', ShipAddress1 = '10319-113 Ave', ShipAddress2 = '', ShipCity = 
+'Fort St John', ShipState = 'BC', ShipPostalCode = 'V1J 6C5', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905627 AND LineNumber = 2<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21211016 | 
+NewOrderNumber = 22905627 | ItemNumber = 241769186 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Robin', ShipLastName = 
+'Derose', ShipAddress1 = '10319-113 Ave', ShipAddress2 = '', ShipCity = 
+'Fort St John', ShipState = 'BC', ShipPostalCode = 'V1J 6C5', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905627 AND LineNumber = 3<br><br>Old Order Number = 21212250 - New Order Number: 22905628<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21212250 | 
+NewOrderNumber = 22905628 | ItemNumber = 241769235 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Jayson', ShipLastName = 
+'Thomas', ShipAddress1 = '98 Salisbury Ave', ShipAddress2 = '', ShipCity
+ = 'St. Albert', ShipState = 'AB', ShipPostalCode = 'T8N 0M8', 
+ShipCountry = 'CANADA' WHERE OrderNumber = 22905628 AND LineNumber = 1<br><br>Old Order Number = 21213060 - New Order Number: 22905629<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21213060 | 
+NewOrderNumber = 22905629 | ItemNumber = 241769242 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Ty', ShipLastName = 
+'Skjonsberg', ShipAddress1 = '#108   54 bell st', ShipAddress2 = '', 
+ShipCity = 'RedDeer', ShipState = 'ab', ShipPostalCode = 't4r1m8', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905629 AND LineNumber = 1<br><br>Old Order Number = 21229728 - New Order Number: 22905630<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21229728 | 
+NewOrderNumber = 22905630 | ItemNumber = 241769143 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Scott', ShipLastName = 
+'Taylor', ShipAddress1 = 'Box 3002', ShipAddress2 = '', ShipCity = 'St 
+Isidore', ShipState = 'AB', ShipPostalCode = 'T0H3B0', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905630 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21229728 | 
+NewOrderNumber = 22905630 | ItemNumber = 241769142 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Scott', ShipLastName = 
+'Taylor', ShipAddress1 = 'Box 3002', ShipAddress2 = '', ShipCity = 'St 
+Isidore', ShipState = 'AB', ShipPostalCode = 'T0H3B0', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905630 AND LineNumber = 2<br><br>Old Order Number = 21229782 - New Order Number: 22905631<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21229782 | 
+NewOrderNumber = 22905631 | ItemNumber = 241769129 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'REAL HOLDINGS', ShipLastName =
+ 'James Pahl', ShipAddress1 = '583 Crimson Dr', ShipAddress2 = '', 
+ShipCity = 'Sherwood Park', ShipState = 'AB', ShipPostalCode = 'T8H 
+0H3', ShipCountry = 'Canada' WHERE OrderNumber = 22905631 AND LineNumber
+ = 1<br><br>Old Order Number = 21229860 - New Order Number: 22905632<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21229860 | 
+NewOrderNumber = 22905632 | ItemNumber = 241769124 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Jason', ShipLastName = 'Padd',
+ ShipAddress1 = '125 West Chester Way', ShipAddress2 = '', ShipCity = 
+'Chestermere', ShipState = 'AB', ShipPostalCode = 'T1X 1B8', ShipCountry
+ = 'Canada' WHERE OrderNumber = 22905632 AND LineNumber = 1<br><br>Old Order Number = 21230992 - New Order Number: 22905633<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21230992 | 
+NewOrderNumber = 22905633 | ItemNumber = 241769165 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Les', ShipLastName = 'Splett',
+ ShipAddress1 = '8616 - 87 St.', ShipAddress2 = '', ShipCity = 'Edmonton
+ ', ShipState = 'Ab.', ShipPostalCode = 'T6C 3G9', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905633 AND LineNumber = 1<br><br>Old Order Number = 21231415 - New Order Number: 22905634<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21231415 | 
+NewOrderNumber = 22905634 | ItemNumber = 241769236 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Tony', ShipLastName = 
+'Ellett', ShipAddress1 = '51139- Hwy 814', ShipAddress2 = '', ShipCity =
+ 'Leduc County', ShipState = 'AB', ShipPostalCode = 'T4X 0K4', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905634 AND LineNumber = 1<br><br>Old Order Number = 21232349 - New Order Number: 22905635<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21232349 | 
+NewOrderNumber = 22905635 | ItemNumber = 241769135 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Scott', ShipLastName = 
+'Hearn', ShipAddress1 = '41 Summerton Landing', ShipAddress2 = '', 
+ShipCity = 'Sherwood Park', ShipState = 'AB', ShipPostalCode = 'T8H 
+2P4', ShipCountry = 'Canada' WHERE OrderNumber = 22905635 AND LineNumber
+ = 1<br><br>Old Order Number = 21232541 - New Order Number: 22905636<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21232541 | 
+NewOrderNumber = 22905636 | ItemNumber = 241769198 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Allan', ShipLastName = 
+'Kestner', ShipAddress1 = '7039 61 ave nw', ShipAddress2 = '', ShipCity =
+ 'Calgary', ShipState = '', ShipPostalCode = 'T3B 3H7', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905636 AND LineNumber = 1<br><br>Old Order Number = 21232573 - New Order Number: 22905637<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21232573 | 
+NewOrderNumber = 22905637 | ItemNumber = 241769176 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Chris', ShipLastName = 
+'Melnyk', ShipAddress1 = '3805 34A  Ave.', ShipAddress2 = '', ShipCity =
+ 'Leduc', ShipState = 'AB', ShipPostalCode = 'T9E 6E8', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905637 AND LineNumber = 1<br><br>Old Order Number = 21232606 - New Order Number: 22905638<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21232606 | 
+NewOrderNumber = 22905638 | ItemNumber = 241769153 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Raymond', ShipLastName = 
+'Peck', ShipAddress1 = '14911  96st.', ShipAddress2 = '', ShipCity = 
+'Edmonton', ShipState = 'Ab', ShipPostalCode = 't5e4b9', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905638 AND LineNumber = 1<br><br>Old Order Number = 21232672 - New Order Number: 22905639<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21232672 | 
+NewOrderNumber = 22905639 | ItemNumber = 241769177 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'John', ShipLastName = 
+'Melnyk', ShipAddress1 = '4505-39 ave', ShipAddress2 = '', ShipCity = 
+'Leduc', ShipState = 'Ab', ShipPostalCode = 'T9E-4Y9', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905639 AND LineNumber = 1<br><br>Old Order Number = 21233480 - New Order Number: 22905640<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21233480 | 
+NewOrderNumber = 22905640 | ItemNumber = 241769217 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Answer ', ShipLastName = ' 
+Asphalt', ShipAddress1 = '14630 119 AVE', ShipAddress2 = 'ANSWER ASPHALT
+ - SUITE 12A', ShipCity = 'Edmonton', ShipState = 'AB', ShipPostalCode =
+ 'T5L 2P2', ShipCountry = 'Canada' WHERE OrderNumber = 22905640 AND 
+LineNumber = 1<br><br>Old Order Number = 21236157 - New Order Number: 22905641<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21236157 | 
+NewOrderNumber = 22905641 | ItemNumber = 241769202 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Kaytie', ShipLastName = 
+'Edney', ShipAddress1 = '16 Davio Place', ShipAddress2 = '', ShipCity = 
+'Whitecourt', ShipState = 'AB', ShipPostalCode = 'T7S1V1', ShipCountry =
+ 'Canada' WHERE OrderNumber = 22905641 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21236157 | 
+NewOrderNumber = 22905641 | ItemNumber = 241769203 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Kaytie', ShipLastName = 
+'Edney', ShipAddress1 = '16 Davio Place', ShipAddress2 = '', ShipCity = 
+'Whitecourt', ShipState = 'AB', ShipPostalCode = 'T7S1V1', ShipCountry =
+ 'Canada' WHERE OrderNumber = 22905641 AND LineNumber = 2<br><br>Old Order Number = 21236413 - New Order Number: 22905642<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21236413 | 
+NewOrderNumber = 22905642 | ItemNumber = 241769175 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Robert', ShipLastName = 
+'Harrison', ShipAddress1 = '27 Sage Hill Manor', ShipAddress2 = '', 
+ShipCity = 'Calgary', ShipState = 'AB', ShipPostalCode = 'T3R 0H1', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905642 AND LineNumber = 1<br><br>Old Order Number = 21237057 - New Order Number: 22905643<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21237057 | 
+NewOrderNumber = 22905643 | ItemNumber = 241769245 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'George &amp; Eric', 
+ShipLastName = 'Davis', ShipAddress1 = 'PO Box 494', ShipAddress2 = '', 
+ShipCity = 'Nakusp', ShipState = 'BC', ShipPostalCode = 'V0G 1R0', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905643 AND LineNumber = 1<br><br>Old Order Number = 21237207 - New Order Number: 22905644<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21237207 | 
+NewOrderNumber = 22905644 | ItemNumber = 241769191 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Dave', ShipLastName = 
+'Wiltshire', ShipAddress1 = '#49-51047, RR 221', ShipAddress2 = '', 
+ShipCity = 'Sherwood Park', ShipState = 'AB', ShipPostalCode = 'T8E 
+1G8', ShipCountry = 'Canada' WHERE OrderNumber = 22905644 AND LineNumber
+ = 1<br><br>Old Order Number = 21238754 - New Order Number: 22905645<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21238754 | 
+NewOrderNumber = 22905645 | ItemNumber = 241769189 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'William', ShipLastName = 
+'Bouchard', ShipAddress1 = '#577  53310 RR221', ShipAddress2 = '', 
+ShipCity = 'Ardrossan', ShipState = 'AB', ShipPostalCode = 'T8E 2L1', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905645 AND LineNumber = 1<br><br>Old Order Number = 21242865 - New Order Number: 22905646<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21242865 | 
+NewOrderNumber = 22905646 | ItemNumber = 241769169 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Mark', ShipLastName = 'Bold', 
+ShipAddress1 = '228 Illingworth Close', ShipAddress2 = '', ShipCity = 
+'Red Deer', ShipState = 'AB', ShipPostalCode = 'T4R 0B2', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905646 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21242865 | 
+NewOrderNumber = 22905646 | ItemNumber = 241769168 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Mark', ShipLastName = 'Bold', 
+ShipAddress1 = '228 Illingworth Close', ShipAddress2 = '', ShipCity = 
+'Red Deer', ShipState = 'AB', ShipPostalCode = 'T4R 0B2', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905646 AND LineNumber = 2<br><br>Old Order Number = 21244489 - New Order Number: 22905647<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21244489 | 
+NewOrderNumber = 22905647 | ItemNumber = 241769232 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'brian', ShipLastName = 
+'vader', ShipAddress1 = 'rr2 site 14 box 4 ', ShipAddress2 = '', 
+ShipCity = 'barrhead', ShipState = 'ab', ShipPostalCode = 't7n1n3', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905647 AND LineNumber = 1<br><br>Old Order Number = 21244561 - New Order Number: 22905648<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21244561 | 
+NewOrderNumber = 22905648 | ItemNumber = 241769172 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Corey', ShipLastName = 
+'Hewitt', ShipAddress1 = '#3 Latimer Place', ShipAddress2 = '', ShipCity
+ = 'St.Albret', ShipState = 'AB', ShipPostalCode = 'T8N2J5', ShipCountry
+ = 'Canada' WHERE OrderNumber = 22905648 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21244561 | 
+NewOrderNumber = 22905648 | ItemNumber = 241769173 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Corey', ShipLastName = 
+'Hewitt', ShipAddress1 = '#3 Latimer Place', ShipAddress2 = '', ShipCity
+ = 'St.Albret', ShipState = 'AB', ShipPostalCode = 'T8N2J5', ShipCountry
+ = 'Canada' WHERE OrderNumber = 22905648 AND LineNumber = 2<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21244561 | 
+NewOrderNumber = 22905648 | ItemNumber = 241769150 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Corey', ShipLastName = 
+'Hewitt', ShipAddress1 = '#3 Latimer Place', ShipAddress2 = '', ShipCity
+ = 'St.Albret', ShipState = 'AB', ShipPostalCode = 'T8N2J5', ShipCountry
+ = 'Canada' WHERE OrderNumber = 22905648 AND LineNumber = 3<br><br>Old Order Number = 21248011 - New Order Number: 22905649<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21248011 | 
+NewOrderNumber = 22905649 | ItemNumber = 241769185 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Terry', ShipLastName = 
+'OConnor', ShipAddress1 = '57-25027 Sturgeon Rd', ShipAddress2 = '', 
+ShipCity = 'Sturgeon County', ShipState = 'AB', ShipPostalCode = 'T8T 
+0B1', ShipCountry = 'Canada' WHERE OrderNumber = 22905649 AND LineNumber
+ = 1<br><br>Old Order Number = 21248025 - New Order Number: 22905650<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21248025 | 
+NewOrderNumber = 22905650 | ItemNumber = 241769174 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Kerrie', ShipLastName = 
+'Callihoo', ShipAddress1 = 'Site 6 Box 21 RR1', ShipAddress2 = '', 
+ShipCity = 'Morinville', ShipState = 'AB', ShipPostalCode = 'T8R1P4', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905650 AND LineNumber = 1<br><br>Old Order Number = 21249768 - New Order Number: 22905651<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21249768 | 
+NewOrderNumber = 22905651 | ItemNumber = 241769192 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Terry/David', ShipLastName = 
+'OConnor', ShipAddress1 = '57-25027 Sturgeon Rd', ShipAddress2 = '', 
+ShipCity = 'Sturgeon County', ShipState = 'AB', ShipPostalCode = 'T8T 
+0B1', ShipCountry = 'Canada' WHERE OrderNumber = 22905651 AND LineNumber
+ = 1<br><br>Old Order Number = 21250074 - New Order Number: 22905652<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21250074 | 
+NewOrderNumber = 22905652 | ItemNumber = 241769199 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Bryan', ShipLastName = 
+'Hawryluk', ShipAddress1 = '6411-152B Ave', ShipAddress2 = '', ShipCity =
+ 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T5A4V3', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905652 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21250074 | 
+NewOrderNumber = 22905652 | ItemNumber = 241769210 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Bryan', ShipLastName = 
+'Hawryluk', ShipAddress1 = '6411-152B Ave', ShipAddress2 = '', ShipCity =
+ 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T5A4V3', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905652 AND LineNumber = 2<br><br>Old Order Number = 21267658 - New Order Number: 22905653<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21267658 | 
+NewOrderNumber = 22905653 | ItemNumber = 241769253 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Jackie', ShipLastName = 'Lucas
+ ', ShipAddress1 = '8116-97 Ave', ShipAddress2 = '', ShipCity = 'Fort st
+ John', ShipState = 'BC', ShipPostalCode = 'V1J1L9', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905653 AND LineNumber = 1<br><br>Old Order Number = 21271744 - New Order Number: 22905654<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21271744 | 
+NewOrderNumber = 22905654 | ItemNumber = 241769119 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Ed', ShipLastName = 
+'Vanderkooi', ShipAddress1 = 'Box 247', ShipAddress2 = ' ', ShipCity = 
+'Barnwell', ShipState = 'AB', ShipPostalCode = 'T0K 0B0', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905654 AND LineNumber = 1<br><br>Old Order Number = 21274389 - New Order Number: 22905655<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21274389 | 
+NewOrderNumber = 22905655 | ItemNumber = 241769149 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Mark', ShipLastName = 
+'Kaplan', ShipAddress1 = '9037 60A Avenue', ShipAddress2 = '', ShipCity =
+ 'Grande Prairie', ShipState = 'AB', ShipPostalCode = 'T8W 2N5', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905655 AND LineNumber = 1<br><br>Old Order Number = 21279417 - New Order Number: 22905656<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21279417 | 
+NewOrderNumber = 22905656 | ItemNumber = 241769226 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Corey', ShipLastName = 
+'Okrainetz', ShipAddress1 = '1204 oakland dr', ShipAddress2 = '', 
+ShipCity = 'devon', ShipState = 'alberta', ShipPostalCode = 't9g2h1', 
+ShipCountry = 'CANADA' WHERE OrderNumber = 22905656 AND LineNumber = 1<br><br>Old Order Number = 21281001 - New Order Number: 22905657<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21281001 | 
+NewOrderNumber = 22905657 | ItemNumber = 241769255 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Chester', ShipLastName = 
+'Andrich', ShipAddress1 = '11843 135 St', ShipAddress2 = '', ShipCity = 
+'Edmonton', ShipState = 'AB', ShipPostalCode = 'T5L 1W7', ShipCountry = 
+'Canada' WHERE OrderNumber = 22905657 AND LineNumber = 1<br><br>Old Order Number = 21282593 - New Order Number: 22905658<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21282593 | 
+NewOrderNumber = 22905658 | ItemNumber = 241769111 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'John', ShipLastName = 
+'Cuglietta', ShipAddress1 = '15914 121 Ave', ShipAddress2 = '', ShipCity
+ = 'Edmonton', ShipState = 'AB', ShipPostalCode = 'T5V 1B5', ShipCountry
+ = 'CANADA' WHERE OrderNumber = 22905658 AND LineNumber = 1<br><br>Old Order Number = 21445081 - New Order Number: 22905659<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21445081 | 
+NewOrderNumber = 22905659 | ItemNumber = 241769259 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Rick', ShipLastName = 'Ball', 
+ShipAddress1 = 'Box 1416', ShipAddress2 = '', ShipCity = 'Slave Lake', 
+ShipState = 'AB', ShipPostalCode = 'T0G 2A0', ShipCountry = 'Canada' 
+WHERE OrderNumber = 22905659 AND LineNumber = 1<br><br>Old Order Number = 21903932 - New Order Number: 22905660<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21903932 | 
+NewOrderNumber = 22905660 | ItemNumber = 241769269 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'SONYA', ShipLastName = 
+'MITCHELL', ShipAddress1 = '*', ShipAddress2 = '', ShipCity = '*', 
+ShipState = 'AB', ShipPostalCode = '*', ShipCountry = 'Canada' WHERE 
+OrderNumber = 22905660 AND LineNumber = 1<br><br>Old Order Number = 21945283 - New Order Number: 22905661<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21945283 | 
+NewOrderNumber = 22905661 | ItemNumber = 241769272 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Dan &amp; phalika', 
+ShipLastName = 'Harkin', ShipAddress1 = '2 - 51222  RR 270', 
+ShipAddress2 = '', ShipCity = 'Spruce Grove', ShipState = 'AB', 
+ShipPostalCode = 'T7Y 1G7', ShipCountry = 'Canada' WHERE OrderNumber = 
+22905661 AND LineNumber = 1<br><br>Old Order Number = 21968020 - New Order Number: 22905662<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21968020 | 
+NewOrderNumber = 22905662 | ItemNumber = 241769254 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'Larry', ShipLastName = 
+'Sicotte', ShipAddress1 = '4239 37 St', ShipAddress2 = '', ShipCity = 
+'Red Deer', ShipState = 'AB ', ShipPostalCode = 'T4N 0V2', ShipCountry =
+ 'Canada' WHERE OrderNumber = 22905662 AND LineNumber = 1<br><br>Old Order Number = 21979175 - New Order Number: 22905663<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 21979175 | 
+NewOrderNumber = 22905663 | ItemNumber = 241769251 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'BRIEN', ShipLastName = 
+'JOHNSON', ShipAddress1 = '4119 55 ST', ShipAddress2 = '', ShipCity = 
+'WETASKIWIN', ShipState = 'AB', ShipPostalCode = 'T9A 1T5', ShipCountry =
+ 'Canada' WHERE OrderNumber = 22905663 AND LineNumber = 1<br><br>Old Order Number = 22011476 - New Order Number: 22905664<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 22011476 | 
+NewOrderNumber = 22905664 | ItemNumber = 241769044 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'JASON', ShipLastName = 
+'DUCHENE', ShipAddress1 = '69 REICHART DRIVE', ShipAddress2 = '', 
+ShipCity = 'BEAUMONT', ShipState = 'AB', ShipPostalCode = 'T4X 1T1', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905664 AND LineNumber = 1<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 22011476 | 
+NewOrderNumber = 22905664 | ItemNumber = 241769045 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'JASON', ShipLastName = 
+'DUCHENE', ShipAddress1 = '69 REICHART DRIVE', ShipAddress2 = '', 
+ShipCity = 'BEAUMONT', ShipState = 'AB', ShipPostalCode = 'T4X 1T1', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905664 AND LineNumber = 2<br><br>Old Order Number = 22041788 - New Order Number: 22905665<br>OldEventCode
+ = 796486 | NewEventCode = 899970 | OldOrderNumber = 22041788 | 
+NewOrderNumber = 22905665 | ItemNumber = 241769046 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 250, Surcharge = 2.5, SeatTypeCode
+ = 54615, ShipCode = 13, ShipFirstName = 'JOHN', ShipLastName = 'MOFFAT 
+', ShipAddress1 = '180-28342 TWP RD 384', ShipAddress2 = '', ShipCity = 
+'RED DEER COUNTY', ShipState = 'AB', ShipPostalCode = 'T4S 2B6', 
+ShipCountry = 'Canada' WHERE OrderNumber = 22905665 AND LineNumber = 1<br><br>Orders Added = 133<br>
+Tickets Added = 170<br>
+Failed Count = 0<br><br>
+Update Order Totals: UPDATE OrderHeader WITH (ROWLOCK) SET SubTotal = 
+SumPrice, OrderSurcharge = SumSurcharge, Discount = SumDiscount, ShipFee
+ = 2.5, Total = SumPrice + SumSurcharge + 2.5 - SumDiscount FROM 
+OrderHeader INNER JOIN (SELECT OrderLine.OrderNumber, SUM(Price) AS 
+SumPrice, SUM(Surcharge) AS SumSurcharge, SUM(Discount) AS SumDiscount 
+FROM OrderLine (NOLOCK) GROUP BY OrderLine.OrderNumber) AS OL ON 
+OrderHeader.OrderNumber = OL.OrderNumber WHERE OrderHeader.IPAddress = 
+'CASTROLDPS 2017' AND OrderHeader.StatusCode = 'R'<br>Totals Updated<br><br>
+<br><b>End CASTROLDPS 2017 - 10/7/2016 4:27:50 PM</b><br></body></html>

@@ -1,0 +1,1336 @@
+/***
+ * CSS code to support http://www.cottagehome.com
+ * Last updated: March 19, 2009
+ * Xhtml/CSS Designed by: Osama Zakaria
+ * Contact Info:
+ *      E-mail eng.osama.cs@gmail.com
+ *      Mobile 0020125438279
+ ***/
+
+
+/************* Defaults *******************/
+
+*{
+	margin: 0;
+	padding: 0;
+	line-height: 1.3em;
+}
+
+body{
+    text-align: center;
+    padding: 7px 10px 10px 10px;
+	background-color: #9DB878;
+	background-repeat: no-repeat;
+	font: 10px Arial, Helvetica, sans-serif;
+	background-image: url(/clients/CottageHome/Images/4.jpg);
+}
+
+fieldset, img{
+    border: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight: normal;	
+}
+
+:focus {
+    outline: 0;
+}
+
+/**************** Global Classes *****************/
+
+.left{
+    float: left;
+}
+
+.right{
+    float: right;
+}
+
+.clear{
+    clear: both;
+}
+
+.invisible{
+	display: none;
+	visibility: hidden;
+}
+
+.visible{
+	display: block;
+	visibility: visible;
+}
+
+.important1{
+	color: Red;
+}
+
+.important2{
+	color: #77A7D0;
+}
+
+/*disc*/
+
+.disc{
+	margin-left: 15px;
+}
+
+.disc li{
+	list-style-type: disc;
+}
+
+/*click*/
+
+.click{
+	color: #003366;
+	border-bottom: dotted 1px;
+}
+.click:hover{
+	border-bottom: solid 1px;
+}
+.click2  { color: #452606; border-bottom: 1px dotted }
+.click2:hover { border-bottom: 1px solid }
+/*text and textarea*/
+
+.text, .textarea{
+    background: #FFF url(/clients/CottageHome/Images/box_body_bg1.jpg) repeat-x;
+    border: 1px solid #DDD;
+    padding-top: 2px;
+    color: #333;
+    font-size: 1.3em;
+}
+
+.textarea{
+	resize: none;
+}
+
+/*fileinput*/
+
+.fileinput{
+    position: relative;
+    text-align: right;
+}
+
+.fileinput .file{
+	position: relative;
+	margin-top: 13px;
+	z-index: 2;
+	cursor: pointer;
+	-moz-opacity: 0;
+	filter: alpha(opacity: 0);
+	opacity: 0;
+}
+
+.fileinput .fakefile{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	min-height: 20px;
+	height: 1.6em;
+	margin-top: 12px;
+	padding-top: 2px;
+	background: #FFF url(/clients/CottageHome/Images/box_body_bg1.jpg) repeat-x;
+	border: 1px solid #DDD;
+	color: #333;
+	font-size: 1.3em;
+	z-index: 3;
+}
+
+.fileinput .button{
+    position: absolute;
+    top: 1px;
+    right: 0px;
+	min-width: 80px;
+	width: .8em;
+    z-index: 1;
+}
+
+.fileinput .button .t{ background: url(/clients/CottageHome/Images/t_box.jpg) repeat-x top left; height: 100%; }
+.fileinput .button .l{ background: url(/clients/CottageHome/Images/l_box.jpg) repeat-y top left; }
+.fileinput .button .r{ background: url(/clients/CottageHome/Images/r_box.jpg) repeat-y top right; }
+.fileinput .button .b{ background: url(/clients/CottageHome/Images/b_box.jpg) repeat-x bottom left; }
+.fileinput .button .tl{ background: url(/clients/CottageHome/Images/tl_box.jpg) no-repeat top left; }
+.fileinput .button .tr{ background: url(/clients/CottageHome/Images/tr_box.jpg) no-repeat top right;  }
+.fileinput .button .bl{ background: url(/clients/CottageHome/Images/bl_box.jpg) no-repeat bottom left; }
+.fileinput .button .br{ background: url(/clients/CottageHome/Images/br_box.jpg) no-repeat bottom right; min-height: 22px; height: 2.2em; padding: 12px; }
+
+.fileinput .button .t-hover{ background: #6696C4 url(/clients/CottageHome/Images/t_box_hover2.jpg) repeat-x top left; height: 100%; }
+.fileinput .button .l-hover{ background: url(/clients/CottageHome/Images/l_box_hover2.jpg) repeat-y top left; }
+.fileinput .button .r-hover{ background: url(/clients/CottageHome/Images/r_box_hover2.jpg) repeat-y top right; }
+.fileinput .button .b-hover{ background: url(/clients/CottageHome/Images/b_box_hover2.jpg) repeat-x bottom left; }
+.fileinput .button .tl-hover{ background: url(/clients/CottageHome/Images/tl_box_hover2.jpg) no-repeat top left; }
+.fileinput .button .tr-hover{ background: url(/clients/CottageHome/Images/tr_box_hover2.jpg) no-repeat top right;  }
+.fileinput .button .bl-hover{ background: url(/clients/CottageHome/Images/bl_box_hover2.jpg) no-repeat bottom left; }
+.fileinput .button .br-hover{ background: url(/clients/CottageHome/Images/br_box_hover2.jpg) no-repeat bottom right; min-height: 22px; height: 2.2em; padding: 12px; }
+
+.fileinput .button a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #053560;
+	font-size: 1.4em;
+	text-align: center;
+}
+
+.fileinput .button .a-hover{
+	color: #FFF;
+}
+
+.fileinput .button a span{
+	display: block;
+	padding-top: .2em;
+}
+
+/**************** IDs and Inner Classes *******************/
+
+/*wrraper*/
+
+#wrapper{
+	min-width: 850px;
+	width: 85em;
+	height: 100%;
+	margin: auto;
+	position: relative;
+}
+
+/*wrapper .main-box*/
+
+#wrapper .main-box{
+	padding: 8px;
+	background: #FFF;
+    text-align: left;
+}
+
+/*wrapper .border*/
+
+#wrapper .border{
+	border: solid 1px #E5EAD4;
+}
+
+/*#head-buttons*/
+
+#head-buttons{
+	width: 100%;
+	padding-top: 17px;
+}
+
+#head-buttons a{
+	float: right;
+	display: block;
+	height: 14px;
+	margin-left: 1px;
+	position: relative;
+	right: 1.7em;
+}
+
+#head-buttons .b1{
+	width: 19px;
+	background: url(/clients/CottageHome/Images/decrease.gif) no-repeat;
+}
+
+#head-buttons .b1:hover{
+	background: url(/clients/CottageHome/Images/decrease_hover.gif) no-repeat;
+}
+
+#head-buttons .b2{
+	width: 19px;
+	background: url(/clients/CottageHome/Images/increase.gif) no-repeat;
+}
+
+#head-buttons .b2:hover{
+	background: url(/clients/CottageHome/Images/increase_hover.gif) no-repeat;
+}
+
+#head-buttons .b3{
+	width: 112px;
+	background: url(/clients/CottageHome/Images/purchase_your_home.gif) no-repeat;
+}
+
+#head-buttons .b3:hover{
+	background: url(/clients/CottageHome/Images/purchase_your_home_hover.gif) no-repeat;
+}
+
+#head-buttons .b4{
+	width: 70px;
+	background: url(/clients/CottageHome/Images/contact_us.gif) no-repeat;
+}
+
+#head-buttons .b4:hover{
+	background: url(/clients/CottageHome/Images/contact_us_hover.gif) no-repeat;
+}
+
+#head-buttons .b5{
+	width: 73px;
+	background: url(/clients/CottageHome/Images/green_built.gif) no-repeat;
+}
+#head-buttons .b5:hover{
+	background: url(/clients/CottageHome/Images/green_built_hover.gif) no-repeat;
+}
+#head-buttons .b6 { background: url(/clients/CottageHome/Images/mobile.gif) no-repeat; width: 48px }
+#head-buttons .b6:hover { background: url(/clients/CottageHome/Images/mobile_over.gif) no-repeat }
+/*logo*/
+
+#logo{
+	position: absolute;
+	top: 4px;
+	left: 0;
+	width: 203px;
+	height: 36px;
+	padding-top: 42px;
+	text-align: center;
+    background: url(/clients/CottageHome/Images/bg_logo.png) no-repeat;
+}
+
+/* IE6 hack */
+* html #logo{
+    background-image: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='./css//clients/CottageHome/Images/bg_logo.png');
+}
+
+/*header*/
+
+#header{
+	width: 100%;
+	min-height: 42px;
+	padding: 32px 0 3px 0;
+	text-align: right;
+}
+
+#header h1{
+	margin-right: 34px;
+	color: #9DB878;
+	font: 1.9em Georgia;
+}
+
+#header ul{
+	margin-right: 34px;
+	padding-top: 4px;
+}
+
+#header ul li{
+	float: right;
+	font: bold 1.2em Times New Roman;
+	padding-top: .05em;
+}
+
+#header ul li.separator{
+	height: 1.7em;
+	margin: 0 7px 0 7px;
+	border-right: solid 1px #E5EAD4;
+}
+
+#header ul li a{
+	color: #053560;
+}
+
+#header ul li a:hover{
+	color: #527CA3;
+}
+
+/*left-content*/
+
+#l-left-content{
+	min-width: 191px;
+	width: 19.1em;
+	height: 100%;
+    background: #6696C4 url(/clients/CottageHome/Images/l_menu.jpg) repeat-y top left;
+}
+
+#r-left-content{
+	width: 100%;
+    background: url(/clients/CottageHome/Images/r_menu.jpg) repeat-y top right;
+}
+
+#left-content{
+	width: 100%;
+	padding-bottom: 30px;
+}
+
+/*left-content .testimonial*/
+
+#left-content .testimonial{
+	padding: 11px 17px 11px 17px;
+	background: #5D89B2;
+	border-bottom: solid 1px #93B2D0;
+	color: Black;
+}
+
+#left-content .testimonial h3{
+	font-size: 1.1em;
+}
+
+/*menu*/
+
+#menu *{
+	line-height: 1.25em;
+}
+
+/*IE6 hack*/
+* html #menu li a{
+	height: 0;
+}
+
+#menu .level_0 li{
+	border-bottom: solid 1px #93B2D0;
+	padding: 6px 0 6px 0;
+	font: 1.3em Georgia;
+}
+
+#menu .level_0 li:hover,
+* html #menu .level_0 li.hover{
+    background: #4B7BA3;
+}
+
+#menu .level_0 a{
+	display: block;
+	padding: 0 12px 0 12px;
+	color: #F2F0AF;
+}
+
+#menu .level_1,
+#menu .level_2,
+#menu .level_3,
+#menu .level_4,
+#menu .level_5,
+#menu .level_6{
+	margin-left: 10px;	
+}
+
+#menu .level_1 li{
+	padding: 0;
+	border: none;
+    font: .85em Arial;
+}
+
+#menu .level_1 li:hover,
+* html #menu .level_1 li.hover{
+    background: none;
+}
+
+#menu .level_2 li{
+    font-size: 1em;
+}
+
+#menu .level_1 a{
+	display: inline;
+	margin: 0;
+	padding: 0 9px 0 9px;
+	border: none;
+	color: #FFF;
+}
+
+#menu .level_1 a:hover{
+	color: #053560;
+}
+
+#menu .level_1 a.more{
+	padding-right: 12px;
+	background: url(/clients/CottageHome/Images/arrow_blue.gif) no-repeat right;
+}
+
+#menu .level_1 a.parent{
+	padding-right: 12px;
+	background: url(/clients/CottageHome/Images/arrow_blue.gif) no-repeat right;
+}
+
+#menu .level_1 a.selected{
+	color: #053560;
+}
+
+/*main-content*/
+
+#main-content{
+	min-width: 640px;
+	width: 64em;
+	padding-bottom: 15px;
+}
+
+/*main-content .page-img*/
+
+#main-content .page-img{
+	min-height: 288px;
+	height: 28.8em;
+}
+
+#main-content .page-img .img{
+	width: 100%;
+	height: 100%;
+}
+
+#main-content .page-img .img.left{
+	position: relative;
+	min-width: 590px;
+	width: 59em;
+}
+
+#main-content .page-img .img img{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+#main-content .page-img .thumbnails{
+	min-width: 49px;
+	width: 4.9em;
+	height: 100%;
+	background: #EBEBEB;
+	text-align: center;
+}
+
+#main-content .page-img .thumbnails img{
+	display: block;
+	min-width: 47px;
+	width: 4.7em;
+	min-height: 47px;
+	height: 4.7em;
+	margin: auto auto 1px auto;
+	cursor: pointer;
+}
+
+/*main-content .gallery-img*/
+
+#main-content .gallery-img{
+	position: relative;
+	min-height: 368px;
+	height: 36.8em;
+	text-align: center;
+	background: #EBEBEB url(/clients/CottageHome/Images/bg_pageimg.jpg) no-repeat right;
+	z-index: 1;
+}
+
+#main-content .gallery-img img{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+#main-content .gallery-img img.vertical{
+	min-width: 303px;
+	width: 30.3em;
+	min-height: 449px;
+	height: 44.9em;
+}
+
+#main-content .gallery-img img.horizontal{
+	width: 100%;	
+	height: 100%;
+}
+
+/*main-content .page-nav*/
+
+#main-content .page-nav{
+	min-height: 15px;
+	height: 1.5em;
+	margin: 3px .8em 3px .8em;
+}
+
+#main-content .page-nav li{
+	float: left;
+}
+
+#main-content .page-nav li,
+#main-content .page-nav li a{
+	color: #9DB878;
+}
+
+#main-content .page-nav li{
+	margin-right: 6px;
+	font: 1.1em Arial;
+}
+
+/*main-content .hr*/
+
+#main-content .hr{
+	height: 31px;
+	width: 190px;
+	margin: 6px auto 14px auto;
+	border-bottom: solid 1px #A3B77C;
+	position: relative;
+}
+
+#main-content .hr img{
+	height: 39px;
+	position: absolute;
+	left: 85px;
+}
+
+/*#main-content .page-title*/
+
+#main-content .page-title{
+	min-width: 571px;
+	width: 57.1em;
+	min-height: 100px;
+	height: 10em;
+	margin-left: 21px;
+	position: relative;
+}
+
+#main-content .page-title.style2{
+	margin: auto;
+}
+
+#main-content .page-title img{
+	min-width: 55px;
+	min-height: 75px;
+	height: 7.5em;
+	margin-top: 12px;
+	position: absolute;
+}
+															 
+#main-content .page-title.style2 img{
+	margin-left: 47%;
+}
+
+#main-content .page-title .main{
+	min-height: 59px;
+	height: 5.9em;
+	border-bottom: solid 1px #9DB878;
+}
+
+#main-content .page-title .sub{
+	min-height: 25px;
+	height: 2.5em;
+	padding-top: 5px;
+}
+
+#main-content .page-title .spacer{
+	display: block;
+	float: left;
+	min-width: 63px;
+	width: 6.3em;
+	height: 100%;
+}
+
+#main-content .page-title.style2 .spacer{
+	min-width: 58%;
+	width: 58%;
+}
+
+#main-content .page-title h2{
+	float: left;
+	margin-top: 28px;
+	color: #00427D;
+	font: 2.4em Georgia;
+}
+
+#main-content .page-title h3{
+	text-align: right;
+	color: #9DB878;
+	font: 1.2em Georgia;
+}
+
+#main-content .page-title p{
+	float: left;
+	font: 1.2em Georgia;
+}
+
+#main-content .page-title .box{
+	float: right;
+	min-width: 165px;
+	width: 16.5em;
+	position: relative;
+	left: 6px;
+}
+
+#main-content .page-title .box .t{ background: url(/clients/CottageHome/Images/t_box.jpg) repeat-x top left; height: 100%; }
+#main-content .page-title .box .l{ background: url(/clients/CottageHome/Images/l_box.jpg) repeat-y top left; }
+#main-content .page-title .box .r{ background: url(/clients/CottageHome/Images/r_box.jpg) repeat-y top right; }
+#main-content .page-title .box .b{ background: url(/clients/CottageHome/Images/b_box.jpg) repeat-x bottom left; }
+#main-content .page-title .box .tl{ background: url(/clients/CottageHome/Images/tl_box.jpg) no-repeat top left; }
+#main-content .page-title .box .tr{ background: url(/clients/CottageHome/Images/tr_box.jpg) no-repeat top right;  }
+#main-content .page-title .box .bl{ background: url(/clients/CottageHome/Images/bl_box.jpg) no-repeat bottom left; }
+#main-content .page-title .box .br{ background: url(/clients/CottageHome/Images/br_box.jpg) no-repeat bottom right; min-height: 34px; height: 3.4em; padding: 12px; }
+
+#main-content .page-title .box .t-hover{ background: #6696C4 url(/clients/CottageHome/Images/t_box_hover2.jpg) repeat-x top left; height: 100%; }
+#main-content .page-title .box .l-hover{ background: url(/clients/CottageHome/Images/l_box_hover2.jpg) repeat-y top left; }
+#main-content .page-title .box .r-hover{ background: url(/clients/CottageHome/Images/r_box_hover2.jpg) repeat-y top right; }
+#main-content .page-title .box .b-hover{ background: url(/clients/CottageHome/Images/b_box_hover2.jpg) repeat-x bottom left; }
+#main-content .page-title .box .tl-hover{ background: url(/clients/CottageHome/Images/tl_box_hover2.jpg) no-repeat top left; }
+#main-content .page-title .box .tr-hover{ background: url(/clients/CottageHome/Images/tr_box_hover2.jpg) no-repeat top right;  }
+#main-content .page-title .box .bl-hover{ background: url(/clients/CottageHome/Images/bl_box_hover2.jpg) no-repeat bottom left; }
+#main-content .page-title .box .br-hover{ background: url(/clients/CottageHome/Images/br_box_hover2.jpg) no-repeat bottom right; min-height: 34px; height: 3.4em; padding: 12px; }
+
+#main-content .page-title .box a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #053560;
+}
+
+#main-content .page-title .box .a-hover{
+	color: #FFF;
+}
+
+#main-content .page-title .box a span{
+	float: left;
+	cursor: pointer;
+}
+
+#main-content .page-title .box .num{
+	min-width: 25px;
+	width: 1em;
+	text-align: right;
+	font: 2.4em Georgia;	
+}
+
+#main-content .page-title .box .separator{
+	min-height: 34px;
+	height: 3.4em;
+	margin: 0 .9em 0 .9em;
+	border-right: solid 1px #E5EAD4;
+}
+
+#main-content .page-title .box .lot{
+	padding-top: .7em;
+	font: 1.3em Georgia;	
+}
+
+#main-content .page-title .box .center{
+	display: block;
+	padding-top: .7em;
+	font: 1.3em Georgia;	
+	text-align: center;
+}
+
+/*main-content .content*/
+
+#main-content .content{
+	padding: 0 52px 0 50px;
+	color: #452606;
+}
+
+#main-content .content p,
+#main-content .content li{
+	padding-bottom: 1px;
+	font-size: 1.1em;
+}
+
+#main-content .content h4{
+	font: 1.6em Georgia;
+}
+
+/*main-content .team-grid*/
+
+#main-content .team-grid .cell{
+	min-width: 260px;
+	width: 26em;
+	margin-bottom: 20px;
+}
+
+#main-content .team-grid .cell .img{
+	padding: 2px;
+	border: solid 1px #E5EAD4;
+}
+
+#main-content .team-grid .cell .img img{
+	display: block;
+	min-width: 104px;
+	width: 10.4em;
+	min-height: 136px;
+	height: 13.6em;
+}
+
+#main-content .team-grid .cell .description{
+	min-width: 145px;
+	width: 14.5em;
+	padding-top: 40px;
+}
+
+#main-content .team-grid .cell .inc{
+	padding: 17px;
+	border: solid 1px #E5EAD4;
+}
+
+/*main-content .video-grid*/
+
+#main-content .video-grid{
+	margin-left: 28px;
+}
+
+#main-content .video-grid .cell{
+	margin-right: 5px;
+}
+
+#main-content .video-grid .cell .img{
+	padding: 2px;
+	border: solid 1px #E5EAD4;
+}
+
+#main-content .video-grid .cell .img img{
+	display: block;
+	min-width: 158px;
+	width: 15.8em;
+	min-height: 111px;
+	height: 11.1em;
+}
+
+#main-content .video-grid .cell .description{
+	min-width: 160px;
+	width: 16em;
+	padding-top: 10px;
+}
+
+/*main-content .gallery-grid*/
+
+#main-content .gallery-grid{
+	min-width: 412px;
+	width: 41.2em;
+	margin: auto;	
+}
+
+#main-content .gallery-grid .cell{
+	margin: 0 10px 0 10px;
+}
+
+* html #main-content .gallery-grid .cell{
+	margin: 0 8px 0 8px;
+}
+
+#main-content .gallery-grid .cell .img{
+	padding: 2px;
+	border: solid 1px #E5EAD4;
+}
+
+#main-content .gallery-grid .cell .img img{
+	display: block;
+	min-width: 180px;
+	width: 18em;
+	min-height: 120px;
+	height: 12em;
+}
+
+#main-content .gallery-grid .cell .caption{
+	min-width: 180px;
+	width: 18em;
+	margin-top: 5px;
+	padding-bottom: 1px;
+	text-align: center
+}
+
+/*main-content .postcard-grid*/
+
+#main-content .postcard-grid{
+	min-width: 500px;
+	width: 50em;
+	margin: auto;
+	text-align: center;
+
+}
+
+#main-content .postcard-grid .cell{
+	min-width: 150px;
+	width: 15em;
+	margin: 8px;
+	padding-bottom: 1px;
+}
+
+* html #main-content .postcard-grid .cell{
+	margin: 7px;
+}
+
+#main-content .postcard-grid .cell .img{
+	display: block;
+	width: 100%;
+	min-height: 105px;
+	height: 10.5em;
+	margin-bottom: 6px;
+}
+
+#main-content .postcard-grid .cell .img img{
+	width: 100%;
+	height: 100%;
+}
+
+/*main-content .available-grid*/
+
+#main-content .available-grid{
+	min-width: 620px;
+	width: 62em;
+}
+
+#main-content .available-grid .cell.left{
+	min-width: 310px;
+	width: 31em;
+}
+
+#main-content .available-grid .cell.right{
+	min-width: 310px;
+	width: 31em;
+}
+
+#main-content .available-grid .cell.right .img{
+	min-width: 104px;
+	width: 10.4em;
+	text-align: center;
+}
+
+#main-content .available-grid .cell.right .img img{
+	display: block;
+	width: 100%;
+	min-height: 64px;
+	height: auto;
+}
+
+#main-content .available-grid .cell.right .description{
+	min-width: 202px;
+	width: 20.2em;
+}
+#main-content .available-grid .cell.left .img{
+	min-width: 104px;
+	width: 10.4em;
+	text-align: center;
+}
+
+#main-content .available-grid .cell.left .img img{
+	display: block;
+	width: 100%;
+	min-height: 64px;
+	height: auto;
+}
+
+#main-content .available-grid .cell.left .description{
+	min-width: 202px;
+	width: 20.2em;
+}
+
+/*main-content .plan-grid*/
+
+#main-content .plan-grid{
+	min-width: 535px;
+	width: 53.5em;
+	margin: auto;
+}
+
+#main-content .plan-grid .cell{
+	min-width: 160px;
+	width: 16em;
+	margin-right: 15px;
+	text-align: center;
+}
+
+#main-content .plan-grid .cell img{
+	display: block;
+	width: 100%;
+}
+
+/*main-content .thumbnails-board*/
+
+#main-content .thumbnails-board{
+	min-width: 538px;
+	width: 53.8em;
+	margin: auto;
+}
+
+#main-content .thumbnails-board img{
+	display: block;
+	float: left;
+	min-width: 47px;
+	width: 4.7em;
+	min-height: 47px;
+	height: 4.7em;
+	margin: 3px;
+	cursor: pointer;
+}
+
+/*#main-content .boxes*/
+
+#main-content .boxes{
+	min-width: 625px;
+	width: 62.5em;
+	margin: auto;
+	text-align: center;
+}
+
+#main-content .boxes .left{
+	min-width: 156px;
+	width: 15.6em;
+}
+
+#main-content .boxes .t{ background: url(/clients/CottageHome/Images/t_box.jpg) repeat-x top left; height: 100%; }
+#main-content .boxes .l{ background: url(/clients/CottageHome/Images/l_box.jpg) repeat-y top left; }
+#main-content .boxes .r{ background: url(/clients/CottageHome/Images/r_box.jpg) repeat-y top right; }
+#main-content .boxes .b{ background: url(/clients/CottageHome/Images/b_box.jpg) repeat-x bottom left; }
+#main-content .boxes .tl{ background: url(/clients/CottageHome/Images/tl_box.jpg) no-repeat top left; }
+#main-content .boxes .tr{ background: url(/clients/CottageHome/Images/tr_box.jpg) no-repeat top right;  }
+#main-content .boxes .bl{ background: url(/clients/CottageHome/Images/bl_box.jpg) no-repeat bottom left; }
+#main-content .boxes .br{ background: url(/clients/CottageHome/Images/br_box.jpg) no-repeat bottom right; padding: 9px; }
+
+#main-content .boxes .t-hover{ background: url(/clients/CottageHome/Images/t_box_hover.jpg) repeat-x top left; height: 100%; }
+#main-content .boxes .l-hover{ background: url(/clients/CottageHome/Images/l_box_hover.jpg) repeat-y top left; }
+#main-content .boxes .r-hover{ background: url(/clients/CottageHome/Images/r_box_hover.jpg) repeat-y top right; }
+#main-content .boxes .b-hover{ background: url(/clients/CottageHome/Images/b_box_hover.jpg) repeat-x bottom left; }
+#main-content .boxes .tl-hover{ background: url(/clients/CottageHome/Images/tl_box_hover.jpg) no-repeat top left; }
+#main-content .boxes .tr-hover{ background: url(/clients/CottageHome/Images/tr_box_hover.jpg) no-repeat top right;  }
+#main-content .boxes .bl-hover{ background: url(/clients/CottageHome/Images/bl_box_hover.jpg) no-repeat bottom left; }
+#main-content .boxes .br-hover{ background: url(/clients/CottageHome/Images/br_box_hover.jpg) no-repeat bottom right; padding: 9px; }
+
+#main-content .boxes .box a{
+	display: block;
+}
+
+#main-content .boxes img{
+	width: 100%;
+	vertical-align: bottom;
+}
+
+#main-content .boxes big{
+	display: block;
+	padding: 8px 5px 0 5px;
+	color: #053560;
+	font: 1.7em Georgia;
+}
+
+#main-content .boxes a.caption{
+	padding-right: 10px;
+	background: url(/clients/CottageHome/Images/arrow_brown.gif) no-repeat right;
+	color: #452606;
+	font: .9em Arial;
+}
+
+/*main-content .form*/
+
+.form p{
+	margin-top: .3em;
+}
+
+.form .textinput{
+	margin-bottom: 4px;
+}
+
+/*IE7 hack*/
+*:first-child+html .form .textinput{
+	margin-bottom: 2px;	
+}
+
+/*IE6 hack*/
+* html .form .textinput{
+	margin-bottom: 2px;	
+} 
+
+.form .textinput .text{
+	min-width: 260px;
+	width: 20em;
+    min-height: 13px;
+    height: 1.3em;
+}
+
+.form .textinput .textarea{
+	min-width: 260px;
+	width: 20em;
+    min-height: 80px;
+    height: 8em;
+}
+
+.form .textinput select{
+	min-width: 260px;
+	width: 20em;
+    min-height: 13px;
+    height: 1.3em;
+}
+
+.form .checkboxs{
+	min-width: 260px;
+	width: 26em;
+}
+
+.form .checkinput{
+	clear: both;
+	padding-bottom: 20px;
+}
+
+.form .checkinput input{
+	float: left;
+	margin-right: 5px;
+}
+
+/*IE7 hack*/
+*:first-child+html .form .checkinput input{
+	margin-right: 2px;
+}
+
+/*IE6 hack*/
+* html .form .checkinput input{
+	margin-right: 0;
+}
+
+.form .checkinput p{
+	float: left;
+	min-width: 235px;
+	width: 21.5em;
+	margin: 0;
+}
+
+/*IE7 hack*/
+*:first-child+html .form .checkinput p{
+	padding-top: 3px;
+}
+
+/*IE6 hack*/
+* html .form .checkinput p{
+	padding-top: 3px;
+}
+
+.form .submit{
+	min-width: 100px;
+	width: 10em;
+	margin-top: 20px;
+}
+
+.form .submit .t{ background: url(/clients/CottageHome/Images/t_box.jpg) repeat-x top left; height: 100%; }
+.form .submit .l{ background: url(/clients/CottageHome/Images/l_box.jpg) repeat-y top left; }
+.form .submit .r{ background: url(/clients/CottageHome/Images/r_box.jpg) repeat-y top right; }
+.form .submit .b{ background: url(/clients/CottageHome/Images/b_box.jpg) repeat-x bottom left; }
+.form .submit .tl{ background: url(/clients/CottageHome/Images/tl_box.jpg) no-repeat top left; }
+.form .submit .tr{ background: url(/clients/CottageHome/Images/tr_box.jpg) no-repeat top right;  }
+.form .submit .bl{ background: url(/clients/CottageHome/Images/bl_box.jpg) no-repeat bottom left; }
+.form .submit .br{ background: url(/clients/CottageHome/Images/br_box.jpg) no-repeat bottom right; min-height: 29px; height: 2.9em; padding: 12px; }
+
+.form .submit .t-hover{ background: #6696C4 url(/clients/CottageHome/Images/t_box_hover2.jpg) repeat-x top left; height: 100%; }
+.form .submit .l-hover{ background: url(/clients/CottageHome/Images/l_box_hover2.jpg) repeat-y top left; }
+.form .submit .r-hover{ background: url(/clients/CottageHome/Images/r_box_hover2.jpg) repeat-y top right; }
+.form .submit .b-hover{ background: url(/clients/CottageHome/Images/b_box_hover2.jpg) repeat-x bottom left; }
+.form .submit .tl-hover{ background: url(/clients/CottageHome/Images/tl_box_hover2.jpg) no-repeat top left; }
+.form .submit .tr-hover{ background: url(/clients/CottageHome/Images/tr_box_hover2.jpg) no-repeat top right;  }
+.form .submit .bl-hover{ background: url(/clients/CottageHome/Images/bl_box_hover2.jpg) no-repeat bottom left; }
+.form .submit .br-hover{ background: url(/clients/CottageHome/Images/br_box_hover2.jpg) no-repeat bottom right; min-height: 29px; height: 2.9em; padding: 12px; }
+
+.form .submit a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #053560;
+	font-size: 1.4em;
+	font-weight: bold;
+	text-align: center;
+}
+
+.form .submit .a-hover{
+	color: #FFF;
+}
+
+.form .submit a span{
+	display: block;
+	padding-top: .4em;
+}
+
+/*preferredSetup*/
+
+.preferredSetup{
+	padding-bottom: 70px;
+}
+
+.preferredSetup .fileinput{
+    min-width: 280px;
+    width: 27em;
+	min-height: 60px;
+	height: 6em;
+}
+
+.preferredSetup .fileinput .fakefile{
+    min-width: 200px;
+    width: 15em;
+}
+
+.preferredSetup .task-bar{
+	width: 200px;
+	margin-top: 20px;
+}
+
+.preferredSetup .task-bar li{
+	margin-left: 10px;
+	float: right;
+}
+
+.preferredSetup .img{
+	min-width: 104px;
+	width: 10.4em;
+	text-align: center;
+	position: relative;
+}
+
+.preferredSetup .img .progress {
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+	background: #FFF;
+}
+
+.preferredSetup .info{
+	min-width: 180px;
+	width: 18em;
+	padding-left: 11px;
+	position: relative;
+}
+
+.preferredSetup .info .text{
+	float: left;
+	min-width: 157px;
+	width: 12em;
+    min-height: 13px;
+    height: 1.3em;
+    margin-bottom: 2px;
+	color: #452606;
+}
+
+.preferredSetup .info .title{
+	color: Red;
+	font-weight: bold;
+}
+
+.preferredSetup .info .address{
+	color: #77A7D0;
+	font-weight: bold;
+}
+
+.preferredSetup .description{
+	min-width: 200px;
+	width: 20em;
+}
+
+.preferredSetup .description .textarea{
+	float: left;
+	min-width: 177px;
+	width: 13.5em;
+	min-height: 90px;
+	height: 8.3em;
+	color: #452606;
+}
+
+.preferredSetup .checkbox{
+	float: right;
+}
+
+.preferredSetup .img .checkbox{
+	float: none;
+}
+
+/*All modern browser not IE7*/
+html>/**/body .preferredSetup .checkbox{
+	margin-top: 4px;
+}
+
+/*Opera hack*/
+html:first-child .preferredSetup .checkbox{
+	margin-top: 0;
+}
+
+/*main-content .sitemap*/
+
+#main-content .sitemap .level_1{
+	margin-top: 4px;
+	padding-top: 5px;
+	border-top: solid 1px #E5EAD4;
+	width: 100%;
+}
+
+#main-content .sitemap .level_2{
+	margin-top: 3px;
+}
+
+#main-content .sitemap li.left{
+	min-width: 125px;
+	width: 12.5em;
+}
+
+#main-content .sitemap li.center{
+	float: left;
+	min-width: 125px;
+	width: 12.5em;
+	margin-left: 40px;
+}
+
+#main-content .sitemap li.right{
+	min-width: 125px;
+	width: 12.5em;
+}
+
+/*IE7 hack*/
+*:first-child+html #main-content .sitemap li.clear{
+	display: inline;
+}
+
+/*IE6 hack*/
+* html #main-content .sitemap li.clear{
+	display: inline;
+}
+
+#main-content .sitemap .level_0 li{
+	padding: 13px 0 13px 0;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+#main-content .sitemap .level_1 li{
+	padding: 1px 0 1px 0;
+	font-size: .9em;
+	font-weight: normal;
+}
+
+#main-content .sitemap .level_0 li a{
+	padding: 8px 21px 9px 0;
+	color: #003366;
+	background: url(/clients/CottageHome/Images/arrow_circle.gif) no-repeat right;
+}
+
+#main-content .sitemap .level_1 li a{
+	padding: 0;
+	background: none;
+}
+
+#main-content .sitemap .level_1 li a:hover{
+	text-decoration: underline;
+}
+
+#main-content .sitemap .level_3,
+#main-content .sitemap .level_4,
+#main-content .sitemap .level_5,
+#main-content .sitemap .level_6{
+	margin-left: 8px;	
+}
+
+/*footer*/
+
+#footer { height: 100%; filter: alpha(opacity: 70); opacity: 0.7 }
+
+#footer .t { color: #000; background: #dfe8d3 url(/clients/CottageHome/Images/bottomlogos.png) no-repeat right ; text-align: left; padding: 11px 8px 8px }
+
+#footer .b{
+	display: block;
+	width: 100%;
+}
+
+#footer p,
+#footer a { font: 1em Arial }
+
+#footer a{
+	color: #00427D;
+}
+
+#footer li,
+#footer li a{
+	float: left;
+}
+
+#footer ul li { margin-right: 10px }
+
+#footer li a{
+	border-bottom: dotted 1px;
+}
+
+#footer li a:hover{
+	border-bottom: solid 1px;
+}

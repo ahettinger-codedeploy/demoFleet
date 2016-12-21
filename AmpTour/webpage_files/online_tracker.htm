@@ -1,0 +1,440 @@
+<!--
+// JavaScript Check Status Functions
+
+var server = 'http://www.amptour.com';
+var request_id = '42291';
+var domain = '.www.amptour.com';
+
+function currentTime() {
+	var date = new Date();
+	return date.getTime();
+}
+
+var ns6 = (!document.all && document.getElementById); 
+var ie4 = (document.all);
+var ns4 = (document.layers);
+
+var initiateOpen = 0;
+var infoOpen = 0;
+var infoImageLoaded = 0;
+var countTracker = 0;
+var idleTimeout = 90 * 60 * 1000;
+var timeStart = currentTime();
+var timeElapsed; var timerTracker; var timerInitiateLayer; var timerLiveHelpInfo; var timerClosingLiveHelpInfo;
+
+var topMargin = 10;
+var leftMargin = 10;
+var itopMargin = topMargin;
+var ileftMargin = leftMargin;
+var hAlign = "right";
+var vAlign = "top";
+var layerHeight = 238;
+var layerWidth = 377;
+var slideTime = 1200;
+
+var windowWidth = 525;
+var windowHeight = 380;
+var windowLeft = (screen.width - windowWidth) / 2;
+var windowTop = (screen.height - windowHeight) / 2;
+var size = 'height=' + windowHeight + ',width=' + windowWidth + ',top=' + windowTop + ',left=' + windowLeft;
+
+var trackerStatus = new Image;
+var time = currentTime();
+var title = document.title;
+var referrer = escape(document.referrer);
+
+if (referrer == '') { referrer = 'false'; }
+
+
+// JavaScript Initiate Chat Layer Functions
+
+window.onload = onloadEvent;
+window.onresize = resetLayerLocation;
+
+function onloadEvent() {
+	resetLayerLocation();
+	main();
+}
+
+function toggle(object) {
+  if (document.getElementById) {
+    if (document.getElementById(object).style.visibility == 'visible')
+      document.getElementById(object).style.visibility = 'hidden';
+    else
+      document.getElementById(object).style.visibility = 'visible';
+  }
+  else if (document.layers && document.layers[object] != null) {
+    if (document.layers[object].visibility == 'visible' || document.layers[object].visibility == 'show' )
+      document.layers[object].visibility = 'hidden';
+    else
+      document.layers[object].visibility = 'visible';
+  }
+  else if (document.all) {
+    if (document.all[object].style.visibility == 'visible')
+      document.all[object].style.visibility = 'hidden';
+    else
+      document.all[object].style.visibility = 'visible';
+  }
+  return false;
+}
+
+function initiateFloatLayer() {
+	var openingTrackerStatus = new Image;
+	var time = currentTime();
+	
+	openingTrackerStatus.src = 'http://www.amptour.com/livehelp/include/image_tracker.php?TIME=' + time + '&TITLE=' + title + '&INITIATE=opened&REQUEST=42291';
+
+	if ( ie4 )document.all['initiateChatResponse'].location = 'http://www.amptour.com/livehelp/include/image_tracker.php?TIME=' + time + '&TITLE=' + title + '&INITIATE=opened&REQUEST=42291';
+	if ( ns4 )document.initiateChatResponse.location = 'http://www.amptour.com/livehelp/include/image_tracker.php?TIME=' + time + '&TITLE=' + title + '&INITIATE=opened&&REQUEST=42291';
+	if ( ns6 )document.getElementById('initiateChatResponse').location = 'http://www.amptour.com/livehelp/include/image_tracker.php?TIME=' + time + '&TITLE=' + title + '&INITIATE=opened&REQUEST=42291';
+
+	floatRefresh();
+}
+	
+function floatRefresh() {
+	window.clearTimeout(timerInitiateLayer);
+	window.clearTimeout(timerTracker);
+	if (countTracker == 10000) {
+		var time = currentTime();
+		trackerStatus.onload = resetTimer;
+		trackerStatus.src = 'http://www.amptour.com/livehelp/include/image_tracker.php?TIME=' + time + '&TITLE=' + title + '&REFERRER=' + referrer;
+		countTracker = 0;
+	}
+	else {
+		countTracker = countTracker + 10;
+		timerInitiateLayer = window.setTimeout('main();floatRefresh();', 10);
+	}
+}
+
+function resetTimer() {
+	main(); floatRefresh();
+}
+	
+function floatObject() { 
+	if (ns4 || ns6) {
+		findHeight = window.innerHeight;
+		findWidth = window.innerWidth;
+	} else if(ie4) {
+		findHeight = document.body.clientHeight;
+		findWidth = document.body.clientWidth;
+	}
+} 
+
+function main() { 
+	if (ns4) { 
+		this.currentY = document.floatLayer.top;
+		this.currentX = document.floatLayer.left; 
+		this.scrollTop = window.pageYOffset;
+		this.scrollLeft = window.pageXOffset;
+		mainTrigger();
+	} else if(ns6) {
+		this.currentY = parseInt(document.getElementById('floatLayer').style.top);
+		this.currentX = parseInt(document.getElementById('floatLayer').style.left); 
+		this.scrollTop = scrollY;
+		this.scrollLeft = scrollX;
+		mainTrigger();
+	} else if(ie4) { 
+		this.currentY = document.all['floatLayer'].style.pixelTop;
+		this.currentX = document.all['floatLayer'].style.pixelLeft;
+		this.scrollTop = document.body.scrollTop;
+		this.scrollLeft = document.body.scrollLeft; 
+		mainTrigger();
+	}
+} 
+
+function mainTrigger() { 
+	var newTargetY = this.scrollTop + this.topMargin;
+	var newTargetX = this.scrollLeft + this.leftMargin;
+	if ( this.currentY != newTargetY || this.currentX != newTargetX) { 
+		if ( newTargetY != this.targetY || newTargetX != this.targetX ) { 
+			this.targetY = newTargetY; this.targetX = newTargetX;
+			floatStart();
+		} 
+		animate(); 
+	} 
+} 
+
+function floatStart() { 
+	var now = new Date();
+	this.Y = this.targetY - this.currentY; this.X = this.targetX - this.currentX;
+	
+	this.C = Math.PI / ( 2 * this.slideTime ) 
+	this.D = now.getTime() 
+	if (Math.abs(this.Y) > this.findHeight) { 
+		this.E = this.Y > 0 ? this.targetY - this.findHeight : this.targetY + this.findHeight;
+		this.Y = this.Y > 0 ? this.findHeight : -this.findHeight;
+	} else { 
+		this.E = this.currentY;
+	} 
+	if (Math.abs(this.X) > this.findWidth) { 
+		this.F = this.X > 0 ? this.targetX - this.findWidth : this.targetX + this.findWidth;
+		this.X = this.X > 0 ? this.findWidth : -this.findWidth;
+	} else { 
+		this.F = this.currentX;
+	} 
+} 
+
+function animate() { 
+	var now = new Date() ;
+	var newY = this.Y * Math.sin( this.C * ( now.getTime() - this.D ) ) + this.E;
+	var newX = this.X * Math.sin( this.C * ( now.getTime() - this.D ) ) + this.F;
+	newY = Math.round(newY);
+	newX = Math.round(newX);
+	if (( this.Y > 0 && newY > this.currentY ) || ( this.Y < 0 && newY < this.currentY )) { 
+		if ( ie4 ) { document.all['floatLayer'].style.pixelTop = newY }
+		else if ( ns4 ) { document.floatLayer.top = newY; }
+		else if ( ns6 ) { document.getElementById('floatLayer').style.top = newY; }
+	}
+	if (( this.X > 0 && newX > this.currentX ) || ( this.X < 0 && newX < this.currentX )) { 
+		if ( ie4 ) { document.all['floatLayer'].style.pixelLeft = newX; }
+		else if ( ns4 ) { document.floatLayer.left = newX; }
+		else if ( ns6 ) { document.getElementById('floatLayer').style.left = newX; }
+	}
+} 
+
+function resetLayerLocation() {
+
+	var browserWidth = 0, browserHeight = 0;
+	if( typeof( window.innerWidth ) == 'number' ) {
+		browserWidth = window.innerWidth;
+		browserHeight = window.innerHeight;
+	} else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+		browserWidth = document.documentElement.clientWidth;
+		browserHeight = document.documentElement.clientHeight;
+	} else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+		browserWidth = document.body.clientWidth;
+		browserHeight = document.body.clientHeight;
+	}
+
+	if ((ns4) || (ns6)) { 
+		if (hAlign == "left") { leftMargin = ileftMargin; }
+		if (hAlign == "right") { leftMargin = window.innerWidth-ileftMargin-layerWidth-20; }
+		if (hAlign == "center") { leftMargin = Math.round((window.innerWidth-20)/2)-Math.round(layerWidth/2); }
+		if (vAlign == "top") { topMargin = itopMargin; } 
+		if (vAlign == "bottom") { topMargin = window.innerHeight-itopMargin-layerHeight; }
+		if (vAlign == "center") { topMargin = Math.round((window.innerHeight-20)/2)-Math.round(layerHeight/2); }
+	}
+	if (ie4) {
+		if (hAlign == "left") { leftMargin = ileftMargin; }
+		if (hAlign == "right") { leftMargin = document.body.offsetWidth-ileftMargin-layerWidth-20; }
+		if (hAlign == "center") { leftMargin = Math.round((document.body.offsetWidth-20)/2)-Math.round(layerWidth/2); }
+		if (vAlign == "top") { topMargin = itopMargin; }
+		if (vAlign == "bottom") { topMargin = browserHeight-itopMargin-layerHeight; }
+		if (vAlign == "center") { topMargin = Math.round((browserHeight-20)/2)-Math.round(layerHeight/2); }
+	}
+
+}
+
+function stopLayer() {
+	window.clearTimeout(timerInitiateLayer);	
+	if ( ns4 ) {
+		document.floatLayer.top = "10"; document.floatLayer.left = "10";
+	} else if ( ns6 ) {
+		document.getElementById('floatLayer').style.top = "10"; document.getElementById('floatLayer').style.left = "10";
+	} else if ( ie4 ) {
+		document.all['floatLayer'].style.pixelTop = "10px"; document.all['floatLayer'].style.pixelLeft = "10px";
+	}
+}
+
+function acceptInitiateChat() {
+	var acceptTrackerStatus = new Image;
+	var time = currentTime();
+	
+	acceptTrackerStatus.src = 'http://www.amptour.com/livehelp/include/image_tracker.php?TIME=' + time + '&TITLE=' + title + '&INITIATE=accepted&REQUEST=42291';
+
+	if ( ie4 )document.all['initiateChatResponse'].location = 'http://www.amptour.com/livehelp/include/image_tracker.php?TIME=' + time + '&TITLE=' + title + '&INITIATE=accepted&REQUEST=42291';
+	if ( ns4 )document.initiateChatResponse.location = 'http://www.amptour.com/livehelp/include/image_tracker.php?TIME=' + time + '&TITLE=' + title + '&INITIATE=accepted&REQUEST=42291';
+	if ( ns6 )document.getElementById('initiateChatResponse').location = 'http://www.amptour.com/livehelp/include/image_tracker.php?TIME=' + time + '&TITLE=' + title + '&INITIATE=accepted&REQUEST=42291';
+
+	if (initiateOpen == 1) {
+		toggle('floatLayer');
+	}
+	stopLayer();
+	onlineTracker();
+}
+
+function declineInitiateChat() {
+	var declineTrackerStatus = new Image;
+	var time = currentTime();
+	
+	declineTrackerStatus.src = 'http://www.amptour.com/livehelp/include/image_tracker.php?TIME=' + time + '&TITLE=' + title + '&INITIATE=declined&REQUEST=42291';
+
+	if ( ie4 )document.all['initiateChatResponse'].location = 'http://www.amptour.com/livehelp/include/image_tracker.php?TIME=' + time + '&TITLE=' + title + '&INITIATE=declined&REQUEST=42291';
+	if ( ns4 )document.initiateChatResponse.location = 'http://www.amptour.com/livehelp/include/image_tracker.php?TIME=' + time + '&TITLE=' + title + '&INITIATE=declined&REQUEST=42291';
+	if ( ns6 )document.getElementById('initiateChatResponse').location = 'http://www.amptour.com/livehelp/include/image_tracker.php?TIME=' + time + '&TITLE=' + title + '&INITIATE=declined&REQUEST=42291';
+
+	if (initiateOpen == 1) {
+		toggle('floatLayer');
+		initiateOpen = 0;
+	}
+	stopLayer();
+	onlineTracker();
+}
+
+function checkInitiate() {
+	// Check if site visitor has an Initiate Chat Request Pending for display...
+	var imageWidth = this.width; var imageHeight = this.height;
+	
+	if (imageWidth == 2 && imageHeight == 2 && initiateOpen == 0) {
+		initiateFloatLayer();
+		toggle('floatLayer');
+		initiateOpen = 1;
+	} 
+}
+
+
+//-->
+
+<!--
+
+function openInfo(statusImage, e) {
+	window.clearTimeout(timerLiveHelpInfo);
+	cancelClosingInfo();
+	
+	var iLayerX = document['LiveHelpInfoContent'].width;
+	var iLayerY = document['LiveHelpInfoContent'].height;
+	var iPosX = statusImage.offsetLeft;
+	var iPosY = statusImage.offsetTop;
+
+	var iWidth = statusImage.clientWidth;
+	var iHeight = statusImage.clientHeight;
+	if (!iWidth) {
+		iWidth = statusImage.offsetWidth;
+	}
+	obj = statusImage.offsetParent;
+	while(obj != null){
+		iPosX += obj.offsetLeft;
+		iPosY += obj.offsetTop;
+		obj = obj.offsetParent;
+	}
+
+	var iCurrentY; var iCurrentX; var iScrollTop; var iScrollLeft; var iFindHeight; var iFindWidth;
+
+	if (ns4) { 
+		iScrollTop = window.pageYOffset;
+		iScrollLeft = window.pageXOffset;
+	} else if(ns6) {
+		iScrollTop = scrollY;
+		iScrollLeft = scrollX;
+	} else if(ie4) { 
+		iScrollTop = document.body.scrollTop;
+		iScrollLeft = document.body.scrollLeft; 
+		iFindHeight = document.body.clientHeight;
+		iFindWidth = document.body.clientWidth;
+	}
+	
+	if (ns4 || ns6) {
+		iFindHeight = window.innerHeight; iFindWidth = window.innerWidth;
+	}
+
+	infoImage = new Image();
+	infoImage.onload = infoImageLoad;
+	
+	var iMarginHeight = iFindHeight - (iHeight + iPosY - iScrollTop);
+	var iMarginWidth = iFindWidth - (iWidth + iPosX - iScrollLeft);
+	
+	if (iMarginHeight < iLayerY && iPosY > iLayerY) {
+		infoImage.src = "http://www.amptour.com/livehelp/images/livehelp_info_bg_top.gif";
+		if (ie4) { 
+			document.all['LiveHelpInfo'].style.background = 'url(' + infoImage.src + ')';
+		} else if (ns4) { 
+			document.LiveHelpInfo.background = 'url(' + infoImage.src + ')';
+		} else if(ns6) {
+			document.getElementById('LiveHelpInfo').style.background = 'url(' + infoImage.src + ')';
+		}
+		iNewX = iPosX - 15;
+		iNewY = iPosY + 20 - iLayerY - 20;
+	}
+	else {
+		infoImage.src = "http://www.amptour.com/livehelp/images/livehelp_info_bg_bottom.gif";
+		if (ie4) { 
+			document.all['LiveHelpInfo'].style.background = 'url(' + infoImage.src + ')';
+		} else if (ns4) { 
+			document.LiveHelpInfo.background = 'url(' + infoImage.src + ')';
+		} else if(ns6) {
+			document.getElementById('LiveHelpInfo').style.background = 'url(' + infoImage.src + ')';
+		}
+		iNewX = iPosX + 15;
+		iNewY = iPosY + 20 + statusImage.height - 20;
+	}
+	
+	if (iMarginWidth < iLayerX && iPosX > iLayerX) {
+		iNewX = iPosX - iLayerX + 175;
+	}
+	else if (iMarginWidth > iLayerX && iPosX < iLayerX) {
+		iNewX = iPosX + 25;
+	}
+	
+	if (ie4) { 
+		document.all['LiveHelpInfo'].style.pixelTop = iNewY;
+		document.all['LiveHelpInfo'].style.pixelLeft = iNewX;
+	} else if (ns4) { 
+		document.LiveHelpInfo.top = iNewY;
+		document.LiveHelpInfo.left = iNewX; 
+	} else if(ns6) {
+		document.getElementById('LiveHelpInfo').style.top = iNewY + "px";
+		document.getElementById('LiveHelpInfo').style.left = iNewX + "px"; 
+	}
+	if (infoImageLoaded == 1) {
+		displayInfo();
+	}
+}
+
+function infoImageLoad() {
+	infoImageLoaded = 1;
+}
+
+function displayInfo() {
+	if (infoOpen == 0) {
+		timerLiveHelpInfo = window.setTimeout("toggle('LiveHelpInfo'); infoOpen = 1;", 2000);
+	}
+}
+
+function closeInfo() {
+	window.clearTimeout(timerLiveHelpInfo);
+	if (infoOpen == 1) {
+		timerClosingLiveHelpInfo = window.setTimeout("toggle('LiveHelpInfo'); infoOpen = 0;", 500);
+	}
+}
+
+function cancelClosingInfo() {
+	window.clearTimeout(timerClosingLiveHelpInfo);
+}
+
+function openLiveHelp() {
+	var winLiveHelp = window.open('http://www.amptour.com/livehelp/index.php?REFERER=' + escape(document.referrer) + '&TITLE=' + document.title + '&URL=' + document.location + '&SERVER=&LANGUAGE=en&CHARSET=iso-8859-1', 'SUPPORTER', size);
+	if (winLiveHelp) { winLiveHelp.opener = self; }
+}
+
+function onlineTracker() {
+	var time = currentTime();
+	trackerStatus.src = 'http://www.amptour.com/livehelp/include/image_tracker.php?TIME=' + time + '&TITLE=' + title + '&REFERRER=' + referrer;
+}
+
+// Detect the Live Help Session Tracking Cookie
+function checkCookie (CookieName) {
+	if (document.cookie) {
+		var CookieSet = document.cookie.split(';');
+		var SetSize = CookieSet.length;
+		var CookiePieces
+		var CookieValue = '';
+		var x = 0;
+		
+		for (x = 0; ((x < SetSize) && (CookieValue == '')); x++) {
+			CookiePieces = CookieSet[x].split ('=');
+			if (CookiePieces[0].substring (0,1) == ' ') {
+				CookiePieces[0] = CookiePieces[0].substring (1, CookiePieces[0].length);
+			}
+			if (CookiePieces[0] == CookieName) {
+				CookieValue = CookiePieces[1];
+			}
+		}
+		if (CookieValue != '') {
+			 onlineTracker();
+		}
+	}
+}
+
+checkCookie('LiveHelpSession');
+
+//-->

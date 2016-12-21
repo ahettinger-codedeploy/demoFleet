@@ -1,0 +1,96 @@
+<SCRIPT language=JavaScript>
+<!--
+function FP_swapImg() {//v1.0
+ var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
+ n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
+ elm.$src=elm.src; elm.src=args[n+1]; } }
+}
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
+
+function FP_getObjectByID(id,o) {//v1.0
+ var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
+ else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
+ if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
+ for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
+ f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
+ for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
+ return null;
+}
+
+function FP_swapImgRestore() {//v1.0
+ var doc=document,i; if(doc.$imgSwaps) { for(i=0;i<doc.$imgSwaps.length;i++) {
+  var elm=doc.$imgSwaps[i]; if(elm) { elm.src=elm.$src; elm.$src=null; } } 
+  doc.$imgSwaps=null; }
+}
+// -->
+</SCRIPT>
+<!--<BODY bgColor=#dfffff 
+onload="FP_preloadImgs(/*url*/'/PrivateLabel/BubblyBlackGirl/Images/menu_cast2.gif', /*url*/'/PrivateLabel/BubblyBlackGirl/Images/menu_about2.gif', /*url*/'/PrivateLabel/BubblyBlackGirl/Images/menu_team2.gif', /*url*/'/PrivateLabel/BubblyBlackGirl/Images/menu_venue2.gif', /*url*/'/PrivateLabel/BubblyBlackGirl/Images/menu_news2.gif', /*url*/'/PrivateLabel/BubblyBlackGirl/Images/menu_extras2.gif', /*url*/'/PrivateLabel/BubblyBlackGirl/Images/menu_tickets6.gif')">-->
+<TABLE border=0 WIDTH=100% cellPadding=0 cellSpacing=0>
+  <TR>
+	<td height=15><IMG SRC="/Images/clear.gif" HEIGHT=15 WIDTH=1></TD>
+  </TR>
+  <TR>
+    <TD width=10><IMG SRC="/Images/clear.gif" WIDTH=10></TD>
+    <TD>
+    
+			<DIV align=center>&nbsp;</DIV>
+			<DIV align=center>
+			<TABLE height=474 cellSpacing=0 borderColorDark=#800080 cellPadding=0 width=741 
+			bgColor=#ffffff borderColorLight=#800080 border=1><!-- MSTableType="layout" -->
+			  <TBODY>
+			  <TR>
+			    <TD vAlign=top align=middle width=741 height=474>
+			      <TABLE height=131 cellSpacing=0 cellPadding=0 width=761 border=0><!-- MSCellFormattingTableID="1" -->
+			        <TBODY>
+			        <TR>
+			          <TD width=761 height=131><!-- MSCellFormattingType="content" -->
+			            <P align=center><A 
+			            href="http://www.bubblyblackgirl.com/tickets"><IMG id=img9 
+			            onmouseover="FP_swapImg(1,1,/*id*/'img9',/*url*/'/PrivateLabel/BubblyBlackGirl/Images/menu_tickets6.gif')" 
+			            onmouseout=FP_swapImgRestore() height=87 
+			            src="/PrivateLabel/BubblyBlackGirl/Images/menu_tickets5.gif" 
+			            width=144 border=0></A><A 
+			            href="http://www.bubblyblackgirl.com/news"><IMG id=img6 
+			            onmouseover="FP_swapImg(1,1,/*id*/'img6',/*url*/'/PrivateLabel/BubblyBlackGirl/Images/menu_news2.gif')" 
+			            onmouseout=FP_swapImgRestore() height=49 
+			            src="/PrivateLabel/BubblyBlackGirl/Images/menu_news1.gif" 
+			            width=96 border=0></A><A 
+			            href="http://www.bubblyblackgirl.com/about"><IMG id=img2 
+			            onmouseover="FP_swapImg(1,1,/*id*/'img2',/*url*/'/PrivateLabel/BubblyBlackGirl/Images/menu_about2.gif')" 
+			            onmouseout=FP_swapImgRestore() height=50 
+			            src="/PrivateLabel/BubblyBlackGirl/Images/menu_about1.gif" 
+			            width=100 border=0></A><A 
+			            href="http://www.bubblyblackgirl.com/cast"><IMG id=img1 
+			            onmouseover="FP_swapImg(1,1,/*id*/'img1',/*url*/'/PrivateLabel/BubblyBlackGirl/Images/menu_cast2.gif')" 
+			            onmouseout=FP_swapImgRestore() height=50 
+			            src="/PrivateLabel/BubblyBlackGirl/Images/menu_cast1.gif" 
+			            width=80 border=0></A><A 
+			            href="http://www.bubblyblackgirl.com/team"><IMG id=img3 
+			            onmouseover="FP_swapImg(1,1,/*id*/'img3',/*url*/'/PrivateLabel/BubblyBlackGirl/Images/menu_team2.gif')" 
+			            onmouseout=FP_swapImgRestore() height=50 
+			            src="/PrivateLabel/BubblyBlackGirl/Images/menu_team1.gif" 
+			            width=100 border=0></A><A 
+			            href="http://www.bubblyblackgirl.com/venue"><IMG id=img4 
+			            onmouseover="FP_swapImg(1,1,/*id*/'img4',/*url*/'/PrivateLabel/BubblyBlackGirl/Images/menu_venue2.gif')" 
+			            onmouseout=FP_swapImgRestore() height=50 
+			            src="/PrivateLabel/BubblyBlackGirl/Images/menu_venue1.gif" 
+			            width=106 border=0></A><A 
+			            href="http://www.bubblyblackgirl.com/extras"><IMG id=img8 
+			            onmouseover="FP_swapImg(1,1,/*id*/'img8',/*url*/'/PrivateLabel/BubblyBlackGirl/Images/menu_extras2.gif')" 
+			            onmouseout=FP_swapImgRestore() height=40 
+			            src="/PrivateLabel/BubblyBlackGirl/Images/menu_extras1.gif" 
+			            width=120 border=0></A>&nbsp; </P></TD></TR></TBODY></TABLE>
+			      <P><IMG height=109 
+			      src="/PrivateLabel/BubblyBlackGirl/Images/colorlogosmall.gif" 
+			      width=200 border=0></P>
+			      <H3><FONT face=Verdana>Tickets</FONT></H3>
+			      <TABLE height=231 cellSpacing=0 cellPadding=0 width=100% border=0><!-- MSTableType="layout" -->
+			        <TBODY>
+			        <TR>
+			          <TD vAlign=top>
+			          

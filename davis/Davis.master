@@ -1,0 +1,2364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><script src="/clients/Davis/Images/Insert.txt"></script>
+   
+    
+    <!-- Stylesheets -->
+
+    <link rel="Stylesheet" type="text/css" href="/clients/Davis/Images/jquery.css">
+    <link rel="Stylesheet" type="text/css" href="/clients/Davis/Images/system.css">
+    <link rel="Stylesheet" type="text/css" href="/clients/Davis/Images/apps.css">
+    <link rel="Stylesheet" type="text/css" href="/clients/Davis/Images/jQueryUI.css">
+    
+    
+    <!-- Scripts -->
+    <script src="/clients/Davis/Images/jquery_002.js" type="text/javascript"></script>
+    <script src="/clients/Davis/Images/swfobject.js" type="text/javascript"></script>
+    <script src="/clients/Davis/Images/Initialize.js" type="text/javascript"></script>
+
+    
+    
+<script type="text/javascript">
+    $(document).ready(function () {
+        SetCookie('SWScreenWidth', screen.width);
+        SetCookie('SWClientWidth', document.body.clientWidth);
+        $("div.ui-article:last").addClass("last-article");
+        $("div.region .app:last").addClass("last-app");
+    });
+    </script>
+    
+    <!-- Page -->
+    
+    <style type="text/css">/* MedaiBegin Standard */
+
+/* GroupBegin Schoollist */
+.sw-mystart-dropdown.schoollist {
+	display:none;
+}
+ul.sw-dropdown-list.mod {
+	width:730px;
+}
+li.school-container {
+	float:left;
+}
+.sw-dropdown-list.mod li.school-container ul.school-list li:hover {
+	color:#FFF;
+}
+ul.sw-dropdown-list li.school-container:hover {
+	background-color:transparent;
+	color:#333;
+}
+ul.school-list {
+	list-style:none outside none;
+	margin:0px;
+	padding:0px;
+}
+li.header {
+	font-weight:bold;
+	text-transform:uppercase;
+}
+.sw-mystart-dropdown .sw-dropdown-list > li:hover a {
+	color:#000;
+}
+.sw-mystart-dropdown .sw-dropdown-list > li > ul > li:hover a {
+	color:#FFF;
+}
+.sw-mystart-dropdown .sw-dropdown-list li:hover {
+	background-color:#CCC;
+}
+/* GroupEnd */
+
+/* GroupBegin Mystart */
+#sw-mystart-outer {
+	height:36px;
+	border-bottom:3px solid #D8D4CF;
+	background:url(/clients/Davis/Images/ms-bg.png) repeat-x 0px 0px transparent;
+}
+.sw-mystart-button, #sw-mystart-account {
+	font-weight:normal;
+	font-size:13px;
+	margin-top:6px;
+	height:16px;
+	padding-bottom:2px;
+}
+.sw-mystart-button a, .sw-mystart-button a:active, .sw-mystart-button a:visited, #sw-mystart-account {
+	color:#FFF;
+}
+.sw-mystart-button.home {
+	padding-left:10px;
+}
+#sw-home-icon {
+	display:none;
+}
+#sw-mystart-inner {
+	height:36px;
+}
+#sw-search-input {
+	width: 182px;
+}
+.sw-mystart-dropdown {
+	color:#000;
+	background-color:#FFF;
+}
+.sw-mystart-dropdown .sw-dropdown {
+	background-color:#FFF;
+	color:#000;
+}
+.sw-mystart-dropdown .sw-dropdown-arrow {
+	background: url(/clients/Davis/Images/sw-mystart-chevron2.png) no-repeat 6px 7px;
+}
+.sw-mystart-dropdown .sw-dropdown-selected{
+	color:#000;
+}
+.sw-mystart-dropdown .sw-dropdown-list li a {
+	color:#000;
+}
+#sw-mystart-search {
+	display:none;
+	background:url(/clients/Davis/Images/gb-search-bg.png) no-repeat 0px 0px transparent;
+	height:24px;
+	width:214px;
+	margin:0px 0px 10px 0px;
+}
+#sw-search-input:focus {
+	outline:none;
+}
+#sw-search-button {
+	display:block;
+	border:none;
+}
+#sw-search-button span {
+	display:none;
+}
+#sw-myaccount .sw-myaccount-chevron {
+	background:url(/clients/Davis/Images/chevron.png) no-repeat 0px -6px transparent;
+	top:10px;
+}
+#sw-myaccount-list li a {
+	color:#FFF;
+}
+#sw-myaccount-list li:hover {
+	background-color:#FFF;
+}
+#sw-mystart-account.clicked-state:hover {
+	color:#FFF;
+}
+#sw-mystart-account.clicked-state:hover #sw-myaccount .sw-myaccount-chevron {
+	background:url(/clients/Davis/Images/chevron.png) no-repeat 0px -6px transparent;
+}
+/* GroupEnd */ 
+
+/* GroupBegin Tools Dropdown */
+#tools-dropdown {
+	display:none;
+}
+#mystart-tools-dropdown {
+	float:left;
+	padding:11px 26px 10px 10px;
+	margin:0px 3px 0px 3px;
+	position:relative;
+	cursor:pointer;
+}
+#mystart-tools-dropdown .sw-myaccount-chevron {
+	background:url(/clients/Davis/Images/chevron.png) no-repeat 0px -6px transparent;
+	position: absolute;
+	width: 10px;
+	height: 8px;
+	top: 16px;
+	right: 8px;
+}
+#mystart-tools-dropdown.active .sw-myaccount-chevron {
+	background-position:0px 1px;
+}
+#mystart-tools-dropdown ul {
+	list-style:none outside none;
+	margin:0px;
+	padding:0px;
+	text-align:left;
+	z-index:8001;
+	position:absolute;
+	top:36px;
+	right:0px;
+	min-width:152px;
+	display:none;
+}
+.tools-item {
+	background:url(/clients/Davis/Images/tools-item-bg.png) repeat-x 0px bottom transparent;
+	padding:7px 12px 7px 12px;
+	cursor:default;
+}
+.tools-item a {
+	color:#FFF;
+	text-decoration:none;
+}
+.tools-item:hover a {
+	font-weight:bold;
+}
+/* GroupEnd */
+ 
+/* GroupBegin Global */
+.gb-body-fade {
+	background:url(/clients/Davis/Images/gb-body-fade.png) repeat-x 0px 0px transparent;
+	height:231px;
+	width:100%;
+	position:absolute;
+	left:0px;
+} 
+.gb-body-fade.top {
+	top:225px;
+}
+.gb-body-fade.bottom {
+	bottom:75px;
+	background-position:0px -231px;
+}
+#gb-header-full {
+	width:100%;
+	min-width:970px;
+	height:183px;
+	position:absolute;
+	top:39px;
+	left:0px;
+	background:#F4EFE9;
+	border-bottom:3px solid #D8D4CF;
+	overflow:hidden;
+}
+#gb-header-fade {
+	position:absolute;
+	top:0px;
+	left:50%;
+	margin-left:-645px;
+	width:1290px;
+	height:183px;
+	background:url(/clients/Davis/Images/gb-header-full-fade.png) repeat-y 0px 0px transparent;
+}
+#gb-page {
+	width: 970px;
+	height: auto;
+	margin: 0px auto 0px auto;
+	position:relative;
+	background:#FFF;
+}
+#gb-header {
+	background:url(/clients/Davis/Images/gb-header-bg.png) no-repeat 304px 0px transparent;
+	width: 970px;
+        height: 135px;
+        position:relative;
+}
+#gb-logo {
+	width: auto;
+        height: 105px;
+        float:left;
+        padding:15px;
+}
+#gb-sitename {
+	float:left;
+	margin:20px 0px 0px 0px;
+}
+#gb-sitename h1 {
+	font-family:'Droid Serif', 'Times', serif;
+	font-size:39px;
+	font-weight:normal;
+	color:#333;
+}
+#gb-sitename h2 {
+	font-family:'Droid Serif', 'Times', serif;
+	font-size:17px;
+	font-weight:normal;
+	color:#666;
+	font-style:italic;
+}
+#gb-contact-box {
+	position:absolute;
+	height:111px;
+	width:211px;
+	top:13px;
+	left:726px;
+	padding:10px 10px 10px 20px;
+}
+#contact-info {
+	clear:both;
+}
+#accent-bar {
+	width:960px;
+	height:6px;
+	margin:0px 0px 1px 0px;
+}
+#gb-icons {
+	background:url(/clients/Davis/Images/gb-icon-bg.png) no-repeat 0px 0px transparent;
+	width:134px;
+	height:273px;
+	float:left;
+}
+#icons-list {
+	list-style:none outside none;
+	margin:27px 0px 0px 12px;
+	padding:0px;
+}
+.icn {
+	background:url(/clients/Davis/Images/gb-icn-sprite.png) no-repeat 0px 0px transparent;
+	height:25px;
+	margin:10px 0px 25px 0px;
+}
+.icn.mydsd {
+	background-position:4px -4px;
+}
+.icn.employment {
+	background-position:0px -32px;
+	display:none;
+}
+.icn.district {
+	background-position:-3px -148px;
+	display:none;
+}
+.icn.dsdtube {
+	background-position:11px -61px;
+}
+.icn.contact {
+	background-position:11px -94px;
+}
+.icn.foundation {
+	background-position:0px -119px;
+}
+.icn a {
+	text-decoration:none;
+	color:#333;
+	font-weight:bold;
+	display:block;
+	height:100%;
+}
+.icn span {
+	display:block;
+}
+.icn.mydsd span {
+	padding:0px 0px 0px 26px;
+}
+.icn.employment span {
+	padding:1px 0px 0px 26px;
+}
+.icn.district span {
+	padding:1px 0px 0px 26px;
+}
+.icn.dsdtube span {
+	padding:3px 0px 0px 39px;
+}
+.icn.contact span {
+	padding:1px 0px 0px 42px;
+}
+.icn.foundation span {
+	padding:3px 0px 0px 30px;
+}
+#gb-content {
+	width: 958px;
+	border:1px solid #CCC;
+	height: auto;
+	min-height:640px;
+	padding:5px;
+	margin:0px 0px 6px 0px;
+	position:relative;
+}
+.column {
+	float: left;
+}
+#sw-footer-outer {
+	display:none;
+}
+#gb-footer-outer {
+	height:75px;
+	width:100%;
+	background:url(/clients/Davis/Images/gb-footer-outer-bg.png) repeat-x 0px 0px transparent;
+}
+#gb-footer {
+	width:494px;
+	height:57px;
+	margin:0px auto 0px auto;
+	color:#FFF;
+	background:url(/clients/Davis/Images/sw-logo.png) no-repeat 0px center transparent;
+	padding:18px 0px 0px 140px;
+}
+#footer-info {
+	margin:0px;
+	padding:0px;
+	list-style:none outside none;
+}
+#footer-info li {
+	float:left;
+	padding:0px 10px 5px 0px;
+}
+#footer-info li a {
+	color:#FFF;
+	text-decoration:none;
+}
+/* GroupEnd */
+/* GroupBegin App Styles */
+.view-calendar-link {
+	display:none;
+	padding-bottom:10px;
+}
+div.ui-widget.app {
+	padding: 0px 5px 5px 5px;
+}
+div.ui-hp div.ui-widget.app, .sp.column.one div.ui-widget.app {
+	padding:0px;
+}
+div.ui-hp div.ui-widget-detail, .sp.column.one div.ui-widget-detail {
+	padding:8px 15px 0px 15px;
+}
+.app-accent {
+	width:100%;
+	height:3px;
+}
+div.ui-hp div.ui-widget.app div.ui-widget-header, .sp.column.one div.ui-widget.app div.ui-widget-header {
+	background:url(/clients/Davis/Images/app-header-bg.png) repeat-x 0px 0px transparent;
+	min-height:34px;
+	border-bottom:1px solid #FFF;
+}
+div.ui-widget.app div.ui-widget-header h1, div.ui-widget.app.navigation div.ui-widget-header h1, .sp.column.one div.ui-widget.app div.ui-widget-header h1 {
+	font-family:'Droid Serif', 'Times', serif;
+	font-weight:normal;
+	color:#FFF;
+	font-size:18px;
+	margin:0px;
+	padding:3px 12px 0px 12px;
+}
+div.ui-hp div.ui-widget.app div.ui-widget-detail {
+	background:url(/clients/Davis/Images/app-detail-bg.png) repeat-x 0px 1px transparent;
+	min-height:64px;
+}
+.hp.inner.one div.ui-hp div.ui-widget.app div.ui-widget-detail {
+	background:none;
+}
+div.ui-widget-title h1 {
+	/*STYLE LIKE H1*/
+}
+h1.ui-article-title {
+	/*STYLE LIKE H2*/
+}
+.more-link {
+	background:url(/clients/Davis/Images/read-more.png) no-repeat 0px 0px transparent;
+	display:block;
+	width:87px;
+	height:27px;
+	padding:0px;
+	margin:5px 0px 0px 15px;
+}
+.more-link span {
+	display:none;
+}
+/* GroupEnd */
+/* GroupBegin Homepage */
+.hp.column.one {
+	width: 238px;
+	height: auto;
+	margin:0px 5px 0px 0px;
+}
+.hp.column.two {
+	width: 714px;
+	height: auto;
+	background:url(/clients/Davis/Images/hp-inner-one-bg.png) repeat-y 0px 0px transparent;
+}
+#hp-inner-top {
+	width:714px;
+	height:273px;
+	border-bottom:5px solid #FFF;
+}
+.hp.inner.one {
+	width:469px;
+	float:left;
+	/*border-bottom:1px solid #CDC9C4;*/
+}
+.hp.inner.two {
+	width: 240px;
+	margin:0px 0px 0px 5px;	
+	float:left;
+}
+#hp-column-cap {
+	width:467px;
+	height:1px;
+	background:#CDC9C4;
+	position:absolute;
+	bottom:5px;
+	left:249px;
+}
+/* GroupEnd */
+/* GroupBegin Photo Area */
+#hp-slideshow {
+	width: 580px;
+	height: 273px;
+	overflow: hidden;
+	position:relative;
+	float:left;
+}
+#canvas-overlay {
+	width:60px;
+	height:273px;
+	position:absolute;
+	top:0px;
+	right:0px;
+	z-index:10;
+	background:url(/clients/Davis/Images/hp-slideshow-overlay.png) no-repeat right 0px transparent;
+}
+.gallery-desc {
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:580px;
+	height:32px;
+	z-index:3;
+}
+.title {
+	width:580px;
+	height:32px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	opacity:.9;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+	filter: alpha(opacity=90);
+	-khtml-opacity: 0.9;
+	-moz-opacity: 0.9;
+}
+.title h1 {
+	visibility:hidden;
+}
+.caption {
+	position:absolute;
+	top:0px;
+	left:0px;
+	color:#FFF;
+	font-weight:bold;
+	width:520px;
+	height:17px;
+	padding:10px 45px 5px 15px;
+}
+.caption a {
+	color:#FFF;
+	text-decoration:none;
+}
+.image-button {
+	background:url(/clients/Davis/Images/photo-toggle-sprite.png) no-repeat 0px 0px transparent;
+	width:20px;
+	height:20px;
+	cursor:pointer;
+	position:absolute;
+	top:247px;
+	z-index:4;
+}
+.image-button.back {
+	left:475px;
+}
+.image-button.next {
+	left:500px;
+	background-position:-24px 0px;
+}
+/* GroupEnd */ 
+/* GroupBegin Subpage */
+#sp-content {
+	background:url(/clients/Davis/Images/sp-content-bg.png) repeat-y 0px 0px transparent;
+	width: 960px;
+	margin:0px auto 0px auto;
+	height: auto;
+	position:relative;
+}
+.sp.column.one {
+	width: 240px;
+	height: auto;
+	margin:0px 15px 0px 0px;
+}
+.sp.column.two {
+	width: 681px;
+	height: auto;
+	position:relative;
+	padding:5px 0px 0px 15px;
+}
+#breadcrumbs-divider {
+	width:696px;
+	height:1px;
+	background:#CDC9C4;
+	position:absolute;
+	top:34px;
+	left:0px;
+}
+ul.ui-breadcrumbs > li > a {
+	background:url(/clients/Davis/Images/breadcrumb-divider.png) no-repeat 100% 50%;
+	text-decoration:none;
+	color:#333;
+}
+#gb-icons.sp {
+	background:url(/clients/Davis/Images/gb-icon-sp-bg.png) no-repeat 0px 0px transparent;
+	width:212px;
+	height:auto;
+	float:none;
+	padding:2px 0px 0px 0px;
+	margin:20px 0px 0px 13px;
+}
+#gb-icons.sp #icons-list {
+	list-style:none outside none;
+	margin:0px 0px 0px 2px;
+	padding:0px;
+}
+#gb-icons.sp .icn {
+	background:url(/clients/Davis/Images/gb-icn-sprite.png) no-repeat 0px 0px transparent;
+	height:20px;
+	margin:10px 0px 14px 0px;
+}
+#gb-icons.sp .icn.mydsd {
+	background-position:10px -4px;
+}
+#gb-icons.sp .icn.employment {
+	background-position:5px -32px;
+	margin-bottom:15px;
+}
+#gb-icons.sp .icn.district {
+	background-position:3px -148px;
+	margin-bottom:15px;
+}
+#gb-icons.sp .icn.dsdtube {
+	background-position:3px -61px;
+	margin-bottom:20px;
+}
+#gb-icons.sp .icn.contact {
+	background-position:0px -94px;
+}
+#gb-icons.sp .icn.foundation {
+	background-position:0px -119px;
+}
+#gb-icons.sp .icn a {
+	text-decoration:none;
+	color:#333;
+	font-weight:bold;
+	display:block;
+	height:100%;
+}
+.icn span {
+	display:block;
+}
+#gb-icons.sp .icn.mydsd span {
+	padding:0px 0px 0px 32px;
+}
+#gb-icons.sp .icn.employment span {
+	padding:1px 0px 0px 32px;
+}
+#gb-icons.sp .icn.district span {
+	padding:1px 0px 0px 32px;
+}
+#gb-icons.sp .icn.dsdtube span {
+	padding:3px 0px 0px 32px;
+}
+#gb-icons.sp .icn.contact span {
+	padding:1px 0px 0px 32px;
+}
+#gb-icons.sp .icn.foundation span {
+	padding:3px 0px 0px 32px;
+}
+#sp-column-one-cap {
+	width:240px;
+	height:1px;
+	background:#CDC9C4;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+}
+/* GroupEnd */
+/* GroupBegin Subpage No Nav */
+#spn-content {
+	width: 930px;
+	height: auto;
+	position:relative;
+	margin:0px auto 0px auto;
+	padding:5px 15px 0px 15px;
+}
+#breadcrumbs-divider.spn {
+	width:960px;
+}
+#ui-datepicker-div {
+	display:none;
+}
+/* GroupEnd */ 
+/* GroupBegin Navigation Styles */
+div.ui-widget.app.navigation li div.bullet.expandable{
+	background:url(/clients/Davis/Images/bullet-expandable.png) no-repeat 0px 0px transparent;
+}
+div.ui-widget.app.navigation li div.bullet.collapsible{
+	background:url(/clients/Davis/Images/bullet-collapsible.png) no-repeat 0px 0px transparent;
+}
+div.ui-widget.app.navigation li div.bullet{
+	background:url(/clients/Davis/Images/bullet.png) no-repeat 0px 0px transparent;
+}
+div.ui-widget.app.navigation li a {
+	color:#333;
+	font-weight:bold;
+}
+/* GroupEnd */
+ 
+/* GroupBegin Channel Bar Styles */
+#sw-channel-list-container {
+	display: block;
+	width: 960px;
+	background:url(/clients/Davis/Images/gb-channelbar-bg.png) repeat-x 0px 0px transparent;
+	margin:0px 0px 5px 0px;
+}
+ul.sw-channel-list {
+	border: 0 none;
+	margin: 0;
+	padding: 0;
+}
+ul.sw-channel-list li.sw-channel-item {
+	float: left;
+	height: 40px;
+	list-style: none outside none;
+	margin: 0;
+	position: relative;
+	background:url(/clients/Davis/Images/gb-channel-divider.png) repeat-y right 0px transparent;
+}
+li.sw-channel-item > a {
+	color: #FFF;
+	display: block;
+	height: 100%;
+	padding: 0 15px 0 0;
+	text-decoration: none;
+	font-size:13px;
+}
+li.sw-channel-item > a span {
+	display: block;
+	padding: 12px 0 12px 15px;
+}
+li.sw-channel-item.hover > a {
+	color: #FFF;
+	background:url(/clients/Davis/Images/gb-channel-active.png) repeat 0px 0px transparent;
+}
+li.sw-channel-item.hover > a span {
+}
+li.sw-channel-item.active > a {
+	color: #FFF;
+	background:url(/clients/Davis/Images/gb-channel-active.png) repeat 0px 0px transparent;
+}
+li.sw-channel-item.active > a span {
+}
+/* GroupEnd */ 
+/* GroupBegin Channel Bar Dropdown Styles */
+ul.sw-channel-dropdown {
+	background: none repeat scroll 0 0 #FFF;
+	border: 1px solid #CDC9C4;
+	display: none;
+	font-size: 12px;
+	font-weight: normal;
+	left: 0;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 39px;
+	width: 180px;
+	z-index: 7001;
+}
+ul.sw-channel-dropdown li {
+	background: none repeat scroll 0 0 transparent;
+	border: 0 none;
+	display: block;
+	height: auto;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0;
+	white-space: pre-wrap;
+	width: 180px;
+}
+ul.sw-channel-dropdown li a {
+	background: none repeat scroll 0 0 transparent;
+	color: #666666;
+	display: block;
+	padding: 7px 10px;
+	text-decoration: none;
+	width: 160px;
+}
+ul.sw-channel-dropdown li a:hover {
+	background: none repeat scroll 0 0 transparent;
+	color: #FFF;
+}
+.sw-channel-more-li {
+	background-color: #333333;
+	background-image: url("/clients/Davis/Images/sw-channel-more-chevron.png");
+	background-position: right top;
+	background-repeat: no-repeat;
+	color: #FFFFFF;
+}
+ul.sw-channel-dropdown li.sw-channel-more-li a:hover {
+	background-color: #333333;
+	background-image: url("/clients/Davis/Images/sw-channel-more-chevron.png");
+	background-position: right top;
+	background-repeat: no-repeat;
+}
+.sw-channel-more-span {
+	color: #FFFFFF;
+}       
+/* GroupEnd */  
+/* GroupBegin EditorStyles */
+body {
+	font-family: 'Droid Sans', Arial, Tahoma, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	color:#333;
+	position:relative;
+}
+h1 {
+	font-size: 20px;
+	line-height: 1.5;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+h2 {
+	font-size: 18px;
+	line-height: 1.5;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+h3 {
+	font-size: 16px;
+	line-height: 1.2;	
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-weight: normal;
+}
+h4 {
+	font-size: 14px;
+	line-height: 1.2;	
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-weight: normal;
+}
+h5 {
+	font-size: 12px;
+	line-height: 1;	
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-weight: bold;
+}
+h6 {
+	font-size: 12px;
+	line-height: 1;		
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	font-weight: normal;
+	font-style: italic;
+}
+.title {
+	font-weight:bold;
+}
+.subtitle {
+	font-style:italic;
+}     
+/* GroupEnd */         
+        
+        
+                
+                
+                
+                
+                
+                
+                /* MediaEnd *//* MediaBegin 768+ */ @media (max-width: 1023px) {                                        
+                
+                } /* MediaEnd *//* MediaBegin 640+ */ @media (max-width: 767px) {                                        
+                
+                } /* MediaEnd *//* MediaBegin 480+ */ @media (max-width: 639px) {                                         
+                 
+                } /* MediaEnd *//* MediaBegin 320+ */ @media (max-width: 479px) {                                        
+                
+                } /* MediaEnd */
+        
+        
+        
+        
+        
+        </style>
+    <script type="text/javascript" src="/clients/Davis/Images/708.txt"></script>
+<script type="text/javascript">
+var LTIE9;
+
+function initCurve() {
+	var cv = document.getElementById("slideshow-overlay");
+	//IF IE
+	if (typeof(G_vmlCanvasManager) != "undefined"){G_vmlCanvasManager.initElement(cv);}
+	var ctx = cv.getContext('2d');
+	drawCurve(ctx);
+}
+function drawCurve(ctx) {
+
+	// layer1/Path
+	ctx.save();
+	ctx.beginPath();
+	ctx.moveTo(7.0, 0.0);
+	ctx.lineTo(0.0, 0.0);
+	ctx.bezierCurveTo(93.3, 125.9, 17.6, 273.0, 17.6, 273.0);
+	ctx.lineTo(42.1, 273.0);
+	ctx.bezierCurveTo(42.1, 273.0, 100.0, 125.9, 7.0, 0.0);
+	ctx.closePath();
+	ctx.fillStyle = color6;
+	ctx.fill();
+	ctx.restore();
+}
+</script>
+
+
+
+<link href="/clients/Davis/Images/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="/clients/Davis/Images/joey.js"></script>
+<script type="text/javascript" src="/clients/Davis/Images/creative.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	//PHOTO GALLERY CONFIGURATION
+	$("#sw-content-container10.ui-hp div.ui-widget.app.gallery").creativeGalleryRotate({
+		"imageHeight" 	: 273,
+		"imageControls" : "on",
+		"animateType"     : "fade", 
+		"useCaptions"    : "on",
+		"useTitles"      : "on",
+		"linkedElement"  : ['all']
+	});
+	searchText();
+	globalIcons();
+	
+	useChannelForSection();
+	toolsDropdown();
+	dynamicContent();
+	if($("div.ui-hp").size()){
+		if(LTIE9 != 1) {
+			initCurve();
+		}
+	}
+	dynamicStylesheet();
+	
+	var isiPad = navigator.userAgent.match(/iPad/i) != null;
+	var isiPhone = navigator.userAgent.match(/iPhone/i) != null;
+	if(isiPad == true || isiPhone == true) {
+		$(".sw-mystart-dropdown.schoollist").css("display" , "block");
+	} else if(isiPad == false) {
+		orderSchools();
+	}
+	
+});
+
+function orderSchools(){	
+	//SCHOOL LIST
+	$(".sw-mystart-button.home").after("<div class='sw-mystart-dropdown sort'>" +
+						"<div class='selector'>Select a School...</div>" +
+						"<div class='sw-dropdown'>" +
+							"<div class='sw-dropdown-selected'>Select a School</div>" +
+							"<ul class='sw-dropdown-list mod ui-clear'>" +
+								"<li class='school-container'>" +
+									"<ul class='school-list elementary'>" +
+										"<li class='header'>Elementary</li>" +
+									"</ul>" +
+								"</li>" +
+								"<li class='school-container'>" +
+									"<ul class='school-list middle'>" +
+										"<li class='header'>Jr High</li>" +
+									"</ul>" +
+								"</li>" +
+								"<li class='school-container'>" +
+									"<ul class='school-list high'>" +
+										"<li class='header'>High</li>" +
+									"</ul>" +
+								"</li>" +
+								"<li class='school-container'>" +
+									"<ul class='school-list other'>" +
+										"<li class='header'>Alternate</li>" +
+									"</ul>" +
+								"</li>" +
+							"</ul>" +
+						"</div>" +
+						"<div class='sw-dropdown-arrow'></div>" +
+					"</div>");
+	
+	$(".schoollist .sw-dropdown-list li").each(function(){
+		if($("a", this).text().indexOf("Elementary") !== -1){
+			$("ul.school-list.elementary").append(this);
+		} else if($("a", this).text().indexOf("Jr") !== -1){
+			$("ul.school-list.middle").append(this);
+		} else if($("a", this).text().indexOf("High") !== -1){
+			$("ul.school-list.high").append(this);
+		} else {
+			$("ul.school-list.other").append(this);
+		}
+	});
+	$("ul.school-list.other li:eq(7)").hide();
+	$("ul.school-list.other li:eq(6)").hide();
+	$("ul.school-list.other li:eq(5)").hide(); 
+	$("ul.school-list.other li:eq(3)").hide();
+	$("ul.school-list.other li:eq(2)").hide();  
+	$("ul.school-list.other li:eq(1)").hide(); 
+	$("ul.school-list.other li:eq(0)").after("<li><a target='_blank' href='http://www.mydavisconnect.org'>Davis Connect K-6 Online</a></li><li><a target='_blank' href='http://www.utahstudentsconnect.org/'>Utah Students Connect</a></li>");
+	$("ul.school-list.other li:eq(0)").after($("ul.school-list.high li:eq(5)"));
+	$("ul.school-list.high li:eq(1) a").attr("href" , "http://bhs.davis.k12.ut.us/");
+}
+function toolsDropdown(){
+	$("#sw-mystart-right").addClass("ui-clear").append("<div id='mystart-tools-dropdown'>Tools<span class='sw-myaccount-chevron'></span><ul></ul></div>");
+	$("#sw-mystart-right .clear").remove();
+	//REMOVING ALL OF THE LABELS FROM THE MINIBASE DATA
+	$("div#tools-dropdown label").remove();
+	
+	var linkText = "";
+	var linkURL = "";
+	var linkTarget = "";
+	
+	$("div#tools-dropdown li.sw-flex-item-group").each(function(){
+		linkText = $("li:eq(1)", this).text();
+		linkURL = $("li:eq(2)", this).text();
+		linkTarget = $("li:eq(3)", this).text();
+		
+		//CREATES A LINK AND PLACES IT IN THE APPROPRIATE BOX
+		$("<li class='tools-item'><a href='" + linkURL + "' target='" + linkTarget + "'>" + linkText + "</a></li>").appendTo("#mystart-tools-dropdown ul");
+	});
+	
+	$("#mystart-tools-dropdown").click(function(){
+		if($(this).hasClass("active")){
+			$("ul", this).hide();
+			$(this).removeClass("active");
+		} else {
+			$("ul", this).show();
+			$(this).addClass("active");
+		}
+	});
+}
+function useChannelForSection() {
+	if(!$("div.sp.column.one .ui-widget-header h1").length > 0) {
+		$("div.sp.column.one .ui-widget-header").append("<h1>Faculty and Staff</h1>");
+	}
+}
+function globalIcons(){
+	if("708" == "davis"){
+		$(".icn:eq(2)").remove();
+		$(".icn.employment").show();
+	} else {
+		$(".icn:eq(1)").remove();
+		$(".icn.district").show();
+	}
+	$(".icn").each(function(i){
+		var n = i +1;
+		$("a", this).attr("href", window['icon'+n+'Link']).attr("target", window['icon'+n+'Target']);
+	});
+}
+function dynamicContent() {
+	//SIGN IN
+	$(".sw-mystart-button.signin span").text("Schoolwires Sign In");	
+		
+	//HEADER INFO
+	if(schoolName != "default"){
+		$("#gb-sitename h1").html(schoolName);
+	} else {
+		$("#gb-sitename h1").html("Davis High School");
+	}
+	$("#gb-sitename h2").html(taglineText);
+	
+	//APP ACCENT BAR
+	$(".ui-hp .app, .sp.column.one .app").each(function(){
+		$(".ui-widget-detail", this).before("<div class='app-accent'></div>");
+	});
+	
+	//MOVE SEARCH
+	$("#sw-mystart-search").prependTo("#gb-contact-box").show();
+					
+	//TRANSLATE
+	var pageURL = window.location.href;
+	$("#sw-mystart-left").append("<div class='sw-mystart-button translate'><a href='http://translate.google.com/translate?u=" + pageURL + "&langpair=en|es&hl=en&anno=0&ie=UTF8'><span>Español</span></a></div>");
+	
+	//DISTRICT SPECIFIC
+	if("708" == "davis"){
+		if(!$("#pw-body").size()){
+			$("body").css("background", "url(/clients/Davis/Images/district-bg.jpg) no-repeat center 225px transparent");
+		}
+		districtStylesheet();
+	}
+	
+	//TEMPLATE COLORS
+	$("body, #mystart-tools-dropdown ul, #sw-myaccount-list, #sw-mystart-account.clicked-state #sw-myaccount").css("background-color", color2);
+	$("#sw-mystart-outer").css("background-color", color4);
+	$("#sw-channel-list-container").css("background-color", color5);
+	$("#accent-bar").css("background-color", color6);
+	$(".app-accent").css("background-color", color7);
+	$("div.ui-hp div.ui-widget.app div.ui-widget-header, .sp.column.one div.ui-widget.app div.ui-widget-header, .title").css("background-color", color1);	
+	$(".hp.inner.one .app-accent").css("background-color", color8);
+	$(".hp.inner.one div.ui-widget.app div.ui-widget-header").css("background-color", color3);	
+	
+	//VIEW CALENDAR LINK
+	$(".ui-hp .upcomingevents").each(function(){
+		$(".view-calendar-link", this).prependTo(".upcomingevents .ui-widget-detail").css("display", "block");
+	});
+}
+function searchText() {
+        //SEARCH TEXT
+        $("div#sw-mystart-search input#sw-search-input").removeAttr("placeholder");
+	$("div#sw-mystart-search input#sw-search-input").attr("value", "Search...");
+	$("div#sw-mystart-search input#sw-search-input").focus(function() {
+		if($(this).val() == "Search...") {
+			$(this).val("");
+		}
+	});
+	$("div#sw-mystart-search input#sw-search-input").blur(function() {
+		if($(this).val() == "") {
+			$(this).val("Search...");
+		}
+	});
+}	
+function districtStylesheet(){
+	var dynStyleSheet = document.createElement('style');
+	if(dynStyleSheet) {
+		dynStyleSheet.setAttribute('type', 'text/css');
+		var head = document.getElementsByTagName('head')[0];
+		if(head) {
+      			head.appendChild(dynStyleSheet);
+		}
+		var dynStyles = 	"div.ui-widget.app.navigation li div.bullet.expandable {" +
+						"background-image:url(/clients/Davis/Images/district-bullet-expandable.png);" +
+					"}" +
+					"div.ui-widget.app.navigation li div.bullet.collapsible {" +
+						"background-image:url(/clients/Davis/Images/district-bullet-collapsible.png);" +
+					"}" +
+					"div.ui-widget.app.navigation li div.bullet {" +
+						"background-image:url(/clients/Davis/Images/district-bullet.png);" +
+					"}";
+		var rules = document.createTextNode(dynStyles);
+		if(dynStyleSheet.styleSheet){// IE
+			dynStyleSheet.styleSheet.cssText = dynStyles;
+		} else {
+			dynStyleSheet.appendChild(rules);
+		}
+	}
+}
+function dynamicStylesheet(){
+	var dynStyleSheet = document.createElement('style');
+	if(dynStyleSheet) {
+		dynStyleSheet.setAttribute('type', 'text/css');
+		var head = document.getElementsByTagName('head')[0];
+		if(head) {
+      			head.appendChild(dynStyleSheet);
+		}
+		var dynStyles = 	".sw-mystart-button:hover, #sw-mystart-account:hover, #mystart-tools-dropdown.active, #sw-mystart-account.clicked-state:hover {" +
+					"	background-color:" + color2 + ";" +
+					"}" +
+					"ul.sw-channel-dropdown li a:hover {" +
+					"	background-color:" + color5 + ";" +
+					"}" +
+					".sw-mystart-dropdown .sw-dropdown-list li:hover {" +
+					"	background-color:" + color4 + ";" +
+					"}";
+		var rules = document.createTextNode(dynStyles);
+		if(dynStyleSheet.styleSheet){// IE
+			dynStyleSheet.styleSheet.cssText = dynStyles;
+		} else {
+			dynStyleSheet.appendChild(rules);
+		}
+	}
+}	
+</script>  
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="/clients/Davis/Images/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-15976630-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+<style>           
+        
+        
+        
+    
+    <!-- App Preview -->
+    
+	
+	
+	<style type="text/css">
+		/* HOMEPAGE EDIT THUMBNAIL STYLES */
+		
+		div.region {
+		    
+		}
+		
+		div.region span.homepage-thumb-region-number {
+		    font: bold 100px verdana;
+		    color: #fff;  
+		}
+		
+		div.homepage-thumb-region {
+		    background: #264867; /*dark blue*/
+		    border: 5px solid #fff;
+		    text-align: center;
+		    padding: 40px 0 40px 0;
+		    display: block;
+		}
+		div.homepage-thumb-region.region-1 {
+		    background: #264867; /*dark blue*/
+		}
+		div.homepage-thumb-region.region-2 {
+		    background: #5C1700; /*dark red*/
+		}
+		div.homepage-thumb-region.region-3 {
+		    background: #335905; /*dark green*/
+		}
+		div.homepage-thumb-region.region-4 {
+		    background: #B45014; /*dark orange*/
+		}
+		div.homepage-thumb-region.region-5 {
+		    background: #51445F; /*dark purple*/
+		}
+		div.homepage-thumb-region.region-6 {
+		    background: #3B70A0; /*lighter blue*/
+		}
+		div.homepage-thumb-region.region-7 {
+		    background: #862200; /*lighter red*/
+		}
+		div.homepage-thumb-region.region-8 {
+		    background: #417206; /*lighter green*/
+		}
+		div.homepage-thumb-region.region-9 {
+		    background: #D36929; /*lighter orange*/
+		}
+		div.homepage-thumb-region.region-10 {
+		    background: #6E5C80; /*lighter purple*/
+		}
+		
+		/* END HOMEPAGE EDIT THUMBNAIL STYLES */
+	</style>
+	
+	<style type="text/css" media="print">
+       .noprint {
+           display: none !important;
+       }
+    </style>
+    
+    
+
+<!-- Begin Schoolwires Traffic Code --> 
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5173826-6']);
+  _gaq.push(['_setDomainName', 'none']);
+  _gaq.push(['_setAllowLinker', true]);
+
+    // Added Custom Variable to allow us to filter based on hosting type, so we can see stats for each environment. Pulls from web config.
+  _gaq.push(['_setCustomVar',
+    1,                // This custom var is set to slot #1.  Required parameter.
+    'Hosting Type',    // The name of the custom variable.  Required parameter.
+    'SAASC',        // The value of the custom variable.  Required parameter.
+                      //  (possible values might be Free, Bronze, Gold, and Platinum)
+    1                 // Sets the scope to visitor-level.  Optional parameter.
+  ]);
+    _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- End Schoolwires Traffic Code -->  
+ 
+    
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script><style type="text/css">.sw-mystart-button:hover, #sw-mystart-account:hover, #mystart-tools-dropdown.active, #sw-mystart-account.clicked-state:hover {	background-color:#683500;}ul.sw-channel-dropdown li a:hover {	background-color:#683500;}.sw-mystart-dropdown .sw-dropdown-list li:hover {	background-color:#EEB422;}</style></head>
+<body style="background-color: rgb(104, 53, 0);">
+
+<!-- off-canvas menu enabled-->
+
+
+	
+
+<style type="text/css">
+	/* SPECIAL MODE BAR */
+	div.sw-special-mode-bar {
+		background: #FBC243 url('http://www.davis.k12.ut.us//Static/V2_05_01//GlobalAssets/Images/special-mode-bar-background.png') no-repeat;
+		height: 30px;
+		text-align: left;
+		font-size: 12px;
+		position: relative;
+		z-index: 10000;
+	}
+	div.sw-special-mode-bar > div {
+		padding: 8px 0 0 55px;
+		font-weight: bold;
+	}
+	div.sw-special-mode-bar > div > a {
+		margin-left: 20px;
+		background: #A0803D;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		color: #fff;
+		padding: 4px 6px 4px 6px;
+		font-size: 11px;
+	}
+	
+	body.blue div.sw-special-mode-bar, body.green div.sw-special-mode-bar, body.red div.sw-special-mode-bar {
+	    display: none;
+	}
+
+	/* END SPECIAL MODE BAR */
+</style>
+
+<script type="text/javascript">
+	
+	function SWEndPreviewMode() { 
+		var data = "{}";
+		var success = "window.location='';";
+		var failure = "CallControllerFailure(result[0].errormessage);";
+		CallController("http://www.davis.k12.ut.us/site/SiteController.aspx/EndPreviewMode", data, success, failure);
+	}
+	
+	function SWEndEmulationMode() {
+		SetUnescapedCookie('UserID', GetCookie('SourceEmulationUserID'));
+		DeleteCookie('SourceEmulationUserID');
+		window.location = 'http://www.davis.k12.ut.us/ums/Users/Users.aspx';
+	}
+
+	function SWEndPreviewConfigMode() {
+	    var data = "{}";
+	    var success = "window.location='';";
+	    var failure = "CallControllerFailure(result[0].errormessage);";
+	    CallController("http://www.davis.k12.ut.us/site/SiteController.aspx/EndPreviewConfigMode", data, success, failure);
+	}
+</script>
+            
+
+    <!-- BEGIN - MYSTART BAR -->
+
+<!-- END - MYSTART BAR -->
+<div class="gb-body-fade top"></div>
+<div class="gb-body-fade bottom"></div>
+<div id="gb-header-full">
+	<div id="gb-header-fade"></div>
+</div>
+<div id="gb-page">
+	<div id="gb-header" class="ui-clear">
+		<div id="gb-logo">
+			<a href="http://www.davis.k12.ut.us/708" title="Davis High School">
+				<img src="/clients/Davis/Images/708.gif" alt="Davis High School">
+			</a>		
+		</div>
+		<div id="gb-sitename">
+			<h1>Davis High School</h1>
+			<h2>Defend the Tradition</h2>
+		</div>
+		<div id="gb-contact-box"><div style="display: block;" id="sw-mystart-search">
+
+<a id="sw-search-button" onclick="SWGoToSearchResultsPageswsearchinput();"><span><img src="/clients/Davis/Images/sw-mystart-search.png" alt="Search"></span></a>
+
+</div>
+			<div id="contact-info">
+				325 S. Main St.<br>Kaysville, UT 84037<br>Phone: 801-402-8800<br>Fax: 801-402-8801
+			</div>
+		</div>
+	</div>
+	<div id="gb-content">
+		<div style="background-color: rgb(238, 180, 34);" id="accent-bar"></div>
+		<div style="background-color: rgb(104, 53, 0);" id="sw-channel-list-container">
+<ul id="channel-navigation" class="sw-channel-list">
+<li style="z-index: 7000;" class="sw-channel-item "><a href="http://www.davis.k12.ut.us/Page/39660"><span>Home</span></a></li>
+<li style="z-index: 6998;" class="sw-channel-item">
+<a href="http://www.davis.k12.ut.us/domain/7530">
+<span>About Us</span></a>
+<ul style="display: none;" class="sw-channel-dropdown">
+<li class=""><a href="http://www.davis.k12.ut.us/domain/7530"><span>About Davis High</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/domain/7531"><span>Administration</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/domain/7532"><span>Attendance</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/domain/7533"><span>Citizenship</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/domain/7534"><span>Map</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/domain/7535"><span>School Policies Handbook</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/domain/7536"><span>School Song</span></a></li>
+</ul>
+</li><li style="z-index: 6996;" class="sw-channel-item">
+<a href="http://www.davis.k12.ut.us/site/Default.aspx?PageType=1&amp;SiteID=7528&amp;ChannelID=7537&amp;DirectoryType=6">
+<span>Departments</span></a>
+</li><li style="z-index: 6994;" class="sw-channel-item active">
+<a href="http://www.davis.k12.ut.us/site/Default.aspx?PageType=1&amp;SiteID=7528&amp;ChannelID=7567&amp;DirectoryType=6">
+<span>Faculty and Staff</span></a>
+</li><li style="z-index: 6992;" class="sw-channel-item ">
+<a href="http://www.davis.k12.ut.us/domain/7710">
+<span>Information</span></a>
+<ul style="display: none;" class="sw-channel-dropdown">
+<li class=""><a href="http://www.davis.k12.ut.us/domain/7710"><span>Computer Lab Schedules</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/domain/7712"><span>Calendar</span></a></li>
+<li class=""><a href="http://www.davishighnews.com/"><span>Davis High Newspaper</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/domain/7716"><span>DHS Yearbook</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/Page/1119"><span>Nutrition Services</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/domain/8946"><span>Online Learning Options</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/domain/9079"><span>Senior Graduation Party!!</span></a></li>
+</ul>
+</li><li style="z-index: 6990;" class="sw-channel-item ">
+<a href="http://www.davis.k12.ut.us/domain/7726">
+<span>Organizations</span></a>
+<ul style="display: none;" class="sw-channel-dropdown">
+<li class=""><a href="http://www.davis.k12.ut.us/domain/7726"><span>Alumni Davis High</span></a></li>
+<li class=""><a href="http://www.davisbands.org/"><span>Band</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/dhs/ate/ate.htm"><span>Career &amp; Technical Education</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/domain/7722"><span>Clubs, Teams &amp; Organizations</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/domain/7727"><span>FBLA</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/domain/7728"><span>Key Club</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/domain/7723"><span>PTSA</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/domain/8945"><span>SLC Schools</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/site/Default.aspx?PageID=40118"><span>Work-Based Learning</span></a></li>
+</ul>
+</li><li style="z-index: 6988;" class="sw-channel-item ">
+<a href="http://www.dhsphotography.smugmug.com/">
+<span>Photo Gallery</span></a>
+</li><li style="z-index: 6986;" class="sw-channel-item ">
+<a href="http://www.davis.k12.ut.us/domain/7735">
+<span>Registration</span></a>
+</li><li style="z-index: 6984;" class="sw-channel-item ">
+<a href="http://www.davis.k12.ut.us/domain/7742">
+<span>Resources</span></a>
+<ul style="display: none;" class="sw-channel-dropdown">
+<li class=""><a href="http://www.davis.k12.ut.us/domain/7742"><span>Community Council</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/site/Default.aspx?PageID=39868"><span>Scholarships</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/domain/7744"><span>Students</span></a></li>
+<li class=""><a href="http://www.davis.k12.ut.us/domain/7740"><span>Teachers</span></a></li>
+</ul>
+</li></ul><div class="clear"></div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        channelHoverIE(); 
+    });
+    
+    function channelHoverIE(){
+		// set z-index for IE7
+		var parentZindex = $('#channel-navigation').parents('div:first').css('z-index');
+		var zindex = (parentZindex > 0 ? parentZindex : 8000);
+		$(".sw-channel-item").each(function(ind) {
+			$(this).css('z-index', zindex - ind);
+			zindex --;
+		});
+	    $(".sw-channel-item").hover(function(){
+	        var subList = $(this).children('ul');
+	        if ($.trim(subList.html()) !== "") {
+		        subList.show();
+		    }
+		    $(this).addClass("hover");
+	    }, function(){
+		    $(".sw-channel-dropdown").hide();
+		    $(this).removeClass("hover");
+	    });
+    }
+
+</script>
+
+
+		<div id="sp-content" class="ui-clear">
+			<div class="sp column one">
+				<div class="ui-widget app navigation pagenavigation">
+<div style="background-color: rgb(238, 180, 34);" class="ui-widget-header">
+<h1>
+May, Marci (Choir)</h1>
+</div>
+<div style="background-color: rgb(104, 53, 0);" class="app-accent"></div><div class="ui-widget-detail">
+<ul class="page-navigation">
+<li id="pagenavigation-40447" class=""><div class="bullet"></div>
+<a href="http://www.davis.k12.ut.us/Page/40447">
+<span>Homepage</span>
+</a>
+</li>
+<li id="pagenavigation-40448" class="active"><div class="bullet"></div>
+<a class="" href="http://www.davis.k12.ut.us/Page/40448">
+<span> LOVER'S FEAST</span>
+</a>
+</li>
+<li id="pagenavigation-61518" class=""><div class="bullet"></div>
+<a class="" href="http://www.davis.k12.ut.us/Page/61518">
+<span>Honor Choir</span>
+</a>
+</li>
+<li id="pagenavigation-58143" class=""><div class="bullet"></div>
+<a class="" href="http://www.davis.k12.ut.us/Page/58143">
+<span>2013-2014 Performance Schedule</span>
+</a>
+</li>
+<li id="pagenavigation-40450" class=""><div class="bullet"></div>
+<a href="http://www.davis.k12.ut.us/Page/40450">
+<span>Choir Documents</span>
+</a>
+</li>
+<li id="pagenavigation-40464" class=""><div class="bullet"></div>
+<a href="http://www.davis.k12.ut.us/Page/40464">
+<span>Practice Recordings</span>
+</a>
+</li>
+<li id="pagenavigation-40449" class=""><div class="bullet"></div>
+<a href="http://www.davis.k12.ut.us/Page/40449">
+<span>Madrigals</span>
+</a>
+</li>
+<li id="pagenavigation-40452" class=""><div class="bullet"></div>
+<a href="http://www.davis.k12.ut.us/Page/40452">
+<span>A Cappella Choir</span>
+</a>
+</li>
+<li id="pagenavigation-40453" class=""><div class="bullet"></div>
+<a href="http://www.davis.k12.ut.us/Page/40453">
+<span>Limited Edition</span>
+</a>
+</li>
+<li id="pagenavigation-40455" class=""><div class="bullet"></div>
+<a href="http://www.davis.k12.ut.us/Page/40455">
+<span>Ladies Ensemble</span>
+</a>
+</li>
+<li id="pagenavigation-40456" class=""><div class="bullet"></div>
+<a href="http://www.davis.k12.ut.us/Page/40456">
+<span>Men's Chorus</span>
+</a>
+</li>
+<li id="pagenavigation-40454" class=""><div class="bullet"></div>
+<a href="http://www.davis.k12.ut.us/Page/40454">
+<span>Bell Choir</span>
+</a>
+</li>
+<li id="pagenavigation-40451" class=""><div class="bullet"></div>
+<a href="http://www.davis.k12.ut.us/Page/40451">
+<span>auditions</span>
+</a>
+</li>
+<li id="pagenavigation-40465" class=""><div class="bullet"></div>
+<a href="http://www.davis.k12.ut.us/Page/40465">
+<span>Link Library</span>
+</a>
+</li>
+<li id="pagenavigation-40466" class=""><div class="bullet"></div>
+<a href="http://www.davis.k12.ut.us/Page/40466">
+<span>Teacher Calendar</span>
+</a>
+</li>
+<li id="pagenavigation-60628" class=""><div class="bullet"></div>
+<a href="http://www.davis.k12.ut.us/Page/60628">
+<span>Choir Tour 2014 - Seattle, Washington</span>
+</a>
+</li></ul>
+</div>
+<div class="ui-widget-footer">
+</div>
+</div>
+
+				<!-- <div id="gb-icons" class="sp">
+					<ul id="icons-list">
+						<li class="icn mydsd"><a href="#"><span>my.DSD</span></a></li>
+						<li class="icn employment"><a href="#"><span>Employment</span></a></li>
+						<li class="icn district"><a href="#"><span>District Home</span></a></li>
+						<li class="icn dsdtube"><a href="#"><span>DSDtube</span></a></li>
+						<li class="icn contact"><a href="#"><span>Contact</span></a></li>
+						<li class="icn foundation"><a href="#"><span>Foundation</span></a></li>
+					</ul>
+				</div> -->
+			</div>
+			<div class="sp column two">
+				<div id="breadcrumbs-divider"></div>
+				<ul class="ui-breadcrumbs">
+<li class="ui-breadcrumb-first"><a href="http://www.davis.k12.ut.us/Domain/7528"><span>Davis High School</span></a></li>
+
+<li><a href="http://www.davis.k12.ut.us/site/Default.aspx?PageType=1&amp;SiteID=7528&amp;ChannelID=7567&amp;DirectoryType=6"><span>Faculty and Staff</span></a></li>
+
+<li class="ui-breadcrumb-last"><a href="http://www.davis.k12.ut.us/Domain/7664"><span>May, Marci (Choir)</span></a></li>
+
+</ul>
+
+				<!-- Start Centricity Content Area --><div id="sw-content-layout-wrapper" class="ui-sp ui-print"><div id="sw-content-layout1"><div id="sw-content-container1" class="ui-column-one region"><div id="pmi-43407">
+
+
+
+<div id="sw-module-543260">
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var DomainID = '7664';
+            var PageID = '40448';
+            var RenderLoc = '0';
+            var MIID = '54326';
+
+            //added to check to make sure moderated content doesn't bleed through the dialog
+            if ($('#dialog-overlay-WindowLargeModal-body.moderateContent').length > 0) {
+                $("#module-content-" + MIID).find(".ui-widget-detail").find(".ui-article").append("<p>&nbsp;</p>");
+            }
+        });
+    </script>
+
+    <script type="text/javascript">$(document).ready(function() {CheckScript('ModuleView');CheckScript('Mustache');
+ });</script>
+    
+    <div id="module-content-54326">
+<div class="ui-widget app flexpage last-app">
+	<div class="ui-widget-header ui-helper-hidden">
+		<h1></h1>
+	</div>
+	
+	<div class="ui-widget-detail">
+		
+<div class="ui-article last-article">
+
+
+<!--TIX DATA START-->
+
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+</div> 
+<div class="clear"></div>
+	
+	</div>
+	<div class="ui-widget-footer">
+		
+			
+		
+		<div class="clear"></div>
+	</div>
+</div>
+<input id="hidFullPath" value="http://www.davis.k12.ut.us/" type="hidden">
+<input id="hidModuleInstanceID0" value="54326" type="hidden">
+<script type="text/javascript">
+$(document).ready(function (){
+});
+function LoadGroupedData(container, MIID, PMI, groupYear, groupMonth, groupBy, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.davis.k12.ut.us//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=7664&PageID=40448&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&EnableQuirksMode=1&ViewID=' + viewToUse + '&Tag=' + tag, container, 2, 'chkSidebar();');
+}
+function LoadData(container, MIID, PMI, flexDataID, groupYear, groupMonth, groupBy, targetView, tag) {
+  if(targetView !== undefined || targetView.Length() == 0){
+  //targetView looks at the hidden Detail View defined in the Builder View.
+      targetView = $('#hid-'+MIID+'-DetailView').val();
+   }
+  GetContent('http://www.davis.k12.ut.us//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=7664&PageID=40448&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&FlexDataID=' + flexDataID + '&GroupYear=' + groupYear + '&GroupMonth=' + groupMonth + '&GroupByField=' + groupBy + '&RenderLoc=0&FromRenderLoc=0&EnableQuirksMode=1&Tag=' + tag + '&ViewID=' + targetView, container, 2, 'chkSidebar();');
+}
+function LoadTaggedData(container, MIID, PMI, tag) {
+  //ViewToUse looks at the hidden Sidebar List View defined in the Builder View.
+  var viewToUse = "";
+    if($('#hid-'+MIID+'-SidebarListView').length > 0){
+      viewToUse = $("#hid-" + MIID + "-SidebarListView").val();
+    };
+  GetContent('http://www.davis.k12.ut.us//cms/UserControls/ModuleView/ModuleViewRendererWrapper.aspx?DomainID=7664&PageID=40448&ModuleInstanceID=' + MIID + '&PageModuleInstanceID=' + PMI + '&RenderLoc=0&FromRenderLoc=0&Tag=' + tag + '&EnableQuirksMode=1&ViewID='+viewToUse, container, 2, 'chkSidebar();');
+}
+</script>
+</div>
+
+</div></div>
+</div><div class="clear"></div></div></div><!-- End Centricity Content Area -->
+			</div>
+			<div id="sp-column-one-cap"></div>
+		</div>
+	</div>
+</div>
+<div id="gb-footer-outer">
+	<div id="gb-footer" class="ui-clear">
+		<ul id="footer-info" class="ui-clear">
+			<li><a href="mailto:jkrice@dsdmail.net">Questions or Feedback?</a></li>
+			<li>|</li>
+			<li><a href="http://www.schoolwires.com/terms">Terms of Use</a></li>
+			<li>|</li>
+			<li><a href="http://www.schoolwires.com/privacy">Schoolwires Privacy Policy (Updated)</a></li>
+			<li>All Content © <script type="text/javascript">var currYear = new Date();document.write(currYear.getFullYear());</script>2014 Davis School District</li>
+		</ul>
+	</div>
+</div>
+<div id="tools-dropdown"><div id="module-content-55834">
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+    }); // end document ready
+    function LoadMinibaseList635254729474210400(PageIndex){
+        var FilterFields = "";
+        if ($('#sw-content-minibaselist635254729474210400-filterquery').length > 0){
+            FilterFields = $('#sw-content-minibaselist635254729474210400-filterquery').val();
+        }else{
+            FilterFields = escape(CreateFilterQuery635254729474210400());
+        }
+        var DisplayType = $("#sw-content-minibaselist635254729474210400-displaytype").val();
+        if (PageIndex === undefined) {
+            PageIndex = $("#sw-content-minibaselist635254729474210400-pageindex").val();
+        }
+        var success = '$("#sw-content-minibaselist635254729474210400-pageindex").val(' + PageIndex + ');';
+        
+        if (0 == 1)
+        { window.open( "http://www.davis.k12.ut.us//site/Default.aspx?DomainID=0&PageID=0&PageType=22&ModuleInstanceID=55834&PageModuleInstanceID=635254729474210400&FilterFields=" + FilterFields + "&DirectoryType=" + DisplayType + "&PageIndex=" + PageIndex);
+        }
+        else 
+        { GetContent("http://www.davis.k12.ut.us//site/UserControls/Minibase/MinibaseListWrapper.aspx?ModuleInstanceID=55834&PageModuleInstanceID=635254729474210400&FilterFields=" + FilterFields + "&DirectoryType=" + DisplayType + "&PageIndex=" + PageIndex, "sw-content-minibaselist635254729474210400", 2, success);
+        }
+    
+    }
+    function LoadMinibaseFilter635254729474210400(){
+        GetContent("http://www.davis.k12.ut.us//site/UserControls/Minibase/MinibaseFilterWrapper.aspx?ModuleInstanceID=55834&PageModuleInstanceID=635254729474210400", "sw-content-minibaselist635254729474210400", 2);
+    }
+    function CreateFilterQuery635254729474210400(){
+        var filterquery = "";
+        $.each($('#sw-content-minibasefilter635254729474210400 label'), function(i){
+            var id = $(this).attr("for");            
+            if($('#' + id).val() != ''){
+                var fieldindex = id.substring(id.lastIndexOf('-') + 1);
+                //filterquery += $(this).text() 
+                
+                var comparetype = "E";
+                if ($('#sw-content-minibasefilter-field635254729474210400' + fieldindex + '-comparetype').val() !== undefined) {
+                    comparetype = $('#sw-content-minibasefilter-field635254729474210400' + fieldindex + '-comparetype').val();
+                }
+                filterquery += fieldindex + ":" + comparetype + ":";
+                if (comparetype != "E") { 
+                    filterquery += $('#' + id).val().replace(/%/g, '[%]').replace(/:/g, '[$C0l0n$]').replace(/;/g, '[$Semic0l0n$]') + ";";
+                } else {
+                    filterquery += $('#' + id).val().replace(/:/g, '[$C0l0n$]').replace(/;/g, '[$Semic0l0n$]') + ";";
+                }
+            }            
+            /*if(i < ($('#sw-content-minibasefilter55834 label').length - 1)) {
+                filterquery += ";";
+            }*/
+        });
+        filterquery += "";
+        return filterquery;
+    }
+</script>
+
+<div class="ui-widget app minibase">
+    
+    <div class="ui-widget-header ui-helper-hidden">
+        
+        <p class="ui-article-description"></p>
+    </div>
+    <input id="sw-content-minibaselist635254729474210400-displaytype" value="L" type="hidden">
+    
+    
+    <div class="ui-widget-detail" id="sw-content-minibaselist635254729474210400">
+        
+
+<div>
+    <ul class="sw-flex-list">
+<li class="sw-flex-item-group"><div class="sw-minibase-list-number">1.</div><ul class="sw-flex-item-list"><li class="sw-flex-item">1</li><!--end flex item--><li class="sw-flex-item">Email (Employee)</li><!--end flex item--><li class="sw-flex-item"><a href="https://www.dsdmail.net/owa/auth/logon.aspx?replaceCurrent=1&amp;url=https%3a%2f%2fwww.dsdmail.net%2fowa%2f" target="_blank">https://www.dsdmail.net/owa/auth/logon.aspx?replaceCurrent=1&amp;url=https%3a%2f%2fwww.dsdmail.net%2fowa%2f</a></li><li class="sw-flex-item">_blank</li><!--end flex item--></ul></li><!--end flex item group, flex item list-->
+<li class="sw-flex-item-group"><div class="sw-minibase-list-number">2.</div><ul class="sw-flex-item-list"><li class="sw-flex-item">2</li><!--end flex item--><li class="sw-flex-item">Encore</li><!--end flex item--><li class="sw-flex-item"><a href="https://www.encore.davis.k12.ut.us/start/encore.html" target="_blank">https://www.encore.davis.k12.ut.us/start/encore.html</a></li><li class="sw-flex-item">_self</li><!--end flex item--></ul></li><!--end flex item group, flex item list-->
+<li class="sw-flex-item-group"><div class="sw-minibase-list-number">3.</div><ul class="sw-flex-item-list"><li class="sw-flex-item">3</li><!--end flex item--><li class="sw-flex-item">myDSD</li><!--end flex item--><li class="sw-flex-item"><a href="http://mydsd.davis.k12.ut.us/studentinformationsystem/faces/login.jsp" target="_blank">http://mydsd.davis.k12.ut.us/studentinformationsystem/faces/login.jsp</a></li><li class="sw-flex-item">_blank</li><!--end flex item--></ul></li><!--end flex item group, flex item list-->
+<li class="sw-flex-item-group"><div class="sw-minibase-list-number">4.</div><ul class="sw-flex-item-list"><li class="sw-flex-item">4</li><!--end flex item--><li class="sw-flex-item">myDSD Payroll</li><!--end flex item--><li class="sw-flex-item">https://mydsd.davis.k12.ut.us/employeeservices/faces/index.jsp</li><!--end flex item--><li class="sw-flex-item">_blank</li><!--end flex item--></ul></li><!--end flex item group, flex item list-->
+<li class="sw-flex-item-group"><div class="sw-minibase-list-number">5.</div><ul class="sw-flex-item-list"><li class="sw-flex-item">5</li><!--end flex item--><li class="sw-flex-item">MyIDEA</li><!--end flex item--><li class="sw-flex-item">https://myidea.davis.k12.ut.us/iep/faces/login.jspx?_afrWindowMode=0&amp;_afrLoop=8801141065416898&amp;_adf.ctrl-state=12oxqwz2cv_4</li><!--end flex item--><li class="sw-flex-item">_self</li><!--end flex item--></ul></li><!--end flex item group, flex item list-->
+<li class="sw-flex-item-group"><div class="sw-minibase-list-number">6.</div><ul class="sw-flex-item-list"><li class="sw-flex-item">6</li><!--end flex item--><li class="sw-flex-item">Safari Montage</li><!--end flex item--><li class="sw-flex-item"><a href="http://www.davis.k12.ut.us/site/Default.aspx?PageID=2788" target="_blank">http://www.davis.k12.ut.us/site/Default.aspx?PageID=2788</a></li><li class="sw-flex-item">_self</li><!--end flex item--></ul></li><!--end flex item group, flex item list-->
+<li class="sw-flex-item-group"><div class="sw-minibase-list-number">7.</div><ul class="sw-flex-item-list"><li class="sw-flex-item">7</li><!--end flex item--><li class="sw-flex-item">District Library System</li><!--end flex item--><li class="sw-flex-item"><a href="http://library.davis.k12.ut.us/" target="_blank">http://library.davis.k12.ut.us/</a></li><li class="sw-flex-item">_blank</li><!--end flex item--></ul></li><!--end flex item group, flex item list-->
+<li class="sw-flex-item-group"><div class="sw-minibase-list-number">8.</div><ul class="sw-flex-item-list"><li class="sw-flex-item">8</li><!--end flex item--><li class="sw-flex-item">District Callout System</li><!--end flex item--><li class="sw-flex-item">https://asp.schoolmessenger.com/davisutahsd/</li><!--end flex item--><li class="sw-flex-item">_blank</li><!--end flex item--></ul></li><!--end flex item group, flex item list-->
+<li class="sw-flex-item-group"><div class="sw-minibase-list-number">9.</div><ul class="sw-flex-item-list"><li class="sw-flex-item">9</li><!--end flex item--><li class="sw-flex-item">District SubFinder System</li><!--end flex item--><li class="sw-flex-item"><a href="http://www.subfinder.davis.k12.ut.us/wc2/?213810222101820370Nav=%7C697%7C&amp;NodeID=6021" target="_blank">http://www.subfinder.davis.k12.ut.us/wc2/?213810222101820370Nav=|697|&amp;NodeID=6021</a></li><li class="sw-flex-item">_blank</li><!--end flex item--></ul></li><!--end flex item group, flex item list-->
+</ul><!--end flex list-->
+
+    
+
+
+<div class="ui-no-records-message">
+
+	
+
+	<div class="clear"></div>
+</div>
+    
+    <div id="ui-paging-container"></div>
+</div>
+<input id="sw-content-minibaselist635254729474210400-filterquery" value="" type="hidden">
+    
+    </div>
+    <input id="sw-content-minibaselist635254729474210400-pageindex" value="1" type="hidden">
+
+</div>
+</div>
+</div><!-- BEGIN - STANDARD FOOTER -->
+<div id="sw-footer-outer">
+<div id="sw-footer-inner">
+<div id="sw-footer-left"></div>
+<div id="sw-footer-right">
+<div id="sw-footer-links">
+<ul>
+<li><a title="Click to email the primary contact" href="mailto:jkrice@dsdmail.net">Questions or Feedback?</a> | </li>
+<li><a href="http://www.schoolwires.com/privacy" target="_blank">Schoolwires Privacy Policy (Updated)</a> | </li>
+<li><a href="http://www.schoolwires.com/terms" target="_blank">Terms of Use</a></li>
+</ul>
+</div>
+<div id="sw-footer-copyright">Copyright © 2002-2014 Schoolwires, Inc. All rights reserved.</div>
+<div id="sw-footer-logo"><a href="http://www.schoolwires.com/" title="This site is powered by Schoolwires Centricity2.">
+<img src="/clients/Davis/Images/sw-footer-logo.png">
+</a></div>
+</div>
+</div>
+</div>
+<!-- END - STANDARD FOOTER -->
+<script type="text/javascript">
+   $(document).ready(function(){
+      var beaconURL='http://analytics2.schoolwires.com/analytics.asmx/Insert?AccountNumber=yy1ssH7vohk28cu1c%2bLwCQ%3d%3d&SessionID=2cd956fb-4d27-4c5f-b7fc-3acbcc75c4a4&SiteID=7528&ChannelID=7567&SectionID=7664&PageID=40448&HitDate=1%2f16%2f2014+10%3a42%3a25+AM&Browser=Firefox+26.0&OS=WinNT&IPAddress=24.176.223.130';
+      try {
+         $.getJSON(beaconURL + '&jsonp=?', function(myData) {});
+      } catch(err) { 
+         // prevent site error for analytics
+      }
+   });
+</script>
+  
+    <input id="hid-pageid" value="40448" type="hidden">  
+ 
+
+
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowMedium-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowSmall-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowLarge-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowMediumModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowSmallModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowLargeModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-WindowXLargeModal-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-MyAccountSubscriptionOverlay-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-InsertOverlay-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#dialog-overlay-InsertOverlay2-base').appendTo('body');
+ 		
+		
+    });
+</script>
+
+
+    <script type="text/javascript">
+	
+
+		$(document).ready(function() {
+		    
+			removeBrokenImages();
+			checkSidebar();
+			RemoveCookie();
+			
+			
+			$('.navigation li.collapsible').each(function() {
+			    if ($(this).find('ul').length == 0) {
+			        $(this).removeClass('collapsible');
+			    } 
+			});
+			
+			
+			// find page nav state cookie and add open chevron
+			var arrValues = GetCookie('SWPageNavState').split('~');
+			$.each(arrValues, function() {
+				if (this != '') {
+					$('#' + this).addClass('collapsible').prepend("<div class='bullet collapsible' />");
+				}
+			});
+
+			// find remaining sub menus and add closed chevron and close menu
+			$('.navigation li > ul').each(function() {
+			    var list = $(this);
+			    
+			    if (list.parent().hasClass('active') && !list.parent().hasClass('collapsible')) {
+			        // open sub for currently selected page                    
+			        list.parent().addClass('collapsible').prepend("<div class='bullet collapsible' />");
+			    } else {
+			        if (list.parent().hasClass('collapsible') && !list.siblings('div').hasClass('collapsible')) {
+			            // open sub for page with auto expand
+			            list.siblings('div.expandable').remove();
+			            list.parent().prepend("<div class='bullet collapsible' />");
+			        }
+			    }
+				if (!list.siblings('div').hasClass('collapsible')) {
+				    // keep all closed that aren't already set to open
+					list.parent().addClass('expandable').prepend("<div class='bullet expandable' />");
+					ClosePageSubMenu(list.parent());
+				} else {
+					OpenPageSubMenu(list.parent());
+				}
+			});
+			
+			// remove bullet from hierarchy if no-bullet set
+			$('.navigation li.collapsible').each(function() {
+			    if ($(this).hasClass('no-bullet')) {
+			        if (!$(this).hasClass('navigationgroup')) {$(this).removeClass('collapsible');}
+			        $(this).children('div.collapsible').remove();
+			    }
+			});
+			$('.navigation li.expandable').each(function() {
+			    if ($(this).hasClass('no-bullet')) {
+			        if (!$(this).hasClass('navigationgroup')) {$(this).removeClass('expandable');}
+			        $(this).children('div.expandable').remove();
+			    }
+			});
+			
+			$('.navigation li:not(.collapsible,.expandable,.no-bullet)').each(function() {
+			    $(this).prepend("<div class='bullet' />");
+			});
+		
+			$('.navigation li.active').parents('ul').each(function() {
+                if (!$(this).hasClass('page-navigation')) {
+                    OpenPageSubMenu($(this).parent());
+                }
+            });
+		
+			// set click event for chevron
+			$('.navigation div.collapsible').live('click',function() {
+				ClosePageSubMenu($(this).parent());
+			});
+			$('.navigation div.expandable').live('click',function() {
+				OpenPageSubMenu($(this).parent());
+            });
+            
+            // set navigation grouping links
+            $('.navigationgroup.collapsible > a').live('click', function() {
+                ClosePageSubMenu($(this).parent());
+            });
+            $('.navigationgroup.expandable > a').live('click', function() {
+                OpenPageSubMenu($(this).parent());
+            });				
+			
+			//SW MYSTART DROPDOWNS
+		    $(".sw-mystart-dropdown").click(function(){
+			    $(this).children(".sw-dropdown").css("display","block");
+		    });
+		    $(".sw-mystart-dropdown").hover(function(){}, function(){
+				$(this).children(".sw-dropdown").hide();
+		    });
+		    //SW ACCOUNT DROPDOWN
+			$("#sw-mystart-account").live('click', function(){
+				$(this).children("#sw-myaccount-list").show();
+				$(this).addClass("clicked-state");
+			});
+			$("#sw-mystart-account, #sw-myaccount-list").hover(function(){}, function(){
+				$(this).children("#sw-myaccount-list").hide();
+				$(this).removeClass("clicked-state");
+			});
+			   
+		   // set hover class for page and section navigation
+		   $('.ui-widget.app.pagenavigation, .ui-widget.app.sectionnavigation').find('li > a').hover(function() {
+		        $(this).addClass('hover');
+		   }, function() {
+		        $(this).removeClass('hover');
+		   });
+
+		}); // end document ready
+		
+		function OpenPageSubMenu(li) {
+            if (li.attr('tagName').toLowerCase() == "li") {
+			    li.removeClass('expandable').addClass('collapsible');
+			    li.find('div:first').removeClass('expandable').addClass('collapsible');	
+			    li.find('ul:first').show();
+			    PageNavigationStateCookie();
+            }
+		}
+		
+		function ClosePageSubMenu(li) {
+            if (li.attr('tagName').toLowerCase() == "li") {
+			    li.removeClass('collapsible').addClass('expandable');
+			    li.find('div:first').removeClass('collapsible').addClass('expandable');	 
+			    li.find('ul:first').hide();
+			    PageNavigationStateCookie();
+            }
+		}
+		
+		function PageNavigationStateCookie() {
+			var strCookie = "";
+			$('.pagenavigation li > ul').each(function() {
+			    var item = $(this).parent('li');
+				if (item.hasClass('collapsible') && !item.hasClass('no-bullet')){
+					strCookie += $(this).parent().attr('id') + '~';
+				}
+			});
+			SetCookie('SWPageNavState', strCookie);
+		}
+		
+		function checkSidebar(){
+		   $(".ui-widget-sidebar").each(function(){
+			   if($.trim($(this).html()) != ""){
+				   $(this).show();
+				   $(this).siblings(".ui-widget-detail").addClass("with-sidebar");
+			   } 
+		   });
+		}
+		function removeBrokenImages(){
+		   //REMOVES ANY BROKEN IMAGES
+		    $("span.img img").each(function() {
+		        if ($(this).attr("src") !== undefined) {
+		            $(this).parent().parent().show();
+		            $(this).parent().parent().siblings().addClass("has-thumb");
+		        } 
+		    });
+		}
+
+		function LoadEventDetailUE(moduleInstanceID, eventDateID, userRegID, isEdit) {
+		    (userRegID === undefined ? userRegID = 0 : '');
+		    (isEdit === undefined ? isEdit = false : '');
+		    OpenDialogOverlay("WindowMediumModal", { LoadType: "U", LoadURL: "http://www.davis.k12.ut.us//site/UserControls/Calendar/EventDetailWrapper.aspx?ModuleInstanceID=" + moduleInstanceID + "&EventDateID=" + eventDateID + "&UserRegID=" + userRegID + "&IsEdit=" + isEdit });
+		}
+
+		function RemoveCookie() {
+		    // There are no sub page            
+		    if ($('.pagenavigation li li').length == 0) {
+		        //return false;
+		        PageNavigationStateCookie();
+		    }
+		}
+	</script>
+	
+	<script type="text/javascript">
+
+	    function AddOffCanvasMenuHeightForSiteNav() {
+	        var sitenavulHeight = 0;
+	        if ($('#sw-pg-sitenav-ul').length > 0) {
+	            sitenavulHeight = parseInt($("#sw-pg-sitenav-ul").height());
+	        }
+	        var swinnerwrapHeight = 0;
+	        if ($('#sw-inner-wrap').length > 0) {
+	            swinnerwrapHeight = parseInt($("#sw-inner-wrap").height());
+	        }
+	        // 360px is abount 5 li height
+	        if (sitenavulHeight + 360 >= swinnerwrapHeight) {
+	            $("#sw-inner-wrap").height(sitenavulHeight + 360);
+	        }
+	    }
+
+	    function AddOffCanvasMenuHeightForSelectSchool() {
+	        var selectschoolulHeight = 0;
+	        if ($('#sw-pg-selectschool-ul').length > 0) {
+	            selectschoolulHeight = parseInt($("#sw-pg-selectschool-ul").height());
+	        }
+	        var swinnerwrapHeight = 0;
+	        if ($('#sw-inner-wrap').length > 0) {
+	            swinnerwrapHeight = parseInt($("#sw-inner-wrap").height());
+	        }
+	        // 360px is abount 5 li height
+	        if (selectschoolulHeight + 360 >= swinnerwrapHeight) {
+	            $("#sw-inner-wrap").height(selectschoolulHeight + 360);
+	        }
+	    }
+
+	    $(document).ready(function() {
+	        if ($("#sw-pg-sitenav-a").length > 0) {
+	            $("#sw-pg-sitenav-a").live("click", function() {
+	                if ($("#sw-pg-sitenav-ul").hasClass('sw-pgmenu-closed')) {
+	                    AddOffCanvasMenuHeightForSiteNav();
+	                    $("ul.sw-pgmenu-toplevel").removeClass('sw-pgmenu-open').addClass('sw-pgmenu-closed');
+	                    $("#sw-pg-sitenav-ul").removeClass('sw-pgmenu-closed');
+	                    $("#sw-pg-sitenav-ul").addClass('sw-pgmenu-open');
+	                }
+	                else {
+	                    $("#sw-pg-sitenav-ul").removeClass('sw-pgmenu-open');
+	                    $("#sw-pg-sitenav-ul").addClass('sw-pgmenu-closed');
+	                }
+	            });
+
+	            $("#sw-pg-selectschool-a").live("click", function() {
+	                if ($("#sw-pg-selectschool-ul").hasClass('sw-pgmenu-closed')) {
+	                    AddOffCanvasMenuHeightForSelectSchool();
+	                    $("ul.sw-pgmenu-toplevel").removeClass('sw-pgmenu-open').addClass('sw-pgmenu-closed');
+	                    $("#sw-pg-selectschool-ul").removeClass('sw-pgmenu-closed');
+	                    $("#sw-pg-selectschool-ul").addClass('sw-pgmenu-open');
+	                }
+	                else {
+	                    $("#sw-pg-selectschool-ul").removeClass('sw-pgmenu-open');
+	                    $("#sw-pg-selectschool-ul").addClass('sw-pgmenu-closed');
+	                }
+	            });
+
+	            $("#sw-pg-myaccount-a").live("click", function() {
+	                if ($("#sw-pg-myaccount-ul").hasClass('sw-pgmenu-closed')) {
+	                    $("ul.sw-pgmenu-toplevel").removeClass('sw-pgmenu-open').addClass('sw-pgmenu-closed');
+	                    $("#sw-pg-myaccount-ul").removeClass('sw-pgmenu-closed');
+	                    $("#sw-pg-myaccount-ul").addClass('sw-pgmenu-open');
+	                }
+	                else {
+	                    $("#sw-pg-myaccount-ul").removeClass('sw-pgmenu-open');
+	                    $("#sw-pg-myaccount-ul").addClass('sw-pgmenu-closed');
+	                }
+	            });
+
+	            $(".pg-list-bullet").live("click", function() {
+	                $(this).prev().toggle();
+	                if ($(this).hasClass('closed')) {
+	                    AddOffCanvasMenuHeightForSiteNav();
+	                    $(this).removeClass('closed');
+	                    $(this).addClass('open');
+	                }
+	                else {
+	                    $(this).removeClass('open');
+	                    $(this).addClass('closed');
+	                }
+	            });
+
+	            $("#sw-pg-selectschool").mouseover(function() {
+	                $("#sw-pg-selectschool-firstli").removeClass('sw-pg-selectschool-firstli-mouseout').addClass('sw-pg-selectschool-firstli-mouseover');
+	                $("#sw-pg-selectschool-firstli a").addClass('sw-pg-selectschool-firstli-a-mouseover').removeClass('sw-pg-selectschool-firstli-a-mouseout');
+	            });
+	            $("#sw-pg-selectschool").mouseout(function() {
+	                $("#sw-pg-selectschool-firstli").removeClass('sw-pg-selectschool-firstli-mouseover').addClass('sw-pg-selectschool-firstli-mouseout');
+	                $("#sw-pg-selectschool-firstli a").addClass('sw-pg-selectschool-firstli-a-mouseout').removeClass('sw-pg-selectschool-firstli-a-mouseover');
+	            });
+
+	            $("#sw-pg-myaccount").mouseover(function() {
+	                $("#sw-pg-myaccount-firstli").removeClass('sw-pg-myaccount-firstli-mouseout').addClass('sw-pg-myaccount-firstli-mouseover');
+	                $("#sw-pg-myaccount-firstli a").addClass('sw-pg-myaccount-firstli-a-mouseover').removeClass('sw-pg-myaccount-firstli-a-mouseout');
+	            });
+	            $("#sw-pg-myaccount").mouseout(function() {
+	                $("#sw-pg-myaccount-firstli").removeClass('sw-pg-myaccount-firstli-mouseover').addClass('sw-pg-myaccount-firstli-mouseout');
+	                $("#sw-pg-myaccount-firstli a").addClass('sw-pg-myaccount-firstli-a-mouseout').removeClass('sw-pg-myaccount-firstli-a-mouseover');
+	            });
+
+	            $("#sw-pg-sitenav").mouseover(function() {
+	                $("#sw-pg-sitenav-firstli").removeClass('sw-pg-sitenav-firstli-mouseout').addClass('sw-pg-sitenav-firstli-mouseover');
+	                $("#sw-pg-sitenav-firstli a").addClass('sw-pg-sitenav-firstli-a-mouseover').removeClass('sw-pg-sitenav-firstli-a-mouseout');
+	            });
+	            $("#sw-pg-sitenav").mouseout(function() {
+	                $("#sw-pg-sitenav-firstli").removeClass('sw-pg-sitenav-firstli-mouseover').addClass('sw-pg-sitenav-firstli-mouseout');
+	                $("#sw-pg-sitenav-firstli a").addClass('sw-pg-sitenav-firstli-a-mouseout').removeClass('sw-pg-sitenav-firstli-a-mouseover');
+	            });
+
+	            $("#sw-pg-district").mouseover(function() {
+	                $("#sw-pg-district-firstli").removeClass('sw-pg-district-firstli-mouseout').addClass('sw-pg-district-firstli-mouseover');
+	                $("#sw-pg-district-firstli a").addClass('sw-pg-district-firstli-a-mouseover').removeClass('sw-pg-district-firstli-a-mouseout');
+	            });
+	            $("#sw-pg-district").mouseout(function() {
+	                $("#sw-pg-district-firstli").removeClass('sw-pg-district-firstli-mouseover').addClass('sw-pg-district-firstli-mouseout');
+	                $("#sw-pg-district-firstli a").addClass('sw-pg-district-firstli-a-mouseout').removeClass('sw-pg-district-firstli-a-mouseover');
+	            });
+	        }
+	    });	
+
+
+</script>
+
+    <script src="/clients/Davis/Images/jquery-ui.js" type="text/javascript"></script>
+    <script src="/clients/Davis/Images/SW-UI.js" type="text/javascript"></script>
+    
+    <script src="/clients/Davis/Images/swfobject_002.js" type="text/javascript"></script>
+    <script src="/clients/Davis/Images/jquery.js" type="text/javascript"></script> 
+
+
+<script type="text/javascript" src="/clients/Davis/Images/json2.js"></script>
+<script type="text/javascript">
+    // Check for included script
+    function CheckScript(ModuleName, ScriptSRC) {
+        var FunctionName = '';
+        
+        switch (ModuleName.toLowerCase()) {
+            case 'sectionrobot':
+                FunctionName = 'CheckSectionRobotScript';
+                ScriptSRC = homeURL + '/cms/Tools/SectionRobot/SectionRobot.js';
+                break;
+            case 'assignments':
+                FunctionName = 'CheckAssignmentsScript';
+                ScriptSRC = homeURL + '/cms/Module/Assignments/Assignments.js';
+                break;
+            case 'calendar':
+                FunctionName = 'CheckCalendarScript';
+                ScriptSRC = homeURL + '/cms/Module/Calendar/Calendar.js';
+                break;
+            case 'fullcalendar':
+		        FunctionName = '$.fn.fullCalendar';
+		        ScriptSRC = staticURL + '/GlobalAssets/Scripts/ThirdParty/jquery.fullcalendar.js';
+		        break;
+            case 'links':
+                FunctionName = 'CheckLinksScript';
+                ScriptSRC = homeURL + '/cms/Module/Links/Links.js';
+                break;
+            case 'minibase':
+                FunctionName = 'CheckMinibaseScript';
+                ScriptSRC = homeURL + '/cms/Module/Minibase/Minibase.js';
+                break;
+            case 'moduleinstance':
+		        //var randNum = Math.floor(Math.random()*11);
+		        var randNum = Math.floor(Math.random() * (1000 - 10 + 1) + 1000);
+                FunctionName = 'CheckModuleInstanceScript';
+                ScriptSRC = homeURL + '/cms/Module/ModuleInstance/ModuleInstance.js?rand=' + randNum;
+                break;
+            case 'photogallery':
+                FunctionName = 'CheckPhotoGalleryScript';
+                ScriptSRC = homeURL + '/cms/Module/PhotoGallery/PhotoGallery.js';
+                break;
+            case 'comments':
+                FunctionName = 'CheckModerateCommentsScript';
+                ScriptSRC = homeURL + '/cms/Tools/ModerateComments/ModerateComments.js';
+                break;
+            case 'postings':
+    	        FunctionName = 'CheckModeratePostingsScript';
+                ScriptSRC = homeURL + '/cms/Tools/ModerateContribution/ModerateContribution.js';
+                break;
+            case 'myaccount':
+                FunctionName = 'CheckMyAccountScript';
+                ScriptSRC = homeURL + '/cms/UserControls/MyAccount/MyAccount.js';
+                break;
+            case 'formsurvey':
+                FunctionName = 'CheckFormSurveyScript';
+                ScriptSRC = homeURL + '/cms/tools/FormsAndSurveys/Surveys.js';
+                break;
+            case 'alerts':
+                FunctionName = 'CheckAlertsScript';
+                ScriptSRC = homeURL + '/cms/tools/Alerts/Alerts.js';
+                break;
+	        case 'workspace':
+                FunctionName = 'CheckWorkspaceScript';
+                ScriptSRC = homeURL + '/cms/Workspace/PageList.js';
+                break;
+            case 'moduleview':
+                FunctionName = 'CheckModuleViewScript';
+                ScriptSRC = staticURL + '/GlobalAssets/Scripts/min/ModuleViewRenderer.js';
+                break;
+            case 'editarea':
+                FunctionName = 'CheckEditAreaScript';
+                ScriptSRC = homeURL + '/GlobalUserControls/EditArea/edit_area_full.js';
+                break;
+            case 'rating':
+		        FunctionName = '$.fn.rating';
+		        ScriptSRC = staticURL + '/GlobalAssets/Scripts/min/jquery.rating.min.js';
+		        break;
+	        case 'metadata':
+		        FunctionName = '$.fn.metadata';
+		        ScriptSRC = staticURL + '/GlobalAssets/Scripts/min/jquery.metadata.min.js';
+		        break;
+		    case 'pwcalendar':
+		        FunctionName = 'CheckPWCalendarScript';
+		        ScriptSRC = homeURL + '/myview/UserControls/Calendar/Calendar.js';
+		        break;
+		    case 'importwizard':
+		        FunctionName = 'CheckImportWizardScript';
+		        ScriptSRC = homeURL + '/cms/UserControls/ImportDialog/ImportWizard.js';
+		        break;
+		    case 'mustache':
+		        FunctionName = 'CheckMustacheScript';
+		        ScriptSRC = staticURL + '/GlobalAssets/Scripts/ThirdParty/mustache.js';
+		        break;
+		    case 'galleria':
+		        FunctionName = 'CheckGalleriaScript';
+		        ScriptSRC = staticURL + '/GlobalAssets/Scripts/ThirdParty/galleria/galleria-1.2.9.min.js';
+		        break;
+    //		case 'wijmo':
+    //			FunctionName = '$.fn.wij';
+    //			ScriptSRC = homeURL + 'http://cdn.wijmo.com/jquery.wijmo-complete.1.1.6.min.js';
+    //			break;
+            default:
+		        FunctionName = 'Check' + ModuleName + 'Script';
+                //ScriptSRC = ScriptSRC;
+		        break;
+        }
+
+        if (eval("typeof " + FunctionName + " == 'function'")) {
+            // do nothing, it's already included
+        } else {
+            // include file here
+	        /*$.ajax({
+		        type: "POST",
+		        data: "{URL:'" + ScriptSRC + "'}",
+		        url: homeURL + "/GlobalAssets/Proxies/CrossDomain.aspx/GetContent",
+		        async: false,
+		        dataType: "json",
+		        contentType: "application/json; charset=utf-8",
+		        cache: false,
+		        success: function(msg){ 
+			        var result = msg.d;
+				        var script = document.createElement('script');
+                        script.type = 'text/javascript';
+                        script.text = result;
+                        $('head').append(script);
+		        }
+	        });*/
+	        
+	        $.ajax({
+		        url: ScriptSRC,
+		        async: false,
+		        cache: true,
+		        success: function(msg){
+			        var result = msg.d;
+				        var script = document.createElement('script');
+                        script.type = 'text/javascript';
+                        script.text = result;
+                        $('head').append(script);
+		        }
+	        });
+        }
+    }
+    // End Check for included script
+    
+</script>
+
+</div>
+</form>
+</body>
+</html>

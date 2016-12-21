@@ -1,0 +1,151 @@
+
+
+
+<LINK 
+href="/PrivateLabel/ACNV/Images/style.css" type=text/css 
+rel=stylesheet>
+
+<CENTER>
+
+<SCRIPT type=text/javascript>
+
+/***********************************************
+* Cool DHTML tooltip script- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var offsetxpoint=-60 //Customize x offset of tooltip
+var offsetypoint=20 //Customize y offset of tooltip
+var ie=document.all
+var ns6=document.getElementById && !document.all
+var enabletip=false
+if (ie||ns6)
+var tipobj=document.all? document.all["dhtmltooltip"] : document.getElementById? document.getElementById("dhtmltooltip") : ""
+
+function ietruebody(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function ddrivetip(thetext, thecolor, thewidth){
+if (ns6||ie){
+if (typeof thewidth!="undefined") tipobj.style.width=thewidth+"px"
+if (typeof thecolor!="undefined" && thecolor!="") tipobj.style.backgroundColor=thecolor
+tipobj.innerHTML=thetext
+enabletip=true
+return false
+}
+}
+
+function positiontip(e){
+if (enabletip){
+var curX=(ns6)?e.pageX : event.clientX+ietruebody().scrollLeft;
+var curY=(ns6)?e.pageY : event.clientY+ietruebody().scrollTop;
+//Find out how close the mouse is to the corner of the window
+var rightedge=ie&&!window.opera? ietruebody().clientWidth-event.clientX-offsetxpoint : window.innerWidth-e.clientX-offsetxpoint-20
+var bottomedge=ie&&!window.opera? ietruebody().clientHeight-event.clientY-offsetypoint : window.innerHeight-e.clientY-offsetypoint-20
+
+var leftedge=(offsetxpoint<0)? offsetxpoint*(-1) : -1000
+
+//if the horizontal distance isn't enough to accomodate the width of the context menu
+if (rightedge<tipobj.offsetWidth)
+//move the horizontal position of the menu to the left by it's width
+tipobj.style.left=ie? ietruebody().scrollLeft+event.clientX-tipobj.offsetWidth+"px" : window.pageXOffset+e.clientX-tipobj.offsetWidth+"px"
+else if (curX<leftedge)
+tipobj.style.left="5px"
+else
+//position the horizontal position of the menu where the mouse is positioned
+tipobj.style.left=curX+offsetxpoint+"px"
+
+//same concept with the vertical position
+if (bottomedge<tipobj.offsetHeight)
+tipobj.style.top=ie? ietruebody().scrollTop+event.clientY-tipobj.offsetHeight-offsetypoint+"px" : window.pageYOffset+e.clientY-tipobj.offsetHeight-offsetypoint+"px"
+else
+tipobj.style.top=curY+offsetypoint+"px"
+tipobj.style.visibility="visible"
+}
+}
+
+function hideddrivetip(){
+if (ns6||ie){
+enabletip=false
+tipobj.style.visibility="hidden"
+tipobj.style.left="-1000px"
+tipobj.style.backgroundColor=''
+tipobj.style.width=''
+}
+}
+
+document.onmousemove=positiontip
+
+</SCRIPT>
+
+<TABLE height=105 cellSpacing=0 cellPadding=0 width=800 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width=800 height=100><A href="http://www.acnv.org/"><IMG 
+      src="/PrivateLabel/ACNV/Images/banner12.jpg" 
+      border=0></A></TD></TR>
+  <TR>
+    <TD vAlign=top width=800 height=5><IMG height=5 
+      src="/PrivateLabel/ACNV/Images/divider.jpg" 
+      width=800 border=0></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=800 
+background=/PrivateLabel/ACNV/Images/body_background.jpg 
+border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top width=5 height="100%" rowSpan=2>&nbsp;</TD>
+    <TD vAlign=top width=187 height="100%">
+      <TABLE class=leftmenu cellSpacing=0 cellPadding=0 width=187 
+      background=/PrivateLabel/ACNV/Images/leftmenu_middle.gif 
+      VALIGN="TOP">
+        <TBODY>
+        <TR>
+          <TD vAlign=top><IMG height=13 
+            src="/PrivateLabel/ACNV/Images/leftmenu_top.gif" 
+            width=187> <BR><BR>&nbsp;&nbsp;&nbsp;<A class=leftmenu 
+            href="http://www.acnv.org/calendar.asp">Calendar</A> 
+            <BR><BR>&nbsp;&nbsp;&nbsp;<A class=leftmenu 
+            href="http://www.acnv.org/">Tickets</A> <BR><BR>&nbsp;&nbsp;&nbsp;<A 
+            class=leftmenu href="http://www.acnv.org/education.asp">Arts &amp; 
+            Education</A> <BR>&nbsp; &nbsp; &nbsp;<A class=leftmenu 
+            href="http://www.acnv.org/artists.asp">Participating Artists</A> 
+            <BR>&nbsp; &nbsp; &nbsp;<A class=leftmenu 
+            href="http://www.acnv.org/education.asp">Education Opportunities</A> 
+            <BR>&nbsp; &nbsp; &nbsp;<A class=leftmenu 
+            href="http://www.acnv.org/scholarships.asp">Scholarships</A> 
+            <BR><BR>&nbsp;&nbsp;&nbsp;<FONT class=leftmenu>Support the 
+            Arts</FONT> <BR>&nbsp; &nbsp; &nbsp;<A class=leftmenu 
+            href="http://www.acnv.org/becomemember.asp">Become a Member</A> 
+            <BR>&nbsp; &nbsp; &nbsp;<A class=leftmenu 
+            href="http://www.acnv.org/becomevolunteer.asp">Become a 
+            Volunteer</A> <BR>&nbsp; &nbsp; &nbsp;<A class=leftmenu 
+            href="http://www.acnv.org/mailinglist.asp">Join our Mailing List</A> 
+            <BR>&nbsp; &nbsp; &nbsp;<A class=leftmenu 
+            href="http://www.acnv.org/">Make Donation Now</A> 
+            <BR><BR>&nbsp;&nbsp;&nbsp;<A class=leftmenu 
+            href="http://www.acnv.org/">Sponsors</A> 
+            <BR><BR>&nbsp;&nbsp;&nbsp;<A class=leftmenu 
+            href="http://www.acnv.org/media.asp">Media</A> 
+            <BR><BR>&nbsp;&nbsp;&nbsp;<A class=leftmenu 
+            href="http://www.acnv.org/links.asp">Links</A> 
+            <BR><BR>&nbsp;&nbsp;&nbsp;<A class=leftmenu 
+            href="http://www.acnv.org/about.asp">About Us</A> <BR>&nbsp; &nbsp; 
+            &nbsp;<A class=leftmenu href="http://www.acnv.org/board.asp">Our 
+            Board</A> <BR>&nbsp; &nbsp; &nbsp;<A class=leftmenu 
+            href="http://www.acnv.org/history.asp">History</A> 
+            <BR><BR>&nbsp;&nbsp;&nbsp;<A class=leftmenu 
+            href="http://www.acnv.org/contact.asp">Contact Us</A> 
+            <BR><BR><BR><IMG height=16 
+            src="/PrivateLabel/ACNV/Images/leftmenu_bottom.gif" 
+            width=187></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top width=8 height="100%" rowSpan=2>&nbsp;</TD>
+  
+    <TD vAlign=top height=380 rowSpan=2><BR>
+      <CENTER>
+      <TABLE width=560>
+        <TBODY>
+        <TR>
+          <TD colSpan=2>
+              

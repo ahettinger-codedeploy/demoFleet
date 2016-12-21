@@ -1,0 +1,3380 @@
+/* START Telerik.Web.UI.Skins.FormDecorator.css */
+/* this is set to the "real" radiobuttons and checkboxes */
+.rfdRealInput
+{
+    position: absolute;
+    left: -99999px;
+}
+
+/* --- COMMON SETTINGS FOR THE SKINNED BUTTONS --- */
+
+/* set one pixel margin to the skinned buttons, which compensates the focus dots when the button is focused */
+.rfdButton a.rfdSkinnedButton
+{
+	margin: 1px;
+}
+
+.rfdButton a.rfdSkinnedButton,
+.rfdButton a.rfdSkinnedButton *
+{
+    cursor: default;
+    background-repeat: no-repeat;
+	background-color: transparent;
+	height: 22px;
+	line-height: 22px;
+	text-decoration: none;
+	display: inline-block;
+	border: 0 !important; /* do not remove the !important flag, otherwise the * selector will not apply for that property */
+	text-align: center;
+	font: normal 12px "Segoe UI", Arial, Helvetica !important;
+    white-space: nowrap;
+}
+
+/* set dotted border to a focused button */
+.rfdButton a.rfdSkinnedButton:focus
+{
+	outline: dotted 1px #ccc;
+}
+
+.rfdButton a.rfdSkinnedButton,
+.rfdButton a.rfdInputDisabled.rfdSkinnedButton:hover
+{
+    padding: 0 4px 0 0;
+}
+
+.RadForm.rfdTextbox input[type="text"], 
+.RadForm.rfdTextbox input[type="password"], 
+.RadForm.rfdTextarea textarea, 
+.RadForm.rfdTextarea textarea[disabled]:hover, 
+.RadForm.rfdTextbox input[disabled][type="text"]:hover, 
+.RadForm.rfdTextbox input[disabled][type="password"]:hover,
+.RadForm .rfdCheckboxChecked, 
+.RadForm .rfdInputDisabled.rfdCheckboxChecked:hover,
+.RadForm .rfdCheckboxUnchecked, 
+.RadForm .rfdInputDisabled.rfdCheckboxUnchecked:hover,
+.RadForm.rfdLabel label,
+.RadForm .rfdRadioUnchecked, 
+.RadForm .rfdInputDisabled.rfdRadioUnchecked:hover, 
+.RadForm .rfdRadioUnchecked:hover, 
+.RadForm .rfdRadioChecked, 
+.RadForm .rfdInputDisabled.rfdRadioChecked:hover, 
+.RadForm .rfdRadioChecked:hover,
+.RadForm .riTextBox, /* prevents text flcikering in IE8, when TadTextBox is used with RDF */
+.RadForm .rfdValidationSummaryControl,
+.RadForm .rfdLoginControl,
+.RadForm legend
+{
+	font-size: 12px; 
+	font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+/* Headings */
+.rfdHeading h4,
+.rfdHeading h5,
+.rfdHeading h6
+{
+	font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 6px 0 1px 0;
+}
+		
+.rfdHeading h4
+{
+	font-size: 14px;
+}
+		
+.rfdHeading h5
+{
+	font-size: 13px;
+}
+		
+.rfdHeading h6
+{
+	font-size: 12px;
+}
+
+/* Sets height of 22px to text boxes */
+.RadForm.rfdTextbox input[type="text"], 
+.RadForm.rfdTextbox input[type="password"]
+{
+	padding-top: 2px;
+	padding-bottom: 3px;
+	height: auto;
+	line-height: normal;
+}
+
+/* Input height fixes where it is necessary if it breaks the layout */
+/* FileExplorer addresbar fix */
+.RadForm.rfdTextbox input.rfeAddressBox[type="text"]
+{
+	padding: 0;
+}
+
+/* Fixes RadColor Picker text input when it is decorated by RadFromDecorator in webkit browsers */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+.RadForm.rfdTextbox .RadColorPicker input[type="text"]
+{
+	padding-top: 1px;
+	padding-bottom: 0;
+	height: 19px;
+	line-height: 19px;
+}
+}
+
+/*TEKI: fix CSS inheritance issue with RadComboBox */
+.RadForm.rfdTextbox .rfdSkinnedButton input,
+.RadForm.rfdTextbox .rfdSkinnedButton button,
+.RadForm.rfdTextbox .RadComboBox input,
+.RadForm.rfdTextbox .RadComboBox input[type="text"]
+{
+   border:0;
+   background-color:transparent;
+}
+
+/*TEKI: (text) inputs by default can have no type specified, so update the button definition to show no border!*/
+.RadForm.rfdTextbox input[type="button"].rfdDecorated,
+.RadForm.rfdTextbox input[type="reset"].rfdDecorated,
+.RadForm.rfdTextbox input[type="submit"].rfdDecorated
+{
+    border: 0;    
+}
+
+.rfdButton input[type="button"].rfdDecorated,
+.rfdButton input[type="reset"].rfdDecorated,
+.rfdButton input[type="submit"].rfdDecorated,
+.rfdButton .rfdSkinnedButton button,
+.rfdButton a.rfdInputDisabled.rfdSkinnedButton:hover *
+{
+    background-position: left -22px;
+    height: 22px;
+	line-height: 22px;
+	border: 0;
+	padding: 0 6px 0 10px;
+	margin-right:0;/*Safari!*/
+}
+
+*+html.rfdButton input[type="button"].rfdDecorated,
+*+html.rfdButton input[type="reset"].rfdDecorated,
+*+html.rfdButton input[type="submit"].rfdDecorated,
+*+html.rfdButton .rfdSkinnedButton button,
+*+html.rfdButton a.rfdInputDisabled.rfdSkinnedButton:hover *
+{
+    padding-right: 0;
+}
+
+.rfdButton a.rfdSkinnedButton *
+{
+    _background-position: left -22px;
+}
+
+/* IE6 fixes */
+.rfdButton a.rfdInputDisabled:hover *
+{
+    _background-position: left -22px !important;
+}
+
+.rfdButton a.rfdInputDisabled:hover
+{
+    _background-position: right 0 !important;
+}
+/* end of IE6 fixes */
+
+.rfdButton a.rfdSkinnedButton,
+.rfdButton a.rfdInputDisabled.rfdSkinnedButton:hover
+{
+	background-position: right 0;
+}
+
+.rfdButton a.rfdSkinnedButton:hover
+{
+	background-position: right -44px;
+}
+
+.rfdButton a.rfdSkinnedButton:hover *
+{
+	background-position: left -66px;
+}
+
+.rfdButton a.rfdClickedButton,
+.rfdButton a.rfdClickedButton:hover
+{
+	background-position: right -88px;
+}
+
+/* IE8 Onclickg filckering Bug fix */
+.rfdButton .rfdSkinnedButton.rfdClickedButton .rfdDecorated
+{
+	-ms-background-position-x: 1px !important;
+	-ms-background-position-y: -109px !important;
+}
+
+.rfdButton a.rfdSkinnedButton.rfdClickedButton *
+{
+	background-position: left -110px !important;
+}
+
+/* IE7 hovers fix */
+*+html.rfdButton a.rfdSkinnedButton:hover *,
+*+html .rfdButton a.rfdSkinnedButton:hover *
+{
+    background-position: left -66px;
+}
+
+/* IE 6 fix for inputs */
+.rfdButtonType
+{
+    padding-left: 5px;
+}
+/* --- END OF COMMON SETTINGS FOR THE SKINNED BUTTONS --- */
+
+.rfdCheckboxChecked,
+.rfdCheckboxUnchecked,
+.rfdRadioUnchecked,
+.rfdRadioChecked
+{
+    line-height: 20px !important;
+	padding: 0 0 0 20px !important;
+	zoom: 1; /* IE font-size fix when set in percent */		
+	display: inline-block !important;
+	background-color: transparent;
+	background-repeat: no-repeat;
+}
+
+/* Checkboxes and Radios Sprite Positions */
+/* Decorate <input type="checkbox" /> */
+.rfdCheckboxUnchecked
+{
+	
+	background-position: 0 0;
+}
+
+.rfdCheckboxUnchecked:hover
+{
+	background-position: 0 -200px;
+}
+
+.rfdCheckboxChecked
+{
+	background-position: 0 -420px;
+}
+
+.rfdCheckboxChecked:hover
+{
+	background-position: 0 -640px;
+}
+
+.rfdCheckboxUnchecked.rfdInputDisabled,
+.rfdCheckboxUnchecked.rfdInputDisabled:hover
+{
+	background-position: 0 -860px;
+}
+
+.rfdCheckboxChecked.rfdInputDisabled,
+.rfdCheckboxChecked.rfdInputDisabled:hover
+{
+	background-position: 0 -1080px;
+}
+
+/* Decorate <input type="radio" /> */
+.rfdRadioUnchecked
+{
+	background-position: 1px 0;
+}
+
+.rfdRadioUnchecked:hover
+{
+	background-position: 1px -220px;
+}
+
+.rfdRadioChecked
+{
+	background-position: 1px -440px;
+}
+
+.rfdRadioChecked:hover
+{
+	background-position: 1px -640px;
+}
+
+.rfdRadioUnchecked.rfdInputDisabled,
+.rfdRadioUnchecked.rfdInputDisabled:hover
+{
+	background-position: 1px -860px;
+}
+
+.rfdRadioChecked.rfdInputDisabled,
+.rfdRadioChecked.rfdInputDisabled:hover
+{
+	background-position: 1px -1080px;
+}
+
+/* Disabled state removed to avoid problems with RadInput and RadCombo */
+.rfdSkinnedButton.rfdInputDisabled,
+.rfdTextarea textarea[disabled],
+.rfdTextbox input[type="text"][disabled],
+.rfdTextbox input[type="password"][disabled]
+{
+    /*filter: alpha(opacity=50);  IE < 8 */
+    /*opacity: .5;  FF3, OP9, WebKit */
+     /*-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)" !important; IE8 */
+   /* -moz-opacity: .5;  FF2 */
+}
+
+*|html .rfdSkinnedButton.rfdInputDisabled,
+*|html.rfdTextarea textarea[disabled],
+*|html.rfdTextbox input[type="text"][disabled],
+*|html.rfdTextbox input[type="password"][disabled],
+.rfdCheckboxChecked.rfdInputDisabled, 
+.rfdCheckboxUnchecked.rfdInputDisabled, 
+.rfdRadioChecked.rfdInputDisabled, 
+.rfdRadioUnchecked.rfdInputDisabled,
+.rfdSelectDisabled
+{
+	opacity: .5;
+}
+
+/* FormDecorator + TreeView fix */
+.RadTreeView .rfdCheckboxUnchecked,
+.RadTreeView .rfdCheckboxChecked
+{
+    display: -moz-inline-box;
+    display: inline-block;
+    width: 0;
+    vertical-align: middle;
+    line-height: 21px;
+    height: 21px;
+}
+
+/* FormDecorator + TreeView fix */
+.RadGrid .rfdCheckboxUnchecked,
+.RadGrid .rfdCheckboxChecked
+{
+    display: -moz-inline-block;
+    display: inline-block;
+}
+
+/* decorated <fieldset />, <textarea /> and <input type="text | password" /> */
+.rfdRoundedInner
+{  
+    width: 1px;
+    font-size: 1px;      
+    background-repeat: no-repeat;
+}
+
+.rfdRoundedOuter
+{    
+    width: 1px;
+    font-size: 0px;  
+}
+
+
+table.rfdRoundedWrapper,
+table.rfdRoundedWrapper_fieldset
+{
+    display: -moz-inline-box; /*FF2*/
+    display: inline-block; /* FF3, Opera, Safari*/
+    _display: inline; /* IE6 */
+    vertical-align: middle;           
+    border-width: 0px !important;    
+}
+
+/* do not merge these 2 rules, because of IE6 ! */
+table.rfdRoundedWrapper td
+{
+	padding: 0px !important;
+	border: 0px !important;
+}
+table.rfdRoundedWrapper_fieldset>tbody>tr>td
+{
+	padding: 0px !important;
+	border: 0px !important;
+}
+
+/* IE7 */
+*+html table.rfdRoundedWrapper, 
+*+html table.rfdRoundedWrapper_fieldset
+{
+   display: inline;
+}
+
+table.rfdRoundedWrapper tr td, table.rfdRoundedWrapper_fieldset tr td
+{
+    vertical-align: middle;
+}
+
+table.rfdRoundedWrapper input[type='text'] 
+{
+	border-left: none; 
+	border-right: none;
+}
+
+/* Styling for TABLE cells */
+.rfdGrids .rfdTable th,
+.rfdGrids .rfdTable td
+{
+	border: 0;
+	padding:5px 7px 4px;
+}
+
+/* specific styling related to the elements that need to support rounded corners */
+table.rfdRoundedWrapper textarea, textarea.rfdTextarea
+{     
+    /* Disable the drag resize of textareas in WebKit browsers */
+    [hack:safari;
+        resize: none;        
+    ]        
+}
+
+/* right-to-left support begin */
+.rfdRtl
+{
+	direction: rtl;
+}
+
+.rfdRtl .rfdRealInput 
+{
+	position: absolute; /* Causes IE to jump when a textbox in a scrollable parent is clicked -however, setting position:relative has other side effects. This is why it will be left here as *absolute* and set to relative where needed */	
+	left: 0;
+	right: 0;
+	top: -9999px;
+}
+
+.rfdRtl .rfdCheckboxUnchecked,
+.rfdRtl .rfdInputDisabled.rfdCheckboxUnchecked:hover
+{
+	padding: 0 20px 0 0 !important;
+	background-position: right 0 !important;
+}
+
+.rfdRtl .rfdCheckboxUnchecked:hover
+{
+	background-position: right -200px !important;
+}
+
+.rfdRtl .rfdCheckboxChecked,
+.rfdRtl .rfdInputDisabled.rfdCheckboxChecked:hover 
+{
+	padding: 0 20px 0 0 !important;
+	background-position: right -420px !important;
+}
+
+.rfdRtl .rfdCheckboxChecked:hover
+{
+	background-position: right -640px !important;
+}
+
+.rfdRtl .rfdRadioUnchecked,
+.rfdRtl .rfdInputDisabled.rfdRadioUnchecked:hover 
+{
+	padding: 0 20px 0 0 !important;
+	background-position: right 0 !important;
+}
+
+.rfdRtl .rfdRadioUnchecked:hover
+{
+	background-position: right -220px !important;
+}
+
+.rfdRtl .rfdRadioChecked,
+.rfdRtl .rfdInputDisabled.rfdRadioChecked:hover 
+{
+	padding: 0 20px 0 0 !important;
+	background-position: right -440px !important;
+}
+
+.rfdRtl .rfdRadioChecked:hover
+{
+	background-position: right -640px !important;
+}
+/* right-to-left support end */
+
+/* skinned selectbox */
+.rfdSelect
+{
+	display: inline-block;
+	text-decoration: none;
+	font-size: 12px;
+	font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+	cursor: default;
+	outline: none;
+	-moz-user-select: none;
+	max-width: 1024px;
+	background-position: 0 0;
+	padding-left: 2px;
+	zoom: 1;
+	z-index: 3000;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+*html .rfdSelect
+{
+	background-position: right -22px;
+	padding-right: 19px;
+	padding-left: 0;
+	vertical-align: top;
+	margin-right: 0;
+}
+
+*+html .rfdSelect
+{
+	vertical-align: top;
+	margin-right: 0;
+}
+
+.rfdSelect:hover
+{
+	background-position: 0 -44px;
+}
+
+*html .rfdSelect:hover
+{
+	background-position: right -66px;
+}
+
+.rfdSelect .rfdSelectOuter,
+.rfdSelect.rfdSelectDisabled:hover .rfdSelectOuter
+{
+    background-position: right -22px;
+    display: block;
+    line-height: 22px;
+    height: 22px;
+    white-space: nowrap;
+    width: inherit;
+    margin-left: 6px;
+}
+
+.rfdSelect.rfdSelectDisabled:hover
+{
+	background-position: 0 0;
+}
+
+*html .rfdSelect .rfdSelectOuter,
+*html .rfdSelect.rfdSelectDisabled:hover .rfdSelectOuter
+{
+	background-position: 0 0;
+	margin-right: 0;
+	margin-left: 0;
+	padding-left: 2px;
+}
+
+.rfdSelect .rfdSelectOuter,
+.rfdSelect.rfdSelectDisabled:hover .rfdSelectOuter
+{
+	margin-right: -1px\9;
+}
+
+.rfdSelect:hover .rfdSelectOuter
+{
+    background-position: right -66px;
+}
+
+*html .rfdSelect:hover .rfdSelectOuter
+{
+    background-position: 0 -44px;
+}
+
+.rfdSelect .rfdSelectOuter span
+{
+    margin-right: 22px;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/*NEW - TEKI - Support for SELECT dropdowns using the new rendering */
+.rfdSelect .rfdSelectBox
+{
+    position: absolute;
+    overflow-y: auto;
+    float: left; 
+    width: inherit;
+}
+
+.rfdSelect li
+{
+    padding: 0 0 0 3px;
+    line-height: 16px;
+    height: 16px;
+    background-image: none !important;
+}
+
+.rfdSelectDisabled
+{
+    opacity: .4; /* Gecko, Opera */
+}
+
+.rfdSelectDisabled .rfdSelectText
+{
+	filter: alpha(opacity=40); /* IE */
+}
+
+
+/* dropdown settings */
+.rfdSelectBox
+{
+    font-size: 12px;
+	font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+    display: inline-block;
+    overflow-x: hidden;
+    z-index: 2900;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+}
+
+.rfdSelectBox.rfdSelectDisabled:hover
+{
+    background-position: 0 0;
+}
+
+.rfdSelectBox ul
+{
+    width: inherit;
+}
+
+.rfdSelectBox ul,
+.rfdSelectBox li
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.rfdSelectBox li
+{
+    cursor: default;
+    padding-left:3px;/* In AJAX CSS-es are registered skin-specific first, base second, which creates problems*/
+    line-height: 16px;
+    height: 16px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.rfdSelectBox_optgroup li
+{
+    padding-left: 20px !important;
+    height: 18px !important;
+    line-height: 18px !important;
+}
+
+.rfdSelectBox_optgroup .rfdSelectBox_optgroup_label
+{
+    font-style: italic;
+    font-weight: bold;
+    padding-left: 0 !important;
+}
+
+.rfdSelectBox_Default .rfdSelectBox_optgroup_label:hover
+{
+    background: none;
+    color: #000;
+}
+
+.rfdSelectBox.rfdSelectDisabled li:hover
+{
+    background: none !important;
+}
+
+.rfdSelectBox .rfdSelectBox_optgroup li
+{
+    padding-left: 12px !important;
+}
+
+.rfdSelectBox li.rfdSelectBox_optgroup_label
+{
+    padding-left: 0 !important;
+}
+
+/* end of skinned selectbox */
+
+
+/* Internet Explorer fix for background position of a <fieldset /> */
+.rfdFieldset fieldset
+{
+   background-position: 0 7px\9; /* all versions IE hack */
+   background-repeat: no-repeat; /* Mandatory to use because of incorrect IE positioning of the image */		
+}
+
+/* IE9 overwrite */
+._Telerik_IE9.rfdFieldset fieldset
+{
+	 background-position: 0 0; 
+}
+
+.RadForm.rfdFieldset table.rfdRoundedWrapper_fieldset fieldset,
+.RadForm.rfdFieldset fieldset.rfdFieldset
+{	
+	_background-image: none !important; /* removes the background image in IE6 */
+}
+
+.rfdCheckboxChecked,
+.rfdCheckboxUnchecked,
+.rfdRadioUnchecked,
+.rfdRadioChecked
+{
+    line-height: 20px !important;
+	padding: 0;
+	padding-left: 20px;
+	zoom: 1; /* fixes IE issue with font-size set in percent */
+	display: inline-block !important;	
+}
+
+.rfdRoundedCorners
+{
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+	border-radius:4px;
+}
+
+/* This one fixes the jumping of the skinned select boxes when clicked in IE7 */
+*+html .rfdSelect
+{
+   vertical-align: middle;
+}
+
+.rfdRtl .rfdSelect
+{
+    padding-left: 18px !important;
+    background-position: 0 -110px !important;
+}
+
+.rfdRtl .rfdSelect .rfdSelectOuter
+{
+    margin: 0 !important;
+    background-position: right -88px !important;
+}
+
+.rfdRtl .rfdSelect:hover
+{
+    background-position: 0 -154px !important;
+}
+
+.rfdRtl .rfdSelect .rfdSelectOuter:hover
+{
+    margin: 0 !important;
+    background-position: right -132px !important;
+}
+
+.rfdRtl .rfdSelect .rfdSelectOuter span.rfdSelectText
+{
+    margin: 0 0 0 0 !important;
+    padding: 0 3px 0 0 !important;
+}
+/* this one removes the hover from the rtl dropdowns in IE6 */
+*html .rfdRtl .rfdSelect:hover
+{
+    _background-position: 0 -110px !important;
+}
+
+*+html.RadForm input.rfdDecorated,  
+*+html.RadForm button.rfdDecorated  
+{  
+    padding-left: 4px !important;  
+}
+
+.rfdDecorated, 
+a.rfdSkinnedButton
+{
+	vertical-align: top;
+}
+
+/*  Fixed button position when it is placed next to a textbox - Firefox/Safari */
+*|html .rfdDecorated, 
+*|html a.rfdSkinnedButton
+{
+	vertical-align: middle;
+}
+
+/* the styling of radiobuttons and checkboxes in Safari and Chrome is already fully achieved with CSS */
+@media screen and (-webkit-min-device-pixel-ratio: 0)
+{
+    .rfdRadio label,
+    .rfdCheckbox label
+    {
+        padding-left: 0 !important;
+        background-image: none !important;
+        line-height: 18px;
+    }
+    
+    .rfdCheckbox label
+    {
+        vertical-align: middle;
+    }
+    
+    .rfdRadio label
+    {
+        vertical-align: bottom;
+    }
+    
+    .rfdRadio input[type="radio"],
+    .rfdCheckbox input[type="checkbox"]
+    {
+        -khtml-appearance: none; /* remove the graphic appearance of the original control */
+        position: static; /* set back it's static position on the page */
+        width: 20px; /* set default width of the control */
+	    height: 20px; /* set default height of the control */
+	    vertical-align: middle; /* align the control properly */
+	    margin: 0;
+    }
+    
+    .rfdCheckbox input[type="checkbox"][disabled],
+    .rfdRadio input[type="radio"][disabled]
+    {
+        opacity: .5; /* give the control a disabled looks */
+    }
+    
+    /* checkboxes */
+    .rfdCheckbox input[type="checkbox"],
+    .rfdCheckbox input[type="checkbox"][disabled]:hover
+    {
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+    
+    .rfdCheckbox input[type="checkbox"]:hover
+    {
+        background-position-y: -200px;
+    }
+    
+    .rfdCheckbox input[type="checkbox"]:checked,
+    .rfdCheckbox input[type="checkbox"][disabled]:hover:checked
+    {
+        background-position-y: -420px;
+    }
+    
+    .rfdCheckbox input[type="checkbox"]:hover:checked
+    {
+        background-position-y: -640px;
+    }
+    
+    /* radio buttons */
+    .rfdRadio input[type="radio"],
+    .rfdRadio input[type="radio"][disabled="disabled"]:hover
+    {
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+    
+    .rfdRadio input[type="radio"]:hover
+    {
+        background-position-y: -220px;
+    }
+    
+    .rfdRadio input[type="radio"]:checked,
+    .rfdRadio input[type="radio"][disabled="disabled"]:hover:checked
+    {
+        background-position-y: -440px;
+    }
+    
+    .rfdRadio input[type="radio"]:hover:checked
+    {
+        background-position-y: -640px;
+    }
+}
+
+/* ScrollBar CSS Settings for WebKit */
+/* Since v.6 chrome uses standard Windows scrollbars for the iframe only */
+/* We ca not manipulate them and will style only body, div and form scrolls */
+/* arrow button settings */
+.RadForm.rfdScrollBars body::-webkit-scrollbar,
+.RadForm.rfdScrollBars textarea::-webkit-scrollbar,
+.RadForm.rfdScrollBars div::-webkit-scrollbar
+{
+    width: 16px;
+    height: 16px;
+}
+
+/* horizontal scroll left button */
+.RadForm.rfdScrollBars ::-webkit-scrollbar-button:horizontal:decrement
+{
+    background-position: 1px -132px;
+}
+
+/* horizontal scroll right button */
+.RadForm.rfdScrollBars ::-webkit-scrollbar-button:horizontal:increment
+{
+    background-position: -10px -132px;
+}
+
+/* vertical scroll up button */
+.RadForm.rfdScrollBars ::-webkit-scrollbar-button:vertical:decrement
+{
+   background-position: 0 -145px;
+}
+
+/* vertical scroll down button */
+.RadForm.rfdScrollBars ::-webkit-scrollbar-button:vertical:increment
+{
+   background-position: -11px -145px;
+}
+
+/* increment / decrement button settings */
+.RadForm.rfdScrollBars ::-webkit-scrollbar-button:vertical:decrement,
+.RadForm.rfdScrollBars ::-webkit-scrollbar-button:vertical:increment,
+.RadForm.rfdScrollBars ::-webkit-scrollbar-button:horizontal:decrement,
+.RadForm.rfdScrollBars ::-webkit-scrollbar-button:horizontal:increment
+{
+    background-repeat: no-repeat;
+    height: auto;
+    width: auto;
+}
+
+.RadForm.rfdScrollBars ::-webkit-scrollbar-button:vertical:decrement, 
+.RadForm.rfdScrollBars ::-webkit-scrollbar-button:vertical:increment, 
+.RadForm.rfdScrollBars ::-webkit-scrollbar-button:horizontal:decrement, 
+.RadForm.rfdScrollBars ::-webkit-scrollbar-button:horizontal:increment, 
+.RadForm.rfdScrollBars ::-webkit-scrollbar-thumb:vertical, 
+.RadForm.rfdScrollBars ::-webkit-scrollbar-thumb:horizontal
+{
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* Validation Summary Control and Login Control  */
+
+.rfdValidationSummaryControl,
+.rfdLoginControl
+	{
+		padding: 4px;
+		border-radius: 4px;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-collapse: separate !important; /* need to be with important as by default the table is rendered with collpase inline style */
+	}
+
+.rfdValidationSummaryControl ul
+{
+	padding-left: 65px;
+	margin-left: 0;
+	min-height: 32px;
+	color: #f00;
+	background: url('/clients/CenterStageNorth/Images/webresource.axd?d=aa7Mn3TE-tz25uAGeueuu_CYoH3Lse96EzSaduS_FPpW-2gjp1rUUP7JrXr4JccJNZM0MnF9oh8ehIoaMCcbIUGJG0W0rBGb1eZ8Qlwb22-hz7OZhCRN8zGqjT9cYPmd8TjQ423xgP05S-POimSTsF5Ehdg1&t=634429586006210000') no-repeat 8px -3px;
+}
+
+*html .rfdValidationSummaryControl ul
+{
+	height: 32px;
+}
+
+/* END Telerik.Web.UI.Skins.FormDecorator.css */
+/* START Telerik.Web.UI.Skins.Web20.FormDecorator.Web20.css */
+/* RadFormDecorator for ASP.NET Web20 Skin */
+
+/* CSS class for styling the decoration zone or the <html /> tag of the page */
+.RadForm_Web20.rfdZone
+{    
+}
+
+/* Decorate scrollbars */
+.RadForm_Web20.rfdScrollBars
+{
+	scrollbar-3dlight-color: #959695; 
+	scrollbar-arrow-color: #3e3e3e;
+	scrollbar-base-color: #f5f5f5; 
+	scrollbar-darkshadow-color: #e7f1fa; 
+	scrollbar-face-color: #e7f1fa;
+	scrollbar-highlight-color: #e7f1fa; 
+	scrollbar-shadow-color: #6787bb;
+	scrollbar-track-color: #fff;
+}
+
+/* Decorate <input type="button | submit | reset" /> and <button type="button | submit | reset" /> - look if there is a secondary .rfdButton class applied to the root element */
+.RadForm_Web20.rfdButton a.rfdSkinnedButton,
+.RadForm_Web20.rfdButton input[type="button"].rfdDecorated,
+.RadForm_Web20.rfdButton input[type="reset"].rfdDecorated,
+.RadForm_Web20.rfdButton input[type="submit"].rfdDecorated,
+.RadForm_Web20.rfdButton .rfdSkinnedButton button
+{
+	background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=iJ6W40wF252STD2ItTx8p5yTMxblVMDamuAxIhqpDhJq3jJFPPA2tZxfelavwK1EWW6kM9dwNaf7KDHkx8e8iGZFsFpxZeETk2L8_9-mVAYoeDffWSozog0ZrBbKrT9auu7sWUZFvfkLhEtIEOG0JadX0yP-BcQogMrN9u3q3Par61tA0&t=634429586006210000');
+	color: #fff;
+}
+
+*html .RadForm_Web20 a.rfdSkinnedButton,
+*html .RadForm_Web20 .rfdSkinnedButton button,
+*html .RadForm_Web20 .rfdSkinnedButton input.rfdDecorated,
+.RadForm_Web20.rfdButton a.rfdSkinnedButton,
+.RadForm_Web20.rfdButton a.rfdSkinnedButton *
+{
+	background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=iJ6W40wF252STD2ItTx8p5yTMxblVMDamuAxIhqpDhJq3jJFPPA2tZxfelavwK1EWW6kM9dwNaf7KDHkx8e8iGZFsFpxZeETk2L8_9-mVAYoeDffWSozog0ZrBbKrT9auu7sWUZFvfkLhEtIEOG0JadX0yP-BcQogMrN9u3q3Par61tA0&t=634429586006210000');
+	color: #fff;
+}
+
+.RadForm_Web20.rfdButton .rfdSkinnedButton:hover *
+{
+    color: #0f1d48;
+}
+
+/* OPERA width fix - do not remove (and check if it is still necessary) */
+@media screen and (min-width:1px)  
+{
+	/* 
+       the hack below fixes a strange behavior under Opera - 
+       input and button have a different CSS display when in anchor tag 
+    */
+	.RadForm_Web20.rfdButton a.rfdSkinnedButton input
+	{
+	    display: block;
+	    float: left;
+	}
+}
+
+/* Decorate <h4|5|6 /> */
+.RadForm_Web20.rfdHeading h4
+{
+	color: #45709b;	
+	border-bottom: solid 1px #6788be;
+}
+
+.RadForm_Web20.rfdHeading h5
+{
+	color: #000;	
+	border-bottom: solid 1px #6788be;	
+}
+
+.RadForm_Web20.rfdHeading h6
+{
+	color: #000;	
+}
+
+/* Decorate <label /> */
+.RadForm_Web20.rfdLabel label
+{	
+	 color: #000;
+}
+
+/* Decorate <input type="checkbox" /> */
+.RadForm_Web20 .rfdCheckboxUnchecked,
+.RadForm_Web20 .rfdCheckboxChecked,
+.RadForm_Web20 .rfdInputDisabled.rfdCheckboxUnchecked,
+.RadForm_Web20 .rfdInputDisabled.rfdCheckboxChecked
+{
+	background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=tBcMSKCuAyHecfeX8dwFbThOmEhJh6YQKCO5msPaXn57-Kc8cmMS5Ebe1H4zgHBvOPZYbSr2zO0XsdXV2fWfVViuCuNtu2SQu5hDXf0bEDgeKGGx2-0L7i9Xtt6Jp5h7z1Covbv6anmZf4M3KIYMZOORoOJ9ifthli3VjYVkqAGlGIzy0&t=634429586006210000');
+}
+
+/* Decorate <input type="radio" /> */
+.RadForm_Web20 .rfdRadioUnchecked,
+.RadForm_Web20 .rfdRadioChecked,
+.RadForm_Web20 .rfdInputDisabled.rfdRadioUnchecked,
+.RadForm_Web20 .rfdInputDisabled.rfdRadioChecked
+{
+	background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=OkzrVA4eB9i5zCrKzTaXTGO7dZ2WBEsJp4A0JeOiF_S5b-eaI_apuEp8xjKfTV3P40yORrwYnl0lArIhDTQvXNm7FxdLmh3Q5I6BgU9vP3cMXNYNjvMXAhuQAvb0M-c5jWBDPSZsT4UrfRxE1bkXvPZ2407TFtfkk6PLVQESbbwZc7sp0&t=634429586006210000');
+}
+
+/* IE6 - we set .gif")%> image instead of .png")%> due to the lack RGBA support */
+.RadForm_Web20 .rfdRadioUnchecked,
+.RadForm_Web20 .rfdInputDisabled.rfdRadioUnchecked:hover,
+.RadForm_Web20 .rfdRadioUnchecked:hover,
+.RadForm_Web20 .rfdRadioChecked,
+.RadForm_Web20 .rfdInputDisabled.rfdRadioChecked:hover,
+.RadForm_Web20 .rfdRadioChecked:hover
+{
+    _background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=YhG0beOKV3sPulNLP3nE6OIuY6y8YKki41_qLu-eUjBtJq9Fr8IdXOpa8lYgO6I0Z5PHQ_qbYMQXUrj4dpC9iesjS0g-DdIsb6z5WmE8WGJt3PGm9g7KL911lh8rcf-1jCZ_h3wZ9wK9asoe4b-pKWG5W0DZtOSQTtMlmksteOlg8i4D0&t=634429586006210000'); /* IE6 hack */
+}
+
+/* <fieldset /> and <legend /> */
+
+.RadForm_Web20.rfdFieldset table.rfdRoundedWrapper_fieldset legend,
+.RadForm_Web20 fieldset.rfdFieldset legend,
+.RadForm_Web20.rfdFieldset fieldset legend
+{
+	color: #6788be;
+}
+
+.RadForm_Web20 table.rfdRoundedWrapper:hover div.rfdRoundedInner
+{
+    background-color: #fff;
+    border-color: #6788be !important;
+}
+
+/* this selector styles the hover of the side bars of the rounded elements */
+.RadForm_Web20 table.rfdRoundedWrapper:hover .rfdRoundedOuter
+{	
+	background-color: #6788be !important;
+}
+
+/* Decorate <input type="text | password" /> and <textarea /> */
+/* For all browsers except IE6 we are using attribute selectors - single or double */
+.RadForm_Web20.rfdTextbox input[type="text"],
+.RadForm_Web20.rfdTextbox input[type="password"],
+.RadForm_Web20.rfdTextarea textarea,
+.RadForm_Web20.rfdTextarea textarea[disabled]:hover,
+.RadForm_Web20.rfdTextbox input[disabled][type="text"]:hover,
+.RadForm_Web20.rfdTextbox input[disabled][type="password"]:hover
+{
+    border: solid 1px #6788be;
+    background-color: #fff;
+}
+
+.RadForm_Web20.rfdTextbox .rfdDecorated:hover,
+.RadForm_Web20.rfdTextarea textarea:hover,
+.RadForm_Web20.rfdTextbox .rfdDecorated:focus,
+.RadForm_Web20.rfdTextarea textarea:focus
+{
+    border: solid 1px #3f5f94;
+}
+
+/* Decorate <fieldset /> */
+.RadForm_Web20.rfdFieldset fieldset
+{	
+	border: solid 1px #6788be;
+	background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=gqP0DFEIcwyDeshxgKqMG2BSRHzc95emBjRYKNd8aXMbNyYitaA1kpNTyCPTgiTHY9K4ucWncJAW4XGyyHDtYwVYzv4y9mWKV-w92ipTWWA4utBqf0dUYFzkBpR2rDR6eOVTsV24ydlF2qzPNVJARcsgttrh9YvkhsGZoerDVjhIiEaW0&t=634429586006210000'); /* having a background image on a fieldset is not okay with IE */	
+}
+
+/* Decorate <fieldset /> and <legend /> */
+.RadForm_Web20.rfdFieldset table.rfdRoundedWrapper_fieldset legend,
+.RadForm_Web20.rfdFieldset fieldset.rfdFieldset legend
+{
+	color: #6788be;
+}
+
+.RadForm_Web20.rfdFieldset table.rfdRoundedWrapper_fieldset fieldset,
+.RadForm_Web20.rfdFieldset fieldset.rfdFieldset
+{	
+	border: solid 1px #6788be;
+	background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=gqP0DFEIcwyDeshxgKqMG2BSRHzc95emBjRYKNd8aXMbNyYitaA1kpNTyCPTgiTHY9K4ucWncJAW4XGyyHDtYwVYzv4y9mWKV-w92ipTWWA4utBqf0dUYFzkBpR2rDR6eOVTsV24ydlF2qzPNVJARcsgttrh9YvkhsGZoerDVjhIiEaW0&t=634429586006210000'); /* having a background image on a fieldset is not okay with IE */	
+}
+
+/* Because of a glitch in IE the following 2 CSS classes must be declared separately for correct parsing of the textarea class in IE6*/
+.RadForm_Web20 table.rfdRoundedWrapper input,
+.RadForm_Web20 table.rfdRoundedWrapper textarea,
+.RadForm_Web20 input.rfdInput, 
+.RadForm_Web20 textarea.rfdTextarea
+{
+	border: solid 1px #6788be;
+	background: #fff;	
+	color: #000;
+}
+
+.RadForm_Web20 textarea.rfdTextarea,
+.RadForm_Web20 table.rfdRoundedWrapper textarea
+{
+    overflow: auto;
+}
+
+/* <select /> */
+.rfdSelect_Web20,
+.rfdSelect_Web20:hover,
+.rfdSelect_Web20 .rfdSelectOuter,
+.rfdSelect_Web20:hover .rfdSelectOuter,
+.rfdSelect_Web20 .rfdSelectArrow span,
+.rfdSelectBox_Web20 .rfdSelect_selected,
+.rfdSelectBox_Web20 li:hover,
+.rfdSelect_Web20.rfdSelectDisabled:hover,
+.rfdRtl .rfdSelect_Web20,
+.rfdRtl .rfdSelect_Web20:hover,
+.rfdRtl .rfdSelect_Web20 .rfdSelectOuter,
+.rfdRtl .rfdSelect_Web20 .rfdSelectOuter:hover
+{
+    background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=iyX7jyG5OhIDO_PxEYK5-uXwSin68fW1FJOkJpfLcvdIEgyYE5ecT9ugLvt9k0b1KE845pTFcPvbFwwceE6OSxU14wY_v8ReRY8ULjToou9TS_dpjIiGDII6Fd1tcNn-JUJbEMp0r6hMT0vg7190H0muyNsqsEDSZY5A9SUIN8eFRVoi0&t=634429586006210000');
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.rfdSelect_Web20 .rfdSelectOuter,
+.rfdSelect_Web20.rfdSelectDisabled:hover .rfdSelectOuter
+{
+    color: #000;
+}
+
+/* dropdown settings */
+.rfdSelectBox_Web20
+{
+    background: #fff;
+    border: solid 1px #6788be;
+    color: #000;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+	-moz-border-radius: 0;
+}
+
+.rfdSelectBox_Web20 li
+{
+    padding: 0 0 0 3px;
+    background-image: none !important;
+}
+
+.rfdSelectBox_Web20 .rfdSelect_selected,
+.rfdSelectBox_Web20 li:hover
+{
+    color: #000;
+    background-color: #e7f1ff;
+}
+
+.rfdSelectBox_Web20 .rfdSelectBox_optgroup_label:hover
+{
+    background: none;
+    color: #000;
+}
+
+/* IE6 disabled state fix - this should not be added to the base stylesheet, but at the bottom of the skin file */
+* html .RadForm_Web20.rfdButton a.rfdInputDisabled:hover
+{
+	_background-position: 0 0;
+}
+
+* html .RadForm_Web20.rfdButton a.rfdInputDisabled:hover *
+{
+	_background-position: right -21px;
+	_color: #000;
+}
+
+.RadForm_Web20.rfdTextbox input.rfdIE6TextBox,
+.RadForm_Web20.rfdTextbox textarea.rfdIE6TextBox
+{
+    _border: solid 1px #6788be;
+    _background-color: #fff;
+}
+
+/* the styling of radiobuttons and checkboxes in Safari and Chrome is already fully achieved with CSS */
+@media screen and (-webkit-min-device-pixel-ratio: 0)
+{
+    /* checkboxes */
+    .rfdCheckbox input[type="checkbox"],
+    .rfdCheckbox input[type="checkbox"][disabled]:hover
+    {
+        background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=tBcMSKCuAyHecfeX8dwFbThOmEhJh6YQKCO5msPaXn57-Kc8cmMS5Ebe1H4zgHBvOPZYbSr2zO0XsdXV2fWfVViuCuNtu2SQu5hDXf0bEDgeKGGx2-0L7i9Xtt6Jp5h7z1Covbv6anmZf4M3KIYMZOORoOJ9ifthli3VjYVkqAGlGIzy0&t=634429586006210000');
+    }
+    
+    /* radio buttons */
+    .rfdRadio input[type="radio"],
+    .rfdRadio input[type="radio"][disabled="disabled"]:hover
+    {
+        background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=OkzrVA4eB9i5zCrKzTaXTGO7dZ2WBEsJp4A0JeOiF_S5b-eaI_apuEp8xjKfTV3P40yORrwYnl0lArIhDTQvXNm7FxdLmh3Q5I6BgU9vP3cMXNYNjvMXAhuQAvb0M-c5jWBDPSZsT4UrfRxE1bkXvPZ2407TFtfkk6PLVQESbbwZc7sp0&t=634429586006210000');
+    }
+}
+
+/* ----------------------------------------------- Skin-specific Scrollbar Settings for WebKit ----------------------------------------------- */
+
+/* the scrollbar face color */
+.RadForm.rfdScrollBars.RadForm_Web20 body::-webkit-scrollbar,
+.RadForm.rfdScrollBars.RadForm_Web20 body::-webkit-scrollbar-thumb:vertical,
+.RadForm.rfdScrollBars.RadForm_Web20 body::-webkit-scrollbar-thumb:horizontal,
+.RadForm.rfdScrollBars.RadForm_Web20 div::-webkit-scrollbar,
+.RadForm.rfdScrollBars.RadForm_Web20 div::-webkit-scrollbar-thumb:vertical,
+.RadForm.rfdScrollBars.RadForm_Web20 div::-webkit-scrollbar-thumb:horizontal
+.RadForm.rfdScrollBars.RadForm_Web20 form::-webkit-scrollbar,
+.RadForm.rfdScrollBars.RadForm_Web20 form::-webkit-scrollbar-thumb:vertical,
+.RadForm.rfdScrollBars.RadForm_Web20 form::-webkit-scrollbar-thumb:horizontal
+{
+    background-color: #e7f1fa;
+}
+
+/* scrollbar track background color */
+.RadForm.rfdScrollBars.RadForm_Web20 ::-webkit-scrollbar-track-piece,
+.RadForm.rfdScrollBars.RadForm_Web20 ::-webkit-scrollbar-corner
+{
+    background-color: #fff;
+}
+
+.RadForm.rfdScrollBars.RadForm_Web20 ::-webkit-scrollbar-button:vertical:decrement, 
+.RadForm.rfdScrollBars.RadForm_Web20 ::-webkit-scrollbar-button:vertical:increment, 
+.RadForm.rfdScrollBars.RadForm_Web20 ::-webkit-scrollbar-button:horizontal:decrement, 
+.RadForm.rfdScrollBars.RadForm_Web20 ::-webkit-scrollbar-button:horizontal:increment, 
+.RadForm.rfdScrollBars.RadForm_Web20 ::-webkit-scrollbar-thumb:vertical, 
+.RadForm.rfdScrollBars.RadForm_Web20 ::-webkit-scrollbar-thumb:horizontal
+{
+    border-color: #959695 #6787bb #6787bb #959695;
+}
+
+/* increment / decrement button settings */
+.RadForm.rfdScrollBars.RadForm_Web20 ::-webkit-scrollbar-button:vertical:decrement, 
+.RadForm.rfdScrollBars.RadForm_Web20 ::-webkit-scrollbar-button:vertical:increment, 
+.RadForm.rfdScrollBars.RadForm_Web20 ::-webkit-scrollbar-button:horizontal:decrement, 
+.RadForm.rfdScrollBars.RadForm_Web20 ::-webkit-scrollbar-button:horizontal:increment
+{
+    background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=iJ6W40wF252STD2ItTx8p5yTMxblVMDamuAxIhqpDhJq3jJFPPA2tZxfelavwK1EWW6kM9dwNaf7KDHkx8e8iGZFsFpxZeETk2L8_9-mVAYoeDffWSozog0ZrBbKrT9auu7sWUZFvfkLhEtIEOG0JadX0yP-BcQogMrN9u3q3Par61tA0&t=634429586006210000');
+    background-color: #e7f1fa;
+}
+
+/*GridView, FormView, DetailsView*/
+.RadForm_Web20.rfdGrids .rfdTable
+{
+    border:1px solid #6788be;
+    background:#fff;
+    color:#000;
+    font:12px "segoe ui",arial,sans-serif;
+}
+
+.RadForm_Web20.rfdGrids .rfdTable th
+{
+    border-bottom:1px solid #3f5f94;
+    border-left:1px solid #5171a7;
+    background:#7b95c6;
+    color:#fff;
+}
+
+.RadForm_Web20.rfdGrids .rfdTable a
+{
+    color:#0f3789;
+}
+
+/* Validation Summary Control and Login Control  */
+
+.RadForm_Web20 .rfdValidationSummaryControl,
+.RadForm_Web20 .rfdLoginControl
+{
+	background-color: #fff;
+	border: 1px solid #6788be;
+}
+
+.RadForm_Web20 a.rfdLoginControl
+{
+	color: #324d92;
+}
+
+.RadForm_Web20 a.rfdLoginControl:active
+{
+	color: #010615;
+}
+
+.RadForm_Web20 a.rfdLoginControl:hover
+{
+	color: #0f3789;
+}
+
+.RadForm_Web20 a.rfdLoginControl:visited
+{
+	color: #222;
+}
+/* END Telerik.Web.UI.Skins.Web20.FormDecorator.Web20.css */
+/* START Telerik.Web.UI.Skins.Menu.css */
+/* Common CSS */
+
+.RadMenu
+{
+	white-space:nowrap;
+	float:left;
+	position:relative;
+    z-index /*\**/: 7000\9; /* IE8 hasLayout fix */
+}
+
+.RadMenu .rmRootGroup
+{
+	margin:0;
+	padding:0;
+	position:relative;
+	left:0;
+	display: inline-block;
+}
+
+* html .RadMenu .rmRootGroup { float: left; }
+
+.RadMenu:after,
+.RadMenu .rmRootGroup:after
+{
+    content:""; 
+    display:block;
+    height:0;
+    overflow: hidden;
+    line-height:0;
+    font-size:0;
+    clear:both;
+    visibility:hidden;
+}
+
+.RadMenu ul.rmVertical,
+.RadMenu ul.rmHorizontal,
+.RadMenu ul.rmRootScrollGroup,
+.RadMenu_Context ul.rmHorizontal
+{
+	margin:0;
+	padding:0;
+	display:none;
+	position:relative;
+	left:0;
+	float:left;
+}
+
+.rmSized ul.rmVertical
+{
+	width: 100%;
+}
+
+.rmSized ul.rmRootGroup
+{
+	float: none;
+}
+
+.rmSized .rmRootGroup .rmVertical
+{
+	width: auto;
+}
+
+.RadMenu .rmItem
+{
+	float:left;
+	position:relative;
+	list-style-image: none;
+	list-style-position:outside;
+	list-style:none;	
+}
+
+* html .RadMenu .rmItem
+{
+	display:inline;
+}
+
+.RadMenu .rmHorizontal .rmItem
+{
+	clear:none;
+}
+
+.RadMenu .rmVertical .rmItem
+{
+	clear:both;
+}
+
+.rmSized .rmVertical .rmItem
+{
+	width: 100%;
+}
+
+.rmSized .rmHorizontal .rmItem,
+.rmSized .rmRootGroup .rmVertical .rmItem
+{
+	width: auto;
+}
+
+.RadMenu ul.rmActive,
+.RadMenu ul.rmRootGroup
+{
+	display:block;
+}
+
+.RadMenu .rmSlide, 
+.RadMenu_Context
+{
+	position:absolute;
+	overflow:hidden;
+	display:none;
+	float:left;
+}
+
+* html .RadMenu .rmSlide, 
+* html .RadMenu_Context
+{
+	height:1px;
+}
+
+.RadMenu_Context
+{
+	z-index:1000;
+	overflow:visible;
+}
+
+.RadMenu .rmText
+{
+	display:block;
+}
+
+.RadMenu div.rmText /*templates*/
+{
+	white-space:normal;
+	background: transparent;
+}
+
+.RadMenu a.rmLink
+{
+	cursor:default;
+	display:block;
+}
+
+.rmScrollWrap
+{
+	position:absolute;
+	float:left;
+	overflow:hidden;
+	left:0;
+}
+
+.RadMenu .rmLeftArrow,
+.RadMenu .rmTopArrow,
+.RadMenu .rmBottomArrow,
+.RadMenu .rmRightArrow
+{
+	position:absolute;
+	z-index:2000;
+	text-indent:-1000em;
+	font-size: 0;
+	line-height: 0;
+	outline: 0;
+	overflow: hidden;
+}
+
+.RadMenu .rmLeftArrowDisabled,
+.RadMenu .rmTopArrowDisabled,
+.RadMenu .rmBottomArrowDisabled,
+.RadMenu .rmRightArrowDisabled
+{
+	display:none;
+	text-indent:-1000em;
+	font-size: 0;
+	line-height: 0;
+}
+
+.RadMenu .rmBottomArrow,
+.RadMenu .rmBottomArrowDisabled
+{
+	margin-bottom: -1px;
+}
+
+.RadMenu .rmLeftImage
+{
+	border:0;
+	float:left;
+}
+
+.RadMenu_rtl
+{
+	float:right;
+	text-align: right;
+}
+
+.RadMenu_rtl ul.rmVertical
+{
+	float:right;
+}
+
+.RadMenu_rtl .rmItem
+{
+	float:right;	
+}
+
+.RadMenu_rtl .rmLeftImage,
+.RadMenu_Context_rtl .rmLeftImage
+{
+	border:0;
+	float:right;
+}
+
+.RadMenu_rtl .rmLeftArrow,
+.RadMenu_rtl .rmTopArrow,
+.RadMenu_rtl .rmBottomArrow,
+.RadMenu_rtl .rmRightArrow,
+.RadMenu_rtl .rmLeftArrowDisabled,
+.RadMenu_rtl .rmTopArrowDisabled,
+.RadMenu_rtl .rmBottomArrowDisabled,
+.RadMenu_rtl .rmRightArrowDisabled
+{
+	text-indent:1000em !important;
+}
+
+.RadMenu .rmLink
+{
+	width:auto;
+}
+
+.RadMenu .rmSeparator,
+.RadMenu .rmSeparator:after
+{
+    line-height: 0;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.RadMenu div.rmRootGroup
+{
+    position: relative;
+}
+/* <base styles> */
+
+.RadMenu .rmItem
+{
+	padding: 0;
+}
+
+.RadMenu .rmLink
+{
+	padding: 0 0 0 12px;
+	outline: 0;
+	float: left;
+}
+
+.RadMenu_rtl .rmLink
+{
+	padding: 0 12px 0 0;
+    margin-left: 2px;
+}
+
+.RadMenu .rmText
+{
+	padding-bottom: 1px;
+	float: left;
+}
+
+.RadMenu_rtl .rmText
+{
+    margin-left: -2px;
+}
+
+/* optimized for 16x16 */
+.RadMenu .rmLeftImage
+{
+	margin: 4px 2px 0 -3px;
+	padding-bottom: 4px;
+}
+
+.RadMenu_rtl .rmLeftImage
+{
+	margin: 4px -3px 0 2px;
+	padding-bottom: 2px;
+}
+
+/* Image sprite placeholder size */
+.RadMenu span.rmLeftImage
+{
+	width: 16px;
+	height: 16px;
+}
+
+.RadMenu .rmVertical .rmLeftImage+.rmText
+{
+	padding: 0 8px 1px 24px;
+}
+
+.RadMenu .rmVertical .rmText
+{
+	padding: 0 24px 1px 0;
+}
+
+.RadMenu .rmHorizontal .rmText
+{
+	padding: 0 12px 1px 0;
+}
+
+.RadMenu_rtl .rmHorizontal .rmText
+{
+	padding: 0 0 1px 12px;
+}
+
+.RadMenu_rtl .rmVertical .rmText
+{
+	padding: 0 0 1px 24px;
+}
+
+.RadMenu .rmVertical .rmText,
+.RadMenu .rmHorizontal .rmVertical .rmText
+{
+	display: block;
+	float: none;
+}
+
+.RadMenu .rmVertical .rmLink,
+.RadMenu .rmHorizontal .rmVertical .rmLink
+{
+	float: none;
+}
+
+* html .RadMenu .rmGroup .rmVertical .rmLink,
+* html .RadMenu .rmGroup .rmHorizontal .rmLink
+{
+	float: left;
+}
+
+/* <Shadows and rounded corners */
+
+.RadMenu .rmTopRight,
+.RadMenu .rmBottomLeft,
+.RadMenu .rmBottomRight,
+.RadMenu .rmRoundedCorners ul.rmGroup,
+.rmRoundedCorners ul.rmGroup,
+.rmRoundedCorners ul.rmGroup ul.rmGroup,
+.RadMenu .rmRoundedCorners .rmMultiColumn
+{
+	border: 0;
+	background-position: 0 0;
+}
+
+.RadMenu .rmRoundedCorners .rmMultiColumn ul.rmMultiGroup
+{
+	background: none;
+	margin: 0;
+}
+
+.RadMenu .rmRoundedCorners .rmGroupColumn
+{
+	height: 100%;
+}
+
+.RadMenu .rmRoundedCorners li.rmFirstGroupColumn
+{
+	background-color: transparent;
+}
+
+.RadMenu .rmTopFix,
+.RadMenu .rmTopRight,
+.RadMenu .rmBottomFix,
+.RadMenu .rmBottomLeft,
+.RadMenu .rmBottomRight
+{
+	position: absolute;
+	width: 4px;
+	height: 4px;
+	list-style-type: none;
+	list-style-position: outside;
+	font-size: 0;
+}
+
+.RadMenu_rtl .rmTopRight,
+.RadMenu_rtl .rmBottomRight
+{
+	width: 32px;
+}
+
+.RadMenu_rtl .rmTopShadowRight,
+.RadMenu_rtl .rmBottomShadowRight
+{
+	width: 4px;
+}
+
+.RadMenu .rmTopShadowRight,
+.RadMenu .rmBottomShadowLeft,
+.RadMenu .rmBottomShadowRight
+{
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+
+.rmRoundedCorners .rmTopShadowRight,
+.rmRoundedCorners .rmBottomShadowLeft,
+.rmRoundedCorners .rmBottomShadowRight
+{
+	width: 5px;
+	height: 5px;
+}
+
+.RadMenu .rmTopRight
+{
+	background-position: 100% 0;
+	top: 0;
+	right: -4px;
+	height: 100%;
+}
+
+.RadMenu .rmBottomLeft
+{
+	background-position: 0 100%;
+	bottom: -4px;
+	left: 0;
+	width: 100%;
+}
+
+.RadMenu .rmBottomFix
+{
+	background-position: -1px 0;
+	width: auto;
+	bottom: -4px;
+	left: 5px;
+	right: 0;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+.RadMenu .rmTopFix
+{
+	background-position: -1px 0;
+	width: auto;
+	top: 0;
+	left: 5px;
+	right: 0;
+	border-top-width: 1px;
+	border-top-style: solid;
+}
+
+* html .RadMenu .rmTopFix,
+* html .RadMenu .rmBottomFix,
+* html .RadMenu .rmBottomShadowLeft
+{
+	width: 0;
+}
+
+.RadMenu .rmBottomRight
+{
+	background-position: 100% 100%;
+	bottom: -4px;
+	right: -4px;
+	width: 8px;
+}
+
+.RadMenu .rmShadows li.rmBottomShadowLeft,
+.RadMenu .rmShadows .rmBottomShadowRight,
+.rmShadows .rmGroup li.rmBottomShadowLeft,
+.rmShadows .rmGroup .rmBottomShadowRight
+{
+	background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=1ItVu7fEEoDC-cVcKXuzLgAzy9Mmk9U0fN4wDDChwuRVLBZCXEc8JbaeBaOC8rEKgvpJjjz6ExxHqku5kYbQGJ6cnf3PXuS13ylRDDk19kTuEMM5rl3R8N9XDXOqK3DB1n36qrpQmOia-sSvYMkCkiPZfM41&t=634429586006210000');
+}
+
+.RadMenu .rmRoundedCorners li.rmBottomShadowLeft,
+.RadMenu .rmRoundedCorners .rmBottomShadowRight,
+.rmRoundedCorners .rmGroup li.rmBottomShadowLeft,
+.rmRoundedCorners .rmGroup .rmBottomShadowRight
+{
+	background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=87iDosHbs3PGoKWk7oJ2It1aZSXP0-IkWM4zrTOZ8PujmKdNoKXN7mcmEBhb_NaAmDGFMTAQ3cyKwqqnKCM4xJraeBMzSsR6r2n2v_ze6Z3riaNIBFh1WkoNPRxBwICGnqlCwTXhfmXJy85LKK9wQpCfo00L2HhujQZuVlx5cuILkU7O0&t=634429586006210000');
+}
+
+.RadMenu .rmShadows .rmTopShadowRight,
+.rmShadows .rmGroup .rmTopShadowRight
+{
+	right: -5px;
+	background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=HsMf5O9wcAarcU7CLYL6WpEk4DstOlyWnFUwhO8bHMzfO6oQ_TUA799W1XAEOXf4GD5I7yGG2Ojv3SgDOWQwqeOsrI8OI1q7iE-4qr8ii-ErmFaAo3u2dbV8ZgTyqaYaaXx4DUIZGAEU_WQodBKK9lhPJPs1&t=634429586006210000');
+	background-position: 100% 0;
+}
+
+.RadMenu .rmBottomShadowLeft
+{
+	bottom: -5px;
+	left: 1px;
+	background-position: 0 100%;
+}
+
+.RadMenu .rmBottomShadowRight
+{
+	bottom: -5px;
+	right: -5px;
+	width: 4px;
+	height: 5px;
+}
+
+.RadMenu .rmScrollWrapContainer .rmTopShadowRight
+{
+	right: -4px;
+}
+
+.RadMenu .rmScrollWrapContainer .rmBottomShadowRight
+{
+	bottom: -4px;
+	right: -4px;
+	width: 3px;
+	height: 4px;
+}
+
+.RadMenu .rmScrollWrapContainer .rmBottomShadowLeft
+{
+	bottom: -4px;
+}
+
+.RadMenu .rmRoundedCorners .rmTopShadowRight,
+.rmRoundedCorners .rmGroup .rmTopShadowRight
+{
+	right: -8px;
+	background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=41WFU4fosx9xbWfQ0hBxKADRv-XQtNcv4BN8zei4WlKOfKElj0tov3sCI7GeIzUPtTe_Fa-BGSY725cGgmnp71AaA33d6WkTgu8vl-OtIynfY51HEmMZDkRz0DjeNTbe9sjFFEPMODMO8VlEXpaPCyo3W441&t=634429586006210000');
+}
+
+.RadMenu .rmRoundedCorners .rmBottomShadowLeft,
+.rmRoundedCorners .rmGroup .rmBottomShadowLeft
+{
+	bottom: -8px;
+}
+
+.RadMenu .rmRoundedCorners .rmBottomShadowRight,
+.rmRoundedCorners .rmGroup .rmBottomShadowRight
+{
+	bottom: -8px;
+	right: -8px;
+	width: 7px;
+	height: 8px;
+}
+
+* html .RadMenu .rmRoundedCorners .rmBottomShadowRight,
+* html .rmRoundedCorners .rmGroup .rmBottomShadowRight
+{
+	width: 11px;
+	height: 8px;
+	font-size: 0;
+}
+
+.RadMenu .rmAccessKey
+{
+	font-size: 10px;
+	font-weight: normal;
+	float: right;
+	padding-right: 8px;
+}
+
+.RadMenu .rmRoundedCorners .rmGroup .rmItem,
+.rmRoundedCorners .rmGroup .rmItem
+{
+	z-index: 1;
+}
+
+* html .RadMenu .rmRoundedCorners .rmGroup .rmText,
+* html .RadMenu .rmShadows .rmGroup .rmText, 
+* html .rmRoundedCorners .rmGroup .rmText,
+* html .rmShadows .rmGroup .rmText { zoom: normal }
+
+.RadMenu .rmRoundedCorners .rmSlide .rmScrollWrap,
+.rmRoundedCorners .rmScrollWrapContainer .rmScrollWrap
+{
+	background-image: none;
+}
+
+.RadMenu .rmRoundedCorners .rmMultiGroup > .rmItem
+{
+	background-image: none;
+}
+
+.RadMenu .rmRoundedCorners .rmSlide,
+.RadMenu .rmShadows .rmSlide,
+.rmRoundedCorners .rmSlide,
+.rmShadows .rmSlide,
+div.rmRoundedCorners,
+div.rmShadows
+{
+	padding: 0 8px 10px 0;
+}
+
+.RadMenu .rmRoundedCorners ul.rmGroup,
+.rmRoundedCorners .rmGroup ul.rmGroup,
+.rmRoundedCorners ul.rmGroup
+{
+	margin-top: 1px;
+	padding: 1px;
+}
+
+.RadMenu .rmRoundedCorners ul.rmGroup .rmSlide,
+.rmRoundedCorners ul.rmGroup .rmSlide
+{
+	margin-top: -5px;
+}
+
+.RadMenu_rtl .rmRoundedCorners ul.rmGroup .rmSlide,
+.RadMenu_rtl.rmRoundedCorners ul.rmGroup .rmSlide
+{
+	margin-right: -5px;
+}
+
+.RadMenu .rmRoundedCorners .rmSlide .rmScrollWrap,
+.rmRoundedCorners .rmSlide .rmScrollWrap
+{
+	border: 0;
+}
+
+.RadMenu .rmRoundedCorners .rmScrollWrap,
+.RadMenu .rmShadows .rmScrollWrap,
+.rmRoundedCorners .rmScrollWrap,
+.rmShadows .rmScrollWrap
+{
+	position: relative;
+}
+
+.RadMenu .rmRoundedCorners .rmScrollWrapContainer,
+.rmRoundedCorners .rmScrollWrapContainer
+{
+	padding: 4px 0 0 4px;
+}
+
+.RadMenu .rmScrollWrapContainer
+{
+	position: absolute;
+}
+
+.RadMenu .rmScrollWrapContainer .rmTopFix
+{
+	height: 100%;
+}
+
+* html .RadMenu .rmScrollWrapContainer .rmTopFix
+{
+	height: 5px;
+}
+
+.RadMenu .rmRoundedCorners ul.rmGroup,
+.rmRoundedCorners .rmGroup ul.rmGroup,
+.rmRoundedCorners ul.rmGroup
+{
+	padding: 4px 0 0 4px;
+}
+
+.RadMenu .rmScrollWrapContainer .rmGroup,
+.rmScrollWrapContainer .rmGroup .rmGroup,
+.rmScrollWrapContainer .rmGroup
+{
+	padding: 0;
+}
+
+/* </Shadows and rounded corners */
+
+.RadMenu .rmRootGroup .rmItem .rmGroup
+{
+	padding-bottom: 1px;
+}
+
+.RadMenu .rmRoundedCorners .rmItem .rmGroup
+{
+	padding-bottom: 0;
+}
+
+.RadMenu .rmGroup .rmItem
+{
+	padding: 0;
+}
+
+.RadMenu .rmGroup .rmLink,
+.RadMenu .rmSlide .rmGroup .rmTemplate
+{
+	padding: 0;
+}
+
+.RadMenu_rtl .rmGroup .rmLink,
+.RadMenu_rtl .rmSlide .rmGroup .rmTemplate
+{
+	padding: 0;
+}
+
+.RadMenu .rmGroup .rmText
+{
+	padding: 0 54px 0 28px;
+	margin: 0 0 0 4px;
+}
+
+.RadMenu_rtl .rmGroup .rmText
+{
+	padding: 0 28px 0 54px;
+	margin: 0 4px 0 0;
+}
+
+.RadMenu .rmMultiColumn
+{
+	list-style: none;
+	display: block;
+   	position: relative;
+	margin: 0;
+	padding: 0;
+	zoom: 1;
+}
+
+.RadMenu .rmMultiColumn .rmMultiGroup
+{
+	background: none;
+	border: 0;
+	float: left;
+	display: block;
+    position: static;
+}
+
+.RadMenu .rmMultiColumn .rmGroupColumn
+{
+	float: left;
+}
+
+.RadMenu_rtl .rmMultiColumn .rmGroupColumn  
+{
+	float: right;
+}
+
+*+html .RadMenu_rtl .rmMultiColumn .rmItem { float: left; }
+* html .RadMenu_rtl .rmMultiColumn .rmItem { float: left; }
+
+.RadMenu .rmSlide .rmVertical .rmLeftImage+.rmText,
+.RadMenu_Context .rmGroup .rmLeftImage+.rmText
+{
+	padding: 0 54px 0 28px;
+}
+
+.RadMenu_rtl .rmSlide .rmVertical .rmLeftImage+.rmText,
+.RadMenu_Context_rtl .rmGroup .rmLeftImage+.rmText
+{
+	padding: 0 28px 0 54px;
+}
+
+.RadMenu .rmSlide .rmHorizontal .rmText
+{
+	padding: 0 11px 0 10px;
+}
+
+.RadMenu .rmGroup .rmLeftImage
+{
+	margin: 4px 0 0 6px;
+}
+
+* html .RadMenu .rmGroup .rmLeftImage { margin-left: 4px; }
+*+html .RadMenu .rmGroup .rmLeftImage { margin-left: 4px; }
+
+* html .rmRoundedCorners .rmGroup .rmLeftImage { margin-left: 1px; }
+*+html ul.rmRoundedCorners .rmGroup .rmLeftImage { margin-left: 2px; }
+
+.RadMenu_rtl .rmGroup .rmLeftImage
+{
+	margin: 4px 6px 0 0;
+}
+
+* html .RadMenu .rmGroup .rmLeftImage { position: absolute; }
+*+html .RadMenu .rmGroup .rmLeftImage { position: absolute; }
+
+.RadMenu a.rmImageOnly img.rmLeftImage,
+.RadMenu .rmRootGroup a.rmImageOnly
+{
+	padding: 0;
+	margin: 0;
+}
+
+.RadMenu .rmRootGroup a.rmImageOnly span.rmText
+{
+	display: none;
+}
+
+* html .RadMenu .rmImageOnly .rmLeftImage { position: static; }
+*+html .RadMenu .rmImageOnly .rmLeftImage { position: static; }
+
+* html .RadMenu_rtl .rmGroup .rmLeftImage { right: 0; }
+*+html .RadMenu_rtl .rmGroup .rmLeftImage { right: 0; }
+
+*+html .RadMenu_Context_rtl ul.rmGroup { position: absolute; }
+* html .RadMenu_Context_rtl ul.rmGroup { position: absolute; }
+
+*+html .RadMenu_Context_rtl .rmGroup .rmItem { float: left; }
+* html .RadMenu_Context_rtl .rmGroup .rmItem { float: left; }
+
+/* <separators> */
+
+.RadMenu .rmSeparator .rmText
+{
+	line-height: 0;
+	font-size: 0;
+	padding: 0;
+	background-repeat: repeat-x;
+	overflow: hidden;
+}
+
+.RadMenu .rmVertical .rmSeparator .rmText,
+.RadMenu .rmHorizontal .rmVertical .rmSeparator .rmText
+{
+	height: auto;
+	width: auto;
+	padding-bottom: 2px;
+}
+
+*+html .RadMenu .rmSeparator .rmText,   /* IE7 separator height problem */
+*+html .RadMenu .rmVertical .rmSeparator .rmText,
+*+html .RadMenu .rmHorizontal .rmVertical .rmSeparator .rmText
+{
+	height: 2px;
+	padding: 0;
+}
+
+* html .RadMenu .rmVertical .rmSeparator { height: 3px; }
+* html .RadMenu .rmVertical .rmSeparator .rmText { height: auto; padding: 2px 0 0; }
+* html .RadMenu .rmHorizontal .rmSeparator .rmText { padding: 0; }
+* html .RadMenu .rmHorizontal .rmVertical .rmSeparator { height: 3px; }
+* html .RadMenu .rmHorizontal .rmVertical .rmSeparator .rmText { height: 2px; }
+
+.RadMenu .rmRootGroup .rmSeparator .rmText
+{
+	margin: 1px 12px;
+}
+
+.RadMenu .rmRootGroup .rmVertical .rmSeparator .rmText,
+.RadMenu_Context .rmVertical .rmSeparator .rmText
+{
+	margin: 1px 2px 1px 31px;
+}
+
+.RadMenu_rtl .rmRootGroup .rmVertical .rmSeparator .rmText,
+.RadMenu_Context_rtl .rmVertical .rmSeparator .rmText
+{
+	margin: 1px 31px 1px 2px;
+}
+
+.RadMenu .rmHorizontal .rmSeparator .rmText,
+.RadMenu .rmVertical .rmHorizontal .rmSeparator .rmText
+{
+	margin: 2px 0 0;
+	height: 20px;
+	width: 2px;
+}
+
+* html .RadMenu .rmHorizontal .rmVertical .rmSeparator .rmText
+{
+	zoom: 1;
+}
+
+/* </separators> */
+
+/* <scroll arrows> */
+
+.RadMenu .rmLeftArrow,
+.RadMenu .rmRightArrow
+{
+	width: 10px;
+	height: 24px;
+}
+
+.RadMenu .rmTopArrow,
+.RadMenu .rmBottomArrow
+{
+	height: 10px;
+	width: 100%;
+}
+
+/* </scroll arrows> */
+
+/* </base styles> */
+
+/* END Telerik.Web.UI.Skins.Menu.css */
+/* START Telerik.Web.UI.Skins.Web20.Menu.Web20.css */
+/* <RadMenu / Web20> */
+
+.RadMenu_Web20 .rmRootGroup,
+.RadMenu_Web20 a.rmLink,
+.RadMenu_Web20 .rmText,
+.RadMenu_Web20 .rmLeftArrow,
+.RadMenu_Web20 .rmRightArrow,
+.RadMenu_Web20 .rmTopArrow,
+.RadMenu_Web20 .rmBottomArrow
+{
+	background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=DmWSfarNgbGKPuIhUo9NkImS6etpcMNPnkJ8sLhtp-e46HFbDcgwMVmCqYUWYnUaYNHjCsT-AEi74X_rjvLCdEARM3E6022LLoxYAt7HjLsVqKWfVSMuruc3JdNPgKG6m4DCn9j9WTcf3ZtXT9JIXgT3crg1&t=634429586006210000');
+	background-color: transparent;
+}
+
+.RadMenu_Web20 .rmRootGroup
+{
+	border: 1px solid #6788be;
+	background-color: #93b4df;
+}
+
+.RadMenu_Web20 .rmHorizontal
+{
+	background-repeat: repeat-x;
+	background-position: 0 0;
+}
+
+.RadMenu_Web20 .rmVertical
+{
+	background-image: none;
+}
+
+/* <Root items> */
+
+.RadMenu_Web20,
+.RadMenu_Web20 a.rmLink
+{
+	font: normal 12px/23px "Segoe UI", Arial, sans-serif;
+	text-decoration: none;
+}
+
+.RadMenu_Web20 a.rmLink
+{
+	color: #fff;
+}
+
+.RadMenu_Web20 a.rmLink,
+.RadMenu_Web20 a.rmLink .rmText
+{
+	background-repeat: no-repeat;
+	background-position: 0 500px;
+}
+
+.RadMenu_Web20 .rmVertical .rmFirst,
+.RadMenu_Web20 .rmVertical .rmLast
+{
+	background: none;
+}
+
+.RadMenu_Web20 a.rmLink:hover,
+.RadMenu_Web20 a.rmFocused,
+.RadMenu_Web20 a.rmSelected,
+.RadMenu_Web20 a.rmExpanded,
+.RadMenu_Web20 a.rmExpanded:hover
+{
+	color: #0f3789;
+	background-position: 0 -72px;
+}
+
+.RadMenu_Web20 .rmFirst a.rmLink:hover,
+.RadMenu_Web20 .rmFirst a.rmFocused,
+.RadMenu_Web20 .rmFirst a.rmSelected,
+.RadMenu_Web20 .rmFirst a.rmExpanded,
+.RadMenu_Web20 .rmFirst a.rmExpanded:hover
+{
+	background-position: -1px -72px;
+}
+
+.RadMenu_Web20 a.rmLink:hover .rmText,
+.RadMenu_Web20 a.rmFocused .rmText,
+.RadMenu_Web20 a.rmSelected .rmText,
+.RadMenu_Web20 a.rmExpanded .rmText,
+.RadMenu_Web20 a.rmExpanded:hover .rmText
+{
+	background-position: 100% -96px;
+}
+
+.RadMenu_Web20 .rmLast a.rmLink:hover .rmText,
+.RadMenu_Web20 .rmLast a.rmFocused .rmText,
+.RadMenu_Web20 .rmLast a.rmSelected .rmText,
+.RadMenu_Web20 .rmLast a.rmExpanded .rmText,
+.RadMenu_Web20 .rmLast a.rmExpanded:hover .rmText
+{
+	background-position: 0 -96px;
+}
+
+.RadMenu_Web20 .rmItem a.rmDisabled,
+.RadMenu_Web20 .rmItem a.rmDisabled:hover,
+.RadMenu_Web20 .rmItem a.rmDisabled .rmText,
+.RadMenu_Web20 .rmItem a.rmDisabled:hover .rmText
+{
+	background-repeat: no-repeat;
+	background-position: 0 500px;
+}
+
+.RadMenu_Web20 .rmVertical a.rmLink
+{
+	padding-top: 1px;
+	padding-bottom: 1px;
+}
+
+.RadMenu_Web20 .rmVertical a.rmLink:hover,
+.RadMenu_Web20 .rmVertical a.rmFocused,
+.RadMenu_Web20 .rmVertical a.rmSelected,
+.RadMenu_Web20 .rmVertical a.rmExpanded,
+.RadMenu_Web20 .rmVertical a.rmExpanded:hover
+{
+	padding-top: 0;
+	padding-bottom: 0;
+	border-style: solid;
+	border-color: #3f5f94;
+	border-width: 1px 0;
+}
+
+.RadMenu_Web20 .rmVertical a.rmLink:hover,
+.RadMenu_Web20 .rmVertical a.rmFocused,
+.RadMenu_Web20 .rmVertical a.rmSelected,
+.RadMenu_Web20 .rmVertical a.rmExpanded,
+.RadMenu_Web20 .rmVertical a.rmExpanded:hover,
+.RadMenu_Web20 .rmVertical a.rmLink:hover .rmText,
+.RadMenu_Web20 .rmVertical a.rmFocused .rmText,
+.RadMenu_Web20 .rmVertical a.rmSelected .rmText,
+.RadMenu_Web20 .rmVertical a.rmExpanded .rmText,
+.RadMenu_Web20 .rmVertical a.rmExpanded:hover .rmText
+{
+	background-position: -1px -72px;
+}
+
+.RadMenu_Web20 .rmVertical .rmFirst a.rmLink:hover,
+.RadMenu_Web20 .rmVertical .rmFirst a.rmFocused,
+.RadMenu_Web20 .rmVertical .rmFirst a.rmSelected,
+.RadMenu_Web20 .rmVertical .rmFirst a.rmExpanded,
+.RadMenu_Web20 .rmVertical .rmFirst a.rmExpanded:hover
+{
+	padding-top: 1px;
+	padding-bottom: 0;
+	border-top-width: 0;
+}
+
+.RadMenu_Web20 .rmVertical .rmLast a.rmLink:hover,
+.RadMenu_Web20 .rmVertical .rmLast a.rmFocused,
+.RadMenu_Web20 .rmVertical .rmLast a.rmSelected,
+.RadMenu_Web20 .rmVertical .rmLast a.rmExpanded,
+.RadMenu_Web20 .rmVertical .rmLast a.rmExpanded:hover
+{
+	padding-bottom: 1px;
+	padding-top: 0;
+	border-bottom-width: 0;
+}
+
+.RadMenu_Web20 .rmVertical .rmItem a.rmDisabled:hover
+{
+	padding-top: 1px;
+	padding-bottom: 1px;
+	border-width: 0;
+}
+
+.RadMenu_Web20 .rmLast a.rmExpanded .rmText
+{
+	background-position: 0 500px;
+	background-repeat: no-repeat;
+}
+
+.RadMenu_Web20 .rmRootGroup a.rmDisabled,
+.RadMenu_Web20 .rmRootGroup a.rmDisabled:hover
+{
+	color: #bdcae3;
+	background: none;
+}
+
+/* </Root items> */
+
+
+/* <Submenu items> */
+
+.RadMenu_Web20 .rmGroup,
+.RadMenu_Web20 .rmMultiColumn,
+.RadMenu_Web20 .rmGroup .rmVertical
+{
+	border: 1px solid #6788BE;
+	background: #fff url('/clients/CenterStageNorth/Images/webresource.axd?d=yUv9-RVwyYBqXgtzVqz1HHGTKlBCypGqDRFLkJHP4L8aY9pMLzqrVzdcB-Nt0YDJY8kb9b6T_ceaWtAliwoc7TywQe_r4wuOVQAG9umrBGRm60JglB9EvkU8vExuBb_QELI2vNHqVYYkvnQeSAKHvNCKZIw1&t=634429586006210000') repeat-y -1px 0;
+}
+
+.RadMenu_Web20 .rmTopFix,
+.RadMenu_Web20 .rmBottomFix,
+.RadMenu_Web20 .rmRoundedCorners .rmGroup .rmItem,
+.RadMenu_Web20 .rmRoundedCorners li.rmFirstGroupColumn .rmItem,
+.RadMenu_Web20 .rmRoundedCorners .rmFirstGroupColumn li.rmFirstGroupColumn .rmItem,
+.RadMenu_Web20 .rmRoundedCorners ul.rmHorizontal .rmFirst,
+.RadMenu_Web20_Context.rmRoundedCorners .rmGroup .rmItem,
+.RadMenu_Web20_Context.rmRoundedCorners ul.rmHorizontal .rmFirst
+{
+	background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=yUv9-RVwyYBqXgtzVqz1HHGTKlBCypGqDRFLkJHP4L8aY9pMLzqrVzdcB-Nt0YDJY8kb9b6T_ceaWtAliwoc7TywQe_r4wuOVQAG9umrBGRm60JglB9EvkU8vExuBb_QELI2vNHqVYYkvnQeSAKHvNCKZIw1&t=634429586006210000');
+	background-color: #fff; 
+	background-repeat: repeat-y;
+	background-position: -3px 0;
+}
+
+* html .rmRoundedCorners_Web20 .rmGroup .rmItem,
+* html .rmRoundedCorners_Web20 ul.rmHorizontal .rmFirst
+{
+	background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=yUv9-RVwyYBqXgtzVqz1HHGTKlBCypGqDRFLkJHP4L8aY9pMLzqrVzdcB-Nt0YDJY8kb9b6T_ceaWtAliwoc7TywQe_r4wuOVQAG9umrBGRm60JglB9EvkU8vExuBb_QELI2vNHqVYYkvnQeSAKHvNCKZIw1&t=634429586006210000');
+	background-color: #fff; 
+	background-repeat: repeat-y;
+	background-position: -3px 0;
+}
+
+.RadMenu_Web20 .rmRoundedCorners .rmScrollWrapContainer .rmGroup,
+.RadMenu_Web20 .rmRoundedCorners .rmScrollWrap .rmItem,
+.RadMenu_Web20 .rmRoundedCorners .rmGroupColumn .rmItem,
+.RadMenu_Web20 .rmRoundedCorners .rmGroupColumn .rmGroupColumn .rmItem,
+.RadMenu_Web20 .rmRoundedCorners .rmHorizontal .rmItem,
+.RadMenu_Web20 .rmRoundedCorners .rmScrollWrap .rmVertical,
+.RadMenu_Web20_Context.rmRoundedCorners .rmScrollWrapContainer .rmGroup,
+.RadMenu_Web20_Context.rmRoundedCorners .rmScrollWrap .rmItem,
+.RadMenu_Web20_Context.rmRoundedCorners .rmHorizontal .rmItem,
+.RadMenu_Web20_Context.rmRoundedCorners .rmScrollWrap .rmVertical
+{
+	background-image: none;
+}
+
+* html .rmRoundedCorners_Web20 .rmScrollWrapContainer .rmGroup,
+* html .rmRoundedCorners_Web20 .rmScrollWrap .rmItem,
+* html .rmRoundedCorners_Web20 .rmHorizontal .rmItem,
+* html .rmRoundedCorners_Web20 .rmScrollWrap .rmVertical
+{
+	background-image: none;
+}
+
+.RadMenu_Web20 .rmRoundedCorners .rmGroupColumn
+{
+	background-color: #fff;
+}
+
+.RadMenu_Web20 .rmBottomLeft,
+.RadMenu_Web20 .rmRoundedCorners .rmScrollWrapContainer,
+.RadMenu_Web20_Context.rmRoundedCorners .rmScrollWrapContainer,
+.RadMenu_Web20_Context.rmRoundedCorners ul.rmGroup,
+.RadMenu_Web20 .rmRoundedCorners ul.rmGroup,
+.RadMenu_Web20 .rmRoundedCorners .rmMultiColumn
+{
+	background-image:  url('/clients/CenterStageNorth/Images/webresource.axd?d=Xeawh3ANSaam1_rxEksCtuoek4wS0dMUSBk7V5dY-Bevb0M8c7TTQ5AET4Idzgh_-88Nu4SeF5rrH-48LIqLd2_Yn0kdVrjsH6GdnwM1FTHIOp30IXUwrq6ueMRN5jKDlYnAVhJMiYkEHgONRAH3sWOknQo1&t=634429586006210000');
+	background-color: transparent; 
+	background-repeat: no-repeat;
+}
+
+* html .rmRoundedCorners_Web20 .rmScrollWrapContainer,
+* html .rmRoundedCorners_Web20 .rmGroup ul.rmGroup,
+* html .rmRoundedCorners_Web20 ul.rmGroup
+{
+	background-image:  url('/clients/CenterStageNorth/Images/webresource.axd?d=Xeawh3ANSaam1_rxEksCtuoek4wS0dMUSBk7V5dY-Bevb0M8c7TTQ5AET4Idzgh_-88Nu4SeF5rrH-48LIqLd2_Yn0kdVrjsH6GdnwM1FTHIOp30IXUwrq6ueMRN5jKDlYnAVhJMiYkEHgONRAH3sWOknQo1&t=634429586006210000');
+	background-color: transparent; 
+	background-repeat: no-repeat;
+}
+
+.RadMenu_Web20 .rmTopRight,
+.RadMenu_Web20 .rmBottomRight
+{
+	background-image:  url('/clients/CenterStageNorth/Images/webresource.axd?d=lLNFJmCmNutoEBvTxQXczfwN-nose4TLMzGcDFzscYTVPiBOMA2tcXc37oVqlQSE3XRc55uVIRGaGbQ2mVRAU6T0MhkQ81WWPeZRa6RcvqLWmlW_d9MHWJXgWT58lfrPo8ZUPS89-WzKyOfr75PKK4uVdLU1&t=634429586006210000');
+	background-color: transparent; 
+	background-repeat: no-repeat;
+}
+
+.RadMenu_Web20 .rmTopFix,
+.RadMenu_Web20 .rmBottomFix,
+.RadMenu_Web20 .rmRoundedCorners .rmGroup .rmFirst,
+.RadMenu_Web20_Context.rmRoundedCorners .rmGroup .rmFirst,
+.rmRoundedCorners_Web20 .rmGroup .rmFirst
+{
+	border-color: #6788BE;
+}
+
+.RadMenu_Web20 .rmRoundedCorners .rmScrollWrapContainer .rmTopFix,
+.RadMenu_Web20 .rmRoundedCorners .rmScrollWrapContainer .rmBottomFix,
+.RadMenu_Web20_Context.rmRoundedCorners .rmScrollWrapContainer .rmTopFix,
+.RadMenu_Web20_Context.rmRoundedCorners .rmScrollWrapContainer .rmBottomFix
+{
+	background: #FFF;
+}
+
+* html .rmRoundedCorners_Web20 .rmScrollWrapContainer .rmTopFix,
+* html .rmRoundedCorners_Web20 .rmScrollWrapContainer .rmBottomFix
+{
+	background: #FFF;
+}
+
+.RadMenu_Web20 .rmRoundedCorners .rmScrollWrapContainer .rmTopArrow,
+.RadMenu_Web20 .rmRoundedCorners .rmScrollWrapContainer .rmBottomArrow,
+.RadMenu_Web20 .rmRoundedCorners .rmScrollWrapContainer .rmLeftArrow,
+.RadMenu_Web20 .rmRoundedCorners .rmScrollWrapContainer .rmRightArrow,
+.RadMenu_Web20_Context.rmRoundedCorners .rmScrollWrapContainer .rmTopArrow,
+.RadMenu_Web20_Context.rmRoundedCorners .rmScrollWrapContainer .rmBottomArrow,
+.RadMenu_Web20_Context.rmRoundedCorners .rmScrollWrapContainer .rmLeftArrow,
+.RadMenu_Web20_Context.rmRoundedCorners .rmScrollWrapContainer .rmRightArrow
+{
+	background-color: #FFF;
+	border: 0;
+}
+
+* html .rmRoundedCorners_Web20 .rmScrollWrapContainer .rmTopArrow,
+* html .rmRoundedCorners_Web20 .rmScrollWrapContainer .rmBottomArrow,
+* html .rmRoundedCorners_Web20 .rmScrollWrapContainer .rmLeftArrow,
+* html .rmRoundedCorners_Web20 .rmScrollWrapContainer .rmRightArrow
+{
+	background-color: #FFF;
+	border: 0;
+}
+
+.RadMenu_Web20 li.rmTopFix,
+.RadMenu_Web20 li.rmBottomFix
+{
+	background-position: -4px 0;
+}
+
+.RadMenu_Web20_rtl .rmBottomLeft,
+.RadMenu_Web20_rtl .rmRoundedCorners ul.rmGroup,
+.RadMenu_Web20_rtl .rmRoundedCorners .rmMultiColumn,
+.RadMenu_Web20 .rmRoundedCorners .rmScrollWrapContainer,
+.RadMenu_Web20 .rmScrollWrapContainer .rmBottomLeft,
+.rmRoundedCorners.RadMenu_Web20_Context_rtl ul.rmGroup,
+.RadMenu_Web20_Context.rmRoundedCorners .rmScrollWrapContainer
+{
+	background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=PbgZ1CoUohSFc2r06paL9WewvtgrtAfm8nwqZTC0dFp-H0LQRkZTuoFuU6HVVdDVPLly1mz-og6_BpKz5tbL--S_NVj-Ej4F-XgOjphRafFvSMimMCYjPnB8rWW3P9AORpjlBtyUQwGXVV-4iRSXETUy11s1&t=634429586006210000');
+}
+
+.RadMenu_Web20_rtl .rmTopRight,
+.RadMenu_Web20_rtl .rmBottomRight
+{
+	background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=DqT48ksdNQY5EgpXG3_CAZnRCc8Cr9oBOGeFyg5bh6EI9CfELi1JR4B86sKUrom275o0xdcDEX3sw0ORlMh4nhlFLDtlYFvfECyv8sn05m1zn53wnGNdg3doYiYFbKRdCISPCB8PCaZYxfGxwLqcMhoZ43k1&t=634429586006210000');
+}
+
+.RadMenu_Web20_rtl li.rmTopFix,
+.RadMenu_Web20_rtl li.rmBottomFix,
+.RadMenu_Web20_rtl .rmRoundedCorners .rmGroup .rmItem,
+.rmRoundedCorners.RadMenu_Web20_Context_rtl ul.rmGroup .rmItem
+{
+	background-position: 101% 0;
+}
+
+.RadMenu_Web20 .rmGroup a.rmLink
+{
+	color: #000;
+}
+
+.RadMenu_Web20 .rmSlide .rmScrollWrap
+{
+	background-image: none;
+}
+
+.RadMenu_Web20_rtl .rmGroup,
+.RadMenu_Web20_rtl .rmMultiColumn,
+.RadMenu_Web20_rtl .rmGroup .rmVertical
+{
+	background-position: 101% 0;
+}
+
+.RadMenu_Web20 .rmRootGroup .rmHorizontal
+{
+	background-image: none;
+}
+
+.RadMenu_Web20 .rmScrollWrap .rmVertical
+{
+	border: 0;
+}
+
+.RadMenu_Web20 .rmRoundedCorners .rmScrollWrapContainer li.rmItem,
+.RadMenu_Web20_Context.rmRoundedCorners .rmScrollWrapContainer li.rmItem,
+.rmRoundedCorners_Web20 .rmScrollWrapContainer li.rmItem
+{
+	background: none;
+}
+
+.RadMenu_Web20 .rmGroup a.rmLink:hover,
+.RadMenu_Web20 .rmGroup .rmItem a.rmFocused,
+.RadMenu_Web20 .rmGroup .rmItem a.rmSelected,
+.RadMenu_Web20 .rmGroup .rmItem a.rmExpanded
+{
+	color: #0f3789;
+}
+
+.RadMenu_Web20 .rmGroup a.rmDisabled,
+.RadMenu_Web20 .rmGroup a.rmDisabled:hover
+{
+	color: #8a8a8a;
+}
+
+.RadMenu_Web20 .rmGroup .rmItem a.rmLink,
+.RadMenu_Web20 .rmGroup .rmItem a.rmLink:hover,
+.RadMenu_Web20 .rmGroup .rmItem a.rmFocused,
+.RadMenu_Web20 .rmGroup .rmItem a.rmSelected,
+.RadMenu_Web20 .rmGroup .rmItem a.rmExpanded
+{
+	padding-top: 0;
+	padding-bottom: 0;
+	border: 0;
+}
+
+.RadMenu_Web20 .rmGroup a.rmLink,
+.RadMenu_Web20 .rmGroup .rmText,
+.RadMenu_Web20 .rmGroup .rmItem a.rmDisabled,
+.RadMenu_Web20 .rmGroup .rmItem a.rmDisabled:hover,
+.RadMenu_Web20 .rmGroup .rmItem a.rmDisabled .rmText,
+.RadMenu_Web20 .rmGroup .rmItem a.rmDisabled:hover .rmText
+{
+	background-position: 0 500px;
+	background-repeat: no-repeat;
+	background-color: transparent;
+}
+
+.RadMenu_Web20 .rmGroup a.rmLink:hover,
+.RadMenu_Web20 .rmGroup a.rmFocused,
+.RadMenu_Web20 .rmGroup a.rmSelected,
+.RadMenu_Web20 .rmGroup a.rmExpanded
+{
+	background-position: 0 -168px;
+}
+
+.RadMenu_Web20 .rmGroup a.rmLink:hover .rmText,
+.RadMenu_Web20 .rmGroup a.rmFocused .rmText,
+.RadMenu_Web20 .rmGroup a.rmSelected .rmText,
+.RadMenu_Web20 .rmGroup a.rmExpanded .rmText
+{
+	background-position: 100% -192px;
+}
+
+/* <expand arrows> */
+
+.RadMenu_Web20 .rmRootGroup .rmLink .rmExpandRight,
+.RadMenu_Web20 .rmGroup .rmLink .rmExpandDown,
+.RadMenu_Web20_Context .rmGroup .rmLink .rmExpandRight,
+.RadMenu_Web20 .rmRootGroup .rmItem a.rmDisabled .rmExpandRight,
+.RadMenu_Web20 .rmGroup .rmItem a.rmDisabled .rmExpandDown,
+.RadMenu_Web20 .rmRootGroup .rmItem a.rmDisabled:hover .rmExpandRight,
+.RadMenu_Web20 .rmGroup .rmItem a.rmDisabled:hover .rmExpandDown
+{
+	background-position: 100% -216px;
+}
+
+.RadMenu_Web20 a.rmLink:hover .rmExpandRight,
+.RadMenu_Web20 a.rmFocused .rmExpandRight,
+.RadMenu_Web20 a.rmExpanded .rmExpandRight,
+.RadMenu_Web20 a.rmSelected .rmExpandRight,
+.RadMenu_Web20 a.rmLink:hover .rmExpandLeft,
+.RadMenu_Web20 a.rmFocused .rmExpandLeft,
+.RadMenu_Web20 a.rmExpanded .rmExpandLeft,
+.RadMenu_Web20 a.rmSelected .rmExpandLeft
+{
+    background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=8a9-su0osmpX4HxWayo5P1KKRZMhGND7Ktm0lDnJHeszeuspZpgmC02SJm4kaLHPQnehxeLgz90wK9NIgG-oCG-Qt2NurJnINjIopCh8BVfbmfShWPxoSa81ZBg730IhLIixMJajoYEs4PPJad3-wUrhGok1&t=634429586006210000');
+}
+
+.RadMenu_Web20 .rmVertical a.rmLink:hover .rmExpandRight,
+.RadMenu_Web20 .rmVertical a.rmSelected .rmExpandRight,
+.RadMenu_Web20 .rmVertical a.rmExpanded .rmExpandRight,
+.RadMenu_Web20 .rmVertical a.rmFocused .rmExpandRight
+{
+	background-position: 100% 0;
+}
+
+.RadMenu_Web20 .rmGroup a.rmLink:hover .rmExpandRight,
+.RadMenu_Web20 .rmGroup a.rmFocused .rmExpandRight,
+.RadMenu_Web20 .rmGroup a.rmSelected .rmExpandRight,
+.RadMenu_Web20 .rmGroup a.rmExpanded .rmExpandRight,
+.RadMenu_Web20 .rmGroup a.rmLink:hover .rmExpandDown,
+.RadMenu_Web20 .rmGroup a.rmFocused .rmExpandDown,
+.RadMenu_Web20 .rmGroup a.rmSelected .rmExpandDown,
+.RadMenu_Web20 .rmGroup a.rmExpanded .rmExpandDown
+{
+    background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=DmWSfarNgbGKPuIhUo9NkImS6etpcMNPnkJ8sLhtp-e46HFbDcgwMVmCqYUWYnUaYNHjCsT-AEi74X_rjvLCdEARM3E6022LLoxYAt7HjLsVqKWfVSMuruc3JdNPgKG6m4DCn9j9WTcf3ZtXT9JIXgT3crg1&t=634429586006210000');
+	background-position: 100% -240px;
+}
+
+.RadMenu_Web20 .rmRootGroup a.rmDisabled:hover .rmExpandRight,
+.RadMenu_Web20 .rmGroup a.rmDisabled:hover .rmExpandDown
+{
+	background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=DmWSfarNgbGKPuIhUo9NkImS6etpcMNPnkJ8sLhtp-e46HFbDcgwMVmCqYUWYnUaYNHjCsT-AEi74X_rjvLCdEARM3E6022LLoxYAt7HjLsVqKWfVSMuruc3JdNPgKG6m4DCn9j9WTcf3ZtXT9JIXgT3crg1&t=634429586006210000');
+	background-position: 100% -216px;
+}
+
+/* </expand arrows> */
+
+/* <rtl> */
+
+.RadMenu_Web20_rtl a.rmLink:hover,
+.RadMenu_Web20_rtl a.rmFocused,
+.RadMenu_Web20_rtl a.rmSelected
+{
+    background-position: 100% -96px;
+}
+
+.RadMenu_Web20_rtl a.rmLink:hover .rmText,
+.RadMenu_Web20_rtl a.rmFocused .rmText,
+.RadMenu_Web20_rtl a.rmSelected .rmText
+{
+    background-position: 0 -72px;
+}
+
+.RadMenu_Web20_rtl a.rmExpanded,
+.RadMenu_Web20_rtl a.rmExpanded:hover
+{
+    background-position: 100% -144px;
+}
+
+.RadMenu_Web20_rtl a.rmExpanded .rmText,
+.RadMenu_Web20_rtl a.rmExpanded:hover .rmText
+{
+    background-position: 0 -120px;
+}
+
+.RadMenu_Web20_rtl .rmGroup a.rmLink:hover,
+.RadMenu_Web20_rtl .rmGroup a.rmFocused,
+.RadMenu_Web20_rtl .rmGroup a.rmSelected,
+.RadMenu_Web20_rtl .rmGroup a.rmExpanded
+{
+	background-position: 100% -264px;
+}
+
+.RadMenu_Web20_rtl .rmGroup a.rmLink:hover .rmText,
+.RadMenu_Web20_rtl .rmGroup a.rmFocused .rmText,
+.RadMenu_Web20_rtl .rmGroup a.rmSelected .rmText,
+.RadMenu_Web20_rtl .rmGroup a.rmExpanded .rmText
+{
+	background-position: 0 -288px;
+}
+
+.RadMenu_Web20_Context_rtl .rmVertical .rmLink .rmExpandLeft,
+.RadMenu_Web20_rtl .rmRootGroup a.rmLink .rmExpandLeft
+{
+	background-position: 0 -312px;
+}
+
+.RadMenu_Web20_rtl .rmVertical a.rmLink:hover .rmExpandLeft,
+.RadMenu_Web20_rtl .rmVertical a.rmSelected .rmExpandLeft,
+.RadMenu_Web20_rtl .rmVertical a.rmExpanded .rmExpandLeft,
+.RadMenu_Web20_rtl .rmVertical a.rmFocused .rmExpandLeft
+{
+	background-position: 0 0;
+}
+
+.RadMenu_Web20_rtl .rmGroup a.rmLink:hover .rmExpandLeft,
+.RadMenu_Web20_rtl .rmGroup a.rmFocused .rmExpandLeft,
+.RadMenu_Web20_rtl .rmGroup a.rmSelected .rmExpandLeft,
+.RadMenu_Web20_rtl .rmGroup a.rmExpanded .rmExpandLeft
+{
+    background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=DmWSfarNgbGKPuIhUo9NkImS6etpcMNPnkJ8sLhtp-e46HFbDcgwMVmCqYUWYnUaYNHjCsT-AEi74X_rjvLCdEARM3E6022LLoxYAt7HjLsVqKWfVSMuruc3JdNPgKG6m4DCn9j9WTcf3ZtXT9JIXgT3crg1&t=634429586006210000');
+	background-position: 0 -336px;
+}
+
+.RadMenu_Web20_rtl .rmRootGroup a.rmDisabled:hover .rmExpandLeft
+{
+    background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=DmWSfarNgbGKPuIhUo9NkImS6etpcMNPnkJ8sLhtp-e46HFbDcgwMVmCqYUWYnUaYNHjCsT-AEi74X_rjvLCdEARM3E6022LLoxYAt7HjLsVqKWfVSMuruc3JdNPgKG6m4DCn9j9WTcf3ZtXT9JIXgT3crg1&t=634429586006210000');
+	background-position: 0 -312px;
+}
+
+/* </rtl> */
+
+/* </Submenu items> */
+
+/* <Submenu offsets (Web20 - specific, overlapping submenus)> */
+
+.RadMenu_Web20 .rmFirst .rmSlide
+{
+	margin: 0 0 0 -1px;
+}
+
+.RadMenu_Web20 .rmVertical .rmSlide,
+.RadMenu_Web20 .rmSlide .rmSlide,
+.RadMenu_Web20_Context .rmGroup .rmSlide
+{
+	margin: 0 0 0 -5px;
+}
+
+.RadMenu_Web20_rtl .rmSlide
+{
+	margin: 0 0 0 0;
+}
+
+.RadMenu_Web20_rtl .rmFirst .rmSlide
+{
+	margin-left: 1px;
+}
+
+.RadMenu_Web20_rtl .rmVertical .rmSlide,
+.RadMenu_Web20_rtl .rmSlide .rmSlide,
+.RadMenu_Web20_Context_rtl .rmGroup .rmSlide
+{
+	margin: 0 0 0 5px;
+}
+
+/* </Submenu offsets> */
+
+/* <Scrolling arrows> */
+
+.RadMenu_Web20 .rmLeftArrow,
+.RadMenu_Web20 .rmRightArrow
+{
+	background-color: #ECF4FF;
+}
+
+.RadMenu_Web20 .rmLeftArrow { background-position: -8px -312px; border-right: 1px solid #828282; }
+.RadMenu_Web20 .rmRightArrow { background-position: -482px -216px; border-left: 1px solid #828282; }
+
+.RadMenu_Web20 .rmTopArrow,
+.RadMenu_Web20 .rmBottomArrow,
+.RadMenu_Web20 .rmGroup .rmLeftArrow,
+.RadMenu_Web20 .rmGroup .rmRightArrow
+{
+	background-color: #ECF4FF;
+}
+
+.RadMenu_Web20 .rmTopArrow { background-position: 50% -367px; border-bottom: 1px solid #828282; }
+.RadMenu_Web20 .rmBottomArrow { background-position: 50% -391px; border-top: 1px solid #828282; }
+
+/* </Scrolling arrows> */
+
+/* <Separators> */
+
+.RadMenu_Web20 .rmHorizontal .rmSeparator .rmText,
+.RadMenu_Web20 .rmVertical .rmHorizontal .rmSeparator .rmText
+{
+	height: 22px;
+	margin: 1px 0 0;
+	width: 1px;
+}
+
+.RadMenu_Web20 .rmHorizontal .rmSeparator .rmText
+{
+	background-color: transparent;
+	background-position: 0 -386px;
+}
+
+.RadMenu_Web20_Context .rmSeparator .rmText,
+.RadMenu_Web20 .rmHorizontal .rmGroup .rmSeparator .rmText,
+.RadMenu_Web20 .rmVertical .rmHorizontal .rmGroup .rmSeparator .rmText
+{
+	background-color: transparent;
+	background-position: 0 -408px;
+}
+
+/* </Separators> */
+
+/* </RadMenu / Web20> */
+
+/* END Telerik.Web.UI.Skins.Web20.Menu.Web20.css */
+/* START Telerik.Web.UI.Skins.ToolTip.css */
+/* RadToolTip Base Stylesheet */
+/*set width:auto because if it is 100% the right border is not visible - should be 100% minus the width of the side border TDs*/
+.RadToolTip.rtLoading
+{	
+	width: auto; 
+	height: 100%;
+}
+
+div.RadToolTip
+{
+	position: absolute;
+	cursor: default;
+}
+
+div.RadToolTip div.rtCallout
+{
+	display: none;
+}
+
+div.RadToolTip.rtVisibleCallout div.rtCallout
+{
+	display: block;
+}
+
+div.RadToolTip table.rtWrapper
+{
+	padding: 0; 
+	margin: 0;
+	border-collapse: collapse;
+}
+
+.RadToolTip table.rtWrapper td.rtWrapperTopLeft,
+.RadToolTip table.rtWrapper td.rtWrapperTopRight,
+.RadToolTip table.rtWrapper td.rtWrapperBottomLeft,
+.RadToolTip table.rtWrapper td.rtWrapperBottomRight
+{
+	width: 3px; 
+	height: 3px; 
+	line-height: 1px; 
+	font-size: 1px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+}
+
+div.RadToolTip table.rtWrapper td.rtWrapperTopLeft
+{
+	background-position: 0 -12px;
+}
+
+div.RadToolTip table.rtWrapper td.rtWrapperTopRight
+{
+	background-position: right -12px;
+}
+
+div.RadToolTip table.rtWrapper td.rtWrapperBottomLeft
+{
+	background-position: 0 -63px;
+}
+
+div.RadToolTip table.rtWrapper td.rtWrapperBottomRight
+{
+	background-position: right -63px;
+}
+
+div.RadToolTip table.rtWrapper td.rtWrapperTopCenter,
+div.RadToolTip table.rtWrapper td.rtWrapperBottomCenter
+{
+	height: 3px; 
+	line-height: 0px; 
+	font-size: 1px;
+	background-repeat: repeat-x;
+}
+
+div.RadToolTip table.rtWrapper td.rtWrapperTopCenter
+{
+	background-position: 0 -66px;
+}
+
+div.RadToolTip table.rtWrapper td.rtWrapperBottomCenter
+{
+	background-position: 0 -120px;
+}
+
+div.RadToolTip table.rtWrapper td.rtWrapperLeftMiddle,
+div.RadToolTip table.rtWrapper td.rtWrapperRightMiddle
+{
+	background-repeat: repeat-y;
+	font-size: 1px;
+	width: 3px;
+}
+
+div.RadToolTip table.rtWrapper td.rtWrapperLeftMiddle
+{
+	background-position: 0 0;
+}
+
+div.RadToolTip table.rtWrapper td.rtWrapperRightMiddle
+{
+	background-position: -3px 0;
+}
+
+div.RadToolTip table.rtWrapper td.rtWrapperContent
+{
+	font: normal 12px "Segoe UI", Arial, Sans-serif;
+	height: 100%;
+}
+
+div.RadToolTip div.rtTitlebar
+{	
+	font: normal 18px "Segoe UI", Arial, Sans-serif;
+	float: left;
+	line-height: 22px;
+}
+
+div.RadToolTip a.rtCloseButton
+{
+	display: block; 
+	float: right;
+	position: absolute;
+	right: 1px;
+	width: 12px; 
+	height: 12px;
+	font-size: 1px; 
+	line-height: 1px;
+	margin-top: 3px;
+	margin-right: 3px;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	outline: none;
+}
+
+/* RTL support begin */
+div.RadToolTip_rtl a.rtCloseButton,
+div.RadToolTip_rtl a.rtCloseButton:hover
+{
+	float: left ;
+	text-decoration: none ;
+    outline: none;
+    left: 2px;
+    margin-left: 1px;
+    right: auto;
+    margin-right: auto;
+}
+
+div.RadToolTip_rtl div.rtTitlebar,
+div.RadToolTip_rtl table.rtWrapper td.rtWrapperTopCenter div.rtTitlebar div
+{
+	float: right ;
+}
+
+/* position="rtCalloutCenter" */
+div.RadToolTip_rtl .rtCalloutCenter
+{
+	right: 0;
+	left: auto;
+}
+
+/* position="rtCalloutBottomRight" */
+.RadToolTip_rtl .rtCalloutTopLeft
+{
+	margin-right: -8px;
+	left: 0;
+}
+
+/* position="rtCalloutBottomCenter" */
+.RadToolTip_rtl .rtCalloutTopCenter
+{
+	margin-right: 10px;
+}
+
+/* position="rtCalloutBottomLeft" */
+.RadToolTip_rtl .rtCalloutTopRight
+{
+	margin-right: 20px;
+}
+
+/* position="rtCalloutTopCenter" */
+.RadToolTip_rtl .rtCalloutBottomCenter
+{
+	margin-right: 10px ;
+}
+
+/* position="rtCalloutTopLeft" */
+.RadToolTip_rtl .rtCalloutBottomRight
+{
+	margin-right: 40px ;
+}
+
+/* position="rtCalloutTopRight" */
+.RadToolTip_rtl .rtCalloutBottomLeft
+{
+	margin-right: -20px;
+	left: 0;
+}
+
+/* position="rtCalloutMiddleRight" */
+.RadToolTip_rtl .rtCalloutMiddleLeft
+{
+	margin-right: 10px;
+	left: 0;
+}
+
+/* position="rtCalloutMiddleLeft" */
+.RadToolTip_rtl .rtCalloutMiddleRight
+{
+	margin-right: 1px;
+}
+
+/* RTL Shadows */
+div.RadToolTip_rtl .rtShadow .rtCloseButton,
+div.RadToolTip_rtl .rtShadow a.rtCloseButton:hover
+{
+    left: 10px;
+}
+
+*+html div.RadToolTip_rtl .rtShadow .rtCloseButton,
+*+html div.RadToolTip_rtl .rtShadow a.rtCloseButton:hover
+{
+    left: 17px;
+}
+
+/* RTL support end */
+
+div.RadToolTip div.rtCallout
+{
+	position: absolute; 
+	height: 11px; 
+	width: 11px;
+	line-height: 0px; 
+	font-size: 1px;
+	background-repeat: no-repeat;
+}
+
+/* position="rtCalloutCenter" */
+div.RadToolTip .rtCalloutCenter
+{
+	visibility: hidden;
+}
+
+/* position="rtCalloutBottomRight" */
+.RadToolTip .rtCalloutTopLeft
+{
+	margin-top: -10px; 
+	margin-left: 20px;
+	background-position: 0 -22px;
+}
+
+/* position="rtCalloutBottomCenter" */
+.RadToolTip .rtCalloutTopCenter
+{
+	left: 50% ;
+	margin-top: -9px; 
+	margin-left: -10px;
+	background-position: 0 0 ;
+}
+
+/* position="rtCalloutBottomLeft" */
+.RadToolTip .rtCalloutTopRight
+{
+	left: 100% ;
+	margin-top: -10px; 
+	margin-left: -20px;
+	background-position: 0 -11px ;
+}
+
+/* position="rtCalloutTopCenter" */
+.RadToolTip .rtCalloutBottomCenter
+{
+	top: 100% ; 
+	left: 50% ;
+	margin-left: -10px ; 
+	margin-top: -1px ;
+	background-position: 0 -55px ;
+}
+
+/* position="rtCalloutTopLeft" */
+.RadToolTip .rtCalloutBottomRight
+{
+	top: 100% ; 
+	left: 100% ;
+	margin-left: -40px ; 
+	margin-top: -1px ;
+	background-position: 0 -66px ;
+}
+
+/* position="rtCalloutTopRight" */
+.RadToolTip .rtCalloutBottomLeft
+{
+	top: 100% ;
+	margin-left: 20px ; 
+	margin-top: -1px ;
+	background-position: 0 -77px ;
+}
+
+/* position="rtCalloutMiddleRight" */
+.RadToolTip .rtCalloutMiddleLeft
+{
+	top: 50% ;
+	margin-left: -10px; 
+	margin-top: -7px;
+	background-position: 0 -44px ;
+}
+
+/* position="rtCalloutMiddleLeft" */
+.RadToolTip .rtCalloutMiddleRight
+{
+	left: 100% ; 
+	top: 50% ;
+	margin-left: -1px;
+	margin-top: -10px;
+	background-position: 0 -33px;
+}
+
+.RadToolTip table.rtWrapper td.rtWrapperTopLeft,   
+.RadToolTip table.rtWrapper td.rtWrapperTopCenter,   
+.RadToolTip table.rtWrapper td.rtWrapperTopRight,   
+.RadToolTip table.rtWrapper td.rtWrapperLeftMiddle,   
+.RadToolTip table.rtWrapper td.rtWrapperContent,   
+.RadToolTip table.rtWrapper td.rtWrapperRightMiddle,   
+.RadToolTip table.rtWrapper td.rtWrapperBottomLeft,   
+.RadToolTip table.rtWrapper td.rtWrapperBottomCenter,   
+.RadToolTip table.rtWrapper td.rtWrapperBottomRight   
+{
+    padding: 0;
+    border: 0;
+    border-collapse: collapse;
+}
+
+/* ToolTip Shadows */
+.RadToolTip table.rtShadow td.rtWrapperTopLeft,
+.RadToolTip table.rtShadow td.rtWrapperTopRight,
+.RadToolTip table.rtShadow td.rtWrapperBottomLeft,
+.RadToolTip table.rtShadow td.rtWrapperBottomRight
+{
+	width: 7px; 
+	height: 7px; 
+	line-height: 1px; 
+	font-size: 1px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+}
+
+div.RadToolTip table.rtShadow td.rtWrapperTopLeft
+{
+	background-position: 0 -128px;
+}
+
+div.RadToolTip table.rtShadow td.rtWrapperTopRight
+{
+	background-position: -9px -128px;
+}
+
+div.RadToolTip table.rtShadow td.rtWrapperBottomLeft
+{
+	background-position: 0 -135px;
+}
+
+div.RadToolTip table.rtShadow td.rtWrapperBottomRight
+{
+	background-position: -9px -135px;
+}
+
+div.RadToolTip table.rtShadow td.rtWrapperTopCenter,
+div.RadToolTip table.rtShadow td.rtWrapperBottomCenter
+{
+	height: 7px; 
+	line-height: 0px; 
+	font-size: 1px;
+	background-repeat: repeat-x;
+}
+
+div.RadToolTip table.rtShadow td.rtWrapperTopCenter
+{
+	background-position: 0 -145px;
+}
+
+div.RadToolTip table.rtShadow td.rtWrapperBottomCenter
+{
+	background-position: 0 -152px;
+}
+
+div.RadToolTip table.rtShadow td.rtWrapperLeftMiddle,
+div.RadToolTip table.rtShadow td.rtWrapperRightMiddle
+{
+	background-repeat: repeat-y;
+	font-size: 1px;
+	width: 7px;
+}
+
+div.RadToolTip table.rtShadow td.rtWrapperLeftMiddle
+{
+	background-position: -7px 0;
+}
+
+div.RadToolTip table.rtShadow td.rtWrapperRightMiddle
+{
+	background-position: -14px 0;
+}
+
+.RadToolTip.rtShadow .rtCalloutTopLeft, 
+.RadToolTip.rtShadow .rtCalloutTopRight
+{
+	margin-top:-4px;
+}
+
+.RadToolTip.rtShadow .rtCalloutTopCenter 
+{
+	margin-top:-3px;
+}
+
+.RadToolTip.rtShadow .rtCalloutMiddleRight
+{
+	margin-left:-7px;
+}
+
+.RadToolTip.rtShadow .rtCalloutMiddleLeft
+{
+	margin-left:-4px;
+}
+
+.RadToolTip.rtShadow .rtCalloutBottomRight, 
+.RadToolTip.rtShadow .rtCalloutBottomCenter,
+.RadToolTip.rtShadow .rtCalloutBottomLeft
+{
+	margin-top: -7px;
+}
+
+div.RadToolTip table.rtShadow a.rtCloseButton
+{
+	margin-top: 6px;
+	margin-right: 8px;
+}
+
+*+html div.RadToolTip table.rtShadow a.rtCloseButton
+{
+	margin-top: 10px;
+	margin-right: 8px;
+}
+
+*+html div.RadToolTip_rtl.rtShadow .rtCalloutMiddleLeft
+{
+	margin-right: 4px !important;
+}
+
+/* Visible Shadowed Titlebar */
+div.RadToolTip table.rtShadow .rtVisibleTitleBar  td.rtWrapperTopLeft
+{
+	background-position: 0 -205px;
+}
+
+div.RadToolTip table.rtShadow .rtVisibleTitleBar  td.rtWrapperTopCenter
+{
+	background-position: 0 -165px;
+}
+		
+div.RadToolTip table.rtShadow .rtVisibleTitleBar  td.rtWrapperTopRight
+{
+	background-position: -7px -205px;
+}
+/* END Telerik.Web.UI.Skins.ToolTip.css */
+/* START Telerik.Web.UI.Skins.Web20.ToolTip.Web20.css */
+/* RadToolTip Web20 Skin */
+
+.RadToolTip_Web20.rtLoading
+{	
+	background: url('/clients/CenterStageNorth/Images/webresource.axd?d=Ea9JFlgEyG0-isIp2YixNTId_PMhKAMEGaqBtKprq7PR89sBmwcwAkNS9VaDK6pqPAnzZs47fyNYWu-zQH71nK8yiZnXym_58v6xMpzP7Q584NGS8hRpV2I6rqTdgrwAdNLB8tjD2KjpjR4maWJdvTjVir01&t=634429586006210000') no-repeat center;
+}
+
+div.RadToolTip_Web20 table.rtWrapper td.rtWrapperTopLeft,
+div.RadToolTip_Web20 table.rtWrapper td.rtWrapperTopRight,
+div.RadToolTip_Web20 table.rtWrapper td.rtWrapperBottomLeft,
+div.RadToolTip_Web20 table.rtWrapper td.rtWrapperBottomRight,
+div.RadToolTip_Web20 table.rtWrapper td.rtWrapperTopCenter,
+div.RadToolTip_Web20 table.rtWrapper td.rtWrapperBottomCenter,
+div.RadToolTip_Web20 table.rtShadow td.rtWrapperTopLeft,
+div.RadToolTip_Web20 table.rtShadow td.rtWrapperTopRight,
+div.RadToolTip_Web20 table.rtShadow td.rtWrapperBottomLeft,
+div.RadToolTip_Web20 table.rtShadow td.rtWrapperBottomRight,
+div.RadToolTip_Web20 table.rtShadow td.rtWrapperTopCenter,
+div.RadToolTip_Web20 table.rtShadow td.rtWrapperBottomCenter,
+div.RadToolTip_Web20 a.rtCloseButton
+{
+	background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=w2AmtFb-E0tOJhARZ6HJQpwKhaSllPWNvCSal_zpvttYfcdbywg-XqY2jTB0T0npzBYTWxk4Q6o0jhyXbGzEiyFXvPqY1Rxu2oqYiSGKGva6Vnhgoye2sl3DBKh5SHnEcNCD51GO8GEqc8CVrJsDO7xxJq81&t=634429586006210000');
+}
+
+div.RadToolTip_Web20 table.rtWrapper td.rtWrapperLeftMiddle,
+div.RadToolTip_Web20 table.rtWrapper td.rtWrapperRightMiddle,
+div.RadToolTip_Web20 table.rtShadow td.rtWrapperLeftMiddle,
+div.RadToolTip_Web20 table.rtShadow td.rtWrapperRightMiddle
+{
+	background-image:  url('/clients/CenterStageNorth/Images/webresource.axd?d=V10sDaog2lVvGEJ6pXJRPgGliZtbMY2f8Gn8ZYPSXpfK0zVVoOgRyrSrKI1Ex-MvwIXzs85d6tHlJPDqWW4mrMEIVsY79ebknCeFcaTCIhazN85HwcbxqKBvUQzHF8jnDvY0JpEg9xasoYes4eYZ2gi7os-uKQEDPak3HYzosgbQvELb0&t=634429586006210000');
+}
+
+div.RadToolTip_Web20 table.rtWrapper td.rtWrapperContent
+{
+	background-color: #e9f2ff;	
+	color: #333;
+}
+
+div.RadToolTip_Web20 div.rtTitlebar
+{	
+	color: #333;
+}
+
+div.RadToolTip_Web20 div.rtCallout
+{
+	background-image: url('/clients/CenterStageNorth/Images/webresource.axd?d=GSMCyBlbkWib6MozPCm3aMmR2EKbo60h00u6qtGPheC47Z2jkxzLbIQFjcoUiyha8xRfnn2ruKtEZbtKSEsn-gPjp2edmfDQpXV9CkdrJ6uGhQTNbzhpYEFZzP-W7ObdDdYORoRFndR5gbZPCd3VLAv9HbM1&t=634429586006210000');
+}
+/* END Telerik.Web.UI.Skins.Web20.ToolTip.Web20.css */

@@ -1,0 +1,1703 @@
+@import url("Reset.css");
+@import url("Standards.css");
+@import url("Forms.css");
+@import url("CP/datePicker.css");
+@import url("Toolbar.css");
+/* Making sure extra bits in the breadcrumbs, e.g. 'My Briefcase' icon,
+   doesn't break the layout of the module  */
+   
+#BreadCrumbOwner
+{
+	overflow: hidden;
+}
+
+.newCP .opacity60
+{
+	opacity: .6;
+}
+
+/*  N E W   M O D U L E S
+============================================================ */
+
+/*  Standard Link Types (Icons)  */
+
+.moduleContentNew a.archLinkColor,
+.moduleContentNew a.bids,
+.moduleContentNew a.blog,
+.moduleContentNew a.calendar,
+.moduleContentNew a.jobs,
+.moduleContentNew a.newsFlash,
+.moduleContentNew a.notifyMe,
+.moduleContentNew a.pages,
+.moduleContentNew a.all,
+.moduleContentNew a.RSS
+{
+	display: block;
+	padding-left: 22px;
+}
+
+.moduleContentNew a.archLinkColor
+{
+	background: url(/Common/images/ArchiveCenterIconSmall.png) no-repeat left 2px;
+}
+
+.moduleContentNew a.all
+{
+	background: url(/Common/images/AllIconSmall.png) no-repeat left 0px;
+}
+
+.moduleContentNew a.bids
+{
+	background: url(/Common/images/BidsIconSmall.png) no-repeat left 1px;
+}
+
+.moduleContentNew a.agendaCenter
+{
+	background: url(/Common/images/AgendaCenterIconSmall.png) no-repeat left 0px;
+}
+
+.moduleContentNew a.alertCenter
+{
+	background: url(/Common/images/AlertCenterIconSmall.png) no-repeat left 1px;
+}
+
+.moduleContentNew a.blog
+{
+	background: url(/Common/images/BlogIconSmall.png) no-repeat left 1px;
+}
+
+.moduleContentNew a.calendar
+{
+	background: url(/Common/images/EventsCalendarIconSmall.png) no-repeat left 1px;
+}
+
+.moduleContentNew a.jobs
+{
+	background: url(/Common/images/JobsIconSmall.png) no-repeat left 1px;
+	display: inline-block;
+}
+
+.moduleContentNew a.cityJobs
+{
+	background: url(/Common/images/JobsIconSmall.png) no-repeat left 1px;
+	display: inline-block;
+}
+
+.moduleContentNew a.areaJobs
+{
+	background: url/Common/images/JobsIconSmall.png) no-repeat left 1px;
+	display: inline-block;
+}
+
+.moduleContentNew a.mediaCenter
+{
+	background: url(/Common/images/MediaCenterIconSmall.png) no-repeat left 1px;
+}
+
+.moduleContentNew a.newsFlash
+{
+	background: url(/Common/images/NewsFlashIconSmall.png) no-repeat left 1px;
+}
+
+.moduleContentNew a.notifyMe
+{
+	background: url(/Common/images/NotifyMeIconSmall.png) no-repeat left 2px;
+}
+
+.moduleContentNew a.pages
+{
+	background: url(/Common/images/PagesIconSmall.png) no-repeat left 2px;
+}
+
+.moduleContentNew a.photoGallery
+{
+	background: url(/Common/images/PhotoGalleryIconSmall.png) no-repeat left 1px;
+}
+
+.moduleContentNew a.realEstateLocator
+{
+	background: url(/Common/images/RealEstateLocatorIconSmall.png) no-repeat left 0px;
+}
+
+.moduleContentNew a.RSS
+{
+	background: url(/Common/images/FeedIcon.png) no-repeat left 2px;
+}
+
+a.iconBriefcaseLink
+{
+	display: -moz-inline-stack; /* for FF2 and below */
+	display: inline-block;
+	left: 3px;
+	position: relative;
+	top: 3px;
+}
+
+a.button
+{
+	background: url(/Common/images/ButtonRightBkg.png) no-repeat right top;
+	color: #555 !important;
+	font-size: 8pt;
+	font-weight: bold;
+	font-family: Arial;
+	padding: 0px 4px 0px 0px;
+	text-decoration: none !important;
+	display:inline-block;
+	text-align:center;
+}
+
+a.button span
+{
+	background: url(/Common/images/ButtonLeftBkg.png) no-repeat left top;
+	display: block;
+	padding: 4px 4px 5px 8px;
+}
+
+.newCP .popUpParent
+{
+	z-index: 1;
+}
+
+.newCP .popUpParent.popped
+{
+	z-index: 10;
+}
+
+/*  END Standard Link Types (Icons )  */
+
+.t-timepicker,
+.t-datetimepicker,
+.t-datepicker
+{
+	width: 8.1em;
+}
+
+/*  HEADER  */
+
+.moduleContentNew .printHeader
+{
+	display: none;
+}
+
+/*  "Logged in as..." bar  */
+
+.moduleContentNew .userAccount
+{
+	font-size: 9pt;
+	margin-bottom: 8px;
+	padding: 3px 10px;
+	text-align: right;
+}
+
+.moduleContentNew .userAccount .currentUser
+{
+	font-style: italic;
+}
+
+.moduleContentNew .userAccount a
+{
+	display: -moz-inline-stack; /* for FF2 and below */
+	display: inline-block;
+	margin-left: 10px;
+}
+
+/*  END "Logged in as..." bar  */
+
+
+/*  Intro  */
+
+.moduleContentNew div.header
+{
+	height: 100%; /* for IE6 */
+	overflow: hidden;
+	padding: 0px 15px 0px 7px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.moduleContentNew .header div.graphic
+{
+	float: left;
+	padding: 7px 0px;
+}
+
+.moduleContentNew .header .graphic a
+{
+	display: block;
+}
+
+.moduleContentNew .header .graphic a img
+{
+	border: none;
+}
+
+.moduleContentNew .header .text
+{
+	margin-bottom: 5px;
+	margin-left: 80px;
+}
+
+.moduleContentNew .header h1
+{
+	margin-top: 5px;
+}
+
+/*  Table is still used for modules with
+	no sidebar and a need for aside links  */
+
+.moduleContentNew table.header
+{
+	width: 100%;
+}
+
+.moduleContentNew table.header td
+{
+	border-style: solid;
+	border-width: 1px;
+	padding-bottom: 5px;
+	vertical-align: top;
+}
+
+.moduleContentNew table.header td.intro
+{
+	border-left-style: none;
+	padding-right: 15px;
+}
+
+.moduleContentNew table.header td.graphic
+{
+	border-right-style: none;
+	padding: 8px;
+	width: 74px;
+}
+
+.moduleContentNew table.header td.spacer
+{
+    background: transparent;
+    border: none;
+    padding: 0px;
+    width: 8px;
+}
+
+.moduleContentNew table.header td.sidebar
+{
+	float: none;
+	padding: 0px 15px 5px 15px;
+}
+
+.moduleContentNew table.header td.sidebar h3
+{
+    margin-top: 0px;
+}
+
+.moduleContentNew table.header td.sidebar ol,
+.moduleContentNew table.header td.sidebar ul
+{
+	list-style-type: none;
+	margin-left: 0px;
+}
+
+/*  END Table Styles  */
+/*  END Intro  */
+
+/*  BEGIN MEGA MENU */
+
+.moduleContentNew .header .search a.button
+{
+	background: url(../Common/images/SelectRightBkg.png) no-repeat right top;
+	display: block;
+	float: left;
+	font-size: 9pt;
+	padding: 0px 22px 3px 0px;
+	position: absolute;
+}
+
+.moduleContentNew .header .search a.button span
+{
+	background: url(../Common/images/SelectLeftBkg.png) no-repeat left top;
+	color: #636336;
+	padding: 3px 5px 4px 10px;
+}
+
+.moduleContentNew .header .search a.button.active
+{
+	background-image: url(../Common/images/SelectRightActiveBkg.png);
+	bottom: -10px;
+}
+
+.moduleContentNew .header .search a.button.active span
+{
+	background: url(../Common/images/SelectLeftActiveBkg.png);
+	color: #333;
+	padding-bottom: 13px;
+}
+
+.moduleContentNew .header .search .megaMenu
+{
+	margin-top: -5px;
+	padding-top: 10px;
+}
+
+.moduleContentNew .header .search .megaMenu div
+{
+	background: #fff;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	max-height: 200px;
+	overflow: auto;
+	padding: 10px 5px 5px;
+	position: relative;
+}
+
+.moduleContentNew .header .search .megaMenu ol
+{
+	float: left;
+	list-style: none;
+	padding: 0px;
+	margin: 0px 1% 0px 0px;
+	width: 23.5%;
+}
+
+.moduleContentNew .header .search .megaMenu li
+{
+	line-height: 1.3;
+	margin-bottom: 5px;
+	padding-left: 16px;
+	position: relative;
+}
+
+.newCP .header .search .megaMenu li input
+{
+	height: 13px;
+	left: 0px;
+	position: absolute;
+	top: 2px;
+	width: 13px;
+}
+
+/* END MEGA MENU */
+
+/* ICONS FOR TABBED BUTTONS */
+
+.moduleContentNew ul.misc li
+{
+	display: block;
+	float: right;
+	margin: 2px 10px 2px 0px;
+}
+
+.newCP .nav .misc li:first-child
+{
+    margin-right: 15px;
+}
+
+.moduleContentNew ul.misc li a
+{
+	display: block;
+	font-size: 8pt;
+	text-decoration: none;
+}
+
+.newCP .header .nav .misc li > a
+{
+	color: #666666;
+	font-weight: bold;
+	line-height: 16px;
+	padding-left: 17px;
+}
+
+.newCP .header .nav .misc li a.archives
+{
+	background: url(/Common/images/IconArchives.png) no-repeat left 0px;
+}
+
+.newCP .header .nav .misc li a.RSS
+{
+	background: url(/Common/images/IconRss.png) no-repeat left 1px;
+}
+
+.newCP .header .nav .misc li a.notifyMe
+{
+	background-position: left 0px;
+	padding-left: 20px;
+}
+
+.newCP .nav li a.help
+{
+	background: url("/Common/images/IconHelp.png") no-repeat left 2px;
+}
+
+/* END ICONS FOR TABS */
+/*  END HEADER  */
+
+
+/*  MODULE CONTENT  */
+
+.moduleContentNew .contentMain
+{
+	margin: 0px 0px 20px;
+}
+
+/*  Search Results Title  */
+
+.moduleContentNew a.return
+{
+	display: inline-block;
+	margin-top: 12px;
+	text-decoration: none;
+	font-size: 9pt;
+}
+
+.newCP a.return:hover
+{
+	text-decoration: underline;
+}
+
+.moduleContentNew p.searchTitle
+{
+	font-size: 13pt;
+	margin: 18px 0px 0px 0px;
+}
+
+/*  END Search Results Title  */
+
+/*  Alert  */
+
+p.alert
+{
+	background-color: #f9f9f9;
+	border: 1px solid #ddd;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) inset;
+	-webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) inset;
+	box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2) inset;
+	color: #888;
+	font-size: 9pt;
+	font-weight: bold;
+	line-height: 1.3;
+	padding: 0.5em;
+}
+
+p.alert.error
+{
+	border-color: #900;
+	background-color: #c33;
+	color: #fff;
+}
+
+p.alert.warning
+{
+	border-color: #ca954a;
+	background-color: #fdc87d;
+	color: #865106;
+}
+
+p.alert.success
+{
+	
+}
+
+.moduleContentNew strong.alert
+{
+	border-style: solid;
+	border-width: 1px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	-moz-box-shadow: 1px 2px 8px rgba(0,0,0,.3);
+	-webkit-box-shadow: 1px 2px 8px rgba(0,0,0,.3);
+	clear: left;
+	display: block;
+	font-weight: normal;
+	margin: 20px 10px;
+	text-align: center;
+}
+
+.moduleContentNew strong.alert em
+{
+	border-style: solid;
+	border-width: 2px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	display: block;
+	padding: 5px 10px;
+}
+
+/*  END Alert  */
+
+
+/*  T A B S  */
+
+.moduleContentNew .tabs
+{
+	float: left;
+	list-style: none;
+	margin: 0px;
+	padding-top: 10px;
+	position: relative;
+	top: 1px;
+	right:0;
+	width: 100%;
+	z-index: 2;
+}
+
+.moduleContentNew .tabs li
+{
+	float: left;
+	height: 27px;
+	margin: 0px 3px 0px 0px;
+	overflow: hidden;
+	width: 101px;
+}
+
+.moduleContentNew .tabs li a:link,
+.moduleContentNew .tabs li a:visited,
+.moduleContentNew .tabs li a:hover,
+.moduleContentNew .tabs li a:focus
+{
+	background: url(/Common/images/tabsLeftBkg.png) no-repeat top left;
+	background-position: left -27px;
+	color: #ffffff;
+	display: block;
+	font-size: 10pt;
+	float: left;
+	text-align: center;
+	text-decoration: none;
+	width: 101px;
+}
+
+.moduleContentNew .tabs span
+{
+	background: url(/Common/images/tabsRightBkg.png) no-repeat right -27px;
+	display: block;
+	margin-left: 7px;
+	padding: 4px 7px 4px 0px;
+}
+
+.moduleContentNew .tabs li.active a
+{
+	background-position: left 0px;
+}
+
+.moduleContentNew .tabs .active span
+{
+	background-position: right 0px;
+	color: #838356;
+	font-weight: bold;
+}
+
+/*  END  T A B S  */
+
+
+/*  Forms  */
+
+.moduleContentNew .onTop
+{
+	max-width: 500px;
+}
+
+.newCP .onTop
+{
+	margin: 20px 0px;
+}
+
+.newCP .onTop p.intro
+{
+	margin: 10px 0px 20px;
+}
+
+.newCP .onTop .section
+{
+	border-top-style: solid;
+	border-top-width: 5px;
+	padding: 20px 0px;
+}
+
+.newCP .onTop .section:first-child
+{
+	border-top: none;
+}
+
+.newCP .onTop .section h2
+{
+	margin: 3px 0px 10px;
+}
+
+.newCP .onTop .section h2 + p
+{
+	font-size: .8em;
+	margin: -5px 0px 10px;
+}
+
+/*  Login form  */
+
+.moduleContentNew .login /* Overwriting template.css */
+{
+	background: none;
+}
+
+.moduleContentNew .login .formline label
+{
+	font-weight: normal;
+	text-align: left;
+}
+
+.moduleContentNew .login .formline div
+{
+	min-width: 250px;
+	width: 250px;
+}
+
+/*  END Login form  */
+/*  END Forms  */
+
+/*  Categories & Items  */
+
+.moduleContentNew .listing
+{
+	margin-bottom: 5px;
+	padding: 15px 0px 0px 0px;
+/*	position: relative;*/
+}
+
+.moduleContentNew .listing h2
+{
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
+	margin: 0px 0px 12px 0px;
+	padding: 0px 0px 2px 5px;
+}
+
+.moduleContentNew .listingIcon
+{
+	background-position: left 11px;
+	background-repeat: no-repeat;
+	padding-left: 50px;
+}
+
+.moduleContentNew .listingIcon h2
+{
+	padding: 0px 0px 3px 0px;
+}
+
+.moduleContentNew .listingIcon .liveEditControl
+{
+	left: 63px;
+}
+
+/*
+	Use <span>&#9660;</span> & <span>&#9658;</span>
+    within the <h2> for expandable/collapsable sections
+*/
+.moduleContentNew .listingCollapse h2
+{
+	padding-left: 27px;
+	position: relative;
+}
+
+.moduleContentNew .listingCollapse h2 div,
+.moduleContentNew .listingCollapse h2 span
+{
+	display: block;
+	font-family: Arial;
+	left: 5px;
+	position: absolute;
+	top: 0px;
+}
+
+.moduleContentNew .listingCollapse .liveEditControl
+{
+	left: 13px;
+}
+
+.moduleContentNew .listingLink
+{
+	position: relative;
+}
+
+.moduleContentNew .listingLink h2
+{
+	padding-right: 8em;
+}
+
+.moduleContentNew .listing a.sideLink
+{
+	font-size: .8em;
+	font-weight: bold;
+	right: 5px;
+	position: absolute;
+	text-decoration: none;
+	top: 1.8em;
+}
+
+/*  Tables  */
+
+.moduleContentNew .listing th.sortable
+{
+	cursor: pointer;
+}
+
+.newCP ul.actions
+{
+	list-style: none;
+	margin: 0px;
+}
+
+.newCP a.button span span.arrow
+{
+	background: none;
+	display: inline;
+	font-size: .9em;
+	margin: 0px 3px;
+	opacity: .5;
+	padding: 0px;
+}
+
+/*  END  Tables  */
+
+/* Edit links for Profiles */
+
+.moduleContentNew .contentMain h2 a.edit
+{
+    text-decoration:none;
+    font-size:9pt;
+    font-weight:normal;
+    padding-left:7px;
+}
+
+/* End Edit links for Profiles */
+
+/*  Specific types of .listing  */
+
+.moduleContentNew .listing.agendaCenter
+{
+	background-image: url(/Common/images/AgendaCenterIconStandard.png);
+}
+
+.moduleContentNew .listing.alertCenter
+{
+	background-image: url(/Common/images/AlertCenterIconStandard.png);
+}
+
+.moduleContentNew .listing.bids
+{
+	background-image: url(/Common/images/BidsIconStandard.png);
+}
+
+.moduleContentNew .listing.blog
+{
+	background-image: url(/Common/images/BlogIconStandard.png);
+}
+
+.moduleContentNew .listing.calendar
+{
+	background-image: url(/Common/images/EventsCalendarIconStandard.png);
+}
+
+.moduleContentNew .listing.jobs
+{
+	background-image: url(/Common/images/JobsIconStandard.png);
+}
+
+.moduleContentNew .listing.cityJobs
+{
+	background-image: url(/Common/images/JobsIconStandard.png);
+}
+
+.moduleContentNew .listing.areaJobs
+{
+	background-image: url(/Common/images/JobsIconStandard.png);
+}
+
+.moduleContentNew .listing.mediaCenter
+{
+	background-image: url(/Common/images/MediaCenterIconStandard.png);
+}
+
+.moduleContentNew .listing.newsFlash
+{
+	background-image: url(/Common/images/NewsFlashIconStandard.png);
+}
+
+.moduleContentNew .listing.notifyMe
+{
+	background-image: url(/Common/images/NotifyMeIconStandard.png);
+}
+
+.moduleContentNew .listing.photoGallery
+{
+	background-image: url(/Common/images/PhotoGalleryIconStandard.png);
+}
+
+.moduleContentNew .listing.realEstateLocator
+{
+	background-image: url(/Common/images/RealEstateLocatorIconStandard.png);
+}
+
+/*  END Specific types of .listing  */
+
+/*  Maybe not used?  */
+.moduleContentNew .listing p.backtotop
+{
+	font-size: .8em;
+	font-weight: bold;
+	margin: 6px 0px 0px 0px;
+	padding: 2px 0px 0px 0px;
+	text-align: right;
+}
+
+.moduleContentNew .listing p.backtotop a
+{
+	display: -mon-inline-stack;
+	display: inline-block;
+	margin: 0px 5px;
+}
+
+/*  END Categories & Items  */
+
+/*  Pagination  */
+
+.moduleContentNew .pagination
+{
+    margin: 15px 0px;
+    text-align: center;
+}
+
+.moduleContentNew .pagination a,
+.moduleContentNew .pagination span
+{
+	display: -moz-inline-stack; /* for FF2 and below */
+    display: inline-block;
+    margin: 0px 6px 0px 0px;
+	padding: 4px 5px 0;
+}
+
+.moduleContentNew .pagination span
+{
+    font-weight: bold;
+}
+
+.moduleContentNew .pagination strong
+{
+    font-size:1.5em;
+    margin-right: 6px;
+}
+
+/*  END Pagination  */
+
+/* Begin Bottom Scroll Navigation */
+
+.moduleContentNew .nextPreviousNav
+{
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	float: left;
+	font-size: .8em;
+	margin-bottom: 13px;
+	padding-bottom: 4px;
+	width: 100%;
+}
+
+.moduleContentNew .nextPreviousNav a
+{
+	display: block;
+	float: right;
+	font-weight: bold;
+	padding: 0px 0px 0px 2%;
+	text-align: right;
+	text-decoration: none;
+	width: 46%;
+}
+
+.moduleContentNew .nextPreviousNav a.prev
+{
+	float: left;
+	padding: 0px 2% 0px 0px;
+	text-align: left;
+}
+
+.moduleContentNew .nextPreviousNav a span
+{
+	display: block;
+	font-weight: normal;
+	margin-right: 2em;
+}
+
+.moduleContentNew .nextPreviousNav a.prev span
+{
+	margin-left: 2em;
+}
+
+.moduleContentNew .nextPreviousNav a span.arrow
+{
+	display: -moz-inline-stack;
+	display: inline-block;
+	font-family: Arial, san-serif;
+	font-size: 1.5em;
+	margin: 0px;
+	position: relative;
+	top: 1px;
+	width: 1.3em;
+}
+
+/* End Bottom Scroll Navigation */
+
+/* BEGIN Common Drop Down Control */
+
+.moduleContentNew .dropDown
+{
+    position:relative;
+}
+
+.moduleContentNew .dropDown span
+{
+    position:relative;
+    font-size:0.9em; /* This may not be commonized */
+}
+
+.moduleContentNew .dropDown a.action
+{
+    text-decoration:underline; /* this is for the "action" hrefs */
+}
+
+.moduleContentNew .dropDown span a.arrow
+{
+    text-decoration:none;
+    margin: 2px 0px 0px 3px;
+    display:inline-block;
+    float:none;
+    font-size:9px; /* This may need changing */
+}
+
+.moduleContentNew .dropDown .dropContainer
+{
+    background: url('../common/images/DropDownTop.png') no-repeat scroll 0 0 transparent;
+    width:112px;
+    padding-top:15px;
+    position:absolute;
+    top:15px;
+    right: -3px;
+    z-index:1; /* This is probably not necessary  ? */
+}
+
+.moduleContentNew .dropDown .dropContainerInner
+{
+    background: url("../common/images/DropDownBottom.png") no-repeat scroll 0 bottom transparent;
+    padding: 6px;
+}
+
+.moduleContentNew .dropDown .dropContainerInner ul
+{
+    list-style-type:none;
+    margin-left:0;
+    width:auto;
+    text-align: left;
+}
+
+.moduleContentNew .dropDown .dropContainerInner ul li a
+{
+    text-decoration:none;
+    display:block;
+    margin-right:-5px;
+    margin-left:-5px;
+    padding-left:7px;
+}
+
+.moduleContentNew .dropDown .dropContainer .dropContainerInner ul li a:hover,
+.moduleContentNew .dropDown .dropContainer .dropContainerInner ul li a:focus
+{
+    text-decoration: underline;
+}
+
+.moduleContentNew .dropDown a
+{
+    display:inline;
+}
+
+.moduleContentNew .dropDown span
+{
+    font-size: 8pt;
+}
+
+.moduleContentNew .dropDown ul
+{
+    display:block;
+}
+
+.moduleContentNew .dropDown .dropDownInner ul li
+{
+    padding-right:0;
+    padding-top:0;
+    float:none;
+}
+
+/* End Common Drop Down */
+
+/*  END MODULE CONTENT  */
+
+
+/*  SIDEBAR  */
+
+.moduleContentNew .sidebar
+{
+	float: right;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.moduleContentNew .sidebar .section
+{
+	border-top-style: solid;
+	border-top-width: 1px;
+	margin: 5px 15px 5px 15px;
+	padding: 5px 0px;
+}
+
+.moduleContentNew .sidebar .section:first-child
+{
+	border: none;
+	margin-top: 0px;
+}
+
+.moduleContentNew .sidebar h3,
+.moduleContentNew .sidebar .h3
+{
+	display: block;
+	margin: 0px;
+	padding: 5px 0px;
+}
+
+.moduleContentNew .sidebar ol,
+.moduleContentNew .sidebar ul
+{
+	font-size: .8em;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.moduleContentNew .sidebar li
+{
+	line-height: 1.3;
+	margin-bottom: 5px;
+}
+
+.moduleContentNew .sidebar p
+{
+	line-height: 1;
+}
+
+.moduleContentNew .sidebar li a
+{
+	text-decoration: none;
+}
+
+/*  Search */
+
+.moduleContentNew .sidebar .search ol li
+{
+	font-size: 1.25em;
+	margin-bottom: 6px;
+}
+
+.moduleContentNew .sidebar .search input
+{
+	font-size: .75em;
+	padding: 3px 2px;
+	width: 95%;
+}
+
+.moduleContentNew .sidebar .search select
+{
+	width: 100%;
+}
+
+.moduleContentNew .sidebar .search input.searchButton
+{
+	cursor: pointer;
+	margin: 0px 0px 0px -1px;
+	padding: 0px;
+	vertical-align: middle;
+	width: auto;
+}
+
+.moduleContentNew .sidebar .search li:last-child
+{
+	margin: 0px;
+}
+
+/* NEW SEARCH (Uses the search icon inside of the input */
+
+.newCP .sidebar div.searchInput
+{
+	position: relative;
+}
+
+.newCP .sidebar div.searchInput input
+{
+	width: 95%;
+	margin-bottom: 2px;
+}
+
+.newCP .sidebar div.searchInput input[type='image']
+{
+	padding: 0px;
+	position: absolute;
+	top: 2px;
+	width: auto;
+	right: 0;
+}
+
+
+/*  END Search  */
+
+/*  Tools  */
+
+.moduleContentNew .sidebar .tools li
+{
+	line-height: 1.6;
+	margin-bottom: 3px;
+}
+
+.moduleContentNew .sidebar .tools h3
+{
+	background: url(/Common/images/ToolsIconSmall.png) no-repeat 0px 6px;
+	display: block;
+	padding-left: 22px;
+}
+
+/*  End Tools  */
+
+/*  Category List  */
+
+.moduleContentNew .sidebar .categories h3
+{
+	background: url(/Common/images/CategoriesIconSmall.png) no-repeat 0px 6px;
+	display: block;
+	padding-left: 22px;
+}
+
+.moduleContentNew .sidebar .categories ol
+{
+	list-style-type: square;
+	padding-left: 22px;
+}
+
+.moduleContentNew .sidebar .categories ol .all
+{
+	list-style: none;
+	margin-left: -20px;
+}
+
+/*  END Category List  */
+/*  END SIDEBAR  */
+
+
+/*  FOOTER  */
+
+.moduleContentNew .footer
+{
+	clear: both;
+	margin: 0px 0px 10px 0px;
+	padding: 10px;
+	border-style:solid;
+	border-width: 1px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.moduleContentNew .footer a.backtotop
+{
+	display: block;
+	float: right;
+	font-size: .8em;
+	margin-top: 12px;
+}
+
+.moduleContentNew .footer a.backtotop span
+{
+	font-size: .8em;
+}
+
+/*  END FOOTER  */
+
+
+/*  A R C H I V E S
+============================================================ */  
+
+.moduleContentNew .listingArchive
+{
+	font-size: .9em;
+}
+
+.moduleContentNew .listingArchive table
+{
+	width: 100%;
+}
+
+.moduleContentNew .listingArchive th,
+.moduleContentNew .listingArchive td
+{
+	padding: 5px;
+	vertical-align: top;
+}
+
+.moduleContentNew .listingArchive th
+{
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.moduleContentNew .listingArchive tr.first td
+{
+	padding-top: 7px;
+}
+
+.moduleContentNew .listingArchive th.icon,
+.moduleContentNew .listingArchive td.icon
+{
+	text-align: center;
+	width: 4em;
+}
+
+.moduleContentNew .listingArchive th.date,
+.moduleContentNew .listingArchive td.date
+{
+	width: 12em;
+}
+
+
+/*  F I L T E R S  */
+
+.moduleContentNew .sidebar .filters h3
+{
+	background: url(/Common/images/ArchiveFilterIcon.png) no-repeat 0px 6px;
+	display: block;
+	padding-left: 22px;
+}
+
+.moduleContentNew .sidebar .filters h4
+{
+	font-size: .8em;
+	font-weight: bold;
+	margin: 15px 0 5px;
+}
+
+.moduleContentNew .sidebar .filters input[type="radio"],
+.moduleContentNew .sidebar .filters input[type="checkbox"]
+{
+	height: 13px;
+	width: 13px;
+}
+
+.moduleContentNew .sidebar .filters label
+{
+	white-space: normal;
+}
+
+.moduleContentNew .sidebar .filters input.search
+{
+	width: 94%;
+}
+
+.moduleContentNew .sidebar .filters ul
+{
+	list-style: none;
+}
+
+.moduleContentNew .sidebar .filters li
+{
+	margin-bottom: 3px;
+}
+
+.moduleContentNew .sidebar .filters .choice
+{
+	padding-left: 20px;
+	position: relative;
+}
+
+.moduleContentNew .sidebar .filters .range input[type="radio"]
+{
+	height: auto;
+	left: 0px;
+	margin: auto 0px;
+	position: absolute;
+	top: 6px;
+}
+
+.moduleContentNew .sidebar .filters .range li:first-child input[type="checkbox"],
+.moduleContentNew .sidebar .filters .range li:first-child input[type="radio"]
+{
+	top: 3px;
+}
+
+.moduleContentNew .sidebar .filters li.recent
+{
+	margin-bottom: 10px;
+}
+
+.moduleContentNew .sidebar .filters .date label
+{
+	display: inline-block;
+	width: 2.5em;
+}
+
+.moduleContentNew .sidebar .filters .date input[type="text"]
+{
+	width: 5.5em;
+}
+
+.moduleContentNew .sidebar .filters a.button
+{
+	float: left;
+	margin: 15px 0px;
+}
+
+/*  END  F I L T E R S  */
+
+/*  END  A R C H I V E S  */
+
+
+/*  M O D A L   W I N D O W
+============================================================ */
+
+.modalContainer .modalTitleLeft
+{
+	background: url(/App_Themes/Default/images/ModalTopLeft.png) no-repeat left top;
+}
+
+.modalContainer h3.modalTitle
+{
+	background: url(/App_Themes/Default/images/ModalTop.png) repeat-x left top;
+	color: #333;
+	font-family: Arial,sans-serif;
+}
+
+.modalContainer h3.modalTitle img
+{
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.modalContainer h3.modalTitle span
+{
+	color: #555;
+	display: -moz-inline-stack;
+	display: inline-block;
+	font-family: Arial, san-serif;
+	font-size: .75em;
+	margin: 0px 4px;
+}
+
+.modalContainer a.modalClose:link,
+.modalContainer a.modalClose:visited
+{
+	background: url(/App_Themes/Default/images/ModalClose.png) no-repeat right bottom;
+}
+
+.modalContainer .modalContentLeft
+{
+	background: url(/App_Themes/Default/images/ModalLeft.png) repeat-y left top;
+}
+
+.modalContainer .modalContentRight
+{
+	background: url(/App_Themes/Default/images/ModalRight.png) repeat-y right top;
+}
+
+.modalContainer .modalBottomLeft
+{
+	background: url(/App_Themes/Default/images/ModalBottomLeft.png) no-repeat left bottom;
+}
+
+.modalContainer .modalBottom
+{
+	background: url(/App_Themes/Default/images/ModalBottom.png) repeat-x left bottom;
+}
+
+.modalContainer .modalBottomRight
+{
+	background: url(/App_Themes/Default/images/ModalBottomRight.png) no-repeat right bottom;
+}
+
+/* E N D  M O D A L  C O N T A I N E R  */
+
+.modal .form.report,
+.modal.report .form
+{
+	padding: 0 10px 0 10px;
+}
+
+.modal .form.report .formline > label,
+.modal.report .formline > label
+{
+	width: 72px;
+	margin-top: 2px;
+}
+
+.modal .form.report .formline.noLabel > div,
+.modal.report .formline.noLabel > div
+{
+	padding-left: 82px;
+}
+
+.modal.help .modalTabs
+{
+	height: 413px;
+	overflow: auto;
+}
+
+.modal.help h1
+{
+	margin-bottom: 7px;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	font-size: 12pt;
+}
+
+.modal.help h3
+{
+	font-size: 10pt;
+	font-weight: bold;
+	margin: 1em 0 0.1em;
+}
+
+.modal.help p,
+.modal.help ol
+{
+	margin-bottom: 1em;
+}
+
+
+/*  D A T E   P I C K E R (old)
+============================================================ */
+
+.DPWeekdayNameList
+{
+	width: 175px;
+	margin-left: 1px;
+	height: 20px;
+	overflow: visible;
+}
+
+.DPGeneralCellSize,
+.DPWeekdayNameList span,
+.DPDayActive,
+.DPDayInactive,
+.DPDaySelected
+{
+	width: 24px;
+	height: 20px;
+}
+
+.DPWeekdayNameList span
+{
+	display: block;
+	position: static;
+	float: left;
+	text-decoration: none;
+	border: none;
+	margin-right: 1px;
+	margin-bottom: 1px;
+}
+
+.DPDayActive,
+.DPDayInactive,
+.DPDaySelected
+{
+	position: static;
+	display: block;
+	text-decoration: none;
+	float: left;
+	margin-right: 1px;
+	margin-top: 1px;
+	color: #000000;
+	border: none;
+	text-align: left;
+}
+
+.DPMonthPrev,
+.DPMonthNext
+{
+	display: block;
+	width: 20px;
+	text-decoration: none;
+	position: absolute;
+	height: 1.4em;
+}
+
+.DPMonthPrev { left: 1px; }
+
+.DPMonthNext { right: 1px; }
+
+.DPLastDayOfWeek
+{
+    margin-right: 0px !important;
+}
+
+
+/*  A U T O - S U G G E S T (old)
+============================================================ */
+
+.PLSuggestList
+{
+	padding: 0px; 
+	overflow: auto;
+	max-height: 100px;
+	z-index: 900;
+	overflow-x: hidden;
+	overflow-y: auto;
+	_height: 64px;
+}
+
+.PLSuggestList a
+{
+	display: block;
+	position: static;
+	text-decoration: none; 
+	border: none;
+	margin-bottom: 0px;
+}
+
+.PLFixedChoiceList
+{
+	padding: 0px;
+	overflow: auto;
+	max-height: 100px;
+	z-index: 900;
+	overflow-x: hidden;
+	overflow-y: auto;
+	_height: 64px;
+}
+
+.PLFixedChoiceList a
+{
+	display: block;
+	position: static;
+	text-decoration: none;
+	text-align: left;
+	font-weight: normal;
+	border: none;
+	margin-bottom: 0px;
+}
+
+.PLFixedChoiceListSpawner
+{
+	padding: 0px;
+	width: 100px;
+	padding-left: 2px;
+	text-align: left;
+	height: 17px;
+	padding-top: 2px;
+	padding-bottom: 0px;
+}
+
+/*  IE Hack  */
+input { *font-family: MS Shell Dlg, Arial; }
+
+/*  FAKE MODAL  */
+div#coverAll
+{
+	position: fixed;
+	top: 0px;
+	_position: absolute;
+	bottom: 0px;
+	right: 0px;
+	left: 0px;
+	height: 100%;
+	width: 100%;
+	background-color: #eeeeee;
+	z-index: 500;
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+	display: none;
+	text-align: center;
+	padding-top: 150px;
+	font-weight: bold;
+	font-size: 35px;
+	color: #cc0033;
+}
+div#coverAll.active
+{
+	display: block;
+}
+
+.fakeTitle
+{
+	background-color: #a5c4da;
+	color: #000000;
+	padding: 0;
+	margin: 0;
+	
+}
+
+.fakeTitle span
+{
+	padding: 0;
+	margin: 0;
+	font-size: 13pt;
+	font-weight: bold;
+}
+
+.fakeTitle span.delete
+{
+	padding: 0 3px;
+	color: #000000;
+	background: #a5c4da none repeat scroll 0 0;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 0;
+	font-size: 17px;
+}
+
+div#coverAll.super
+{
+	display:block;
+	z-index:9999999;
+	-moz-opacity:0.9; 
+	opacity: 0.9; 
+	filter:alpha(opacity=90);
+}
+
+
+/*  A R C H I V I N G    S T Y L E    F I X E S (old)
+============================================================ */
+
+.moduleContentNew table.archSearchBoxMain
+{
+	border-spacing: 4px;
+}
+
+.moduleContentNew .archSearchBoxMain td
+{
+	vertical-align: middle;
+}
+
+.moduleContentNew .archSearchBoxMain label
+{
+	text-align: right;
+	width: 100%;
+	display: block;
+}
+
+/* Loading Graphic for Ajax */
+
+.loading p
+{
+	font-weight:bold;
+	margin-top:5px;
+}

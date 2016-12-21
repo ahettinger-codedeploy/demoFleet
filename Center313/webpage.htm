@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<title>center313.com - Home</title>
+
+<script type="text/javascript" src="webpage_files/jquery-1.js"></script>
+
+
+	<link rel="shortcut icon" href="http://www.center313.com/common/images/favicon-bz.ico" type="image/vnd.microsoft.icon">
+	<link rel="icon" href="http://www.center313.com/common/images/favicon-bz.ico" type="image/vnd.microsoft.icon">
+
+
+
+<script language="JavaScript" type="text/javascript"><!--
+	window._MUSICPLAYER_FRAME = 1;
+
+	/*
+		Change the target of all external links in the main frame to _parent, so that they
+		will break this frameset when clicked.
+	*/
+	function updateLinks() {
+			/*
+				We need to make sure that links to other member sites also break the frameset, so we use a fancy regex
+				which strips a URL down to being only its hostname and directory path (not including its filename). If the
+				regex returns the same string for the current location and the link, then we assume that the link is local.
+			*/
+
+		try {
+		    var result = window.location.href.match('[^:]+://([^/]+.*)/[^/]*');
+		    var thisURLMatch = result[1];
+
+		    for (var i=0; i < window.mainFrame.document.links.length; i++) {
+					result = window.mainFrame.document.links[i].href.match('[^:]+://([^/]+.*)/[^/]*');
+					if (result != null) {
+						if (result[1] != thisURLMatch)
+						{
+							if (window.mainFrame.document.links[i].target == "") {
+								window.mainFrame.document.links[i].target = "_parent";
+							}
+						}
+					}
+				}
+		}
+		catch (ex) {}
+	}
+
+	/*
+	 Poll the main frame to detect when it has changed URL.
+	 When it does, call updateLinks()
+	*/
+	function monitor(force) {
+		try {
+			// Make sure the other frame is loaded
+			if (window.frames[0] == null) return;
+
+
+			if (!window.mainFrame.document) return;
+			if (!window.mainFrame.document.links) return;
+
+		    if (typeof(force) != "undefined" || document.title != window.mainFrame.document.title) {
+		        document.title = window.mainFrame.document.title;
+		        updateLinks();
+		    }
+
+		    // Poll every 1 second (1000 ms)
+		    setTimeout('monitor()',1000);
+		} catch (ex) {}
+	}
+	
+	//-->
+</script>
+</head>
+
+
+<frameset rows="*,31" onload="monitor(true)" frameborder="NO" border="0" framespacing="0">
+	<frame src="webpage_files/home.htm" id="mainFrame" name="mainFrame" frameborder="0" marginheight="0" marginwidth="0" allowtransparency="true" style="background-color: #22211d;" scrolling="auto">
+	<frame src="webpage_files/index.htm" id="musicplayerFrame" name="musicplayerFrame" noresize="noresize" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">
+	<noframes>
+		<body>
+		<p>
+		<strong>This feature requires that your browser support frames.</strong>
+		<a href="/fr_home.cfm?FEATURE=&">Click here</a> to return to the non-framed version of this site.
+		</p>
+		</body>
+	</noframes>
+</frameset>
+
+
+
+
+</html>

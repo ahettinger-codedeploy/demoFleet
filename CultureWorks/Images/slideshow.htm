@@ -1,0 +1,168 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"><!--
+
+SlideShow with Captions and Cross-Fade
+(C)2002 by CodeLifter.com
+
+Shows images and accompanying captions.
+Browsers: NS4-7,IE4-6
+Fade effect only in IE; degrades gracefully.
+NS4 shows default caption only.
+
+INSTRUCTIONS:
+
+Copy this entire script into a completely blank
+page.  Follow the commented instructions within.
+
+//-->
+
+
+
+
+
+<!-- 
+Set up the caption font in the following style.
+Place the style script in the head of the page.
+//-->
+
+<style>
+.Caption {
+font-family: Arial;
+font-weight: bold;
+color:      #123456;
+}
+</style>
+
+<!-- 
+Place the following script in the head of the page.
+Follow the set-up instructions within the script.
+//-->
+
+<script>
+
+// (C) 2002 www.CodeLifter.com
+// http://www.codelifter.com
+// Free for all users, but leave in this header.
+
+// ==============================
+// Set the following variables...
+// ==============================
+
+// Set the slideshow speed (in milliseconds)
+var SlideShowSpeed = 3000;
+
+// Set the duration of crossfade (in seconds)
+var CrossFadeDuration = 3;
+
+var Picture = new Array(); // don't change this
+var Caption = new Array(); // don't change this
+
+// Specify the image files...
+// To add more images, just continue
+// the pattern, adding to the array below.
+// To use fewer images, remove lines
+// starting at the end of the Picture array.
+// Caution: The number of Pictures *must*
+// equal the number of Captions!
+
+Picture[1]  = 'Image001.jpg';
+Picture[2]  = 'Image002.jpg';
+Picture[3]  = 'Image003.jpg';
+Picture[4]  = 'Image004.jpg';
+Picture[5]  = 'Image005.jpg';
+Picture[6]  = 'Image006.jpg';
+Picture[7]  = 'Image007.jpg';
+Picture[8]  = 'Image008.jpg';
+Picture[9]  = 'Image009.jpg';
+Picture[10] = 'Image010.jpg';
+Picture[11] = 'Image011.jpg';
+
+// Specify the Captions...
+// To add more captions, just continue
+// the pattern, adding to the array below.
+// To use fewer captions, remove lines
+// starting at the end of the Caption array.
+// Caution: The number of Captions *must*
+// equal the number of Pictures!
+
+Caption[1]  = "";
+Caption[2]  = "";
+Caption[3]  = "";
+Caption[4]  = "";
+Caption[5]  = "";
+Caption[6]  = "";
+Caption[7]  = "";
+Caption[8]  = "";
+Caption[9]  = "";
+Caption[10] = "";
+Caption[11] = "";
+
+// =====================================
+// Do not edit anything below this line!
+// =====================================
+
+var tss;
+var iss;
+var jss = 1;
+var pss = Picture.length-1;
+
+var preLoad = new Array();
+for (iss = 1; iss < pss+1; iss++){
+preLoad[iss] = new Image();
+preLoad[iss].src = Picture[iss];}
+
+function runSlideShow(){
+if (document.all){
+document.images.PictureBox.style.filter="blendTrans(duration=2)";
+document.images.PictureBox.style.filter="blendTrans(duration=CrossFadeDuration)";
+document.images.PictureBox.filters.blendTrans.Apply();}
+document.images.PictureBox.src = preLoad[jss].src;
+if (document.getElementById) document.getElementById("CaptionBox").innerHTML= Caption[jss];
+if (document.all) document.images.PictureBox.filters.blendTrans.Play();
+jss = jss + 1;
+if (jss > (pss)) jss=1;
+tss = setTimeout('runSlideShow()', SlideShowSpeed);
+}
+
+</script>
+
+<title></title>
+
+<!--
+Add the onload=runSlideShow() event call to the body tag.
+//-->
+
+</head><body onload="runSlideShow()">
+
+<!--
+The following table holds the images and captions.
+Place the table in your page where you want the slideshow
+to appear.  Follow the instructions for each table cell.
+//-->
+
+<table border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr valign="top">
+    <!--
+    The next table cell holds the images.
+    Set cell and image width and height the same.
+    The img src must have name=PictureBox in its
+    tag.  Usually the first image in the Picture
+    array in the script is used here.
+    //-->
+    <td>
+    <img src="slideshow_data/Image011.jpg" name="PictureBox" height="432" width="576">
+    </td>
+  </tr>
+  <tr>
+    <!-- 
+    The next table cell holds the captions.
+    This table cell must have id=CaptionBox and
+    class=Caption in its tag. The default caption
+    shows whilst loading in all browsers; NS4
+    will show only the default caption, throughout.
+    //-->
+    <td id="CaptionBox" class="Caption" align="center"></td>
+  </tr>
+</tbody></table>
+
+</body></html>

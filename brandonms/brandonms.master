@@ -1,0 +1,2012 @@
+<%
+'changelog'
+'LSP 09/16/16 - initial development'
+%>
+<!DOCTYPE html>
+<html class="Firefox Firefox48 js no-touch cssanimations csstransitions js no-touch" prefix="og: http://ogp.me/ns#" lang="en-US">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+	<title>Events - City of Brandon, Mississippi</title>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+	<script src="/clients/brandonms/images/ga.js" async="" type="text/javascript"></script>
+	<script type="text/javascript">
+		var ajaxurl = "http://www.brandonms.org/wp-admin/admin-ajax.php"
+	</script>
+	<style id="critical-path-css" type="text/css">
+		body,
+		html {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0
+		}
+		
+		.page-preloader {
+			top: 0;
+			left: 0;
+			z-index: 999;
+			position: fixed;
+			height: 100%;
+			width: 100%;
+			text-align: center
+		}
+		
+		.preloader-logo,
+		.preloader-preview-area {
+			top: 50%;
+			max-height: calc(50% - 20px);
+			opacity: 1
+		}
+		
+		.preloader-preview-area {
+			-webkit-animation-delay: -.2s;
+			animation-delay: -.2s;
+			-webkit-transform: translateY(100%);
+			-ms-transform: translateY(100%);
+			transform: translateY(100%);
+			margin-top: 10px;
+			width: 100%;
+			text-align: center;
+			position: absolute
+		}
+		
+		.preloader-logo {
+			max-width: 90%;
+			-webkit-transform: translateY(-100%);
+			-ms-transform: translateY(-100%);
+			transform: translateY(-100%);
+			margin: -10px auto 0;
+			position: relative
+		}
+		
+		.ball-pulse>div,
+		.ball-scale>div,
+		.line-scale>div {
+			margin: 2px;
+			display: inline-block
+		}
+		
+		.ball-pulse>div {
+			width: 15px;
+			height: 15px;
+			border-radius: 100%;
+			-webkit-animation: ball-pulse .75s infinite cubic-bezier(.2, .68, .18, 1.08);
+			animation: ball-pulse .75s infinite cubic-bezier(.2, .68, .18, 1.08)
+		}
+		
+		.ball-pulse>div:nth-child(1) {
+			-webkit-animation-delay: -.36s;
+			animation-delay: -.36s
+		}
+		
+		.ball-pulse>div:nth-child(2) {
+			-webkit-animation-delay: -.24s;
+			animation-delay: -.24s
+		}
+		
+		.ball-pulse>div:nth-child(3) {
+			-webkit-animation-delay: -.12s;
+			animation-delay: -.12s
+		}
+		
+		@-webkit-keyframes ball-pulse {
+			0%,
+			80% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				opacity: 1
+			}
+			45% {
+				-webkit-transform: scale(.1);
+				transform: scale(.1);
+				opacity: .7
+			}
+		}
+		
+		@keyframes ball-pulse {
+			0%,
+			80% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				opacity: 1
+			}
+			45% {
+				-webkit-transform: scale(.1);
+				transform: scale(.1);
+				opacity: .7
+			}
+		}
+		
+		.ball-clip-rotate-pulse {
+			position: relative;
+			-webkit-transform: translateY(-15px);
+			-ms-transform: translateY(-15px);
+			transform: translateY(-15px);
+			display: inline-block
+		}
+		
+		.ball-clip-rotate-pulse>div {
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 100%
+		}
+		
+		.ball-clip-rotate-pulse>div:first-child {
+			height: 36px;
+			width: 36px;
+			top: 7px;
+			left: -7px;
+			-webkit-animation: ball-clip-rotate-pulse-scale 1s 0s cubic-bezier(.09, .57, .49, .9) infinite;
+			animation: ball-clip-rotate-pulse-scale 1s 0s cubic-bezier(.09, .57, .49, .9) infinite
+		}
+		
+		.ball-clip-rotate-pulse>div:last-child {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			left: -16px;
+			top: -2px;
+			background: 0 0;
+			border: 2px solid;
+			-webkit-animation: ball-clip-rotate-pulse-rotate 1s 0s cubic-bezier(.09, .57, .49, .9) infinite;
+			animation: ball-clip-rotate-pulse-rotate 1s 0s cubic-bezier(.09, .57, .49, .9) infinite;
+			-webkit-animation-duration: 1s;
+			animation-duration: 1s
+		}
+		
+		@-webkit-keyframes ball-clip-rotate-pulse-rotate {
+			0% {
+				-webkit-transform: rotate(0) scale(1);
+				transform: rotate(0) scale(1)
+			}
+			50% {
+				-webkit-transform: rotate(180deg) scale(.6);
+				transform: rotate(180deg) scale(.6)
+			}
+			100% {
+				-webkit-transform: rotate(360deg) scale(1);
+				transform: rotate(360deg) scale(1)
+			}
+		}
+		
+		@keyframes ball-clip-rotate-pulse-rotate {
+			0% {
+				-webkit-transform: rotate(0) scale(1);
+				transform: rotate(0) scale(1)
+			}
+			50% {
+				-webkit-transform: rotate(180deg) scale(.6);
+				transform: rotate(180deg) scale(.6)
+			}
+			100% {
+				-webkit-transform: rotate(360deg) scale(1);
+				transform: rotate(360deg) scale(1)
+			}
+		}
+		
+		@-webkit-keyframes ball-clip-rotate-pulse-scale {
+			30% {
+				-webkit-transform: scale(.3);
+				transform: scale(.3)
+			}
+			100% {
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+		}
+		
+		@keyframes ball-clip-rotate-pulse-scale {
+			30% {
+				-webkit-transform: scale(.3);
+				transform: scale(.3)
+			}
+			100% {
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+		}
+		
+		@-webkit-keyframes square-spin {
+			25% {
+				-webkit-transform: perspective(100px) rotateX(180deg) rotateY(0);
+				transform: perspective(100px) rotateX(180deg) rotateY(0)
+			}
+			50% {
+				-webkit-transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+				transform: perspective(100px) rotateX(180deg) rotateY(180deg)
+			}
+			75% {
+				-webkit-transform: perspective(100px) rotateX(0) rotateY(180deg);
+				transform: perspective(100px) rotateX(0) rotateY(180deg)
+			}
+			100% {
+				-webkit-transform: perspective(100px) rotateX(0) rotateY(0);
+				transform: perspective(100px) rotateX(0) rotateY(0)
+			}
+		}
+		
+		@keyframes square-spin {
+			25% {
+				-webkit-transform: perspective(100px) rotateX(180deg) rotateY(0);
+				transform: perspective(100px) rotateX(180deg) rotateY(0)
+			}
+			50% {
+				-webkit-transform: perspective(100px) rotateX(180deg) rotateY(180deg);
+				transform: perspective(100px) rotateX(180deg) rotateY(180deg)
+			}
+			75% {
+				-webkit-transform: perspective(100px) rotateX(0) rotateY(180deg);
+				transform: perspective(100px) rotateX(0) rotateY(180deg)
+			}
+			100% {
+				-webkit-transform: perspective(100px) rotateX(0) rotateY(0);
+				transform: perspective(100px) rotateX(0) rotateY(0)
+			}
+		}
+		
+		.square-spin {
+			display: inline-block
+		}
+		
+		.square-spin>div {
+			width: 50px;
+			height: 50px;
+			-webkit-animation: square-spin 3s 0s cubic-bezier(.09, .57, .49, .9) infinite;
+			animation: square-spin 3s 0s cubic-bezier(.09, .57, .49, .9) infinite
+		}
+		
+		.cube-transition {
+			position: relative;
+			-webkit-transform: translate(-25px, -25px);
+			-ms-transform: translate(-25px, -25px);
+			transform: translate(-25px, -25px);
+			display: inline-block
+		}
+		
+		.cube-transition>div {
+			width: 15px;
+			height: 15px;
+			position: absolute;
+			top: -5px;
+			left: -5px;
+			-webkit-animation: cube-transition 1.6s 0s infinite ease-in-out;
+			animation: cube-transition 1.6s 0s infinite ease-in-out
+		}
+		
+		.cube-transition>div:last-child {
+			-webkit-animation-delay: -.8s;
+			animation-delay: -.8s
+		}
+		
+		@-webkit-keyframes cube-transition {
+			25% {
+				-webkit-transform: translateX(50px) scale(.5) rotate(-90deg);
+				transform: translateX(50px) scale(.5) rotate(-90deg)
+			}
+			50% {
+				-webkit-transform: translate(50px, 50px) rotate(-180deg);
+				transform: translate(50px, 50px) rotate(-180deg)
+			}
+			75% {
+				-webkit-transform: translateY(50px) scale(.5) rotate(-270deg);
+				transform: translateY(50px) scale(.5) rotate(-270deg)
+			}
+			100% {
+				-webkit-transform: rotate(-360deg);
+				transform: rotate(-360deg)
+			}
+		}
+		
+		@keyframes cube-transition {
+			25% {
+				-webkit-transform: translateX(50px) scale(.5) rotate(-90deg);
+				transform: translateX(50px) scale(.5) rotate(-90deg)
+			}
+			50% {
+				-webkit-transform: translate(50px, 50px) rotate(-180deg);
+				transform: translate(50px, 50px) rotate(-180deg)
+			}
+			75% {
+				-webkit-transform: translateY(50px) scale(.5) rotate(-270deg);
+				transform: translateY(50px) scale(.5) rotate(-270deg)
+			}
+			100% {
+				-webkit-transform: rotate(-360deg);
+				transform: rotate(-360deg)
+			}
+		}
+		
+		.ball-scale>div {
+			border-radius: 100%;
+			height: 60px;
+			width: 60px;
+			-webkit-animation: ball-scale 1s 0s ease-in-out infinite;
+			animation: ball-scale 1s 0s ease-in-out infinite
+		}
+		
+		@-webkit-keyframes ball-scale {
+			0% {
+				-webkit-transform: scale(0);
+				transform: scale(0)
+			}
+			100% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				opacity: 0
+			}
+		}
+		
+		@keyframes ball-scale {
+			0% {
+				-webkit-transform: scale(0);
+				transform: scale(0)
+			}
+			100% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				opacity: 0
+			}
+		}
+		
+		.line-scale>div {
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+			width: 5px;
+			height: 50px;
+			border-radius: 2px
+		}
+		
+		.line-scale>div:nth-child(1) {
+			-webkit-animation: line-scale 1s -.5s infinite cubic-bezier(.2, .68, .18, 1.08);
+			animation: line-scale 1s -.5s infinite cubic-bezier(.2, .68, .18, 1.08)
+		}
+		
+		.line-scale>div:nth-child(2) {
+			-webkit-animation: line-scale 1s -.4s infinite cubic-bezier(.2, .68, .18, 1.08);
+			animation: line-scale 1s -.4s infinite cubic-bezier(.2, .68, .18, 1.08)
+		}
+		
+		.line-scale>div:nth-child(3) {
+			-webkit-animation: line-scale 1s -.3s infinite cubic-bezier(.2, .68, .18, 1.08);
+			animation: line-scale 1s -.3s infinite cubic-bezier(.2, .68, .18, 1.08)
+		}
+		
+		.line-scale>div:nth-child(4) {
+			-webkit-animation: line-scale 1s -.2s infinite cubic-bezier(.2, .68, .18, 1.08);
+			animation: line-scale 1s -.2s infinite cubic-bezier(.2, .68, .18, 1.08)
+		}
+		
+		.line-scale>div:nth-child(5) {
+			-webkit-animation: line-scale 1s -.1s infinite cubic-bezier(.2, .68, .18, 1.08);
+			animation: line-scale 1s -.1s infinite cubic-bezier(.2, .68, .18, 1.08)
+		}
+		
+		@-webkit-keyframes line-scale {
+			0%,
+			100% {
+				-webkit-transform: scaley(1);
+				transform: scaley(1)
+			}
+			50% {
+				-webkit-transform: scaley(.4);
+				transform: scaley(.4)
+			}
+		}
+		
+		@keyframes line-scale {
+			0%,
+			100% {
+				-webkit-transform: scaley(1);
+				transform: scaley(1)
+			}
+			50% {
+				-webkit-transform: scaley(.4);
+				transform: scaley(.4)
+			}
+		}
+		
+		.ball-scale-multiple {
+			position: relative;
+			-webkit-transform: translateY(30px);
+			-ms-transform: translateY(30px);
+			transform: translateY(30px);
+			display: inline-block
+		}
+		
+		.ball-scale-multiple>div {
+			border-radius: 100%;
+			position: absolute;
+			left: -30px;
+			top: 0;
+			opacity: 0;
+			margin: 0;
+			width: 50px;
+			height: 50px;
+			-webkit-animation: ball-scale-multiple 1s 0s linear infinite;
+			animation: ball-scale-multiple 1s 0s linear infinite
+		}
+		
+		.ball-scale-multiple>div:nth-child(2),
+		.ball-scale-multiple>div:nth-child(3) {
+			-webkit-animation-delay: -.2s;
+			animation-delay: -.2s
+		}
+		
+		@-webkit-keyframes ball-scale-multiple {
+			0% {
+				-webkit-transform: scale(0);
+				transform: scale(0);
+				opacity: 0
+			}
+			5% {
+				opacity: 1
+			}
+			100% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				opacity: 0
+			}
+		}
+		
+		@keyframes ball-scale-multiple {
+			0% {
+				-webkit-transform: scale(0);
+				transform: scale(0);
+				opacity: 0
+			}
+			5% {
+				opacity: 1
+			}
+			100% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				opacity: 0
+			}
+		}
+		
+		.ball-pulse-sync {
+			display: inline-block
+		}
+		
+		.ball-pulse-sync>div {
+			width: 15px;
+			height: 15px;
+			border-radius: 100%;
+			margin: 2px;
+			-webkit-animation-fill-mode: both;
+			animation-fill-mode: both;
+			display: inline-block
+		}
+		
+		.ball-pulse-sync>div:nth-child(1) {
+			-webkit-animation: ball-pulse-sync .6s -.21s infinite ease-in-out;
+			animation: ball-pulse-sync .6s -.21s infinite ease-in-out
+		}
+		
+		.ball-pulse-sync>div:nth-child(2) {
+			-webkit-animation: ball-pulse-sync .6s -.14s infinite ease-in-out;
+			animation: ball-pulse-sync .6s -.14s infinite ease-in-out
+		}
+		
+		.ball-pulse-sync>div:nth-child(3) {
+			-webkit-animation: ball-pulse-sync .6s -70ms infinite ease-in-out;
+			animation: ball-pulse-sync .6s -70ms infinite ease-in-out
+		}
+		
+		@-webkit-keyframes ball-pulse-sync {
+			33% {
+				-webkit-transform: translateY(10px);
+				transform: translateY(10px)
+			}
+			66% {
+				-webkit-transform: translateY(-10px);
+				transform: translateY(-10px)
+			}
+			100% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0)
+			}
+		}
+		
+		@keyframes ball-pulse-sync {
+			33% {
+				-webkit-transform: translateY(10px);
+				transform: translateY(10px)
+			}
+			66% {
+				-webkit-transform: translateY(-10px);
+				transform: translateY(-10px)
+			}
+			100% {
+				-webkit-transform: translateY(0);
+				transform: translateY(0)
+			}
+		}
+		
+		.transparent-circle {
+			display: inline-block;
+			border-top: .5em solid rgba(255, 255, 255, .2);
+			border-right: .5em solid rgba(255, 255, 255, .2);
+			border-bottom: .5em solid rgba(255, 255, 255, .2);
+			border-left: .5em solid #fff;
+			-webkit-transform: translateZ(0);
+			transform: translateZ(0);
+			-webkit-animation: transparent-circle 1.1s infinite linear;
+			animation: transparent-circle 1.1s infinite linear;
+			width: 50px;
+			height: 50px;
+			border-radius: 50%
+		}
+		
+		.transparent-circle:after {
+			border-radius: 50%;
+			width: 10em;
+			height: 10em
+		}
+		
+		@-webkit-keyframes transparent-circle {
+			0% {
+				-webkit-transform: rotate(0);
+				transform: rotate(0)
+			}
+			100% {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg)
+			}
+		}
+		
+		@keyframes transparent-circle {
+			0% {
+				-webkit-transform: rotate(0);
+				transform: rotate(0)
+			}
+			100% {
+				-webkit-transform: rotate(360deg);
+				transform: rotate(360deg)
+			}
+		}
+		
+		.ball-spin-fade-loader {
+			position: relative;
+			top: -10px;
+			left: -10px;
+			display: inline-block
+		}
+		
+		.ball-spin-fade-loader>div {
+			width: 15px;
+			height: 15px;
+			border-radius: 100%;
+			margin: 2px;
+			position: absolute;
+			-webkit-animation: ball-spin-fade-loader 1s infinite linear;
+			animation: ball-spin-fade-loader 1s infinite linear
+		}
+		
+		.ball-spin-fade-loader>div:nth-child(1) {
+			top: 25px;
+			left: 0;
+			animation-delay: -.84s;
+			-webkit-animation-delay: -.84s
+		}
+		
+		.ball-spin-fade-loader>div:nth-child(2) {
+			top: 17.05px;
+			left: 17.05px;
+			animation-delay: -.72s;
+			-webkit-animation-delay: -.72s
+		}
+		
+		.ball-spin-fade-loader>div:nth-child(3) {
+			top: 0;
+			left: 25px;
+			animation-delay: -.6s;
+			-webkit-animation-delay: -.6s
+		}
+		
+		.ball-spin-fade-loader>div:nth-child(4) {
+			top: -17.05px;
+			left: 17.05px;
+			animation-delay: -.48s;
+			-webkit-animation-delay: -.48s
+		}
+		
+		.ball-spin-fade-loader>div:nth-child(5) {
+			top: -25px;
+			left: 0;
+			animation-delay: -.36s;
+			-webkit-animation-delay: -.36s
+		}
+		
+		.ball-spin-fade-loader>div:nth-child(6) {
+			top: -17.05px;
+			left: -17.05px;
+			animation-delay: -.24s;
+			-webkit-animation-delay: -.24s
+		}
+		
+		.ball-spin-fade-loader>div:nth-child(7) {
+			top: 0;
+			left: -25px;
+			animation-delay: -.12s;
+			-webkit-animation-delay: -.12s
+		}
+		
+		.ball-spin-fade-loader>div:nth-child(8) {
+			top: 17.05px;
+			left: -17.05px;
+			animation-delay: 0s;
+			-webkit-animation-delay: 0s
+		}
+		
+		@-webkit-keyframes ball-spin-fade-loader {
+			50% {
+				opacity: .3;
+				-webkit-transform: scale(.4);
+				transform: scale(.4)
+			}
+			100% {
+				opacity: 1;
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+		}
+		
+		@keyframes ball-spin-fade-loader {
+			50% {
+				opacity: .3;
+				-webkit-transform: scale(.4);
+				transform: scale(.4)
+			}
+			100% {
+				opacity: 1;
+				-webkit-transform: scale(1);
+				transform: scale(1)
+			}
+		}
+	</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="format-detection" content="telephone=no">
+
+	<!-- This site is optimized with the Yoast SEO plugin v3.5 - https://yoast.com/wordpress/plugins/seo/ -->
+	<link rel="canonical" href="http://www.brandonms.org/event-directory/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Events - City of Brandon, Mississippi">
+	<meta property="og:url" content="http://www.brandonms.org/event-directory/">
+	<meta property="og:site_name" content="City of Brandon, Mississippi">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Events - City of Brandon, Mississippi">
+	<!-- / Yoast SEO plugin. -->
+
+	<link rel="alternate" type="application/rss+xml" title="City of Brandon, Mississippi » Feed" href="http://www.brandonms.org/feed/">
+
+	<link rel="shortcut icon" href="http://www.brandonms.org/wp-content/uploads/2016/06/favicon.png">
+	<script type="text/javascript">
+		window.abb = {};
+		php = {};
+		window.PHP = {};
+		PHP.ajax = "http://www.brandonms.org/wp-admin/admin-ajax.php";
+		PHP.wp_p_id = "3";
+		var mk_header_parallax, mk_banner_parallax, mk_page_parallax, mk_footer_parallax, mk_body_parallax;
+		var mk_images_dir = "http://www.brandonms.org/wp-content/themes/jupiter/assets/images",
+			mk_theme_js_path = "http://www.brandonms.org/wp-content/themes/jupiter/assets/js",
+			mk_theme_dir = "http://www.brandonms.org/wp-content/themes/jupiter",
+			mk_captcha_placeholder = "Enter Captcha",
+			mk_captcha_invalid_txt = "Invalid. Try again.",
+			mk_captcha_correct_txt = "Captcha correct.",
+			mk_responsive_nav_width = 0,
+			mk_vertical_header_back = "Back",
+			mk_vertical_header_anim = "1",
+			mk_check_rtl = true,
+			mk_grid_width = 1140,
+			mk_ajax_search_option = "disable",
+			mk_preloader_bg_color = "#ffffff",
+			mk_accent_color = "#952224",
+			mk_go_to_top = "true",
+			mk_smooth_scroll = "true",
+			mk_preloader_bar_color = "#952224",
+			mk_preloader_logo = "";
+		var mk_header_parallax = false,
+			mk_banner_parallax = false,
+			mk_page_parallax = false,
+			mk_footer_parallax = false,
+			mk_body_parallax = false,
+			mk_no_more_posts = "No More Posts";
+	</script>
+
+	<link rel="stylesheet" id="ai1ec_style-css" href="/clients/brandonms/images/bf3fc886_ai1ec_parsed_css.css" type="text/css" media="all">
+	<link rel="stylesheet" id="tc-front-css" href="/clients/brandonms/images/front.css" type="text/css" media="all">
+
+	<link rel="stylesheet" id="rs-plugin-settings-css" href="/clients/brandonms/images/settings.css" type="text/css" media="all">
+	<style id="rs-plugin-settings-inline-css" type="text/css">
+		#rs-demo-id {}
+	</style>
+	<link rel="stylesheet" id="chosen-css" href="/clients/brandonms/images/chosen.css" type="text/css" media="all">
+	<link rel="stylesheet" id="wp-job-manager-frontend-css" href="/clients/brandonms/images/frontend.css" type="text/css" media="all">
+	<link rel="stylesheet" id="js-media-query-css" href="/clients/brandonms/images/media.css" type="text/css" media="all">
+	<link rel="stylesheet" id="theme-styles-css" href="/clients/brandonms/images/core-styles.css" type="text/css" media="all">
+	<link rel="stylesheet" id="google-font-api-special-1-css" href="/clients/brandonms/images/css.css" type="text/css" media="all">
+	<link rel="stylesheet" id="theme-dynamic-styles-css" href="/clients/brandonms/images/custom.css" type="text/css" media="all">
+	<style id="theme-dynamic-styles-inline-css" type="text/css">
+		body {
+			background-color: #fff;
+		}
+		
+		.mk-header {
+			background-color: #bececd;
+			background-size: cover;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+		}
+		
+		.mk-header-bg {
+			background: -webkit-linear-gradient(top, #fff 0%, #efeae5 100%);
+			background: linear-gradient(to bottom, #fff 0%, #efeae5 100%)
+		}
+		
+		.mk-classic-nav-bg {
+			background: -webkit-linear-gradient(top, #fff 0%, #efeae5 100%);
+			background: linear-gradient(to bottom, #fff 0%, #efeae5 100%)
+		}
+		
+		#theme-page {
+			background-color: #ffffff;
+		}
+		
+		#mk-footer {
+			background-color: #6f5144;
+		}
+		
+		#mk-boxed-layout {
+			-webkit-box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+			-moz-box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+			box-shadow: 0 0 0px rgba(0, 0, 0, 0);
+		}
+		
+		.mk-news-tab .mk-tabs-tabs .is-active a,
+		.mk-fancy-title.pattern-style span,
+		.mk-fancy-title.pattern-style.color-gradient span:after,
+		.page-bg-color {
+			background-color: #ffffff;
+		}
+		
+		.page-title {
+			font-size: 20px;
+			color: #6f5144;
+			text-transform: uppercase;
+			font-weight: 400;
+			letter-spacing: 2px;
+		}
+		
+		.page-subtitle {
+			font-size: 14px;
+			line-height: 100%;
+			color: #4d4d4d;
+			font-size: 14px;
+			text-transform: none;
+		}
+		
+		.mk-header {
+			border-bottom: 1px solid #ededed;
+		}
+		
+		.header-style-1 .mk-header-padding-wrapper,
+		.header-style-2 .mk-header-padding-wrapper,
+		.header-style-3 .mk-header-padding-wrapper {
+			padding-top: 151px;
+		}
+		
+	
+	</style>
+	<link rel="stylesheet" id="tablepress-default-css" href="/clients/brandonms/images/default.css" type="text/css" media="all">
+	<style id="tablepress-default-inline-css" type="text/css">
+		.tablepress thead th,
+		.tablepress tfoot th {
+			background-color: #EEE
+		}
+		
+		.tablepress thead .sorting_asc,
+		.tablepress thead .sorting_desc,
+		.tablepress thead .sorting:hover {
+			background-color: #95a5a6
+		}
+		
+		.tablepress .row-hover tr:hover td {
+			background-color: #BDC3C7
+		}
+		
+		.tablepress tbody td {
+			font-family: Tahoma;
+			font-size: 14px;
+			color: #22313F
+		}
+		
+		.tablepress .odd td {
+			background-color: #F2F1EF
+		}
+		
+		.tablepress .even td {
+			background-color: #ECF0F1
+		}
+	</style>
+	<link rel="stylesheet" id="mc4wp-form-themes-css" href="/clients/brandonms/images/form-themes.css" type="text/css" media="all">
+	<link rel="stylesheet" id="global-assets-css-css" href="/clients/brandonms/images/components-production.css" type="text/css" media="all">
+	<link rel="stylesheet" id="theme-options-css" href="/clients/brandonms/images/theme-options-production.css" type="text/css" media="all">
+	<link rel="stylesheet" id="ubermenu-css" href="/clients/brandonms/images/ubermenu.css" type="text/css" media="all">
+
+	<link rel="stylesheet" id="mk-style-css" href="/clients/brandonms/images/style.css" type="text/css" media="all">
+	<script type="text/javascript" src="/clients/brandonms/images/jquery_003.js"></script>
+	<script type="text/javascript" src="/clients/brandonms/images/jquery-migrate.js"></script>
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		var tc_ajax = {
+			"ajaxUrl": "http:\/\/www.brandonms.org\/wp-admin\/admin-ajax.php",
+			"emptyCartMsg": "Are you sure you want to remove all tickets from your cart?",
+			"success_message": "Ticket Added!",
+			"imgUrl": "http:\/\/www.brandonms.org\/wp-content\/plugins\/tickera-event-ticketing-system\/images\/ajax-loader.gif",
+			"addingMsg": "Adding ticket to cart...",
+			"outMsg": "In Your Cart",
+			"cart_url": "http:\/\/www.brandonms.org\/tickets-cart\/",
+			"update_cart_message": "Please update your cart before proceeding."
+		};
+		/* ]]> */
+	</script>
+	<script type="text/javascript" src="/clients/brandonms/images/cart.js"></script>
+	<script type="text/javascript" src="/clients/brandonms/images/calendar.js"></script>
+	<script type="text/javascript" src="/clients/brandonms/images/jquery.js"></script>
+	<script type="text/javascript" src="/clients/brandonms/images/jquery_004.js"></script>
+	<script type="text/javascript" src="/clients/brandonms/images/jquery_002.js"></script>
+	<link rel="https://api.w.org/" href="http://www.brandonms.org/wp-json/">
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.brandonms.org/xmlrpc.php?rsd">
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.brandonms.org/wp-includes/wlwmanifest.xml">
+	<link rel="shortlink" href="http://www.brandonms.org/?p=3">
+	<link rel="alternate" type="application/json+oembed" href="http://www.brandonms.org/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.brandonms.org%2Fevent-directory%2F">
+	<link rel="alternate" type="text/xml+oembed" href="http://www.brandonms.org/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.brandonms.org%2Fevent-directory%2F&amp;format=xml">
+
+	<style id="ubermenu-custom-generated-css">
+		/** UberMenu Responsive Styles (Breakpoint Setting) **/
+		
+		@media screen and (min-width: 1140px) {
+			.ubermenu {
+				display: block !important;
+			}
+			.ubermenu-responsive .ubermenu-item.ubermenu-hide-desktop {
+				display: none !important;
+			}
+			.ubermenu-responsive.ubermenu-retractors-responsive .ubermenu-retractor-mobile {
+				display: none;
+			}
+			/* Force current submenu always open but below others */
+			.ubermenu-force-current-submenu .ubermenu-item-level-0.ubermenu-current-menu-item>.ubermenu-submenu-drop,
+			.ubermenu-force-current-submenu .ubermenu-item-level-0.ubermenu-current-menu-ancestor>.ubermenu-submenu-drop {
+				display: block!important;
+				opacity: 1!important;
+				visibility: visible!important;
+				margin: 0!important;
+				top: auto!important;
+				height: auto;
+				z-index: 19;
+			}
+			/* Invert Horizontal menu to make subs go up */
+			.ubermenu-invert.ubermenu-horizontal .ubermenu-item-level-0>.ubermenu-submenu-drop {
+				top: auto;
+				bottom: 100%;
+			}
+			.ubermenu-invert.ubermenu-horizontal.ubermenu-sub-indicators .ubermenu-item-level-0.ubermenu-has-submenu-drop>.ubermenu-target:after {
+				content: "\f106";
+			}
+			/* Invert Vertical menu to make subs go left */
+			.ubermenu-invert.ubermenu-vertical .ubermenu-item-level-0>.ubermenu-submenu-drop {
+				right: 100%;
+				left: auto;
+			}
+			.ubermenu-invert.ubermenu-vertical.ubermenu-sub-indicators .ubermenu-item-level-0.ubermenu-item-has-children>a.ubermenu-target:after {
+				right: auto;
+				left: 10px;
+				margin-top: -7px;
+				content: "\f104";
+			}
+			.ubermenu-vertical.ubermenu-invert .ubermenu-item>.ubermenu-submenu-drop {
+				clip: rect(-5000px, 5000px, 5000px, -5000px);
+			}
+			.ubermenu-responsive-toggle {
+				display: none;
+			}
+		}
+		
+		@media screen and (max-width: 1139px) {
+			.ubermenu-responsive-toggle,
+			.ubermenu-sticky-toggle-wrapper {
+				display: block;
+			}
+			.ubermenu-responsive {
+				width: 100%;
+				max-height: 500px;
+				visibility: visible;
+				overflow: visible;
+				-webkit-transition: max-height 1s ease-in;
+				transition: max-height .3s ease-in;
+			}
+			.ubermenu-responsive.ubermenu-items-align-center {
+				text-align: left;
+			}
+			.ubermenu-responsive.ubermenu {
+				margin: 0;
+			}
+			.ubermenu-responsive.ubermenu .ubermenu-nav {
+				display: block;
+			}
+			.ubermenu-responsive.ubermenu-responsive-nocollapse,
+			.ubermenu-repsonsive.ubermenu-no-transitions {
+				display: block;
+				max-height: none;
+			}
+			.ubermenu-responsive.ubermenu-responsive-collapse {
+				max-height: none;
+				visibility: visible;
+				overflow: visible;
+			}
+			.ubermenu-responsive.ubermenu-responsive-collapse {
+				max-height: 0;
+				overflow: hidden !important;
+				visibility: hidden;
+			}
+			.ubermenu-responsive.ubermenu-in-transition,
+			.ubermenu-responsive.ubermenu-in-transition .ubermenu-nav {
+				overflow: hidden !important;
+				visibility: visible;
+			}
+			.ubermenu-responsive.ubermenu-responsive-collapse:not(.ubermenu-in-transition) {
+				border-top-width: 0;
+				border-bottom-width: 0;
+			}
+			.ubermenu-responsive.ubermenu-responsive-collapse .ubermenu-item .ubermenu-submenu {
+				display: none;
+			}
+			.ubermenu-responsive .ubermenu-item-level-0 {
+				width: 50%;
+			}
+			.ubermenu-responsive.ubermenu-responsive-single-column .ubermenu-item-level-0 {
+				float: none;
+				clear: both;
+				width: 100%;
+			}
+			.ubermenu-responsive .ubermenu-item.ubermenu-item-level-0>.ubermenu-target {
+				border: none;
+				box-shadow: none;
+			}
+			.ubermenu-responsive .ubermenu-item.ubermenu-has-submenu-flyout {
+				position: static;
+			}
+			.ubermenu-responsive.ubermenu-sub-indicators .ubermenu-submenu-type-flyout .ubermenu-has-submenu-drop>.ubermenu-target:after {
+				content: "\f107";
+			}
+			.ubermenu-responsive .ubermenu-nav .ubermenu-item .ubermenu-submenu.ubermenu-submenu-drop {
+				width: 100%;
+				min-width: 100%;
+				max-width: 100%;
+				top: auto;
+				left: 0 !important;
+			}
+			.ubermenu-responsive.ubermenu-has-border .ubermenu-nav .ubermenu-item .ubermenu-submenu.ubermenu-submenu-drop {
+				left: -1px !important;
+				/* For borders */
+			}
+			.ubermenu-responsive .ubermenu-submenu.ubermenu-submenu-type-mega>.ubermenu-item.ubermenu-column {
+				min-height: 0;
+				border-left: none;
+				float: left;
+				/* override left/center/right content alignment */
+				display: block;
+			}
+			.ubermenu-responsive .ubermenu-item.ubermenu-active>.ubermenu-submenu.ubermenu-submenu-type-mega {
+				max-height: none;
+				height: auto;
+				/*prevent overflow scrolling since android is still finicky*/
+				overflow: visible;
+			}
+			.ubermenu-responsive.ubermenu-transition-slide .ubermenu-item.ubermenu-in-transition>.ubermenu-submenu-drop {
+				max-height: 1000px;
+				/* because of slide transition */
+			}
+			.ubermenu .ubermenu-submenu-type-flyout .ubermenu-submenu-type-mega {
+				min-height: 0;
+			}
+			.ubermenu.ubermenu-responsive .ubermenu-column,
+			.ubermenu.ubermenu-responsive .ubermenu-column-auto {
+				min-width: 50%;
+			}
+			.ubermenu.ubermenu-responsive .ubermenu-autoclear>.ubermenu-column {
+				clear: none;
+			}
+			.ubermenu.ubermenu-responsive .ubermenu-column:nth-of-type(2n+1) {
+				clear: both;
+			}
+			.ubermenu.ubermenu-responsive .ubermenu-submenu-retractor-top:not(.ubermenu-submenu-retractor-top-2) .ubermenu-column:nth-of-type(2n+1) {
+				clear: none;
+			}
+			.ubermenu.ubermenu-responsive .ubermenu-submenu-retractor-top:not(.ubermenu-submenu-retractor-top-2) .ubermenu-column:nth-of-type(2n+2) {
+				clear: both;
+			}
+			.ubermenu.ubermenu-responsive .ubermenu-tabs,
+			.ubermenu.ubermenu-responsive .ubermenu-tabs-group,
+			.ubermenu.ubermenu-responsive .ubermenu-tab,
+			.ubermenu.ubermenu-responsive .ubermenu-tab-content-panel {
+				/** TABS SHOULD BE 100%  ACCORDION */
+				width: 100%;
+				min-width: 100%;
+				max-width: 100%;
+				left: 0;
+			}
+			.ubermenu.ubermenu-responsive .ubermenu-tabs,
+			.ubermenu.ubermenu-responsive .ubermenu-tab-content-panel {
+				min-height: 0 !important;
+				/* Override Inline Style from JS */
+			}
+			.ubermenu.ubermenu-responsive .ubermenu-tabs {
+				z-index: 15;
+			}
+			.ubermenu.ubermenu-responsive .ubermenu-tab-content-panel {
+				z-index: 20;
+			}
+			/* Tab Layering */
+			.ubermenu-responsive .ubermenu-tab {
+				position: relative;
+			}
+			.ubermenu-responsive .ubermenu-tab.ubermenu-active {
+				position: relative;
+				z-index: 20;
+			}
+			.ubermenu-responsive .ubermenu-tab>.ubermenu-target {
+				border-width: 0 0 1px 0;
+			}
+			.ubermenu-responsive.ubermenu-sub-indicators .ubermenu-tabs>.ubermenu-tabs-group>.ubermenu-tab.ubermenu-has-submenu-drop>.ubermenu-target:after {
+				content: "\f107";
+			}
+			.ubermenu-responsive .ubermenu-tabs>.ubermenu-tabs-group>.ubermenu-tab>.ubermenu-tab-content-panel {
+				top: auto;
+				border-width: 1px;
+			}
+			.ubermenu-responsive .ubermenu-tab-layout-bottom>.ubermenu-tabs-group {
+				/*position:relative;*/
+			}
+			.ubermenu-reponsive .ubermenu-item-level-0>.ubermenu-submenu-type-stack {
+				/* Top Level Stack Columns */
+				position: relative;
+			}
+			.ubermenu-responsive .ubermenu-submenu-type-stack .ubermenu-column,
+			.ubermenu-responsive .ubermenu-submenu-type-stack .ubermenu-column-auto {
+				/* Stack Columns */
+				width: 100%;
+				max-width: 100%;
+			}
+			.ubermenu-responsive .ubermenu-item-mini {
+				/* Mini items */
+				min-width: 0;
+				width: auto;
+				float: left;
+				clear: none !important;
+			}
+			.ubermenu-responsive .ubermenu-item.ubermenu-item-mini>a.ubermenu-target {
+				padding-left: 20px;
+				padding-right: 20px;
+			}
+			.ubermenu-responsive .ubermenu-item.ubermenu-hide-mobile {
+				/* Hiding items */
+				display: none !important;
+			}
+			.ubermenu-responsive.ubermenu-hide-bkgs .ubermenu-submenu.ubermenu-submenu-bkg-img {
+				/** Hide Background Images in Submenu */
+				background-image: none;
+			}
+			.ubermenu.ubermenu-responsive .ubermenu-item-level-0.ubermenu-item-mini {
+				min-width: 0;
+				width: auto;
+			}
+			.ubermenu-vertical .ubermenu-item.ubermenu-item-level-0 {
+				width: 100%;
+			}
+			.ubermenu-vertical.ubermenu-sub-indicators .ubermenu-item-level-0.ubermenu-item-has-children>.ubermenu-target:after {
+				content: '\f107';
+			}
+			.ubermenu-vertical .ubermenu-item.ubermenu-item-level-0.ubermenu-relative.ubermenu-active>.ubermenu-submenu-drop.ubermenu-submenu-align-vertical_parent_item {
+				top: auto;
+			}
+			.ubermenu-responsive-toggle {
+				display: block;
+			}
+		}
+		
+		@media screen and (max-width: 480px) {
+			.ubermenu.ubermenu-responsive .ubermenu-item-level-0 {
+				width: 100%;
+			}
+			.ubermenu.ubermenu-responsive .ubermenu-column,
+			.ubermenu.ubermenu-responsive .ubermenu-column-auto {
+				min-width: 100%;
+			}
+		}
+		/** UberMenu Custom Menu Styles (Customizer) **/
+		/* main */
+		
+		.ubermenu-main.ubermenu-vertical .ubermenu-submenu-type-mega {
+			width: 960px;
+		}
+		
+		.ubermenu-main .ubermenu-item .ubermenu-submenu-drop {
+			-webkit-transition-duration: 300ms;
+			-ms-transition-duration: 300ms;
+			transition-duration: 300ms;
+		}
+		
+		.ubermenu-main .ubermenu-item-layout-image_left>.ubermenu-target-text {
+			padding-left: 26px;
+		}
+		
+		.ubermenu-main .ubermenu-item-layout-image_right>.ubermenu-target-text {
+			padding-right: 26px;
+		}
+		
+		.ubermenu-main {
+			background-color: #6f5144;
+			background: -webkit-gradient(linear, left top, left bottom, from(#6f5144), to(#6f5144));
+			background: -webkit-linear-gradient(top, #6f5144, #6f5144);
+			background: -moz-linear-gradient(top, #6f5144, #6f5144);
+			background: -ms-linear-gradient(top, #6f5144, #6f5144);
+			background: -o-linear-gradient(top, #6f5144, #6f5144);
+			background: linear-gradient(top, #6f5144, #6f5144);
+		}
+		
+		.ubermenu-main.ubermenu-transition-fade .ubermenu-item .ubermenu-submenu-drop {
+			margin-top: 0;
+		}
+		
+		.ubermenu-main .ubermenu-item-level-0>.ubermenu-target {
+			font-size: 15.5px;
+			text-transform: none;
+			color: #e7c7af;
+			border: none;
+			-webkit-box-shadow: inset 1px 0 0 0 rgba(255, 255, 255, 0);
+			-moz-box-shadow: inset 1px 0 0 0 rgba(255, 255, 255, 0);
+			-o-box-shadow: inset 1px 0 0 0 rgba(255, 255, 255, 0);
+			box-shadow: inset 1px 0 0 0 rgba(255, 255, 255, 0);
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+		
+		.ubermenu-main .ubermenu-nav .ubermenu-item.ubermenu-item-level-0>.ubermenu-target {
+			font-weight: normal;
+		}
+		
+		.ubermenu.ubermenu-main .ubermenu-item-level-0:hover>.ubermenu-target,
+		.ubermenu-main .ubermenu-item-level-0.ubermenu-active>.ubermenu-target {
+			color: #f8f3e8;
+			background-color: #af292e;
+			background: -webkit-gradient(linear, left top, left bottom, from(#af292e), to(#af292e));
+			background: -webkit-linear-gradient(top, #af292e, #af292e);
+			background: -moz-linear-gradient(top, #af292e, #af292e);
+			background: -ms-linear-gradient(top, #af292e, #af292e);
+			background: -o-linear-gradient(top, #af292e, #af292e);
+			background: linear-gradient(top, #af292e, #af292e);
+		}
+		
+		.ubermenu-main .ubermenu-item-level-0.ubermenu-current-menu-item>.ubermenu-target,
+		.ubermenu-main .ubermenu-item-level-0.ubermenu-current-menu-parent>.ubermenu-target,
+		.ubermenu-main .ubermenu-item-level-0.ubermenu-current-menu-ancestor>.ubermenu-target {
+			color: #f8f3e8;
+			background-color: #af292e;
+			background: -webkit-gradient(linear, left top, left bottom, from(#af292e), to(#af292e));
+			background: -webkit-linear-gradient(top, #af292e, #af292e);
+			background: -moz-linear-gradient(top, #af292e, #af292e);
+			background: -ms-linear-gradient(top, #af292e, #af292e);
+			background: -o-linear-gradient(top, #af292e, #af292e);
+			background: linear-gradient(top, #af292e, #af292e);
+		}
+		
+		.ubermenu-main .ubermenu-item.ubermenu-item-level-0>.ubermenu-highlight {
+			color: #f8f3e8;
+			background-color: #af292e;
+			background: -webkit-gradient(linear, left top, left bottom, from(#af292e), to(#af292e));
+			background: -webkit-linear-gradient(top, #af292e, #af292e);
+			background: -moz-linear-gradient(top, #af292e, #af292e);
+			background: -ms-linear-gradient(top, #af292e, #af292e);
+			background: -o-linear-gradient(top, #af292e, #af292e);
+			background: linear-gradient(top, #af292e, #af292e);
+		}
+		
+		.ubermenu-main .ubermenu-item-level-0.ubermenu-active>.ubermenu-target,
+		.ubermenu-main .ubermenu-item-level-0:hover>.ubermenu-target {
+			-webkit-box-shadow: inset 1px 0 0 0 rgba(255, 255, 255, 0);
+			-moz-box-shadow: inset 1px 0 0 0 rgba(255, 255, 255, 0);
+			-o-box-shadow: inset 1px 0 0 0 rgba(255, 255, 255, 0);
+			box-shadow: inset 1px 0 0 0 rgba(255, 255, 255, 0);
+		}
+		
+		.ubermenu-main .ubermenu-submenu.ubermenu-submenu-drop {
+			background-color: #d3d2cf;
+			border: 1px solid #6f5144;
+			color: #af292e;
+		}
+		
+		.ubermenu-main .ubermenu-submenu .ubermenu-column {
+			min-width: 100px;
+		}
+		
+		.ubermenu-main .ubermenu-submenu .ubermenu-item-header>.ubermenu-target,
+		.ubermenu-main .ubermenu-tab>.ubermenu-target {
+			font-size: 16px;
+		}
+		
+		.ubermenu-main .ubermenu-submenu .ubermenu-item-header>.ubermenu-target {
+			color: #6f5144;
+		}
+		
+		.ubermenu-main .ubermenu-submenu .ubermenu-item-header>.ubermenu-target:hover {
+			color: #6f5144;
+		}
+		
+		.ubermenu-main .ubermenu-submenu .ubermenu-item-header.ubermenu-current-menu-item>.ubermenu-target {
+			color: #6f5144;
+		}
+		
+		.ubermenu-main .ubermenu-nav .ubermenu-submenu .ubermenu-item-header>.ubermenu-target {
+			font-weight: normal;
+		}
+		
+		.ubermenu-main .ubermenu-item-normal>.ubermenu-target {
+			color: #af292e;
+			font-size: 12px;
+		}
+		
+		.ubermenu.ubermenu-main .ubermenu-item-normal>.ubermenu-target:hover,
+		.ubermenu.ubermenu-main .ubermenu-item-normal:hover>.ubermenu-target,
+		.ubermenu.ubermenu-main .ubermenu-item-normal.ubermenu-active>.ubermenu-target {
+			color: #af292e;
+		}
+		
+		.ubermenu-main .ubermenu-item-normal.ubermenu-current-menu-item>.ubermenu-target {
+			color: #af292e;
+		}
+		
+		.ubermenu-main .ubermenu-target>.ubermenu-target-description {
+			font-size: 10px;
+			text-transform: none;
+		}
+		
+		.ubermenu-main .ubermenu-item-level-0.ubermenu-has-submenu-drop>.ubermenu-target:after {
+			color: #fafafa;
+		}
+		
+		.ubermenu-main .ubermenu-submenu .ubermenu-has-submenu-drop>.ubermenu-target:after {
+			color: #f7f7f7;
+		}
+		
+		.ubermenu-responsive-toggle.ubermenu-responsive-toggle-main {
+			font-size: 26px;
+			color: #c2d1d0;
+		}
+		
+		.ubermenu.ubermenu-main .ubermenu-search input.ubermenu-search-input {
+			background: #dd8080;
+			color: #bcbcbc;
+		}
+		
+		.ubermenu.ubermenu-main .ubermenu-search input.ubermenu-search-input::-webkit-input-placeholder {
+			color: #bcbcbc;
+		}
+		
+		.ubermenu.ubermenu-main .ubermenu-search input.ubermenu-search-input::-moz-placeholder {
+			color: #bcbcbc;
+		}
+		
+		.ubermenu.ubermenu-main .ubermenu-search input.ubermenu-search-input::-ms-input-placeholder {
+			color: #bcbcbc;
+		}
+		
+		.ubermenu.ubermenu-main .ubermenu-search .ubermenu-search-submit {
+			color: #bcbcbc;
+		}
+		/** UberMenu Custom Menu Item Styles (Menu Item Settings) **/
+		/* 7107 */
+		
+		.ubermenu .ubermenu-submenu.ubermenu-submenu-id-7107 {
+			min-width: 231.3px;
+		}
+		/* Status: Loaded from Transient */
+	</style>
+	<style type="text/css">
+		/* MailChimp for WP - Checkbox Styles */
+		
+		.mc4wp-checkbox-wp-registration-form {
+			clear: both;
+			display: block;
+			position: static;
+			width: auto;
+		}
+		
+		.mc4wp-checkbox-wp-registration-form input {
+			float: none;
+			width: auto;
+			position: static;
+			margin: 0 6px 0 0;
+			padding: 0;
+			vertical-align: middle;
+			display: inline-block !important;
+			max-width: 21px;
+			-webkit-appearance: checkbox;
+		}
+		
+		.mc4wp-checkbox-wp-registration-form label {
+			float: none;
+			display: block;
+			cursor: pointer;
+			width: auto;
+			position: static;
+			margin: 0 0 16px 0;
+		}
+	</style>
+	<meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress.">
+	<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="http://www.brandonms.org/wp-content/plugins/js_composer_theme/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]-->
+	<!--[if IE  8]><link rel="stylesheet" type="text/css" href="http://www.brandonms.org/wp-content/plugins/js_composer_theme/assets/css/vc-ie8.min.css" media="screen"><![endif]-->
+	<meta name="generator" content="Powered by Slider Revolution 5.2.6 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
+	<meta name="generator" content="City of Brandon Theme 1.0">
+	<noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+	<style type="text/css">
+		@keyframes resizeanim {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 0;
+			}
+		}
+		
+		.resize-triggers {
+			animation: 1ms resizeanim;
+			visibility: hidden;
+			opacity: 0;
+		}
+		
+		.resize-triggers,
+		.resize-triggers>div,
+		.contract-trigger:before {
+			content: " ";
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+		}
+		
+		.resize-triggers>div {
+			background: #eee;
+			overflow: auto;
+		}
+		
+		.contract-trigger:before {
+			width: 200%;
+			height: 200%;
+		}
+	</style>
+	<style type="text/css">
+		.fancybox-margin {
+			margin-right: 17px;
+		}
+	</style>
+</head>
+
+<body class="page page-id-3 page-template-default city-of-brandon-theme wpb-js-composer js-comp-ver-4.11.3 vc_responsive" itemscope="itemscope" itemtype="https://schema.org/WebPage" data-adminbar="">
+
+
+	<!-- Target for scroll anchors to achieve native browser bahaviour + possible enhancements like smooth scrolling -->
+	<div id="top-of-page"></div>
+
+	<div id="mk-boxed-layout">
+
+		<div id="mk-theme-container">
+
+
+			<header data-height="100" data-sticky-height="55" data-responsive-height="100" data-transparent-skin="" data-header-style="2" data-sticky-style="false" data-sticky-offset="header" id="mk-header-1" class="mk-header header-style-2 header-align-left  toolbar-false menu-hover-2 sticky-style-false mk-background-stretch boxed-header mobile-align-right "
+							role="banner" itemscope="itemscope" itemtype="https://schema.org/WPHeader">
+				<div class="mk-header-holder">
+					<div class="mk-header-inner">
+
+						<div class="mk-header-bg "></div>
+
+
+						<div class="mk-grid header-grid">
+							<div class="add-header-height">
+								<div class=" header-logo fit-logo-img add-header-height logo-is-responsive logo-has-sticky">
+
+									<a href="http://www.brandonms.org/" title="City of Brandon, Mississippi">
+
+										<img class="mk-desktop-logo dark-logo" title="" alt="" src="/clients/brandonms/images/Logo-MAIN-City-of-Brandon.png">
+
+										<img class="mk-desktop-logo light-logo" title="" alt="" src="/clients/brandonms/images/City-of-Brandon_HORIZlogo_light.png">
+
+										<img class="mk-resposnive-logo" title="" alt="" src="/clients/brandonms/images/489-City-of-Brandon_HORIZlogo.png">
+
+										<img class="mk-sticky-logo" title="" alt="" src="/clients/brandonms/images/489-City-of-Brandon_HORIZlogo.png">
+									</a>
+
+								</div>
+								<div class="right-primary-nav">
+									<nav class="mk-main-navigation js-main-nav">
+										<ul id="menu-top-menu" class="main-navigation-ul dropdownJavascript">
+											<li id="menu-item-7656" class="menu-item menu-item-type-post_type menu-item-object-page no-mega-menu"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/leadership/employment-opportunities/">Jobs</a></li>
+											<li id="menu-item-7657" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children no-mega-menu"><a aria-haspopup="true" class="menu-item-link js-smooth-scroll" href="#">Services</a>
+												<ul style="" class="sub-menu ">
+													<li id="menu-item-7944" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/public-works/citizen-works-request/">Citizen Works Request</a></li>
+													<li id="menu-item-7941" class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link js-smooth-scroll" href="https://www.logicsolbp.com/brandon/login.aspx">Pay Water Bill</a></li>
+												</ul>
+											</li>
+											<li id="menu-item-7783" class="menu-item menu-item-type-post_type menu-item-object-page no-mega-menu"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/news/">News</a></li>
+											<li id="menu-item-7768" class="menu-item menu-item-type-post_type menu-item-object-page no-mega-menu"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/contact/">Contact Us</a></li>
+										</ul>
+									</nav>
+									<form class="mk-searchform" method="get" id="searchform" action="/">
+										<input class="text-input empty" placeholder="" name="s" onblur="this.value=''" onsubmit="this.value=''" id="s1" type="text">
+									</form>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="clearboth"></div>
+
+						<div class="mk-header-nav-container menu-hover-style-2" role="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+							<div class="mk-classic-nav-bg"></div>
+							<div class="mk-classic-menu-wrapper">
+
+								<!-- UberMenu [Configuration:main] [Theme Loc:primary-menu] [Integration:auto] -->
+								<button class="ubermenu-responsive-toggle ubermenu-responsive-toggle-main ubermenu-skin-none ubermenu-loc-primary-menu ubermenu-responsive-toggle-content-align-left ubermenu-responsive-toggle-align-full ubermenu-responsive-toggle-icon-only " data-ubermenu-target="ubermenu-main-28-primary-menu"><i class="fa fa-bars"></i></button>
+								<div
+												id="ubermenu-main-28-primary-menu" class="ubermenu ubermenu-main ubermenu-menu-28 ubermenu-loc-primary-menu ubermenu-responsive ubermenu-responsive-1139 ubermenu-responsive-collapse ubermenu-horizontal ubermenu-transition-fade ubermenu-trigger-hover_intent ubermenu-skin-none  ubermenu-bar-align-full ubermenu-items-align-center ubermenu-bound ubermenu-disable-submenu-scroll ubermenu-retractors-responsive ubermenu-notouch">
+									<ul id="ubermenu-nav-main-28-primary-menu" class="ubermenu-nav">
+										<li id="menu-item-7659" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7659 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Home</span></a></li>
+										<li id="menu-item-7106" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-item-7106 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-flyout"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/leadership/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Leadership</span></a>
+											<ul class="ubermenu-submenu ubermenu-submenu-id-7106 ubermenu-submenu-type-flyout ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item">
+												<li id="menu-item-2879" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-2879 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/leadership/office-of-the-mayor/"><span class="ubermenu-target-title ubermenu-target-text">Office of the Mayor</span></a></li>
+												<li
+																id="menu-item-2873" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-2873 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/leadership/board-of-aldermen/"><span class="ubermenu-target-title ubermenu-target-text">Board of Aldermen</span></a></li>
+										<li
+														id="menu-item-3159" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-3159 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/leadership/city-clerks-office/"><span class="ubermenu-target-title ubermenu-target-text">City Clerk’s Office</span></a></li>
+											<li
+															id="menu-item-8024" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8024 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/leadership/board-minutes-and-agenda/"><span class="ubermenu-target-title ubermenu-target-text">Board Agenda &amp; Minutes</span></a></li>
+												<li
+																id="menu-item-7194" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7194 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/leadership/employment-opportunities/"><span class="ubermenu-target-title ubermenu-target-text">Employment Opportunities</span></a></li>
+													<li
+																	class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li>
+														</ul>
+														</li>
+														<li id="menu-item-7107" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-item-7107 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-flyout"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/experience-brandon/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Experience Brandon</span></a>
+															<ul
+																			class="ubermenu-submenu ubermenu-submenu-id-7107 ubermenu-submenu-type-flyout ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item">
+																<li id="menu-item-7109" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7109 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/experience-brandon/history-of-brandon/"><span class="ubermenu-target-title ubermenu-target-text">History of Brandon</span></a></li>
+																<li
+																				id="menu-item-8360" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8360 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/experience-brandon/history-of-crossgates/"><span class="ubermenu-target-title ubermenu-target-text">History of Crossgates</span></a></li>
+														<li
+																		id="menu-item-8937" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8937 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/experience-brandon/tour-brandon/"><span class="ubermenu-target-title ubermenu-target-text">Tour Brandon</span></a></li>
+															<li
+																			id="menu-item-7111" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7111 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/experience-brandon/quality-of-life/"><span class="ubermenu-target-title ubermenu-target-text">Quality of Life</span></a></li>
+																<li
+																				class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li>
+									</ul>
+									</li>
+									<li id="menu-item-8733" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-item-8733 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-flyout"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/residents/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Residents</span></a>
+										<ul class="ubermenu-submenu ubermenu-submenu-id-8733 ubermenu-submenu-type-flyout ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item">
+											<li id="menu-item-8408" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8408 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/residents/education/"><span class="ubermenu-target-title ubermenu-target-text">Education</span></a></li>
+											<li id="menu-item-7707"
+															class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7707 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/residents/senior-services/"><span class="ubermenu-target-title ubermenu-target-text">Senior Services</span></a></li>
+											<li id="menu-item-7713"
+															class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-7713 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://cmrls.lib.ms.us/cmrlsbranches/brandon"><span class="ubermenu-target-title ubermenu-target-text">Brandon Library</span></a></li>
+											<li id="menu-item-9008"
+															class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-9008 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/police-department/"><span class="ubermenu-target-title ubermenu-target-text">Police Department</span></a></li>
+											<li
+															id="menu-item-7710" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7710 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/fire-department/"><span class="ubermenu-target-title ubermenu-target-text">Fire Department</span></a></li>
+									<li
+													id="menu-item-7711" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7711 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/public-works/"><span class="ubermenu-target-title ubermenu-target-text">Public Works</span></a></li>
+										<li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li>
+										</ul>
+										</li>
+										<li id="menu-item-7115" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-item-7115 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-flyout"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/businesses/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Businesses</span></a>
+											<ul class="ubermenu-submenu ubermenu-submenu-id-7115 ubermenu-submenu-type-flyout ubermenu-submenu-drop ubermenu-submenu-align-left_edge_item">
+												<li id="menu-item-7122" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7122 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/businesses/demographics/"><span class="ubermenu-target-title ubermenu-target-text">Demographics</span></a></li>
+												<li id="menu-item-7121"
+																class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7121 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/businesses/economic-development-business/"><span class="ubermenu-target-title ubermenu-target-text">Economic Development</span></a></li>
+												<li
+																id="menu-item-7118" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7118 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/businesses/community-business/"><span class="ubermenu-target-title ubermenu-target-text">Community</span></a></li>
+										<li id="menu-item-7117"
+														class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7117 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/businesses/permits-licenses/"><span class="ubermenu-target-title ubermenu-target-text">Permits / Licenses</span></a></li>
+										<li
+														id="menu-item-8983" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-8983 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-1"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" target="_blank" href="http://www.rankinchamber.com/"><span class="ubermenu-target-title ubermenu-target-text">Chamber of Commerce</span></a></li>
+											<li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li>
+											</ul>
+											</li>
+											<li id="menu-item-7123" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-item-7123 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-drop ubermenu-has-submenu-mega ubermenu-submenu-rtl"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">Departments</span></a>
+												<ul class="ubermenu-submenu ubermenu-submenu-id-7123 ubermenu-submenu-type-mega ubermenu-submenu-drop ubermenu-submenu-align-right_edge_item">
+													<li class="  ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-has-children ubermenu-item-7653 ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack ubermenu-item-type-column ubermenu-column-id-7653">
+														<ul class="ubermenu-submenu ubermenu-submenu-id-7653 ubermenu-submenu-type-stack">
+															<li id="menu-item-7704" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-7704 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto">
+																<div class="ubermenu-content-block ubermenu-custom-content ubermenu-custom-content-padded">
+																	<a href="http://www.brandonms.org/leadership/employment-opportunities/"><img src="/clients/brandonms/images/fire-department-1.png" style="width:100%;height:auto;" height="130" width="189"></a>
+																	<br>
+																	<a class="nav-btn" href="http://www.brandonms.org/leadership/employment-opportunities/">Search Jobs</a></div>
+															</li>
+														</ul>
+													</li>
+													<li class="  ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-has-children ubermenu-item-7652 ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack ubermenu-item-type-column ubermenu-column-id-7652">
+														<ul class="ubermenu-submenu ubermenu-submenu-id-7652 ubermenu-submenu-type-stack">
+															<li id="menu-item-2875" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-item-2875 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/community-development/"><span class="ubermenu-target-title ubermenu-target-text">Community Development</span></a>
+																<ul
+																				class="ubermenu-submenu ubermenu-submenu-id-2875 ubermenu-submenu-type-auto ubermenu-submenu-type-stack">
+																	<li id="menu-item-7678" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7678 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/community-development/community-development-staff/"><span class="ubermenu-target-title ubermenu-target-text">Our Staff</span></a></li>
+																	<li
+																					id="menu-item-7681" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7681 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/community-development/building-permits/"><span class="ubermenu-target-title ubermenu-target-text">Building Permits</span></a></li>
+															<li
+																			id="menu-item-7680" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7680 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/community-development/code-enforcement/"><span class="ubermenu-target-title ubermenu-target-text">Code Enforcement</span></a></li>
+													<li
+																	id="menu-item-7679" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7679 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/community-development/planning-and-zoning/"><span class="ubermenu-target-title ubermenu-target-text">Planning and Zoning</span></a></li>
+											<li
+															id="menu-item-7682" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7682 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/community-development/historic-preservation/"><span class="ubermenu-target-title ubermenu-target-text">Historic Preservation</span></a></li>
+												<li
+																id="menu-item-7683" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7683 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/community-development/public-hearing-notices/"><span class="ubermenu-target-title ubermenu-target-text">Public Hearing Notices</span></a></li>
+													<li
+																	id="menu-item-7685" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7685 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/community-development/planbrandon/"><span class="ubermenu-target-title ubermenu-target-text">Brandon Comprehensive Plan</span></a></li>
+														</ul>
+														</li>
+														<li id="menu-item-2877" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-2877 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/event-services/"><span class="ubermenu-target-title ubermenu-target-text">Event Services</span></a></li>
+														<li
+																		id="menu-item-8721" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8721 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/residents/senior-services/"><span class="ubermenu-target-title ubermenu-target-text">Senior Services</span></a></li>
+															<li
+																			id="menu-item-6150" class="ubermenu-item ubermenu-item-type-custom ubermenu-item-object-custom ubermenu-item-6150 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonparkandrec.com/"><span class="ubermenu-target-title ubermenu-target-text">Parks and Recreation</span></a></li>
+																</ul>
+																</li>
+																<li class="  ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-has-children ubermenu-item-7651 ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack ubermenu-item-type-column ubermenu-column-id-7651">
+																	<ul class="ubermenu-submenu ubermenu-submenu-id-7651 ubermenu-submenu-type-stack">
+																		<li id="menu-item-5406" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-item-5406 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/economic-development/"><span class="ubermenu-target-title ubermenu-target-text">Economic Development</span></a>
+																			<ul
+																							class="ubermenu-submenu ubermenu-submenu-id-5406 ubermenu-submenu-type-auto ubermenu-submenu-type-stack">
+																				<li id="menu-item-7686" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7686 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/economic-development/traffic-information/"><span class="ubermenu-target-title ubermenu-target-text">Traffic Information</span></a></li>
+																				<li
+																								id="menu-item-8699" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8699 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/economic-development/traffic-count/"><span class="ubermenu-target-title ubermenu-target-text">Traffic Count</span></a></li>
+																		<li
+																						id="menu-item-8595" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8595 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/economic-development/commuting-patterns/"><span class="ubermenu-target-title ubermenu-target-text">Commuting Patterns</span></a></li>
+																<li
+																				id="menu-item-7687" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7687 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/economic-development/demographic-information/"><span class="ubermenu-target-title ubermenu-target-text">Demographic Information</span></a></li>
+																	<li
+																					id="menu-item-7688" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7688 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/economic-development/sales-tax-information/"><span class="ubermenu-target-title ubermenu-target-text">Sales Tax Information</span></a></li>
+																		<li
+																						id="menu-item-8007" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8007 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/economic-development/incentives/"><span class="ubermenu-target-title ubermenu-target-text">Incentives</span></a></li>
+																			<li
+																							id="menu-item-8068" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8068 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/economic-development/school-information/"><span class="ubermenu-target-title ubermenu-target-text">School Information</span></a></li>
+																				<li
+																								id="menu-item-7691" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7691 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/economic-development/housing-information/"><span class="ubermenu-target-title ubermenu-target-text">Housing Information</span></a></li>
+																					</ul>
+																					</li>
+																					<li id="menu-item-5418" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-item-5418 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/police-department/"><span class="ubermenu-target-title ubermenu-target-text">Police Department</span></a>
+																						<ul
+																										class="ubermenu-submenu ubermenu-submenu-id-5418 ubermenu-submenu-type-auto ubermenu-submenu-type-stack">
+																							<li id="menu-item-8747" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8747 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/police-department/command-staff/"><span class="ubermenu-target-title ubermenu-target-text">Command Staff</span></a></li>
+																							<li
+																											id="menu-item-8945" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8945 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/police-department/dispatch/"><span class="ubermenu-target-title ubermenu-target-text">Dispatch</span></a></li>
+																					<li
+																									id="menu-item-8537" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8537 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/police-department/animal-control/"><span class="ubermenu-target-title ubermenu-target-text">Animal Control</span></a></li>
+																						<li
+																										id="menu-item-8081" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8081 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/police-department/court-services/"><span class="ubermenu-target-title ubermenu-target-text">Court Services</span></a></li>
+																							<li
+																											id="menu-item-8083" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8083 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/police-department/police-department-statistics/"><span class="ubermenu-target-title ubermenu-target-text">Police Department Statistics</span></a></li>
+																								<li
+																												id="menu-item-8775" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8775 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/police-department/frequently-asked-questions/"><span class="ubermenu-target-title ubermenu-target-text">Frequently Asked Questions</span></a></li>
+																									</ul>
+																									</li>
+																									</ul>
+																									</li>
+																									<li class="  ubermenu-item ubermenu-item-type-custom ubermenu-item-object-ubermenu-custom ubermenu-item-has-children ubermenu-item-7650 ubermenu-item-level-1 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack ubermenu-item-type-column ubermenu-column-id-7650">
+																										<ul class="ubermenu-submenu ubermenu-submenu-id-7650 ubermenu-submenu-type-stack">
+																											<li id="menu-item-2882" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-item-2882 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/public-works/"><span class="ubermenu-target-title ubermenu-target-text">Public Works</span></a>
+																												<ul
+																																class="ubermenu-submenu ubermenu-submenu-id-2882 ubermenu-submenu-type-auto ubermenu-submenu-type-stack">
+																													<li id="menu-item-7695" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7695 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/public-works/mosquito-abatement-program/"><span class="ubermenu-target-title ubermenu-target-text">Mosquito Abatement Program</span></a></li>
+																													<li
+																																	id="menu-item-8201" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8201 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/public-works/herbicide-spraying-program/"><span class="ubermenu-target-title ubermenu-target-text">Herbicide Spraying Program</span></a></li>
+																											<li
+																															id="menu-item-7697" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7697 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/public-works/sewer-division/"><span class="ubermenu-target-title ubermenu-target-text">Sewer Division</span></a></li>
+																									<li
+																													id="menu-item-7698" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7698 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/public-works/street-division/"><span class="ubermenu-target-title ubermenu-target-text">Street Division</span></a></li>
+																										<li
+																														id="menu-item-8720" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8720 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/public-works/garbage-collection/"><span class="ubermenu-target-title ubermenu-target-text">Garbage Collection</span></a></li>
+																											<li
+																															id="menu-item-7699" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7699 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/public-works/street-sweeping-program/"><span class="ubermenu-target-title ubermenu-target-text">Street Sweeping Program</span></a></li>
+																												<li
+																																id="menu-item-7700" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7700 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/public-works/water-divison/"><span class="ubermenu-target-title ubermenu-target-text">Water Divison</span></a></li>
+																													<li
+																																	id="menu-item-8205" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8205 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/public-works/leafpickup/"><span class="ubermenu-target-title ubermenu-target-text">Curbside Leaf and Limb Pickup</span></a></li>
+																														<li
+																																		id="menu-item-7701" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7701 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/public-works/citizen-works-request/"><span class="ubermenu-target-title ubermenu-target-text">Citizen Works Request</span></a></li>
+																															</ul>
+																															</li>
+																															<li id="menu-item-2878" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-has-children ubermenu-item-2878 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-2 ubermenu-column ubermenu-column-auto ubermenu-has-submenu-stack"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/fire-department/"><span class="ubermenu-target-title ubermenu-target-text">Fire Department</span></a>
+																																<ul
+																																				class="ubermenu-submenu ubermenu-submenu-id-2878 ubermenu-submenu-type-auto ubermenu-submenu-type-stack">
+																																	<li id="menu-item-8587" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8587 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/fire-department/fire-department-command-staff/"><span class="ubermenu-target-title ubermenu-target-text">Command Staff</span></a></li>
+																																	<li
+																																					id="menu-item-8084" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8084 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/fire-department/fdstations/"><span class="ubermenu-target-title ubermenu-target-text">Stations &amp; Equipment</span></a></li>
+																															<li
+																																			id="menu-item-8603" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-8603 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/fire-department/burning-permits/"><span class="ubermenu-target-title ubermenu-target-text">Burning Permits</span></a></li>
+																																<li
+																																				id="menu-item-7693" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7693 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/fire-department/adopt-a-hydrant/"><span class="ubermenu-target-title ubermenu-target-text">Adopt-A-Hydrant</span></a></li>
+																																	<li
+																																					id="menu-item-7694" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-item-7694 ubermenu-item-auto ubermenu-item-normal ubermenu-item-level-3 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/departments/fire-department/firefighter-ride-out-and-observe/"><span class="ubermenu-target-title ubermenu-target-text">Firefighter Ride Out and Observe</span></a></li>
+																																		</ul>
+																																		</li>
+																																		</ul>
+																																		</li>
+																																		<li class="ubermenu-retractor ubermenu-retractor-mobile"><i class="fa fa-times"></i> Close</li>
+																																		</ul>
+																																		</li>
+																																		<li id="menu-item-7658" class="ubermenu-item ubermenu-item-type-post_type ubermenu-item-object-page ubermenu-current-menu-item ubermenu-page_item ubermenu-page-item-3 ubermenu-current_page_item ubermenu-item-7658 ubermenu-item-level-0 ubermenu-column ubermenu-column-auto"><a class="ubermenu-target ubermenu-item-layout-default ubermenu-item-layout-text_only" href="http://www.brandonms.org/event-directory/" tabindex="0"><span class="ubermenu-target-title ubermenu-target-text">City Events</span></a></li>
+																																		</ul>
+							</div>
+							<!-- End UberMenu -->
+						</div>
+					</div>
+
+
+					<div class="mk-header-right">
+					</div>
+
+					<div style="max-height: 664px;" class="mk-responsive-wrap">
+
+						<nav class="menu-main-menu-container">
+							<ul id="menu-main-menu" class="mk-responsive-nav">
+								<li id="menu-item-7659" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/">Home</a></li>
+								<li id="menu-item-7106" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a aria-haspopup="true" class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/leadership/">Leadership</a><span class="mk-moon-arrow-down mk-nav-arrow mk-nav-sub-closed"><svg class="mk-svg-icon" data-name="mk-moon-arrow-down" data-cacheid="2" style="height:14px; width: 14px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 192l-96-96-160 160-160-160-96 96 256 255.999z"></path></svg></span>
+									<ul class="sub-menu ">
+										<li id="menu-item-2879" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/leadership/office-of-the-mayor/">Office of the Mayor</a></li>
+										<li id="menu-item-2873" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/leadership/board-of-aldermen/">Board of Aldermen</a></li>
+										<li id="menu-item-3159" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/leadership/city-clerks-office/">City Clerk’s Office</a></li>
+										<li id="menu-item-8024" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/leadership/board-minutes-and-agenda/">Board Agenda &amp; Minutes</a></li>
+										<li id="menu-item-7194" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/leadership/employment-opportunities/">Employment Opportunities</a></li>
+									</ul>
+								</li>
+								<li id="menu-item-7107" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a aria-haspopup="true" class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/experience-brandon/">Experience Brandon</a><span class="mk-moon-arrow-down mk-nav-arrow mk-nav-sub-closed"><svg class="mk-svg-icon" data-name="mk-moon-arrow-down" data-cacheid="2" style="height:14px; width: 14px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 192l-96-96-160 160-160-160-96 96 256 255.999z"></path></svg></span>
+									<ul class="sub-menu ">
+										<li id="menu-item-7109" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/experience-brandon/history-of-brandon/">History of Brandon</a></li>
+										<li id="menu-item-8360" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/experience-brandon/history-of-crossgates/">History of Crossgates</a></li>
+										<li id="menu-item-8937" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/experience-brandon/tour-brandon/">Tour Brandon</a></li>
+										<li id="menu-item-7111" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/experience-brandon/quality-of-life/">Quality of Life</a></li>
+									</ul>
+								</li>
+								<li id="menu-item-8733" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a aria-haspopup="true" class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/residents/">Residents</a><span class="mk-moon-arrow-down mk-nav-arrow mk-nav-sub-closed"><svg class="mk-svg-icon" data-name="mk-moon-arrow-down" data-cacheid="2" style="height:14px; width: 14px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 192l-96-96-160 160-160-160-96 96 256 255.999z"></path></svg></span>
+									<ul class="sub-menu ">
+										<li id="menu-item-8408" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/residents/education/">Education</a></li>
+										<li id="menu-item-7707" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/residents/senior-services/">Senior Services</a></li>
+										<li id="menu-item-7713" class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link js-smooth-scroll" href="http://cmrls.lib.ms.us/cmrlsbranches/brandon">Brandon Library</a></li>
+										<li id="menu-item-9008" class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/police-department/">Police Department</a></li>
+										<li id="menu-item-7710" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/fire-department/">Fire Department</a></li>
+										<li id="menu-item-7711" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/public-works/">Public Works</a></li>
+									</ul>
+								</li>
+								<li id="menu-item-7115" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a aria-haspopup="true" class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/businesses/">Businesses</a><span class="mk-moon-arrow-down mk-nav-arrow mk-nav-sub-closed"><svg class="mk-svg-icon" data-name="mk-moon-arrow-down" data-cacheid="2" style="height:14px; width: 14px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 192l-96-96-160 160-160-160-96 96 256 255.999z"></path></svg></span>
+									<ul class="sub-menu ">
+										<li id="menu-item-7122" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/businesses/demographics/">Demographics</a></li>
+										<li id="menu-item-7121" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/businesses/economic-development-business/">Economic Development</a></li>
+										<li id="menu-item-7118" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/businesses/community-business/">Community</a></li>
+										<li id="menu-item-7117" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/businesses/permits-licenses/">Permits / Licenses</a></li>
+										<li id="menu-item-8983" class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link js-smooth-scroll" target="_blank" href="http://www.rankinchamber.com/">Chamber of Commerce</a></li>
+									</ul>
+								</li>
+								<li id="menu-item-7123" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a aria-haspopup="true" class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/">Departments</a><span class="mk-moon-arrow-down mk-nav-arrow mk-nav-sub-closed"><svg class="mk-svg-icon" data-name="mk-moon-arrow-down" data-cacheid="2" style="height:14px; width: 14px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 192l-96-96-160 160-160-160-96 96 256 255.999z"></path></svg></span>
+									<ul class="sub-menu ">
+										<li id="menu-item-7653" class="menu-item menu-item-type-custom menu-item-object-ubermenu-custom menu-item-has-children"><a aria-haspopup="true" class="menu-item-link js-smooth-scroll" href="#ubermenu-column">[Column]</a>
+											<ul class="sub-menu ">
+												<li id="menu-item-7704" class="menu-item menu-item-type-custom menu-item-object-ubermenu-custom"><a class="menu-item-link js-smooth-scroll" href="#ubermenu-custom_content">[Custom]</a></li>
+											</ul>
+										</li>
+										<li id="menu-item-7652" class="menu-item menu-item-type-custom menu-item-object-ubermenu-custom menu-item-has-children"><a aria-haspopup="true" class="menu-item-link js-smooth-scroll" href="#ubermenu-column">[Column]</a>
+											<ul class="sub-menu ">
+												<li id="menu-item-2875" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a aria-haspopup="true" class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/community-development/">Community Development</a>
+													<ul class="sub-menu ">
+														<li id="menu-item-7678" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/community-development/community-development-staff/">Our Staff</a></li>
+														<li id="menu-item-7681" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/community-development/building-permits/">Building Permits</a></li>
+														<li id="menu-item-7680" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/community-development/code-enforcement/">Code Enforcement</a></li>
+														<li id="menu-item-7679" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/community-development/planning-and-zoning/">Planning and Zoning</a></li>
+														<li id="menu-item-7682" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/community-development/historic-preservation/">Historic Preservation</a></li>
+														<li id="menu-item-7683" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/community-development/public-hearing-notices/">Public Hearing Notices</a></li>
+														<li id="menu-item-7685" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/community-development/planbrandon/">Brandon Comprehensive Plan</a></li>
+													</ul>
+												</li>
+												<li id="menu-item-2877" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/event-services/">Event Services</a></li>
+												<li id="menu-item-8721" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/residents/senior-services/">Senior Services</a></li>
+												<li id="menu-item-6150" class="menu-item menu-item-type-custom menu-item-object-custom"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonparkandrec.com/">Parks and Recreation</a></li>
+											</ul>
+										</li>
+										<li id="menu-item-7651" class="menu-item menu-item-type-custom menu-item-object-ubermenu-custom menu-item-has-children"><a aria-haspopup="true" class="menu-item-link js-smooth-scroll" href="#ubermenu-column">[Column]</a>
+											<ul class="sub-menu ">
+												<li id="menu-item-5406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a aria-haspopup="true" class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/economic-development/">Economic Development</a>
+													<ul class="sub-menu ">
+														<li id="menu-item-7686" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/economic-development/traffic-information/">Traffic Information</a></li>
+														<li id="menu-item-8699" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/economic-development/traffic-count/">Traffic Count</a></li>
+														<li id="menu-item-8595" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/economic-development/commuting-patterns/">Commuting Patterns</a></li>
+														<li id="menu-item-7687" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/economic-development/demographic-information/">Demographic Information</a></li>
+														<li id="menu-item-7688" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/economic-development/sales-tax-information/">Sales Tax Information</a></li>
+														<li id="menu-item-8007" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/economic-development/incentives/">Incentives</a></li>
+														<li id="menu-item-8068" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/economic-development/school-information/">School Information</a></li>
+														<li id="menu-item-7691" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/economic-development/housing-information/">Housing Information</a></li>
+													</ul>
+												</li>
+												<li id="menu-item-5418" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a aria-haspopup="true" class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/police-department/">Police Department</a>
+													<ul class="sub-menu ">
+														<li id="menu-item-8747" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/police-department/command-staff/">Command Staff</a></li>
+														<li id="menu-item-8945" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/police-department/dispatch/">Dispatch</a></li>
+														<li id="menu-item-8537" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/police-department/animal-control/">Animal Control</a></li>
+														<li id="menu-item-8081" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/police-department/court-services/">Court Services</a></li>
+														<li id="menu-item-8083" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/police-department/police-department-statistics/">Police Department Statistics</a></li>
+														<li id="menu-item-8775" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/police-department/frequently-asked-questions/">Frequently Asked Questions</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li id="menu-item-7650" class="menu-item menu-item-type-custom menu-item-object-ubermenu-custom menu-item-has-children"><a aria-haspopup="true" class="menu-item-link js-smooth-scroll" href="#ubermenu-column">[Column]</a>
+											<ul class="sub-menu ">
+												<li id="menu-item-2882" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a aria-haspopup="true" class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/public-works/">Public Works</a>
+													<ul class="sub-menu ">
+														<li id="menu-item-7695" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/public-works/mosquito-abatement-program/">Mosquito Abatement Program</a></li>
+														<li id="menu-item-8201" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/public-works/herbicide-spraying-program/">Herbicide Spraying Program</a></li>
+														<li id="menu-item-7697" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/public-works/sewer-division/">Sewer Division</a></li>
+														<li id="menu-item-7698" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/public-works/street-division/">Street Division</a></li>
+														<li id="menu-item-8720" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/public-works/garbage-collection/">Garbage Collection</a></li>
+														<li id="menu-item-7699" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/public-works/street-sweeping-program/">Street Sweeping Program</a></li>
+														<li id="menu-item-7700" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/public-works/water-divison/">Water Divison</a></li>
+														<li id="menu-item-8205" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/public-works/leafpickup/">Curbside Leaf and Limb Pickup</a></li>
+														<li id="menu-item-7701" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/public-works/citizen-works-request/">Citizen Works Request</a></li>
+													</ul>
+												</li>
+												<li id="menu-item-2878" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a aria-haspopup="true" class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/fire-department/">Fire Department</a>
+													<ul class="sub-menu ">
+														<li id="menu-item-8587" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/fire-department/fire-department-command-staff/">Command Staff</a></li>
+														<li id="menu-item-8084" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/fire-department/fdstations/">Stations &amp; Equipment</a></li>
+														<li id="menu-item-8603" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/fire-department/burning-permits/">Burning Permits</a></li>
+														<li id="menu-item-7693" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/fire-department/adopt-a-hydrant/">Adopt-A-Hydrant</a></li>
+														<li id="menu-item-7694" class="menu-item menu-item-type-post_type menu-item-object-page"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/departments/fire-department/firefighter-ride-out-and-observe/">Firefighter Ride Out and Observe</a></li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li id="menu-item-7658" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3 current_page_item"><a class="menu-item-link js-smooth-scroll" href="http://www.brandonms.org/event-directory/">City Events</a></li>
+							</ul>
+						</nav>
+
+
+					</div>
+
+				</div>
+		</div>
+		<div class="mk-header-padding-wrapper"></div>
+		<section id="mk-page-introduce" class="intro-left">
+			<div class="mk-grid">
+				<h1 class="page-title ">Events</h1>
+				<div id="mk-breadcrumbs">
+					<div class="mk-breadcrumbs-inner dark-skin"><span xmlns:v="http://rdf.data-vocabulary.org/#"><span typeof="v:Breadcrumb"><a href="http://www.brandonms.org/" rel="v:url" property="v:title">Home</a> » <span class="breadcrumb_last">Events</span></span>
+						</span>
+					</div>
+				</div>
+				<div class="clearboth"></div>
+			</div>
+		</section>
+		</header>
+
+		<div id="theme-page" class="master-holder clearfix" role="main" itemprop="mainContentOfPage">
+			<div class="mk-main-wrapper-holder">
+				<div id="mk-page-id-3" class="theme-page-wrapper mk-main-wrapper mk-grid full-layout  ">
+					<div class="theme-content " itemprop="mainContentOfPage">
+						<!-- START All-in-One Event Calendar Plugin - Version 2.5.11 -->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+						<div class="clearboth"></div>
+					</div>
+					<div class="clearboth"></div>
+
+				</div>
+			</div>
+
+
+
+		</div>
+		<section id="footer-action-call">
+			<div class="mk-grid full-layout">
+				<div style="padding:0 30px;">
+					<div class="mk-col-2-3">
+						<h3 style="display:inline">What's Happening In Brandon, Mississippi?</h3>
+					</div>
+					<div class="mk-col-1-3">
+						<div style="display:inline"><a class="footer-action-btn" href="http://www.brandonms.org/experience-brandon/event-directory/" title=""><strong>View</strong> City Events</a></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="mk-footer-unfold-spacer"></section>
+
+		<section id="mk-footer" class="" role="contentinfo" itemscope="itemscope" itemtype="https://schema.org/WPFooter">
+			<div class="footer-wrapper mk-grid">
+				<div class="mk-padding-wrapper">
+					<div class="mk-col-1-2">
+						<section id="text-29" class="widget widget_text">
+							<div class="textwidget"><img src="/clients/brandonms/images/City-of-Brandon_HORIZlogo_light.png" alt="City of Brandon Logo">
+								<p>&nbsp;</p>
+								<p>Founded in 1828, the town of Brandon was named after the first native Mississippi governor, Gerard Chittocque Brandon. Brandon has grown from a 40-acre tract town to an over 26-square-mile city. The City of Brandon now has over 23,000 residents.
+									Her residents enjoy large-city amenities while not losing the small-town charm. </p>
+							</div>
+						</section>
+					</div>
+					<div class="mk-col-1-2">
+						<div class="mk-col-1-2">
+							<section id="nav_menu-54" class="widget widget_nav_menu">
+								<div class="widgettitle">Quick Links</div>
+								<div class="menu-quick-links-footer-container">
+									<ul id="menu-quick-links-footer" class="menu">
+										<li id="menu-item-8088" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8088"><a href="http://www.brandonms.org/departments/community-development/public-hearing-notices/"><svg class="mk-svg-icon" data-name="" data-cacheid="0" style="height:14px; width: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1792"><path d="M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"></path></svg>Public Hearing Notices</a></li>
+										<li id="menu-item-8089" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8089"><a href="http://www.brandonms.org/departments/event-services/"><svg class="mk-svg-icon" data-name="" data-cacheid="0" style="height:14px; width: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1792"><path d="M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"></path></svg>Event Services</a></li>
+										<li id="menu-item-8090" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8090"><a href="http://www.brandonms.org/wp-content/uploads/2016/07/Sample-Water-Bill.pdf"><svg class="mk-svg-icon" data-name="" data-cacheid="0" style="height:14px; width: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1792"><path d="M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"></path></svg>Understanding Your Water Bill</a></li>
+										<li id="menu-item-8091" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8091"><a href="https://www2.municode.com/library/ms/brandon/codes/code_of_ordinances"><svg class="mk-svg-icon" data-name="" data-cacheid="0" style="height:14px; width: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1792"><path d="M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"></path></svg>Code of Ordinances</a></li>
+										<li id="menu-item-8092" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8092"><a href="http://www.brandonms.org/leadership/board-of-aldermen/"><svg class="mk-svg-icon" data-name="" data-cacheid="0" style="height:14px; width: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1792"><path d="M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"></path></svg>Board of Aldermen</a></li>
+										<li id="menu-item-8093" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8093"><a href="http://www.brandonms.org/wp-content/uploads/2016/07/2015-CCR-Report.pdf"><svg class="mk-svg-icon" data-name="" data-cacheid="0" style="height:14px; width: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1792"><path d="M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"></path></svg>Water Quality Report</a></li>
+										<li id="menu-item-8094" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8094"><a href="http://www.brandonms.org/residents/senior-services/"><svg class="mk-svg-icon" data-name="" data-cacheid="0" style="height:14px; width: 5px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 1792"><path d="M595 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z"></path></svg>Senior Calendar</a></li>
+									</ul>
+								</div>
+							</section>
+							<section id="text-32" class="widget widget_text">
+								<div class="widgettitle">Employees</div>
+								<div class="textwidget"><a href="https://login.microsoftonline.com/" target="_blank">Employee Email Access</a><br>
+								</div>
+							</section>
+						</div>
+						<div class="mk-col-1-2">
+							<section id="text-5" class="widget widget_text">
+								<div class="widgettitle">Contact Us</div>
+								<div class="textwidget">1000 Municipal Drive<br> Brandon, MS 39042<br><br>
+									<strong>Tel:</strong> <a class="footer_blue_link" href="tel:+16018255021">601.825.5021</a> <br>
+									<strong>Email:</strong> <a class="footer_blue_link" href="email:info@brandonms.org">info@brandonms.org</a><br><br>
+									<strong>Hours:</strong><br> Monday - Friday | 8 AM - 5 PM</div>
+							</section>
+						</div>
+					</div>
+					<div class="clearboth"></div>
+				</div>
+			</div>
+			<div id="sub-footer">
+				<div class=" mk-grid">
+
+					<span class="mk-footer-copyright">© 2016 City of Brandon</span>
+					<nav id="mk-footer-navigation" class="footer_menu">
+						<ul id="menu-subfooter-nav" class="menu">
+							<li id="menu-item-7645" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7645"><a href="http://www.brandonms.org/privacy-policy/">Privacy Policy</a></li>
+						</ul>
+					</nav>
+					<div class="subfooter_social_links">
+						<a href="https://www.facebook.com/Brandon.MS.Government"><img src="/clients/brandonms/images/social_links_facebook.svg" height="30" width="30"></a>
+						<a href="https://twitter.com/CityofBrandonMs"><img src="/clients/brandonms/images/social_links_twitter.svg" height="30" width="30"></a>
+						<a href="https://youtu.be/WcaCnkr_T8w"><img src="/clients/brandonms/images/social_links_youtube.svg" height="30" width="30"></a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.brandonms.org%2Fcontact-us-2%2F&amp;title=Contact%20Us"><img src="/clients/brandonms/images/social_links_linkedin.svg" height="30" width="30"></a>
+						<a href="http://www.brandonms.org/contact"><img src="/clients/brandonms/images/social_links_more.svg" height="30" width="30"></a>
+
+					</div>
+				</div>
+				<div class="clearboth"></div>
+			</div>
+		</section>
+		<div class="resize-triggers">
+			<div class="expand-trigger">
+				<div style="width: 1518px; height: 1814px;"></div>
+			</div>
+			<div class="contract-trigger"></div>
+		</div>
+	</div>
+
+	<div class="mk-side-dashboard">
+		<div class="side-dash-top-widgets">
+		</div>
+
+		<div class="side-dash-bottom-widgets">
+		</div>
+
+	</div>
+	</div>
+
+	<div class="bottom-corner-btns js-bottom-corner-btns">
+
+		<a href="#top-of-page" class="mk-go-top  js-smooth-scroll js-bottom-corner-btn js-bottom-corner-btn--back">
+			<i class="mk-icon-chevron-up"><svg class="mk-svg-icon" data-name="mk-icon-chevron-up" data-cacheid="1" style="height:16px; width: 16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1792 1792"><path d="M1683 1331l-166 165q-19 19-45 19t-45-19l-531-531-531 531q-19 19-45 19t-45-19l-166-165q-19-19-19-45.5t19-45.5l742-741q19-19 45-19t45 19l742 741q19 19 19 45.5t-19 45.5z"></path></svg></i>
+		</a>
+
+	</div>
+
+
+
+
+	<footer id="mk_page_footer">
+		<style type="text/css"></style>
+	
+		<style id="dynamic_styles" type="text/css"></style>
+	
+	
+
+
+	</footer>
+
+
+
+	<style>
+		.mk-event-countdown-ul.query_max-width_750px li {
+			width: 90%;
+			display: block;
+			margin: 0 auto 15px
+		}
+		
+		.mk-process-steps.query_max-width_960px ul:before {
+			display: none!important
+		}
+		
+		.mk-process-steps.query_max-width_960px li {
+			margin-bottom: 30px!important;
+			width: 100%!important;
+			text-align: center
+		}
+	</style>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+
+		<script>
+			$(document).ready(function() {
+				$("#MasterContent_TixInnerContent_pnlButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_ButtonPanel").removeAttr("style");
+/* remove extra button defaults
+				$("#MasterContent_TixInnerContent_ctl00_gvSchedule_btnBuyTix_0").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnBackToShopping").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCancelOrder").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCheckout").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_LoginButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CancelOrderButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CompleteButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingBtn").removeAttr("style");*/
+				
+				
+			});
+		</script>
+
+		</div>
+		</form>
+	</body>
+
+	</html>

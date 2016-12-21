@@ -1,0 +1,203 @@
+/* Menu */
+
+/*** ESSENTIAL STYLES ***/
+.inside .dropdown,
+.inside .dropdown *,
+.dropdown,
+.dropdown * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+
+}
+
+.dropdown {
+	line-height:	1.0;
+}
+.dropdown ul {
+	position:		absolute;
+	top:			-999em;
+	width:			210px; /* left offset of submenus need to match (see below) */
+}
+.dropdown ul li {
+	width:			100%;
+	list-style-type: none;
+}
+.dropdown li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+.dropdown li {
+	float:			left;
+	position:		relative;
+	line-height: 1.7em;
+}
+.dropdown a {
+	display:		block;
+	position:		relative;
+}
+.dropdown li:hover ul,
+.dropdown li.sfHover ul {
+	left:			0;
+	top:			2.5em; /* match top ul list item height */
+	z-index:		99;
+}
+.dropdown li:hover li ul,
+.dropdown li.sfHover li ul {
+	top:			-999em;
+}
+.dropdown li li:hover ul,
+.dropdown li li.sfHover ul {
+	left:			210px; /* match ul width */
+	top:			0;
+}
+.dropdown li li:hover li ul,
+.dropdown li li.sfHover li ul {
+	top:			-999em;
+}
+.dropdown li li li:hover ul,
+.dropdown li li li.sfHover ul {
+	left:			210px; /* match ul width */
+	top:			0;
+}
+
+.dropdown li.our-company:hover ul ul,
+.dropdown li.our-company li li:hover ul ul,
+.dropdown li.our-company li li.sfHover ul ul {
+	left: -210px;
+}
+
+/*** DEMO SKIN ***/
+
+.dropdown {
+	float:			left;
+	margin-bottom: 1em;
+	z-index: 100;
+}
+
+.dropdown a {
+	text-decoration: none;
+	color: #562F0B;
+}
+
+.dropdown a.level-0 {
+	color:#00aadc;
+}
+
+.dropdown a.level-0:hover {
+	color: #562F0B;
+}
+
+.dropdown ul.level-1 a {
+	color: #562F0B;
+	background-color: #F8F8F8;
+}
+
+.dropdown li.level-1 a {
+	font-size: 14px;
+}
+
+.dropdown li a.current {
+	color: #7AC141;
+}
+
+.dropdown li.level-0 li {
+	border-left: 1px solid #111;
+	border-bottom: 1px solid #111;
+}
+
+.dropdown li li {
+	font-size:12px;
+	background: #f8f8f8;
+}
+
+.dropdown li li a {
+	padding: 3px 8px;
+}
+
+.dropdown li.level-1 li:hover,
+.dropdown li.level-1 li.sfHover,
+.dropdown li.level-1 a:focus,
+.dropdown li.level-1 a:hover,
+.dropdown li.level-1 a:active {
+	background:	#000;
+	color: #562F0B;
+	outline:		0;
+}
+
+/*** arrows **/
+.dropdown ul.level-1 a.sf-with-ul {
+	padding-right: 	2.25em;
+	min-width:		1px; /* trigger IE7 hasLayout so spans position accurately */
+}
+
+
+.sf-sub-indicator {
+	position:		absolute;
+	display:		block;
+	right:			.75em;
+	top:			1.05em; /* IE6 only */
+	width:			10px;
+	height:			10px;
+	text-indent: 	-999em;
+	overflow:		hidden;
+	background:		url('https://secure.thewebshop.ca/churchoftherock.ca/img/arrows-ffffff.png') no-repeat -10px -100px; /* 8-bit indexed alpha png. IE6 gets solid image only */
+}
+
+.level-0 .level-1 .sf-sub-indicator
+{
+	display: block;
+}
+
+a > .sf-sub-indicator {  /* give all except IE6 the correct values */
+	background-position: 0 -100px; /* use translucent arrow for modern browsers*/
+}
+
+.level-0 a > .sf-sub-indicator {
+	top: 0.3em;
+	right: -20px;
+}
+.level-1 a > .sf-sub-indicator {
+	top:			.6em;
+	right: 5px;
+}
+
+/* apply hovers to modern browsers */
+a:focus > .sf-sub-indicator,
+a:hover > .sf-sub-indicator,
+a:active > .sf-sub-indicator,
+li:hover > a > .sf-sub-indicator,
+li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px -100px; /* arrow hovers for modern browsers*/
+}
+
+/* point right for anchors in subs */
+.dropdown ul .sf-sub-indicator {
+	background-position:  -10px 0;
+}
+
+.dropdown ul a > .sf-sub-indicator {
+	background-position:  0 0;
+}
+
+/* apply hovers to modern browsers */
+.dropdown ul a:focus > .sf-sub-indicator,
+.dropdown ul a:hover > .sf-sub-indicator,
+.dropdown ul a:active > .sf-sub-indicator,
+.dropdown ul li:hover > a > .sf-sub-indicator,
+.dropdown ul li.sfHover > a > .sf-sub-indicator {
+	background-position: -10px 0; /* arrow hovers for modern browsers*/
+}
+
+/*** shadows for all but IE6 ***/
+.sf-shadow ul {
+	background:	url('https://secure.thewebshop.ca/churchoftherock.ca/img/shadow.png') no-repeat bottom right;
+	padding: 0 8px 9px 0;
+	-moz-border-radius-bottomleft: 17px;
+	-moz-border-radius-topright: 17px;
+	-webkit-border-top-right-radius: 17px;
+	-webkit-border-bottom-left-radius: 17px;
+}
+
+.sf-shadow ul.sf-shadow-off {
+	background: transparent;
+}

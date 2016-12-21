@@ -1,0 +1,74 @@
+</DIV></DIV>
+      <DIV class=building_block id=pgbldblk42>
+      <DIV class=blockbody id=body_pgbldblk42>
+      </DIV></DIV>
+      <DIV class=building_block id=pgbldblk37>
+      <DIV class=blockbody id=body_pgbldblk37>
+      </DIV></DIV>
+      <DIV class=building_block id=pgbldblk51>
+      <DIV class=blockbody id=body_pgbldblk51>
+      </DIV></DIV>
+      <DIV class=building_block id=pgbldblk56>
+      <DIV class=blockbody id=body_pgbldblk56>
+      </DIV></DIV>
+      <DIV class=building_block id=pgbldblk61>
+      <DIV class=blockbody id=body_pgbldblk61>
+      </DIV></DIV></DIV></DIV>
+      <DIV id=column2>
+      <DIV class=colbody id=colbody2></DIV></DIV>
+      <DIV id=column3>
+      <DIV class=colbody id=colbody3></DIV></DIV></DIV>
+      <DIV id=measurescroll style="CLEAR: both"></DIV>
+      <TABLE id=other_footer cellSpacing=0 cellPadding=0 width="100%" 
+        border=0><TBODY>
+        <TR>
+          <TD vAlign=middle align=left>
+            <DIV align=center style="FONT-SIZE: 70%; color:#555555; FONT-STYLE: normal; FONT-FAMILY: verdana, arial, sans-serif" >P O Box 
+            2460&nbsp;&nbsp;&nbsp; Lake Havasu City, AZ 
+            86405&nbsp;&nbsp;&nbsp;&nbsp; 928.854.5404<BR>Copyright 
+            2007</DIV></TD></TR>
+        <TR>
+          <TD vAlign=middle align=left>
+            <P 
+            style="FONT-SIZE: 10px; FONT-STYLE: normal; FONT-FAMILY: arial,verdana,sans-serif"><A 
+            title=Website 
+            style="FONT-SIZE: 10px; FONT-STYLE: normal; FONT-FAMILY: arial,verdana,sans-serif; TEXT-DECORATION: none" 
+            href="http://ads.networksolutions.com/landing?code=P111C100S1N0B142A1D401E0000V100">Website</A> 
+            powered by Network Solutions&#174;</P></TD></TR></TBODY></TABLE><!-- End content section --></TD></TR></TBODY></TABLE></DIV></DIV>
+<DIV class=tertiary id=footer></DIV></DIV></DIV>
+<DIV class=clearer></DIV>
+<SCRIPT language=javaScript>
+// Column Height Script
+function pngHeight() {
+	var pngColHeight1=document.getElementById('column1').clientHeight;
+	var pngColHeight2=document.getElementById('column3').clientHeight;
+	var pngColHeight3=document.getElementById('column3').clientHeight;
+	var othFootHeight=document.getElementById('other_footer').clientHeight;
+	var navConHeight=document.getElementById('nav-wrapper').clientHeight;
+	var imageConHeight = document.getElementById('image-container').clientHeight;
+	
+	pngColHeight=pngColHeight1;
+	
+	if(pngColHeight<pngColHeight2) pngColHeight=pngColHeight2;
+	if(pngColHeight<pngColHeight3) pngColHeight=pngColHeight3;
+	
+	if (document.getElementById('nav-top')) {
+	
+	if(pngColHeight<552) {
+		pngColHeight=552-(navConHeight + 4);
+			document.getElementById('content').style.height=(pngColHeight) + "px";	
+	} else {
+			document.getElementById('content').style.height=(pngColHeight + othFootHeight + 3) + "px";
+	}	
+	} else if (document.getElementById('nav-left') || document.getElementById('nav-right')) {
+	if(pngColHeight<552) pngColHeight=552;
+			document.getElementById('navcontainer').style.height=(pngColHeight + othFootHeight + 3) + "px";
+			document.getElementById('content').style.height=pngColHeight + "px";
+	}
+}
+
+var oldhandler = window.onload;
+window.onload = (typeof oldhandler == "function")
+    ? function() { oldhandler(); pngHeight(); } : pngHeight;
+</SCRIPT>
+</div>

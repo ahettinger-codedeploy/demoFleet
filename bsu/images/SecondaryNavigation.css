@@ -1,0 +1,142 @@
+﻿/* _________________________________________________
+
+Ball State Design - Secondary Navigation
+_____________________________________________________
+
+1.SECONDARYNAV
+2.SECONDARYNAV LEVEL2
+
+SECONDARYNAV
+*/
+#secondaryNav 
+{
+    margin: 0 0 10px;
+    padding: 0;
+    text-transform: none;
+    list-style-image: none;
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 8.5pt;
+    color: #FFFFFF;
+}
+
+#container .mobileOnly 
+{
+    display: none;
+    padding: 5px 0 5px 48px;
+    width: auto;
+    
+    background-color: #818E9A;
+    color: #FFF;
+    font-size: 12pt;
+    font-weight: bold;
+    
+    height: 32px;
+    background-image: url(/Components/Design/Images/Display/mobile-menu-icon-32x32.png);
+    background-position: 5px 5px;
+    background-repeat: no-repeat;
+    
+    cursor: pointer;
+}
+    
+/* SecondaryNav Li */
+#secondaryNav li 
+{
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px dotted #FFFFFF;
+}
+    
+#secondaryNav li.on { border-bottom: none; }
+    
+/* SecondaryNav Li a */
+#secondaryNav li a 
+{
+    display: block;
+    color: #FFFFFF;
+    padding: 10px 10px;
+    text-decoration: none;
+    background-color: #818E9A;
+}
+    
+#secondaryNav li a.on { border-bottom: 1px dotted #FFFFFF; }
+    
+#secondaryNav li a:hover
+{
+	color: #FFFFFF;
+	background-color: #445566;
+	text-decoration: none;
+}
+    
+/* SecondaryNav Li.contextParent a */
+#secondaryNav li.contextParent a { background-color: #445566; }
+    
+#secondaryNav li.contextParent a:hover { background-color: transparent; }
+    
+/**************************************************
+**  SECONDARYNAV LEVEL2    ************************
+**************************************************/
+#secondaryNav ul.level2 
+{
+    margin: 0;
+    padding: 5px 0;
+    background-color: #E3DEBE;
+    list-style-image: none;
+    list-style-type: none;
+    border-bottom: 1px dotted #FFF;
+}
+    
+#secondaryNav ul.level2 li
+{
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+}
+    
+#secondaryNav ul.level2 li a 
+{
+    padding: 5px 5px 5px 25px;
+    font-size: 8.5pt;
+    color: #336699;
+    background-color: #E3DEBE;
+    background-image: url(/Components/Design/Images/Icons/subnav-arrow.gif);
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+}
+
+#secondaryNav ul.level2 li a.on 
+{
+    border-bottom: none;
+}
+    
+#secondaryNav ul.level2 li a:hover  
+{
+    color: #FFFFFF; 
+    background-color: #445566;
+    background-image: none;
+}
+    
+/**********************************************************
+**  CONTENT CONTAINER SINGLE COLUMN BANNER COLUMN 2    ****
+***********************************************************/
+#contentContainer.single-column-banner #column2 
+{
+    margin-top: -250px; /* For right nav to go to the top of the billboard, jQuery will double check based on image size */
+}
+    
+/****************************************************
+**  SINGLE COLUMN BANNER    *************************
+****************************************************/
+#contentContainer.single-column-banner #secondaryNav
+{
+    text-align: left;
+    width: 100%;
+    clear: both;
+    background-color: #818E9A;
+    color: #FFFFFF;
+}
+    
+/*960px __________________________________________________________________________________________________________ */
+/* @media only screen and (max-width: 960px) { */
+    body {}
+/* } */

@@ -1,0 +1,930 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		8;
+	dw-num-cols-tablet:		16;
+	dw-num-cols-desktop:	24;
+	dw-gutter-percentage:	10;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+.fluid {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+.fluidList {
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;        
+}
+
+/* Mobile Layout: 480px and below. */
+  
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 98.8636%;
+	padding-left: 0.5681%;
+	padding-right: 0.5681%;
+	clear: none;
+	float: none;
+	padding-top: 0px;
+	margin-top: 15px;
+}
+#PageArea {
+	background-color: #FFFFFF;
+	margin-top: -30px;
+	-webkit-box-shadow: 2px 2px 30px #000000;
+	box-shadow: 2px 2px 30px #000000;
+	padding-top: 30px;
+	margin-left: 0;
+	width: 100%;
+}
+#HeaderArea {
+width: 100%;
+margin-left: 0;
+}
+#Logo {
+	width: 24.1379%;
+	clear: left;
+	text-align: center;
+	margin-left: 5px;
+}
+#Title {
+	width: 74.7126%;
+	clear: none;
+	text-align: center;
+	font-size: 40px;
+	color: #1e4f88;
+	margin-left: 1.1494%;
+	margin-top: 23px;
+	display: none;
+}
+#CurtainTop {
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-top: -5px;
+}
+#SideNav {
+width: 100%;
+display: none;
+margin-left: 0;
+}
+#ContentRight {
+	clear: both;
+	margin-bottom: 20px;
+	vertical-align: middle;
+
+	width: 100%;
+
+}
+#CurrentShow {
+width: 100%;
+margin-left: 0;
+clear: both;
+}
+#Phone {
+	color: #8D1213;
+	font-size: 24px;
+	font-weight: bold;
+	width: 62.0689%;
+	margin-left: 0;
+	text-align: center;
+}
+#DonateBTN {
+	background-color: #636363;
+	color: #FFFFFF;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	-webkit-box-shadow: 1px 1px 2px 1px #787878;
+	box-shadow: 1px 1px 2px 1px #787878;
+	clear: none;
+	width: 24.1379%;
+	margin-left: 1.1494%;
+	margin-top: 10px;
+}
+#NavM {
+display: block;
+width: 100%;
+margin-left: 0;
+}
+#Phone a {
+	color: #8D1213;
+}
+#Phone a:hover {
+	color: #7da7d9;
+}
+#CurrentShowPhoto {
+	width: 49.4252%;
+	text-align: center;
+	margin-left: 25.2873%;
+	margin-bottom: 15px;
+}
+#OnStage {
+	width: 74.7126%;
+	clear: none;
+	color: #E2BF70;
+	font-size: 30px;
+	margin-left: 13.7931%;
+	text-align: center;
+}
+#ShowText {
+	width: 74.7126%;
+	margin-left: 12.6436%;
+	background-color: #E2BF70;
+	clear: both;
+	padding-left: 5px;
+}
+.showTitle {
+	font-weight: bold;
+	font-size: 30px;
+	margin-top: 0px;
+	padding-top: 5px;
+}
+.showSubtitle {
+	font-weight: bolder;
+	font-size: 20px;
+	margin-top: -30px;
+}
+.showDescription {
+	font-size: 16px;
+	margin-top: -12px;
+}
+.showDateTime {
+	font-weight: bold;
+	font-size: 30px;
+	margin-top: -5px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+#TicketsNow {
+	width: 66.1538%;
+	text-align: center;
+	margin-left: 16.923%;
+}
+#MainContent {
+	margin-bottom: 15px;
+	padding-bottom: 0px;
+	width: 94%;
+	margin-left: 16px;
+	margin-top: -32px;
+}
+#btnArea {
+	width: 74.7126%;
+	text-align: center;
+	margin-left: 12.6436%;
+	display: none;
+}
+#ComingSoon {
+	width: 100%;
+	margin-left: 0;
+	clear: both;
+	color: #7da7d9;
+	font-size: 32px;
+	line-height: 20px;
+}
+#SponsorScroll {
+width: 100%;
+margin-left: 0;
+display: none;
+}
+#Slideshow {
+	width: 100%;
+	margin-left: 0;
+	margin-top: 15px;
+	text-align: center;
+	display: none;
+}
+#DonateBTN a {
+	color: #FFFFFF;
+}
+#DonateBTN a:hover {
+	color: #E2BF70;
+
+
+}
+.grayLarge {
+	color: #636363;
+	font-size: 28px;
+	line-height: 28px;
+	text-align: center;
+	font-weight: bold;
+}
+.graySmall {
+	color: #636363;
+	font-size: 20px;
+	text-align: center;
+}
+#FooterArea {
+	background-color: #000000;
+	color: #E2BF70;
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	-webkit-box-shadow: 2px 2px 30px #000000;
+	box-shadow: 2px 2px 30px #000000;
+}
+#FooterLeft {
+	width: 100%;
+	text-align: center;
+	margin-left: 0;
+	color: #d7d7d7;
+	font-size: 14px;
+}
+#FooterMiddle {
+	width: 100%;
+	margin-left: 0;
+	clear: both;
+	font-size: 16px;
+	text-align: center;
+}
+#FooterRight {
+	width: 100%;
+	margin-left: 0;
+	clear: both;
+	font-size: 14px;
+	text-align: center;
+}
+#FooterArea a {
+	color: #e2bf70;
+}
+#FooterArea a:hover {
+	color: #7da7d9;
+}
+#SlideshowBanner {
+}
+#FooterCredit {
+	width: 100%;
+	margin-left: 0;
+	text-align: center;
+	margin-top: 5px;
+	font-size: 12px;
+}
+#MarqueeText {
+	text-align: left;
+	width: 87.3563%;
+	background-image: url(../_graphics/marquee.png);
+	background-repeat: no-repeat;
+	background-position: 0% 0%;
+	background-size: 100% 100%;
+	padding: 4px 15px 5px 10px;
+	margin-left: 10px;
+}
+#TitleM {
+	display: block;
+	width: 62.0689%;
+	margin-left: 1.1494%;
+	clear: none;
+	margin-top: 42px;
+}
+#zombiefestImg {
+	width: 98%;
+}
+#frances {
+}
+#hnjSponors {
+	width: 100%;
+	text-align: center;
+}
+.sponsorCell {
+	width: 100%;
+	margin-left: 0;
+	clear: both;
+	text-align: center;
+	margin-top: 12px;
+	vertical-align: middle;
+	border: medium double #000000;
+}
+#volunteer2 {
+}
+#volunteer2Cell {
+}
+#staff {
+}
+#staffPhoto {
+	text-align: center;
+}
+#staffBio {
+}
+#boardMember {
+width: 100%;
+margin-left: 0;
+clear: both;
+}
+#boardPhoto {
+width: 100%;
+margin-left: 0;
+clear: both;
+}
+#boardBio {
+margin-left: 0;
+width: 100%;
+}
+#BoardGroup {
+}
+#facebookFeeds {
+	margin-top: 25px;
+}
+#rentSeating {
+	width: 65%;
+	margin-left: 80px;
+	clear: both;
+}
+#rentGallery {
+	display: block;
+	margin-left: 0;
+	width: 100%;
+}
+#decadeTable {
+	width: 100%;
+	margin-left: 0;
+	clear: both;
+	margin-top: 15px;
+}
+#decadeIcon {
+width: 100%;
+margin-left: 0;
+clear: both;
+}
+#Icon {
+	width: 20%;
+}
+#BiosM {
+	display: block;
+}
+#BiosD {
+	display: none;
+}
+.zeroMargin_mobile {
+margin-left: 0;
+}
+.hide_mobile {
+display: none;
+}
+#PageArea p {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+
+.gridContainer {
+	width: 99.4318%;
+	padding-left: 0.284%;
+	padding-right: 0.284%;
+	clear: none;
+	float: none;
+	margin-left: auto;
+	margin-top: -5px;
+}
+#PageArea {
+width: 100%;
+margin-left: 0;
+}
+#HeaderArea {
+width: 87.4285%;
+margin-left: 0;
+}
+#Logo {
+	clear: both;
+	width: 20.915%;
+	margin-left: 7.1895%;
+}
+#Title {
+	clear: none;
+	width: 78.4313%;
+	margin-left: 0.6535%;
+	margin-top: 25px;
+	display: none;
+}
+#CurtainTop {
+}
+#SideNav {
+width: 5.7142%;
+display: none;
+margin-left: 0;
+}
+#ContentRight {
+	width: 100%;
+	clear: both;
+	margin-left: 0;
+	vertical-align: middle;
+}
+#Phone {
+	font-size: 38px;
+	width: 49.6732%;
+	margin-left: 14.379%;
+	text-align: left;
+}
+#DonateBTN {
+	clear: none;
+	font-size: 20px;
+	width: 20.915%;
+	margin-left: 0.6535%;
+	margin-top: 12px;
+}
+#NavM {
+display: block;
+margin-left: 0;
+width: 87.4285%;
+}
+#CurrentShow {
+width: 64.0522%;
+clear: none;
+margin-left: 0.6535%;
+}
+#CurrentShowPhoto {
+	width: 28.1045%;
+	margin-top: 46px;
+	margin-left: 7.1895%;
+}
+#OnStage {
+	width: 66.3265%;
+	clear: both;
+	margin-left: 0;
+	text-align: left;
+}
+#ShowText {
+	width: 88.7755%;
+	margin-left: 0;
+	clear: both;
+	padding-left: 10px;
+}
+#TicketsNow {
+	width: 49.4252%;
+	margin-left: 50.5747%;
+	margin-top: 10px;
+}
+#MainContent {
+	width: 81.1428%;
+	margin-left: 6.2857%;
+}
+#btnArea {
+	width: 6.5359%;
+	margin-left: 0;
+	display: none;
+	margin-top: 64px;
+}
+#ComingSoon {
+width: 85.6209%;
+clear: none;
+margin-left: 7.8431%;
+}
+#SponsorScroll {
+width: 13.7254%;
+margin-left: 0;
+display: none;
+}
+#Slideshow {
+	width: 85.6209%;
+	margin-left: 7.1895%;
+	text-align: center;
+	display: block;
+	color: #1e4f88;
+	font-size: 36px;
+}
+#FooterArea {
+}
+#FooterLeft {
+width: 18.2857%;
+margin-left: 0;
+}
+#FooterMiddle {
+width: 37.1428%;
+clear: none;
+margin-left: 0.5714%;
+}
+#FooterRight {
+	width: 30.8571%;
+	clear: none;
+	margin-left: 6.8571%;
+}
+#SlideshowBanner {
+}
+#FooterCredit {
+width: 100%;
+margin-left: 0;
+}
+#MarqueeText {
+	width: 85.6209%;
+	margin-left: 7.1895%;
+	padding-right: 10px;
+	margin-top: 15px;
+	padding-left: 10px;
+}
+#TitleM {
+display: block;
+width: 56.8627%;
+margin-left: 7.8431%;
+clear: none;
+}
+#zombiefestImg {
+}
+#frances {
+}
+#hnjSponors {
+	width: 100%;
+}
+.sponsorCell {
+	width: 25%;
+	clear: right;
+	margin-left: 41px;
+	text-align: center;
+	height: 237px;
+}
+#volunteer2 {
+	width: 45%;
+	clear: right;
+	margin-right: 28px;
+}
+#volunteer2Cell {
+}
+#staff {
+}
+#staffPhoto {
+	width: 16%;
+	clear: both;
+	margin-top: 22px;
+	float: right;
+}
+#staffBio {
+	width: 77%;
+	clear: left;
+}
+#boardMember {
+	width: 42%;
+	clear: right;
+	margin-left: 0;
+}
+#boardPhoto {
+width: 100%;
+clear: both;
+margin-left: 0;
+}
+#boardBio {
+
+}
+#BoardGroup {
+}
+#facebookFeeds {
+}
+#rentSeating {
+	width: 37.1428%;
+	margin-left: 0;
+	clear: both;
+}
+#rentGallery {
+	width: 43.4285%;
+	clear: right;
+	margin-left: 0.5714%;
+	display: block;
+}
+#decadeTable {
+width: 100%;
+clear: both;
+margin-left: 0;
+}
+#decadeIcon {
+	width: 50%;
+	clear: right;
+	margin-left: 0;
+}
+#Icon {
+}
+#sponsorGroup {
+	width: 27%;
+	clear: right;
+	padding-left: 23px;
+}
+#sponsorGroup2 {
+	width: 100%;
+}
+#BiosM {
+}
+#BiosD {
+	display: none;
+}
+.hide_tablet {
+display: none;
+}
+.zeroMargin_tablet {
+margin-left: 0;
+}
+
+}
+
+/* Desktop Layout: 769px to a max of 1020px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+
+.gridContainer {
+	width: 89.659%;
+	max-width: 1020px;
+	padding-left: 0.1704%;
+	padding-right: 0.1704%;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+#PageArea {
+	margin-top: -75px;
+
+	width: 100%;
+
+	margin-left: 0;
+
+}
+#HeaderArea {
+	margin-top: 40px;
+
+	width: 100%;
+
+	margin-left: 0;
+
+}
+#Logo {
+	width: 16.3498%;
+	margin-left: 0;
+	margin-bottom: 63px;
+	margin-top: -10px;
+
+}
+#Title {
+	clear: none;
+	font-size: 42px;
+	width: 66.5399%;
+	margin-left: 8.7452%;
+	margin-top: 0px;
+	display: block;
+}
+#CurtainTop {
+}
+#SideNav {
+	width: 20.5323%;
+	background-color: #000000;
+	color: #FFFFFF;
+	display: block;
+	padding-top: 40px;
+	margin-top: -54px;
+	margin-left: -40px;
+}
+#ContentRight {
+	width: 79.0874%;
+	clear: none;
+	margin-left: 40.38px;
+	margin-top: -76px;
+	vertical-align: middle;
+}
+#Phone {
+
+width: 41.8269%;
+
+margin-left: 26.4423%;
+
+}
+#DonateBTN {
+	clear: none;
+	width: 20.673%;
+	margin-left: 0.4807%;
+	margin-top: 15px;
+}
+#NavM {
+display: none;
+margin-left: 0;
+width: 100%;
+}
+#CurrentShow {
+	margin-top: 15px;
+	width: 68.2692%;
+	clear: none;
+	padding-left: 0px;
+	margin-left: 0;
+}
+#CurrentShowPhoto {
+
+width: 25.9615%;
+
+margin-left: 5.2884%;
+
+}
+#OnStage {
+	width: 53.5211%;
+	clear: both;
+	margin-left: 7.7464%;
+}
+#ShowText {
+	width: 92.2535%;
+	padding-bottom: 15px;
+	clear: both;
+	padding-left: 20px;
+	margin-left: 0;
+}
+#TicketsNow {
+	width: 41.2213%;
+	margin-left: 58.7786%;
+	margin-top: -54px;
+}
+#MainContent {
+	width: 94%;
+	margin-left: 31px;
+	margin-top: -10px;
+}
+#btnArea {
+	width: 49.8098%;
+	margin-left: 0;
+	display: block;
+	margin-top: 35px;
+}
+#ComingSoon {
+	width: 45.6273%;
+	clear: none;
+	margin-left: 0.3802%;
+	margin-top: -10px;
+}
+#SponsorScroll {
+width: 83.2699%;
+margin-left: 8.365%;
+display: block;
+}
+#Slideshow {
+	width: 91.6349%;
+	margin-left: 4.1825%;
+	text-align: center;
+	display: block;
+}
+#FooterArea {
+	background-position: 0% 0%;
+}
+#FooterLeft {
+	width: 12.1673%;
+	margin-left: 4.1825%;
+}
+#FooterMiddle {
+width: 33.0798%;
+clear: none;
+margin-left: 4.5627%;
+}
+#FooterRight {
+width: 37.2623%;
+clear: none;
+margin-left: 4.5627%;
+}
+#SlideshowBanner {
+}
+#FooterCredit {
+width: 58.1749%;
+margin-left: 20.9125%;
+}
+#MarqueeText {
+	width: 86.665%;
+	margin-top: -70px;
+	padding-left: 20px;
+	margin-left: 55px;
+}
+#TitleM {
+display: none;
+width: 100%;
+clear: both;
+margin-left: 0;
+}
+#zombiefestImg {
+}
+#frances {
+}
+#hnjSponors {
+	width: 100%;
+}
+.sponsorCell {
+	width: 31.25%;
+	clear: none;
+	margin-left: 0.481%;
+	text-align: center;
+	padding-top: auto;
+	vertical-align: central;
+	height: 230px;
+}
+#volunteer2 {
+	width: 47%;
+	clear: right;
+	margin-right: 20px;
+}
+#volunteer2Cell {
+
+
+}
+#staff {
+}
+#staffPhoto {
+	float: right;
+	clear: both;
+}
+#staffBio {
+	clear: left;
+	width: 83%;
+}
+#boardMember {
+width: 31.25%;
+clear: none;
+margin-left: 0.4807%;
+}
+#boardPhoto {
+width: 100%;
+clear: none;
+margin-left: 1.5384%;
+}
+#boardBio {
+	width: 117%;
+	margin-left: 0;
+	clear: right;
+}
+#BoardGroup {
+}
+#facebookFeeds {
+	width: 50%;
+	clear: right;
+}
+#rentSeating {
+	width: 47.1153%;
+	clear: both;
+	margin-left: 0.4807%;
+}
+#rentGallery {
+	width: 41.8269%;
+	clear: right;
+	margin-left: 0.4807%;
+	display: block;
+}
+#decadeTable {
+	width: 47.1153%;
+	clear: none;
+	margin-left: 2.481%;
+}
+#decadeIcon {
+width: 47.1153%;
+clear: none;
+margin-left: 0.4807%;
+}
+#Icon {
+}
+#sponsorGroup {
+	width: 22%;
+	clear: right;
+	margin-left: 73px;
+}
+#BiosM {
+	display: none;
+}
+#BiosD {
+	display: block;
+}
+.zeroMargin_desktop {
+margin-left: 0;
+}
+.hide_desktop {
+display: none;
+}
+
+
+
+}

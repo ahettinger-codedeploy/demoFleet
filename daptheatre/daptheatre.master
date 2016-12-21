@@ -1,0 +1,87 @@
+<%
+'changelog'
+'LSP 10/03/16 - initial develompent'
+%>
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+
+<title>Bootstrap!</title>
+
+
+		<!-- bootstrap-->
+	<link rel="stylesheet" href="/clients/daptheatre/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/clients/daptheatre/assets/css/bootstrap-theme.min.css">
+	<!--font awesome-->
+	<link rel="stylesheet" href="/clients/daptheatre/assets/css/font-awesome.css">
+		<link rel="stylesheet" href="/clients/daptheatre/assets/css/font-awesome.min.css">
+
+	<!--custom css-->
+	<link rel="stylesheet" href="/clients/daptheatre/assets/style.css">
+</head>
+
+<body>
+<header>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<a href="http://www.dapetheatre.com">			<img  class="img-responsive center-block" src="/clients/daptheatre/assets/images/DAPLOGO-3.gif" border="0" /></a>
+		
+</div>
+	</div>
+</div>
+</header>
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 content">
+				<!--tix content-->
+	<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+			
+			</div>
+		</div>
+	</div>
+</section>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="/clients/daptheatre/assets/js/bootstrap.min.js"></script>
+
+		<script>
+			$(document).ready(function() {
+				$("#MasterContent_TixInnerContent_pnlButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_ButtonPanel").removeAttr("style");
+/* remove extra button defaults
+				$("#MasterContent_TixInnerContent_ctl00_gvSchedule_btnBuyTix_0").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnBackToShopping").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCancelOrder").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCheckout").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_LoginButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CancelOrderButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CompleteButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingBtn").removeAttr("style");*/
+				
+				
+			});
+		</script>
+
+		</div>
+		</form>
+	</body>
+
+	</html>

@@ -1,0 +1,449 @@
+/*
+*Standard City of Albuquerque style sheet
+*History
+*Version	Date		By		Description
+*--------------------------------------------------------------------
+*1.1		02/17/2004	ml		Revised bgcolors
+*1.2		03/2/2004	jh		established skipnav style
+*1.3		03/4/2004	jh		established styles for a-z and eServices
+*1.4 		06/24/2004	jh		changed CSS to reflect percentage based font sizes instead of fixed
+*1.5		02/18/05	jh		added ul.home
+*1.6		03/16/05	as		removed invalid <style></style> tags
+								th selector: changed invalid 'align' to 'text-align'
+								per w3c recomendation, added generic 'sans-serif' font to all font-family styles and capitalized font names
+								added styles to support new templates
+								cleaned up all original styles
+*/
+
+@import url("contribute.css");
+
+/* Colors */
+body, td.home, td.living, td.visiting, td.business
+{
+color: #000000; /* black */
+background-color: #FFFFFF; /* white */
+}
+p.bottomnav, h3, th.home, table.home
+{
+background-color: #CCCC99; /* brown */
+}
+td.home, th.home, table.home
+{
+border-color: #CCCC99; /* brown */
+}
+hr
+{
+color: #CCCC99; /* brown */
+}
+a:link
+{
+color: #0000FF; /* blue */
+/* This is a nicer blue, one that other sites like yahoo are using instead of the default link color
+color: #0024CC;  
+*/
+}
+a:hover
+{
+background-color: #FFFFCC;  /* off-white */
+}
+a:active
+{
+color: #FF9900; /* orange */
+}
+a:visited
+{
+color: #663399; /* purple */
+}
+h3.living, th.living, table.living
+{
+background-color: #99CC99; /* green */
+}
+td.living, th.living, table.living
+{
+border-color: #99CC99; /* green */
+}
+h3.visiting, th.visiting, table.visiting
+{
+background-color: #FFCC33; /* orange */
+}
+td.visiting, th.visiting, table.visiting
+{
+border-color: #FFCC33; /* orange */
+}
+h3.business, th.business, table.business
+{
+background-color: #99CCCC; /* blue */
+}
+td.business, th.business, table.business
+{
+border-color: #99CCCC; /* blue */
+}
+h3.a-z
+{
+background-color:#CC9999; /* red */
+}
+h3.eservices
+{
+background-color:#CCCCFF; /* cyan */
+}
+h2.error, p.error, strong.error
+{
+color: #FF0000; /* red */
+}
+
+/* Fonts */
+body
+{
+font-family: Arial, Helvetica, "MS Sans Serif", Geneva, sans-serif;
+}
+h1
+{
+font-size: 130%;
+}
+h2
+{
+font-size: 110%
+}
+body, p, td, th, h3, h4, h5, h6, li
+{
+font-size: 90%;
+}
+.small
+{
+font-size: 80%;
+}
+.fine
+{
+font-size: 70%;
+}
+
+/* Generic */
+body
+{
+margin: 0px;
+}
+a img
+{
+border: 0;
+}
+td.backgroundimage, .backgroundimage
+{
+background-image: url(/images/common/backgroundtile.gif);
+}
+hr
+{
+height: 1px;
+}
+ul
+{
+list-style-image: url("/images/bullet.gif");
+}
+ol
+{
+list-style-image: none;
+}
+th
+{
+text-align: left;
+}
+h1, h2, h3, h4, h5, h6, dl, dt, dd, ol, p.bottomnav
+{
+margin-top: 6px;
+margin-bottom: 6px;
+}
+.skipnav, .hidden
+{ 
+display: none;
+}
+ul.home
+{
+margin: 0 0 0 15px;
+padding: 0;
+list-style-image: url("/images/bullet.gif");
+}
+
+/* Secondary Navigation Border */
+td.home, th.home, table.home, td.living, th.living, table.living, td.visiting, th.visiting, table.visiting, td.business, th.business, table.business
+{
+border-style: solid;
+border-width: 1px;
+padding: 5px;
+}
+
+/* 	NEW STYLES */
+/* Header Area */
+#maintable
+{
+width: 95%;
+border-spacing: 0;
+border-collapse: collapse;
+margin-left: 2.5%;
+margin-right: 2.4%;
+}
+#logocell, #navcell, #datecell, #searchcell
+{
+padding: 0;
+}
+#logocell
+{
+text-align: left;
+}
+#logocell img, #logocell a
+{
+vertical-align: top;
+}
+#navcell
+{
+text-align: center;
+}
+#datecell
+{
+width: 75%;
+text-align: center;
+font-size: 72%;
+}
+#searchcell
+{
+text-align: right;
+white-space: nowrap;
+padding-right: 5px;
+}
+#searchcell form, #searchcell p
+{
+display: inline;
+padding: 0;
+margin: 0;
+border: 0;
+}
+#searchcell input
+{
+vertical-align: middle;
+}
+input#go2
+{
+margin-left: 5px;
+}
+
+/* Topic Navigation */
+#topicnav
+{
+width: 225px;
+}
+/* hides the left-hand navigation when printing 
+@media print { 
+   #topicnav { display: none; }
+}
+*/
+#topicnavcontainer
+{
+border-style: solid;
+border-width: 1px;
+}
+#topicnav p
+{
+margin-top: 5px;
+margin-bottom: 9px;
+}
+#topicnav p, #topicnav h3
+{
+padding: 0px 5px;
+}
+#topicnav, #content, #contentgeneric
+{
+padding-top: 15px;
+padding-bottom: 15px;
+vertical-align: top;
+}
+
+/* Content Area */
+#content
+{
+padding-left: 15px;
+}
+
+/* Footer */
+#footer
+{
+text-align: center;
+}
+#bottomnav
+{
+font-size: 90%;
+padding-top: 0px;
+padding-bottom: 2px;
+}
+#copyright
+{
+font-size: 80%;
+}
+
+/* Colors */
+#bottomnav, h3, .navigationbox
+{
+background-color: #CCCC99; /* brown (default) */
+}
+#topicnavcontainer, div.captionimageright, div.captionimageleft
+{
+border-color: #CCCC99; /* brown (default) */
+}
+#living h3, #living .navigationbox
+{
+background-color: #99CC99; /* green (living) */
+}
+#living #topicnavcontainer, #living div.captionimageright, #living div.captionimageleft
+{
+border-color: #99CC99; /* green (living) */
+}
+#visiting h3, #visiting .navigationbox
+{
+background-color: #FFCC33; /* orange (visiting) */
+}
+#visiting #topicnavcontainer, #visiting div.captionimageright, #visiting div.captionimageleft
+{
+border-color: #FFCC33; /* orange (visiting) */
+}
+#business h3, #business .navigationbox
+{
+background-color: #99CCCC; /* blue (business) */
+}
+#business #topicnavcontainer, #business div.captionimageright, #business div.captionimageleft
+{
+border-color: #99CCCC; /* blue (business) */
+}
+#a-z h3, #a-z .navigationbox
+{
+background-color: #CC9999; /* red (a-z) */
+}
+#a-z #topicnavcontainer, #a-z div.captionimageright, #a-z div.captionimageleft
+{
+border-color: #CC9999; /* red (a-z) */
+}
+#eservices h3, #eservices .navigationbox
+{
+background-color: #CCCCFF; /* cyan (eservices) */
+}
+#eservices #topicnavcontainer, #eservices div.captionimageright, #eservices div.captionimageleft
+{
+border-color: #CCCCFF; /* cyan (eservices) */
+}
+
+/* Search Results Page */
+.searchresline
+{
+margin-bottom: 0.9em;
+}
+.searchresline dt
+{
+margin-bottom: 0.1em;
+}
+.searchresline dd
+{
+margin-top: 0;
+font-size: 90%;
+}
+.searchreslineurl
+{
+color: rgb(0,128,0);
+}
+#searchbestbets li a
+{
+font-size: 122%;
+}
+.searchresline dt a, .searchctrl, .bigtext, .pagectrl
+{
+font-size: 110%;
+}
+.searchctrl, .pagectrl
+{
+font-weight: bold;
+text-align: center;
+margin-top: 1.5em;
+}
+/* 3rd Level Navigation */
+.navigationbox
+{
+float: right;
+margin: 0 0 10px 10px;
+padding: 5px;
+}
+.navigationbox ul 
+{
+list-style-type: none;
+list-style-image: none;
+padding: 0;
+margin: 0;
+}
+.navigationbox h3
+{
+margin: 0 0 6px 0;
+}
+/* Helper Styles */
+.center
+{
+text-align: center;
+}
+
+/* Form Styles */
+.standardform label
+{
+padding: 3px 10px 0px 10px;
+font-size: 90%;
+display: block;
+}
+.standardform label.required
+{
+font-weight: bold;
+}
+.standardform td
+{
+vertical-align: top;
+}
+.requiredasterisk
+{
+font-size: 125%;
+font-weight: bold;
+line-height: 5%;
+color: rgb(153,0,0);
+}
+
+/* Image Styles */
+div.captionimageleft, .imageleft
+{
+float: left;
+margin-right: 5px;
+margin-left: 0px;
+}
+div.captionimageright, .imageright
+{
+float: right;
+margin-right: 0px;
+margin-left: 5px;
+}
+.imageleft, .imageright
+{
+margin-top: 5px;
+margin-bottom: 5px;
+}
+div.captionimageleft, div.captionimageright
+{
+text-align: center;
+border-width: 1px;
+border-style: solid;
+padding: 4px;
+font-size: 75%;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+div.captionimageleft p, div.captionimageright p
+{
+margin: 0;
+}
+div.captionimageleft img, div.captionimageright img
+{
+vertical-align: bottom;
+}
+.flashvideo { border: 1px solid gray; padding: 20px; color: #990000; }
+.videotime { color: #666666; }
+
+#living h3.transparent, #visiting h3.transparent, #business h3.transparent, #a-z h3.transparent, #eservices h3.transparent
+{ background-color: transparent; }

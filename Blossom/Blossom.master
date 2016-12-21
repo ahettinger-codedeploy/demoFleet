@@ -1,0 +1,1288 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+<link rel="stylesheet" href="/clients/Blossom/Images/contributorStyles.css" type="text/css">
+<link rel="stylesheet" href="/clients/Blossom/Images/blossom-style.css" type="text/css">
+<link rel="stylesheet" href="/clients/Blossom/Images/no-nav.css" type="text/css">
+<link rel="stylesheet" href="/clients/Blossom/Images/navigation.css" type="text/css">
+<style type="text/css">
+	.mw { color:#000000;font-family:Verdana,Arial,Helvetica;font-weight:bold;font-size:xx-small;text-decoration:none; }
+	a.mw:link	{color:#000000;font-family:Verdana,Arial,Helvetica;font-weight:bold;font-size:xx-small;text-decoration:none;}
+	a.mw:visited	{color:#000000;font-family:Verdana,Arial,Helvetica;font-weight:bold;font-size:xx-small;text-decoration:none;}
+	a.mw:hover	{color:#0000FF;font-family:Verdana,Arial,Helvetica;font-weight:bold;font-size:xx-small;text-decoration:none;}
+</style> <script type="text/javascript">
+<!--
+	var gMenuControlID = 0;
+	var menus_included = 0;
+	var jsDlgLoader = '/artscollege/music/blossom/loader.cfm';
+	var jsSiteID = 1;
+	var jsSubSiteID = 5176;
+	var js_gvPageID = 2933422;
+	var jsPageID = 2933422;
+	var jsPageSetID = 0;
+	var jsPageType = 0;
+	var jsControlsWithRenderHandlers = ",8,9,10,20,23,23,23,23,23,23,23,23,23,23,23,23,23,36,36,36,36,36,39,39,39,39,39,1401,1401,1409,1409,1409,1428,1428,1457,1457,1457,1457,1460,1460,1460,1470,1474,1474,1526,1526,1526,1526,2097,2108,2108,3397,3397,8173,8195,8195,8230,8482,8482,8482,8482,8482,9039,9299,9299,9299,9299,9299,9299,28049,36870,36870,260469,334861,334861,484398,484398,484398,484398,664201,670580,670580,670580,670580,707473,707473,1253977,1254964,1255112,1392287,1392851,1559180,1996266,2015069,2015069,2101984,2101984,2114002,2114002,2114002,2133074,2186294,2203427,2203427,2203427,2203427,2309060,2326127,2473087,2490075,2490075,2525160,2525160,2525160,2526356,2526356,2526356,2526356,2526356,2526356,2575111,2599294,2599294,2599294,2599294,2599294,2599294,2599294,2599294,2618989,2654607,2662772,2784325,2784325,2784325,2784325,2799345,2799345,2836386,2889241,2902013,2935125,2935125,2935125,2935125,2935125,2943245,2943245,2943265,2965994,2967471,2993991,3025207,3032818,3097870,3135304,3135304,";
+	var jsDefaultRenderHandlerProps = ",20_2,20_1,39_2,39_1,1401_1,1409_1,1428_1,1474_1,2097_1,2108_1,3397_1,8173_1,8195_1,8230_1,8482_1,9039_1,9299_1,36870_1,260469_1,334861_1,670580_1,707473_1,1254964_1,1255112_1,1392287_1,1392851_1,1559180_1,2114002_1,2133074_1,2186294_1,2203427_1,2473087_1,2490075_1,2575111_1,2618989_1,2654607_1,2662772_1,2784325_1,2799345_1,2836386_1,2902013_1,2965994_1,";
+	var jsAuthorizedControls = ",1,2,3,4,6,7,8,9,10,11,16,18,20,21,22,23,25,26,27,28,29,30,31,34,36,39,40,41,42,43,44,45,46,47,50,51,52,53,54,1356,1373,1401,1409,1428,1433,1439,1448,1457,1460,1470,1474,1477,1501,1516,1526,2097,2108,2909,3397,8173,8195,8230,8482,9039,9198,9299,12667,12669,15663,16678,17103,22517,28049,31170,32055,32177,34217,34249,34273,35119,35607,36870,42648,50940,50949,258497,260469,334861,334871,382628,484398,523520,664139,664201,664327,667704,667774,670580,707473,744838,745018,745020,745236,751375,751404,751489,784747,791358,843272,865565,954102,954156,1232339,1232622,1232629,1232631,1232633,1232637,1232640,1232655,1232673,1232675,1232888,1232890,1232893,1232896,1232912,1253977,1254964,1255112,1262728,1385697,1390874,1392287,1392851,1427296,1559180,1645880,1653387,1653388,1764557,1764588,1892369,1931660,1932283,1934059,1934336,1944510,1944515,1944615,1950674,1967050,1976529,1996266,2011950,2012004,2015069,2050259,2061664,2061673,2065698,2079887,2101984,2111781,2114002,2114239,2124012,2129474,2129484,2131846,2133074,2133127,2154868,2161190,2162469,2162486,2186294,2186516,2188461,2203427,2224992,2251044,2255868,2293546,2295166,2309060,2313954,2315325,2320174,2326127,2349982,2352496,2473087,2477863,2490075,2505209,2507838,2507851,2520340,2524463,2525160,2526356,2528798,2538006,2575111,2578753,2599294,2618989,2654607,2662772,2663690,2702011,2708091,2724374,2724420,2750942,2779898,2779918,2779936,2779967,2784325,2784502,2784798,2784933,2784943,2787882,2787948,2799345,2799353,2807175,2817839,2819538,2824780,2824834,2836386,2851180,2865736,2866241,2889241,2889364,2902013,2903097,2935125,2943245,2943265,2965994,2967471,2972335,2984151,2993991,3025207,3032818,3040873,3042957,3097870,3104676,3104754,3121073,3121088,3131649,3135304,3150301,3189529,3189533,3189539,3235905,3282213,3282241,3282737,3325415,3325426,3328899,3358068,3371895,3381297,3419273,";
+	var jsCustomRenderHandlerPairs = "";
+	var jsStandardRenderHandlers = "";
+	var jsSiteSecurityCreateControls = 0;
+	var jsShowRejectForApprover = 1;
+
+	document.CS_StaticURL = "http://cmsprod.uis.kent.edu/";
+	document.CS_DynamicURL = "http://cmsprod.uis.kent.edu/";
+// -->
+</script>
+<script type="text/javascript" src="/clients/Blossom/Images/browser-all.js"></script> 
+			<script type="text/javascript" src="/clients/Blossom/Images/jquery-1.js"></script>
+			
+			
+		<script type="text/javascript" src="/clients/Blossom/Images/jquery-ui-1.js"></script>
+	
+			<link rel="stylesheet" href="/clients/Blossom/Images/jquery-ui-1.css" type="text/css" media="screen">
+		
+<script type="text/javascript" src="/clients/Blossom/Images/thickbox.js"></script>
+<link rel="stylesheet" href="/clients/Blossom/Images/thickbox.css" type="text/css" media="screen">
+<script type="text/javascript" src="/clients/Blossom/Images/jquery_002.js"></script>
+<!-- these styles are used for the entire site -->
+<link href="/clients/Blossom/Images/global.css" media="screen" rel="stylesheet">
+<script language="JavaScript" src="/clients/Blossom/Images/jquery.js"></script> 
+<script language="JavaScript" src="/clients/Blossom/Images/header.js"></script>
+
+<!-- these stylesheets are to fix the templates in IE6/7 using HTML conditional statements -->
+<!--[if IE 6]><link rel="stylesheet" type="text/css" href="/style/ie/IE6.css" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" type="text/css" href="/style/ie/IE7.css" /><![endif]-->
+
+<!-- The stylesheet below is used for internal/level and success story pages -->
+<link href="/clients/Blossom/Images/internal.css" media="screen" rel="stylesheet">
+
+<link href="/clients/Blossom/Images/print.css" media="print" rel="stylesheet">
+<meta name="google-site-verification" content="FVw1W1OPIe7mlesI8YCQhzU7ptUjlDaXS11Cp0zB2UY">
+<link rel="shortcut icon" href="http://www.kent.edu/blossom/favicon.ico">
+<link rel="stylesheet" href="/clients/Blossom/Images/commonspot.css" type="text/css" id="cs_maincss"> <meta name="Description" id="Description" content="Blossom Music">
+    				  <title>Blossom Music</title>
+                      <meta name="modified-date" content="2013-04-18">
+                      </head><body class="CS_Document" lang="en"><a name="__topdoc__"></a><script src="/clients/Blossom/Images/always-include-common.js" type="text/javascript"></script><script src="/clients/Blossom/Images/always-include-moz.js" type="text/javascript"></script>
+<div id="skipmenu">
+<a href="#skip" class="skippy">Skip Navigation</a>
+<a name="top"></a>
+</div> <!-- end skipmenu -->
+<div id="utility_panels">
+    <div id="panel_dir" class="slideoutPanel">
+		<div id="cs_control_2145" class=""> <div class="CS_Element_Schedule" title="" id="CS_Element_directoryPanel"> 
+<a name="customcf12899" id="customcf12899"></a><a name="CP_JUMP_12899" id="CP_JUMP_12899"></a><div id="cs_control_12899" class="cs_control CS_Element_CustomCF"> <div id="CS_CCF_2933422_12899"> 
+
+<span id="phonelogo">Phone directory</span>
+		<ul>		
+			<li><a onclick="pageTracker._trackPageview('/outgoing/utilitypanel/phone/facultystaff');return true;" href="https://keys.kent.edu:44220/ePROD/bwgkphon.P_EnterStaffCriteria">Search for faculty or staff member</a></li>
+
+			<li><a onclick="pageTracker._trackPageview('/outgoing/utilitypanel/phone/emeriti');return true;" href="https://keys.kent.edu:44220/ePROD/bwgkphon.P_EnterEmeritiCriteria">Search for emeriti or retiree</a></li>
+			<li><a onclick="pageTracker._trackPageview('/outgoing/utilitypanel/phone/depts');return true;" href="https://keys.kent.edu:44220/ePROD/bwgkphon.P_DeptDir">Find all departments</a></li>
+		</ul>
+
+        <div class="phoneSmall">*To search for student contact 
+information, login to FlashLine and choose the "Directory" icon in the 
+FlashLine masthead (blue bar).</div> </div> </div>
+
+</div> </div> 
+	</div>
+    <div id="panel_ask" class="slideoutPanel">
+		<div id="cs_control_2146" class=""> <div class="CS_Element_Schedule" title="" id="CS_Element_askPanel"> 
+<a name="customcf12723" id="customcf12723"></a><a name="CP_JUMP_12723" id="CP_JUMP_12723"></a><div id="cs_control_12723" class="cs_control CS_Element_CustomCF"> <div id="CS_CCF_2933422_12723"> 
+
+    <div class="clear_fix"></div>
+    <span id="askquestions">Ask questions like, 
+    <a onclick="pageTracker._trackPageview('/outgoing/utilitypanel/askkentstate/');return true;" href="http://kentstate.askadmissions.net/ask.aspx?did=2&amp;cid=2257&amp;quser=How+do+I+transfer+to+Kent+State&amp;ask=submit">How do I transfer to Kent State?</a> 
+    <a onclick="pageTracker._trackPageview('/outgoing/utilitypanel/askkentstate/');return true;" href="http://kentstate.askadmissions.net/ask.aspx?did=2&amp;cid=2257&amp;quser=What+are+admissions+requirements&amp;ask=submit">What are admissions requirements?</a> 
+    <a onclick="pageTracker._trackPageview('/outgoing/utilitypanel/askkentstate/');return true;" href="http://kentstate.askadmissions.net/ask.aspx?did=2&amp;cid=2257&amp;quser=Where+do+I+go+to+apply&amp;ask=submit">Where do I go to apply?</a></span>
+
+</div> </div>
+
+</div> </div> 
+	</div>
+   	<div id="panel_maps" class="slideoutPanel">
+		<div id="cs_control_2147" class=""> <div class="CS_Element_Schedule" title="" id="CS_Element_mapsPanel"> 
+<a name="customcf12581" id="customcf12581"></a><a name="CP_JUMP_12581" id="CP_JUMP_12581"></a><div id="cs_control_12581" class="cs_control CS_Element_CustomCF"> <div id="CS_CCF_2933422_12581"> <span id="maplogo">Kent State maps</span>
+		<p>Search by campus:</p>
+		<ul>
+			<li><a onclick="pageTracker._trackPageview('/outgoing/utilitypanel/map/kent');return true;" href="http://www.kent.edu/campuses/maps/map.cfm">Kent</a></li>
+
+			<li><a onclick="pageTracker._trackPageview('/outgoing/utilitypanel/map/ashtabula');return true;" href="http://www.kent.edu/campuses/maps/ashtabula.cfm">Ashtabula</a></li>
+			<li><a onclick="pageTracker._trackPageview('/outgoing/utilitypanel/map/eliv');return true;" href="http://www.kent.edu/campuses/maps/east-liverpool.cfm">East Liverpool</a></li>
+			<li><a onclick="pageTracker._trackPageview('/outgoing/utilitypanel/map/geauga');return true;" href="http://www.kent.edu/campuses/maps/geauga.cfm">Geauga</a></li>
+
+			<li><a onclick="pageTracker._trackPageview('/outgoing/utilitypanel/map/kent');return true;" href="http://www.kent.edu/campuses/maps/cpm.cfm">KSU CPM</a></li>
+
+
+			<li><a onclick="pageTracker._trackPageview('/outgoing/utilitypanel/map/salem');return true;" href="http://www.kent.edu/campuses/maps/salem.cfm">Salem</a></li>
+			<li><a onclick="pageTracker._trackPageview('/outgoing/utilitypanel/map/stark');return true;" href="http://www.kent.edu/campuses/maps/stark.cfm">Stark</a></li>
+			<li><a onclick="pageTracker._trackPageview('/outgoing/utilitypanel/map/trumbull');return true;" href="http://www.kent.edu/campuses/maps/trumbull.cfm">Trumbull</a></li>
+
+			<li><a onclick="pageTracker._trackPageview('/outgoing/utilitypanel/map/tusc');return true;" href="http://www.kent.edu/campuses/maps/tuscarawas.cfm">Tuscarawas</a></li>
+		</ul> </div> </div>
+
+</div> </div> 
+	</div>
+</div>	
+	
+<script type="text/javascript">
+
+	jQuery('#cs_PageModeMenuBtnsContainer').prepend('<li id="cs_page_menu_0" class="cs_PageModeMenuBtn"><a href="/contentadmin/"><img src="/interface_img/dashboard.png" /><span class="cs_PageModeMenuBtnText">My Content Dashboard</span></a></li>');
+		   
+</script>	
+<div id="outerWrap">
+	<div id="wrapper" class="level1">
+   		
+            <div id="header">
+                <div id="cs_control_863825" class=""> <div class="CS_Element_Schedule" title="" id="CS_Element_KSUlogo"> 
+<a name="customcf863827" id="customcf863827"></a><a name="CP_JUMP_863827" id="CP_JUMP_863827"></a><div id="cs_control_863827" class="cs_control CS_Element_CustomCF"> <div id="CS_CCF_2933422_863827"> <a id="logo" href="http://www.kent.edu/index.cfm"><span class="hide">Kent State University - Excellence in Action</span></a><a id="einAction" href="http://www.kent.edu/academics/excellence.cfm"><span class="hide">Excellence in Action</span></a>
+
+ </div> </div>
+
+</div> </div> 
+                <ul id="utilities">
+                    <div style="display: block;" id="script">
+                        <li id="utl_give"><a onclick="pageTracker._trackPageview('/outbound/utilitybar/givebutton');return true;" href="http://www.kent.edu/advancement/givetokent/index.cfm">Give to kent</a></li>
+                        <li id="utl_flashline" class="utlIcon"><a href="https://login.kent.edu/login-small.aspx?KeepThis=true&amp;TB_iframe=true&amp;height=295&amp;width=387" class="thickbox">FlashLine Login</a></li>
+                        <li id="utl_dir" class="utlIcon"><a href="javascript:void(0);">Phone Directories</a></li>
+                        <li id="utl_ask" class="utlIcon"><a href="javascript:void(0);">Ask Kent State</a></li>
+                        <li id="utl_maps" class="utlIcon"><a href="javascript:void(0);">Maps</a></li>
+                       
+                    	<li id="utl_home"><a href="http://assistive.usablenet.com/tt/www.kent.edu/artscollege/music/blossom/index.cfm">Text Only</a></li>
+                    </div>
+                    <div style="display: none;" id="noscript">
+                        <li id="utl_give"><a href="http://www.kent.edu/advancement/givetokent/index.cfm">Give to kent</a></li>
+                        <li id="utl_flashline" class="utlIcon"><a href="https://login.kent.edu/">FlashLine Login</a></li>
+                        <li id="utl_dir" class="utlIcon"><a href="http://kentstate.kent.edu/phonedirectory/">Phone Directories</a></li>
+                        <li id="utl_ask" class="utlIcon"><a href="http://www.kent.edu/askkentstate">Ask Kent State</a></li>
+                        <li id="utl_maps" class="utlIcon"><a href="http://maps.kent.edu/">Maps</a></li>
+                        <li id="utl_home"><a href="http://assistive.usablenet.com/tt/www.kent.edu/artscollege/music/blossom/index.cfm">Text Only</a></li>
+                    </div>
+                </ul><!-- end utilities -->
+
+                <div id="search">
+                <div class="AZindex"> <div id="cs_control_1920885" class="cs_control CS_Element_Textblock"> <div><a href="http://www.kent.edu/alphalist/" class="CS_Textblock_Caption" onmouseout=" setStatbar('');return true;" onmouseover="setStatbar('/alphalist/');return true;">A-Z Index</a></div> </div>
+</div>
+                
+                                 
+
+				<div id="cs_control_1920886" class="cs_control CS_Element_CustomCF"> <div id="CS_CCF_2933422_1920886"> 
+	<link type="text/css" href="/clients/Blossom/Images/jquery.css" rel="stylesheet">
+	<script type="text/javascript">         
+        jQuery(document).ready(function()
+        { 
+            var data =  new Array();
+data[0] = "About KSU";
+data[1] = "Academic Computing Support";
+data[2] = "Academic Personnel";
+data[3] = "Academic Policies";
+data[4] = "Academic Programs";
+data[5] = "Academic Quality Improvement";
+data[6] = "Academic Resources";
+data[7] = "Academic Success Center";
+data[8] = "Account Internships";
+data[9] = "Accounting Technology";
+data[10] = "Accounts Payable";
+data[11] = "Additional Programs";
+data[12] = "Admissions";
+data[13] = "Admissions Office";
+data[14] = "Aeronautics";
+data[15] = "Aerospace Studies/Air Force Reserve Officer Training Corp";
+data[16] = "African American Affairs, Institute for";
+data[17] = "Airport";
+data[18] = "Alerts";
+data[19] = "Alumni and Friends";
+data[20] = "Alumni Relations";
+data[21] = "Applied Conflict Management, Center for";
+data[22] = "Applied Engineering";
+data[23] = "Applied Linguistics, Institute for";
+data[24] = "Applied Psychology Center";
+data[25] = "AQIP";
+data[26] = "Architecture and Environmental Design, College of";
+data[27] = "Arts and Culture";
+data[28] = "Athletics";
+data[29] = "Awards and Honors";
+data[30] = "Banquet Sales";
+data[31] = "Benefits";
+data[32] = "Benefits Office";
+data[33] = "Bibliography and Editing, Institute for";
+data[34] = "Biomedical Sciences";
+data[35] = "Board of Trustees";
+data[36] = "Buildings";
+data[37] = "Bursar\'s Office";
+data[38] = "Business";
+data[39] = "Business Administrator Services";
+data[40] = "Business Management Technology";
+data[41] = "Campus Life";
+data[42] = "Career Services Center";
+data[43] = "Center for Adult and Veteran Services";
+data[44] = "Center for Applied Conflict Management";
+data[45] = "Center for Corporate and Professional Development";
+data[46] = "Center for Ecology and Natural Resources Sustainability";
+data[47] = "Center for International and Comparative Programs";
+data[48] = "Center for Public Administration and Public Policy";
+data[49] = "Center for Student Involvement";
+data[50] = "Centers and Institutes";
+data[51] = "Child Development Center";
+data[52] = "College and Graduate School of Education, Health and Human Services";
+data[53] = "College of Architecture and Environmental Design";
+data[54] = "College of Arts and Sciences";
+data[55] = "College of Business Administration";
+data[56] = "College of Communication and Information";
+data[57] = "College of Continuing Studies";
+data[58] = "College of Nursing";
+data[59] = "College of Podiatric Medicine";
+data[60] = "College of Public Health";
+data[61] = "College of Technology";
+data[62] = "College of the Arts";
+data[63] = "Colleges, Schools, and Departments";
+data[64] = "Columbiana County Campus";
+data[65] = "Commencement";
+data[66] = "Commencement and Graduation";
+data[67] = "Commission on Inclusion";
+data[68] = "Communication Research Center";
+data[69] = "Communication, Journalism and Media";
+data[70] = "Communications and Special Events";
+data[71] = "Commuter & Off-Campus Student Organization";
+data[72] = "Computational Mathematics, Institute for";
+data[73] = "Computer Technology";
+data[74] = "Computers, Math and Technology";
+data[75] = "Conrad Studies, Center for";
+data[76] = "Contact Info and Biographies";
+data[77] = "Controller\'s Office";
+data[78] = "Corporate Services";
+data[79] = "Councils and Committees";
+data[80] = "Counseling and Human Development Center";
+data[81] = "Courses";
+data[82] = "Current Students";
+data[83] = "Curriculum Services";
+data[84] = "Data Pages";
+data[85] = "Dean of Students and Student Ombuds";
+data[86] = "Department of Accounting";
+data[87] = "Department of Anthropology";
+data[88] = "Department of Biological Sciences";
+data[89] = "Department of Chemical Physics";
+data[90] = "Department of Chemistry";
+data[91] = "Department of Computer Science";
+data[92] = "Department of Economics";
+data[93] = "Department of English";
+data[94] = "Department of Enterprise Support & Application Services";
+data[95] = "Department of Finance";
+data[96] = "Department of Geography";
+data[97] = "Department of Geology";
+data[98] = "Department of History";
+data[99] = "Department of Infrastructure & Operations";
+data[100] = "Department of Justice Studies";
+data[101] = "Department of Management and Information Systems";
+data[102] = "Department of Marketing and Entrepreneurship";
+data[103] = "Department of Mathematical Sciences";
+data[104] = "Department of Modern and Classical Language Studies";
+data[105] = "Department of Pan-African Studies";
+data[106] = "Department of Philosophy";
+data[107] = "Department of Physics";
+data[108] = "Department of Political Science";
+data[109] = "Department of Psychology";
+data[110] = "Department of Sociology";
+data[111] = "Department of Undergraduate Studies";
+data[112] = "Design Visual Arts";
+data[113] = "Destination Kent State";
+data[114] = "Dining Services";
+data[115] = "Disaster Recovery, Infrastructure and Security";
+data[116] = "Diversity";
+data[117] = "Division of Diversity, Equity and Inclusion";
+data[118] = "Division of Enrollment Management and Student Affairs";
+data[119] = "Division of Finance and Administration";
+data[120] = "Division of Human Resources";
+data[121] = "Division of Information Services";
+data[122] = "Division of Institutional Advancement";
+data[123] = "Division of Research";
+data[124] = "Division of University Relations";
+data[125] = "Early Childhood Education Technology";
+data[126] = "Education Abroad";
+data[127] = "Education and Teaching";
+data[128] = "Educational Policies Council";
+data[129] = "Educational Technology & Distance Learning";
+data[130] = "Educational Technology and End User Services";
+data[131] = "Employee Assistance Program";
+data[132] = "Employee Relations";
+data[133] = "Employment";
+data[134] = "Engineering Technology";
+data[135] = "Entrepreneurial Academy, The";
+data[136] = "Entrepreneurship and Business Innovation, Center for";
+data[137] = "Equal Opportunity and Affirmative Action";
+data[138] = "Ethnic Heritage Center";
+data[139] = "Event Detail Page";
+data[140] = "Events";
+data[141] = "External Employers and Professionals";
+data[142] = "Facilities Planning and Operations";
+data[143] = "Faculty Affairs";
+data[144] = "Faculty and Staff";
+data[145] = "Faculty and Staff Services";
+data[146] = "Faculty Professional Development Center";
+data[147] = "Faculty Professional Development Study Committee";
+data[148] = "Faculty Senate";
+data[149] = "Family Child Learning Center";
+data[150] = "Financial Accounting";
+data[151] = "Financial Affairs";
+data[152] = "Financial Engineering";
+data[153] = "Fire Prevention Services";
+data[154] = "First Year Student";
+data[155] = "Flash Communications";
+data[156] = "FLASHcard office";
+data[157] = "Food and Dining";
+data[158] = "Forms and Documents";
+data[159] = "Foundation";
+data[160] = "Future Students";
+data[161] = "Gallery Pages";
+data[162] = "Gerald H. Read Center for International and Intercultural Education";
+data[163] = "Giving";
+data[164] = "Global Management Center";
+data[165] = "Governance";
+data[166] = "Government Relations";
+data[167] = "Graduate Admissions";
+data[168] = "Graduate Student Senate";
+data[169] = "Graduate Studies";
+data[170] = "Grants Accounting";
+data[171] = "Hattie Larlham Research Institute";
+data[172] = "Health and Wellness";
+data[173] = "Health Promotion through Education, Center for";
+data[174] = "Healthcare";
+data[175] = "Help pages";
+data[176] = "Honors College";
+data[177] = "Hospitality and Tourism";
+data[178] = "Housing";
+data[179] = "Human Development Center";
+data[180] = "Human Resources Shared Services";
+data[181] = "Human Services and Social Sciences";
+data[182] = "Ice Arena";
+data[183] = "Information Architecture and Knowledge Management";
+data[184] = "Information Systems, Center for";
+data[185] = "Information Technology for Administrative Professionals";
+data[186] = "Informational Page";
+data[187] = "Innovation in Transition and Employment, Center for";
+data[188] = "Intercollegiate Athletics";
+data[189] = "Interdisciplinary Programs";
+data[190] = "Interest Areas";
+data[191] = "Internal Audit";
+data[192] = "International";
+data[193] = "International Admissions";
+data[194] = "International Student and Scholar Services";
+data[195] = "International Students";
+data[196] = "International Studies";
+data[197] = "Jewish Studies";
+data[198] = "Jewish Studies Program";
+data[199] = "Justice Volunteer Center";
+data[200] = "Kent Academic Support and Advising Association";
+data[201] = "Kent Campus";
+data[202] = "Kent Nanostructured Materials Center";
+data[203] = "Kent Regional Business Alliance";
+data[204] = "Kent State University at Ashtabula";
+data[205] = "Kent State University at East Liverpool";
+data[206] = "Kent State University at Geauga";
+data[207] = "Kent State University at Salem";
+data[208] = "Kent State University at Stark";
+data[209] = "Kent State University at Trumbull";
+data[210] = "Kent State University at Tuscarawas";
+data[211] = "Kent State University Museum";
+data[212] = "Kent Student Center";
+data[213] = "Kent Student Center Programming";
+data[214] = "Labor Relations";
+data[215] = "Landing Pages & Home Pages";
+data[216] = "Language, Literature and Culture";
+data[217] = "Law, Public Safety and Government";
+data[218] = "Lesbian, Gay, Bisexual, Transgender, Queer";
+data[219] = "Lesbian, Gay, Bisexual, Transgender, Queer Student Center";
+data[220] = "Library";
+data[221] = "Library and Information Literacy Education, Institute for";
+data[222] = "Liquid Crystal Institute";
+data[223] = "Literature and Psychoanalysis, Center for";
+data[224] = "Lyman L. Lemnitzer Center for NATO and European Union Studies";
+data[225] = "Mail Services";
+data[226] = "Materials Informatics, Center for";
+data[227] = "May 4, 1970";
+data[228] = "Media Law Center for Ethics and Access";
+data[229] = "Meeting Materials";
+data[230] = "Military Science";
+data[231] = "Military Science/Army Reserve Officer Training Corps";
+data[232] = "Multicultural";
+data[233] = "Multiple Audiences";
+data[234] = "Multiple Locations";
+data[235] = "News";
+data[236] = "News and Announcements";
+data[237] = "Nuclear Research, Center for";
+data[238] = "Nursing Research, Center for";
+data[239] = "Occupational Health and Safety";
+data[240] = "Off Campus";
+data[241] = "Office Continuing and Distance Education";
+data[242] = "Office of Academic Affairs";
+data[243] = "Office of Advising and Academic Services";
+data[244] = "Office of Diversity and Academic Initiatives";
+data[245] = "Office of Experiential Education and Civic Engagement";
+data[246] = "Office of Global Education";
+data[247] = "Office of Student Conduct";
+data[248] = "Office of Student Success";
+data[249] = "Office of the General Counsel";
+data[250] = "Office of the President";
+data[251] = "Office of the Provost";
+data[252] = "Office of the University Architect";
+data[253] = "Offices and Divisions";
+data[254] = "Ohio Employee Ownership Center";
+data[255] = "Ohio Literacy Resource Center";
+data[256] = "Ohio Small Business Development Center at Kent State Stark";
+data[257] = "Ohio Small Business Development Center at the Kent Regional Business Alliance";
+data[258] = "Online Learning";
+data[259] = "Online Tools";
+data[260] = "Pan African Culture, Center of";
+data[261] = "Paralegal Studies";
+data[262] = "Parents and Families";
+data[263] = "Parking and Transportation";
+data[264] = "Parking Services";
+data[265] = "Partnership";
+data[266] = "Payroll";
+data[267] = "People";
+data[268] = "Performing Arts";
+data[269] = "Planning and Academic Resource Management";
+data[270] = "Police Services";
+data[271] = "Policies and Regulations";
+data[272] = "Procurement";
+data[273] = "Psychology Clinic";
+data[274] = "Public Administration and Public Policy, Center for";
+data[275] = "Public Safety";
+data[276] = "Reading & Writing Development Center";
+data[277] = "Records";
+data[278] = "Recreation";
+data[279] = "Recreational Services";
+data[280] = "Regional Campus Administration";
+data[281] = "Regional College";
+data[282] = "Regional Corporate and Community Services Office";
+data[283] = "Research";
+data[284] = "Research and Evaluation Bureau";
+data[285] = "Research and Sponsored Programs";
+data[286] = "Research and Workplace Literacy, Center for";
+data[287] = "Research Center for Educational Technology";
+data[288] = "Research in Justice Issues";
+data[289] = "Research, Planning and Institutional Effectiveness";
+data[290] = "Residence Services";
+data[291] = "ROTC";
+data[292] = "Safety";
+data[293] = "Scholastic Journalism, Center for";
+data[294] = "School of Art";
+data[295] = "School of Biomedical Sciences";
+data[296] = "School of Communication Studies";
+data[297] = "School of Digital Sciences";
+data[298] = "School of Family and Consumer Studies";
+data[299] = "School of Fashion Design and Merchandising";
+data[300] = "School of Foundations, Leadership and Administration";
+data[301] = "School of Health Sciences";
+data[302] = "School of Journalism and Mass Communication";
+data[303] = "School of Library and Information Science";
+data[304] = "School of Lifespan Development and Educational Sciences";
+data[305] = "School of Music";
+data[306] = "School of Teaching, Learning and Curriculum Studies";
+data[307] = "School of Theatre and Dance";
+data[308] = "School of Visual Communication Design";
+data[309] = "Science and Environment";
+data[310] = "Senior Citizen Programs";
+data[311] = "Shannon Rodgers and Jerry Silverman School of Fashion Design and Merchandising";
+data[312] = "Small Business Administration Resource Center, Trumbull Campus";
+data[313] = "Sports and Recreation";
+data[314] = "Strategic Plan";
+data[315] = "Student Accessibility Services";
+data[316] = "Student Financial Aid";
+data[317] = "Student Multicultural Center";
+data[318] = "Student Organizations";
+data[319] = "Student Resources";
+data[320] = "Student Services";
+data[321] = "Success Stories";
+data[322] = "Summer Classes";
+data[323] = "Support Kent State";
+data[324] = "Sustainability";
+data[325] = "Talent Acquistion";
+data[326] = "Tech Spot";
+data[327] = "Tech Support";
+data[328] = "Technology";
+data[329] = "Technology Transfer and Economic Development";
+data[330] = "TeleProductions";
+data[331] = "Training";
+data[332] = "Training and Development";
+data[333] = "Transfer Admissions";
+data[334] = "Transportation Services";
+data[335] = "Travel Information";
+data[336] = "Treasury, Tax and Risk Management Services";
+data[337] = "Trustees Professor";
+data[338] = "Tuition and Financial Assistance";
+data[339] = "Undergraduate Admissions";
+data[340] = "University Administration";
+data[341] = "University Advising";
+data[342] = "University Bookstore";
+data[343] = "University Budget";
+data[344] = "University Communications and Marketing";
+data[345] = "University Conference Bureau";
+data[346] = "University Council on Teacher Education";
+data[347] = "University Council on Technology";
+data[348] = "University Diversity Advisory Council";
+data[349] = "University Facilities Management";
+data[350] = "University Health Services";
+data[351] = "University Libraries";
+data[352] = "University Policies";
+data[353] = "University Press";
+data[354] = "University Priorities and Budget Advisory Committee";
+data[355] = "University Research Council";
+data[356] = "University Scheduling";
+data[357] = "University Scholarship Advisory Council";
+data[358] = "University Staff Advisory Council";
+data[359] = "University Teaching Council";
+data[360] = "Veterinary Technology";
+data[361] = "Video and Animations";
+data[362] = "Visiting Kent State";
+data[363] = "Wellness";
+data[364] = "Wick Poetry Center";
+data[365] = "WKSU";
+data[366] = "Women\'s Center";
+data[367] = "Writing Commons";
+data[368] = "maps";
+data[369] = "directions";
+data[370] = "campus tours";
+data[371] = "virtual tour";
+data[372] = "dining locations";
+data[373] = "meal plans";
+data[374] = "dining calculator";
+data[375] = "Eastway Café";
+data[376] = "Eastway Market";
+data[377] = "Jazzman\'s Café";
+data[378] = "Prentice Café";
+data[379] = "Steward Café";
+data[380] = "The Cookie Jar";
+data[381] = "Rosie\'s Diner";
+data[382] = "Pete\'s Arena";
+data[383] = "Rathsekllar";
+data[384] = "Kent Market";
+data[385] = "Sunset Strips";
+data[386] = "Einstein Bros";
+data[387] = "Jump Asian Express";
+data[388] = "Quizno\'s Subs";
+data[389] = "A&W Restaurant";
+data[390] = "Ambrois";
+data[391] = "Kent Market II";
+data[392] = "Basket Shoppe";
+data[393] = "Summit Street Cafe";
+data[394] = "Snack Stop";
+data[395] = "Med center";
+data[396] = "wellness programs";
+data[397] = "uhs";
+data[398] = "university health center";
+data[399] = "counseling services";
+data[400] = "bookstore";
+data[401] = "student recreation and wellness center";
+data[402] = "bursar office";
+data[403] = "registrar";
+data[404] = "dining";
+data[405] = "parking";
+data[406] = "FLASHcard";
+data[407] = "adult student center";
+data[408] = "career services center";
+data[409] = "bus services";
+data[410] = "computer labs";
+data[411] = "ombuds";
+data[412] = "credit union";
+data[413] = "accessibility services";
+data[414] = "health services";
+data[415] = "multicultural center";
+data[416] = "sexual assault support";
+data[417] = "rape support";
+data[418] = "SART";
+data[419] = "regional campuses";
+data[420] = "education health and human services";
+data[421] = "arts and sciences";
+data[422] = "Graduation";
+data[423] = "Arts";
+data[424] = "Arts and Sciences";
+data[425] = "Business Administration";
+data[426] = "Communication and Information";
+data[427] = "Education Health and Human Services";
+data[428] = "Technology";
+data[429] = "Regional Campuses";
+data[430] = "research opportunities";
+data[431] = "undergraduate research";
+data[432] = "research requirements";
+data[433] = "IRB";
+data[434] = "graduate research";
+data[435] = "internal review board";
+data[436] = "executive offices";
+data[437] = "executive officers";
+data[438] = "divisions";
+data[439] = "vice presidents";
+data[440] = "provost";
+data[441] = "president";
+data[442] = "arts and sciences";
+data[443] = "arts";
+data[444] = "traveline";
+data[445] = "per diems";
+data[446] = "mileage";
+data[447] = "policies";
+data[448] = "policy register";
+data[449] = "Video";
+data[450] = "Audio";
+data[451] = "Images";
+data[452] = "Emergency Alerts";
+data[453] = "flashalerts";
+data[454] = "flash alerts";
+data[455] = "advisories";
+data[456] = "emergency";
+data[457] = "emergency handbook";
+data[458] = "Multimedia and Educational Design";
+data[459] = " Classroom Enhancements";
+data[460] = "Course Management";
+data[461] = "Vista";
+data[462] = "Blackboard";
+data[463] = "Project Management";
+data[464] = "Training";
+data[465] = "E-services";
+data[466] = "Application Services";
+data[467] = "Giving";
+data[468] = "endowment";
+data[469] = "foundation";
+data[470] = "annual fund";
+data[471] = "campaign";
+data[472] = "gift planning";
+data[473] = "planned gifts";
+data[474] = "donations";
+data[475] = "donor";
+data[476] = "Press releases";
+data[477] = "business administration";
+data[478] = "arts and sciences";
+data[479] = "Distance Learning";
+data[480] = "DL";
+data[481] = "web classes";
+data[482] = "Financial Aid";
+data[483] = "work study";
+data[484] = "scholarships";
+data[485] = "grants";
+data[486] = "costs";
+data[487] = "fees";
+data[488] = "campus jobs";
+data[489] = "Student government";
+data[490] = "student clubs";
+data[491] = "student organizations";
+data[492] = "on-campus housing";
+data[493] = "Living-Learning Communities";
+data[494] = "student events";
+data[495] = "rec center";
+data[496] = "student rec";
+data[497] = "Intramural sports";
+data[498] = "ice arena";
+data[499] = "rec center";
+data[500] = "student clubs";
+data[501] = "student organizations,";
+data[502] = "drop class";
+data[503] = "freshmen forgiveness";
+data[504] = "freshman forgiveness";
+data[505] = "digest of rules and regulations";
+data[506] = "policy register";
+data[507] = "copyright";
+data[508] = "plagiarism";
+data[509] = "Parking Pass";
+data[510] = "Permits";
+data[511] = "Parta";
+data[512] = "Bus Service";
+data[513] = "parking lots";
+data[514] = "parking tickets";
+data[515] = "parking ticket";
+data[516] = "transfer credits";
+data[517] = "FYE";
+data[518] = "First Year Experience";
+data[519] = "orientation";
+data[520] = "audiovisual services";
+data[521] = "mail services";
+data[522] = "women\'s resource center";
+data[523] = "university health services";
+data[524] = "university communications and marketing";
+data[525] = "student recreation and wellness center";
+data[526] = "counseling services";
+data[527] = "disability services";
+data[528] = "Arts and Sciences";
+data[529] = "Business Administration";
+data[530] = "Communication and Information";
+data[531] = "Technology";
+data[532] = "rules";
+data[533] = "regulations";
+data[534] = "policies";
+data[535] = "university policies";
+data[536] = "policy register";
+data[537] = "Network Services & Telecommunications";
+data[538] = "Server Support";
+data[539] = "Client Infrastructure";
+data[540] = "Architecture and Environmental Design";
+data[541] = "Arts";
+data[542] = "Communicaton and Information";
+data[543] = "Technology";
+data[544] = "Arts and Sciences";
+data[545] = "Communication and Information";
+data[546] = "residence hall";
+data[547] = "off-campus living";
+data[548] = "dorm";
+data[549] = " residence hall";
+data[550] = "Lake Hall";
+data[551] = "Olson Hall";
+data[552] = "Stopher Hall";
+data[553] = "Johnson Hall";
+data[554] = "Centennial Court";
+data[555] = "Allerton Family Housing";
+data[556] = "Van Campen Housing";
+data[557] = "Engleman Hall";
+data[558] = "Dunbar Hall";
+data[559] = "Prentice Hall";
+data[560] = "Verder Hall";
+data[561] = "Eastway";
+data[562] = "Clark Hall";
+data[563] = "Fletcher Hall";
+data[564] = "Allyn Hall";
+data[565] = "Manchester Hall";
+data[566] = "Twin Towers";
+data[567] = "Tri-Towers";
+data[568] = "New Front";
+data[569] = "Quad";
+data[570] = "Leebrick Hall";
+data[571] = "Wright Hall";
+data[572] = "Koonce Hall";
+data[573] = "Korb Hall";
+data[574] = "Beall Hall";
+data[575] = "Mcdowell Hall";
+data[576] = "Charts";
+data[577] = " Graphs";
+data[578] = " Facts";
+data[579] = "Figures";
+data[580] = "Population";
+data[581] = "Demographics";
+data[582] = "education health and human services";
+data[583] = "arts and sciences";
+data[584] = "university teams";
+data[585] = "sports teams";
+data[586] = "freshman admissions";
+data[587] = "freshmen";
+data[588] = "admissions";
+data[589] = "admissions requirements";
+data[590] = "transfer admissions";
+data[591] = "transfer credits";
+data[592] = "Museum";
+data[593] = "Kent/Blossom";
+data[594] = "Porthouse Theatre";
+data[595] = "performing arts";
+data[596] = "visual and design arts";
+data[597] = "Hugh A. Glauser School of Music";
+data[598] = "School of Theatre and Dance";
+data[599] = "Downtown Gallery";
+data[600] = "School of Fashion";
+data[601] = "School of Art";
+data[602] = "graduate requirements";
+data[603] = "education health and human services";
+data[604] = "business administration";
+data[605] = "History";
+data[606] = "facts";
+data[607] = "student body profile";
+data[608] = "enrollment";
+data[609] = "flash facts";
+data[610] = "schedule of classes";
+data[611] = "academic calendar";
+data[612] = "apply";
+data[613] = "applying";
+data[614] = "application";
+data[615] = "admissions requirements";
+data[616] = "faculty awards";
+data[617] = "achievements";
+data[618] = "employee awards";
+data[619] = "20 year club";
+data[620] = "DTA";
+data[621] = "OTA";
+data[622] = "DSA";
+data[623] = "Academic Calendar";
+data[624] = "exam schedules";
+data[625] = "success center";
+data[626] = "midterm schedule";
+data[627] = "finals schedule";
+data[628] = "tutoring";
+data[629] = "supplemental instruction";
+data[630] = "advising";
+data[631] = "library";
+data[632] = "libraries";
+data[633] = "drop dates";
+data[634] = "public safety";
+data[635] = "police";
+data[636] = "international requirements";
+data[637] = "Online Surveys";
+data[638] = "Online Application Forms";
+data[639] = "Flashline";
+data[640] = "email";
+data[641] = "Arts";
+data[642] = "arts and sciences";
+data[643] = "Education Health and Human services";
+data[644] = "technology";
+data[645] = "faculty";
+data[646] = "staff";
+data[647] = "students";
+data[648] = "Education health and human services";
+data[649] = "Arts and sciences";
+data[650] = "vision insurance";
+data[651] = "vacation";
+data[652] = "medical insurance";
+data[653] = "medical mutual";
+data[654] = "aetna";
+data[655] = "HR forms";
+data[656] = "Jobs";
+data[657] = "Want ads";
+data[658] = "Help wanted";
+data[659] = "helpdesk";
+data[660] = "help desk";
+data[661] = "desktop support";
+data[662] = "computer support";
+data[663] = "computer help";
+data[664] = "FlashLine help";
+data[665] = "passwords";
+data[666] = "login";
+data[667] = "Study Abroad";
+data[668] = "Florence";
+data[669] = "Geneva";
+data[670] = "international students";
+data[671] = "Uganda";
+data[672] = "Cuba";
+data[673] = "Ireland";
+data[674] = "international internships";
+data[675] = "Gerald H. Read Center";
+data[676] = "Regional campuses";
+data[677] = "Nursing";
+data[678] = "Education health and human services";
+data[679] = "Arts and science";
+data[680] = "workshops";
+data[681] = "professional development";
+data[682] = "FPDC";
+data[683] = "faculty professional development center";
+data[684] = "May 4th shootings";
+data[685] = "May 4th";
+data[686] = "sex offender";
+data[687] = "dropping classes";
+data[688] = "drop classes";
+data[689] = "international study";
+data[690] = "international affairs";
+data[691] = "helpdesk";
+data[692] = "tech support";
+data[693] = "global studies";
+data[694] = "podiatry";
+data[695] = "podiatric medicine";
+data[696] = "podiatric surgery";
+
+            jQuery("#search_field")
+                .autocomplete({ source: data })
+                .keyup(function(e)
+                {
+                    if (e.keyCode === 13)
+                    {
+                        jQuery(this).closest('form').trigger('submit');
+                    }
+                })
+                .val('Search KENT.EDU')
+                .css({'color' : '#999', 'font-style' : 'italic'})
+                .focusin(function()
+                {
+                    jQuery(this).val('').css({'color' : '#666', 'font-style' : 'normal'});
+                });
+        }); 
+    </script> 
+
+
+</div> </div>
+
+                </div><!-- End of google search-->
+
+            
+	        
+                <div id="main_nav">
+						<div id="cs_control_2158" class="cs_control CS_Element_LinkBar"> 
+<ul class="sf-menu" id="sf-menu">
+
+			<li><a title="About" href="http://www.kent.edu/about/index.cfm?ref=nav_about">About</a>
+
+	
+	
+				<ul>
+		
+					<li><a title="Administration" href="http://www.kent.edu/about/administration/index.cfm?ref=nav_about">Administration</a></li>
+	
+					<li><a title="Alumni" href="http://www.kent.edu/alumni/index.cfm?ref=nav_about">Alumni</a></li>
+	
+					<li><a title="Centers &amp; Institutes" href="http://www.kent.edu/about/centersinstitutes/index.cfm?ref=nav_about">Centers &amp; Institutes</a></li>
+	
+					<li><a title="Corporate Services" href="http://www.kent.edu/yourtrainingpartner/index.cfm?ref=nav_about">Corporate Services</a></li>
+	
+					<li><a title="Employment" href="http://www.kent.edu/about/Employment/index.cfm?ref=nav_about">Employment</a></li>
+	
+					<li><a title="Facts &amp; Figures" href="http://www.kent.edu/about/facts/index.cfm?ref=nav_about">Facts &amp; Figures</a></li>
+	
+					<li><a title="Giving Opportunities" href="http://www.kent.edu/advancement/index.cfm?ref=nav_about">Giving Opportunities</a></li>
+	
+					<li><a title="History" href="http://www.kent.edu/about/history/index.cfm?ref=nav_about">History</a></li>
+	
+					<li><a title="Offices &amp; Services" href="http://www.kent.edu/about/offices/index.cfm?ref=nav_about">Offices &amp; Services</a></li>
+	
+				</ul>
+			</li>
+			<li class="main_nav_divider"></li>
+			
+			<li><a title="Academics" href="http://www.kent.edu/academics/index.cfm?ref=nav_academics">Academics</a>
+
+	
+	
+				<ul>
+		
+					<li><a title="Academic Locations" href="http://www.kent.edu/campuses/index.cfm?ref=nav_academics">Academic Locations</a></li>
+	
+					<li><a title="Academic Resources" href="http://www.kent.edu/academics/resources/index.cfm?ref=nav_academics">Academic Resources</a></li>
+	
+					<li><a title="Colleges and Schools" href="http://www.kent.edu/academics/colleges-and-schools.cfm?ref=nav_academics">Colleges and Schools</a></li>
+	
+					<li><a title="Commencement" href="http://www.kent.edu/commencement/index.cfm?ref=nav_academics">Commencement</a></li>
+	
+					<li><a title="Distance &amp; Online Learning" href="http://www.kent.edu/academics/dl/index.cfm?ref=nav_academics_top">Distance &amp; Online Learning</a></li>
+	
+					<li><a title="Graduate Study" href="http://www.kent.edu/academics/graduate/index.cfm?ref=nav_academics">Graduate Study</a></li>
+	
+					<li><a title="Honors College" href="http://www.kent.edu/honors?utm_source=newkentsite&amp;utm_medium=linkbar&amp;utm_campaign=honorslinkclicks&amp;ref=nav_academics">Honors College</a></li>
+	
+					<li><a title="International Study" href="http://www.kent.edu/academics/international/index.cfm?ref=nav_academics">International Study</a></li>
+	
+					<li><a title="Libraries" href="http://www.kent.edu/academics/library/index.cfm?ref=nav_academics">Libraries</a></li>
+	
+					<li><a title="Majors and Degrees" href="http://www.kent.edu/gps/index.cfm?ref=nav_academics">Majors and Degrees</a></li>
+	
+					<li><a title="Online Learning" href="http://www.kent.edu/academics/dl/index.cfm?ref=nav_academics_bottom">Online Learning</a></li>
+	
+					<li><a title="Provost" href="http://www.kent.edu/provost/index.cfm?ref=nav_academics">Provost</a></li>
+	
+					<li><a title="ROTC Programs" href="http://www.kent.edu/academics/rotc/index.cfm?ref=nav_academics">ROTC Programs</a></li>
+	
+					<li><a title="Summer Classes" href="http://www.kent.edu/summer/index.cfm?ref=nav_academics">Summer Classes</a></li>
+	
+				</ul>
+			</li>
+			<li class="main_nav_divider"></li>
+			
+			<li><a title="Admissions &amp; Financial Aid" href="http://www.kent.edu/admissions/index.cfm?ref=nav_admissions">Admissions &amp; Financial Aid</a>
+
+	
+	
+				<ul>
+		
+					<li><a title="Explore Campus" href="http://www.kent.edu/admissions/explore/index.cfm?ref=nav_admissions">Explore Campus</a></li>
+	
+					<li><a title="Apply Now" href="http://www.kent.edu/admissions/apply/index.cfm?ref=nav_admissions">Apply Now</a></li>
+	
+					<li><a title="Tuition, Scholarships &amp; Financial Aid" href="http://www.kent.edu/admissions/cost/index.cfm?ref=nav_admissions">Tuition, Scholarships &amp; Financial Aid</a></li>
+	
+					<li><a title="Undergraduate Admissions" href="http://www.kent.edu/admissions/undergraduate/index.cfm?ref=nav_admissions">Undergraduate Admissions</a></li>
+	
+					<li><a title="Graduate Admissions" href="http://www.kent.edu/admissions/graduate/index.cfm?ref=nav_admissions">Graduate Admissions</a></li>
+	
+					<li><a title="International Admissions" href="http://www.kent.edu/admissions/international/index.cfm?ref=nav_admissions">International Admissions</a></li>
+	
+					<li><a title="Post-Secondary Enrollment Option Programs (PSEOP)" href="http://www.kent.edu/undergradstudies/dual/index.cfm?ref=nav_admissions">Post-Secondary Enrollment Option Programs (PSEOP)</a></li>
+	
+					<li><a title="Newly Admitted Students" href="http://www.kent.edu/admissions/undergraduate/newfreshmen/next-steps.cfm?ref=nav_admissions">Newly Admitted Students</a></li>
+	
+					<li><a title="Contact" href="http://www.kent.edu/admissions/contact/index.cfm?ref=nav_admissions">Contact</a></li>
+	
+				</ul>
+			</li>
+			<li class="main_nav_divider"></li>
+			
+			<li><a title="Student Life" href="http://www.kent.edu/studentlife/index.cfm?ref=nav_student">Student Life</a>
+
+	
+	
+				<ul>
+		
+					<li><a title="Activities &amp; Organizations" href="http://www.kent.edu/studentlife/activities/index.cfm?ref=nav_student">Activities &amp; Organizations</a></li>
+	
+					<li><a title="Arts &amp; Culture" href="http://www.kent.edu/studentlife/arts/index.cfm?ref=nav_student">Arts &amp; Culture</a></li>
+	
+					<li><a title="Campus Safety" href="http://www.kent.edu/studentlife/safety/index.cfm?ref=nav_student">Campus Safety</a></li>
+	
+					<li><a title="Commuter &amp; Off-Campus Students" href="http://www.kent.edu/studentlife/commuter.cfm?ref=nav_student">Commuter &amp; Off-Campus Students</a></li>
+	
+					<li><a title="Dining" href="http://www.kent.edu/studentlife/dining/index.cfm?ref=nav_student">Dining</a></li>
+	
+					<li><a title="Health Services" href="http://www.kent.edu/studentlife/health/index.cfm?ref=nav_student">Health Services</a></li>
+	
+					<li><a title="Housing" href="http://www.kent.edu/housing/index.cfm?ref=nav_student">Housing</a></li>
+	
+					<li><a title="Student Resources" href="http://www.kent.edu/studentlife/resources/index.cfm?ref=nav_student">Student Resources</a></li>
+	
+					<li><a title="Transportation" href="http://www.kent.edu/studentlife/transportation/index.cfm?ref=nav_student">Transportation</a></li>
+	
+				</ul>
+			</li>
+			<li class="main_nav_divider"></li>
+			
+			<li><a title="Athletics" href="http://www.kent.edu/athletics/index.cfm?ref=nav_athletics">Athletics</a>
+
+	
+	
+				<ul>
+		
+					<li><a title="Ice Arena" href="http://www.kent.edu/athletics/recservices/icearena/index.cfm?ref=nav_athletics">Ice Arena</a></li>
+	
+					<li><a title="Intramural Sports" href="http://www.kent.edu/athletics/recservices/sports/intramuralsports.cfm?ref=nav_athletics">Intramural Sports</a></li>
+	
+					<li><a title="Intercollegiate Sports" href="http://www.kent.edu/athletics/sports/index.cfm?ref=nav_athletics">Intercollegiate Sports</a></li>
+	
+					<li><a title="Recreational Services" href="http://www.kent.edu/athletics/recservices/index.cfm?ref=nav_athletics">Recreational Services</a></li>
+	
+				</ul>
+			</li>
+			<li class="main_nav_divider"></li>
+			
+			<li><a title="News &amp; Events" href="http://www.kent.edu/news/index.cfm?ref=nav_news">News &amp; Events</a>
+
+	
+	
+				<ul>
+		
+					<li><a title="Calendar of Events" href="http://www.kent.edu/news/ecalendar/index.cfm?ref=nav_news">Calendar of Events</a></li>
+	
+					<li><a title="Centennial Information" href="http://www.kent.edu/news/celebrate/index.cfm?ref=nav_news">Centennial Information</a></li>
+	
+					<li><a title="Featured Videos" href="http://www.kent.edu/news/video/index.cfm?ref=nav_news">Featured Videos</a></li>
+	
+					<li><a title="For the Media" href="http://www.kent.edu/news/media/index.cfm?ref=nav_news">For the Media</a></li>
+	
+					<li><a title="General Announcements" href="https://www.kent.edu/news/announcements/announcements.cfm?ref=nav_news">General Announcements</a></li>
+	
+					<li><a title="May 4 Online Newsroom" href="http://www.kent.edu/about/history/may4/newsroom/index.cfm?ref=nav_news">May 4 Online Newsroom</a></li>
+	
+					<li><a title="Profiles of Excellence in Action" href="http://www.kent.edu/news/profiles/index.cfm?ref=nav_news">Profiles of Excellence in Action</a></li>
+	
+					<li><a title="Success Stories" href="http://www.kent.edu/news/announcements/success/index.cfm?ref=nav_news">Success Stories</a></li>
+	
+				</ul>
+			</li>
+			<li class="main_nav_divider"></li>
+			
+			<li><a title="Research" href="http://www.kent.edu/research/index.cfm?ref=nav_research">Research</a>
+
+	
+	
+			</li>
+			<li class="main_nav_divider"></li>
+				
+			<li><a title="Campuses" href="http://www.kent.edu/campuses/index.cfm?ref=nav_campuses">Campuses</a>
+
+	
+	
+				<ul>
+		
+					<li><a title="Ashtabula" href="http://www.ashtabula.kent.edu/index.cfm?campuses">Ashtabula</a></li>
+	
+					<li><a title="East Liverpool" href="http://www.eliv.kent.edu/index.cfm?campuses">East Liverpool</a></li>
+	
+					<li><a title="Geauga" href="http://www.geauga.kent.edu/index.cfm?campuses">Geauga</a></li>
+	
+					<li><a title="Kent" href="http://www.kent.edu/campuses/kent/index.cfm?ref=nav_campuses">Kent</a></li>
+	
+					<li><a title="Salem" href="http://www.salem.kent.edu/index.cfm?campuses">Salem</a></li>
+	
+					<li><a title="Stark" href="http://www.stark.kent.edu/index.cfm?campuses">Stark</a></li>
+	
+					<li><a title="Trumbull" href="http://www.trumbull.kent.edu/index.cfm?campuses">Trumbull</a></li>
+	
+					<li><a title="Tuscarawas" href="http://www.tusc.kent.edu/index.cfm?campuses">Tuscarawas</a></li>
+	
+					<li><a title="Other Academic Locations" href="http://www.kent.edu/campuses/index.cfm?ref=nav_campuses_other">Other Academic Locations</a></li>
+	
+					<li><a title="Maps &amp; Directions" href="http://www.kent.edu/campuses/maps/index.cfm?ref=nav_campuses">Maps &amp; Directions</a></li>
+	
+		</ul>
+	</li>
+
+</ul>
+</div>
+
+                </div><!-- end main_nav -->
+	    
+            </div><!-- end header -->
+			
+			
+<div id="content">
+
+	<h2>
+
+<div id="cs_control_29830" class=""> <div class="CS_Element_Schedule" title="" id="CS_Element_subsiteTitle"> 
+<a name="customcf309862" id="customcf309862"></a><a name="CP_JUMP_309862" id="CP_JUMP_309862"></a><div id="cs_control_309862" class="cs_control CS_Element_CustomCF"> <div id="CS_CCF_2933422_309862"> <h3 class="collegeName"><a href="http://www.kent.edu/artscollege/">College of the Arts Home</a></h3> </div> </div>
+<a name="breadcrumb37759" id="breadcrumb37759"></a><a name="CP_JUMP_37759" id="CP_JUMP_37759"></a><div id="cs_control_37759" class="cs_control CS_Element_LinkBar"> Blossom </div>
+
+</div> </div> 
+           
+    </h2>
+    
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+<!--TIX DATA START-->
+	</div>
+
+		<div id="footer">
+			
+				<div id="cs_control_1429294" class=""> <div class="CS_Element_Schedule" title="" id="CS_Element_ConnectContainer"> 
+<a name="custom1429571" id="custom1429571"></a><a name="CP_JUMP_1429571" id="CP_JUMP_1429571"></a><div id="cs_control_1429571" class="cs_control"> </div>
+
+</div> </div> 
+				
+			
+			<!-- start bottom_utilities -->
+            <div id="footer_links">
+			<div id="cs_control_2149" class=""> <div class="CS_Element_Schedule" title="" id="CS_Element_BottomUtilites"> 
+<a name="customFooter" id="customFooter"></a><a name="CP_JUMP_1519726" id="CP_JUMP_1519726"></a><div id="cs_control_1519726" class="cs_control CS_Element_Textblock"> <div class="CS_Textblock_Text"><div align="center">
+<table style="" summary="Kent/Blossom Mailing Address" border="0" height="30" width="650">
+<tbody>
+<tr>
+<td style="white-space: nowrap;"><strong>Kent/Blossom Music, Kent State University</strong></td>
+<td style="" width="40">&nbsp;</td>
+<td style="white-space: nowrap;">P.O. Box 5190/E101 Music &amp; Speech Center</td>
+<td style="" width="40">&nbsp;</td>
+<td style="white-space: nowrap;">Kent, OH 44242</td>
+</tr>
+</tbody>
+</table>
+
+<table style="" summary="Kent/Blossom Contact Information" border="0" width="600">
+<tbody>
+<tr>
+<td style="white-space: nowrap;"><a href="mailto:kbm@kent.edu" style="color: rgb(66, 52, 95);">kbm@kent.edu</a></td>
+<td style="" width="25">&nbsp;</td>
+<td style="white-space: nowrap;">Phone: 330-672-2613</td>
+<td style="" width="25">&nbsp;</td>
+<td style="white-space: nowrap;">Fax: 330-672-7837</td>
+<td style="" width="25">&nbsp;</td>
+<td style="white-space: nowrap;">Physical Address: 1325 Theatre Drive</td>
+</tr>
+</tbody>
+</table>
+</div></div> </div>
+<a name="linkbar3005" id="linkbar3005"></a><a name="CP_JUMP_3005" id="CP_JUMP_3005"></a><div id="cs_control_3005" class="cs_control CS_Element_LinkBar"> 
+  	<ul id="bottom_utilities">
+        
+                <li class="btmUtlLinks"><a href="http://www.kent.edu/index.cfm">Home</a></li>
+          
+            
+                <li>|</li>      
+            
+                <li class="btmUtlLinks"><a href="http://www.kent.edu/police">Emergency Information</a></li>
+          
+            
+                <li>|</li>      
+            
+                <li class="btmUtlLinks"><a href="https://jobs.kent.edu/applicants/jsp/shared/frameset/Frameset.jsp?time=1253288083363">Jobs</a></li>
+          
+            
+                <li>|</li>      
+            
+                <li class="btmUtlLinks"><a href="http://www.kent.edu/news/Media/index.cfm">For the Media</a></li>
+          
+            
+     	
+        <li>|</li> <li class="btmUtlLinks">
+        	
+            	<a href="http://www.kent.edu/blossom/index.cfm?&amp;mobile=yes">Mobile Site</a></li>
+            
+  	</ul>
+</div>
+<a name="textblock179183" id="textblock179183"></a><a name="CP_JUMP_179183" id="CP_JUMP_179183"></a><div id="cs_control_179183" class="cs_control CS_Element_Textblock"> <div class="CS_Textblock_Text"><p id="copyright">As
+ one of Ohio’s top universities, Kent State offers the resources and 
+facilities of a large university with the friendly, casual atmosphere of
+ a liberal arts college. Enroll today to start pursuing your future at 
+one of the best colleges in Ohio. We’ve been educating successful 
+graduates for over 100 years; join us today.<br>
+</p></div> </div>
+<a name="customcf2119470" id="customcf2119470"></a><a name="CP_JUMP_2119470" id="CP_JUMP_2119470"></a><div id="cs_control_2119470" class="cs_control CS_Element_CustomCF"> <div id="CS_CCF_2933422_2119470">  
+<p id="copyright">
+Copyright 2013 
+&nbsp;&nbsp;&nbsp;Kent State University&nbsp;&nbsp;&nbsp;Kent, Ohio 44242&nbsp;&nbsp;&nbsp;&nbsp;Phone: 330-672-3000
+</p>
+</div> </div>
+
+</div> </div> 
+			
+			<!-- end bottom_utilities -->
+			
+			
+            </div><!-- end footer_links -->
+		</div><!-- end footer -->
+	</div><!-- end wrapper -->
+</div><!-- end outerWrap -->
+
+<!-- ANALYTICS CODE -->
+<script type="text/javascript">
+	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="/clients/Blossom/Images/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+	try {
+	var pageTracker = _gat._getTracker("UA-10691197-1");
+	pageTracker._setDomainName('.kent.edu');
+	pageTracker._setAllowLinker(true);
+	pageTracker._setAllowHash(false);
+	pageTracker._trackPageview(); 
+	} catch(err) {}
+</script>
+<div style="display:block; clear:left; padding:0px; font-family:Verdana,Arial; font-size:10px; color:gray;"></div><script type="text/javascript">
+		<!--
+			var jsPageContributeMode = 'read';
+			var jsPageSessionContributeMode = 'read';
+			var jsPageAuthorMode = 0;
+			var jsPageEditMode = 0;
+			// build commonspot.csPage, used by entrance.js and onDocumentLoaded
+			if(!commonspot)
+				var commonspot = {};
+			commonspot.csPage = {};
+			commonspot.csPage.url = location.pathname + ((location.pathname.match(/.cfm/i)) ? '' : 'index.cfm'); // use index.cfm if no filename
+			commonspot.csPage.id = 2933422;
+			commonspot.csPage.title = 'Blossom Music';
+			commonspot.csPage.subsiteRoot = '/artscollege/music/blossom/';
+			commonspot.csPage.siteRoot = '/';
+			commonspot.csPage.mode = jsPageSessionContributeMode;
+			commonspot.csPage.authorok = 0;
+			commonspot.csPage.showContainerUI = 0;
+			commonspot.csPage.requestedVersionTimestamp = '';
+			commonspot.csPage.userRights = {};
+			commonspot.csPage.userRights.isLoggedIn = 0;
+			commonspot.csPage.userRights.read = 1;
+			commonspot.csPage.userRights.author = 0;
+			commonspot.csPage.userRights.edit = 0;
+			commonspot.csPage.userRights.approve = 0;
+			commonspot.csPage.userRights.history = 0;
+			commonspot.csPage.userRights.design = 0;
+			commonspot.csPage.userRights.admin = 0;
+			commonspot.csPage.userRights.subsiteAdmin = 0;
+			commonspot.csPage.userRights.siteAdmin = 0;
+			commonspot.csPage.userRights.userAdmin = 0;
+			var doLviewRedirect;
+			if(parent && parent.commonspot && parent.commonspot.lview && (!doLviewRedirect))
+			{
+				onPageArrival = function()
+				{
+					parent.commonspot.lview.currentPage.onPageArrival(commonspot.csPage.mode, commonspot.csPage.url, commonspot.csPage.id, commonspot.csPage.title, commonspot.csPage.subsiteRoot, commonspot.csPage.siteRoot);
+				};
+				onPageUnload = function()
+				{
+					parent.commonspot.lview.currentPage.onPageUnload(location.pathname + '?' + document.location.search);
+				};
+				parent.Spry.Utils.addEventListener(window, 'load', onPageArrival, false);
+				parent.Spry.Utils.addEventListener(window, 'unload', onPageUnload, false);
+			}
+		
+		// -->
+		</script><ul style="z-index: 1000; top: 0px; left: 0px; display: none;" aria-activedescendant="ui-active-menuitem" role="listbox" class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all"></ul></div>
+</form>
+</body>
+</html>

@@ -1,0 +1,668 @@
+<%
+'changelog
+'LSP 04/26/16 - initial development
+%>
+	
+
+<!DOCTYPE html>
+
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
+				style="" lang="en-US">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+<link href='https://fonts.googleapis.com/css?family=Montserrat|Lato:400,700' rel='stylesheet' type='text/css'>
+
+
+	<link rel="stylesheet" id="jeweltheme-jquery-ui-style-css" href="/clients/CLAProductions/Images/jquery-ui.css" type="text/css" media="all">
+	<link rel="stylesheet" id="dashicons-css" href="/clients/CLAProductions/Images/dashicons.css" type="text/css" media="all">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+	<link rel="stylesheet" id="rs-plugin-settings-css" href="/clients/CLAProductions/Images/settings.css" type="text/css" media="all">
+	<style id="rs-plugin-settings-inline-css" type="text/css">
+		.tp-caption a {
+			color: #ff7302;
+			text-shadow: none;
+			-webkit-transition: all 0.2s ease-out;
+			-moz-transition: all 0.2s ease-out;
+			-o-transition: all 0.2s ease-out;
+			-ms-transition: all 0.2s ease-out
+		}
+		
+		.tp-caption a:hover {
+			color: #ffa902
+		}
+		
+		.tp-caption a {
+			color: #ff7302;
+			text-shadow: none;
+			-webkit-transition: all 0.2s ease-out;
+			-moz-transition: all 0.2s ease-out;
+			-o-transition: all 0.2s ease-out;
+			-ms-transition: all 0.2s ease-out
+		}
+		
+		.tp-caption a:hover {
+			color: #ffa902
+		}
+		
+		.tp-caption a {
+			color: #ff7302;
+			text-shadow: none;
+			-webkit-transition: all 0.2s ease-out;
+			-moz-transition: all 0.2s ease-out;
+			-o-transition: all 0.2s ease-out;
+			-ms-transition: all 0.2s ease-out
+		}
+		
+		.tp-caption a:hover {
+			color: #ffa902
+		}
+	</style>
+	<link rel="stylesheet" id="croma_mystyle-css" href="/clients/CLAProductions/Images/style.css" type="text/css" media="all">
+	<style id="croma_mystyle-inline-css" type="text/css">
+		a,
+		#cromaslide .ls-nav-prev:hover,
+		#cromaslide .ls-nav-next:hover,
+		.mobilemenupart:hover,
+		#croma-primarynav .current-menu-item > a,
+		#croma-primarynav .current-menu-ancestor > a,
+		#croma-primarynav .current_page_item > a,
+		#croma-primarynav .current_page_ancestor > a,
+		.cro_bodysidebar ul li.widget-container ul li a:hover,
+		.cat_post_wrapper h2 a:hover,
+		ul.cro_sociallinks li i:hover,
+		.cro_paging span,
+		.cro_cust_col,
+		.croma_searchresult a:hover,
+		.cro_frontpage_blg h4 a:hover,
+		#croma-primarynav li a:hover {
+			color: #EA392B;
+		}
+		
+		.noUi-background,
+		.cro_gr_labelholder a,
+		.cro_cust_bg,
+		ul.cro_shortcal li .clarlabel:hover,
+		.cat_audio_wrapper .mejs-container,
+		.cat_audio_wrapper .mejs-embed,
+		.cat_audio_wrapper .mejs-embed body,
+		.cro_bodysidebar ul li.widget-container .tagcloud a,
+		#comments .comment-reply-link,
+		.reveal-modal .close-reveal-modal,
+		.owl-theme .owl-controls .active span,
+		ul.cro_donationsfrequency li.cro_don_freq_active,
+		form.wpcf7-form input.wpcf7-submit,
+		ul.cro_footwidget li.widget-container .tagcloud a,
+		ul.cro_footwidget li.widget_search input#searchsubmit,
+		.comments-area input#submit {
+			background: #EA392B;
+		}
+		
+		.croma-topbarnav ul li,
+		.croma-topbarnav ul li ul {
+			background-color: #EA392B;
+		}
+		
+		.topbar {
+			background: #191B1D;
+		}
+		
+		.topbar p,
+		ul.cro_sociallinks li a {
+			color: #949AA1;
+		}
+		
+		header#pageheader.cro_standardheader {
+			background: #313438;
+		}
+		
+		.croma-topbarnav ul li a {
+			color: #FFFFFF;
+		}
+		
+		.cat_audio_wrapper .mejs-container {
+			border-top: 10px solid #EA392B;
+			border-bottom: 10px solid #EA392B;
+		}
+		
+		.croma-topbarnav ul li a,
+		.cro_cust_font {
+			font-family: "Lato";
+			font-weight: 400;
+		}
+		
+		.croma-logo img {
+			padding-bottom: 5px;
+			padding-top: 3px;
+		}
+		
+		.cro_menurow {
+			background-color: #292C2F;
+		}
+		
+		@media only screen and (max-width: 940px) {
+			.croma-primarynav {
+				display: none;
+			}
+			.mobilemenupart {
+				display: block;
+			}
+		}
+		
+		@media only screen and (max-width: 740px) {
+			header#pageheader {
+				background: #313438;
+			}
+		}
+		
+		.mobilemenupart {
+			color: #C1C5C9;
+		}
+		
+		#croma-primarynav li a {
+			font-family: "Lato";
+			font-weight: 400;
+			font-size: 12px;
+			color: #C1C5C9;
+		}
+		
+		.croma-topbarnav ul li a,
+		.croma-subnav ul li a {
+			font-family: "Lato";
+			font-weight: 400;
+		}
+		
+		.cro_hp_header {
+			font-family: "Lato";
+			font-weight: 400;
+		}
+		
+		.cro_hp_body {
+			font-family: "Lato";
+			font-weight: 400;
+		}
+		
+		.croma-subnav {
+			padding-top: 45px;
+		}
+		
+		media="all" .faqwd_search .faqwd_search_button {
+			background: transparent url("../images/search_icon.png") no-repeat;
+			background-size: 20px 20px;
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			top: 6px;
+			right: 8px;
+			border: none;
+			cursor: pointer;
+		}
+		
+		.faqwd_question_title_container {
+			margin-top: 2px;
+			border-color: red;
+			border-width: 1px;
+			border: none;
+		}
+		
+		media="all" .faqwd_question_title_container .faqwd_question_title {
+			font-size: 18px;
+			color: #EA392B;
+		}
+		
+		.opened {
+			color: #ffffff !important;
+			background-color: #EA392B!important;
+			border: none;
+		}
+		
+		td.dxic {
+			font-size: 17px!important;
+		}
+		
+		.entry-content {
+			color: 707881;
+			font-size: 15px;
+			line-height: 1.9em;
+		}
+	</style>
+	<link rel="stylesheet" id="crx_styles-css" href="/clients/CLAProductions/Images/crx-styles.css" type="text/css" media="all">
+
+
+
+	<link rel="https://api.w.org/" href="http://claproductions.com/wp-json/">
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://claproductions.com/xmlrpc.php?rsd">
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://claproductions.com/wp-includes/wlwmanifest.xml">
+
+	<link rel="canonical" href="http://claproductions.com/tix-template">
+	<link rel="shortlink" href="http://claproductions.com/?p=142">
+	<link rel="alternate" type="application/json+oembed" href="http://claproductions.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fclaproductions.com%2Ftix-template">
+	<link rel="alternate" type="text/xml+oembed" href="http://claproductions.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fclaproductions.com%2Ftix-template&amp;format=xml">
+	<script type="text/javascript">
+	
+	<script src="/clients/CLAProductions/Images/a" async="" type="text/javascript"></script>
+</head>
+
+
+<body class="singular page page-id-142 page-template-default">
+
+
+
+	<!-- fetch menu -->
+	<nav id="croma-mobilenav" class="reveal-modal">
+		<a class="mobilenav-close cro_cust_bg close-reveal-modal"><i class="icon-remove"></i></a>
+		<div class="croma-mobilenavigation">
+			<ul id="menu-primary-menu" class="menu">
+				<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://clacamphill.com/">clacamphill.com</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://claproductions.com/">claproductions.com</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page cro_megamenudropper cro_haschildren"><a class="cro_hastoggle" href="http://claproductions.com/show-times">Show Times</a>
+					<ul class="submenu cro_megamenu">
+						<li class="menu-item cro_megamenu-item">
+
+
+							<!-- start the section  -->
+							<div class="cro_mm_oneside cro_mm_events">
+
+
+
+								<div class="cro_mmcal">
+									<div class="cro_mm_calinner clearfix">
+										<div class="cro_mm_agendadate cro_hp_header"><a href="http://claproductions.com/calendar-item/104-2" class="cro_accent">2 Jul</a></div>
+
+										<div class="cro_mm_clarlabel">
+											<a href="http://claproductions.com/calendar-item/104-2" class="cro_accent">
+												<i class="icon-chevron-right"></i></a>
+										</div>
+
+										<div class="cro_mm_maindate">
+											<div class="cro_cust_font cro_hp_header"><a href="http://claproductions.com/calendar-item/104-2">Saturday, July 2 @ 2PM</a></div>
+										</div>
+
+									</div>
+									<div class="cro_mm_calinner clearfix">
+										<div class="cro_mm_agendadate cro_hp_header"><a href="http://claproductions.com/calendar-item/saturday-july-2-2pm" class="cro_accent">2 Jul</a></div>
+
+										<div class="cro_mm_clarlabel">
+											<a href="http://claproductions.com/calendar-item/saturday-july-2-2pm" class="cro_accent">
+												<i class="icon-chevron-right"></i></a>
+										</div>
+
+										<div class="cro_mm_maindate">
+											<div class="cro_cust_font cro_hp_header"><a href="http://claproductions.com/calendar-item/saturday-july-2-2pm">Saturday, July 2 @ 6PM</a></div>
+										</div>
+
+									</div>
+									<div class="cro_mm_calinner clearfix">
+										<div class="cro_mm_agendadate cro_hp_header"><a href="http://claproductions.com/calendar-item/sunday-july-3-3pm" class="cro_accent">3 Jul</a></div>
+
+										<div class="cro_mm_clarlabel">
+											<a href="http://claproductions.com/calendar-item/sunday-july-3-3pm" class="cro_accent">
+												<i class="icon-chevron-right"></i></a>
+										</div>
+
+										<div class="cro_mm_maindate">
+											<div class="cro_cust_font cro_hp_header"><a href="http://claproductions.com/calendar-item/sunday-july-3-3pm">Sunday, July 3 @ 3PM</a></div>
+										</div>
+
+									</div>
+								</div>
+
+
+							</div>
+
+
+
+
+
+
+
+							<!-- start the section  -->
+							<div class="cro_mm_oneside cro_mm_introtext">
+
+
+
+								<!-- start the header  -->
+								<h2 class="cro_hp_header">One Nation Under God</h2>
+
+								<!--  start the body -->
+								<p class="cro_hp_body">CLAProductions proudly presents One Nation, Under God, a unique, indoor performance of dramatic vignettes interwoven with patriotic music. By remembering our past, engaging our future, and honoring those who protect our way of life, we’ll celebrate
+									freedom in a variety of ways, all building up to a stunning finale that will leave you declaring: God Bless America!</p>
+
+								<!-- start the link  -->
+								<p class="cro_mm_textlink"><a href="http://claproductions.com/tix" style="  color: #0a0a0a;  background: #ffffff;  ">Buy Tickets</a></p>
+
+
+							</div>
+
+
+
+
+						</li>
+					</ul>
+				</li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://claproductions.com/volunteer">Volunteer</a></li>
+				<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://claproductions.com/contact">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
+
+
+
+
+
+
+
+
+	<div style="height: 60px;" class="sticky-wrapper" id="undefined-sticky-wrapper">
+		<div class="cro_menurow">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="large-12 columns">
+
+			
+
+						<nav id="croma-primarynav">
+
+							<div class="mobilemenupart" data-reveal-id="croma-mobilenav" data-reveal=""><i class="icon-reorder"></i></div>
+
+							<div class="croma-primarynav">
+								<ul id="menu-primary-menu-1" class="menu sf-js-enabled sf-arrows">
+									<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://clacamphill.com/">clacamphill.com</a></li>
+									<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://claproductions.com/">claproductions.com</a></li>
+									<li class="menu-item menu-item-type-post_type menu-item-object-page cro_megamenudropper"><a class="sf-with-ul" href="http://claproductions.com/show-times">Show Times</a>
+										<ul style="display: none;" class="submenu cro_megamenu sf-js-enabled sf-arrows">
+											<li class="menu-item cro_megamenu-item">
+
+
+												<!-- start the section  -->
+												<div class="cro_mm_oneside cro_mm_events">
+
+
+
+													<div class="cro_mmcal">
+														<div class="cro_mm_calinner clearfix">
+															<div class="cro_mm_agendadate cro_hp_header"><a href="http://claproductions.com/calendar-item/104-2" class="cro_accent">2 Jul</a></div>
+
+															<div class="cro_mm_clarlabel">
+																<a href="http://claproductions.com/calendar-item/104-2" class="cro_accent">
+																	<i class="icon-chevron-right"></i></a>
+															</div>
+
+															<div class="cro_mm_maindate">
+																<div class="cro_cust_font cro_hp_header"><a href="http://claproductions.com/calendar-item/104-2">Saturday, July 2 @ 2PM</a></div>
+															</div>
+
+														</div>
+														<div class="cro_mm_calinner clearfix">
+															<div class="cro_mm_agendadate cro_hp_header"><a href="http://claproductions.com/calendar-item/saturday-july-2-2pm" class="cro_accent">2 Jul</a></div>
+
+															<div class="cro_mm_clarlabel">
+																<a href="http://claproductions.com/calendar-item/saturday-july-2-2pm" class="cro_accent">
+																	<i class="icon-chevron-right"></i></a>
+															</div>
+
+															<div class="cro_mm_maindate">
+																<div class="cro_cust_font cro_hp_header"><a href="http://claproductions.com/calendar-item/saturday-july-2-2pm">Saturday, July 2 @ 6PM</a></div>
+															</div>
+
+														</div>
+														<div class="cro_mm_calinner clearfix">
+															<div class="cro_mm_agendadate cro_hp_header"><a href="http://claproductions.com/calendar-item/sunday-july-3-3pm" class="cro_accent">3 Jul</a></div>
+
+															<div class="cro_mm_clarlabel">
+																<a href="http://claproductions.com/calendar-item/sunday-july-3-3pm" class="cro_accent">
+																	<i class="icon-chevron-right"></i></a>
+															</div>
+
+															<div class="cro_mm_maindate">
+																<div class="cro_cust_font cro_hp_header"><a href="http://claproductions.com/calendar-item/sunday-july-3-3pm">Sunday, July 3 @ 3PM</a></div>
+															</div>
+
+														</div>
+													</div>
+
+
+												</div>
+
+
+
+
+
+
+
+												<!-- start the section  -->
+												<div class="cro_mm_oneside cro_mm_introtext">
+
+
+
+													<!-- start the header  -->
+													<h2 class="cro_hp_header">One Nation Under God</h2>
+
+													<!--  start the body -->
+													<p class="cro_hp_body">CLAProductions proudly presents One Nation, Under God, a unique, indoor performance of dramatic vignettes interwoven with patriotic music. By remembering our past, engaging our future, and honoring those who protect our way of life, we’ll
+														celebrate freedom in a variety of ways, all building up to a stunning finale that will leave you declaring: God Bless America!</p>
+
+													<!-- start the link  -->
+													<p class="cro_mm_textlink"><a href="http://claproductions.com/tix" style="  color: #0a0a0a;  background: #ffffff;  ">Buy Tickets</a></p>
+
+
+												</div>
+
+
+
+
+											</li>
+										</ul>
+									</li>
+									<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://claproductions.com/volunteer">Volunteer</a></li>
+									<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://claproductions.com/contact">Contact</a></li>
+								</ul>
+							</div>
+						</nav>
+
+
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+
+
+
+
+
+	<header id="pageheader" class="cro_minimalheaderheader">
+
+
+		<!-- fetch main navigation part -->
+		<div class="row">
+
+			<div class="large-12 columns">
+
+
+
+
+
+
+				<div class="croma-logo">
+					<a href="http://claproductions.com/" title="CLA Productions" rel="home">
+						<img src="/clients/CLAProductions/Images/1px.png" alt="CLA Productions">
+					</a>
+				</div>
+
+
+
+
+			</div>
+
+
+		</div>
+
+
+	</header>
+
+
+
+
+
+
+
+
+
+
+
+
+	<section id="cromaheader" style=" background-image: url(/clients/claproductions/images/Header-Image.jpg);  background-position: center;  height: 200px;   background-repeat: no-repeat; background-size: cover; ">
+		<div class="cro_headermask" style=" background: #000000;  opacity: 0.4; "></div>
+		<h1 class="cro_cust_font" style=" color: #ffffff; ">CLA Productions</h1>
+	</section>
+
+
+
+
+
+
+
+
+
+	<!-- start tit hthe page layout -->
+	<section id="pagelayout">
+		<div class="row">
+			<div id="main">
+				<div class="main singlemain cro_pagelayout">
+
+
+					<!-- render the page subject to the sidebar settings 1> sidebar left -->
+
+					<div class="large-12 column">
+
+						<!-- Start the section -->
+						<article id="post-142" class="post-142 page type-page status-publish hentry">
+							<div>
+
+
+
+
+								<!-- category time handler -->
+
+
+
+
+								<!-- Post title -->
+
+
+								<!-- image -->
+
+
+
+
+
+								<!-- render entry content -->
+								<div class="entry-content">
+
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+
+
+								</div>
+								<!-- .entry-content -->
+
+
+
+
+
+
+
+							</div>
+						</article>
+					</div>
+
+
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+	<footer id="colophon" role="contentinfo">
+
+		<div class="container">
+
+			<!-- draw the footer widgets -->
+			<div class="row cro_footwidgets">
+
+
+				<!-- footer widget left -->
+				<div class="large-4 columns">
+
+
+				</div>
+
+
+				<!-- footer widget center -->
+				<div class="large-4 columns">
+
+				</div>
+
+
+				<!-- footer widget right -->
+				<div class="large-4 columns">
+
+				</div>
+
+			</div>
+
+			<div class="site-info">
+				<div class="row">
+
+					<!-- draw the site credits & copyright -->
+					<div class="large-6 columns">
+						<div id="site-cnt">
+							<a href="http://clacamphill.com/" rel="home">
+								Christian Life Assembly | 2645 Lisburn Rd, Camp Hill, PA 17011
+							</a>
+						</div>
+					</div>
+
+					<!-- draw the site clink -->
+					<div class="large-6 columns">
+						<div id="site-generator">
+							<a>@clacamphill</a> |
+							<a href="http://instagram.com/clacamphill">Instagram</a> |
+							<a href="http://twitter.com/clacamphill">Twitter</a> |
+							<a href="http://fb.com/clacamphill">Facebook</a>
+						</div>
+						<!-- #site-generator -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- closing the footer -->
+
+</div>
+</form>
+</body>
+</html>

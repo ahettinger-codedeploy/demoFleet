@@ -1,0 +1,552 @@
+@charset "utf-8";
+
+.kasHint { font-family: sans-serif; font-size: 12px; text-align: left; position: absolute; width: 250px; margin-top: -4px; border: 1px solid #c93; padding: 10px 12px; background: #ffc url(images/pointer-left.png) no-repeat -10px 5px; } /* The pointer image is added by using another span */
+.kasHintUnder { background: #ffc url(images/pointer-up.png) no-repeat 5px -10px; } /* The pointer image is added by using another span */
+.kasHintUnder .pointer { position: absolute; left: 5px; top: -10px; width: 19px; height: 10px; background: url(images/pointer-up.png) left top no-repeat; }
+.kasHintRight { background: #ffc url(images/pointer-left.png) no-repeat -10px 5px; } /* The pointer image is added by using another span */
+.kasHintRight .pointer { position: absolute; left: -10px; top: 5px; width: 10px; height: 19px; background: url(images/pointer-left.png) left top no-repeat; }
+	
+/* Normalizing/Tearing/Zeroing */
+.kasPopUp ol, .kasPopUp h1 {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	}
+.kasPopUp a img {
+	border-width: 0;
+	}
+	
+/* Content Styles */
+.kasPopUp, .kasPopUp input, .kasPopUp textarea {
+	font: 16px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	}
+.kasPopUp textarea {
+	font-size: 14px;
+	}
+.kasPopUp li:hover {
+	background-color: #e2e8ed;
+	}
+.kasPopUp li {
+	cursor: pointer;
+	}
+	
+.checklist li { /*If this was ".kasPopUp .checklist li", rollover colors are overwritten */
+	padding: 1px 7px 2px 24px;
+	background: url(images/gif/checkbox-off.gif) no-repeat 6px 3px; /*6px 2px*/
+	}
+.kasPopUp .checklist li.selected {
+	background-image: url(images/gif/checkbox-on.gif);
+	}
+
+.radiolist li { /*See .checklist li notes */
+	padding: 3px 3px 3px 31px;
+	background: url(images/gif/radiobutton-off.gif) no-repeat 6px 6px;
+	}
+.kasPopUp .radiolist li.selected {
+	background-image: url(images/gif/radiobutton-on.gif);
+	}
+	
+.kasPopUp #textarea {
+	width: 307px;
+	}
+.kasPopUp #colorpicker img {
+	cursor: pointer;
+	}
+.kasPopUp #col2 div {
+	margin-bottom: 1px;
+	}
+.kasPopUp #col2 div img {
+	vertical-align: bottom;
+	margin-bottom: 4px;
+	}
+.kasPopUp #col2 input {
+	text-align: center;
+	border-width: 1px;
+	border-color: #bec6cc;
+	border-style: none none dotted;
+	background-color: #f5f8fa;
+	}
+.kasPopUp .datebox {
+	width: 110px;
+	}
+.kasPopUp #col2 #monthstyle_table {
+	display: none;
+	width: 298px;
+}
+.kasPopUp #monthstyle_table > div {
+	display: table-row;
+}
+.kasPopUp #monthstyle_table > div > div {
+	display: table-cell;
+	width: 53px;
+}
+.kasPopUp #monthstyle_table ol {
+	display: table-cell;
+}
+.kasPopUp #monthstyle_table li {
+	padding-bottom: 5px;
+}
+
+
+.kasPopUp .buttons .cancel {
+	float: left;
+	}
+.kasPopUp .buttons .delete, .kasPopUp .buttons a#help {
+	float: left;
+	margin-left: 12px;
+	}
+/*.kasPopUp #buttons #delete {
+	visibility: hidden;
+	}*/
+.kasPopUp #buttons #ok {
+	float: right;
+	}
+.kasPopUp #buttons em {
+	float: right;
+	font-size: 12px;
+	margin: 6px 15px 0 0;
+	color: #003663;
+	}
+
+.kasPopUp h1 span {
+	display: none;
+	}
+	
+.kasPopUp #col1 {
+	clear: both;
+	float: left;
+	padding: 0 12px 0 6px;
+	}
+
+.kasPopUp #col2 {
+	padding: 0 6px 0 16px;
+	border-left: 1px #bec6cc solid;
+}
+	
+.kasPopUp #text {
+	padding: 0px 10px 19px 12px; /*0px 10px 19px 12px*/
+	/*width: 340px;*/
+	float: left;
+	}
+.kasPopUp #colorpicker {
+	width: 26px;
+	margin: 3px 3px 0 0;
+	float: left;
+	background: blue;
+	display: inline;
+	}
+
+.kasPopUp .buttons {
+	clear: both;
+	padding: 18px 0 0;
+	height: 25px;
+	}
+
+/* Background Styles */
+.kasPopUp {
+	/*float: left;*/
+	visibility: hidden;
+	position: absolute;
+	top: 128px;
+	left: 16px;
+	z-index: 4;
+	width: 560px;
+/*	min-height: 500px; */
+	}
+.kasPopUp .topright {
+	background-image:url(images/topright.png);
+	background-repeat:no-repeat;
+	margin:0;
+	}
+.kasPopUp .topleft {
+	background-image:url(images/topleft.png);
+	background-repeat:no-repeat;
+	margin:0;
+	padding: 15px 0 0 15px;
+	}
+.kasPopUp .bottomleft {
+	clear: left;
+	background-image:url(images/bottomleft.png);
+	background-repeat:no-repeat;
+	margin:0;
+	height: 21px;
+	}
+.kasPopUp .bottomright {
+	background-image:url(images/bottomright.png);
+	background-repeat:no-repeat;
+	margin:0;
+	height: 21px;
+	}
+.kasPopUp .bottomright, .topright {
+	background-position: top right;
+	padding-right: 21px;
+	}
+
+/* two-column layout with header/footer */
+	/* Header styles */
+	#swpu_header {
+		clear:both;
+		float:left;
+		width:100%;
+	}
+	#swpu_header {
+		border-bottom:1px solid #000;
+	}
+	#swpu_header p,
+	#swpu_header h1,
+	#swpu_header h2 {
+		padding:.4em 15px 0 15px;
+		margin:0;
+	}
+	#swpu_header ul {
+		clear:left;
+		float:left;
+		width:100%;
+		list-style:none;
+		margin:10px 0 0 0;
+		padding:0;
+	}
+	#swpu_header ul li {
+		display:inline;
+		list-style:none;
+		margin:0;
+		padding:0;
+	}
+	#swpu_header ul li a {
+		display:block;
+		float:left;
+		margin:0 0 0 1px;
+		padding:3px 10px;
+		text-align:center;
+		background:#eee;
+		color:#000;
+		text-decoration:none;
+		position:relative;
+		left:15px;
+		line-height:1.3em;
+	}
+	#swpu_header ul li a:hover {
+		background:#369;
+		color:#fff;
+	}
+	#swpu_header ul li a.active,
+	#swpu_header ul li a.active:hover {
+		color:#fff;
+		background:#000;
+		font-weight:bold;
+	}
+	#swpu_header ul li a span {
+		display:block;
+	}
+	/* column container */
+	.swpu_colmask {
+		position:relative;	/* This fixes the IE7 overflow hidden bug */
+		clear:both;
+		float:left;
+		width:100%;			/* width of whole page */
+		overflow:hidden;		/* This chops off any overhanging divs */
+	}
+	/* common column settings */
+	.swpu_colright,
+	.swpu_colmid,
+	.swpu_colleft {
+		float:left;
+		width:100%;
+		position:relative;
+	}
+	.swpu_col1,
+	.swpu_col2,
+	.swpu_col3 {
+		float:left;
+		position:relative;
+		padding:0 0 0 0;
+		overflow:hidden;
+	}
+	/* 2 Column (left menu) settings */
+	.swpu_leftmenu {
+	/*	background:#fff;		*//* right column background colour */
+	}
+	.swpu_leftmenu .swpu_colleft {
+		right:68%;			/* right column width */
+	/*	background:#f4f4f4;	*//* left column background colour */
+	}
+	.swpu_leftmenu .swpu_col1 {
+		width:68%;			/* right column content width */
+		left:100%;			/* 100% plus left column left padding */
+/*		height: 400px;
+		overflow: auto; */
+	}
+	.swpu_leftmenu .swpu_col2 {
+		width:30%;			/* left column content width (column width minus left and right padding) */
+		left:0%;				/* (right column left and right padding) plus (left column left padding) */
+		height: 300px;
+		overflow-y: auto;
+		border-right: 1px solid #000;
+	}
+	.swpu_leftmenu .swpu_col2 div {
+		font-size: 14px;
+		color:#444;
+	}
+	.swpu_leftmenu .swpu_col2 div a {
+		display:block;
+		text-align:left;
+		margin:0 0 0 0;
+		padding:3px 3px;
+		/* background:#eee; */
+		font-size: 14px;
+		color:#444;
+		text-decoration:none;
+		position:relative;
+		left:0px;
+		line-height:1.3em;
+	}
+	.swpu_leftmenu .swpu_col1 div a {
+		color: #00f;
+		text-decoration: none;
+	}
+	.swpu_leftmenu .swpu_col1 div a span {
+		text-decoration: underline;
+	}
+	.swpu_leftmenu .swpu_col1 div a .swpu_edit {
+    padding-left:1.5em;
+		padding-top:0px;
+		text-decoration:none;
+		position:relative;
+		font-size: 12px;
+		left:0px;
+		line-height:1.0em;
+	}
+	.swpu_leftmenu .swpu_col2 div a:hover {
+		background:#69c;
+		color:#fff;
+	}
+	.swpu_leftmenu .swpu_col2 div a.active,
+	.swpu_leftmenu .swpu_col2 div a.active:hover {
+		background:#369;
+		color:#fff;
+		font-weight:bold;
+	}
+	.swpu_leftmenu .swpu_col2 div a.active span,
+	.swpu_leftmenu .swpu_col2 div a.active:hover span {
+		text-decoration:underline;
+	}
+	.swpu_leftmenu .swpu_col2 div a .swpu_edit {
+    padding-left:1.5em;
+		padding-top:0px;
+		text-decoration:none;
+		position:relative;
+		font-size: 12px;
+		left:0px;
+		line-height:1.0em;
+	}
+	.swpu_leftmenu .swpu_col2 div a.active .swpu_edit,
+	.swpu_leftmenu .swpu_col2 div a.active:hover .swpu_edit,
+	.swpu_leftmenu .swpu_col2 div a:hover .swpu_edit {
+		color:#fff;
+	}
+	/* Footer styles */
+	#swpu_footer {
+		clear:both;
+		float:left;
+		width:100%;
+		border-top:1px solid #000;
+		margin-top:0.25em;
+	}
+	#swpu_footer p {
+		padding:10px;
+		margin:0;
+	}
+
+	.swpu_tab {
+	}
+
+	#swpu_find_tab {
+	}
+	
+	.swpu_find_body, #kasFindPeopleTab, #kasAddFriendTab .findBody {
+		clear: both;
+	}
+	
+	.swpu_message, #kasAddFriendTab .message {
+		margin-top: 1em;
+		margin-bottom: 1em;
+		text-align: center;
+	}
+	
+	.swpu_find_input, #kasFindPeopleTab, #kasAddFriendTab, .findInput {
+		padding-top: 0.25em;
+		padding-bottom: 0.25em;
+	}
+	
+	.swpu_findtabresultscount {
+		float: right;
+	}
+	
+	.swpu_find_results, #kasAddFriendTab .findResults {
+		/* border-top: 1px solid #000; */
+		clear: both;
+		max-height: 350px;
+		overflow-y: auto;
+	}
+	.swpu_find_results div a {
+		color: #00f;
+		text-decoration: none;
+	}
+	.swpu_find_results div a span {
+		text-decoration: underline;
+	}
+	.swpu_find_results div a .swpu_edit {
+    padding-left:1.5em;
+		padding-top:0px;
+		text-decoration:none;
+		position:relative;
+		font-size: 12px;
+		left:0px;
+		line-height:1.0em;
+	}
+
+	ul#swpu_tab_menu {
+		text-align: left; /* set to left, right or center */
+		margin: 0 0 0 0; /* set margins as desired */
+		font: bold 11px verdana, arial, sans-serif; /* set font as desired */
+		border-bottom: 1px solid black; /* set border COLOR as desired */
+		background-color: #F5F8FA; /* this is the background color in the background png used for the popup window */
+		list-style-type: none;
+		padding: 3px 10px 3px 10px; /* THIRD number must change with respect to padding-top (X) below */
+	}
+	
+	ul#swpu_tab_menu li {
+		display: inline;
+		background-color: #F5F8FA;
+		margin-right: 4px;
+	}
+	
+	ul#swpu_tab_menu li.active {
+		border-bottom: 1px solid #F5F8FA;
+	}
+	
+	ul#swpu_tab_menu li a {
+		padding: 3px 4px;
+		border: 1px solid black;
+		text-decoration: none;
+		border-bottom: none;
+	}
+	
+	ul#swpu_tab_menu li.active a {
+		background-color: #F5F8FA; /* set selected tab background color as desired */
+		color: #000; /* set selected tab link color as desired */
+		position: relative;
+		top: 1px;
+		padding-top: 4px; /* must change with respect to padding (X) above and below */
+	}
+	
+	ul#swpu_tab_menu a:hover {
+		background-color: #C7D8E2;
+	}
+
+/* buttons... */
+.kasBtn {
+	font-weight: bold;
+	margin-right: 12px;
+	padding: 0px 6px;
+	width: auto;
+	overflow: visible;
+	min-width: 82px;
+}
+
+.kasBtnGreen {
+	color: green;
+}
+
+.kasBtnRed {
+	color: red;
+}
+
+.kasBtnOrange {
+	color: orange;
+}
+
+/* Tabs */
+.kasTabContent {
+}
+
+ul.kasTabMenu {
+	text-align: left; /* set to left, right or center */
+	margin: 0px 0px 3px 0px; /* set margins as desired */
+	font: bold 11px verdana, arial, sans-serif; /* set font as desired */
+	border-bottom: 1px solid black; /* set border COLOR as desired */
+	background-color: #F5F8FA; /* this is the background color in the background png used for the popup window */
+	list-style-type: none;
+	padding: 3px 10px 3px 10px; /* THIRD number must change with respect to padding-top (X) below */
+}
+
+ul.kasTabMenu li {
+	display: inline;
+	background-color: #F5F8FA;
+	margin-right: 4px;
+}
+
+ul.kasTabMenu li.active {
+	border-bottom: 1px solid #F5F8FA;
+}
+
+ul.kasTabMenu li a {
+	padding: 3px 4px;
+	border: 1px solid black;
+	text-decoration: none;
+	border-bottom: none;
+}
+
+ul.kasTabMenu li.active a {
+	background-color: #F5F8FA; /* set selected tab background color as desired */
+	color: #000; /* set selected tab link color as desired */
+	position: relative;
+	top: 1px;
+	padding-top: 4px; /* must change with respect to padding (X) above and below */
+}
+
+ul.kasTabMenu a:hover {
+	background-color: #C7D8E2;
+}
+
+/* Manage Friends Tab */
+#kasManageFriendsTab {
+/*	overflow: auto; */
+}
+#kasManageFriendsTab #friendList {
+	/* border-top: 1px solid #000; */
+	clear: both;
+	height: 300px;
+	overflow-y: auto;
+}
+#kasManageFriendsTab #friendList div a {
+	color: #00f;
+	text-decoration: none;
+}
+#kasManageFriendsTab #friendList div a span {
+	text-decoration: underline;
+}
+#kasManageFriendsTab #friendList div a .swpu_edit {
+    padding-left:1.5em;
+	padding-top:0px;
+	text-decoration:none;
+	position:relative;
+	font-size: 12px;
+	left:0px;
+	line-height:1.0em;
+}
+#kasManageGroupsMemberList {
+	overflow-y: auto;
+	height: 200px;
+}
+a.active span span.kasGreenPlus {
+	color: white;
+}
+a span span.kasGreenPlus {
+	color: green;
+	cursor: pointer;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	padding: 2px;
+	width: 12px;
+}

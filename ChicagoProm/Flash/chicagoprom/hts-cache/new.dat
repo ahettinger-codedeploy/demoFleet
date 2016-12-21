@@ -1,0 +1,2308 @@
+9
+CACHE-1.43
+4044
+404016
+Object Not Found9
+text/html0
+29
+Fri, 09 Sep 2005 05:13:39 GMT0
+0
+0
+15
+chicagoprom.com11
+/robots.txt0
+3
+HTS4
+4040<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html dir=ltr>
+
+<head>
+<style>
+a:link			{font:8pt/11pt verdana; color:FF0000}
+a:visited		{font:8pt/11pt verdana; color:#4e4e4e}
+</style>
+
+<META NAME="ROBOTS" CONTENT="NOINDEX">
+
+<title>The page cannot be found</title>
+
+<META HTTP-EQUIV="Content-Type" Content="text-html; charset=Windows-1252">
+</head>
+
+<script> 
+function Homepage(){
+<!--
+// in real bits, urls get returned to our script like this:
+// res://shdocvw.dll/http_404.htm#http://www.DocURL.com/bar.htm 
+
+	//For testing use DocURL = "res://shdocvw.dll/http_404.htm#https://www.microsoft.com/bar.htm"
+	DocURL = document.URL;
+		
+	//this is where the http or https will be, as found by searching for :// but skipping the res://
+	protocolIndex=DocURL.indexOf("://",4);
+	
+	//this finds the ending slash for the domain server 
+	serverIndex=DocURL.indexOf("/",protocolIndex + 3);
+
+		//for the href, we need a valid URL to the domain. We search for the # symbol to find the begining 
+	//of the true URL, and add 1 to skip it - this is the BeginURL value. We use serverIndex as the end marker.
+	//urlresult=DocURL.substring(protocolIndex - 4,serverIndex);
+	BeginURL=DocURL.indexOf("#",1) + 1;
+	
+	urlresult=DocURL.substring(BeginURL,serverIndex);
+				
+	//for display, we need to skip after http://, and go to the next slash
+	displayresult=DocURL.substring(protocolIndex + 3 ,serverIndex);
+
+	InsertElementAnchor(urlresult, displayresult);
+}
+
+function HtmlEncode(text)
+{
+    return text.replace(/&/g, '&amp').replace(/'/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+function TagAttrib(name, value)
+{
+    return ' '+name+'="'+HtmlEncode(value)+'"';
+}
+
+function PrintTag(tagName, needCloseTag, attrib, inner){
+    document.write( '<' + tagName + attrib + '>' + HtmlEncode(inner) );
+    if (needCloseTag) document.write( '</' + tagName +'>' );
+}
+
+function URI(href)
+{
+    IEVer = window.navigator.appVersion;
+    IEVer = IEVer.substr( IEVer.indexOf('MSIE') + 5, 3 );
+
+    return (IEVer.charAt(1)=='.' && IEVer >= '5.5') ?
+        encodeURI(href) :
+        escape(href).replace(/%3A/g, ':').replace(/%3B/g, ';');
+}
+
+function InsertElementAnchor(href, text)
+{
+    PrintTag('A', true, TagAttrib('HREF', URI(href)), text);
+}
+
+//-->
+</script>
+
+<body bgcolor="FFFFFF">
+
+<table width="410" cellpadding="3" cellspacing="5">
+
+  <tr>    
+    <td align="left" valign="middle" width="360">
+	<h1 style="COLOR:000000; FONT: 13pt/15pt verdana"><!--Problem-->The page cannot be found</h1>
+    </td>
+  </tr>
+  
+  <tr>
+    <td width="400" colspan="2">
+	<font style="COLOR:000000; FONT: 8pt/11pt verdana">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</font></td>
+  </tr>
+  
+  <tr>
+    <td width="400" colspan="2">
+	<font style="COLOR:000000; FONT: 8pt/11pt verdana">
+
+	<hr color="#C0C0C0" noshade>
+	
+    <p>Please try the following:</p>
+
+	<ul>
+      <li>If you typed the page address in the Address bar, make sure that it is spelled correctly.<br>
+      </li>
+	  
+      <li>Open the 
+	  
+	  <script>
+	  <!--
+	  if (!((window.navigator.userAgent.indexOf("MSIE") > 0) && (window.navigator.appVersion.charAt(0) == "2")))
+	  { 
+	  	Homepage();
+	  }
+	  //-->
+	   </script>
+
+	   home page, and then look for links to the information you want.</li>
+	   
+      <li>Click the <a href="javascript:history.back(1)">Back</a> button to try another link.</li>
+    </ul>
+    
+    <h2 style="font:8pt/11pt verdana; color:000000">HTTP 404 - File not found<br>
+    Internet Information Services<BR></h2>
+	 
+	<hr color="#C0C0C0" noshade>
+	
+	<p>Technical Information (for support personnel)</p>
+	
+<ul>
+<li>More information:<br>
+<a href="http://www.microsoft.com/ContentRedirect.asp?prd=iis&sbp=&pver=5.0&pid=&ID=404&cat=web&os=&over=&hrd=&Opt1=&Opt2=&Opt3=" target="_blank">Microsoft Support</a>
+</li>
+</ul> 
+
+    </font></td>
+  </tr>
+  
+</table>
+</body>
+</html>
+3
+2004
+99952
+OK9
+text/html5
+utf-829
+Fri, 09 Sep 2005 05:13:39 GMT0
+0
+0
+15
+chicagoprom.com16
+/test/links.aspx72
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/links.html3
+HTS4
+9995
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html>
+	<head>
+		<title>links</title>
+		<meta name="GENERATOR" Content="Microsoft Visual Studio 7.0">
+		<meta name="CODE_LANGUAGE" Content="C#">
+		<meta name="vs_defaultClientScript" content="JavaScript">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<link href="Styles/Styles.css" type="text/css" rel="stylesheet">
+		<script language="javascript" src="Includes/JavaScripts.js" type="text/javascript"></script>
+	</head>
+	<body MS_POSITIONING="GridLayout">
+		<form name="links" method="post" action="links.aspx" id="links">
+<input type="hidden" name="__VIEWSTATE" value="dDw4NjI2OTkyMDI7dDw7bDxpPDE+Oz47bDx0PDtsPGk8Mz47PjtsPHQ8O2w8aTwzPjs+O2w8dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+Pjs7Pjs+Pjs+Pjs+Pjs+b+7KPn8AxRbZmmIPzCPPsIqxzW8=" />
+
+			
+<!-- Beginning of Header-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td valign="middle" align="center" width="100%" height="100%"><table width="750" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="195" colspan="3"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="750" height="195" id="dm1" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="dm1.swf" />
+<param name="loop" value="false" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#f31b8b" />
+<embed src="dm1.swf" loop="false" quality="high" bgcolor="#f31b8b" width="750" height="195" name="dm1" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+					</td>
+				</tr>
+				<tr>
+					<td width="173"><table width="173" height="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="173" height="41"><a href="about.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('About','','images/link_aboutprom_ovr.gif',1)"><img src="images/link_aboutprom.gif" alt="About Us" name="About" width="173" height="41" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="33"><a href="links.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Links','','images/link_links_ovr.gif',1)"><img src="images/link_links.gif" alt="Links" name="Links" width="173" height="33" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="33"><a href="cast.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Cast','','images/link_cast_ovr.gif',1)"><img src="images/link_cast.gif" alt="Cast" name="Cast" width="173" height="33" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="37"><a href="news.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('News','','images/link_news_ovr.gif',1)"><img src="images/link_news.gif" alt="News" name="News" width="173" height="37" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="41"><a href="press.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Press','','images/link_press_ovr.gif',1)"><img src="images/link_press.gif" alt="Press" name="Press" width="173" height="41" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="36"><a href="fun.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Fun','','images/link_fun_ovr.gif',1)"><img src="images/link_fun.gif" alt="Fun Stuff" name="Fun" width="173" height="36" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="27"><a href="store.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Store','','images/link_store_ovr.gif',1)"><img src="images/link_store.gif" alt="Store" name="Store" width="173" height="27" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="31"><a href="contact.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Contact','','images/link_contact_ovr.gif',1)"><img src="images/link_contact.gif" alt="Contact Us" name="Contact" width="173" height="31" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="16"><img src="images/link_navbottom.gif" width="173" height="16"></td>
+							</tr>
+							<tr>
+								<td width="173" height="100%" background="images/link_navstretch.gif">&nbsp;</td>
+							</tr>
+							<tr>
+								<td width="173" height="159"><img src="images/logobttm.gif" width="173" height="159"></td>
+							</tr>
+						</table>
+					</td>
+					<td valign="top" width="511" height="100%"><table width="511" height="100%" border="0	" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="100%" bgcolor="E4D98B" valign="top" class="cp">
+<!-- Ending of Header-->
+			<table width="510" cellpadding="4" background="images/pac_bg.gif">
+				<tr>
+					<td valign="top" class="cp"><p><a href="http://chicagoprom.tix.com" target="_blank"><img src="Images/chicagoticket.gif" border="0"></a></p>
+						<P><i>Finally, it’s your chance to be the Prom King or Queen!</i></P>
+						<P>Prom King and Queen tickets are just $66 per person, and include:</P>
+						<ul>
+							<li>
+								Admission to the Prom via exclusive VIP entrance—no lines or waiting</li>
+							<li>
+								Open Bar all night (list restrictions here)</li>
+							<li>
+								Reserved seating at a Prom table</li>
+							<li>
+								Prom picture</li>
+							<li>
+								Prom gift basket</li>
+							<li>
+								Complimentary admission to RadioStar for dancing after the Prom
+							</li>
+						</ul>
+						<P>Prom Prince and Princess tickets start at just $45 and include:</P>
+						<ul>
+							<li>
+								Admission to the Prom
+							</li>
+							<li>
+								Two drink tickets per person (list restrictions here)</li>
+							<li>
+								Prom picture</li>
+							<li>
+								Prom gift basket</li>
+							<li>
+								Complimentary admission to RadioStar for dancing after the Prom</li></ul>
+						<P>Underclassman tickets are priced at $35 and include:</P>
+						<ul>
+							<li>
+								Admission to the Prom
+							</li>
+							<li>
+								Complimentary admission to RadioStar for dancing after the Prom</li></ul>
+						<P>Special pre-Prom dinner packages are available at Sangria for just $19.89 per 
+							person! Click here for menu and reservations.</P>
+						<P>Special Occasion Group Packages (and prices) are also available, including:
+							<br>
+							<br>
+							<b>Girls Just Wanna Have Fun</b>—Bachelorette Parties
+							<Br>
+							<b>16 Candles</b>—Birthday parties
+							<br>
+							<b>Back to the Future</b>—Class Reunions<br>
+							<b>Risky Business</b>—Corporate Functions
+							<br>
+							<b>Animal House</b>—College/Fraternity/Sorority parties<br>
+							And More! Call 312-664-PROM (7766) for details!!</P>
+					</td>
+					
+<!--Beginning of Footer-->
+<td width="10"></td>
+<td valign="top">
+	<p><br>
+		<table width="160" border="0" cellspacing="0" cellpadding="1" bgcolor="#000000" class="cp">
+			<tr>
+				<td>
+					<table width="100%" border="0" cellspacing="0" cellpadding="3" bgcolor="#e577d7">
+						<tr>
+							<td class="cp" align="middle"><b>BUY TICKETS NOW!!</b>
+								<br>
+								<a href="http://chicagoprom.tix.com" target="_blank"><img src="images/ticketsimage.gif" border="0"></a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</p>
+	<p>
+		<OBJECT id="press_reviews" codeBase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" height="200" width="150" align="middle" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
+			<PARAM NAME="_cx" VALUE="3969">
+			<PARAM NAME="_cy" VALUE="5292">
+			<PARAM NAME="FlashVars" VALUE="">
+			<PARAM NAME="Movie" VALUE="press_reviews.swf">
+			<PARAM NAME="Src" VALUE="press_reviews.swf">
+			<PARAM NAME="WMode" VALUE="Window">
+			<PARAM NAME="Play" VALUE="-1">
+			<PARAM NAME="Loop" VALUE="-1">
+			<PARAM NAME="Quality" VALUE="High">
+			<PARAM NAME="SAlign" VALUE="">
+			<PARAM NAME="Menu" VALUE="-1">
+			<PARAM NAME="Base" VALUE="">
+			<PARAM NAME="AllowScriptAccess" VALUE="sameDomain">
+			<PARAM NAME="Scale" VALUE="ShowAll">
+			<PARAM NAME="DeviceFont" VALUE="0">
+			<PARAM NAME="EmbedMovie" VALUE="0">
+			<PARAM NAME="BGColor" VALUE="E4D98B">
+			<PARAM NAME="SWRemote" VALUE="">
+			<PARAM NAME="MovieData" VALUE="">
+			<PARAM NAME="SeamlessTabbing" VALUE="1">
+			<embed src="press_reviews.swf" quality="high" bgcolor="#e4d98b" width="150" height="200" name="press_reviews" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+		</OBJECT>
+	</p>
+	<table id="Footer_submitTbl" class="cp" align="right" border="0">
+	<tr>
+		<td valign="top"><B>Join our newsletter:</B><br>
+				<input name="Footer:emailTxt" type="text" id="Footer_emailTxt" />
+				<br>
+				<input type="submit" name="Footer:submtButton" value="Enter" id="Footer_submtButton" /><br>
+				&nbsp;<br>
+				<span id="Footer_errCatchLbl" class="required"></span>
+			</td>
+	</tr>
+</table>
+
+	<br>
+	
+	<br>
+</td>
+</TR></TABLE></TD></TR>
+<tr>
+	<td width="511">
+		<table height="59" width="511" background="Images/d1.gif" border="0">
+			<tr>
+				<td vAlign="top">
+				</td>
+				<td vAlign="top">
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+</TABLE></TD><td width="66">
+	<table height="100%" cellSpacing="0" cellPadding="0" width="66" border="0">
+		<tr>
+			<td width="66" background="images/bstretch.gif" height="100%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="66" height="43"><IMG height="43" src="images/c2.gif" width="66"></td>
+		</tr>
+	</table>
+</td>
+</TR></TABLE></TD></TR></TABLE> 
+<!--Ending of Footer-->
+
+		</form>
+	</body>
+</html>
+3
+2004
+12012
+OK8
+text/css0
+29
+Thu, 08 Sep 2005 18:22:47 GMT21
+"f2649450a2b4c51:937"0
+0
+15
+chicagoprom.com23
+/test/Styles/Styles.css79
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/Styles/Styles.css3
+HTS4
+1201body
+{
+	margin-left:0px;
+	margin-top:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+	background-color:F31B8B;
+}
+.title_pink
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight:bold;
+	color: F31B8B;
+}
+
+.cp {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: 111111;
+}
+.title {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight:bold;
+	color: 174D85;
+}
+.bb_brown {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: 6D450B;
+}
+.bb_white {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: ffffff;
+}
+.required {
+	color: #CC0000;
+	font-size: 8px;
+	font-weight: bold;
+}
+.required_
+{
+	color: #ffffff;
+	font-size: 8px;
+	font-weight: bold;
+}
+a:link 
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: 174D85;
+	text-decoration: underline;
+}
+a:hover {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: 174D85;
+	text-decoration: none;
+}
+a:visited {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: 174D85;
+}
+3
+2004
+18402
+OK24
+application/x-javascript0
+29
+Wed, 31 Aug 2005 21:08:26 GMT20
+"703992170aec51:937"0
+0
+15
+chicagoprom.com29
+/test/Includes/JavaScripts.js85
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/Includes/JavaScripts.js3
+HTS4
+1840
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function openWindow( mypage, myname, w, h, scroll ) {
+	var winl = ( screen.width - w ) / 2;
+	var wint = ( screen.height - h ) / 2;
+	winprops = 'height='+h+',width='+w+',top='+wint+',left='+winl+',scrollbars='+scroll+',resizable'
+	win = window.open( mypage, myname, winprops )
+	if ( parseInt( navigator.appVersion ) >= 4 ) {
+		win.window.focus();
+	}
+}
+
+function closeWindow() {
+	window.close();
+}
+
+function printWindow() {
+	window.print();
+}
+
+//MM_preloadImages('Images/inside/menu1_rlvr.gif','Images/inside/menu2_rlvr.gif','Images/inside/menu3_rlvr.gif','Images/inside/menu4_rlvr.gif','Images/inside/menu5_rlvr.gif','Images/inside/menu6_rlvr.gif','Images/inside/menu7_rlvr.gif','Images/inside/menu8_rlvr.gif','Images/inside/menu9_rlvr.gif')3
+2002
+622
+OK29
+application/x-shockwave-flash0
+29
+Thu, 08 Sep 2005 18:11:19 GMT21
+"dadff0b5a0b4c51:937"0
+0
+15
+chicagoprom.com13
+/test/dm1.swf69
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/dm1.swf3
+HTS1
+03
+2004
+95652
+OK9
+text/html5
+utf-829
+Fri, 09 Sep 2005 05:13:41 GMT0
+0
+0
+15
+chicagoprom.com16
+/test/about.aspx72
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/about.html3
+HTS4
+9565
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html>
+	<head>
+		<title>about</title>
+		<meta name="GENERATOR" Content="Microsoft Visual Studio 7.0">
+		<meta name="CODE_LANGUAGE" Content="C#">
+		<meta name="vs_defaultClientScript" content="JavaScript">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<link href="Styles/Styles.css" type="text/css" rel="stylesheet">
+		<script language="javascript" src="Includes/JavaScripts.js" type="text/javascript"></script>
+	</head>
+	<body MS_POSITIONING="GridLayout">
+		<form name="about" method="post" action="about.aspx" id="about">
+<input type="hidden" name="__VIEWSTATE" value="dDw4NjI2OTkyMDI7dDw7bDxpPDE+Oz47bDx0PDtsPGk8Mz47PjtsPHQ8O2w8aTwzPjs+O2w8dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+Pjs7Pjs+Pjs+Pjs+Pjs+1NhSPupTiEu1Zg2RUKOXEZs61HE=" />
+
+			
+<!-- Beginning of Header-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td valign="middle" align="center" width="100%" height="100%"><table width="750" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="195" colspan="3"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="750" height="195" id="dm1" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="dm1.swf" />
+<param name="loop" value="false" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#f31b8b" />
+<embed src="dm1.swf" loop="false" quality="high" bgcolor="#f31b8b" width="750" height="195" name="dm1" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+					</td>
+				</tr>
+				<tr>
+					<td width="173"><table width="173" height="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="173" height="41"><a href="about.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('About','','images/link_aboutprom_ovr.gif',1)"><img src="images/link_aboutprom.gif" alt="About Us" name="About" width="173" height="41" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="33"><a href="links.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Links','','images/link_links_ovr.gif',1)"><img src="images/link_links.gif" alt="Links" name="Links" width="173" height="33" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="33"><a href="cast.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Cast','','images/link_cast_ovr.gif',1)"><img src="images/link_cast.gif" alt="Cast" name="Cast" width="173" height="33" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="37"><a href="news.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('News','','images/link_news_ovr.gif',1)"><img src="images/link_news.gif" alt="News" name="News" width="173" height="37" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="41"><a href="press.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Press','','images/link_press_ovr.gif',1)"><img src="images/link_press.gif" alt="Press" name="Press" width="173" height="41" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="36"><a href="fun.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Fun','','images/link_fun_ovr.gif',1)"><img src="images/link_fun.gif" alt="Fun Stuff" name="Fun" width="173" height="36" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="27"><a href="store.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Store','','images/link_store_ovr.gif',1)"><img src="images/link_store.gif" alt="Store" name="Store" width="173" height="27" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="31"><a href="contact.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Contact','','images/link_contact_ovr.gif',1)"><img src="images/link_contact.gif" alt="Contact Us" name="Contact" width="173" height="31" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="16"><img src="images/link_navbottom.gif" width="173" height="16"></td>
+							</tr>
+							<tr>
+								<td width="173" height="100%" background="images/link_navstretch.gif">&nbsp;</td>
+							</tr>
+							<tr>
+								<td width="173" height="159"><img src="images/logobttm.gif" width="173" height="159"></td>
+							</tr>
+						</table>
+					</td>
+					<td valign="top" width="511" height="100%"><table width="511" height="100%" border="0	" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="100%" bgcolor="E4D98B" valign="top" class="cp">
+<!-- Ending of Header-->
+			<table width="510" cellpadding="3" border="0" cellspacing="0" class="cp" border="0" background="images/pac_bg.gif">
+				<tr>
+					<td><br>
+						<p class="title_pink"><img src="images/text_promtime.gif"><br>
+							<br>
+							You’re invited to the all-new blast-from-the–past party that’s got Chicago 
+							theater up on its feet and dancing the night away!
+						</p>
+						<p>
+							The 1989 Senior Class of Wannaget High cordially invite you to the Prom. Come 
+							dressed in your favorite formal, leg warmers, Members Only jacket or whatever 
+							else makes you want to party like its 1989!
+						</p>
+						<p>You'll be at the Prom with all your favorite characters from the classic "Brat 
+							Pack" 80s movies--the captain of the football team, the hottie head 
+							cheerleader, the asian exchange student, the geek and more! And after you 
+							"Dance the night Away," to your favorite 80s hits, YOU vote and decide who will 
+							be Prom King and Queen--just like on "American Idol!" If you’re lucky, you’ll 
+							even get to dance with the head cheerleader—or maybe the captain of the 
+							football team! So grab your sweetheart or your secret crush and call TODAY for 
+							tickets to the most fun you’ve had in decades....and this time, there's no 
+							curfew!</p>
+						<p>
+							The Awesome 80s Prom is the only place in town you can still "Walk Like an 
+							Egyptian" and Moonwalk! The Prom happens every week, Thursday to Saturday, at 
+							the Ballroom at Radio Star (901 W. Weed Street). And after the show, stay and 
+							dance to even more of your favorite hits from the 80s!</p>
+					</td>
+					
+<!--Beginning of Footer-->
+<td width="10"></td>
+<td valign="top">
+	<p><br>
+		<table width="160" border="0" cellspacing="0" cellpadding="1" bgcolor="#000000" class="cp">
+			<tr>
+				<td>
+					<table width="100%" border="0" cellspacing="0" cellpadding="3" bgcolor="#e577d7">
+						<tr>
+							<td class="cp" align="middle"><b>BUY TICKETS NOW!!</b>
+								<br>
+								<a href="http://chicagoprom.tix.com" target="_blank"><img src="images/ticketsimage.gif" border="0"></a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</p>
+	<p>
+		<OBJECT id="press_reviews" codeBase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" height="200" width="150" align="middle" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
+			<PARAM NAME="_cx" VALUE="3969">
+			<PARAM NAME="_cy" VALUE="5292">
+			<PARAM NAME="FlashVars" VALUE="">
+			<PARAM NAME="Movie" VALUE="press_reviews.swf">
+			<PARAM NAME="Src" VALUE="press_reviews.swf">
+			<PARAM NAME="WMode" VALUE="Window">
+			<PARAM NAME="Play" VALUE="-1">
+			<PARAM NAME="Loop" VALUE="-1">
+			<PARAM NAME="Quality" VALUE="High">
+			<PARAM NAME="SAlign" VALUE="">
+			<PARAM NAME="Menu" VALUE="-1">
+			<PARAM NAME="Base" VALUE="">
+			<PARAM NAME="AllowScriptAccess" VALUE="sameDomain">
+			<PARAM NAME="Scale" VALUE="ShowAll">
+			<PARAM NAME="DeviceFont" VALUE="0">
+			<PARAM NAME="EmbedMovie" VALUE="0">
+			<PARAM NAME="BGColor" VALUE="E4D98B">
+			<PARAM NAME="SWRemote" VALUE="">
+			<PARAM NAME="MovieData" VALUE="">
+			<PARAM NAME="SeamlessTabbing" VALUE="1">
+			<embed src="press_reviews.swf" quality="high" bgcolor="#e4d98b" width="150" height="200" name="press_reviews" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+		</OBJECT>
+	</p>
+	<table id="Footer_submitTbl" class="cp" align="right" border="0">
+	<tr>
+		<td valign="top"><B>Join our newsletter:</B><br>
+				<input name="Footer:emailTxt" type="text" id="Footer_emailTxt" />
+				<br>
+				<input type="submit" name="Footer:submtButton" value="Enter" id="Footer_submtButton" /><br>
+				&nbsp;<br>
+				<span id="Footer_errCatchLbl" class="required"></span>
+			</td>
+	</tr>
+</table>
+
+	<br>
+	
+	<br>
+</td>
+</TR></TABLE></TD></TR>
+<tr>
+	<td width="511">
+		<table height="59" width="511" background="Images/d1.gif" border="0">
+			<tr>
+				<td vAlign="top">
+				</td>
+				<td vAlign="top">
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+</TABLE></TD><td width="66">
+	<table height="100%" cellSpacing="0" cellPadding="0" width="66" border="0">
+		<tr>
+			<td width="66" background="images/bstretch.gif" height="100%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="66" height="43"><IMG height="43" src="images/c2.gif" width="66"></td>
+		</tr>
+	</table>
+</td>
+</TR></TABLE></TD></TR></TABLE> 
+<!--Ending of Footer-->
+
+		</form>
+	</body>
+</html>
+3
+2004
+22922
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:15:58 GMT21
+"ccc48d1b7eadc51:937"0
+0
+15
+chicagoprom.com35
+/test/images/link_aboutprom_ovr.gif91
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/link_aboutprom_ovr.gif3
+HTS1
+03
+2004
+22922
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:15:58 GMT21
+"1051591b7eadc51:937"0
+0
+15
+chicagoprom.com31
+/test/images/link_aboutprom.gif87
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/link_aboutprom.gif3
+HTS1
+03
+2004
+29512
+OK9
+image/gif0
+29
+Wed, 31 Aug 2005 21:11:21 GMT21
+"80e21e8970aec51:937"0
+0
+15
+chicagoprom.com31
+/test/images/link_links_ovr.gif87
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/link_links_ovr.gif3
+HTS1
+03
+2004
+29592
+OK9
+image/gif0
+29
+Wed, 31 Aug 2005 21:11:20 GMT21
+"a820dc8870aec51:937"0
+0
+15
+chicagoprom.com27
+/test/images/link_links.gif83
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/link_links.gif3
+HTS1
+03
+2004
+80582
+OK9
+text/html5
+utf-829
+Fri, 09 Sep 2005 05:13:42 GMT0
+0
+0
+15
+chicagoprom.com15
+/test/cast.aspx71
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/cast.html3
+HTS4
+8058
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html>
+	<head>
+		<title>cast</title>
+		<meta name="GENERATOR" Content="Microsoft Visual Studio 7.0">
+		<meta name="CODE_LANGUAGE" Content="C#">
+		<meta name="vs_defaultClientScript" content="JavaScript">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<link href="Styles/Styles.css" type="text/css" rel="stylesheet">
+		<script language="javascript" src="Includes/JavaScripts.js" type="text/javascript"></script>
+	</head>
+	<body MS_POSITIONING="GridLayout">
+		<form name="cast" method="post" action="cast.aspx" id="cast">
+<input type="hidden" name="__VIEWSTATE" value="dDw4NjI2OTkyMDI7dDw7bDxpPDE+Oz47bDx0PDtsPGk8Mz47PjtsPHQ8O2w8aTwzPjs+O2w8dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+Pjs7Pjs+Pjs+Pjs+Pjs+d3Ylo/Ba/k8Ld5NONopuOoFvxS8=" />
+
+			
+<!-- Beginning of Header-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td valign="middle" align="center" width="100%" height="100%"><table width="750" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="195" colspan="3"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="750" height="195" id="dm1" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="dm1.swf" />
+<param name="loop" value="false" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#f31b8b" />
+<embed src="dm1.swf" loop="false" quality="high" bgcolor="#f31b8b" width="750" height="195" name="dm1" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+					</td>
+				</tr>
+				<tr>
+					<td width="173"><table width="173" height="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="173" height="41"><a href="about.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('About','','images/link_aboutprom_ovr.gif',1)"><img src="images/link_aboutprom.gif" alt="About Us" name="About" width="173" height="41" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="33"><a href="links.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Links','','images/link_links_ovr.gif',1)"><img src="images/link_links.gif" alt="Links" name="Links" width="173" height="33" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="33"><a href="cast.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Cast','','images/link_cast_ovr.gif',1)"><img src="images/link_cast.gif" alt="Cast" name="Cast" width="173" height="33" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="37"><a href="news.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('News','','images/link_news_ovr.gif',1)"><img src="images/link_news.gif" alt="News" name="News" width="173" height="37" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="41"><a href="press.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Press','','images/link_press_ovr.gif',1)"><img src="images/link_press.gif" alt="Press" name="Press" width="173" height="41" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="36"><a href="fun.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Fun','','images/link_fun_ovr.gif',1)"><img src="images/link_fun.gif" alt="Fun Stuff" name="Fun" width="173" height="36" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="27"><a href="store.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Store','','images/link_store_ovr.gif',1)"><img src="images/link_store.gif" alt="Store" name="Store" width="173" height="27" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="31"><a href="contact.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Contact','','images/link_contact_ovr.gif',1)"><img src="images/link_contact.gif" alt="Contact Us" name="Contact" width="173" height="31" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="16"><img src="images/link_navbottom.gif" width="173" height="16"></td>
+							</tr>
+							<tr>
+								<td width="173" height="100%" background="images/link_navstretch.gif">&nbsp;</td>
+							</tr>
+							<tr>
+								<td width="173" height="159"><img src="images/logobttm.gif" width="173" height="159"></td>
+							</tr>
+						</table>
+					</td>
+					<td valign="top" width="511" height="100%"><table width="511" height="100%" border="0	" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="100%" bgcolor="E4D98B" valign="top" class="cp">
+<!-- Ending of Header-->
+			<table width="510" cellpadding="0" border="0" cellspacing="0" class="cp" border="0" background="images/pac_bg.gif">
+				<tr>
+					<td><p><img src="Images/uc_sign.gif"></p>
+					</td>
+					
+<!--Beginning of Footer-->
+<td width="10"></td>
+<td valign="top">
+	<p><br>
+		<table width="160" border="0" cellspacing="0" cellpadding="1" bgcolor="#000000" class="cp">
+			<tr>
+				<td>
+					<table width="100%" border="0" cellspacing="0" cellpadding="3" bgcolor="#e577d7">
+						<tr>
+							<td class="cp" align="middle"><b>BUY TICKETS NOW!!</b>
+								<br>
+								<a href="http://chicagoprom.tix.com" target="_blank"><img src="images/ticketsimage.gif" border="0"></a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</p>
+	<p>
+		<OBJECT id="press_reviews" codeBase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" height="200" width="150" align="middle" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
+			<PARAM NAME="_cx" VALUE="3969">
+			<PARAM NAME="_cy" VALUE="5292">
+			<PARAM NAME="FlashVars" VALUE="">
+			<PARAM NAME="Movie" VALUE="press_reviews.swf">
+			<PARAM NAME="Src" VALUE="press_reviews.swf">
+			<PARAM NAME="WMode" VALUE="Window">
+			<PARAM NAME="Play" VALUE="-1">
+			<PARAM NAME="Loop" VALUE="-1">
+			<PARAM NAME="Quality" VALUE="High">
+			<PARAM NAME="SAlign" VALUE="">
+			<PARAM NAME="Menu" VALUE="-1">
+			<PARAM NAME="Base" VALUE="">
+			<PARAM NAME="AllowScriptAccess" VALUE="sameDomain">
+			<PARAM NAME="Scale" VALUE="ShowAll">
+			<PARAM NAME="DeviceFont" VALUE="0">
+			<PARAM NAME="EmbedMovie" VALUE="0">
+			<PARAM NAME="BGColor" VALUE="E4D98B">
+			<PARAM NAME="SWRemote" VALUE="">
+			<PARAM NAME="MovieData" VALUE="">
+			<PARAM NAME="SeamlessTabbing" VALUE="1">
+			<embed src="press_reviews.swf" quality="high" bgcolor="#e4d98b" width="150" height="200" name="press_reviews" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+		</OBJECT>
+	</p>
+	<table id="Footer_submitTbl" class="cp" align="right" border="0">
+	<tr>
+		<td valign="top"><B>Join our newsletter:</B><br>
+				<input name="Footer:emailTxt" type="text" id="Footer_emailTxt" />
+				<br>
+				<input type="submit" name="Footer:submtButton" value="Enter" id="Footer_submtButton" /><br>
+				&nbsp;<br>
+				<span id="Footer_errCatchLbl" class="required"></span>
+			</td>
+	</tr>
+</table>
+
+	<br>
+	
+	<br>
+</td>
+</TR></TABLE></TD></TR>
+<tr>
+	<td width="511">
+		<table height="59" width="511" background="Images/d1.gif" border="0">
+			<tr>
+				<td vAlign="top">
+				</td>
+				<td vAlign="top">
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+</TABLE></TD><td width="66">
+	<table height="100%" cellSpacing="0" cellPadding="0" width="66" border="0">
+		<tr>
+			<td width="66" background="images/bstretch.gif" height="100%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="66" height="43"><IMG height="43" src="images/c2.gif" width="66"></td>
+		</tr>
+	</table>
+</td>
+</TR></TABLE></TD></TR></TABLE> 
+<!--Ending of Footer-->
+
+		</form>
+	</body>
+</html>
+3
+2004
+29702
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:15:59 GMT21
+"ea49f41b7eadc51:937"0
+0
+15
+chicagoprom.com30
+/test/images/link_cast_ovr.gif86
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/link_cast_ovr.gif3
+HTS1
+03
+2004
+29772
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:15:59 GMT21
+"8838c21b7eadc51:937"0
+0
+15
+chicagoprom.com26
+/test/images/link_cast.gif82
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/link_cast.gif3
+HTS1
+03
+2004
+97932
+OK9
+text/html5
+utf-829
+Fri, 09 Sep 2005 05:13:43 GMT0
+0
+0
+15
+chicagoprom.com15
+/test/news.aspx71
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/news.html3
+HTS4
+9793
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html>
+	<head>
+		<title>news</title>
+		<meta name="GENERATOR" Content="Microsoft Visual Studio 7.0">
+		<meta name="CODE_LANGUAGE" Content="C#">
+		<meta name="vs_defaultClientScript" content="JavaScript">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<link href="Styles/Styles.css" type="text/css" rel="stylesheet">
+		<script language="javascript" src="Includes/JavaScripts.js" type="text/javascript"></script>
+	</head>
+	<body MS_POSITIONING="GridLayout">
+		<form name="news" method="post" action="news.aspx" id="news">
+<input type="hidden" name="__VIEWSTATE" value="dDw4NjI2OTkyMDI7dDw7bDxpPDE+Oz47bDx0PDtsPGk8Mz47PjtsPHQ8O2w8aTwzPjs+O2w8dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+Pjs7Pjs+Pjs+Pjs+Pjs+KbYwulfcbVN/MiGiMlpVK0VrxNs=" />
+
+			
+<!-- Beginning of Header-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td valign="middle" align="center" width="100%" height="100%"><table width="750" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="195" colspan="3"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="750" height="195" id="dm1" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="dm1.swf" />
+<param name="loop" value="false" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#f31b8b" />
+<embed src="dm1.swf" loop="false" quality="high" bgcolor="#f31b8b" width="750" height="195" name="dm1" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+					</td>
+				</tr>
+				<tr>
+					<td width="173"><table width="173" height="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="173" height="41"><a href="about.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('About','','images/link_aboutprom_ovr.gif',1)"><img src="images/link_aboutprom.gif" alt="About Us" name="About" width="173" height="41" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="33"><a href="links.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Links','','images/link_links_ovr.gif',1)"><img src="images/link_links.gif" alt="Links" name="Links" width="173" height="33" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="33"><a href="cast.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Cast','','images/link_cast_ovr.gif',1)"><img src="images/link_cast.gif" alt="Cast" name="Cast" width="173" height="33" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="37"><a href="news.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('News','','images/link_news_ovr.gif',1)"><img src="images/link_news.gif" alt="News" name="News" width="173" height="37" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="41"><a href="press.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Press','','images/link_press_ovr.gif',1)"><img src="images/link_press.gif" alt="Press" name="Press" width="173" height="41" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="36"><a href="fun.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Fun','','images/link_fun_ovr.gif',1)"><img src="images/link_fun.gif" alt="Fun Stuff" name="Fun" width="173" height="36" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="27"><a href="store.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Store','','images/link_store_ovr.gif',1)"><img src="images/link_store.gif" alt="Store" name="Store" width="173" height="27" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="31"><a href="contact.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Contact','','images/link_contact_ovr.gif',1)"><img src="images/link_contact.gif" alt="Contact Us" name="Contact" width="173" height="31" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="16"><img src="images/link_navbottom.gif" width="173" height="16"></td>
+							</tr>
+							<tr>
+								<td width="173" height="100%" background="images/link_navstretch.gif">&nbsp;</td>
+							</tr>
+							<tr>
+								<td width="173" height="159"><img src="images/logobttm.gif" width="173" height="159"></td>
+							</tr>
+						</table>
+					</td>
+					<td valign="top" width="511" height="100%"><table width="511" height="100%" border="0	" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="100%" bgcolor="E4D98B" valign="top" class="cp">
+<!-- Ending of Header-->
+			<table width="510" cellpadding="0" border="0" cellspacing="0" class="cp" border="0" background="images/pac_bg.gif">
+				<tr>
+					<td><p></p>
+						<br>
+						<p class="title_pink">What's New</p>
+						<table cellpadding="3" cellspacing="2" border="0" width="300" class="cp">
+							<tr>
+								<td width="250" bgcolor="FCEC93" class="title_pink">They Met At The Prom</td>
+								<td width="50" bgcolor="FCEC93">8/28/05</td>
+							</tr>
+							<tr>
+								<td width="300" bgcolor="FFFFD9" colspan="2">
+									Congratulations to our original Captain of the Football Team, Brandon Williams 
+									and our original Heather #2, Sheila Berezan, who just got engaged! The word at 
+									Wanaget High is that Whitley\'s pretty jealous, but was quoted as saying, \"If 
+									I have to lose Blake, at least it\'s to a Heather.\" Congratulations Brandon 
+									and Sheila . . . The entire class of \'89 wishes you the best!
+								</td>
+							</tr>
+							<tr>
+								<td width="250" bgcolor="FCEC93" class="title_pink">Look out Baltimore - The Prom 
+									opens soon!</td>
+								<td width="50" bgcolor="FCEC93">8/25/05</td>
+							</tr>
+							<tr>
+								<td width="300" bgcolor="FFFFD9" colspan="2">
+									The Awesome 80s Prom brings the 80s back to Baltimore starting September 27th. 
+									Check our tickets page for more information!
+								</td>
+							</tr>
+							<tr>
+								<td width="250" bgcolor="FCEC93" class="title_pink">
+									Extended in Minneapolis!</td>
+								<td width="50" bgcolor="FCEC93">8/24/05</td>
+							</tr>
+							<tr>
+								<td width="300" bgcolor="FFFFD9" colspan="2">
+									Great news! The Awesome 80s Prom has been extended in Minneapolis and will be 
+									performing there until September 24th! Check out our tickets page for more 
+									details!
+								</td>
+							</tr>
+						</table>
+					</td>
+					
+<!--Beginning of Footer-->
+<td width="10"></td>
+<td valign="top">
+	<p><br>
+		<table width="160" border="0" cellspacing="0" cellpadding="1" bgcolor="#000000" class="cp">
+			<tr>
+				<td>
+					<table width="100%" border="0" cellspacing="0" cellpadding="3" bgcolor="#e577d7">
+						<tr>
+							<td class="cp" align="middle"><b>BUY TICKETS NOW!!</b>
+								<br>
+								<a href="http://chicagoprom.tix.com" target="_blank"><img src="images/ticketsimage.gif" border="0"></a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</p>
+	<p>
+		<OBJECT id="press_reviews" codeBase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" height="200" width="150" align="middle" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
+			<PARAM NAME="_cx" VALUE="3969">
+			<PARAM NAME="_cy" VALUE="5292">
+			<PARAM NAME="FlashVars" VALUE="">
+			<PARAM NAME="Movie" VALUE="press_reviews.swf">
+			<PARAM NAME="Src" VALUE="press_reviews.swf">
+			<PARAM NAME="WMode" VALUE="Window">
+			<PARAM NAME="Play" VALUE="-1">
+			<PARAM NAME="Loop" VALUE="-1">
+			<PARAM NAME="Quality" VALUE="High">
+			<PARAM NAME="SAlign" VALUE="">
+			<PARAM NAME="Menu" VALUE="-1">
+			<PARAM NAME="Base" VALUE="">
+			<PARAM NAME="AllowScriptAccess" VALUE="sameDomain">
+			<PARAM NAME="Scale" VALUE="ShowAll">
+			<PARAM NAME="DeviceFont" VALUE="0">
+			<PARAM NAME="EmbedMovie" VALUE="0">
+			<PARAM NAME="BGColor" VALUE="E4D98B">
+			<PARAM NAME="SWRemote" VALUE="">
+			<PARAM NAME="MovieData" VALUE="">
+			<PARAM NAME="SeamlessTabbing" VALUE="1">
+			<embed src="press_reviews.swf" quality="high" bgcolor="#e4d98b" width="150" height="200" name="press_reviews" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+		</OBJECT>
+	</p>
+	<table id="Footer_submitTbl" class="cp" align="right" border="0">
+	<tr>
+		<td valign="top"><B>Join our newsletter:</B><br>
+				<input name="Footer:emailTxt" type="text" id="Footer_emailTxt" />
+				<br>
+				<input type="submit" name="Footer:submtButton" value="Enter" id="Footer_submtButton" /><br>
+				&nbsp;<br>
+				<span id="Footer_errCatchLbl" class="required"></span>
+			</td>
+	</tr>
+</table>
+
+	<br>
+	
+	<br>
+</td>
+</TR></TABLE></TD></TR>
+<tr>
+	<td width="511">
+		<table height="59" width="511" background="Images/d1.gif" border="0">
+			<tr>
+				<td vAlign="top">
+				</td>
+				<td vAlign="top">
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+</TABLE></TD><td width="66">
+	<table height="100%" cellSpacing="0" cellPadding="0" width="66" border="0">
+		<tr>
+			<td width="66" background="images/bstretch.gif" height="100%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="66" height="43"><IMG height="43" src="images/c2.gif" width="66"></td>
+		</tr>
+	</table>
+</td>
+</TR></TABLE></TD></TR></TABLE> 
+<!--Ending of Footer-->
+
+		</form>
+	</body>
+</html>
+3
+2004
+32292
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:16:03 GMT21
+"12e2131e7eadc51:937"0
+0
+15
+chicagoprom.com30
+/test/images/link_news_ovr.gif86
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/link_news_ovr.gif3
+HTS1
+03
+2004
+32442
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:16:02 GMT20
+"a33e41d7eadc51:937"0
+0
+15
+chicagoprom.com26
+/test/images/link_news.gif82
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/link_news.gif3
+HTS1
+03
+2004
+80622
+OK9
+text/html5
+utf-829
+Fri, 09 Sep 2005 05:13:44 GMT0
+0
+0
+15
+chicagoprom.com16
+/test/press.aspx72
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/press.html3
+HTS4
+8062
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html>
+	<head>
+		<title>press</title>
+		<meta name="GENERATOR" Content="Microsoft Visual Studio 7.0">
+		<meta name="CODE_LANGUAGE" Content="C#">
+		<meta name="vs_defaultClientScript" content="JavaScript">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<link href="Styles/Styles.css" type="text/css" rel="stylesheet">
+		<script language="javascript" src="Includes/JavaScripts.js" type="text/javascript"></script>
+	</head>
+	<body MS_POSITIONING="GridLayout">
+		<form name="press" method="post" action="press.aspx" id="press">
+<input type="hidden" name="__VIEWSTATE" value="dDw4NjI2OTkyMDI7dDw7bDxpPDE+Oz47bDx0PDtsPGk8Mz47PjtsPHQ8O2w8aTwzPjs+O2w8dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+Pjs7Pjs+Pjs+Pjs+Pjs+SP4SvBRiYU6WyZKfQUFHmb39RLU=" />
+
+			
+<!-- Beginning of Header-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td valign="middle" align="center" width="100%" height="100%"><table width="750" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="195" colspan="3"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="750" height="195" id="dm1" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="dm1.swf" />
+<param name="loop" value="false" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#f31b8b" />
+<embed src="dm1.swf" loop="false" quality="high" bgcolor="#f31b8b" width="750" height="195" name="dm1" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+					</td>
+				</tr>
+				<tr>
+					<td width="173"><table width="173" height="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="173" height="41"><a href="about.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('About','','images/link_aboutprom_ovr.gif',1)"><img src="images/link_aboutprom.gif" alt="About Us" name="About" width="173" height="41" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="33"><a href="links.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Links','','images/link_links_ovr.gif',1)"><img src="images/link_links.gif" alt="Links" name="Links" width="173" height="33" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="33"><a href="cast.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Cast','','images/link_cast_ovr.gif',1)"><img src="images/link_cast.gif" alt="Cast" name="Cast" width="173" height="33" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="37"><a href="news.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('News','','images/link_news_ovr.gif',1)"><img src="images/link_news.gif" alt="News" name="News" width="173" height="37" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="41"><a href="press.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Press','','images/link_press_ovr.gif',1)"><img src="images/link_press.gif" alt="Press" name="Press" width="173" height="41" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="36"><a href="fun.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Fun','','images/link_fun_ovr.gif',1)"><img src="images/link_fun.gif" alt="Fun Stuff" name="Fun" width="173" height="36" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="27"><a href="store.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Store','','images/link_store_ovr.gif',1)"><img src="images/link_store.gif" alt="Store" name="Store" width="173" height="27" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="31"><a href="contact.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Contact','','images/link_contact_ovr.gif',1)"><img src="images/link_contact.gif" alt="Contact Us" name="Contact" width="173" height="31" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="16"><img src="images/link_navbottom.gif" width="173" height="16"></td>
+							</tr>
+							<tr>
+								<td width="173" height="100%" background="images/link_navstretch.gif">&nbsp;</td>
+							</tr>
+							<tr>
+								<td width="173" height="159"><img src="images/logobttm.gif" width="173" height="159"></td>
+							</tr>
+						</table>
+					</td>
+					<td valign="top" width="511" height="100%"><table width="511" height="100%" border="0	" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="100%" bgcolor="E4D98B" valign="top" class="cp">
+<!-- Ending of Header-->
+			<table width="510" cellpadding="0" border="0" cellspacing="0" class="cp" border="0" background="images/pac_bg.gif">
+				<tr>
+					<td><p><img src="Images/uc_sign.gif"></p>
+					</td>
+					
+<!--Beginning of Footer-->
+<td width="10"></td>
+<td valign="top">
+	<p><br>
+		<table width="160" border="0" cellspacing="0" cellpadding="1" bgcolor="#000000" class="cp">
+			<tr>
+				<td>
+					<table width="100%" border="0" cellspacing="0" cellpadding="3" bgcolor="#e577d7">
+						<tr>
+							<td class="cp" align="middle"><b>BUY TICKETS NOW!!</b>
+								<br>
+								<a href="http://chicagoprom.tix.com" target="_blank"><img src="images/ticketsimage.gif" border="0"></a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</p>
+	<p>
+		<OBJECT id="press_reviews" codeBase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" height="200" width="150" align="middle" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
+			<PARAM NAME="_cx" VALUE="3969">
+			<PARAM NAME="_cy" VALUE="5292">
+			<PARAM NAME="FlashVars" VALUE="">
+			<PARAM NAME="Movie" VALUE="press_reviews.swf">
+			<PARAM NAME="Src" VALUE="press_reviews.swf">
+			<PARAM NAME="WMode" VALUE="Window">
+			<PARAM NAME="Play" VALUE="-1">
+			<PARAM NAME="Loop" VALUE="-1">
+			<PARAM NAME="Quality" VALUE="High">
+			<PARAM NAME="SAlign" VALUE="">
+			<PARAM NAME="Menu" VALUE="-1">
+			<PARAM NAME="Base" VALUE="">
+			<PARAM NAME="AllowScriptAccess" VALUE="sameDomain">
+			<PARAM NAME="Scale" VALUE="ShowAll">
+			<PARAM NAME="DeviceFont" VALUE="0">
+			<PARAM NAME="EmbedMovie" VALUE="0">
+			<PARAM NAME="BGColor" VALUE="E4D98B">
+			<PARAM NAME="SWRemote" VALUE="">
+			<PARAM NAME="MovieData" VALUE="">
+			<PARAM NAME="SeamlessTabbing" VALUE="1">
+			<embed src="press_reviews.swf" quality="high" bgcolor="#e4d98b" width="150" height="200" name="press_reviews" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+		</OBJECT>
+	</p>
+	<table id="Footer_submitTbl" class="cp" align="right" border="0">
+	<tr>
+		<td valign="top"><B>Join our newsletter:</B><br>
+				<input name="Footer:emailTxt" type="text" id="Footer_emailTxt" />
+				<br>
+				<input type="submit" name="Footer:submtButton" value="Enter" id="Footer_submtButton" /><br>
+				&nbsp;<br>
+				<span id="Footer_errCatchLbl" class="required"></span>
+			</td>
+	</tr>
+</table>
+
+	<br>
+	
+	<br>
+</td>
+</TR></TABLE></TD></TR>
+<tr>
+	<td width="511">
+		<table height="59" width="511" background="Images/d1.gif" border="0">
+			<tr>
+				<td vAlign="top">
+				</td>
+				<td vAlign="top">
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+</TABLE></TD><td width="66">
+	<table height="100%" cellSpacing="0" cellPadding="0" width="66" border="0">
+		<tr>
+			<td width="66" background="images/bstretch.gif" height="100%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="66" height="43"><IMG height="43" src="images/c2.gif" width="66"></td>
+		</tr>
+	</table>
+</td>
+</TR></TABLE></TD></TR></TABLE> 
+<!--Ending of Footer-->
+
+		</form>
+	</body>
+</html>
+3
+2004
+38182
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:16:04 GMT21
+"5adc8f1e7eadc51:937"0
+0
+15
+chicagoprom.com31
+/test/images/link_press_ovr.gif87
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/link_press_ovr.gif3
+HTS1
+03
+2004
+38242
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:16:03 GMT21
+"ce55481e7eadc51:937"0
+0
+15
+chicagoprom.com27
+/test/images/link_press.gif83
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/link_press.gif3
+HTS1
+03
+2004
+80542
+OK9
+text/html5
+utf-829
+Fri, 09 Sep 2005 05:13:44 GMT0
+0
+0
+15
+chicagoprom.com14
+/test/fun.aspx70
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/fun.html3
+HTS4
+8054
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html>
+	<head>
+		<title>fun</title>
+		<meta name="GENERATOR" Content="Microsoft Visual Studio 7.0">
+		<meta name="CODE_LANGUAGE" Content="C#">
+		<meta name="vs_defaultClientScript" content="JavaScript">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<link href="Styles/Styles.css" type="text/css" rel="stylesheet">
+		<script language="javascript" src="Includes/JavaScripts.js" type="text/javascript"></script>
+	</head>
+	<body MS_POSITIONING="GridLayout">
+		<form name="fun" method="post" action="fun.aspx" id="fun">
+<input type="hidden" name="__VIEWSTATE" value="dDw4NjI2OTkyMDI7dDw7bDxpPDE+Oz47bDx0PDtsPGk8Mz47PjtsPHQ8O2w8aTwzPjs+O2w8dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+Pjs7Pjs+Pjs+Pjs+Pjs+/Wh/geMpMBJcRAeyKJMae68KT2E=" />
+
+			
+<!-- Beginning of Header-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td valign="middle" align="center" width="100%" height="100%"><table width="750" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="195" colspan="3"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="750" height="195" id="dm1" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="dm1.swf" />
+<param name="loop" value="false" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#f31b8b" />
+<embed src="dm1.swf" loop="false" quality="high" bgcolor="#f31b8b" width="750" height="195" name="dm1" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+					</td>
+				</tr>
+				<tr>
+					<td width="173"><table width="173" height="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="173" height="41"><a href="about.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('About','','images/link_aboutprom_ovr.gif',1)"><img src="images/link_aboutprom.gif" alt="About Us" name="About" width="173" height="41" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="33"><a href="links.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Links','','images/link_links_ovr.gif',1)"><img src="images/link_links.gif" alt="Links" name="Links" width="173" height="33" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="33"><a href="cast.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Cast','','images/link_cast_ovr.gif',1)"><img src="images/link_cast.gif" alt="Cast" name="Cast" width="173" height="33" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="37"><a href="news.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('News','','images/link_news_ovr.gif',1)"><img src="images/link_news.gif" alt="News" name="News" width="173" height="37" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="41"><a href="press.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Press','','images/link_press_ovr.gif',1)"><img src="images/link_press.gif" alt="Press" name="Press" width="173" height="41" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="36"><a href="fun.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Fun','','images/link_fun_ovr.gif',1)"><img src="images/link_fun.gif" alt="Fun Stuff" name="Fun" width="173" height="36" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="27"><a href="store.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Store','','images/link_store_ovr.gif',1)"><img src="images/link_store.gif" alt="Store" name="Store" width="173" height="27" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="31"><a href="contact.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Contact','','images/link_contact_ovr.gif',1)"><img src="images/link_contact.gif" alt="Contact Us" name="Contact" width="173" height="31" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="16"><img src="images/link_navbottom.gif" width="173" height="16"></td>
+							</tr>
+							<tr>
+								<td width="173" height="100%" background="images/link_navstretch.gif">&nbsp;</td>
+							</tr>
+							<tr>
+								<td width="173" height="159"><img src="images/logobttm.gif" width="173" height="159"></td>
+							</tr>
+						</table>
+					</td>
+					<td valign="top" width="511" height="100%"><table width="511" height="100%" border="0	" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="100%" bgcolor="E4D98B" valign="top" class="cp">
+<!-- Ending of Header-->
+			<table width="510" cellpadding="0" border="0" cellspacing="0" class="cp" border="0" background="images/pac_bg.gif">
+				<tr>
+					<td><p><img src="Images/uc_sign.gif"></p>
+					</td>
+					
+<!--Beginning of Footer-->
+<td width="10"></td>
+<td valign="top">
+	<p><br>
+		<table width="160" border="0" cellspacing="0" cellpadding="1" bgcolor="#000000" class="cp">
+			<tr>
+				<td>
+					<table width="100%" border="0" cellspacing="0" cellpadding="3" bgcolor="#e577d7">
+						<tr>
+							<td class="cp" align="middle"><b>BUY TICKETS NOW!!</b>
+								<br>
+								<a href="http://chicagoprom.tix.com" target="_blank"><img src="images/ticketsimage.gif" border="0"></a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</p>
+	<p>
+		<OBJECT id="press_reviews" codeBase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" height="200" width="150" align="middle" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
+			<PARAM NAME="_cx" VALUE="3969">
+			<PARAM NAME="_cy" VALUE="5292">
+			<PARAM NAME="FlashVars" VALUE="">
+			<PARAM NAME="Movie" VALUE="press_reviews.swf">
+			<PARAM NAME="Src" VALUE="press_reviews.swf">
+			<PARAM NAME="WMode" VALUE="Window">
+			<PARAM NAME="Play" VALUE="-1">
+			<PARAM NAME="Loop" VALUE="-1">
+			<PARAM NAME="Quality" VALUE="High">
+			<PARAM NAME="SAlign" VALUE="">
+			<PARAM NAME="Menu" VALUE="-1">
+			<PARAM NAME="Base" VALUE="">
+			<PARAM NAME="AllowScriptAccess" VALUE="sameDomain">
+			<PARAM NAME="Scale" VALUE="ShowAll">
+			<PARAM NAME="DeviceFont" VALUE="0">
+			<PARAM NAME="EmbedMovie" VALUE="0">
+			<PARAM NAME="BGColor" VALUE="E4D98B">
+			<PARAM NAME="SWRemote" VALUE="">
+			<PARAM NAME="MovieData" VALUE="">
+			<PARAM NAME="SeamlessTabbing" VALUE="1">
+			<embed src="press_reviews.swf" quality="high" bgcolor="#e4d98b" width="150" height="200" name="press_reviews" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+		</OBJECT>
+	</p>
+	<table id="Footer_submitTbl" class="cp" align="right" border="0">
+	<tr>
+		<td valign="top"><B>Join our newsletter:</B><br>
+				<input name="Footer:emailTxt" type="text" id="Footer_emailTxt" />
+				<br>
+				<input type="submit" name="Footer:submtButton" value="Enter" id="Footer_submtButton" /><br>
+				&nbsp;<br>
+				<span id="Footer_errCatchLbl" class="required"></span>
+			</td>
+	</tr>
+</table>
+
+	<br>
+	
+	<br>
+</td>
+</TR></TABLE></TD></TR>
+<tr>
+	<td width="511">
+		<table height="59" width="511" background="Images/d1.gif" border="0">
+			<tr>
+				<td vAlign="top">
+				</td>
+				<td vAlign="top">
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+</TABLE></TD><td width="66">
+	<table height="100%" cellSpacing="0" cellPadding="0" width="66" border="0">
+		<tr>
+			<td width="66" background="images/bstretch.gif" height="100%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="66" height="43"><IMG height="43" src="images/c2.gif" width="66"></td>
+		</tr>
+	</table>
+</td>
+</TR></TABLE></TD></TR></TABLE> 
+<!--Ending of Footer-->
+
+		</form>
+	</body>
+</html>
+3
+2004
+33102
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:16:01 GMT21
+"8eddca1c7eadc51:937"0
+0
+15
+chicagoprom.com29
+/test/images/link_fun_ovr.gif85
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/link_fun_ovr.gif3
+HTS1
+03
+2004
+33192
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:16:00 GMT21
+"d269961c7eadc51:937"0
+0
+15
+chicagoprom.com25
+/test/images/link_fun.gif81
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/link_fun.gif3
+HTS1
+03
+2004
+83072
+OK9
+text/html5
+utf-829
+Fri, 09 Sep 2005 05:13:45 GMT0
+0
+0
+15
+chicagoprom.com16
+/test/store.aspx72
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/store.html3
+HTS4
+8307
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html>
+	<head>
+		<title>store</title>
+		<meta name="GENERATOR" Content="Microsoft Visual Studio 7.0">
+		<meta name="CODE_LANGUAGE" Content="C#">
+		<meta name="vs_defaultClientScript" content="JavaScript">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<link href="Styles/Styles.css" type="text/css" rel="stylesheet">
+		<script language="javascript" src="Includes/JavaScripts.js" type="text/javascript"></script>
+	</head>
+	<body MS_POSITIONING="GridLayout">
+		<form name="store" method="post" action="store.aspx" id="store">
+<input type="hidden" name="__VIEWSTATE" value="dDw4NjI2OTkyMDI7dDw7bDxpPDE+Oz47bDx0PDtsPGk8Mz47PjtsPHQ8O2w8aTwzPjs+O2w8dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+Pjs7Pjs+Pjs+Pjs+Pjs+2M/0JWwnhLAnju8eyjXuNLRliRc=" />
+
+			
+<!-- Beginning of Header-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td valign="middle" align="center" width="100%" height="100%"><table width="750" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="195" colspan="3"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="750" height="195" id="dm1" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="dm1.swf" />
+<param name="loop" value="false" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#f31b8b" />
+<embed src="dm1.swf" loop="false" quality="high" bgcolor="#f31b8b" width="750" height="195" name="dm1" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+					</td>
+				</tr>
+				<tr>
+					<td width="173"><table width="173" height="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="173" height="41"><a href="about.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('About','','images/link_aboutprom_ovr.gif',1)"><img src="images/link_aboutprom.gif" alt="About Us" name="About" width="173" height="41" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="33"><a href="links.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Links','','images/link_links_ovr.gif',1)"><img src="images/link_links.gif" alt="Links" name="Links" width="173" height="33" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="33"><a href="cast.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Cast','','images/link_cast_ovr.gif',1)"><img src="images/link_cast.gif" alt="Cast" name="Cast" width="173" height="33" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="37"><a href="news.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('News','','images/link_news_ovr.gif',1)"><img src="images/link_news.gif" alt="News" name="News" width="173" height="37" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="41"><a href="press.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Press','','images/link_press_ovr.gif',1)"><img src="images/link_press.gif" alt="Press" name="Press" width="173" height="41" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="36"><a href="fun.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Fun','','images/link_fun_ovr.gif',1)"><img src="images/link_fun.gif" alt="Fun Stuff" name="Fun" width="173" height="36" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="27"><a href="store.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Store','','images/link_store_ovr.gif',1)"><img src="images/link_store.gif" alt="Store" name="Store" width="173" height="27" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="31"><a href="contact.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Contact','','images/link_contact_ovr.gif',1)"><img src="images/link_contact.gif" alt="Contact Us" name="Contact" width="173" height="31" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="16"><img src="images/link_navbottom.gif" width="173" height="16"></td>
+							</tr>
+							<tr>
+								<td width="173" height="100%" background="images/link_navstretch.gif">&nbsp;</td>
+							</tr>
+							<tr>
+								<td width="173" height="159"><img src="images/logobttm.gif" width="173" height="159"></td>
+							</tr>
+						</table>
+					</td>
+					<td valign="top" width="511" height="100%"><table width="511" height="100%" border="0	" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="100%" bgcolor="E4D98B" valign="top" class="cp">
+<!-- Ending of Header-->
+			<table width="510" cellpadding="0" border="0" cellspacing="0" class="cp" border="0" background="images/pac_bg.gif">
+				<tr>
+					<td width="20"></td>
+					<td><p></p>
+						<br>
+						<p class="title_pink">Store</p>
+						<p>
+							<b>Purchase Awesome 80's Prom merchandise <a href="http://www.awesome80sprom.com/fun.html" target="_blank">
+									HERE</a></b></p>
+						<p><img src="images/store.gif"></p>
+					</td>
+					
+<!--Beginning of Footer-->
+<td width="10"></td>
+<td valign="top">
+	<p><br>
+		<table width="160" border="0" cellspacing="0" cellpadding="1" bgcolor="#000000" class="cp">
+			<tr>
+				<td>
+					<table width="100%" border="0" cellspacing="0" cellpadding="3" bgcolor="#e577d7">
+						<tr>
+							<td class="cp" align="middle"><b>BUY TICKETS NOW!!</b>
+								<br>
+								<a href="http://chicagoprom.tix.com" target="_blank"><img src="images/ticketsimage.gif" border="0"></a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</p>
+	<p>
+		<OBJECT id="press_reviews" codeBase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" height="200" width="150" align="middle" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
+			<PARAM NAME="_cx" VALUE="3969">
+			<PARAM NAME="_cy" VALUE="5292">
+			<PARAM NAME="FlashVars" VALUE="">
+			<PARAM NAME="Movie" VALUE="press_reviews.swf">
+			<PARAM NAME="Src" VALUE="press_reviews.swf">
+			<PARAM NAME="WMode" VALUE="Window">
+			<PARAM NAME="Play" VALUE="-1">
+			<PARAM NAME="Loop" VALUE="-1">
+			<PARAM NAME="Quality" VALUE="High">
+			<PARAM NAME="SAlign" VALUE="">
+			<PARAM NAME="Menu" VALUE="-1">
+			<PARAM NAME="Base" VALUE="">
+			<PARAM NAME="AllowScriptAccess" VALUE="sameDomain">
+			<PARAM NAME="Scale" VALUE="ShowAll">
+			<PARAM NAME="DeviceFont" VALUE="0">
+			<PARAM NAME="EmbedMovie" VALUE="0">
+			<PARAM NAME="BGColor" VALUE="E4D98B">
+			<PARAM NAME="SWRemote" VALUE="">
+			<PARAM NAME="MovieData" VALUE="">
+			<PARAM NAME="SeamlessTabbing" VALUE="1">
+			<embed src="press_reviews.swf" quality="high" bgcolor="#e4d98b" width="150" height="200" name="press_reviews" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+		</OBJECT>
+	</p>
+	<table id="Footer_submitTbl" class="cp" align="right" border="0">
+	<tr>
+		<td valign="top"><B>Join our newsletter:</B><br>
+				<input name="Footer:emailTxt" type="text" id="Footer_emailTxt" />
+				<br>
+				<input type="submit" name="Footer:submtButton" value="Enter" id="Footer_submtButton" /><br>
+				&nbsp;<br>
+				<span id="Footer_errCatchLbl" class="required"></span>
+			</td>
+	</tr>
+</table>
+
+	<br>
+	
+	<br>
+</td>
+</TR></TABLE></TD></TR>
+<tr>
+	<td width="511">
+		<table height="59" width="511" background="Images/d1.gif" border="0">
+			<tr>
+				<td vAlign="top">
+				</td>
+				<td vAlign="top">
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+</TABLE></TD><td width="66">
+	<table height="100%" cellSpacing="0" cellPadding="0" width="66" border="0">
+		<tr>
+			<td width="66" background="images/bstretch.gif" height="100%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="66" height="43"><IMG height="43" src="images/c2.gif" width="66"></td>
+		</tr>
+	</table>
+</td>
+</TR></TABLE></TD></TR></TABLE> 
+<!--Ending of Footer-->
+
+		</form>
+	</body>
+</html>
+2
+3268dc87057bbf92806a1860306c04a5892
+323ff948d7f27fe03e59b6aa2f0b9e89772
+322c97a2636348812d338e5864b9a11ab22
+322114a0fd95b562d524ac9a43150aa53b2
+3202f4b1e3248fb4d953674ae655da62a22
+323ad37057ea38a322333410ca4c4591c32
+32c5fb43d6b81f7562dfe90f3267a98f572
+32679860b0fa6d5481ae7247efa84381fe2
+328c5c3d4f985ac8078c724b67a346a5163
+2004
+23962
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:16:04 GMT21
+"b675ea1e7eadc51:937"0
+0
+15
+chicagoprom.com31
+/test/images/link_store_ovr.gif87
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/link_store_ovr.gif3
+HTS1
+03
+2004
+23992
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:16:04 GMT21
+"5464b81e7eadc51:937"0
+0
+15
+chicagoprom.com27
+/test/images/link_store.gif83
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/link_store.gif3
+HTS1
+03
+2004
+98402
+OK9
+text/html5
+utf-829
+Fri, 09 Sep 2005 05:13:46 GMT0
+0
+0
+15
+chicagoprom.com18
+/test/contact.aspx74
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/contact.html3
+HTS4
+9840
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<title>contact</title>
+		<meta name="GENERATOR" Content="Microsoft Visual Studio 7.0">
+		<meta name="CODE_LANGUAGE" Content="C#">
+		<meta name="vs_defaultClientScript" content="JavaScript">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<link href="Styles/Styles.css" type="text/css" rel="stylesheet">
+		<script language="javascript" src="Includes/JavaScripts.js" type="text/javascript"></script>
+	</HEAD>
+	<body MS_POSITIONING="GridLayout">
+		<form name="contact" method="post" action="contact.aspx" id="contact">
+<input type="hidden" name="__VIEWSTATE" value="dDwtMTgwMTcyOTg4Mjt0PDtsPGk8MT47PjtsPHQ8O2w8aTwzPjtpPDc+Oz47bDx0PHA8bDxWaXNpYmxlOz47bDxvPGY+Oz4+Ozs+O3Q8O2w8aTwzPjs+O2w8dDxwPGw8VmlzaWJsZTs+O2w8bzxmPjs+Pjs7Pjs+Pjs+Pjs+Pjs+8L6eofIBCYq0x4Ym3eNrq9Wkgt8=" />
+
+			
+<!-- Beginning of Header-->
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td valign="middle" align="center" width="100%" height="100%"><table width="750" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td height="195" colspan="3"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" width="750" height="195" id="dm1" align="middle">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="dm1.swf" />
+<param name="loop" value="false" />
+<param name="quality" value="high" />
+<param name="bgcolor" value="#f31b8b" />
+<embed src="dm1.swf" loop="false" quality="high" bgcolor="#f31b8b" width="750" height="195" name="dm1" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+</object>
+					</td>
+				</tr>
+				<tr>
+					<td width="173"><table width="173" height="100%" border="0" cellspacing="0" cellpadding="0">
+							<tr>
+								<td width="173" height="41"><a href="about.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('About','','images/link_aboutprom_ovr.gif',1)"><img src="images/link_aboutprom.gif" alt="About Us" name="About" width="173" height="41" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="33"><a href="links.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Links','','images/link_links_ovr.gif',1)"><img src="images/link_links.gif" alt="Links" name="Links" width="173" height="33" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="33"><a href="cast.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Cast','','images/link_cast_ovr.gif',1)"><img src="images/link_cast.gif" alt="Cast" name="Cast" width="173" height="33" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="37"><a href="news.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('News','','images/link_news_ovr.gif',1)"><img src="images/link_news.gif" alt="News" name="News" width="173" height="37" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="41"><a href="press.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Press','','images/link_press_ovr.gif',1)"><img src="images/link_press.gif" alt="Press" name="Press" width="173" height="41" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="36"><a href="fun.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Fun','','images/link_fun_ovr.gif',1)"><img src="images/link_fun.gif" alt="Fun Stuff" name="Fun" width="173" height="36" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="27"><a href="store.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Store','','images/link_store_ovr.gif',1)"><img src="images/link_store.gif" alt="Store" name="Store" width="173" height="27" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="31"><a href="contact.aspx" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Contact','','images/link_contact_ovr.gif',1)"><img src="images/link_contact.gif" alt="Contact Us" name="Contact" width="173" height="31" border="0"></a></td>
+							</tr>
+							<tr>
+								<td width="173" height="16"><img src="images/link_navbottom.gif" width="173" height="16"></td>
+							</tr>
+							<tr>
+								<td width="173" height="100%" background="images/link_navstretch.gif">&nbsp;</td>
+							</tr>
+							<tr>
+								<td width="173" height="159"><img src="images/logobttm.gif" width="173" height="159"></td>
+							</tr>
+						</table>
+					</td>
+					<td valign="top" width="511" height="100%"><table width="511" height="100%" border="0	" cellspacing="0" cellpadding="0">
+							<tr>
+								<td height="100%" bgcolor="E4D98B" valign="top" class="cp">
+<!-- Ending of Header-->
+			<table width="510" cellpadding="0" border="0" cellspacing="0" class="cp" border="0" background="images/pac_bg.gif">
+				<tr>
+					<td>
+						
+						<table id="submtTbl" class="cp" cellspacing="0" cellpadding="5" width="250" align="center" border="0">
+	<tr>
+		<td colspan="2">
+									<p class="title_pink">CONTACT US</p>
+								</td>
+	</tr>
+	<tr>
+		<td valign="top">Name<span class="required">*</span>&nbsp;<br>
+									<input name="name" type="text" maxlength="50" id="name" />
+								</td>
+	</tr>
+	<tr>
+		<td valign="top">Email <span class="required">*</span>&nbsp;<br>
+									<span id="errorCatchLbl" class="required"></span>
+									<input name="email" type="text" maxlength="50" id="email" />
+								</td>
+	</tr>
+	<tr>
+		<td valign="top">Message<br>
+									<input name="message" type="text" id="message" />
+								</td>
+	</tr>
+	<tr>
+		<td>
+									<input type="submit" name="submitButton" value="Submit" id="submitButton" class="button" />
+								</td>
+	</tr>
+</table>
+
+						<br>
+						<table class="cp">
+							<tr>
+								<td width="20"></td>
+								<td><p></p>
+									<br>
+									<p>For more information on <b>The Awesome 80s Prom</b>,
+										<br>
+										Phone: (312) 664-PROM (7766)<br>
+										Fax: (312) 397-0589<br>
+										<br>
+									</p>
+									<p>
+										For press inquiries, please contact:
+										<br>
+										Mary Alyce Buck<br>
+										The Silverman Group<br>
+										<a href="Maryalyce@silvermangroupchicago.com">Maryalyce@silvermangroupchicago.com</a><br>
+										Phone: 312/932-9958<br>
+										<br>
+									</p>
+									<p>
+										Questions or comments about the site? Contact:
+										<br>
+										<a href="mailto:Maryalyce@silvermangroupchicago.com">Maryalyce@silvermangroupchicago.com</a><br>
+									</p>
+								</td>
+							</tr>
+						</table>
+					</td>
+					
+<!--Beginning of Footer-->
+<td width="10"></td>
+<td valign="top">
+	<p><br>
+		<table width="160" border="0" cellspacing="0" cellpadding="1" bgcolor="#000000" class="cp">
+			<tr>
+				<td>
+					<table width="100%" border="0" cellspacing="0" cellpadding="3" bgcolor="#e577d7">
+						<tr>
+							<td class="cp" align="middle"><b>BUY TICKETS NOW!!</b>
+								<br>
+								<a href="http://chicagoprom.tix.com" target="_blank"><img src="images/ticketsimage.gif" border="0"></a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</p>
+	<p>
+		<OBJECT id="press_reviews" codeBase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,0,0" height="200" width="150" align="middle" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
+			<PARAM NAME="_cx" VALUE="3969">
+			<PARAM NAME="_cy" VALUE="5292">
+			<PARAM NAME="FlashVars" VALUE="">
+			<PARAM NAME="Movie" VALUE="press_reviews.swf">
+			<PARAM NAME="Src" VALUE="press_reviews.swf">
+			<PARAM NAME="WMode" VALUE="Window">
+			<PARAM NAME="Play" VALUE="-1">
+			<PARAM NAME="Loop" VALUE="-1">
+			<PARAM NAME="Quality" VALUE="High">
+			<PARAM NAME="SAlign" VALUE="">
+			<PARAM NAME="Menu" VALUE="-1">
+			<PARAM NAME="Base" VALUE="">
+			<PARAM NAME="AllowScriptAccess" VALUE="sameDomain">
+			<PARAM NAME="Scale" VALUE="ShowAll">
+			<PARAM NAME="DeviceFont" VALUE="0">
+			<PARAM NAME="EmbedMovie" VALUE="0">
+			<PARAM NAME="BGColor" VALUE="E4D98B">
+			<PARAM NAME="SWRemote" VALUE="">
+			<PARAM NAME="MovieData" VALUE="">
+			<PARAM NAME="SeamlessTabbing" VALUE="1">
+			<embed src="press_reviews.swf" quality="high" bgcolor="#e4d98b" width="150" height="200" name="press_reviews" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+		</OBJECT>
+	</p>
+	<table id="Footer_submitTbl" class="cp" align="right" border="0">
+	<tr>
+		<td valign="top"><B>Join our newsletter:</B><br>
+				<input name="Footer:emailTxt" type="text" id="Footer_emailTxt" />
+				<br>
+				<input type="submit" name="Footer:submtButton" value="Enter" id="Footer_submtButton" /><br>
+				&nbsp;<br>
+				<span id="Footer_errCatchLbl" class="required"></span>
+			</td>
+	</tr>
+</table>
+
+	<br>
+	
+	<br>
+</td>
+</TR></TABLE></TD></TR>
+<tr>
+	<td width="511">
+		<table height="59" width="511" background="Images/d1.gif" border="0">
+			<tr>
+				<td vAlign="top">
+				</td>
+				<td vAlign="top">
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr>
+</TABLE></TD><td width="66">
+	<table height="100%" cellSpacing="0" cellPadding="0" width="66" border="0">
+		<tr>
+			<td width="66" background="images/bstretch.gif" height="100%">&nbsp;</td>
+		</tr>
+		<tr>
+			<td width="66" height="43"><IMG height="43" src="images/c2.gif" width="66"></td>
+		</tr>
+	</table>
+</td>
+</TR></TABLE></TD></TR></TABLE> 
+<!--Ending of Footer-->
+
+		</form>
+	</body>
+</HTML>
+2
+32ed99883f5887ae8b13c0bc9756e5d3383
+2004
+28782
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:16:00 GMT21
+"caba661c7eadc51:937"0
+0
+15
+chicagoprom.com33
+/test/images/link_contact_ovr.gif89
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/link_contact_ovr.gif3
+HTS1
+03
+2004
+28822
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:16:00 GMT20
+"e47321c7eadc51:937"0
+0
+15
+chicagoprom.com29
+/test/images/link_contact.gif85
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/link_contact.gif3
+HTS1
+03
+2004
+21742
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:16:02 GMT21
+"de86761d7eadc51:937"0
+0
+15
+chicagoprom.com31
+/test/images/link_navbottom.gif87
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/link_navbottom.gif3
+HTS1
+03
+2003
+2152
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:16:02 GMT21
+"e635a61d7eadc51:937"0
+0
+15
+chicagoprom.com32
+/test/images/link_navstretch.gif88
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/link_navstretch.gif3
+HTS1
+03
+2005
+116382
+OK9
+image/gif0
+29
+Thu, 08 Sep 2005 18:35:09 GMT20
+"908aa6aa4b4c51:937"0
+0
+15
+chicagoprom.com23
+/test/images/pac_bg.gif79
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/pac_bg.gif3
+HTS1
+03
+2004
+57772
+OK9
+image/gif0
+29
+Thu, 08 Sep 2005 18:27:57 GMT20
+"3edf559a3b4c51:937"0
+0
+15
+chicagoprom.com29
+/test/images/ticketsimage.gif85
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/ticketsimage.gif3
+HTS1
+03
+2005
+126652
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:16:05 GMT21
+"8010261f7eadc51:937"0
+0
+15
+chicagoprom.com25
+/test/images/logobttm.gif81
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/logobttm.gif3
+HTS1
+03
+2003
+5102
+OK9
+image/gif0
+29
+Thu, 08 Sep 2005 18:22:41 GMT21
+"82a5c74ca2b4c51:937"0
+0
+15
+chicagoprom.com19
+/test/Images/d1.gif75
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/Images/d1.gif3
+HTS1
+03
+2003
+2122
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:15:57 GMT21
+"2082871a7eadc51:937"0
+0
+15
+chicagoprom.com25
+/test/images/bstretch.gif81
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/bstretch.gif3
+HTS1
+03
+2003
+3252
+OK9
+image/gif0
+29
+Tue, 30 Aug 2005 16:15:58 GMT21
+"7e523a1b7eadc51:937"0
+0
+15
+chicagoprom.com19
+/test/images/c2.gif75
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/images/c2.gif3
+HTS1
+03
+2004
+63182
+OK29
+application/x-shockwave-flash0
+29
+Thu, 08 Sep 2005 22:11:32 GMT21
+"78a92845c2b4c51:937"0
+0
+15
+chicagoprom.com23
+/test/press_reviews.swf79
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/press_reviews.swf3
+HTS1
+03
+2005
+156662
+OK9
+image/gif0
+29
+Thu, 08 Sep 2005 19:28:31 GMT21
+"8a7f597fabb4c51:937"0
+0
+15
+chicagoprom.com30
+/test/Images/chicagoticket.gif86
+T:/Clients/ChicagoProm/Flash/chicagoprom/chicagoprom.com/test/Images/chicagoticket.gif3
+HTS1
+0

@@ -1,0 +1,1577 @@
+/* ------
+ * import the CommonSpot overrride
+ -------*/
+@import url("/style/cs_overrides.css");
+
+/* ------------------------------------------------------------------
+	6/10/09: KKB - SET DEFAULT PRINT STYLES 
+	8/26/09: KKB - REMOVE SIDEBAR & EMAIL PRINT SHARE FROM SS/NEWS
+	4/24/13: MLH - Testing Audit Again
+	5/02/13: JPK - Added style for header-wrapper; added overflow:hidden to #header
+-------------------------------------------------------------------- */
+
+@media print {
+
+body {
+	font-family: sans-serif !important;
+	font-size: 12pt !important;
+	background: white !important;
+	color: #555;	
+}
+
+/* Remove unwanted elements */
+#drawer, .btn-holder, #search-box, #search, #navigation, #footer, .event-bottom-modules, .content-layout-3-column, hr.grid-divider, div.content-container .article-tools , .image-holder, #videoPlayer, #sidebar
+{
+       display: none !important;
+}
+
+
+
+div.grid-e .column.first {display: none !important;}
+
+/* Make the various content containers span the entire page    */
+
+div.grid-e .column, .content-layout-6-column, div.content-container, div.content-container .news-success-story .article-copy {
+        width: 100% !important; 
+        margin: 0 !important; 
+        float: none !important; /**/}
+		
+a:link, a:visited {color: #781351 !important;}
+
+/* Remove & replace sIFR text  */
+
+.sIFR-flash, .sIFR-flash object, .sIFR-flash embed {
+	display: none !important;
+	height: 0;
+	width: 0;
+	position: absolute;
+	overflow: hidden;
+}
+
+span.sIFR-alternate {
+	visibility: visible !important;
+	display: block !important;
+	position: static !important;
+	left: auto !important;
+	top: auto !important;
+}
+
+}
+
+/* --------------------------------------------
+	RESET DEFAULT BROWSER CSS SETTINGS
+-------------------------------------------- */
+html, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	/*font-size: 100%;*/
+	font-size:12px;
+	/*line-height:18px;*/
+	vertical-align: baseline;
+	background: transparent;
+}
+
+/* body { line-height: 1; } */
+/* ol, ul { list-style: none; } MEM 05/13/10 */
+ul { list-style: none; }
+ol { list-style-position: inside; list-style-image: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+/* remember to define focus styles! */
+:focus { outline: 0; }
+/* remember to highlight inserts somehow! */
+ins { text-decoration: none; }
+del { text-decoration: line-through; }
+/* tables still need 'cellspacing="0"' in the markup */
+
+/* --------------------------------------------
+				GLOBAL CLASSES
+-------------------------------------------- */
+.clear     				{ clear:both;}
+.clear-left 			{ clear: left; }
+.center         		{ margin: 0 auto;}
+.block 					{ display: block; }
+.space          		{ display: block; height: 5px; }
+.float-left, .left    	{ float:left; }
+.float-right, .right   	{ float:right; }
+ 
+.text-left     			{ text-align:left; }
+.text-right    			{ text-align:right; }
+.text-center   			{ text-align:center; }
+.text-justify  			{ text-align:justify; }
+ 
+.normal					{ font-weight: normal; } 
+.bold          			{ font-weight:bold; }
+.italic        			{ font-style:italic; }
+.underline     			{ border-bottom:1px solid; }
+.highlight     			{ background:#ffc; }
+ 
+.img-left      			{ float:left; margin:4px 8px 12px 0; }
+.img-right     			{ float:right; margin:4px 0 4px 10px; }
+
+.nopadding     			{ padding:0; }
+.nomargin				{ margin:0; }
+.noindent      			{ margin-left:0; padding-left:0; }
+.nobullet      			{ list-style:none; list-style-image:none; list-style-type: none;}
+.noborder 				{ border:none; }
+.hide					{ display: none;}
+.nobackground 			{ background:none; }
+.altfont 				{ font-family:Arial, Helvetica, sans-serif; }
+
+.absolute-container   	{ position:relative; }
+.black 					{ color: #000; }
+.last-li 				{ border-bottom: 0; }
+.module-border 			{ border: 2px solid #eee; }
+
+.gray 					{ color: #888;}
+.black 					{ color: #000;font-weight: bold;}
+.red 					{ color:#ca0319 !important; }
+.small-gray-text 		{ font-size: 11px; color: #666; }
+
+/* Picture border for thumbnail pics */
+.pic-border 			{ padding: 5px; margin: 0 8px 0 0; border: 1px solid #ddd; }
+
+/* class that caps the bottom of the page */
+.bottom 				{ padding-bottom: 20px; border-bottom:1px solid #b3ae0b; }
+
+/* pagination, mostly for accordion lists */
+.pagination 			{ float:right; }
+	
+/* --------------------------------------------
+				global settings 
+-------------------------------------------- */
+/* body {
+	font-family: trebuchet ms, sans-serif;
+	font-size:12px;
+	background: #f1eee4 url(/clients/Auyoga/Images/main-page-bg.png) top left repeat-x;
+	color: #555;
+	text-align: center;
+}
+
+body.page-template{
+	font-family: trebuchet ms, sans-serif;
+	font-size:12px;
+	background: #fff;
+	color: #555;
+	padding:20px;
+} */
+
+#wrapper, .wrapper { padding: 0; margin: 0;  }
+.divide { border-bottom: 2px solid #eee; }
+
+/* --------------------------------------------
+				links 
+-------------------------------------------- */
+a,
+a:visited,
+a:active {
+	color: #3399cc;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+a:hover { 
+	color: #003260;
+	text-decoration: none;
+}
+
+ul.content-navigation li a:hover {
+	color: #ca0319 !important;
+}
+
+/* bottom footer HOME link */
+.home-link { 
+	display: block;
+	padding: 0 0 0 25px;
+	margin: 0 15px 0 0;
+	float: left;
+	height: 21px;
+	width: 20px;
+	background: transparent url(/clients/Auyoga/Images/black-logo.jpg) no-repeat bottom left;
+}
+
+.home-link:hover{ 
+	background: transparent url(/clients/Auyoga/Images/black-logo.jpg) no-repeat top left;
+}
+
+.black-logo { 
+	float: left; 
+	padding: 0 5px 0 0; 
+	width: 20px;
+	height: 21px;
+}
+
+/* Call to Action Arrow Buttons
+---------------------------------------------- */
+.cta-btn {
+	width: auto; 
+	float: left; 
+	color: #fff !important;
+	display: block;
+	padding: 0 12px 0 6px;
+	font-family: trebuchet ms, sans-serif;
+	font-size:11px !important;
+	height: 15px;
+	line-height: 14px;
+	font-weight: bold !important;
+	text-transform: uppercase;
+}
+
+/* Yellow general
+------------------------------------ */
+.yellow-cta {
+	background: #f4c52f url(/clients/Auyoga/Images/cta-arrows-white.png) right 0 no-repeat;
+}
+.yellow-cta:hover {
+	background: #d49d15 url(/clients/Auyoga/Images/cta-arrows-white.png) right -15px no-repeat;
+}
+
+.cta {
+	background: #f4c52f url(/clients/Auyoga/Images/cta-arrows-white.png) right 0 no-repeat;
+}
+.cta:hover {
+	background: #d49d15 url(/clients/Auyoga/Images/cta-arrows-white.png) right -15px no-repeat;
+}
+
+/* SIS
+------------------------------------ */
+.sis-cta {
+	background: #745224 url(/clients/Auyoga/Images/cta-arrows-white.png) right -30px no-repeat;
+}
+.sis-cta:hover {
+	background: #7a7615 url(/clients/Auyoga/Images/cta-arrows-white.png) right -45px no-repeat;
+}
+
+/* SOC
+------------------------------------ */
+.soc-cta {
+	background: #f5b00b url(/clients/Auyoga/Images/cta-arrows-white.png) right -60px no-repeat;
+}
+.soc-cta:hover {
+	background: #d06e0d url(/clients/Auyoga/Images/cta-arrows-white.png) right -75px no-repeat;
+}
+
+/* SPA
+------------------------------------ */
+.spa-cta {
+	background: #bbb15e url(/clients/Auyoga/Images/cta-arrows-white.png) right -90px no-repeat;
+}
+.spa-cta:hover {
+	background: #6e7a76 url(/clients/Auyoga/Images/cta-arrows-white.png) right -105px no-repeat;
+}
+
+/* KOGOD
+------------------------------------ */
+.kogod-cta {
+	background: #135b83 url(/clients/Auyoga/Images/cta-arrows-white.png) right -120px no-repeat;
+}
+.kogod-cta:hover {
+	background: #4e554d url(/clients/Auyoga/Images/cta-arrows-white.png) right -135px no-repeat;
+}
+
+/* Homepage discover au module Learn More button
+------------------------------------ */
+a.learn-more-big-cta {
+	background: url(/clients/Auyoga/Images/learn-more-big-cta.gif) top left no-repeat;
+	height: 30px;
+	width: 182px;
+	display: block;
+	text-indent: -9999px;
+}
+
+a.learn-more-big-cta:hover {
+	background: url(/clients/Auyoga/Images/learn-more-big-cta.gif) bottom left no-repeat;
+}
+
+.yellow-biglink {
+	background: #fff url(/clients/Auyoga/Images/yellow-biglink-arrow.gif) center left no-repeat;
+	height: 30px;
+	width: 15px;
+}
+
+
+/* Dark links  on homepage discover au module
+--------------------------------------------- */
+a.dark-link {
+	background: url(/clients/Auyoga/Images/dark-link-cta.gif) bottom right no-repeat !important;
+	width: auto; 
+	float: left; 
+	color: #fff !important;
+	display: block;
+	padding: 0 12px 0 6px;
+	font-family: trebuchet ms, sans-serif;
+	font-size:11px !important;
+	height: 15px;
+	line-height: 14px;
+	font-weight: bold !important;
+	text-transform: uppercase;
+	margin-bottom: 4px;
+}
+
+a.dark-link:hover {
+	background: url(/clients/Auyoga/Images/dark-link-cta.gif) top right no-repeat !important;
+}
+
+/* RSS links
+--------------------------------------------- */
+.rssimage {
+	position: absolute;
+	right: 0px;
+	margin: 0px;
+}
+
+.rss-link {
+	position: absolute;
+	right: 10px;
+	top: 5%;
+	_top: 3%;
+	background: url(/clients/Auyoga/Images/rss.gif) no-repeat !important;
+	padding: 0px;
+	margin: 0;
+	height: 17px;
+	width: 17px;
+	overflow: hidden;
+	display:block;
+	z-index: 200;
+	text-indent: -9999px;
+}
+
+
+/* --------------------------------------------
+				common formatting 
+-------------------------------------------- */
+/* LISTS */
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul li { border-bottom: 1px solid #ddd; margin: 8px 0 8px 0; }
+#navigation li { border: 0; margin: 0; }
+
+/* PARAGRAPH SETTINGS */
+p {
+	line-height: 15px;
+	padding: 0;
+	margin: 12px 0 12px 0;
+}
+
+/* special pragraphc text to get text to hang on the right side of an image */
+p.text-imgonright {
+	float: left;
+	width: 55%; /* set to percentages to minimize markup */
+	margin: 0px 10px 10px 10px;
+}
+
+/* HEADINGS */
+h1 {
+	background: url(/clients/Auyoga/Images/arrow-red.png) left no-repeat;
+	background-position:0 12px;
+	color: #3f3f3f;
+	font-size: 30px;
+	line-height:36px;
+	font-family: Arial, Helvetica, sans-serif;
+	height:auto;
+	padding: 0 0 0 10px;
+}
+
+h1 em {
+	font-size:30px;
+	font-style:normal;
+	font-weight:normal;
+}
+
+h1 span.updated-at {
+	color:#999;
+	font-size:12px;
+	font-family:trebuchet ms, sans-serif;
+}
+
+h2 {
+	background: url(/clients/Auyoga/Images/arrow-red.png) left no-repeat;
+	border-bottom: 1px solid #ddd;
+	color: #333;
+	font-size: 18px;
+	/*letter-spacing: -.2px;*/
+	line-height: 21px;
+	margin: 13px 0 10px 0;
+	padding: 0px 0 5px 10px;
+	/*Original
+	margin: 10px 0 10px 0;
+	padding: 6px 0 5px 10px;*/
+}
+
+h2.sifr-head {
+	background: url(/clients/Auyoga/Images/arrow-red.png) left no-repeat;
+	border-bottom: 1px solid #ddd;
+	color: #333;
+	font-size: 18px;
+	letter-spacing: -.2px;
+	line-height: 1;
+	margin: 10px 0 10px 0;
+	padding: 6px 0 5px 10px;
+}
+
+h2.no-arrow {
+	background:none;
+	padding-left:0;
+}
+
+h2.altfont {
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+h3 {
+	background: url(/clients/Auyoga/Images/arrow-red.png) no-repeat;
+	background-position: left 9px;
+	border-bottom: 1px solid #ddd;
+	color: #333;
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 6px 0 6px 10px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+h3.no-arrow {
+	background:none;
+	padding-left:0;
+}
+
+h3.altfont {
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+h4 {
+	text-transform: uppercase;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+/* --------------------------------------------
+				Layout 
+-------------------------------------------- */
+#main-container {
+	width:987px;
+	margin:0 auto;
+	padding-top: 0px;
+	text-align:left;
+	position:relative;
+}
+
+#main {
+	border-left:1px solid #b4ae95;
+	border-right:1px solid #b4ae95;
+	border-bottom:1px solid #b4ae95;
+	background-color:#fff;
+	width:985px;
+	height:auto;
+	margin: 0 auto;
+	float:left;
+}
+
+/*
+ Top page titles (most contain sIFR replaced <h1>s)
+ --------------------------------------------------*/
+.page-title-holder {
+	background: #DEDACD url(/clients/Auyoga/Images/page-title-bg2.png) 0px -1px repeat-x;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	padding: 1px 0 0 0;
+	clear:both;
+	margin: 0;
+}
+
+.page-title-holder-empty {
+	background: #DEDACD url(/clients/Auyoga/Images/page-title-bg2.png) 0px -1px repeat-x;
+	width: 100%;
+	height: 0px;
+	_display: none;
+	text-align: center;
+	padding: 1px 0 0 0;
+	clear:both;
+	margin: 0;
+}
+ 
+.page-title {
+	width:958px;
+	height:19px;
+	background-color:#f8f5ee;
+	padding:29px 14px 13px 13px;
+	border-bottom:1px solid #e7e0c6;
+	border-left:1px solid #b4ae95;
+	border-right:1px solid #b4ae95;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.page-title.page-title-image {
+	height:96px;
+	padding: 0 14px 0 13px;
+}
+
+.page-title.page-title-image h1.sifr-head {
+	width: 475px;
+	display: inline;
+	position: relative;
+	top: -25px;
+}
+
+.page-title.page-title-promo a.promo {
+	position: relative;
+	top: -50px;
+	left: 750px;
+	max-width: 200px;
+	display: block;
+}
+
+.page-title.page-title-promo img {
+	border: 1px dotted #CCC;
+}
+
+.page-title.a-new-au {
+	padding: 10px 0 15px;
+	height: 76px;
+	width: 985px;
+}
+
+.page-title.a-new-au img {
+	position: relative;
+	left: -6px;
+}
+
+.page-title.a-new-au h1.sifr-head {
+	width: 475px;
+	display: inline;
+	position: relative;
+	top: -10px;
+}
+
+.striped-bar { background:url("/clients/Auyoga/Images/striped-bar-background.png") repeat-x; display:block; height:8px; width:100%; }
+
+/* --------------------------------------------
+				HEADER
+-------------------------------------------- */
+#header {
+	margin: 0 auto 1px;
+	width: 100%;
+	height: auto;
+	background: url(/clients/Auyoga/Images/blue-gradient3.png) top center no-repeat;
+	overflow: hidden;
+}
+
+#still-header {
+	height: 84px;
+	width: 982px;
+	min-width: 982px;
+	margin: 0 auto;
+	background: url(/clients/Auyoga/Images/blue-gradient4.png) top center no-repeat !important;
+}
+
+#header-wrapper {
+	background: url(/clients/Auyoga/Images/main-page-bg.png) repeat-x scroll left top #F1EEE4;
+	margin: 0;
+	padding: 0;
+	min-width: 988px;
+}
+
+#logo { margin: 18px 0 0px 0; float:left; padding: 0;}
+
+/* --------------------------------------------
+				SEARCH BOX 
+-------------------------------------------- */
+#search-box { float:right; width: 168px; margin:0; padding: 0; height: 23px;}
+
+.search-box-label {
+	background-color:#ffcc00;
+}
+
+#search {
+	margin: 25px 0 0 0;
+	border: 2px solid #3c5882;
+	width: 100%;
+	height: 25px;
+}
+
+#search-input {
+	border: none;
+	color: #999;
+	background: url(/clients/Auyoga/Images/search_bg.png) repeat-x left top;
+	margin: 0;
+	padding: 5px 0 0 4px;
+	height: 20px;
+	float: left;
+	font-size: 12px;
+	width: 129px;
+}
+
+select#search-input {
+	height: 25px;
+}
+
+#submit-search {
+	height: 25px;
+	width: 35px;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+input {border-color: #fff;}
+
+/* --------------------------------------------
+				DRAWER 
+-------------------------------------------- */
+
+/* DRAWER TAB BUTTON */
+.btn-holder {
+	width: 982px;
+	margin: 0 auto;
+	height: auto;
+	position: relative;
+}
+
+.find-schools-btn {
+	display: block;
+	width: 310px;
+	height: 27px;
+	position: absolute;
+	bottom: -2px;
+	right: 234px;
+	_right: 229px;
+	top: -23px;
+	z-index: 50;
+}
+
+.find-schools-btn a {
+	display: block;
+	width: 315px;
+	height: 27px;
+	text-indent: -9999px;
+}
+
+.find-schools-btn a:hover {
+	display: block;
+	width: 315px;
+	height: 27px;
+	background: url(/clients/Auyoga/Images/tab-btn-hover.jpg) no-repeat;
+	text-indent: -9999px;
+}
+
+.find-schools-btn a.on {
+	display: block;
+	width: 315px;
+	height: 27px;
+	background: url(/clients/Auyoga/Images/tab-btn-active.jpg) no-repeat;
+	text-indent: -9999px;
+}
+
+/* DRAWER CONTENT */
+#drawer {
+	background: #152235 url(/clients/Auyoga/Images/drawer-bg2.jpg) top center no-repeat;
+	position:relative;
+	width:100%;
+	padding: 4px 0 0 0;
+	margin: 0;
+}
+
+#nav-holder {
+	width: 100%;
+	margin:0 auto;
+	background: none;
+}
+
+#drawer-content p { padding: 0; margin: 0; }
+
+#drawer-content {
+	background: #152235 url(/clients/Auyoga/Images/drawer-bg2.jpg) top center no-repeat !important;
+	width: 100%;
+	height: 200px;
+	text-align: center;
+}
+
+#drawer-inside {
+	margin: 0 auto;
+	padding: 0;
+	width: 987px;
+	height: 200px;
+	background: transparent;
+}
+
+h2.drawerh2 {
+	margin: 0 0 10px 0;
+	padding: 0;
+	width: 190px;
+	background: none ;
+	border: none;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	/* text-indent: -9999em; */
+	/*ie hacks*/
+	_text-indent: 0px !important;
+	_background: none !important;
+}
+
+.key-sitesh2{
+	background: transparent url(/clients/Auyoga/Images/key-sites.png) no-repeat top left !important;
+	display: block;
+	width: 62px;
+	height: 11px;
+}
+
+.schools-degreesh2{
+	background: transparent url(/clients/Auyoga/Images/schools-degreesh2.png) no-repeat top left !important;
+	display: block;
+	width: 62px;
+	height: 11px;
+}
+
+.key-sitesh2{
+	background: transparent url(/clients/Auyoga/Images/key-sites.png) no-repeat top left !important;
+	display: block;
+	width: 62px;
+	height: 11px;
+}
+
+.anewauh2{
+	background: transparent url(/clients/Auyoga/Images/anewauh2.png) no-repeat top left !important;
+	display: block;
+	width: 62px;
+	height: 11px;
+}
+
+.popular-officeh2{
+	background: transparent url(/clients/Auyoga/Images/popular-officeh2.png) no-repeat top left !important;
+	display: block;
+	width: 62px;
+	height: 11px;
+}
+
+.directoriesh2{
+	background: transparent url(/clients/Auyoga/Images/directoriesh2.png) no-repeat top left !important;
+	display: block;
+	width: 62px;
+	height: 11px;
+}
+
+
+
+.drawer-links {
+	margin: 20px 50px 10px 0;
+	width: 200px;
+	color: #ffefbb;
+	float: left;
+	font-size: 1.2em;
+	height: auto;
+	text-align: left;
+}
+
+.drawer-links a {
+	color: #ffefbb;
+}
+.drawer-links a:hover {
+	color: #f5c52f;
+}
+.last-box {
+	margin-right: 0;
+}
+
+.drawer-links li {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	line-height: 15px;
+}
+
+/* --------------------------------------------
+			NAVIGATION BUTTONS 
+-------------------------------------------- */
+#navigation {
+	background: transparent url(/clients/Auyoga/Images/nav.jpg) 2px 0px;
+	width: 988px;
+	height: 55px;
+	margin: 0 auto;
+	padding: 0;
+	overflow: hidden;
+	border: none;
+	clear: both;
+}
+
+#navigation li {
+	background: transparent;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+}
+
+#navigation li, #navigation a { height: 55px; display: block; }
+
+/* START NAV BUTTONS */
+#discoverau { text-indent: -300em; overflow: hidden; width: 122px; }
+#admissions { text-indent: -300em; overflow: hidden; width: 118px; }
+#academics { text-indent: -300em; overflow: hidden; width: 118px; }
+#campuslife { text-indent: -300em; overflow: hidden; width: 109px; }
+#globalinvolve { text-indent: -300em; overflow: hidden; width: 146px; }
+#infonews { text-indent: -300em; overflow: hidden; width: 104px; }
+#aupedia { text-indent: -300em; overflow: hidden; width: 96px; }
+#athletics { text-indent: -300em; overflow: hidden; width: 88px; }
+#alumni { text-indent: -300em; overflow: hidden; width: 86px; }
+
+/* HOVER STATES */
+#discoverau a:hover { background: transparent url(/clients/Auyoga/Images/nav.jpg) 2px -55px no-repeat; }
+#admissions a:hover { background: transparent url(/clients/Auyoga/Images/nav.jpg) -120px -55px no-repeat; }
+#academics a:hover { background: transparent url(/clients/Auyoga/Images/nav.jpg) -238px -55px no-repeat; }
+#campuslife a:hover { background: transparent url(/clients/Auyoga/Images/nav.jpg) -356px -55px no-repeat; }
+#globalinvolve a:hover { background: transparent url(/clients/Auyoga/Images/nav.jpg) -465px -55px no-repeat; }
+#infonews a:hover { background: transparent url(/clients/Auyoga/Images/nav.jpg) -611px -55px no-repeat; }
+#aupedia a:hover { background: transparent url(/clients/Auyoga/Images/nav.jpg) -715px -55px no-repeat; }
+#athletics a:hover { background: transparent url(/clients/Auyoga/Images/nav.jpg) -811px -55px no-repeat; }
+#alumni a:hover { background: transparent url(/clients/Auyoga/Images/nav.jpg) -899px -55px no-repeat; }
+
+
+/* ACTIVE STATES */
+.discoverau-on { background: transparent url(/clients/Auyoga/Images/nav.jpg) 2px -110px no-repeat; }
+.admissions-on { background: transparent url(/clients/Auyoga/Images/nav.jpg) -120px -110px no-repeat; }
+.academics-on { background: transparent url(/clients/Auyoga/Images/nav.jpg) -238px -110px no-repeat; }
+.campuslife-on { background: transparent url(/clients/Auyoga/Images/nav.jpg) -356px -110px no-repeat; }
+.globalinvolve-on { background: transparent url(/clients/Auyoga/Images/nav.jpg) -465px -110px no-repeat; }
+.infonews-on { background: transparent url(/clients/Auyoga/Images/nav.jpg) -611px -110px no-repeat; }
+.aupedia-on { background: transparent url(/clients/Auyoga/Images/nav.jpg) -715px -110px no-repeat; }
+.athletics-on { background: transparent url(/clients/Auyoga/Images/nav.jpg) -811px -110px no-repeat; }
+.alumni-on { background: transparent url(/clients/Auyoga/Images/nav.jpg) -899px -110px no-repeat; }
+
+
+/* Content Page Navigation List
+-------------------------------------------------------*/
+ul.content-navigation {
+	/* float:left; */
+	width:248px;
+	background:url("/clients/Auyoga/Images/content-navigation-bground.gif") top right no-repeat !important;
+	border-right: none !important;
+	font-size:1.1em;
+	line-height:1.2em;
+	_font-weight: bold;
+	_overflow: hidden;
+}
+ul.content-navigation li {	
+	border-right: none !important;
+	margin:0;
+	padding:14px 0 12px 22px;
+	_padding:14px 0 12px 15px;
+	background:url("/clients/Auyoga/Images/content-navigation-item-bground.png") bottom repeat-x;
+	_background:url("/clients/Auyoga/Images/content-navigation-item-bground.gif") bottom repeat-x;
+	width:225px;
+	height:auto;
+	text-indent:-22px; /* Useful for making sure second line navigation items don't drop beneath the arrow */
+	_font-weight: bold;
+}
+ul.content-navigation li.dotted-bottom {
+	border-bottom:1px dotted #a6a6a6;
+	border-right: none !important;
+}
+ul.content-navigation li.toplink {
+	padding:3px 0 9px 0;
+	border-bottom:1px dotted #b2b2b2;
+	border-right: none !important;
+	width:248px;
+}
+ul.content-navigation li a {
+	padding:0 0 0 11px;
+	margin:0 0 0 12px;
+	text-transform:uppercase !important;
+	color:#333;
+	_color: #666 !important;
+	background:url("/clients/Auyoga/Images/content-navigation-arrow.png") left no-repeat;
+	_background:url("/clients/Auyoga/Images/content-navigation-arrow.gif") left no-repeat;
+	font-size:1.1em !important;
+	_font-weight: bold;
+}
+
+
+ul.content-navigation li a.active {
+	background:url("/clients/Auyoga/Images/tiny-arrow-down.png") left no-repeat;
+}
+
+
+
+ul.content-navigation li ul li a {
+	text-transform:none !important;
+}
+
+ul.content-navigation li a.no-background {
+	background:none;
+}
+ul.content-navigation li a.red-arrow {
+	background:url("/clients/Auyoga/Images/content-navigation-red-arrow.png") right no-repeat !important;
+	_background:url("/clients/Auyoga/Images/content-navigation-red-arrow.gif") right no-repeat;
+	padding-right:14px;
+}
+
+ul.content-navigation li a.red-active {
+	background: url("/clients/Auyoga/Images/red-active.gif") -10px 0px no-repeat !important;
+	width: 175px !important; /* FORMERLY 195PX BUT CHANGED TO 175PX */
+	_width: 185px;
+	height: 20px !important;
+	padding-top: 3px !important;
+	display: block !important;
+	margin: 0 0 0 -5px;
+	padding-left: 35px;
+	overflow: hidden;
+	color: #fff !important;
+}
+
+ul.content-navigation li a.red-active:hover {
+	color: #fff !important;
+}
+
+
+a.red-arrow {
+	background:url("/clients/Auyoga/Images/content-navigation-red-arrow.png") right no-repeat !important;
+	_background:url("/clients/Auyoga/Images/content-navigation-red-arrow.gif") right no-repeat;
+	padding-right:14px;
+}
+
+a.red-active {
+	background: url("/clients/Auyoga/Images/red-active.gif") -10px 0px no-repeat !important;
+	width: 175px !important; /* FORMERLY 195PX BUT CHANGED TO 175PX */
+	_width: 185px;
+	height: 20px !important;
+	padding-top: 3px !important;
+	display: block !important;
+	margin: 0 0 0 -5px;
+	padding-left: 35px;
+	overflow: hidden;
+	color: #fff !important;
+}
+
+a.red-active:hover {
+	color: #fff !important;
+}
+
+ul.content-navigation li ul {
+	margin:3px 0 3px 0;
+	border-right: none !important;
+}
+ul.content-navigation li ul li {
+	background:none;
+	padding:0;
+	*padding:0 0 3px 0;
+	border:none;
+	margin:9px 0 0 7px;
+	*margin:9px 0 -3px 7px;
+	line-height:1em;
+	border-right: none !important;
+}
+ul.content-navigation li ul a {
+	background:none;
+	text-transform:none;
+	color:#2588c6 !important;
+	font-weight:normal;
+	
+}
+ul.content-navigation li.last {
+	background:url("/clients/Auyoga/Images/content-navigation-last-bground.png") top right no-repeat;
+	height:102px;
+	width:246px;
+	border:none !important;
+	padding:0;
+	margin:0;
+}
+
+/* Link <a> Replacements/Icons
+-------------------------------------------- */
+a.rss {
+	background:url("/clients/Auyoga/Images/rss.gif") top left no-repeat;
+	padding:2px 0 0 22px;
+	height:17px;
+	display:block;
+}
+a.email {
+	background:url("/clients/Auyoga/Images/email.gif") left no-repeat;
+	padding:2px 0 0 22px;
+	height:17px;
+	display:block;
+}
+a.print {
+	background:url("/clients/Auyoga/Images/print.gif") left no-repeat;
+	padding:2px 0 0 22px;
+	height:17px;
+	display:block;
+}
+a.share {
+	background:url("/clients/Auyoga/Images/share.gif") left no-repeat;
+	padding:2px 0 0 22px;
+	height:17px;
+	display:block;
+}
+a.bullet-blue-arrow-right {
+	background:url("/clients/Auyoga/Images/bullet-blue-arrow-right.gif") right no-repeat;
+	padding-right:8px;
+}
+a.bullet-blue-arrow-left {
+	background:url("/clients/Auyoga/Images/bullet-blue-arrow-left.gif") left no-repeat;
+	padding-left:8px;
+}
+
+/* Share options (rss, email, print, share)
+----------------------------------------------------*/
+ul.share {
+	list-style:none;
+	float:right;
+	margin-right:22px;
+	clear:both;
+}
+ul.share li {
+	float:left;
+	margin-left:13px;
+	width:auto;
+	height:auto;
+	border:none;
+}
+ul.share li a {
+	display:inline;
+}
+ul.share li.last a {
+	padding-right:0 !important;
+}
+
+/* Global Bottom Modules
+---------------------------------------*/
+/* Grid customizations
+ - We'll base it on grid-a, since this is the closest thing to what we need here
+----------------------------------------------------*/
+.event-bottom-modules .column {
+	width:220px !important;
+	float: left;
+	margin-bottom: 25px;
+	margin-right: 0;
+}
+.event-bottom-modules .column.main {
+	width:715px !important;
+	float: left;
+	margin-bottom: 25px;
+}
+.event-bottom-modules {
+	background:url("/clients/Auyoga/Images/event-bottom-modules-bground333.gif") left repeat-y;
+	margin: 0 auto;
+	padding-left: 8px;
+	width:950px !important;
+	line-height:18px;
+}
+.event-bottom-modules .title {
+	float:left;
+	margin:0 0 0 0;
+	padding:0 0 7px 0;
+	border-bottom:1px solid #ccc;
+}
+.event-bottom-modules h3 {
+	float:left !important;
+	width:auto !important;
+	padding:0 !important;
+	margin:0 !important;
+	border: none !important;
+}
+.event-bottom-modules .title a.rss {
+	width:0;
+	overflow:hidden;
+	padding:0 0 0 16px;
+	margin:0;
+	float:right;
+}
+.events-today {
+	float:left;
+	width:382px;
+	margin-right:10px;	
+	padding-right: 10px;
+	border-right: 1px dotted #ddd;
+}
+.events-today .title {
+	width:382px !important;
+}
+.newly-updated-aupedia {
+	width:301px;
+	float:left;
+	margin-right:0px;	
+
+}
+.newly-updated-aupedia .title {
+	width:301px !important;
+}
+.recent-news {
+	float:left;
+	width:220px;
+	padding-left: 8px;
+	margin-left: -1px;
+	border-left: 1px dotted #ddd;
+}
+.recent-news .title {
+	width:220px !important;
+}
+.events-today table {
+	width:100%;
+	clear:both;
+}
+.events-today th {
+	font-weight:normal !important;
+}
+.events-today td,
+.events-today th {
+	border-bottom:1px solid #e5e5e5;
+	padding:7px 0 4px 0;
+}
+.events-today tr.last td,
+.events-today tr.last th {
+	border:none;
+}
+.events-today th {
+	color:#333;
+}
+.event-bottom-modules ul {
+	float:left;
+	padding-top:9px;
+}
+.event-bottom-modules li {
+	width:100%;
+	float:left;
+	border-bottom:1px solid #e5e5e5;
+	padding:3px 0 7px 0;
+	margin:0;
+}
+.event-bottom-modules li.last {
+	border:none;
+}
+.event-bottom-modules li img {
+	float:left;
+	margin-right:10px;
+}
+.event-bottom-modules a.yellow-cta {
+	margin:23px 0 0 0;
+}
+
+/* --------------------------------------------
+				FOOTER 
+-------------------------------------------- */
+#footer {
+	height: 105px;
+	width: 985px;
+	margin: 0 auto;
+	padding: 0;
+	text-align: left;
+}
+
+#footer p{
+	margin: 0;
+	padding: 6px 0 0 0;
+}
+
+.footer-top {
+	margin: 0 auto;
+	height: 50px;
+	padding: 10px 0 0 0;
+	width: 987px;
+	text-align: left;
+}
+
+.footer-bottom {
+	margin: 0 auto;
+	height: 42px;
+	width: 985px;
+	text-align: left;
+	background: url(/clients/Auyoga/Images/footer.jpg) top left repeat-x;
+	padding:0 0 0px 0;
+}
+
+.footer-top-left { margin: 0 0 0 8px; }
+.footer-bottom-left { margin: 0 0 0 8px; }
+.footer-top-right { margin: 0 8px 0 0; }
+.footer-bottom-right { margin: 0 8px 0 0; }
+
+/* --------------------------------------------
+				TABS 
+-------------------------------------------- */
+div.tab {
+	float:right;
+	height:27px;
+	background:url("/clients/Auyoga/Images/tab-background.gif") left repeat-x;
+	width:auto;
+	position:relative;
+	margin-right:29px;
+	font-size:12px;
+}
+div.tab a {
+	display:inline;
+	float:left;
+	width:auto;
+	padding:2px 16px 0 11px;
+	margin-right:27px;
+	background:url("/clients/Auyoga/Images/tab-arrow-down.gif") right no-repeat;
+	font-weight:normal;
+}
+div.tab a.on {
+	background:url("/clients/Auyoga/Images/tab-arrow-down.gif") right no-repeat;
+}
+div.tab a.off {
+	background:url("/clients/Auyoga/Images/tab-arrow-up.gif") right no-repeat;
+}
+div.tab .tab-left {
+	width:3px;
+	height:27px;
+	background:url("/clients/Auyoga/Images/tab-left.gif") left no-repeat;
+	float:left;
+}
+div.tab .tab-right {
+	position:absolute;
+	top:0;
+	right:0;
+	float:right;
+	width:27px;
+	height:27px;
+	background:url("/clients/Auyoga/Images/tab-right.gif") right no-repeat;
+	overflow:hidden;
+}
+
+.rss-image {
+	background: url(/clients/Auyoga/Images/rss.gif) right no-repeat;
+}
+
+hr.divider {
+	width: 951px;
+	height: 4px;
+	background-color: #b2b2b2;
+	border: none;
+	margin: 0 auto;
+	margin-top: 35px;
+	margin-bottom: 20px;
+	padding: 0;
+}
+
+.date-highlight {float:right;}
+
+/* Global top subnav on certain pages
+---------------------------------------------*/
+.top-nav-holder {
+	margin: 0 auto;
+	width: 985px;
+	overflow: hidden;
+	height: 36px;
+	border-left: 1px solid #B4AE95;
+	border-right: 1px solid #B4AE95;
+	border-bottom: 1px solid #B4AE95;
+	background: #fff;
+	padding: 0;
+}
+
+ul#global-top-subnav-left {
+	width: 550px !important;
+	overflow:hidden;
+	float: left;
+}
+
+ul#global-top-subnav-left li {
+	float:left;
+	border-bottom: none;
+	height: 20px;
+	border-right: 1px solid #999;
+	padding: 4px 10px 0 10px;
+	margin: 7px 0 0 0;
+}
+
+ul#global-top-subnav-left .last {
+	border-right:0;
+}
+
+
+ul#global-top-subnav-right {
+	width: auto !important;
+	overflow:hidden;
+	float: right;
+}
+
+ul#global-top-subnav-right li {
+	float:left;
+	border-bottom: none;
+	height: 20px;
+	padding: 4px 10px 0 10px;
+	margin: 7px 0 0 0;
+}
+
+ul#global-top-subnav-right .last {
+	border-right:0;
+	padding-right: 20px;
+}	
+
+ul#global-top-subnav-right li.active-link {
+	background: #ACA593;
+		margin: 0px;
+		height: 36px;
+		line-height: 26px;
+}	
+
+ul#global-top-subnav-right li.active-link a{
+	color: #fff !important;
+}	
+
+/* --------------------------------------------
+	GLOBAL MODULES
+-------------------------------------------- */
+/* Global Quicklinks across school pages */
+
+#school-quicklinks {
+	background:transparent url(/clients/Auyoga/Images/top-bar-shadow2.png) repeat-x center top;
+	width: 295px;
+	margin: 0 0 10px 15px;
+	padding: 10px 0 0 0;
+	height: auto;
+	
+}
+
+/* #school-quicklinks {
+	margin-top: 30px;
+	padding-top: 10px;
+} */
+
+#school-quicklinks ul {
+	width: 295px;
+	
+}
+
+#school-quicklinks li {
+	width: 137px;
+	float: left;
+	padding: 0px 0 0 10px;
+	margin: 0px;
+}
+
+/* Global Secondary Content across school pages */
+#basic-secondary {
+	background:transparent url(/clients/Auyoga/Images/top-bar-shadow2.png) repeat-x center top;
+	width: 295px;
+	margin: 10px 0px 10px 15px;
+	padding: 10px 0 0 0;
+}
+
+#basic-secondary h2 {
+	border-bottom: none;
+	background-position: left 10px;
+	font-size: 15px;
+	text-align: left;
+}
+
+#basic-secondary h4 {
+	margin-left: 10px;
+}
+
+#basic-secondary ul {
+	margin: 0 0 0 10px;
+	width: 295px;
+}
+
+#basic-secondary ul li{
+	border: none;
+}
+
+.secondary {
+	background:url(/clients/Auyoga/Images/sis-secondary-bg.png) no-repeat 0 0;
+	}
+
+#school-secondary {
+	background:transparent url(/clients/Auyoga/Images/top-bar-shadow-wide.jpg) repeat-x scroll center top;
+	width: 304px;
+	margin: 10px 16px 10px 10px;
+	_margin-right:2px;
+	padding: 10px 0 0 0;
+	_padding-top:15px;
+	
+}
+
+#school-secondary h2 {
+	border-bottom: none;
+}
+
+#school-secondary h4 {
+	margin-bottom:7px;
+}
+
+#school-secondary .school-college h4 {
+	text-transform:none;
+	}
+
+#school-secondary p {
+	padding:0 0 10px 5px;
+	font-size:14px;
+	color:#1e526d;
+}
+
+/* Admissions Info */
+.school-admissions-info {
+	width:100%;
+	overflow:hidden;
+	padding:0 0 0 5px;
+	}
+	
+.school-admissions-info.top {
+	border-bottom:1px solid #e5e5e5;
+	padding:0 0 15px 5px;
+	margin:0 0 15px 0;
+	}
+	
+.info-box {
+	width: 135px;
+	float: left;
+	/* margin-bottom: 15px; */
+	}
+	
+	
+.info-box-right {
+	float: right;
+	width: 153px;
+	}
+	
+.info-box a {
+	display:block;
+	margin-bottom:7px;
+	}
+
+.info-box span {
+	font-size:10px;
+	font-style:italic;
+	}
+
+
+/* Global column modules across school pages */
+.bottom-border {
+	height:2px;
+	width:293px;
+	background-color:#b2b2b2;
+	overflow:hidden;
+	position:absolute;
+	bottom:0;
+	left:0;
+	margin:0 0 0 4px;
+	@position:relative; /* SHIFT FIX */
+	@left:0px; /* SHIFT FIX */
+	@margin:0px; /* SHIFT FIX */
+	}
+
+#school-news-module, 
+#school-calendar, 
+#school-au-pedia {
+	background:transparent url(/clients/Auyoga/Images/wide-module-stripes.jpg) no-repeat scroll center top;
+	padding: 7px 10px 15px 10px;
+	margin: 5px 0px 11px 0px;
+	border:2px solid #EEEEEE;
+	width: 281px;
+	height: auto;
+	overflow:hidden;
+	position:relative;
+	@padding: 7px 10px 0px 10px; /*SHIFT FIX */
+}
+
+#school-calendar ul{
+	padding-bottom: 4px;
+}
+
+#school-au-pedia {
+	margin: 5px 0 0 5px !important;
+	
+}
+
+#school-news-module ul li.last-li{
+	padding: 2px 0 10px 0;
+}
+
+#school-news-module p {
+	margin: 10px 0 11px 0;
+}
+
+#school-au-pedia ul li{
+	padding: 2px 0 3px 0;
+}
+
+#school-au-pedia ul li.last-li{
+	padding: 2px 0 28px 0;
+}
+
+#school-au-pedia p{
+	margin-bottom: 5px;
+	margin-top: 0;
+	padding: 0;
+}
+
+p.text-imgonright {
+	width: 200px;
+	margin-bottom: 20px !important;
+}
+
+#school-news-module strong {
+	color:#231f20;
+	display:block;
+	}
+	
+#school-news-module img {
+	width: 137px;
+	height: 93px;
+}
+
+#school-news-module .news-img {
+	display: block;
+	margin: 3px 0 5px;
+}
+	
+#school-news-module li {
+	border:0;
+	margin-bottom:20px;
+	}
+
+#school-calendar .date-highlight {
+	float:right;
+}
+
+#school-calendar .no-border {
+	margin-bottom:23px;
+	}
+
+
+/* GLOBAL BOTTOM TOUT MODULES  ON SCHOOL PAGES */
+.tout-module {
+	margin: 27px 0px 11px 11px;
+	_margin: 23px 0px 11px 13px;
+	float:left;
+	display: inline;
+	_width: 213px;
+	_overflow: hidden;
+	padding: 0px 10px 20px;
+	width: 213px;
+}
+
+.tout-module h3 {
+	margin: 0px 0px 11px 0px;
+}
+
+/* --------------------------------------------
+	Image margins
+-------------------------------------------- */
+
+.img-margin-right {
+	margin-right: 5px;
+}
+
+.CS_Form_Required_Baseline {padding-right:10px;}
+.CS_Form_Label_Baseline {padding-right:10px;}
+.CS_Form_Label { padding-right:10px;}
+

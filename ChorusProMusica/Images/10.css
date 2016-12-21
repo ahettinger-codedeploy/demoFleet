@@ -1,0 +1,1169 @@
+@charset "utf-8";
+html, body, div, span, object, frame, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, button, input, select, textarea, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block
+}
+blockquote, q {
+  quotes: none
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none
+}
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none
+}
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold
+}
+del {
+  text-decoration: line-through
+}
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0
+}
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif
+}
+.ie7 img {
+  -ms-interpolation-mode: bicubic
+}
+html {
+  overflow-y: scroll
+}
+small {
+  font-size: 85%
+}
+strong, th {
+  font-weight: bold
+}
+em {
+  font-style: italic
+}
+td {
+  vertical-align: top
+}
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative
+}
+sup {
+  top: -0.5em
+}
+sub {
+  bottom: -0.25em
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px
+}
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden
+}
+.clearfix:after {
+  clear: both
+}
+.clearfix {
+  zoom: 1
+}
+.clear {
+  clear: both
+}
+body {
+  background: #dedede url(https://choruspromusica.s3.amazonaws.com/25/bd/d/22/bg.png) center top repeat-y;
+  font: normal 13px/1.5 Arial, Helvetica, sans-serif;
+  color: #7d7b7b
+}
+.container {
+  width: 960px;
+  margin: auto;
+  position: relative
+}
+#siteheader {
+  z-index: 5;
+  background: url(https://choruspromusica.s3.amazonaws.com/25/a7/8/42/4/header-home.jpg) center top no-repeat
+}
+#siteheader h1 {
+  position: absolute;
+  top: 12px;
+  left: 0
+}
+#siteheader h1 a {
+  display: block;
+  width: 328px;
+  height: 115px;
+  background: url(https://choruspromusica.s3.amazonaws.com/25/42/f/51/2/logo-header.png?v=2) 0 0 no-repeat;
+  text-indent: -9999px
+}
+#main {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  padding: 30px 0 70px
+}
+#widecolumn {
+  width: 670px;
+  border-right: 1px solid #e5e3e4
+}
+#widecolumn .content {
+  padding: 0 50px 25px 0
+}
+#narrowcolumn {
+  width: 250px
+}
+#login a.button {
+  text-transform: none;
+  color: #fff
+}
+#sitenav {
+  margin-top: 180px;
+  background: url(https://choruspromusica.s3.amazonaws.com/25/09/7/21/bg-trans-nav.png) center 0 repeat-y
+}
+.sf-menu>li {
+  float: left;
+  position: relative
+}
+.sf-menu>li>a, .donate {
+  display: block;
+  padding: 0 20px;
+  color: #fff;
+  font-family: CantarellRegular, sans-serif;
+  font-size: 14px;
+  line-height: 3;
+  text-transform: uppercase
+}
+.donate {
+  display: inline-block;
+  background: #b41f23;
+  position: absolute;
+  right: 0;
+  top: 0
+}
+.sf-menu>li>a:hover, .sf-menu>li.sfHover>a, .sf-menu>li>a.selected {
+  background: url(https://choruspromusica.s3.amazonaws.com/25/5f/4/16/bg-subnav.png) 0 0 no-repeat;
+  text-decoration: none
+}
+span.sf-sub-indicator {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  overflow: hidden;
+  background: url(https://choruspromusica.s3.amazonaws.com/25/c2/3/52/sf-sub-indicator.png) 0 0 no-repeat;
+  *vertical-align: middle;
+  text-indent: -9999px
+}
+.sf-menu>li>a:hover span.sf-sub-indicator, .sf-menu>li.sfHover>a span.sf-sub-indicator {
+  background-position: 0 -16px
+}
+.sf-menu li ul {
+  position: absolute;
+  z-index: 10;
+  display: none;
+  top: 32px;
+  left: 0;
+  background: url(https://choruspromusica.s3.amazonaws.com/25/5f/4/16/bg-subnav.png) 0 -40px no-repeat
+}
+.sf-menu li ul li {
+  white-space: nowrap
+}
+.sf-menu li ul li a {
+  color: #fff;
+  display: block;
+  padding: 10px
+}
+.sf-menu li ul li a:hover {
+  background: url(https://choruspromusica.s3.amazonaws.com/25/f4/a/18/bg-trans-f50.png);
+  color: #333;
+  text-decoration: none
+}
+#member-menu {
+  margin-bottom: 20px
+}
+fieldset {
+  border: 1px dotted #ccc;
+  padding: 20px;
+  margin-bottom: 20px
+}
+legend {
+  font-size: 17px;
+  background: #fff;
+  padding: 5px 10px
+}
+.placeholder {
+  color: #999
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #999
+}
+.field {
+  display: inline-block;
+  position: relative
+}
+#main .field img {
+  vertical-align: middle;
+  padding: 0
+}
+.container form label {
+  display: block;
+  font-size: 11px;
+  margin-top: 12px
+}
+.container form div {
+  margin-bottom: 7px
+}
+.container input[type='text'], .container input[type='password'], .container select, .container textarea {
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  margin-right: 6px
+}
+.container textarea {
+  overflow: auto
+}
+.container input[type='text'], .container input[type='password'], .container select {
+  vertical-align: middle
+}
+.container input[type='text']:focus, .container input[type='password']:focus, .container select:focus, .container textarea:focus {
+  background: #fff8e2;
+  color: #333;
+  outline: none
+}
+.container input[type="button"], .container input[type="submit"], .container input[type="image"], .container button {
+  cursor: pointer;
+  background: url(https://choruspromusica.s3.amazonaws.com/25/1b/3/17/bg-trans-dark.png)
+}
+.container input[placeholder="First Name *"], .container input[placeholder="Last Name *"] {
+  width: 180px
+}
+.container input[placeholder="Email Address *"], .container input[placeholder="Subject *"], .container input[placeholder="Voice Part *"] {
+  width: 390px
+}
+.container textarea {
+  width: 390px !important;
+  height: 150px
+}
+.container .contribute_form input[placeholder="First Name *"], .container .contribute_form input[placeholder="Last Name *"] {
+  width: 140px
+}
+.container .contribute_form input[placeholder="Email *"] {
+  width: 202px
+}
+.container .contribute_form input[placeholder="Phone *"] {
+  width: 150px
+}
+.container .contribute_form input[placeholder="Address *"], .container .contribute_form input[placeholder="Address 2"] {
+  width: 380px
+}
+.container .contribute_form input[placeholder="City *"] {
+  width: 190px
+}
+.container form .amounts input[type="text"] {
+  margin-left: 6px
+}
+.container form .amounts label {
+  display: inline-block;
+  width: 180px;
+  padding-bottom: 10px
+}
+.container form .amounts label.radio_button {
+  width: 45px
+}
+.card {
+  padding-top: 20px
+}
+.container input[type="radio"] {
+  vertical-align: text-bottom
+}
+.container input[type="checkbox"] {
+  vertical-align: bottom
+}
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline
+}
+.ie7 legend {
+  margin-left: -7px
+}
+input.error {
+  border: 1px dotted #fa352b;
+  background-color: #faf4d7
+}
+.container form .field label.error {
+  margin-right: 7px
+}
+.error-outer {
+  display: inline-block;
+  position: absolute;
+  margin-top: -22px
+}
+.error {
+  display: block;
+  background-color: #faf4d7;
+  border: 1px dotted #fa352b;
+  padding: 1px 5px
+}
+.container .fieldWithErrors input[type="text"], .container .fieldWithErrors textarea {
+  border: 1px dotted #fa352b !important;
+  background-color: #faf4d7 !important
+}
+.error, .errors, .fieldErrMessage {
+  color: red
+}
+.container form div.fieldErrMessage {
+  margin-bottom: 0
+}
+.error_block {
+  padding: 30px 30px 30px 100px;
+  background: url(httpss://d8ldk29pm7a3h.cloudfront.net/default/images/icon_alert_new.gif) no-repeat 10px 10px #ffebeb;
+  font-weight: bold;
+  color: #333;
+  text-shadow: 0 1px #fff
+}
+a, a:visited {
+  color: #b31f24;
+  text-decoration: none
+}
+a:hover {
+  color: #000;
+  text-decoration: underline
+}
+a:hover, a:active, a:focus {
+  outline: none
+}
+a.button, .container input[type="submit"] {
+  display: inline-block;
+  padding: 5px 10px;
+  color: #fff;
+  vertical-align: middle;
+  text-transform: uppercase;
+  text-align: center
+}
+a.button:visited {
+  color: #fff
+}
+a.button:hover, .container input[type="submit"]:hover {
+  text-decoration: none;
+  background: #333;
+  color: #fff
+}
+a.button:active, .container input[type="submit"]:active {
+  background: #cd4c50
+}
+.g {
+  background: url(https://choruspromusica.s3.amazonaws.com/25/1b/3/17/bg-trans-dark.png)
+}
+.y {
+  background: #e8c245
+}
+.r, .container .filter input[name="commit"], .redbutton input[name="commit"] {
+  background: #b41f23
+}
+.container .filter input[name="commit"]:hover {
+  background: #333;
+  color: #fff
+}
+a.donate, #footer a.donate {
+  display: inline-block;
+  color: #fff;
+  padding: 0 30px;
+  text-transform: uppercase
+}
+a.donate:hover, #footer a.donate:hover {
+  background: #333;
+  color: #fff;
+  text-decoration: none
+}
+a.donate:active, #footer a.donate:active {
+  background: #cd4c50
+}
+#footer a.donate {
+  top: 30px
+}
+a.rss {
+  display: block;
+  height: 24px;
+  width: 24px;
+  background: url(https://choruspromusica.s3.amazonaws.com/25/de/f/117/rss.png) center no-repeat;
+  text-indent: -9999px
+}
+#main img {
+  padding: 5px;
+  background: url(https://choruspromusica.s3.amazonaws.com/25/ff/b/20/bg-trans-light.png)
+}
+#widecolumn img[style*=right], #widecolumn img[align=right], #widecolumn img.right {
+  margin: 5px 0 20px 20px !important
+}
+#widecolumn img[style*=left], #widecolumn img[align=left], #widecolumn img.left {
+  margin: 5px 20px 20px 0 !important
+}
+.des img {
+  opacity: 0.4
+}
+.des:hover img {
+  opacity: 1.0
+}
+#widecolumn img.noshadow, #main .field img {
+  background: none
+}
+ul, ol {
+  margin: 10px 0
+}
+li {
+  margin: 0 0 5px 20px
+}
+ul li {
+  list-style: disc
+}
+ol li {
+  list-style: decimal
+}
+ul.clearfix {
+  margin: 0
+}
+ul.clearfix li {
+  float: left;
+  list-style: none;
+  margin: 0
+}
+#narrowcolumn li {
+  list-style: none;
+  margin: 0
+}
+th, td {
+  text-align: left;
+  vertical-align: top
+}
+th {
+  font-size: 14px
+}
+#widecolumn table {
+  margin-bottom: 30px
+}
+#widecolumn td {
+  padding: 10px
+}
+.left {
+  float: left
+}
+.right {
+  float: right
+}
+.txtRt {
+  text-align: right
+}
+.txtCtr {
+  text-align: center
+}
+.hide {
+  display: none
+}
+.invisible {
+  visibility: hidden
+}
+::-moz-selection {
+  background: #666;
+  color: #fff;
+  text-shadow: none
+}
+::selection {
+  background: #666;
+  color: #fff;
+  text-shadow: none
+}
+.separator {
+  height: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed #ddd
+}
+@font-face {
+  font-family: 'CantarellRegular';
+  src: url("https://choruspromusica.s3.amazonaws.com/25/ad/8/29/cantarell-regular-webfont.eot");
+  src: url("https://choruspromusica.s3.amazonaws.com/25/ad/8/29/cantarell-regular-webfont.eot?#iefix") format("embedded-opentype"), url("https://choruspromusica.s3.amazonaws.com/25/d4/4/32/cantarell-regular-webfont.woff") format("woff"), url("https://choruspromusica.s3.amazonaws.com/25/2a/a/31/cantarell-regular-webfont.ttf") format("truetype"), url("https://choruspromusica.s3.amazonaws.com/25/4b/9/30/cantarell-regular-webfont.svg#CantarellRegular") format("svg");
+  font-weight: normal;
+  font-style: normal
+}
+@font-face {
+  font-family: 'CantarellBold';
+  src: url("https://choruspromusica.s3.amazonaws.com/25/3a/b/25/cantarell-bold-webfont.eot");
+  src: url("https://choruspromusica.s3.amazonaws.com/25/3a/b/25/cantarell-bold-webfont.eot?#iefix") format("embedded-opentype"), url("https://choruspromusica.s3.amazonaws.com/25/e3/c/28/cantarell-bold-webfont.woff") format("woff"), url("https://choruspromusica.s3.amazonaws.com/25/02/1/27/cantarell-bold-webfont.ttf") format("truetype"), url("https://choruspromusica.s3.amazonaws.com/25/07/8/26/cantarell-bold-webfont.svg#CantarellBold") format("svg");
+  font-weight: normal;
+  font-style: normal
+}
+@font-face {
+  font-family: 'SortsMillGoudyRegular';
+  src: url("https://choruspromusica.s3.amazonaws.com/25/07/d/37/goudystm-webfont.eot");
+  src: url("https://choruspromusica.s3.amazonaws.com/25/07/d/37/goudystm-webfont.eot?#iefix") format("embedded-opentype"), url("https://choruspromusica.s3.amazonaws.com/25/3d/1/40/goudystm-webfont.woff") format("woff"), url("https://choruspromusica.s3.amazonaws.com/25/ee/5/39/goudystm-webfont.ttf") format("truetype"), url("https://choruspromusica.s3.amazonaws.com/25/2f/e/38/goudystm-webfont.svg#SortsMillGoudyRegular") format("svg");
+  font-weight: normal;
+  font-style: normal
+}
+@font-face {
+  font-family: 'SortsMillGoudyItalic';
+  src: url("https://choruspromusica.s3.amazonaws.com/25/8a/b/33/goudystm-italic-webfont.eot");
+  src: url("https://choruspromusica.s3.amazonaws.com/25/8a/b/33/goudystm-italic-webfont.eot?#iefix") format("embedded-opentype"), url("https://choruspromusica.s3.amazonaws.com/25/79/7/36/goudystm-italic-webfont.woff") format("woff"), url("https://choruspromusica.s3.amazonaws.com/25/f2/1/35/goudystm-italic-webfont.ttf") format("truetype"), url("https://choruspromusica.s3.amazonaws.com/25/e6/8/34/goudystm-italic-webfont.svg#SortsMillGoudyItalic") format("svg");
+  font-weight: normal;
+  font-style: normal
+}
+h1, h2, h3, h4, h5 {
+  font-family: CantarellRegular, sans-serif;
+  color: #b31f24;
+  line-height: 1.2
+}
+h1 a, h2 a, h3 a, h4 a, h5 a {
+  color: #b31f24
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
+  text-decoration: none;
+  color: #000
+}
+h1 {
+  font-size: 24px;
+  margin: 25px 0;
+  text-transform: uppercase
+}
+h1.pagetitle, #narrowcolumn h1 {
+  border-bottom: 1px dashed #e5e3e4;
+  padding-bottom: 20px;
+  margin-bottom: 35px
+}
+h2 {
+  font-size: 20px;
+  margin: 30px 0 10px
+}
+h3 {
+  font-size: 17px;
+  margin: 20px 0 6px
+}
+.contribute_form h3 {
+  margin-top: 0
+}
+h4 {
+  font-size: 15px;
+  margin: 16px 0 4px
+}
+h5 {
+  font-weight: bold;
+  margin: 12px 0 2px;
+  color: #7b7b7b
+}
+p {
+  margin-bottom: 20px
+}
+p.date {
+  font-size: 11px;
+  font-style: italic;
+  margin-bottom: 0
+}
+blockquote {
+  background: #eee;
+  padding: 20px;
+  width: 80%;
+  margin: 10px auto 30px
+}
+blockquote p {
+  margin-bottom: 5px
+}
+#toplogin {
+  background: url(https://choruspromusica.s3.amazonaws.com/25/ed/a/58/1/bg-toplogin.jpg) center bottom no-repeat
+}
+.toploginform {
+  padding: 20px;
+  text-align: center
+}
+.close {
+  position: absolute;
+  border-radius: 11px;
+  background: #dfdedf;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 6px;
+  border: 1px solid #838283;
+  color: #838283
+}
+#toplogin .close {
+  top: 8px;
+  right: 155px
+}
+.concertinfo .close {
+  top: -40px;
+  right: 0
+}
+.close:hover {
+  background: #838283;
+  color: #dfdedf;
+  text-decoration: none;
+  cursor: pointer
+}
+.topforgot {
+  padding-top: 6px
+}
+.topforgot a {
+  color: #fff
+}
+.topforgot a:hover {
+  color: #b31f24
+}
+#pagetitle {
+  position: relative;
+  background: #999
+}
+#pagetitle h1 {
+  color: #fff;
+  margin: 0 0 0 30px;
+  line-height: 80px;
+  text-transform: uppercase
+}
+#banner {
+  padding-bottom: 40px
+}
+.reviews {
+  position: absolute;
+  top: 65px;
+  left: 600px;
+  width: 350px;
+  text-align: center;
+  font: 22px/1.2 Georgia, "Times New Roman", Times, serif
+}
+.reviews p {
+  display: none
+}
+.reviews span {
+  display: block
+}
+.review {
+  color: #b31f24;
+  font-style: italic;
+  font-weight: bold;
+  padding-bottom: 10px
+}
+.publication {
+  font-style: normal;
+  font-size: 18px;
+  color: #3E3F3F
+}
+.concerts div.right {
+  width: 510px
+}
+.concerts h2 {
+  margin-top: 0
+}
+.concerts h2 span {
+  background: url(https://choruspromusica.s3.amazonaws.com/25/ec/3/135/1/icon-openclose.png) 0 0 no-repeat;
+  margin: -2px 8px 0 0;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  overflow: hidden
+}
+.concerts h2.opened span {
+  background-position: 0 -18px
+}
+.concerts h2.opened a {
+  color: #000
+}
+.concerts h2.opened a:hover {
+  color: #b31f24
+}
+.concerts .first .hide {
+  display: block
+}
+.concertinfo h4 {
+  margin: 10px 0
+}
+.concertinfo {
+  position: relative
+}
+.subheader {
+  width: 290px
+}
+.subheader h3 {
+  margin-top: 8px
+}
+.archives h2.season {
+  margin: 0;
+  padding: 3px 20px;
+  background: #ddd
+}
+.archives h3 {
+  margin: 15px 0 0
+}
+.archives h4 {
+  margin: 4px 0 10px
+}
+.archives h5 {
+  margin: 0 0 6px
+}
+.archives .item .clearfix {
+  padding-bottom: 10px
+}
+#slideshow {
+  position: relative;
+  height: 335px
+}
+#slideshow h1 {
+  margin: 0
+}
+.slides, .slide {
+  overflow: hidden;
+  width: 700px;
+  height: 335px
+}
+#main .slide img {
+  padding: 0;
+  bottom: 0
+}
+.slidetext {
+  height: 80px;
+  width: 100%;
+  background: #584e4f;
+  color: #fff
+}
+.slidetext .date {
+  background: #b41f23;
+  font: 16px/1 CantarellRegular, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 20px;
+  width: 85px
+}
+.slidetext .date span {
+  display: block;
+  font-size: 22px
+}
+.slidetext h2 {
+  color: #fff;
+  font: italic 22px/80px Georgia, "Times New Roman", Times, serif;
+  margin: 0 0 0 30px
+}
+.slidetext td.btn {
+  text-align: right;
+  padding: 20px 24px 0 0;
+  font-family: CantarellRegular, sans-serif
+}
+.slidetext td.btn .button {
+  padding: 10px 20px
+}
+.tabtext {
+  color: #7b7b7b
+}
+.tabtext span:nth-child(2) {
+  width: 155px
+}
+.tabtext .button {
+  padding: 6px 6px 4px;
+  line-height: 1;
+  font-size: 11px;
+  color: #fff;
+  text-align: center;
+  margin-right: 12px;
+  vertical-align: top;
+  text-transform: uppercase;
+  margin-top: 2px
+}
+.tabtext .button span {
+  display: block;
+  font-weight: bold;
+  font-size: 15px
+}
+.controls {
+  display: inline-block;
+  margin: auto;
+  padding-top: 20px
+}
+.controls li a {
+  display: block;
+  height: 5px;
+  width: 105px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: #dbd9da
+}
+.controls li a:hover, .controls li.activeSlide a {
+  background-color: #b41f23
+}
+#slidenav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 257px
+}
+#slidenav h2 {
+  text-transform: uppercase;
+  font-size: 17px;
+  margin: 0 0 0 14px;
+  padding-left: 14px;
+  line-height: 40px;
+  border-bottom: 1px dotted #d7d7d7
+}
+.slidetabs {
+  margin-top: 10px
+}
+.slidetabs li {
+  list-style: none;
+  margin: 0 0 10px 0;
+  padding: 0 0 0 13px
+}
+.slidetabs li .tabtext {
+  display: block;
+  padding: 4px 15px;
+  border: 1px solid #fff;
+  border-left: none
+}
+.slidetabs li:hover, .slidetabs li.activeSlide {
+  background: url(https://choruspromusica.s3.amazonaws.com/25/5b/e/53/1/slidenav-arrow.png) left center no-repeat
+}
+.slidetabs li:hover .tabtext, .slidetabs li.activeSlide .tabtext {
+  background: #f3f3f3;
+  border-color: #ddd;
+  text-decoration: none
+}
+.home {
+  background: url(https://choruspromusica.s3.amazonaws.com/25/b9/a/15/1/bg-midpage.jpg) center 420px no-repeat
+}
+.home #main {
+  background: none
+}
+.home #widecolumn, .home #narrowcolumn {
+  margin-top: 50px
+}
+.home #widecolumn {
+  width: 500px
+}
+.home #narrowcolumn {
+  width: 400px
+}
+.home #main img.left {
+  margin: 5px 20px 20px 0
+}
+.home .welcome, .home .musicdirector {
+  margin-top: 60px
+}
+.home .welcome {
+  width: 380px;
+  padding-right: 50px
+}
+.home .musicdirector {
+  width: 470px;
+  padding-left: 50px;
+  border-left: 1px solid #dddbdc
+}
+.home .welcome h2, .home .musicdirector h2 {
+  text-transform: uppercase;
+  font-size: 17px;
+  border-bottom: 1px dotted #c3c3c3;
+  padding-bottom: 15px;
+  margin: 15px 0 26px
+}
+.form span {
+  display: inline-block
+}
+.home .form input[type="text"] {
+  width: 198px
+}
+.home .form input[placeholder="Email *"] {
+  width: 345px
+}
+.form .error {
+  position: relative;
+  margin-right: 7px
+}
+.form .error .close {
+  position: absolute;
+  top: 4px;
+  right: 4px
+}
+#narrowcolumn .form {
+  padding-bottom: 20px
+}
+#narrowcolumn .form h2 {
+  font-size: 14px;
+  border-top: 1px dashed #e5e3e4;
+  padding-top: 10px;
+  margin-top: 20px
+}
+.container #narrowcolumn .form input[placeholder="First Name *"], .container #narrowcolumn .form input[placeholder="Last Name *"] {
+  width: 98px
+}
+.container #narrowcolumn .form input[placeholder="Email *"] {
+  width: 145px
+}
+.sidebar-blog-list li {
+  padding-bottom: 30px
+}
+.sidebar-blog-list .button {
+  font: 16px/1 CantarellRegular, sans-serif
+}
+.sidebar-blog-list .button span {
+  display: block;
+  font-size: 20px
+}
+.sidebar-blog-list .details {
+  padding-left: 15px;
+  width: 178px
+}
+.sidebar-blog-list .details p {
+  margin-bottom: 3px;
+  line-height: 1
+}
+.sidebar-blog-list .details a, .sidebar-blog-list .details a:visited {
+  font-weight: bold;
+  color: #7d7b7b
+}
+.sidebar li a {
+  display: block;
+  padding: 8px
+}
+.sidebar li a.selected, .sidebar li a:hover {
+  background: url(https://choruspromusica.s3.amazonaws.com/25/5f/4/16/bg-subnav.png) 0 -90px no-repeat;
+  text-decoration: none;
+  color: #fff
+}
+#footer {
+  background: url(https://choruspromusica.s3.amazonaws.com/25/39/a/14/bg-footer.png) center 0 repeat-y;
+  color: #fff
+}
+#footer .container {
+  padding: 30px 30px 100px;
+  font-family: CantarellRegular, sans-serif;
+  color: #c7c1c1;
+  background: url(https://choruspromusica.s3.amazonaws.com/25/fa/0/50/2/logo-footer.png?v=2) right 108px no-repeat
+}
+#footer a {
+  color: #c7c1c1
+}
+#footer a:hover {
+  color: #e8c245;
+  text-decoration: none
+}
+#footer nav {
+  display: inline-block;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #847a7b
+}
+#footer ul {
+  display: inline-block
+}
+#footer li a {
+  display: inline-block;
+  padding: 0 15px;
+  font-size: 15px;
+  border-left: 1px solid #c7c1c1
+}
+#footer li:first-child a {
+  border-left: none;
+  padding-left: 0
+}
+#footer address, #footer summary {
+  display: inline-block;
+  line-height: 60px
+}
+#footer address {
+  border-bottom: 1px solid #847a7b
+}
+#footer details {
+  display: inline-block;
+  line-height: 28px;
+  padding: 0 10px;
+  background: #4b4547
+}
+#sponsorlist a img {
+  opacity: 0.6;
+  filter: alpha(opacity=60)
+}
+#sponsorlist a:hover img {
+  opacity: 1.0;
+  filter: alpha(opacity=100)
+}
+.multimedia .item {
+  padding-bottom: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed #e5e3e4
+}
+.multimedia .item p {
+  margin-bottom: 10px
+}
+.edit-account td {
+  padding: 0 20px 0 0
+}
+.edit-account div span {
+  display: inline-block
+}
+.edit-account input[type="text"] {
+  width: 429px
+}
+.edit-account div.half input {
+  width: 200px
+}
+.edit-account div.third input {
+  width: 123px
+}
+.announcements .recipients {
+  margin-bottom: 20px
+}
+.announcements .recipients br {
+  display: none
+}
+.announcements label.check_box, .announcements .recipients label {
+  display: inline-block;
+  float: left;
+  padding-right: 50px
+}
+.announcements input[type="text"], .announcements textarea {
+  width: 390px !important
+}
+.announcements .item {
+  width: 600px
+}
+.announcements .info, .announcements .message {
+  margin-bottom: 10px
+}
+.announcements h3 span {
+  color: #444;
+  font-size: 14px
+}
+.container form div.filter {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px dotted #ccc
+}
+.container form div.filter .left {
+  width: 600px
+}
+.fb, .tw, .fb:hover, .tw:hover {
+  display: inline-block;
+  height: 27px;
+  width: 27px;
+  padding: 0;
+  border: none;
+  background: url(https://choruspromusica.s3.amazonaws.com/25/44/8/43/1/icons-social.png) no-repeat;
+  overflow: hidden
+}
+.fb {
+  background-position: 0 0;
+  margin-right: 5px
+}
+.tw {
+  background-position: -32px 0
+}
+.fb:hover {
+  background-position: -62px 0;
+  margin-right: 5px
+}
+.tw:hover {
+  background-position: -94px 0
+}
+#sitenav .fb, #sitenav .tw {
+  position: absolute;
+  top: 8px
+}
+#sitenav .fb {
+  right: 140px
+}
+#sitenav .tw {
+  right: 184px
+}
+#footer .fb {
+  margin-left: 15px
+}
+#mask {
+  background: url(https://choruspromusica.s3.amazonaws.com/25/ff/b/20/bg-trans-light.png);
+  display: none;
+  height: 100%;
+  left: 0;
+  padding-top: 90px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 90
+}
+.page-holder {
+  background: #fff;
+  border: 3px solid #eee;
+  padding: 36px 0 36px 36px;
+  position: absolute;
+  z-index: 1000;
+  width: 550px
+}
+.page-holder .close {
+  position: absolute;
+  right: 10px;
+  top: 10px
+}
+.page-holder #info {
+  padding-right: 36px
+}
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important
+  }
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline
+  }
+  a[href]:after {
+    content: " (" attr(href) ")"
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")"
+  }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: ""
+  }
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid
+  }
+  thead {
+    display: table-header-group
+  }
+  tr, img {
+    page-break-inside: avoid
+  }
+  @page {
+    margin: 0.5cm
+  }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3
+  }
+  h2, h3 {
+    page-break-after: avoid
+  }
+}
+.separator {
+  height: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px dashed #ddd
+}

@@ -1,0 +1,376 @@
+/* VERSIONS
+/* 4_5: Initial css version, with most recent production improvements
+/* 4_6: Added base css for Discussion Boards
+/* 4_7: Updated notes and discussion styling, also added Image Form
+/* 5_0: Updated notes styles to reflect new css standards and added all note forms [TODO: Discussions] [Author: Corbin Bentley]
+/* 5_1: Updated discussion styles to reflect new css standards and added all discussion forms [Author: Corbin Bentley]
+/* 6_0: Module Framework (redid classing for Discussions and removed module header/footer styles)
+/* 6_1: Comment List [Author: Nick Hall]
+
+
+/* NOTES STYLES
+********************************************************************************/
+
+/* 
+-----------------------------------------------------------------------------
+ =NoteList
+----------------------------------------------------------------------------- */
+.notes .list ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-image: none;
+    }   
+    .notes .list ul li {
+		border-bottom: 1px solid #EFEFEF;
+		margin-bottom: .5em;
+		padding-bottom: .5em; 
+        list-style: none;
+        list-style-image: none;
+        }
+    .notes .list ul li.alt { }    
+        .notes .list ul li h4 { }
+            .notes .list ul li h4 a { }
+                .notes .list ul li h4 a span { }   
+        .notes .list ul li h5 { }
+            .notes .list ul li h5 a { }
+                .notes .list ul li h5 a span { }   
+        .notes .list ul h6 {
+            font-size: 10px;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+            }
+        .notes .list ul li p { }
+        .notes .list ul li div.thumb { }    
+            .notes .list ul li div.thumb a { }    
+                .notes .list ul li div.thumb a img { }    
+        .notes .list ul li span { }
+            .notes .list ul li span a.edit { }
+            .notes .list ul li span a.delete { }
+                
+.classnotes  { }
+.recentnotes  { }
+.messagenotes  { }
+.shortnotes  { }
+.comments  { }
+
+	        
+/* 
+-----------------------------------------------------------------------------
+ =New/Edit Note Form
+----------------------------------------------------------------------------- */
+.noteform { }
+    .noteform label { }
+        .noteform label span {
+            display: block;
+            }
+            .noteform label span input { }
+            .noteform label span select { }        
+            .noteform label span textarea { }        
+    .noteform input#submit {
+        margin-top: 5px;
+        }        
+
+/* 
+-----------------------------------------------------------------------------
+ =Search Note Form
+----------------------------------------------------------------------------- */
+.searchform { }
+    .searchform label { }
+        .searchform label span {
+            display: block;
+            }
+            .searchform label span input { }
+            .searchform label span select { }        
+            .searchform label span textarea { }        
+    .searchform input#submit {
+        margin-top: 5px;
+        }  
+    .searchform input#clear {
+        margin-top: 5px;
+        }  
+    
+/* 
+-----------------------------------------------------------------------------
+ =Attachments Form
+----------------------------------------------------------------------------- */
+.imageform { }
+    .imageform p { }
+    .imageform label { }
+        .imageform label span {
+            display: block;
+            }
+        .imageform label span input { }    
+        .imageform label span input.Input { }    
+    .imageform input.button {
+        margin-top: 5px;
+        }
+		
+/* 
+-----------------------------------------------------------------------------
+ =Comment List
+----------------------------------------------------------------------------- */
+.comments { float: none; clear: both; }
+	.comments .list ul { }
+		.comments .list ul li { margin: 0; padding: 0; vertical-align: top; }
+		.pc .comments .list ul li {
+			border-bottom: 1px solid #dadada;
+			padding: 8px 10px 10px 100px;
+			background: #fff url(/_infrastructure/images/icons/comments/comment-icon.gif) 10px 10px no-repeat;
+			}
+		.sc .comments .list ul li,
+		.tc .comments .list ul li { margin-bottom: 1em; }
+		.comments .list ul li.alt { }
+		.pc .comments .list ul li.alt { background-color: #f3f3f3; background-image: url(/_infrastructure/images/icons/comments/comment-icon-alt.gif); }
+			.comments .list ul li h3 { margin-bottom: .3em; }
+			.comments .list ul li h4,
+			.comments .list ul li h5,
+			.comments .list ul li h6 { margin-bottom: .2em; }
+			.comments .list ul li p { margin-bottom: .6em; }
+			.comments .list ul li a { }
+			.pc .comments .list ul li ul { border-top: 1px solid #dadada; margin-top: 1em; }
+			.sc .comments .list ul li ul,
+			.tc .comments .list ul li ul { margin: 1em 0 0 2em; }
+
+
+/* DISCUSSION STYLES
+********************************************************************************/
+
+/* 
+-----------------------------------------------------------------------------
+ =General Styles
+----------------------------------------------------------------------------- */
+
+.discussion { position: relative; }
+    .discussion ul {
+        list-style: none;
+        list-style-image: none;
+        padding: 0;
+        margin: 0;
+        }	
+    .discussion .notes {
+	    padding: 0;
+	    margin: 1px 0 0 0;
+	    }
+        .discussion .notes li { }
+        .discussion .notes li:after {
+            content: "."; 
+            display: block; 
+            height: 0; 
+            clear: both; 
+            visibility: hidden;
+            }
+
+/* 
+-----------------------------------------------------------------------------
+ =Topic List
+----------------------------------------------------------------------------- */	
+.discussion .topics { }
+    .discussion .topics .notes {
+	    margin: 0; 
+	    padding: 0; 
+	    }
+        .discussion .topics .notes li {
+	        background: none;
+	        list-style-type: none;
+	        padding: .5em 2px;
+	        margin: 0 2px;
+	        border-top: 1px solid #cccccc;
+	        }
+        .discussion .topics .notes li.first-child {
+	        padding-top: 0.5em; 
+	        border-top: 0;
+	        }
+        .discussion .topics .notes li.alt {
+            background-color: #E8EFF1;
+	        }
+            .discussion .topics .notes h3 {
+	            padding: 0;
+	            margin: 0;
+	            font-weight: normal;
+	            font-size: 1.1em !important;
+	            }
+            .discussion .topics .notes h4 {
+	            float: none;
+	            clear: both;
+	            display: block;
+	            padding: 0;
+	            margin: 0;
+	            font-weight: normal;
+	            font-size: .91em;
+	            }
+            .discussion .topics .notes h5 {
+	            float: right;
+	            clear: right;
+	            display: block;
+	            padding: 0;
+	            margin: 0;
+	            font-weight: normal;
+	            font-size: .92em;
+	            }
+            .discussion .topics .notes h6 {
+	            float: right;
+	            clear: right;
+	            display: block;
+	            padding: 0;
+	            margin: 0;
+	            font-weight: normal;
+	            }
+                .discussion .topics .notes h6 a {
+	                font-size: .92em;
+	                padding: 0;
+	                margin: 0;
+	                }
+            .discussion .topics .notes p {
+	            display: block;
+	            margin: 0;
+	            }
+            .discussion .topics .notes a.url {
+	            padding: 0;
+	            margin: 0;
+	            }
+	            
+/* 
+-----------------------------------------------------------------------------
+ =Thread View
+----------------------------------------------------------------------------- */	
+.discussion .thread { }
+    .discussion .thread h3 { }
+    .discussion .thread .notes {
+	    padding: 0;
+	    margin: 0;
+	    }
+        .discussion .thread .notes li {
+	        padding: 0;
+	        margin: 0;
+	        }
+            .discussion .thread .notes ul { margin-left: 20px; }
+            .discussion .thread .notes li .bb-note-body {
+	            margin: 10px 0;
+	            padding: 0;
+	            }
+            .discussion .thread .notes li .alt {
+                background-color: #E8EFF1;
+                }
+                .discussion .thread .notes h3 {
+	                margin: 0 0 2px 0;
+	                padding: 0;
+	                font-weight: normal;
+	                font-size: 1em;
+	                }
+                .discussion .thread .notes h4 { }
+                .discussion .thread .notes h5 {
+	                float: right;
+	                clear: right;
+	                display: block;
+	                padding: 0;
+	                margin: 0;
+	                font-weight: normal;
+	                font-size: .92em;
+	                color: #828282;
+	                }
+                .discussion .thread .notes h6 {
+	                float: right;
+	                clear: right;
+	                display: block;
+	                padding: 0;
+	                margin: 0;
+	                font-weight: normal;
+	                }
+                    .discussion .thread .notes h6 a {
+	                    font-size: .92em;
+	                    padding: 0;
+	                    margin: 0;
+	                    }
+                .discussion .thread .notes p {
+	                display: block;
+	                margin: 0;
+	                line-height: 1.2em;
+	                }
+	            .discussion .thread .notes a.url {
+	                margin: 0;
+	                }
+
+/* 
+-----------------------------------------------------------------------------
+ =Single View
+----------------------------------------------------------------------------- */	
+.discussion .single { }
+    .discussion .single .notes {
+	    list-style: none;
+	    padding: 0;
+	    margin: 0;
+	    }
+        .discussion .single .notes li {
+	        list-style: none;
+	        list-style-image: none;
+	        padding: 0 0 10px 0;
+	        margin: 0;
+	        }
+            .discussion .single .notes h4 { }
+            .discussion .single .notes ul { }
+                .discussion .single .notes .bb-note-body {
+	                margin: 0;
+	                padding: 5px 0;
+	                }
+                    .discussion .single .notes h3 {
+	                    margin: 0;
+	                    padding: 2px 0;
+	                    font-weight: normal;
+	                    font-size: 1em;
+	                    }
+                    .discussion .single .notes h5 {
+	                    /*float: none;
+	                    clear: both;*/
+	                    display: block;
+	                    padding: 0;
+	                    margin: 0 0 10px 0;
+	                    font-weight: normal;
+	                    font-size: .92em;
+	                    }
+                    .discussion .single .notes h6 {
+	                    float: right;
+	                    clear: right;
+	                    display: block;
+	                    padding: 0;
+	                    margin: 10px 10px 0 0;
+	                    font-weight: normal;
+	                    }
+                        .discussion .single .notes h6 a {
+	                        font-size: .92em;
+	                        padding: 0;
+	                        margin: 0;
+	                        }
+                    .discussion .single .notes p {
+	                    display: block;
+	                    margin: 0 0 10px 0;
+                    	margin-right: 110px; 
+	                    }
+                    .discussion .single .notes a.url {
+	                    margin: 0;
+                    	padding: 0;  
+	                    }
+
+/* 
+-----------------------------------------------------------------------------
+ =Forms
+----------------------------------------------------------------------------- */	
+.discussion .form { }
+    .discussion .form #noteForm { }
+        .discussion .form #noteForm strong { }
+        .discussion .form #noteForm h4 { }
+        .discussion .form #noteForm input { }
+        .discussion .form #noteForm textarea { }
+        .discussion .form #noteForm #submit { }
+
+    .discussion .form #FileEditForm { }
+        .discussion .form #FileEditForm label { 
+	        display: block;
+	        margin-bottom: 5px;
+	        }
+        .discussion .form #FileEditForm label span { 
+	        margin-left: 10px;
+	        }
+            .discussion .form #FileEditForm label span input { }
+            .discussion .form #FileEditForm label span textarea { }

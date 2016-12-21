@@ -1,0 +1,33 @@
+
+// Absolute News Manager 6.0 : AJAX Zone Inject And Paginate
+// Copyright(c) XIGLA SOFTWARE : http://www.xigla.com
+
+
+document.write('<div id="xlaANMzone_ab2b6e"></div>');
+
+
+if (window.addEventListener){ 
+  window.addEventListener("load", xlaANM_load_zone_ab2b6e , false); 
+} else if (window.attachEvent){ 
+  window.attachEvent("onload", xlaANM_load_zone_ab2b6e); 
+} 
+
+
+function xlaANM_zone_content_ab2b6e(content){
+	document.getElementById("xlaANMzone_ab2b6e").innerHTML=content;	
+}
+
+var xlaANM_zone_page_ab2b6e=1;
+
+function xlaANM_load_zone_ab2b6e(){
+	xlaANM_zone_content_ab2b6e('<img src="http://www.cubanhebrew.com//siteimgs/loading.gif" />');
+	myurl = 'http://www.cubanhebrew.com/anmzone.aspx?z=2&pz=2&h=10&ss=y&sc=n&sd=y&st=n&d=v&cp=4&cs=2&layer=ab2b6e&currentpage=' + xlaANM_zone_page_ab2b6e;
+	var oScript = document.createElement("script");
+    oScript.src = myurl
+    document.body.appendChild(oScript);
+
+}
+
+
+
+

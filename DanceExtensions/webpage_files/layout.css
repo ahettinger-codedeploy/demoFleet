@@ -1,0 +1,471 @@
+/*------------------------
+JAVASCRIPT MENU
+-------------------------*/
+TD,P,B,INPUT,DIV{font-family:,helvetica; font-size:12px}
+.clCMEvent{position:absolute; z-index:300; width:100%; height:100%; clip:rect(0,100%,100%,0); left:0; top:0; visibility:hidden; }
+.clCMAbs{position:absolute; width:10; height:10; left:0; top:0; visibility:hidden; }
+.clT,.clTover,.clS,.clSover,.clS2,.clS2over{position:absolute; overflow:hidden; width:120; height:20; cursor:pointer; cursor:hand; }
+/*---------------------------------------  MAIN NAV ------------------------------------------------*/
+/*--Main Item and Main Item Rollover Font Particulars --*/
+.clT,.clTover{font-family:Verdana, Arial, Helvetica, sans-serif; letter-spacing:1px; padding:2px; font-size:12px; font-weight:bold}
+/*--Main Item Font Color --*/
+.clT{color:#FFFFFF;} 
+/*--Main Item Rollover Font Color --*/  
+.clTover{color:#FFFFFF;}
+/*--Main Item Rollover Particulars --*/
+.clTover{text-align: center; layer-background-color:#FFFFFF; background-color:#7980DA;}
+
+/*---------------------------------------  SECONDARY NAV ------------------------------------------------*/
+/*--Secondary Item and Secondary Item Rollover Font Particulars --*/
+.clS,.clSover{font-family:Verdana, Arial, Helvetica, sans-serif; letter-spacing:1px; padding:1px; padding-top:5px; font-size:12px; font-weight:bold}
+/*--Thirtiary Item and Thirtiary Item Rollover Font Particulars --*/
+.clS2,.clS2over{font-family:Verdana, Arial, Helvetica, sans-serif; letter-spacing:1px; padding:1px; padding-top:5px; font-size:12px; font-weight:bold}
+/*--Secondary and Thirtiary Font Particulars --*/
+.clS,.clS2{font-family:Verdana, Arial, Helvetica, sans-serif; letter-spacing:1px; padding:1px; padding-top:5px; color:#FFFFFF; background-color:#7980DA; layer-background-color:#7980DA; text-align: center; font-weight:bold;}
+/*--Secondary Item Rollover and Thirtiary Item Rollover Font Color --*/
+.clSover,.clS2over{color:#FFFFFF;}
+/*--Secondary and Thirtiary Rollover Font Particulars --*/
+.clSover,.clS2over,.clB,.clBar{text-align: center; layer-background-color:#A0C9B6; background-color:#5965AF;}
+
+/*---------------------------------------  DO NOT TOUCH ------------------------------------------------*/
+.clB{position:absolute; visibility:hidden; z-index:300;}
+.clBar{position:absolute; width:10; height:10; visibility:hidden;  margin: 0 0 0 -249; }
+/*clt = First Level Font
+/*clTover = font on mousever
+
+
+/*------------------------
+LAYOUT & WHOLE
+-------------------------*/
+
+html, body, p, h1, h2, h3, h4, h5, h6, form, fieldset, a, div, img {
+						margin: 0; 
+						padding: 0; 
+						font-family: Verdana, Arial, Helvetica, sans-serif;
+						color: #464646;
+						border: 0;}
+						
+html {
+
+						min-height:100%;
+						margin-bottom:1px}
+						
+
+body 				{
+	background-color: #540D1D;
+	text-align: center;
+	background-image: url(../webpage_files/bgrd_curtain2.jpg);
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+}
+
+p					{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #464646;
+	padding-right: 5px;
+						}						
+						
+#wrapper 			{
+	width: 770px;
+	height:100%;
+	margin-left: auto;
+	margin-right: auto;
+	border-style: solid;
+	border-color: #ECECEC;
+	border-width: 0.1em;
+						}
+
+#main 				{background-color: #ffffff; 
+						border-style: solid; 
+						border-color: #7d7d7d; 
+						border-width: 0.1em; 
+						margin-top: 5%;
+						width: 101%;
+						height: 95%;
+						text-align: left;
+						}
+
+						
+#content			{
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-top: 10px;
+	padding-top: 10px;
+						}						
+						
+						
+/*------------------------
+HEADER			
+-------------------------*/
+			
+#header 			{width: 771px; 
+						position: relative;
+						}
+
+#header_left		{margin: 5.5em 0 0 0.5em;
+						float: left;
+						
+						}
+						
+#header_right		{font-family: Verdana, Arial, Helvetica, sans-serif;
+						font-size: 0.9em;
+						color: #464646;
+						float: right;
+						margin: 0.5em 0.5em 0 0;
+						}						
+
+
+/*------------------------
+HEADER
+-------------------------*/
+
+#header 		{
+	position: relative;
+	z-index: 300;
+	text-align: center;
+	width: 770px;
+	height:170px;
+						}
+						
+						
+/*------------------------
+NAVIGATION
+-------------------------*/
+
+#navigation 		{
+	position: relative;
+	z-index: 300;
+	text-align: left;
+	width: 770px;
+	height:12px;
+	
+
+	
+	
+						}
+
+/*------------------------
+BODY
+-------------------------*/
+
+#mainbody 		{
+	position: relative;
+	z-index: 100;
+	text-align: left;
+	width: 768px;
+	border: 1px solid #5965AF;
+	background-color: #FFFFFF;
+	background-image:url(../webpage_files/dance_background.gif);
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	max-height:auto;
+	height:auto;
+	border-bottom: none;
+
+
+	
+	
+	
+						}
+
+
+						
+/*------------------------
+CONTENT
+-------------------------*/		
+
+#content_left		{
+	position: relative;
+	width: 420px;
+	margin-top: 10px;
+	height: 100%;
+	padding-top: 10px;
+	padding-left: 5px;
+						}
+						
+#content_both		{
+	position: relative;
+	width: 760;
+	margin-top: 1.6em;
+	height: 100%;
+	padding-top: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+						}
+						
+#news				{
+	margin-top: 10px;
+	position: absolute;
+	width: 321px;
+	left: 438px;
+	top: 3px;
+	height: 95%;
+	background-color: #EFF0F4;
+	margin-left: 0px;
+	margin-right: 0px;
+						}			
+						
+#news_content				{
+	border: 1px solid #EFF0F4;
+	background-color: #EFF0F4;
+	width: 319px;
+	
+
+						}																		
+
+#news_text			{padding-left: 1.2em;
+						padding-right: 0.7em;
+						}
+
+.col_head			{
+	font-size: 18px;
+	font-weight: bold;
+	color: #5965AF;
+						}
+						
+
+.col_head2			{
+	font-size: 14px;
+	font-weight: bold;
+	color: #5965AF;
+						}
+						
+						
+						
+
+.news_head			{
+	font-size: 12px;
+	font-weight: bold;
+	line-height: normal;
+	color: #FF0000;
+						}	
+
+.weather			{
+	width:300px;
+	height:300px;
+	left: 6px;
+	top: 47px;
+ 
+	 
+						}						
+										
+						
+#links_text			{padding-left: 1.2em;
+						padding-right: 0.7em;
+						margin-top: 0.5em;
+						}
+												
+#links p			{line-height: 200%;
+						}
+
+
+#content_main		{float: left;
+						width: 57%;
+						}
+
+#content_text		{padding: 1em 0.5em 1em 1em;
+						}						
+
+#content_text p		{line-height: 200%;
+						}
+
+									
+
+#content_right		{position: relative;
+						margin-top: 1.5em;
+						margin-bottom: -0.7em;
+						float: right;
+						width: 14em;
+						}
+
+
+h1					{font-size: 1.6em;
+						color: #464646;
+						padding-top: 0.7em;
+						}							
+						
+						
+#contacts			{margin-top: 0.5em;
+						}
+.table_line			{border-bottom: 1px solid #006A3F;
+						}
+
+
+
+#news_item			{
+	margin-top: 10px;
+	margin-left: 1px;
+	margin-right: 1px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border-bottom-style: dashed;
+	border-bottom-color: #5965AF;
+	border-bottom-width: 1px;
+	padding-left: 5px;
+	padding-right: 5px;
+						}						
+
+.smalltext			{
+	font-size: 10px;
+	font-weight: normal;
+	line-height: normal;
+						}						
+						
+
+#contacts_text		{padding-left: 0.7em;
+						padding-right: 0;
+						font-size: 0.9em;
+						}						
+						
+
+
+						
+#clear 				{clear: both; 
+						}
+
+/*------------------------
+CONTENT webpage_files
+-------------------------*/
+
+
+img.imageright			{float: right;
+						margin: 1em;
+						}
+
+
+
+
+/*------------------------
+FOOTER
+-------------------------*/
+
+#footer				{
+	background-color: #7980DA;
+	height: 25px;
+	width: 768px;
+	text-align: center;
+	border: 1px solid #5965AF;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	position: relative;
+	word-spacing: normal;
+	z-index: 100;
+	padding-bottom: 0px;
+	background-image: url(../webpage_files/footer_back.gif);
+	padding-top: 10px;
+	border-top: none;
+	
+						}
+
+a.footerlink			{color: #FFFFFF;
+
+							}
+
+a.footerlink:visited	{color: #FFFFFF;
+							}
+						
+a.footerlink:hover		{color: #FFFFFF;
+						text-decoration:none;
+							}
+
+a.footerlink:active	{color: #FFE7A3;
+							}									
+							
+							
+/* Hide from IE5-mac. Only IE-win sees this.
+*html #footer 		{height: 26px;
+						width: 100%;
+						padding: 0.5em 0.5em 0 0;
+						margin-top: 0em;
+						}\*/
+/* End hide from IE5/mac */		
+
+
+
+
+/*------------------------
+LINK FORMATTING
+-------------------------*/
+
+
+a:link					{text-decoration: none;
+							}
+
+a:visited				{}
+
+a:hover					{
+							text-decoration: underline;
+							}
+
+a:active				{}
+
+
+
+a.news_head				{color: #ef9c00;
+							text-decoration: none;
+							}
+
+a.news_head.visited		{color: #808080;
+							}
+						
+a.news_head.hover		{color: #808080;
+							}
+
+a.news_head.active		{color: #ef9c00;
+							}					
+	
+
+						
+a.contactlink			{color: #006A3F;
+							text-decoration: none;
+							}
+
+a.contactlink.visited	{color: #808080;
+						text-decoration: none;
+							}
+						
+a.contactlink.hover		{color: #808080;
+							}
+
+a.contactlink.active	{color: #ef9c00;
+							}							
+#wrapper #mainbody #content_left p {
+}
+
+
+
+/*-----------------
+ACCORDION INFORMATION
+--------------------*/
+#accordion {
+	margin:20px 0px;
+}
+
+h3.toggler {
+	cursor: pointer;
+	border: 1px solid #f5f5f5;
+	border-right-color: #ddd;
+	border-bottom-color: #ddddddd;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	background: #436537;
+	color: #FFFFFF;
+	margin: 0 0 0 0;
+	padding: 5px 15px 3px;
+}
+
+div.element p, div.element h4 {
+	margin:0px;
+	padding:4px;
+	
+}
+
+div.element {
+	background: #BBD6B1;
+}
+
+blockquote {
+	padding:5px 20px;
+}

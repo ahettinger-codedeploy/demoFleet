@@ -1,0 +1,931 @@
+/*
+Main structure and default values
+*/
+
+/* Event Priority classes */
+.priority1 {
+	background: url('../../images/calendar/flag_blue2.png') no-repeat;
+	min-height: 17px;
+	padding-left: 17px;
+}
+.priority2 {
+	background: url('../../images/calendar/flag_orange2.png') no-repeat;
+	min-height: 17px;
+	padding-left: 17px;
+}
+.priority3 {
+	background: url('../../images/calendar/flag_red2.png') no-repeat;
+	min-height: 17px;
+	padding-left: 17px;
+}
+
+/* Date Dropdown classes */
+#divDateDropdown {
+	background-color: #efefef; 
+	border: 1px solid gray; 
+	color: black; 
+	cursor: pointer; 
+	float: left; 
+	font-size: 0.8em; 
+	margin: 0px auto auto 110px; 
+	position: absolute; 
+	width: 170px;
+	*margin: 25px auto auto -250px; /* Margin fix for IE */
+}
+#divDateDropdownMonth {
+	float: left; 
+	width: 100px;
+}
+#divDateDropdownMonth div {
+	border-right: 1px solid gray; 
+	padding: 5px;
+}
+#divDateDropdownMonth div:hover {
+	background-color: gray; 
+	color: white; 
+}
+#divDateDropdownYear {
+	float: right; 
+	text-align: center; 
+	width: 70px;
+}
+#divDateDropdownYear div {
+	padding: 5px;
+}
+#divDateDropdownYear div:hover {
+	background-color: gray; 
+	color: white; 
+}
+#divDateDropdown .divselected {
+	background-color: black; 
+	color: white; 
+}
+#divDateDropdown .divselected:hover {
+	background-color: black; 
+}
+
+/* Calendar Display */
+#calendar_nav { margin-bottom: 3px; }
+#calendar_buttons {
+	margin-bottom: 3px;
+	width: 60%;
+	float: left;
+}
+#calendar_icons {
+	margin-bottom: 3px;
+	padding-right: 4px;
+	width: 39%;
+	float: right;
+}
+#calendar_icons span {
+	margin-left: 4px;
+	float: right;
+}
+.calendar_titlebar {
+	padding: 3px 0;
+	border: 1px solid #999999;
+	background-color: #BBBBBB;
+	color:#000000;
+	font-weight: bold;
+	font-size: 11px;
+	width: 100%;
+}
+.calendar_titlebar a, .calendar_titlebar a:link, .calendar_titlebar a:visited { color:#000000; }
+.calendar_titlebar input{
+	border:none;
+	background-color:transparent;
+	cursor:pointer;
+}
+
+/* Options Panel */
+.options_titlebar {
+	padding: 3px;
+	border: 1px solid #999999;
+	background-color: #BBBBBB;
+	color:#000;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+/* Table that contains grids */
+.gridcon {
+	width: 100%;
+}
+
+/* Nav Toggle Button */
+.periodbutton {
+	display: block;
+	float: left;
+	margin-right: 2px;
+	padding: 2px 8px;
+	background-color:#EEEEEE;
+	border: 1px solid #CCCCCC;
+	color: #666666;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+}
+.periodbutton_on {
+	display: block;
+	float: left;
+	border: 1px solid #CCCCCC;
+	margin-right: 2px;
+	padding: 2px 8px;
+	background-color:#EEEEEE;
+	color: #666666;
+	font-size: 11px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+}
+a.periodbutton:visited,a.periodbutton:active,a.periodbutton:link {
+	border: 1px solid #CCCCCC;
+	background-color:#EEEEEE;
+	color: #666666;
+	font-size: 11px;
+}
+a.periodbutton_on:visited,a.periodbutton_on:active,a.periodbutton_on:link {
+	border: 1px solid #CCCCCC;
+	background-color:#EEEEEE;
+	color: #666666;
+	font-size: 11px;
+}
+
+/* Day View */
+.daycon ul {
+	padding: 0px;
+	margin: 0px;
+}
+.daycon li {
+	list-style-type: none;
+	overflow: hidden;
+}
+.dayrow_mid {
+	width: 100%;
+	padding-left: 0px;
+	margin: 0px;
+	border-bottom: 1px solid #c0c0c0;
+	min-height: 32px;
+	background-color: #fff;
+}
+.daycon .dayrow_mid{
+	display: none;
+}
+
+.daycon .eventcol {
+	width: 99%;
+}
+
+.timecap {
+	display: block;
+	float: left;
+	width: 49px;
+	height: 19px;
+	padding: 3px;
+	background-color: #FFFFCC;
+	font-weight: bold;
+	text-align: right;
+}
+.timedata {
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+	overflow: auto;
+}
+
+.timealt {
+	background-color: #eee;
+}
+
+/* Week View */
+.weekhead {
+	width: 100%;
+	float: left;
+	background-color: #EEEEEE;
+	border-bottom: 1px solid #c0c0c0;
+	font-weight: bold;
+	text-align: center;
+}
+
+#weekcon{
+	margin-right:-1px;
+}
+
+.weekcon ul {
+	padding: 0px;
+	margin: 0px;
+}
+.weekcon li {
+	list-style-type: none;
+	overflow: hidden;
+}
+
+.weekcol {
+	width: 13%;
+	margin-left:-1px;
+	float: left;
+	border-top: 1px solid #c0c0c0;
+	border-left: 1px solid #c0c0c0;
+	overflow: hidden;
+	
+}
+
+.weekcon .dayrow_mid{
+	display: none;
+}
+
+.weekcon .eventcol {
+	width: 92%;
+}
+
+#weekblock_2 .timecap, #weekblock_3 .timecap, #weekblock_4 .timecap, #weekblock_5 .timecap, #weekblock_6 .timecap, #weekblock_7 .timecap {
+	display: none;
+}
+
+#weekblock_7 {
+	border-right: 1px solid #c0c0c0;
+}
+
+#timecol{
+	width:9%;
+	float:left;
+	padding-top:1px;
+}
+
+#timecol p {
+	margin: 0px;
+}
+.wtimecap {
+	display: block;
+	float: right;
+	width:100%;
+	height:100%;
+	background-color: #dddddd;
+	color:#333333;
+	border-top: 1px solid #999;
+	font-weight: bold;
+	text-align: right;
+}
+
+.weekcol span.timecap {
+	border-bottom:1px solid #999999;
+	margin-left:-56px !important;
+	margin-top:-1px !important;
+	position:relative;
+	z-index:50;
+}
+#weekblock_1 {
+	overflow: visible;
+}
+
+/* Block Styles */
+.bkCol {
+	width: 14.25%;
+	float: left;
+	height: 31px;
+	text-align: center;
+}
+.bkData {
+	border: 1px solid #C0C0C0;
+	width: 100%;
+	height: 100%;
+}
+.blockevent {
+	border-bottom: 1px solid #999999;
+	background-color: #DDDDDD;
+	color:#333333;
+	text-align: center;
+}
+.blockevent span{ display:block; }
+
+.blockevent a {
+	text-decoration: none;
+}
+
+/*		
+	Frontend gowider month grid view
+		- works in FF (with the execption of cell height from javascript)
+		- IE wraps weekend days below previous week
+		- Safari leaves extra padding to right of dayname bar
+			
+	Admin gowider month grid view
+		- FF looks fine except for width of day header (Sat/Sun)
+		- IE wraps weekend days below previous week
+			- removing borders doesn't help
+
+*/
+
+
+/* Grid View */
+#calendarcon{ 
+	visibility:hidden; /*hide the calendar until all values are loaded*/
+}
+.calendarcon{
+	border-top:1px solid #999999;
+	border-left:1px solid #999999;
+}
+.calendarcon ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+.gridsubtitle {
+	background-color: #eee;
+	width:100%;
+}
+.monthrow {
+	background-color: #f6f6f6;
+	min-height: 100px;
+	clear:both;
+	width:100%;
+}
+.lastrow {
+	border-width: 0px 0px 1px 0px !important;
+	border-style: solid;
+	border-color:#999999;
+}
+.deadrow {
+	display: none;
+}
+.coltitle {
+	font-weight: bold;
+	text-align: center;
+}
+.caldata {
+	margin: 0px;
+	padding-left: 0px;
+	border-right:1px solid #999999;
+	border-bottom:1px solid #999999;
+	/*width: 99%;*/
+	overflow-x: hidden;
+}
+.daycap {
+	display: block;
+	padding: 2px;
+	background-color: #ddd;
+	color: #333;
+	text-align: right;
+}
+.daycap_off {
+	display: block;
+	padding: 2px;
+	background-color: #eee;
+	color: #999;
+	text-align: right;
+}
+.daycap_today{
+	background-color: #333;
+	color: #fff;
+}
+.eventobj {
+	
+}
+.eventobj_on {
+	overflow: hidden;
+}
+
+.listcon .eventobj_off {
+	padding-left: 7px;
+	padding-right: 7px;
+}
+.eventspacer {
+	display: block;
+	height:2px;
+}
+.more_obj {
+	display: none;
+}
+
+/* Events */
+/* Event Style */
+.eventcol {
+	margin:0px;
+	padding:4px 2px;
+	width:100%;
+}
+.eventcol p {
+	margin: 0;
+	padding: 0;
+}
+.eventcolicon {
+	width: 10%;
+	max-width: 30px;
+}
+.eventcol_short .eventcon {
+	width: 60% !important;
+}
+.event_indate {
+	float: left;
+	padding-right: 3px;
+}
+.event_icon {
+	float: left;
+}
+.calkey {
+	display:block;
+}
+.calimg {
+	float: left;
+}
+
+.eventcon{
+	display:block;
+	float:left;
+	padding:0 0 0 2px;
+	width:86%;
+}
+.etitle, .event_time, .event_location, .event_notes {
+	display:block;
+}
+.etitle{
+	font-weight:bold;
+	word-wrap: break-word;
+}
+.eicon {
+	float: left;
+	height: 12px;
+	width: 12px;
+	margin-right: 2px;
+	border: 1px solid #999999;
+}
+.elink {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+
+.weekcon .eventcon{
+	width: 70%;
+}
+
+/* Mini-Cal pop-up */
+#cal1Container {
+	position: absolute;
+	display: none;
+}
+#cal2Container {
+	position: absolute;
+	display: none;
+}
+#minical_img1{
+	cursor: pointer;
+}
+#minical_img2{
+	cursor: pointer;
+}
+
+/* Category Legend */
+.identifierkey {
+	float: left;
+	border: 1px solid #000;
+	margin: 3px;
+	line-height: 0;
+}
+#calkeybar {
+	margin-top: 15px;
+	clear: both;
+}
+
+/* Weather Block */
+.weatherblock {
+	overflow: hidden;
+}
+.weatherblock span {
+	display: block;
+	font-size: .9em;
+	float: left;
+	margin-right: 5px;
+}
+.weatherblock span:last-of-type {
+	padding-left: 4px;
+	padding-top: 4px;
+	line-height: 1.3em;
+}
+/* Details Overlay */
+.detailsOverlay {
+	background-color: #ddd;
+	border: 1px solid #999;
+}
+.hd {
+	background-color: #ccc;
+	border-bottom: 1px solid #333;
+	padding: 3px;
+	font-weight: bold;
+}
+
+/* Verbose View */
+.backbar {
+	text-align: right;
+	margin-top: 5px;
+	font-weight: bold;
+}
+
+/* Stacked Date Format */
+.event_stackdate{ display:block; float:left;}
+.event_stackdate span{ display:block; text-align:center; padding:0 .5em; text-transform:uppercase; }
+.event_stackdaynum{ font-size:2em; }
+.event_stackrepeat{ visibility:hidden; }
+
+/* Misc */
+.adminicon {
+	display: none;
+}
+
+.verbose_event {
+	padding: 5px;
+}
+
+/* List View */
+.listcon {
+	width: 100%;
+	list-style-type: none;
+	border-top:1px solid #999999;
+	border-left:1px solid #999999;
+}
+.listcon ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+.listcon .caldata {
+	width:100%;
+}
+.listconempty {
+	border: none;
+}
+.listcap {
+	display: block;
+	background-color: transparent;
+	color: #666666;
+	font-weight: bold;
+	padding: 5px;
+}
+.listevent {
+	display: block;
+	padding: 3px;
+	margin:2px 0;
+}
+.monthhead{
+	display: block;
+	padding: 3px;
+	font-weight: bold;
+}
+.listempty {
+	text-align: center;
+	padding: 10px;
+}
+
+.listonly_block .listcon{
+	border-top:none;
+	border-left:none;
+}
+.listonly_block .caldata{
+	border-right:none;
+	border-bottom:none;
+	width: 100%;
+}
+
+/* Banner & Portal view */
+.bannercon .caldata, .portalcon .caldata{
+	border-style:none;
+}
+
+.bannercon ul, .portalcon ul{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+
+a.addcalevent {
+	background-color: #FFFFFF;
+	border: 1px solid #999999;
+	padding: 2px;
+	margin-top: 1px;
+	line-height: 0;
+}
+
+
+@media print{
+   .caldata {  overflow: visible;  }
+}
+
+
+/* --- Styles for calnav.cfm --- */
+#calendar_feedurl_inputcon { display: none; }
+
+.calendarfeed_rss_menu {
+	width: 150px;
+	color: #333;
+	background-color: #F2F2F2;
+	border: 1px solid #333;
+	display: none;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 10px;
+}
+.calendarfeed_ical_menu {
+	width: 150px;
+	color: #333;
+	background-color: #F2F2F2;
+	border: 1px solid #333;
+	display: none;
+	position: absolute;
+	z-index: 9999;
+	margin-left: 10px;
+}
+.calendarfeed_rss_menu ul, .calendarfeed_ical_menu ul {
+	margin: 0px;
+	padding: 0px;
+}
+.calendarfeed_rss_menu li, .calendarfeed_ical_menu li {
+	list-style: none;
+	margin-left: 5px;
+	border-bottom: 1px solid #ddd;
+}
+.calendarfeed_rss_menu li:hover, .calendarfeed_ical_menu li:hover {
+	background-color: #dcdcdc;
+}
+.calendarfeed_rss_menu a, .calendarfeed_ical_menu a {
+	text-decoration: none;
+	color: #333;
+}
+
+#feedDialog_box .bd, #feedDialog_box td{
+	color: #333;
+}
+
+.cal_dropbox_icon {
+	background-color:#CCCCCC;
+	border:1px solid #333333;
+	position:relative;
+	top:2px;
+}
+
+/* style 2.0 overrides */
+
+#calendarcon .eventcon{
+	width: 95%;
+}
+.identifierkey {
+	border: 1px solid #EEE;
+}
+.periodbutton, a.periodbutton:visited, a.periodbutton:active, a.periodbutton:link,
+a.periodbutton_on:visited, a.periodbutton_on:active, a.periodbutton_on:link {
+	background: #DDD;
+	border: 1px solid #DDD;
+	padding: 4px 8px;
+	border-radius: 4px;
+	color: #777;
+	font-weight: normal;
+}
+a.periodbutton_on:visited, a.periodbutton_on:active, a.periodbutton_on:link{
+	background: #333;
+	border: 1px solid #111;
+	color: #FFF;
+}
+.calendar_titlebar {
+	background: rgba(0, 0, 0, 0);
+	border: 0;
+	font-size: .9em;
+	padding: 15px 0 15px;
+}
+.calendar_titlebar a.prevMonth, .calendar_titlebar a.prevYear, .calendar_titlebar a.nextMonth, .calendar_titlebar a.nextYear {
+	background: #F0F0F0;
+	background: rgba(240, 240, 240, 0.7);
+	border: 0;
+	border-radius: 3px;
+	color: #999;
+	cursor: pointer;
+	font: 10px verdana;
+	font-weight: bold;
+	margin: 0px;
+	padding: 1px;
+	padding: 5px 6px;
+	vertical-align: middle;
+}
+.calendar_titlebar a:hover {
+	background: #F0F0F0;
+}
+a.periodbutton:hover {
+	background: #CCC;
+	border-color: #CCC;
+}
+a.periodbutton_on:hover {
+	background: #333;
+	border-color: #333;
+	color: #FFF;
+}
+#calendar_alert_badge {
+	padding: 2px 4px;
+	border-radius: 4px;
+	font-size: 11px;
+	color: #FFF;
+	text-decoration: none;
+	display: inline-block;
+	background: #0076D2;
+	border: 1px solid #0068B9;
+	vertical-align: top;
+}
+#calendar_alert_badge:hover {
+	background: #0068B9;
+}
+#calendar_icons {
+	width: auto;
+}
+#calendar_icons a {
+	margin-left: 4px;
+	opacity: .6;
+}
+#calendar_icons img {
+	-moz-backface-visibility: hidden;
+}
+#calendar_icons a:hover {
+	opacity: 1;
+}
+#calendarcon .weekhead {
+	background: #FFF;
+	font-size: .9em;
+}
+a.addcalevent {
+	background-color: #FFF;
+	background-color: rgba(255,255,255,.5);
+	border: 0;
+	border-radius: 50%;
+	padding: 2px;
+	line-height: 0;
+	margin: 3px 0 0 3px;
+}
+a.addcalevent img {
+	height: 14px;
+	width: 14px;
+}
+a.addcalevent:hover {
+	background-color: #FFF;
+}
+.listcon,
+.caldata {
+	border-color: #DDD;
+}
+/*Front end calendar output*/
+
+/* Mini Cal */
+.yui-calendar td.calcell{
+	background-color: #efefef;
+	border: 1px solid white;
+	line-height: 1;
+	padding: 0.5em 0.2em;
+}
+.yui-calendar td.calcell .selector,
+.yui-calendar .selector {
+	color: #777;
+}
+.yui-calendar  td.calcell:hover, 
+.yui-calendar  td.calcell.selected {
+	background-color: #d5d5d5;
+	border: 0;
+}
+.yui-calendar td.calcell.oom {
+	background-color: #CCC;
+}
+.yui-calendar  td.calcell.today,
+.yui-calendar  td.calcell.calcellhover {
+	background-color: #333;
+}
+.yui-skin-sam .yui-calendar  td.calcell.today.selected a,
+.yui-skin-sam .yui-calendar td.calcell.today a {
+	background-color: transparent;
+}
+.yui-calendar .calheader .calnav:hover {
+	background: transparent;
+}
+.yui-skin-sam .yui-calendar  td.calcell.calcellhover a{
+	background: transparent;
+}
+.yui-calendar td.calcell.today .selector {
+	color: white;
+}
+.yui-calendar a.calnav:hover {
+	color: #000;
+}
+
+
+.iconLink, .iconLink.inactive:hover {
+    display:inline-block;
+    line-height:1;
+    background-position: 4px center;
+    background-repeat: no-repeat;
+    border-radius: 4px 4px 4px 4px;
+    border-width:1px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.15) rgba(0, 0, 0, 0.25);
+    font-weight: normal;
+    line-height: 1;
+    padding: 4px 8px 4px 24px;
+    text-shadow: 0 -1px 0 rgba(225, 225, 225, 0.25);
+    text-decoration: none;
+    font:inherit; /*this should fix any buttons that it gets applied to*/
+    -webkit-transition: background-color .2s;
+    -moz-transition: background-color .2s;
+    transition: background-color .2s;
+}
+.iconBtnSave:hover {
+    background-color: #55AA55;
+}
+.iconBtnSave, .iconBtnSave.inactive:hover {
+	background-color: #5BB75B;
+	background-image: url("../../images/admin_ui/2.0/white/save.png");
+	background-position: 0.5em center;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	border-style:solid;
+	border-width:1px;
+	color:#fff !important;
+	cursor: pointer;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	-webkit-text-shadow:0 0 1px #008000;
+	box-shadow: 1px 0 0 rgba(255, 255, 255, 0.125) inset, 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05)
+}
+.options_titlebar {
+	background-color: rgba(0, 0, 0, 0);
+	border: 0;
+}
+#calcustomize a {
+	background-color: #999;
+	border-radius: 4px;
+	color: #EEE;
+	display: inline-block;
+	font-size: 11px;
+	line-height: 1;
+	margin: 2px 0;
+	padding: 0.5em;
+	text-decoration: none;
+}
+#calcustomize a:hover {
+	background-color: #777;
+	color: #FFF;
+}
+#basicmenu .options_titlebar a, 
+#basicmenu .options_titlebar a:visited {
+	background: #EEE;
+	background: rgba(238, 238, 238, 0.8);
+	color: #555;
+	display: block;
+	font-size: 1em;
+	font-weight: normal;
+	line-height: 1;
+	padding: .6em 1em .6em .4em;
+}
+#basicmenu .options_titlebar a:hover {
+	background: #F8F8F8;
+}
+.buttons{
+	background: #666;
+	background: rgba(0, 0, 0, .5);
+	border-style: none;
+	border-width: 0;
+	border-width: 0;
+	border-radius: 4px;
+	color: #FFF;
+	padding: .25em .75em;
+	padding: .5em 1em;
+}
+#calcustomize .buttons:hover,
+#calsearch input[type="submit"]:hover {
+	background: #555;
+}
+#calsearch input {
+	outline: none;
+	border: 1px solid #EEE;
+}
+#calsearch input:focus {
+	border: 1px solid #AAA;
+}
+#calsearch input[type="submit"] {
+	padding: 4px 5px 4px !important;
+	line-height: 1;
+	border: 0;
+	border-radius: 3px;
+	font-size: 12px;
+	font-weight: normal;
+	vertical-align: top;
+}
+#calcustomize h3,
+#calsearch h3 {
+	color: #333;
+	font-size: 1.3em;
+}
+#calcustomize a.calnavbar_close,
+#calsearch a.calnavbar_close {
+	background: rgba(0, 0, 0, 0);
+	border-radius: 50%;
+	display: inline;
+	float: right;
+	opacity: .4;
+	padding: 6px 0 5px 8px;
+	width: 16px;
+}
+#calcustomize a.calnavbar_close:hover,
+#calsearch a.calnavbar_close:hover {
+	opacity: 1;
+}

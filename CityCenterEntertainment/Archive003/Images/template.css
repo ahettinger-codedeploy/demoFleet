@@ -1,0 +1,223 @@
+
+/*
+**  Template.css
+**
+**	Default Layout
+**
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html, body {
+	height: 100%
+}
+
+	#wb-container-outer {
+		min-width:800px;
+		min-height:100%;
+		height:auto !important;
+		height: 100%;
+		background-image:none;
+		background-repeat:repeat-x;
+		background-color:#000000;
+	}
+
+	#wb-container-inner {
+		margin: auto;
+		width:800px;
+		background-color:#32312b;
+	}
+
+	#wb-layout {
+	}
+
+	#wb-layout-inner {
+	}
+	
+/* WB-LAYOUT-HEADER: This is the header section *//*overflow:hidden*/
+	#wb-layout-header {
+		width:800px;
+		height:250px;
+		background-image:url(/clients/CityCenterEntertainment/Images/luxurious_hotels_h.gif);
+		background-position: top left;
+		background-repeat: no-repeat;
+		background-color:#e5d4b9;
+	}
+
+	#wb-layout-header-mask {
+		background-image:url(/clients/CityCenterEntertainment/Images/luxurious_hotels_hm.png);
+		background-repeat:no-repeat;
+		width:800px;
+		height:250px;
+		overflow:hidden;
+	}
+		* html #wb-layout-header-mask{
+				background-image:none;
+				filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src=webpage_files/luxurious_hotels_hm.png, );
+				height:250px;
+		}
+			* html #wb-layout-header-mask a {
+				position: relative;
+			}
+
+	#wb-layout-header-base {
+
+	}
+	
+/* WB-LAYOUT-TOP-2: for designs that have navigation between the header and content
+**  Layout 3
+*/
+
+    #wb-navigation-subtop {
+		display: none;
+    }
+
+    #wb-top-subbasenav {
+    }
+
+/* WB-CONTAINER-CONTENTWRAPPER: This wraps the content area of the site
+**
+**	ALL Layouts
+**
+*/
+	#wb-container-contentwrapper {
+		width:800px;
+		height: 100%;
+		background-image:url(/clients/CityCenterEntertainment/Images/luxurious_hotels_main.jpg);
+		background-position: top left;
+		background-repeat: repeat;
+	}
+
+/* SIDEBAR is for designs that have a left or right column built in
+**
+**	Layout 1
+**	Layout 2
+*/
+	#wb-layout-sidebar {
+        float: left;
+        width: 175px;
+		background-image:none;
+	}
+
+* html 	#wb-layout-sidebar {
+        width: 165px;	
+		margin:20px 0 0 15px;
+	}
+	
+	/* sidebar navigation */
+	#wb-navigation {
+		background-position:top left;
+		background-image:url(/clients/CityCenterEntertainment/Images/luxurious_hotels_midnav.jpg);
+		background-repeat: repeat-y;
+
+	}
+
+	#wb-navigation-top {
+		background-image:url(/clients/CityCenterEntertainment/Images/luxurious_hotels_bnav.jpg);
+		background-repeat:repeat-x;
+		background-position: bottom left;
+		padding-bottom: 15px;
+		
+	}
+	
+	#wb-basenav {
+	}
+
+	#wb-navbasewrap {
+		padding:10px 10px 30px 10px;
+	}
+
+/* SIDEBAR NAVIGATION STRUCTURE
+**
+**	Layout 1
+**	Layout 2
+**
+*/
+	#wb-navigation-bottom {
+	/* NO HEIGHT: 100%.  BREAKS FF. */
+			background-position:top left;
+		background-image:url(/clients/CityCenterEntertainment/Images/luxurious_hotels_tnav.jpg);
+		background-repeat: repeat-x;
+		padding-top:20px;
+	}
+	
+		#wb-navigation-bottom div {
+			padding: 3px 0px;
+		}
+		#wb-navigation-bottom div a h3{
+			padding: 0 5px 10px 25px;
+			width: 150px;
+			background-position:top left;
+			background-image:url(/clients/CityCenterEntertainment/Images/luxurious_hotels_bullet.jpg);
+			background-repeat: no-repeat;
+		}
+		
+		* html 	#wb-navigation-bottom div a h3{
+			width: 140px;
+		}
+		
+			#wb-navigation-bottom div.submenu {
+				padding: 0px;
+				background-position:top left;
+				background-image:url(/clients/CityCenterEntertainment/Images/luxurious_hotels_midnav.jpg);
+				background-repeat: repeat-y;
+			}
+				#wb-navigation-bottom div.submenu div {
+				}
+					#wb-navigation-bottom div.submenu div a{
+					}
+           #wb-navigation-bottom div a h3{
+                                               cursor:hand;
+                               }
+
+
+/* MAIN-CONTENT AREA
+**
+**	ALL Layouts
+**
+*/
+	#wb-layout-main {
+		width:625px;
+		height: 100%;
+		float: right;
+		background-image: none;
+		background-position: top right;
+		background-repeat: no-repeat;
+	}
+
+	#wb-layout-main-inner-1 {
+    }
+
+	#wb-layout-main-inner-2  {
+	}
+
+/* Page FOOTER
+**
+**	ALL Layouts
+**
+*/
+	#wb-layout-footer {
+		min-height: 62px;
+		height:auto !important;
+		height: 62px;
+		background-image:url(/clients/CityCenterEntertainment/Images/luxurious_hotels_f.png);
+		background-position: top;
+		background-repeat: repeat-x;
+		width: 800px;
+		background-color:#32312b;
+	}
+		* html #wb-layout-footer  {
+				background-image:none;
+				filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src=webpage_files/luxurious_hotels_f.png, );
+		}
+#wb-layout-footer-inner-1 {
+	padding-top:30px;
+	}
+/* submenu defaults */
+div.submenu {
+	display: none;
+	background-color: #CC742A;
+}

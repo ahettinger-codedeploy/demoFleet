@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><title>
+
+</title>
+    <script type="text/javascript" src="XdmSessionProvider_data/imodules_common_1_0_2.js"> </script>
+    <script type="text/javascript" src="XdmSessionProvider_data/easyXDM.js"> </script>
+	<script type="text/javascript">var sessionData = {"SessionId":"8ac224f4-f853-4fa6-846d-7bbebc21d28f","SiteViewMode":1};</script></head>
+<body>
+	<div>
+	</div>
+    
+	<script type="text/javascript">
+
+	    var XdmLogin = new easyXDM.Rpc({}, {
+	        local: {
+	            EnsureSessionCookie: {
+	                method: function(onSuccess, onError) {
+	                    //alert("SessionId Param:" + jsonResult.SessionId);sessionId
+	                    //if (window.console) {
+	                    //    window.console.debug('XdmSessionProvider.aspx:' + sessionData);
+	                    //}
+	                    return onSuccess(sessionData);
+	                }
+	            }
+	        }
+	    });
+	    
+	    
+	</script>
+
+
+</body></html>

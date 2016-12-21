@@ -1,0 +1,241 @@
+/*
+Theme Name: Nonprofit
+Theme URI: http://themes1.com
+Description: NGO and Charity WordPress Theme
+Author: Themes1
+Author URI: http://themes1.com/
+Version: 1.2
+Tags: white
+Text Domain: nonprofit
+Domain Path: /languages
+
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+*/
+
+
+
+
+	html, body {-webkit-text-size-adjust: 100%;}
+	
+
+/*-------------------------------------
+ *	GLOBALY USED
+ *-------------------------------------*/
+ 
+ 	
+	/* Some helper classes */
+	
+		/** clear floating **/
+		.clear{
+			clear:both;
+			display: block;
+			}
+		.clearfix:after{
+			content: " ";
+			clear: both;
+			display: block;
+			}
+		
+		/** hide overflow **/
+		.hideoverflow{
+			overflow: hidden;
+			}
+		
+		/** full height **/
+		.fullheight{
+			height: 100%;
+			}
+	
+		/** text aligning **/
+		.align-center { text-align: center; }
+		.align-left	{ text-align: left; }
+		.align-right { text-align: right; }
+
+		/** floating **/
+		.no-float { float: none; }
+		.float-left	{ float: left; }
+		.float-right { float: right; }
+	
+		/** disable text selection **/
+		.noselect{
+			-webkit-user-select: none; /* Chrome/Safari */        
+			-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* IE10+ */
+			}
+			
+		/** vertical centering **/
+		.centered-vertically,
+		.valign-middle{
+			position: relative;
+			top: 50%;
+			transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+			}
+		
+		/** content color scheme (light/dark) **/
+		.content-light{	color: #fff; }
+		.content-light a{ color: #ddd; }
+		
+		.content-dark{ color: #000; }
+		.content-dark a{ color: #666; }
+
+
+	/* Loading screen */
+	 
+	.loading-screen{
+		background: #333;
+		}
+		.loading-screen-inner{
+			background: grey;
+			height: 50%;
+			display: block;
+			position: relative;
+			margin: 0 auto;
+			width: 0;
+			}
+		.loading-icon{
+			position: absolute;
+			bottom: -15px;
+			left: -15px;
+			background: url(images/loading.png) no-repeat center;
+			width: 30px;
+			height: 30px;
+			-webkit-animation-name: loadingrotate; 
+			-webkit-animation-duration: 1.3s; 
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-timing-function: linear;
+			-moz-animation-name: loadingrotate; 
+			-moz-animation-duration: 1.3s; 
+			-moz-animation-iteration-count: infinite;
+			-moz-animation-timing-function: linear;
+			}
+		@-webkit-keyframes loadingrotate {
+			from {-webkit-transform: rotate(0deg);}
+			to {-webkit-transform: rotate(360deg);}
+			}
+		@-moz-keyframes loadingrotate {
+			from {-moz-transform: rotate(0deg);}
+			to {-moz-transform: rotate(360deg);}
+			}
+
+
+	
+/*-------------------------------------
+ *	SIDEBARS AND WIDGETS
+ *-------------------------------------*/
+
+
+	/* Sidebar */
+	
+	.sidebar > ul,
+	.sidebar > ol{
+		padding-left: 0;
+		margin: 0;
+		}
+	.sidebar ul,
+	.sidebar ol,
+	.sidebar li{
+		list-style: none;
+		}
+			
+			
+		/** Widget **/
+		
+		.widget > ul{
+			padding-left: 0;
+		}
+		.sidebar .widget img{
+			max-width: 100%;
+			height: auto;
+			}
+		.sidebar .widget select{
+			max-width: 100%;
+			}
+			
+			
+		/** Calendar **/
+		
+		table#wp-calendar{
+			width: 100%;
+			border-color: rgba( 255, 255, 255, 0.3 );
+			}
+		tfoot .pad{
+			border: none;
+			}
+		table#wp-calendar > tbody > tr > td > a{
+			font-weight:bold;
+			font-size:12px;
+			}
+		thead > tr > th{
+			width:20px;
+			height:20px;
+			text-align:center;
+			}
+		table#wp-calendar tbody > tr > td{
+			width:20px;
+			height:20px;
+			text-align:center;
+			border-color: rgba( 255, 255, 255, 0.3 );
+			padding: 8px 0;
+			}
+		tfoot > tr > td > a,
+		tfoot > tr > td > a:link,
+		tfoot > tr > td > a:visited,
+		tfoot > tr > td > a:hover,
+		tfoot > tr > td > a:active{
+			font-weight:bold;
+			font-size:12px;
+			height:20px;
+			}
+		tfoot > tr > td#prev{
+			border: none;
+			width:58px;
+			height:20px;
+			text-align:left;
+			}
+		tfoot > tr > td#next{
+			border: none;
+			width:58px;
+			height:20px;
+			text-align:right;
+			}
+		
+		.sidebar table#wp-calendar,
+		.sidebar table#wp-calendar tbody > tr > td{
+			border-color: #ddd;
+			}
+
+
+
+/*-------------------------------------
+ *	FOOTER
+ *-------------------------------------*/
+
+
+	.footer ul,
+	.footer ol,
+	.footer li{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+	}
+
+		
+	/* footer static parallax*/
+	
+	@media screen and (min-width:901px){	
+	.static-parallax-footer #main{
+		position: relative;
+		z-index: 1;
+	}
+	.static-parallax-footer #footer-wrapper{
+		width: 100%;
+		overflow: hidden;
+	}
+	.static-parallax-footer #footer{
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+	}
+	}

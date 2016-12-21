@@ -1,0 +1,151 @@
+@charset "UTF-8";
+/* CSS Document */
+
+.menu_side, .menu_side * {
+	margin:0;
+	padding:0;
+}
+div#horiz-top_menu {/* this is a z-index ie6 and ie7 bug fix */
+	position:absolute;
+	z-index:50;
+}
+#horiz-top_menu li li {
+	margin:0;
+}
+.menu_side {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 116px 0px 0px 0px;
+	width: 100%;
+}
+.menu_side ul {/*background:#fff;*//*IE6 needs this*/
+	padding:0;
+	clear:left;
+	/*float:left;*/
+width: 940px;
+	list-style:none;
+	margin:0 auto;
+	position:relative;
+	text-align:center;
+}
+.menu_side li {
+	display: inline;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+}
+.menu_side li li {
+	display:block;
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+}
+div.menu_side li li a, div.menu_side li.active li a {
+	display:block;
+	padding:0;
+	margin:0;
+	text-decoration:none;
+	float:none;
+	width:258px;
+	line-height: 20px;
+	text-indent: 15px;
+}
+.menu_side li ul {
+	float:none;
+	left:-999em;
+	position:absolute;
+	width:258px;
+	padding-bottom:5px;
+	z-index:5;
+	
+	-moz-box-shadow: 0px 8px 7px #000;
+	-webkit-box-shadow: 0px 8px 7px #000;
+	box-shadow: 0px 8px 7px #000;
+}
+.menu_side li:hover ul, .menu_side li.sfHover ul {
+	left:0px;
+	top:22px;
+}
+.menu_side li:hover li ul, .menu_side li.sfHover li ul, .menu_side li li:hover li ul, .menu_side li li.sfHover li ul, .menu_side li li li:hover li ul, .menu_side li li li.sfHover li ul {
+	top:-999em;
+}
+.menu_side li li:hover ul, .menu_side li li.sfHover ul, .menu_side li li li:hover ul, .menu_side li li li.sfHover ul, .menu_side li li li li:hover ul, .menu_side li li li li.sfHover ul {
+	left:177px;
+	top:0px;
+}
+.menu_side li li {
+	position:relative;
+	float:none;
+	width:100%;
+}
+.menu_side ul {
+}
+.menu_side ul li a {
+	margin:0 0 0 1px;
+	padding:4px 17px;
+	color:#000;
+	text-decoration:none;
+	line-height:1.3em;
+}
+.menu_side ul li a:hover {
+	background:#1E4D2B;
+	color:#fff;
+}
+.menu_side ul li ul {
+	background:#F5BC23;
+}
+.menu_side ul li ul li {
+	right: 0px;
+	text-align: left;
+}
+#centeredmenu {
+	float:left;
+	width:100%;
+	background:#F5BC23;
+	overflow:hidden;
+	position:relative;
+	height: 1.3em;
+	padding: 3px 0px;
+}
+#centeredmenu ul {
+	clear:left;
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	left:50%;
+	text-align:center;
+}
+#centeredmenu ul li {
+	display:block;
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	right:50%;
+}
+#centeredmenu ul li a {
+	display:block;
+	margin:0 0 0 1px;
+	padding:3px 17px;
+	background:#F5BC23;
+	color:#000;
+	text-decoration:none;
+	line-height:1.3em;
+}
+#centeredmenu ul li a:hover, #centeredmenu ul li a:focus, #centeredmenu ul li a:active {
+	background:#1E4D2B;
+	color:#fff;
+}
+#centeredmenu ul li a.inactive, #centeredmenu ul li a.inactive:hover {
+	color:#1E4D2B;
+	background:#fff;
+	font-weight:bold;
+	cursor: default;
+}

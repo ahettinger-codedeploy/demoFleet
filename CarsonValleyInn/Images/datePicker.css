@@ -1,0 +1,271 @@
+@import url("datePickerCustom.css");
+
+h4.specials_h {
+	float:none;
+}
+.calendarbody {
+	margin:10px 0 0 0;
+}
+.calendarbody h3 {
+	text-align: left;
+	margin: 0px 0px 0px 10px;
+}
+table.jCalendar, table.wp-calendar {
+	width:150px;
+	border-collapse: separate;
+	border-spacing: 4px;
+}
+table.jCalendar th, table.wp-calendar th {/*BG week days names*/
+	font-weight: bold;
+	padding: 0 2px;
+	text-transform:uppercase;
+	font-size:8px;
+	text-align:center;
+}
+table.jCalendar td, table.wp-calendar td {/*BG week days*/
+	font-family: Arial;
+	padding: 0;
+	text-align: center;
+	line-height:12px;
+}
+/* For the popup */
+
+.calendars div.dp-popup, .calendarbody div.dp-popup {
+	background:none;
+	border:0;
+	position:relative;
+}
+div.dp-popup {
+	position: relative;
+	font-size: 10px;
+	font-family: Georgia,Arial,Tahoma,Verdana,Serif;
+	padding: 0;
+	width: 180px;
+	line-height: 1.2em;
+}
+div#dp-popup {
+	position: absolute;
+	padding:5px;
+	width:150px;
+	z-index: 1199;
+}
+div.dp-popup h2 {
+	text-align: left;
+	margin: 2px 0 5px 5px;
+	padding: 0 !important;
+}
+a#dp-close {
+	font-size: 11px;
+	padding: 4px 0;
+	text-align: center;
+	display: block;
+}
+a#dp-close:hover {
+	text-decoration: underline;
+}
+div.dp-popup a {
+	color: #fff;
+	text-decoration: none;
+	padding: 3px 2px 0;
+}
+div.dp-popup div.dp-nav-prev {
+	position: absolute;
+	top: 0;
+	left: 120px;
+	width: 12px;
+	height:11px;
+	line-height:11px;
+}
+div.dp-popup div.dp-nav-prev a {
+	display:block;
+	width:12px;
+	height:11px;
+	overflow:hidden;
+	text-indent:-100px;
+	padding:0;
+	background:url(../images/arr-cal.gif) 0 0 no-repeat;
+}
+/* Opera needs the rules to be this specific otherwise it doesn't change the cursor back to pointer after you have disabled and re-enabled a link */
+div.dp-popup div.dp-nav-prev a, div.dp-popup div.dp-nav-next a {
+	cursor: pointer;
+}
+div.dp-popup div.dp-nav-prev a.disabled, div.dp-popup div.dp-nav-next a.disabled {
+	cursor: default;
+}
+div.dp-popup div.dp-nav-next {
+	position: absolute;
+	top: 0;
+	left: 134px;
+	width: 12px;
+	height:11px;
+	line-height:11px;
+}
+div.dp-popup div.dp-nav-next a {
+	display:block;
+	width:12px;
+	height:11px;
+	overflow:hidden;
+	text-indent:-100px;
+	padding:0;
+	background:url(../images/arr-cal.gif) left -15px no-repeat;
+}
+div#dp-popup div.dp-nav-prev, div#dp-popup div.dp-nav-next {
+	top:7px;
+}
+div.dp-popup div.dp-nav-next a.disabled, div.dp-popup div.dp-nav-prev a.disabled {
+	cursor: default;
+	color: #aaa;
+}
+div.dp-popup td {
+	cursor: pointer;
+}
+div.dp-popup td.disabled {
+	cursor: default;
+}
+
+a.dp-choose-date {
+	background-image: url(../images/calendar.gif);
+	background-repeat: no-repeat;
+	bottom: auto;
+	display: block;
+	height: 12px;
+	float:left;
+	left: -20px;
+	margin: 30px 0 0 -30px;
+	position: relative;
+	top: 5px;
+	text-indent: -2000px;
+	overflow: hidden;
+	margin: 0;
+	width: 13px;
+}
+a.dp-choose-date.dp-disabled {
+	background-position: 0 -20px;
+	cursor: default;
+}
+.form td a.dp-choose-date {
+
+}
+input.dp-applied {
+	float: left;
+	/*color: #6e6b5c;
+	width:80px;*/
+}
+
+/* EVENTS */
+
+.calendarbody .calendar {
+	margin-bottom:15px;
+}
+.calendarbody #jqCalendar {
+	background:url(../images/calendar.gif) 0 0 no-repeat;
+	padding:10px 5px;
+}
+.calendarbody h2 {
+	color: #dfd4c4 !important;
+	margin-left:5px;
+}
+.calendarbody .events {
+	padding:0;
+	margin:10px 0;
+}
+.calendarbody .events li {
+	display:block;
+	position:relative;
+	font:normal 12px Georgia,Arial,Tahoma,Verdana,Serif;
+	position:relative;
+	padding:0 0 10px 10px;
+	background:none;
+	margin:0;
+}
+.calendarbody .events a {
+	padding:0 !important;
+	background:none !important;
+	text-decoration:none !important;
+}
+.calendarbody .events strong {
+	display:block;
+	line-height:13px;
+	padding:0;
+	margin:0;
+	font-size:10px;
+}
+.calendarbody .events .date {
+	display:block;
+	font-size:11px;
+}
+
+.calendarbody .events p {
+	display:block;
+	padding:0;
+	font-size:10px;
+	line-height:11px;
+}
+.calendarbody .events em {
+	display:block;
+	padding:0;
+	font-size:9px;
+	font-style:italic;
+}
+.calendarbody a.more {
+	display:block;
+	font-size:10px;
+	text-decoration:underline !important;
+	color:#e4a28b;
+}
+.calendarbody a.more:hover {
+	text-decoration:underline;
+}
+.calendarbody .links {
+	display: inline;
+	float:left;
+	padding:0;
+	position:relative;
+	margin-left: 10px;
+}
+.calendarbody .links li {
+	display:block;
+	float:left;
+	width:19px;
+	height:12px;
+	overflow:hidden;
+	margin:0 2px 0 0;
+	padding:0;
+	background:url(../images/icons.png) -40px 0px no-repeat;
+}
+.calendarbody .links a {
+	display:block;
+	width:19px;
+	height:12px;
+	overflow:hidden;
+}
+.calendarbody li.ical {
+	background-position:0px 0;
+}
+.calendarbody li.print {
+	background-position: -20px 0px;
+}
+.calendarbody a.calendar-link {
+	display:block;
+	font-size: 11px;
+}
+#ajaxloading {
+	color:#015d7b;
+	font-size:10px;
+	text-align:center;
+	line-height:15px;
+	display:none;
+}
+#jqCalendarResults1 {
+	position:relative;
+	clear:both;
+	overflow:hidden;
+	text-align: left;
+}
+
+td input.date-pick {
+	margin-right:4px;
+}
+div.dp-popup div.dp-nav-prev a.dp-nav-prev-year, div.dp-popup div.dp-nav-next a.dp-nav-next-year{
+	display:none;
+	}

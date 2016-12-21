@@ -1,0 +1,116 @@
+/* Meta box: gallery manager */
+
+.GALLERY-wrapper,
+.GALLERY-wrapper *,
+.GALLERY-wrapper *:before,
+.GALLERY-wrapper *:after{
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.GALLERY-wrapper{
+	padding: 10px;
+}
+.GALLERY-wrapper:after,
+.GALLERY-list > li .imgctrl:after{
+	content: " ";
+	display: block;
+	clear: both;
+}
+
+.GALLERY-list{
+	padding-top: 20px;
+	margin: 0;
+	border-top: dashed 1px #ddd;
+}
+.GALLERY-item{
+	cursor: move;
+	display: block;
+	float: left;
+	padding: 4px;
+	position: relative;
+	width: 150px;
+	height: 150px;
+}
+.GALLERY-item > div{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.GALLERY-item .imgbg{
+	background-color: #222;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 100%;
+}
+.GALLERY-item .imgctrl{
+	display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 30px;
+}
+.GALLERY-item:hover .imgctrl,
+.GALLERY-item .imgctrl.visible{
+	display: block;
+}
+.GALLERY-item .imgctrl > div{
+	border-radius: 15px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	width: 16px;
+	height: 16px;
+	float: right;
+	margin: 2px 8px 0 0px;
+}
+.GALLERY-item .imgdel{
+	background: url(images/imgdel.png) center no-repeat #900;
+	cursor: pointer;
+}
+.GALLERY-item .imgdel:hover{
+	background-color: #f00;
+}
+.GALLERY-item .imginfo{
+	/**/display: none;
+	background: url(images/imginfo.png) center no-repeat #ddd;
+	cursor: pointer;
+}
+.GALLERY-item .imginfo:hover{
+	background-color: #fff;
+}
+.GALLERY-item .imginfo > div{
+	display: none;
+	background: rgba(30,30,30,0.95);
+	border: solid 1px rgba(255,255,255,0.3);
+	border-radius: 4px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+	padding: 8px;
+	position: absolute;
+	z-index: 2;
+	bottom: 8px;
+	right: 28px;
+	width: 170px;
+	height: 165px;
+	font-size: 10px;
+}
+.GALLERY-item .imginfo > div input,
+.GALLERY-item .imginfo > div textarea{
+	background: #111;
+	border: solid 1px #333;
+	color: #aaa;
+}
+
+
+
+
+
+.ui-state-highlight {
+	background: #ddd;
+	border: dashed 1px #aaa; 
+	padding: 0;
+}
+
+

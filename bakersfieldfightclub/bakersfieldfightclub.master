@@ -1,0 +1,334 @@
+<%
+'changelog'
+'LSP 12/01/16 - initial development'
+%>
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" class="html_stretched responsive av-preloader-disabled av-default-lightbox  html_header_top html_logo_left html_main_nav_header html_menu_right html_custom html_header_sticky html_header_shrinking html_mobile_menu_tablet html_disabled html_header_searchicon_disabled html_content_align_center html_header_unstick_top html_header_stretch html_minimal_header html_minimal_header_shadow html_elegant-blog html_entry_id_813  avia_desktop  js_active  avia_transform  avia_transform3d  avia_transform  avia_transform3d  avia_transform  avia_transform3d  avia-mozilla avia-mozilla-50 avia-windows"
+    lang="en-US">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+<script src="https://www.tix.com/clients/tix/js/jquery-1.6.4.min.js" type="text/javascript"></script>
+	 <style>
+		 div,span {
+			 font-size: inherit;
+		 }
+	 </style>
+<script src="https://www.tix.com/clients/tix/js/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="https://www.tix.com/javascript/Tooltip.js"></script>
+
+<style>
+    #arrow {
+        z-index: 999998;
+        display: none;
+        background-color: Transparent;
+        pointer-events: none;
+    }
+
+    #tooltipBox {
+        z-index: 999999;
+        display: none;
+        position: absolute;
+    background-color: #fff !important;
+        border: 1px solid rgba(120, 120, 120, 0.8);
+        border-radius: 3px;
+        margin: 10px 8px;
+        padding: 5px;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        pointer-events: none;
+    }
+
+    #EventTooltip {
+        background-color: #fff;
+    }
+
+    #EventTooltip table, #EventTooltip tr, #EventTooltip td {
+        border: 0;
+    }
+
+    .tooltip-text {
+        width: 400px;
+        padding: 10px;
+        font-size: 0.85em;
+    }
+</style>
+
+<div id="tooltipBox">
+    <div id="EventTooltip"><img src="https://www.tix.com/images/loading.gif" /></div>
+</div>    
+<div id="arrow"><img src="https://www.tix.com/images/ArrowLeftDown.png" name="arrowimg" /></div>
+
+    <link rel="dns-prefetch" href="http://s.w.org/">
+    <link rel="alternate" type="application/rss+xml" title="bakersfieldfightclub.com » Feed" href="http://bakersfieldfightclub.com/feed/">
+    <link rel="alternate" type="application/rss+xml" title="bakersfieldfightclub.com » Comments Feed" href="http://bakersfieldfightclub.com/comments/feed/">
+    <link rel="stylesheet" id="avia-google-webfont" href="/clients/bakersfieldfightclub/images/css.css" media="all"> 
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="/clients/bakersfieldfightclub/images/e0d33ae0ee4886222c0ac75dd7754149.css"> <script src="/clients/bakersfieldfightclub/images/a063b3dde05a64fcb5e439c05f446aec.js"></script>
+        <link rel="https://api.w.org/" href="http://bakersfieldfightclub.com/wp-json/">
+        <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://bakersfieldfightclub.com/xmlrpc.php?rsd">
+        <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://bakersfieldfightclub.com/wp-includes/wlwmanifest.xml">
+        <meta name="generator" content="WordPress 4.6.1">
+        <link rel="shortlink" href="http://bakersfieldfightclub.com/?p=813">
+        <link rel="alternate" type="application/json+oembed" href="http://bakersfieldfightclub.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fbakersfieldfightclub.com%2Ftickets%2F">
+        <link rel="alternate" type="text/xml+oembed" href="http://bakersfieldfightclub.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fbakersfieldfightclub.com%2Ftickets%2F&amp;format=xml">
+        <link rel="profile" href="http://gmpg.org/xfn/11">
+        <link rel="alternate" type="application/rss+xml" title="bakersfieldfightclub.com RSS2 Feed" href="http://bakersfieldfightclub.com/feed/">
+        <link rel="pingback" href="http://bakersfieldfightclub.com/xmlrpc.php">
+        <style media="screen">
+            #top #header_main>.container,
+            #top #header_main>.container .main_menu ul:first-child>li>a,
+            #top #header_main #menu-item-shop .cart_dropdown_link {
+                height: 205px;
+                line-height: 205px
+            }
+            
+            .html_top_nav_header .av-logo-container {
+                height: 205px
+            }
+            
+            .html_header_top.html_header_sticky #top #wrap_all #main {
+                padding-top: 205px
+            }
+        </style>
+        <!--[if lt IE 9]><script src="http://bakersfieldfightclub.com/wp-content/themes/enfold/js/html5shiv.js"></script><![endif]-->
+
+
+        <style type="text/css" id="av-browser-width-mm"></style>
+</head>
+
+<body id="top" class="page page-id-813 page-template-default stretched oswald lato " itemscope="itemscope" itemtype="https://schema.org/WebPage">
+    <div id="wrap_all">
+        <a id="advanced_menu_hide" href="#" aria-hidden="true" data-av_icon="" data-av_iconfont="entypo-fontello"></a>
+        <ul id="mobile-advanced" class="">
+            <li id="menu-item-780" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-1"><a href="http://bakersfieldfightclub.com/" itemprop="url"><span class="avia-bullet"></span><span class="avia-menu-text">Home</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+            <li id="menu-item-915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-mega-parent  menu-item-top-level menu-item-top-level-2"><a href="http://bakersfieldfightclub.com/schedule/" itemprop="url"><span class="avia-bullet"></span><span class="avia-menu-text">Schedule</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+            <li id="menu-item-825" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-813 current_page_item menu-item-top-level menu-item-top-level-3"><a href="http://bakersfieldfightclub.com/tickets/" itemprop="url"><span class="avia-bullet"></span><span class="avia-menu-text">Tickets</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+            <li id="menu-item-824" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-4"><a href="http://bakersfieldfightclub.com/venue/" itemprop="url"><span class="avia-bullet"></span><span class="avia-menu-text">Venue</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+            <li id="menu-item-833" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-5"><a href="http://bakersfieldfightclub.com/media/" itemprop="url"><span class="avia-bullet"></span><span class="avia-menu-text">Media</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+            <li id="menu-item-834" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-6"><a href="http://bakersfieldfightclub.com/livestream/" itemprop="url"><span class="avia-bullet"></span><span class="avia-menu-text">Livestream</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+            <li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-7"><a href="http://bakersfieldfightclub.com/news/" itemprop="url"><span class="avia-bullet"></span><span class="avia-menu-text">News</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+            <li id="menu-item-835" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-8"><a href="http://bakersfieldfightclub.com/staff/" itemprop="url"><span class="avia-bullet"></span><span class="avia-menu-text">Staff</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+            <li id="menu-item-892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-9"><a href="http://bakersfieldfightclub.com/sponsors/" itemprop="url"><span class="avia-bullet"></span><span class="avia-menu-text">Sponsors</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+            <li id="menu-item-871" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-10"><a href="http://bakersfieldfightclub.com/contact/" itemprop="url"><span class="avia-bullet"></span><span class="avia-menu-text">Contact</span><span class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span></span></a></li>
+        </ul>
+        <header id="header" class="all_colors header_color dark_bg_color  av_header_top av_logo_left av_main_nav_header av_menu_right av_custom av_header_sticky av_header_shrinking av_header_stretch av_mobile_menu_tablet av_header_searchicon_disabled av_header_unstick_top av_seperator_small_border av_minimal_header av_minimal_header_shadow av_bottom_nav_disabled "
+            role="banner" itemscope="itemscope" itemtype="https://schema.org/WPHeader" style="margin-top: 0px;">
+            <div id="header_main" class="container_wrap container_wrap_logo">
+                <div class="container av-logo-container" style="height: 205px; line-height: 205px;">
+                    <div class="inner-container"><strong class="logo"><a href="http://bakersfieldfightclub.com/" style="max-height: 205px;"><img src="/clients/bakersfieldfightclub/images/BakersfieldFightClubLogoWeb_Transparent-800x849-1-283x300.png" alt="bakersfieldfightclub.com" style="max-height: 205px;" width="300" height="100"></a></strong>
+                        <a
+                            id="advanced_menu_toggle" href="#" aria-hidden="true" data-av_icon="" data-av_iconfont="entypo-fontello"></a>
+                            <nav class="main_menu" data-selectname="Select a page" role="navigation" itemscope="itemscope"
+                                itemtype="https://schema.org/SiteNavigationElement">
+                                <div class="avia-menu av-main-nav-wrap av_menu_icon_beside">
+                                    <ul id="avia-menu" class="menu av-main-nav">
+                                        <li id="menu-item-780" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-1"
+                                            style="">
+                                            <a href="http://bakersfieldfightclub.com/" itemprop="url" style="height: 205px; line-height: 205px;"><span class="avia-bullet"></span><span class="avia-menu-text">Home</span>
+                                                <span
+                                                    class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span>
+                                                    </span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-mega-parent  menu-item-top-level menu-item-top-level-2"
+                                            style="">
+                                            <a href="http://bakersfieldfightclub.com/schedule/" itemprop="url" style="height: 205px; line-height: 205px;"><span class="avia-bullet"></span><span class="avia-menu-text">Schedule</span>
+                                                <span
+                                                    class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span>
+                                                    </span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-825" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-813 current_page_item menu-item-top-level menu-item-top-level-3"
+                                            style="">
+                                            <a href="http://bakersfieldfightclub.com/tickets/" itemprop="url" style="height: 205px; line-height: 205px;"><span class="avia-bullet"></span><span class="avia-menu-text">Tickets</span>
+                                                <span
+                                                    class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span>
+                                                    </span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-824" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-4"
+                                            style="">
+                                            <a href="http://bakersfieldfightclub.com/venue/" itemprop="url" style="height: 205px; line-height: 205px;"><span class="avia-bullet"></span><span class="avia-menu-text">Venue</span>
+                                                <span
+                                                    class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span>
+                                                    </span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-833" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-5"
+                                            style="">
+                                            <a href="http://bakersfieldfightclub.com/media/" itemprop="url" style="height: 205px; line-height: 205px;"><span class="avia-bullet"></span><span class="avia-menu-text">Media</span>
+                                                <span
+                                                    class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span>
+                                                    </span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-834" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-6"
+                                            style="">
+                                            <a href="http://bakersfieldfightclub.com/livestream/" itemprop="url" style="height: 205px; line-height: 205px;"><span class="avia-bullet"></span><span class="avia-menu-text">Livestream</span>
+                                                <span
+                                                    class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span>
+                                                    </span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-7"
+                                            style="">
+                                            <a href="http://bakersfieldfightclub.com/news/" itemprop="url" style="height: 205px; line-height: 205px;"><span class="avia-bullet"></span><span class="avia-menu-text">News</span>
+                                                <span
+                                                    class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span>
+                                                    </span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-835" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-8"
+                                            style="">
+                                            <a href="http://bakersfieldfightclub.com/staff/" itemprop="url" style="height: 205px; line-height: 205px;"><span class="avia-bullet"></span><span class="avia-menu-text">Staff</span>
+                                                <span
+                                                    class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span>
+                                                    </span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-892" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-9"
+                                            style="">
+                                            <a href="http://bakersfieldfightclub.com/sponsors/" itemprop="url" style="height: 205px; line-height: 205px;"><span class="avia-bullet"></span><span class="avia-menu-text">Sponsors</span>
+                                                <span
+                                                    class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span>
+                                                    </span>
+                                            </a>
+                                        </li>
+                                        <li id="menu-item-871" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-top-level menu-item-top-level-10"
+                                            style="">
+                                            <a href="http://bakersfieldfightclub.com/contact/" itemprop="url" style="height: 205px; line-height: 205px;"><span class="avia-bullet"></span><span class="avia-menu-text">Contact</span>
+                                                <span
+                                                    class="avia-menu-fx"><span class="avia-arrow-wrap"><span class="avia-arrow"></span></span>
+                                                    </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <ul class="noLightbox social_bookmarks icon_count_3">
+                                 <li class="social_bookmarks_facebook av-social-link-facebook social_icon_1"><a href="https://www.facebook.com/bakersfieldfightclub"><i class="fa fa-facebook"></i></a></li>
+                        <li
+                            class="social_bookmarks_twitter av-social-link-twitter social_icon_2"><a href="https://twitter.com/BFL_fightclub"><i class="fa fa-twitter"></i></a></li>
+                            <li class="social_bookmarks_instagram av-social-link-instagram social_icon_3"><a href="https://www.instagram.com/bakersfieldfightclub/"><i class="fa fa-instagram"></i></a></a></li>
+
+
+ </ul>
+                            </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="header_bg"></div>
+        </header>
+        <div id="main" class="all_colors" data-scroll-offset="205">
+            <div id="av_section_1" class="avia-section main_color avia-section-large avia-no-border-styling avia-bg-style-scroll  avia-builder-el-0  avia-builder-el-no-sibling  container_wrap fullsize">
+                <div class="container">
+                    <main role="main" itemprop="mainContentOfPage" class="template-page content  av-content-full alpha units">
+                        <div class="post-entry post-entry-type-page post-entry-813">
+                            <div class="entry-content-wrapper clearfix">
+                                <div style="padding-bottom:30px;font-size:70px;" class="av-special-heading av-special-heading-h1  blockquote modern-quote  avia-builder-el-1  el_before_av_one_half  avia-builder-el-first   av-thin-font av-inherit-size">
+                                    <h1 class="av-special-heading-tag" itemprop="headline">Tickets<strong>.</strong></h1>
+                                    <div class="special-heading-border">
+                                        <div class="special-heading-inner-border"></div>
+                                    </div>
+                                </div>
+                                <div class="flex_column av_one_half  flex_column_div av-zero-column-padding first  avia-builder-el-2  el_after_av_heading  el_before_av_one_half  "
+                                    style="border-radius:0px; ">
+                                    <section class="av_textblock_section" itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
+                                        <div class="avia_textblock " itemprop="text">
+                                            <p>
+                                            <!--tix content-->
+                                        <asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+                                            </p>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="flex_column av_one_half  flex_column_div av-zero-column-padding   avia-builder-el-4  el_after_av_one_half  avia-builder-el-last  "
+                                    style="border-radius:0px; "></div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+            <div class="container_wrap footer_color" id="footer">
+                <div class="container">
+                    <div class="flex_column av_one_third  first el_before_av_one_third">
+                        <section id="text-3" class="widget clearfix widget_text">
+                            <h3 class="widgettitle">Venue</h3>
+                            <div class="textwidget">
+                                <p>Dignity Health Event Center<br> 1400 Norris Road<br> Bakersfield, CA 93308</p>
+                            </div> <span class="seperator extralight-border"></span></section>
+                    </div>
+                    <div class="flex_column av_one_third  el_after_av_one_third  el_before_av_one_third ">
+                        <section id="text-6" class="widget clearfix widget_text">
+                            <h3 class="widgettitle">About Us</h3>
+                            <div class="textwidget">
+                                <p><a href="http://bakersfieldfightclub.com/staff/">Staff</a><br> <a href="http://bakersfieldfightclub.com/venue/">Venue</a><br>                                    <a href="http://bakersfieldfightclub.com/schedule/">Schedule</a><br> <a href="http://bakersfieldfightclub.com/news/">News</a></p>
+                            </div>
+                            <span class="seperator extralight-border"></span></section>
+                    </div>
+                    <div class="flex_column av_one_third  el_after_av_one_third  el_before_av_one_third ">
+                        <section id="text-5" class="widget clearfix widget_text">
+                            <h3 class="widgettitle">Contact</h3>
+                            <div class="textwidget">
+                                <p>Office Number<br> (661) 615-6550</p>
+                            </div> <span class="seperator extralight-border"></span></section>
+                    </div>
+                </div>
+            </div>
+            <footer class="container_wrap socket_color" id="socket" role="contentinfo" itemscope="itemscope" itemtype="https://schema.org/WPFooter">
+                <div class="container"> <span class="copyright"> &#169; Copyright - Bakersfield Fight Club | Website by <a href="http://www.shore.com/" target="_blank">Shore</a></span>
+                    <ul class="noLightbox social_bookmarks icon_count_3">
+                        <li class="social_bookmarks_facebook av-social-link-facebook social_icon_1"><a href="https://www.facebook.com/bakersfieldfightclub"><i class="fa fa-facebook"></i></a></li>
+                        <li
+                            class="social_bookmarks_twitter av-social-link-twitter social_icon_2"><a href="https://twitter.com/BFL_fightclub"><i class="fa fa-twitter"></i></a></li>
+                            <li class="social_bookmarks_instagram av-social-link-instagram social_icon_3"><a href="https://www.instagram.com/bakersfieldfightclub/"><i class="fa fa-instagram"></i></a></a></li>
+
+
+
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div> 
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+
+		<script>
+			$(document).ready(function() {
+				$("#MasterContent_TixInnerContent_pnlButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_ButtonPanel").removeAttr("style");
+/* remove extra button defaults
+				$("#MasterContent_TixInnerContent_ctl00_gvSchedule_btnBuyTix_0").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnBackToShopping").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCancelOrder").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCheckout").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_LoginButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CancelOrderButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CompleteButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingBtn").removeAttr("style");*/
+				
+				
+			});
+		</script>
+
+		</div>
+		</form>
+	</body>
+
+	</html>

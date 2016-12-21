@@ -1,0 +1,1235 @@
+﻿
+
+
+
+
+/* 	SECONDARY BUTTONS
+		These are buttons that are not the primary action on a page.  They should draw less visual
+		attention than the standard button
+*/
+
+form input.secondary,
+#main form input.secondary,
+#main a.secondary,
+#main a.secondary:visited {
+	border-color: #846E49;
+	background-color: #B7A97C;
+	color: #ffffff;
+}
+
+/*
+#main form input.secondary:hover,
+#main a.secondary:hover {
+	border-color: #846E49;
+	background-color: #B7A97C;
+	color: #FFF;
+}*/
+
+/* ALTERNATING TABLE ROWS */
+table.data tbody tr.alt td { /* OPTIONAL */
+	background-color: #FAFAFA;
+	/*background: #F5F5F5 url("/innerweb/v3.0/styles/delta/webpage_files/alt_row_bg.gif") bottom left repeat-x;*/
+}
+
+/*	#####  HEADER IMAGE REPLACEMENT  #####
+	TO SUBSTITUTE AN IMAGE FOR THE SITE NAME, UNCOMMENT THE LINES BELOW
+	-- BE SURE TO PROVIDE PROPER PATHS AND SIZES FOR YOUR IMAGE
+*/		
+
+/*
+#site-name {
+	margin: 0;
+	padding: 0;
+	width: 400px;
+	height: 40px;
+	background: transparent url("/path/to/image") top left no-repeat;
+}
+
+#site-name span {
+	text-indent: -10000px;
+}
+*/
+
+#checkout_padding {
+	padding-right:30px;
+
+}
+	
+/***********************************************************************************
+****************************** Initial Customization *******************************
+************************************************************************************/
+
+/*controls background of the entire page */
+body {
+	background-color: #3E342B;/*sets background color of the entire page */
+	//background-image: url("/clients/ClarkBookstore/Images/bg_gradient.gif"); /*set image if using gradient */
+	background-image: url("/clients/ClarkBookstore/Images/background.jpg"); 
+	background-position:top left;/* don't change(positions image) */
+	background-repeat: repeat-x;/* don't change(repeats image horizontally */
+	background-attachment:fixed;
+}
+
+
+/*controls header */
+#header {
+	color: #FFF;/*set text color of header (if using default generic header text) */
+	height: 75px;/*set to height of header */
+	background-color: transparent; /*set background color of header (must be transparent if header image has rounded edges) */
+	background-image: url("/clients/ClarkBookstore/Images/header_image_28.jpg");/*set header image */
+	background-position: top left;/*don't change (positions image) */
+	background-repeat: no-repeat;/* don't change (ensures header does not repeat if dimensions aren't exactly right); */
+	width: 850px;
+}
+
+div#site-search_index {
+	float:right;
+	height:25px;
+	width:350px;
+	margin-top:-25px;
+	padding-right:5px;
+	text-align:right;
+}
+
+.imgtwitter 	{
+	float:left;
+	margin-top:-18px;
+	margin-left:10px;
+	padding-right:10px;
+}
+
+.imgfacebook 	{
+	float:left;
+	margin-top:-18px;
+	margin-left:40px;
+	padding-left:10px;
+}
+
+
+/*controls default generic bookstore name in header */
+#site-name span {
+	visibility: hidden; /*comment out to use default generic bookstore name in header */
+	text-decoration:none;
+}
+
+
+/*controls invisible box over header to link to homepage */
+#header div#site-name a {
+	/*takes underline off of default generic bookstore name in header */
+	display: block;/*ensures box will be displayed */
+	width: 400px;/*set width of box */
+	height: 55px; text:none
+}
+
+
+/*controls cart summary and login status in header */
+#cart-summary,
+#user-summary {
+	color: #FFF;/*set text color for cart and login summary in header (top line only)*/
+}
+
+
+/*controls link for how many items are in the basket in header */
+#header a,
+#header a:link,
+#header a:active,
+#header a:visited {
+	color: #ffffff;/*set text color for link to login */
+	text-decoration:none;
+}
+
+
+/*controls background of navigation - ONLY FOR SQUARE EDGES */
+div#subhead {
+	background-image: url("/clients/ClarkBookstore/Images/dropdown_bk.jpg");
+	background-repeat:no-repeat;
+	width:850px;
+	height:22px;
+	text-align:left;
+	padding-top:2px;
+	/*background-color: #000;*/ /*set background color between header and content - uncomment if square edges */
+	/*overflow: hidden;*/ /*don't change (color will not show if this is missing) - uncomment if square edges */
+}
+
+
+/*controls the large image on the default page*/
+#default_page_box {
+	width:850px;
+	}
+
+#left_side_sub_header {
+	position:relative;
+	background-image: url("/clients/ClarkBookstore/Images/lt_side_sub_header.jpg");
+	width:230px;
+	height:200px;
+	margin-right:620px;
+}
+
+ /*slider*/
+#slider {
+    position:relative;
+    height:150px;
+    background-image: url("/clients/ClarkBookstore/Images/rt_side_sub_header.jpg");
+}
+
+
+/*controls text for basket info in header */
+#cart-summary span {
+    color: #FFF;/*set text color for basket info */
+}
+
+
+/*controls top of content section only necessary if using rounded edges*/
+#content #content-top {
+	width: 100%; /*don't change (makes the image span the width of the content section */
+	height: 0px; /*set to height of image you use */
+	visibility:hidden;
+	background-color: transparent; /*must be transparent for rounded edges */
+	background-image: url("/clients/ClarkBookstore/Images/page_corners_top.gif"); /*image used for rounding edges (765px wide, including right bar) - none if square edges */
+	background-position: top left;/*don't change (positions image) */
+	background-repeat: no-repeat;/*don't change (ensures header does not repeat if dimensions aren't exactly right); */
+}
+
+
+#content {
+	background-color: #FFF; /*sets background color of content section (should not matter) */
+	background-image: url("/clients/ClarkBookstore/Images/page_faux_columns_left.gif");/*set background image (765px wide, including right bar) - none if square edges */
+	background-position: top left;/*don't change(positions image) */
+	background-repeat: repeat-y;/*don't change(repeats image vertically) */
+}
+
+
+/*controls bottom of content section only necessary if using rounded edges */
+#content #content-bottom {
+	clear: both; /*don't change (ensures footer goes to the next line) */
+	width: 100%; /*don't change (makes the image span the width of the content section */
+	height: 0px; /*set to height of image you use */
+	visibility:hidden;
+	background-color: transparent; /*must be transparent for rounded edges */
+	background-image: url("/clients/ClarkBookstore/Images/page_corners_bottom.gif"); /*image used for rounding edges (765px wide, including right bar) - none if square edges */
+	background-position: bottom left; /*don't change(positions image) */
+	background-repeat: no-repeat; /*don't change(ensures header does not repeat if dimensions aren't exactly right); */
+
+}
+
+
+/*controls advertising block which is a portion of the right bar */
+div#content div#advertising{
+	float: left;
+	color: #ffffff;
+	padding: 0px;
+	text-align: left;
+	width: 145px;
+	background-color:#546476;
+	/*background-color: #718DC7;*/ /*sets background color of advertising block */
+}
+
+#advertising {
+	float: left;
+	color: #ffffff;
+	font-size:12px;
+	margin-top 0px;
+	text-align: left;
+	width: 145px;
+	font-family: Arial;
+	background-color:#546476;
+	/*background-color: #718DC7;*/ /*sets background color of advertising block */
+}
+
+
+#ad_title0 {
+	padding-left:10px;
+	text-align:left;
+	margin-top:0px;
+	margin-bottom:10px;
+	padding-top:0px;
+	padding-bottom:5px;
+	font-size:14px;
+	color: #ffffff;
+	font-family: Arial;
+	background-color: #738393;
+	height: 20px;
+	width: 135px;
+}
+
+#ad_title1 {
+	padding-left:10px;
+	text-align: left;
+	margin-top: 15px;
+	margin-bottom:10px;
+	padding-top: 4px;
+	font-size: 14px;
+	color: #ffffff;
+	font-family: Arial;
+	background-color: #738393;
+	height: 20px;
+	width: 135px;
+}
+
+
+#ad_title2 {	
+	padding-left:10px;
+	text-align: left;
+	margin-top: 25px;
+	margin-bottom:10px;
+	padding-top: 4px;
+	font-size: 14px;
+	color: #ffffff;
+	font-family: Arial;
+	background-color: #738393;
+	height: 20px;
+	width: 135px;
+}
+
+
+#advertising a:link {
+	color:#ffffff;
+	font-size:11px;
+	text-align:left;
+	list-style-type: none;
+	margin-left:10px;
+	line-spacing:15px;
+	line-height: 20px;
+	letter-spacing: .06em; text:none
+}
+
+#advertising a:hover {
+	color: #ffffff;
+	list-style-type: none; text:underline
+}
+
+#advertising a:visited {
+	color:#ffffff;
+	font-size:11px;
+	text-align:left;
+	list-style-type: none;
+	margin-left:10px;
+	line-spacing:15px;
+	line-height: 20px;
+	letter-spacing: .06em; text:none
+}
+
+#verisign {	
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+#index_ad {
+	width: 705px;
+	height: 600px;
+	display: block; 
+}
+
+
+#spring_ads {
+	position:absolute;
+	width:396px;
+	height:600px;
+	margin-top:auto;
+	margin-right:auto;
+	margin-top:auto;
+	margin-right:auto;
+	margin-bottom:-602px;
+	margin-left:0px;
+}
+
+#spring_ads a:hover img {
+filter:alpha(opacity=80);-moz-opacity:.80;opacity:.80;
+}
+
+#spring_ads2 {
+	position:B;
+	
+}
+
+/*controls textbook box (emphasis blocks) on homepage */
+.em div.block-onecol {
+	/*background-image: url(/clients/ClarkBookstore/Images/home_box_gradient.gif);*/ /*set background image for emphasis blocks - Uncomment if using custom image */
+}
+
+.em {
+	text-align:left;
+	height:190px;
+	width:225px;
+	padding-top:10px;
+	padding-left:5px;
+}
+
+.em a {
+	color:#AAB2BF;
+	font-size:20px;
+	text-align:left;
+	margin-left:0px; text:none
+}
+
+#em2 {
+	color:#AAB2BF;
+	font-size:11px;
+	text-align:left;
+	margin-top:0px;
+	margin-left:0px;
+}
+
+#em3 {
+	color:#AAB2BF;
+	font-size:10px;
+	text-align:left;
+	margin-top:10px;
+	margin-left:0px;
+}
+
+#em4 {
+	color:#AAB2BF;
+	font-size:10px;
+	text-align:center;
+	line-height:10px;
+	margin-top:10px;
+	margin-left:0px;
+} 
+
+
+/*controls all blocks that take one column */
+/*.block-onecol {
+	border-top-color: #336699;*/  /*set color for top bar - same as body background color unless otherwise specified */url('')
+}
+
+
+.autoformat h1, .autoformat h2, .autoformat h3, .autoformat h4, .autoformat h5 {
+border-bottom-color: #336699;
+}
+
+/*controls background color for boxes like on buy page and swap page */
+.search-box, div.results-search-bar,
+#reserve-promo, table#cart-contents tfoot td {
+	background-color: #E5E5E5;/* set background color for boxes */
+}
+
+
+/*controls background color for reserve box on buy_main.asp */
+#reserve-feature  {
+	border-color: #393770;
+	background-color: #E5E5E5;
+}
+
+
+/*controls general links throughout site */
+
+/*
+a,
+a:link,
+a:active {
+	color: #B65109;/*set text color of link */
+	text-decoration: underline;/*set whether or not links are underlined */
+}
+*/
+
+#main a:visited {
+	color: #ffffff;
+}
+
+/*controls links for currently selected page in the navigation area */
+body#buy div#nav li#nav-buy a,
+body#sell div#nav li#nav-sell a,
+body#reserve div#nav li#nav-reserve a,
+body#swap div#nav li#nav-swap a,
+body#shop div#nav li#nav-shop a {
+	color: #FFF;/*set text color of link */
+}
+
+
+/*controls uppercase headings that are NOT links*/
+#home .highlight h3 {
+	color: #B65109;/*set heading color for non-linked h3 headings - should be the same as "a" tag (general links)*/
+}
+
+
+/*controls button colors*/
+form input.button,
+#main form input.button,
+#main a.button,
+#main a.button:visited {
+	border-color: #E5E5E5;/*set color of the border of the buttons */
+	background-color: #B65109;/*set color of the button */
+	color: #ffffff;/*set text color of the button */
+}
+
+
+/*controls button when mouse is over top, but not clicked */
+#main a.button:hover {
+	border-color: #E5E5E5;/*set color of the border of the hovered button */
+	background-color: #B65109;/*set color of the hovered button */
+	color: #FFF;/*set text color of the hovered button */
+}
+
+
+/*controls top of navigation caret. */
+#extra1 {
+	visibility: hidden;
+	top: 160px; /*only needs to be set if header height has been changed - uncomment if necessary and change accordingly */
+}
+
+
+body#buy #extra1 div {
+	background-position: 95px 0;/*set position for buy link in nav */
+}
+body#sell #extra1 div {
+	background-position: 140px 0;/*set position for sell link in nav */
+}
+body#reserve #extra1 div {
+	background-position: 226px 0;/*set position for reserve link in nav */
+}
+body#swap #extra1 div {
+	background-position: 200px 0;/*set position for swap link in nav */
+}
+body#shop #extra1 div {
+	background-position: 260px 0;/*set position for shop link in nav */
+}
+
+/*controls the webpage_files for the pillbox in the navigation area */
+#nav li.label{
+	background-image: url("/clients/ClarkBookstore/Images/nav_left.gif");/*set image for textbooks */
+}
+#nav li.first{
+	background-image: url("/clients/ClarkBookstore/Images/nav_middle_left.gif");/*set left pillbox image */
+}
+#nav li{
+	background-image: url("/clients/ClarkBookstore/Images/nav_middle_middle.gif");/*set middle pillbox image */
+}
+#nav li.last{
+	background-image: url('https://staging.thecampushub.com/clarkcollege/webpage_files/nav_middle_right.gif');/*set right pillbox image */
+}
+
+#nav a {
+	color: #00339A;/*set color for links in navigation area */
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color:#00339A;
+	margin-bottom:0px;
+}
+
+h9 {
+	color:#00339A;
+	font-size:12px;
+}
+
+body, #main, p {
+	font-size:11px;
+	color: #000;
+}
+
+body2, #main, p {
+	font-size:12px;
+	color: #000;
+}
+
+p a{
+	color:#000000;
+	font-weight:800; text:none
+}
+
+p a:hover{
+	color:#000000;
+	text:underline
+}
+
+p.margin{
+margin-left:150px;
+}
+
+div#footer {
+	color:#fff;
+	text-align:center;
+	padding-top:15px;
+}
+
+div#footer a {
+	color:#fff;
+}
+
+div#content.two-col div#main {
+	float:right;
+	padding-right: 0px;
+	margin-right: 10px;
+	margin-left: 0px;
+	display:inline;
+	padding:15pt 0px 50px 0px;
+	voice-family:inherit;
+	width:682px;
+}
+
+div#content {
+	clear:left;
+	padding:0pt;
+	text-align:left;
+	width:850px;
+}
+
+
+div#page {
+	background:transparent none repeat scroll 0%;
+	margin:0pt auto;
+	padding:0pt;
+	text-align:center;
+	width:850px;
+}
+
+.mac {
+	float:left;
+	margin-top:2px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	}
+
+.mac2 {
+	float:left;
+	height:220px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+}
+
+.mac3 {
+	float:center;
+	height:220px;
+	margin-left: 0px;
+	margin-bottom: 30px;
+}
+
+.style {
+	width:390px;
+	margin-top:10px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+}
+
+
+.style1 {
+	float: left;
+	width:400px;
+	height: 50px;
+	margin-left: 0px;
+	margin-bottom: 0px;
+	margin
+}
+
+
+.style2 {
+	text-align: center;
+	float: center;
+	margin-top:25px;
+	margin-bottom: 15px;
+}
+
+.style2b {
+
+<!-- used for lower banners-->
+	text-align: center;
+	float: center;
+	margin-top:3px;
+	margin-bottom:3px;
+}
+
+
+.style3 {
+	float: left;
+	margin-left: 10px;
+	width:220px;
+}
+
+.style4 {
+	float: left;
+	width:390px;
+	height:200px;
+	margin-left: 30px;
+	margin-bottom: 15px;
+}
+
+div#main {
+text-align:left;
+padding-bottom:45px;
+padding-left:15px;
+}
+
+body, #main, p {
+margin-left:15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+margin-top:10px;
+margin-left:15px;
+}
+
+h2 a{
+	color:#00339A;
+	text:underline
+}
+
+
+h2b {
+margin-top:10px;
+margin-left:0px;
+color:#00339A;
+text:underline
+}
+
+
+h3 a{
+	color:#000000;
+	font-weight:400;
+	padding:30px;
+	text:underline
+}
+
+.button a{
+	color:#000000;
+	padding:15px;
+	font-weight:400;
+	text:none
+}
+
+#main form p {
+clear:both;
+display:block;
+margin: 10pt;
+}
+
+.catalog-feature {
+background:transparent url(/innerweb/v3.0/styles/delta/webpage_files/home_box_gradient.gif) repeat-x scroll left top;
+width:675px;
+margin-left:2px;
+margin-bottom:1em;
+}
+
+#main div.hr {
+border-bottom:1px solid #CCCCCC;
+height:1px;
+margin:10px 0pt;
+
+}
+
+
+#main div.hr2 {
+border-bottom:1px solid #CCCCCC;
+height:1px;
+margin:10px 0pt;
+
+}
+
+
+.answer_box {
+height: 130px;
+}
+
+.answer {
+margin-bottom:105px;
+}
+
+.answer2 {
+margin-top: 10px;
+margin-right:15px;
+margin-left:15px;
+}
+
+.answer_image {
+background-color:#9896CC;
+width:100px;
+height:100px;
+margin-left:10px;
+}
+
+
+.answer a{
+margin-left:15px;
+}
+
+#hr2 {
+margin-top:15px;
+margin-left:10px;
+}
+
+
+#title6 {
+margin-top:35px;
+}
+
+.space {
+margin-top:75px;
+}
+
+.space2 {
+margin-top:90px;
+}
+
+.form-tella-text {
+	display:none;
+}
+
+.small_box {
+	width:265px;
+}
+
+#small_box {
+	background-color:#d9dbdc;
+	border:5px solid #00339A;
+	border-collapse:collapse;
+	padding:5px 20px 10px;
+	width:300px;
+	font-size:20px;
+	font-weight:800;
+	margin-top:5px;
+	text-align:center;
+}
+
+#small_box li{
+	list-style: disc;
+	text-align:left;
+	font-size:12px;
+}
+
+#hours {
+	color:#000000;
+	padding:5px 20px 10px;
+	width:400px;
+	font-size:16px;
+	font-weight:bolder;
+	margin-top:10px;
+	text-align:left;
+}
+
+.hoursred {
+	color:#FF0000;
+	padding:5px 0px 0px;
+	width:500px;
+	font-size:14px;
+	font-weight:bolder;
+	margin-top:10px;
+	text-align:left;
+}
+
+
+#hours li{
+	list-style: none;
+	text-align:left;
+	font-size:12px;
+	font-weight: 800;
+	line-height:15px;
+}
+
+.month {
+	color:#00339A;
+	margin-bottom:8px;
+	font-size:16px;
+	font-weight: 300;
+}
+
+
+.monthblk {
+	color:#00339A;
+	margin-bottom:8px;
+	font-size:16px;
+	font-weight: 800;
+}
+
+.monthblk2 {
+	color:#00339A;
+	margin-top:8px;
+	margin-bottom:8px;
+	font-size:16px;
+	font-weight: 800;	
+}
+
+
+.monthblk3 {
+	color:#00339A;
+	margin-top:4px;
+	margin-bottom:4px;
+	font-size:16px;
+	font-weight: 800;	
+}
+
+.monthblk4 {
+	color:#ff0000;
+	margin-top:8px;
+	margin-bottom:8px;
+	font-size:16px;
+	font-weight: 525;	
+}
+
+
+
+.closed {
+	color:#615C31;
+	margin-top:5px;
+	margin-bottom:25px;
+	font-size:12px;
+	font-weight: 800;
+}
+
+#long_box {
+	background-color:#F4F2E9;
+	border:5px solid #8ba178;
+	border-collapse:collapse;
+	padding:5px 5px 25px;
+	width:615px;
+	font-size:13px;
+	font-weight:700;
+	margin-top:5px;
+	margin-left:18px;
+	
+}
+
+.lb_link {
+	margin-top:25px;
+	padding-bottom:5px;
+	text-align:center;
+}
+
+.lb_link a{	
+	padding-right:30px;
+}
+
+.frontpage_im {
+	padding-top:1px;
+	height:108px;
+}
+
+.large_font {
+	color: #0000000;
+	font-size:50px;
+	font-weight:bold;
+	
+}
+
+.large_font_a {
+	color: #0000000;
+	font-size:50px;
+	font-weight:bold;
+
+}
+.large_font2 {
+	color: #000000;
+	font-size:60px;
+	font-weight:bold;
+
+}
+.large_font3 {
+	color: #000000;
+	font-size:60px;
+	font-weight:bold;
+
+}
+.dark_gray_font_a {
+	color: #909090;
+	font-size:25px;
+	font-weight:bold;
+
+}
+.dark_gray_font {
+	color: #909090;
+	font-size:25px;
+	font-weight:bold;
+
+}
+.title_border {
+	font-size:16px;
+	color:#00339A;
+	border-bottom: 1px solid #DDDDDD;
+	margin-top:25px;
+	letter-spacing: .07em;
+	font-weight:800;
+
+}
+.title_border2 {
+	font-size:25px;
+	color:#000000;
+	border-bottom: 1px solid #DDDDDD;
+	margin-top:15px;
+	letter-spacing: .07em;
+	font-weight:800;
+	
+		
+}
+.title_border3 {
+	padding:10px;
+	font-size:18px;
+	color:#616362;
+	letter-spacing: .07em;
+	font-weight:800;
+	border-bottom: 1px solid #DDDDDD;
+}
+.short_title_border {
+	border-bottom: 1px solid #DDDDDD;
+	width:200px;
+
+}
+.title_font {
+	font-size:14px;
+	color:#2C4C6C;
+	margin-top:5px;
+
+}
+.right_blue {
+	font-size:16px;
+	color:#336699;
+	border-bottom: 1px solid #DDDDDD;
+	margin-top:0px;
+	letter-spacing: .01em;
+	font-weight:800;
+	text-align:right;
+}
+
+.right_blue li{
+	list-style: none;
+	display:inline;
+	padding-left:50px;
+	padding-right:20px;
+}
+
+.left {
+	float:left;
+	width:350px;
+}
+
+.pumpkin_left {
+	width:360px;
+}
+
+.left2 {
+	float:left;
+	width:250px;
+}
+
+.right {
+	float:right;
+	width:330px;
+}
+
+.left_small {
+	margin-top:25px;
+	float:left;
+	width:130px;
+	height:150px;
+}
+
+.left_title {
+	font-size:14px;
+	color:#000000;
+	margin-top:20px;
+	font-weight:normal;
+}
+
+.left_title a{
+	color:#000000;
+}
+
+.left_content {
+	font-size:12px;
+	margin-top:8px;
+	color:#696969;
+}
+
+.left_content li{
+	font-size:12px;
+	margin-top:8px;
+	margin-left:-20px;
+	color:#696969;
+}
+
+.left_content2 {
+	font-size:20px;
+	color:#696969;
+}
+
+.left_content2 li{
+	font-size:20px;
+	margin-top:8px;
+	margin-left:-20px;
+	color:#696969;
+}
+
+.left_title2 {
+	font-size:14px;
+	color:#00339a;
+	margin-top:20px;
+	font-weight:normal;
+}
+
+.left_content2 {
+	font-size:12px;
+	margin-top:8px;
+	color:#000000;
+}
+
+.left_content2 a{
+	color:#334366;
+	text:underline
+}
+
+.tb_image {
+	float:right;
+	margin-top:20px;
+	width:300px;
+	height:407px;
+
+}
+
+.tb_image_right {
+	float:right;
+	padding-left:20px;
+	margin-top:20px;
+	width:300px;
+	height:407px;
+
+
+}
+
+.tb_image2 {
+	float:right;
+	margin-top:20px;
+	margin-right:50px;
+	width:300px;
+	height:407px;
+}
+
+.rs_image {
+	float:right;
+	margin-top:0px;
+	width:480px;
+	height:175px;
+}
+
+.links {
+	color:#000000;
+	font-size:13px;
+	font-weight:800;
+	margin-left:15px;
+}
+
+.links a{
+	color:#000000;
+	font-size:13px;
+	font-weight:800;
+}
+
+.links a:hover{
+	color:#7E7253;
+}
+
+.links li{
+	list-style:none;
+	display:inline;
+	margin-left:45px;
+	padding-right:100px;
+}
+
+.name li {
+	list-style:none;
+	display:inline;
+	margin-left:85px;
+	padding-right:110px;
+}
+
+.center {
+	text-align:center;
+	margin-top:10px;
+}
+
+.center li {	
+	list-style:none;
+}
+
+#taxservice {
+	padding-top:10px;
+}
+
+.rental {
+	color:#00339a;
+	font-size:16px;
+	font-weight:bolder;
+	margin-top:10px;
+	text-align:left;
+	border-bottom:1px solid #DDDDDD;
+}
+
+.rental2 {
+	color:#00339a;
+	font-size:13px;
+	font-weight:bolder;
+	margin-top:10px;
+	text-align:left;
+	border-bottom:1px solid #DDDDDD;
+}
+
+.bold {
+	font-weight:bolder;
+}
+
+.red {
+	font-family:Arial,Verdana;
+	font-weight:900;
+	color:#CA0202;
+}
+
+.negative {
+	margin-top:-20px;
+}
+
+p.big {line-height:200%}
+
+.gift-card-rotation { 
+	position:absolute; 
+	margin-top:55px; 
+	margin-left:365px;
+	z-index:2; }
+
+.gc-splash { 
+	margin-top: -5px; 
+	z-index:-1; }
+	
+	
+ul.breadcrumbs, ul#checkout-steps {
+list-style:none outside none;
+margin:5px 0 10px;
+padding:0;
+}
+
+.indent {padding-left: 20px;}
+
+dt.list-price, dd.list-price {
+	visibility:hidden;
+}
+
+
+/***********************************************************************************
+***************************** Buy_courselisting footer *****************************
+************************************************************************************/
+div.clark-custom-footer{
+width:130px; 
+float:right;
+}
+div.clark-custom-footer span{
+color:#B65109;
+display:block; 
+width:130px; 
+text-align:center; 
+padding-top:10px;
+}
+div.clark-custom-footer span input.button{
+width:125px;
+visibility:visible;
+}
+#options{
+	display: none;
+}
+
+#buyback-condition {
+   visibility:hidden;
+   }
+   
+.courselisting-youravailability {
+    visibility:hidden;
+}
+
+div.clark-custom-footer span {
+visibility: visible;
+}
+

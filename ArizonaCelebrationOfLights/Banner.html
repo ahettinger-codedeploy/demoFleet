@@ -1,0 +1,220 @@
+
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	color: #ff5c00;
+}
+.style2 {
+	font-size: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+.style6 {color: #ff5c00; font-weight: bold; }
+.style7 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+}
+.style9 {
+	font-size: 10px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.style14 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+#Layer1 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:2;
+	top: 0;
+	left: -1px;
+}
+#Layer2 {
+	position:absolute;
+	width:244px;
+	height:155px;
+	z-index:1;
+	left: 502px;
+	top: 590px;
+	background-color: 471378;
+}
+.style15 {color: #FFFFFF}
+a:link {
+	color: #FF0000;
+}
+#Layer3 {
+	position:absolute;
+	width:216px;
+	height:138px;
+	z-index:3;
+	left: 19px;
+	top: 530px;
+}
+#Layer4 {
+	position:absolute;
+	width:218px;
+	height:118px;
+	z-index:3;
+	left: 20px;
+	top: 686px;
+}
+.style16 {font-size: 11px; font-family: Verdana, Arial, Helvetica, sans-serif;}
+.style18 {color: #FF5C00}
+.style19 {font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; font-weight: bold; color: #ff5c00; }
+.style20 {font-size: 12px}
+.style23 {font-size: 11px; color: #000000; font-family: Verdana, Arial, Helvetica, sans-serif;}
+-->
+</style>
+<script type="text/javascript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+function MM_CheckFlashVersion(reqVerStr,msg){
+  with(navigator){
+    var isIE  = (appVersion.indexOf("MSIE") != -1 && userAgent.indexOf("Opera") == -1);
+    var isWin = (appVersion.toLowerCase().indexOf("win") != -1);
+    if (!isIE || !isWin){  
+      var flashVer = -1;
+      if (plugins && plugins.length > 0){
+        var desc = plugins["Shockwave Flash"] ? plugins["Shockwave Flash"].description : "";
+        desc = plugins["Shockwave Flash 2.0"] ? plugins["Shockwave Flash 2.0"].description : desc;
+        if (desc == "") flashVer = -1;
+        else{
+          var descArr = desc.split(" ");
+          var tempArrMajor = descArr[2].split(".");
+          var verMajor = tempArrMajor[0];
+          var tempArrMinor = (descArr[3] != "") ? descArr[3].split("r") : descArr[4].split("r");
+          var verMinor = (tempArrMinor[1] > 0) ? tempArrMinor[1] : 0;
+          flashVer =  parseFloat(verMajor + "." + verMinor);
+        }
+      }
+      // WebTV has Flash Player 4 or lower -- too low for video
+      else if (userAgent.toLowerCase().indexOf("webtv") != -1) flashVer = 4.0;
+
+      var verArr = reqVerStr.split(",");
+      var reqVer = parseFloat(verArr[0] + "." + verArr[2]);
+  
+      if (flashVer < reqVer){
+        if (confirm(msg))
+          window.location = "http://www.macromedia.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash";
+      }
+    }
+  } 
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_validateForm() { //v4.0
+  var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+  for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=MM_findObj(args[i]);
+    if (val) { nm=val.name; if ((val=val.value)!="") {
+      if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+        if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+      } else if (test!='R') { num = parseFloat(val);
+        if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+        if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+          min=test.substring(8,p); max=test.substring(p+1);
+          if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+    } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+  } if (errors) alert('The following error(s) occurred:\n'+errors);
+  document.MM_returnValue = (errors == '');
+}
+//-->
+</script>
+</head><body onload="MM_CheckFlashVersion('7,0,0,0','Content on this page requires a newer version of Macromedia Flash Player. Do you want to download it now?');">
+<div id="Layer1">
+  <table align="left" border="0" cellpadding="0" cellspacing="0" width="1082">
+    <tbody><tr>
+      <td width="1082"><table border="0" cellpadding="0" cellspacing="0" width="954">
+          <tbody><tr>
+            <td width="207"><img src="/clients/arizonacelebrationoflights/images/header_01.jpg" width="137" height="49"></td>
+            <td width="150"><img src="/clients/arizonacelebrationoflights/images/header_02.jpg" width="73" height="49"></td>
+            <td width="150"><img src="/clients/arizonacelebrationoflights/images/header_03.jpg" width="133" height="49"></td>
+            <td width="45"><img src="/clients/arizonacelebrationoflights/images/header_04.jpg" width="131" height="49"></td>
+            <td width="23"><img src="/clients/arizonacelebrationoflights/images/header_05.jpg" width="117" height="49"></td>
+            <td width="25"><img src="/clients/arizonacelebrationoflights/images/header_06.jpg" width="325" height="49"></td>
+            <td width="25"><img src="/clients/arizonacelebrationoflights/images/header_07.jpg" width="170" height="49"></td>
+          </tr>
+          <tr>
+            <td><div align="right"><img src="/clients/arizonacelebrationoflights/images/toolbar_01.jpg" width="136" height="27"></div></td>
+            <td><div align="center"><a href="http://www.arizonacelebrationoflights.com/index.html"><img src="/clients/arizonacelebrationoflights/images/toolbar_02.jpg" border="0" width="73" height="27"></a></div></td>
+            <td><img src="/clients/arizonacelebrationoflights/images/toolbar_03.jpg" width="133" height="27"></td>
+            <td><a href="http://www.arizonacelebrationoflights.com/sponsors.html"><img src="/clients/arizonacelebrationoflights/images/toolbar_04.jpg" border="0" width="131" height="27"></a></td>
+            <td><a href="http://www.arizonacelebrationoflights.com/event_news.html"><img src="/clients/arizonacelebrationoflights/images/toolbar_05.jpg" border="0" width="117" height="27"></a></td>
+            <td><a href="http://www.arizonacelebrationoflights.com/contact.html"><img src="/clients/arizonacelebrationoflights/images/toolbar_06.jpg" border="0" width="325" height="27"></a></td>
+            <td><img src="/clients/arizonacelebrationoflights/images/toolbar_07.jpg" width="170" height="27"></td>
+          </tr>
+          <tr>
+            <td><img src="/clients/arizonacelebrationoflights/images/header_08.jpg" width="137" height="73"></td>
+            <td><img src="/clients/arizonacelebrationoflights/images/header_09.jpg" width="73" height="73"></td>
+            <td><img src="/clients/arizonacelebrationoflights/images/header_10.jpg" width="133" height="73"></td>
+            <td><img src="/clients/arizonacelebrationoflights/images/header_11.jpg" width="131" height="73"></td>
+            <td><img src="/clients/arizonacelebrationoflights/images/header_12.jpg" width="117" height="73"></td>
+            <td><img src="/clients/arizonacelebrationoflights/images/header_13.jpg" width="325" height="73"></td>
+            <td><img src="/clients/arizonacelebrationoflights/images/header_14.jpg" width="170" height="73"></td>
+          </tr>
+      </tbody></table></td>
+    </tr>
+    <tr>
+      <td valign="top"><table border="0" cellpadding="0" cellspacing="0" width="988" valign=top>
+          <tbody><tr>
+            <td width="260" valign="top"><table border="0" bordercolor="#ffffff" cellpadding="4" cellspacing="4" width="260">
+                <tbody><tr>
+                  <td width="260"><img src="/clients/arizonacelebrationoflights/images/index_image_01.jpg" width="260" height="294"></td>
+                </tr>
+                <tr>
+                  <td height="52"><p class="style14"><img src="/clients/arizonacelebrationoflights/images/tix_image_02.jpg" width="260" height="221"></p>                    </td>
+                </tr>
+                <tr>
+                  <td bgcolor="#ffffff"><form action="http://www.arizonacelebrationoflights.com/cgi-bin/signup.pl" method="post" name="form1" class="style14" id="form1">
+                      <div align="center">
+                        <p onfocus="MM_validateForm('sign_up','','NisEmail');return document.MM_returnValue"><a href="http://www.mapquest.com/maps?city=Glendale&amp;state=AZ&amp;address=21000+N.+75th+Ave&amp;zipcode=85308">DIRECTIONS</a><br>
+                        </p>
+                      </div>
+                  </form></td>
+                </tr>
+                <tr>
+                  <td><img src="/clients/arizonacelebrationoflights/images/tix_image_05.jpg" usemap="#Map" border="0" width="260" height="312"></td>
+                </tr>
+                <tr>
+                  <td><div align="center"><img src="/clients/arizonacelebrationoflights/images/coj_logo.jpg" usemap="#Map3" align="middle" border="0" width="108" height="97">
+                      <map name="Map3" id="Map3">
+                        <area shape="rect" coords="7,11,166,145" href="http://www.joyonline.org/" target="_blank">
+                      </map>
+                      </div></td>
+                </tr>
+                <tr>
+                  <td><div align="center"><span class="style23">Click on Logo to visit <br>
+                    <strong>Community of Joy</strong> website </span></div></td>
+                </tr>
+                
+
+            </tbody></table></td>
+            <td width="700" valign="top">
+                 
+                 
+                 
+                  
+                 
+                 
+                 
+                 
+                 
+          

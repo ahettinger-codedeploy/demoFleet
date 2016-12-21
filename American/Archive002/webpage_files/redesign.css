@@ -1,0 +1,842 @@
+/******* DROP IN BOX ************/
+
+#dropinboxv2cover{
+width: 320px; /*change width to desired */
+position:absolute; /*Don't change below 4 rules*/
+z-index: 100;
+overflow:hidden;
+visibility: hidden;
+}
+
+
+#dropinboxv2{
+width: 300px; /*change width to above width -20. */
+border: 0px solid black; /*Customize box appearance*/
+background-color: #EFEFEF;
+padding: 4px;
+position:absolute; /*Don't change below 3 rules */
+left: 0;
+top: 0;
+}
+
+
+/* neutralise elements */
+* { margin: 0; padding: 0; }
+img { border: none; }
+
+/* html elements */
+body 
+{
+    font-family: verdana, sans-serif;
+    background: url(/clients/American/Images/page_bg.jpg) repeat-x left top #143d8d;   
+}
+body, h1, h2, p, div
+{
+  font-size: 11px;
+  line-height: 15px;
+}
+p
+{
+  display: block;
+  margin-bottom: 15px;
+}
+.rich a {
+  color: #710010;
+ text-decoration: none;
+}
+.rich a:hover {
+ color: #a2bae9;
+}
+.rich a:hover {
+  color: #710010;
+}
+
+ul {
+  margin-left: 20px;
+}
+h1 
+{
+  font-size: 14px;
+  display: block;
+  margin-bottom: 15px;
+  line-height: 130%;
+  color: #c51835;
+}
+a
+{
+  font-size: 11px;
+  color: #cc0000;
+}
+a:hover 
+{
+  text-decoration: none;
+}
+/* structural elements */
+#wrapper 
+{
+    width: 100%;
+    padding-bottom: 40px;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+#des-wrapper 
+{
+    width: 990px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#header 
+{
+    width: 990px;
+    height: 157px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 200;
+}
+a.home-link 
+{
+    display: block;
+    width: 150px;
+    height: 157px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 230;
+}
+.header-icons 
+{
+    width: 371px;
+    height: 57px;
+    padding-top: 5px;
+    padding-right: 5px;
+    position: absolute;
+    right: 0;
+    top: 33px;
+    z-index: 225;
+}
+.header-icons a 
+{
+    display: block;
+    height: 15px;
+    float: right;
+    margin-bottom: 3px;
+    clear: both;
+}
+.header-icons a.icon1
+{
+    width: 151px;
+    background: url(/clients/American/Images/support_athletics_btn.png) no-repeat right top;
+}
+.header-icons a.icon2
+{
+    width: 151px;
+    background: url(/clients/American/Images/tickets_btn.png) no-repeat right top;
+}
+.header-icons a.icon3
+{
+    width: 215px;
+    background: url(/clients/American/Images/au_website_btn.png) no-repeat right top;
+}
+.header-icons a:hover 
+{
+    background-position: left -15px;
+}
+.header-bg 
+{
+    width: 990px;
+    height: 157px;
+    background: url(/clients/American/Images/header_bg.png) no-repeat left top;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 210; 
+}
+.photo {
+  float: right;
+  padding: 9px;
+  width: 400px;
+  background-color: #000;
+  margin-bottom: 20px;
+}
+
+/* navigation */
+
+/************ J-QUERY DROPDOWN ************/
+
+#nav {
+  width: 720px;
+  height: 23px;
+  position: absolute;
+  right: 1px;
+  top: 99px;
+  z-index: 220;
+}
+
+#nav ul, #nav li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: left;
+}
+
+#nav ul li {
+      position: relative;
+      z-index: 500;
+      margin-right: 34px;
+}
+
+#nav ul li a{
+      display:block;
+      height:23px;
+      text-decoration:none;
+      background-image: none;
+      background-repeat: no-repeat;
+      background-position: left top;
+}
+
+#nav ul li a:hover, #nav ul li a.current {
+  background-position: left -23px; 
+}
+
+#nav ul li a.nav1 { width: 74px; }
+#nav ul li a.nav2 { width: 97px; }
+#nav ul li a.nav3 { width: 133px; }
+#nav ul li a.nav4 { width: 139px; }
+#nav ul li a.nav5 { width: 106px; }
+
+#nav ul li #submenu-container{
+       width: 180px;
+	position:absolute;
+        top: 23px;
+	display:none;
+}
+
+#nav ul li #submenu-container .submenu {
+  width: 178px;
+  background: #93152b;
+  padding; 2px 0;
+  border: solid 1px #763a44;
+  border-top: none;
+}
+
+#nav ul li #submenu-container .submenu ul, 
+#nav ul li #submenu-container .submenu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: none;
+}
+
+#nav ul li #submenu-container .submenu ul li {
+  position: static;
+  display: block;
+}
+
+#nav ul li #submenu-container .submenu ul li a {
+  display: block;
+  height: 16px;
+  line-height: 16px;
+  padding: 2px 5px;
+  text-decoration: none;
+  color: #fff;
+}
+
+#nav ul li #submenu-container .submenu ul li a:hover {
+  background: #290106;
+}
+
+/*********** TOP NAV *************/
+
+#top-nav
+{
+    width: 770px;
+    height: 26px;
+    position: absolute;
+    right: 4px;
+    bottom: 8px;
+    z-index: 215;
+    overflow: hidden;
+}
+#top-nav .section-header
+{
+    display: block;
+    width: 280px;
+    height: 26px;
+    float: left;
+    overflow: hidden;
+}
+#top-nav ul, #top-nav li 
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#top-nav ul 
+{
+    display: block;
+    width: auto;
+    float: left;
+}
+#top-nav ul li
+{
+    padding-right: 7px;
+    margin-right: 5px;
+    background: url(/clients/American/Images/topnav_sep.gif) no-repeat right center;
+    float: left;
+}
+#top-nav ul li a 
+{
+    font-family: arial;
+    font-size: 11px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #143d8d;
+    text-decoration: none;
+    line-height: 26px;
+}
+#top-nav ul li a:hover 
+{
+    color: #710010;
+}
+#top-nav ul li.last 
+{
+    padding-right: 0;
+    margin-right: 0;
+    background: none;
+}
+.prestosports 
+{
+    display: block;
+    width: 169px;
+    height: 44px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+/****** HEADLINES TAB CONTENT ********/
+#tablist {
+  width: 510px;
+  height: 24px;
+  background: url(/clients/American/Images/headlines_tablist_bg.jpg) repeat-x left bottom;
+  clear: both;
+  overflow: hidden;
+}
+
+#tablist a {
+  display: block;
+  height: 24px;
+  float: left;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+a.tab1 { width: 91px; }
+a.tab2 { width: 129px; }
+
+#tabcontentcontainer{
+  width: 510px;
+  overflow: hidden;
+}
+.tabcontent {
+  display: none;
+  width: 510px;
+  height: 338px;
+  overflow: hidden;
+}
+/****** CONTAINERS *********/
+.trans 
+{
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: url(/clients/American/Images/trans_bg.jpg) repeat-x left top;
+}
+.content 
+{
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    z-index: 3;
+    overflow: hidden;
+}
+.wc {
+  padding: 10px;
+  background: #fff;
+}
+.trc1
+{
+    width: 528px;
+    height: 380px;
+    float: left;
+    margin-bottom: 5px;
+    border: solid 1px #728bbb;
+    position: relative;
+    overflow: hidden;
+}
+.trc1 .content 
+{
+    width: 510px;
+    height: 362px;
+}
+.trc2 
+{
+    width: 223px;
+    height: 380px;
+    float: left;
+    margin-left: 6px;
+    margin-bottom: 5px;
+    border: solid 1px #728bbb;
+    position: relative;
+    overflow: hidden;
+}
+.trc2 .content
+{
+    width: 205px;
+    height: 362px;
+}
+.trc3 
+{
+    width: 221px;
+    height: 380px;
+    float: left;
+    margin-left: 6px;
+    margin-bottom: 5px;
+    border: solid 1px #728bbb;
+    position: relative;
+    overflow: hidden;
+}
+.trc3 .content
+{
+    width: 205px;
+    left: 8px;
+    height: 362px;
+}
+.brc 
+{
+    width: 192px;
+    height: 229px;
+    float: left;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    border: solid 1px #728bbb;
+    position: relative;
+    overflow: hidden;
+}
+.brc .content 
+{
+    width: 174px;
+    height: 211px;
+}
+.brc .box-content 
+{
+    padding: 5px 10px;
+    height: 178px;
+    font-family: arial;
+    color: #fff;
+    overflow: auto;
+}
+.fr 
+{
+    width: 988px;
+    height: 101px;
+    margin-bottom: 5px;
+    border: solid 1px #728bbb;
+    position: relative;
+    overflow: hidden;
+}
+.fr .content 
+{
+    width: 970px;
+    height: 83px;
+}
+a.ic
+{
+    display: block;
+    width: 46px;
+    height: 83px;
+    float: left;
+    padding: 0 6px;
+    text-align: center;
+    text-decoration: none;
+}
+a:hover.ic span
+{
+    color: #710010;
+}
+img.icon 
+{
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin: 3px auto 10px;
+}
+.ic span 
+{
+    display: block;
+    color: #fff;
+    font-family: arial;
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 10px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+/* design elements */
+#video-container 
+{
+    width: 205px;
+    height: 172px;
+    background: #333;
+    overflow: hidden;
+}
+#calendar 
+{
+    width: 205px;
+    height: 252px;
+    background: #fff;
+    margin-bottom: 9px;
+    overflow: auto;
+}
+#stay-connected,
+#spotlight, 
+#alumni-friends, 
+#photos-merchandise,
+#trophy-room {
+  width: 172px;
+  height: 188px;
+  background: url(/clients/American/Images/blue_gradient.jpg) repeat-x left top #09245b;
+  border: solid 1px #6682ba;
+  overflow: hidden;
+}
+#trophy-room .rich, #alumni-friends .rich
+{
+    padding: 5px 10px;
+    height: 178px;
+    font-family: arial;
+    color: #fff;
+    overflow: auto;
+}
+#alumni-friends .rich td, #alumni-friends .rich th
+{
+    font-size: 11px;
+    text-align: left;
+    vertical-align: top;
+}
+
+#alumni-friends .rich a {
+ color: #a2bae9;
+}
+
+#alumni-friends .rich a:hover {
+ color: #FFFFFF;
+}
+
+#stay-connected a 
+{
+    display: block;
+}
+#spotlight {
+  text-align: center;
+}
+#spotlight a
+{
+    font-family: arial;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: none;
+}
+#spotlight a:hover
+{
+    text-decoration: underline;
+}
+#trophy-room
+{
+    background: url(/clients/American/Images/trophyroom_bg.jpg) no-repeat left top;
+}
+#search 
+{
+    width: 155px;
+    height: 68px;
+    float: left;
+    margin-top: 15px;
+    padding-left: 10px;
+    overflow: hidden;
+}
+#search form {
+  display: block;
+  width: 155px;
+  height: 47px;
+  overflow: hidden;
+}
+.txt-field 
+{
+    width: 109px;
+    height: 15px;
+    font-size: 11px;
+    padding: 2px;
+    line-height: 15px;
+    color: #002664;
+    border: solid 1px #002664;
+    float: left;
+}
+.go 
+{
+    width: 32px;
+    height: 19px;
+    border: none;
+    background: url(/clients/American/Images/go.jpg) no-repeat left top;
+    float: left;
+    margin-left: 5px;
+}
+a.bullet-link {
+    font-size: 11px;
+    color: #fff;
+    font-family: arial;
+    font-weight: bold;
+    text-decoration: none;
+    background: url(/clients/American/Images/bullet.jpg) no-repeat left 5px;
+    display: block;
+    margin-bottom: 2px;
+    padding-left: 12px;
+}
+a.bullet-link:hover, a.bullet-link-matched {
+    color: #a2bae9;
+}
+
+/* utility classes */
+.clear { clear: both; }
+.no-l-margin { margin: 0; }
+.head { display: block; margin: 0; }
+
+
+
+/********** ROSTERS **********/
+table.roster {
+  width: 970px;
+  background-color: ;
+}
+
+tr.roster-header td {
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #143D8D;
+    padding: 5px;
+}
+
+tr.roster-header td a{
+    color: #faa928;
+}
+
+tr.roster-row a{
+    text-decoration: underline;
+    color: #336699;
+}
+
+tr.roster-row a:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+
+tr.roster-row0 td {
+    background-color: #d1d1d1;
+    font-size: 11px;
+    padding: 5px;
+}
+tr.roster-row1 td {
+    background-color: #FFFFFF;
+    font-size: 11px;
+    padding: 5px;
+}
+
+
+/********** ROSTER BRIEF **************/
+#roster-brief {
+  float: right;
+}
+
+
+/********* BIOS ***********/
+.bio {
+    background-color: #143D8D;
+    border: outset;
+    border-width: 2px;
+    padding: 5px;
+}
+
+.bio td {
+  color: #FFFFFF;
+}
+
+.bio td a {
+  color: #FFFFFF;
+}
+
+.bio-name {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 3px;
+}
+
+.bio-data {
+    color: #CCCCCC;
+    font-size: 12px;
+}
+
+
+.bio-data span{
+    color: #D00000;
+    font-size: 10px;
+}
+
+.bio-data td{
+    color: #CCCCCC;
+    font-size: 10px;
+}
+
+.bio-data a {
+  color: #FFFFFF;
+}
+
+.bio-data a:hover {
+  color:#ffdc30;
+}
+
+.bio-photo {
+  float: left;
+  padding: 10px;
+}
+
+/********** SCHEDULE **********/
+table.schedule {
+  width: 970px;
+  background-color: ;
+}
+
+.schedule-data {
+  width: 500px;
+}
+
+.schedule-data td {
+    padding: 5px;
+}
+
+tr.schedule-header td {
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #143D8D;
+    padding: 5px;
+}
+
+tr.schedule-row0 td {
+    background-color: #d1d1d1;
+    font-size: 11px;
+    padding: 5px;
+}
+
+tr.schedule-row1 td {
+    background-color: #;
+    font-size: 11px;
+    padding: 5px;
+}
+
+.home-opp {
+  text-transform: uppercase;
+}
+
+
+/********** COMPOSITE *************/
+.calendar {
+  border-collapse: collapse;
+  background-color: #FFFFFF;
+  color: #000000;
+  text-align: center;
+  width: 970px;
+}
+
+.calendar td {
+  border: 1px solid #143d8d;
+
+}
+
+.calendar td a {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.calendar td a:hover {
+  text-decoration: underline;
+}
+
+.calendar-month  {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.calendar-header td{
+  background-color: #c30b27;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.calendar-sport {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.calendar-date {
+  float: left;
+  color: #FFFFFF;
+  background-color: #143d8d;
+  width: 15px;
+}
+
+.calendar-event {
+  font-size: 10px;
+}
+
+.calendar-event td a {
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.calendar-event td a:hover {
+  text-decoration: underline;
+}
+
+#hidden-block {
+  display: none;
+}
+
+/********** Lightbox - Thumbnails ***********/
+#lightbox{
+	background-color:#eee;
+	padding: 10px;
+	border-bottom: 2px solid #666;
+	border-right: 2px solid #666;
+	}
+#lightboxDetails{
+	font-size: 0.8em;
+	padding-top: 0.4em;
+	}	
+#lightboxCaption{ float: left; }
+#keyboardMsg{ float: right; }
+#closeButton{ top: 5px; right: 5px; }
+
+#lightbox img{ border: none; clear: both;} 
+#overlay img{ border: none; }
+
+#overlay{ background-image: url(/clients/American/Images/overlay.png); }
+
+* html #overlay{
+	background-color: #333;
+	back\ground-color: transparent;
+	background-image: url(blank.gif);
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/clients/American/Images/overlay.png", sizingMethod="scale");
+	}

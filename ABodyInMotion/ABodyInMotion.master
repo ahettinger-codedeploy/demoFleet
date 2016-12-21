@@ -1,0 +1,1890 @@
+<%
+'CHANGELOG
+'LSP 02/03/16 - initial development
+%>
+<!DOCTYPE html>
+<html lang="en-US">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Class Schedules</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://abodyinmotion.us/xmlrpc.php">
+	<link rel="alternate" type="application/rss+xml" title="A Body in Motion The Studio » Feed" href="http://abodyinmotion.us/feed/">
+	<link rel="alternate" type="application/rss+xml" title="A Body in Motion The Studio » Comments Feed" href="http://abodyinmotion.us/comments/feed/">
+	<link rel="stylesheet" id="siteorigin-panels-front-css" href="/clients/ABodyInMotion/Images/front.css" type="text/css" media="all">
+	<link rel="stylesheet" id="contact-form-7-css" href="/clients/ABodyInMotion/Images/styles.css" type="text/css" media="all">
+	<link rel="stylesheet" id="cff-css" href="/clients/ABodyInMotion/Images/cff-style.css" type="text/css" media="all">
+	<link rel="stylesheet" id="cff-font-awesome-css" href="/clients/ABodyInMotion/Images/font-awesome.css" type="text/css" media="all">
+	<link rel="stylesheet" id="simple-staff-list-css" href="/clients/ABodyInMotion/Images/simple-staff-list-public.css" type="text/css" media="all">
+	<link rel="stylesheet" id="staff-list-custom-css-css" href="/clients/ABodyInMotion/Images/simple-staff-list-custom.css" type="text/css" media="all">
+	<link rel="stylesheet" id="pinboard-css" href="/clients/ABodyInMotion/Images/style.css" type="text/css" media="all">
+	<link rel="stylesheet" id="colorbox-css" href="/clients/ABodyInMotion/Images/colorbox.css" type="text/css" media="all">
+	<link rel="stylesheet" id="font-awesome-styles-css" href="/clients/ABodyInMotion/Images/font-awesome_002.css" type="text/css" media="all">
+
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/jquery_004.js"></script>
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/jquery-migrate.js"></script>
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/simple-staff-list-public.js"></script>
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/ios-orientationchange-fix.js"></script>
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/jquery_006.js"></script>
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/jquery_005.js"></script>
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/jquery_003.js"></script>
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://abodyinmotion.us/xmlrpc.php?rsd">
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://abodyinmotion.us/wp-includes/wlwmanifest.xml">
+	<meta name="generator" content="WordPress 4.1">
+	<link rel="canonical" href="http://abodyinmotion.us/classes/class-schedules/">
+	<link rel="shortlink" href="http://abodyinmotion.us/?p=40">
+	<style>
+		.wcs3-responsive-wrapper .wcs3-responsive-list {
+			display: none;
+		}
+
+		@media all and (max-width: px) {
+			.wcs3-responsive-wrapper .wcs3-responsive-list {
+				display: block;
+			}
+			.wcs3-responsive-wrapper .wcs3-schedule-wrapper {
+				display: none;
+			}
+		}
+	</style>
+	<style>
+		.wcs3-class-container {
+			background-color: #00aeef;
+			color: #373737;
+		}
+
+		.wcs3-class-container a {
+			color: #1982D1;
+		}
+
+		.wcs3-details-box-container {
+			background-color: #FFDDDD;
+		}
+
+		body .wcs3-qtip-tip {
+			background-color: #FFFFFF;
+			border-color: #DDDDDD;
+		}
+
+		.wcs3-schedule-wrapper table th {
+			background-color: #EEEEEE;
+			color: #;
+		}
+
+		.wcs3-schedule-wrapper table {
+			background-color: #FFFFFF;
+		}
+
+		.wcs3-schedule-wrapper table,
+		.wcs3-schedule-wrapper table td,
+		.wcs3-schedule-wrapper table th {
+			border-color: #DDDDDD;
+		}
+	</style>
+	<script>
+		/* <![CDATA[ */
+		jQuery(window).load(function() {});
+		jQuery(document).ready(function($) {
+			$('#access .menu > li > a').each(function() {
+				var title = $(this).attr('title');
+				if (typeof title !== 'undefined' && title !== false) {
+					$(this).append('<br /> <span>' + title + '</span>');
+					$(this).removeAttr('title');
+				}
+			});
+
+			function pinboard_move_elements(container) {
+				if (container.hasClass('onecol')) {
+					var thumb = $('.entry-thumbnail', container);
+					if ('undefined' !== typeof thumb)
+						$('.entry-container', container).before(thumb);
+					var video = $('.entry-attachment', container);
+					if ('undefined' !== typeof video)
+						$('.entry-container', container).before(video);
+					var gallery = $('.post-gallery', container);
+					if ('undefined' !== typeof gallery)
+						$('.entry-container', container).before(gallery);
+					var meta = $('.entry-meta', container);
+					if ('undefined' !== typeof meta)
+						$('.entry-container', container).after(meta);
+				}
+			}
+
+			function pinboard_restore_elements(container) {
+				if (container.hasClass('onecol')) {
+					var thumb = $('.entry-thumbnail', container);
+					if ('undefined' !== typeof thumb)
+						$('.entry-header', container).after(thumb);
+					var video = $('.entry-attachment', container);
+					if ('undefined' !== typeof video)
+						$('.entry-header', container).after(video);
+					var gallery = $('.post-gallery', container);
+					if ('undefined' !== typeof gallery)
+						$('.entry-header', container).after(gallery);
+					var meta = $('.entry-meta', container);
+					if ('undefined' !== typeof meta)
+						$('.entry-header', container).append(meta);
+					else
+						$('.entry-header', container).html(meta.html());
+				}
+			}
+			if (($(window).width() > 960) || ($(document).width() > 960)) {
+				// Viewport is greater than tablet: portrait
+			} else {
+				$('#content .hentry').each(function() {
+					pinboard_move_elements($(this));
+				});
+			}
+			$(window).resize(function() {
+				if (($(window).width() > 960) || ($(document).width() > 960)) {
+					$('.page-template-template-full-width-php #content .hentry, .page-template-template-blog-full-width-php #content .hentry, .page-template-template-blog-four-col-php #content .hentry').each(function() {
+						pinboard_restore_elements($(this));
+					});
+				} else {
+					$('#content .hentry').each(function() {
+						pinboard_move_elements($(this));
+					});
+				}
+				if (($(window).width() > 760) || ($(document).width() > 760)) {
+					var maxh = 0;
+					$('#access .menu > li > a').each(function() {
+						if (parseInt($(this).css('height')) > maxh) {
+							maxh = parseInt($(this).css('height'));
+						}
+					});
+					$('#access .menu > li > a').css('height', maxh);
+				} else {
+					$('#access .menu > li > a').css('height', 'auto');
+				}
+			});
+			if (($(window).width() > 760) || ($(document).width() > 760)) {
+				var maxh = 0;
+				$('#access .menu > li > a').each(function() {
+					var title = $(this).attr('title');
+					if (typeof title !== 'undefined' && title !== false) {
+						$(this).append('<br /> <span>' + title + '</span>');
+						$(this).removeAttr('title');
+					}
+					if (parseInt($(this).css('height')) > maxh) {
+						maxh = parseInt($(this).css('height'));
+					}
+				});
+				$('#access .menu > li > a').css('height', maxh);
+				$('#access li').mouseenter(function() {
+					$(this).children('ul').css('display', 'none').stop(true, true).fadeIn(250).css('display', 'block').children('ul').css('display', 'none');
+				});
+				$('#access li').mouseleave(function() {
+					$(this).children('ul').stop(true, true).fadeOut(250).css('display', 'block');
+				});
+			} else {
+				$('#access li').each(function() {
+					if ($(this).children('ul').length)
+						$(this).append('<span class="drop-down-toggle"><span class="drop-down-arrow"></span></span>');
+				});
+				$('.drop-down-toggle').click(function() {
+					$(this).parent().children('ul').slideToggle(250);
+				});
+			}
+			$('.entry-attachment audio, .entry-attachment video').mediaelementplayer({
+				videoWidth: '100%',
+				videoHeight: '100%',
+				audioWidth: '100%',
+				alwaysShowControls: true,
+				features: ['playpause', 'progress', 'tracks', 'volume'],
+				videoVolume: 'horizontal'
+			});
+			$(".entry-attachment, .entry-content").fitVids({
+				customSelector: "iframe[src*='wordpress.tv'], iframe[src*='www.dailymotion.com'], iframe[src*='blip.tv'], iframe[src*='www.viddler.com']"
+			});
+		});
+		jQuery(window).load(function() {
+			jQuery('.entry-content a[href$=".jpg"],.entry-content a[href$=".jpeg"],.entry-content a[href$=".png"],.entry-content a[href$=".gif"],a.colorbox').colorbox({
+				maxWidth: '100%',
+				maxHeight: '100%',
+			});
+		});
+		/* ]]> */
+	</script>
+	<style type="text/css">
+		@media screen and (max-width: 760px) {
+			#sidebar {
+				display: none;
+			}
+		}
+
+		#header {
+			border-color: #00aeef;
+		}
+
+		#access {
+			background: #00aeef;
+		}
+
+		@media screen and (max-width: 760px) {
+			#access {
+				background: none;
+			}
+		}
+
+		#access li li {
+			background: #0071aa;
+		}
+
+		body,
+		#slider .entry-title,
+		.page-title,
+		#sidebar-wide .widget-title,
+		#sidebar-boxes .widget-title,
+		#sidebar-footer-wide .widget-title {
+			font-family: "Helvetica Neue", "Nimbus Sans L", sans-serif;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		#site-title,
+		#site-description,
+		.entry-title,
+		#comments-title,
+		#reply-title,
+		.widget-title {
+			font-family: "Lucida Grande", "Lucida Sans Unicode", "Bitstream Vera Sans", sans-serif;
+		}
+
+		.entry-content {
+			font-family: "Trebuchet MS", "Bitstream Vera Sans", sans-serif;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		.entry-title,
+		.entry-title a {
+			color: #00aeef;
+		}
+	</style>
+	<!-- All in one Favicon 4.3 -->
+	<style type="text/css">
+		#site-title .home,
+		#site-description {
+			position: absolute !important;
+			clip: rect(1px, 1px, 1px, 1px);
+		}
+	</style>
+	<style type="text/css" id="custom-background-css">
+		body.custom-background {
+			background-image: url('/clients/ABodyInMotion/Images/bg.jpg');
+			background-repeat: repeat;
+			background-position: top left;
+			background-attachment: scroll;
+		}
+	</style>
+	<style id="fit-vids-style">
+		.fluid-width-video-wrapper {
+			width: 100%;
+			position: relative;
+			padding: 0;
+		}
+
+		.fluid-width-video-wrapper iframe,
+		.fluid-width-video-wrapper object,
+		.fluid-width-video-wrapper embed {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+
+
+<body class="page page-id-40 page-child parent-pageid-36 page-template-default custom-background page-template-template-full-width-php">
+	<div id="wrapper">
+		<header id="header">
+			<div id="site-title">
+				<a href="http://abodyinmotion.us/" rel="home">
+					<img src="/clients/ABodyInMotion/Images/cropped-abodyinmotion_shiny_final_no_body-e1419917369582.png" alt="A Body in Motion The Studio" height="133" width="300">
+				</a>
+				<a class="home" href="http://abodyinmotion.us/" rel="home">A Body in Motion The Studio</a>
+			</div>
+			<div id="site-description">fine arts, dance, fitness</div>
+
+			<div id="social-media-icons">
+				<a class="social-media-icon facebook" href="https://www.facebook.com/ABodyInMotion">Facebook</a>
+				<a class="social-media-icon twitter" href="https://twitter.com/abodyinmotion">Twitter</a>
+			</div>
+			<div class="clear"></div>
+			<nav id="access">
+				<a class="nav-show" href="#access">Show Navigation</a>
+				<a class="nav-hide" href="#nogo">Hide Navigation</a>
+				<div class="menu-main-menu-container">
+					<ul id="menu-main-menu" class="menu">
+						<li id="menu-item-59" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-59"><a style="height: 21px;" href="http://abodyinmotion.us/">Home</a></li>
+						<li id="menu-item-62" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-62"><a style="height: 21px;" href="http://abodyinmotion.us/classes/">Classes</a>
+							<ul class="sub-menu">
+								<li id="menu-item-61" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-40 current_page_item menu-item-61"><a href="http://abodyinmotion.us/classes/class-schedules/">Class Schedules</a></li>
+								<li id="menu-item-624" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-624"><a href="http://abodyinmotion.us/classes/class-prices/">Class Prices</a></li>
+								<li id="menu-item-189" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-189"><a href="http://abodyinmotion.us/classes/dance-classes/">Dance Classes</a>
+									<ul class="sub-menu">
+										<li id="menu-item-456" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-456"><a href="http://abodyinmotion.us/classes/dance-classes/college-dancedrill-team-prep/">College Dance/Drill Team Prep</a></li>
+										<li id="menu-item-455" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-455"><a href="http://abodyinmotion.us/classes/dance-classes/pro-dancecheer-prep/">Pro Dance/Cheer Prep</a></li>
+										<li id="menu-item-454" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-454"><a href="http://abodyinmotion.us/classes/dance-classes/adult-dance/">Adult Dance</a></li>
+									</ul>
+								</li>
+								<li id="menu-item-188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188"><a href="http://abodyinmotion.us/classes/fitness-classes/">Fitness Classes</a></li>
+								<li id="menu-item-439" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-439"><a href="http://abodyinmotion.us/classes/art-in-motion/">Art in Motion</a></li>
+							</ul>
+						</li>
+						<li id="menu-item-560" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-560"><a style="height: 21px;" href="http://abodyinmotion.us/registration/">Parent/Student Info</a>
+							<ul style="display: none;" class="sub-menu">
+								<li id="menu-item-598" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-598"><a href="http://abodyinmotionthestudio.studioware-online.com/">Online Registration</a></li>
+								<li id="menu-item-644" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-644"><a href="http://abodyinmotion.us/studio-news/">Studio News</a></li>
+								<li id="menu-item-625" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-625"><a href="http://abodyinmotion.us/classes/class-prices/">Class Prices</a></li>
+								<li id="menu-item-629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-629"><a href="http://abodyinmotion.us/registration/student-dress-code/">Student Dress Code</a></li>
+							</ul>
+						</li>
+						<li id="menu-item-70" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-70"><a style="height: 21px;" href="http://abodyinmotion.us/companies-teams/">Companies &amp; Teams</a>
+							<ul style="display: none;" class="sub-menu">
+								<li id="menu-item-64" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64"><a href="http://abodyinmotion.us/companies-teams/dance-companies/">Dance Companies</a></li>
+								<li id="menu-item-63" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-63"><a href="http://abodyinmotion.us/companies-teams/cheer-teams/">Cheer Teams</a></li>
+							</ul>
+						</li>
+						<li id="menu-item-390" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-390"><a style="height: 21px;" href="http://abodyinmotion.us/special-events/">Events</a>
+							<ul class="sub-menu">
+								<li id="menu-item-539" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-539"><a href="http://abodyinmotion.us/special-events/boot-camps/">Boot Camps</a></li>
+								<li id="menu-item-538" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-538"><a href="http://abodyinmotion.us/special-events/summer-camps/">Summer Camps</a>
+									<ul class="sub-menu">
+										<li id="menu-item-60" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-60"><a href="http://abodyinmotion.us/choreography/">Choreography</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li id="menu-item-187" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-187"><a style="height: 21px;" href="http://abodyinmotion.us/staff/">Staff</a>
+							<ul class="sub-menu">
+								<li id="menu-item-186" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-186"><a href="http://abodyinmotion.us/contact/partners/">Partners</a></li>
+							</ul>
+						</li>
+						<li id="menu-item-185" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-185"><a style="height: 21px;" href="http://abodyinmotion.us/contact/">Contact</a>
+							<ul class="sub-menu">
+								<li id="menu-item-66" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-66"><a href="http://abodyinmotion.us/contact/locations/">Locations</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+			</nav>
+			<!-- #access -->
+		</header>
+		<!-- #header -->
+		<div id="container">
+			<section id="content" class="column onecol">
+<!--tix content-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+				<!-- .post -->
+			</section>
+			<!-- #content -->
+			<div id="sidebar" class="column twocol">
+			</div>
+			<!-- #sidebar -->
+			<div class="clear"></div>
+		</div>
+		<!-- #container -->
+		<div id="footer">
+			<div id="footer-area" class="widget-area" role="complementary">
+				<div class="column threecol">
+					<aside id="text-4" class="widget widget_text">
+						<div class="textwidget">1201 S. Broadway, #101
+							<br> Carrollton, Texas 75007
+							<br> Telephone:972-245-6252
+							<br> info@abodyinmotion.us
+							<br>
+							<script type="text/javascript" src="/clients/ABodyInMotion/Images/siteseal.js"></script>
+							<a href="#" style="text-decoration:none;" onclick="javascript:window.open('https://www.rapidscansecure.com/siteseal/Verify.aspx?code=42,1DDFF07DD96015B3178722D545824544A42022B3', 'Verification',  'location=no, toolbar=no, resizable=no, scrollbars=yes, directories=no, status=no,top=100,left=100, width=720, height=460'); return false;">
+								<img src="/clients/ABodyInMotion/Images/Seal.jpg" border="0">
+							</a>
+						</div>
+					</aside>
+					<!-- .widget -->
+				</div>
+				<div class="clear"></div>
+			</div>
+			<!-- #footer-area -->
+			<div id="copyright">
+				<p class="copyright twocol">&#169; 2016 A Body in Motion The Studio</p>
+				<div class="clear"></div>
+			</div>
+			<!-- #copyright -->
+		</div>
+		<!-- #footer -->
+	</div>
+	<!-- #wrapper -->
+	<!-- Custom Facebook Feed JS -->
+	<script type="text/javascript">
+		var cfflinkhashtags = "true";
+	</script>
+	<link rel="stylesheet" id="wcs3_qtip_css-css" href="/clients/ABodyInMotion/Images/jquery.css" type="text/css" media="all">
+	<link rel="stylesheet" id="wcs3_front_css-css" href="/clients/ABodyInMotion/Images/wcs3_front.css" type="text/css" media="all">
+	<link rel="stylesheet" id="wcs3_ex1_front_css-css" href="/clients/ABodyInMotion/Images/wcs3_ex1_front.css" type="text/css" media="all">
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/jquery_007.js"></script>
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		var _wpcf7 = {
+			"loaderUrl": "http:\/\/abodyinmotion.us\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif",
+			"sending": "Sending ..."
+		};
+		/* ]]> */
+	</script>
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/scripts.js"></script>
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/cff-scripts.js"></script>
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		var mejsL10n = {
+			"language": "en-US",
+			"strings": {
+				"Close": "Close",
+				"Fullscreen": "Fullscreen",
+				"Download File": "Download File",
+				"Download Video": "Download Video",
+				"Play\/Pause": "Play\/Pause",
+				"Mute Toggle": "Mute Toggle",
+				"None": "None",
+				"Turn off Fullscreen": "Turn off Fullscreen",
+				"Go Fullscreen": "Go Fullscreen",
+				"Unmute": "Unmute",
+				"Mute": "Mute",
+				"Captions\/Subtitles": "Captions\/Subtitles"
+			}
+		};
+		var _wpmejsSettings = {
+			"pluginPath": "\/wp-includes\/js\/mediaelement\/"
+		};
+		/* ]]> */
+	</script>
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/mediaelement-and-player.js"></script>
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/wp-mediaelement.js"></script>
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/comment-reply.js"></script>
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/jquery.js"></script>
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/imagesloaded.js"></script>
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/jquery_002.js"></script>
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/wcs3_common.js"></script>
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		var WCS3_DATA = {
+			"options": {
+				"first_day_of_week": 0,
+				"24_hour_mode": "no",
+				"location_collision": "yes",
+				"instructor_collision": "yes",
+				"details_template": "[class] with [instructor] [start hour] to [end hour] [notes]",
+				"allow_html_in_notes": "no",
+				"color_base": "00aeef",
+				"color_details_box": "FFDDDD",
+				"color_text": "373737",
+				"color_border": "DDDDDD",
+				"color_headings_text": "666666",
+				"color_headings_background": "EEEEEE",
+				"color_background": "FFFFFF",
+				"color_qtip_background": "FFFFFF",
+				"color_links": "1982D1"
+			},
+			"locations": [{
+				"unique_start_times": ["09-00", "10-00", "11-00", "12-00", "13-00", "14-00", "15-30", "17-00", "17-30", "18-00", "18-30", "19-00", "19-30", "20-00", "20-30", "21-00"],
+				"classes": {
+					"09-00": [{
+						"class_title": "Private Lessons\/Academic tutoring (By appointment only)",
+						"class_desc": "",
+						"instructor_title": "Jaclyn (Jax) Tisdale",
+						"instructor_desc": "",
+						"color": "deeaff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "2",
+						"start_hour": "9:00 am",
+						"end_hour": "11:00 am",
+						"notes": "",
+						"start_hour_css": "09-00",
+						"end_hour_css": "11-00",
+						"duration": 120
+					}, {
+						"class_title": "Private Lessons\/Academic tutoring (By appointment only)",
+						"class_desc": "",
+						"instructor_title": "Jaclyn (Jax) Tisdale",
+						"instructor_desc": "",
+						"color": "deeaff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "4",
+						"start_hour": "9:00 am",
+						"end_hour": "11:00 am",
+						"notes": "",
+						"start_hour_css": "09-00",
+						"end_hour_css": "11-00",
+						"duration": 120
+					}],
+					"10-00": [{
+						"class_title": "Creative Movement (2-4 years)",
+						"class_desc": "",
+						"instructor_title": "Carolyn S. Lang",
+						"instructor_desc": "",
+						"color": "DDFFDD",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "6",
+						"start_hour": "10:00 am",
+						"end_hour": "10:45 am",
+						"notes": "",
+						"start_hour_css": "10-00",
+						"end_hour_css": "10-45",
+						"duration": 45
+					}],
+					"11-00": [{
+						"class_title": "College\/Pro Dance Team Prep INT\/ADV (Teen\/Adult)",
+						"class_desc": "",
+						"instructor_title": "Carolyn S. Lang",
+						"instructor_desc": "",
+						"color": "DDFFDD",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "6",
+						"start_hour": "11:00 am",
+						"end_hour": "1:00 pm",
+						"notes": "",
+						"start_hour_css": "11-00",
+						"end_hour_css": "13-00",
+						"duration": 120
+					}, {
+						"class_title": "Preschool Tap\/Jazz (2-4 years)",
+						"class_desc": "",
+						"instructor_title": "Jaclyn (Jax) Tisdale",
+						"instructor_desc": "",
+						"color": "deeaff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "4",
+						"start_hour": "11:00 am",
+						"end_hour": "11:45 am",
+						"notes": "",
+						"start_hour_css": "11-00",
+						"end_hour_css": "11-45",
+						"duration": 45
+					}],
+					"12-00": [{
+						"class_title": "Fit Body Werkout Beg\/Int (Adult)",
+						"class_desc": "",
+						"instructor_title": "Jaclyn (Jax) Tisdale",
+						"instructor_desc": "",
+						"color": "deeaff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "4",
+						"start_hour": "12:00 pm",
+						"end_hour": "1:00 pm",
+						"notes": "",
+						"start_hour_css": "12-00",
+						"end_hour_css": "13-00",
+						"duration": 60
+					}],
+					"13-00": [{
+						"class_title": "Hip Hop Int\/Adv (Teen\/Adult)",
+						"class_desc": "",
+						"instructor_title": "Kary\u00a0Williams",
+						"instructor_desc": "",
+						"color": "f6deff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "6",
+						"start_hour": "1:00 pm",
+						"end_hour": "2:00 pm",
+						"notes": "",
+						"start_hour_css": "13-00",
+						"end_hour_css": "14-00",
+						"duration": 60
+					}],
+					"14-00": [{
+						"class_title": "Seraphim Jr Contemporary Company",
+						"class_desc": "",
+						"instructor_title": "Kaylee White",
+						"instructor_desc": "",
+						"color": "f7deff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "0",
+						"start_hour": "2:00 pm",
+						"end_hour": "3:30 pm",
+						"notes": "",
+						"start_hour_css": "14-00",
+						"end_hour_css": "15-30",
+						"duration": 90
+					}],
+					"15-30": [{
+						"class_title": "Velocity Jr Jazz Company",
+						"class_desc": "",
+						"instructor_title": "Kaylee White",
+						"instructor_desc": "",
+						"color": "f7deff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "0",
+						"start_hour": "3:30 pm",
+						"end_hour": "5:00 pm",
+						"notes": "",
+						"start_hour_css": "15-30",
+						"end_hour_css": "17-00",
+						"duration": 90
+					}],
+					"17-00": [{
+						"class_title": "Starting Pointe Jr Ballet Company",
+						"class_desc": "",
+						"instructor_title": "Nicole Funderburg",
+						"instructor_desc": "",
+						"color": "f2bb9e",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "0",
+						"start_hour": "5:00 pm",
+						"end_hour": "6:30 pm",
+						"notes": "",
+						"start_hour_css": "17-00",
+						"end_hour_css": "18-30",
+						"duration": 90
+					}],
+					"17-30": [{
+						"class_title": "Cheer Prep (5-14 years)",
+						"class_desc": "",
+						"instructor_title": "Raechel Peters",
+						"instructor_desc": "",
+						"color": "efdeff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "1",
+						"start_hour": "5:30 pm",
+						"end_hour": "6:00 pm",
+						"notes": "",
+						"start_hour_css": "17-30",
+						"end_hour_css": "18-00",
+						"duration": 30
+					}, {
+						"class_title": "Tap I (4-6 years)",
+						"class_desc": "",
+						"instructor_title": "Staff",
+						"instructor_desc": "",
+						"color": null,
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "2",
+						"start_hour": "5:30 pm",
+						"end_hour": "6:00 pm",
+						"notes": "",
+						"start_hour_css": "17-30",
+						"end_hour_css": "18-00",
+						"duration": 30
+					}, {
+						"class_title": "Preschool Tap\/Jazz (2-4 years)",
+						"class_desc": "",
+						"instructor_title": "Carolyn S. Lang",
+						"instructor_desc": "",
+						"color": "DDFFDD",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "3",
+						"start_hour": "5:30 pm",
+						"end_hour": "6:15 pm",
+						"notes": "Instructors: Carolyn Lang and Kate Haas",
+						"start_hour_css": "17-30",
+						"end_hour_css": "18-15",
+						"duration": 45
+					}, {
+						"class_title": "Tap I (4-6 years)",
+						"class_desc": "",
+						"instructor_title": "Kate Haas",
+						"instructor_desc": "",
+						"color": "fff8de",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "4",
+						"start_hour": "5:30 pm",
+						"end_hour": "6:00 pm",
+						"notes": "",
+						"start_hour_css": "17-30",
+						"end_hour_css": "18-00",
+						"duration": 30
+					}, {
+						"class_title": "Musical Theater (5-13 years)",
+						"class_desc": "",
+						"instructor_title": "Joe Strohl",
+						"instructor_desc": "",
+						"color": "80cbfc",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "5",
+						"start_hour": "5:30 pm",
+						"end_hour": "6:30 pm",
+						"notes": "",
+						"start_hour_css": "17-30",
+						"end_hour_css": "18-30",
+						"duration": 60
+					}],
+					"18-00": [{
+						"class_title": "Ballet I (4-6 years)",
+						"class_desc": "",
+						"instructor_title": "Staff",
+						"instructor_desc": "",
+						"color": null,
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "2",
+						"start_hour": "6:00 pm",
+						"end_hour": "6:30 pm",
+						"notes": "",
+						"start_hour_css": "18-00",
+						"end_hour_css": "18-30",
+						"duration": 30
+					}, {
+						"class_title": "Tumbling (5-14 years)",
+						"class_desc": "",
+						"instructor_title": "Raechel Peters",
+						"instructor_desc": "",
+						"color": "efdeff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "1",
+						"start_hour": "6:00 pm",
+						"end_hour": "6:30 pm",
+						"notes": "",
+						"start_hour_css": "18-00",
+						"end_hour_css": "18-30",
+						"duration": 30
+					}, {
+						"class_title": "Ballet I (4-6 years)",
+						"class_desc": "",
+						"instructor_title": "Carolyn S. Lang",
+						"instructor_desc": "",
+						"color": "DDFFDD",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "4",
+						"start_hour": "6:00 pm",
+						"end_hour": "6:30 pm",
+						"notes": "",
+						"start_hour_css": "18-00",
+						"end_hour_css": "18-30",
+						"duration": 30
+					}],
+					"18-30": [{
+						"class_title": "Jazz I (4-6 years)",
+						"class_desc": "",
+						"instructor_title": "Staff",
+						"instructor_desc": "",
+						"color": null,
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "2",
+						"start_hour": "6:30 pm",
+						"end_hour": "7:00 pm",
+						"notes": "",
+						"start_hour_css": "18-30",
+						"end_hour_css": "19-00",
+						"duration": 30
+					}, {
+						"class_title": "Ballet III\/IV Beg\/Int (10-18 years)",
+						"class_desc": "",
+						"instructor_title": "Kaylee White",
+						"instructor_desc": "",
+						"color": "f7deff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "5",
+						"start_hour": "6:30 pm",
+						"end_hour": "7:30 pm",
+						"notes": "",
+						"start_hour_css": "18-30",
+						"end_hour_css": "19-30",
+						"duration": 60
+					}, {
+						"class_title": "Baton Twirling (5-14 years)",
+						"class_desc": "",
+						"instructor_title": "Joe Hudson",
+						"instructor_desc": "",
+						"color": "acfc7e",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "1",
+						"start_hour": "6:30 pm",
+						"end_hour": "7:30 pm",
+						"notes": "",
+						"start_hour_css": "18-30",
+						"end_hour_css": "19-30",
+						"duration": 60
+					}, {
+						"class_title": "Tap II (7-9 years)",
+						"class_desc": "",
+						"instructor_title": "Kate Haas",
+						"instructor_desc": "",
+						"color": "fff8de",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "3",
+						"start_hour": "6:30 pm",
+						"end_hour": "7:00 pm",
+						"notes": "",
+						"start_hour_css": "18-30",
+						"end_hour_css": "19-00",
+						"duration": 30
+					}, {
+						"class_title": "Jazz I (4-6 years)",
+						"class_desc": "",
+						"instructor_title": "Kate Haas",
+						"instructor_desc": "",
+						"color": "fff8de",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "4",
+						"start_hour": "6:30 pm",
+						"end_hour": "7:00 pm",
+						"notes": "",
+						"start_hour_css": "18-30",
+						"end_hour_css": "19-00",
+						"duration": 30
+					}],
+					"19-00": [{
+						"class_title": "Hip Hop I (4-6 years)",
+						"class_desc": "",
+						"instructor_title": "Staff",
+						"instructor_desc": "",
+						"color": null,
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "2",
+						"start_hour": "7:00 pm",
+						"end_hour": "7:30 pm",
+						"notes": "",
+						"start_hour_css": "19-00",
+						"end_hour_css": "19-30",
+						"duration": 30
+					}, {
+						"class_title": "Ballet II (7-9 years)",
+						"class_desc": "",
+						"instructor_title": "Nicole Funderburg",
+						"instructor_desc": "",
+						"color": "f2bb9e",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "3",
+						"start_hour": "7:00 pm",
+						"end_hour": "7:30 pm",
+						"notes": "",
+						"start_hour_css": "19-00",
+						"end_hour_css": "19-30",
+						"duration": 30
+					}, {
+						"class_title": "Hip Hop I (4-6 years)",
+						"class_desc": "",
+						"instructor_title": "Kary\u00a0Williams",
+						"instructor_desc": "",
+						"color": "f6deff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "4",
+						"start_hour": "7:00 pm",
+						"end_hour": "7:30 pm",
+						"notes": "",
+						"start_hour_css": "19-00",
+						"end_hour_css": "19-30",
+						"duration": 30
+					}],
+					"19-30": [{
+						"class_title": "Teen\/Adult Jazz (Beg\/Int)",
+						"class_desc": "",
+						"instructor_title": "Allison Perkins",
+						"instructor_desc": "",
+						"color": "f8ff9c",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "2",
+						"start_hour": "7:30 pm",
+						"end_hour": "8:30 pm",
+						"notes": "",
+						"start_hour_css": "19-30",
+						"end_hour_css": "20-30",
+						"duration": 60
+					}, {
+						"class_title": "Contemporary III\/IV Beg\/Int (10-18 years)",
+						"class_desc": "",
+						"instructor_title": "Kaylee White",
+						"instructor_desc": "",
+						"color": "f7deff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "5",
+						"start_hour": "7:30 pm",
+						"end_hour": "8:30 pm",
+						"notes": "",
+						"start_hour_css": "19-30",
+						"end_hour_css": "20-30",
+						"duration": 60
+					}, {
+						"class_title": "Lyrical III\/IV (10-18 years)",
+						"class_desc": "",
+						"instructor_title": "Nicole Funderburg",
+						"instructor_desc": "",
+						"color": "f2bb9e",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "1",
+						"start_hour": "7:30 pm",
+						"end_hour": "8:00 pm",
+						"notes": "",
+						"start_hour_css": "19-30",
+						"end_hour_css": "20-00",
+						"duration": 30
+					}, {
+						"class_title": "Jazz II (7-9 years)",
+						"class_desc": "",
+						"instructor_title": "Nicole Funderburg",
+						"instructor_desc": "",
+						"color": "f2bb9e",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "3",
+						"start_hour": "7:30 pm",
+						"end_hour": "8:00 pm",
+						"notes": "",
+						"start_hour_css": "19-30",
+						"end_hour_css": "20-00",
+						"duration": 30
+					}, {
+						"class_title": "Hip Hop II\/III (7-13 years)",
+						"class_desc": "",
+						"instructor_title": "Kary\u00a0Williams",
+						"instructor_desc": "",
+						"color": "f6deff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "4",
+						"start_hour": "7:30 pm",
+						"end_hour": "8:30 pm",
+						"notes": "Instructors: Kary Williams and Carolyn Lang",
+						"start_hour_css": "19-30",
+						"end_hour_css": "20-30",
+						"duration": 60
+					}],
+					"20-00": [{
+						"class_title": "Ballet III\/IV Beg\/Int (10-18 years)",
+						"class_desc": "",
+						"instructor_title": "Nicole Funderburg",
+						"instructor_desc": "",
+						"color": "f2bb9e",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "1",
+						"start_hour": "8:00 pm",
+						"end_hour": "9:00 pm",
+						"notes": "",
+						"start_hour_css": "20-00",
+						"end_hour_css": "21-00",
+						"duration": 60
+					}, {
+						"class_title": "Hip Hop II (7-9 years)",
+						"class_desc": "",
+						"instructor_title": "Staff",
+						"instructor_desc": "",
+						"color": null,
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "3",
+						"start_hour": "8:00 pm",
+						"end_hour": "8:30 pm",
+						"notes": "",
+						"start_hour_css": "20-00",
+						"end_hour_css": "20-30",
+						"duration": 30
+					}],
+					"20-30": [{
+						"class_title": "Jazz III\/IV Beg\/Int (10-18 years)",
+						"class_desc": "",
+						"instructor_title": "Kaylee White",
+						"instructor_desc": "",
+						"color": "f7deff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "5",
+						"start_hour": "8:30 pm",
+						"end_hour": "9:30 pm",
+						"notes": "",
+						"start_hour_css": "20-30",
+						"end_hour_css": "21-30",
+						"duration": 60
+					}, {
+						"class_title": "Tap III\/IV (Teen\/Adult)",
+						"class_desc": "",
+						"instructor_title": "Allison Perkins",
+						"instructor_desc": "",
+						"color": "f8ff9c",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "2",
+						"start_hour": "8:30 pm",
+						"end_hour": "9:30 pm",
+						"notes": "Tuesday\u00a0Nite Dance Deal! One class is $15, Two classes is $20, All 4 classes $25",
+						"start_hour_css": "20-30",
+						"end_hour_css": "21-30",
+						"duration": 60
+					}, {
+						"class_title": "Drill Team Prep BEG\/INT (10-16 years)",
+						"class_desc": "",
+						"instructor_title": "Nicole Funderburg",
+						"instructor_desc": "",
+						"color": "f2bb9e",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "3",
+						"start_hour": "8:30 pm",
+						"end_hour": "9:30 pm",
+						"notes": "",
+						"start_hour_css": "20-30",
+						"end_hour_css": "21-30",
+						"duration": 60
+					}, {
+						"class_title": "Flex\/Core (10 years - Adult)",
+						"class_desc": "",
+						"instructor_title": "Carolyn S. Lang",
+						"instructor_desc": "",
+						"color": "DDFFDD",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "4",
+						"start_hour": "8:30 pm",
+						"end_hour": "9:30 pm",
+						"notes": "",
+						"start_hour_css": "20-30",
+						"end_hour_css": "21-30",
+						"duration": 60
+					}],
+					"21-00": [{
+						"class_title": "Prepointe\/Pointe (10-18 years)",
+						"class_desc": "",
+						"instructor_title": "Nicole Funderburg",
+						"instructor_desc": "",
+						"color": "f2bb9e",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "1",
+						"start_hour": "9:00 pm",
+						"end_hour": "10:00 pm",
+						"notes": "",
+						"start_hour_css": "21-00",
+						"end_hour_css": "22-00",
+						"duration": 60
+					}]
+				},
+				"layout": "full",
+				"location_slug": "old-downtown-carrollton"
+			}, {
+				"unique_start_times": ["18-00", "19-00"],
+				"classes": {
+					"18-00": [{
+						"class_title": "Motion Xtreme Cheer Tumbling",
+						"class_desc": "",
+						"instructor_title": "Raechel Peters",
+						"instructor_desc": "",
+						"color": "efdeff",
+						"location_title": "Palaestra",
+						"location_desc": "4335 North Beltwood Parkway\r\nFarmers Branch, TX 75244\r\n(972) 620-9922",
+						"weekday": "2",
+						"start_hour": "6:00 pm",
+						"end_hour": "7:00 pm",
+						"notes": "",
+						"start_hour_css": "18-00",
+						"end_hour_css": "19-00",
+						"duration": 60
+					}],
+					"19-00": [{
+						"class_title": "Motion Xtreme Cheer Practice",
+						"class_desc": "",
+						"instructor_title": "Katinya Lilly",
+						"instructor_desc": "",
+						"color": "fabc5f",
+						"location_title": "Palaestra",
+						"location_desc": "4335 North Beltwood Parkway\r\nFarmers Branch, TX 75244\r\n(972) 620-9922",
+						"weekday": "2",
+						"start_hour": "7:00 pm",
+						"end_hour": "8:00 pm",
+						"notes": "Coaches: Katinya Lilly and Raechel Peters",
+						"start_hour_css": "19-00",
+						"end_hour_css": "20-00",
+						"duration": 60
+					}]
+				},
+				"layout": "full",
+				"location_slug": "palaestra"
+			}, {
+				"unique_start_times": ["18-00"],
+				"classes": {
+					"18-00": [{
+						"class_title": "Zumba",
+						"class_desc": "",
+						"instructor_title": "Katinya Lilly",
+						"instructor_desc": "",
+						"color": "fabc5f",
+						"location_title": "Palaestra Dance Floor",
+						"location_desc": "",
+						"weekday": "2",
+						"start_hour": "6:00 pm",
+						"end_hour": "7:00 pm",
+						"notes": "",
+						"start_hour_css": "18-00",
+						"end_hour_css": "19-00",
+						"duration": 60
+					}]
+				},
+				"layout": "full",
+				"location_slug": "palaestra-dance-floor"
+			}]
+		};
+		/* ]]> */
+	</script>
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/wcs3_front.js"></script>
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		var WCS3_EX1_DATA = {
+			"options": {
+				"first_day_of_week": 0,
+				"24_hour_mode": "no",
+				"location_collision": "yes",
+				"instructor_collision": "yes",
+				"details_template": "[class] with [instructor] [start hour] to [end hour] [notes]",
+				"allow_html_in_notes": "no",
+				"color_base": "00aeef",
+				"color_details_box": "FFDDDD",
+				"color_text": "373737",
+				"color_border": "DDDDDD",
+				"color_headings_text": "666666",
+				"color_headings_background": "EEEEEE",
+				"color_background": "FFFFFF",
+				"color_qtip_background": "FFFFFF",
+				"color_links": "1982D1"
+			},
+			"locations": [{
+				"unique_start_times": ["09-00", "10-00", "11-00", "12-00", "13-00", "14-00", "15-30", "17-00", "17-30", "18-00", "18-30", "19-00", "19-30", "20-00", "20-30", "21-00"],
+				"classes": {
+					"09-00": [{
+						"class_title": "Private Lessons\/Academic tutoring (By appointment only)",
+						"class_desc": "",
+						"instructor_title": "Jaclyn (Jax) Tisdale",
+						"instructor_desc": "",
+						"color": "deeaff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "2",
+						"start_hour": "9:00 am",
+						"end_hour": "11:00 am",
+						"notes": "",
+						"start_hour_css": "09-00",
+						"end_hour_css": "11-00",
+						"duration": 120
+					}, {
+						"class_title": "Private Lessons\/Academic tutoring (By appointment only)",
+						"class_desc": "",
+						"instructor_title": "Jaclyn (Jax) Tisdale",
+						"instructor_desc": "",
+						"color": "deeaff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "4",
+						"start_hour": "9:00 am",
+						"end_hour": "11:00 am",
+						"notes": "",
+						"start_hour_css": "09-00",
+						"end_hour_css": "11-00",
+						"duration": 120
+					}],
+					"10-00": [{
+						"class_title": "Creative Movement (2-4 years)",
+						"class_desc": "",
+						"instructor_title": "Carolyn S. Lang",
+						"instructor_desc": "",
+						"color": "DDFFDD",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "6",
+						"start_hour": "10:00 am",
+						"end_hour": "10:45 am",
+						"notes": "",
+						"start_hour_css": "10-00",
+						"end_hour_css": "10-45",
+						"duration": 45
+					}],
+					"11-00": [{
+						"class_title": "College\/Pro Dance Team Prep INT\/ADV (Teen\/Adult)",
+						"class_desc": "",
+						"instructor_title": "Carolyn S. Lang",
+						"instructor_desc": "",
+						"color": "DDFFDD",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "6",
+						"start_hour": "11:00 am",
+						"end_hour": "1:00 pm",
+						"notes": "",
+						"start_hour_css": "11-00",
+						"end_hour_css": "13-00",
+						"duration": 120
+					}, {
+						"class_title": "Preschool Tap\/Jazz (2-4 years)",
+						"class_desc": "",
+						"instructor_title": "Jaclyn (Jax) Tisdale",
+						"instructor_desc": "",
+						"color": "deeaff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "4",
+						"start_hour": "11:00 am",
+						"end_hour": "11:45 am",
+						"notes": "",
+						"start_hour_css": "11-00",
+						"end_hour_css": "11-45",
+						"duration": 45
+					}],
+					"12-00": [{
+						"class_title": "Fit Body Werkout Beg\/Int (Adult)",
+						"class_desc": "",
+						"instructor_title": "Jaclyn (Jax) Tisdale",
+						"instructor_desc": "",
+						"color": "deeaff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "4",
+						"start_hour": "12:00 pm",
+						"end_hour": "1:00 pm",
+						"notes": "",
+						"start_hour_css": "12-00",
+						"end_hour_css": "13-00",
+						"duration": 60
+					}],
+					"13-00": [{
+						"class_title": "Hip Hop Int\/Adv (Teen\/Adult)",
+						"class_desc": "",
+						"instructor_title": "Kary\u00a0Williams",
+						"instructor_desc": "",
+						"color": "f6deff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "6",
+						"start_hour": "1:00 pm",
+						"end_hour": "2:00 pm",
+						"notes": "",
+						"start_hour_css": "13-00",
+						"end_hour_css": "14-00",
+						"duration": 60
+					}],
+					"14-00": [{
+						"class_title": "Seraphim Jr Contemporary Company",
+						"class_desc": "",
+						"instructor_title": "Kaylee White",
+						"instructor_desc": "",
+						"color": "f7deff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "0",
+						"start_hour": "2:00 pm",
+						"end_hour": "3:30 pm",
+						"notes": "",
+						"start_hour_css": "14-00",
+						"end_hour_css": "15-30",
+						"duration": 90
+					}],
+					"15-30": [{
+						"class_title": "Velocity Jr Jazz Company",
+						"class_desc": "",
+						"instructor_title": "Kaylee White",
+						"instructor_desc": "",
+						"color": "f7deff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "0",
+						"start_hour": "3:30 pm",
+						"end_hour": "5:00 pm",
+						"notes": "",
+						"start_hour_css": "15-30",
+						"end_hour_css": "17-00",
+						"duration": 90
+					}],
+					"17-00": [{
+						"class_title": "Starting Pointe Jr Ballet Company",
+						"class_desc": "",
+						"instructor_title": "Nicole Funderburg",
+						"instructor_desc": "",
+						"color": "f2bb9e",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "0",
+						"start_hour": "5:00 pm",
+						"end_hour": "6:30 pm",
+						"notes": "",
+						"start_hour_css": "17-00",
+						"end_hour_css": "18-30",
+						"duration": 90
+					}],
+					"17-30": [{
+						"class_title": "Cheer Prep (5-14 years)",
+						"class_desc": "",
+						"instructor_title": "Raechel Peters",
+						"instructor_desc": "",
+						"color": "efdeff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "1",
+						"start_hour": "5:30 pm",
+						"end_hour": "6:00 pm",
+						"notes": "",
+						"start_hour_css": "17-30",
+						"end_hour_css": "18-00",
+						"duration": 30
+					}, {
+						"class_title": "Tap I (4-6 years)",
+						"class_desc": "",
+						"instructor_title": "Staff",
+						"instructor_desc": "",
+						"color": null,
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "2",
+						"start_hour": "5:30 pm",
+						"end_hour": "6:00 pm",
+						"notes": "",
+						"start_hour_css": "17-30",
+						"end_hour_css": "18-00",
+						"duration": 30
+					}, {
+						"class_title": "Preschool Tap\/Jazz (2-4 years)",
+						"class_desc": "",
+						"instructor_title": "Carolyn S. Lang",
+						"instructor_desc": "",
+						"color": "DDFFDD",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "3",
+						"start_hour": "5:30 pm",
+						"end_hour": "6:15 pm",
+						"notes": "Instructors: Carolyn Lang and Kate Haas",
+						"start_hour_css": "17-30",
+						"end_hour_css": "18-15",
+						"duration": 45
+					}, {
+						"class_title": "Tap I (4-6 years)",
+						"class_desc": "",
+						"instructor_title": "Kate Haas",
+						"instructor_desc": "",
+						"color": "fff8de",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "4",
+						"start_hour": "5:30 pm",
+						"end_hour": "6:00 pm",
+						"notes": "",
+						"start_hour_css": "17-30",
+						"end_hour_css": "18-00",
+						"duration": 30
+					}, {
+						"class_title": "Musical Theater (5-13 years)",
+						"class_desc": "",
+						"instructor_title": "Joe Strohl",
+						"instructor_desc": "",
+						"color": "80cbfc",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "5",
+						"start_hour": "5:30 pm",
+						"end_hour": "6:30 pm",
+						"notes": "",
+						"start_hour_css": "17-30",
+						"end_hour_css": "18-30",
+						"duration": 60
+					}],
+					"18-00": [{
+						"class_title": "Ballet I (4-6 years)",
+						"class_desc": "",
+						"instructor_title": "Staff",
+						"instructor_desc": "",
+						"color": null,
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "2",
+						"start_hour": "6:00 pm",
+						"end_hour": "6:30 pm",
+						"notes": "",
+						"start_hour_css": "18-00",
+						"end_hour_css": "18-30",
+						"duration": 30
+					}, {
+						"class_title": "Tumbling (5-14 years)",
+						"class_desc": "",
+						"instructor_title": "Raechel Peters",
+						"instructor_desc": "",
+						"color": "efdeff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "1",
+						"start_hour": "6:00 pm",
+						"end_hour": "6:30 pm",
+						"notes": "",
+						"start_hour_css": "18-00",
+						"end_hour_css": "18-30",
+						"duration": 30
+					}, {
+						"class_title": "Ballet I (4-6 years)",
+						"class_desc": "",
+						"instructor_title": "Carolyn S. Lang",
+						"instructor_desc": "",
+						"color": "DDFFDD",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "4",
+						"start_hour": "6:00 pm",
+						"end_hour": "6:30 pm",
+						"notes": "",
+						"start_hour_css": "18-00",
+						"end_hour_css": "18-30",
+						"duration": 30
+					}],
+					"18-30": [{
+						"class_title": "Jazz I (4-6 years)",
+						"class_desc": "",
+						"instructor_title": "Staff",
+						"instructor_desc": "",
+						"color": null,
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "2",
+						"start_hour": "6:30 pm",
+						"end_hour": "7:00 pm",
+						"notes": "",
+						"start_hour_css": "18-30",
+						"end_hour_css": "19-00",
+						"duration": 30
+					}, {
+						"class_title": "Ballet III\/IV Beg\/Int (10-18 years)",
+						"class_desc": "",
+						"instructor_title": "Kaylee White",
+						"instructor_desc": "",
+						"color": "f7deff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "5",
+						"start_hour": "6:30 pm",
+						"end_hour": "7:30 pm",
+						"notes": "",
+						"start_hour_css": "18-30",
+						"end_hour_css": "19-30",
+						"duration": 60
+					}, {
+						"class_title": "Baton Twirling (5-14 years)",
+						"class_desc": "",
+						"instructor_title": "Joe Hudson",
+						"instructor_desc": "",
+						"color": "acfc7e",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "1",
+						"start_hour": "6:30 pm",
+						"end_hour": "7:30 pm",
+						"notes": "",
+						"start_hour_css": "18-30",
+						"end_hour_css": "19-30",
+						"duration": 60
+					}, {
+						"class_title": "Tap II (7-9 years)",
+						"class_desc": "",
+						"instructor_title": "Kate Haas",
+						"instructor_desc": "",
+						"color": "fff8de",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "3",
+						"start_hour": "6:30 pm",
+						"end_hour": "7:00 pm",
+						"notes": "",
+						"start_hour_css": "18-30",
+						"end_hour_css": "19-00",
+						"duration": 30
+					}, {
+						"class_title": "Jazz I (4-6 years)",
+						"class_desc": "",
+						"instructor_title": "Kate Haas",
+						"instructor_desc": "",
+						"color": "fff8de",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "4",
+						"start_hour": "6:30 pm",
+						"end_hour": "7:00 pm",
+						"notes": "",
+						"start_hour_css": "18-30",
+						"end_hour_css": "19-00",
+						"duration": 30
+					}],
+					"19-00": [{
+						"class_title": "Hip Hop I (4-6 years)",
+						"class_desc": "",
+						"instructor_title": "Staff",
+						"instructor_desc": "",
+						"color": null,
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "2",
+						"start_hour": "7:00 pm",
+						"end_hour": "7:30 pm",
+						"notes": "",
+						"start_hour_css": "19-00",
+						"end_hour_css": "19-30",
+						"duration": 30
+					}, {
+						"class_title": "Ballet II (7-9 years)",
+						"class_desc": "",
+						"instructor_title": "Nicole Funderburg",
+						"instructor_desc": "",
+						"color": "f2bb9e",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "3",
+						"start_hour": "7:00 pm",
+						"end_hour": "7:30 pm",
+						"notes": "",
+						"start_hour_css": "19-00",
+						"end_hour_css": "19-30",
+						"duration": 30
+					}, {
+						"class_title": "Hip Hop I (4-6 years)",
+						"class_desc": "",
+						"instructor_title": "Kary\u00a0Williams",
+						"instructor_desc": "",
+						"color": "f6deff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "4",
+						"start_hour": "7:00 pm",
+						"end_hour": "7:30 pm",
+						"notes": "",
+						"start_hour_css": "19-00",
+						"end_hour_css": "19-30",
+						"duration": 30
+					}],
+					"19-30": [{
+						"class_title": "Teen\/Adult Jazz (Beg\/Int)",
+						"class_desc": "",
+						"instructor_title": "Allison Perkins",
+						"instructor_desc": "",
+						"color": "f8ff9c",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "2",
+						"start_hour": "7:30 pm",
+						"end_hour": "8:30 pm",
+						"notes": "",
+						"start_hour_css": "19-30",
+						"end_hour_css": "20-30",
+						"duration": 60
+					}, {
+						"class_title": "Contemporary III\/IV Beg\/Int (10-18 years)",
+						"class_desc": "",
+						"instructor_title": "Kaylee White",
+						"instructor_desc": "",
+						"color": "f7deff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "5",
+						"start_hour": "7:30 pm",
+						"end_hour": "8:30 pm",
+						"notes": "",
+						"start_hour_css": "19-30",
+						"end_hour_css": "20-30",
+						"duration": 60
+					}, {
+						"class_title": "Lyrical III\/IV (10-18 years)",
+						"class_desc": "",
+						"instructor_title": "Nicole Funderburg",
+						"instructor_desc": "",
+						"color": "f2bb9e",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "1",
+						"start_hour": "7:30 pm",
+						"end_hour": "8:00 pm",
+						"notes": "",
+						"start_hour_css": "19-30",
+						"end_hour_css": "20-00",
+						"duration": 30
+					}, {
+						"class_title": "Jazz II (7-9 years)",
+						"class_desc": "",
+						"instructor_title": "Nicole Funderburg",
+						"instructor_desc": "",
+						"color": "f2bb9e",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "3",
+						"start_hour": "7:30 pm",
+						"end_hour": "8:00 pm",
+						"notes": "",
+						"start_hour_css": "19-30",
+						"end_hour_css": "20-00",
+						"duration": 30
+					}, {
+						"class_title": "Hip Hop II\/III (7-13 years)",
+						"class_desc": "",
+						"instructor_title": "Kary\u00a0Williams",
+						"instructor_desc": "",
+						"color": "f6deff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "4",
+						"start_hour": "7:30 pm",
+						"end_hour": "8:30 pm",
+						"notes": "Instructors: Kary Williams and Carolyn Lang",
+						"start_hour_css": "19-30",
+						"end_hour_css": "20-30",
+						"duration": 60
+					}],
+					"20-00": [{
+						"class_title": "Ballet III\/IV Beg\/Int (10-18 years)",
+						"class_desc": "",
+						"instructor_title": "Nicole Funderburg",
+						"instructor_desc": "",
+						"color": "f2bb9e",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "1",
+						"start_hour": "8:00 pm",
+						"end_hour": "9:00 pm",
+						"notes": "",
+						"start_hour_css": "20-00",
+						"end_hour_css": "21-00",
+						"duration": 60
+					}, {
+						"class_title": "Hip Hop II (7-9 years)",
+						"class_desc": "",
+						"instructor_title": "Staff",
+						"instructor_desc": "",
+						"color": null,
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "3",
+						"start_hour": "8:00 pm",
+						"end_hour": "8:30 pm",
+						"notes": "",
+						"start_hour_css": "20-00",
+						"end_hour_css": "20-30",
+						"duration": 30
+					}],
+					"20-30": [{
+						"class_title": "Jazz III\/IV Beg\/Int (10-18 years)",
+						"class_desc": "",
+						"instructor_title": "Kaylee White",
+						"instructor_desc": "",
+						"color": "f7deff",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "5",
+						"start_hour": "8:30 pm",
+						"end_hour": "9:30 pm",
+						"notes": "",
+						"start_hour_css": "20-30",
+						"end_hour_css": "21-30",
+						"duration": 60
+					}, {
+						"class_title": "Tap III\/IV (Teen\/Adult)",
+						"class_desc": "",
+						"instructor_title": "Allison Perkins",
+						"instructor_desc": "",
+						"color": "f8ff9c",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "2",
+						"start_hour": "8:30 pm",
+						"end_hour": "9:30 pm",
+						"notes": "Tuesday\u00a0Nite Dance Deal! One class is $15, Two classes is $20, All 4 classes $25",
+						"start_hour_css": "20-30",
+						"end_hour_css": "21-30",
+						"duration": 60
+					}, {
+						"class_title": "Drill Team Prep BEG\/INT (10-16 years)",
+						"class_desc": "",
+						"instructor_title": "Nicole Funderburg",
+						"instructor_desc": "",
+						"color": "f2bb9e",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "3",
+						"start_hour": "8:30 pm",
+						"end_hour": "9:30 pm",
+						"notes": "",
+						"start_hour_css": "20-30",
+						"end_hour_css": "21-30",
+						"duration": 60
+					}, {
+						"class_title": "Flex\/Core (10 years - Adult)",
+						"class_desc": "",
+						"instructor_title": "Carolyn S. Lang",
+						"instructor_desc": "",
+						"color": "DDFFDD",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "4",
+						"start_hour": "8:30 pm",
+						"end_hour": "9:30 pm",
+						"notes": "",
+						"start_hour_css": "20-30",
+						"end_hour_css": "21-30",
+						"duration": 60
+					}],
+					"21-00": [{
+						"class_title": "Prepointe\/Pointe (10-18 years)",
+						"class_desc": "",
+						"instructor_title": "Nicole Funderburg",
+						"instructor_desc": "",
+						"color": "f2bb9e",
+						"location_title": "Old Downtown Carrollton",
+						"location_desc": "1201 S. Broadway, Ste 101\r\nCarrollton, TX 75006\r\nTelephone:972-245-6252\r\n",
+						"weekday": "1",
+						"start_hour": "9:00 pm",
+						"end_hour": "10:00 pm",
+						"notes": "",
+						"start_hour_css": "21-00",
+						"end_hour_css": "22-00",
+						"duration": 60
+					}]
+				},
+				"layout": "full",
+				"location_slug": "old-downtown-carrollton"
+			}, {
+				"unique_start_times": ["18-00", "19-00"],
+				"classes": {
+					"18-00": [{
+						"class_title": "Motion Xtreme Cheer Tumbling",
+						"class_desc": "",
+						"instructor_title": "Raechel Peters",
+						"instructor_desc": "",
+						"color": "efdeff",
+						"location_title": "Palaestra",
+						"location_desc": "4335 North Beltwood Parkway\r\nFarmers Branch, TX 75244\r\n(972) 620-9922",
+						"weekday": "2",
+						"start_hour": "6:00 pm",
+						"end_hour": "7:00 pm",
+						"notes": "",
+						"start_hour_css": "18-00",
+						"end_hour_css": "19-00",
+						"duration": 60
+					}],
+					"19-00": [{
+						"class_title": "Motion Xtreme Cheer Practice",
+						"class_desc": "",
+						"instructor_title": "Katinya Lilly",
+						"instructor_desc": "",
+						"color": "fabc5f",
+						"location_title": "Palaestra",
+						"location_desc": "4335 North Beltwood Parkway\r\nFarmers Branch, TX 75244\r\n(972) 620-9922",
+						"weekday": "2",
+						"start_hour": "7:00 pm",
+						"end_hour": "8:00 pm",
+						"notes": "Coaches: Katinya Lilly and Raechel Peters",
+						"start_hour_css": "19-00",
+						"end_hour_css": "20-00",
+						"duration": 60
+					}]
+				},
+				"layout": "full",
+				"location_slug": "palaestra"
+			}, {
+				"unique_start_times": ["18-00"],
+				"classes": {
+					"18-00": [{
+						"class_title": "Zumba",
+						"class_desc": "",
+						"instructor_title": "Katinya Lilly",
+						"instructor_desc": "",
+						"color": "fabc5f",
+						"location_title": "Palaestra Dance Floor",
+						"location_desc": "",
+						"weekday": "2",
+						"start_hour": "6:00 pm",
+						"end_hour": "7:00 pm",
+						"notes": "",
+						"start_hour_css": "18-00",
+						"end_hour_css": "19-00",
+						"duration": 60
+					}]
+				},
+				"layout": "full",
+				"location_slug": "palaestra-dance-floor"
+			}],
+			"ex_options": {
+				"selected_weekdays_0": "yes",
+				"selected_weekdays_1": "yes",
+				"selected_weekdays_2": "yes",
+				"selected_weekdays_3": "yes",
+				"selected_weekdays_4": "yes",
+				"selected_weekdays_5": "yes",
+				"selected_weekdays_6": "yes",
+				"color_priority": "wcs3_instructor",
+				"time_increments": 30,
+				"abbr_weekdays": "yes"
+			}
+		};
+		/* ]]> */
+	</script>
+	<script type="text/javascript" src="/clients/ABodyInMotion/Images/wcs3_ex1_front.js"></script>
+
+	<div style="display: none;" id="cboxOverlay"></div>
+	<div style="display: none;" tabindex="-1" role="dialog" class="" id="colorbox">
+		<div id="cboxWrapper">
+			<div>
+				<div style="float: left;" id="cboxTopLeft"></div>
+				<div style="float: left;" id="cboxTopCenter"></div>
+				<div style="float: left;" id="cboxTopRight"></div>
+			</div>
+			<div style="clear: left;">
+				<div style="float: left;" id="cboxMiddleLeft"></div>
+				<div style="float: left;" id="cboxContent">
+					<div style="float: left;" id="cboxTitle"></div>
+					<div style="float: left;" id="cboxCurrent"></div>
+					<button id="cboxPrevious" type="button"></button>
+					<button id="cboxNext" type="button"></button>
+					<button id="cboxSlideshow"></button>
+					<div style="float: left;" id="cboxLoadingOverlay"></div>
+					<div style="float: left;" id="cboxLoadingGraphic"></div>
+				</div>
+				<div style="float: left;" id="cboxMiddleRight"></div>
+			</div>
+			<div style="clear: left;">
+				<div style="float: left;" id="cboxBottomLeft"></div>
+				<div style="float: left;" id="cboxBottomCenter"></div>
+				<div style="float: left;" id="cboxBottomRight"></div>
+			</div>
+		</div>
+		<div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div>
+	</div>
+</div>
+</form>
+</body>
+</html>

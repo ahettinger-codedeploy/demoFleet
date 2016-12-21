@@ -1,0 +1,648 @@
+<%
+'changelog
+'LSP  2/22/16 - initial development
+%>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html class="cufon-active cufon-ready" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+  <head runat="server">
+  <asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+  <meta property="og:title" content="title" />
+  <meta property="og:description" content="description" />
+  <meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+  <meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+  <meta property="og:image:type" content="image/jpeg" />
+  </head>
+  <BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+  <form id="form1" runat="server">
+  <div>
+  <style id="StylePlaceholder" type="text/css"></style>
+
+  <link href="/clients/CSA-Marion/Images/default.css" type="text/css" rel="stylesheet">
+  <link href="/clients/CSA-Marion/Images/skin.css" type="text/css" rel="stylesheet">
+  <link href="/clients/CSA-Marion/Images/innerGray.css" type="text/css" rel="stylesheet">
+  <link href="/clients/CSA-Marion/Images/container.css" type="text/css" rel="stylesheet">
+  <link href="/clients/CSA-Marion/Images/portal.css" type="text/css" rel="stylesheet">
+  <link href="/clients/CSA-Marion/Images/module.css" type="text/css" rel="stylesheet">
+  <link href="/clients/CSA-Marion/Images/ComboBox.css" type="text/css" rel="stylesheet">
+  <script src="/clients/CSA-Marion/Images/ga.js" async="" type="text/javascript"></script>
+  <script src="/clients/CSA-Marion/Images/jquery_002.js" type="text/javascript"></script>
+  <script src="/clients/CSA-Marion/Images/jquery-ui.js" type="text/javascript"></script>
+
+
+
+  <link href="/clients/CSA-Marion/Images/superfish.css" rel="stylesheet" type="text/css" media="all">
+  <title>
+    Community School of the Arts &gt; Experience CSA &gt; Current Shows
+  </title>
+  <style type="text/css">
+    cufon {
+      text-indent: 0!important;
+    }
+
+    @media screen,
+    projection {
+      cufon {
+        display: inline!important;
+        display: inline-block!important;
+        position: relative!important;
+        vertical-align: middle!important;
+        font-size: 1px!important;
+        line-height: 1px!important;
+      }
+      cufon cufontext {
+        display: -moz-inline-box!important;
+        display: inline-block!important;
+        width: 0!important;
+        height: 0!important;
+        overflow: hidden!important;
+        text-indent: -10000in!important;
+      }
+      cufon canvas {
+        position: relative!important;
+      }
+    }
+
+    @media print {
+      cufon {
+        padding: 0!important;
+      }
+      cufon canvas {
+        display: none!important;
+      }
+    }
+  </style>
+</head>
+
+<body id="Body" style="background-image: url('/clients/CSA-Marion/Images/background.jpg')">
+
+
+
+
+    <script src="/clients/CSA-Marion/Images/WebResource.js" type="text/javascript"></script>
+
+
+    <script src="/clients/CSA-Marion/Images/jquery-1.js" type="text/javascript"></script>
+    <script src="/clients/CSA-Marion/Images/superfish.js" type="text/javascript"></script>
+    <script src="/clients/CSA-Marion/Images/superfish-init.js" type="text/javascript"></script>
+    <script src="/clients/CSA-Marion/Images/Telerik.js" type="text/javascript"></script>
+    <script src="/clients/CSA-Marion/Images/dnn_003.js" type="text/javascript"></script>
+    <div>
+
+    </div>
+
+
+    <script src="/clients/CSA-Marion/Images/jquery_004.js" type="text/javascript"></script>
+    <script src="/clients/CSA-Marion/Images/dnn_002.js" type="text/javascript"></script>
+    <script src="/clients/CSA-Marion/Images/ControlPanel.js" type="text/javascript"></script>
+    <script src="/clients/CSA-Marion/Images/dnncore.js" type="text/javascript"></script>
+    <script src="/clients/CSA-Marion/Images/dnn.js" type="text/javascript"></script>
+
+
+
+
+    <div class="body wsc_lh_gray">
+      <div class="wsc_top_light1">
+        <div class="wsc_top_light2">
+          <div class="wsc_top_light3">
+
+            <div class="wsc_header">
+              <div class="container_960">
+                <div class="wsc_header_inner">
+                  <div class="wsc_site_logo">
+                    <h1 class="cufonApplied"><a id="dnn_dnnLOGO_hypLogo" title="Community School of the Arts" href="http://www.csa-marion.com/Home.aspx"><img id="dnn_dnnLOGO_imgLogo" src="/clients/CSA-Marion/Images/CSA%2520WebLogo.png" alt="Community School of the Arts" style="border-width:0px;"></a></h1>
+                  </div>
+                  <div class="wsc_login">
+                    <a id="dnn_USER1_registerLink" class="user" onclick="return dnnModal.show('http://www.csa-marion.com/ExperienceCSA/CurrentShows/tabid/455/ctl/Register/Default.aspx?returnurl=http%3a%2f%2fwww.csa-marion.com%2fExperienceCSA%2fCurrentShows.aspx&amp;popUp=true',/*showReturn*/true,600,950,true,'')"
+                      href="http://www.csa-marion.com/ExperienceCSA/CurrentShows/tabid/455/ctl/Register/Default.aspx?returnurl=http%3a%2f%2fwww.csa-marion.com%2fExperienceCSA%2fCurrentShows.aspx">Register</a> &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <a id="dnn_LOGIN1_loginLink" class="user" onclick="return dnnModal.show('http://www.csa-marion.com/ExperienceCSA/CurrentShows/tabid/455/ctl/Login/Default.aspx?returnurl=%2fExperienceCSA%2fCurrentShows.aspx&amp;popUp=true',/*showReturn*/true,300,650,true,'')"
+                      href="http://www.csa-marion.com/ExperienceCSA/CurrentShows/tabid/455/ctl/Login/Default.aspx?returnurl=%2fExperienceCSA%2fCurrentShows.aspx">Login</a>
+                  </div>
+                  <div class="wsc_search">
+
+
+                    <div id="dnn_dnnSEARCH_DropDownSearch" class="SearchContainer">
+                      <div class="SearchBorder">
+                        <div style="background-image: url(&quot;/icons/sigma/DnnSearch_16X16_Standard.png&quot;);" id="SearchIcon" class="SearchIcon">
+                          <img id="dnn_dnnSEARCH_downArrow" title="Select the search type" src="/clients/CSA-Marion/Images/Action_16X16_Standard.png" alt="Select the search type" style="border-width:0px;">
+                        </div>
+                        <input value="Search..." name="dnn$dnnSEARCH$txtSearchNew" maxlength="255" id="dnn_dnnSEARCH_txtSearchNew" class="SearchTextBox" onkeydown="return __dnn_KeyDown('13', 'javascript:__doPostBack(%27dnn$dnnSEARCH$cmdSearchNew%27,%27%27)', event);" type="text">&nbsp;
+                        <ul style="display: none;" id="SearchChoices">
+                          <li style="background-image: url(&quot;/icons/sigma/DnnSearch_16X16_Standard.png&quot;);" id="SearchIconSite">Site</li>
+                          <li style="background-image: url(&quot;/icons/sigma/GoogleSearch_16X16_Standard.png&quot;);" id="SearchIconWeb">Web</li>
+                        </ul>
+                      </div>
+                      <a id="dnn_dnnSEARCH_cmdSearchNew" class="ServerSkinWidget" href="javascript:__doPostBack('dnn$dnnSEARCH$cmdSearchNew','')">Search</a>
+                    </div>
+
+                  </div>
+                  <div class="cleaner">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wsc_menu">
+              <div class="container_960">
+                <div class="wsc_menu_inner">
+
+                  <div class="MenuSkin">
+                    <ul class="cs-superfish sf-menu sf-js-enabled sf-shadow">
+
+
+                      <li class=" first">
+                        <a href="http://www.csa-marion.com/Home.aspx"><span class="wsc_curve"></span>Home</a>
+
+                      </li>
+
+
+
+                      <li class=" ">
+                        <a class="sf-with-ul" href="http://www.csa-marion.com/BeCSA.aspx">Be CSA<span class="sf-sub-indicator"> »</span></a>
+
+                        <ul style="display: none; visibility: hidden;" class="sf-shadow-off">
+                          <div class="wsc_dd_frame">
+                            <div class="menu_frame_arrow"></div>
+                            <div class="wsc_frame_tl">
+                              <div class="wsc_frame_tr">
+                                <div class="wsc_frame_tc">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="wsc_frame_cl">
+                              <div class="wsc_frame_cr">
+                                <div class="wsc_frame_cc">
+
+                                  <li class="  first">
+                                    <a href="http://www.csa-marion.com/BeCSA/20152016ClassOfferings.aspx"><span class="wsc_curve"></span>2015-2016 Class Offerings</a>
+
+                                  </li>
+
+                                  <li class="  ">
+                                    <a href="http://www.csa-marion.com/BeCSA/RegisterOnline.aspx">Register Online</a>
+
+                                  </li>
+
+                                  <li class="  ">
+                                    <a href="http://www.csa-marion.com/BeCSA/RegistrationForm.aspx">Registration Form</a>
+
+                                  </li>
+
+                                  <li class="  ">
+                                    <a href="http://www.csa-marion.com/BeCSA/CSAStudentHandbook.aspx">CSA Student Handbook</a>
+
+                                  </li>
+
+                                  <li class="  ">
+                                    <a href="http://www.csa-marion.com/BeCSA/StudentCompanies.aspx">Student Companies</a>
+
+                                  </li>
+
+                                  <li class=" last ">
+                                    <a href="http://www.csa-marion.com/BeCSA/ScholarshipInformation.aspx">Scholarship Information</a>
+
+                                  </li>
+
+                                </div>
+                              </div>
+                            </div>
+                            <div class="wsc_frame_bl">
+                              <div class="wsc_frame_br">
+                                <div class="wsc_frame_bc">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </ul>
+
+
+                      </li>
+
+
+
+                      <li class="">
+                        <a class="sf-with-ul" href="http://www.csa-marion.com/ExperienceCSA.aspx">Experience CSA<span class="sf-sub-indicator"> »</span></a>
+
+                        <ul style="display: none; visibility: hidden;" class="sf-shadow-off">
+                          <div class="wsc_dd_frame">
+                            <div class="menu_frame_arrow"></div>
+                            <div class="wsc_frame_tl">
+                              <div class="wsc_frame_tr">
+                                <div class="wsc_frame_tc">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="wsc_frame_cl">
+                              <div class="wsc_frame_cr">
+                                <div class="wsc_frame_cc">
+
+                                  <li class="current  first">
+                                    <a href="http://www.csa-marion.com/ExperienceCSA/CurrentShows.aspx"><span class="wsc_curve"></span>Current Shows</a>
+
+                                  </li>
+
+                                  <li class="  ">
+                                    <a href="http://www.csa-marion.com/ExperienceCSA/SeasonTickets.aspx">Season Tickets</a>
+
+                                  </li>
+
+                                  <li class="  ">
+                                    <a href="http://www.csa-marion.com/ExperienceCSA/AnnualArtAuction.aspx">Annual Art Auction</a>
+
+                                  </li>
+
+                                  <li class="  ">
+                                    <a href="http://www.csa-marion.com/ExperienceCSA/GoArtsGoKarts.aspx">GoArts/Go Karts</a>
+
+                                  </li>
+
+                                  <li class="  ">
+                                    <a href="http://www.csa-marion.com/ExperienceCSA/PastShowsandEvents.aspx">Past Shows and Events</a>
+
+                                  </li>
+
+                                  <li class=" last ">
+                                    <a href="http://www.csa-marion.com/ExperienceCSA/PastWorkshopsMasterClasses.aspx">Past Workshops &amp; Master Classes</a>
+
+                                  </li>
+
+                                </div>
+                              </div>
+                            </div>
+                            <div class="wsc_frame_bl">
+                              <div class="wsc_frame_br">
+                                <div class="wsc_frame_bc">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </ul>
+
+
+                      </li>
+
+
+
+                      <li class=" ">
+                        <a class="sf-with-ul" href="http://www.csa-marion.com/SupportCSA.aspx">Support CSA<span class="sf-sub-indicator"> »</span></a>
+
+                        <ul style="display: none; visibility: hidden;" class="sf-shadow-off">
+                          <div class="wsc_dd_frame">
+                            <div class="menu_frame_arrow"></div>
+                            <div class="wsc_frame_tl">
+                              <div class="wsc_frame_tr">
+                                <div class="wsc_frame_tc">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="wsc_frame_cl">
+                              <div class="wsc_frame_cr">
+                                <div class="wsc_frame_cc">
+
+                                  <li class="  first">
+                                    <a href="http://www.csa-marion.com/SupportCSA/SupportCSAin20152016.aspx"><span class="wsc_curve"></span>Support CSA in 2015-2016</a>
+
+                                  </li>
+
+                                  <li class="  ">
+                                    <a href="http://www.csa-marion.com/SupportCSA/20152016CorporateSponsors.aspx">2015-2016 Corporate Sponsors</a>
+
+                                  </li>
+
+                                  <li class=" last ">
+                                    <a href="http://www.csa-marion.com/SupportCSA/GrantsandAwards.aspx">Grants and Awards</a>
+
+                                  </li>
+
+                                </div>
+                              </div>
+                            </div>
+                            <div class="wsc_frame_bl">
+                              <div class="wsc_frame_br">
+                                <div class="wsc_frame_bc">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </ul>
+
+
+                      </li>
+
+
+
+                      <li class=" ">
+                        <a class="sf-with-ul" href="http://www.csa-marion.com/AboutCSA.aspx">About CSA<span class="sf-sub-indicator"> »</span></a>
+
+                        <ul style="display: none; visibility: hidden;" class="sf-shadow-off">
+                          <div class="wsc_dd_frame">
+                            <div class="menu_frame_arrow"></div>
+                            <div class="wsc_frame_tl">
+                              <div class="wsc_frame_tr">
+                                <div class="wsc_frame_tc">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="wsc_frame_cl">
+                              <div class="wsc_frame_cr">
+                                <div class="wsc_frame_cc">
+
+                                  <li class="  first">
+                                    <a href="http://www.csa-marion.com/AboutCSA/CSAStaff.aspx"><span class="wsc_curve"></span>CSA Staff</a>
+
+                                  </li>
+
+                                  <li class="  ">
+                                    <a href="http://www.csa-marion.com/AboutCSA/TeachingOpportunities.aspx">Teaching Opportunities</a>
+
+                                  </li>
+
+                                  <li class="  ">
+                                    <a href="http://www.csa-marion.com/AboutCSA/CSAFaculty.aspx">CSA Faculty</a>
+
+                                  </li>
+
+                                  <li class="  ">
+                                    <a href="http://www.csa-marion.com/AboutCSA/CSABoardofDirectors.aspx">CSA Board of Directors</a>
+
+                                  </li>
+
+                                  <li class="  ">
+                                    <a href="http://www.csa-marion.com/AboutCSA/ContactUs.aspx">Contact Us</a>
+
+                                  </li>
+
+                                  <li class="  ">
+                                    <a href="http://www.csa-marion.com/AboutCSA/CSAGuestArtists.aspx">CSA Guest Artists</a>
+
+                                  </li>
+
+                                  <li class=" last ">
+                                    <a href="http://www.csa-marion.com/AboutCSA/20142015EndoftheYearReport.aspx">2014-2015 End of the Year Report</a>
+
+                                  </li>
+
+                                </div>
+                              </div>
+                            </div>
+                            <div class="wsc_frame_bl">
+                              <div class="wsc_frame_br">
+                                <div class="wsc_frame_bc">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </ul>
+
+
+                      </li>
+
+
+
+                      <li class=" last ">
+                        <a href="http://www.csa-marion.com/ShopCSA.aspx">Shop CSA</a>
+
+                      </li>
+
+
+                    </ul>
+                  </div>
+
+
+
+                  <div class="clearFloat">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wsc_content">
+              <div class="wsc_content_inner">
+                <div class="container_12">
+                  <div id="dnn_ContentPane" class="grid_12 wsc_pane">
+                    <div class="DnnModule DnnModule-DNN_HTML DnnModule-1193">
+                      <a name="1193"></a>
+                      <div class="c_head h3_title_container">
+                        <div class="head_title">
+                          <div class="c_actions">
+
+                          </div>
+                          <div class="c_icon">
+
+                            <h3 class="c_title cufonApplied"><span id="dnn_ctr1193_dnnTITLE_titleLabel" class="TitleHead"><cufon style="width: 7px; height: 25px;" alt="&nbsp;" class="cufon cufon-canvas"><canvas style="width: 25px; height: 27px; top: 1px; left: 0px;" height="27" width="25"></canvas><cufontext>&nbsp;</cufontext></cufon></span></h3>
+                          </div>
+                          <div class="clear_float">
+                          </div>
+                        </div>
+                        <div class="c_content">
+                          <div id="dnn_ctr1193_ContentPane" class="Normal c_contentpane">
+                            <!-- Start_Module_1193 -->
+                            <div id="dnn_ctr1193_ModuleContent" class="DNNModuleContent ModDNNHTMLC">
+                              <div id="dnn_ctr1193_HtmlModule_lblContent" class="Normal">
+<!-- tix content-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+                              </div>
+
+                            </div>
+                            <!-- End_Module_1193 -->
+                          </div>
+                        </div>
+                        <div class="c_footer">
+
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="clearFloat">
+                  </div>
+                  <div id="dnn_LeftNarrowPane2" class="grid_4 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div id="dnn_MiddleNarrowPane" class="grid_4 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div id="dnn_RightNarrowPane2" class="grid_4 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div id="dnn_LeftHalfPane" class="grid_6 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div id="dnn_RightHalfPane" class="grid_6 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div class="clearFloat">
+                  </div>
+                  <div id="dnn_LeftWidePane" class="grid_8 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div id="dnn_RightNarrowPane" class="grid_4 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div class="clearFloat">
+                  </div>
+                  <div id="dnn_LeftNarrowPane" class="grid_4 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div id="dnn_RightWidePane" class="grid_8 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div class="clearFloat">
+                  </div>
+                  <div id="dnn_BottomPane" class="grid_12 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div class="clearFloat">
+                  </div>
+                  <div id="dnn_BottomPane0" class="grid_3 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div id="dnn_BottomPane25" class="grid_3 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div id="dnn_BottomPane50" class="grid_3 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div id="dnn_BottomPane75" class="grid_3 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div class="clearFloat">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wsc_prefooter">
+              <div class="wsc_prefooter_inner">
+                <div class="container_12">
+                  <div id="dnn_PreFooterWide" class="grid_12 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div class="clearFloat">
+                  </div>
+                  <div class="wsc_3_cells_devider">
+                    <div class="wsc_first_devider">
+                      <div class="wsc_second_devider">
+                        <div id="dnn_PreFooterThirdLeft" class="grid_4 wsc_pane DNNEmptyPane">
+                        </div>
+                        <div id="dnn_PreFooterThirdMiddle" class="grid_4 wsc_pane DNNEmptyPane">
+                        </div>
+                        <div id="dnn_PreFooterThirdRight" class="grid_4 wsc_pane DNNEmptyPane">
+                        </div>
+                        <div class="clearFloat">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="dnn_PreFooterHalfLeft" class="grid_6 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div id="dnn_PreFooterHalfRight" class="grid_6 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div class="clearFloat">
+                  </div>
+                  <div id="dnn_PreFooterPane0" class="grid_3 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div id="dnn_PreFooterPane25" class="grid_3 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div id="dnn_PreFooterPane50" class="grid_3 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div id="dnn_PreFooterPane75" class="grid_3 wsc_pane DNNEmptyPane">
+                  </div>
+                  <div class="clearFloat">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="wsc_footer">
+              <div class="container_940">
+                <div class="footer_menu">
+                  <span id="dnn_footer_links_lblLinks"><a class="SkinObject" href="http://www.csa-marion.com/Home.aspx">Home</a> <a class="SkinObject" href="http://www.csa-marion.com/BeCSA.aspx">Be CSA</a> <a class="SkinObject" href="http://www.csa-marion.com/ExperienceCSA.aspx">Experience CSA</a> <a class="SkinObject" href="http://www.csa-marion.com/SupportCSA.aspx">Support CSA</a> <a class="SkinObject" href="http://www.csa-marion.com/AboutCSA.aspx">About CSA</a> <a class="SkinObject" href="http://www.csa-marion.com/ShopCSA.aspx">Shop CSA</a></span>
+
+                  <a id="dnn_dnnUSER_registerLink" class="user" onclick="return dnnModal.show('http://www.csa-marion.com/ExperienceCSA/CurrentShows/tabid/455/ctl/Register/Default.aspx?returnurl=http%3a%2f%2fwww.csa-marion.com%2fExperienceCSA%2fCurrentShows.aspx&amp;popUp=true',/*showReturn*/true,600,950,true,'')"
+                    href="http://www.csa-marion.com/ExperienceCSA/CurrentShows/tabid/455/ctl/Register/Default.aspx?returnurl=http%3a%2f%2fwww.csa-marion.com%2fExperienceCSA%2fCurrentShows.aspx">Register</a>
+                  <a id="dnn_dnnLOGIN_loginLink" class="user" onclick="return dnnModal.show('http://www.csa-marion.com/ExperienceCSA/CurrentShows/tabid/455/ctl/Login/Default.aspx?returnurl=%2fExperienceCSA%2fCurrentShows.aspx&amp;popUp=true',/*showReturn*/true,300,650,true,'')"
+                    href="http://www.csa-marion.com/ExperienceCSA/CurrentShows/tabid/455/ctl/Login/Default.aspx?returnurl=%2fExperienceCSA%2fCurrentShows.aspx">Login</a>
+                </div>
+                <div class="wsc_footer_copyrights">
+                  <span id="dnn_FooterCopyright_lblCopyright" class="SkinObject">Copyright 2016 by Community School of the Arts</span>
+
+                </div>
+                <div class="clearFloat">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="/clients/CSA-Marion/Images/jquery.js"></script>
+
+
+    <script type="text/javascript" src="/clients/CSA-Marion/Images/cufon.js"></script>
+    <script type="text/javascript" src="/clients/CSA-Marion/Images/GeosansLight_500.js"></script>
+
+
+    <script type="text/javascript" src="/clients/CSA-Marion/Images/jquery_003.js"></script>
+
+
+    <!--[if IE]>
+    <script type="text/javascript" src="/Portals/_default/Skins/LightHeads/MenuSkin/js/superfish-init-ie.js"></script>
+<![endif]-->
+
+
+    <script type="text/javascript" src="/clients/CSA-Marion/Images/custom.js"></script>
+
+
+
+
+
+    <input name="ScrollTop" id="ScrollTop" type="hidden">
+    <input name="__dnnVariable" id="__dnnVariable" autocomplete="off" value="{&quot;__scdoff&quot;:&quot;1&quot;,&quot;SearchIconWebUrl&quot;:&quot;url(/icons/sigma/GoogleSearch_16X16_Standard.png)&quot;,&quot;SearchIconSiteUrl&quot;:&quot;url(/icons/sigma/DnnSearch_16X16_Standard.png)&quot;,&quot;SearchIconSelected&quot;:&quot;S&quot;}"
+      type="hidden">
+    <script src="/clients/CSA-Marion/Images/Search.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="/clients/CSA-Marion/Images/initWidgets.js"></script>
+    <script type="text/javascript">
+      //<![CDATA[
+      Sys.Application.initialize();
+      //]]>
+    </script>
+
+
+
+  <script type="text/javascript">
+    //<![CDATA[
+
+    //This code is to force a refresh of browser cache
+    //in case an old version of dnn.js is loaded
+    //It should be removed as soon as .js versioning is added
+    jQuery(document).ready(function() {
+      if (navigator.userAgent.indexOf(" Chrome/") == -1) {
+        if ((typeof dnnJscriptVersion === 'undefined' || dnnJscriptVersion !== "6.0.0") && typeof dnn !== 'undefined') {
+          window.location.reload(true);
+        }
+      }
+    });
+    //]]>
+  </script>
+
+  <div id="fancybox-tmp"></div>
+  <div id="fancybox-loading">
+    <div></div>
+  </div>
+  <div id="fancybox-overlay"></div>
+  <div id="fancybox-wrap">
+    <div id="fancybox-outer">
+      <div class="fancybox-bg" id="fancybox-bg-n"></div>
+      <div class="fancybox-bg" id="fancybox-bg-ne"></div>
+      <div class="fancybox-bg" id="fancybox-bg-e"></div>
+      <div class="fancybox-bg" id="fancybox-bg-se"></div>
+      <div class="fancybox-bg" id="fancybox-bg-s"></div>
+      <div class="fancybox-bg" id="fancybox-bg-sw"></div>
+      <div class="fancybox-bg" id="fancybox-bg-w"></div>
+      <div class="fancybox-bg" id="fancybox-bg-nw"></div>
+      <div id="fancybox-content"></div>
+      <a id="fancybox-close"></a>
+      <div id="fancybox-title"></div><a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a></div>
+  </div>
+</div>
+</form>
+</body>
+</html>

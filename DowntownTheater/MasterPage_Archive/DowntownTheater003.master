@@ -1,0 +1,128 @@
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+
+</head>
+
+<BODY BGCOLOR=#57c3df LINK=#666666 ALINK=#666666 VLINK=#666666 leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+
+<form id="form1" runat="server">
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<title>DowntownTheater - Ticket Sales</title>
+
+<style>
+
+html
+{
+overflow-x: hidden;
+}
+
+body 
+{
+width: 820px;
+margin: 0;
+padding: 0;
+margin: auto;
+overflow-x: hidden;
+}
+
+.panel
+{
+width: 760px;
+background-color: #ffffff;
+}
+
+.panel-heading
+{
+padding:0px;
+}
+
+/* flat button style */
+div#MasterContent_TixContent.TixContent input[type=submit],
+div#MasterContent_TixContent.TixContent input[type=button]
+{
+font-size: 12px; 
+font-weight: 400; 
+line-height: 1.42857; 
+
+text-align: center; 
+vertical-align: middle; 
+white-space: nowrap; 
+display: inline-block; 
+
+border: 1px solid transparent; 
+border-radius: 4px;
+
+cursor: pointer; 
+background-image: none; 
+
+padding: 6px 12px; 
+margin-bottom: 0px; 
+
+-webkit-user-select: none;  /* Chrome Safari all */
+-moz-user-select: none;     /* Firefox all */
+-ms-user-select: none;      /* IE 10+ */
+-o-user-select: none;		/* Opera */
+user-select: none;  		/* IE */ 
+}
+
+
+</style>
+
+</head>
+
+		<body>
+		
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '646291662155388',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+				<div class="container bg"> 
+						
+					<div class="panel panel-default">
+					
+						<div class="panel-heading">
+						
+						</div>
+						
+						<div class="panel-body">
+						
+							<div class="table-responsive">
+				
+							<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+							
+							</div>
+						
+						</div>
+
+					</div>
+	
+				</div>
+
+		</body>
+		
+	</html>
+
+</div>
+</form>
+</body>
+</html>

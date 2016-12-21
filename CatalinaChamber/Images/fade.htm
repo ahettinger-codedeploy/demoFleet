@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html><head>
+<title>Rotary</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Style for Fade-In Page script -->
+<style type="text/css">
+#fadeDiv {
+	display:none;
+	width:100%;
+}
+.member {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	width:175px;
+	height:350px;
+	background-color:#000000;
+	color:#FFFFFF;
+	padding:1px;
+	line-height:150%;
+	margin:0px;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+</style>
+<!--[if lt IE 7]>
+<style type="text/css">
+#fadeDiv {
+	position: absolute !important;
+}
+</style>
+<![endif]-->
+<!-- End Style for Fade-In Page script -->
+<script type="text/javascript" src="fade_data/jquery.js"></script>
+<script type="text/javascript">
+
+/* jQuery Fade-In Page script (c)2011 John Davenport Scheuer
+   As first seen in http://www.dynamicdrive.com/forums/
+   username:jscheuer1 - This credit must remain for legal use.
+   */
+   
+$.fn.fademypage = {
+	speed: 1500, // Edit speed in milliseconds
+	background: '#FAF8F1' // Edit background style (color or color and image) of transition division, should match page background or the predominant color of the page
+}
+$('head').append('\n<style type="text/css">\n/* Style for Fade-In Page script */\n#fadeDiv ' +
+	'{\n\tdisplay: block;\n\tposition: fixed;\n\theight: ' + $(window).height() + 'px;'+
+	'\n\tbackground: ' + $.fn.fademypage.background + ';\n\ttop: 0;\n\tleft: 0;\n}\n/* End Style for Fade-In Page script */\n</style>\n');
+jQuery(function($){
+	/*@cc_on @*/
+	/*@if(@_jscript_version >= 5)
+		if($.browser.version < 7){
+			window.scrollTo(0, 0);
+		}
+	@end @*/
+	$('#fadeDiv').fadeOut($.fn.fademypage.speed);
+});
+</script>
+<style type="text/css">
+/* Style for Fade-In Page script */
+#fadeDiv {
+	display: block;
+	position: fixed;
+	height: 350px;
+	background: #FAF8F1;
+	top: 0;
+	left: 0;
+}
+/* End Style for Fade-In Page script */
+</style>
+
+<meta http-equiv="Refresh" content="10">
+</head>
+<body>
+<div style="display: none;" id="fadeDiv"></div>
+<div class="member">
+
+
+<img src="fade_data/Don_VanSickle.jpg" alt="You can change the world" height="180" border="0" width="173"><br>
+<div align="center"><strong>Don</strong><br>
+<strong>ENVIRONMENTALIST</strong><br>
+Rotary is 1.2 million ordinary men and women working together to 
+accomplish extraordinary things. From planting trees to recycling 
+programs. Rotary Clubs worldwide help preserve the environment.</div>
+</div>
+
+</body></html>

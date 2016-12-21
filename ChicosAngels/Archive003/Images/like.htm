@@ -1,0 +1,155 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html class=" " id="facebook" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en"><head>
+
+
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-language" content="en">
+<script type="text/javascript">
+//<![CDATA[
+CavalryLogger=false;window._is_quickling_index="";/**
+ * @provides click-ref
+ * @inline
+ */
+function get_intern_ref(node) {
+  var intern_ref = '-';
+  if (!!node) {
+    // try to get the the closest wrapping pagelet or designated wrapping div
+    // (depending on which happens first) of this node, if exists.
+    // you can use this to track the detailed internal referral for
+    // user action.
+
+    // define the div ids you want to track as internal referral, if the node
+    // does not have wrapping pagelet or the wrapping pagelet is not detailed
+    // enough.
+    var div_ids = {
+      profile_minifeed : 1,
+      info_tab : 1,
+      gb_content_and_toolbar : 1,
+      gb_muffin_area : 1,
+      ego : 1,
+      bookmarks_menu : 1,
+      jewelBoxNotif: 1,      // Notifications related
+      jewelNotif: 1,
+      BeeperBox: 1
+    };
+    for (var cur = node;
+         cur && cur != document.body;
+         cur = cur.parentNode) {
+      if (!cur.id || typeof cur.id !== 'string') {
+        continue;
+      }
+      if (cur.id.substr(0, 8) == 'pagelet_') {
+        intern_ref = cur.id.substr(8);
+        break;
+      }
+      if (div_ids[cur.id]) {
+        intern_ref = cur.id;
+        break;
+      }
+    }
+  }
+}
+var user_action = (function() {
+  var ue_count = 0, logged = 0;
+  return function(node, context, e, s) {
+    var type = null;
+    if (e) {
+      if (logged) {
+        // we might be picked up by a few
+        // different listeners, we only log
+        // once action for each event.
+        return;
+      } else {
+        logged = 1;
+        setTimeout(function(){logged = 0;}, 0);
+      }
+    }
+
+    var href = null;
+    if (!!node) {
+      /*
+       * getting the href of the node
+       * note that there is one issue of the photostream that we cannot
+       * get the correct photo URI: the "next" link in the photostream
+       * is wrong
+       */
+      href = node.href;
+
+      if ((!href || node.rel) && node.getAttribute) {
+        // ajaxify is the preferred id for the rel case
+        // for cases like "like" button, its ajaxify gives a value of 1
+        var ajax = node.getAttribute('ajaxify');
+        if (ajax && ajax != '1') {
+          href = ajax;
+        }
+      }
+
+      if (!href && node.name) {
+        // this is for cases that the interaction does not involve an URI.
+        // e.g. "like" button
+        href = node.name;
+      }
+
+      if (!href) {
+        href = '-';
+      }
+    }
+
+    ue_count ++;
+    var ue_ts = (+new Date());
+    var ue = ue_ts + '/' + ue_count;
+
+    document.cookie = "act=" + encodeURIComponent(ue)
+      + "; path=/; domain="
+      + window.location.hostname.replace(/^.*(\.facebook\..*)$/i, '$1');
+    // we don't set expires time, so default to browser session termination
+    // window location takes facebook.com... in case of TLDs
+
+    if (!s) {
+      s = 'r'; // reference only
+    }
+
+    window.Arbiter && Arbiter.inform(
+      'user/action',
+      {context: context, event: e, node: node});
+
+    window.Log && Log('act', [ue_ts,
+        ue_count,
+        href,
+        context,
+        type,
+        get_intern_ref(),
+        s]);
+    return ue;
+  }
+})();
+
+//]]>
+</script><noscript> <meta http-equiv=refresh content="0;
+URL=?href=http%3A%2F%2Fchicos2010.dotfilmz.com%2F%3Fpage_id%3D90&amp;layout=button_count&amp;show_faces=true&amp;width=450&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;_fb_noscript=1"
+/> </noscript>
+
+<meta name="robots" content="noodp,noydir">
+<meta name="description" content=" Facebook is a social utility that connects people with friends and others who work, study and live around them. People use Facebook to keep up with friends, upload an unlimited number of photos, post links and videos, and learn more about the people they meet.">
+<link rel="alternate" media="handheld" href="webpage_files/like.htm">
+
+    <link type="text/css" rel="stylesheet" href="like_data/2ujdzo23.css">
+
+  
+    <script type="text/javascript" src="like_data/a27w6e83.js"></script>
+<title>Facebook</title><iframe id="bootloader_iframe" src="webpage_files/a.htm" style="width: 0pt; height: 0pt; left: 0pt; top: 0pt; position: absolute;"></iframe></head><body class="transparent_widget ff3 win Locale_en_US"><input id="post_form_id" name="post_form_id" value="265c4254204d7af450dcdcfb23696c8c" autocomplete="off" type="hidden"><div id="FB_HiddenContainer" style="position: absolute; top: -10000px; width: 0px; height: 0px;"></div><div id="connect_widget_4c49be400864d53019392" class="connect_widget button_count" style="font-family: &quot;arial&quot;,sans-serif;"><table class="connect_widget_interactive_area"><tbody><tr><td class="connect_widget_vertical_center connect_widget_button_cell"><div class="connect_button_slider"><div class="connect_button_container"><a class="connect_widget_like_button clearfix like_button_no_like"><span class="liketext">Like</span></a></div></div></td><td class="connect_widget_vertical_center"><div class="connect_confirmation_cell"><div class="connect_text_wrapper"><span class="connect_widget_text"><span class="connect_widget_connected_text hidden_elem">1</span><span class="connect_widget_not_connected_text"></span><span class="unlike_link hidden_elem"><a class="mhs" href="#">Unlike</a></span></span></div></div></td></tr></tbody></table></div><script type="text/javascript">
+Env={user:692107179,locale:"en_US",method:"GET",dev:0,start:(new Date()).getTime(),ps_limit:5,ps_ratio:4,svn_rev:269242,vip:"66.220.153.15",static_base:"http:\/\/static.ak.fbcdn.net\/",www_base:"http:\/\/www.facebook.com\/",tlds:["com"],rep_lag:2,pc:{"m":"1.0.4","l":"1.0.4","axi":true,"j":true,"bsz":16},post_form_id:"265c4254204d7af450dcdcfb23696c8c",fb_dtsg:"4GOZf",lhsh:"ee7b9",tracking_domain:"http:\/\/pixel.facebook.com\/",silent_oops_errors:"1",ajaxpipe_enabled:"1",pagecache_whitelist_regex:"^\\\/ajax\\\/(presence\\\/|chat\\\/|proxy\\.php)",quickling_inactive_page_regex:"^\\\/(election08\\\/|username\\\/|ads\\\/manage\\\/|login\\.php|comments\\.php|logout\\.php|sorry\\.php|help\\.php|giftshop\\.php|ac\\.php|ae\\.php|ajax\\\/emu\\\/h\\.php|ajax\\\/emu\\\/f\\.php|ext\\\/|ads\\\/create\\\/|feeds\\\/|.+(\\?|&)fb95_opt_(in|out)|intern\\\/(?!example\\\/page_cache)|sitetour\\\/homepage_tour\\.php|badges\\\/|quikvote\\\/|syndication\\.php|identity_switch\\.php|campaign\\\/landing\\.php|search\\\/|advertising\\\/|editalbum\\.php.+add=1)"};
+</script>
+
+  <script type="text/javascript">Bootloader.setResourceMap({"+ltBw":{"name":"js\/6mwdadzdy84ko4co.pkg.js","type":"js","src":"http:\/\/static.ak.fbcdn.net\/rsrc.php\/z45B3\/p\/hash\/5e29yojn.js"},"+Gdgd":{"name":"js\/ecw5gb3xcw84owks.pkg.js","type":"js","src":"http:\/\/static.ak.fbcdn.net\/rsrc.php\/z5VJR\/p\/hash\/crqb0cid.js"},"0Gokm":{"name":"css\/6cj9fhpf0wsgkkow.pkg.css","type":"css","permanent":1,"src":"http:\/\/static.ak.fbcdn.net\/rsrc.php\/z30T1\/hash\/2ujdzo23.css"},"CiNUi":{"name":"js\/8ddowwkfxlc8kg00.pkg.js","type":"js","src":"http:\/\/static.ak.fbcdn.net\/rsrc.php\/z29JW\/hash\/a27w6e83.js"},"RUucs":{"name":"js\/ui\/xhp\/button\/button.js","type":"js","src":"http:\/\/static.ak.fbcdn.net\/rsrc.php\/z22Z8\/p\/hash\/rue6xzcs.js"},"NJtdf":{"name":"js\/lib\/net\/async_postlude.js","type":"js","src":"http:\/\/static.ak.fbcdn.net\/rsrc.php\/z2V41\/p\/hash\/835vzsrg.js"}});
+Bootloader.enableBootload({"async":["CiNUi","+ltBw","0Gokm"],"dialog":["CiNUi","+ltBw","0Gokm"],"dom-form":["CiNUi","+ltBw","0Gokm"],"Button":["CiNUi","+ltBw","RUucs"],"async-postlude":["CiNUi","+ltBw","0Gokm","NJtdf"],"vector":["CiNUi","+ltBw"]});Arbiter.registerCallback(InitialJSLoader.callback, ["BOOTLOAD\/ROADRUNNER_READY"]);Arbiter.registerCallback(function(){setTimeout(function() {InitialJSLoader.load(["+ltBw","+Gdgd"]);Arbiter.inform("BOOTLOAD\/ROADRUNNER_READY", true, Arbiter.BEHAVIOR_STATE);}, 50)}, [OnloadEvent.ONLOAD_DOMCONTENT_CALLBACK]);</script><script type="text/javascript">
+
+onloadRegister(function(){Bootloader.configurePage(["0Gokm"]);});
+Bootloader.done(["0Gokm"]);
+
+
+onloadRegister(function (){Quickling.init("269242;0", 20, {"page_cache":1,"quickling_init_page":false,"flush_cache_in_transition":1,"flush_cache_in_page_write":0});;});
+onloadRegister(function (){window.__UIControllerRegistry["c4c49be40088af13c0f4ee"] = new ExternalPageLikeWidget({"viewer":692107179,"channelURL":null,"nodeType":"link","externalURL":"http:\/\/chicos2010.dotfilmz.com\/?page_id=90","pageId":null,"widgetID":"connect_widget_4c49be400864d53019392","alreadyConnected":false,"viewerIsAdmin":false,"adminUrl":"","showFaces":false,"useUnlikeLink":false,"layout":"button_count","commentWidgetMarkup":"","error":null,"autoResize":true,"connectText":null,"socialbar":false,"ref":null,"abtestunlike":false,"userOptedOut":false,"showCaptcha":false,"usingInlineCommenting":false,"isBlocked":false}); ;;});
+
+
+</script></body></html>

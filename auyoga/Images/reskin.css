@@ -1,0 +1,1141 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+.reskin html,.reskin body,.reskin div,.reskin span,.reskin applet,.reskin object,.reskin iframe,.reskin h1,.reskin h2,.reskin h3,.reskin h4,.reskin h5,.reskin h6,.reskin p,.reskin blockquote,.reskin pre,.reskin a,.reskin abbr,.reskin acronym,.reskin address,.reskin big,.reskin cite,.reskin code,.reskin del,.reskin dfn,.reskin em,.reskin img,.reskin ins,.reskin kbd,.reskin q,.reskin s,.reskin samp,.reskin small,.reskin strike,.reskin strong,.reskin sub,.reskin sup,.reskin tt,.reskin var,.reskin b,.reskin u,.reskin i,.reskin center,.reskin dl,.reskin dt,.reskin dd,.reskin ol,.reskin ul,.reskin li,.reskin fieldset,.reskin form,.reskin label,.reskin legend,.reskin table,.reskin caption,.reskin tbody,.reskin tfoot,.reskin thead,.reskin tr,.reskin th,.reskin td,.reskin article,.reskin aside,.reskin canvas,.reskin details,.reskin embed,.reskin figure,.reskin figcaption,.reskin footer,.reskin header,.reskin hgroup,.reskin menu,.reskin nav,.reskin output,.reskin ruby,.reskin section,.reskin summary,.reskin time,.reskin mark,.reskin audio,.reskin video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+
+/* HTML5 display-role reset for older browsers */
+.reskin article,.reskin aside,.reskin details,.reskin figcaption,.reskin figure,.reskin footer,.reskin header,.reskin hgroup,.reskin menu,.reskin nav,.reskin section{display:block}
+.reskin body{line-height:1}
+.reskin ol,.reskin ul{list-style:none}
+.reskin blockquote,.reskin q{quotes:none}
+.reskin blockquote:before,.reskin blockquote:after,.reskin q:before,.reskin q:after{content:'';content:none}
+.reskin table{border-collapse:collapse;border-spacing:0}
+
+/* iOS Reset */
+
+input[type=text] {
+    border-radius: 0;
+}
+
+/* General Rules */
+
+/* Color Changes (7/5/2013):
+ * 
+ *  Base HSL color:		hsl(215,44,32)
+ * 	Header: 			#46556c --> #2e4c76
+ * 						#1e314d --> #0f294d
+ *  Nav top border: 	#597093 --> #3965a2
+ *  Nav left border:	#445671 --> #355685
+ *  Nav colors:			#3b5780 --> #234e8b	
+ * 						#233858 --> #123059
+ * 	Nav hover colors:	#4a6c9e --> #2c61aa
+ * 						#395785 --> #204e8d
+ *  Sub-nav border color: #cacdd1 --> #bdc2c6
+ *  Secondary nav border and bullet color: #ccc --> #bbb
+ */
+
+.reskin {
+	font-size: 16px;
+	text-align: left;
+	outline: inherit;
+}
+
+.reskin h2 {
+	background: none;
+	border: none;
+	color: inherit;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+
+
+.reskin a, .reskin a:visited, .reskin a:link, .reskin a:hover {
+	color: #2588c6;
+	text-decoration: none;
+}
+
+.reskin a:hover {
+	text-decoration: underline;
+}
+
+#wrapper-reskin {
+	min-width: 987px;
+	/*background-color:#f1eee4;*/
+	font-family: trebuchet ms, sans-serif;
+	font-size: 12pt;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+}
+
+.reskin header {
+	background: #0f294d;
+	background: -moz-linear-gradient(top, #2e4c76 0%, #0f294d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2e4c76), color-stop(100%,#0f294d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #2e4c76 0%,#0f294d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #2e4c76 0%,#0f294d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #2e4c76 0%,#0f294d 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #2e4c76 0%,#0f294d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e4c76', endColorstr='#0f294d',GradientType=0 ); /* IE6-9 */
+}
+
+div.sideshades {
+	padding-bottom: 42px;
+	background: transparent;
+	background: -moz-linear-gradient(left, rgba(0,0,0,0.3) 0%, rgba(255,255,255,0) 30%, rgba(255,255,255,0) 70%, rgba(0,0,0,0.3) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.3)), color-stop(30%,rgba(255,255,255,0)), color-stop(70%,rgba(255,255,255,0)), color-stop(100%,rgba(0,0,0,0.3))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, rgba(0,0,0,0.3) 0%,rgba(255,255,255,0) 30%,rgba(255,255,255,0) 70%,rgba(0,0,0,0.3) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, rgba(0,0,0,0.3) 0%,rgba(255,255,255,0) 30%,rgba(255,255,255,0) 70%,rgba(0,0,0,0.3) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, rgba(0,0,0,0.3) 0%,rgba(255,255,255,0) 30%,rgba(255,255,255,0) 70%,rgba(0,0,0,0.3) 100%); /* IE10+ */
+	background: linear-gradient(to right, rgba(0,0,0,0.3) 0%,rgba(255,255,255,0) 30%,rgba(255,255,255,0) 70%,rgba(0,0,0,0.3) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26000000', endColorstr='#26000000',GradientType=1 ); /* IE6-9 */
+}
+
+div.etched-top {
+	height: 6px;
+	border-top: 2px solid #2c2924;
+	background: transparent url(/clients/Auyoga/Images/etched.png) repeat-x
+}
+
+#logo-reskin {
+	width: 986px;
+	min-width: 966px;
+	margin: 0 auto;
+	padding: 10px 0;
+	overflow: hidden;
+	float: none;
+}
+
+#logo-reskin a.crest {
+	margin: 10px 12px 10px 0;
+	display: block;
+	float: left;
+}
+
+/* Header Utilities */
+#utilities-reskin {
+	float: right;
+	font-family: 'Roboto Condensed';
+}
+
+/* Search */
+#search-box-reskin {
+	overflow: hidden;
+	margin-top: 9px;
+}
+
+#search-box-reskin input.search {
+	border: 0;
+	margin: 0;
+	line-height: 19px;
+	height: 19px;
+	width: 125px;
+	background:#fff;
+	padding:5px 6px;
+	float: left;
+	font-size: 0.75em;
+}
+
+#search-box-reskin input.search:focus {
+	outline: none;
+}
+
+#search-box-reskin button {
+	height: 29px;
+	width: 29px;
+	background: #fff;
+	padding:5px 6px;
+	margin:0;
+	border:0;
+}
+
+#search-box-reskin button span {
+	width:19px;
+	height:19px;
+	margin:0;
+	padding:0;
+	display:block;
+	background: url('/clients/Auyoga/Images/icons.png') 0 0 no-repeat
+}
+
+#search-box-reskin button:hover span {
+	background-position: 0 -30px
+}
+
+#search-box-reskin ::-webkit-input-placeholder, #search-box-reskin :-moz-placeholder, #search-box-reskin ::-moz-placeholder, #search-box-reskin :-ms-input-placeholder {
+	color:#a3a3a3
+}
+
+#search-detail {
+	display: none;
+	color: #333;
+	font-size: 0.75em;
+	line-height: 1.1em;
+	position: absolute;
+	width: 142px;
+	padding: 24px 12px 14px;
+	z-index: 9999;
+	background: #eee;
+	background: -moz-linear-gradient(top, rgba(203,203,203,1) 0%, rgba(196,196,196,1) 5%, rgba(238,238,238,1) 15%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(203,203,203,1)), color-stop(5%,rgba(196,196,196,1)), color-stop(15%,rgba(238,238,238,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(203,203,203,1) 0%,rgba(196,196,196,1) 5%,rgba(238,238,238,1) 15%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(203,203,203,1) 0%,rgba(196,196,196,1) 5%,rgba(238,238,238,1) 15%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(203,203,203,1) 0%,rgba(196,196,196,1) 5%,rgba(238,238,238,1) 15%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(203,203,203,1) 0%,rgba(196,196,196,1) 5%,rgba(238,238,238,1) 15%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cbcbcb', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+	border-bottom: 3px solid #a6a6a6;
+	-webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);  
+}
+
+#search-detail.alt {
+	background: rgb(85, 83, 83);
+	color: #e7e7e7;
+	border-bottom: 0;
+}
+
+#search-detail .arrow {
+	display: block;
+	margin: -24px 0 16px -7px;
+	background: url("/clients/Auyoga/Images/icons.png") no-repeat 0 -60px;
+	width: 17px;
+	height: 8px;
+}
+
+#search-detail.alt .arrow {
+	display: none;
+}
+
+#search-detail input[type=radio] {
+	margin-left: -1px;
+	height: 12px;
+	width: 12px;
+}
+
+#search-detail li {
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+#search-detail li a {
+	line-height: 1.25;
+}
+
+#search-detail li a:hover {
+	color: #333;
+}
+
+#search-detail h2 {
+	margin-bottom: 15px;
+}
+
+#search-detail.alt h2 {
+	margin: 20px 0 10px;
+}
+
+#search-detail h2 span {
+	text-transform: uppercase;
+	color: #959595;
+	text-shadow: -1px -1px 1px rgba(238, 238, 238, 0.5);
+	padding-bottom: 3px;
+	border-bottom: 2px solid #d9d9d9;
+}
+
+#search-detail.alt h2 span {
+	font-size: 1.2em;
+	border-bottom: 0;
+	color: #fff;
+}
+
+#search-detail.alt a {
+	color: #f5d263;
+}
+
+#search-detail.alt a:hover {
+	color: #fff2ca;
+}
+
+#login-reskin {
+	margin: 0;
+	overflow: hidden;
+}
+
+#login-reskin a {
+	float: right;
+	font-family: 'Roboto Condensed', trecbuchet ms, sans-serif;
+	font-size: 0.813em;
+	text-decoration: none;
+	letter-spacing: 1px;
+	height: 14px;
+	line-height: 14px;
+	color: #fff;
+	display: block;
+	text-transform: uppercase
+}
+
+#login-reskin a span {
+	margin-left: 10px;
+	background: url("/clients/Auyoga/Images/icons.png") no-repeat -60px 0;
+	display: inline-block;
+	height: 7px;
+	width: 9px
+}
+
+#login-detail {
+	display: none;
+	color: #333;
+	font-size: 0.75em;
+	position: absolute;
+	width: 132px;
+	padding: 24px 24px 14px 10px;
+	z-index: 9999;
+	background: #eee;
+	background: -moz-linear-gradient(top, rgba(203,203,203,1) 0%, rgba(196,196,196,1) 10%, rgba(238,238,238,1) 30%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(203,203,203,1)), color-stop(10%,rgba(196,196,196,1)), color-stop(30%,rgba(238,238,238,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(203,203,203,1) 0%,rgba(196,196,196,1) 10%,rgba(238,238,238,1) 30%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(203,203,203,1) 0%,rgba(196,196,196,1) 10%,rgba(238,238,238,1) 30%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(203,203,203,1) 0%,rgba(196,196,196,1) 10%,rgba(238,238,238,1) 30%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(203,203,203,1) 0%,rgba(196,196,196,1) 10%,rgba(238,238,238,1) 30%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cbcbcb', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+	border-bottom: 3px solid #a6a6a6;
+	-webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+	margin-top: 2px;
+}
+
+#login-detail .arrow {
+	float: right;
+	display: block;
+	margin: -24px -18px 0 0;
+	background: url("/clients/Auyoga/Images/icons.png") no-repeat -30px -60px;
+	opacity: 0.8;
+	width: 17px;
+	height: 8px;
+}
+
+#login-detail li {
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+#login-detail li a {
+	color: #333;
+	float: right;
+	line-height: 1.25;
+}
+
+#login-detail li a:hover {
+	color: #2588c6;
+}
+
+/* Navigation */
+nav.home-nav, nav.site-nav {
+	clear: both;
+	color: #fff;
+	display: block;
+	font-family: 'Roboto Condensed', trebuchet ms, sans-serif;
+	font-size: 0.813em;
+	font-weight: 300;
+	margin: 0 auto;
+	padding:0;
+	overflow: hidden;
+	width: 987px;
+	line-height: 13px;
+	/*position: relative;
+	z-index: 100;*/
+}
+
+/* Home Nav */ 
+
+nav.home-nav {
+	height: 41px;
+	border-top: 1px solid #3965a2;
+	margin-top: -42px;
+}
+
+nav.home-nav > ul {
+	overflow: hidden;
+	border-bottom: 1px solid #909090;
+	background: #eee;
+}
+
+nav.home-nav > ul > li {
+	float: left;
+	width: 164px;
+}
+
+nav.home-nav > ul > li:first-child {
+	width: 165px;
+}
+
+nav.home-nav > ul > li:first-child > a {
+	border-left: 1px solid #355685;
+}
+
+nav.home-nav > ul > li:last-child {
+	border-right: 0;
+	width: 166px;
+}
+
+.reskin nav.home-nav > ul > li > a {
+	position: relative;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	display: block;
+	color: #fff;
+	padding: 14px 12px;
+	overflow: hidden;
+	word-wrap: break-word;
+	text-decoration: none;
+	background: #123059;
+	background: -moz-linear-gradient(top, #234e8b 0%, #123059 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#234e8b), color-stop(100%,#123059)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #234e8b 0%,#123059 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #234e8b 0%,#123059 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #234e8b 0%,#123059 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #234e8b 0%,#123059 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#234e8b', endColorstr='#123059',GradientType=0 ); /* IE6-9 */ 
+}
+
+nav.home-nav > ul > li > a:hover, nav.home-nav > ul > li:hover > a {
+	background-color: #204e8d;
+	background: -moz-linear-gradient(top, #2c61aa 0%, #204e8d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2c61aa), color-stop(100%,#204e8d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #2c61aa 0%,#204e8d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #2c61aa 0%,#204e8d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #2c61aa 0%,#204e8d 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #2c61aa 0%,#204e8d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c61aa', endColorstr='#204e8d',GradientType=0 ); /* IE6-9 */ 
+}
+
+nav.home-nav > ul > li:hover > ul.sub-nav {
+	background: #fff;
+}
+
+nav .separator {
+	/*margin: -14px -12px;*/
+	 /*margin: -7px -12px -14px; top align */
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 41px;
+	background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0.4))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.4) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.4) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.4) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,0.4) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#66ffffff',GradientType=0 ); /* IE6-9 */
+	display: block;
+	width: 1px;
+	/*float: right;*/
+}
+
+/* Site Nav */
+
+/* Expand Menu */ 
+div.expand-tab {
+	overflow: hidden;
+	margin: -65px 0 0 48%;
+	position: relative;
+	z-index: 100;
+}
+
+div.expand-tab > span {
+	font-family: 'Roboto Condensed', trebuchet ms, sans-serif;
+	font-size: 0.813em;
+	font-weight: 400;
+	color: #333;
+	cursor: pointer;
+	width: 280px;
+	text-align: center;
+	text-transform: uppercase;
+	display: block;
+	background: #eee;
+	float: left;
+	padding: 5px;
+}
+
+div.expand-tab .arrow-down {
+	background: url("/clients/Auyoga/Images/icons.png") no-repeat 0 -90px;
+	display: inline-block;
+	height: 7px;
+	width: 9px;
+	margin-left: 10px;
+}
+
+div.expand-tab div {
+	width: 0px;
+	height: 0px;
+	border-top: 23px solid rgba(0, 0, 0, 0);
+	border-left: 23px solid #eee;
+	float: left;
+}
+
+nav.site-nav {
+	font-weight: 400;
+}
+
+nav.site-nav ul.main {
+	overflow: hidden;
+	background: #eee;
+	border-right: 1px solid #bdc2c6;
+	border-left: 1px solid #bdc2c6;
+	visibility: hidden;
+}
+
+nav.site-nav ul.main > li {
+	position: relative;
+	float: left;
+	width: 164px;
+	padding-top: 15px;
+}
+
+.reskin nav.site-nav > ul.main > li > a {
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	display: block;
+	color: #333;
+	padding: 0 12px 5px;
+	overflow: hidden;
+	word-wrap: break-word;
+	text-decoration: none;
+	border-left: 1px solid #bbb;
+}
+
+.reskin nav.site-nav > ul.main > li:first-child > a {
+	border-left: 0;
+}
+
+nav.site-nav ul.main .label {
+	position: absolute;
+	float: left;
+	display: block;
+	margin-top: -2px;
+}
+
+nav.site-nav ul.main .bullet {
+	display: block;
+	float: left;
+	height: 9px;
+	width: 8px;
+	background: #bbb;
+	margin: 0 7px 0 -12px;
+	vertical-align: top;
+}
+
+nav.site-nav ul.main > li:hover .bullet {
+	background: #2588c6;
+}
+
+/* Site Menu */
+
+nav.site-nav > div {
+	/*display: table;
+	width: 100%;*/
+	border-top: 1px solid #3965a2;
+}
+
+nav.site-nav ul.site {
+	display: table-row;
+	height: 41px;
+}
+
+nav.site-nav > div {
+	background: #123059;
+	background: -moz-linear-gradient(top, #234e8b 0%, #123059 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#234e8b), color-stop(100%,#123059)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #234e8b 0%,#123059 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #234e8b 0%,#123059 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #234e8b 0%,#123059 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #234e8b 0%,#123059 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#234e8b', endColorstr='#123059',GradientType=0 ); /* IE6-9 */ 
+}
+
+nav.site-nav ul.site li {
+	/*min-width: 60px;
+	max-width: 142px;*/
+	display:table-cell;
+	position: relative;
+	/*padding:0 12px;
+	padding-top: 7px; top vertical-align */
+	/*vertical-align:middle;*/
+}
+
+nav.site-nav ul.site li:hover {
+	background-color: #204e8d;
+	background: -moz-linear-gradient(top, #2c61aa 0%, #204e8d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#2c61aa), color-stop(100%,#204e8d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #2c61aa 0%,#204e8d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #2c61aa 0%,#204e8d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #2c61aa 0%,#204e8d 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #2c61aa 0%,#204e8d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c61aa', endColorstr='#204e8d',GradientType=0 ); /* IE6-9 */ 
+}
+
+nav.site-nav ul.site li:first-child {
+	border-left: 1px solid #355685;
+}
+
+nav.site-nav ul.site a {
+	/*min-width: 60px;
+	max-width: 168px;*/
+	position: relative;
+	height: 27px;
+	padding: 7px 8px;
+	color: #fff;
+	font-weight: 300;
+	text-transform: none;
+	letter-spacing: 1px;
+	word-wrap: break-word;
+	/*padding: 0;*/
+	background: transparent;
+	/*display: inline;*/
+	display: block;
+}
+
+nav.site-nav ul.site a:hover, nav.site-nav ul.site li:hover a {
+	text-decoration: none;
+	background: transparent;
+}
+
+/* Sub Nav */
+nav.home-nav ul.sub-nav {
+	padding-bottom: 10px;
+	width: 163px;
+	border-right: 1px solid #bdc2c6;	
+	/* Nav Overlay method  
+	display: none;
+	position: absolute;
+	top: 42px;
+	z-index: 9999;
+	-webkit-box-shadow: 0 5px 6px -1px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 5px 8px -1px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 8px -1px rgba(0, 0, 0, 0.2); */
+}
+
+nav.home-nav > ul > li:first-child > ul.sub-nav {
+	width: 163px;
+	border-left: 1px solid #bdc2c6;
+}
+
+nav.home-nav > ul > li:last-child > ul.sub-nav {
+	width: 165px;
+}
+
+nav.home-nav ul.sub-nav > li {
+	display:block;
+	padding: 10px 10px 0;
+	border: 0;
+}
+
+nav.home-nav ul.sub-nav > li > a {
+	color:#333;
+	font-size:1em;
+	font-weight: 400;
+}
+
+nav.home-nav ul.sub-nav > li > a:hover, nav.home-nav ul.sub-nav > li > a:active {
+	color: #2588c6;
+}
+
+nav ul.sub-nav > li.has-child {
+	position:relative;
+}
+
+nav ul.sub-nav > li.has-child span.arrow {
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	background: url(/clients/Auyoga/Images/arrow-red.png) no-repeat 5px 3px;
+}
+
+nav ul.sub-nav-child {
+	display: none;
+	left: 150px;
+	top: 0;
+	z-index: 101;
+	position: absolute;
+	border: 1px solid #f1eee4;
+	background: #f1eee4;
+	padding: 10px 20px;
+	white-space: nowrap;
+	-webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul.sub-nav-child li {
+	line-height: 1.5;
+}
+
+nav li.has-child ul.sub-nav-child li a {
+	color: #333;
+	font-weight: 400;
+}
+
+nav li.has-child ul.sub-nav-child li a:hover {
+	color: #2588c6;
+	text-decoration: underline;
+}
+
+/* Expand Sub Nav */
+nav.site-nav > ul.main ul.sub-nav {
+	padding-bottom: 10px;
+	border-left: 1px solid #bbb;
+}
+
+nav.site-nav > ul.main > li:first-child ul.sub-nav {
+	border-left: 0;
+}
+
+nav.site-nav > ul.main ul.sub-nav > li {
+	display: block;
+	padding: 10px 12px 0;
+}
+
+nav.site-nav > ul.main ul.sub-nav > li > a {
+	color: #333;
+	font-size: 1em;
+	font-weight: 400;
+}
+
+nav.site-nav > ul.main ul.sub-nav > li > a:hover, nav.site-nav > ul.main ul.sub-nav > li > a:active {
+	color: #2588c6;
+}
+
+/* Page Content */
+
+#main {
+	background: #fff;
+	border: 1px solid #b4ae95;
+	border-top: 0;
+	width: 985px;
+	-webkit-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.15);
+	margin: 0 auto;
+}
+
+.page-title-holder {
+	background: none;
+	padding: 0;
+}
+
+#homepage_row1 {
+	float:left;
+	padding-top: 10px;	
+	width: 985px;
+}
+	
+#homepage_row2 {
+	float:left;
+	padding: 30px 0 20px;	
+	width: 985px;
+}
+	
+.homepage_module {
+	float:left
+}
+	
+.row2_container {
+	width:328px
+}
+	
+/*Sifr replaces */
+h1.sifr-head {
+	margin-top: -5px; 	
+	font-family: Montserrat, trebuchet, 'trebuchet ms', sans-serif;
+	font-weight: normal;
+	font-size: 2.1em;
+	line-height: 0.75;
+}
+
+h2.sifr-head {
+	font-family: Montserrat, trebuchet, 'trebuchet ms', sans-serif;
+	font-size: 1.4em; 
+	font-weight: normal;
+	line-height: 0.75;
+}
+
+/*
+h3.sifr-head-light{
+	font-size:2.2em !important;
+	font-family: Arial, Montserrat, trebuchet, 'trebuchet ms', sans-serif;
+	font-weight:lighter;
+	background:none;
+	text-transform:none;		
+}
+*/
+
+#news-listing-headline a{color:#474747}
+
+/* Facebook Widget */
+#facebook-home {
+	position: relative;
+	background: url(/clients/Auyoga/Images/d9stripes.png) repeat-x;
+    border: 1px solid #eee;
+    width: 300px;
+    height: 614px;
+	margin-left: 14px;
+	overflow: hidden;
+	-webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+	font-size: 0.688em;
+}
+
+#facebook-home h2 {
+	background: url(/clients/Auyoga/Images/arrow-red.png) 5px 31px no-repeat;
+	color: #333;
+	font-family: Montserrat, trebuchet, 'trebuchet ms', sans-serif;
+	font-size: 2.2em;
+	line-height: 1;
+	padding: 26px 15px 10px;
+	margin: 0 5px;
+	font-weight: normal;
+}
+
+#facebook-home div.reskin-bottom-border {
+	position: absolute;
+	bottom: 0;
+	border-bottom: 2px solid #B2B2B2;
+	width: 100%;
+	height: 2px;
+}
+
+/* Events Calendar Widget */
+div.reskin-events-calendar {
+	margin-left: 9px;
+	width: 298px;
+	background: url(/clients/Auyoga/Images/d9stripes.png) repeat-x;
+	border: 1px solid #eee;
+	padding: 10px 0 0;
+	position: relative;
+	-webkit-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.15);
+}
+
+div.reskin-events-calendar > div.events, div.reskin-events-calendar > div.school {
+	padding: 16px 5px 83px;
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 70%, rgba(242,242,242,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(70%,rgba(255,255,255,1)), color-stop(100%,rgba(242,242,242,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 70%,rgba(242,242,242,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 70%,rgba(242,242,242,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 70%,rgba(242,242,242,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 70%,rgba(242,242,242,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f2f2f2',GradientType=0 ); /* IE6-9 */
+	border-bottom: 2px solid #b2b2b2;
+	position: relative;
+	font-family: trebuchet, 'trebuchet ms', sans-serif;
+	font-size: 0.688em;
+}
+
+div.reskin-events-calendar h2 {
+	background: url(/clients/Auyoga/Images/arrow-red.png) 5px 5px no-repeat;
+	border-bottom: 1px solid #ddd;
+	color: #333;
+	font-family: Montserrat, trebuchet, 'trebuchet ms', sans-serif;
+	font-size: 1.636em;
+	font-weight: normal;
+	line-height: 1;
+	padding: 0 15px 10px;
+}
+
+div.reskin-events-calendar a.rss-link {
+	background: url(/clients/Auyoga/Images/rss.gif) no-repeat;
+	height: 17px;
+	width: 17px;
+	overflow: hidden;
+	display: block;
+	text-indent: -9999px;
+	position: absolute;
+	top: 16px;
+	right: 10px;
+}
+
+div.reskin-events-calendar div.tabs {
+	padding: 25px 5px 0;
+	overflow: hidden;
+	clear: both;
+}
+
+div.reskin-events-calendar div.tabs li {
+	float: left;
+	width: 100px;
+}
+
+div.reskin-events-calendar div.tabs li a {
+	display: block;
+	padding: 6px 0;
+	text-transform: uppercase;
+	text-align: center;
+	border: 1px solid #ececec;
+	border-bottom-color: #d9d9d9;
+	color: #909090;
+}
+
+div.reskin-events-calendar div.tabs li a.active {
+	color: #2588c6;
+	background: #f2f2f2;
+	border-color: #d9d9d9;
+	border-bottom-color: transparent;
+	cursor: default;
+}
+
+div.reskin-events-calendar div.tabs li a.active:hover {
+	text-decoration: none;
+}
+
+div.reskin-events-calendar div.container ul {
+	margin: -1px 5px;
+	border-bottom: 1px solid #d9d9d9;
+	overflow: auto;
+    overflow-x: hidden;
+}
+
+div.reskin-events-calendar div.container ul li {
+	border: 1px solid #d9d9d9;
+	background: #f2f2f2;
+	border-bottom: 0;
+	padding: 10px 12px;
+	color: #666;
+	line-height: 1.25;
+}
+
+div.reskin-events-calendar div.today {
+	position: absolute;
+	top: 53px;
+	right: 10px;
+}
+
+div.reskin-events-calendar div.today a {
+	background: #dc2827;
+	border-radius: 3px;
+	text-decoration: none;
+	color: #fff;
+	font-weight: 400;
+	text-transform: uppercase;
+	padding: 3px 6px;
+}
+
+div.reskin-events-calendar div.container h4 {
+	color: #333;
+	padding: 10px 0 0;
+	font-family: Montserrat, trebuchet, 'trebuchet ms', sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+div.reskin-events-calendar div.container li.coming-soon {
+	height: 27px;
+	background: transparent;
+	border: 0;
+	border-top: 1px solid #d9d9d9;
+	padding-bottom: 0;
+}
+
+div.reskin-events-calendar div.container li.coming-soon-row {
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #d9d9d9;
+}
+
+div.reskin-events-calendar div.container li.coming-soon-row:last-child {
+	border-bottom: 0;
+}
+
+div.reskin-events-calendar div.calendar-footer {
+	position: absolute;
+	bottom: 0;
+	padding: 15px 12px;
+	margin: 10px 10px 0;
+	border-top: 1px dotted #b2b2b2;
+	width: 254px;
+}
+
+div.reskin-events-calendar div.calendar-footer a {
+	display: block;
+	clear: both;
+	float: left;
+	width: auto;
+	color: #fff;
+	margin-bottom: 5px;
+	padding: 0 12px 0 6px;
+	height: 16px;
+	line-height: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+	background: #f4c52f;
+	/*background: #f4c52f url(/clients/Auyoga/Images/cta-arrows-white.png) right 0 no-repeat;*/
+}
+
+div.reskin-events-calendar div.calendar-footer a:hover {
+	text-decoration: none;
+	background: #d49d15;
+}
+
+div.reskin-events-calendar div.calendar-footer a span.arrow {
+	display: inline-block;
+	margin-left: 12px;
+	position: absolute;
+	border: 8px solid transparent;
+	border-left-color: #f4c52f;
+	background: transparent;
+}
+
+div.reskin-events-calendar div.calendar-footer a:hover span.arrow {
+	border-left-color: #d49d15;
+}
+
+/* Footer */
+.reskin footer {
+	width: 987px;
+	overflow: hidden;
+	color: #555;
+	font-size: 0.938em;
+	margin: 0 auto;
+	padding: 10px 0 0;
+	background: #eae7dc
+}
+
+/* Social Media Bar */
+#social-media-bar {
+	margin-top: 7px;
+	background: #dedacd;
+	overflow:hidden;
+	padding: 6px 20px;
+}
+
+#social-media-bar span {
+	font-weight: bold;
+	font-size: 1.1em;
+	line-height: 23px;
+	display:inline-block;
+	float:left;
+	text-transform: uppercase;
+}
+
+#social-media-bar ul {
+	float:left;
+	margin-left: 10px;
+}
+
+#social-media-bar li {
+	line-height: 23px;
+	float: left;
+	margin-right: 10px;
+}
+
+span.social-icon {
+	background: url(/clients/Auyoga/Images/icons.png) no-repeat;
+	display: inline-block;
+	overflow: hidden;
+	width: 23px;
+	height: 23px;
+	margin: 0 9px;
+	opacity: 0.75;
+}
+
+span.social-icon:hover, .social-icon:active {
+	opacity: 1.0
+}
+
+span.icon-facebook { background-position: -120px -30px }
+span.icon-twitter { background-position: -120px 0 }
+span.icon-youtube { background-position: -90px 0 }
+span.icon-linkedin { background-position: -90px -30px }
+span.icon-instagram { background-position: -90px -60px }
+span.icon-wordpress { background-position: -30px -90px }
+span.icon-ausocial { background-position: -120px -60px }
+span.icon-googleplus { background-position: -120px -90px }
+span.icon-email { background-position: 0 -120px }
+span.icon-copylink { background-position: -30px -120px }
+
+
+.reskin footer {
+	font-size: 0.75em;
+}
+
+.reskin footer .footer-top-reskin {
+	overflow: hidden;
+	padding: 10px 8px 10px;
+	border-bottom: 1px solid #bbb;
+	margin-bottom: 5px;
+}
+
+.reskin footer .footer-bottom-reskin {
+	padding: 13px 8px 0;
+}
+
+.reskin footer .footer-bottom-reskin div div {
+	margin-bottom: 10px;
+}
+
+.reskin footer .left {
+	float: left;
+}
+
+.reskin footer .right {
+	float: right;
+}
+
+.reskin footer .right p {
+	line-height: 21px;
+}
+
+a.home-link-reskin {
+	vertical-align: top;
+	line-height: 21px;
+}
+
+span.icon-home { 
+	display: inline-block;
+	overflow: hidden;
+	height: 21px;
+	width: 20px;
+	background: transparent url(/clients/Auyoga/Images/icons.png) no-repeat -30px 0;
+	margin: 0 5px 0 0;
+}
+
+a.home-link-reskin:hover span.icon-home { 
+	background-position: -30px -30px;
+}
+
+.black-logo { 
+	float: left; 
+	padding: 0 5px 0 0; 
+	width: 20px;
+	height: 21px;
+}
+
+@media print {
+	
+	.reskin header, #logo-reskin {
+		width: 985px;
+		margin: 0 auto;
+	}
+	
+	div.etched-top {
+		border-top:0;
+	}
+	
+	#utilities-reskin, nav.home-nav, nav.site-nav, div.expand-tab {
+		display: none;
+	}
+	
+	div.sideshades {
+		background: none;
+		padding: 0;
+	}
+	
+	#main {
+		border: 0;
+	}
+}

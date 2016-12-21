@@ -1,0 +1,406 @@
+﻿@import url(/clients/bsu/images/Editor.css);
+
+/* _________________________________________________
+
+Ball State Design - Main Layout
+_____________________________________________________
+
+1.HEADERCONTAINER
+2.PAGEHEADER
+3.NAVGATEWAY
+4.NAVTACTICAL
+5.SEARCH
+6.HEADERIMAGE
+7.NAVPRIMARY
+8.RULEVERTICAL
+9.BANNERCONTAINER
+10.PAGEBILLBOARD
+11.CONTAINER
+12.CONTENTCONTAINER
+13.COLUMNS
+14.DEPARTMENTCONTACT
+15.FOOTERCONTAINER
+16.FOOTER
+17.MINIMAP
+
+HEADER CONTAINER
+*/
+#headerContainer
+{
+    width: 100%;
+    text-align: center;
+
+    background-image: url(/clients/bsu/images/backgroundHeader.gif);
+    background-position: 0% 0%;
+    background-repeat: repeat-x;
+}
+
+/**************************************************
+**  PAGE HEADER    ********************************
+**************************************************/
+#pageHeader
+{
+    margin: 0 auto;
+    width: 940px;
+    text-align: left;
+}
+
+/**************************************************
+**  NAV GATEWAY    ********************************
+**************************************************/
+#navGateway
+{
+    float: left;
+    margin: 0;
+    padding: 0 10px 0 0;
+    width: auto;
+    height: 37px;
+    text-align: left;
+    overflow: hidden;
+
+    font-family: NewsGothicBT-Roman, Helvetica, Arial, Sans-Serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* CSS3 Font Smoothing */
+    -webkit-font-smoothing: subpixel-antialiased;
+    color: #555555;
+}
+
+/* NAVGATEWAY UL */
+#navGateway ul
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+/* NAVGATEWAY UL LI */
+#navGateway ul li
+{
+    float: left;
+    font-size: 9pt;
+    white-space: nowrap;
+}
+
+/* NAVGATEWAY UL LI A */
+#navGateway ul li a
+{
+    display: block;
+    margin: 0;
+    padding: 13px 8px 10px;
+
+    color: #555555;
+    letter-spacing: 0px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* NAVGATEWAY UL LI A:HOVER */
+#navGateway ul li a:hover
+{
+    color: #CC0000;
+    text-decoration: none;
+}
+
+/* NAVGATEWAY UL LI.FIRST A */
+#navGateway ul li.first a { padding-left: 0; }
+
+/* NAVGATEWAY UL LI.FIRST A */
+#navGateway ul li.last a { padding-right: 0; }
+
+/* Firefox-specific CSS property */
+@-moz-document url-prefix()
+{
+    #navGateway ul li { font-size: 8pt; }
+    #navGateway ul li a { padding: 13px 7px 10px; }
+}
+
+/**************************************************
+**  NAV TACTICAL    *******************************
+**************************************************/
+#navTactical
+{
+    float: left;
+    margin: 0;
+    width: auto;
+    height: 37px;
+    text-align: left;
+    overflow: hidden;
+
+    font-family: NewsGothicBT-Roman, Helvetica, Arial, Sans-Serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* CSS3 Font Smoothing */
+    -webkit-font-smoothing: subpixel-antialiased;
+    color: #CC0000;
+}
+
+/* NAVTACTICAL UL */
+#navTactical ul
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+/* NAVTACTICAL UL LI */
+#navTactical ul li
+{
+    float: left;
+    font-size: 9pt;
+    white-space: nowrap;
+}
+
+/* NAVTACTICAL UL LI A */
+#navTactical ul li a
+{
+    display: block;
+    margin: 0;
+    padding: 13px 8px 10px;
+
+    color: #CC0000;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* NAVTACTICAL UL LI.FIRST A:HOVER */
+#navTactical ul li a:hover
+{
+    color: #555555;
+    text-decoration: none;
+}
+
+/* NAVTACTICAL UL LI.FIRST A */
+#navTactical ul li.first a { }
+
+/* NAVTACTICAL UL LI.LAST A */
+#navTactical ul li.last a { padding-right: 0; }
+
+/* Firefox-specific CSS property */
+@-moz-document url-prefix()
+{
+    #navTactical ul li { font-size: 8pt; }
+    #navTactical ul li a { padding: 13px 7px 10px; }
+}
+
+/**************************************************
+**  SEARCH    *************************************
+**************************************************/
+#pnlSearch
+{
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+#pnlSearch .txtSearch
+{
+    color: #000;
+    float: left;
+    width: 120px;
+    margin: 8px 10px 0 0;
+    font-size: 10pt;
+}
+
+#pnlSearch .btnSearch { border: 0; }
+
+/**************************************************
+**  HEADER IMAGE    *******************************
+**************************************************/
+#headerImage
+{
+    margin: 0 auto;
+    text-align: left;
+}
+
+/**************************************************
+**  NAV PRIMARY    ********************************
+**************************************************/
+#navPrimary
+{
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #FFFFFF;
+    background-color: #CC0000;
+    overflow: hidden;
+}
+
+/**************************************************
+**  RULE VERTICAL    ******************************
+**************************************************/
+.ruleVertical
+{
+    width: 10px;
+    min-height: 37px;
+    background-image: url(/clients/bsu/images/ruleVertical.gif);
+    background-position: 50% 0%;
+    background-repeat: repeat-y;
+}
+
+#pageHeader .ruleVertical { float: left; }
+
+/**************************************************
+**  BANNER CONTAINER    ***************************
+**************************************************/
+#bannerContainer
+{
+    width: 100%;
+    text-align: center;
+    clear: both;
+
+    background-color: #4E5E6D;
+}
+
+/**************************************************
+**  PAGE BILLBOARD    *****************************
+**************************************************/
+#pageBillboard
+{
+    margin: 0 auto;
+    width: 940px;
+}
+
+/**************************************************
+**  CONTAINER    **********************************
+**************************************************/
+#container
+{
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+}
+
+/**************************************************
+**  CONTENT CONTAINER    **************************
+**************************************************/
+#contentContainer
+{
+    margin: 0 auto;
+    width: 940px;
+}
+
+#contentContainer .primary .contentImage img,
+.contentImage img {
+    padding: 0;
+    z-index: initial;
+    max-width: 100%;
+    height: auto;
+}
+
+/**************************************************
+**  COLUMNS    ************************************
+**************************************************/
+
+/* Column1, Column2, Column3 */
+#column1, #column2, #column3 { float: left; }
+
+/* Column1 Wide */
+#column1.wide
+{
+    padding: 20px 20px 30px 20px;
+    line-height: 2em;
+    float: none;
+    width: 100%;
+    clear: both;
+}
+
+/* Column1, Column2 Primary */
+#column1.primary, #column2.primary
+{
+    padding: 20px 20px 30px 20px;
+    width: 625px;
+    line-height: 2em;
+}
+
+/* Column1, Column2, Column3 Secondary */
+#column1.secondary, #column2.secondary, #column3.secondary
+{
+    padding: 0;
+    width: 275px;
+    min-height: 1px;
+}
+
+/* Column1, Column2, Column3 Primary Multi */
+#column1.primary.multi, #column2.primary.multi, #column3.primary.multi
+{
+    padding: 20px 20px 30px 20px;
+    width: 540px;
+    min-height: 1px;
+}
+
+/* Column1, Column2, Column3 Secondary Multi */
+#column1.secondary.multi, #column2.secondary.multi, #column3.secondary.multi
+{
+    padding: 0;
+    width: 179px;
+    min-height: 1px;
+}
+
+#column1.secondary.multi { padding-top: 25px; }
+
+#column3.secondary.multi { margin-left: 2px; }
+
+/**************************************************
+**  DEPARTMENT CONTACT    *************************
+**************************************************/
+.departmentContact
+{
+    margin: 15px 0 0 0;
+    display: block;
+    padding: 20px 12px 20px 10px;
+    background-color: #6A7D8F;
+    color: #FFFFFF;
+}
+
+.departmentContact a
+{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.departmentContact a:hover
+{
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+/**************************************************
+**  MINI MAP    ***********************************
+**************************************************/
+div.mini-map {
+    margin: 0;
+    padding: 0;
+}
+
+div.mini-map img {
+    width: 100%;
+    height: auto;
+}
+
+div.mini-map p {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #FFF;
+}
+
+div.mini-map p a {
+    display: block;
+    padding: 5px 10px;
+    background-color: #818E9A;
+    border: none;
+    font-weight: bold;
+    color: #FFF;
+    font-size: 9.5pt;
+    text-decoration: none;
+}
+
+div.mini-map p a:hover {
+    background-color: #456;
+}
+
+/*960px __________________________________________________________________________________________________________ */
+/* @media only screen and (max-width: 960px) { */
+    body {}
+}

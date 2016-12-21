@@ -1,0 +1,283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head>
+				<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+						
+						<link href="home_data/template.css" rel="stylesheet" type="text/css">
+					        
+
+				<link href="home_data/styles.css" rel="stylesheet" type="text/css">
+				<!--[if IE]><link href="styles-ie.css?3-1327000252" rel="stylesheet" type="text/css" /><![endif]-->
+				
+				<script src="home_data/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="home_data/framed_musicplayer.js"></script>
+				<script language="JavaScript" type="text/JavaScript">
+					function stopPlayer() {
+						jQuery("[zplayer]").jPlayer("pause");
+						//jQuery("[zplayer]").trigger("stop");
+                        if ( typeof(toggleOffButtons) == "function" ) {
+						   toggleOffButtons();
+                        }
+					}
+
+					
+						
+						if(!isMusicPlayerOpen()) {
+							openFramedMusicPlayer();
+						}
+					
+				</script>
+			
+				<script type="text/javascript" src="home_data/jquery-1.js"></script>
+				<script type="text/javascript"> jQuery.noConflict(); </script>
+				<script type="text/javascript" src="home_data/spam.js"></script>
+				
+				
+				<!--[if IE 6]>
+				<script type="text/javascript" src="/common/js/jquery/plugins/pngFix/jquery.pngFix.js"></script>
+				<style type="text/css">.navMenuHorizontal li.top { margin: 0 5px; }</style>
+				<script type="text/javascript">
+					jQuery(document).ready(function($){
+						// apply a wrapper to the link to make them work again after the PNG fix
+						// see: http://www.satzansatz.de/cssd/tmp/alphatransparency.html
+						$('.navMenu a.top').each(function() {
+							var $li = $(this).parent('li');
+							var bgIMG = $li.css('background-image');
+							if(bgIMG != null && bgIMG.indexOf(".png")!=-1){
+								$this = $(this);
+								// move the bg image & appropriate styles to the wrapper
+								$this.css({position: 'relative', zIndex: 1});
+								var styles = {'background-image': $li.css('background-image'), float: 'left' };
+								$(['padding-left','padding-right','padding-top','padding-bottom','width','height','background-repeat','background-position-x','background-position-y']).each(function() {
+									var t = $li.css( '' + this + '' );
+									if( t != null ) styles[this] = t;
+								})
+								$this.wrap($('<div></div>').css(styles));
+								$li.css('background-image', 'none');
+							}
+						});
+						// give subtitles 'hasLayout' so that the filter works appropriately
+						$('.subtitlewrap').css({zoom: '1'});
+						// finally fix the pngs
+						$('.navMenu li.top').pngFix();
+						// if we call it on all of them in one go then it only works for the first
+						// one and all the rest get missing background so we do them 1 by 1
+						$('.subtitlewrap').each(function() { $(this).pngFix(); } );
+					});
+				</script>
+				<![endif]-->
+		
+		
+				
+				<script type="text/javascript" src="home_data/jquery_005.js"></script>
+				<script type="text/javascript" src="home_data/jQuery.js"></script>
+				
+				<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$('.navMenu').zoogleNav({imageSuffix: 'png'});
+	
+						// replace all the flash elements with ones with wmode params so that the
+						// menu doesn't overlay on other Windows browsers (as IE uses bgiframe)
+						// could extract this to be re-usable
+						if( !$.browser.msie && window.navigator.userAgent.match( /Windows/ ) ) {
+							$('object').each(function() {
+								$this = $(this);
+								if( ! $('param[name=wmode]', $this ).length == 1 ) {
+									$targ = $this.clone();
+									$targ.append('<param name="wmode" value="opaque" />');
+									$('embed', $targ).attr('wmode', 'opaque');
+									$this.replaceWith($targ);
+								}
+							} );
+	
+							$('embed').each(function() {
+								$this = $(this);
+								if( $this.attr('wmode') == null ) {
+									$this.replaceWith($this.clone().attr('wmode', 'opaque'));
+								}
+							});
+						}
+					});
+				</script>
+			<title>center313.com - Home</title>
+			<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+			
+					<link rel="shortcut icon" href="http://www.center313.com/common/images/favicon-bz.ico" type="image/vnd.microsoft.icon">
+				
+		        <script type="text/javascript" src="home_data/jquery.js"></script>
+			    <script type="text/javascript" src="home_data/jquery_004.js"></script>
+			    <script type="text/javascript" src="home_data/zoogle-player.js"></script>
+              
+				<script type="text/javascript">
+					var _gaq = _gaq || [];
+					_gaq.push(['_setAccount', 'UA-37926563-1']);
+					
+					_gaq.push(['_setReferrerOverride', 'http://www.center313.com/home.cfm?&FEATURE=']);
+					
+					_gaq.push(['_trackPageview']);
+
+					(function() {
+						var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+						ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+						var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+					})();
+				</script>
+				
+
+			<link href="home_data/facebox.css" rel="stylesheet" type="text/css">
+			<script type="text/javascript" src="home_data/facebox.js"></script>
+
+			<script type="text/javascript">
+				jQuery(document).ready(function($) {
+					$.fn.facebox({
+						opacity      : 0.1,
+						loadingImage : 'http://assets.sitezoogle.com/common/js/facebox/loading.gif?1327000252',
+						closeImage   : 'http://assets.sitezoogle.com/common/js/facebox/closelabel.gif?1327000252'
+					});
+				});
+				// Apply behaviors to any new content loaded in the facebox div.
+				jQuery(document).bind('afterReveal.facebox', function() {
+					jQuery('#facebox a[rel*=facebox]').each(function() {
+						jQuery(this).facebox();
+					});
+					jQuery('#facebox input[class*=facebox]').each(function() {
+						jQuery(this).facebox();
+					});
+					// Setup spam fields, but ignore errors if it doesn't work.
+					try { setup_captcha(); }
+					catch(e){};
+				});
+			</script>
+		<link href="home_data/features.css" rel="stylesheet" type="text/css" media="screen">
+		<link href="home_data/jquery.css" media="screen" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="home_data/jquery_003.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function() {
+				// Apply tooltip.
+				jQuery('.icon a').tooltip({ showURL: false, fade: 0 });
+				// Turning off rollover.
+				// Mouseover changes image.
+				// jQuery("img.social").mouseover(function(){
+				// 	this.src = this.src.replace(/_off\./, '_on.');
+				// }).mouseout(function(){
+				// 	this.src = this.src.replace(/_on\./, '_off.');
+				// });
+			});
+		</script>
+	
+			</head>
+			<body class="base">
+				<div class="container" id="container">
+					<div class="navigation clear"><ul class="navMenu navMenuHorizontal"><li style="z-index: 100;" class="top"><a href="http://www.center313.com/home.cfm" class="top"><img src="home_data/button-home.png" alt="Home" class="rollover" height="30" width="61"></a></li><li style="z-index: 99;" class="top"><a href="http://www.center313.com/aboutus.cfm" class="top"><img src="home_data/button-aboutus.png" alt="About Us" class="rollover" height="30" width="96"></a></li><li style="z-index: 98;" class="top"><a href="http://www.center313.com/photos.cfm" class="top"><img src="home_data/button-photos.png" alt="Photos" class="rollover" height="30" width="69"></a></li><li style="z-index: 97;" class="top"><a href="http://www.center313.com/contactus.cfm" class="top"><img src="home_data/button-contactus.png" alt="Contact Us" class="rollover" height="30" width="109"></a></li><li style="z-index: 96;" class="top"><a href="http://www.center313.com/catchus.cfm" class="top"><img src="home_data/button-catchus.png" alt="Catch Us" class="rollover" height="30" width="91"></a></li><li style="z-index: 95;" class="top"><a href="http://www.center313.com/videos.cfm" class="top"><img src="home_data/button-videos.png" alt="Videos" class="rollover" height="30" width="68"></a></li><li style="z-index: 94;" class="top"><a href="http://www.center313.com/links.cfm" class="top"><img src="home_data/button-links.png" alt="Links" class="rollover" height="30" width="57"></a></li><li style="z-index: 93;" class="top"><a href="http://www.center313.com/merchandise.cfm" class="top"><img src="home_data/button-merchandise.png" alt="Merchandise" class="rollover" height="30" width="127"></a></li></ul></div>
+					<div class="header clear">
+						
+						<div class="header-graphic"><img src="home_data/1463183.jpg" alt=""></div>
+						
+						
+					</div>
+					
+					
+					
+					
+					<div class="content-top"></div>
+					<div class="clear">
+						
+						<div class="content"> 
+			<table cellspacing="8" width="100%">
+				
+
+					<tbody><tr>
+						
+							<td colspan="2" valign="top">
+								<div class="layout layout-full">
+									
+					<div class="subtitlewrap">
+						<div class="subtitle">
+							<img src="home_data/subheader-4521231.png" alt="EVENT TICKETS">
+						</div>
+					</div>
+			
+											<a name="a1891137_4521231" id="a1891137_4521231" style="display:hidden"> </a>
+											
+	<p class="text">&nbsp;<i><span style="font-size: xx-large;">Tickets are now availble for the September 28th "Trust in Me" &nbsp;concert at the Arlington Music Hall!!</span></i><br>
+<span style="font-size: larger;"><br>
+<span style="font-size: xx-large;"><a target="_parent" href="http://center313.tix.com/">http://center313.tix.com/<br>
+</a></span><br>
+<br>
+<br>
+<br>
+<br></span></p>
+	
+								</div>
+							</td>
+						
+					</tr>
+				
+
+					<tr>
+						
+							<td colspan="2" valign="top">
+								<div class="layout layout-full">
+									
+											<a name="a1891137_4180599" id="a1891137_4180599" style="display:hidden"> </a>
+												
+		<div class="counter">
+			<p>You are visitor number: 1935</p>
+		</div>
+	
+								</div>
+							</td>
+						
+					</tr>
+				
+
+					<tr>
+						
+							<td colspan="2" valign="top">
+								<div class="layout layout-full">
+									
+											<a name="a1891137_4183086" id="a1891137_4183086" style="display:hidden"> </a>
+											
+<div style="text-align:center;">
+
+	<span class="icon">
+		<a href="http://twitter.com/center313" target="_blank"><img src="home_data/btn-twitter_on.png" alt="Twitter" class="social" border="0"></a>
+	</span>
+	
+	<span class="icon">
+		<a href="http://facebook.com/Centerthreethirteen" target="_blank"><img src="home_data/btn-facebook_on.png" alt="Facebook" class="social" border="0"></a>
+	</span>
+	
+</div>
+
+								</div>
+							</td>
+						
+					</tr>
+				
+			</tbody></table>
+			</div>
+					</div>
+					
+					<div class="content-bottom"></div>
+					
+					
+
+					<div class="footer clear"><a href="http://bandzoogle.com/" target="_blank" title="Powered by Bandzoogle" class="branding-button"><img src="home_data/branding_80x15.gif" alt="Powered by Bandzoogle" border="0" height="15" width="80"></a></div>
+					
+				</div>
+				
+				
+				<script type="text/javascript" src="home_data/jquery_006.js"></script>
+				<script type="text/javascript" src="home_data/jquery_002.js"></script>
+				
+				<script type="text/javascript">
+					jQuery(document).ready(function($) {
+						$('a[rel*=facebox]').each(function() {
+							var el = $(this);
+							el.facebox();
+						});
+					});
+				</script>
+			 <div class="footertext"></div>
+			
+		
+	<img style="display: none;" src="home_data/button-home-over.png"><img style="display: none;" src="home_data/button-aboutus-over.png"><img style="display: none;" src="home_data/button-photos-over.png"><img style="display: none;" src="home_data/button-contactus-over.png"><img style="display: none;" src="home_data/button-catchus-over.png"><img style="display: none;" src="home_data/button-videos-over.png"><img style="display: none;" src="home_data/button-links-over.png"><img style="display: none;" src="home_data/button-merchandise-over.png">    <div id="facebox" style="display:none;">       <div class="popup">         <table>           <tbody>             <tr>               <td class="tl"></td><td class="b"></td><td class="tr"></td>             </tr>             <tr>               <td class="b"></td>               <td class="body">                 <div class="cntent">                 </div>                 <div class="footer">                   <a href="#" class="close">                     <img src="home_data/closelabel.gif" title="close" class="close_image">                   </a>                 </div>               </td>               <td class="b"></td>             </tr>             <tr>               <td class="bl"></td><td class="b"></td><td class="br"></td>             </tr>           </tbody>         </table>       </div>     </div><div style="display: none;" id="tooltip"><h3></h3><div class="body"></div><div class="url"></div></div></body></html>

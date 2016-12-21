@@ -1,0 +1,88 @@
+
+        
+            ews.ColorPickerBlock = {};
+            
+            /*load*/
+            $(function() {
+                $(".ews_cpb_colorok").click(ews.ColorPickerBlock.wColorOk_Clicked);
+                $(".ews_cpb_colorcancel").click(ews.ColorPickerBlock.wColorCancel_Clicked);
+                $(".ews_cpb_pickbutton").click(ews.ColorPickerBlock.wPick_Clicked);
+                $(".ews_cpb_design_dsp").click(ews.ColorPickerBlock.wDesignDsp_Clicked);
+                $(".ews_cpb_opacity input").keyup(ews.ColorPickerBlock.wOpacity_Blur);
+                //$(".ews_cpb_custom_dsp").addClass("ews_cpb_design_dsp_selected");
+            });
+
+            ews.ColorPickerBlock.ShowColor = function() {
+                ews.Editor.ShowInLitebox("ews_cb_colorpicker");
+                ews.ColorPicker.Init($(".ews_colorpicker"), $(".ews_cb_background_color").val());
+            }
+            ews.ColorPickerBlock.PreviewColor = function(oTarget) {
+                $("div[name=" + $(oTarget).attr("name") + "]").removeClass("ews_cpb_design_dsp_selected");
+                var oColor = $(oTarget).css("background-color");
+                var oOpacity = $(oTarget).parents(".ews_cpb_wrap").find(".ews_cpb_opacity input");
+
+                if (oOpacity && oOpacity.length > 0) {
+                    var oColorRgba = oColor.replace("rgba(", "").replace("rgb(", "").replace(")", "").replace(";", "").split(',');
+                    var nOpacity = parseFloat(oOpacity.val().replace("%", ""));
+                    if (nOpacity > -1 && nOpacity <= 1) {
+                        oColor = "rgba(" + oColorRgba[0] + "," + oColorRgba[1] + "," + oColorRgba[2] + "," + oOpacity.val() + ")";
+                    }
+                    else if (nOpacity > 1 && nOpacity <= 100) {
+                        oColor = "rgba(" + oColorRgba[0] + "," + oColorRgba[1] + "," + oColorRgba[2] + "," + (nOpacity / 100) + ")";
+                    } else {
+                        oColor = "rgba(" + oColorRgba[0] + "," + oColorRgba[1] + "," + oColorRgba[2] + ", 1)";
+                    }
+
+                }
+                else
+                    oColor = ews.ColorPickerBlock.CleanColor($(oTarget).css("background-color"));
+
+                $("input[name=" + $(oTarget).attr("name") + "]").val(oColor);
+                $(oTarget).addClass("ews_cpb_design_dsp_selected");
+                var oClass =  $(oTarget).attr("classname");
+                var oStyle =  $(oTarget).attr("stylename");
+                
+                if ($(oTarget).attr("tags")) {
+                    var oTags = $(oTarget).attr("tags").split(',');
+                    $(oTags).each(function() {
+                        $(this.toString()).css(oStyle, oColor);
+                    });
+                }
+                $("." + oClass).css(oStyle, oColor);
+            }
+
+            /* Click Events */
+            ews.ColorPickerBlock.wColorOk_Clicked = function(e) {
+                var oColor = ews.ColorPicker.GetColor();
+                $(ews.ColorPickerBlock.ColorTarget).prev().css("background-color", "#" + oColor);
+                ews.Editor.HideLitebox('ews_cb_colorpicker');
+                ews.ColorPickerBlock.PreviewColor($(ews.ColorPickerBlock.ColorTarget).prev()[0]);
+            }
+            ews.ColorPickerBlock.wColorCancel_Clicked = function(e) {
+                ews.Editor.HideLitebox('ews_cb_colorpicker');
+            }
+            ews.ColorPickerBlock.wPick_Clicked = function(e) {
+                ews.ColorPickerBlock.ColorTarget = this;
+                ews.ColorPickerBlock.ShowColor();
+            }
+            ews.ColorPickerBlock.wOpacity_Blur = function (e) {
+                var oTarget = $(this).parents(".ews_cpb_wrap").find(".ews_cpb_design_dsp_selected");
+                ews.ColorPickerBlock.PreviewColor(oTarget);
+            }
+            ews.ColorPickerBlock.wDesignDsp_Clicked = function(e) {
+                ews.ColorPickerBlock.PreviewColor(this);
+            }
+
+            /* utilities */
+            ews.ColorPickerBlock.CleanColor = function(str) {
+                if (str[0] == "#")
+                    return str;
+                var toHex = function(n) {var o = n.toString(16);return o[1] ? o : "0" + o;}
+                return str.replace(/rgb\((\d+)\,\s(\d+)\,\s(\d+)\)/g, function (a, b, c, d) {return "#" + toHex(parseInt(b)) + toHex(parseInt(c)) + toHex(parseInt(d));});
+            }
+            
+        
+
+if (typeof Sys != "undefined" && Sys && Sys.Application) {
+    Sys.Application.notifyScriptLoaded();
+}

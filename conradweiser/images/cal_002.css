@@ -1,0 +1,347 @@
+
+/* black - district wide; blue - hs; red - ms; green - elementary; orange - ms/hs. */
+.red { color: #f00; }
+.blue { color: #369; } /* WAS: #06c */
+.green { color: #093; }
+.orange { color: #f93; }
+
+
+
+table#calendar5,
+table#calendar2,
+table#calendar {
+	border: 1px solid #666;
+	font-size: 10pt;
+	background-color: #fff;
+	float: no-float; 
+	margin: 10px;
+	}
+table#calendar {
+margin-right: 25px;
+}
+table#calendar5 td, 
+table#calendar5 th, 
+table#calendar2 td, 
+table#calendar2 th, 
+table#calendar td, 
+table#calendar th {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+	}
+table#calendar5 th,
+table#calendar2 th,
+table#calendar th,
+	th.wkDaysHeader,
+	th.calHeader {
+	font-family: Georgia, serif; 
+	color: #369;
+	text-align: center; 
+	background-color: #eee; 
+	}
+th.calHeader {
+	font-size: 120%;
+	}
+table#tList td { padding: 3px 20px 3px 0; }
+	.now { background-color: orange; color: #fff;  }
+table#calendar5 td.now { background-color: #fff; color: #666; }
+table#calendar5 td.now div.smNums { background-color: orange; color: #fff; border-color: #900; }
+#col2 td.now a:link, 
+#col2 td.now a:visited, 
+#col2 td.now a:hover, 
+#col2 td.now a:active { color: #900; }
+
+table#calendar2 { margin: 5px 15px 10px 15px;  float: no-float; clear: both; }
+table#calendar2 th {
+	font-family: Verdana, sans-serif;
+}
+table#calendar2 * { font-size: 8pt; padding: 2px; }
+
+table#evForm { margin: 0; border:  1px solid #bbb; border-bottom: none; }
+table#evForm td  { margin: 2px; border-bottom:  1px solid #bbb; }
+table#evForm td  { padding: 4px 4px 3px 6px; }
+
+* p.calDate, 
+table#masterLayout td#col2 p.calDate { margin-top: 25px; margin-bottom: 0; padding-bottom: 0;  }
+table#masterLayout td#col2 h3.calTitle { margin-top: 0; padding-top: 0; border-bottom: 1px solid #ccc; font-size: 14pt;  }
+
+td.hasEvent { background-color: #69c; color: #fff; }
+table#masterLayout td#col2 * td.hasEvent a:link, 
+table#masterLayout td#col2 * td.hasEvent a:visited, 
+table#masterLayout td#col2 * td.hasEvent a:hover, 
+table#masterLayout td#col2 * td.hasEvent a:active { color: #fff; }
+
+table#tList { margin-bottom: 10px; }
+
+.warning {
+position: absolute;
+padding: 40px;
+margin: 0 15px 0 0;
+border: 2px solid #900;
+background-color: #ff9;
+border-radius: 8px;
+width: auto;
+text-align: center;
+color: #900;
+}
+table#masterLayout td#col2 .warning h1, 
+table#masterLayout td#col2 .warning h2,
+table#masterLayout td#col2 .warning h3,
+table#masterLayout td#col2 .warning h4 { 
+color: #900; 
+margin: .3em 0 .1em 0; 
+padding:  0; 
+}
+table#masterLayout td#col2 .warning table {
+float: no-float;
+margin: 0; 
+padding: 10px; 
+margin-right: auto;
+margin-left: auto;
+background-color: #fff;
+}
+table#masterLayout td#col2 .warning table td {
+text-align: left;
+}
+
+#wrapper #content table#calendar5 {
+width: 100%;
+}
+#wrapper #content table#calendar5 th {
+text-align: center; 
+}
+div.smNums {
+border: none;
+width: 21px;
+height: auto;
+float: right; 
+border-radius: 5px;
+text-align: center; 
+}
+table#calendar5 td { 
+text-align: left; 
+}
+table#calendar5 ul { 
+padding: 5px 5px 5px 25px; 
+margin:0; 
+}
+table#calendar5 ul li { 
+padding: 2px 2px 4px 2px; 
+margin:0; 
+font-size: 8pt;
+}
+
+/*  NEW TEMPLATE, STYLES: */
+
+ * ul#cwef li,
+ * ul#cwef a:link,
+ * ul#cwef a:visited, 
+ * table#calendar a:link, 
+ * table#calendar a:visited { color: #eee; } 
+ #quickLinks2 {
+ 	margin-top: 360px;
+	height: auto;
+	right: 25px;
+	width: 360px;
+ }
+
+body.noCal * table#calendar {
+position: absolute; 
+top: -280px;
+right: 45px;
+}
+body.noCal * #quickLinks2 {
+margin-top: 0;
+}
+body.noCal * #eventList2 *.calTitle {
+color: #369;
+}
+body.noCal * #eventList2 * {
+color: #333; 
+}
+
+#morelinks {
+ clear:both;
+ float: no-float;
+ }
+ #moreLinks h3,
+ #quickLinks2 h3 {
+ text-transform: uppercase; 
+ font-weight: normal;
+ letter-spacing: 2px;
+ border-bottom: 1px solid #666;
+ margin-bottom: 8px;
+ position: relative;
+ color: #666;
+ }
+ td#col2 { padding-bottom: 40px; }
+ 
+ * td#col1, 
+ * td#col2, 
+ * td#col4 {
+ /* background-color: #369; */
+ width: 33%;
+ } 
+ 
+ * table#calendar { margin: 25px; } 
+ * table#calendar * { font-size: 115%; } 
+ * table#calendar th { font-size: 170%; } 
+ 
+ * h1, 
+ * h2,
+ * h3,
+ * h4 {
+ font-weight: normal;
+ }
+
+ * h1, 
+ * h2,
+ * h3,
+ * h4,
+ * a:link,
+ * a:visited {
+ color: #369;
+ }
+ td.content2 {
+ padding: 0 25px 30px 25px;
+ }
+ td#col1, td#col2, td#col4 { padding-bottom: 0;}
+ td#col1a { border-right: 1px solid #bbb; }
+ table#masterLayout td#col1b { background-image: url(../images/cwasd_left-col-bkgd-2.gif); background-repeat: no-repeat; }
+ td#col2a {font-size: 115%; }
+ td.content2 ul {
+ margin: .5em 1.5em;
+ }
+ 
+  * #eventList2 {
+  width: auto; 
+  height: 290px;
+  margin: 0 10px 0 0;
+  padding: 5px 20px 10px 5px;
+  overflow: auto;
+  }
+ * #eventList2 h4#Events, 
+ * #eventList2 * { 
+ color: #eee; 
+ margin-left: 0;
+ }
+ * #eventList2 h3.calTitle, 
+ * #eventList2 h3, 
+ * h3.calTitle {
+ color: #fff; 
+ }
+ body.noCal * eventList2 {
+height: auto;
+}
+ #mission { 
+ margin-bottom: 0;
+ padding-bottom: 0;
+ }
+ 
+ * td#col2 {
+ padding-right: 0;
+ }
+ 
+* td#col4 {
+ color: #ccc; 
+ padding: 25px; 
+ }
+ * td#col4 h1, 
+* td#col4 h3 {
+color: #fff;
+}
+* table#calendar {
+position: relative;
+margin: 440px 0 0 25px;
+}
+table#calendar td {
+color: #333; 
+}
+
+* td#col4 a.fff:link, * td#col4 a.fff:visited { color: #eee; }
+	* td#col4 .fff, * td#col4 a.fff:hover, * td#col4 a.fff:active { color: #fff; }
+* td#col4 .eee, * td#col4 a.eee:link, * td#col4 a.eee:visited, * td#col4 a.eee:hover, * td#col4 a.eee:active { color: #eee; }
+
+body#home * td#col2 img.homeInset,
+* td#col2 img.homeInset  {
+margin-top: -15px;
+padding-right: 0;
+margin-right: -50px;
+}
+
+* img#contentColSp {
+width: 733px;
+}
+body#home * img#contentColSp {
+width: 670px;
+margin: 0;
+}
+
+* table#masterLayout td *, 
+* td#col1a * {
+}
+
+* td#col1b, 
+* td#col4 {
+height: 400px;
+overflow: hidden;
+}
+
+body.noCal * #eventList2 {
+height: auto;
+}
+* #Events {
+color: #fff; 
+margin-top: 0; 
+margin-bottom: 10px; 
+padding-top: 0;
+font-weight: normal;
+}
+body.noCal * #Events {
+color: #369; 
+margin-bottom: 10px; 
+}
+/* REGULAR PAGES */
+table#masterLayout table.calPreview, 
+table#masterLayout table#calendar {
+position: relative; 
+margin: 0 0 -320px 25px;
+}
+/* DISTRICT CALENDAR PAGE -- W. CHECKBOXES */
+body.noCal table#masterLayout table.calPreview, 
+body.noCal table#masterLayout table#calendar {
+position: relative; 
+margin: -150px 0 -150px 65px;
+}
+
+* table#calendar2,
+body.noCal table#masterLayout table#calendar2 {
+position: relative; 
+margin:0; 
+margin-top: 5px;
+}
+
+* table#calendar5 ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+* table#calendar5 ul li {
+margin: 2px 0 2px 25px;
+}
+* img.changeBttn {
+margin-left: -20px;
+}
+
+* td#calColRt {
+padding: 15px 15px 15px 0;
+}
+body.noCal * hideEvForm, 
+* #hideEvForm { 
+position: relative; 
+clear: both;
+margin-top: 0px;
+}
+
+* table#evFormLayout { border: none; }
+* p#tList2 { margin-right: 2.5em; }

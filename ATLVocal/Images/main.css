@@ -1,0 +1,324 @@
+body {	background: #fff url('/clients/ATLVocal/Images/body-bg.jpg') repeat-x top left; }
+
+html, body  {height: 100%;}
+
+#wrap {min-height: 100%;}
+
+@font-face {
+	font-family: 'TangerineBold';
+	src: url('/fonts/Tangerine_Bold-webfont.eot');
+	src: local('☺'), url('/fonts/Tangerine_Bold-webfont.woff') format('woff'), url('/fonts/Tangerine_Bold-webfont.ttf') format('truetype'), url('/fonts/Tangerine_Bold-webfont.svg#webfontm6icAieI') format('svg');
+}
+
+/* Basic Phrase Element Styles
+---------------------------------------------------------- */
+span.script { font-family: "TangerineBold", sans-serif; color: #1c4cc8; font-size: 2em; line-height: 0.5em;}
+strong {font-weight: bold;}
+
+h1,h2,h3,
+h1 a,h2 a,h3 a { color: #333333; font-family: Georgia, serif; font-weight: bold;}
+
+h2 { color: #cea502; }
+
+
+
+/* Anchors
+---------------------------------------------------------- */
+a {text-decoration: underline; color: #1b3663;}
+a:visited { color: #1b3663;}
+a:hover {text-decoration: none; color:#1b3663;}
+a img {border-width: 0; border-style: none;}
+
+
+
+
+/* Generic page structure
+---------------------------------------------------------- */
+
+#container,
+.container {
+	background: none;
+	margin: 0 auto;
+	padding: 0 10px;
+	position: relative;
+	width: 890px;
+	overflow:auto;
+	padding-bottom: 50px; /* must be same height as the footer */
+	}
+
+/* Header */
+#header {
+	background: none;
+	height: 310px;
+	position: relative;
+	}
+
+#logo,
+#banner,
+#season-link {
+	margin: 0;
+	position: absolute;
+	}
+
+/* Logo */
+#logo {
+	height: 323px;
+	left: 10px;
+	top: -19px;
+	width: 290px;
+	z-index: 3;
+	}
+
+#logo a {
+	display: block;
+	height: 100%;
+	}
+	
+#season-link{
+	top: 255px;
+	left: 41px;
+	z-index: 5;
+	line-height: 1.5em;
+}
+
+#season-link span{ display: block;}
+
+#season-link a{
+	color: #333333;
+	font-family: Georgia, serif;
+	text-decoration: none;
+}
+
+#season-link #season-sml{ font-size: 1.5em; }
+#season-link #season-lrg { font-size: 2em; }
+
+/* Banner */
+#banner {
+	display: block;
+	margin-bottom: 0;
+	left:267px;
+	height: 284px;
+	width: 613px;
+	overflow: hidden;
+	}
+
+/* Columns */
+#columns {
+	background: #fff;
+	margin-bottom: 10px;
+	position: relative;
+	}
+
+/* Left Column */
+#leftcol {
+	float: left;
+	position: relative;
+	width: 280px;
+}
+
+#leftcol-inner { padding: 30px; }
+
+/* Right Column */
+#rightcol {
+	float: right;
+	position: relative;
+	width: 610px;
+	}
+
+#rightcol-inner { padding: 25px 30px; }
+	
+
+/* Callout Structure
+---------------------------------------------------------- */
+#callouts {
+	width: 266px;
+	padding: 15px 0 0 0;
+	margin: 0 0 0 4px;
+	position: relative;
+}
+
+#callouts .callout-inner{
+	padding: 15px 0 0 21px;
+	height: 75px;
+	margin: 2px;
+	background: #fff url('/clients/ATLVocal/Images/callout.jpg') no-repeat top left;
+}
+
+#callouts .callout-inner a{ text-decoration: none;}
+#callouts .callout-inner a:hover{ text-decoration: none; color:#333333;}
+
+#callouts span.lrg-txt{
+	display: block;
+	font-size: 1.6em;
+	font-weight: bold;
+	line-height: 1.4em;
+	font-family: Georgia;
+}
+
+#callouts span.sml-txt{
+	display: block;
+	font-size: 1.2em;
+	line-height: 1em;
+}
+
+#callouts #social-media { padding: 5px 35px; }
+
+/* Contact Form Structure
+---------------------------------------------------------- */
+#form-wrapper{ width: 250px; }
+
+#form input{ width: 100%; }
+
+input.submit-btn {
+	width: 250px;
+	height: 40px;
+	background: #1b3663;
+	text-align: right;
+	cursor: pointer;
+	font-size: 1.5em;
+	border: none;
+	color: #e6f5fe;
+	padding-right: 20px;
+}
+
+textarea.text-style{
+	width:100%; 
+	height: 100px;
+}
+
+
+
+/* Footer Structure
+---------------------------------------------------------- */
+#footer {
+	position: relative;
+	margin-top: -50px; /* negative value of footer height */
+	height: 50px;
+	clear:both;
+	background: #fff url('/clients/ATLVocal/Images/footer-bg.jpg') repeat-x top left;
+	} 
+	
+#footer-wrap {
+	font-size: 0.8em;
+	line-height: 1.2em;
+	margin: 0 auto;
+	padding: 10px 0 0 0;
+	text-align: left;
+	width: 850px;
+	}
+
+#footer,
+#footer a { 
+	color: #fff;
+}
+
+#footer p { margin: 0;}
+	
+/*Opera Fix*/
+body:before {
+content:"";
+height:100%;
+float:left;
+width:0;
+margin-top:-32767px;
+}
+
+
+
+/* Navigation Reset
+---------------------------------------------------------- */
+#nav * {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	z-index:100;
+}	
+
+#nav  {
+	height: 29px;
+	line-height: 25px;
+	margin-bottom: 0px;
+	padding-top:74px;
+	font-family: Georgia, serif;
+}
+
+* html #nav ul { display:inline; }
+
+#nav li { float: right; position: relative; }
+
+#nav a { display: block; }
+
+
+
+
+/* Navigation Custom Styles
+---------------------------------------------------------- */
+
+#nav { background: #fff url('/clients/ATLVocal/Images/nav-bg.jpg') no-repeat top right; }
+
+#nav ul {
+	font-size:1.33em;
+	float: right;
+	width: 100%;
+}
+
+#nav li:hover,
+#nav li.hover {
+	background: none; 
+}
+
+#nav ul li.first  { border-left: none; }
+#nav ul li.last  { border-right: none; }
+
+#nav a {
+	color:#333333;
+	text-decoration: none;
+}
+#nav a:hover {
+	background: none; 
+	color: #1c4cc8; 
+}
+#nav a span {
+	display: block;
+	padding: 0 15px;
+}
+
+
+/* Navigation Drop Down
+---------------------------------------------------------- */
+#nav li li {  background: #fff; }
+
+#nav li li:hover { background: #fff; }
+
+
+#nav ul li ul { 
+	border:0; /* stops inheritance from level 1 ul */
+	margin-left:0px; /* stops inheritance from level 1 ul */
+	position:absolute; /* positions the drop-down ul in relation to its relatively positioned li parent */
+	width: 12em; /* sets the width of menu levels 2 - 4 */
+}
+
+#nav ul li ul li {
+	width:100%;
+	padding:0; /* stops inheritance */
+	border-left:0; /* stops inheritance */
+	border-right:0; /* stops inheritance */
+}
+
+#nav ul li ul {
+	display:none; /* conceals the drop-down when menu not hovered */
+	font-size: 0.9em;
+}
+
+#nav ul li:hover ul,
+#nav ul li.hover ul {
+	display:block; /* shows the drop-down when the menu is hovered */
+	z-index:1000; /* Safari needs this to display menu on top of other page elements */
+}
+
+
+/* Hacks for IE6 and < */
+* html #nav { z-index:1; }
+* html #nav ul li ul { z-index:400;}
+* html #nav a { }
+* html #nav ul ul a { zoom:100%; }

@@ -1,0 +1,752 @@
+/* CSS Document for:
+
+	DIVERSIONARY THEATRE
+	VERSION 1.0
+	by Barron Henzel of Henzel Design
+	
+	Kudos to http://www.wait-till-i.com/ for the domtab script
+	
+	CONTENTS:
+	
+	   1.DEFAULT STYLING
+	   2.BODY ELEMENTS
+	   3.BANNER
+	   4.PHOTOS
+	   5.NAVIGATION GENERAL
+	   6.MINI CALENDAR
+	   7.CALENDAR
+	   8.DOM TABS
+	   
+	
+	   18.404
+	
+*/
+
+/* 1.DEFAULT STYLING
+---------------------------------------------------------------------- */
+
+html img,
+html #footer {
+	behavior: url(iepngfix.htc);
+}
+
+/* Zero default margin & padding around common elements */
+body, dd, dl, dt, form, h1, h2, h3, h4, h5, h6, li, ol, p, ul	{
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+body	{
+	font: 0.8em Verdana, Geneva, Arial, Helvetica, sans-serif;
+	color: #666666;
+	background-image: url(/clients/diversionary/images/back.jpg);
+	background-repeat:repeat-x;
+	background-color: #333333;
+}
+
+a:link, a:visited	{
+	text-decoration: none;
+	color: #990000;
+}
+
+a:hover, a:active	{
+	text-decoration: underline;
+	color:#990000;
+}
+
+/* TEXT STYLES */
+.bodyGray {
+	text-align: left;
+	list-style-position: inside;
+	padding-bottom: 1em;
+}
+
+.bodyGrayHeadline {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #006699;
+	font-size: 1.5em;
+	padding-bottom: .5em;
+	font-weight: bold;
+}
+
+.bodyGraySubhead {
+	color: #006699;
+	font-size: 1.15em;
+	font-weight: bold;
+}
+
+.bodyGrayIndent {
+	text-align: left;
+	list-style-position: inside;
+	list-style-image: url(/clients/diversionary/images/bullet_arrow.gif);
+	margin-left: 50px;
+	padding-bottom: 1em;
+}
+
+.bodyGraySmall {
+	text-align: left;
+	list-style-position: inside;
+	list-style-image: url(/clients/diversionary/images/bullet_arrow.gif);
+	margin-left: 10px;
+	line-height: 1.5em;
+}
+
+.bodyHomeHead	{
+	color: #666666;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.25em;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #999999;
+	margin-bottom: 1em;
+}
+
+.bodyHomeSubHead	{
+	color: #006699;
+	font-size: .9em;
+	border-top-width: 1px;
+	border-top-style: dotted;
+	border-top-color: #999999;
+	margin-top: 1em;
+	padding-top: 0.75em;
+	font-weight: bold;
+}
+
+.bodyHome	{
+	color: #006699;
+	font-size: .9em;
+}
+
+.subHeadCopyBlue	{
+	color: #006699;
+	font-size: 0.85em;
+	padding-bottom: 1em;
+	text-align: center;
+}
+
+.captionCopyGray	{
+	color: #333333;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+.subNav	{
+	color: #FFFFFF;
+	font-size: 0.75em;
+}
+
+.footer	{
+	color: #999999;
+	font-size: 0.75em;
+}
+
+/* 2.BODY ELEMENTS
+---------------------------------------------------------------------- */
+
+#Container {
+	width:1020px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	background-image: url(/clients/diversionary/images/back_logo.jpg);
+	background-repeat: no-repeat;
+	background-position: left top;
+}
+
+#wrapper {
+	text-align: left;
+	width: 930px;
+	background-image: url(/clients/diversionary/images/shadow_back.png);
+	background-repeat:repeat-y;
+	position: relative;
+	overflow: hidden;
+	margin-right: auto;
+	margin-left: auto;
+	z-index: -100px;
+}
+
+#subnavTop {
+	width:900px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	padding-right: 0px;
+	text-align: right;
+	height: 34px;
+	background-image: url(/clients/diversionary/images/topbar.jpg);
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	padding-top: 5px;
+	color: #999999;
+	font-size: .85em;
+}
+
+#subnavTop a:link,
+#subnavTop a:visited,
+#subnavTop a:active,
+#subnavTop a:hover{
+	color: #FF0000;
+}
+
+#rightColumn {
+	float: right;
+	width: 650px;
+	padding: 51px 15px 0 0;
+	overflow: hidden;
+	
+}
+
+#rightBody {
+	padding: 10px;
+}
+
+#rightBody h2 {
+
+}
+
+#sideBar1 {
+	width: 178px;
+	border: 1px solid #CECECE;
+	background-color: #E5E5E5;
+	text-align: center;
+	padding: 10px;
+	color: #333333;
+	background-image: url(/clients/diversionary/images/sideBarBack.jpg);
+	background-repeat: repeat-x;
+	margin: 10px;
+}
+
+#sideBar2 {
+	width: 178px;
+	border: 1px solid #CECECE;
+	background-color: #E5E5E5;
+	text-align: center;
+	padding: 10px;
+	color: #333333;
+	background-image: url(/clients/diversionary/images/sideBarBack.jpg);
+	background-repeat: repeat-x;
+	margin: 10px;
+}
+
+#sideBar3 {
+	width: 178px;
+	border: 1px solid #CECECE;
+	background-color: #E5E5E5;
+	text-align: center;
+	padding: 10px;
+	color: #333333;
+	background-image: url(/clients/diversionary/images/sideBarBack.jpg);
+	background-repeat: repeat-x;
+	margin: 10px;
+}
+
+#productionInfo {
+	width: 370px;
+	border: 1px solid #999999;
+	padding: 10px;
+	margin: 10px;
+}
+
+#productionInfo h1 {
+	font-size: 1.25em;
+	color: #006699;
+	padding-bottom: .5em;
+}
+
+#productionInfo p {
+	font-size: 0.85em;
+	padding-bottom: 1em;
+}
+
+#productionInfoArchived {
+	border: 1px solid #999999;
+	padding: 10px;
+	margin: 10px;
+}
+
+#productionInfoArchived h1 {
+	font-size: 1.25em;
+	color: #006699;
+	padding-bottom: .5em;
+}
+
+#productionInfoArchived p {
+	font-size: 0.85em;
+	padding-bottom: 1em;
+}
+
+#miniCal
+ {
+	float: right;
+	width: 230px;
+	padding: 10px;
+	overflow: auto;
+}
+
+#footer	{
+	width: 930px;
+	height: 5em;
+	text-align: center;
+	clear: both;
+	margin-right: 45px;
+	margin-left: 45px;
+	background-image: url(/clients/diversionary/images/shadow_bottom.png);
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-top: 30px;
+	margin-top: 0px;
+	font-size: 0.75em;
+	color: #CCCCCC;
+}
+
+#footer a:link,
+#footer a:visited,
+#footer a:active,
+#footer a:hover{
+	color: #FF0000;
+}
+
+/* 3.BANNER
+---------------------------------------------------------------------- */
+.captionedBanner {
+	line-height: 1em;
+	width: 660px;
+	margin-top: 0em;
+	margin-bottom: 0.5em;
+	
+	background-repeat: repeat-x;
+}
+.captionedBanner p {
+	width: 100%;
+	margin: 0;
+	color: #333333;
+	text-align: center;
+	font-size: 0.65em;
+}
+.captionedBanner img {
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+/* 4.PHOTOS
+---------------------------------------------------------------------- */
+
+.captionedPhotoRight {
+	float: right;
+	margin: 0em 0em 0.5em 1em;
+	padding: 0px;
+	line-height: 1em;
+}
+.captionedPhotoRight p {
+	width: 100%;
+	margin: 0;
+	padding: 1em 0;
+	font: 0.65em Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+	text-align: center;
+}
+.captionedPhotoRight img {
+	margin: 0;
+	padding: 0;
+	display: block;
+	border: 1px solid #333333;
+}
+
+.captionedPhotoRight140 {
+	float: right;
+	margin: 0em 10px 0.5em 1em;
+	padding: 0px;
+	line-height: 1em;
+	width: 140px;	
+}
+.captionedPhotoRight140 p {
+	width: 100%;
+	margin: 0;
+	padding: .5em 0;
+	font: 0.65em Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+	text-align: center;
+}
+.captionedPhotoRight140 img {
+	margin: 0;
+	padding: 0;
+	display: block;
+	border: 1px solid #333333;
+}
+
+.captionedPhotoRight300 {
+	float: right;
+	margin: 0em 10px 0.5em 1em;
+	padding: 0px;
+	line-height: 1em;
+	width: 300px;	
+}
+.captionedPhotoRight300 p {
+	width: 100%;
+	margin: 0;
+	padding: 1em 0;
+	font: 0.65em Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+	text-align: center;
+}
+.captionedPhotoRight300 img {
+	margin: 0;
+	padding: 0;
+	display: block;
+	border: 1px solid #333333;
+}
+
+.captionedPhotoLeft {
+	float: left;
+	margin: 0em 1em 0.5em 0em;
+	padding: 0px;
+	line-height: 1em;	
+}
+
+.captionedPhotoLeft p {
+	width: 100%;
+	margin: 0;
+	padding: 1em 0;
+	font: 0.65em Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+	text-align: center;
+}
+.captionedPhotoLeft img {
+	margin: 0;
+	padding: 0;
+	display: block;
+	border: 1px solid #333333;
+}
+
+.captionedPhotoLeft140 {
+	float: left;
+	margin: 0em 1em 0.5em 10px;
+	padding: 0px;
+	line-height: 1em;
+	width: 140px;	
+}
+
+.captionedPhotoLeft140 p {
+	width: 100%;
+	margin: 0;
+	padding: .5em 0;
+	font: 0.65em Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+	text-align: center;
+}
+
+.captionedPhotoLeft140 img {
+	margin: 0;
+	padding: 0;
+	display: block;
+	border: 1px solid #333333;
+}
+
+.captionedPhotoLeft216 {
+	float: left;
+	margin: 0em 1em 0.5em 10px;
+	padding: 0px;
+	line-height: 1em;
+	width: 216px;	
+}
+
+.captionedPhotoLeft216 p {
+	width: 100%;
+	margin: 0;
+	padding: .5em 0;
+	font: 0.65em Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+	text-align: center;
+}
+
+.captionedPhotoLeft216 img {
+	margin: 0;
+	padding: 0;
+	display: block;
+	border: 1px solid #333333;
+}
+
+.captionedPhotoLeft300 {
+	float: left;
+	margin: 0em 1em 0.5em 10px;
+	padding: 0px;
+	line-height: 1em;
+	width: 300px;	
+}
+
+.captionedPhotoLeft300 p {
+	width: 100%;
+	margin: 0;
+	padding: 1em 0;
+	font: 0.65em Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+	text-align: center;
+}
+.captionedPhotoLeft300 img {
+	margin: 0;
+	padding: 0;
+	display: block;
+	border: 1px solid #333333;
+}
+
+/* 5.NAVIGATION GENERAL
+---------------------------------------------------------------------- */
+#navigation {
+	width: 225px;
+	padding-left: 28px;
+	padding-top: 51px;
+	padding-right:10px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.125em;
+	background-image: url(/clients/diversionary/images/navlogo.jpg);
+	background-repeat: no-repeat;
+	background-position: 19px top;
+	z-index:100;
+	overflow: visible;
+}
+
+.nav_current {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	color: #990000;
+}
+
+.nav_indent {
+	list-style: none;
+	margin: 0px 0px 0px 20px;
+	padding: 0px;
+}
+
+#navigation ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#navigation li {
+	border-bottom: 1px dotted #999999;
+}
+
+#navigation li a:link, #navigation li a:visited  {
+	display: block;
+	border-left: 6px solid #333333;
+	color: #666666;
+	text-decoration: none;
+	padding-top: 0.6em;
+	padding-bottom: 1em;
+	padding-left: 0.6em;
+}
+
+* html #navigation li a {
+  width: 90%;
+}
+
+#navigation li a:hover {
+  background-color: #dddddd;
+  color: #333333;
+}
+
+#navigation ul ul {
+	margin-left: 12px;
+	font-size: 0.75em;
+	margin-bottom: -1px;
+}
+
+#navigation ul ul li {
+  border-bottom: 1px dotted #999999;
+  margin:0;
+}
+
+#navigation ul ul a:link, #navigation ul ul a:visited {
+  color: #666666;
+}
+
+#navigation ul ul a:hover {
+  background-color: #dddddd;
+  color: #333333;
+}
+
+/* 6.MINI CALENDAR
+---------------------------------------------------------------------- */
+.miniCalmonth {
+	border-collapse: collapse;
+}
+.miniCalmonth caption {
+	text-align: center;
+	font: bold 110% Georgia, "Times New Roman", Times, serif; 
+	padding-bottom: 0.4em;
+}
+.miniCalmonth th {
+	border: 1px solid #AAAAAA;
+	border-bottom: none;
+	padding: 0.2em 0.4em 0.2em 0.4em;
+	background-color: #CCCCCC;
+	color: #3F3F3F;
+	font: 80% Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.miniCalmonth td {
+	border: 1px solid #EAEAEA;
+	font: 80% Verdana, Geneva, Arial, Helvetica, sans-serif;
+	padding: 0.2em 0.4em 0.2em 0.4em;
+	vertical-align: top;
+}
+.miniCalmonth td.previous, .miniCalmonth td.next {
+	background-color: #F6F6F6;
+	color: #C6C6C6;
+}
+.miniCalmonth td.active {
+	background-color: #B1CBE1;
+	color: #2B5070;
+	border: 2px solid #4682B4;
+}
+
+/* 7.CALENDAR
+---------------------------------------------------------------------- */
+.clmonth {
+	border-collapse: collapse;
+	width: 640px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.clmonth caption {
+	text-align: left;
+	font: bold 110% Georgia, "Times New Roman", Times, serif;
+	padding-bottom: 0.4em;
+	padding-top: 1em;
+}
+.clmonth th {
+	border: 1px solid #AAAAAA;
+	border-bottom: none;
+	padding: 0.2em 0.6em 0.2em 0.6em;
+	background-color: #CCCCCC;
+	color: #3F3F3F;
+	font: 80% Verdana, Geneva, Arial, Helvetica, sans-serif;
+	width: 110px;
+}
+.clmonth td {
+	border: 1px solid #EAEAEA;
+	font: 80% Verdana, Geneva, Arial, Helvetica, sans-serif;
+	padding: 0.2em 0.6em 0.2em 0.6em;
+	vertical-align: top;
+}
+.clmonth td.previous, .clmonth td.next {
+	background-color: #F6F6F6;
+	color: #C6C6C6;
+}
+.clmonth td.active {
+	background-color: #B1CBE1;
+	color: #2B5070;
+	border: 2px solid #4682B4;
+}
+.clmonth ul {
+	margin: 0;
+	padding-left: 1em;
+	padding-right: 0.6em;
+	list-style-type: none;
+}
+.clmonth li {
+	margin-bottom: 1em;
+}
+
+/* 8.DOM TABS
+---------------------------------------------------------------------- */
+div.domtab{
+	padding:0;
+}
+
+.domtabbed_area {  /* "outer" box */
+	border:1px solid #494e52;
+	background-color:#2E2E2E;
+	padding:8px;
+	margin-right: 10px;
+	margin-left: 10px;
+	clear: both;
+} 
+
+ul.domtabs{  
+	float:left;
+	width:100%;
+	margin:0em;				
+}
+
+ul.domtabs li{
+	float:left;
+	padding:0em 0.5em 0 0;
+	list-style-type: none;
+}
+
+ul.domtabs a:link,  /* non active tabs */
+ul.domtabs a:visited,
+ul.domtabs a:active,
+ul.domtabs a:hover{
+	width:11em;
+	padding:0.5em 0.5em 0.25em 1em;
+	display:block;
+	color:#ffebb5;
+	height:2em;
+	font-weight:bold;
+	text-decoration:none;
+	background-color: #464c54;
+	background-image:url(/clients/diversionary/images/tab_off.jpg);
+	background-repeat:repeat-x;
+	background-position:bottom;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 0.7em;
+	text-transform: uppercase;
+}
+
+html>body ul.domtabs a:link,
+html>body ul.domtabs a:visited,
+html>body ul.domtabs a:active,
+html>body ul.domtabs a:hover{
+	height:auto;
+	min-height:1.75em;
+}
+
+ul.domtabs a:hover{
+	background:#FFFFFF;
+	color: #474C54;
+}
+
+div.domtab div{
+	clear:both;
+	width:auto;
+	background:#FFFFFF;
+	color:#333333;
+	padding:1em;
+	background-image:url(/clients/diversionary/images/content_bottom.jpg);
+	background-repeat:repeat-x;
+	background-position:bottom;
+}
+
+ul.domtabs li.active a:link,  /* active tab */
+ul.domtabs li.active a:visited,
+ul.domtabs li.active a:active,
+ul.domtabs li.active a:hover{
+	background:#FFFFFF url(/clients/diversionary/images/tab_on.jpg) repeat-x top;
+	color:#282e32;   
+}  
+
+div.domtab p{
+	margin:0 0 1em;
+	line-height:1.3em;
+}
+
+div.domtab h1{
+	font-size:1.25em;
+	color:#333333;
+	text-transform:uppercase;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	padding-top: 0;
+	padding-right: 0;
+	padding-bottom: 0.7em;
+}
+
+pre{
+	font-size:1.2em;
+	padding:1em;
+}

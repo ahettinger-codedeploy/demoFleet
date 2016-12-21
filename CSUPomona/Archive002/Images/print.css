@@ -1,0 +1,392 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Here are the official web colors, taken from the Graphic Standards Manual at http://www.csupomona.edu/~publicaffairs/graphics/webcolors.shtml:
+
+logo green   #1E4D2B
+gold         #C6930A   	
+orange       #A24E12
+light green  #679000
+olive        #998714
+brown        #613418
+purple       #5A2D5F
+dark blue    #293F6F
+maroon       #7C1D20
+light blue   #607C8C
+red          #E31B23
+
+dark eggplant #231F20
+*/
+
+html, body {
+}
+body {
+	font-family: Calibri, Helvetica, Arial, sans-serif;
+	font-size: 100.01%;
+}
+#container {
+}
+img {
+	border: none;
+}
+#header {
+	width: 100%;
+	height: 113px;
+	background: #231F20;
+}
+#header_contents {
+	margin: 0 auto 0 auto;
+	width: 940px;
+}
+#header_graphic {
+	width: 557px;
+	height: 93px;
+	float:left;
+	background: #231F20;
+}
+#header img {
+	float:left;
+	display:block;
+	border: none;
+}
+#header_links {
+	float: right;
+	height: 50px;
+	width: 383px;
+	font-size: 0.9em;
+	background: #231F20;
+}
+#header_links ul {
+	float: right;
+	padding: 0 0 0 0;
+	margin: 24px 0 7px 0;
+}
+#header_links li {
+	list-style: none;
+	float: left;
+	padding: 0 8px 0 8px;
+	border-left: 1px solid #FFFFFF;
+}
+#header_links li.first {
+	border-left: none;
+}
+#header_links a:link {
+	color: #F8D16B;
+	text-decoration: none;
+}
+#header_links a:visited {
+	color: #F8D16B;
+	text-decoration: none;
+}
+#header_links a:hover, #header_links a:active, #header_links a:focus {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+#search {
+	width: 383px;
+	height: 63px;
+	float: right;
+	background: #231F20 url(../img/topheader_search.gif) top left no-repeat;
+}
+#search #searchbutton {
+	float: right;
+	margin-top: 9px;
+	margin-right: 32px;
+}
+#search input#q {
+	width: 150px;
+	height: 17px;
+	font-size: 13px;
+	border: none;
+	margin-top: 16px;
+	margin-left: 155px;
+	background: url(../img/searchbg.gif) no-repeat;
+	float: left;
+}
+#search input#q:hover, #search input#q:focus, #search input#q:active {
+	background: #FFFFFF;
+}
+#centeredmenu {
+	float:left;
+	width:100%;
+	background:#F5BC23;
+	overflow:hidden;
+	position:relative;
+}
+#centeredmenu ul {
+	clear:left;
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	left:50%;
+	text-align:center;
+}
+#centeredmenu ul li {
+	display:block;
+	float:left;
+	list-style:none;
+	margin:0;
+	padding:0;
+	position:relative;
+	right:50%;
+}
+#centeredmenu ul li a {
+	display:block;
+	margin:0 0 0 1px;
+	padding:3px 17px;
+	background:#F5BC23;
+	color:#000;
+	text-decoration:none;
+	line-height:1.3em;
+}
+#centeredmenu ul li a:hover, #centeredmenu ul li a:focus, #centeredmenu ul li a:active {
+	background:#1E4D2B;
+	color:#fff;
+}
+#centeredmenu ul li a.inactive, #centeredmenu ul li a.inactive:hover {
+	color:#1E4D2B;
+	background:#fff;
+	font-weight:bold;
+	cursor: default;
+}
+#pagebackground {
+	width: 100%;
+	height: 100%;
+}
+#contents {
+	width: 940px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 35px;
+	background-color: #FFF;
+}
+#leftcolumn {
+	float: left;
+	width: 626px;
+	background-color: #fff;
+}
+#leftcolumn a {
+	text-decoration:underline;
+}
+#rightcolumn a {
+	text-decoration:underline;
+}
+#rightcolumn {
+	float: right;
+	width: 314px;
+	background-color:#fff;
+	margin: 0px;
+}
+#rightcolumn img {
+	-moz-box-shadow: 6px 6px 7px #999;
+	-webkit-box-shadow: 6px 6px 7px #999;
+	box-shadow: 6px 6px 7px #999;
+}
+#contents_folder { /* usable in either left or right columns */
+	margin: 17px;
+}
+#rightnav {
+	border-left: 17px solid #C6930A;
+	border-bottom: 1px solid #C6930A;
+	margin-bottom: 7px;
+	padding: 0 0 17px 0;
+	margin-top: 0;
+}
+#rightnav ul {
+	margin: 0px;
+	padding: 0px;
+}
+#rightnav li {
+	list-style: none;
+	margin: 0px 0px 0px 10px;
+	padding: 2px 5px 3px 5px;
+	text-indent: -5px;
+	font-size: 1em;
+	font-weight: bold;
+}
+#rightnav ul ul {
+	margin: 0;
+	padding: 0;
+}
+#rightnav li li {
+	list-style: square;
+	margin: 5px 0px 5px 10px;
+	padding: 0;
+	text-indent: 0px;
+	font-size: 1em;
+	font-weight: bold;
+}
+#rightnav a:link, #rightnav a:visited {
+	text-decoration: none;
+	color: #1E4D2B;
+}
+#rightnav a:hover, #rightnav a:active, #rightnav a:focus {
+	text-decoration: none;
+	border-bottom: 2px solid #C6930A;
+}
+#footer {
+	background-color: #231F20;
+	color: #FFFFFF;
+	margin: 0;
+	width: 100%;
+	font-size: 0.9em;
+	font-weight: normal;
+	text-align: center;
+	position: absolute;
+	bottom: 0;
+	height: 35px;
+}
+#footer_contents {
+	width: 906px;
+	margin: 0 auto 0 auto;
+	text-align: left;
+}
+#footer p#copyright {
+	float: left;
+	margin: 7px 0 7px 0;
+	padding: 0 8px 0 0;
+	background-color: #231F20;
+}
+#footer p#lastmod {
+	display: inline; /* fix IE bug - http://www.positioniseverything.net/explorer/doubled-margin.html */
+	float: right;
+	margin: 7px 7px 7px 0;
+}
+#footer ul {
+	float: left;
+	padding: 0 0 0 0;
+	margin: 7px 0 7px 0;
+}
+#footer li {
+	list-style: none;
+	float: left;
+	padding: 0 8px 0 8px;
+	border-left: 1px solid #FFFFFF;
+}
+#footer a:link {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#footer a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+#footer a:hover, #footer a:active, #footer a:focus {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+a:link {
+	color: #1E4D2B;
+}
+a:visited {
+	color: #1E4D2B;
+}
+a:hover, a:active, a:focus {
+	color: #E31B23;
+	text-decoration: none;
+}
+h1 {
+	margin: 0 0 0 0px;
+	padding: 0px 7px 7px 0;
+	font-size: 1.4em;
+	color: #1E4D2B;
+	font-variant:small-caps;
+}
+h2 {
+	margin: 0 0 7px -17px;
+	padding: 2px 2px 0px 42px;
+	color:#827D83;
+	font-size: 1.2em;
+	background: #FFFFFF url(../img/h2bullet-gold.gif) center left no-repeat;
+}
+h3 {
+	margin: 0 0 0 0px;
+	color: #679000;
+	font-size: 1em;
+}
+.invisible {
+	display: none;
+}
+h2.logogreen {
+	background: #FFFFFF url(../img/h2bullet-logogreen.gif) center left no-repeat;
+}
+h2.brown {
+	background: #FFFFFF url(../img/h2bullet-brown.gif) center left no-repeat;
+}
+h2.darkblue {
+	background: #FFFFFF url(../img/h2bullet-darkblue.gif) center left no-repeat;
+}
+h2.eggplant {
+	background: #FFFFFF url(../img/h2bullet-eggplant.gif) center left no-repeat;
+}
+h2.lightblue {
+	background: #FFFFFF url(../img/h2bullet-lightblue.gif) center left no-repeat;
+}
+h2.lightgreen {
+	background: #FFFFFF url(../img/h2bullet-lightgreen.gif) center left no-repeat;
+}
+h2.maroon {
+	background: #FFFFFF url(../img/h2bullet-maroon.gif) center left no-repeat;
+}
+h2.olive {
+	background: #FFFFFF url(../img/h2bullet-olive.gif) center left no-repeat;
+}
+h2.orange {
+	background: #FFFFFF url(../img/h2bullet-orange.gif) center left no-repeat;
+}
+h2.purple {
+	background: #FFFFFF url(../img/h2bullet-purple.gif) center left no-repeat;
+}
+h2.red {
+	background: #FFFFFF url(../img/h2bullet-red.gif) center left no-repeat;
+}
+#rightcolumn .icons {
+	margin: 0;
+	text-align: right;
+}
+#rightcolumn .icons img {
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+table#icon_nav {
+	margin: 0px 0 0 0;
+	padding: 0;
+	width: 100%;
+	font-size: 1.2em;
+	background: url(../img/icon_gradient_bg.jpg) top left;
+}
+table#icon_nav td {
+	margin: 0;
+	padding: 0 17px 0 0px;
+	font-weight: bold;
+	text-align: right;
+	vertical-align: middle;
+	height: 65px;
+	background: center left no-repeat;
+}
+table#icon_nav a {
+	padding-left: 70px; /* width of icon + whitespace */
+	display: block;
+	line-height: 1.1em;
+}
+/* Hide from IE-Mac \*/
+
+* html table#icon_nav a {
+	width: 110px;
+}
+/* End hide */
+table#icon_nav a:link, table#icon_nav a:visited {
+	text-decoration: none;
+}
+table#icon_nav a:hover, table#icon_nav a:active, table#icon_nav a:focus {
+	text-decoration: none;
+}
+#header_contents {
+	position: relative;
+}
+.skipnav a {
+display: none;
+}

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html xmlns:wairole="http://www.w3.org/2005/01/wai-rdf/GUIRoleTaxonomy#" xmlns:waistate="http://www.w3.org/2005/07/aaa"><head id="Head1">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta http-equiv="CACHE-CONTROL" content="NO-CACHE"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Content-Language" content="en"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>
+	Virtual EMS - Custom Events
+</title><link href="CustomBrowseEvents_data/jquery-ui.css" type="text/css" media="screen" rel="stylesheet"><link href="CustomBrowseEvents_data/Vems.css" type="text/css" media="screen, print" rel="stylesheet"><link rel="icon" href="http://64.141.108.206:7989/VirtualEMS/favicon.ico" type="image/x-icon"><link rel="shortcut icon" href="http://64.141.108.206:7989/VirtualEMS/ShortcutIcon.ico" type="image/x-icon">
+    <script type="text/javascript" src="CustomBrowseEvents_data/jquery-1.js"></script>
+    <script type="text/javascript" src="CustomBrowseEvents_data/jquery-ui.js"></script>
+    <script type="text/javascript" src="CustomBrowseEvents_data/EmsPlugins.js"></script>
+    <script type="text/javascript" src="CustomBrowseEvents_data/json.js"></script>
+    <script type="text/javascript" src="CustomBrowseEvents_data/Globals.js"></script>
+    <script type="text/javascript" src="CustomBrowseEvents_data/idleTimeout.js"></script>
+    <script type="text/javascript" src="CustomBrowseEvents_data/ui.js"></script>
+    
+<link href="CustomBrowseEvents_data/BrowseEvents.css" type="text/css" media="screen, print" rel="stylesheet">
+<script type="text/javascript" src="CustomBrowseEvents_data/BrowseCommon.js"></script>
+<script type="text/javascript" src="CustomBrowseEvents_data/BrowseEvents.js"></script>
+
+    <!--[if IE 7]>
+        <style type="text/css" >
+           #MenuContainer {margin-top:-13px;}
+           #ctl00_MainMenun0Items table tr td,#ctl00_MainMenun1Items table tr td, #ctl00_MainMenun2Items table tr td,#ctl00_MainMenun3Items table tr td, #ctl00_MainMenun4Items table tr td {padding:.2em;}
+        </style>
+    <![endif]-->
+</head>
+
+<body id="emsBody" class="emsBody">
+<div id="emsCon" class="emsCon">
+    <noscript>Virtual EMS requires Javascript to be supported and enabled.</noscript>
+    <form method="post" action="CustomBrowseEvents.aspx?data=udR316oJKv%2fc72UbPRStgu%2fWwql%2fB9tzDm0Srm2I4cc%3d" id="VirtualEmsForm">
+<div class="aspNetHidden">
+<input name="ems_onPage" id="ems_onPage" value="0" type="hidden">
+<input name="ems_ListViewGrid_sortColumn" id="ems_ListViewGrid_sortColumn" value="TimeEventStart" type="hidden">
+<input name="ems_ListViewGrid_sortDirection" id="ems_ListViewGrid_sortDirection" value="ASC" type="hidden">
+<input name="ems_ListViewGrid_groupBy" id="ems_ListViewGrid_groupBy" value="Date" type="hidden">
+<input name="__EVENTTARGET" id="__EVENTTARGET" value="" type="hidden">
+<input name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" type="hidden">
+<input name="ems_ListViewGrid_CheckedRows" id="ems_ListViewGrid_CheckedRows" value="" type="hidden">
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="8pJxLQh1Yqe3zeBwziKBRHaekC6nsiSdXhMOP4iaOVwINq5nGohzUwim34Am43CXt2wpYVoE9m9pTFE6esFjhJpRk4UqCTN0UiHdVk0xG2nGiSkk3jUxRitTi2V7tHfvC+1DfGg9PPBrzOtHCPdywlmbtqRiVg8hRu+0XiGyqpcaSK2HYrzkwCg8OsMbK1SMYiTI8l04Fo+hdhXf7pyMYuzETNPbb3FcdN2O5GcHDmV6anzD0V7CnN0pwXZ7PmqaQ2v0yvAnO4cP+3OEfXGWUt37V6V5sEUtG+/JpWmsajelikHGBlWIVcC30057tsOST3eU4cAD59h2Tc4tzakq7foASlS6uiw5nKzLmlLYRTeKTzVZSdEaIo+JoB44x/S+ucKWfN0MFxysVcYmsDEB5dTfiBicf5Tr/Qyy/vQANxtgl49ft1UUrDuCHPXSjMv0FQ2Le/11bg8LNPcOV1d/4tpDOOSkU6+8XCOJDjqgCXFbVtD9DgNOGPZlcqq1DrL1/okc2usaLdkBvezPi0pDXdlamsU09Q4OEmtWIMBlp1jRBz5Ps/UaionUBTF9R41nqstaObLhtvwv6icaar7Detp3C3U7zfCy7gJJylBNtG1gh9+U60Ud7bX7cK3ZeTl2UUKnTEeZv9lO6mLVxwkKQcmalpxzh2e0CEdCw1Wpr7eanqKv5epZjaqzgd66PHzqCQj1Vef0R7pR9ZiSkmEsspuixtaN78h/R+AQ6Ab/XgX22aTVs6QcQoyR6xeVznQVMlY7NXM1IqkhgBH81Z6yuXHzjcB4HIyQpk/FAvSpIAyniTHaKLXYf4mS6iTjHZJUkU1dyF7wLj8iZl53m93LaPgOpeF9nzNBQaqdEM8FNyDgeAFOQjudA4QXoaxi2edTTZVs8e50pKCa/8eoWdKmbY/EQum3Ip/ydjRt/W1HufErV94rtqfzGf7Io1mPcygT2RnVhteuALGooeKZaibYruRo4IlxXT9tND1cTR8Jgo2WS6Abgx08cpBTppRWHG/i9K5D4bqZzq34bPKgX+VM8YQ1RmRFJxi5Jcx1vYRqA1KBX88yujmPHfy9wrJM1L0j22RLxcEPKZOe84lvCay9sJGdcV+/IjCuW9jv+0yYGukd502ZvNXhlh87L0ykH64DaD2u94HGJBXFfggqrprAVZh1EbSXJA/OSyhmHqMIvgjjbc2PsED6e+H/r6WGeo1EiDkAEvChSa2fKtbtiGLTOzXKvDgbLkBUhpICf6pX31A=" type="hidden">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['VirtualEmsForm'];
+if (!theForm) {
+    theForm = document.VirtualEmsForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="CustomBrowseEvents_data/WebResource.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+var sOnDateLabelId = 'pc_OnDateLabel',sDateId = 'pc_BrowseDate_box',ems_PauseToLoadMsg = "Pause to load tool tip",ems_tabToLoad = '1',ems_haveFieldsForTip = "1";ems_lvg = 'pc_ListViewGrid',ems_btnNext = 'pc_moveNext',ems_btnPrev = 'pc_movePrevious',ems_LocTitle = "Virtual EMS - Location Details",ems_DetailsTitle = "Virtual EMS - Booking Details";var ems_Help = "Help",ems_timeSep = ":",ems_AM = "AM",ems_PM = "PM",ems_timeFormat = "h:mm tt",ems_timePicker = "Time Picker",ems_appLevel = 1,ems_useHelpIcon = 1,ems_UnhandledCallback = "Unhandled Callback.",ems_FailedToLoadCallbackXml = "Error loading xml document from server",ems_NoItemSelected = "You must select an item first",ems_InvalidTime = "Invalid Time",ems_FirstDateViolation = "Date violates your first available booking date",ems_LastDateViolation = "Date violates your last available booking date",ems_InvalidDate = "Invalid Date",ems_CloseTheCalendar = "Close the Calendar",ems_LocDetails = "Virtual EMS - Location Details",ems_ResourceDetails = "Virtual EMS - Resource Details",ems_BookingDetails = "Virtual EMS - Booking Details",ems_ResDetails = "Virtual EMS - Reservation Details",ems_AddInfo = "Virtual EMS - Additional Info",ems_cookieHash = "deaConnection",sSelectedColor = "rgb(255,255,255)";Dea.pageCallback = function (emsObject) { WebForm_DoCallback('__Page','' + Dea.JSON.stringify(emsObject) + '',Dea.handleCallback,'' + emsObject.router + '',Dea.errorCallback,true)};var PathToRoot = '/VirtualEms/',ems_PauseToLoadMsg = "Pause to load tool tip",ems_Loading = "Loading...",ems_sessionMilli=1200000,ems_timeOutUrl="default.aspx";
+                 Dea.Grid = function() { };
+
+                Dea.Grid.sort = function (c, g) {
+                    var oCC = Dea.Get('ems_ListViewGrid_sortColumn');
+                    var oCD = Dea.Get('ems_ListViewGrid_sortDirection');
+                    if(oCC && oCD) {
+                        if(c === oCC.value) {
+                            if(oCD.value === 'ASC') {
+                                oCD.value = 'DESC';
+                            }
+                            else {
+                                oCD.value = 'ASC';
+                            }
+                        }
+                        else {
+                            oCC.value = c;
+                            oCD.value = 'ASC';
+                        }
+
+                        Dea.setEmsData(true);
+                        Dea.makeCallback('sort' + g);
+                    }
+                }
+                Dea.Grid.groupByChanged = function(c, g) {
+                    var oCGB = Dea.Get('ems_ListViewGrid_groupBy');
+                    if(oCGB) {
+                        if(c == oCGB.value) {
+                            return;
+                        }
+                        oCGB.value = c;
+                    }
+                    Dea.setEmsData();
+                     Dea.makeCallback('groupByChanged' + g);
+                }//]]>
+</script>
+
+<script src="CustomBrowseEvents_data/WebResource.axd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+var  localizationKey = "en-US";var  localizationDateSeparator = "/";var  localizationDateFormat = "m/d/yyyy";jQuery(function($){$.datepicker.regional['en-US'] = {closeText: 'Close the Calendar',prevText: 'Previous',nextText: 'Next',currentText: 'Current',monthNames: ['January','February','March','April','May','June','July','August','September','October','November','December',''],monthNamesShort: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec',''],dayNames: ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],dayNamesShort: ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],dayNamesMin: ['Su','Mo','Tu','We','Th','Fr','Sa'],dateFormat: 'm/d/yy D',firstDay: 0,isRTL: false};$.datepicker.setDefaults($.datepicker.regional['en-US']);});//]]>
+</script>
+
+<script src="CustomBrowseEvents_data/WebResource_003.axd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function() {$("#pc_BrowseDate_box").blur(Dea.dp.validateDate);$("#pc_BrowseDate_box").focus(function() { Dea.dp.lastDateValue = $(this).val(); });$("#pc_BrowseDate_box").datepicker({numberOfMonths: 1,showButtonPanel: false,changeMonth: false,changeYear: false,onClose: function (dateText, inst) { $(this).bind('blur', Dea.dp.validateDate); Dea.dp.afterSet(); },beforeShow: function(input) { $(input).unbind('blur'); }});Dea.calRollover($("#pc_BrowseDate_box").datepicker('option', 'buttonImage' ));});//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" type="hidden">
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Ju79FiTylc07BQ3OambzjEo4SiCb7fMVXwoveYyN7MJZ40LPEchV2AMN1IbweoRE9MWZ2aTKzZnjQUWlxlZEw4dHRWOLvqaYnitCIpcUdcBqJjg1BW3fBSpmT/BM4jM4813q/69S96kCYpSxHrnoxQKT9bgIVKb/vzKRjbhU/5I=" type="hidden">
+</div>
+        <div id="HeaderContainer" class="HeaderContainer">
+            <a id="LogoLink" title="Navigate to Virtual Event Management Systems home page" href="http://64.141.108.206:7989/VirtualEms/"><img id="HeaderImage" class="float headerLogo" src="CustomBrowseEvents_data/logo.gif" alt="Virtual Event Management Systems Logo"></a>
+                    <h1 id="ApplicationTitle" class="ApplicationTitle">
+	Virtual EMS
+</h1>
+                    
+        </div>
+        
+       <div class="master-TopLeft">
+       
+       <div class="master-ContentImg">
+            <div class="master-topCPH">
+                <div class="floatRight" style="margin-right:1em;"><img title="Help" id="helpIco" src="CustomBrowseEvents_data/btn-HelpIco.png" alt="Help" style="position: relative; display: none; cursor: pointer;"></div>
+                &nbsp;
+            </div>
+            <div class="master-bc-mid">
+                <div class="row master-page" id="page">
+                    <div class="master-pc">
+                        
+                        <div id="Summary" class="errorSummary" style="color:Red;display:none;">
+
+</div>
+                         
+                      <div class="master-widthContainer">
+                        
+<div role="application" class="ui-tabs ui-widget ui-corner-all" id="BrowseEvents">
+        <!--CustomOnChangeCall="Dea.BrowseCommon.moveDate(0);"-->
+            <div id="pc_BrowseDate" calendarpickeralttext="Calendar">
+	<label class="forTextbox" for="pc_BrowseDate_box">Date:</label><div class="clear tbwl">
+		<input class="hasDatepicker" name="ctl00$pc$BrowseDate$box" value="11/3/2014 Mon" id="pc_BrowseDate_box" style="width:95px;" type="text">
+	</div>
+</div>&nbsp;
+
+        <ul role="tablist" class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-corner-all">
+            <li role="presentation" class="ui-state-default ui-corner-top"><a id="tab0-tab" aria-controls="tab0" role="tab" aria-selected="false" tabindex="-1" href="#tab0" data-isajax="1">Daily List</a></li>
+            <li role="presentation" class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"><a id="tab1-tab" aria-controls="tab1" role="tab" aria-selected="true" tabindex="0" href="#tab1" data-isajax="1">Weekly List</a></li>
+            <li role="presentation" class="ui-state-default ui-corner-top"><a id="tab2-tab" aria-controls="tab2" role="tab" aria-selected="false" tabindex="-1" href="#tab2" data-isajax="1">Monthly List</a></li>
+            <li role="presentation" class="ui-state-default ui-corner-top"><a id="tab3-tab" aria-controls="tab3" role="tab" aria-selected="false" tabindex="-1" href="#tab3" data-isajax="1">Weekly Calendar</a></li>
+            <li role="presentation" class="ui-state-default ui-corner-top"><a id="tab4-tab" aria-controls="tab4" role="tab" aria-selected="false" tabindex="-1" href="#tab4" data-isajax="1">Monthly Calendar</a></li>
+        </ul><div class="ui-widget-header ui-state-active tabLine" style="height:.5em;"></div>
+        <div class="quickNavLinks">
+            <a onclick="return Dea.BrowseCommon.loadSpecificByDate('11/3/2014 Mon', 0);" id="pc_TodayButton" href="javascript:__doPostBack('ctl00$pc$TodayButton','')">Today</a>
+            &nbsp;|&nbsp;
+            <a onclick="return Dea.BrowseCommon.loadSpecificByDate('11/3/2014 Mon', 3);" id="pc_ThisWeekButton" href="javascript:__doPostBack('ctl00$pc$ThisWeekButton','')">This Week</a>
+            &nbsp;|&nbsp;
+            <a onclick="return Dea.BrowseCommon.loadSpecificByDate('11/3/2014 Mon', 4);" id="pc_ThisMonthButton" href="javascript:__doPostBack('ctl00$pc$ThisMonthButton','')">This Month</a>
+        </div>
+        <div class="DateRow">
+            <div class="float left">
+                <input style="cursor: pointer;" name="ctl00$pc$movePrevious" id="pc_movePrevious" title="Previous" src="CustomBrowseEvents_data/btn-ArrowPrev.png" alt="Previous" onclick="return Dea.BrowseCommon.moveDate(-1);" type="image">
+                <input style="cursor: pointer;" name="ctl00$pc$moveNext" id="pc_moveNext" title="Next" src="CustomBrowseEvents_data/btn-ArrowNext.png" alt="Next" onclick="return Dea.BrowseCommon.moveDate(1);" type="image">
+            </div>
+            <span id="pc_OnDateLabel" class="OnDateLabel">Sunday, November 02, 2014 - Saturday, November 08, 2014</span>
+        </div>
+        <div class="row ui-state-default ui-buttonset" id="groupByOptions" style="width: 100%;">
+            <span id="pc_GroupByLabel">Group By</span>
+            <input class="ui-helper-hidden-accessible" id="pc_GroupByDate" name="ctl00$pc$GroupByOptions" value="GroupByDate" checked="checked" onclick="Dea.Grid.groupByChanged('Date', 'ListViewGrid');" type="radio"><label aria-disabled="false" role="button" aria-pressed="true" class="ui-state-active ui-button ui-widget ui-state-default ui-button-text-only" for="pc_GroupByDate"><span class="ui-button-text">Date</span></label>
+            <input class="ui-helper-hidden-accessible" id="pc_GroupByLocation" name="ctl00$pc$GroupByOptions" value="GroupByLocation" onclick="Dea.Grid.groupByChanged('LocationDisplay', 'ListViewGrid');" type="radio"><label aria-disabled="false" role="button" class="ui-button ui-widget ui-state-default ui-button-text-only" aria-pressed="false" for="pc_GroupByLocation"><span class="ui-button-text">Location</span></label>
+            <input class="ui-helper-hidden-accessible" id="pc_GroupByGroup" name="ctl00$pc$GroupByOptions" value="GroupByGroup" onclick="Dea.Grid.groupByChanged('GroupName', 'ListViewGrid');" type="radio"><label aria-disabled="false" role="button" class="ui-button ui-widget ui-state-default ui-button-text-only" aria-pressed="false" for="pc_GroupByGroup"><span class="ui-button-text">Ministry</span></label>
+        </div>
+        <div aria-labelledby="tab0-tab" role="tabpanel" aria-busy="false" aria-live="polite" aria-expanded="false" aria-hidden="true" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tab0"></div>
+        <div aria-busy="false" aria-live="polite" aria-labelledby="tab1-tab" role="tabpanel" aria-expanded="true" aria-hidden="false" class="ui-tabs-panel ui-widget-content ui-corner-bottom" id="tab1">
+                    <div>
+	<table class="ui-widget" summary="A table of events" id="pc_ListViewGrid" style="width:100%;border-collapse:collapse;" cellspacing="0">
+		<tbody><tr>
+			<th class="white-widget-header" scope="col"><a href="#" class="sorter" onclick="Dea.Grid.sort('TimeEventStart', 'ListViewGrid')" title="Click to sort">Start Time&nbsp;<img src="CustomBrowseEvents_data/WebResource_002.axd" alt="Sorted Ascending"></a></th><th class="white-widget-header" scope="col"><a href="#" class="sorter" onclick="Dea.Grid.sort('EventName', 'ListViewGrid')" title="Click to sort">Title&nbsp;<img src="CustomBrowseEvents_data/WebResource_002.axd" alt="Sorted Ascending" style="visibility:hidden"></a></th><th class="white-widget-header" scope="col"><a href="#" class="sorter" onclick="Dea.Grid.sort('LocationDisplay', 'ListViewGrid')" title="Click to sort">Location&nbsp;<img src="CustomBrowseEvents_data/WebResource_002.axd" alt="Sorted Ascending" style="visibility:hidden"></a></th><th class="white-widget-header" scope="col"><a href="#" class="sorter" onclick="Dea.Grid.sort('GroupName', 'ListViewGrid')" title="Click to sort">Ministry Name&nbsp;<img src="CustomBrowseEvents_data/WebResource_002.axd" alt="Sorted Ascending" style="visibility:hidden"></a></th>
+		</tr><tr>
+			<td class="ui-widget-groupby ui-widget-content" colspan="6">
+                                    <span id="pc_ListViewGrid_dateLabel_0">11/2/2014 Sun&nbsp;<br></span>
+                                </td>
+		</tr><tr data-tipid="28804">
+			<td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">3:00 AM</td><td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">
+                                    <a id="pc_ListViewGrid_HyperLink2_0" class=" st-14  et3  gt0  rt0  g2  s1 " href="http://64.141.108.206:7989/VirtualEms/BookingDetails.aspx?data=mUmyd1qkylvGFVvXTFsiX2BASd5AJl3OtwWdRMsu%2fFlxL4OkAUKBHTbw2Z3de1%2fAQ57fnIh9JI3Za13yDssjFp3qWRhZ7QEJImTj1YAzkq%2fr0NuxYpnXFMebiaMRz4Em">Switch your clocks</a>
+                                </td><td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">
+                                    
+                                    <span id="pc_ListViewGrid_LocationText_0">Day Light Savings Time </span>
+                                </td><td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">Special / Misc. Events</td>
+		</tr><tr data-tipid="25661">
+			<td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">9:25 AM</td><td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">
+                                    <a id="pc_ListViewGrid_HyperLink2_1" class=" st-14  et3  gt0  rt0  g2  s1 " href="http://64.141.108.206:7989/VirtualEms/BookingDetails.aspx?data=mUmyd1qkylvGFVvXTFsiX%2bBUUIPvJ9Uw9TTvP9gZ%2b%2fIbcPwQqvIa8arsaqYwrvx1dx0UaGXDgQTQZMVlOWWa6uFqDpeHk3i%2bpItwEGE7ZjtBD%2boiiBzry1a8ue9eFzpM">Sunday 9:25 Service with Communion</a>
+                                </td><td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">
+                                    
+                                    <span id="pc_ListViewGrid_LocationText_1">Sanctuary</span>
+                                </td><td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">Special / Misc. Events</td>
+		</tr><tr data-tipid="25704">
+			<td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">11:25 AM</td><td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">
+                                    <a id="pc_ListViewGrid_HyperLink2_2" class=" st-14  et3  gt0  rt0  g2  s1 " href="http://64.141.108.206:7989/VirtualEms/BookingDetails.aspx?data=mUmyd1qkylvGFVvXTFsiX%2bBUUIPvJ9Uw9TTvP9gZ%2b%2fIbcPwQqvIa8arsaqYwrvx1dx0UaGXDgQTQZMVlOWWa6uFqDpeHk3i%2bpItwEGE7ZjsJ7kHmQfg%2bg1t6%2fQH55Cxn">Sunday 11:25 Service with Communion</a>
+                                </td><td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">
+                                    
+                                    <span id="pc_ListViewGrid_LocationText_2">Sanctuary</span>
+                                </td><td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">Special / Misc. Events</td>
+		</tr><tr data-tipid="27405">
+			<td class="st-14  et3  gt0  rt0  g7  s1  ui-widget-content">11:30 AM</td><td class="st-14  et3  gt0  rt0  g7  s1  ui-widget-content">
+                                    <a id="pc_ListViewGrid_HyperLink2_3" class=" st-14  et3  gt0  rt0  g7  s1 " href="http://64.141.108.206:7989/VirtualEms/BookingDetails.aspx?data=mUmyd1qkylvGFVvXTFsiX3xS%2bHzk46OA2V5EAyzm1oEGi1EtozE35ERQif14Ri3dgwOiWqnMTnCoi8gqquO16K0BspfIgHLP7%2f%2f4fu%2fIGRNaVv11iJofpiuqebfaBzxh">International Young Adults Bible Study</a>
+                                </td><td class="st-14  et3  gt0  rt0  g7  s1  ui-widget-content">
+                                    
+                                    <span id="pc_ListViewGrid_LocationText_3">Adult Ministry Room 2</span>
+                                </td><td class="st-14  et3  gt0  rt0  g7  s1  ui-widget-content">Home Groups</td>
+		</tr><tr>
+			<td class="ui-widget-groupby ui-widget-content" colspan="6">
+                                    <span id="pc_ListViewGrid_dateLabel_4">11/3/2014 Mon&nbsp;<br></span>
+                                </td>
+		</tr><tr data-tipid="27251">
+			<td class="st-14  et3  gt0  rt0  g32  s1  ui-widget-content">2:00 PM</td><td class="st-14  et3  gt0  rt0  g32  s1  ui-widget-content">
+                                    <a id="pc_ListViewGrid_HyperLink2_4" class=" st-14  et3  gt0  rt0  g32  s1 " href="http://64.141.108.206:7989/VirtualEms/BookingDetails.aspx?data=mUmyd1qkylvGFVvXTFsiXyf%2fh5b%2begY3o3I7W4wcMrYTGmp6%2flrrPnpDn7j%2bJ4DLev5B7DYeVgSLCiq3%2bwz2Aho6oTwDgEatN3chMge%2blDCUD%2bh8HMs2u1MMpUEPsfu0">Beyond Grief - Afternoon Class</a>
+                                </td><td class="st-14  et3  gt0  rt0  g32  s1  ui-widget-content">
+                                    
+                                    <span id="pc_ListViewGrid_LocationText_4">Adult Ministry Room 4</span>
+                                </td><td class="st-14  et3  gt0  rt0  g32  s1  ui-widget-content">Beyond Grief</td>
+		</tr><tr data-tipid="27297">
+			<td class="st-14  et3  gt0  rt0  g32  s1  ui-widget-content">7:00 PM</td><td class="st-14  et3  gt0  rt0  g32  s1  ui-widget-content">
+                                    <a id="pc_ListViewGrid_HyperLink2_5" class=" st-14  et3  gt0  rt0  g32  s1 " href="http://64.141.108.206:7989/VirtualEms/BookingDetails.aspx?data=mUmyd1qkylvGFVvXTFsiXyf%2fh5b%2begY3o3I7W4wcMrYTGmp6%2flrrPnpDn7j%2bJ4DLev5B7DYeVgSLCiq3%2bwz2Aho6oTwDgEatN3chMge%2blDCUD%2bh8HMs2u1Y5%2b93F08Ai">Beyond Grief - Evening Class</a>
+                                </td><td class="st-14  et3  gt0  rt0  g32  s1  ui-widget-content">
+                                    
+                                    <span id="pc_ListViewGrid_LocationText_5">Adult Ministry Room 4</span>
+                                </td><td class="st-14  et3  gt0  rt0  g32  s1  ui-widget-content">Beyond Grief</td>
+		</tr><tr>
+			<td class="ui-widget-groupby ui-widget-content" colspan="6">
+                                    <span id="pc_ListViewGrid_dateLabel_6">11/4/2014 Tue&nbsp;<br></span>
+                                </td>
+		</tr><tr data-tipid="26669">
+			<td class="st-14  et3  gt0  rt0  g6  s1  ui-widget-content">9:30 AM</td><td class="st-14  et3  gt0  rt0  g6  s1  ui-widget-content">
+                                    <a id="pc_ListViewGrid_HyperLink2_6" class=" st-14  et3  gt0  rt0  g6  s1 " href="http://64.141.108.206:7989/VirtualEms/BookingDetails.aspx?data=mUmyd1qkylvGFVvXTFsiX147lpqlpqhuylAKLP%2f8YxEWjAty7jpJVrMF5wc%2f7IqIt%2faIKZ%2f%2fUdKNWhNIpICWSr4vh368zsRcKzGuJuc0aANbs83TNNMqycM4Jl34xTaz">Corporate Prayer</a>
+                                </td><td class="st-14  et3  gt0  rt0  g6  s1  ui-widget-content">
+                                    
+                                    <span id="pc_ListViewGrid_LocationText_6">Prayer Room</span>
+                                </td><td class="st-14  et3  gt0  rt0  g6  s1  ui-widget-content">Prayer Ministry</td>
+		</tr><tr data-tipid="26107">
+			<td class="st-14  et3  gt0  rt0  g57  s1  ui-widget-content">10:00 AM</td><td class="st-14  et3  gt0  rt0  g57  s1  ui-widget-content">
+                                    <a id="pc_ListViewGrid_HyperLink2_7" class=" st-14  et3  gt0  rt0  g57  s1 " href="http://64.141.108.206:7989/VirtualEms/BookingDetails.aspx?data=mUmyd1qkylvGFVvXTFsiX1FISMt7nGHm0EQTlHinCe7fY2eqlyw9TlRtk3whcPq4m0G%2fqKV3cF60rIrf%2brb3I%2fbzNoV8jArmZcsoHkc7802OZ6D%2fK7BPihZaukxmhJHv">Rock Tots</a>
+                                </td><td class="st-14  et3  gt0  rt0  g57  s1  ui-widget-content">
+                                    
+                                    <span id="pc_ListViewGrid_LocationText_7">Kidz Rock Room 1</span>
+                                </td><td class="st-14  et3  gt0  rt0  g57  s1  ui-widget-content">Rock Tots</td>
+		</tr><tr>
+			<td class="ui-widget-groupby ui-widget-content" colspan="6">
+                                    <span id="pc_ListViewGrid_dateLabel_8">11/5/2014 Wed&nbsp;<br></span>
+                                </td>
+		</tr><tr data-tipid="26159">
+			<td class="st-14  et3  gt0  rt0  g50  s1  ui-widget-content">9:30 AM</td><td class="st-14  et3  gt0  rt0  g50  s1  ui-widget-content">
+                                    <a id="pc_ListViewGrid_HyperLink2_8" class=" st-14  et3  gt0  rt0  g50  s1 " href="http://64.141.108.206:7989/VirtualEms/BookingDetails.aspx?data=mUmyd1qkylvGFVvXTFsiX%2bJ0APS1qhEbDsrA9vwtRCZ4DXTO1fPLMcjKd79kqlz1cwkLXXIRYNNZSzom1%2bWRQq1evITRX5z3gmsOENd9T48XPnh%2bZw2jc9%2bsgx0RSSV6">Women of Worth</a>
+                                </td><td class="st-14  et3  gt0  rt0  g50  s1  ui-widget-content">
+                                    
+                                    <span id="pc_ListViewGrid_LocationText_8">Multi-Purpose Room</span>
+                                </td><td class="st-14  et3  gt0  rt0  g50  s1  ui-widget-content">Women of Worth</td>
+		</tr><tr data-tipid="27554">
+			<td class="st-14  et3  gt0  rt0  g1  s1  ui-widget-content">7:00 PM</td><td class="st-14  et3  gt0  rt0  g1  s1  ui-widget-content">
+                                    <a id="pc_ListViewGrid_HyperLink2_9" class=" st-14  et3  gt0  rt0  g1  s1 " href="http://64.141.108.206:7989/VirtualEms/BookingDetails.aspx?data=mUmyd1qkylvGFVvXTFsiXy6PuvPKI6MXAqyP6MmnqaZCxkR592O%2bopUIusgzN%2fu7hn9Wk5lkIjdnOIwJpEDsWNxYCe%2fukfERfnuddLSIooq3IZZg930QPorrphdsMs1V">Men of the Rock</a>
+                                </td><td class="st-14  et3  gt0  rt0  g1  s1  ui-widget-content">
+                                    
+                                    <span id="pc_ListViewGrid_LocationText_9">Adult Ministry Room 2</span>
+                                </td><td class="st-14  et3  gt0  rt0  g1  s1  ui-widget-content">Mens Ministry</td>
+		</tr><tr>
+			<td class="ui-widget-groupby ui-widget-content" colspan="6">
+                                    <span id="pc_ListViewGrid_dateLabel_10">11/7/2014 Fri&nbsp;<br></span>
+                                </td>
+		</tr><tr data-tipid="25514">
+			<td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">7:00 PM</td><td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">
+                                    <a id="pc_ListViewGrid_HyperLink2_10" class=" st-14  et3  gt0  rt0  g2  s1 " href="http://64.141.108.206:7989/VirtualEms/BookingDetails.aspx?data=mUmyd1qkylvGFVvXTFsiX2Lf3XJ4cPNj07Gvb1NuhT35OosSfPFuSL1%2fhqPrw9Djda4nkLkhpfBIRM0dvJuoBsDVIEa6N4nDFFHfvgwE5qkgIEgGvE4g%2fnU6T1R3rVU1">Leaders Retreat</a>
+                                </td><td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">
+                                    
+                                    <span id="pc_ListViewGrid_LocationText_10">Chapel</span>
+                                </td><td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">Special / Misc. Events</td>
+		</tr><tr>
+			<td class="ui-widget-groupby ui-widget-content" colspan="6">
+                                    <span id="pc_ListViewGrid_dateLabel_11">11/8/2014 Sat&nbsp;<br></span>
+                                </td>
+		</tr><tr data-tipid="25515">
+			<td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">9:00 AM</td><td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">
+                                    <a id="pc_ListViewGrid_HyperLink2_11" class=" st-14  et3  gt0  rt0  g2  s1 " href="http://64.141.108.206:7989/VirtualEms/BookingDetails.aspx?data=mUmyd1qkylvGFVvXTFsiX2Lf3XJ4cPNj07Gvb1NuhT1v0FbdasbCMIHN%2bLgv6%2f2RJW%2bX2ifbmOKGZb1%2brtlVpcDEY4NbKGfPwcKQ9vvkv4l6FMOU79Q%2fFiQrmVlb9Xae">Leaders Retreat</a>
+                                </td><td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">
+                                    
+                                    <span id="pc_ListViewGrid_LocationText_11">Chapel</span>
+                                </td><td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">Special / Misc. Events</td>
+		</tr><tr data-tipid="25545">
+			<td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">5:25 PM</td><td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">
+                                    <a id="pc_ListViewGrid_HyperLink2_12" class=" st-14  et3  gt0  rt0  g2  s1 " href="http://64.141.108.206:7989/VirtualEms/BookingDetails.aspx?data=mUmyd1qkylvGFVvXTFsiXyOd5GG7oPG5Q8rHJgbPDdkhVhyniJamkf3oY%2fgmy%2bT9ZIn9Ju9V9wS9JtZtnzUMc0%2fPeuFVejPWs2NZCVe2GPQsGDR6hSBylKsXLzpkTNGy">Saturday 5:25 Service</a>
+                                </td><td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">
+                                    
+                                    <span id="pc_ListViewGrid_LocationText_12">Sanctuary</span>
+                                </td><td class="st-14  et3  gt0  rt0  g2  s1  ui-widget-content">Special / Misc. Events</td>
+		</tr>
+	</tbody></table>
+</div>
+            </div>
+        <div aria-labelledby="tab2-tab" role="tabpanel" aria-expanded="false" aria-hidden="true" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tab2"></div>
+        <div aria-labelledby="tab3-tab" role="tabpanel" aria-expanded="false" aria-hidden="true" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tab3"></div>
+        <div aria-labelledby="tab4-tab" role="tabpanel" aria-expanded="false" aria-hidden="true" class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-tabs-hide" id="tab4"></div>
+        
+                    <div>
+
+</div>
+            
+    </div>
+
+   
+    
+   <div>
+
+</div>
+   <div>
+
+</div>
+
+
+
+                      </div>
+                      <div id="FooterContainer" class="footer">
+                        <span id="PoweredBy" title="Room Scheduling Software Powered by Dean Evans &amp; Associates, Inc.">Powered by</span>&nbsp;<a href="http://www.dea.com/" target="_blank"><img id="footerImage" title="Room Scheduling Software Powered by Dean Evans &amp; Associates, Inc." src="CustomBrowseEvents_data/RoomSchedulingSoftware.jpg" alt="Room Scheduling Software Powered by Dean Evans &amp; Associates, Inc."></a>
+
+                           <span id="dbInfoDiv" class="block clear"></span>
+                        </div>
+                        <div aria-hidden="true" id="CallbackStatus" style="z-index: 100; top: 5px; right: 5px; display: none;" class="callbackStatus">
+                            <img id="LoadingImage" src="CustomBrowseEvents_data/Loading.gif" alt="">
+                            <span id="LoadingText">Loading...</span>
+                       </div>
+                    </div>
+                </div> 
+          </div>
+          <div class="master-bc-lft">&nbsp;</div>
+          <div class="master-bc-rgt">&nbsp;</div>
+          <div class="master-bc-bot"></div>
+        </div>  
+          
+        </div>
+        
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("Summary"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ApplicationTitle = document.all ? document.all["ApplicationTitle"] : document.getElementById("ApplicationTitle");
+ApplicationTitle.isHelpText = "False";
+var Summary = document.all ? document.all["Summary"] : document.getElementById("Summary");
+Summary.headertext = "The following errors occurred attempting to process your request:";
+var DefaultHelp = document.all ? document.all["DefaultHelp"] : document.getElementById("DefaultHelp");
+DefaultHelp.isHelpText = "True";
+var pc_BrowseDate_box = document.all ? document.all["pc_BrowseDate_box"] : document.getElementById("pc_BrowseDate_box");
+pc_BrowseDate_box.errorMsg = "Date is required";
+pc_BrowseDate_box.emsDataId = "BrowseDate";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+WebForm_InitCallback();//]]>
+</script>
+</form>
+</div>
+
+
+<div aria-labelledby="ui-dialog-title-helpDialog" role="dialog" tabindex="-1" class="ui-dialog ui-widget ui-widget-content ui-corner-all  ui-draggable ui-resizable" style="display: none; z-index: 1000; outline: 0px none; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-dialog-title-helpDialog" class="ui-dialog-title">Help</span><a role="button" class="ui-dialog-titlebar-close ui-corner-all" href="#"><span class="ui-icon ui-icon-closethick">close</span></a></div><div class="ui-dialog-content ui-widget-content" id="helpDialog">
+                            <div id="DefaultHelp" class="clear">
+	
+</div>   
+                        </div><div class="ui-resizable-handle ui-resizable-n"></div><div class="ui-resizable-handle ui-resizable-e"></div><div class="ui-resizable-handle ui-resizable-s"></div><div class="ui-resizable-handle ui-resizable-w"></div><div style="z-index: 1001;" class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se ui-icon-grip-diagonal-se"></div><div style="z-index: 1002;" class="ui-resizable-handle ui-resizable-sw"></div><div style="z-index: 1003;" class="ui-resizable-handle ui-resizable-ne"></div><div style="z-index: 1004;" class="ui-resizable-handle ui-resizable-nw"></div></div><div aria-labelledby="ui-dialog-title-tipDiv" role="dialog" tabindex="-1" class="ui-dialog ui-widget ui-widget-content ui-corner-all  ui-draggable" style="display: none; z-index: 1001; outline: 0px none; top: 362px; left: 575px; height: auto; width: 400px;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-dialog-title-tipDiv" class="ui-dialog-title">&nbsp;</span><a role="button" class="ui-dialog-titlebar-close ui-corner-all" href="#"><span class="ui-icon ui-icon-closethick">close</span></a></div><div style="width: auto; min-height: 105px; height: auto;" class="ui-dialog-content ui-widget-content" id="tipDiv"><div>
+	<table class="BookingTip" id="pc_BookingTip_Details" style="width:450px;border-collapse:collapse;" cellspacing="0">
+		<tbody><tr>
+			<td class="bold w">Event Name</td><td>Beyond Grief - Afternoon Class</td>
+		</tr><tr>
+			<td class="bold w">Date</td><td>Monday, November 03, 2014</td>
+		</tr><tr>
+			<td class="bold w">Location</td><td>Adult Ministry Room 4</td>
+		</tr><tr>
+			<td class="bold w">Event Time</td><td>2:00 PM - 4:00 PM</td>
+		</tr><tr>
+			<td class="bold w">Ministry</td><td>Beyond Grief</td>
+		</tr>
+	</tbody></table>
+</div></div></div><form method="post"><input id="virtualBufferForm" value="0" type="hidden"></form><div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all ui-helper-hidden-accessible"></div></body></html>

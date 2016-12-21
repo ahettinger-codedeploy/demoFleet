@@ -1,0 +1,1247 @@
+/*
+Theme Name: Accentuate WP
+Theme URI: http://bcproducties.com
+Description: Accentuate is a professional business / portfolio theme for Wordpress, jam-packed with an abundance of styles and layouts and easily customizable to fit your needs!
+Version: 1.0
+Author: BCProducties
+Author URI: http://bcproducties.com
+Tags: jquery, 3d slider, xhtml, business, web designer, photographer, company, professional, business, clean, wood, wooden, coloured, theme options, Beautiful
+
+
+
+@import "style/css/reset.css";
+@import "style/css/typography.css";
+@import "style/css/layout.css";
+
+/** Basic Styles, */
+* {
+	outline:none;
+}
+
+/* MAIN STYLES */
+
+h1 {
+	color: #FFF;
+	font-size: 48px;
+	margin:0;
+	margin-bottom: 10px;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 24px;
+	color: #FFF;
+	font-weight: normal;
+	margin:0;
+}
+h3 {
+	color: #eeeeee;
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-bottom: 15px;
+	font-weight: normal;
+	margin-top: 15px;
+}
+h4 {
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #eeeeee;
+	margin-bottom: 15px;
+}
+h5 {
+	font-size: 14px;
+	color: #eeeeee;
+	padding-top: 15px;
+	margin:0;
+}
+p {
+	font-size: 12px;
+	line-height: 18px;
+	color: #eeeeee;
+	margin-bottom: 20px;
+}
+p.success {
+	color: #333;
+	padding: 20px;
+	background-color: #CEECB3;
+	border: thin solid #666;
+	width: auto;
+	float: left;
+}
+
+a {
+	text-decoration: none;
+	color: #40a9e0;
+}
+
+body {
+	background-color: #111111;
+	background-image: url(/clients/Charros/Images/body-bg-tiled.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	font-family: Arial, Helvetica, sans-serif;
+	margin:0;
+	padding:0;
+	font-size: 12px;
+	line-height: 18px;
+	color: #eeeeee;
+}
+
+body .portfolio-sections a {
+	color:#999999;
+}
+/* SKYBLUE THEME */
+body.skyblue {background-image: url(/clients/Charros/Images/skyblue/body-bg-tiled.jpg);}
+body.skyblue .search-box {background-image: url(/clients/Charros/Images/skyblue/search-bg.png);}
+body.skyblue .search-container .search-box input {
+	background-color: #D0DDEE;
+	border: 1px solid #D0DDEE;
+	color: #666;
+}
+body.skyblue .search-container #searchsubmit {background-image: url(/clients/Charros/Images/skyblue/search-submit.png);}
+body.skyblue .search-container #searchsubmit:hover {background-image: url(/clients/Charros/Images/skyblue/search-submit-hov.png);}
+
+/* CHOC THEME */
+body.choc {background-image: url(/clients/Charros/Images/body-bg.jpg); }
+body.choc.content {background-image: url(/clients/Charros/Images/body-bg-sh.jpg); }
+body.choc .search-box {background-image: url(/clients/Charros/Images/search-bg.png);}
+body.choc .search-container .search-box input {
+	background-color: #E2D9D0;
+	border: 1px solid #E2D9D0;
+	color: #666;
+}
+body.choc .search-container #searchsubmit {background-image: url(/clients/Charros/Images/search-submit.png);}
+body.choc .search-container #searchsubmit:hover {background-image: url(/clients/Charros/Images/search-submit-hov.png);}
+
+/* BLUEWOOD THEME */
+body.bluewood {background-image: url(/clients/Charros/Images/bluewood/body-bg-tiled.jpg);}
+body.bluewood .portfolio-sections a {color:#999;}
+
+/* ROYAL THEME */
+body.royal {background-image: url(/clients/Charros/Images/royal/body-bg-tiled.jpg);}
+body.royal .portfolio-sections a{color:#999;}
+
+/* WOODY THEME */
+body.woody {background-image: url(/clients/Charros/Images/woody/body-bg-tiled.jpg);}
+body.content.woody .portfolio-sections a {color:#999;}
+
+/* TOXIC THEME */
+body.toxic {background-image: url(/clients/Charros/Images/toxic/body-bg-tiled.jpg);}
+body.toxic .portfolio-sections a {color:#999;}
+
+/* REDY THEME */
+body.redy {background-image: url(/clients/Charros/Images/redy/body-bg-tiled.jpg);}
+body.redy .portfolio-sections a {color:#999;}
+
+.main_bg {
+	width:100%;
+	overflow:hidden;
+	background-image: url(/clients/Charros/Images/body-bg.png);
+	background-position: center top;
+	background-repeat: repeat-x;
+}
+
+.main_bg.content {	background-image: url(/clients/Charros/Images/body-bg-sh.png); }
+.bluewood .main_bg {	background-image: url(/clients/Charros/Images/bluewood/body-bg.png); }
+.bluewood .main_bg.content {	background-image: url(/clients/Charros/Images/bluewood/body-bg-sh.png); }
+.royal .main_bg {	background-image: url(/clients/Charros/Images/royal/body-bg.png); }
+.royal .main_bg.content {	background-image: url(/clients/Charros/Images/royal/body-bg-sh.png); }
+.skyblue .main_bg {	background-image: url(/clients/Charros/Images/skyblue/body-bg.png); }
+.skyblue .main_bg.content {	background-image: url(/clients/Charros/Images/skyblue/body-bg-sh.png); }
+.woody .main_bg {	background-image: url(/clients/Charros/Images/woody/body-bg.png); }
+.woody .main_bg.content {	background-image: url(/clients/Charros/Images/woody/body-bg-sh.png); }
+.toxic .main_bg {	background-image: url(/clients/Charros/Images/toxic/body-bg.png); }
+.toxic .main_bg.content {	background-image: url(/clients/Charros/Images/toxic/body-bg-sh.png); }
+.redy .main_bg {	background-image: url(/clients/Charros/Images/redy/body-bg.png); }
+.redy .main_bg.content {	background-image: url(/clients/Charros/Images/redy/body-bg-sh.png); }
+.choc .main_bg {	background-image: none; }
+.choc .main_bg.content {	background-image: none; }
+
+/* End: COLOUR THEMES */
+
+.content .mar-top {
+	margin-top: 25px;
+}
+.img-1 {
+	margin-top: 45px;
+	margin-left: 25px;
+}
+.shadow-bg {
+	background-image: url(/clients/Charros/Images/shadow-divider-1.png);
+	height: 47px;
+	background-repeat: no-repeat;
+	margin-bottom: 10px;
+}
+
+
+
+.logo-container {
+	float: left;
+	position: relative;
+	height: 80px;
+	display: block;
+	overflow: visible;
+	margin-top: 20px;
+	left: -50px;
+	margin-bottom: 20px;
+}
+
+.logo-container a img {
+	border:0;
+}
+.service-img {
+	margin-bottom: 20px;
+}
+
+.hr-divider {/* USED TO ALIGN SHADOWS */
+	margin-bottom: 30px;
+}
+.vr-divider {
+	float: right;
+}
+.rightalign {
+	float:right;
+}
+.leftalign {
+	float:left;
+}
+.textleft {
+	text-align:left;
+}
+.textright {
+	text-align:right;
+}
+.blank {
+	height: 40px;
+}
+.social img {
+	margin-right: 12px;
+}
+/* SEARCH */
+
+.search-container {
+	width: auto;
+	float: right;
+	margin-top: 35px;
+}
+.search-box {
+	height: 45px;
+	width: 204px;
+	background-image: url(/clients/Charros/Images/search-bg.png);
+	background-repeat: no-repeat;
+	float: left;
+}
+.search-container input {
+	float: left;
+	color: #B7B7B7;
+	width: 150px;
+	font-size: 11px;
+}
+
+.search-container .search-box input {
+	margin-top: 7px;
+	margin-left: 5px;
+	height: 20px;
+	background-color: #DBDBDB;
+	border: 1px solid #DBDBDB;
+}
+.search-container #searchsubmit {
+	background-image: url(/clients/Charros/Images/search-submit.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	width: 31px;
+	overflow: hidden;
+	text-indent: 100px;
+	float: left;
+	margin-left: 5px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	cursor: pointer;
+}
+.search-container #searchsubmit:hover {
+	background-image: url(/clients/Charros/Images/search-submit-hov.png);
+
+}
+
+/* HOMEPAGE BUTTONS */
+.tour {
+	margin-top: 70px;
+}
+.button-1 {
+	text-decoration: none;
+	color: #FFF;
+	height: 41px;
+	width: 190px;
+	text-align: center;
+	background-image: url(/clients/Charros/Images/button-1.png);
+	text-transform: uppercase;
+	font-size: 14px;
+	padding-top: 20px;
+	position: relative;
+	display: block;
+	float: right;
+	margin-left: 20px;
+}
+.button-2 {
+	text-decoration: none;
+	color: #FFF;
+	height: 41px;
+	width: 190px;
+	text-align: center;
+	background-image: url(/clients/Charros/Images/button-2.png);
+	text-transform: uppercase;
+	font-size: 14px;
+	padding-top: 20px;
+	position: relative;
+	display: block;
+	float: right;
+}
+/* HOMEPAGE BUTTONS END */
+
+/* MORE BUTTONS */
+.inquire-button {
+	text-decoration: none;
+	color: #FFF;
+	height: 41px;
+	width: 285px;
+	text-align: center;
+	background-image: url(/clients/Charros/Images/inquire-button.png);
+	text-transform: uppercase;
+	font-size: 14px;
+	padding-top: 20px;
+	position: relative;
+	display: block;
+	float: left;
+	background-repeat: no-repeat;
+	margin-top: 40px;
+}
+/* SIDE BAR */
+.side {
+	list-style: none;
+	padding-left: 0;
+}
+.side li a {
+	text-decoration: none;
+	color: #999999;
+	font-size: 14px;
+	line-height: 30px;
+	background-image: url(/clients/Charros/Images/list-bg-1.png);
+	display:block;
+	clear: left;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	width: 80%;
+	text-indent: 35px;
+}
+.sidebar h4 {
+	margin-left: 35px;
+}
+
+.side li a:hover, .side li a:hover {
+	color: #CCC;
+}
+.side {
+	margin-top: 25px;
+}
+.sidebar {
+	padding-top: 15px;
+}
+
+/* FOOTER */
+
+.news img {
+	float: left;
+	clear: left;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+.news p {
+	color: #999999;
+}
+.item {
+	float: left;
+	width: 440px;
+}
+.footer_bg.white .news h5 a {
+	color:#666666;
+}
+.footer_bg.white .news h5 a:hover {
+	color:#000000;
+}
+.partners li a, .widget ul li a {
+	text-decoration: none;
+	color: #999999;
+	font-size: 14px;
+	line-height: 30px;
+	background-image: url(/clients/Charros/Images/list-bg-1.png);
+	display:block;
+	clear: left;
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	width: 100%;
+	text-indent: 5px;
+}
+.sidebar .widget ul li ul {
+padding-left: 0px;
+margin-top: 0;
+}
+li.recentcomments {
+	font-size: 10px;
+	text-transform: uppercase;
+	color:#646464;
+	margin-top: 7px;
+}
+li.recentcomments a {
+	display: block !important;
+	text-transform: none;
+}
+li.recentcomments a.url {
+	font-size: 10px;
+	text-transform: uppercase;
+	color:#646464;
+	margin-top: 7px;
+	display: inline !important;
+	background: none;
+}
+.partners li a:hover, .contact-info li a:hover, .widget ul li a:hover {
+	color: #CCC;
+}
+.partners, .contact-info, .widget ul {
+	margin-top: 25px;
+	list-style: none;
+	padding-left:0;
+}
+.sidebar .widget ul {
+	margin-top: 25px;
+	list-style: none;
+	padding-left: 30px;
+}
+.contact-info li a {
+	text-decoration: none;
+	color: #999999;
+	font-size: 14px;
+	line-height: 30px;
+	float: left;
+	clear: left;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	width: 80%;
+	text-indent: 50px;
+	margin-bottom: 15px;
+}
+.contact-info .phone a {
+	background-image: url(/clients/Charros/Images/icons/phone.png);
+	background-position: left;
+	padding-left: 40px;
+}
+.contact-info .email a {
+	background-image: url(/clients/Charros/Images/icons/email.png);
+	background-position: left;
+	padding-left: 40px;
+}
+.contact-info .www a {
+	background-image: url(/clients/Charros/Images/icons/www.png);
+	background-position: left;
+	color: #40a9e0;
+	padding-left: 40px;
+}
+.copyright {
+	height: 47px;
+	width: 927px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(/clients/Charros/Images/shadow-footer-bg.png);
+	background-repeat: no-repeat;
+	margin-top: 20px;
+}
+.copyright p {
+	text-align: center;
+	font-size: 10px;
+	color: #6f6f6f;
+	padding-top: 30px;
+}
+
+.footer_bg	{
+	width:100%;
+	overflow:hidden;
+	padding:30px 0;
+	background-color: #000;
+	background-image: url(/clients/Charros/Images/footer_bg.png);
+	background-position: center top;
+	background-repeat: repeat-x;
+}
+	
+	
+/* WHITE FOOTER : To switch to white footer add 'white' to the footer_bg div class*/	
+.footer_bg.white {background-image: url(/clients/Charros/Images/footer_bg_white.png);background-position: top;}
+.footer_bg.white h4 {color: #000;}
+.footer_bg.white h5 {color: #333;}
+.footer_bg.white p {color: #666;}
+.footer_bg.white .contact-info .phone a {background-image: url(/clients/Charros/Images/icons/phone_black.png);}
+.footer_bg.white .contact-info .email a {background-image: url(/clients/Charros/Images/icons/email_black.png);}
+.footer_bg.white .contact-info .www a {background-image: url(/clients/Charros/Images/icons/www_black.png);}
+.footer_bg.white .partners li a, .footer_bg.white .widget ul li a {color: #666;background-image: url(/clients/Charros/Images/list-bg-1_white.png);}
+.contact-info li a {color: #666;}
+.footer_bg.white .partners li a:hover, .footer_bg.white .widget ul li a:hover {color: #000;}
+.footer_bg.white .copyright p {	color: #666;}
+/* FOOTER END */
+
+
+/* MAIN NAVIGATION */
+.navigation {
+	background-image: url(/clients/Charros/Images/navigation-bg.png);
+	background-repeat: repeat-x;
+	height: 28px;
+	background-position: top;
+	width: auto;
+	position: relative;
+	float: right;
+	padding-top: 6px;
+	right: -5px;
+}
+
+.navigation ul {
+	display: inline;
+}
+.navigation ul li {
+	display: inline;
+
+
+}
+.navigation ul li a {
+	text-decoration: none;
+	color: #dbdbdb;
+	width: auto;
+	padding-right: 25px;
+	padding-left: 25px;
+	font-size: 11px;
+	text-transform: uppercase;
+	display: block;
+	float: left;
+	padding-top: 9px;
+	padding-bottom: 5px;
+	letter-spacing: 0.1em;
+}
+.nav-right-corner {
+	height: 34px;
+	width: 15px;
+	background-image: url(/clients/Charros/Images/nav-right-corner-bg.png);
+	float: right;
+	right: -5px;
+	position: relative;
+}
+.nav-left-corner {
+	height: 34px;
+	width: 69px;
+	background-image: url(/clients/Charros/Images/nav-left-corner-bg.png);
+	float: right;
+	right: -5px;
+	position: relative;
+}
+
+.navigation-wrap {
+	float: right;
+	position: relative;
+	width: 960px;
+	background-repeat: repeat-x;
+	background-position: bottom;
+	z-index: 999;
+}
+
+.sf-menu, .sf-menu * {
+	margin:			0;
+	padding:		0;
+	list-style:		none;
+}
+.sf-menu {
+	line-height:	1.0;
+	position:relative;
+	z-index:50;
+}
+.sf-menu ul {
+	position:		absolute;
+	top:			-999em;
+	width:			185px; /* left offset of submenus need to match (see below) */
+	z-index:100;
+}
+.sf-menu ul li {
+	width:			100%;
+}
+.sf-menu li:hover {
+	visibility:		inherit; /* fixes IE7 'sticky bug' */
+}
+.sf-menu li {
+	float:			left;
+	position:		relative;
+}
+.sf-menu a {
+	display:		block;
+	position:		relative;
+		
+
+}
+.sf-menu li:hover ul, .sf-menu li.sfHover ul {
+	left:			0;
+	top:2em; /* match top ul list item height */
+}
+ul.sf-menu li:hover li ul, ul.sf-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li:hover ul, ul.sf-menu li li.sfHover ul {
+	left:			185px; /* match ul width */
+	top:			0;
+}
+ul.sf-menu li li:hover li ul, ul.sf-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li li:hover ul, ul.sf-menu li li li.sfHover ul {
+	left:			185px; /* match ul width */
+	bottom: 10em;
+	top:			0;
+}
+.sf-menu {
+	float:right;
+	margin-bottom:	0;
+	z-index: 50;
+	position:relative;
+	right:-5px;
+	background-image: url(/clients/Charros/Images/navigation-bg.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	height:34px
+}
+.sf-menu a {
+	text-decoration:none;
+}
+.sf-menu a, .sf-menu a:visited { /* visited pseudo selector so IE6 applies text colour*/
+	text-decoration: none;
+	color: #dbdbdb;
+	width: auto;
+	padding-right: 25px;
+	padding-left: 25px;
+	font-size: 10px;
+	text-transform: uppercase;
+	display: block;
+	float: left;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	letter-spacing: 0.1em;
+}
+.sf-menu li {
+
+}
+.sf-menu li ul {
+	padding:1px;
+	padding-bottom:15px;
+	background-color: #1b1b1b;
+	background-image: url(/clients/Charros/Images/sub-nav-bg.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	border: 1px solid #4e4e4e;
+
+}
+.sf-menu li li {
+	padding-bottom: 5px;
+	padding-top: 0px;
+	height:25px;
+	background-image: url(/clients/Charros/Images/sub-nav-li-ul-bg.png);
+	background-repeat: no-repeat;
+	background-position: center 8px;
+}
+.sf-menu li:hover, .sf-menu li.sfHover, .sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active {
+	color:#fff;
+	outline:		0;
+}
+.sf-menu li li:hover, .sf-menu li li.sfHover, .sf-menu li li a:focus, .sf-menu li li a:hover, .sf-menu li li a:active {
+	color:#fff;
+	outline:		0;
+}
+/* Active Page Status CSS for all the browsers*/	
+.sf-menu li.current-cat a, .sf-menu li.current_page_item a {
+	color:#dbdbdb;
+}
+.sf-menu li.current-cat a:visited, .sf-menu li.current_page_item a:visited {
+	color:#C4C4C4;
+}
+.sf-menu .current_page_item a {
+	background-image: url(/clients/Charros/Images/active-glow.jpg);
+	background-repeat: no-repeat;
+	background-position: center 5px;
+	font-weight: bold;
+	color: #FFF;
+}
+.sf-menu ul li .current_page_item a {
+	background-image: none;
+}
+.sf-menu .current_page_ancestor a {
+	background-image: url(/clients/Charros/Images/active-glow.jpg);
+	background-repeat: no-repeat;
+	background-position: center 5px;
+	font-weight: bold;
+}
+.sf-menu .current_page_ancestor a:hover {
+	color:#DBDBDB;
+}
+.sf-menu li.current_page_ancestor ul li a {
+	background-image: none;
+	font-weight: normal;
+}
+.sf-menu  li.current_page_item ul li a {
+	background-image: none;
+
+}
+.sf-menu  li.current_page_item ul li a:hover {
+	background-image: none;
+	color:#FFF
+
+}
+/* MAIN NAVIGATION END */
+
+
+/* SLIDER */
+
+.slider-frame {
+	background-image: url(/clients/Charros/Images/slider-frame.png);
+	height: 354px;
+	background-repeat: no-repeat;
+	background-position: top;
+	width: 960px;
+	left: -5px;
+	position: relative;
+	padding-right: 5px;
+	padding-left: 5px;
+	overflow: visible;
+	margin-bottom: 25px;
+}
+
+.slider-frame img {
+	border:0;
+}
+
+	#slider ul, #slider li,  #slider li { /* defines width and height of  each slide*/
+	width:960px;
+	height:348px;
+	overflow:hidden;
+}
+/* numeric controls */	
+
+	ol#controls {
+	margin:1em 0;
+	padding:0;
+	float: right;
+	
+
+}
+ol#controls li {
+	margin:0 10px 0 0;
+	padding:0;
+	float:left;
+	list-style:none;
+
+	
+}
+ol#controls li a {
+	float:right;
+	color:#666;
+	padding:0 10px;
+	text-decoration:none;
+			
+}
+ol#controls li.current a {
+	color:#999;
+	font-weight:bold;
+}
+
+/* END SLIDER */
+
+/* 3d header */
+#piecemakercontainer {
+	width:1200px;
+	outline:0;
+	margin-left: -120px;
+}
+.piecemakerframe {
+	background-image: url(/clients/Charros/Images/cub3r-frame-shadow.png);
+	height: 430px;
+	background-repeat: no-repeat;
+	background-position: top;
+	width: 960px;
+	left: -5px;
+	position: relative;
+	padding-right: 5px;
+	padding-left: 5px;
+	overflow: visible;
+	z-index: 1;
+}
+/* END CU3ER */
+h2 .tag {
+	position: relative;
+	z-index: -3;
+}
+.grey {
+	color: #999;
+}
+
+
+/* CONTACT FORM */
+
+#CommentForm fieldset legend	{ display: none; }
+#CommentForm fieldset { border: none; padding: 0; margin: 0; }
+#CommentForm div 				{
+	margin-bottom: 10px;
+}		
+#CommentForm .textInput			{
+	width: 196px;
+	margin: 0;
+	height: 38px;
+	background-image: url(/clients/Charros/Images/input_bg.png);
+	background-repeat: no-repeat;
+	border: 0;
+	padding-right: 10px;
+	padding-left: 10px;
+	color: #969696;
+}	
+#CommentForm .submit {
+	border: 0;
+	float: right;
+	background-color: #323232;
+	color: #CCC;
+	padding: 3px;
+	height: 31px;
+	width: 95px;
+	background-image: url(/clients/Charros/Images/submit_bg.png);
+	background-repeat: no-repeat;
+	text-align: center;
+}
+#CommentForm .submit:hover {
+	background-image: url(/clients/Charros/Images/submit_bg_hov.png);
+	color: #FFF;
+	cursor: pointer;
+}
+
+#CommentForm textarea {
+	width: 196px;
+	margin: 0;
+	height: 86px;
+	background-image: url(/clients/Charros/Images/textarea_bg.png);
+	background-repeat: no-repeat;
+	border: 0;
+	padding-right: 10px;
+	padding-left: 10px;
+	color: #969696;
+	overflow: visible;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	overflow:hidden;
+}	
+
+.portfolio .thumb {
+	height: 120px;
+	width: 296px;
+	padding-top: 6px;
+	padding-left: 4px;
+	background-image: url(/clients/Charros/Images/portfolio_thumb.png);
+	background-repeat: no-repeat;
+	margin-bottom: 20px;
+	-ms-interpolation-mode: bicubic; 
+
+}
+.portfolio .thumb img:hover {
+	position:relative;
+	z-index:1;
+	background-image: url(/clients/Charros/Images/portfolio-hov-bg.png);
+	padding:11px
+}
+
+.portfolio .thumb.acc-overlay-image img, .portfolio .thumb.acc-overlay-video img {
+	z-index:1;
+	padding:0;
+	background-image: none;
+}
+
+.portfolio .thumb.acc-overlay-image a {
+	z-index:1;
+	padding:0;
+	display: block;
+	background-image: url(/clients/Charros/Images/acc-overlay-image.png);
+	background-repeat: no-repeat;
+}
+
+.portfolio .thumb.acc-overlay-video a {
+	z-index:1;
+	padding:0;
+	display: block;
+	background-image: url(/clients/Charros/Images/acc-overlay-video.png);
+	background-repeat: no-repeat;
+}
+
+.portfolio-sections {
+	height: 50px;
+	padding-top: 80px;
+	background-image: url(/clients/Charros/Images/shadow-divider-1.png);
+	background-position: top;
+	background-repeat: no-repeat;
+}
+.portfolio-sections a {
+	float: left;
+	margin-left: 45px;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: -0.05em;
+}
+
+.pagination-sections {
+	height: 50px;
+}
+.pagination-sections a {
+	float: left;
+	margin-left: 45px;
+	color: #333;
+	text-transform: uppercase;
+	font-size: 14px;
+	letter-spacing: -0.05em;
+	line-height: 50px;
+}
+
+.pagination-sections a:hover {
+	color: #FFF;
+}
+
+.portfolio-sections span {
+	font-size: 14px;
+	color: #FFF;
+	text-transform: uppercase;
+	float: left;
+
+
+}
+.portfolio-sections .current {
+	color: #7D7D7D;
+}
+.portfolio-sections a:hover {
+	color: #999;
+}
+.portfolio h4 {
+	font-weight: normal;
+	font-size: 14px;
+	text-transform: none;
+}
+.portfolio p {
+	font-size: 10px;
+	margin-top: -15px;
+	margin-bottom:20px;
+	color: #999;	
+}
+
+
+/*--Main Container--*/
+.main_view {
+	float: left;
+	position: relative;
+}
+/*--Window/Masking Styles--*/
+.window {
+	height:348px;
+	width: 960px;
+	overflow: hidden; /*--Hides anything outside of the set width/height--*/
+	position: relative;
+	margin-bottom: 25px;
+}
+.image_reel {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 348px;
+	overflow: hidden;
+}
+.image_reel img {float: left;}
+
+/*--Paging Styles--*/
+.paging {
+	position: absolute;
+	bottom: 40px;
+	right: -7px;
+	width: 178px;
+	height:47px;
+	z-index: 999; /*--Assures the paging stays on the top layer--*/
+	text-align: center;
+	line-height: 40px;
+	background: url(/clients/Charros/Images/paging_bg2.png) no-repeat;
+	display: none; /*--Hidden by default, will be later shown with jQuery--*/
+}
+.paging a {
+	padding: 5px;
+	text-decoration: none;
+	color: #fff;
+}
+.paging a.active {
+	font-weight: bold;
+	border: 1px solid #666;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background-color: #000;
+}
+.paging a:hover {font-weight: bold;}
+
+.widget {
+	padding-right: 35px;
+	margin-bottom: 40px;
+}
+
+.blogsidebar .widget {
+	padding-left: 35px;
+	margin-bottom: 40px;
+}
+
+.no-margin {
+	margin:0;
+}
+
+.business-details-widget {
+	padding: 0;
+}
+
+.widgettitle {
+	margin-top: 0;
+}
+
+/** BLOG STYLING **/
+
+.blogpost {
+	overflow: hidden;
+	font-size: 12px;
+	line-height: 18px;
+	color: #eeeeee;
+	margin-bottom: 20px;	
+}
+
+.postimage {
+	width: 214px;
+	height: 214px;
+	float:left;
+	padding:7px;
+	background-image: url(/clients/Charros/Images/post-image-bg.png);
+	background-repeat: no-repeat;
+}
+
+.postshadow {
+	margin-top:30px;
+	margin-bottom:10px;
+}
+
+.postmeta {
+	font-size: 10px;
+	text-transform: uppercase;
+	color:#646464;
+	margin-top: 7px;
+}
+.redy .postmeta { color:#999; }
+
+.posttitle a {
+	color:#eeeeee;
+}
+
+.postcomments {
+	font-size: 10px;
+	text-transform: uppercase;
+	color:#40a9e0;
+	float:right;
+	width: 150px;
+	text-align: right;
+}
+
+.comments-icon {
+	margin-top:5px;
+	margin-right: 5px;
+}
+
+.more-link {
+	display: block;
+	margin-top: 20px;
+}
+
+.pagination {
+	margin-top:0;
+	float:right
+}
+
+.pagination li {
+	display: inline;
+	list-style: none;
+	margin-left: 3px;
+}
+
+.pagination li a {
+	font-size: 11px;
+	background:#2c2c2c;
+	border:1px solid #4f4f4f;
+	color:#cbcbcb;
+	padding:3px;
+}
+
+.pagination li span {
+	font-size: 11px;
+	background:#2c2c2c;
+	border:1px solid #4f4f4f;
+	color:#6e6e6e;
+	padding:3px;
+}
+
+.author-meta-single, .author-meta-comment {
+	float:right;
+	font-size: 10px;
+	text-transform: uppercase;
+	color:#646464;
+	margin-top: 7px;
+}
+
+.redy .author-meta-single, .author-meta-comment { color:#999; }
+
+/** COMMENT STYLING **/
+
+#comments {
+	margin-bottom: 25px;
+}
+
+#comment_list {
+	list-style:none;
+	margin:0 0 25px;
+	overflow:hidden;
+	padding:0;
+}
+
+#comment_list li {
+	width:590px;
+	clear:both;
+	overflow:hidden;
+	margin-bottom: 20px;
+}
+
+#comment_list li ul.children {
+	list-style:none;
+	padding:0;
+}
+
+#comment_list li ul.children li {
+	list-style:none;
+	width:445px;
+	margin-left:109px;
+	overflow:hidden;
+	padding:15px;
+	line-height:24px;	
+	margin-bottom:20px;
+}
+
+#comment_list li ul.children li:last-child {
+	margin-bottom:0px;
+}
+
+#comment_list li ul.children li .avatar {
+	float:right;
+	margin:0 0 10px 10px;
+}
+
+
+#comment_list li .comment_left {
+	float:left;
+	width:80px;
+	margin-right:15px;
+}
+
+#comment_list li .comment_left p {
+	text-align: center;
+	margin: 0;
+}
+
+#comment_list li .comment_left img.avatar {
+	margin-bottom:10px;
+}
+
+#comment_list li .comment_content {
+	margin-bottom:10px;
+}
+
+#comment_list li .comment_content p {
+	margin-top:0;
+}
+
+#comment_list li .comment_content img {
+	border:0;
+	padding:0;
+}
+
+#comment_list li .comment_right {
+	float:left;
+	width:460px;
+	margin-bottom:20px;
+	line-height:24px;
+}
+
+#comment_list li .comment_meta {
+	overflow:hidden;
+	margin-top:-15px;
+	clear:both;
+}
+
+#comment_list li .comment_right .name, #comment_list li ul.children li .name {
+	float:left;
+	width:245px;
+}
+
+#comment_list li .comment_right .date, #comment_list li ul.children li .date {
+	float:right;
+	width:200px;
+	text-align:right;
+}
+
+.reply {
+	margin-left:109px;
+}
+
+#leave_comment p {
+	margin-bottom:20px;
+}
+
+.comment-reply-link {
+	font-size: 10px;
+	text-transform: uppercase;
+	color:#40a9e0;
+	text-align: center;
+}
+
+.author-meta-comment {
+	float: none;
+	margin-top: 0;
+}
+
+#comment {
+	width:500px;
+	height:150px;
+	background:#2c2c2c;
+	color:#cbcbcb;
+	border:1px solid #4f4f4f;
+}
+
+#author, #email, #url {
+	padding-left: 5px;
+	width:230px;
+	height:30px;
+	background:#2c2c2c;
+	color:#cbcbcb;
+	border:1px solid #4f4f4f;
+	margin-right: 15px;
+}
+
+
+
+h5 a {
+	color:#eeeeee;
+}
+

@@ -1,0 +1,114 @@
+<%
+'changelog'
+'LSP 09/29/16 - initial development'
+%>
+<!DOCTYPE html>
+<html lang="en">
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+<head>
+
+<title>cancun challenge</title>
+
+
+		<!-- bootstrap-->
+	<link rel="stylesheet" href="/clients/cancunchallenge/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/clients/cancunchallenge/assets/css/bootstrap-theme.min.css">
+	<!--font awesome-->
+	<link rel="stylesheet" href="/clients/cancunchallenge/assets/css/font-awesome.css">
+		<link rel="stylesheet" href="/clients/cancunchallenge/assets/css/font-awesome.min.css">
+
+	<!--custom css-->
+	<link rel="stylesheet" href="/clients/cancunchallenge/assets/style.css">
+</head>
+
+<body>
+	<header class="header">
+<div class="container">
+	<div class="row">
+		<div class=" col-md-12">
+			<img src="/clients/cancunchallenge/assets/images/logo.png" class="img-responsive"><br>
+			<img  class="img-responsive" src="/clients/cancunchallenge/assets/images/nav.png" border="0"  USEMAP="#NotNamed"/>
+
+<map name="NotNamed">
+  <area shape="rect" coords="8,5,91,50" href="http://www.cancunchallenge.net/"  alt="" title="">
+  <area shape="rect" coords="94,7,193,48" href="http://www.cancunchallenge.net/2016-mens-field.html"  alt="" title="">
+  <area shape="rect" coords="202,12,334,49" href="http://www.cancunchallenge.net/2016-womens-field.html"  alt="" title="">
+  <area shape="rect" coords="347,8,521,52" href="http://www.cancunchallenge.net/packages.html"  alt="" title="">
+  <area shape="rect" coords="535,10,652,53" href="http://www.cancunchallenge.net/tickets.html"  alt="" title="">
+  <area shape="rect" coords="651,4,760,52" href="http://cancunchallenge.weebly.com/archived-news.html"  alt="" title="">
+  <area shape="rect" coords="771,8,893,47" href="http://cancunchallenge.weebly.com/about-us.html"  alt="" title="">
+</map>
+		</div>
+	</div>
+</div>
+
+
+	</header>
+
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 content">
+<!--tix content-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+			</div>
+		</div>
+	</div>
+</section>
+<footer class="footer">
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<img src="/clients/cancunchallenge/assets/images/tcs.png" class="img-responsive center-block">
+			Copyright &#169; Cancun Challenge
+		</div>
+	</div>
+</div>
+</footer>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="/clients/cancunchallenge/assets/js/bootstrap.min.js"></script>
+
+
+
+
+		<script>
+			$(document).ready(function() {
+				$("#MasterContent_TixInnerContent_pnlButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_ButtonPanel").removeAttr("style");
+/* remove extra button defaults
+				$("#MasterContent_TixInnerContent_ctl00_gvSchedule_btnBuyTix_0").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnBackToShopping").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCancelOrder").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCheckout").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_LoginButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CancelOrderButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CompleteButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingBtn").removeAttr("style");*/
+				
+				
+			});
+		</script>
+
+		</div>
+		</form>
+	</body>
+
+	</html>

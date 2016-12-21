@@ -1,0 +1,193 @@
+﻿/* _________________________________________________
+
+Ball State Design - Animated Billboard Presentation
+_____________________________________________________
+
+1.EASYSLIDER
+
+EASYSLIDER
+*/
+#slider  
+{
+    width: 100%;
+    margin: 0 26px;
+    height: 253px;
+    border-left: 1px solid #FFF;
+    border-right: 1px solid #FFF;
+}
+
+.billboard.two-column-banner.animated #slider, .billboard.two-column-banner.random-animated #slider
+{
+    height: auto;
+    /* max-height: 253px; */
+    margin-left: 0;
+}
+
+.billboard.single-column-banner.animated #slider, .billboard.single-column-banner.random-animated #slider 
+{
+    width: 664px;
+    height: auto;
+    margin-left: 0;
+}
+	
+#slider ul, #slider li
+/* #slider2 ul, #slider2 li */{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+       
+/* #slider2{ margin-top:1em; } */
+#slider li, #slider2 li{ 
+	/* 
+		define width and height of list item (slide)
+		entire slider area will adjust according to the parameters provided here
+	*/ 
+	width: 940px;
+	height: 253px;
+	overflow:hidden; 
+}	
+
+.billboard.two-column-banner.animated #slider li, .billboard.two-column-banner.random-animated #slider li, 
+.billboard.two-column-banner.animated #slider2 li, .billboard.two-column-banner.random-animated #slider2 li
+{
+    height: auto;
+}
+
+.billboard.single-column-banner.animated #slider li, .billboard.single-column-banner.random-animated #slider li, 
+.billboard.single-column-banner.animated #slider2 li, .billboard.single-column-banner.random-animated #slider2 li
+{
+    width: 664px;
+    height: auto;
+}
+		
+#prevBtn, #nextBtn,
+#slider1next, #slider1prev{ 
+	display:block;
+	width:26px;
+	height:253px;
+	position:absolute;
+	left: 0;
+	top: 0;
+	z-index:1000;
+		
+}	
+
+/* Internal Billboard Settings */
+.billboard.two-column-banner.animated #prevBtn, .billboard.two-column-banner.random-animated #prevBtn, 
+.billboard.two-column-banner.animated #nextBtn, .billboard.two-column-banner.random-animated #nextBtn,
+.billboard.two-column-banner.animated #slider1next, .billboard.two-column-banner.random-animated #slider1next, 
+.billboard.two-column-banner.animated #slider1prev, .billboard.two-column-banner.random-animated #slider1prev, 
+.billboard.single-column-banner.animated #prevBtn, .billboard.single-column-banner.random-animated #prevBtn, 
+.billboard.single-column-banner.animated #nextBtn, .billboard.single-column-banner.random-animated #nextBtn,
+.billboard.single-column-banner.animated #slider1next, .billboard.single-column-banner.random-animated #slider1next, 
+.billboard.single-column-banner.animated #slider1prev, .billboard.single-column-banner.random-animated #slider1prev
+{
+    width: 58px;
+    /* left: 27px; */
+    height: 100%;
+}
+
+#nextBtn, #slider1next
+{
+	left: auto;
+	right: 0;
+}	
+
+.billboard.two-column-banner.animated #nextBtn, .billboard.two-column-banner.animated #slider1next 
+{
+    left: auto;
+    /* right: 27px; */
+}
+
+/* Single column billbaord needs to be treated a little differently */
+.billboard.single-column-banner.animated #nextBtn, .billboard.single-column-banner.animated #slider1next
+{
+	left: auto;
+	/* right: -27px; */
+}		
+
+/* Home Billboard Left Arrow Image */													
+#prevBtn a, #nextBtn a,
+#slider1next a, #slider1prev a{  
+	display:block;
+	position:relative;
+	width:26px;
+	height:100%;
+	background:url(/Components/Design/Images/AnimatedBillboard/left/s01.gif) no-repeat 0 50%;	
+}	
+
+/* Internal Billboard Left Arrow Image */
+.billboard.two-column-banner.animated #prevBtn a, .billboard.two-column-banner.animated #nextBtn a,
+.billboard.two-column-banner.animated #slider1next a, .billboard.two-column-banner.animated #slider1prev a,
+.billboard.single-column-banner.animated #prevBtn a, .billboard.single-column-banner.animated #nextBtn a,
+.billboard.single-column-banner.animated #slider1next a, .billboard.single-column-banner.animated #slider1prev a 
+{
+    width: 58px;
+    background:url(/Components/Design/Images/AnimatedBillboard/left/leftarrow.png) no-repeat 0 50%;	
+}
+
+.billboard.two-column-banner.animated #prevBtn a, .billboard.two-column-banner.random-animated #prevBtn a, 
+.billboard.two-column-banner.animated #nextBtn a, .billboard.two-column-banner.random-animated #nextBtn a,
+.billboard.two-column-banner.animated #slider1next a, .billboard.two-column-banner.random-animated #slider1next a, 
+.billboard.two-column-banner.animated #slider1prev a, .billboard.two-column-banner.random-animated #slider1prev a
+{
+    height: 100%;
+}
+
+/* Home Billboard Left Arrow Hover Image */
+#prevBtn a:hover, #nextBtn a:hover,
+#slider1next a:hover, #slider1prev a:hover{  
+	display:block;
+	position:relative;
+	width:26px;
+	height:100%;
+	background:url(/Components/Design/Images/AnimatedBillboard/left/s02.gif) no-repeat 0 50%;	
+}	
+
+/* Internal Billboard Left Arrow Hover Image */
+.billboard.two-column-banner.animated #prevBtn a:hover, .billboard.two-column-banner.animated #nextBtn a:hover,
+.billboard.two-column-banner.animated #slider1next a:hover, .billboard.two-column-banner.animated #slider1prev a:hover,
+.billboard.single-column-banner.animated #prevBtn a:hover, .billboard.single-column-banner.animated #nextBtn a:hover,
+.billboard.single-column-banner.animated #slider1next a:hover, .billboard.single-column-banner.animated #slider1prev a:hover 
+{
+    width: 58px;
+    background:url(/Components/Design/Images/AnimatedBillboard/left/leftarrowred.png) no-repeat 0 50%;	
+}
+
+.billboard.two-column-banner.animated #prevBtn a:hover, .billboard.two-column-banner.random-animated #prevBtn a:hover, 
+.billboard.two-column-banner.animated #nextBtn a:hover, .billboard.two-column-banner.random-animated #nextBtn a:hover,
+.billboard.two-column-banner.animated #slider1next a:hover, .billboard.two-column-banner.random-animated #slider1next a:hover, 
+.billboard.two-column-banner.animated #slider1prev a:hover, .billboard.two-column-banner.random-animated #slider1prev a:hover
+{
+    height: 100%;
+}
+
+/* Home Billboard Right Arrow Image */
+#nextBtn a, #slider1next a{ 
+	background:url(/Components/Design/Images/AnimatedBillboard/right/s01.gif) no-repeat 0 50%;	
+}	
+
+/* Internal Billboard Right Arrow Image */
+.billboard.two-column-banner.animated #nextBtn a, .billboard.two-column-banner.animated #slider1next a,
+.billboard.single-column-banner.animated #nextBtn a, .billboard.single-column-banner.animated #slider1next a
+{
+    background: url(/Components/Design/Images/AnimatedBillboard/right/rightarrow.png) no-repeat 0 50%;	
+}
+
+/* Home Billboard Right Arrow Hover Image */	
+#nextBtn a:hover, #slider1next a:hover{ 
+	background:url(/Components/Design/Images/AnimatedBillboard/right/s02.gif) no-repeat 0 50%;	
+}	
+
+/* Internal Billboard Right Arrow Hover Image */
+.billboard.two-column-banner.animated #nextBtn a:hover, .billboard.two-column-banner.animated #slider1next a:hover,
+.billboard.single-column-banner.animated #nextBtn a:hover, .billboard.single-column-banner.animated #slider1next a:hover
+{
+    background: url(/Components/Design/Images/AnimatedBillboard/right/rightarrowred.png) no-repeat 0 50%;	
+}
+
+/*960px __________________________________________________________________________________________________________ */
+/* @media only screen and (max-width: 960px) { */
+    body {}
+/* } */

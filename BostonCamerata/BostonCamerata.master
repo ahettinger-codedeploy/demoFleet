@@ -1,0 +1,511 @@
+<%
+'CHANGELOG
+'LSP 02/08/13 - initial development
+%>
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY BGCOLOR=#FFFFFF LINK=#333383 ALINK=#008400 VLINK=#333383 leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <link href="/clients/BostonCamerata/Images/normalizer.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/clients/BostonCamerata/Images/bc-style-programs.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/clients/BostonCamerata/Images/uvumi-dropdown.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/clients/BostonCamerata/Images/uvumi-scrollbar.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/clients/BostonCamerata/Images/leftlinktxt.css" media="screen" rel="stylesheet" type="text/css">
+  <!--[if IE 6]>
+	<link rel="stylesheet" type="text/css" href="ie6.css" />
+<![endif]-->
+  <script src="/clients/BostonCamerata/Images/mootools-for-dropdown.js" type="text/javascript">
+  </script>
+  <script src="/clients/BostonCamerata/Images/UvumiDropdown-compressed.js" type="text/javascript">
+  </script>
+  <!--<script type="text/javascript" src="mootools-for-scrollbar.js"> </script>
+    var scroller = new UvumiScrollbar("scrollbar-demo");
+<script type="text/javascript" src="UvumiScrollbar-compressed.js"> </script>-->
+  <script type="text/javascript">
+   <!--Uvumi Dropdown-->
+	var myMenu = new UvumiDropdown("dropdown-menu");
+
+    function toggleDiv(divID)
+    {
+    	var ele = document.getElementById(divID);
+    	if (ele.style.display == "none" )
+    		ele.style.display = "block";
+    	else
+    		ele.style.display = "none";
+    }
+  </script>
+  <style type="text/css">
+   <!--	
+		#annc { 
+			width: 90%; 
+			padding: 10px; margin: 10px; 
+			font-family: serif;
+			color: #ebdbbd;
+			font-size: 14pt;
+			background:  #870E21; 
+		/*	display:	block;	/* turn on announcement here */
+			display:	none;	/* turn off announcement here */
+			position:	absolute;
+			left:		25px;
+			top:		225px;
+			z-index:	11; 
+			border: 3px solid #ebdbbd;
+			text-align:center;
+ 		}
+ 		#annc a, p {
+			font-size: inherit;
+ 		}
+		-->
+  </style>
+  <style type="text/css">
+   <!--
+#wrapper #content #main .block #scrollbar-demo .medievalheading {
+	margin-top:10px;
+}
+#wrapper #content #main .block #scrollbar-demo #synopsis {
+	width:550px;
+	height:150px;
+	border-top:1px solid #e6ddcc;
+	border-bottom:1px solid #e6ddcc;
+	margin-top:5px;
+}
+#wrapper #content #main .block #scrollbar-demo #synopsis #headingimg {
+	width:140px;
+	height:130px;
+	margin-top:10px;
+	float:left;
+}
+#wrapper #content #main .block #scrollbar-demo #synopsis #headingtext .header {
+	font-size:20px;
+}
+#wrapper #content #main .block #scrollbar-demo #synopsis #synopbuttons {
+	margin-top:10px;
+}
+#wrapper #content #main .block #scrollbar-demo #headlabel {
+	margin-top:35px;
+}
+#wrapper #content #main .block #scrollbar-demo .introsection a {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#e6ddcc;
+	text-decoration:underline;
+}
+#wrapper #content #main .block #scrollbar-demo .introsection a:hover {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#CCCCCC;
+	text-decoration:underline;
+}
+-->
+  </style>
+  <style type="text/css">
+   #scrollbar-demo { color: #e6ddcc; text-align: left; font-family: Verdana,Geneva,sans-serif; font-size: 12px; }
+		.event { clear: both; }
+		.month { font-size: 30px; font-weight: bold; clear: both; }
+		.date { float: left; width: 100px; font-size: 24px; font-weight: bold; font-family: Georgia,"Times New Roman",Times,serif; color: #FFCC66 }
+		.year { font-size: 28px; font-weight: bold; font-family: Georgia,"Times New Roman",Times,serif; color: #FFCC66 }
+		.description { float: right; width: 480px; margin: 5px 0px 10px 0px; }
+		.space {
+	clear: both;
+	margin-bottom: 10px;
+	font-size: 1px;
+	line-height: 0px;
+}
+		.eventimage { text-align: center; }
+		#scrollbar-demo a {
+		 font-family:Verdana, Arial, Helvetica, sans-serif;
+		 font-size:12px;
+		 color:#FFCC99;
+		 text-decoration:none;
+		}
+	
+.style1 {
+  float: right;
+  width: 480px;
+  margin: 5px 0px 10px 0px;
+  color: #E6DDCC;
+}
+		h1,h2 {
+			font-family: Georgia, "Times New Roman", Times, serif;
+			color: #FFCC66;
+			font-size: 14pt;
+			font-variant:small-caps;
+		}
+		h2 {
+			font-size: 18pt;
+			text-align: center;
+			color: #fff;
+		}
+  </style>
+  <!-- InstanceBeginEditable name="head" -->
+  <!-- InstanceEndEditable -->
+ </head>
+ <body>
+  <div id="wrapper">
+   <!-- open wrapper -->
+   <!-- HEADER -->
+   <div id="header">
+    <!-- open header -->
+    <div id="headerlogo">
+     <!-- open headerlogo -->
+     <a href="http://bostoncamerata.com/index.html">
+      <img src="/clients/BostonCamerata/Images/newlogo.png">
+     </a>
+    </div>
+    <!-- close headerlogo -->
+    <div id="headerpattern">
+     <!-- open headerpattern -->
+     <div id="headerglow">
+      <!-- open headerglow -->
+      <div id="mininav">
+       <!-- open mininav -->
+       <a class="urm" href="http://bostoncamerata.com/auditions.html">
+        <img src="/clients/BostonCamerata/Images/auditions.png" title="Now Auditioning">
+       </a>
+       <a class="urm" href="http://bostoncamerata.com/tickets.html">
+        <img alt="tickets" src="/clients/BostonCamerata/Images/tickets.gif" title="buy tickets">
+       </a>
+       &nbsp;&nbsp;
+       <a class="urm" href="http://bostoncamerata.com/individual.html#donors">
+        <span class="urm">
+         Donate
+        </span>
+       </a>
+       &nbsp;&nbsp;
+       <a class="urm" href="http://bostoncamerata.com/bcshop.html">
+        <span class="urm">
+         Shop
+        </span>
+       </a>
+       &nbsp;&nbsp;
+       <a class="urm" href="http://bostoncamerata.com/contact.php">
+        <span class="urm">
+         Contact
+        </span>
+       </a>
+       &nbsp;
+       <!-- BEGIN: Constant Contact Text Link Email List Button -->
+       <a href="http://bostoncamerata.com/emailUpdateSignup.html">
+        <img alt="Sign Up for Email Updates" src="/clients/BostonCamerata/Images/email5_trans.gif" style="margin-right:3px;margin-top:2px; background-color:#870E21;" title="Signup for Email Updates" border="0">
+        <span class="urm">
+         Updates
+        </span>
+       </a>
+       <!-- END: Constant Contact Text Link Email List Button -->
+      </div>
+      <!-- close mininav -->
+     </div>
+     <!-- close headerglow -->
+    </div>
+    <!-- close headerpattern -->
+   </div>
+   <!-- close header -->
+   <!-- CONTENT -->
+   <div id="content">
+    <!-- open content -->
+    <!-- NAV -->
+    <div id="navbox">
+     <!-- open navbox -->
+     <div id="navline">
+      <!-- open navline -->
+     </div>
+     <!-- close navline -->
+     <div id="navgradient">
+      <!-- open navgradient -->
+     </div>
+     <!-- close navgradient -->
+    </div>
+    <!-- close navbox -->
+    <!--MAIN-->
+    <div class="allprograms" id="main">
+     <!--open Main-->
+     <!-- NAVIGATION -->
+     <div id="navigation">
+      <!-- open navigation -->
+      <ul style="overflow: visible; height: auto; margin-left: -1px; visibility: visible;" class="dropdown" id="dropdown-menu">
+       <!--ABOUT button-->
+       <li style="position: relative; display: block; top: 0px; z-index: 1; float: left;" class="f submenu">
+        <a style="display: block;" class="ddm" href="http://bostoncamerata.com/about.html">
+         About
+        </a>
+        <ul style="display: block; visibility: hidden; opacity: 0; position: absolute; top: 20px; left: 0px; margin-left: 0px;">
+         <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: 0px; z-index: 1;" class="a">
+          <a style="display: block;" class="ddm" href="http://bostoncamerata.com/history.html">
+           History
+          </a>
+         </li>
+         <!--What Is-->
+         <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: -24px; z-index: 1;" class="a">
+          <a style="display: block;" class="ddm" href="http://bostoncamerata.com/directors.html">
+           Directors
+          </a>
+         </li>
+         <!--Directors-->
+         <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: -48px; z-index: 1;" class="a">
+          <a style="display: block;" class="ddm" href="http://bostoncamerata.com/musicians.html">
+           Musicians
+          </a>
+         </li>
+         <!--Musicians-->
+         <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: -72px; z-index: 1;" class="a">
+          <a style="display: block;" class="ddm" href="http://bostoncamerata.com/bcbios-admin.html">
+           Admin
+          </a>
+         </li>
+         <!--Admin & Board-->
+        </ul>
+       </li>
+       <!--close About-->
+       <!--PROGRAMS button-->
+       <li style="position: relative; display: block; top: 0px; z-index: 1; float: left;" class="f">
+        <a style="display: block;" class="ddm" href="http://bostoncamerata.com/bcprograms.html">
+         Programs
+        </a>
+       </li>
+       <!--LIVE Button-->
+       <li style="position: relative; display: block; top: 0px; z-index: 1; float: left;" class="f">
+        <a style="display: block;" class="ddm" href="http://bostoncamerata.com/live.html">
+         Live
+        </a>
+       </li>
+       <!--close Live-->
+       <!--NEWS Button-->
+       <li style="position: relative; display: block; top: 0px; z-index: 1; float: left;" class="f">
+        <a style="display: block;" class="ddm" href="http://bostoncamerata.com/blog/">
+         News
+        </a>
+       </li>
+       <!--SIGHTS & SOUNDS Button-->
+       <li style="position: relative; display: block; top: 0px; z-index: 1; float: left;" class="f">
+        <a style="display: block;" class="ddm" href="http://bostoncamerata.com/press.html">
+         Press
+        </a>
+       </li>
+       <li style="position: relative; display: block; top: 0px; z-index: 1; float: left;" class="f submenu">
+        <a style="display: block;" class="ddm" href="http://bostoncamerata.com/sights.html">
+         Media
+        </a>
+        <ul style="display: block; visibility: hidden; opacity: 0; position: absolute; top: 20px; left: 0px; margin-left: 0px;">
+         <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: 0px; z-index: 1;" class="c">
+          <a style="display: block;" class="ddm" href="http://bostoncamerata.com/video.html">
+           Video
+          </a>
+         </li>
+         <!--Video -->
+         <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: -30px; z-index: 1;" class="c">
+          <a style="display: block;" class="ddm" href="http://bostoncamerata.com/audio.html">
+           Audio
+          </a>
+         </li>
+         <!--Video -->
+         <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: -60px; z-index: 1;" class="c">
+          <a style="display: block;" class="ddm" href="http://bostoncamerata.com/camradio.html">
+           CamRadio
+          </a>
+         </li>
+         <!--Camerata Radio -->
+        </ul>
+       </li>
+       <!--close Sights & Sounds-->
+       <!--LEARN Button-->
+       <li style="position: relative; display: block; top: 0px; z-index: 1; float: left;" class="f submenu">
+        <a style="display: block;" class="ddm" href="http://bostoncamerata.com/learn.html">
+         Learn
+        </a>
+        <ul style="display: block; visibility: hidden; opacity: 0; position: absolute; top: 20px; left: 0px; margin-left: 0px;">
+         <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: 0px; z-index: 1;" class="d">
+          <a style="display: block;" class="ddm" href="http://bostoncamerata.com/residencies.html">
+           Residencies
+          </a>
+         </li>
+         <!--Residencies-->
+         <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: -30px; z-index: 1;" class="d">
+          <a style="display: block;" class="ddm" href="http://bostoncamerata.com/learnmat.html">
+           Learning Materials
+          </a>
+         </li>
+         <!--LearningMaterials-->
+        </ul>
+       </li>
+       <!--close Learn-->
+       <!--CONTRIBUTE Button-->
+       <li style="position: relative; display: block; top: 0px; z-index: 1; float: left;" class="f submenu">
+        <a style="display: block;" class="ddm" href="http://bostoncamerata.com/contribute.html">
+         Contribute
+        </a>
+        <ul style="display: block; visibility: hidden; opacity: 0; position: absolute; top: 20px; left: 0px; margin-left: 0px;">
+         <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: 0px; z-index: 1;" class="e">
+          <a style="display: block;" class="ddm" href="http://bostoncamerata.com/individual.html">
+           Individual
+          </a>
+         </li>
+         <!--Individual-->
+         <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: -30px; z-index: 1;" class="e">
+          <a style="display: block;" class="ddm" href="http://bostoncamerata.com/corp.html">
+           Corp
+          </a>
+         </li>
+         <!--Corp-->
+         <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: -60px; z-index: 1;" class="e">
+          <a style="display: block;" class="ddm" href="http://bostoncamerata.com/inkind.html">
+           In-Kind
+          </a>
+         </li>
+         <!--InKind-->
+         <li style="visibility: hidden; opacity: 0; position: relative; display: block; top: -90px; z-index: 1;" class="e">
+          <a style="display: block;" class="ddm" href="http://bostoncamerata.com/volunteer.html">
+           Volunteer
+          </a>
+         </li>
+         <!--Volunteer-->
+        </ul>
+       </li>
+       <!--close Contribute-->
+      <li style="clear: both; display: block; position: relative; top: 0px; height: 0px; width: 0px; font-size: 0px; line-height: 0px; margin: 0px; padding: 0px;">&nbsp;</li></ul>
+     </div>
+     <!-- close navigation -->
+     <div id="leftlinks">
+      <!--open leftlinks-->
+      <ul style="margin-bottom: 0">
+       <li>
+       </li>
+       <li>
+        <a href="http://bostoncamerata.com/touring.html" id="hideSections">
+         <img src="/clients/BostonCamerata/Images/touring.png">
+        </a>
+       </li>
+       <li>
+        <a href="http://bostoncamerata.com/bccalendarSeasons.htm">
+         <img src="/clients/BostonCamerata/Images/thebostonseries.png">
+        </a>
+       </li>
+       <li>
+        <a href="http://bostoncamerata.com/pastPerfs.html">
+         <img src="/clients/BostonCamerata/Images/pastPerfs.png">
+        </a>
+       </li>
+      </ul>
+      <div class="space">
+      </div>
+      <div id="lltext">
+       <center>
+        <br>
+       </center>
+      </div>
+     </div>
+     <!--close leftlinks-->
+     <div class="block">
+      <!--open Block-->
+      <div id="scrollbar-demo">
+	  <div style="background-color:#870E21;">
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+      </div>
+	  </div>
+      <!-- InstanceEndRepeat -->
+      <!-- END EDITING CALENDAR ____________________________________________________________________________________________________________________________________-->
+     </div>
+     <br>
+     <br>
+    </div>
+    <!--close scrollbar demo-->
+   </div>
+   <!--close Block-->
+   <div id="annc" style="display:none; z-index:99;">
+    <h1>
+     Star of Glory
+    </h1>
+    <p>
+     Our luminous 2012-2013 season will have, as its December 
+centerpiece, The Brotherhood of the Star, our beloved Christmas/Epiphany
+ production around Spanish music of the Old and New Worlds. We’ll also 
+be exploring, in our other season programs, illumination and 
+spirituality in North American and medieval European music, including 
+the American première of a beautiful production from The Boston 
+Camerata’s 2011 Reims, France residency. Your participation is 
+requested!
+Stay tuned for more program and ticket information
+at bostoncamerata.org.
+     <input onclick="toggleDiv('annc');" value="Close" type="button">
+    </p>
+   </div>
+  </div>
+  <!--close Main-->
+  <!-- close content -->
+  <br clear="all">
+  <!-- FOOTER -->
+  <div id="footer">
+   <div id="secondarynav">
+    <a href="http://bostoncamerata.com/index.html">
+     HOME
+    </a>
+    |
+    <a href="http://bostoncamerata.com/about.html">
+     ABOUT
+    </a>
+    |
+    <a href="http://bostoncamerata.com/bcprograms.html">
+     PROGRAMS
+    </a>
+    |
+    <a href="http://bostoncamerata.com/live.html">
+     LIVE
+    </a>
+    |
+    <a href="http://bostoncamerata.com/blog/">
+     NEWS
+    </a>
+    |
+    <a href="http://bostoncamerata.com/sights.html">
+     MEDIA
+    </a>
+    |
+    <a href="http://bostoncamerata.com/learn.html">
+     EDUCATION
+    </a>
+    |
+    <a href="http://bostoncamerata.com/contribute.html">
+     CONTRIBUTE
+    </a>
+    |
+    <a href="http://bostoncamerata.com/bcshop.html">
+     SHOP
+    </a>
+    |
+    <a href="http://bostoncamerata.com/press.html">
+     PRESS
+    </a>
+    |
+    <a href="http://bostoncamerata.com/contact.php">
+     CONTACT
+    </a>
+    |
+    <a href="http://bostoncamerata.com/individual.html#donors">
+     DONATE
+    </a>
+    |
+    <a href="http://bostoncamerata.com/tickets.html">
+     TICKETS
+    </a>
+   </div>
+   <div id="address">
+    <p style="margin-bottom: 0">
+     The Boston Camerata | P.O. Box 120751, Boston, MA 02112 | 617.262.2092 | All Rights Reserved 2013 The Boston Camerata
+    </p>
+   </div>
+  </div>
+  <!-- close wrapper -->
+ 
+ 
+
+</div>
+</form>
+</body>
+</html>

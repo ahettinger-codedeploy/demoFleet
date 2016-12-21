@@ -1,0 +1,372 @@
+/* general classes */
+.nospam{display:none;}
+.spacermap{padding:2px;}
+.alert{font:11px verdana;color:#ff9900;font-weight:bold;}
+.buttons{border:#cccccc 1px solid;padding:2px;cursor:hand;cursor:pointer;}
+
+/* this is an IE8 menu hover fix */
+#nav_menus a:hover,#ql_menu a:hover{position:relative;}
+
+/* frontend ui view */
+
+#groupContainer .inactive{opacity:0.5;-moz-opacity:0.5;filter:alpha(opacity=50); cursor:default;}
+
+.mainGroupTitle{font-weight:bold;padding:.5em 0;position:relative;font-size:1.09em;
+/*	text-shadow:1px 1px 0 #eee;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;background-color:#e6e6e6;*/
+	}
+.mainGroupTitleControls{ display:inline; margin-left:0.5em; padding-left:0.5em; border-left:1px dotted #666; font-size:0.83em; }
+.groupOptions{ padding:.5em 0; position:relative; min-height:2em;}
+.groupOptions a{ text-decoration:none; }
+.groupOptions a:hover{ text-decoration:underline; }
+.mainGroup .weak{ color:#666; }
+.mainGroup .inactive{opacity:0.5;-moz-opacity:0.5;filter:alpha(opacity=50); cursor:default;}
+.mainGroup table{ border-collapse:collapse; width:100%; background-color:#fff; }
+.mainGroup th,.mainGroup td{ padding:.5em; border:1px solid #eee; text-align:left;  }
+.mainGroup th{ background-color:#eee; border-color:#ddd; color:#666; font-weight:normal; }
+
+/* general button attributes */
+.mainGroup .iconBtn{background:transparent url('../images/button.png') top left no-repeat;border-style:none;width:16px;height:16px;margin:0 4px;text-align:left;text-indent:20px;overflow:hidden;cursor:pointer; display:inline-block;}
+.mainGroup .iconLink,.iconLink.inactive:hover{display:inline-block;background-color:#ddd;color:#003158 !important;line-height:1;padding:.5em .75em .5em 28px;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;text-decoration:none;background-position:6px center;background-repeat:no-repeat;text-shadow:none;font-weight:normal;text-decoration:none;border-style:none;}
+.mainGroup .iconLink:hover,.iconLink.on{background-color:#395778;color:#fff !important;text-decoration:none !important;}
+
+/* custom buttons */
+.mainGroup .iconBtnAdd,.iconBtnAdd.inactive:hover{background-image:url('../images/add.png');background-color:#CBF3BD;color:#008000 !important;}
+.mainGroup .iconBtnAdd:hover{background-color:#008000;color:#fff !important;}
+.mainGroup .iconBtnSave,.iconBtnSave.inactive:hover{background-image:url('../images/accept.png');background-color:#CBF3BD;color:#008000 !important;}
+.mainGroup .iconBtnSave:hover{background-color:#008000;color:#fff !important;}
+.mainGroup .iconBtnDelete,.iconBtnDelete.inactive:hover{background-image:url('../images/cross.png');background-color:#eddddd;color:#900 !important;}
+.mainGroup .iconBtnTrash,.iconBtnTrash.inactive:hover{background-image:url("../images/trashcan.png");background-color:#eddddd;color:#900 !important;}
+.mainGroup .iconBtnDelete:hover,.iconBtnTrash:hover{background-color:#900;color:#fff !important;}
+.mainGroup .iconBtnManage, .iconBtnManage.inactive:hover{ background-image:url('../images/application_view_detail.png'); background-color:#bae2f7; color: #003158 !important; }
+.mainGroup .iconBtnManage:hover{ background-color:#395778;color:#fff !important; }
+
+.mainGroup .iconBtnAttach{ background-image: url('../images/paper_clip_333333.png'); }
+
+
+/* button icons */
+.mainGroup .iconBtnNone{ padding-left:.75em; }
+.mainGroup .iconBtnLock{background-image:url('../images/lock.png');}
+.mainGroup .iconBtnEdit{background-image:url('../images/pencil.png');}
+.mainGroup .iconBtnChart{background-image:url('../images/chart_pie.png');}
+.mainGroup .iconBtnMerge{background-image:url('../images/arrow_merge.png');}
+.mainGroup .iconBtnCog{background-image:url('../images/cog.png');}
+.mainGroup .iconBtnView{background-image:url('../images/eye.png');}
+.mainGroup .iconBtnGroup{background-image:url('../images/group.png');}
+.mainGroup .iconBtnLink{background-image:url('../images/link.png');}
+.mainGroup .iconBtnCopy{background-image:url('../images/page_copy.png');}
+.mainGroup .iconBtnMove{background-image:url('../images/move.png');}
+.mainGroup .iconBtnBack{background-image:url('../images/arrow_left.png');}
+.mainGroup .iconBtnEmail{background-image:url('../images/email.png');}
+
+/* loading icon */
+.iconBtnWaiting{ background-image:url('../images/loading_circles.gif') center center no-repeat; background-color:transparent; color:#666 !important; cursor:default; }
+.iconBtnWaiting:hover{ background-color:transparent; color:#666 !important; }
+
+/* loading bar */
+.mainGroup .loadingBar{ background:transparent url('../images/loadingbar.gif') center center no-repeat; position:absolute; top:0; left:0; width:100%; height:100%; text-indent:-9999px;}
+
+.mainGroup .iconLink:active{-moz-transform:translate(1px,1px);-webkit-transform:translate(1px,1px);transform:translate(1px,1px);}
+.mainGroup .iconLink.inactive:active{-moz-transform:translate(0px,0px);-webkit-transform:translate(0px,0px);transform:translate(0px,0px);}
+.mainGroup a.sortColumn{background:url("../images/bullet_arrow_down.png") center center no-repeat;float:right;text-indent:-9999px;width:14px;height:14px;opacity:0.4;}
+.mainGroup th:hover a.sortColumn{opacity:1;}
+.mainGroup th:hover a.sortColumnUp{opacity:1;}
+.mainGroup th.sorted{background-color:#ddd;}
+.mainGroup th.sorted a.sortColumn{opacity:1;}
+.mainGroup th.sorted a.sortColumnUp{opacity:1;}
+.mainGroup a.sortColumnUp{background:url("../images/bullet_arrow_up.png") center center no-repeat;float:right;text-indent:-9999px;width:14px;height:14px;opacity:0.4;}
+
+.mainGroup .subGroup{  margin:.5em 0; clear:both; }
+.mainGroup .subGroupTitle{ margin-bottom:.5em; padding:.5em; font-weight:bold; border-bottom:1px solid #666; }
+.mainGroup .subGroupTitleControls{ text-align:right; }
+
+
+/* forms results pages */
+.submissionsTable{ border-collapse:collapse; }
+.submissionsTable th{ border:1px solid; padding:.5em; }
+.submissionsTable td{ border:1px solid; padding:.5em; }
+
+/* yui modal window */
+#modalPanel{border:5px solid #fff;}
+#modalPanel .bd{overflow:auto;border:none;}
+#modalPanel .hd{background:#fff !important;border-color:#ccc;border-width:0 0 1px 0;}
+#modalPanel .ft{background:#fff !important;border:none;}
+#modalPanel .container-close{background:transparent url('../images/modal_close.gif') no-repeat top right;top:0;right:0;}
+#modalPanel .underlay{width:100%;height:100%;}
+.yui-skin-sam .yui-panel a{outline:none;}
+
+/* fsContentSlider */
+.contentControls{margin:.5em 0;overflow:auto;}
+.contentControls div{float:left;margin-right:.5em;padding:0 .3em;border:1px solid;background-color:#fff;cursor:pointer;}
+.contentControls div.on{background-color:#ccc;}
+.contentControls .cboxPrev,.contentControls .cboxNext{border-width:0;font-size:1.5em;margin:0;padding:0 .2em;}
+.contentControls .cboxPrev{padding-left:0;}
+.contentSlider{clear:both;}
+
+/* Expanding content list */
+ul.sub_list{list-style-type:none;margin:0;padding:0;border-bottom:1px solid;}
+ul.sub_list li{clear:both;}
+a.sub_title,a.sub_title:link,a.sub_title:hover,a.sub_title:visited,a.sub_title_on,a.sub_title_on:link,a.sub_title_on:hover,a.sub_title_on:visited{display:block;*width:100%;padding:4px;text-decoration:none;border-top:1px solid;border-color:inherit;}
+a.sub_title_on{font-weight:bold;}
+.sub_notes{padding:6px 12px 6px 12px;border-top:1px solid;}
+
+/* user login */
+#login_container{border:1px solid;border-color:#cccccc;background-color:#ffffff;}
+#login_title{background-color:#bbbbbb;color:#ffffff;border-bottom:1px solid;border-color:#cccccc;padding:2px;}
+#login_message{background-color:#f6f6f6;border-bottom:1px solid;border-color:#cccccc;padding:4px;}
+.fsLoginForms{width:30em;}
+.fsLoginTitle{font-weight:bold;}
+.fsLoginMessage{} /*this used to default to red & bold*/
+.fsLoginErrMsg{font-weight:bold;color:#900;}
+.fsLoginForms label{display:block;float:left;width:6em;text-align:right;margin-right:0.5em;padding-top:0.45em;clear:both;}
+.fsLoginForms input[type="text"],.fsLoginForms input[type="password"]{width:14em;font-size:1em;margin-bottom:0.5em;padding:0.2em 0.25em;}
+.fsLoginFooter{margin-left:6.5em;}
+.fsLogin{}
+.fsLoginNew label{width:8em;}
+.fsLoginNew .fsLoginFooter{margin-left:8.5em;}
+.fsLoginForgot label{width:5em;}
+.fsLoginForgot .fsLoginFooter{margin-left:5.5em;}
+.fsLoginKey{}
+.fsLoginKey label{width:7em;}
+
+/* groups element on portals */
+.fsMyGroupsDashboardLink a:before{
+  content:'';
+  width:36px;
+  height:25px;
+  display:inline-block;
+  background-image: url('../images/lmssprite.png');
+  background-position: -75px -3px;
+  vertical-align:middle;
+}
+
+.fsMyGroupsDashboardLink a{
+  background: #e7e9ef;
+  background: -moz-linear-gradient(top,  #ffffff 0%, #e7e9ef 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e7e9ef));
+  background: -webkit-linear-gradient(top,  #ffffff 0%,#e7e9ef 100%);
+  background: -o-linear-gradient(top,  #ffffff 0%,#e7e9ef 100%);
+  background: -ms-linear-gradient(top,  #ffffff 0%,#e7e9ef 100%);
+  background: linear-gradient(to bottom,  #ffffff 0%,#e7e9ef 100%);
+  border:1px solid #DEDEE2;
+  border-radius:4px;
+  display: inline-block;
+  text-decoration:none;
+  margin-bottom:1em;
+  line-height:1;
+  padding:6px 12px 6px 8px;
+}
+
+.fsMyGroupsDashboardLink a:hover{
+  background:#F3F4F7;
+}
+
+
+/* Some standard style classes available. Anything prefixed with .fsStyle should not be used to identify specific html. These should be classes that can be used anywhere and shouldn't be modified very often */
+
+/* From what I can tell, this should be all we need if we decide to stop supporting IE7 and below (should probably do our own testing to confirm) - RW*/
+.fsStyleAutoclear:after {
+	clear:both;
+	content:" ";
+	display:block;
+	font-size:0;
+	height:0;
+	visibility:hidden;
+}
+.fsStyleBlackOnWhite {
+	background: white;
+	border: 1px solid black;
+	color: black;
+}
+.fsStyleBorderBoxSizing { /* Width is calculated from the outside of the border instead of the inner width, supported in most newer browsers */
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.fsStyleBorderRadius4 {
+	border-radius: 4px; /* No vendor specifics because most modern browsers support this and the rest won't get rounded corners! */
+}
+.fsStyleWhiteOnBlack {
+	background: black;
+	border: 1px solid white;
+	color: white;
+}
+
+/* End standard style classes */
+
+/* Glyph images */
+.fsGlyphChatBubble,
+.fsGlyphDarkGrayX,
+.fsGlyphGrayX,
+.fsGlyphGroup,
+.fsGlyphInbox,
+.fsGlyphList,
+.fsGlyphMail,
+.fsGlyphOpenFolder,
+.fsGlyphPlus,
+.fsGlyphProfile,
+.fsGlyphRedX,
+.fsGlyphReturnArrow,
+.fsGlyphSearch,
+.fsGlyphUpArrow,
+.fsGlyphWorld {
+  background: url('../images/glyphsprite.png') no-repeat;
+  display: inline-block;
+  margin-right: 5px; /* This might be better to put in specific stylesheets if we find we need to customize it alot */
+}
+
+.fsGlyphChatBubble {
+  background-position: -35px -14px;
+  width: 12px;
+  height: 11px;
+}
+
+.fsGlyphDarkGrayX {
+  background-position: -12px -43px;
+  width: 10px;
+  height: 10px;
+}
+
+.fsGlyphGrayX {
+  background-position: 0px -43px;
+  width: 10px;
+  height: 10px;
+}
+
+.fsGlyphGroup {
+  background-position: 0px 0px;
+  width: 16px;
+  height: 14px;
+}
+
+.fsGlyphInbox {
+  background-position: 0px -29px;
+  width: 12px;
+  height: 12px;
+}
+
+.fsGlyphList {
+  background-position: 0px -16px;
+  width: 12px;
+  height: 11px;
+}
+
+.fsGlyphMail {
+  background-position: -14px -16px;
+  width: 12px;
+  height: 10px;
+}
+
+.fsGlyphOpenFolder {
+  background-position: -18px 0px;
+  width: 15px;
+  height: 11px;
+}
+
+.fsGlyphPlus {
+  background-position: -35px 0px;
+  width: 12px;
+  height: 12px;
+}
+
+.fsGlyphProfile {
+  background-position: -14px -29px;
+  width: 12px;
+  height: 12px;
+}
+
+.fsGlyphRedX {
+  background-position: -24px -43px;
+  width: 10px;
+  height: 10px;
+}
+
+.fsGlyphReturnArrow {
+  background-position: -28px -29px;
+  width: 12px;
+  height: 9px;
+}
+
+.fsGlyphSearch {
+  background-position: -49px 0px;
+  width: 12px;
+  height: 12px;
+}
+
+.fsGlyphUpArrow {
+  background-position: -49px -14px;
+  width: 9px;
+  height: 12px;
+}
+
+.fsGlyphWorld {
+  background-position: -49px -28px;
+  width: 12px;
+  height: 12px;
+}
+/* End Glyphs */
+
+/* Poweredby badge */
+#poweredby a,#poweredby a:link,#poweredby a:visited{display:block;width:132px;height:21px;text-indent:-9999px;background:url('../images/poweredBy.png') top left no-repeat;background:url('../images/poweredBy.svg') top left no-repeat;FILTER:alpha(opacity=25);-moz-opacity:0.25;opacity:0.25;-khtml-opacity:0.25;}
+#poweredby a:hover{FILTER:alpha(opacity=100);-moz-opacity:1;opacity:1;-khtml-opacity:1;}
+
+
+.autoclear:after{content:".";display:block;height:0;font-size:0;clear:both;visibility:hidden}
+.autoclear{display:inline-block}
+* html .autoclear{height:1px}
+.autoclear{display:block}
+
+
+
+
+/* Like Buttons */
+.fs_LikeContainer {
+    display: block;
+    font-size:13px;
+}
+
+.fs_Like {
+    display: inline-block;
+}
+.fs_Like a,
+.fs_Like a:visited,
+.fs_Liked a,
+.fs_Liked a:visited{
+  color: #222;
+  text-decoration: none;
+  background: #fff url('../images/admin_ui/2.0/like.png') no-repeat 5px center;
+  border:1px solid #ccc;
+  border-radius: 3px;
+  line-height:1;
+  margin-right:2px;
+  padding:4px 10px 4px 25px;
+  text-align: center;
+}
+
+.fs_Like a:hover, .fs_Liked a:hover {
+  background-color: #eee;
+}
+
+.fs_Liked {
+    display: inline-block;
+}
+
+.fs_Liked a,
+.fs_Liked a:visited{
+      background: #fff url('../images/admin_ui/2.0/liked.png') no-repeat 5px center;
+}
+
+.fs_likeCount {
+  background-color: #ddd;
+  vertical-align:middle;
+  line-height:1;
+  border-radius: 10px;
+  font-size:.8em;
+  color: #0E2035;
+  vertical-align:middle;
+  text-decoration: none;
+  padding:4px 8px;
+
+
+}
+/* END: Like Buttons */

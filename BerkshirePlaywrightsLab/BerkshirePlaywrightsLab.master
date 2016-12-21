@@ -1,0 +1,732 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+<link rel="stylesheet" href="/clients/BerkshirePlaywrightsLab/Images/style.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="Berkshire Playwrights Lab RSS Feed" href="http://www.berkshireplaywrightslab.org/feed/">
+<link rel="alternate" type="application/atom+xml" title="Berkshire Playwrights Lab Atom Feed" href="http://www.berkshireplaywrightslab.org/feed/atom/">
+<link rel="pingback" href="http://www.berkshireplaywrightslab.org/xmlrpc.php">
+
+
+
+<script type="text/javascript">
+	document.documentElement.className = 'js';
+</script>
+
+                        <style type="text/css" media="screen">
+                                .socialwrap li.icon_text a img, .socialwrap li.iconOnly a img, .followwrap li.icon_text a img, .followwrap li.iconOnly a img{border-width:0 !important;background-color:none;}#follow.right {width:24px;position:fixed; right:0; top:100px;padding:10px 0;font-family:impact,charcoal,arial, helvetica,sans-serif;-moz-border-radius-topleft: 5px;-webkit-border-top-left-radius:5px;-moz-border-radius-bottomleft:5px;-webkit-border-bottom-left-radius:5px;}#follow.right ul {padding:0; margin:0; list-style-type:none !important;font-size:24px;color:black;}
+#follow.right ul li {padding-bottom:10px;list-style-type:none !important;padding-left:4px;padding-right:4px}
+#follow img{border:none;}#follow.right ul li.follow {margin:0 4px;}
+#follow.right ul li.follow img {border-width:0;display:block;overflow:hidden; background:transparent url(http://www.berkshireplaywrightslab.org/wp-content/plugins/share-and-follow/images/impact/follow-right.png) no-repeat -0px 0px;height:79px;width:20px;}
+#follow.right ul li a {display:block;}
+#follow.right ul li.follow span, #follow ul li a span {display:none}.share {margin:0 3px 3px 0;}
+.phat span {display:inline;}
+ul.row li {float:left;list-style-type:none;}
+li.iconOnly a span.head {display:none}
+#follow.left ul.size16 li.follow{margin:0px auto !important}
+li.icon_text a {padding-left:0;margin-right:3px}
+li.text_only a {background-image:none !important;padding-left:0;}
+li.text_only a img {display:none;}
+li.icon_text a span{background-image:none !important;padding-left:0 !important; }
+li.iconOnly a span.head {display:none}
+ul.socialwrap li {margin:0 3px 3px 0 !important;}
+ul.socialwrap li a {text-decoration:none;}ul.row li {float:left;line-height:auto !important;}
+ul.row li a img {padding:0}.size16 li a,.size24 li a,.size32 li a, .size48 li a, .size60 li a {display:block}ul.socialwrap {list-style-type:none !important;margin:0; padding:0;text-indent:0 !important;}
+ul.socialwrap li {list-style-type:none !important;background-image:none;padding:0;list-style-image:none !important;}
+ul.followwrap {list-style-type:none !important;margin:0; padding:0}
+ul.followwrap li {margin-right:3px;margin-bottom:3px;list-style-type:none !important;}
+#follow.right ul.followwrap li, #follow.left ul.followwrap li {margin-right:0px;margin-bottom:0px;}
+.shareinpost {clear:both;padding-top:25px}.shareinpost ul.socialwrap {list-style-type:none !important;margin:0 !important; padding:0 !important}
+.shareinpost ul.socialwrap li {padding-left:0 !important;background-image:none !important;margin-left:0 !important;list-style-type:none !important;text-indent:0 !important}
+.socialwrap li.icon_text a img, .socialwrap li.iconOnly a img{border-width:0}ul.followrap li {list-style-type:none;list-style-image:none !important;}
+div.clean {clear:left;}
+div.display_none {display:none;}
+                        </style>
+                                                <style type="text/css" media="print">
+                                body {background: white;font-size: 12pt;color:black;}
+ * {background-image:none;}
+ #wrapper, #content {width: auto;margin: 0 5%;padding: 0;border: 0;float: none !important;color: black;background: transparent none;}
+ a { text-decoration : underline; color : #0000ff; }
+#menu, #navigation, #navi, .menu {display:none}
+                        </style>
+                        <link rel="image_src" href="/clients/BerkshirePlaywrightsLab/Images/bpl_logo.gif"> 
+<meta content="Event v.1.2" name="generator">	
+	<style type="text/css">
+		body { color: #; }
+		#content-area a { color: ##ff7f01; }
+		ul.nav li a { color: ##ff7f01; }
+		ul.nav > li.current_page_item > a, ul#top-menu > li:hover > a, ul.nav > li.current-cat > a { color: ##ff7f01; }
+		h1, h2, h3, h4, h5, h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { color: ##c06813; }
+		
+		#sidebar a { color:##ff7f01; }		
+		div#footer { color:# }
+		#footer a, ul#bottom-menu li a { color:# }
+	</style>
+
+<link media="screen" type="text/css" href="/clients/BerkshirePlaywrightsLab/Images/jquery.css" rel="stylesheet">
+<link media="screen" type="text/css" href="/clients/BerkshirePlaywrightsLab/Images/page_templates.css" rel="stylesheet"><link rel="stylesheet" id="thickbox-css" href="/clients/BerkshirePlaywrightsLab/Images/thickbox.css" type="text/css" media="all">
+<link rel="stylesheet" id="ssupload_css-css" href="/clients/BerkshirePlaywrightsLab/Images/quiz.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpfb-css" href="/clients/BerkshirePlaywrightsLab/Images/wp-filebase_css.css" type="text/css" media="all">
+<link rel="stylesheet" id="miniAudioPlayer-css" href="/clients/BerkshirePlaywrightsLab/Images/miniplayer.css" type="text/css" media="screen">
+<link rel="stylesheet" id="et-shortcodes-css-css" href="/clients/BerkshirePlaywrightsLab/Images/shortcodes.css" type="text/css" media="all">
+<script type="text/javascript" src="/clients/BerkshirePlaywrightsLab/Images/jquery_007.js"></script>
+<script type="text/javascript" src="/clients/BerkshirePlaywrightsLab/Images/id3.js"></script><script type="text/vbscript">
+Function IEBinary_getByteAt(strBinary, iOffset)
+	IEBinary_getByteAt = AscB(MidB(strBinary,iOffset+1,1))
+End Function
+Function IEBinary_getLength(strBinary)
+	IEBinary_getLength = LenB(strBinary)
+End Function
+</script>
+
+<script type="text/javascript" src="/clients/BerkshirePlaywrightsLab/Images/jquery_005.js"></script>
+<script type="text/javascript" src="/clients/BerkshirePlaywrightsLab/Images/jquery_006.js"></script>
+<script type="text/javascript" src="/clients/BerkshirePlaywrightsLab/Images/et_shortcodes_frontend.js"></script>
+<script type="text/javascript" src="/clients/BerkshirePlaywrightsLab/Images/jquery_002.js"></script>
+<script type="text/javascript" src="/clients/BerkshirePlaywrightsLab/Images/jquery_004.js"></script>
+<script type="text/javascript" src="/clients/BerkshirePlaywrightsLab/Images/jquery_003.js"></script>
+<script type="text/javascript" src="/clients/BerkshirePlaywrightsLab/Images/jquery.js"></script>
+
+<script type="text/javascript" src="/clients/BerkshirePlaywrightsLab/Images/quiz.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.berkshireplaywrightslab.org/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.berkshireplaywrightslab.org/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 3.5.1">
+<style type="text/css">
+    .calnk a:hover {
+        background-position:0 0;
+        text-decoration:none;  
+        color:#000000;
+        border-bottom:1px dotted #000000;
+     }
+    .calnk a:visited {
+        text-decoration:none;
+        color:#000000;
+        border-bottom:1px dotted #000000;
+    }
+    .calnk a {
+        text-decoration:none; 
+        color:#000000; 
+        border-bottom:1px dotted #000000;
+    }
+    .calnk a span { 
+        display:none; 
+    }
+    .calnk a:hover span {
+        color:#333333; 
+        background:#F6F79B; 
+        display:block;
+        position:absolute; 
+        margin-top:1px; 
+        padding:5px; 
+        width:150px; 
+        z-index:100;
+        line-height:1.2em;
+    }
+    .calendar-table {
+        border:0 !important;
+        width:100% !important;
+        border-collapse:separate !important;
+        border-spacing:2px !important;
+    }
+    .calendar-heading {
+        height:25px;
+        text-align:center;
+        border:1px solid #D6DED5;
+        background-color:#E4EBE3;
+    }
+    .calendar-next {
+        width:25%;
+        text-align:center;
+    }
+    .calendar-prev {
+        width:25%;
+        text-align:center;
+    }
+    .calendar-month {
+        width:50%;
+        text-align:center;
+        font-weight:bold;
+    }
+    .normal-day-heading {
+        text-align:center;
+        width:25px;
+        height:25px;
+        font-size:0.8em;
+        border:1px solid #DFE6DE;
+        background-color:#EBF2EA;
+    }
+    .weekend-heading {
+        text-align:center;
+        width:25px;
+        height:25px;
+        font-size:0.8em;
+        border:1px solid #DFE6DE;
+        background-color:#EBF2EA;
+        color:#FF0000;
+    }
+    .day-with-date {
+        vertical-align:text-top;
+        text-align:left;
+        width:60px;
+        height:60px;
+        border:1px solid #DFE6DE;
+    }
+    .no-events {
+
+    }
+    .day-without-date {
+        width:60px;
+        height:60px;
+        border:1px solid #E9F0E8;
+    }
+    span.weekend {
+        color:#FF0000;
+    }
+    .current-day {
+        vertical-align:text-top;
+        text-align:left;
+        width:60px;
+        height:60px;
+        border:1px solid #BFBFBF;
+        background-color:#E4EBE3;
+    }
+    span.event {
+        font-size:0.75em;
+    }
+    .kjo-link {
+        font-size:0.75em;
+        text-align:center;
+    }
+    .calendar-date-switcher {
+        height:25px;
+        text-align:center;
+        border:1px solid #D6DED5;
+        background-color:#E4EBE3;
+    }
+    .calendar-date-switcher form {
+        margin:2px;
+    }
+    .calendar-date-switcher input {
+        border:1px #D6DED5 solid;
+        margin:0;
+    }
+    .calendar-date-switcher select {
+        border:1px #D6DED5 solid;
+        margin:0;
+    }
+    .calnk a:hover span span.event-title {
+        padding:0;
+        text-align:center;
+        font-weight:bold;
+        font-size:1.2em;
+        margin-left:0px;
+    }
+    .calnk a:hover span span.event-title-break {
+        width:96%;
+        text-align:center;
+        height:1px;
+        margin-top:5px;
+        margin-right:2%;
+        padding:0;
+        background-color:#000000;
+        margin-left:0px;
+    }
+    .calnk a:hover span span.event-content-break {
+        width:96%;
+        text-align:center;
+        height:1px;
+        margin-top:5px;
+        margin-right:2%;
+        padding:0;
+        background-color:#000000;
+        margin-left:0px;
+    }
+    .page-upcoming-events {
+        font-size:80%;
+    }
+    .page-todays-events {
+        font-size:80%;
+    }
+    .calendar-table table,tbody,tr,td {
+        margin:0 !important;
+        padding:0 !important;
+    }
+    table.calendar-table {
+        margin-bottom:5px !important;
+    }
+    .cat-key {
+        width:100%;
+        margin-top:30px;
+        padding:5px;
+        border:0 !important;
+    }
+    .cal-separate {
+       border:0 !important;
+       margin-top:10px;
+    }
+    table.cat-key {
+       margin-top:5px !important;
+       border:1px solid #DFE6DE !important;
+       border-collapse:separate !important;
+       border-spacing:4px !important;
+       margin-left:2px !important;
+       width:99.5% !important;
+       margin-bottom:5px !important;
+    }
+    .cat-key td {
+       border:0 !important;
+    }
+</style>
+
+	<!-- start miniAudioPlayer initializer -->
+
+	<!-- end miniAudioPlayer initializer -->
+
+	<link rel="shortcut icon" href="http://www.berkshireplaywrightslab.org/wp-content/uploads/2011/06/favicon.ico"><style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #654722; background-image: url('/clients/BerkshirePlaywrightsLab/Images/bg_orgray.jpg'); background-repeat: no-repeat; background-position: top center; background-attachment: fixed; }
+</style>
+
+<!-- WordPress Facebook Open Graph protocol plugin (WPFBOGP v2.0.7) http://rynoweb.com/wordpress-plugins/ -->
+<meta property="fb:app_id" content="386626461410660">
+<meta property="og:url" content="http://www.berkshireplaywrightslab.org">
+<meta property="og:title" content="Berkshire Playwrights Lab">
+<meta property="og:site_name" content="Berkshire Playwrights Lab">
+<meta property="og:description" content="See and hear exciting new plays performed and staged, script in hand">
+<meta property="og:type" content="website">
+<!-- There is not an image here as you haven't set a default image in the plugin settings! -->
+<meta property="og:locale" content="en_us">
+<!-- // end wpfbogp -->
+
+<style type="text/css">cufon{text-indent:0!important;}@media screen,projection{cufon{display:inline!important;display:inline-block!important;position:relative!important;vertical-align:middle!important;font-size:1px!important;line-height:1px!important;}cufon cufontext{display:-moz-inline-box!important;display:inline-block!important;width:0!important;height:0!important;overflow:hidden!important;text-indent:-10000in!important;}cufon canvas{position:relative!important;}}@media print{cufon{padding:0!important;}cufon canvas{display:none!important;}}</style></head>
+<body id="home" class="home blog custom-background gecko">
+	<div id="main-bg" class="qcc">
+		<div id="center-highlight">
+			<div id="header">
+				<div class="container clearfix">
+					<a href="http://www.berkshireplaywrightslab.org/">
+												<img src="/clients/BerkshirePlaywrightsLab/Images/BPLlogo-trans.png" alt="Event Logo" id="logo">
+					</a>
+					<ul id="top-menu" class="nav sf-js-enabled"><li id="menu-item-200" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-200 sf-ul"><a class="sf-with-ul" href="http://www.berkshireplaywrightslab.org/about/">About Us<span class="sf-sub-indicator"> </span></a>
+<ul style="display: none; visibility: hidden;" class="sub-menu">
+	<li id="menu-item-1942" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1942"><a href="http://www.berkshireplaywrightslab.org/category/who-we-are/">Who We Are</a></li>
+	<li id="menu-item-206" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-206"><a href="http://www.berkshireplaywrightslab.org/about/submissions/">Submissions</a></li>
+	<li id="menu-item-204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-204"><a href="http://www.berkshireplaywrightslab.org/about/jobs-internships/">Jobs &amp; Internships</a></li>
+	<li id="menu-item-244" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-244"><a class="sf-with-ul" href="http://www.berkshireplaywrightslab.org/category/pressmedia/">Press/Media<span class="sf-sub-indicator"> </span></a>
+	<ul style="display: none; visibility: hidden;" class="sub-menu">
+		<li id="menu-item-365" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-365"><a href="http://www.berkshireplaywrightslab.org/category/pressmedia/pr/">Press Releases &amp; Photos</a></li>
+		<li id="menu-item-367" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-367"><a href="http://www.berkshireplaywrightslab.org/category/pressmedia/media-releases-photos/">Media Releases &amp; Photos</a></li>
+		<li id="menu-item-366" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-366"><a href="http://www.berkshireplaywrightslab.org/category/pressmedia/articles-about-bpl/">Articles about BPL</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-272 sf-ul"><a class="sf-with-ul" href="http://www.berkshireplaywrightslab.org/productions/">Productions<span class="sf-sub-indicator"> </span></a>
+<ul style="display: none; visibility: hidden;" class="sub-menu">
+	<li id="menu-item-2634" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2634"><a href="http://www.berkshireplaywrightslab.org/productions/new-play-benefit-gala/">New Play Benefit Gala!</a></li>
+	<li id="menu-item-1888" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1888"><a href="http://www.berkshireplaywrightslab.org/productions/2014-new-play-staged-reading-series/">2014 Staged Reading Series</a></li>
+	<li id="menu-item-2796" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2796"><a href="http://www.berkshireplaywrightslab.org/glory-unending/">Glory Unending</a></li>
+	<li id="menu-item-770" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-770"><a class="sf-with-ul" href="http://www.berkshireplaywrightslab.org/category/pastplays/">Plays from Past Seasons<span class="sf-sub-indicator"> </span></a>
+	<ul style="display: none; visibility: hidden;" class="sub-menu">
+		<li id="menu-item-2566" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2566"><a href="http://www.berkshireplaywrightslab.org/category/pastplays/2013-season/">2013 Season</a></li>
+		<li id="menu-item-1797" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1797"><a href="http://www.berkshireplaywrightslab.org/category/pastplays/2012-season/">2012 Season</a></li>
+		<li id="menu-item-865" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-865"><a href="http://www.berkshireplaywrightslab.org/category/pastplays/2011-season/">2011 Season</a></li>
+		<li id="menu-item-864" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-864"><a href="http://www.berkshireplaywrightslab.org/category/pastplays/2010-season/">2010 Season</a></li>
+		<li id="menu-item-863" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-863"><a href="http://www.berkshireplaywrightslab.org/category/pastplays/2009-season/">2009 Season</a></li>
+		<li id="menu-item-862" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-862"><a href="http://www.berkshireplaywrightslab.org/category/pastplays/2008-season/">2008 Season</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-2264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2264 sf-ul"><a class="sf-with-ul" href="http://www.berkshireplaywrightslab.org/support-us/">Support Us<span class="sf-sub-indicator"> </span></a>
+<ul style="display: none; visibility: hidden;" class="sub-menu">
+	<li id="menu-item-262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-262"><a href="http://www.berkshireplaywrightslab.org/fundraising/">Donate</a></li>
+	<li id="menu-item-2327" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2327"><a href="http://www.berkshireplaywrightslab.org/support-us/donation-incantation/">Donation Incantation</a></li>
+</ul>
+</li>
+<li id="menu-item-205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-205"><a href="http://www.berkshireplaywrightslab.org/about/contact-us/">Contact Us</a></li>
+</ul>					
+					<!-- end #search-form -->
+				</div> <!-- end .container -->
+			</div> <!-- end #header -->
+			
+			<div id="main-area">
+				<div class="container clearfix">
+<h2 class="custom-title">latest news</h2>     
+<div class="fullwidthHome">
+   <div class="big-boxH">
+      <div class="big-box-topH">
+         <div class="big-box-contentH">
+			<!--TIX DATA START-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+		</div>     
+      </div>
+   </div>
+   </div>
+	
+			<h2 class="custom-title">upcoming events</h2>
+		<script type="text/javascript">
+var currentSlide = 0;
+autoscrolling = 0;
+</script>
+<div id="featured" class="clearfix" onmouseover="autoscrolling = 0;" onmouseout="autoscrolling = 0;">
+	
+	
+	<div id="featured-nav">
+		<ul>
+							<li class="active">
+					<a href="#" onclick="currentSlide = 0;" id="featuredSlide1">
+						<span class="featured-title">2013 Staged Reading Series</span>
+						<span class="featured-info"> <span></span></span>
+					</a>
+				</li>
+							<li>
+					<a href="#" onclick="currentSlide = 1;" id="featuredSlide2">
+						<span class="featured-title"></span>
+						<span class="featured-info"></span>
+					</a>
+				</li>
+							<li>
+					<a href="#" onclick="currentSlide = 2;" id="featuredSlide3">
+						<span class="featured-title"></span>
+						<span class="featured-info"></span>
+					</a>
+				</li>
+					</ul>
+	</div> <!-- end #featured-nav -->
+	
+	<div id="slides">
+					<div class="slide" style="background: url(&quot;http://www.berkshireplaywrightslab.org/wp-content/themes/Event/timthumb.php?src=&amp;h=382&amp;w=705&amp;q=90&amp;zc=1&quot;) no-repeat scroll 0% 0% transparent; display: block;">
+				<div class="info-overlay">
+					<h2 class="slider-title"><a href="http://www.berkshireplaywrightslab.org/2013-staged-reading-series/">2013 Staged Reading Series</a></h2>
+					<span class="featured-info"> <span></span></span>
+					<p>Our Flagship Staged Reading Series: New Plays in Development 
+2013.
+BPL will present staged readings of new plays on Wednesdays July 10, 
+July 24, August 7, and August 21 at 7:30pm at the Mahaiwe Performing 
+Arts Center in Great Barrington, MA.</p>
+					<a href="http://www.berkshireplaywrightslab.org/2013-staged-reading-series/" class="readmore"><span>More Info</span></a>
+				</div> <!-- end .info-overlay -->
+			</div> <!-- end .slide -->
+					<div class="slide" style="background: url(&quot;http://www.berkshireplaywrightslab.org/wp-content/themes/Event/timthumb.php?src=&amp;h=382&amp;w=705&amp;q=90&amp;zc=1&quot;) no-repeat scroll 0% 0% transparent; display: none;">
+				<div class="info-overlay">
+					<h2 class="slider-title"><a href=""></a></h2>
+					<span class="featured-info"></span>
+					<p></p>
+					<a href="" class="readmore"><span>More Info</span></a>
+				</div> <!-- end .info-overlay -->
+			</div> <!-- end .slide -->
+					<div class="slide" style="background: url(&quot;http://www.berkshireplaywrightslab.org/wp-content/themes/Event/timthumb.php?src=&amp;h=382&amp;w=705&amp;q=90&amp;zc=1&quot;) no-repeat scroll 0% 0% transparent; display: none;">
+				<div class="info-overlay">
+					<h2 class="slider-title"><a href=""></a></h2>
+					<span class="featured-info"></span>
+					<p></p>
+					<a href="" class="readmore"><span>More Info</span></a>
+				</div> <!-- end .info-overlay -->
+			</div> <!-- end .slide -->
+			</div> <!-- end #slides -->
+</div> <!-- end #featured -->		
+			<div class="blog-half">
+			<h2 class="custom-title">the blog</h2>
+			<div class="small-box">
+				<div class="small-box-top">
+					<div class="small-box-content">
+																										<div class="entry clearfix">
+																
+																
+								<div class="small_datapanel">
+									<h4 class="title"><a href="http://www.berkshireplaywrightslab.org/halftime-from-stage-to-screen-to-stage-again/"><i>HALFTIME</i>: From Stage to Screen to Stage Again</a></h4>
+									<p class="meta-info"> Jun 11, 2013 : <a href="http://www.berkshireplaywrightslab.org/category/7-blog/" title="View all posts in Blog" rel="category tag">Blog</a></p>
+									<p></p><p><em>BPL Resident Blogger Matt Whalan explores the journey of Richard Dresser's...</em></p><em>
+								</em></div><em> 	<!-- end .small_datapanel-->
+							</em></div><em> 	<!-- end .entry-->
+																				<div class="entry clearfix">
+																
+																	<div class="thumbnail">
+										<a href="http://www.berkshireplaywrightslab.org/maddie-meyers/">
+											<img src="/clients/BerkshirePlaywrightsLab/Images/MaddieMeyersHeadshot-61x61.jpg" class="thumb alignleft wp-post-image" alt="An Interview with BPL's Youngest Playwright" title="An Interview with BPL's Youngest Playwright" height="61" width="61">											<span class="overlay"></span>
+										</a>	
+									</div> 	<!-- end .thumbnail -->
+																
+								<div class="small_datapanel">
+									<h4 class="title"><a href="http://www.berkshireplaywrightslab.org/maddie-meyers/">An Interview with BPL's Youngest Playwright</a></h4>
+									<p class="meta-info"> Jun 3, 2013 : <a href="http://www.berkshireplaywrightslab.org/category/7-blog/" title="View all posts in Blog" rel="category tag">Blog</a></p>
+									<p></p><p><i>Maddie Meyers is an actress, a writer – and a senior in high school. At eighteen years old,...</i></p><i>
+								</i></div><i> 	<!-- end .small_datapanel-->
+							</i></div><i> 	<!-- end .entry-->
+																				<div class="entry clearfix last">
+																
+																	<div class="thumbnail">
+										<a href="http://www.berkshireplaywrightslab.org/a-playwrights-experience/">
+											<img src="/clients/BerkshirePlaywrightsLab/Images/timthumb.jpg" class="thumb alignleft" alt="A PLAYWRIGHT'S EXPERIENCE" height="61" width="61">											<span class="overlay"></span>
+										</a>	
+									</div> 	<!-- end .thumbnail -->
+																
+								<div class="small_datapanel">
+									<h4 class="title"><a href="http://www.berkshireplaywrightslab.org/a-playwrights-experience/">A PLAYWRIGHT'S EXPERIENCE</a></h4>
+									<p class="meta-info"> May 22, 2013 : <a href="http://www.berkshireplaywrightslab.org/category/pressmedia/articles-about-bpl/" title="View all posts in Articles about BPL" rel="category tag">Articles about BPL</a>, <a href="http://www.berkshireplaywrightslab.org/category/7-blog/" title="View all posts in Blog" rel="category tag">Blog</a></p>
+									<p></p><p>Here's a wonderful essay by playwright Jessica Provenz about her experience developing...</p>
+								</div> 	<!-- end .small_datapanel-->
+							</div> 	<!-- end .entry-->
+																	</i></em></div><em><i> 	<!-- end .small-box-content-->		
+				</i></em></div><em><i> 	<!-- end .small-box-top-->
+			</i></em></div><em><i> 	<!-- end .small-box-->		
+		</i></em></div><em><i> 	<!-- end .blog-half-->	
+		
+		<div class="blog-half" id="about">
+			<h2 class="custom-title">about us</h2>
+			<div class="small-box">
+				<div class="small-box-top">
+					<div class="small-box-content">
+						<div class="entry">
+																						<h4 class="title"><a href="http://www.berkshireplaywrightslab.org/about/">About Us</a></h4>
+								<p>Our mission is to provide the playwright with space to 
+create. The Berkshire Playwrights Lab provides an opportunity for 
+emerging and established playwrights to find a secure berth where they 
+can develop new work and/or explore new avenues of creativity. Without a
+ commitment to nurturing new voices and new talent, the American theater
+ is losing promising playwrights. The Lab was created to provide 
+playwrights the opportunity to develop their work and more than 25 short
+ and 30 full-length plays have been presented under the BPL banner since
+ its inception in 2007.</p>
+<p>Founded by <a title="Joe Cacaci" href="http://www.berkshireplaywrightslab.org/joe-cacaci/">Joe Cacaci</a>, <a title="Jim Frangione" href="http://www.berkshireplaywrightslab.org/jim-frangione/">Jim Frangione</a>, <a title="Bob Jaffe" href="http://www.berkshireplaywrightslab.org/matthew-penn-2/">Bob Jaffe</a>, and <a title="Matthew Penn" href="http://www.berkshireplaywrightslab.org/matthew-penn/">Matthew Penn</a>,
+ the Berkshire Playwrights Lab is the area's only theater dedicated 
+exclusively to encouraging, developing, and presenting new plays. 
+Through readings, workshops and fully-staged <a title="productions" href="http://www.berkshireplaywrightslab.org/productions/">productions</a>,
+ the Lab provides emerging and established writers with a professional 
+and creative environment, while offering audiences the engaging and 
+provocative opportunity to share in the dramatic evolution of premiere 
+works.</p>
+<table>
+<tbody>
+<tr>
+<td valign="top">
+<h3>Funded in part by</h3>
+<p><a target="_blank" title="Mass Cultural Council" href="http://www.massculturalcouncil.org/"><img class="alignleft  wp-image-1808" style="margin: 20px;" title="Funded in part by" alt="Untitled" src="/clients/BerkshirePlaywrightsLab/Images/Untitled.jpg" height="63" width="143"></a></p></td>
+</tr>
+<tr>
+<td valign="top">
+<h3>Support our Advertisers!</h3>
+<p style="text-align: center;"><a target="_blank" title="Berkshire Mountain Chiropractic" href="http://www.berkshiremtnchiro.com/"><img class="aligncenter  wp-image-2745" style="margin: 20px; border: 2px solid black;" alt="Berkshire Mountain Chiropractic" src="/clients/BerkshirePlaywrightsLab/Images/BMC-Business-Card1-1024x555.jpg" height="84" width="155"></a></p>
+<p>&nbsp;</p></td>
+</tr>
+</tbody>
+</table>								<a href="http://www.berkshireplaywrightslab.org/about/" class="readmore"><span>more info</span></a>
+																				</div> 	<!-- end .entry-->		
+					</div> 	<!-- end .small-box-content-->		
+				</div> 	<!-- end .small-box-top-->
+			</div> 	<!-- end .small-box-->		
+		</div> 	<!-- end .blog-half-->
+		
+				</i></em></div><em><i> <!-- end .container -->
+			</i></em></div><em><i> <!-- end #main-area -->						
+										
+			<div id="footer">
+				<div class="container clearfix">
+					<div id="follow-widget-3" class="footer-widget follow_links"><h4 class="widgettitle">Follow BPL</h4><ul class="followwrap size24 down"><li class="icon_text"><a rel="nofollow me" target="_blank" style="background: transparent url(http://www.berkshireplaywrightslab.org/wp-content/plugins/share-and-follow/default/24/facebook.png) no-repeat top left;padding-left:28px;line-height:28px;" class="facebook" href="http://www.facebook.com/BerkshirePlaywrightsLab?ref=ts" title="Become a Fan"><span class="head">Become a Fan</span></a></li><li class="icon_text"><a rel="nofollow me" target="_blank" style="background: transparent url(http://www.berkshireplaywrightslab.org/wp-content/plugins/share-and-follow/default/24/rss.png) no-repeat top left;padding-left:28px;line-height:28px;" class="rss" href="http://www.berkshireplaywrightslab.org/feed/rss/" title="RSS feed"><span class="head">RSS feed</span></a></li><li class="icon_text"><a rel="nofollow me" target="_blank" style="background: transparent url(http://www.berkshireplaywrightslab.org/wp-content/plugins/share-and-follow/default/24/twitter.png) no-repeat top left;padding-left:28px;line-height:28px;" class="twitter" href="http://twitter.com/#%21/Playwrights_Lab" title="Follow Us"><span class="head">Follow Us</span></a></li></ul></div> <!-- end .widget --><div id="share-widget-3" class="footer-widget share_links"><h4 class="widgettitle">Share</h4><ul class="socialwrap size16 down"><li class="icon_text"><a rel="nofollow" target="_blank" style="background: transparent url(http://www.berkshireplaywrightslab.org/wp-content/plugins/share-and-follow/default/16/digg.png) no-repeat top left;padding-left:20px;line-height:20px;" class="digg" href="http://digg.com/submit?url=http%3A%2F%2Fwww.berkshireplaywrightslab.org&amp;title=Berkshire+Playwrights+Lab&amp;bodytext=See+and+hear+exciting+new+plays+performed+and+staged%2C+script+in+hand" title="Digg this blog : Berkshire Playwrights Lab"><span class="head">Digg this post</span></a></li><li class="icon_text"><a rel="nofollow" target="_blank" style="background: transparent url(http://www.berkshireplaywrightslab.org/wp-content/plugins/share-and-follow/default/16/facebook.png) no-repeat top left;padding-left:20px;line-height:20px;" class="facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fwww.berkshireplaywrightslab.org&amp;t=Berkshire+Playwrights+Lab" title="Recommend this blog : Berkshire Playwrights Lab on Facebook"><span class="head">Share on Facebook</span></a></li><li class="icon_text"><a rel="nofollow" target="_blank" style="background: transparent url(http://www.berkshireplaywrightslab.org/wp-content/plugins/share-and-follow/default/16/linkedin.png) no-repeat top left;padding-left:20px;line-height:20px;" class="linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fwww.berkshireplaywrightslab.org&amp;title=Berkshire+Playwrights+Lab&amp;&amp;summary=See+and+hear+exciting+new+plays+performed+and+staged%2C+script+in+hand" title="Share this blog : Berkshire Playwrights Lab on Linkedin"><span class="head">Share on Linkedin</span></a></li><li class="icon_text"><a rel="nofollow" target="_blank" style="background: transparent url(http://www.berkshireplaywrightslab.org/wp-content/plugins/share-and-follow/default/16/reddit.png) no-repeat top left;padding-left:20px;line-height:20px;" class="reddit" href="http://www.reddit.com/submit?url=http%3A%2F%2Fwww.berkshireplaywrightslab.org&amp;title=Berkshire+Playwrights+Lab" title="Share this blog : Berkshire Playwrights Lab on Reddit"><span class="head">share via Reddit</span></a></li><li class="icon_text"><a rel="nofollow" target="_blank" style="background: transparent url(http://www.berkshireplaywrightslab.org/wp-content/plugins/share-and-follow/default/16/twitter.png) no-repeat top left;padding-left:20px;line-height:20px;" class="twitter" href="http://twitter.com/home/?status=Far+From+the+Trees+-+http%3A%2F%2Fwww.berkshireplaywrightslab.org" title="Tweet this blog : Berkshire Playwrights Lab on Twitter"><span class="head">Tweet about it</span></a></li><li class="icon_text"><a rel="_self" style="background: transparent url(http://www.berkshireplaywrightslab.org/wp-content/plugins/share-and-follow/default/16/email.png) no-repeat top left;padding-left:20px;line-height:20px;" class="email" href="mailto:?subject=Berkshire%20Playwrights%20Lab%20:%20Berkshire%20Playwrights%20Lab&amp;body=here%20is%20a%20link%20to%20a%20site%20I%20really%20like.%20%20%20http://www.berkshireplaywrightslab.org" title="Tell a friend about this blog : Berkshire Playwrights Lab "><span class="head">Tell a friend</span></a></li></ul></div> <!-- end .widget --><div id="text-2" class="footer-widget widget_text"><h4 class="widgettitle">Get Our Newsletter</h4>			<div class="textwidget"><!-- BEGIN: Constant Contact Stylish Email Newsletter Form -->
+<div align="left">
+<div style="width:200px; text-align:left;">
+<form name="ccoptin" action="http://visitor.r20.constantcontact.com/d.jsp" target="_blank" method="post" style="margin-bottom:3;">
+<font style="font-family:Arial; font-size:13px; color:#FFFFFF; text-align:left;">Enter email address:</font><br>
+<input name="ea" size="30" style="font-family:Verdana,Geneva,Arial,Helvetica,sans-serif; font-size:10px; border:1px solid #999999;" type="text">
+<input name="go" value="Go" class="submit" style="font-family:Arial,Helvetica,sans-serif; font-size:14px;" type="submit">
+<input name="llr" value="ah6fs8cab" type="hidden">
+<input name="m" value="1102584149216" type="hidden">
+<input name="p" value="oi" type="hidden">
+</form>
+</div>
+</div>
+<!-- END: Constant Contact Stylish Email Newsletter Form --></div>
+		</div> <!-- end .widget -->				</div> <!-- end .container -->	
+			</div> <!-- end #footer -->	
+					
+			<div id="footer-bottom">	
+				<div class="container clearfix">
+					
+						
+				
+					<p id="copyright">Designed by  <a href="http://www.tsquareds.com/" title="T Square Design Studio">T Square Design Studio</a> | Powered by  <a href="http://www.wordpress.org/">WordPress</a></p><p id="copyright">
+	</p><li class="cat-item cat-item-29"><a href="http://www.berkshireplaywrightslab.org/category/bpl-admin/" title="Private area for board members">BPL Admin</a>
+</li>
+ 
+<p></p>
+				</div> <!-- end .container -->	
+			</div> <!-- end #footer-bottom -->
+		</i></em></div><em><i> <!-- end #center-highlight-->
+	</i></em></div><em><i> <!-- end #main-bg -->	
+
+		<script src="/clients/BerkshirePlaywrightsLab/Images/cufon-yui.js" type="text/javascript"></script>
+	<script src="/clients/BerkshirePlaywrightsLab/Images/Chunk_Five_400.js" type="text/javascript"></script>
+	<script src="/clients/BerkshirePlaywrightsLab/Images/Colaborate-Thin_400-Colaborate-Bold_400.js" type="text/javascript"></script>
+		
+	<script type="text/javascript" src="/clients/BerkshirePlaywrightsLab/Images/superfish.js"></script>	
+	<script type="text/javascript">
+	//<![CDATA[
+		jQuery.noConflict();
+						
+		jQuery('ul.nav').superfish({ 
+			delay:       200,                            // one second delay on mouseout 
+			animation:   {opacity:'show',height:'show'},  // fade-in and slide-down animation 
+			speed:       'fast',                          // faster animation speed 
+			autoArrows:  true,                           // disable generation of arrow mark-up 
+			dropShadows: false                            // disable drop shadows 
+		});
+		
+		jQuery('ul.nav > li > a.sf-with-ul').parent('li').addClass('sf-ul');
+		
+		var $featured_content = jQuery('#featured');
+		
+		et_search_bar();
+		
+		if ( $featured_content.length ) {
+			et_service_tabs($featured_content);
+			window.setInterval( function() { Cufon.refresh('span.featured-title'); }, 100 );
+		}
+				
+		<!---- Search Bar Improvements ---->
+		function et_search_bar(){
+			var $searchform = jQuery('#header div#search-form'),
+				$searchinput = $searchform.find("input#searchinput"),
+				searchvalue = $searchinput.val();
+				
+			$searchinput.focus(function(){
+				if (jQuery(this).val() === searchvalue) jQuery(this).val("");
+			}).blur(function(){
+				if (jQuery(this).val() === "") jQuery(this).val(searchvalue);
+			});
+		};
+		
+		<!---- Service Tabs ---->
+		function et_service_tabs($service_tabs){
+			var active_tabstate = 'active',
+			active_tab = 0,
+			$service_div = $service_tabs.find('div.slide').hide(),
+			$service_li = $service_tabs.find('#featured-nav >ul>li');
+		
+			$service_div.filter(':first').show();
+			$service_li.filter(':first').addClass(active_tabstate);
+					
+			$service_li.find('a').click(function(){
+				var $a = jQuery(this),
+					next_tab = $a.parent('li').prevAll().length,
+					next_tab_height = $service_tabs.find('>div').eq(next_tab).outerHeight();
+				
+				if ( next_tab != active_tab ) {
+					$service_tabs.css({height:next_tab_height});
+					$service_div.filter(':visible')
+						.animate( {opacity: 'hide'},500, function(){
+							jQuery(this).parent().find('>div').eq(next_tab).animate( {opacity: 'show'},500 );
+						} );
+					$service_li.removeClass(active_tabstate).filter(':eq('+next_tab+')').addClass(active_tabstate);
+					active_tab = next_tab;
+				}
+				
+				return false;
+			}).hover(function(){
+				if ( !jQuery(this).parent('li').hasClass(active_tabstate) && !is_ie ) jQuery(this).fadeTo('slow',.7);
+			}, function(){
+				if (!is_ie) jQuery(this).fadeTo('slow',1);
+			});
+		}
+		
+		var $et_custom_calendar = jQuery('#et_custom_calendar'),
+			$et_custom_calendar_links = $et_custom_calendar.find('#wp-custom-calendar a');
+		
+		$et_custom_calendar_links.live("click", function(){
+			$href = jQuery(this).attr('href');
+			var $et_event_info = jQuery('.event_post')
+			$et_event_info.fadeTo('slow',0);
+			$et_custom_calendar
+			.load($href+' #et_custom_calendar', function() {
+				Cufon.set('fontFamily', 'Colaborate-Thin');
+				Cufon.replace('#wp-custom-calendar caption',{textShadow:'1px 1px 0px #fff'});
+				
+				Cufon.set('fontFamily', 'Chunk Five');
+				Cufon.replace('#wp-custom-calendar thead th',{textShadow:'1px 1px 0px #d5a273'})('.event_post h2.title'); 
+			}); 
+			return false;
+		});
+		
+		var $et_daywithposts = jQuery('td.dwp');
+			
+		$et_daywithposts.live('mouseenter', function(e){
+			jQuery(this).find('span.et_popup').css({'bottom':'42px'}).stop(true, true).animate({bottom:"32px", opacity:'show'},200);
+		});
+		
+		$et_daywithposts.live('mouseleave', function(e){
+			jQuery(this).find('span.et_popup').stop(true, true).animate({bottom:"42px", opacity:'hide'},200);
+		});
+		
+					
+		Cufon.now();
+	//]]>	
+	</script>	<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21935367-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script><script type="text/javascript">
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"http:\/\/www.berkshireplaywrightslab.org\/wp-includes\/js\/thickbox\/loadingAnimation.gif","closeImage":"http:\/\/www.berkshireplaywrightslab.org\/wp-includes\/js\/thickbox\/tb-close.png"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/clients/BerkshirePlaywrightsLab/Images/thickbox.js"></script>
+<script type="text/javascript" src="/clients/BerkshirePlaywrightsLab/Images/underscore.js"></script>
+<script type="text/javascript" src="/clients/BerkshirePlaywrightsLab/Images/shortcode.js"></script>
+<script type="text/javascript" src="/clients/BerkshirePlaywrightsLab/Images/media-upload.js"></script>
+<script type="text/javascript" src="/clients/BerkshirePlaywrightsLab/Images/jquery_008.js"></script>
+<script type="text/javascript" src="/clients/BerkshirePlaywrightsLab/Images/et-ptemplates-frontend.js"></script>
+	
+<script type="text/javascript">
+   // set up some vars and prep a virtual click
+   event = document.createEvent("HTMLEvents");
+   event.initEvent("click", true, true);
+   nextSlide; nextSlide = currentSlide + 1;
+   
+   // slide has been changed prep another virtual click
+   function prepClick() {
+      event = document.createEvent("HTMLEvents");
+      event.initEvent("click", true, true);
+   };
+   
+   // auto click the next apropriate slide
+   function featuredCycle() {
+      var t=setTimeout("document.getElementById('featuredSlide'+nextSlide).dispatchEvent(event)",0);
+      currentSlide = currentSlide + 1;
+      nextSlide = currentSlide + 1;
+      if (nextSlide > 3) {
+         nextSlide = 1;
+      }
+      prepClick();
+   };
+</script> 
+<script>
+   // Set the time in miliseconds between slides
+   setInterval(function() {
+      if ( autoscrolling == 1 ) {
+         featuredCycle();
+      }
+   }, 5000);
+</script>
+<script type="text/javascript">if(!NREUMQ.f){NREUMQ.f=function(){NREUMQ.push(["load",new Date().getTime()]);var e=document.createElement("script");e.type="text/javascript";e.src=(("http:"===document.location.protocol)?"http:":"https:")+"//"+"js-agent.newrelic.com/nr-100.js";document.body.appendChild(e);if(NREUMQ.a)NREUMQ.a();};NREUMQ.a=window.onload;window.onload=NREUMQ.f;};NREUMQ.push(["nrfj","beacon-4.newrelic.com","be633d574e","3206255","MQMENkJWDERRVkxYDghJJwFEXg1ZH11XXAQ=",0,1642,new Date().getTime(),"","","","",""]);</script><script type="text/javascript">
+/* <![CDATA[ */
+(function(){try{var s,a,i,j,r,c,l=document.getElementsByTagName("a"),t=document.createElement("textarea");for(i=0;l.length-i;i++){try{a=l[i].getAttribute("href");if(a&&"www.cloudflare.com/email-protection"==a.substr(7 ,35)){s='';j=43;r=parseInt(a.substr(j,2),16);for(j+=2;a.length-j&&a.substr(j,1)!='X';j+=2){c=parseInt(a.substr(j,2),16)^r;s+=String.fromCharCode(c);}j+=1;s+=a.substr(j,a.length-j);t.innerHTML=s.replace(/</g,"&lt;").replace(/>/g,"&gt;");l[i].setAttribute("href","mailto:"+t.value);}}catch(e){}}}catch(e){}})();
+/* ]]> */
+</script>
+
+</i></em><div id="fancy_overlay"></div><div id="fancy_loading"><div></div></div><div id="fancy_outer"><div id="fancy_inner"><div id="fancy_close"></div><div id="fancy_bg"><div class="fancy_bg" id="fancy_bg_n"></div><div class="fancy_bg" id="fancy_bg_ne"></div><div class="fancy_bg" id="fancy_bg_e"></div><div class="fancy_bg" id="fancy_bg_se"></div><div class="fancy_bg" id="fancy_bg_s"></div><div class="fancy_bg" id="fancy_bg_sw"></div><div class="fancy_bg" id="fancy_bg_w"></div><div class="fancy_bg" id="fancy_bg_nw"></div></div><a href="javascript:;" id="fancy_left"><span class="fancy_ico" id="fancy_left_ico"></span></a><a href="javascript:;" id="fancy_right"><span class="fancy_ico" id="fancy_right_ico"></span></a><div id="fancy_content"></div></div></div><div id="fancy_title"><table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td class="fancy_title" id="fancy_title_left"></td><td class="fancy_title" id="fancy_title_main"><div></div></td><td class="fancy_title" id="fancy_title_right"></td></tr></tbody></table></div><script src="/clients/BerkshirePlaywrightsLab/Images/nr-100.js" type="text/javascript"></script><script src="/clients/BerkshirePlaywrightsLab/Images/be633d574e" type="text/javascript"></script>
+</div>
+</form>
+</body>
+</html>

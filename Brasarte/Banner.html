@@ -1,0 +1,353 @@
+
+<SCRIPT language=JavaScript type=text/javascript>
+<!--
+window.onerror=null;	// no error reporting
+if (window != top)	// break out of frames
+	top.location.href=location.href;
+//if ('' != document.referrer)	// check referrer
+//	alert(document.referrer);
+//-->
+</SCRIPT>
+
+
+<SCRIPT type=text/javascript>
+<!--
+var fake_element;
+
+function xoopsGetElementById(id) {
+
+if (document.getElementById(id)) {
+	return document.getElementById(id);
+	} else if (document.all[id]) {
+		return document.all[id];
+		} else if (document.layers && document.layers[id]) {
+			return (document.layers[id]);
+			} else {
+				return fake_element;
+			}
+}
+
+function toggle_visibility(id, flag)  {
+
+if (xoopsGetElementById(id)) {
+	xoopsGetElementById(id).style.visibility = (flag) ? 'visible' : 'hidden';
+	}
+}
+
+function showImgSelected(imgId, selectId, imgDir) {
+imgDom     = xoopsGetElementById(imgId);
+selectDom  = xoopsGetElementById(selectId);
+imgDom.src = "/PrivateLabel/Brasarte/Images/"+ imgDir + "/" + selectDom.options[selectDom.selectedIndex].value;
+}
+
+
+function justReturn() {
+	return;
+}
+
+
+function openWithSelfMain(url,name,width,height) {
+var options = "width=" + width + ",height=" + height + "toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,copyhistory=no";
+
+new_window = window.open(url, name, options);
+window.self.name = "main";
+new_window.moveTo(((screen.availWidth/2)-(width/2)),((screen.availHeight/2)-(height/2)))
+new_window.focus();
+}
+
+
+function setElementColor(id, color) {
+	xoopsGetElementById(id).style.color = "#" + color;
+}
+
+
+function setElementFont(id, font) {
+	xoopsGetElementById(id).style.fontFamily = font;
+}
+
+
+function setElementSize(id, size) {
+	xoopsGetElementById(id).style.fontSize = size;
+}
+
+
+function changeDisplay(id) {
+var elestyle = xoopsGetElementById(id).style;
+
+if (elestyle.display == "") {
+	elestyle.display = "none";
+	} else {
+		elestyle.display = "block";
+	}
+}
+
+function toggleDisplay(id) {
+var elestyle = xoopsGetElementById(id).style;
+
+if (elestyle.display == "none") {
+	elestyle.display = 'block';
+	} else {
+		elestyle.display = "none";
+	}
+}
+
+function setVisible(id) {
+	xoopsGetElementById(id).style.visibility = "visible";
+}
+
+
+function setHidden(id) {
+	xoopsGetElementById(id).style.visibility = "hidden";
+}
+
+
+function makeBold(id) {
+var eleStyle = xoopsGetElementById(id).style;
+
+if (eleStyle.fontWeight != "bold") {
+	eleStyle.fontWeight = "bold";
+	} else {
+		eleStyle.fontWeight = "normal";
+	}
+}
+
+
+function makeItalic(id) {
+var eleStyle = xoopsGetElementById(id).style;
+
+if (eleStyle.fontStyle != "italic") {
+	eleStyle.fontStyle = "italic";
+	} else {
+		eleStyle.fontStyle = "normal";
+	}
+}
+
+
+function makeUnderline(id) {
+var eleStyle = xoopsGetElementById(id).style;
+
+if (eleStyle.textDecoration != "underline") {
+	eleStyle.textDecoration = "underline";
+	} else {
+		eleStyle.textDecoration = "none";
+	}
+}
+
+
+function appendSelectOption(selectMenuId, optionName, optionValue) {
+var selectMenu = xoopsGetElementById(selectMenuId);
+var newoption  = new Option(optionName, optionValue);
+
+selectMenu.options[selectMenu.length] = newoption;
+selectMenu.options[selectMenu.length].selected = true;
+}
+
+
+function disableElement(target) {
+var targetDom = xoopsGetElementById(target);
+
+if (targetDom.disabled != true) {
+	targetDom.disabled = true;
+	} else {
+		targetDom.disabled = false;
+	}
+}
+
+
+function xoopsCheckAll(formname, switchid) {
+var ele = document.forms[formname].elements;
+var switch_cbox = xoopsGetElementById(switchid);
+
+for (var i=0; i<ele.length; i++) {
+	var e = ele[i];
+	if ( (e.name != switch_cbox.name) && (e.type == 'checkbox') ) {
+		e.checked = switch_cbox.checked;
+	}
+}
+}
+//-->
+</SCRIPT>
+<LINK href="/PrivateLabel/Brasarte/Images/style2.css" type=text/css rel=stylesheet>
+
+<!-- HTML CODE -->
+<SCRIPT src="/PrivateLabel/Brasarte/Images/date.js" type=text/javascript></SCRIPT>
+
+<SCRIPT src="/PrivateLabel/Brasarte/Images/x.js" type=text/javascript></SCRIPT>
+<STYLE type=text/css media=all>@import url(/PrivateLabel/Brasarte/Images/style.css );
+</STYLE>
+
+
+<TABLE cellSpacing=0 cellPadding=0 width="100%" align=center border=0>
+  <TBODY>
+  <TR>
+    <TD>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center border=0 
+      zbgcolor="#F1F27A">
+        <TBODY>
+        <TR>
+          <TD class=exoops vAlign=top><A 
+            href="http://www.brasarte.com/modules/news/"><IMG height=94 
+            alt="Preserving a culture" hspace=0 src="/PrivateLabel/Brasarte/Images/header.jpg" 
+            width=720 align=left border=0></A></TD></TR>
+        <TR>
+          <TD class=exoops vAlign=top><A 
+            href="http://www.brasarte.com/modules/news/"><IMG height=85 
+            alt="Preserving a culture" hspace=0 
+            src="/PrivateLabel/Brasarte/Images/subheader.jpg" width=720 align=left 
+          border=0></A></TD></TR></TBODY></TABLE>
+      <TABLE style="PADDING-TOP: 3px" cellSpacing=0 cellPadding=0 width="100%" 
+      align=center border=0>
+        <TBODY>
+        <TR>
+          <TD class=sidebar1 id=leftblocks vAlign=top align=left 
+          background=/PrivateLabel/Brasarte/Images/bg.gif name="leftblocks"><!-- HTML CODE -->
+            <TABLE cellSpacing=0 cellPadding=0 width=160 border=0>
+              <TBODY>
+              <TR class=bg1 valign=top>
+                <TD background=/PrivateLabel/Brasarte/Images/bg_degrade.gif>
+                  <DIV class=sidboxtitle></DIV></TD></TR>
+              <TR>
+                <TD class=sideboxcontent>
+                  <DIV align=center><BR>
+                      &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                  <IMG height=1 alt="" src="/PrivateLabel/Brasarte/Images/pixel.gif" width=1 
+                  border=0> 
+                  </DIV></TD></TR></TBODY></TABLE><BR 
+            style="LINE-HEIGHT: 7px"><!-- HTML CODE --><!-- HTML CODE -->
+            <TABLE cellSpacing=0 cellPadding=0 width=160 border=0>
+              <TBODY>
+              <TR class=bg1>
+                <TD background=/PrivateLabel/Brasarte/Images/bg_degrade.gif>
+                  <DIV class=sidboxtitle>&nbsp; &nbsp; Welcome to 
+                BrasArte</DIV></TD></TR>
+              <TR>
+                <TD class=sideboxcontent><SMALL><B 
+                  style="COLOR: yellow">&#187;</B>&nbsp;</SMALL><A 
+                  title="About BrasArte ..." 
+                  href="http://www.brasarte.com/modules/xoopsfaq/index.php?cat_id=2#1">About 
+                  BrasArte</A><BR><SMALL><B 
+                  style="COLOR: yellow">&#187;</B>&nbsp;</SMALL><A 
+                  title="Conceição Damasceno ..." 
+                  href="http://www.brasarte.com/modules/xoopsfaq/index.php?cat_id=8#4">Concei&#231;&#227;o 
+                  Damasceno</A><BR><SMALL><B 
+                  style="COLOR: yellow">&#187;</B>&nbsp;</SMALL><A 
+                  title="World Dance Center ..." 
+                  href="http://www.brasarte.com/modules/xoopsfaq/index.php?cat_id=4#8">World 
+                  Dance Center<IMG class=wmsg height=85 alt="World Dance Center" 
+                  hspace=0 src="/PrivateLabel/Brasarte/Images/banner_wdc.jpg" width=720 
+                  border=0></A><BR><SMALL><B 
+                  style="COLOR: yellow">&#187;</B>&nbsp;</SMALL><A 
+                  title="Schedule of Classes ..." 
+                  href="http://www.brasarte.com/modules/week/">Schedule of 
+                  Classes<IMG class=wmsg height=85 alt="Schedule of Classes" 
+                  hspace=0 src="/PrivateLabel/Brasarte/Images/banner_schedule.jpg" width=720 
+                  border=0></A><BR><SMALL><B 
+                  style="COLOR: yellow">&#187;</B>&nbsp;</SMALL><A 
+                  title="Borboletas (Children) ..." 
+                  href="http://www.brasarte.com/modules/xoopsfaq/index.php?cat_id=7#10">Borboletas<SMALL> 
+                  (Children)</SMALL><IMG class=wmsg height=85 
+                  alt="Borboletas<small> (Children)</small>" hspace=0 
+                  src="/PrivateLabel/Brasarte/Images/banner_borboletas.jpg" width=720 
+                  border=0></A><BR><SMALL><B 
+                  style="COLOR: yellow">&#187;</B>&nbsp;</SMALL><A 
+                  title="Ginga Brasil (Shows) ..." 
+                  href="http://www.brasarte.com/modules/xoopsfaq/index.php?cat_id=6#7">Ginga 
+                  Brasil<SMALL> (Shows)</SMALL><IMG class=wmsg height=85 
+                  alt="Ginga Brasil<small> (Shows)</small>" hspace=0 
+                  src="/PrivateLabel/Brasarte/Images/banner_gingabrasil.jpg" width=720 
+                  border=0></A><BR><SMALL><B 
+                  style="COLOR: yellow">&#187;</B>&nbsp;</SMALL><A 
+                  title="Tambores do Brasil (Band) ..." 
+                  href="http://www.brasarte.com/modules/xoopsfaq/index.php?cat_id=10#21">Tambores<SMALL> 
+                  do </SMALL>Brasil<SMALL> (Band)</SMALL></A><BR><SMALL><B 
+                  style="COLOR: yellow">&#187;</B>&nbsp;</SMALL><A 
+                  title="Three Goddesses (Store) ..." 
+                  href="http://www.brasarte.com/modules/xoopsfaq/index.php?cat_id=5#6">Three 
+                  Goddesses<SMALL> (Store)</SMALL></A><BR><SMALL><B 
+                  style="COLOR: yellow">&#187;</B>&nbsp;</SMALL><A 
+                  title="Calendar of Events ..." 
+                  href="http://www.brasarte.com/modules/eCal/">Calendar of 
+                  Events<IMG class=wmsg height=85 alt="Calendar of Events" 
+                  hspace=0 src="/PrivateLabel/Brasarte/Images/banner_calendar.jpg" width=720 
+                  border=0></A><BR></TD></TR></TBODY></TABLE><BR 
+            style="LINE-HEIGHT: 7px"><!-- HTML CODE --><!-- HTML CODE -->
+            <TABLE cellSpacing=0 cellPadding=0 width=160 border=0>
+              <TBODY>
+              <TR class=bg1>
+                <TD background=/PrivateLabel/Brasarte/Images/bg_degrade.gif>
+                  </TD></TR>
+              <TR>
+                <TD class=sideboxcontent></TD></TR></TBODY></TABLE><BR 
+            style="LINE-HEIGHT: 7px"><!-- HTML CODE --><!-- HTML CODE -->
+            <BR 
+            style="LINE-HEIGHT: 7px"><!-- HTML CODE --><!-- HTML CODE -->
+            <BR 
+            style="LINE-HEIGHT: 7px"><!-- HTML CODE --><!-- HTML CODE -->
+            <BR 
+            style="LINE-HEIGHT: 7px"><!-- HTML CODE --><!-- HTML CODE -->
+            <BR 
+            style="LINE-HEIGHT: 7px"><!-- HTML CODE --></TD>
+          <TD style="PADDING-LEFT: 4px" vAlign=top align=middle width="100%">
+            <TABLE class=sidboxtitle cellSpacing=0 cellPadding=0 width="100%" 
+            background=/PrivateLabel/Brasarte/Images/bg_degrade.gif border=0>
+              <TBODY>
+              <TR>
+                <TD width=1><IMG style="CURSOR: hand" 
+                  onclick="toggleDisplay('leftblocks');" 
+                  alt="Expand | Collapse left side - Click and see!" 
+                  src="/PrivateLabel/Brasarte/Images/sidebar.gif" align=absMiddle></TD>
+                <TD noWrap width="100%">
+                  <TABLE style="COLOR: #ccf" cellSpacing=0 cellPadding=0 
+                  width="100%" border=0>
+                    <TBODY>
+                    <TR>
+                      <TD noWrap><B><SMALL style="LETTER-SPACING: 2px"><A 
+                        title="Contact Us! Requests, scheduling, shows, suggestions, volunteering, classes, events, donnations, etc" 
+                        style="FONT-WEIGHT: bold; FONT-SIZE: larger; COLOR: #0000ff; TEXT-DECORATION: none" 
+                        href="http://www.brasarte.com/themes/brasarte/contactus.php">&nbsp; 
+                        Contact Us <IMG alt="C o n t a c t &nbsp; U s !" 
+                        src="/PrivateLabel/Brasarte/Images/mail.gif" 
+border=0></A></SMALL></B></TD>
+                      <TD noWrap>&nbsp;«&#187; <IMG style="CURSOR: hand" 
+                        onclick="window.open('http://translate.google.com/translate?hl=de&amp;u=' + document.URL);" 
+                        alt=Übersetzen src="/PrivateLabel/Brasarte/Images/german.gif" 
+                        align=middle border=0> <IMG style="CURSOR: hand" 
+                        onclick="window.open('http://translate.google.com/translate?hl=fr&amp;u=' + document.URL);" 
+                        alt=Traduisez src="/PrivateLabel/Brasarte/Images/french.gif" 
+                        align=middle border=0> <IMG style="CURSOR: hand" 
+                        onclick="window.open('http://translate.google.com/translate?hl=it&amp;u=' + document.URL);" 
+                        alt=Traduca src="/PrivateLabel/Brasarte/Images/italian.gif" align=middle 
+                        border=0> <IMG style="CURSOR: hand" 
+                        onclick="window.open('http://translate.google.com/translate?hl=es&amp;u=' + document.URL);" 
+                        alt=Traduzca src="/PrivateLabel/Brasarte/Images/spanish.gif" 
+                        align=middle border=0> <IMG style="CURSOR: hand" 
+                        onclick="window.open('http://translate.google.com/translate?hl=pt&amp;u=' + document.URL);" 
+                        alt=Traduza src="/PrivateLabel/Brasarte/Images/portuguese.gif" 
+                        align=middle border=0> </TD>
+                      <TD noWrap>&nbsp; &#171;&#187;<B><SMALL 
+                        style="LETTER-SPACING: 2px"><A 
+                        title="Links Links and more Links" 
+                        style="FONT-WEIGHT: bold; FONT-SIZE: larger; COLOR: #0000ff; TEXT-DECORATION: none" 
+                        href="http://www.brasarte.com/modules/mylinks/"> Links 
+                        <IMG alt="L i n k s" src="/PrivateLabel/Brasarte/Images/links.gif" 
+                        align=absMiddle border=0></A></SMALL></B></TD>
+                      <TD noWrap>&nbsp;</TD>
+                      <TD noWrap align=right width="100%">
+                        <DIV class=myclock id=myclock 
+                        style="FONT-SIZE: smaller; COLOR: #000000" 
+                        align=right>&nbsp;</DIV></TD></TR></TBODY></TABLE></TD>
+                        <!-- td width="1"><img style="cursor: hand;" onclick="toggleDisplay('rightblocks');" src="http://www.brasarte.com/themes/brasarte/images/sidebar.gif" align="absmiddle" alt="Expand | Collapse left side - Click and see!" /></td-->
+                        </TR></TBODY></TABLE>
+                        <!-- HTML CODE --><!-- START MODULE SPAN CSS --><SPAN 
+            class=xoopsfaq_css id=xoopsfaq_dom name="xoopsfaq_dom">
+            <!-- START MODULE SPAN CSS --> 
+            <TABLE cellSpacing=1 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR class=bg2>
+                <TD vAlign=top>
+                  <TABLE cellSpacing=1 cellPadding=8 width="100%" border=0>
+                    <TBODY>
+                    <TR class=bg1>
+                      <TD vAlign=top><!-- HTML CODE -->
+                        <H4 style="TEXT-ALIGN: left">
+                            Tickets</H4>

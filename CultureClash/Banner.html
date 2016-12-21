@@ -1,0 +1,328 @@
+<SCRIPT type=text/javascript>
+<!--
+function clearDefault(el) {  if (el.defaultValue==el.value) el.value = ""}
+function newImage(arg) {
+	if (document.images) {
+		rslt = new Image();
+		rslt.src = arg;
+		return rslt;
+	}
+}
+
+function changeImages() {
+	if (document.images && (preloadFlag == true)) {
+		for (var i=0; i<changeImages.arguments.length; i+=2) {
+			document[changeImages.arguments[i]].src = changeImages.arguments[i+1];
+		}
+	}
+}
+
+var preloadFlag = false;
+function preloadImages() {
+	if (document.images) {
+		schedule_roll = newImage("/Privatelabel/CultureClash/images/cc_history_11_scheduleroll.gif");
+		merch_roll = newImage("/Privatelabel/CultureClash/images/cc_history_13_merchroll.gif");
+		press_roll = newImage("/Privatelabel/CultureClash/images/cc_history_15_pressroll.gif");
+		clips_roll = newImage("/Privatelabel/CultureClash/images/cc_history_16_clipsroll.gif");
+		links_roll = newImage("/Privatelabel/CultureClash/images/cc_history_17_linksroll.gif");
+		contact_roll = newImage("/Privatelabel/CultureClash/images/cc_history_18_contactroll.gif");
+		home_roll = newImage("/Privatelabel/CultureClash/images/emailrobbie-over.gif");
+		timeline_roll = newImage("/Privatelabel/CultureClash/images/cc_history_27_timelineroll.gif");
+		group_roll = newImage("/Privatelabel/CultureClash/images/cc_history_28_grouproll.gif");
+		preloadFlag = true;
+	}
+}
+
+// -->
+</SCRIPT>
+
+<SCRIPT language=JavaScript type=text/javascript>
+<!--
+function checkBrowser(){
+	this.ver=navigator.appVersion
+	this.dom=document.getElementById?1:0
+	this.ie5=(this.ver.indexOf("MSIE 5")>-1 && this.dom)?1:0;
+	this.ie4=(document.all && !this.dom)?1:0;
+	this.ns5=(this.dom && parseInt(this.ver) >= 5) ?1:0;
+	this.ns4=(document.layers && !this.dom)?1:0;
+	this.bw=(this.ie5 || this.ie4 || this.ns4 || this.ns5)
+	return this
+}
+bw=new checkBrowser()
+var speed=50
+var loop, timer
+function makeObj(obj,nest){
+    nest=(!nest) ? '':'document.'+nest+'.'
+	this.el=bw.dom?document.getElementById(obj):bw.ie4?document.all[obj]:bw.ns4?eval(nest+'document.'+obj):0;
+  	this.css=bw.dom?document.getElementById(obj).style:bw.ie4?document.all[obj].style:bw.ns4?eval(nest+'document.'+obj):0;
+	this.scrollHeight=bw.ns4?this.css.document.height:this.el.offsetHeight
+	this.clipHeight=bw.ns4?this.css.clip.height:this.el.offsetHeight
+	this.up=goUp;this.down=goDown;
+	this.moveIt=moveIt; this.x; this.y;
+    this.obj = obj + "Object"
+    eval(this.obj + "=this")
+    return this
+}
+function moveIt(x,y){
+	this.x=x;this.y=y
+	this.css.left=this.x
+	this.css.top=this.y
+}
+function goDown(move){
+	if(this.y>-this.scrollHeight+oCont.clipHeight){
+		this.moveIt(0,this.y-move)
+			if(loop) setTimeout(this.obj+".down("+move+")",speed)
+	}
+}
+function goUp(move){
+	if(this.y<0){
+		this.moveIt(0,this.y-move)
+		if(loop) setTimeout(this.obj+".up("+move+")",speed)
+	}
+}
+function scroll(speed){
+	if(loaded){
+		loop=true;
+		if(speed>0) oScroll.down(speed)
+		else oScroll.up(speed)
+	}
+}
+function scrollPic(speed){
+	if(loaded){
+		loop=true;
+		if(speed>0) pScroll.down(speed)
+		else pScroll.up(speed)
+	}
+}
+function noScroll(){
+	loop=false
+	if(timer) clearTimeout(timer)
+}
+var loaded;
+function scrollInit(){
+	oCont=new makeObj('divCont')
+	oScroll=new makeObj('divText','divCont')
+	oScroll.moveIt(0,0)
+	oCont.css.visibility='visible'
+    pCont=new makeObj('divCont1')
+	pScroll=new makeObj('divPic1','divCont1')
+	pScroll.moveIt(0,0)
+	pCont.css.visibility='visible'
+	loaded=true;
+}
+
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</SCRIPT>
+
+<SCRIPT src="/Privatelabel/CultureClash/images/AC_RunActiveContent.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=JavaScript type=text/JavaScript>
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+//-->
+</SCRIPT>
+
+<TABLE id=Table_01 height=1491 cellSpacing=0 cellPadding=0 width=901 border=0>
+  <TBODY>
+  <TR>
+    <TD colSpan=4 rowSpan=2 valign=top>
+      <TABLE cellSpacing=0 cellPadding=0 width=900 border=0>
+        <TBODY>
+        <TR>
+          <TD bgColor=#bbcde5 colSpan=3><A 
+            onmouseover="MM_swapImage('Image57','','/Privatelabel/CultureClash/images/cc_history_01_welcomeroll.gif',1)" 
+            onmouseout=MM_swapImgRestore() 
+            href="http://www.cultureclash.com/index.html"><IMG id=Image57 
+            height=44 alt=banner 
+            src="/Privatelabel/CultureClash/images/cc_history_01.gif" width=900 
+            border=0 name=Image57></A></TD></TR>
+        <TR>
+          <TD vAlign=top align=left width=419 bgColor=#996633><IMG height=28 
+            alt=title src="/Privatelabel/CultureClash/images/cc_schedule_04.gif" 
+            width=418></TD>
+          <TD vAlign=top width=5 bgColor=#ffffff>&nbsp;</TD>
+          <TD vAlign=top width=478>
+            <TABLE height=28 width=480 bgColor=#cccc99 border=0>
+              <TBODY>
+              <TR>
+                <FORM action=http://www.cultureclash.com/maillist/sub.pl 
+                method=post target=_blank>
+                <TD vAlign=top align=left width=278 bgColor=#cccc99 
+                  height=27><FONT face="Arial, Helvetica, sans-serif" 
+                  color=#ffffff size=2><STRONG>Enter your email to join our 
+                  mailing list:</STRONG></FONT>&nbsp;&nbsp;</TD>
+                <TD vAlign=top align=left width=125 bgColor=#cccc99><INPUT 
+                  onfocus=clearDefault(this) size=15 value="Enter Email" 
+                  name=address></TD>
+                <TD vAlign=top align=left width=62 bgColor=#cccc99><INPUT type=submit value=Join! name=submit2></TD></FORM></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+    <TD><IMG height=44 alt="" 
+      src="/Privatelabel/CultureClash/images/spacer.gif" width=1></TD></TR>
+  <TR>
+    <TD style="height: 49px"><IMG height=28 alt="" 
+      src="/Privatelabel/CultureClash/images/spacer.gif" width=1></TD></TR>
+      
+  
+  <TR>
+    <TD >
+      <SCRIPT type=text/javascript>
+AC_FL_RunContent( 'codebase','','width','188','height','133','src','/Privatelabel/CultureClash/images/small_logo_contact','quality','high','pluginspage','http://www.macromedia.com/go/getflashplayer','movie','/Privatelabel/CultureClash/images/small_logo_contact' ); //end AC code
+</SCRIPT>
+      <NOSCRIPT>
+      <OBJECT height=133 width=188 classid=clsid:D27CDB6E-AE6D-11cf-96B8-444553540000><PARAM NAME="movie" VALUE="/Privatelabel/CultureClash/images/small_logo_contact.swf"><PARAM NAME="quality" VALUE="high">
+                                    <embed src="/Privatelabel/CultureClash/images/small_logo_contact.swf" 
+      quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" 
+      type="application/x-shockwave-flash" width="188" height="133"></embed>	    
+      </OBJECT></NOSCRIPT></TD>
+    <TD colSpan=3 rowSpan=10>&nbsp; </TD>
+    <TD><IMG height=133 alt="" 
+      src="/Privatelabel/CultureClash/images/spacer.gif" width=1></TD></TR>
+      <TR>
+    <TD><A 
+      onmouseover="MM_swapImage('Imagexx','','/Privatelabel/CultureClash/images/cc_schedule_09.gif',1)" 
+      onmouseout=MM_swapImgRestore() 
+      href="http://www.cultureclash.com/cc_schedule.html"><IMG height=36
+      src="/Privatelabel/CultureClash/images/cc_merch_10.gif" width=188 
+      border=0 name=Imagexx></A></TD>
+    <TD><IMG height=36 alt="" 
+      src="/Privatelabel/CultureClash/images/spacer.gif" width=1></TD></TR>
+      <TR>
+    <TD><A 
+      onmouseover="MM_swapImage('Image42','','/Privatelabel/CultureClash/images/cc_schedule_10_historyroll.jpg',1)" 
+      onmouseout=MM_swapImgRestore() 
+      href="http://www.cultureclash.com/cc_history.html"><IMG height=38 
+      src="/Privatelabel/CultureClash/images/cc_schedule_10.gif" width=188 
+      border=0 name=Image42></A></TD>
+    <TD><IMG height=38 alt="" 
+      src="/Privatelabel/CultureClash/images/spacer.gif" width=1></TD></TR>
+  <TR>
+    <TD><A 
+      onmouseover="MM_swapImage('Image43','','/Privatelabel/CultureClash/images/cc_schedule_11_merchroll.jpg',1)" 
+      onmouseout=MM_swapImgRestore() 
+      href="http://www.cultureclash.com/cc_merch.html"><IMG height=34 
+      src="/Privatelabel/CultureClash/images/cc_schedule_11.gif" width=188 
+      border=0 name=Image43></A></TD>
+    <TD><IMG height=33 alt="" 
+      src="/Privatelabel/CultureClash/images/spacer.gif" width=1></TD></TR>
+  <TR>
+    <TD><A 
+      onmouseover="MM_swapImage('Image44','','/Privatelabel/CultureClash/images/cc_schedule_12_pressroll.jpg',1)" 
+      onmouseout=MM_swapImgRestore() 
+      href="http://www.cultureclash.com/cc_press.html"><IMG height=36 
+      src="/Privatelabel/CultureClash/images/cc_schedule_12.gif" width=188 
+      border=0 name=Image44></A></TD>
+    <TD><IMG height=35 alt="" 
+      src="/Privatelabel/CultureClash/images/spacer.gif" width=1></TD></TR>
+  <TR>
+    <TD><A 
+      onmouseover="MM_swapImage('Image45','','/Privatelabel/CultureClash/images/cc_schedule_13_clipsroll.jpg',1)" 
+      onmouseout=MM_swapImgRestore() 
+      href="http://www.cultureclash.com/cc_clips.html"><IMG height=36 
+      src="/Privatelabel/CultureClash/images/cc_schedule_13.gif" width=188 
+      border=0 name=Image45></A></TD>
+    <TD><IMG height=35 alt="" 
+      src="/Privatelabel/CultureClash/images/spacer.gif" width=1></TD></TR>
+  <TR>
+    <TD><A 
+      onmouseover="MM_swapImage('Image46','','/Privatelabel/CultureClash/images/cc_schedule_14_linksroll.jpg',1)" 
+      onmouseout=MM_swapImgRestore() 
+      href="http://www.cultureclash.com/cc_links.html"><IMG height=36 
+      src="/Privatelabel/CultureClash/images/cc_schedule_14.gif" width=188 
+      border=0 name=Image46></A></TD>
+    <TD><IMG height=35 alt="" 
+      src="/Privatelabel/CultureClash/images/spacer.gif" width=1></TD></TR>
+  <TR>
+    <TD><A 
+      onmouseover="MM_swapImage('Image47','','/Privatelabel/CultureClash/images/cc_schedule_15_contactroll.jpg',1)" 
+      onmouseout=MM_swapImgRestore() 
+      href="http://www.cultureclash.com/cc_contact.html"><IMG height=38 
+      src="/Privatelabel/CultureClash/images/cc_schedule_15.gif" width=188 
+      border=0 name=Image47></A></TD>
+    <TD><IMG height=37 alt="" 
+      src="/Privatelabel/CultureClash/images/spacer.gif" width=1></TD></TR>
+  <TR>
+    <TD><IMG height=27 alt="" 
+      src="/Privatelabel/CultureClash/images/cc_schedule_16.gif" width=188></TD>
+    <TD><IMG height=26 alt="" 
+      src="/Privatelabel/CultureClash/images/spacer.gif" width=1></TD></TR>
+  <TR>
+    <TD rowSpan=2>
+      <SCRIPT type=text/javascript>
+AC_FL_RunContent( 'codebase','','width','188','height','269','align','top','src','/Privatelabel/CultureClash/images/leftLoad','quality','high','pluginspage','http://www.macromedia.com/go/getflashplayer','movie','/Privatelabel/CultureClash/images/leftLoad' ); //end AC code
+</SCRIPT>
+      <NOSCRIPT>
+      <OBJECT 
+       
+      height=269 width=188 align=top 
+      classid=clsid:D27CDB6E-AE6D-11cf-96B8-444553540000><PARAM NAME="movie" VALUE="/Privatelabel/CultureClash/images/leftLoad.swf"><PARAM NAME="quality" VALUE="high">
+                                    <embed src="/Privatelabel/CultureClash/images/leftLoad.swf" width="188" 
+      height="269" align="top" quality="high" 
+      pluginspage="http://www.macromedia.com/go/getflashplayer" 
+      type="application/x-shockwave-flash"></embed>	    </OBJECT></NOSCRIPT></TD>
+    <TD><IMG height=213 alt="" 
+      src="/Privatelabel/CultureClash/images/spacer.gif" width=1></TD></TR>
+  <TR>
+    <TD colSpan=3 rowSpan=4>&nbsp; </TD>
+    <TD><IMG height=55 alt="" 
+      src="/Privatelabel/CultureClash/images/spacer.gif" width=1></TD></TR>
+  <TR>
+    <TD><IMG height=14 alt="" 
+      src="/Privatelabel/CultureClash/images/cc_schedule_19.gif" width=188></TD>
+    <TD><IMG height=14 alt="" 
+      src="/Privatelabel/CultureClash/images/spacer.gif" width=1></TD></TR>
+  <TR>
+    <TD><A 
+      onmouseover="MM_swapImage('Image48','','/Privatelabel/CultureClash/images/cc_schedule_20_homeroll.jpg',1)" 
+      onmouseout=MM_swapImgRestore() 
+      href="http://www.cultureclash.com/cc_homepage.html"><IMG height=29 
+      src="/Privatelabel/CultureClash/images/cc_schedule_20.jpg" width=188 
+      border=0 name=Image48></A></TD>
+    <TD><IMG height=29 alt="" 
+      src="/Privatelabel/CultureClash/images/spacer.gif" width=1></TD></TR>
+  <TR>
+    <TD><IMG height=675 alt="" 
+      src="/Privatelabel/CultureClash/images/cc_schedule_21.gif" width=188></TD>
+    <TD><IMG height=675 alt="" 
+      src="/Privatelabel/CultureClash/images/spacer.gif" width=1></TD></TR>
+  <TR>
+    <TD><IMG height=1 alt="" src="/Privatelabel/CultureClash/images/spacer.gif" 
+      width=188></TD>
+    <TD><IMG height=1 alt="" src="/Privatelabel/CultureClash/images/spacer.gif" 
+      width=230></TD>
+    <TD><IMG height=1 alt="" src="/Privatelabel/CultureClash/images/spacer.gif" 
+      width=3></TD>
+    <TD><IMG height=1 alt="" src="/Privatelabel/CultureClash/images/spacer.gif" 
+      width=479></TD>
+    <TD></TD></TR></TBODY></TABLE>
+<P>&nbsp;</P>
+<DIV id=Layer1 
+style="Z-INDEX: 1; LEFT: 203px; WIDTH: 700px; POSITION: absolute; TOP: 96px; HEIGHT: 454px">
+<P>

@@ -1,0 +1,321 @@
+/* ============================================================= */
+/* =================== Main tab styling ======================== */
+/* ============================================================= */
+.MenuWrapper, div.MenuWrapperMega {z-index:100; display:block; margin:0px auto; padding:0px; /*background:url(/clients/ArlingtonMusicHall/Images/top_shadow7px.png) bottom left repeat-x;*/ position:relative; height:30px;}
+.MenuWrapper div.PfNav, div.MenuWrapperMega div.PfNav  {margin:auto; z-index:1000; position:absolute; top:0px; left:14px; display:block; text-align:center; padding:3px 0px 0px 0px; /*border-top:4px solid #403c35; border-bottom:4px solid #262422; background:#F8F8ED;*/}            
+/* ============================================================= */
+/* =================== Main tab styling (level 0) ============== */
+/* ============================================================= */
+
+/* =================== styling for non-Mega ==================== */
+.MenuWrapper ul {width:2000px; margin:auto; position:static; list-style:none; font-weight:bold; margin:0px 0px 0px 0px; padding:0px; text-align:center; vertical-align:top; display:inline-block;}
+
+.MenuWrapper ul li {margin:0px 0px 0px 0px; padding:0px 4px 0px 5px; text-align:center; border-bottom:none; display:inline-block; float:left;  background:url(/clients/ArlingtonMusicHall/Images/sep.png) 0px 2px no-repeat;}
+.MenuWrapper ul li:first-child {background:none;}
+.MenuWrapper ul li:hover {padding:0px 4px 0px 5px; margin:0px 0px 0px 0px; z-index:1;}
+
+.MenuWrapper ul {width:2000px; font-family: Arial, Helvetica, sans-serif; position:static;}    
+.MenuWrapper ul a {text-decoration:none; color:#ffffff; font-weight:normal; font-size:17px; font-family:Tahoma, Geneva, sans-serif; line-height:38px; display:block; text-align: left; padding: 0px 0px 0px 15px;}
+.MenuWrapper ul li.Active a {color:#ffffff; padding: 0px 0px 0px 15px; background:url(/clients/ArlingtonMusicHall/Images/top_hover_left_Active_v2.png) no-repeat left top;}
+.MenuWrapper ul li:hover a  {color:#c5c5c5; padding: 0px 0px 0px 15px; background:url(/clients/ArlingtonMusicHall/Images/top_hover_left.png) no-repeat left top;}
+.MenuWrapper ul li.Active a span.MenuText {display:block; padding: 0px 15px 0px 0px; height:38px; line-height:33px; background:url(/clients/ArlingtonMusicHall/Images/top_hover_right_Active_v2.png) no-repeat center top;}
+.MenuWrapper ul li a span.MenuText {display:block; padding: 0px 15px 0px 0px; line-height:38px;}
+.MenuWrapper ul li:hover a span.MenuText {background:url(/clients/ArlingtonMusicHall/Images/top_hover_right.png) no-repeat center top;}
+
+
+/* =================== styling for Mega ======================== */
+ul#PfNavMega {width:2000px; margin:auto; position:static; list-style:none; font-weight:bold; margin:0px 0px 0px 0px; padding:0px; text-align:center; vertical-align:top; display:inline-block;}
+
+ul#PfNavMega li {margin:0px 0px 0px 0px; padding:0px 4px 0px 5px; text-align:center; border-bottom:none; display:inline-block; float:left;  background:url(/clients/ArlingtonMusicHall/Images/sep.png) 0px 2px no-repeat;}
+ul#PfNavMega li:first-child {background:none;}
+ul#PfNavMega li:hover {padding:0px 4px 0px 5px; margin:0px 0px 0px 0px; z-index:1;}
+
+ul#PfNavMega {width:850px; font-family: Arial, Helvetica, sans-serif; position:static;}    
+ul#PfNavMega a {text-decoration:none; color:#c5c5c5; font-weight:bold; font-size:12px; font-family:Arial, Helvetica, sans-serif; line-height:22px; display:block; text-align: left; padding: 0px 0px 0px 15px;}
+ul#PfNavMega li.Active a {color:#ffffff; padding: 0px 0px 0px 15px; background:url(/clients/ArlingtonMusicHall/Images/top_hover_left_Active_v2.png) no-repeat left top;}
+ul#PfNavMega li.Active a span.MenuText {display:block; padding: 0px 15px 0px 0px; height:38px; line-height:33px; background:url(/clients/ArlingtonMusicHall/Images/top_hover_right_Active_v2.png) no-repeat center top;}
+ul#PfNavMega li:hover a {color:#ffffff; padding: 0px 0px 0px 15px; background:url(/clients/ArlingtonMusicHall/Images/top_hover_left.png) no-repeat left top;}
+ul#PfNavMega li a span.MenuText {display:block; padding: 0px 15px 0px 0px; line-height:38px;}
+ul#PfNavMega li:hover a span.MenuText {background:url(/clients/ArlingtonMusicHall/Images/top_hover_right.png) no-repeat center top;}
+
+/* ============================================================= */
+/* =================== DropMenu Styling           ============== */
+/* ============================================================= */
+
+
+/******************************* Normal CSS begin *************************/
+ul#PfNavMega div.shadow {overflow:auto; z-index:-1; display:block; position:absolute; left:-10000px; margin:0px; width:699px; background:url(/clients/ArlingtonMusicHall/Images/divShadow.png) bottom center no-repeat; padding:0px 6px 6px 6px; text-align:center; top:41px; /*CSS3 >>*/opacity: 0.0; /* Firefox */ -moz-transition: opacity 0.25s ease 0.1s; /* WebKit */ -webkit-transition: opacity 0.25s ease 0.1s; /* Opera */ -o-transition: opacity 0.25s ease 0.1s; /* Standard */ transition: opacity 0.25s ease 0.1s; /*<< CSS3*/}
+ul#PfNavMega div.shadow div {z-index:1; margin:0px; width:500px; background:#ffffff; padding:0px; text-align:center; border:0px solid #000000; border-top:none;}
+
+/* show drop divs */
+ul#PfNavMega li:hover div.shadow {left:-2px; opacity:1;} /*neg margin is for shadow */
+/******************************* Normal CSS end ***************************/
+
+
+/******************************* jQuery CSS begin *************************/
+ul#PfNavMega div.jShadow {overflow:auto; z-index:-1; display:none; position:absolute; left:-2px; margin:0px; width:699px; background:url(/clients/ArlingtonMusicHall/Images/divShadow.png) bottom center no-repeat; padding:0px 6px 6px 6px; text-align:center; top:40px;}
+ul#PfNavMega div.jShadow div {z-index:1; margin:0px; width:500px; background:#ffffff; padding:0px; text-align:center; border:1px solid #000000; border-top:none;}
+
+/* show drop divs */
+ul#PfNavMega li:hover div.jShadow {} /*neg margin is for shadow */
+/******************************* jQuery CSS end ***************************/
+
+
+.IconImgBefore {padding:0px 5px; vertical-align:middle;}
+.HtmlBeforeLevel0 {display:block; float:left; margin-right:20px;}
+
+
+ul#PfNavMega li div.Column {display:inline; border:none; vertical-align:top;}
+ul#PfNavMega li:hover div.Column {display:inline; border:none; vertical-align:top;}
+/* ============================================================= */
+/* =================== Column Heading Styling (level 1) ======== */
+/* ============================================================= */
+
+ul#PfNavMega ul {list-style:none; margin:0px; padding:0px;}
+ul#PfNavMega ul li {background:none; border:none; padding:0px 0px 0px 0px; margin:5px 0px 0px 0px; text-align:left; vertical-align:top;}
+ul#PfNavMega ul li:hover {background:none; padding:0px 0px 0px 0px; margin:5px 0px 0px 0px;} 
+
+ul#PfNavMega ul li a {font-size:11px; font-weight:bold; color:#000000 !important; font-family:Arial, Helvetica, sans-serif;}
+ul#PfNavMega li div ul li a {background:none; border:none;}
+ul#PfNavMega li:hover div ul li a {background:none; border:none; line-height:22px; padding:0 0 0 10px; color:#000000;}
+ul#PfNavMega li:hover div ul li a:hover {background:url(/clients/ArlingtonMusicHall/Images/megaL1_hover.png) 0px 6px no-repeat; text-decoration:none !important; color:#a80d00 !important;}
+
+/* ============================================================= */
+/* =================== Menu item styling (level 2) ============= */
+/* ============================================================= */
+
+ul#PfNavMega ul li ul li a {font-size:12px; font-weight:normal; color:#000000; font-family:Arial, Helvetica, sans-serif;}
+
+ul#PfNavMega div ul {position:relative; display:inline-block; margin:10px 0px 20px 0px; vertical-align:top;}
+ul#PfNavMega div ul li {display:block; position:relative; background:none; border:none; padding:0px 10px 0px 10px; margin:5px 0px 0px 0px; text-align:left; vertical-align:top; width:220px;clear:both;}
+ul#PfNavMega div ul li:hover {display:block; position:relative; background:none; border:none; padding:0px 10px 0px 10px; margin:5px 0px 0px 0px; text-align:left; vertical-align:top;}
+
+ul#PfNavMega div ul li ul {margin:5px 0px 0px 0px;}
+ul#PfNavMega div ul li ul li {display:block; position:relative; background:none; border-bottom:1px solid #e1e1e1; padding:0px 0px 0px 0px; margin:0px 0px 0px 0px; text-align:left; vertical-align:top;}
+ul#PfNavMega div ul li ul li:hover {display:block; position:relative; background:none; border-bottom:1px solid #e1e1e1; padding:0px 0px 0px 0px; margin:0px 0px 0px 0px; text-align:left; vertical-align:top;}
+ul#PfNavMega li:hover div ul li ul li a {color:#000000; padding:7px 8px 6px 8px; margin:3px 0px; line-height:125%;}
+ul#PfNavMega li:hover div ul li ul li a:hover, ul#PfNavMega li:hover div ul li ul li.Active a {color:#f2f2f2; background:#6B6B6B;}
+
+/* ============================================================= */
+/* =================== Menu item styling (level 3) ============= */
+/* ============================================================= */
+
+ul#PfNavMega div ul li ul li ul {margin:5px 0px 15px 15px;}
+ul#PfNavMega div ul li ul li ul li {border:none; background:none;}
+ul#PfNavMega div ul li ul li ul li:hover {border:none; background:none;}
+ul#PfNavMega div ul li ul li ul li:hover a {}
+ul#PfNavMega li:hover div ul li ul li ul li a {padding:3px 8px; margin:0px; line-height:125%;}
+ul#PfNavMega li:hover div ul li ul li ul li a:hover, ul#PfNavMega li:hover div ul li ul li ul li.Active a {}
+
+/* ============================================================= */
+/* =================== Left Menu styling======================== */
+/* ============================================================= */
+
+.LeftMenuWrapper { }
+.Root_LeftMenuWrapper { border-bottom:1px dotted #62aaeb; border-top:0px dashed #666666; padding:5px 0 10px 15px; text-decoration:none; color:#a80d00; font-weight:bold; font-size:17px; font-family:Tahoma, sans-serif;}
+.Root_LeftMenuWrapper a:link,.Root_LeftMenuWrapper a:visited { color:#ffffff; text-transform:uppercase; font-size:16px; font-family:Arial, Helvetica, sans-serif; text-decoration:none;}
+
+/* ============================================================= */
+/* =================== Left Menu item styling (level 0)========= */
+/* ============================================================= */
+
+.LeftMenuWrapper ul {padding:9px 19px 12px 9px; margin:0px; list-style-type:none;}
+.LeftMenuWrapper ul li {padding:4px 0px 5px 0px; margin:0px; display:block; list-style-type:none;}
+.LeftMenuWrapper ul li a, .LeftMenuWrapper ul li a:link, .LeftMenuWrapper ul li a:visited, .LeftMenuWrapper ul li a:active, .LeftMenuWrapper ul li a:hover {padding:3px 0px 3px 5px; font-size:13px; font-weight:bold; font-family:Arial, Helvetica, sans-serif; text-decoration:none; display:block;}
+.LeftMenuWrapper ul li a:hover {color:#a80d00; }
+.LeftMenuWrapper ul li a.Active {background:url(/clients/ArlingtonMusicHall/Images/megaL1_hover.png) 4px 4px no-repeat; color:#a80d00; padding:0 0 0 15px;}
+
+/* ============================================================= */
+/* =================== Left Menu item styling (level 1)========= */
+/* ============================================================= */
+
+.LeftMenuWrapper ul li ul {padding:9px 0px 12px 0px; margin:0px 0px 0px 17px; list-style-type:none;}
+.LeftMenuWrapper ul li ul li {padding:0px; margin:0px; display:block; list-style-type:none; line-height:24px;}
+.LeftMenuWrapper ul li ul li a, .LeftMenuWrapper ul li ul li a:link, .LeftMenuWrapper ul li ul li a:visited, .LeftMenuWrapper ul li ul li a:active, .LeftMenuWrapper ul li ul li a:hover {padding:5px 0px 4px 0px; line-height:125%; margin:0px 0px 0px 17px; font-size:12px; font-weight:normal; color:#000000; font-family:Tahoma, sans-serif; text-decoration:none; background:none; display:block; border-bottom:1px solid #e1e1e1;}
+.LeftMenuWrapper ul li ul li a:hover, .LeftMenuWrapper ul li ul li.Active a.Active {color:#2f80b9;}
+
+/* ============================================================= */
+/* =================== Left Menu item styling (level 2)========= */
+/* ============================================================= */
+
+.LeftMenuWrapper ul li ul li ul {padding:9px 0px 12px 0px; margin:0px 0px 0px 17px; list-style-type:none;}
+.LeftMenuWrapper ul li ul li ul li {padding:2px 0px; margin:0px; display:block; list-style-type:none;}
+.LeftMenuWrapper ul li ul li ul li a, .LeftMenuWrapper ul li ul li ul li a:link, .LeftMenuWrapper ul li ul li ul li a:visited, .LeftMenuWrapper ul li ul li ul li a:active, .LeftMenuWrapper ul li ul li ul li a:hover {padding:0px; margin:0px 0px 0px 17px; font-size:11px; font-weight:normal; color:#000000; font-family:Tahoma, sans-serif; text-decoration:none; background:none; display:block;}
+.LeftMenuWrapper ul li ul li ul li a:hover, .LeftMenuWrapper ul li ul li ul li.Active a.Active {color:#6b6b6b;}
+
+
+/* ============================================================= */
+/* =================== Main Template styling/layout ============ */
+/* ============================================================= */
+
+#Body {background:#ebe7de url(/clients/ArlingtonMusicHall/Images/eclipse.png) top center no-repeat; overflow-x:hidden; *background-position: top left;   } 
+.HeaderMainContainer {}
+.TopNavigationMainContainer {background:url(/clients/ArlingtonMusicHall/Images/topnav_bg.png) top center no-repeat;}
+.TopNavigationMain {}
+.ContentMainContainer {background:url(/clients/ArlingtonMusicHall/Images/mid_bg.png) top center repeat-y;}
+.patos {background:url(/clients/ArlingtonMusicHall/Images/botShadow.png) top center no-repeat; width:974px; height:6px;}
+.outerBorder {background:none;}
+.HeaderMain {background:none;}
+.ContentMain {background:#ffffff;}
+.ContentMain .LeftContent {}
+.ContentMain .RightContent {}
+.ContentMain .td_LeftContent {border-right:1px solid #d6cdba;}
+.ContentMain .td_RightContent {}
+
+/* ============================================================= */
+/* =================== Header styling/layout =================== */
+/* ============================================================= */
+
+/* =================== MiniNav styling/layout ================== */
+.HeaderMiniNav {color:#000000;}
+.HeaderMiniNav .miniNavUser, .HeaderMiniNav a.miniNavUser, .HeaderMiniNav a.miniNavUser:link, .HeaderMiniNav a.miniNavUser:visited, .HeaderMiniNav a.miniNavUser:active, .HeaderMiniNav a.miniNavUser:hover {color:#000000; text-decoration:none; font-family:Tahoma, "Trebuchet MS", Arial, Helvetica, sans-serif; text-transform:uppercase; font-size:12px;}
+.HeaderMiniNav .miniNavLogin, .HeaderMiniNav a.miniNavLogin, .HeaderMiniNav a.miniNavLogin:link, .HeaderMiniNav a.miniNavLogin:visited, .HeaderMiniNav a.miniNavLogin:active, .HeaderMiniNav a.miniNavLogin:hover {color:#000000; text-decoration:none; font-family:Tahoma, "Trebuchet MS", Arial, Helvetica, sans-serif; text-transform:uppercase; font-size:12px;}
+.HeaderMiniNav .miniNavDate {color:#000000; text-decoration:none; font-family:Tahoma, sans-serif; font-size:12px;}
+
+/* =================== Search styling/layout =================== */
+.HeaderSearch .NormalTextBox {border:2px solid #9f9f9f; color:#333333;}
+.HeaderSearch .searchbox, .HeaderSearch a.searchbox {border:2px solid #9f9f9f; font-size:10px; background:#333333; color:#ffffff; text-decoration:none; font-family:Tahoma, sans-serif;}
+
+/* ============================================================= */
+/* =================== MainContent styling/layout ============== */
+/* ============================================================= */
+.Breadcrumb {color:#797979; text-decoration:none; font-family:Tahoma, sans-serif; font-size:10px;}
+.Breadcrumb a, .Breadcrumb a:link, .Breadcrumb a:visited, .Breadcrumb a:active, .Breadcrumb a:hover {color:#3a3a3a; text-decoration:none; font-family:Tahoma, sans-serif; font-size:12px;}
+
+/* ============================================================= */
+/* =================== Footer styling/layout =================== */
+/* ============================================================= */
+.FooterMain {color:#6b6b6b; background:none; text-decoration:none; font-family:Tahoma, sans-serif; font-size:12px;}
+.FooterMain a, .FooterMain a:link, .FooterMain a:visited, .FooterMain a:active, .FooterMain a:hover {color:#000000; text-decoration:none; font-family:Tahoma, sans-serif; font-size:12px;}
+
+/* ============================================================= */
+/* =================== DNN Control styling/layout ============== */
+/* ============================================================= */
+.AdminMenuControl {background:#ffffff; border:2px solid #403c35;}
+.AdminMenuControl .main_dnnmenu_submenu2 {background:#ffffff; border:2px solid #403c35;}
+
+
+
+/* IE7 RULES */
+ul#PfNavMega div ul {!display:inline;}
+
+
+/* ============================================================= */
+/* ===================  CONTAINER SKINS  ======================= */
+/* ============================================================= */
+.MegaDropDownContainer {background:none;}
+.MegaDropDownContainer .Normal { font-family:Tahoma, sans-serif; color:#797979;}
+.MegaDropDownContainer .Normal div { font-family:Tahoma, sans-serif; color:#797979;}
+.MegaDropDownContainer a, .MegaDropDownContainer a:link, .MegaDropDownContainer a:visited, .MegaDropDownContainer a:active {color:#000000;}
+.MegaDropDownContainer a:hover {color:#6b6b6b;}
+.MegaDropDownContainer p {font-family:Tahoma, sans-serif;color:#797979;}
+.MegaDropDownContainer .Normal h3 {color:#3a3a3a;}
+/* --------------------------- */
+.MegaDropDownContainer .Container_1 {background:none;}
+.MegaDropDownContainer .Container_1 .Normal {color:#797979; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_1 .Normal div {color:#797979; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_1 a, .MegaDropDownContainer .Container_1 a:link, .MegaDropDownContainer .Container_1 a:visited, .MegaDropDownContainer .Container_1 a:active {color:#000000;}
+.MegaDropDownContainer .Container_1 a:hover {color:#6b6b6b;}
+.MegaDropDownContainer .Container_1 p {color:#797979; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_1 .Normal h3 {color:#3A3A3A; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_1 .Normal h2 {color:#3A3A3A; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Title_Container_1 .Head  {color:#000000; font-family:Tahoma, sans-serif; background:#ffffff; border-bottom:1px solid #000000;}
+/* --------------------------- */
+.MegaDropDownContainer .Container_2 {background:none; border:1px solid #6b6b6b;}
+.MegaDropDownContainer .Container_2 .Normal {color:#797979; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_2 .Normal div {color:#797979; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_2 a, .MegaDropDownContainer .Container_2 a:link, .MegaDropDownContainer .Container_2 a:visited, .MegaDropDownContainer .Container_2 a:active {color:#000000;}
+.MegaDropDownContainer .Container_2 a:hover {color:#6b6b6b;}
+.MegaDropDownContainer .Container_2 p {color:#797979; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_2 .Normal h3 {color:#3a3a3a; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_2 .Normal h2 {color:#3a3a3a; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Title_Container_2 .Head  {color:#ffffff; font-family:Tahoma, sans-serif; background:#6b6b6b;}
+.MegaDropDownContainer .Title_Container_2 .round_top_left {background:url(/clients/ArlingtonMusicHall/Images/container_topleft.png) top left no-repeat;}
+.MegaDropDownContainer .Title_Container_2 .round_top_right {background:url(/clients/ArlingtonMusicHall/Images/container_topright.png) top right no-repeat;}
+/* --------------------------- */
+.MegaDropDownContainer .Container_2a {background:none; border:1px solid #3a3a3a;}
+.MegaDropDownContainer .Container_2a .Normal {color:#797979; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_2a .Normal div {color:#797979; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_2a a, .MegaDropDownContainer .Container_2a a:link, .MegaDropDownContainer .Container_2a a:visited, .MegaDropDownContainer .Container_2a a:active {color:#000000;}
+.MegaDropDownContainer .Container_2a a:hover {color:#6b6b6b;}
+.MegaDropDownContainer .Container_2a p {color:#797979; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_2a .Normal h3 {color:#3a3a3a; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_2a .Normal h2 {color:#3a3a3a; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Title_Container_2a .Head  {color:#ffffff; font-family:Tahoma, sans-serif; background:#3a3a3a;}
+.MegaDropDownContainer .Title_Container_2a .round_top_left {background:url(/clients/ArlingtonMusicHall/Images/container_topleft.png) top left no-repeat;}
+.MegaDropDownContainer .Title_Container_2a .round_top_right {background:url(/clients/ArlingtonMusicHall/Images/container_topright.png) top right no-repeat;}
+/* --------------------------- */
+.MegaDropDownContainer .Container_2b {background:none; border:1px solid #ebe7de;}
+.MegaDropDownContainer .Container_2b .Normal {color:#797979; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_2b .Normal div {color:#797979; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_2b a, .MegaDropDownContainer .Container_2b a:link, .MegaDropDownContainer .Container_2b a:visited, .MegaDropDownContainer .Container_2b a:active {color:#000000;}
+.MegaDropDownContainer .Container_2b a:hover {color:#6b6b6b;}
+.MegaDropDownContainer .Container_2b p {color:#797979; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_2b .Normal h3 {color:#3a3a3a; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_2b .Normal h2 {color:#3a3a3a; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Title_Container_2b .Head  {color:#3a3a3a; font-family:Tahoma, sans-serif; background:#ebe7de;}
+.MegaDropDownContainer .Title_Container_2b .round_top_left {background:url(/clients/ArlingtonMusicHall/Images/container_topleft.png) top left no-repeat;}
+.MegaDropDownContainer .Title_Container_2b .round_top_right {background:url(/clients/ArlingtonMusicHall/Images/container_topright.png) top right no-repeat;}
+/* --------------------------- */
+.MegaDropDownContainer .Container_3 {background:none; background:#6b6b6b;}
+.MegaDropDownContainer .Container_3 .Normal {color:#f2f2f2; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_3 .Normal div {color:#f2f2f2; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_3 a, .MegaDropDownContainer .Container_3 a:link, .MegaDropDownContainer .Container_3 a:visited, .MegaDropDownContainer .Container_3 a:active {color:#ffffff; text-decoration:underline;}
+.MegaDropDownContainer .Container_3 a:hover {color:#ebe7de; text-decoration:underline;}
+.MegaDropDownContainer .Container_3 p {color:#f2f2f2; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_3 .Normal h3 {color:#f2f2f2; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_3 .Normal h2 {color:#f2f2f2; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Title_Container_3 .Head  {color:#ffffff; font-family:Tahoma, sans-serif; background:#6b6b6b;}
+.MegaDropDownContainer .Title_Container_3 .round_top_left {background:url(/clients/ArlingtonMusicHall/Images/container_topleft.png) top left no-repeat;}
+.MegaDropDownContainer .Title_Container_3 .round_top_right {background:url(/clients/ArlingtonMusicHall/Images/container_topright.png) top right no-repeat;}
+.MegaDropDownContainer .Container_3 .round_bot_left {background:url(/clients/ArlingtonMusicHall/Images/container_botleft.png) bottom left no-repeat;}
+.MegaDropDownContainer .Container_3 .round_bot_right {background:url(/clients/ArlingtonMusicHall/Images/container_botright.png) bottom right no-repeat;}
+/* --------------------------- */
+.MegaDropDownContainer .Container_3a {background:none; background:#3a3a3a;}
+.MegaDropDownContainer .Container_3a .Normal {color:#f2f2f2; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_3a .Normal div {color:#f2f2f2; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_3a a, .MegaDropDownContainer .Container_3a a:link, .MegaDropDownContainer .Container_3a a:visited, .MegaDropDownContainer .Container_3a a:active {color:#ffffff; text-decoration:underline;}
+.MegaDropDownContainer .Container_3a a:hover {color:#ebe7de; text-decoration:underline;}
+.MegaDropDownContainer .Container_3a p {color:#f2f2f2; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_3a .Normal h3 {color:#f2f2f2; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_3a .Normal h2 {color:#f2f2f2; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Title_Container_3a .Head  {color:#ffffff; font-family:Tahoma, sans-serif; background:#3a3a3a;}
+.MegaDropDownContainer .Title_Container_3a .round_top_left {background:url(/clients/ArlingtonMusicHall/Images/container_topleft.png) top left no-repeat;}
+.MegaDropDownContainer .Title_Container_3a .round_top_right {background:url(/clients/ArlingtonMusicHall/Images/container_topright.png) top right no-repeat;}
+.MegaDropDownContainer .Container_3a .round_bot_left {background:url(/clients/ArlingtonMusicHall/Images/container_botleft.png) bottom left no-repeat;}
+.MegaDropDownContainer .Container_3a .round_bot_right {background:url(/clients/ArlingtonMusicHall/Images/container_botright.png) bottom right no-repeat;}
+/* --------------------------- */
+.MegaDropDownContainer .Container_3b {background:none; background:#ebe7de;}
+.MegaDropDownContainer .Container_3b .Normal {color:#3a3a3a; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_3b .Normal div {color:#3a3a3a; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_3b a, .MegaDropDownContainer .Container_3b a:link, .MegaDropDownContainer .Container_3b a:visited, .MegaDropDownContainer .Container_3b a:active {color:#3a3a3a; text-decoration:underline;}
+.MegaDropDownContainer .Container_3b a:hover {color:#3a3a3a; text-decoration:underline;}
+.MegaDropDownContainer .Container_3b p {color:#3a3a3a; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_3b .Normal h3 {color:#3a3a3a; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_3b .Normal h2 {color:#3a3a3a; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Title_Container_3b .Head  {color:#3a3a3a; font-family:Tahoma, sans-serif; background:#ebe7de;}
+.MegaDropDownContainer .Title_Container_3b .round_top_left {background:url(/clients/ArlingtonMusicHall/Images/container_topleft.png) top left no-repeat;}
+.MegaDropDownContainer .Title_Container_3b .round_top_right {background:url(/clients/ArlingtonMusicHall/Images/container_topright.png) top right no-repeat;}
+.MegaDropDownContainer .Container_3b .round_bot_left {background:url(/clients/ArlingtonMusicHall/Images/container_botleft.png) bottom left no-repeat;}
+.MegaDropDownContainer .Container_3b .round_bot_right {background:url(/clients/ArlingtonMusicHall/Images/container_botright.png) bottom right no-repeat;}
+/* --------------------------- */
+.MegaDropDownContainer .Container_4 {background:none;}
+.MegaDropDownContainer .Container_4 .Normal {color:#797979; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_4 .Normal div {color:#797979; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_4 a, .MegaDropDownContainer .Container_4 a:link, .MegaDropDownContainer .Container_4 a:visited, .MegaDropDownContainer .Container_4 a:active {color:#000000;}
+.MegaDropDownContainer .Container_4 a:hover {color:#6b6b6b;}
+.MegaDropDownContainer .Container_4 p {color:#797979; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_4 .Normal h3 {color:#949ba6; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Container_4 .Normal h2 {color:#949ba6; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Title_Container_4 .Head  {color:#949ba6; font-family:Tahoma, sans-serif;}
+/* --------------------------- */
+.MegaDropDownContainer .ClearContainer {background:none;}
+.MegaDropDownContainer .ClearContainer .Normal {color:#797979; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .ClearContainer .Normal div {color:#797979; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .ClearContainer a, .MegaDropDownContainer .ClearContainer a:link, .MegaDropDownContainer .ClearContainer a:visited, .MegaDropDownContainer .ClearContainer a:active {color:#000000;}
+.MegaDropDownContainer .ClearContainer a:hover {color:#6b6b6b;}
+.MegaDropDownContainer .ClearContainer p {color:#797979; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .ClearContainer .Normal h3 {color:#3a3a3a; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .ClearContainer .Normal h2 {color:#3a3a3a; font-family:Tahoma, sans-serif;}
+.MegaDropDownContainer .Title_ClearContainer .Head  {color:#3a3a3a; font-family:Tahoma, sans-serif;}
+/* --------------------------- */

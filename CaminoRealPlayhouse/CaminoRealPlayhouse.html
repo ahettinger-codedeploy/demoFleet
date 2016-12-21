@@ -1,0 +1,201 @@
+<%
+'CHANGELOG
+'LSP 09/04/14 - initial development
+'LSP 06/22/15 - add Google Analytics to Header LINE 48-51
+%>
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+<link rel="stylesheet" href="/clients/CaminoRealPlayhouse/Images/style.css" type="text/css" media="screen">
+<script src="/clients/CaminoRealPlayhouse/Images/jquery-1.js"></script>
+<script src="/clients/CaminoRealPlayhouse/Images/superfish.js"></script>
+<script src="/clients/CaminoRealPlayhouse/Images/script.js"></script>
+<script src="/clients/CaminoRealPlayhouse/Images/jquery.js"></script>
+<script src="/clients/CaminoRealPlayhouse/Images/slides.js"></script>
+<script src="/clients/CaminoRealPlayhouse/Images/jquery_002.js"></script>
+<script>
+$(function(){
+	$('#slides').slides({
+		effect: 'fade',
+		fadeSpeed:700,
+		preload: false,
+		play: 5000,
+		pause: 5000,
+		hoverPause: true,
+		animationStart: function(current){
+			$('.caption').animate({opacity:0});
+			if (window.console && console.log) {
+				console.log('animationStart on slide: ', current);
+			};
+		},
+		animationComplete: function(current){
+			$('.caption').animate({opacity:1});
+			if (window.console && console.log) {
+				console.log('animationComplete on slide: ', current);
+			};
+		},
+		slidesLoaded: function() {
+			$('.caption').animate({opacity:1});
+		}
+	});
+});
+</script>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-63352457-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+<style type="text/css">
+.auto-style1 {
+	color: #FFBC0D;
+}
+body {
+	background-image: url(/clients/CaminoRealPlayhouse/Images/site_bg.png);
+	margin-top: 0px;
+}
+.auto-style4 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #8E241A;
+	font-size: x-large;
+}
+.auto-style5 {
+	text-align: left;
+}
+a {
+	color: #C02111;
+}
+a:hover {
+	color: #FFBC0D;
+}
+.auto-style7 {
+	font-size: 14pt;
+	font-weight: bold;
+}
+.auto-style8 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #A6760D;
+	font-size: x-large;
+}
+.auto-style9 {
+	margin-bottom: 0px;
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>
+<body style="background-image: url('/clients/CaminoRealPlayhouse/Images/site-bg.jpg'); margin-top: 10px; visibility: visible;">
+<div class="bg-header" align="center">
+  <!-- header --><a href="http://caminorealplayhouse.org/index.html" style="visibility: visible"><img src="/clients/CaminoRealPlayhouse/Images/marquee.png" alt="Header Logo" align="middle" height="120" width="300"></a></div>
+<div class="bg-header">
+  <div class="marg">
+		<header style="visibility: visible">
+			<div class="container_12" style="visibility: visible">
+				<div class="grid_12 alpha omega">
+<nav id="main-menu">
+						<ul class="sf-menu responsive-menu sf-js-enabled">
+							<li class="current" style="visibility: visible">
+							<a href="#" style="visibility: visible">
+							Home<span class="arrow" style="visibility: visible; left: 150px; bottom: 23px; width: 11px; height: 6px;"></span></a><ul style="visibility: visible; display: none;">
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/index.html">Home</a></li>
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/partners.html">Partners</a></li>
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/whatsnews.html">What's News</a></li>
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/dining.html">Dining</a></li>
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/directions.html">Directions</a></li>
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/rental.html">Rent Theatre</a></li>
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/gala.html">Gala Night</a></li>
+								</ul></li>
+							<li style="visibility: visible">
+							<a href="http://caminorealplayhouse.org/season.html" style="visibility: visible">
+							Our Season</a></li>
+							<li class="" style="visibility: visible">
+							<a href="#" style="visibility: visible">
+							Buy Tickets<span class="arrow" style="visibility: visible; left: 150px; bottom: 23px; width: 11px; height: 6px;"></span></a><ul style="visibility: visible; display: none;">
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/mainstage.html">Mainstage Plays</a></li>
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/stage2.html">Stage II Plays</a></li>
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/events.html">Special Events</a></li>
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/comedy.html">Comedy Night</a></li>
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/subscriptions.html">Season Tickets</a></li>
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/giftcertificates.html">Gift Certificates</a></li>
+								</ul></li>
+							<li style="visibility: visible">
+							<a href="#" style="visibility: visible">
+							Even More<span class="arrow" style="visibility: visible; left: 150px; bottom: 23px; width: 11px; height: 6px;"></span></a><ul style="visibility: visible; display: none;">
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/auditions.html">Audition!</a></li>
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/education-adults.html">Adult Classes</a></li>
+									<li style="visibility: visible"><a href="http://www.actingacademyforkids.com/" target="_blank">Kids' Classes</a></li>
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/support.html">Sponsorships</a></li>
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/volunteer.html">Volunteer!</a></li>
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/gallery.html">Videos &amp; Gallery</a></li>
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/showoff-submit.html">Submit A Showoff Play</a></li>
+								</ul></li>
+							<li class="" style="visibility: visible">
+							<a href="#" style="visibility: visible">
+							Contact Us<span class="arrow" style="visibility: visible; left: 150px; bottom: 23px; width: 11px; height: 6px;"></span></a><ul style="visibility: visible; display: none;">
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/contactus.html">Contact Us</a></li>
+									<li style="visibility: visible"><a href="http://caminorealplayhouse.org/directions.html">Map &amp; Directions</a></li>
+								</ul></li>
+						</ul>
+						<div class="clear"></div>
+				  </nav>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</header>
+	</div>
+</div>
+<!-- content -->
+<div class="bg" style="left: 0px; top: 0px; visibility: visible;">
+	<div class="bg2" style="visibility: visible">
+	<div class="wrapper" style="visibility: visible; top: 0px; left: 0px;">
+	</div>
+&nbsp;<section id="content" class="" style="visibility: visible">
+	<div class="container_12 padcontent" style="visibility: visible">
+<!--TIX DATA START-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+	</div>
+		</section>
+	</div>
+</div>
+<!-- footer -->
+<footer style="visibility: visible">
+	<div class="container_12" style="visibility: visible">
+		<div class="z1" style="visibility: visible">
+			<div class="grid_3">
+				<h1>
+				<a href="http://caminorealplayhouse.org/index.html" style="width: 220px; height: 72px"><img src="/clients/CaminoRealPlayhouse/Images/logo-footer.png" alt=""></a></h1>
+			</div>
+			<div class="grid_6">
+				&nbsp;<div class="auto-style1"><span class="auto-style7">Camino Real Playhouse</span><br>South Orange
+					County Community Theatre&nbsp; |&nbsp; Capistrano Center for the
+					Performing Arts<br>31776 El Camino Real | San Juan
+					Capistrano, CA 92675&nbsp; |&nbsp; Box Office: (949) 489-8082<br></div>
+			</div>
+			<div class="grid_3">
+				<ul class="tooltips" style="visibility: visible">
+					<li><a href="https://www.facebook.com/pages/Camino-Real-Playhouse/225077514169778?rf=213609775320986" target="_blank" class="tooltip">
+					<strong style="visibility: visible">
+					<img src="/clients/CaminoRealPlayhouse/Images/icon4.png" alt="" style="visibility: visible"></strong><span>Facebook</span></a></li>
+					<li class="auto-style9" style="height: 20px"><a href="https://www.youtube.com/channel/UCfjJ7BpAC8rHj9AEm2aTLQQ" target="_blank" class="tooltip">
+					<strong style="visibility: visible">
+					<img src="/clients/CaminoRealPlayhouse/Images/icon5.png" alt="" style="visibility: visible"></strong><span>You Tube</span></a></li>
+				</ul>
+				<div class="clear"></div>
+
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="z2" style="left: 0px; top: 0px; visibility: visible;"><div class="grid_3"><div class="copyright">SOCCT© 2014&nbsp;&nbsp;
+			|&nbsp;&nbsp; <a href="http://caminorealplayhouse.org/privacy.html">Our Privacy Policy</a><br> <!-- {%FOOTER_LINK} -->Designed by: <a href="http://simplygreatwebsites.com/" target="_blank" title="Every business deserves a Simply Great Website.">SimplyGreatWebsites.com</a></div></div><div class="clear">
+</div></div>
+	</div>
+</footer>
+</div>
+</form>
+</body>
+</html>

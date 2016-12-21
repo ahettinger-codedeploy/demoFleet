@@ -1,0 +1,205 @@
+/* VERSIONS
+   1_0: General Misc Styles
+   1_1: Added disabled, none, new icons [Author: Landon Durnan]
+   1_2: Added css definitions for "dd.facebook-profile a.url", which is used by
+        the Directory List and Directory Profile web parts. [Kevin Albrecht]
+   1_3: Shared Images [Author: Nick Hall]
+   1_4: Flash Player and Sitemap search margins [Author: Nick Hall]
+   1_5: Default Button Styles [Author: Nick Hall]
+----------------------------------------------------------------------------- */
+
+/* 
+-----------------------------------------------------------------------------
+ =Misc.
+----------------------------------------------------------------------------- */
+.button,
+.disabled {
+	display: inline-block;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	line-height: 1;
+	font-weight: normal;
+	color: #fff!important;
+	text-decoration: none;
+	text-shadow: 0 -1px #853913;
+	border: 1px solid #cf2088;
+	padding: .667em 1em; 
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: inset 0 -1px 0 #f79e72;
+	-moz-box-shadow: inset 0 -1px 0 #f79e72;
+	box-shadow: inset 0 -1px 0 #f79e72;
+	background: #ec008c; 
+	}
+.button:hover, 
+.button:active {
+	color: #000 !important; 
+	text-shadow: 0 1px #f966bd;
+	}
+.disabled,
+.disabled:hover {
+	cursor: default;
+	color: #5f5f5f !important; 
+	text-shadow: 0 1px #e0e0e0;
+	border-color: #c8c6c6;
+	-webkit-box-shadow: inset 0 -1px 0 #e0e0e0;
+	-moz-box-shadow: inset 0 -1px 0 #e0e0e0;
+	box-shadow: inset 0 -1px 0 #e0e0e0;
+	background: #cfcfcf;
+	}
+
+/* 
+-----------------------------------------------------------------------------
+ =Search Form
+----------------------------------------------------------------------------- */
+div.search { position: absolute; top: 58px; right: 250px; width: 219px; height: 47px; }
+	div.search div#search-area { position: absolute; top: 0; left: 0; display: none; width: 219px; height: 47px; background: url(/images/common/search-bg.png) left top no-repeat;  }
+		div.search #q { background-color: #0e0e0e; border: 1px solid #595959 !important; outline: 0; color: #757575; font: normal 12px/26px Lucida Sans Unicode, Lucida Grande, sans-serif; line-height: 26px; height: 26px; width: 163px; padding: 0 6px; margin: 14px 6px 6px 6px; position: absolute; top: 0; left: 0; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+		div.search input#q:focus { outline: 0; border: 0; }
+		div.search #searchButton { padding: 0; position: absolute; top: 13px; right: 6px; }
+
+/* 
+-----------------------------------------------------------------------------
+ =Icons
+----------------------------------------------------------------------------- */
+a.file, a.img, a.pdf, a.doc, a.xls, a.ppt, a.txt, a.aud, a.vid, a.form,
+a.email, span.phone, span.fax, a.print, 
+a.ext, a.int, a.back, a.lock, a.unlock,  
+a.rss, a.ical, a.ext-FacebookProfile, a.ext-twitter, a.ext-linkedin, a.ext-flickr, a.ext-youtube, 
+span.cc-visa, span.cc-mc, span.cc-amex, span.cc-discover, span.cc-diners, span.cc-cash,
+dd.facebook-profile a.url {
+	padding: 2px 0 2px 24px;
+	background: url(/_infrastructure/images/icons/default/file_default.png) left top no-repeat;
+	}
+
+a.img	{ background-image: url(/_infrastructure/images/icons/default/file_image.png); }
+a.pdf	{ background-image: url(/_infrastructure/images/icons/default/file_pdf.png); }
+a.doc	{ background-image: url(/_infrastructure/images/icons/default/file_doc.png); }
+a.xls	{ background-image: url(/_infrastructure/images/icons/default/file_xls.png); }
+a.ppt	{ background-image: url(/_infrastructure/images/icons/default/file_ppt.png); }
+a.txt	{ background-image: url(/_infrastructure/images/icons/default/file_txt.png); }
+a.aud	{ background-image: url(/_infrastructure/images/icons/default/file_audio.png); }
+a.vid	{ background-image: url(/_infrastructure/images/icons/default/file_video.png); }
+
+a.email	{ background-image: url(/_infrastructure/images/icons/default/email.png); }
+span.phone	{ background-image: url(/_infrastructure/images/icons/default/phone.png); }
+span.fax	{ background-image: url(/_infrastructure/images/icons/default/fax.png); }
+a.print { background-image: url(/_infrastructure/images/icons/default/print.png); }
+
+a.ext	{ background-image: url(/_infrastructure/images/icons/default/link_ext.png); }
+a.int	{ background-image: url(/_infrastructure/images/icons/default/link_int.png); }
+a.back	{ background-image: url(/_infrastructure/images/icons/default/back.png); padding-left: 18px; }
+a.lock	{ background-image: url(/_infrastructure/images/icons/default/lock_closed.png); padding-left: 18px; }
+a.unlock	{ background-image: url(/_infrastructure/images/icons/default/lock_open.png); padding-left: 18px; }
+
+a.rss	{ background-image: url(/_infrastructure/images/icons/default/social_rss.png); }
+a.ical	{ background-image: url(/_infrastructure/images/icons/default/ical.png); padding-left: 18px; }
+a.ext-FacebookProfile, dd.facebook-profile a.url {
+    background-image: url(/_infrastructure/images/icons/default/social_facebook.png);
+    }
+a.ext-twitter	{ background-image: url(/_infrastructure/images/icons/default/social_twitter.png); }
+a.ext-linkedin	{ background-image: url(/_infrastructure/images/icons/default/social_linkedin.png); }
+a.ext-flickr	{ background-image: url(/_infrastructure/images/icons/default/social_flickr.png); }
+a.ext-youtube	{ background-image: url(/_infrastructure/images/icons/default/social_youtube.png); }
+
+span.cc-visa	{ background-image: url(/_infrastructure/images/icons/default/cc_visa.png); }
+span.cc-mc	{ background-image: url(/_infrastructure/images/icons/default/cc_mc.png); }
+span.cc-amex	{ background-image: url(/_infrastructure/images/icons/default/cc_amex.png); }
+span.cc-discover	{ background-image: url(/_infrastructure/images/icons/default/cc_discover.png); }
+span.cc-diners	{ background-image: url(/_infrastructure/images/icons/default/cc_diners.png); }
+span.cc-cash	{ background-image: url(/_infrastructure/images/icons/default/cc_cash.png); }
+
+/* 
+-----------------------------------------------------------------------------
+ =General Utilities
+----------------------------------------------------------------------------- */
+.hidden	{ position: absolute; left: -3000px;}
+.none	{ display: none; }
+.production-note { color: #F00; } /*Production Note*/
+.production-warn { color: #F00; } /*Production Warning*/
+.wiki-note { border: 1px solid #999999; color: #990000; padding: 5px; } /*Reference Site Note*/
+.clear { float: none; clear: both; }
+/* Disables dropdowns in browsers that can't support them over flash */
+.prevent-overlap #nav-main ul li.hover ul,
+.prevent-overlap #nav-main ul li:hover ul {
+	display: none;
+	}
+	
+/* 
+-----------------------------------------------------------------------------
+ =Clear Fix
+----------------------------------------------------------------------------- */
+.clearfix:after { content: ""; display: table; clear: both; }
+
+/* 
+-----------------------------------------------------------------------------
+ =Login Form
+----------------------------------------------------------------------------- */
+#loginForm table td, #loginForm table th,
+#login .form-container form table th, #login .form-container form table td,
+#password-reminder table td, #password-reminder table th { padding: 4px; }
+
+/* 
+-----------------------------------------------------------------------------
+ =Flash Players
+----------------------------------------------------------------------------- */
+.webpartzone .flash-container { margin-bottom: 1.5em; } 
+	.sc .webpartzone .flash-container, 
+	.tc .webpartzone .flash-container { margin-left: 0px !important; margin-right: 0px !important; }
+		.webpartzone .flash-container object { width: 100% !important; }	
+
+/* 
+-----------------------------------------------------------------------------
+ =Sitemap
+----------------------------------------------------------------------------- */
+.sitemapSearch { margin-bottom: 1.5em; }
+
+/* 
+-----------------------------------------------------------------------------
+Best Place - prettyphoto
+----------------------------------------------------------------------------- */
+div.best_place_theme { top: -50px !important; }
+	div.best_place_theme .pp_left, div.best_place_theme .pp_middle, div.best_place_theme .pp_right, div.best_place_theme .pp_content {
+	  background-color: transparent !important;
+	}
+	div.best_place_theme .pp_close { display: block; width: 21px; height: 30px; background: url(/images/common/best-close.png) 0 0 no-repeat; position: absolute; right: 40px; top: 10px; }
+		div.best_place_theme .pp_close:hover { background-position: 0 -30px; } 
+	div.best_place_theme .pp_expand, div.best_place_theme .pp_contract { display: none !important; visibility: hidden !important; }
+
+/* 
+-----------------------------------------------------------------------------
+ =Custom HTML Buttons
+----------------------------------------------------------------------------- */
+.text-button { color: #000; text-shadow: 0 1px 0 rgba(255, 255, 255, 0.40); margin: 0 0 -7px 0; padding: 0; width: 277px; height: 101px; }
+	.pink-button { background: url(/images/landing/btn-pink.png) top right no-repeat; }
+	.green-button { background: url(/images/landing/btn-green.png) top right no-repeat; }
+	.blue-button { background: url(/images/landing/btn-blue.png) top right no-repeat; }
+.text-button a { display: block; color: #000; }
+.text-button a .inner { display: block; margin: 0; padding: 14px 18px; }
+.text-button .inner > span { display: block; }
+.text-button .headline { font: normal 18px/18px 'TeXGyreAdventorBold'; color: #000; }
+.text-button .caption,
+.text-button .sub-caption { font: normal 13px/18px 'TeXGyreAdventorRegular'; color: #000; }
+.text-button .caption {}
+.text-button .sub-caption {}
+.text-button a:hover { color: #000; }
+	.pink-button a:hover { color: #6d0041; }
+	.green-button a:hover { color: #416a1d; } 
+	.blue-button a:hover { color: #00506f; }
+.text-button a:hover .inner {}
+.text-button a:hover .inner > span {}
+.text-button a:hover .headline { color: #000; }
+	.pink-button a:hover .headline { color: #6d0041; }
+	.green-button a:hover .headline  { color: #416a1d; } 
+	.blue-button a:hover .headline  { color: #00506f; }
+.text-button a:hover .caption,
+.text-button a:hover .sub-caption { color: #000; }
+	.pink-button a:hover .sub-caption { color: #6d0041; }
+	.green-button a:hover .sub-caption  { color: #416a1d; } 
+	.blue-button a:hover .sub-caption  { color: #00506f; }
+.text-button a:hover .caption {}
+.text-button a:hover .sub-caption {}
+
+
+#movenotice { position: absolute; top: 0; z-index: 10000; padding: 20px; font-size: 2em; text-align: center; color: #fff; background: #900; }

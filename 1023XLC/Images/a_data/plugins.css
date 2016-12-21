@@ -1,0 +1,349 @@
+/* reset.css, copied from blueprint.css */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+body {line-height:1.5;}
+object { outline:none; }
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;}
+table, td, th {vertical-align:middle;}
+blockquote:before, blockquote:after, q:before, q:after {content:"";}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+
+	img, body {
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+	body {
+                line-height:1.1;
+		background-color: #151515;
+		color: #cccccc;
+		font-weight:inherit;font-style:inherit;font-size:100%;
+		font-family:Helvetica, Arial, sans-serif;
+	}
+	
+	body.light {
+		color: #333333;
+	}
+	a {
+		color: #aaaaaa;
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+	.open a, .track:hover a {
+		color: #ffffff;
+	}
+	
+	.light a {
+		color: #333333;
+	}
+	.light .open a, .light .track:hover a {
+		color: #000000;
+	}
+
+	.songName {
+		font-size:1.1em;
+		font-weight: 400;
+	}
+	.artistName {
+		font-size:.7em;
+		font-weight: 200;
+		display: none;
+	}
+	.songinfo {
+		float: left;
+		overflow: hidden;
+		white-space:nowrap;
+	}
+	.timestamp {
+		font-size:1.1em;
+		font-weight: 300;
+		color: #666666;
+		float: right;
+		text-align:right;
+		width: 85px;
+	}
+    #feedContentsDiv {
+		border-top: 1px solid #666666;
+    }
+	.track {
+		border-top: 1px solid #666666;
+		padding: 2px 5px 2px 5px;
+		height: 25px;
+	}
+	.opentrack {
+		padding: 2px 5px 2px 5px;
+		height: 150px;
+	}
+	.opentrack img, .track img {
+		height: 100px;
+		max-width: 100px;
+	}
+	.fleft {
+		float: left;
+	}
+	.column {
+		float: left;
+		display: none;
+		width: 100px;
+	}
+	.open .artistName, .open .column {
+		display: block;
+	}
+	.open .top {
+		height: 40px;
+		margin-bottom: 5px;
+	}
+	.actions {
+		padding: 5px 0 0 5px;
+		font-size:.7em;
+		font-weight: 400;
+	}
+
+	.icon {
+		text-decoration:none;
+		margin-right: 4px;
+		margin-top: -4px;
+		float: left;
+		display:block;
+		height: 20px;
+		width: 20px;
+		overflow: hidden;
+	}
+	
+	a:hover.save, a:hover.play {
+		color: #2B72FF;
+		text-decoration: none;
+	}
+	
+	a.save .icon {
+		background: url(src/action_buttons_small.gif) 0px 0px no-repeat;
+	}
+	a:hover.save .icon {
+		background: url(src/action_buttons_small.gif) 0px -20px no-repeat;
+	}
+	a.play .icon {
+		background: url(src/action_buttons_small.gif) -20px 0px no-repeat;
+	}
+	a:hover.play .icon {
+		background: url(src/action_buttons_small.gif) -20px -20px no-repeat;
+	}	
+
+	.light a.save .icon {
+		background: url(src/action_buttons_small_light.gif) 0px 0px no-repeat;
+	}
+	.light a:hover.save .icon {
+		background: url(src/action_buttons_small_light.gif) 0px -20px no-repeat;
+	}
+	.light a.play .icon {
+		background: url(src/action_buttons_small_light.gif) -20px 0px no-repeat;
+	}
+	.light a:hover.play .icon {
+		background: url(src/action_buttons_small_light.gif) -20px -20px no-repeat;
+	}	
+
+	.brand {
+		width: 100%;
+		height: 40px;
+	}
+	.brandshine {
+		position: absolute;
+		width: 100%;
+		height: 40px;
+		z-index: 0;
+		overflow:hidden;
+	}
+	.brandshine[class] {
+		background: url(src/head_bg.png) repeat-x 0 -17px;
+	}
+	.brandcontainer {
+		position: absolute;
+		width: 100%;
+		height: 40px;
+		z-index: 1;
+		overflow:hidden;
+	}
+	.b_el, .butt_el {
+		float: left;
+		text-align: center;
+	}
+	.butt_el {
+		font-size:.8em;
+		padding-top: 12px;
+		border-left: 1px solid #666;
+		height: 40px;
+	}
+	.butt_el a {
+		color: #fff;
+	}
+	
+.mesh {
+	background-image: url(src/adbak.png);
+}
+.light .mesh{
+	background-image: url(src/lite_stripe.png);
+}
+
+.recenthead {
+	height:16px;padding:2px;font-style:italic;font-size:80%;color:#666;
+	}
+	
+.buzz {
+	font-size:70%;
+	font-weight: 300;
+	float:left;margin-right:10px;
+	border-bottom:1px solid #333;width:234px;
+	padding: 12px 5px 10px 5px;
+	color: #ccc;
+}
+
+.buzz a {
+	color: #fff;
+}
+
+.light .buzz {
+	color: #333333;
+}
+
+.light .buzz a {
+	color: #000;
+}
+
+.buzz:hover a {
+	color: #2B72FF;
+}
+
+.buzz div {
+	float:left;margin-right:10px;
+	max-width: 140px;
+}
+
+.buzz .avatar {
+	padding:1px;border:1px solid #333;
+	width: 50px;
+	height: 50px;
+}
+
+.buzz .user {
+	font-weight:bold;font-size:120%;
+}
+
+.mute {color:#666;font-size:.9em}
+.mute a {color:#ccc;}
+
+.viewmore {
+    text-align: right;
+	height: 19px;
+	padding-top:3px;
+	font-size:70%;
+	font-style: italic;
+}
+
+.viewmore a {
+	background-color:#848484;
+	color: #fff;
+	padding: 2px;
+}
+.search {
+	height:32px;
+	padding:2px 0 0 5px;
+	background-color: #9d9d9d;
+}
+
+.search input {
+	color: #989797;
+	float: left;
+	padding:5px;
+	border:1px solid #bbb;
+}
+
+.search input:focus {
+	color: #000;
+	border:1px solid #666;
+}
+
+.textbutton {
+	cursor: pointer;
+}
+
+.search button {
+	border: none;
+	float: left;
+	width: 27px;
+	height: 25px;
+	cursor: pointer;
+	text-indent: -9999px;
+	background: #fbc900 url(src/button_submit_new.png) no-repeat top right;
+	margin:2px 0 0 5px;
+}
+#hours {
+	position:absolute;
+	top:0px;
+	left:0px;
+	margin:0px;
+	padding:0px;
+	z-index:0;
+}
+.adholder{
+	position:absolute;
+	left:17px;
+	margin:0px;
+	padding:0px;
+	width:200px;
+	z-index:2;
+	overflow:hidden;
+	/*display:none;*/
+}
+#adcode {
+	position:relative;
+	width:200px;
+	height:200px;
+	margin:0px;
+	padding:0px;
+}
+#showad {
+	margin:-4px 0 0 0;
+	padding:0 0 0 0;
+	left:0px;
+	width:234px;
+	height: 12px;
+	text-align:center;
+	z-index:3;
+	display:none;
+}
+.small {
+	font-size:x-small;
+}
+.big {
+	font-size:large;
+	line-height: 2;
+}
+.right {
+	text-align:right;
+}
+.floatleft {
+    display:block;
+	float: left;
+}
+.floatright {
+    display:block;
+	float: right;
+}
+.adpane {
+	position:relative;
+	overflow:visible;
+	display:block;
+	width:200px;
+	top:220px;
+	left:0px;
+    background:none;
+}
+
+.adholder {color:#fff;text-decoration:none;background-color:#000;}
+.adholder a:focus, .adholder a:hover {color:#fff;text-decoration:underline;background-color:#000;}
+.adholder a {color:#fff;text-decoration:none;}
+.light .adholder {color:#151515;text-decoration:none;background-color:#fff;}
+.light .adholder a:focus, .light .adholder a:hover {color:#151515;text-decoration:underline;background-color:#fff;}
+.light .adholder a {color:#151515;}

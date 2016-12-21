@@ -1,0 +1,395 @@
+<!--CHANGELOG-->
+<!--LSP 6/6/12 - initial development-->
+    <script src="/clients/Dance-Rush/Images/all.js" id="facebook-jssdk"></script><script type="text/javascript" src="/clients/Dance-Rush/Images/jquery_1_4_4.js"></script>
+    <link rel="stylesheet" href="/clients/Dance-Rush/Images/yada_20.css" type="text/css" media="screen, projection">
+    <link href="/clients/Dance-Rush/Images/video-js.css" rel="stylesheet">
+    <script src="/clients/Dance-Rush/Images/video.js" async="true"></script>
+    <script language="javascript">
+jQuery(function() {
+                        jQuery('.alt_main_btn').click(function(){
+                document.location.href='/altone';
+            });
+            jQuery('.alt_forum_btn').click(function(){
+                document.location.href='/1forum/1forum/yada/';
+            });
+            jQuery('.alt_video_btn').click(function(){
+                document.location.href='/video';
+            });
+            jQuery('.alt_photo_btn').click(function(){
+                document.location.href='/photo';
+            });
+            jQuery('.alt_about_btn').click(function(){
+                document.location.href='/about';
+            });
+            jQuery('.alt_tickets_btn').click(function(){
+            document.location.href='/tickets';
+            });
+            jQuery('#buyTicket').click(function(){
+            document.location.href='/tickets';
+            });
+            jQuery('.alt_blog_btn').click(function(){
+                document.location.href='/blog';
+            });
+            jQuery('.alt_venue_btn').click(function(){
+            document.location.href='/venue';
+            });
+            jQuery('.slave_header_text').click(function(){
+            document.location.href='/altone';
+            });
+            jQuery('.tw_ico').click(function(){
+            window.open('https://twitter.com/#!/YADADANCERUSH','_newtab');
+            });
+            jQuery('.enterbtn').click(function(){
+                document.ny_subscribe_form.submit();
+            });
+
+
+
+            jQuery('.fb_ico').click(function(){
+                window.open('http://www.facebook.com/pages/Dance-RUSH-BY-YADA-Dance-Company/166684123446908','_newtab');
+            });
+            jQuery('.yt_ico').click(function(){
+                window.open('http://www.youtube.com/user/oxmalta','_newtab');
+            });
+            jQuery('.ylp_ico').click(function(){
+                window.open('http://www.yelp.com/biz/palace-of-fine-arts-theatre-san-francisco','_newtab');
+            });
+            jQuery('#videoButton').click(function(){
+            var myPlayer = _V_("yada_video");
+            myPlayer.pause();
+            jQuery("#pollContent").hide();
+            jQuery("#subscribeContent").hide();
+            jQuery("#videoContent").slideToggle("slow");
+            });
+            jQuery('#pollButton').click(function(){
+            var myPlayer = _V_("yada_video");
+            myPlayer.pause();
+            jQuery("#videoContent").hide();
+            jQuery("#subscribeContent").hide();
+            jQuery("#pollContent").slideToggle("slow");
+
+            });
+            jQuery('#subscribeButton').click(function(){
+            var myPlayer = _V_("yada_video");
+            myPlayer.pause();
+            jQuery("#pollContent").hide();
+            jQuery("#videoContent").hide();
+            jQuery("#subscribeContent").slideToggle("slow");
+            });
+
+            jQuery('#ny_email').focus(function(){
+                if (jQuery(this).val() == "enter email to subscribe"){
+                    jQuery(this).val('');
+                    jQuery(this).removeClass("noobsaibot")
+                }
+
+            });
+            jQuery('#ny_email').focusout(function(){
+
+                if (jQuery(this).val() == ""){
+                    jQuery(this).addClass("noobsaibot");
+                    jQuery(this).val('enter email to subscribe');
+                }
+            });
+            $(document).ready(function() {
+                jQuery('#ny_email').val('enter email to subscribe');
+            });
+
+
+            jQuery('.sbmtbtn').click(function(){
+            var mail = $('.jinput').val()
+            var ajaxurl = 'http://dance-rush.com/wp-admin/admin-ajax.php';
+
+            jQuery.post(
+            ajaxurl,
+            {
+            'action':'add_notify',
+            'notify_mail':mail
+            },
+            function(response){
+            var myJSONObject = response;
+                        jQuery(".outinfo").empty();
+                        jQuery(".outinfo").append(response.msg);
+            }
+            );
+
+            });
+
+
+            jQuery('.feedback_btn').click(function(){
+            var mail = $('.f_mail').val()
+            var msg = $('.f_msg').val()
+            var ajaxurl = 'http://dance-rush.com/wp-admin/admin-ajax.php';
+
+            jQuery.post(
+            ajaxurl,
+            {
+            'action':'add_feedback',
+            'mail':mail,
+            'user_msg':msg
+            },
+            function(response){
+            var myJSONObject = response;
+
+            jQuery(".feedback_outinfo").empty();
+                        jQuery(".feedback_outinfo").append(response.msg);
+            }
+            );
+
+            });
+
+
+
+
+        });
+    </script>
+    <link rel="alternate" type="application/rss+xml" title="DANCE RUSH - THE SHOW FROM MALTA » Feed" href="http://dance-rush.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="DANCE RUSH - THE SHOW FROM MALTA » Comments Feed" href="http://dance-rush.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="DANCE RUSH - THE SHOW FROM MALTA » Tickets Comments Feed" href="http://dance-rush.com/tickets/feed/">
+<link rel="stylesheet" id="bbpress-style-css" href="/clients/Dance-Rush/Images/bbpress.css" type="text/css" media="screen">
+<link rel="stylesheet" id="wp-polls-css" href="/clients/Dance-Rush/Images/polls-css.css" type="text/css" media="all">
+<link rel="stylesheet" id="lightboxStyle-css" href="/clients/Dance-Rush/Images/colorbox.css" type="text/css" media="screen">
+<script type="text/javascript" src="/clients/Dance-Rush/Images/jquery_002.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://dance-rush.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://dance-rush.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Blog" href="http://dance-rush.com/blog/">
+<link rel="next" title="Polls" href="http://dance-rush.com/polls/">
+<meta name="generator" content="WordPress 3.3.1">
+<link rel="canonical" href="http://dance-rush.com/tickets/">
+<link rel="stylesheet" type="text/css" media="all" href="/clients/Dance-Rush/Images/byrev-gallery-pagination.css">  <link href="/clients/Dance-Rush/Images/video-js.css" rel="stylesheet">
+  <script src="/clients/Dance-Rush/Images/video.js"></script>
+
+    <link href="/clients/Dance-Rush/Images/video-js.css" rel="stylesheet">
+    <script src="/clients/Dance-Rush/Images/video.js" async="true"></script>
+
+    <style type="text/css">
+        .centred_wide{
+            width: 100%;
+            text-align: center;
+            display: block;
+        }
+        .tickets_left{
+            width: 68%;
+            float: left;
+        }
+        .tickets_right{
+            width: 32%;
+            float: left;
+        }
+        .soclear{
+            clear: both;
+        }
+        .soclear table{
+            color: white;
+            width: 100%;
+        }
+        .sobold{
+            font-weight: bold;
+        }
+        .leftalign{
+            text-align: left;
+        }
+        .centeralign{
+            text-align: center;
+        }
+        .rightalign{
+            text-align: right;
+        }
+        .tickets_wrap{
+            font-size: 10pt;
+            font-weight: bold;
+        }
+        .jyellow{
+            color: yellow;
+        }
+        .jpink{
+            color: #e737ff;
+        }
+        .jinput{
+            width: 100%;
+            margin-top: 5px;
+        }
+        .jshedule{
+            text-align: center;
+            padding: 30px 30px 30px 0;
+            font-weight: bold;
+        }
+        .jshedule td{
+            width: 33%;
+        }
+        .jdescr {
+            font-size: 10pt;
+            padding-bottom: 20px;
+            font-weight: bold;
+        }
+        .jdescr td{
+            vertical-align: top;
+        }
+        .sothin{
+            font-weight: normal;
+        }
+        .jgray{
+            color: gray;
+        }
+        .sosmall{
+            font-size: 8pt;
+        }
+        .hormarg{
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .sbmtbtn{
+            background: url("/clients/Dance-Rush/Images/submit_button.png");
+            width: 66px;
+            height: 20px;
+            margin: 5px auto 0;
+            cursor: pointer;
+        }
+
+    </style>
+
+
+<body class="alt_body">
+
+
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div class="alt_wrapall">
+    <div class="alt_slave_bg">
+        <!--        <div class="alt_content">-->
+        <div class="slave_header">
+            <div class="slave_header_text"></div>
+        </div>
+        <div class="alt_slave_menu">
+                        <div class="ourfont alt_menu_elem alt_main_btn">MAIN</div>
+            <div class="ourfont alt_menu_elem alt_about_btn">SHOW</div>
+            <div class="ourfont alt_menu_elem alt_video_btn">VIDEO</div>
+            <div class="ourfont alt_menu_elem alt_photo_btn">PHOTO</div>
+            <div class="ourfont alt_menu_elem alt_blog_btn">BLOG</div>
+            <div class="ourfont alt_menu_elem alt_forum_btn">FORUM</div>
+            <div class="ourfont alt_menu_elem alt_tickets_btn">TICKETS</div>
+            <div class="ourfont alt_menu_elem alt_venue_btn">VENUE</div>
+        </div>
+        <div class="rigth_slave_content">
+
+            <div class="direct_content" style="background: url('/clients/Dance-Rush/Images/venue-pattern.png');color: white;margin-top: 70px;border-radius: 0;padding: 40px;width:560px;">
+
+                <div class="tickets_wrap">
+				<!--TIX DATA START-->
+
+				<!--TIX DATA END-->
+				</div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+
+    <div class="terms"><span class="fbottomtext">
+        <span style="width: 100%;display: block;">Copyright 2012 Bridge to San Francisco, Inc All rights reserved.</span>
+
+        <span><a href="http://dance-rush.com/terms">Terms &amp; Conditions</a></span> |
+        <span><a href="http://dance-rush.com/privacy">Privacy Policy</a></span> |
+        <span><a href="http://dance-rush.com/webteam">Web Team</a></span> |
+        <span><a href="http://dance-rush.com/contact">Contact us/Help</a></span>
+
+    </span></div>
+    <div class="copyright"><span class="fbottomtext">WTF RG ©</span></div>
+</div>
+<script type="text/javascript">
+ var _gaq = _gaq || [];
+ _gaq.push(['_setAccount', 'UA-32031315-1']);
+ _gaq.push(['_trackPageview']);
+
+ (function() {
+   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+</script>
+        <!--        </div>-->
+
+        <div id="buyTicket" title="Buy Tickets"></div>
+<div id="videoButton" class="mainPageButtons" title="Play Video"></div>
+<div id="pollButton" class="mainPageButtons" title="Poll"></div>
+<div id="subscribeButton" class="mainPageButtons" title="Feedback"></div>
+<div id="sponsorButton" class="mainPageButtons" title="Our sponsor"></div>
+<div class="subscribe_new" style="position: absolute;top:250px;left:60px;">
+    <div id="ny_subscribe_wrapper">
+		</div></div>
+<div id="danceRushTop" class="danceRush"></div>
+<div class="social_panel">
+                    <div class="social_btn fb_ico" title="facebook"></div>
+                <div class="social_btn tw_ico" title="twitter"></div>
+                <div class="social_btn yt_ico" title="youtube"></div>
+                <div class="social_btn ylp_ico" title="yelp"></div>
+</div>
+
+
+
+<div style="display: none;" id="videoContent" class="mainPageContent">
+    <div style="width: 638px; height: 360px;" height="360" width="638" class="video-js vjs-default-skin vjs-paused" id="yada_video"><video tabindex="0" id="yada_video_html5_api" class="vjs-tech" preload="none" i="">
+        
+        
+    </video><img style="display: none;" tabindex="-1" src="" class="vjs-poster"><div style="display: block;" class="vjs-loading-spinner"><div class="ball1"></div><div class="ball2"></div><div class="ball3"></div><div class="ball4"></div><div class="ball5"></div><div class="ball6"></div><div class="ball7"></div><div class="ball8"></div></div><div style="display: none;" tabindex="0" class="vjs-big-play-button"><span></span></div><div class="vjs-controls vjs-fade-out"><div tabindex="0" class="vjs-play-control vjs-control  vjs-paused"><div><span class="vjs-control-text">Play</span></div></div><div tabindex="0" class="vjs-fullscreen-control vjs-control "><div><span class="vjs-control-text">Fullscreen</span></div></div><div class="vjs-current-time vjs-time-controls vjs-control"><div class="vjs-current-time-display">0:00</div></div><div class="vjs-time-divider"><div><span>/</span></div></div><div class="vjs-duration vjs-time-controls vjs-control"><div class="vjs-duration-display">0:00</div></div><div class="vjs-remaining-time vjs-time-controls vjs-control"><div class="vjs-remaining-time-display">-0:00</div></div><div class="vjs-progress-control vjs-control"><div class="vjs-progress-holder" tabindex="0" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0"><div class="vjs-load-progress"><span class="vjs-control-text">Loaded: 0%</span></div><div style="width: 1.48%;" class="vjs-play-progress"><span class="vjs-control-text">Progress: 0%</span></div><div style="left: 0%;" class="vjs-seek-handle"><span class="vjs-control-text">00:00</span></div></div></div><div class="vjs-volume-control vjs-control"><div class="vjs-volume-bar" tabindex="0" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0"><div style="width: 90%;" class="vjs-volume-level"><span class="vjs-control-text"></span></div><div style="left: 80%;" class="vjs-volume-handle"><span class="vjs-control-text"></span></div></div></div><div tabindex="0" class="vjs-mute-control vjs-control"><div><span class="vjs-control-text">Mute</span></div></div></div><div class="vjs-subtitles"></div></div>
+</div>
+
+<div style="display: none;" id="pollContent" class="mainPageContent">
+    <div id="polls-2" class="wp-polls">
+	<form id="polls_form_2" class="wp-polls-form" action="/tickets/" method="post">
+		<p style="display: none;"><input name="poll_id" value="2" type="hidden"></p>
+		<p style="text-align: center;"><strong>Do you like this website?</strong></p><div id="polls-2-ans" class="wp-polls-ans"><ul class="wp-polls-ul">
+		<li><input id="poll-answer-6" name="poll_2" value="6" type="radio"> <label for="poll-answer-6">I like it very much!</label></li>
+		<li><input id="poll-answer-7" name="poll_2" value="7" type="radio"> <label for="poll-answer-7">It is ok!</label></li>
+		<li><input id="poll-answer-8" name="poll_2" value="8" type="radio"> <label for="poll-answer-8">I am not satisfied!</label></li>
+		</ul><p style="text-align: center;"><input name="vote" value="   Vote   " class="Buttons" onclick="poll_vote(2);" type="button"></p><p style="text-align: center;"><a href="#ViewPollResults" onclick="poll_result(2); return false;" title="View Results Of This Poll">View Results</a></p></div>
+	</form>
+</div>
+<div id="polls-2-loading" class="wp-polls-loading"><img src="/clients/Dance-Rush/Images/loading.gif" alt="Loading ..." title="Loading ..." class="wp-polls-image" height="16" width="16">&nbsp;Loading ...</div>
+</div>
+<div style="display: none;" id="subscribeContent" class="mainPageContent thinfont">
+    <p class="centered">Leave Feedback!</p>
+        <p style="text-align: left; margin-bottom: 0; font-size:8pt;">Email address</p>
+        <p style="margin-top: 0;">
+            <input class="f_mail" style="width: 200px;" name="email" type="text">
+        </p>
+        <p style="text-align: left; margin-bottom: 0; font-size:8pt;">Your message</p>
+        <p style="margin-top: 0;">
+            <textarea rows="5" cols="50" class="f_msg"></textarea>
+        </p>
+        <div>
+            <div class="fb_btn">
+            <input class="btn-class feedback_btn" id="subscribeSubmit" value="Submit" type="submit">
+            </div>
+            <div class="feedback_outinfo">
+
+            </div>
+        </div>
+
+</div>
+    </div>
+</div>
+<!-- Lightbox Plus v2.3 - 2011.08.11 - Message: -->
+<script type="text/javascript">
+jQuery(document).ready(function($){
+  $("a[rel*=lightbox]").colorbox({speed:250,opacity:0.8,slideshow:true,slideshowAuto:false,slideshowSpeed:2500,slideshowStart:"start slideshow",slideshowStop:"stop slideshow"});
+});
+</script>
+<link rel="stylesheet" id="-css" href="/clients/Dance-Rush/Images/ny-admin-ui.css" type="text/css" media="all">
+<script type="text/javascript" src="/clients/Dance-Rush/Images/jquery.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var pollsL10n = {"ajax_url":"http:\/\/dance-rush.com\/wp-content\/plugins\/wp-polls\/wp-polls.php","text_wait":"Your last request is still being processed. Please wait a while ...","text_valid":"Please choose a valid poll answer.","text_multiple":"Maximum number of choices allowed: ","show_loading":"1","show_fading":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/clients/Dance-Rush/Images/polls-js.js"></script>
+
+
+<div style="display: none;" id="cboxOverlay"></div><div style="padding-bottom: 20px; padding-right: 0px; display: none;" class="" id="colorbox"><div id="cboxWrapper"><div><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div style="width: 0pt; height: 0pt; overflow: hidden; float: left;" id="cboxLoadedContent"></div><div style="float: left;" id="cboxLoadingOverlay"></div><div style="float: left;" id="cboxLoadingGraphic"></div><div style="float: left;" id="cboxTitle"></div><div style="float: left;" id="cboxCurrent"></div><div style="float: left;" id="cboxNext"></div><div style="float: left;" id="cboxPrevious"></div><div style="float: left;" id="cboxSlideshow"></div><div style="float: left;" id="cboxClose"></div></div><div style="float: left;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></body></html>

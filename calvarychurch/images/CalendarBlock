@@ -1,0 +1,557 @@
+
+        
+        $(document).ready(function () {
+            if ($(".ews_cal_list_select_checkbox,.ews_cal_list_select_checkbox_clear").length > 0) {
+                $(".ews_cal_list_select_checkbox,.ews_cal_list_select_checkbox_clear").click(function (srcc) {
+
+                    if ($(this).hasClass("ews_cal_list_select_checkbox")) {
+                        $(this).removeClass("ews_cal_list_select_checkbox");
+                        $(this).addClass("ews_cal_list_select_checkbox_clear");
+                    }
+                    else {
+                        $(this).removeClass("ews_cal_list_select_checkbox_clear");
+                        $(this).addClass("ews_cal_list_select_checkbox");
+                    }
+                });
+            }
+            if (ews.Editor) {
+                if ($(".ews_calendarblock_eventype:checked").length > 0 && $(".ews_calendarblock_eventype:checked")[0].value == "All Types") {
+                    $(".ews_calendarblock_eventype").each(function () {
+                        if (this.value != "All Types") {
+                            $(this).next().css("color", "#D3D3D3");
+                            $(this).attr('checked', false);
+                            $(this).attr('disabled', '');
+                        }
+                    });
+                }
+                if ($(".ews_calendarblock_eventags:checked").length > 0 && $(".ews_calendarblock_eventags:checked")[0].value == "All Tags") {
+                    $(".ews_calendarblock_eventags").each(function () {
+
+                        if (this.value != "All Tags") {
+                            $(this).next().css("color", "#D3D3D3");
+                            $(this).attr('checked', false);
+                            $(this).attr('disabled', '');
+                        }
+                    });
+                }
+            
+                ews.CalendarBlock.DisplayTypeChanged();
+                $(".ews_amp_fusion").hide();
+                $('*[id$=wSelectedProviders] option').each(function () {
+                    if ($(this).text().indexOf("Elexio Database Events") > -1) {
+                        $(".ews_amp_fusion").show();
+                        $('.ews_calendar_sim').hide('fast');
+                        $('.ews_calendar_adv').show('fast');
+                        $('.ews_calendar_sim_link').hide();
+                        $('.ews_calendar_adv_link').show();
+                    }
+                });
+
+                $(".ews_cal_grid_select_checkbox,.ews_cal_grid_select_checkbox_clear").click(function (srcc) {
+                    if ($(this).hasClass("ews_cal_grid_select_checkbox")) {
+                        $(this).removeClass("ews_cal_grid_select_checkbox");
+                        $(this).addClass("ews_cal_grid_select_checkbox_clear");
+                    }
+                    else {
+                        $(this).removeClass("ews_cal_grid_select_checkbox_clear");
+                        $(this).addClass("ews_cal_grid_select_checkbox");
+                    }
+                });
+            }
+
+        });
+
+        if (typeof ews == "undefined")
+            var ews = {};
+
+        ews.CalendarBlock = {};
+        ews.CalendarBlock.LightBoxTop = null;
+        ews.CalendarBlock.LightBoxLeft = null;
+
+        ews.CalendarBlock.SelectBox = function (oBox) {
+            $(".ews_cal_grid_box_normal").removeClass("ews_cal_grid_box_selected");
+            $(".ews_cal_grid_box_today").removeClass("ews_cal_grid_box_selected");
+            $(oBox).addClass("ews_cal_grid_box_selected");
+        }
+
+        ews.CalendarBlock.LightBox = function (src) {
+            var width = 400;
+            var height = 300;
+            var top = (($(window).height() - height) / 2) - 100;
+            var left = (($(window).width() - width) / 2) - 256;
+            ews.CalendarBlock.LightBoxLeft = left;
+            ews.CalendarBlock.LightBoxTop = top;
+            var iFrame = $("<div class='ews_cal_lightbox' style='left:-5000px; top:-5000px;'><iframe src=\"" + src + "\" class='ews_cal_lightbox_iframe' frameborder='0' allowtransparency='true' background-color='transparent' scrolling='no' ></iframe></div>");
+
+            var oBg = $("<div class='ews_cal_lightboxbackground'></div>");
+            oBg.appendTo('body');
+            iFrame.appendTo('body');
+            oBg.show();
+            iFrame.show();
+            return iFrame;
+        }
+        ews.CalendarBlock.LightBoxLoaded = function (src) {
+            $(".ews_cal_lightbox").css({ "top": ews.CalendarBlock.LightBoxTop, "left": ews.CalendarBlock.LightBoxLeft });
+        }
+        ews.CalendarBlock.AddEvent = function (uid, source, clientid) {
+            source = $("#" + clientid + "_" + uid + "_source")[0].value.replace("'", "%39").replace("&", "%26");
+            window.open("webcal://" + window.location.hostname + "/" + source + "?Uid=" + uid, "_self");
+        }
+
+        ews.CalendarBlock.AddCal = function (source) {
+            window.open("webcal://" + window.location.hostname + "/" + source.replace("://", ""), "_self");
+
+        }
+        ews.CalendarBlock.PrintGrid = function (clientid) {
+            var oldheader = "";
+            var printhtml = "";
+            for (var i = 0; i < $("div[id*='ews_cal_grid_print_" + clientid + "']").length; i++) {
+                var newheader = $($($("div[id*='ews_cal_grid_print_" + clientid + "']")[i]).children()[0]).html();
+                if (oldheader != newheader) {
+                    printhtml += newheader;
+                    oldheader = newheader;
+                }
+                printhtml += $($("div[id*='ews_cal_grid_print_" + clientid + "']")[i]).html();
+            }
+
+            src = "<ht" + "ml>\n" +
+              "<head>\n" +
+              "<title></title>\n" +
+              "<style type='text/css'>@import url('/Blocks/CalendarBlock/Css/Default.css');</style>\n" +
+              "<scr" + "ipt>\n" +
+              "function step1() {\n" +
+              "  setTimeout('step2()', 10);\n" +
+              "}\n" +
+              "function step2() {\n" +
+              "  window.print();\n" +
+              "  window.close();\n" +
+              "}\n" +
+              "</scr" + "ipt>\n" +
+              "</head>\n" +
+              "<body onLoad='step1()'>\n" +
+              printhtml + "\n" +
+              "</body>\n" +
+              "</html>\n";
+            link = "about:blank";
+            var printwindow = window.open(link, "_new");
+            printwindow.document.open();
+            printwindow.document.write(src);
+            printwindow.document.close();
+        }
+        ews.CalendarBlock.PrintList = function (clientid) {
+            var oldheader = "";
+            var printhtml = "";
+            for (var i = 0; i < $("div[id*='ews_cal_list_print_" + clientid + "']").length; i++) {
+                var newheader = $($($("div[id*='ews_cal_list_print_" + clientid + "']")[i]).children()[0]).html();
+                if (oldheader != newheader) {
+                    printhtml += newheader;
+                    oldheader = newheader;
+                }
+                printhtml += $($("div[id*='ews_cal_list_print_" + clientid + "']")[i]).html();
+            }
+            src = "<ht" + "ml>\n" +
+              "<head>\n" +
+              "<title></title>\n" +
+              "<style type='text/css'>@import url('/Blocks/CalendarBlock/Css/Default.css');</style>\n" +
+              "<scr" + "ipt>\n" +
+              "function step1() {\n" +
+              "  setTimeout('step2()', 10);\n" +
+              "}\n" +
+              "function step2() {\n" +
+              "  window.print();\n" +
+              "  window.close();\n" +
+              "}\n" +
+              "</scr" + "ipt>\n" +
+              "</head>\n" +
+              "<body onLoad='step1()'>\n" +
+              printhtml + "\n" +
+              "</body>\n" +
+              "</html>\n";
+            link = "about:blank";
+            var printwindow = window.open(link, "_new");
+            printwindow.document.open();
+            printwindow.document.write(src);
+            printwindow.document.close();
+        }
+        ews.CalendarBlock.ShowMoreInfo = function (uid, clientid) {
+            $("#wMoreInfo_" + clientid + "_" + uid).slideToggle();
+            $("#wMoreInfoImg_" + clientid + "_" + uid).toggleClass("ews_cal_list_moreinfo_img");
+            $("#wMoreInfoImg_" + clientid + "_" + uid).toggleClass("ews_cal_list_moreinfo_img_expanded");
+        }
+        ews.CalendarBlock.ShowlistFilter = function (clientid) {
+            var listfilter = $("#" + clientid + "_wListFilter");
+            var listleft = $("#" + clientid + "_wListLeft");
+            var sender = $("#wFilterImg_" + clientid);
+            if (listfilter[0].style.width != "20%") {
+                listfilter.animate({ width: "20%" }, 400, function () { listfilter.show(); });
+                listleft.animate({ width: "75%" }, 300);
+            }
+            else {
+                listfilter.animate({ width: "0%" }, 300, function () { listfilter.hide(); });
+                listleft.animate({ width: "95%" }, 400);
+            }
+            sender.toggleClass("ews_cal_list_filter_img");
+            sender.toggleClass("ews_cal_list_filter_img_expanded");
+        }
+        ews.CalendarBlock.ShowCustom = function (clientid) {
+            if ($("#" + clientid + "_wListCustom").hasClass("ews_cal_list_custom")) {
+                $("#" + clientid + "_wListCustom").removeClass("ews_cal_list_custom");
+                $("#" + clientid + "_wListCustom").addClass("ews_cal_list_custom_clear");
+            }
+            else {
+                $("#" + clientid + "_wListCustom").removeClass("ews_cal_list_custom_clear");
+                $("#" + clientid + "_wListCustom").addClass("ews_cal_list_custom");
+            }
+        }
+
+ 
+
+        ews.CalendarBlock.EventTypeClick = function (oCheckbox) {
+            if ($(oCheckbox).is(':checked') && oCheckbox.value == "All Types") {
+                $(".ews_calendarblock_eventype").each(function () {
+                    if (this.value != "All Types") {
+                        $(this).next().css("color", "#D3D3D3");
+                        $(this).attr('checked', false);
+                        $(this).attr('disabled', '');
+                    }
+                });
+            }
+            if (!$(oCheckbox).is(':checked') && oCheckbox.value == "All Types") {
+                $(".ews_calendarblock_eventype").each(function () {
+                    if (this.value != "All Types") {
+                        $(this).attr('disabled', null);
+                        $(this).next().css("color", "#000000");
+                    }
+                });
+            }
+        }
+        ews.CalendarBlock.EventTagsClick = function (oCheckbox) {
+            if ($(oCheckbox).is(':checked') && oCheckbox.value == "All Tags") {
+                $(".ews_calendarblock_eventags").each(function () {
+                    if (this.value != "All Tags") {
+                        $(this).next().css("color", "#D3D3D3");
+                        $(this).attr('checked', false);
+                        $(this).attr('disabled', '');
+                    }
+                });
+            }
+            if (!$(oCheckbox).is(':checked') && oCheckbox.value == "All Tags") {
+                $(".ews_calendarblock_eventags").each(function () {
+                    if (this.value != "All Tags") {
+                        $(this).attr('disabled', null);
+                        $(this).next().css("color", "#000000");
+                    }
+                });
+            }
+        }
+
+        //hide the fake tooltip if you click on anything but the fake tooltip
+        document.onclick = function check(e) {
+            var target = (e && e.target) || (event && event.srcElement);
+            if (ews.CalendarBlock.LastShownPopup && ews.CalendarBlock.CheckParent(target)) {
+                $("#" + ews.CalendarBlock.LastShownPopup.id).removeClass("ews_cal_grid_event_details_show");
+                $("#" + ews.CalendarBlock.LastShownPopup.id).addClass("ews_cal_grid_event_details");
+                ews.CalendarBlock.LastShownPopup = null;
+            }
+
+            if (target.id != "emailcal" && target.nodeName != "INPUT") {
+                $(".ews_cal_grid_email_box").fadeOut(500);
+                $(".ews_cal_list_email_box").fadeOut(500);
+            }
+
+        }
+
+        //check parent ????
+        ews.CalendarBlock.CheckParent = function (t) {
+            if (t.id.indexOf("wClosePopUp") > -1)
+                return true;
+            if (ews.CalendarBlock.LastShownPopup) {
+                while (t.parentNode) {
+
+                    if (t.id == ews.CalendarBlock.LastShownPopup.id || t.id == "p" + ews.CalendarBlock.LastShownPopup.id) {
+                        return false;
+                    }
+                    t = t.parentNode
+                }
+            }
+            return true
+        }
+        ews.CalendarBlock.LastShownPopup = null;
+        ews.CalendarBlock.EventDetails = function (uid, clientid, e) {
+            if (ews.CalendarBlock.LastShownPopup && $("#" + ews.CalendarBlock.LastShownPopup.id).hasClass("ews_cal_grid_event_details_show")) {
+                $("#" + ews.CalendarBlock.LastShownPopup.id).removeClass("ews_cal_grid_event_details_show");
+                $("#" + ews.CalendarBlock.LastShownPopup.id).addClass("ews_cal_grid_event_details");
+            }
+            $("#" + clientid + "_" + uid).removeClass("ews_cal_grid_event_details");
+            $("#" + clientid + "_" + uid).addClass("ews_cal_grid_event_details_show");
+            ews.CalendarBlock.LastShownPopup = $("#" + clientid + "_" + uid)[0];
+            $("#" + clientid + "_" + uid)[0].focus();
+
+            if (!e) var e = window.event;
+
+            if (e) {
+                e.cancelBubble = true;
+            }
+            return false;
+        }
+
+        ews.CalendarBlock.ShowUpcomingLb = function (oName) {
+            oName = $(oName);
+            var oEvent = oName.parent().parent().parent();
+            if ($.trim(oEvent.find(".ews_ue_event_url").html()).length > 0) {
+                $(".ews_ue_lightbox_summary").html("<a href=\"" + oEvent.find(".ews_ue_event_url").html() + "\" >" + oEvent.find(".ews_ue_event_name a").html() + "</a>");
+            } else {
+                $(".ews_ue_lightbox_summary").html(oEvent.find(".ews_ue_event_name a").html());
+            }
+
+            var sLocation = oEvent.find(".ews_ue_event_location").html();
+            var re = new RegExp("[0-9]{5}", "g");
+            var myArray = sLocation.match(re);
+
+            if (oEvent.find(".ews_ue_event_date .ews_ue_event_daytime").html().length > 0 && oEvent.find(".ews_ue_event_location").html().length > 0) {
+
+                if (myArray == null) {
+                    $(".ews_ue_lightbox_location").html(
+                        oEvent.find(".ews_ue_event_date .ews_ue_event_daytime .ews_ue_event_lb_date").html() + " | " +
+                        sLocation
+                    );
+                }
+                else {
+                    $(".ews_ue_lightbox_location").html(
+                        oEvent.find(".ews_ue_event_date .ews_ue_event_daytime .ews_ue_event_lb_date").html() + " | " +
+                        "<a target='_new' href='http://maps.google.com/maps?hl=en&amp;q=" + sLocation + "'>" + sLocation + "</a>"
+                    );
+                }
+            } else {
+                $(".ews_ue_lightbox_location").html(
+                    oEvent.find(".ews_ue_event_date .ews_ue_event_daytime  .ews_ue_event_lb_date").html() +
+                    oEvent.find(".ews_ue_event_location").html()
+                );
+            }
+
+            $(".ews_ue_lightbox_description").html(oEvent.find(".ews_ue_event_description").html());
+
+            $(".ews_ue_lightboxbackground").click(function () {
+                $(".ews_ue_lightboxbackground").hide();
+                $(".ews_ue_lightbox").hide();
+            });
+            $(".ews_ue_lightbox_x").click(function () {
+                $(".ews_ue_lightboxbackground").hide();
+                $(".ews_ue_lightbox").hide();
+            });
+
+            $(".ews_ue_lightbox_edit").html(
+                           oEvent.find(".ews_ue_event_edit").html()
+                       );
+
+            $(".ews_ue_lightboxbackground").show();
+            $(".ews_ue_lightbox").show();
+
+        }
+        ews.CalendarBlock.ShowLightBox = function (uid, clientid) {
+            var eventdescription = $("#lightbox_" + clientid + "_" + uid)[0];
+            var lightbox = $("#wLightBox_" + clientid);
+            var lightboxcontent = $("#wLightBoxContent_" + clientid)[0];
+            lightboxcontent.innerHTML = eventdescription.innerHTML;
+
+
+            //var width = 400;
+            //var height = 300;
+
+            //lightbox.css({ "top": (($(window).height() - height) / 2), "left": (($(window).width() - width) / 2), "width": width, "height": height });
+            $("#ews_cal_grid_lightboxbackground_" + clientid).fadeTo(200, 0.65);
+            $("#ews_cal_grid_lightboxbackground_" + clientid).fadeIn(200,
+            function () {
+                lightbox.removeClass("ews_cal_grid_lightbox");
+                lightbox.addClass("ews_cal_grid_lightbox_show");
+            });
+        }
+
+        ews.CalendarBlock.ShowEditControlBar = function (uid, action, clientid, top, e, source, starttime, endtime) {
+            $(".ews_ue_lightboxbackground").hide();
+            $(".ews_ue_lightbox").hide();
+            if (source && (source == "[AmpFusion]" || source.indexOf("http:") > -1 || source.indexOf("https:") > -1)) {
+                alert("You can not edit Amp Fusion, Google or Outlook events from this website \r\n Please use those programs to manage events.");
+                if (e) {
+                    e.cancelBubble = true;
+                }
+                return false;
+            }
+            if (action == "add")
+            {
+                if ($(".ews_cal_grid_box_selected").length > 0)
+                {
+                    uid = $(".ews_cal_grid_box_selected").attr("date");
+                }
+                //ews.MenuBar.OpenControlPanel('/Blocks/CalendarBlock/EditEvent.aspx?EventID=' + uid + '&CalendarID=add', 800, 480);     
+                //ews.CalendarBlock.Grid.EditGrid = oCalendarManager;
+                ews.CalendarBlock.Grid.EditFrame = ews.CalendarBlock.LightBox('/Blocks/CalendarBlock/EditEvent.aspx?EventID=' + uid + '&CalendarID=add&Sources=' + $("#" + clientid + "_sources").val().replace("&", "%26"));
+
+            }
+            else
+            {
+                //ews.CalendarBlock.Grid.EditGrid = oCalendarManager;
+                ews.CalendarBlock.Grid.EditFrame = ews.CalendarBlock.LightBox('/Blocks/CalendarBlock/EditEvent.aspx?EventID=' + uid + '&CalendarID=' + $("#" + clientid + "_" + uid + "_source")[0].value.replace("&", "%26") + "&startime=" + starttime + "&endtime=" + endtime);
+            }
+            if (!e) var e = window.event;
+
+            if (e) {
+                e.cancelBubble = true;
+            }
+            return false;
+        }
+        ews.CalendarBlock.ShowEditCalendar = function () {
+            ews.MenuBar.OpenControlPanel('/Blocks/CalendarBlock/EditCalendar.aspx', 680, 700);
+        }
+        ews.CalendarBlock.HideEditLightBox = function () {
+            $("#__EVENTARGUMENT")[0].value = "refresh";
+            $("#aspnetForm").submit();
+        }
+
+        ews.CalendarBlock.HideEditCalendarLightBox = function () {
+            ews.Editor.HideLitebox("ews_silverlight_container");
+            var wSaveHolder = $(".wSaveEvent");
+            __doPostBack(wSaveHolder[0].id, "Calendar Saved");
+        }
+        ews.CalendarBlock.HideLightBox = function (clientID) {
+
+            var lightbox = $("#wLightBox_" + clientID);
+            if (lightbox.hasClass("ews_cal_grid_lightbox_show")) {
+                lightbox.removeClass("ews_cal_grid_lightbox_show");
+                $(".ews_cal_grid_lightboxbackground").fadeOut(500);
+            }
+            lightbox.addClass("ews_cal_grid_lightbox");
+            lightbox = $("#" + clientID + "_wEditEvent");
+            if (lightbox.hasClass("ews_cal_grid_lightbox_show_edit")) {
+                lightbox.removeClass("ews_cal_grid_lightbox_show_edit");
+                lightbox.addClass("ews_cal_grid_lightbox");
+                $(".ews_cal_grid_lightboxbackground").fadeOut(500);
+            }
+            if (lightbox.hasClass("ews_cal_list_lightbox_show_edit")) {
+                lightbox.removeClass("ews_cal_list_lightbox_show_edit");
+                lightbox.addClass("ews_cal_list_lightbox");
+                $(".ews_cal_list_lightboxbackground").fadeOut(500);
+            }
+
+            //for upcoming events probably should have done the rest like this
+            $(".ews_upcoming_lightboxbackground").fadeOut(500);
+            $(".ews_upcoming_lightbox_show").addClass("ews_upcoming_lightbox");
+            $(".ews_upcoming_lightbox_show").removeClass("ews_upcoming_lightbox_show");
+        }
+        ews.CalendarBlock.ShowGridFilter = function (clientID, bAnimate) {
+            var calgridfilter = $("#wGridFilter_" + clientID);
+            var calgridleft = $("#wGridLeft_" + clientID);
+            var sender = $("#wFilterImg_" + clientID);
+            if (calgridfilter[0].style.width != "20%") {
+
+                if (bAnimate)
+                    calgridleft.animate({ width: "75%" }, 300, function () { calgridfilter.animate({ width: "20%" }, 10); calgridfilter.show(); });
+                else
+                    calgridleft.animate({ width: "75%" }, 0, function () { calgridfilter.animate({ width: "20%" }, 0); calgridfilter.show(); });
+
+            }
+            else {
+                calgridfilter.animate({ width: "0%" }, 10, function () { calgridfilter.hide(); });
+                calgridleft.animate({ width: "99.8%" }, 400);
+
+            }
+            $(sender).toggleClass("ews_cal_grid_filter_img");
+            $(sender).toggleClass("ews_cal_grid_filter_img_expanded");
+
+
+        }
+        ews.CalendarBlock.EventSaved = function (clientid) {
+            //this event is fired by silverlight after the event was saved
+            alert("Event Saved");
+            ews.CalendarBlock.HideCalEditLightBox();
+            var wSaveHolder = $(".wSaveEvent");
+            __doPostBack(wSaveHolder[0].id, "Event Saved");
+
+        }
+        ews.CalendarBlock.EventDelete = function () {
+            //this event is fired by silverlight after the event was saved
+            ews.CalendarBlock.HideCalEditLightBox();
+            var wSaveHolder = $(".wSaveEvent");
+            __doPostBack(wSaveHolder[0].id, "Event Deleted");
+            alert("Event Deleted");
+        }
+
+        ews.CalendarBlock.GetAssignedCalendarsOnLoad = function (clientid) {
+            return $("#" + clientid + "_wGridGetAssignedCalendars")[0].innerHTML;
+        }
+        ews.CalendarBlock.GetAssignedCalendars = function (clientid) {
+            __doPostBack($("#" + clientid + "_wGridGetAssignedCalendars")[0].id, 'click');
+            return $("#" + clientid + "_wGridGetAssignedCalendars")[0].innerHTML;
+        }
+        ews.CalendarBlock.SaveAssignedCalendars = function (source, clientid) {
+            __doPostBack($("#" + clientid + "_wSaveCalendar")[0].id, source);
+            alert("Calendar Saved %" + source);
+        }
+        ews.CalendarBlock.AddProvider = function (clientid) {
+            if ($('*[id$=wSources] option:selected').text().indexOf("Elexio Database Events") > -1) {
+                $(".ews_amp_fusion").show();
+                $('.ews_calendar_sim').hide('fast');
+                $('.ews_calendar_adv').show('fast');
+                $('.ews_calendar_sim_link').hide();
+                $('.ews_calendar_adv_link').show();
+            }
+            $('*[id$=wSources] option:selected').appendTo('*[id$=wSelectedProviders]');
+        }
+        ews.CalendarBlock.RemoveProvider = function (clientid) {
+            if ($('*[id$=wSelectedProviders] option:selected').text().indexOf("Elexio Database Events") > -1) {
+                $(".ews_amp_fusion").hide();
+            }
+            $('*[id$=wSelectedProviders] option:selected').appendTo('*[id$=wSources]');
+        }
+        ews.CalendarBlock.OkClick = function (clientid) {
+            if ($("*[id$=wSelectedProviders] option").length == 0) {
+                alert("You must select at least one calendar");
+                return false;
+            }
+            else
+                $("*[id$=wSelectedProviders]").each(function () {
+                    $("*[id$=wSelectedProviders] option").attr("selected", "selected");
+                });
+        }
+        ews.CalendarBlock.DisplayTypeChanged = function () {
+            var sNewType = $("*[id$=wCalendarType] option:selected").val();
+
+            if (sNewType == "List") {
+                $("#wListViewOptions").show();
+                $("#wUpcomingEventOptions").hide();
+                $("#wTagOptions").show();
+                $(".ews_ue_moresettings").hide();
+                $(".ews_cal_section_note").hide();
+            } else if (sNewType == "Grid") {
+                $("#wListViewOptions").hide();
+                $("#wUpcomingEventOptions").hide();
+                $("#wTagOptions").show();
+                $(".ews_ue_moresettings").hide();
+                $(".ews_cal_section_note").hide();
+            } else {
+                $(".ews_cal_section_note").show();
+                $("#wListViewOptions").hide();
+                $("#wUpcomingEventOptions").show();
+                $("#wTagOptions").hide();
+                $(".ews_ue_moresettings").show();
+            }
+        }
+        ews.CalendarBlock.ShowInsertLink = function () {
+            $("#ews_cb_linkpagenew").hide();
+            $(".ews_insertlink_label").hide();
+            var textboxid = $("[id$=_wEventsLink]")[0].id;
+            var id = $("[id$=_wStaticInsertLink]")[0].id;
+            ews.InsertLink.ShowInLitebox(id);
+            ews.Editor.Blackout.hide();
+        }
+        ews.CalendarBlock.SelectLink = function (par1, par2, par3) {
+            $("[id$=_wEventsLink]")[0].value = par1;
+        }
+        ews.CalendarBlock.GridEventScrollRight = function (oButton) {
+
+        }
+        
+
+if (typeof Sys != "undefined" && Sys && Sys.Application) {
+    Sys.Application.notifyScriptLoaded();
+}

@@ -1,0 +1,410 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY BGCOLOR=#e6e6e6 LINK=#333383 ALINK=#008400 VLINK=#333383 leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+<!--CHANGELOG-->
+<!--LSP 9/26/12 - initial development-->
+                        <style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"Franklin Gothic Book";
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	panose-1:2 11 5 3 2 1 2 2 2 4;
+	mso-font-signature:647 0 0 0 536871071 -539557888;}
+ /* Style Definitions */
+div.MsoNormal
+	{mso-style-parent:"";
+	margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:7.9919pt;
+	text-align:left;
+	font-family:"Century Schoolbook";
+	font-size:9.5pt;
+	color:black
+	}
+li.MsoNormal
+	{mso-style-parent:"";
+	margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:7.9919pt;
+	text-align:left;
+	font-family:"Century Schoolbook";
+	font-size:9.5pt;
+	color:black
+	}
+p.MsoNormal
+	{mso-style-parent:"";
+	margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:7.9919pt;
+	text-align:left;
+	font-family:"Century Schoolbook";
+	font-size:9.5pt;
+	color:black
+	}
+ol
+	{margin-top:0in;
+	margin-bottom:0in;
+	margin-left:-2197in;}
+ul
+	{margin-top:0in;
+	margin-bottom:0in;
+	margin-left:-2197in;}
+@page
+	{mso-hyphenate:none;}
+.style24 {
+				margin-top: 0px;
+				margin-bottom: 9px;
+}
+-->
+                        </style>
+                        <style>
+<!--
+ /* Style Definitions */
+div.MsoNormal
+	{mso-style-parent:"";
+	margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-family:"Times New Roman";
+	font-size:10.0pt;
+	color:black
+	}
+li.MsoNormal
+	{mso-style-parent:"";
+	margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-family:"Times New Roman";
+	font-size:10.0pt;
+	color:black
+	}
+p.MsoNormal
+	{mso-style-parent:"";
+	margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-family:"Times New Roman";
+	font-size:10.0pt;
+	color:black
+	}
+ol
+	{margin-top:0in;
+	margin-bottom:0in;
+	margin-left:-2197in;}
+ul
+	{margin-top:0in;
+	margin-bottom:0in;
+	margin-left:-2197in;}
+@page
+	{mso-hyphenate:none;}
+.style1 {
+				border-width: 0px;
+}
+.style13 {
+				text-align: center;
+}
+.style15 {
+				font-family: Verdana;
+				font-size: xx-small;
+}
+.style8 {
+				border-width: 0px;
+}
+.style11 {
+				font-size: xx-small;
+}
+.style18 {
+				font-family: Verdana;
+}
+.style19 {
+				border-width: 0px;
+				font-family: Verdana;
+				font-size: x-small;
+}
+-->
+                        </style>
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"Franklin Gothic Book";
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	panose-1:2 11 5 3 2 1 2 2 2 4;
+	mso-font-signature:647 0 0 0 536871071 -539557888;}
+ /* Style Definitions */
+div.MsoNormal
+	{mso-style-parent:"";
+	margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:7.9919pt;
+	text-align:left;
+	font-family:"Century Schoolbook";
+	font-size:9.5pt;
+	color:black
+	}
+li.MsoNormal
+	{mso-style-parent:"";
+	margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:7.9919pt;
+	text-align:left;
+	font-family:"Century Schoolbook";
+	font-size:9.5pt;
+	color:black
+	}
+p.MsoNormal
+	{mso-style-parent:"";
+	margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:7.9919pt;
+	text-align:left;
+	font-family:"Century Schoolbook";
+	font-size:9.5pt;
+	color:black
+	}
+ol
+	{margin-top:0in;
+	margin-bottom:0in;
+	margin-left:-2197in;}
+ul
+	{margin-top:0in;
+	margin-bottom:0in;
+	margin-left:-2197in;}
+@page
+	{mso-hyphenate:none;}
+-->
+                        </style><style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"Century Schoolbook";
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	panose-1:2 4 6 4 5 5 5 2 3 4;
+	mso-font-signature:647 0 0 0 536871071 -539557888;}
+ /* Style Definitions */
+div.MsoNormal
+	{mso-style-parent:"";
+	margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:7.9919pt;
+	text-align:left;
+	font-family:"Century Schoolbook";
+	font-size:9.5pt;
+	color:black
+	}
+li.MsoNormal
+	{mso-style-parent:"";
+	margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:7.9919pt;
+	text-align:left;
+	font-family:"Century Schoolbook";
+	font-size:9.5pt;
+	color:black
+	}
+p.MsoNormal
+	{mso-style-parent:"";
+	margin-right:0pt;
+	text-indent:0pt;
+	margin-top:0pt;
+	margin-bottom:7.9919pt;
+	text-align:left;
+	font-family:"Century Schoolbook";
+	font-size:9.5pt;
+	color:black
+	}
+ol
+	{margin-top:0in;
+	margin-bottom:0in;
+	margin-left:-2197in;}
+ul
+	{margin-top:0in;
+	margin-bottom:0in;
+	margin-left:-2197in;}
+@page
+	{mso-hyphenate:none;}
+-->
+                        </style>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+<title>Chisago Lakes High School - Lindstrom, Minnesota</title>
+<style>
+<!--
+div.Section1
+	{page:Section1;}
+h4
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	}
+-->
+                        </style>
+                        </head>
+
+<body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" alink="#1E6D2E" bgcolor="#D2D1D1" link="#1E6D2E" vlink="#1E6D2E">
+
+<div align="center">
+	<table cellpadding="0" cellspacing="0" border="0" height="19" width="859">
+		<tbody><tr>
+			<td height="19">
+			<!--webbot bot="Include" U-Include="clhsmenutop.htm" TAG="BODY" startspan -->
+
+<div align="center">
+	<table cellpadding="0" cellspacing="0" border="0" width="859">
+		<tbody><tr>
+			<td><map name="FPMap1_I1">
+			<area href="http://www.chisagolakes.k12.mn.us/schools/highschool/staff.htm" shape="rect" coords="257, 117, 404, 145">
+			<area href="http://www.chisagolakes.k12.mn.us/schools/highschool/index.html" shape="rect" coords="749, 117, 833, 145">
+			<area href="http://www.chisagolakes.k12.mn.us/schools/highschool/contactus.htm" shape="rect" coords="636, 117, 746, 145">
+			<area href="http://www.chisagolakes.k12.mn.us/activities.htm" shape="rect" coords="534, 117, 634, 145">
+			<area href="https://adminn00400a.ties.k12.mn.us/schoolview/sv_login_secure.asp?" shape="rect" coords="406, 117, 533, 145">
+			</map>
+			<img src="/clients/ChisagoLakes/Images/clhstopmenur2.gif" usemap="#FPMap1_I1" border="0" height="146" width="859"></td>
+		</tr>
+	</tbody></table>
+</div>
+
+<!--webbot bot="Include" i-checksum="48857" endspan --></td>
+		</tr>
+	</tbody></table>
+</div>
+<div align="center">
+
+</div>
+
+<!--webbot bot="Include" i-checksum="42540" endspan --></td>
+		</tr>
+	</tbody></table>
+</div>
+<div align="center">
+
+</div>
+<div align="center">
+	<table cellpadding="0" cellspacing="0" border="0" width="851">
+		<tbody><tr>
+			<td bgcolor="#ffffff">
+			<!--TIX DATA START-->
+			
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+			
+			<!--TIX DATA END-->
+</td>
+		</tr>
+	</tbody></table>
+</div>
+<div align="center">
+	<table cellpadding="0" cellspacing="0" border="0" width="859">
+		<tbody><tr>
+			<td>
+			<!--webbot bot="Include" U-Include="quicklinks.htm" TAG="BODY" startspan -->
+
+<div align="center">
+	<table cellpadding="0" cellspacing="0" border="0" width="859">
+		<tbody><tr>
+			<td><map name="FPMap0_I4">
+			<area href="http://www.chisagolakes.k12.mn.us/schools/highschool/calendars.htm" shape="rect" coords="167, 7, 293, 57">
+			<area href="http://www.chisagolakes.k12.mn.us/activities.htm" shape="rect" coords="296, 7, 448, 57">
+			<area href="http://www.chisagolakes.k12.mn.us/schools/highschool/guidance.htm" shape="rect" coords="450, 7, 578, 57">
+			<area href="http://www.chisagolakes.k12.mn.us/schools/highschool/library.htm" shape="rect" coords="581, 7, 706, 57">
+			<area href="http://chisagolakes.mn.schoolwebpages.com/education/components/scrapbook/default.php?sectiondetailid=4941" shape="rect" coords="709, 7, 844, 57">
+			</map>
+			<img src="/clients/ChisagoLakes/Images/quicklinks.gif" usemap="#FPMap0_I4" border="0" height="58" width="859"></td>
+		</tr>
+	</tbody></table>
+</div>
+
+<!--webbot bot="Include" i-checksum="40986" endspan --></td>
+		</tr>
+	</tbody></table>
+</div>
+<div align="center">
+	<table cellpadding="0" cellspacing="0" border="0" width="859">
+		<tbody><tr>
+			<td>
+			<!--webbot bot="Include" U-Include="clhsmenubottom.htm" TAG="BODY" startspan -->
+
+<div align="center">
+	<table cellpadding="0" cellspacing="0" border="0" width="859">
+		<tbody><tr>
+			<td>
+			<img src="/clients/ChisagoLakes/Images/clhsbottomb1.gif" border="0" height="14" width="859"></td>
+		</tr>
+		<tr>
+			<td>
+			<div align="center">
+				<table cellpadding="0" cellspacing="0" border="0" width="100%">
+					<tbody><tr>
+						<td width="80">
+						<img src="/clients/ChisagoLakes/Images/clhsbottomb2a.gif" border="0" height="32" width="99"></td>
+						<td bgcolor="#00480F">
+						<p align="center">
+						<font color="#FFDE00" face="Verdana" size="1">|</font><font color="#FFFFFF" face="Verdana" size="1">
+						<a href="http://www.chisagolakes.k12.mn.us/schools/highschool/staff.htm"><font color="#FFFFFF">Staff 
+						Directory</font></a> </font>
+						<font color="#FFDE00" face="Verdana" size="1">|</font><font color="#FFFFFF" face="Verdana" size="1">&nbsp;
+						<a href="http://www.chisagolakes.k12.mn.us/schools/highschool/activities.htm"><font color="#FFFFFF">
+						Activities</font></a>
+						</font>
+						<font color="#FFDE00" face="Verdana" size="1">|</font><font color="#FFFFFF" face="Verdana" size="1">
+						<a href="http://www.chisagolakes.k12.mn.us/schools/highschool/contactus.htm"><font color="#FFFFFF">Contact Us</font></a>
+						</font><font color="#FFDE00" face="Verdana" size="1">|</font><font color="#FFFFFF" face="Verdana" size="1">
+						<a href="http://www.chisagolakes.k12.mn.us/schools/highschool/index.html"><font color="#FFFFFF">Home</font></a>
+						</font><font color="#FFDE00" face="Verdana" size="1">|</font></p></td>
+						<td width="60">
+						<img src="/clients/ChisagoLakes/Images/clhsbottomb2b.gif" border="0" height="32" width="247"></td>
+					</tr>
+				</tbody></table>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td>
+			<img src="/clients/ChisagoLakes/Images/clhsbottomb3.gif" border="0" height="24" width="859"></td>
+		</tr>
+	</tbody></table>
+</div>
+
+<!--webbot bot="Include" i-checksum="1913" endspan --></td>
+		</tr>
+	</tbody></table>
+</div>
+
+
+
+</body></html>
+</div>
+</form>
+</body>
+</html>

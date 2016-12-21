@@ -1,0 +1,1890 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252"><style type="text/css">
+    
+body, th, td
+{
+    font-family: "arial", "helvetica", Sans-Serif;
+	font-size: 12px;
+    line-height: 1 em;
+}
+th, td
+{
+    text-align: left;
+}
+</style>
+
+</head><body><b>Begin CTRPOINT2017FLE - 7/13/2016 1:41:19 PM</b><br><br><table><tbody><tr> 
+<td colspan="3"><b>Renewal Events</b></td></tr>
+<tr><td>Old Event:</td><td>776489</td><td>2016 Season Subscription Flex Pass</td></tr><tr><td>New Event:</td><td>891315</td><td>2017 Season Subscription Flex Pass</td></tr></tbody></table><br> 
+<u><b>Price Records - Missing Section/SeatTypes</b></u><br>
+<table><tbody><tr><th>Section Code</th><th>Section</th><th>Seat Type Code</th><th>Seat Type</th></tr>
+<tr><td colspan="4">No Missing Price Records</td></tr>
+</tbody></table><br><br>
+<u><b>Seat Records - Missing Seats</b></u><br>
+<table><tbody><tr><th>Section Code</th><th>Section</th><th>Row</th><th>Seat</th></tr>
+<tr><td colspan="4">No Missing Seats</td></tr>
+</tbody></table><br><br><hr>
+<table><tbody><tr> 
+<td colspan="3"><b>Renewal Events</b></td></tr>
+<tr><td>Old Event:</td><td>845571</td><td>6-show 2016 Season Subscription Flex Pass</td></tr><tr><td>New Event:</td><td>891315</td><td>2017 Season Subscription Flex Pass</td></tr></tbody></table><br> 
+<u><b>Price Records - Missing Section/SeatTypes</b></u><br>
+<table><tbody><tr><th>Section Code</th><th>Section</th><th>Seat Type Code</th><th>Seat Type</th></tr>
+<tr><td colspan="4">No Missing Price Records</td></tr>
+</tbody></table><br><br>
+<u><b>Seat Records - Missing Seats</b></u><br>
+<table><tbody><tr><th>Section Code</th><th>Section</th><th>Row</th><th>Seat</th></tr>
+<tr><td colspan="4">No Missing Seats</td></tr>
+</tbody></table><br><br><hr>
+<table><tbody><tr> 
+<td colspan="3"><b>Renewal Events</b></td></tr>
+<tr><td>Old Event:</td><td>852211</td><td>5 show 2016 Season Subscription Flex Pass</td></tr><tr><td>New Event:</td><td>891315</td><td>2017 Season Subscription Flex Pass</td></tr></tbody></table><br> 
+<u><b>Price Records - Missing Section/SeatTypes</b></u><br>
+<table><tbody><tr><th>Section Code</th><th>Section</th><th>Seat Type Code</th><th>Seat Type</th></tr>
+<tr><td colspan="4">No Missing Price Records</td></tr>
+</tbody></table><br><br>
+<u><b>Seat Records - Missing Seats</b></u><br>
+<table><tbody><tr><th>Section Code</th><th>Section</th><th>Row</th><th>Seat</th></tr>
+<tr><td colspan="4">No Missing Seats</td></tr>
+</tbody></table><br><br><hr>
+<b><u>Begin Renewal</u></b><br><br>
+SELECT OrderLine.OrderNumber, OrderLine.LineNumber, Seat.EventCode, 
+Section.Section, Seat.SectionCode, Seat.Row, Seat.Seat, 
+OrderLine.SeatTypeCode, OrderLine.ShipFirstName, OrderLine.ShipLastName,
+ OrderLine.ShipAddress1, OrderLine.ShipAddress2, OrderLine.ShipCity, 
+OrderLine.ShipState, OrderLine.ShipCountry, OrderLine.ShipPostalCode, 
+OrderHeader.CustomerNumber FROM Seat (NOLOCK) INNER JOIN Section 
+(NOLOCK) ON Seat.EventCode = Section.EventCode AND Seat.SectionCode = 
+Section.SectionCode INNER JOIN OrderLine (NOLOCK) ON Seat.ItemNumber = 
+OrderLine.ItemNumber INNER JOIN OrderHeader (NOLOCK) ON Seat.OrderNumber
+ = OrderHeader.OrderNumber WHERE Seat.EventCode IN 
+(776489,845571,852211) AND Seat.StatusCode = 'S' AND OrderLine.ItemType 
+IN ('Seat', 'SubFixedEvent') AND OrderHeader.OrderTypeNumber &lt;&gt; 5 
+ AND OrderHeader.OrderNumber &gt; 14229635 ORDER BY 
+OrderLine.OrderNumber, OrderLine.LineNumber<br><br>Old Order Number = 19993910 - New Order Number: 22319934<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 19993910 | 
+NewOrderNumber = 22319934 | ItemNumber = 234379422 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'James', 
+ShipLastName = 'Waite', ShipAddress1 = '3854 South 260 West', 
+ShipAddress2 = '', ShipCity = 'Nibley', ShipState = 'UT', ShipPostalCode
+ = '84321', ShipCountry = 'United States' WHERE OrderNumber = 22319934 
+AND LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 19993910 | NewOrderNumber = 22319934 | ItemNumber = 
+234379423 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 112, Surcharge = 2.05, SeatTypeCode = 64138, ShipCode = 4, 
+ShipFirstName = 'James', ShipLastName = 'Waite', ShipAddress1 = '3854 
+South 260 West', ShipAddress2 = '', ShipCity = 'Nibley', ShipState = 
+'UT', ShipPostalCode = '84321', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319934 AND LineNumber = 9<br><br>Old Order Number = 19993911 - New Order Number: 22319935<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 19993911 | 
+NewOrderNumber = 22319935 | ItemNumber = 234379424 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Brent', 
+ShipLastName = 'Ericksen', ShipAddress1 = '1485 West 2920 South', 
+ShipAddress2 = '', ShipCity = 'Syracuse', ShipState = 'UT', 
+ShipPostalCode = '84075', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22319935 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 19993911 | NewOrderNumber = 
+22319935 | ItemNumber = 234379425 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Brent', ShipLastName = 'Ericksen', 
+ShipAddress1 = '1485 West 2920 South', ShipAddress2 = '', ShipCity = 
+'Syracuse', ShipState = 'UT', ShipPostalCode = '84075', ShipCountry = 
+'UNITED STATES' WHERE OrderNumber = 22319935 AND LineNumber = 9<br><br>Old Order Number = 19993917 - New Order Number: 22319936<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 19993917 | 
+NewOrderNumber = 22319936 | ItemNumber = 234379426 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Merry', 
+ShipLastName = 'Jackson', ShipAddress1 = '4342 South 2950 East', 
+ShipAddress2 = '', ShipCity = 'Holliday', ShipState = 'UT', 
+ShipPostalCode = '84124', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319936 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 19993917 | NewOrderNumber = 
+22319936 | ItemNumber = 234379427 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Merry', ShipLastName = 'Jackson', 
+ShipAddress1 = '4342 South 2950 East', ShipAddress2 = '', ShipCity = 
+'Holliday', ShipState = 'UT', ShipPostalCode = '84124', ShipCountry = 
+'United States' WHERE OrderNumber = 22319936 AND LineNumber = 9<br><br>Old Order Number = 19993934 - New Order Number: 22319937<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 19993934 | 
+NewOrderNumber = 22319937 | ItemNumber = 234379428 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Stephanie', 
+ShipLastName = 'Hawley', ShipAddress1 = '733 West 1400 South', 
+ShipAddress2 = '', ShipCity = 'Woods Cross', ShipState = 'UT', 
+ShipPostalCode = '84087', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319937 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 19993934 | NewOrderNumber = 
+22319937 | ItemNumber = 234379429 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Stephanie', ShipLastName = 'Hawley', 
+ShipAddress1 = '733 West 1400 South', ShipAddress2 = '', ShipCity = 
+'Woods Cross', ShipState = 'UT', ShipPostalCode = '84087', ShipCountry =
+ 'United States' WHERE OrderNumber = 22319937 AND LineNumber = 9<br><br>Old Order Number = 19993943 - New Order Number: 22319938<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 19993943 | 
+NewOrderNumber = 22319938 | ItemNumber = 234379430 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Scott and Marsha', 
+ShipLastName = 'Wall', ShipAddress1 = '752 South 650 East', ShipAddress2
+ = '', ShipCity = 'Centerville', ShipState = 'UT', ShipPostalCode = 
+'84014', ShipCountry = 'United States' WHERE OrderNumber = 22319938 AND 
+LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 19993943 | NewOrderNumber = 22319938 | ItemNumber = 
+234379431 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 112, Surcharge = 2.05, SeatTypeCode = 64138, ShipCode = 4, 
+ShipFirstName = 'Scott and Marsha', ShipLastName = 'Wall', ShipAddress1 =
+ '752 South 650 East', ShipAddress2 = '', ShipCity = 'Centerville', 
+ShipState = 'UT', ShipPostalCode = '84014', ShipCountry = 'United 
+States' WHERE OrderNumber = 22319938 AND LineNumber = 9<br><br>Old Order Number = 19993948 - New Order Number: 22319940<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 19993948 | 
+NewOrderNumber = 22319940 | ItemNumber = 234379432 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Pat', ShipLastName =
+ 'Wood', ShipAddress1 = '1116 Front Nine Way', ShipAddress2 = '', 
+ShipCity = 'Farmington', ShipState = 'UT', ShipPostalCode = '84025', 
+ShipCountry = 'United States' WHERE OrderNumber = 22319940 AND 
+LineNumber = 1<br><br>Old Order Number = 19993949 - New Order Number: 22319941<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 19993949 | 
+NewOrderNumber = 22319941 | ItemNumber = 234379433 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Christine', 
+ShipLastName = 'Dick', ShipAddress1 = '1600 North 1575 West APT M108', 
+ShipAddress2 = '', ShipCity = 'Layton', ShipState = 'UT', ShipPostalCode
+ = '84041', ShipCountry = 'United States' WHERE OrderNumber = 22319941 
+AND LineNumber = 1<br><br>Old Order Number = 19993951 - New Order Number: 22319942<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 19993951 | 
+NewOrderNumber = 22319942 | ItemNumber = 234379434 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Elias and Joyce', 
+ShipLastName = 'Miller', ShipAddress1 = '1469 North 500 East', 
+ShipAddress2 = '', ShipCity = 'Centerville', ShipState = 'UT', 
+ShipPostalCode = '84014', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319942 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 19993951 | NewOrderNumber = 
+22319942 | ItemNumber = 234379435 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Elias and Joyce', ShipLastName = 
+'Miller', ShipAddress1 = '1469 North 500 East', ShipAddress2 = '', 
+ShipCity = 'Centerville', ShipState = 'UT', ShipPostalCode = '84014', 
+ShipCountry = 'United States' WHERE OrderNumber = 22319942 AND 
+LineNumber = 9<br><br>Old Order Number = 19993959 - New Order Number: 22319944<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 19993959 | 
+NewOrderNumber = 22319944 | ItemNumber = 234379436 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Dean', ShipLastName
+ = 'Cleverly', ShipAddress1 = '158 East 1650 South', ShipAddress2 = '', 
+ShipCity = 'Bountiful', ShipState = 'UT', ShipPostalCode = '84010', 
+ShipCountry = 'United States' WHERE OrderNumber = 22319944 AND 
+LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 19993959 | NewOrderNumber = 22319944 | ItemNumber = 
+234379437 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 112, Surcharge = 2.05, SeatTypeCode = 64138, ShipCode = 4, 
+ShipFirstName = 'Dean', ShipLastName = 'Cleverly', ShipAddress1 = '158 
+East 1650 South', ShipAddress2 = '', ShipCity = 'Bountiful', ShipState =
+ 'UT', ShipPostalCode = '84010', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319944 AND LineNumber = 9<br><br>Old Order Number = 20181409 - New Order Number: 22319945<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 20181409 | 
+NewOrderNumber = 22319945 | ItemNumber = 234379438 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Ric', ShipLastName =
+ 'Wailes', ShipAddress1 = '3925 South 3200 West', ShipAddress2 = '', 
+ShipCity = 'West Valley City', ShipState = 'Utah', ShipPostalCode = 
+'84119', ShipCountry = 'UNITED STATES' WHERE OrderNumber = 22319945 AND 
+LineNumber = 1<br><br>Old Order Number = 20197312 - New Order Number: 22319946<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 20197312 | 
+NewOrderNumber = 22319946 | ItemNumber = 234379439 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Ric', ShipLastName =
+ 'Wailes', ShipAddress1 = '3925 South 3200 West', ShipAddress2 = '', 
+ShipCity = 'West Valley City', ShipState = 'Utah', ShipPostalCode = 
+'84119', ShipCountry = 'UNITED STATES' WHERE OrderNumber = 22319946 AND 
+LineNumber = 1<br><br>Old Order Number = 20501835 - New Order Number: 22319947<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 20501835 | 
+NewOrderNumber = 22319947 | ItemNumber = 234379440 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Ardis', 
+ShipLastName = 'Knudsen', ShipAddress1 = '1145 Sunset Drive', 
+ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84010', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319947 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 20501835 | NewOrderNumber = 
+22319947 | ItemNumber = 234379441 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Ardis', ShipLastName = 'Knudsen', 
+ShipAddress1 = '1145 Sunset Drive', ShipAddress2 = '', ShipCity = 
+'Bountiful', ShipState = 'UT', ShipPostalCode = '84010', ShipCountry = 
+'United States' WHERE OrderNumber = 22319947 AND LineNumber = 9<br><br>Old Order Number = 20508928 - New Order Number: 22319948<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 20508928 | 
+NewOrderNumber = 22319948 | ItemNumber = 234379442 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Boyd &amp; Janice',
+ ShipLastName = 'Black', ShipAddress1 = '121 West 1300 North ', 
+ShipAddress2 = '', ShipCity = 'Centerville ', ShipState = 'UT', 
+ShipPostalCode = '84014', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319948 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 20508928 | NewOrderNumber = 
+22319948 | ItemNumber = 234379443 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Boyd &amp; Janice', ShipLastName = 
+'Black', ShipAddress1 = '121 West 1300 North ', ShipAddress2 = '', 
+ShipCity = 'Centerville ', ShipState = 'UT', ShipPostalCode = '84014', 
+ShipCountry = 'United States' WHERE OrderNumber = 22319948 AND 
+LineNumber = 9<br><br>Old Order Number = 20870173 - New Order Number: 22319949<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 20870173 | 
+NewOrderNumber = 22319949 | ItemNumber = 234379444 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Gary', ShipLastName
+ = 'Cox', ShipAddress1 = '483 North Angel Street', ShipAddress2 = '', 
+ShipCity = 'Kaysville', ShipState = 'UT', ShipPostalCode = '84037', 
+ShipCountry = 'United States' WHERE OrderNumber = 22319949 AND 
+LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 20870173 | NewOrderNumber = 22319949 | ItemNumber = 
+234379445 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 112, Surcharge = 2.05, SeatTypeCode = 64138, ShipCode = 4, 
+ShipFirstName = 'Gary', ShipLastName = 'Cox', ShipAddress1 = '483 North 
+Angel Street', ShipAddress2 = '', ShipCity = 'Kaysville', ShipState = 
+'UT', ShipPostalCode = '84037', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319949 AND LineNumber = 9<br><br>Old Order Number = 20871690 - New Order Number: 22319950<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 20871690 | 
+NewOrderNumber = 22319950 | ItemNumber = 234379446 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Jennifer', 
+ShipLastName = 'Spencer', ShipAddress1 = '3074 north 2400 East', 
+ShipAddress2 = '', ShipCity = 'Layton ', ShipState = 'UT', 
+ShipPostalCode = '84040', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319950 AND LineNumber = 1<br><br>Old Order Number = 20932008 - New Order Number: 22319951<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 20932008 | 
+NewOrderNumber = 22319951 | ItemNumber = 234379447 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Cindy', 
+ShipLastName = 'Mortensen', ShipAddress1 = '3300 North Pioneer Way', 
+ShipAddress2 = '', ShipCity = 'Las Vegas ', ShipState = 'NV', 
+ShipPostalCode = '89129', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319951 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 20932008 | NewOrderNumber = 
+22319951 | ItemNumber = 234379448 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Cindy', ShipLastName = 'Mortensen', 
+ShipAddress1 = '3300 North Pioneer Way', ShipAddress2 = '', ShipCity = 
+'Las Vegas ', ShipState = 'NV', ShipPostalCode = '89129', ShipCountry = 
+'United States' WHERE OrderNumber = 22319951 AND LineNumber = 9<br><br>Old Order Number = 20944474 - New Order Number: 22319952<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 20944474 | 
+NewOrderNumber = 22319952 | ItemNumber = 234379449 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Mylissa', 
+ShipLastName = 'Weger', ShipAddress1 = '1242 Spring Meadow Lane', 
+ShipAddress2 = '', ShipCity = 'Kaysville', ShipState = 'UT', 
+ShipPostalCode = '84037', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319952 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 20944474 | NewOrderNumber = 
+22319952 | ItemNumber = 234379450 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Mylissa', ShipLastName = 'Weger', 
+ShipAddress1 = '1242 Spring Meadow Lane', ShipAddress2 = '', ShipCity = 
+'Kaysville', ShipState = 'UT', ShipPostalCode = '84037', ShipCountry = 
+'United States' WHERE OrderNumber = 22319952 AND LineNumber = 9<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 20944474 | 
+NewOrderNumber = 22319952 | ItemNumber = 234379451 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Mylissa', 
+ShipLastName = 'Weger', ShipAddress1 = '1242 Spring Meadow Lane', 
+ShipAddress2 = '', ShipCity = 'Kaysville', ShipState = 'UT', 
+ShipPostalCode = '84037', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319952 AND LineNumber = 17<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 20944474 | NewOrderNumber = 
+22319952 | ItemNumber = 234379452 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Mylissa', ShipLastName = 'Weger', 
+ShipAddress1 = '1242 Spring Meadow Lane', ShipAddress2 = '', ShipCity = 
+'Kaysville', ShipState = 'UT', ShipPostalCode = '84037', ShipCountry = 
+'United States' WHERE OrderNumber = 22319952 AND LineNumber = 25<br><br>Old Order Number = 20949218 - New Order Number: 22319953<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 20949218 | 
+NewOrderNumber = 22319953 | ItemNumber = 234379453 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Tara', ShipLastName
+ = 'Davis', ShipAddress1 = '196 Farm Circle', ShipAddress2 = '', 
+ShipCity = 'Farmington', ShipState = 'UT', ShipPostalCode = '84025', 
+ShipCountry = 'United States' WHERE OrderNumber = 22319953 AND 
+LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 20949218 | NewOrderNumber = 22319953 | ItemNumber = 
+234379454 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 112, Surcharge = 2.05, SeatTypeCode = 64138, ShipCode = 4, 
+ShipFirstName = 'Tara', ShipLastName = 'Davis', ShipAddress1 = '196 Farm
+ Circle', ShipAddress2 = '', ShipCity = 'Farmington', ShipState = 'UT', 
+ShipPostalCode = '84025', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319953 AND LineNumber = 9<br><br>Old Order Number = 20950469 - New Order Number: 22319954<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 20950469 | 
+NewOrderNumber = 22319954 | ItemNumber = 234379455 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64140, ShipCode = 4, ShipFirstName = 'Linda', 
+ShipLastName = 'Twitchell', ShipAddress1 = '1229 Garnette Street', 
+ShipAddress2 = '', ShipCity = 'Salt Lake City ', ShipState = 'UT', 
+ShipPostalCode = '84116', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319954 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 20950469 | NewOrderNumber = 
+22319954 | ItemNumber = 234379456 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Linda', ShipLastName = 'Twitchell', 
+ShipAddress1 = '1229 Garnette Street', ShipAddress2 = '', ShipCity = 
+'Salt Lake City ', ShipState = 'UT', ShipPostalCode = '84116', 
+ShipCountry = 'United States' WHERE OrderNumber = 22319954 AND 
+LineNumber = 9<br><br>Old Order Number = 20968537 - New Order Number: 22319955<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 20968537 | 
+NewOrderNumber = 22319955 | ItemNumber = 234379457 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Steve &amp; Kelly',
+ ShipLastName = 'Terry', ShipAddress1 = '521 Woodland Hills Drive', 
+ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84010', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319955 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 20968537 | NewOrderNumber = 
+22319955 | ItemNumber = 234379458 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Steve &amp; Kelly', ShipLastName = 
+'Terry', ShipAddress1 = '521 Woodland Hills Drive', ShipAddress2 = '', 
+ShipCity = 'Bountiful', ShipState = 'UT', ShipPostalCode = '84010', 
+ShipCountry = 'United States' WHERE OrderNumber = 22319955 AND 
+LineNumber = 9<br><br>Old Order Number = 20979845 - New Order Number: 22319956<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 20979845 | 
+NewOrderNumber = 22319956 | ItemNumber = 234379459 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Ryan', ShipLastName
+ = 'Mikesell', ShipAddress1 = '1671 East South Weber Drive', 
+ShipAddress2 = '', ShipCity = 'South Weber', ShipState = 'UT', 
+ShipPostalCode = '84405', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22319956 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 20979845 | NewOrderNumber = 
+22319956 | ItemNumber = 234379460 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Ryan', ShipLastName = 'Mikesell', 
+ShipAddress1 = '1671 East South Weber Drive', ShipAddress2 = '', 
+ShipCity = 'South Weber', ShipState = 'UT', ShipPostalCode = '84405', 
+ShipCountry = 'UNITED STATES' WHERE OrderNumber = 22319956 AND 
+LineNumber = 9<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 20979845 | NewOrderNumber = 22319956 | ItemNumber = 
+234379461 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Ryan', ShipLastName = 'Mikesell', ShipAddress1 = '1671 
+East South Weber Drive', ShipAddress2 = '', ShipCity = 'South Weber', 
+ShipState = 'UT', ShipPostalCode = '84405', ShipCountry = 'UNITED 
+STATES' WHERE OrderNumber = 22319956 AND LineNumber = 17<br><br>Old Order Number = 20986060 - New Order Number: 22319957<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 20986060 | 
+NewOrderNumber = 22319957 | ItemNumber = 234379462 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Dave', ShipLastName
+ = 'Larsen', ShipAddress1 = '294 South 1550 East', ShipAddress2 = '', 
+ShipCity = 'Bountiful', ShipState = 'UT', ShipPostalCode = '84010', 
+ShipCountry = 'UNITED STATES' WHERE OrderNumber = 22319957 AND 
+LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 20986060 | NewOrderNumber = 22319957 | ItemNumber = 
+234379463 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Dave', ShipLastName = 'Larsen', ShipAddress1 = '294 
+South 1550 East', ShipAddress2 = '', ShipCity = 'Bountiful', ShipState =
+ 'UT', ShipPostalCode = '84010', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22319957 AND LineNumber = 9<br><br>Old Order Number = 20989616 - New Order Number: 22319958<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 20989616 | 
+NewOrderNumber = 22319958 | ItemNumber = 234379464 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Christina', 
+ShipLastName = 'Guidry', ShipAddress1 = '2532 South Davis Blvd.', 
+ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84010', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22319958 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 20989616 | NewOrderNumber = 
+22319958 | ItemNumber = 234379465 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Christina', ShipLastName = 'Guidry', 
+ShipAddress1 = '2532 South Davis Blvd.', ShipAddress2 = '', ShipCity = 
+'Bountiful', ShipState = 'UT', ShipPostalCode = '84010', ShipCountry = 
+'UNITED STATES' WHERE OrderNumber = 22319958 AND LineNumber = 9<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 20989616 | 
+NewOrderNumber = 22319958 | ItemNumber = 234379466 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Christina', 
+ShipLastName = 'Guidry', ShipAddress1 = '2532 South Davis Blvd.', 
+ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84010', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22319958 AND LineNumber = 17<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 20989616 | NewOrderNumber = 
+22319958 | ItemNumber = 234379467 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Christina', ShipLastName = 'Guidry', 
+ShipAddress1 = '2532 South Davis Blvd.', ShipAddress2 = '', ShipCity = 
+'Bountiful', ShipState = 'UT', ShipPostalCode = '84010', ShipCountry = 
+'UNITED STATES' WHERE OrderNumber = 22319958 AND LineNumber = 25<br><br>Old Order Number = 20993019 - New Order Number: 22319959<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 20993019 | 
+NewOrderNumber = 22319959 | ItemNumber = 234379468 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Marc', ShipLastName
+ = 'Hanlin', ShipAddress1 = '3495 West Inverness Drive', ShipAddress2 = 
+'', ShipCity = 'Syracuse', ShipState = 'UT', ShipPostalCode = '84075', 
+ShipCountry = 'United States' WHERE OrderNumber = 22319959 AND 
+LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 20993019 | NewOrderNumber = 22319959 | ItemNumber = 
+234379469 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Marc', ShipLastName = 'Hanlin', ShipAddress1 = '3495 
+West Inverness Drive', ShipAddress2 = '', ShipCity = 'Syracuse', 
+ShipState = 'UT', ShipPostalCode = '84075', ShipCountry = 'United 
+States' WHERE OrderNumber = 22319959 AND LineNumber = 9<br><br>Old Order Number = 21000149 - New Order Number: 22319960<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21000149 | 
+NewOrderNumber = 22319960 | ItemNumber = 234379470 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Haley', 
+ShipLastName = 'Trujillo', ShipAddress1 = '84 North 3225 West', 
+ShipAddress2 = '', ShipCity = 'Layton', ShipState = 'UT', ShipPostalCode
+ = '84041', ShipCountry = 'United States' WHERE OrderNumber = 22319960 
+AND LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21000149 | NewOrderNumber = 22319960 | ItemNumber = 
+234379471 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Haley', ShipLastName = 'Trujillo', ShipAddress1 = '84 
+North 3225 West', ShipAddress2 = '', ShipCity = 'Layton', ShipState = 
+'UT', ShipPostalCode = '84041', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319960 AND LineNumber = 9<br><br>Old Order Number = 21001428 - New Order Number: 22319961<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21001428 | 
+NewOrderNumber = 22319961 | ItemNumber = 234379472 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Susan', 
+ShipLastName = 'Parkin', ShipAddress1 = '1681 North 725 West', 
+ShipAddress2 = '', ShipCity = 'Centerville', ShipState = 'UT', 
+ShipPostalCode = '84014', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319961 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21001428 | NewOrderNumber = 
+22319961 | ItemNumber = 234379473 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Susan', ShipLastName = 'Parkin', 
+ShipAddress1 = '1681 North 725 West', ShipAddress2 = '', ShipCity = 
+'Centerville', ShipState = 'UT', ShipPostalCode = '84014', ShipCountry =
+ 'United States' WHERE OrderNumber = 22319961 AND LineNumber = 9<br><br>Old Order Number = 21022370 - New Order Number: 22319962<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21022370 | 
+NewOrderNumber = 22319962 | ItemNumber = 234379474 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Corey', 
+ShipLastName = 'Schultz', ShipAddress1 = '1323 North 2525 West', 
+ShipAddress2 = '', ShipCity = 'Layton', ShipState = 'Ut', ShipPostalCode
+ = '84041', ShipCountry = 'United States' WHERE OrderNumber = 22319962 
+AND LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21022370 | NewOrderNumber = 22319962 | ItemNumber = 
+234379475 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Corey', ShipLastName = 'Schultz', ShipAddress1 = '1323 
+North 2525 West', ShipAddress2 = '', ShipCity = 'Layton', ShipState = 
+'Ut', ShipPostalCode = '84041', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319962 AND LineNumber = 9<br><br>Old Order Number = 21023489 - New Order Number: 22319963<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21023489 | 
+NewOrderNumber = 22319963 | ItemNumber = 234379476 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Trisha', 
+ShipLastName = 'Tanner', ShipAddress1 = '2882 South 580 West', 
+ShipAddress2 = '', ShipCity = 'Syracuse', ShipState = 'Ut', 
+ShipPostalCode = '84075', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319963 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21023489 | NewOrderNumber = 
+22319963 | ItemNumber = 234379477 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Trisha', ShipLastName = 'Tanner', 
+ShipAddress1 = '2882 South 580 West', ShipAddress2 = '', ShipCity = 
+'Syracuse', ShipState = 'Ut', ShipPostalCode = '84075', ShipCountry = 
+'United States' WHERE OrderNumber = 22319963 AND LineNumber = 9<br><br>Old Order Number = 21029927 - New Order Number: 22319964<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21029927 | 
+NewOrderNumber = 22319964 | ItemNumber = 234379478 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = ' Richard and Kasi',
+ ShipLastName = 'Palmer', ShipAddress1 = '194 Carrington Lane', 
+ShipAddress2 = '', ShipCity = 'Centerville', ShipState = 'Ut', 
+ShipPostalCode = '84014', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319964 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21029927 | NewOrderNumber = 
+22319964 | ItemNumber = 234379479 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = ' Richard and Kasi', ShipLastName = 
+'Palmer', ShipAddress1 = '194 Carrington Lane', ShipAddress2 = '', 
+ShipCity = 'Centerville', ShipState = 'Ut', ShipPostalCode = '84014', 
+ShipCountry = 'United States' WHERE OrderNumber = 22319964 AND 
+LineNumber = 9<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21029927 | NewOrderNumber = 22319964 | ItemNumber = 
+234379480 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = ' Richard and Kasi', ShipLastName = 'Palmer', 
+ShipAddress1 = '194 Carrington Lane', ShipAddress2 = '', ShipCity = 
+'Centerville', ShipState = 'Ut', ShipPostalCode = '84014', ShipCountry =
+ 'United States' WHERE OrderNumber = 22319964 AND LineNumber = 17<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21029927 | 
+NewOrderNumber = 22319964 | ItemNumber = 234379481 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = ' Richard and Kasi',
+ ShipLastName = 'Palmer', ShipAddress1 = '194 Carrington Lane', 
+ShipAddress2 = '', ShipCity = 'Centerville', ShipState = 'Ut', 
+ShipPostalCode = '84014', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319964 AND LineNumber = 25<br><br>Old Order Number = 21031260 - New Order Number: 22319965<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21031260 | 
+NewOrderNumber = 22319965 | ItemNumber = 234379482 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Don', ShipLastName =
+ 'Meyerpeter', ShipAddress1 = ' 1672 West 2055 South', ShipAddress2 = 
+'', ShipCity = 'Syracuse', ShipState = 'UT', ShipPostalCode = '84075', 
+ShipCountry = 'UNITED STATES' WHERE OrderNumber = 22319965 AND 
+LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21031260 | NewOrderNumber = 22319965 | ItemNumber = 
+234379483 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Don', ShipLastName = 'Meyerpeter', ShipAddress1 = ' 
+1672 West 2055 South', ShipAddress2 = '', ShipCity = 'Syracuse', 
+ShipState = 'UT', ShipPostalCode = '84075', ShipCountry = 'UNITED 
+STATES' WHERE OrderNumber = 22319965 AND LineNumber = 9<br><br>Old Order Number = 21031586 - New Order Number: 22319966<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21031586 | 
+NewOrderNumber = 22319966 | ItemNumber = 234379484 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Stephanie', 
+ShipLastName = 'Herzog', ShipAddress1 = '71 South Orchard Dr', 
+ShipAddress2 = '', ShipCity = 'North Salt Lake', ShipState = 'Ut', 
+ShipPostalCode = '84054', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319966 AND LineNumber = 1<br><br>Old Order Number = 21034950 - New Order Number: 22319967<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21034950 | 
+NewOrderNumber = 22319967 | ItemNumber = 234379485 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Gary', ShipLastName
+ = 'Lund', ShipAddress1 = '275 East Balsam Drive', ShipAddress2 = '', 
+ShipCity = 'Centerville', ShipState = 'UT', ShipPostalCode = '84014', 
+ShipCountry = 'United States' WHERE OrderNumber = 22319967 AND 
+LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21034950 | NewOrderNumber = 22319967 | ItemNumber = 
+234379486 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 112, Surcharge = 2.05, SeatTypeCode = 64138, ShipCode = 4, 
+ShipFirstName = 'Gary', ShipLastName = 'Lund', ShipAddress1 = '275 East 
+Balsam Drive', ShipAddress2 = '', ShipCity = 'Centerville', ShipState = 
+'UT', ShipPostalCode = '84014', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319967 AND LineNumber = 9<br><br>Old Order Number = 21035905 - New Order Number: 22319968<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21035905 | 
+NewOrderNumber = 22319968 | ItemNumber = 234379487 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Margo', 
+ShipLastName = 'Hill', ShipAddress1 = '1128 On the Green Way ', 
+ShipAddress2 = '', ShipCity = 'Farmington ', ShipState = 'UT', 
+ShipPostalCode = '84025', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319968 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21035905 | NewOrderNumber = 
+22319968 | ItemNumber = 234379488 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Margo', ShipLastName = 'Hill', 
+ShipAddress1 = '1128 On the Green Way ', ShipAddress2 = '', ShipCity = 
+'Farmington ', ShipState = 'UT', ShipPostalCode = '84025', ShipCountry =
+ 'United States' WHERE OrderNumber = 22319968 AND LineNumber = 9<br><br>Old Order Number = 21040452 - New Order Number: 22319969<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21040452 | 
+NewOrderNumber = 22319969 | ItemNumber = 234379489 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Omar', ShipLastName
+ = 'Kadri', ShipAddress1 = '1915 W 475 N', ShipAddress2 = '', ShipCity =
+ 'Farmington', ShipState = 'UT', ShipPostalCode = '84025', ShipCountry =
+ 'UNITED STATES' WHERE OrderNumber = 22319969 AND LineNumber = 1<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21040452 | 
+NewOrderNumber = 22319969 | ItemNumber = 234379490 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Omar', ShipLastName
+ = 'Kadri', ShipAddress1 = '1915 W 475 N', ShipAddress2 = '', ShipCity =
+ 'Farmington', ShipState = 'UT', ShipPostalCode = '84025', ShipCountry =
+ 'UNITED STATES' WHERE OrderNumber = 22319969 AND LineNumber = 9<br><br>Old Order Number = 21047307 - New Order Number: 22319970<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21047307 | 
+NewOrderNumber = 22319970 | ItemNumber = 234379491 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Janel', 
+ShipLastName = 'Wilsey', ShipAddress1 = 'PO Box 4641', ShipAddress2 = 
+'', ShipCity = 'Santa Clara', ShipState = 'CA ', ShipPostalCode = 
+'95056', ShipCountry = 'UNITED STATES' WHERE OrderNumber = 22319970 AND 
+LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21047307 | NewOrderNumber = 22319970 | ItemNumber = 
+234379492 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Janel', ShipLastName = 'Wilsey', ShipAddress1 = 'PO Box
+ 4641', ShipAddress2 = '', ShipCity = 'Santa Clara', ShipState = 'CA ', 
+ShipPostalCode = '95056', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22319970 AND LineNumber = 9<br><br>Old Order Number = 21051388 - New Order Number: 22319971<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21051388 | 
+NewOrderNumber = 22319971 | ItemNumber = 234379493 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Craig', 
+ShipLastName = 'DeWaal', ShipAddress1 = '3009 E Scenic Valley Ln', 
+ShipAddress2 = '', ShipCity = 'Sandy', ShipState = 'UT', ShipPostalCode =
+ '84092', ShipCountry = 'UNITED STATES' WHERE OrderNumber = 22319971 AND
+ LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21051388 | NewOrderNumber = 22319971 | ItemNumber = 
+234379494 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 112, Surcharge = 2.05, SeatTypeCode = 64138, ShipCode = 4, 
+ShipFirstName = 'Craig', ShipLastName = 'DeWaal', ShipAddress1 = '3009 E
+ Scenic Valley Ln', ShipAddress2 = '', ShipCity = 'Sandy', ShipState = 
+'UT', ShipPostalCode = '84092', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22319971 AND LineNumber = 9<br><br>Old Order Number = 21053657 - New Order Number: 22319972<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21053657 | 
+NewOrderNumber = 22319972 | ItemNumber = 234379495 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Tyra', ShipLastName
+ = 'Holbrook', ShipAddress1 = '9 Park Place Lane', ShipAddress2 = '', 
+ShipCity = 'Centerville', ShipState = 'UT', ShipPostalCode = '84014', 
+ShipCountry = 'UNITED STATES' WHERE OrderNumber = 22319972 AND 
+LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21053657 | NewOrderNumber = 22319972 | ItemNumber = 
+234379496 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Tyra', ShipLastName = 'Holbrook', ShipAddress1 = '9 
+Park Place Lane', ShipAddress2 = '', ShipCity = 'Centerville', ShipState
+ = 'UT', ShipPostalCode = '84014', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22319972 AND LineNumber = 9<br><br>Old Order Number = 21056405 - New Order Number: 22319973<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21056405 | 
+NewOrderNumber = 22319973 | ItemNumber = 234379497 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'David', 
+ShipLastName = 'Ornelas', ShipAddress1 = '832 West 2300 South', 
+ShipAddress2 = '', ShipCity = 'Syracuse', ShipState = 'Ut', 
+ShipPostalCode = '84075', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319973 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21056405 | NewOrderNumber = 
+22319973 | ItemNumber = 234379498 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'David', ShipLastName = 'Ornelas', 
+ShipAddress1 = '832 West 2300 South', ShipAddress2 = '', ShipCity = 
+'Syracuse', ShipState = 'Ut', ShipPostalCode = '84075', ShipCountry = 
+'United States' WHERE OrderNumber = 22319973 AND LineNumber = 9<br><br>Old Order Number = 21056743 - New Order Number: 22319974<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21056743 | 
+NewOrderNumber = 22319974 | ItemNumber = 234379499 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Karen', 
+ShipLastName = 'Borski', ShipAddress1 = '1504 South 500 East', 
+ShipAddress2 = '', ShipCity = 'Kaysville', ShipState = 'UT', 
+ShipPostalCode = '84037', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319974 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21056743 | NewOrderNumber = 
+22319974 | ItemNumber = 234379500 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Karen', ShipLastName = 'Borski', 
+ShipAddress1 = '1504 South 500 East', ShipAddress2 = '', ShipCity = 
+'Kaysville', ShipState = 'UT', ShipPostalCode = '84037', ShipCountry = 
+'United States' WHERE OrderNumber = 22319974 AND LineNumber = 9<br><br>Old Order Number = 21057747 - New Order Number: 22319975<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21057747 | 
+NewOrderNumber = 22319975 | ItemNumber = 234379501 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Carrie', 
+ShipLastName = 'Sawyer', ShipAddress1 = '2383 South 1660 West', 
+ShipAddress2 = '', ShipCity = 'Syracuse', ShipState = 'Ut', 
+ShipPostalCode = '84075', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319975 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21057747 | NewOrderNumber = 
+22319975 | ItemNumber = 234379502 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Carrie', ShipLastName = 'Sawyer', 
+ShipAddress1 = '2383 South 1660 West', ShipAddress2 = '', ShipCity = 
+'Syracuse', ShipState = 'Ut', ShipPostalCode = '84075', ShipCountry = 
+'United States' WHERE OrderNumber = 22319975 AND LineNumber = 9<br><br>Old Order Number = 21058072 - New Order Number: 22319976<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21058072 | 
+NewOrderNumber = 22319976 | ItemNumber = 234379503 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Liz', ShipLastName =
+ 'Sullenger', ShipAddress1 = '409 South 800 East', ShipAddress2 = '', 
+ShipCity = 'Kaysville', ShipState = 'UT', ShipPostalCode = '84037', 
+ShipCountry = 'United States' WHERE OrderNumber = 22319976 AND 
+LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21058072 | NewOrderNumber = 22319976 | ItemNumber = 
+234379504 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 112, Surcharge = 2.05, SeatTypeCode = 64138, ShipCode = 4, 
+ShipFirstName = 'Liz', ShipLastName = 'Sullenger', ShipAddress1 = '409 
+South 800 East', ShipAddress2 = '', ShipCity = 'Kaysville', ShipState = 
+'UT', ShipPostalCode = '84037', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319976 AND LineNumber = 9<br><br>Old Order Number = 21060766 - New Order Number: 22319977<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21060766 | 
+NewOrderNumber = 22319977 | ItemNumber = 234379505 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Kaylene', 
+ShipLastName = 'Pugmire', ShipAddress1 = '602 east 1625 South ', 
+ShipAddress2 = '', ShipCity = 'Kaysville', ShipState = 'UT', 
+ShipPostalCode = '84037', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319977 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21060766 | NewOrderNumber = 
+22319977 | ItemNumber = 234379506 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Kaylene', ShipLastName = 'Pugmire', 
+ShipAddress1 = '602 east 1625 South ', ShipAddress2 = '', ShipCity = 
+'Kaysville', ShipState = 'UT', ShipPostalCode = '84037', ShipCountry = 
+'United States' WHERE OrderNumber = 22319977 AND LineNumber = 9<br><br>Old Order Number = 21066657 - New Order Number: 22319978<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21066657 | 
+NewOrderNumber = 22319978 | ItemNumber = 234379507 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Myken', 
+ShipLastName = 'Shingleton', ShipAddress1 = '117 Bountiful Blvd', 
+ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84010', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319978 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21066657 | NewOrderNumber = 
+22319978 | ItemNumber = 234379508 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Myken', ShipLastName = 'Shingleton', 
+ShipAddress1 = '117 Bountiful Blvd', ShipAddress2 = '', ShipCity = 
+'Bountiful', ShipState = 'UT', ShipPostalCode = '84010', ShipCountry = 
+'United States' WHERE OrderNumber = 22319978 AND LineNumber = 9<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21066657 | 
+NewOrderNumber = 22319978 | ItemNumber = 234379509 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Myken', 
+ShipLastName = 'Shingleton', ShipAddress1 = '117 Bountiful Blvd', 
+ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84010', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319978 AND LineNumber = 17<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21066657 | NewOrderNumber = 
+22319978 | ItemNumber = 234379510 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Myken', ShipLastName = 'Shingleton', 
+ShipAddress1 = '117 Bountiful Blvd', ShipAddress2 = '', ShipCity = 
+'Bountiful', ShipState = 'UT', ShipPostalCode = '84010', ShipCountry = 
+'United States' WHERE OrderNumber = 22319978 AND LineNumber = 25<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21066657 | 
+NewOrderNumber = 22319978 | ItemNumber = 234379511 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Myken', 
+ShipLastName = 'Shingleton', ShipAddress1 = '117 Bountiful Blvd', 
+ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84010', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319978 AND LineNumber = 33<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21066657 | NewOrderNumber = 
+22319978 | ItemNumber = 234379512 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Myken', ShipLastName = 'Shingleton', 
+ShipAddress1 = '117 Bountiful Blvd', ShipAddress2 = '', ShipCity = 
+'Bountiful', ShipState = 'UT', ShipPostalCode = '84010', ShipCountry = 
+'United States' WHERE OrderNumber = 22319978 AND LineNumber = 41<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21066657 | 
+NewOrderNumber = 22319978 | ItemNumber = 234379513 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Myken', 
+ShipLastName = 'Shingleton', ShipAddress1 = '117 Bountiful Blvd', 
+ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84010', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319978 AND LineNumber = 49<br><br>Old Order Number = 21067244 - New Order Number: 22319979<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21067244 | 
+NewOrderNumber = 22319979 | ItemNumber = 234379514 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Gladys and Sean', 
+ShipLastName = 'Lynch', ShipAddress1 = '926 South 250 East', 
+ShipAddress2 = '', ShipCity = 'Farmington', ShipState = 'UT', 
+ShipPostalCode = '84025', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319979 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21067244 | NewOrderNumber = 
+22319979 | ItemNumber = 234379515 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Gladys and Sean', ShipLastName = 'Lynch',
+ ShipAddress1 = '926 South 250 East', ShipAddress2 = '', ShipCity = 
+'Farmington', ShipState = 'UT', ShipPostalCode = '84025', ShipCountry = 
+'United States' WHERE OrderNumber = 22319979 AND LineNumber = 9<br><br>Old Order Number = 21067399 - New Order Number: 22319980<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21067399 | 
+NewOrderNumber = 22319980 | ItemNumber = 234379516 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Jansen &amp; Tara',
+ ShipLastName = 'Davis', ShipAddress1 = '196 North Farm Circle', 
+ShipAddress2 = '', ShipCity = 'Farmington', ShipState = 'UT', 
+ShipPostalCode = '84025', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319980 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21067399 | NewOrderNumber = 
+22319980 | ItemNumber = 234379517 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Jansen &amp; Tara', ShipLastName = 
+'Davis', ShipAddress1 = '196 North Farm Circle', ShipAddress2 = '', 
+ShipCity = 'Farmington', ShipState = 'UT', ShipPostalCode = '84025', 
+ShipCountry = 'United States' WHERE OrderNumber = 22319980 AND 
+LineNumber = 9<br><br>Old Order Number = 21067644 - New Order Number: 22319981<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21067644 | 
+NewOrderNumber = 22319981 | ItemNumber = 234379518 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Emily', 
+ShipLastName = 'Naylor', ShipAddress1 = '1281 West 8680 South', 
+ShipAddress2 = '', ShipCity = 'West Jordan ', ShipState = 'UT', 
+ShipPostalCode = '84088', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22319981 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21067644 | NewOrderNumber = 
+22319981 | ItemNumber = 234379519 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Emily', ShipLastName = 'Naylor', 
+ShipAddress1 = '1281 West 8680 South', ShipAddress2 = '', ShipCity = 
+'West Jordan ', ShipState = 'UT', ShipPostalCode = '84088', ShipCountry =
+ 'UNITED STATES' WHERE OrderNumber = 22319981 AND LineNumber = 9<br><br>Old Order Number = 21070116 - New Order Number: 22319982<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21070116 | 
+NewOrderNumber = 22319982 | ItemNumber = 234379520 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Austin', 
+ShipLastName = 'Apedaile', ShipAddress1 = '388 South 450 West', 
+ShipAddress2 = '', ShipCity = 'Layton', ShipState = 'UT', ShipPostalCode
+ = '84042', ShipCountry = 'United States' WHERE OrderNumber = 22319982 
+AND LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21070116 | NewOrderNumber = 22319982 | ItemNumber = 
+234379521 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Austin', ShipLastName = 'Apedaile', ShipAddress1 = '388
+ South 450 West', ShipAddress2 = '', ShipCity = 'Layton', ShipState = 
+'UT', ShipPostalCode = '84042', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319982 AND LineNumber = 9<br><br>Old Order Number = 21070608 - New Order Number: 22319983<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21070608 | 
+NewOrderNumber = 22319983 | ItemNumber = 234379522 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Scott', 
+ShipLastName = 'Schryver', ShipAddress1 = '917 South Main ', 
+ShipAddress2 = '', ShipCity = 'Layton ', ShipState = 'UT', 
+ShipPostalCode = '84041', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319983 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21070608 | NewOrderNumber = 
+22319983 | ItemNumber = 234379523 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Scott', ShipLastName = 'Schryver', 
+ShipAddress1 = '917 South Main ', ShipAddress2 = '', ShipCity = 'Layton 
+', ShipState = 'UT', ShipPostalCode = '84041', ShipCountry = 'United 
+States' WHERE OrderNumber = 22319983 AND LineNumber = 9<br><br>Old Order Number = 21070633 - New Order Number: 22319984<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21070633 | 
+NewOrderNumber = 22319984 | ItemNumber = 234379524 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Jason', 
+ShipLastName = 'Wernli', ShipAddress1 = '213 South 1500 West', 
+ShipAddress2 = '', ShipCity = 'Woods Cross', ShipState = 'UT', 
+ShipPostalCode = '84087', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319984 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21070633 | NewOrderNumber = 
+22319984 | ItemNumber = 234379525 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Jason', ShipLastName = 'Wernli', 
+ShipAddress1 = '213 South 1500 West', ShipAddress2 = '', ShipCity = 
+'Woods Cross', ShipState = 'UT', ShipPostalCode = '84087', ShipCountry =
+ 'United States' WHERE OrderNumber = 22319984 AND LineNumber = 9<br><br>Old Order Number = 21071358 - New Order Number: 22319985<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21071358 | 
+NewOrderNumber = 22319985 | ItemNumber = 234379526 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Susan', 
+ShipLastName = 'Frost', ShipAddress1 = '3699 North 2400 East ', 
+ShipAddress2 = '', ShipCity = 'Layton', ShipState = 'UT', ShipPostalCode
+ = '84040', ShipCountry = 'United States' WHERE OrderNumber = 22319985 
+AND LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21071358 | NewOrderNumber = 22319985 | ItemNumber = 
+234379527 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 112, Surcharge = 2.05, SeatTypeCode = 64138, ShipCode = 4, 
+ShipFirstName = 'Susan', ShipLastName = 'Frost', ShipAddress1 = '3699 
+North 2400 East ', ShipAddress2 = '', ShipCity = 'Layton', ShipState = 
+'UT', ShipPostalCode = '84040', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319985 AND LineNumber = 9<br><br>Old Order Number = 21073079 - New Order Number: 22319986<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21073079 | 
+NewOrderNumber = 22319986 | ItemNumber = 234379528 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Lisa', ShipLastName
+ = 'Wizinsky', ShipAddress1 = '2899 West 5600 South', ShipAddress2 = '',
+ ShipCity = 'Roy', ShipState = 'UT', ShipPostalCode = '84067', 
+ShipCountry = 'United States' WHERE OrderNumber = 22319986 AND 
+LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21073079 | NewOrderNumber = 22319986 | ItemNumber = 
+234379529 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 112, Surcharge = 2.05, SeatTypeCode = 64138, ShipCode = 4, 
+ShipFirstName = 'Lisa', ShipLastName = 'Wizinsky', ShipAddress1 = '2899 
+West 5600 South', ShipAddress2 = '', ShipCity = 'Roy', ShipState = 'UT',
+ ShipPostalCode = '84067', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319986 AND LineNumber = 9<br><br>Old Order Number = 21076475 - New Order Number: 22319987<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21076475 | 
+NewOrderNumber = 22319987 | ItemNumber = 234379530 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Amber', 
+ShipLastName = 'Curvin', ShipAddress1 = '2086 South 775 West', 
+ShipAddress2 = '', ShipCity = 'Woods Cross', ShipState = 'Ut', 
+ShipPostalCode = '84087', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319987 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21076475 | NewOrderNumber = 
+22319987 | ItemNumber = 234379531 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Amber', ShipLastName = 'Curvin', 
+ShipAddress1 = '2086 South 775 West', ShipAddress2 = '', ShipCity = 
+'Woods Cross', ShipState = 'Ut', ShipPostalCode = '84087', ShipCountry =
+ 'United States' WHERE OrderNumber = 22319987 AND LineNumber = 9<br><br>Old Order Number = 21083644 - New Order Number: 22319988<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21083644 | 
+NewOrderNumber = 22319988 | ItemNumber = 234379532 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Eileen', 
+ShipLastName = 'Dubach', ShipAddress1 = '264 East Briarwood Drive', 
+ShipAddress2 = '', ShipCity = 'Centerville', ShipState = 'UT', 
+ShipPostalCode = '84014', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319988 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21083644 | NewOrderNumber = 
+22319988 | ItemNumber = 234379533 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Eileen', ShipLastName = 'Dubach', 
+ShipAddress1 = '264 East Briarwood Drive', ShipAddress2 = '', ShipCity =
+ 'Centerville', ShipState = 'UT', ShipPostalCode = '84014', ShipCountry =
+ 'United States' WHERE OrderNumber = 22319988 AND LineNumber = 9<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21083644 | 
+NewOrderNumber = 22319988 | ItemNumber = 234379534 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Eileen', 
+ShipLastName = 'Dubach', ShipAddress1 = '264 East Briarwood Drive', 
+ShipAddress2 = '', ShipCity = 'Centerville', ShipState = 'UT', 
+ShipPostalCode = '84014', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319988 AND LineNumber = 17<br><br>Old Order Number = 21085732 - New Order Number: 22319989<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21085732 | 
+NewOrderNumber = 22319989 | ItemNumber = 234379535 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Lance', 
+ShipLastName = 'Rigby', ShipAddress1 = '630 Julie Dr', ShipAddress2 = 
+'', ShipCity = 'Layton', ShipState = 'Ut', ShipPostalCode = '84041', 
+ShipCountry = 'United States' WHERE OrderNumber = 22319989 AND 
+LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21085732 | NewOrderNumber = 22319989 | ItemNumber = 
+234379536 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 112, Surcharge = 2.05, SeatTypeCode = 64138, ShipCode = 4, 
+ShipFirstName = 'Lance', ShipLastName = 'Rigby', ShipAddress1 = '630 
+Julie Dr', ShipAddress2 = '', ShipCity = 'Layton', ShipState = 'Ut', 
+ShipPostalCode = '84041', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319989 AND LineNumber = 9<br><br>Old Order Number = 21086467 - New Order Number: 22319990<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21086467 | 
+NewOrderNumber = 22319990 | ItemNumber = 234379537 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Tiffani', 
+ShipLastName = 'Vriens', ShipAddress1 = '2 Mistywood Lane', ShipAddress2
+ = '', ShipCity = 'Sandy', ShipState = 'UT', ShipPostalCode = '84092', 
+ShipCountry = 'United States' WHERE OrderNumber = 22319990 AND 
+LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21086467 | NewOrderNumber = 22319990 | ItemNumber = 
+234379538 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 112, Surcharge = 2.05, SeatTypeCode = 64138, ShipCode = 4, 
+ShipFirstName = 'Tiffani', ShipLastName = 'Vriens', ShipAddress1 = '2 
+Mistywood Lane', ShipAddress2 = '', ShipCity = 'Sandy', ShipState = 
+'UT', ShipPostalCode = '84092', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319990 AND LineNumber = 9<br><br>Old Order Number = 21086570 - New Order Number: 22319991<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21086570 | 
+NewOrderNumber = 22319991 | ItemNumber = 234379539 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'John', ShipLastName
+ = 'Compton', ShipAddress1 = '4217 Iris Ave. ', ShipAddress2 = '', 
+ShipCity = 'Morgan', ShipState = 'Utah', ShipPostalCode = '84050', 
+ShipCountry = 'UNITED STATES' WHERE OrderNumber = 22319991 AND 
+LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21086570 | NewOrderNumber = 22319991 | ItemNumber = 
+234379540 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 112, Surcharge = 2.05, SeatTypeCode = 64138, ShipCode = 4, 
+ShipFirstName = 'John', ShipLastName = 'Compton', ShipAddress1 = '4217 
+Iris Ave. ', ShipAddress2 = '', ShipCity = 'Morgan', ShipState = 'Utah',
+ ShipPostalCode = '84050', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22319991 AND LineNumber = 9<br><br>Old Order Number = 21086576 - New Order Number: 22319992<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21086576 | 
+NewOrderNumber = 22319992 | ItemNumber = 234379541 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Kim', ShipLastName =
+ 'Foust', ShipAddress1 = '23 W Park Drive', ShipAddress2 = '', ShipCity =
+ 'Kaysville', ShipState = 'UT', ShipPostalCode = '84037', ShipCountry = 
+'United States' WHERE OrderNumber = 22319992 AND LineNumber = 1<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21086576 | 
+NewOrderNumber = 22319992 | ItemNumber = 234379542 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Kim', ShipLastName =
+ 'Foust', ShipAddress1 = '23 W Park Drive', ShipAddress2 = '', ShipCity =
+ 'Kaysville', ShipState = 'UT', ShipPostalCode = '84037', ShipCountry = 
+'United States' WHERE OrderNumber = 22319992 AND LineNumber = 9<br><br>Old Order Number = 21086609 - New Order Number: 22319994<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21086609 | 
+NewOrderNumber = 22319994 | ItemNumber = 234379543 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Shauna', 
+ShipLastName = 'Vancleave', ShipAddress1 = '731 North 400 West', 
+ShipAddress2 = '', ShipCity = 'Centerville', ShipState = 'UT', 
+ShipPostalCode = '84014', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319994 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21086609 | NewOrderNumber = 
+22319994 | ItemNumber = 234379544 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Shauna', ShipLastName = 'Vancleave', 
+ShipAddress1 = '731 North 400 West', ShipAddress2 = '', ShipCity = 
+'Centerville', ShipState = 'UT', ShipPostalCode = '84014', ShipCountry =
+ 'United States' WHERE OrderNumber = 22319994 AND LineNumber = 9<br><br>Old Order Number = 21086640 - New Order Number: 22319995<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21086640 | 
+NewOrderNumber = 22319995 | ItemNumber = 234379545 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Steve &amp; Kelly',
+ ShipLastName = 'Terry', ShipAddress1 = '521 Woodland Hills Drive', 
+ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84010', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319995 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21086640 | NewOrderNumber = 
+22319995 | ItemNumber = 234379546 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Steve &amp; Kelly', ShipLastName = 
+'Terry', ShipAddress1 = '521 Woodland Hills Drive', ShipAddress2 = '', 
+ShipCity = 'Bountiful', ShipState = 'UT', ShipPostalCode = '84010', 
+ShipCountry = 'United States' WHERE OrderNumber = 22319995 AND 
+LineNumber = 9<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21086640 | NewOrderNumber = 22319995 | ItemNumber = 
+234379547 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Steve &amp; Kelly', ShipLastName = 'Terry', 
+ShipAddress1 = '521 Woodland Hills Drive', ShipAddress2 = '', ShipCity =
+ 'Bountiful', ShipState = 'UT', ShipPostalCode = '84010', ShipCountry = 
+'United States' WHERE OrderNumber = 22319995 AND LineNumber = 17<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21086640 | 
+NewOrderNumber = 22319995 | ItemNumber = 234379548 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Steve &amp; Kelly',
+ ShipLastName = 'Terry', ShipAddress1 = '521 Woodland Hills Drive', 
+ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84010', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319995 AND LineNumber = 25<br><br>Old Order Number = 21087214 - New Order Number: 22319996<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21087214 | 
+NewOrderNumber = 22319996 | ItemNumber = 234379549 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Joan', ShipLastName
+ = 'Heusser', ShipAddress1 = '755 Bonita Way', ShipAddress2 = '', 
+ShipCity = 'Centerville', ShipState = 'UT', ShipPostalCode = '84014', 
+ShipCountry = 'UNITED STATES' WHERE OrderNumber = 22319996 AND 
+LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21087214 | NewOrderNumber = 22319996 | ItemNumber = 
+234379550 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Joan', ShipLastName = 'Heusser', ShipAddress1 = '755 
+Bonita Way', ShipAddress2 = '', ShipCity = 'Centerville', ShipState = 
+'UT', ShipPostalCode = '84014', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22319996 AND LineNumber = 9<br><br>Old Order Number = 21089151 - New Order Number: 22319997<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21089151 | 
+NewOrderNumber = 22319997 | ItemNumber = 234379551 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Kathi', 
+ShipLastName = 'Standford', ShipAddress1 = '2434 North 10 West', 
+ShipAddress2 = '', ShipCity = 'Layton', ShipState = 'UT', ShipPostalCode
+ = '84041', ShipCountry = 'United States' WHERE OrderNumber = 22319997 
+AND LineNumber = 1<br><br>Old Order Number = 21089228 - New Order Number: 22319998<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21089228 | 
+NewOrderNumber = 22319998 | ItemNumber = 234379552 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64140, ShipCode = 4, ShipFirstName = 'Cindy', 
+ShipLastName = 'Barrs', ShipAddress1 = '119 West 925 North', 
+ShipAddress2 = '', ShipCity = 'Centerville', ShipState = 'UT', 
+ShipPostalCode = '84014', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319998 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21089228 | NewOrderNumber = 
+22319998 | ItemNumber = 234379553 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64140, 
+ShipCode = 4, ShipFirstName = 'Cindy', ShipLastName = 'Barrs', 
+ShipAddress1 = '119 West 925 North', ShipAddress2 = '', ShipCity = 
+'Centerville', ShipState = 'UT', ShipPostalCode = '84014', ShipCountry =
+ 'United States' WHERE OrderNumber = 22319998 AND LineNumber = 9<br><br>Old Order Number = 21089388 - New Order Number: 22319999<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21089388 | 
+NewOrderNumber = 22319999 | ItemNumber = 234379554 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Dennis', 
+ShipLastName = 'Johnson', ShipAddress1 = '24 Mountain Vista Road', 
+ShipAddress2 = '', ShipCity = 'Kaysville', ShipState = 'UT', 
+ShipPostalCode = '84037', ShipCountry = 'United States' WHERE 
+OrderNumber = 22319999 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21089388 | NewOrderNumber = 
+22319999 | ItemNumber = 234379555 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Dennis', ShipLastName = 'Johnson', 
+ShipAddress1 = '24 Mountain Vista Road', ShipAddress2 = '', ShipCity = 
+'Kaysville', ShipState = 'UT', ShipPostalCode = '84037', ShipCountry = 
+'United States' WHERE OrderNumber = 22319999 AND LineNumber = 9<br><br>Old Order Number = 21089401 - New Order Number: 22320000<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21089401 | 
+NewOrderNumber = 22320000 | ItemNumber = 234379556 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Brian', 
+ShipLastName = 'Perry', ShipAddress1 = '980 North 100 east', 
+ShipAddress2 = '', ShipCity = 'Centerville', ShipState = 'UT', 
+ShipPostalCode = '84014', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320000 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21089401 | NewOrderNumber = 
+22320000 | ItemNumber = 234379557 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Brian', ShipLastName = 'Perry', 
+ShipAddress1 = '980 North 100 east', ShipAddress2 = '', ShipCity = 
+'Centerville', ShipState = 'UT', ShipPostalCode = '84014', ShipCountry =
+ 'United States' WHERE OrderNumber = 22320000 AND LineNumber = 9<br><br>Old Order Number = 21090005 - New Order Number: 22320001<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21090005 | 
+NewOrderNumber = 22320001 | ItemNumber = 234379558 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Carolyn', 
+ShipLastName = 'Hellberg', ShipAddress1 = '1059 Eaglewood Loop', 
+ShipAddress2 = '', ShipCity = 'North Salt Lake', ShipState = 'Utah', 
+ShipPostalCode = '84054', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22320001 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21090005 | NewOrderNumber = 
+22320001 | ItemNumber = 234379559 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Carolyn', ShipLastName = 'Hellberg', 
+ShipAddress1 = '1059 Eaglewood Loop', ShipAddress2 = '', ShipCity = 
+'North Salt Lake', ShipState = 'Utah', ShipPostalCode = '84054', 
+ShipCountry = 'UNITED STATES' WHERE OrderNumber = 22320001 AND 
+LineNumber = 9<br><br>Old Order Number = 21091158 - New Order Number: 22320002<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21091158 | 
+NewOrderNumber = 22320002 | ItemNumber = 234379560 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Darron', 
+ShipLastName = 'Schryver', ShipAddress1 = '917 South Main', ShipAddress2
+ = '', ShipCity = 'Layton', ShipState = 'UT', ShipPostalCode = '84041', 
+ShipCountry = 'United States' WHERE OrderNumber = 22320002 AND 
+LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21091158 | NewOrderNumber = 22320002 | ItemNumber = 
+234379561 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Darron', ShipLastName = 'Schryver', ShipAddress1 = '917
+ South Main', ShipAddress2 = '', ShipCity = 'Layton', ShipState = 'UT', 
+ShipPostalCode = '84041', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320002 AND LineNumber = 9<br><br>Old Order Number = 21091689 - New Order Number: 22320003<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21091689 | 
+NewOrderNumber = 22320003 | ItemNumber = 234379562 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Maren', 
+ShipLastName = 'Morrison', ShipAddress1 = '696 West 1100 South', 
+ShipAddress2 = '', ShipCity = 'Woods Cross', ShipState = 'UT', 
+ShipPostalCode = '84087', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22320003 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21091689 | NewOrderNumber = 
+22320003 | ItemNumber = 234379563 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Maren', ShipLastName = 'Morrison', 
+ShipAddress1 = '696 West 1100 South', ShipAddress2 = '', ShipCity = 
+'Woods Cross', ShipState = 'UT', ShipPostalCode = '84087', ShipCountry =
+ 'UNITED STATES' WHERE OrderNumber = 22320003 AND LineNumber = 9<br><br>Old Order Number = 21118577 - New Order Number: 22320004<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21118577 | 
+NewOrderNumber = 22320004 | ItemNumber = 234379564 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Gerald &amp; 
+Carol', ShipLastName = 'Jenson', ShipAddress1 = '756 West 1100 South', 
+ShipAddress2 = '', ShipCity = 'Woods Cross', ShipState = 'UT', 
+ShipPostalCode = '84087', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320004 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21118577 | NewOrderNumber = 
+22320004 | ItemNumber = 234379565 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Gerald &amp; Carol', ShipLastName = 
+'Jenson', ShipAddress1 = '756 West 1100 South', ShipAddress2 = '', 
+ShipCity = 'Woods Cross', ShipState = 'UT', ShipPostalCode = '84087', 
+ShipCountry = 'United States' WHERE OrderNumber = 22320004 AND 
+LineNumber = 9<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21118577 | NewOrderNumber = 22320004 | ItemNumber = 
+234379566 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Gerald &amp; Carol', ShipLastName = 'Jenson', 
+ShipAddress1 = '756 West 1100 South', ShipAddress2 = '', ShipCity = 
+'Woods Cross', ShipState = 'UT', ShipPostalCode = '84087', ShipCountry =
+ 'United States' WHERE OrderNumber = 22320004 AND LineNumber = 17<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21118577 | 
+NewOrderNumber = 22320004 | ItemNumber = 234379567 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Gerald &amp; 
+Carol', ShipLastName = 'Jenson', ShipAddress1 = '756 West 1100 South', 
+ShipAddress2 = '', ShipCity = 'Woods Cross', ShipState = 'UT', 
+ShipPostalCode = '84087', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320004 AND LineNumber = 25<br><br>Old Order Number = 21143198 - New Order Number: 22320005<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21143198 | 
+NewOrderNumber = 22320005 | ItemNumber = 234379568 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Richard &amp; Ann',
+ ShipLastName = 'Hunter', ShipAddress1 = '1264 South 1525 West', 
+ShipAddress2 = '', ShipCity = 'Syracuse', ShipState = 'UT', 
+ShipPostalCode = '84075', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320005 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21143198 | NewOrderNumber = 
+22320005 | ItemNumber = 234379569 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Richard &amp; Ann', ShipLastName = 
+'Hunter', ShipAddress1 = '1264 South 1525 West', ShipAddress2 = '', 
+ShipCity = 'Syracuse', ShipState = 'UT', ShipPostalCode = '84075', 
+ShipCountry = 'United States' WHERE OrderNumber = 22320005 AND 
+LineNumber = 9<br><br>Old Order Number = 21156309 - New Order Number: 22320006<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21156309 | 
+NewOrderNumber = 22320006 | ItemNumber = 234379570 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64140, ShipCode = 4, ShipFirstName = 'Roy and Catherine',
+ ShipLastName = 'Rasband', ShipAddress1 = '1031 East 250 South', 
+ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84010', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320006 AND LineNumber = 1<br>OldEventCode = 845571 | 
+NewEventCode = 891315 | OldOrderNumber = 21156309 | NewOrderNumber = 
+22320006 | ItemNumber = 234379571 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64140, 
+ShipCode = 4, ShipFirstName = 'Roy and Catherine', ShipLastName = 
+'Rasband', ShipAddress1 = '1031 East 250 South', ShipAddress2 = '', 
+ShipCity = 'Bountiful', ShipState = 'UT', ShipPostalCode = '84010', 
+ShipCountry = 'United States' WHERE OrderNumber = 22320006 AND 
+LineNumber = 9<br>OldEventCode = 845571 | NewEventCode = 891315 | 
+OldOrderNumber = 21156309 | NewOrderNumber = 22320006 | ItemNumber = 
+234379572 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Roy and Catherine', ShipLastName = 'Rasband', 
+ShipAddress1 = '1031 East 250 South', ShipAddress2 = '', ShipCity = 
+'Bountiful', ShipState = 'UT', ShipPostalCode = '84010', ShipCountry = 
+'United States' WHERE OrderNumber = 22320006 AND LineNumber = 17<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21156309 | 
+NewOrderNumber = 22320006 | ItemNumber = 234379573 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Roy and Catherine',
+ ShipLastName = 'Rasband', ShipAddress1 = '1031 East 250 South', 
+ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84010', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320006 AND LineNumber = 25<br><br>Old Order Number = 21159819 - New Order Number: 22320007<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21159819 | 
+NewOrderNumber = 22320007 | ItemNumber = 234379574 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Joe', ShipLastName =
+ 'Heward', ShipAddress1 = 'PO box 706', ShipAddress2 = '', ShipCity = 
+'Thayne', ShipState = 'WY', ShipPostalCode = '83127', ShipCountry = 
+'United States' WHERE OrderNumber = 22320007 AND LineNumber = 1<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21159819 | 
+NewOrderNumber = 22320007 | ItemNumber = 234379575 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Joe', ShipLastName =
+ 'Heward', ShipAddress1 = 'PO box 706', ShipAddress2 = '', ShipCity = 
+'Thayne', ShipState = 'WY', ShipPostalCode = '83127', ShipCountry = 
+'United States' WHERE OrderNumber = 22320007 AND LineNumber = 9<br><br>Old Order Number = 21170275 - New Order Number: 22320008<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21170275 | 
+NewOrderNumber = 22320008 | ItemNumber = 234379576 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Megan', 
+ShipLastName = 'Brown', ShipAddress1 = '151 South 1150 West ', 
+ShipAddress2 = '', ShipCity = 'Farmington', ShipState = 'UT', 
+ShipPostalCode = '84025', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320008 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21170275 | NewOrderNumber = 
+22320008 | ItemNumber = 234379577 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Megan', ShipLastName = 'Brown', 
+ShipAddress1 = '151 South 1150 West ', ShipAddress2 = '', ShipCity = 
+'Farmington', ShipState = 'UT', ShipPostalCode = '84025', ShipCountry = 
+'United States' WHERE OrderNumber = 22320008 AND LineNumber = 9<br><br>Old Order Number = 21190658 - New Order Number: 22320009<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21190658 | 
+NewOrderNumber = 22320009 | ItemNumber = 234379578 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Doug and Kathy', 
+ShipLastName = 'Cummings', ShipAddress1 = '2099 North Park Hill Drive', 
+ShipAddress2 = '', ShipCity = 'Centerville', ShipState = 'UT', 
+ShipPostalCode = '84014', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320009 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21190658 | NewOrderNumber = 
+22320009 | ItemNumber = 234379579 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Doug and Kathy', ShipLastName = 
+'Cummings', ShipAddress1 = '2099 North Park Hill Drive', ShipAddress2 = 
+'', ShipCity = 'Centerville', ShipState = 'UT', ShipPostalCode = 
+'84014', ShipCountry = 'United States' WHERE OrderNumber = 22320009 AND 
+LineNumber = 9<br><br>Old Order Number = 21191313 - New Order Number: 22320010<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21191313 | 
+NewOrderNumber = 22320010 | ItemNumber = 234379580 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Michelle', 
+ShipLastName = 'Wren', ShipAddress1 = 'PO Box 1422', ShipAddress2 = '', 
+ShipCity = 'Bountiful', ShipState = 'UT', ShipPostalCode = '84011', 
+ShipCountry = 'UNITED STATES' WHERE OrderNumber = 22320010 AND 
+LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21191313 | NewOrderNumber = 22320010 | ItemNumber = 
+234379581 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Michelle', ShipLastName = 'Wren', ShipAddress1 = 'PO 
+Box 1422', ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84011', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22320010 AND LineNumber = 9<br><br>Old Order Number = 21238113 - New Order Number: 22320011<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21238113 | 
+NewOrderNumber = 22320011 | ItemNumber = 234379582 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64175, ShipCode = 4, ShipFirstName = 'Kerri', 
+ShipLastName = 'Rognon', ShipAddress1 = '126 North 3425 West', 
+ShipAddress2 = '', ShipCity = 'Layton', ShipState = 'UT', ShipPostalCode
+ = '84041', ShipCountry = 'United States' WHERE OrderNumber = 22320011 
+AND LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21238113 | NewOrderNumber = 22320011 | ItemNumber = 
+234379583 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 112, Surcharge = 2.05, SeatTypeCode = 64175, ShipCode = 4, 
+ShipFirstName = 'Kerri', ShipLastName = 'Rognon', ShipAddress1 = '126 
+North 3425 West', ShipAddress2 = '', ShipCity = 'Layton', ShipState = 
+'UT', ShipPostalCode = '84041', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320011 AND LineNumber = 9<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21238113 | NewOrderNumber = 
+22320011 | ItemNumber = 234379584 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Kerri', ShipLastName = 'Rognon', 
+ShipAddress1 = '126 North 3425 West', ShipAddress2 = '', ShipCity = 
+'Layton', ShipState = 'UT', ShipPostalCode = '84041', ShipCountry = 
+'United States' WHERE OrderNumber = 22320011 AND LineNumber = 17<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21238113 | 
+NewOrderNumber = 22320011 | ItemNumber = 234379585 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Kerri', 
+ShipLastName = 'Rognon', ShipAddress1 = '126 North 3425 West', 
+ShipAddress2 = '', ShipCity = 'Layton', ShipState = 'UT', ShipPostalCode
+ = '84041', ShipCountry = 'United States' WHERE OrderNumber = 22320011 
+AND LineNumber = 25<br><br>Old Order Number = 21243764 - New Order Number: 22320012<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21243764 | 
+NewOrderNumber = 22320012 | ItemNumber = 234379586 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Ashley', 
+ShipLastName = 'Barrs', ShipAddress1 = '119 West 925 North', 
+ShipAddress2 = '', ShipCity = 'Centerville', ShipState = 'UT', 
+ShipPostalCode = '84014', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320012 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21243764 | NewOrderNumber = 
+22320012 | ItemNumber = 234379587 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Ashley', ShipLastName = 'Barrs', 
+ShipAddress1 = '119 West 925 North', ShipAddress2 = '', ShipCity = 
+'Centerville', ShipState = 'UT', ShipPostalCode = '84014', ShipCountry =
+ 'United States' WHERE OrderNumber = 22320012 AND LineNumber = 9<br><br>Old Order Number = 21273984 - New Order Number: 22320013<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21273984 | 
+NewOrderNumber = 22320013 | ItemNumber = 234379588 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Brent', 
+ShipLastName = 'Ferguson', ShipAddress1 = '401 South 400 East', 
+ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'Utah', 
+ShipPostalCode = '84010', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22320013 AND LineNumber = 1<br>OldEventCode = 776489 | 
+NewEventCode = 891315 | OldOrderNumber = 21273984 | NewOrderNumber = 
+22320013 | ItemNumber = 234379589 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Brent', ShipLastName = 'Ferguson', 
+ShipAddress1 = '401 South 400 East', ShipAddress2 = '', ShipCity = 
+'Bountiful', ShipState = 'Utah', ShipPostalCode = '84010', ShipCountry =
+ 'UNITED STATES' WHERE OrderNumber = 22320013 AND LineNumber = 9<br><br>Old Order Number = 21286706 - New Order Number: 22320014<br>OldEventCode
+ = 776489 | NewEventCode = 891315 | OldOrderNumber = 21286706 | 
+NewOrderNumber = 22320014 | ItemNumber = 234379590 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Clark', 
+ShipLastName = 'Gessel', ShipAddress1 = '2665 East 1650 North', 
+ShipAddress2 = '', ShipCity = 'Layton', ShipState = 'Ut', ShipPostalCode
+ = '84040', ShipCountry = 'United States' WHERE OrderNumber = 22320014 
+AND LineNumber = 1<br>OldEventCode = 776489 | NewEventCode = 891315 | 
+OldOrderNumber = 21286706 | NewOrderNumber = 22320014 | ItemNumber = 
+234379591 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Clark', ShipLastName = 'Gessel', ShipAddress1 = '2665 
+East 1650 North', ShipAddress2 = '', ShipCity = 'Layton', ShipState = 
+'Ut', ShipPostalCode = '84040', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320014 AND LineNumber = 9<br><br>Old Order Number = 21303091 - New Order Number: 22320015<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21303091 | 
+NewOrderNumber = 22320015 | ItemNumber = 234379592 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Amber', 
+ShipLastName = 'Webster', ShipAddress1 = '268 S 500 E #E2', ShipAddress2
+ = '', ShipCity = 'Clearfield', ShipState = 'UT', ShipPostalCode = 
+'84015', ShipCountry = 'UNITED STATES' WHERE OrderNumber = 22320015 AND 
+LineNumber = 1<br>OldEventCode = 845571 | NewEventCode = 891315 | 
+OldOrderNumber = 21303091 | NewOrderNumber = 22320015 | ItemNumber = 
+234379593 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Amber', ShipLastName = 'Webster', ShipAddress1 = '268 S
+ 500 E #E2', ShipAddress2 = '', ShipCity = 'Clearfield', ShipState = 
+'UT', ShipPostalCode = '84015', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22320015 AND LineNumber = 9<br><br>Old Order Number = 21308478 - New Order Number: 22320016<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21308478 | 
+NewOrderNumber = 22320016 | ItemNumber = 234379594 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Michelle', 
+ShipLastName = 'Sanders', ShipAddress1 = '1476 W 925 S', ShipAddress2 = 
+'', ShipCity = 'Syracuse', ShipState = 'Ut', ShipPostalCode = '84075', 
+ShipCountry = 'United States' WHERE OrderNumber = 22320016 AND 
+LineNumber = 1<br>OldEventCode = 845571 | NewEventCode = 891315 | 
+OldOrderNumber = 21308478 | NewOrderNumber = 22320016 | ItemNumber = 
+234379595 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 112, Surcharge = 2.05, SeatTypeCode = 64138, ShipCode = 4, 
+ShipFirstName = 'Michelle', ShipLastName = 'Sanders', ShipAddress1 = 
+'1476 W 925 S', ShipAddress2 = '', ShipCity = 'Syracuse', ShipState = 
+'Ut', ShipPostalCode = '84075', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320016 AND LineNumber = 9<br><br>Old Order Number = 21354952 - New Order Number: 22320017<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21354952 | 
+NewOrderNumber = 22320017 | ItemNumber = 234379596 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Joyce', 
+ShipLastName = 'Oman', ShipAddress1 = '1166 Alice Lane', ShipAddress2 = 
+'', ShipCity = 'Farmington', ShipState = 'Ut', ShipPostalCode = '84025',
+ ShipCountry = 'United States' WHERE OrderNumber = 22320017 AND 
+LineNumber = 1<br>OldEventCode = 845571 | NewEventCode = 891315 | 
+OldOrderNumber = 21354952 | NewOrderNumber = 22320017 | ItemNumber = 
+234379597 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 112, Surcharge = 2.05, SeatTypeCode = 64138, ShipCode = 4, 
+ShipFirstName = 'Joyce', ShipLastName = 'Oman', ShipAddress1 = '1166 
+Alice Lane', ShipAddress2 = '', ShipCity = 'Farmington', ShipState = 
+'Ut', ShipPostalCode = '84025', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320017 AND LineNumber = 9<br><br>Old Order Number = 21392155 - New Order Number: 22320018<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21392155 | 
+NewOrderNumber = 22320018 | ItemNumber = 234379598 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Michael', 
+ShipLastName = 'Barrett', ShipAddress1 = '877 South 1100 West', 
+ShipAddress2 = '', ShipCity = 'Clearfield', ShipState = 'UT', 
+ShipPostalCode = '84015', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320018 AND LineNumber = 1<br>OldEventCode = 845571 | 
+NewEventCode = 891315 | OldOrderNumber = 21392155 | NewOrderNumber = 
+22320018 | ItemNumber = 234379599 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Michael', ShipLastName = 'Barrett', 
+ShipAddress1 = '877 South 1100 West', ShipAddress2 = '', ShipCity = 
+'Clearfield', ShipState = 'UT', ShipPostalCode = '84015', ShipCountry = 
+'United States' WHERE OrderNumber = 22320018 AND LineNumber = 9<br><br>Old Order Number = 21405110 - New Order Number: 22320019<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21405110 | 
+NewOrderNumber = 22320019 | ItemNumber = 234379600 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Lisa', ShipLastName
+ = 'Bosley', ShipAddress1 = '1291 West 1200 North', ShipAddress2 = '', 
+ShipCity = 'Layton', ShipState = 'UT', ShipPostalCode = '84041', 
+ShipCountry = 'United States' WHERE OrderNumber = 22320019 AND 
+LineNumber = 1<br>OldEventCode = 845571 | NewEventCode = 891315 | 
+OldOrderNumber = 21405110 | NewOrderNumber = 22320019 | ItemNumber = 
+234379601 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Lisa', ShipLastName = 'Bosley', ShipAddress1 = '1291 
+West 1200 North', ShipAddress2 = '', ShipCity = 'Layton', ShipState = 
+'UT', ShipPostalCode = '84041', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320019 AND LineNumber = 9<br><br>Old Order Number = 21405151 - New Order Number: 22320020<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21405151 | 
+NewOrderNumber = 22320020 | ItemNumber = 234379602 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Cindy', 
+ShipLastName = 'Foote', ShipAddress1 = '1375 North 1100 East ', 
+ShipAddress2 = '', ShipCity = 'Layton', ShipState = 'UT', ShipPostalCode
+ = '84040', ShipCountry = 'United States' WHERE OrderNumber = 22320020 
+AND LineNumber = 1<br><br>Old Order Number = 21405450 - New Order Number: 22320021<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21405450 | 
+NewOrderNumber = 22320021 | ItemNumber = 234379603 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Doug', ShipLastName
+ = 'Finlinson', ShipAddress1 = '922 West 2300 South', ShipAddress2 = '',
+ ShipCity = 'Syracuse', ShipState = 'Ut', ShipPostalCode = '84075', 
+ShipCountry = 'United States' WHERE OrderNumber = 22320021 AND 
+LineNumber = 1<br>OldEventCode = 845571 | NewEventCode = 891315 | 
+OldOrderNumber = 21405450 | NewOrderNumber = 22320021 | ItemNumber = 
+234379604 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Doug', ShipLastName = 'Finlinson', ShipAddress1 = '922 
+West 2300 South', ShipAddress2 = '', ShipCity = 'Syracuse', ShipState = 
+'Ut', ShipPostalCode = '84075', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320021 AND LineNumber = 9<br><br>Old Order Number = 21422371 - New Order Number: 22320022<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21422371 | 
+NewOrderNumber = 22320022 | ItemNumber = 234379605 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Stephen', 
+ShipLastName = 'Jacobson', ShipAddress1 = '1249 West 975 South', 
+ShipAddress2 = '', ShipCity = 'Clearield', ShipState = 'UT', 
+ShipPostalCode = '84015', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320022 AND LineNumber = 1<br>OldEventCode = 845571 | 
+NewEventCode = 891315 | OldOrderNumber = 21422371 | NewOrderNumber = 
+22320022 | ItemNumber = 234379606 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Stephen', ShipLastName = 'Jacobson', 
+ShipAddress1 = '1249 West 975 South', ShipAddress2 = '', ShipCity = 
+'Clearield', ShipState = 'UT', ShipPostalCode = '84015', ShipCountry = 
+'United States' WHERE OrderNumber = 22320022 AND LineNumber = 9<br><br>Old Order Number = 21423726 - New Order Number: 22320023<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21423726 | 
+NewOrderNumber = 22320023 | ItemNumber = 234379607 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Wayne', 
+ShipLastName = 'Christensen', ShipAddress1 = '955 North 275 West', 
+ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84010', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320023 AND LineNumber = 1<br>OldEventCode = 845571 | 
+NewEventCode = 891315 | OldOrderNumber = 21423726 | NewOrderNumber = 
+22320023 | ItemNumber = 234379608 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Wayne', ShipLastName = 'Christensen', 
+ShipAddress1 = '955 North 275 West', ShipAddress2 = '', ShipCity = 
+'Bountiful', ShipState = 'UT', ShipPostalCode = '84010', ShipCountry = 
+'United States' WHERE OrderNumber = 22320023 AND LineNumber = 9<br><br>Old Order Number = 21464690 - New Order Number: 22320024<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21464690 | 
+NewOrderNumber = 22320024 | ItemNumber = 234379609 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Jana', ShipLastName
+ = 'Bilton', ShipAddress1 = '1163 North Alice Lane', ShipAddress2 = '', 
+ShipCity = 'Farmington', ShipState = 'UT', ShipPostalCode = '84025', 
+ShipCountry = 'United States' WHERE OrderNumber = 22320024 AND 
+LineNumber = 1<br>OldEventCode = 845571 | NewEventCode = 891315 | 
+OldOrderNumber = 21464690 | NewOrderNumber = 22320024 | ItemNumber = 
+234379610 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Jana', ShipLastName = 'Bilton', ShipAddress1 = '1163 
+North Alice Lane', ShipAddress2 = '', ShipCity = 'Farmington', ShipState
+ = 'UT', ShipPostalCode = '84025', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320024 AND LineNumber = 9<br><br>Old Order Number = 21489021 - New Order Number: 22320025<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21489021 | 
+NewOrderNumber = 22320025 | ItemNumber = 234379611 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Sally', 
+ShipLastName = 'Taggart', ShipAddress1 = '2101 Towncenter Drive Unit 
+2004', ShipAddress2 = '', ShipCity = 'Round Rock ', ShipState = 'TX', 
+ShipPostalCode = '78664', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320025 AND LineNumber = 1<br>OldEventCode = 845571 | 
+NewEventCode = 891315 | OldOrderNumber = 21489021 | NewOrderNumber = 
+22320025 | ItemNumber = 234379612 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Sally', ShipLastName = 'Taggart', 
+ShipAddress1 = '2101 Towncenter Drive Unit 2004', ShipAddress2 = '', 
+ShipCity = 'Round Rock ', ShipState = 'TX', ShipPostalCode = '78664', 
+ShipCountry = 'United States' WHERE OrderNumber = 22320025 AND 
+LineNumber = 9<br><br>Old Order Number = 21493432 - New Order Number: 22320026<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21493432 | 
+NewOrderNumber = 22320026 | ItemNumber = 234379613 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Donald', 
+ShipLastName = 'Sisson', ShipAddress1 = '329 Creekside Way', 
+ShipAddress2 = '', ShipCity = 'Kaysville', ShipState = 'UT', 
+ShipPostalCode = '84037', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320026 AND LineNumber = 1<br>OldEventCode = 845571 | 
+NewEventCode = 891315 | OldOrderNumber = 21493432 | NewOrderNumber = 
+22320026 | ItemNumber = 234379614 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Donald', ShipLastName = 'Sisson', 
+ShipAddress1 = '329 Creekside Way', ShipAddress2 = '', ShipCity = 
+'Kaysville', ShipState = 'UT', ShipPostalCode = '84037', ShipCountry = 
+'United States' WHERE OrderNumber = 22320026 AND LineNumber = 9<br><br>Old Order Number = 21495387 - New Order Number: 22320027<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21495387 | 
+NewOrderNumber = 22320027 | ItemNumber = 234379615 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Daryl', 
+ShipLastName = 'Petersen', ShipAddress1 = '1913 North 725 West', 
+ShipAddress2 = '', ShipCity = 'West Bountiful', ShipState = 'Ut', 
+ShipPostalCode = '84087', ShipCountry = '' WHERE OrderNumber = 22320027 
+AND LineNumber = 1<br>OldEventCode = 845571 | NewEventCode = 891315 | 
+OldOrderNumber = 21495387 | NewOrderNumber = 22320027 | ItemNumber = 
+234379616 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Daryl', ShipLastName = 'Petersen', ShipAddress1 = '1913
+ North 725 West', ShipAddress2 = '', ShipCity = 'West Bountiful', 
+ShipState = 'Ut', ShipPostalCode = '84087', ShipCountry = '' WHERE 
+OrderNumber = 22320027 AND LineNumber = 9<br><br>Old Order Number = 21514848 - New Order Number: 22320028<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21514848 | 
+NewOrderNumber = 22320028 | ItemNumber = 234379617 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64175, ShipCode = 4, ShipFirstName = 'Susan', 
+ShipLastName = 'Anderson', ShipAddress1 = '4010 West 3600 North', 
+ShipAddress2 = '', ShipCity = 'Plain City', ShipState = 'UT', 
+ShipPostalCode = '84404', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320028 AND LineNumber = 1<br>OldEventCode = 845571 | 
+NewEventCode = 891315 | OldOrderNumber = 21514848 | NewOrderNumber = 
+22320028 | ItemNumber = 234379618 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64175, 
+ShipCode = 4, ShipFirstName = 'Susan', ShipLastName = 'Anderson', 
+ShipAddress1 = '4010 West 3600 North', ShipAddress2 = '', ShipCity = 
+'Plain City', ShipState = 'UT', ShipPostalCode = '84404', ShipCountry = 
+'United States' WHERE OrderNumber = 22320028 AND LineNumber = 9<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21514848 | 
+NewOrderNumber = 22320028 | ItemNumber = 234379619 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Susan', 
+ShipLastName = 'Anderson', ShipAddress1 = '4010 West 3600 North', 
+ShipAddress2 = '', ShipCity = 'Plain City', ShipState = 'UT', 
+ShipPostalCode = '84404', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320028 AND LineNumber = 17<br>OldEventCode = 845571 | 
+NewEventCode = 891315 | OldOrderNumber = 21514848 | NewOrderNumber = 
+22320028 | ItemNumber = 234379620 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Susan', ShipLastName = 'Anderson', 
+ShipAddress1 = '4010 West 3600 North', ShipAddress2 = '', ShipCity = 
+'Plain City', ShipState = 'UT', ShipPostalCode = '84404', ShipCountry = 
+'United States' WHERE OrderNumber = 22320028 AND LineNumber = 25<br><br>Old Order Number = 21516400 - New Order Number: 22320029<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21516400 | 
+NewOrderNumber = 22320029 | ItemNumber = 234379621 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Derek &amp; 
+Candie', ShipLastName = 'Williams', ShipAddress1 = '10967 South Sophie 
+Lane', ShipAddress2 = '', ShipCity = 'Sandy ', ShipState = 'UT', 
+ShipPostalCode = '84070', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22320029 AND LineNumber = 1<br>OldEventCode = 845571 | 
+NewEventCode = 891315 | OldOrderNumber = 21516400 | NewOrderNumber = 
+22320029 | ItemNumber = 234379622 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Derek &amp; Candie', ShipLastName = 
+'Williams', ShipAddress1 = '10967 South Sophie Lane', ShipAddress2 = '',
+ ShipCity = 'Sandy ', ShipState = 'UT', ShipPostalCode = '84070', 
+ShipCountry = 'UNITED STATES' WHERE OrderNumber = 22320029 AND 
+LineNumber = 9<br><br>Old Order Number = 21532876 - New Order Number: 22320031<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21532876 | 
+NewOrderNumber = 22320031 | ItemNumber = 234379623 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Boyd', ShipLastName
+ = 'Brown', ShipAddress1 = '958 North 150 West', ShipAddress2 = '', 
+ShipCity = 'Centerville', ShipState = 'UT', ShipPostalCode = '84014', 
+ShipCountry = 'United States' WHERE OrderNumber = 22320031 AND 
+LineNumber = 1<br><br>Old Order Number = 21539533 - New Order Number: 22320032<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21539533 | 
+NewOrderNumber = 22320032 | ItemNumber = 234379624 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Shirla', 
+ShipLastName = 'Wheeler', ShipAddress1 = '1169 East Beverly Way', 
+ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84010', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320032 AND LineNumber = 1<br>OldEventCode = 845571 | 
+NewEventCode = 891315 | OldOrderNumber = 21539533 | NewOrderNumber = 
+22320032 | ItemNumber = 234379625 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Shirla', ShipLastName = 'Wheeler', 
+ShipAddress1 = '1169 East Beverly Way', ShipAddress2 = '', ShipCity = 
+'Bountiful', ShipState = 'UT', ShipPostalCode = '84010', ShipCountry = 
+'United States' WHERE OrderNumber = 22320032 AND LineNumber = 9<br><br>Old Order Number = 21549621 - New Order Number: 22320033<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21549621 | 
+NewOrderNumber = 22320033 | ItemNumber = 234379626 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Diane and Farrell',
+ ShipLastName = 'Yeates', ShipAddress1 = '635 East 100 North', 
+ShipAddress2 = '', ShipCity = 'Centerville', ShipState = 'UT', 
+ShipPostalCode = '84014', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320033 AND LineNumber = 1<br><br>Old Order Number = 21549677 - New Order Number: 22320034<br>OldEventCode
+ = 845571 | NewEventCode = 891315 | OldOrderNumber = 21549677 | 
+NewOrderNumber = 22320034 | ItemNumber = 234379627 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Jeannine', 
+ShipLastName = 'Andersen', ShipAddress1 = '282 North 700 East', 
+ShipAddress2 = '', ShipCity = 'Centerville', ShipState = 'UT', 
+ShipPostalCode = '84014', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320034 AND LineNumber = 1<br><br>Old Order Number = 21557254 - New Order Number: 22320035<br>OldEventCode
+ = 852211 | NewEventCode = 891315 | OldOrderNumber = 21557254 | 
+NewOrderNumber = 22320035 | ItemNumber = 234379628 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64140, ShipCode = 4, ShipFirstName = 'Joyce', 
+ShipLastName = 'Price', ShipAddress1 = '1309 West 400 North', 
+ShipAddress2 = '', ShipCity = 'West Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84087', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22320035 AND LineNumber = 1<br>OldEventCode = 852211 | 
+NewEventCode = 891315 | OldOrderNumber = 21557254 | NewOrderNumber = 
+22320035 | ItemNumber = 234379629 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64175, 
+ShipCode = 4, ShipFirstName = 'Joyce', ShipLastName = 'Price', 
+ShipAddress1 = '1309 West 400 North', ShipAddress2 = '', ShipCity = 
+'West Bountiful', ShipState = 'UT', ShipPostalCode = '84087', 
+ShipCountry = 'UNITED STATES' WHERE OrderNumber = 22320035 AND 
+LineNumber = 9<br><br>Old Order Number = 21577058 - New Order Number: 22320036<br>OldEventCode
+ = 852211 | NewEventCode = 891315 | OldOrderNumber = 21577058 | 
+NewOrderNumber = 22320036 | ItemNumber = 234379630 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64140, ShipCode = 4, ShipFirstName = 'Terry', 
+ShipLastName = 'Hill', ShipAddress1 = '343 South 500 East, Apt 225', 
+ShipAddress2 = '', ShipCity = 'Salt Lake city', ShipState = 'UT', 
+ShipPostalCode = '84102', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320036 AND LineNumber = 1<br>OldEventCode = 852211 | 
+NewEventCode = 891315 | OldOrderNumber = 21577058 | NewOrderNumber = 
+22320036 | ItemNumber = 234379631 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64140, 
+ShipCode = 4, ShipFirstName = 'Terry', ShipLastName = 'Hill', 
+ShipAddress1 = '343 South 500 East, Apt 225', ShipAddress2 = '', 
+ShipCity = 'Salt Lake city', ShipState = 'UT', ShipPostalCode = '84102',
+ ShipCountry = 'United States' WHERE OrderNumber = 22320036 AND 
+LineNumber = 9<br><br>Old Order Number = 21588345 - New Order Number: 22320037<br>OldEventCode
+ = 852211 | NewEventCode = 891315 | OldOrderNumber = 21588345 | 
+NewOrderNumber = 22320037 | ItemNumber = 234379632 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Jennifer', 
+ShipLastName = 'Iverson', ShipAddress1 = '44 North 3600 West', 
+ShipAddress2 = '', ShipCity = 'Layton', ShipState = 'UT', ShipPostalCode
+ = '84041', ShipCountry = 'UNITED STATES' WHERE OrderNumber = 22320037 
+AND LineNumber = 1<br>OldEventCode = 852211 | NewEventCode = 891315 | 
+OldOrderNumber = 21588345 | NewOrderNumber = 22320037 | ItemNumber = 
+234379633 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Jennifer', ShipLastName = 'Iverson', ShipAddress1 = '44
+ North 3600 West', ShipAddress2 = '', ShipCity = 'Layton', ShipState = 
+'UT', ShipPostalCode = '84041', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22320037 AND LineNumber = 9<br><br>Old Order Number = 21589794 - New Order Number: 22320038<br>OldEventCode
+ = 852211 | NewEventCode = 891315 | OldOrderNumber = 21589794 | 
+NewOrderNumber = 22320038 | ItemNumber = 234379634 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64140, ShipCode = 4, ShipFirstName = 'Kathleen', 
+ShipLastName = 'Pierce', ShipAddress1 = '1254 East 1800 South', 
+ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84010', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22320038 AND LineNumber = 1<br><br>Old Order Number = 21593804 - New Order Number: 22320039<br>OldEventCode
+ = 852211 | NewEventCode = 891315 | OldOrderNumber = 21593804 | 
+NewOrderNumber = 22320039 | ItemNumber = 234379635 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Deon', ShipLastName
+ = 'Stevens', ShipAddress1 = '1425 South 50 West', ShipAddress2 = '', 
+ShipCity = 'Kaysville', ShipState = 'UT', ShipPostalCode = '84037', 
+ShipCountry = 'United States' WHERE OrderNumber = 22320039 AND 
+LineNumber = 1<br><br>Old Order Number = 21635204 - New Order Number: 22320040<br>OldEventCode
+ = 852211 | NewEventCode = 891315 | OldOrderNumber = 21635204 | 
+NewOrderNumber = 22320040 | ItemNumber = 234379636 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Becky', 
+ShipLastName = 'Barnett', ShipAddress1 = '16 South Davis Boulevard', 
+ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84010', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320040 AND LineNumber = 1<br>OldEventCode = 852211 | 
+NewEventCode = 891315 | OldOrderNumber = 21635204 | NewOrderNumber = 
+22320040 | ItemNumber = 234379637 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Becky', ShipLastName = 'Barnett', 
+ShipAddress1 = '16 South Davis Boulevard', ShipAddress2 = '', ShipCity =
+ 'Bountiful', ShipState = 'UT', ShipPostalCode = '84010', ShipCountry = 
+'United States' WHERE OrderNumber = 22320040 AND LineNumber = 9<br><br>Old Order Number = 21641745 - New Order Number: 22320041<br>OldEventCode
+ = 852211 | NewEventCode = 891315 | OldOrderNumber = 21641745 | 
+NewOrderNumber = 22320041 | ItemNumber = 234379638 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64140, ShipCode = 4, ShipFirstName = 'Miland', 
+ShipLastName = 'Palmer', ShipAddress1 = '3343 South West ', ShipAddress2
+ = '', ShipCity = 'Syracuse', ShipState = 'UT', ShipPostalCode = 
+'84075', ShipCountry = 'United States' WHERE OrderNumber = 22320041 AND 
+LineNumber = 1<br>OldEventCode = 852211 | NewEventCode = 891315 | 
+OldOrderNumber = 21641745 | NewOrderNumber = 22320041 | ItemNumber = 
+234379639 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Miland', ShipLastName = 'Palmer', ShipAddress1 = '3343 
+South West ', ShipAddress2 = '', ShipCity = 'Syracuse', ShipState = 
+'UT', ShipPostalCode = '84075', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320041 AND LineNumber = 9<br><br>Old Order Number = 21674687 - New Order Number: 22320042<br>OldEventCode
+ = 852211 | NewEventCode = 891315 | OldOrderNumber = 21674687 | 
+NewOrderNumber = 22320042 | ItemNumber = 234379640 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64175, ShipCode = 4, ShipFirstName = 'Melanie', 
+ShipLastName = 'Mortensen', ShipAddress1 = '68 Windsor Court', 
+ShipAddress2 = '', ShipCity = 'Bountiful', ShipState = 'UT', 
+ShipPostalCode = '84010', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320042 AND LineNumber = 1<br>OldEventCode = 852211 | 
+NewEventCode = 891315 | OldOrderNumber = 21674687 | NewOrderNumber = 
+22320042 | ItemNumber = 234379641 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Melanie', ShipLastName = 'Mortensen', 
+ShipAddress1 = '68 Windsor Court', ShipAddress2 = '', ShipCity = 
+'Bountiful', ShipState = 'UT', ShipPostalCode = '84010', ShipCountry = 
+'United States' WHERE OrderNumber = 22320042 AND LineNumber = 9<br><br>Old Order Number = 21681582 - New Order Number: 22320043<br>OldEventCode
+ = 852211 | NewEventCode = 891315 | OldOrderNumber = 21681582 | 
+NewOrderNumber = 22320043 | ItemNumber = 234379642 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Rolland', 
+ShipLastName = 'Burdge', ShipAddress1 = '327 West 650 North, Unit A', 
+ShipAddress2 = '', ShipCity = 'Centerville', ShipState = 'UT', 
+ShipPostalCode = '84014', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320043 AND LineNumber = 1<br>OldEventCode = 852211 | 
+NewEventCode = 891315 | OldOrderNumber = 21681582 | NewOrderNumber = 
+22320043 | ItemNumber = 234379643 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Rolland', ShipLastName = 'Burdge', 
+ShipAddress1 = '327 West 650 North, Unit A', ShipAddress2 = '', ShipCity
+ = 'Centerville', ShipState = 'UT', ShipPostalCode = '84014', 
+ShipCountry = 'United States' WHERE OrderNumber = 22320043 AND 
+LineNumber = 9<br><br>Old Order Number = 21733556 - New Order Number: 22320044<br>OldEventCode
+ = 852211 | NewEventCode = 891315 | OldOrderNumber = 21733556 | 
+NewOrderNumber = 22320044 | ItemNumber = 234379644 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Robert', 
+ShipLastName = 'Lund', ShipAddress1 = '423 North Joseph Acres Road', 
+ShipAddress2 = '', ShipCity = 'Kaysville', ShipState = 'UT', 
+ShipPostalCode = '84037', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320044 AND LineNumber = 1<br>OldEventCode = 852211 | 
+NewEventCode = 891315 | OldOrderNumber = 21733556 | NewOrderNumber = 
+22320044 | ItemNumber = 234379645 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Robert', ShipLastName = 'Lund', 
+ShipAddress1 = '423 North Joseph Acres Road', ShipAddress2 = '', 
+ShipCity = 'Kaysville', ShipState = 'UT', ShipPostalCode = '84037', 
+ShipCountry = 'United States' WHERE OrderNumber = 22320044 AND 
+LineNumber = 9<br><br>Old Order Number = 21819107 - New Order Number: 22320045<br>OldEventCode
+ = 852211 | NewEventCode = 891315 | OldOrderNumber = 21819107 | 
+NewOrderNumber = 22320045 | ItemNumber = 234379646 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Liz', ShipLastName =
+ 'Packard', ShipAddress1 = '262 North 3675 West', ShipAddress2 = '', 
+ShipCity = 'Layton', ShipState = 'Ut', ShipPostalCode = '84041', 
+ShipCountry = 'United States' WHERE OrderNumber = 22320045 AND 
+LineNumber = 1<br>OldEventCode = 852211 | NewEventCode = 891315 | 
+OldOrderNumber = 21819107 | NewOrderNumber = 22320045 | ItemNumber = 
+234379647 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Liz', ShipLastName = 'Packard', ShipAddress1 = '262 
+North 3675 West', ShipAddress2 = '', ShipCity = 'Layton', ShipState = 
+'Ut', ShipPostalCode = '84041', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320045 AND LineNumber = 9<br><br>Old Order Number = 21850419 - New Order Number: 22320046<br>OldEventCode
+ = 852211 | NewEventCode = 891315 | OldOrderNumber = 21850419 | 
+NewOrderNumber = 22320046 | ItemNumber = 234379648 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Anette', 
+ShipLastName = 'West', ShipAddress1 = '5954 South Misty Way', 
+ShipAddress2 = '', ShipCity = 'Salt Lake City', ShipState = 'Ut', 
+ShipPostalCode = '84118', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320046 AND LineNumber = 1<br><br>Old Order Number = 21856103 - New Order Number: 22320047<br>OldEventCode
+ = 852211 | NewEventCode = 891315 | OldOrderNumber = 21856103 | 
+NewOrderNumber = 22320047 | ItemNumber = 234379649 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64138, ShipCode = 4, ShipFirstName = 'Toby', ShipLastName
+ = 'Gonzales', ShipAddress1 = '5610 South 3600 West', ShipAddress2 = '',
+ ShipCity = 'Roy', ShipState = 'UT', ShipPostalCode = '84067', 
+ShipCountry = 'United States' WHERE OrderNumber = 22320047 AND 
+LineNumber = 1<br>OldEventCode = 852211 | NewEventCode = 891315 | 
+OldOrderNumber = 21856103 | NewOrderNumber = 22320047 | ItemNumber = 
+234379650 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 112, Surcharge = 2.05, SeatTypeCode = 64138, ShipCode = 4, 
+ShipFirstName = 'Toby', ShipLastName = 'Gonzales', ShipAddress1 = '5610 
+South 3600 West', ShipAddress2 = '', ShipCity = 'Roy', ShipState = 'UT',
+ ShipPostalCode = '84067', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320047 AND LineNumber = 9<br><br>Old Order Number = 21912999 - New Order Number: 22320048<br>OldEventCode
+ = 852211 | NewEventCode = 891315 | OldOrderNumber = 21912999 | 
+NewOrderNumber = 22320048 | ItemNumber = 234379651 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64140, ShipCode = 4, ShipFirstName = 'Arlene', 
+ShipLastName = 'Wyrick', ShipAddress1 = '515 East 700 North', 
+ShipAddress2 = '', ShipCity = 'Kaysville', ShipState = 'UT', 
+ShipPostalCode = '84037', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22320048 AND LineNumber = 1<br>OldEventCode = 852211 | 
+NewEventCode = 891315 | OldOrderNumber = 21912999 | NewOrderNumber = 
+22320048 | ItemNumber = 234379652 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, SeatTypeCode = 64138, 
+ShipCode = 4, ShipFirstName = 'Arlene', ShipLastName = 'Wyrick', 
+ShipAddress1 = '515 East 700 North', ShipAddress2 = '', ShipCity = 
+'Kaysville', ShipState = 'UT', ShipPostalCode = '84037', ShipCountry = 
+'UNITED STATES' WHERE OrderNumber = 22320048 AND LineNumber = 9<br><br>Old Order Number = 21919189 - New Order Number: 22320049<br>OldEventCode
+ = 852211 | NewEventCode = 891315 | OldOrderNumber = 21919189 | 
+NewOrderNumber = 22320049 | ItemNumber = 234379653 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 112, Surcharge = 2.05, 
+SeatTypeCode = 64140, ShipCode = 4, ShipFirstName = 'Todd', ShipLastName
+ = 'Gibbs', ShipAddress1 = '595 West 350 South', ShipAddress2 = '', 
+ShipCity = 'Farmington', ShipState = 'UT', ShipPostalCode = '84025', 
+ShipCountry = 'United States' WHERE OrderNumber = 22320049 AND 
+LineNumber = 1<br>OldEventCode = 852211 | NewEventCode = 891315 | 
+OldOrderNumber = 21919189 | NewOrderNumber = 22320049 | ItemNumber = 
+234379654 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 112, Surcharge = 2.05, SeatTypeCode = 64140, ShipCode = 4, 
+ShipFirstName = 'Todd', ShipLastName = 'Gibbs', ShipAddress1 = '595 West
+ 350 South', ShipAddress2 = '', ShipCity = 'Farmington', ShipState = 
+'UT', ShipPostalCode = '84025', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320049 AND LineNumber = 9<br>OldEventCode = 852211 | 
+NewEventCode = 891315 | OldOrderNumber = 21919189 | NewOrderNumber = 
+22320049 | ItemNumber = 234379655 | ReturnCode = 0<br>UPDATE OrderLine 
+WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, SeatTypeCode = 64134, 
+ShipCode = 4, ShipFirstName = 'Todd', ShipLastName = 'Gibbs', 
+ShipAddress1 = '595 West 350 South', ShipAddress2 = '', ShipCity = 
+'Farmington', ShipState = 'UT', ShipPostalCode = '84025', ShipCountry = 
+'United States' WHERE OrderNumber = 22320049 AND LineNumber = 17<br>OldEventCode
+ = 852211 | NewEventCode = 891315 | OldOrderNumber = 21919189 | 
+NewOrderNumber = 22320049 | ItemNumber = 234379656 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Todd', ShipLastName
+ = 'Gibbs', ShipAddress1 = '595 West 350 South', ShipAddress2 = '', 
+ShipCity = 'Farmington', ShipState = 'UT', ShipPostalCode = '84025', 
+ShipCountry = 'United States' WHERE OrderNumber = 22320049 AND 
+LineNumber = 25<br><br>Old Order Number = 21920947 - New Order Number: 22320050<br>OldEventCode
+ = 852211 | NewEventCode = 891315 | OldOrderNumber = 21920947 | 
+NewOrderNumber = 22320050 | ItemNumber = 234379657 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Brett', 
+ShipLastName = 'Lutz', ShipAddress1 = '1382 S 875 W', ShipAddress2 = '',
+ ShipCity = 'Woods Cross', ShipState = 'Utah', ShipPostalCode = '84087',
+ ShipCountry = 'UNITED STATES' WHERE OrderNumber = 22320050 AND 
+LineNumber = 1<br>OldEventCode = 852211 | NewEventCode = 891315 | 
+OldOrderNumber = 21920947 | NewOrderNumber = 22320050 | ItemNumber = 
+234379658 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Brett', ShipLastName = 'Lutz', ShipAddress1 = '1382 S 
+875 W', ShipAddress2 = '', ShipCity = 'Woods Cross', ShipState = 'Utah',
+ ShipPostalCode = '84087', ShipCountry = 'UNITED STATES' WHERE 
+OrderNumber = 22320050 AND LineNumber = 9<br><br>Old Order Number = 21927960 - New Order Number: 22320051<br>OldEventCode
+ = 852211 | NewEventCode = 891315 | OldOrderNumber = 21927960 | 
+NewOrderNumber = 22320051 | ItemNumber = 234379659 | ReturnCode = 0<br>UPDATE
+ OrderLine WITH (ROWLOCK) SET Price = 124, Surcharge = 2.05, 
+SeatTypeCode = 64134, ShipCode = 4, ShipFirstName = 'Kim', ShipLastName =
+ 'Dahl', ShipAddress1 = '821 East 3250 North', ShipAddress2 = '', 
+ShipCity = 'North Ogden', ShipState = 'UT', ShipPostalCode = '84414', 
+ShipCountry = 'United States' WHERE OrderNumber = 22320051 AND 
+LineNumber = 1<br>OldEventCode = 852211 | NewEventCode = 891315 | 
+OldOrderNumber = 21927960 | NewOrderNumber = 22320051 | ItemNumber = 
+234379660 | ReturnCode = 0<br>UPDATE OrderLine WITH (ROWLOCK) SET Price =
+ 124, Surcharge = 2.05, SeatTypeCode = 64134, ShipCode = 4, 
+ShipFirstName = 'Kim', ShipLastName = 'Dahl', ShipAddress1 = '821 East 
+3250 North', ShipAddress2 = '', ShipCity = 'North Ogden', ShipState = 
+'UT', ShipPostalCode = '84414', ShipCountry = 'United States' WHERE 
+OrderNumber = 22320051 AND LineNumber = 9<br><br>Orders Added = 114<br>
+Tickets Added = 239<br>
+Failed Count = 0<br><br>
+Update Order Totals: UPDATE OrderHeader WITH (ROWLOCK) SET SubTotal = 
+SumPrice, OrderSurcharge = SumSurcharge, Discount = SumDiscount, ShipFee
+ = 0, Total = SumPrice + SumSurcharge + 0 - SumDiscount FROM OrderHeader
+ INNER JOIN (SELECT OrderLine.OrderNumber, SUM(Price) AS SumPrice, 
+SUM(Surcharge) AS SumSurcharge, SUM(Discount) AS SumDiscount FROM 
+OrderLine (NOLOCK) GROUP BY OrderLine.OrderNumber) AS OL ON 
+OrderHeader.OrderNumber = OL.OrderNumber WHERE OrderHeader.IPAddress = 
+'CTRPOINT2017FLE' AND OrderHeader.StatusCode = 'R'<br>Totals Updated<br><br>
+<br><b>End CTRPOINT2017FLE - 7/13/2016 1:41:46 PM</b><br></body></html>

@@ -1,0 +1,444 @@
+<%
+'CHANGELOG
+'LSP 01/04/16 - initial development
+%>
+<!DOCTYPE html>
+<html lang="en-US">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+	<meta charset="UTF-8">
+	<title>The Historic Dixon Theatre</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="stylesheet" type="text/css" media="all" href="/clients/DixonTheatre/Images/style_002.css">
+	<link rel="pingback" href="http://dixontheatre.com/xmlrpc.php">
+	<style type="text/css">
+		.no-break br {
+			display: none !important;
+		}
+	</style>
+	<script src="/clients/DixonTheatre/Images/widgets.js" id="twitter-wjs"></script>
+	<script type="text/javascript" src="/clients/DixonTheatre/Images/swfobject.js"></script>
+	<script type="text/javascript" src="/clients/DixonTheatre/Images/jsapi"></script>
+
+	<link type="text/css" rel="stylesheet" href="/clients/DixonTheatre/Images/thickbox.css">
+	<link type="text/css" rel="stylesheet" href="/clients/DixonTheatre/Images/style.css">
+	<script type="text/javascript">
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function() {
+					if (oldonload) {
+						oldonload();
+					}
+					func();
+				}
+			}
+		}
+		//addLoadEvent(loadCalTest);
+	</script>
+	<link rel="alternate" type="application/rss+xml" title="The Historic Dixon Theatre » Feed" href="http://dixontheatre.com/feed/">
+
+	<link rel="stylesheet" id="contact-form-7-css" href="/clients/DixonTheatre/Images/styles.css" type="text/css" media="all">
+	<link rel="stylesheet" id="google-calendar-events-qtip-css" href="/clients/DixonTheatre/Images/jquery.css" type="text/css" media="all">
+	<link rel="stylesheet" id="google-calendar-events-public-css" href="/clients/DixonTheatre/Images/gce-style.css" type="text/css" media="all">
+	<script type="text/javascript" src="/clients/DixonTheatre/Images/jquery_005.js"></script>
+	<script type="text/javascript" src="/clients/DixonTheatre/Images/jquery-migrate.js"></script>
+	<script type="text/javascript" src="/clients/DixonTheatre/Images/swfobject_002.js"></script>
+	<script type="text/javascript" src="/clients/DixonTheatre/Images/flippingbook.js"></script>
+	<script type="text/javascript" src="/clients/DixonTheatre/Images/jquery.js"></script>
+	<script type="text/javascript" src="/clients/DixonTheatre/Images/jquery_002.js"></script>
+	<script type="text/javascript" src="/clients/DixonTheatre/Images/date.js"></script>
+	<script type="text/javascript" src="/clients/DixonTheatre/Images/thickbox.js"></script>
+	<script type="text/javascript" src="/clients/DixonTheatre/Images/wiky.js"></script>
+	<script type="text/javascript" src="/clients/DixonTheatre/Images/functions.js"></script>
+	<script src="/clients/DixonTheatre/Images/a" type="text/javascript"></script>
+	<script src="/clients/DixonTheatre/Images/coremediarssgeoopensearchatomthreadingappgdatafinancecontacts.js" type="text/javascript"></script>
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://dixontheatre.com/xmlrpc.php?rsd">
+	<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://dixontheatre.com/wp-includes/wlwmanifest.xml">
+	<meta name="generator" content="WordPress 4.3.1">
+	<link rel="canonical" href="http://dixontheatre.com/">
+	<link rel="shortlink" href="http://dixontheatre.com/">
+	<script src="/clients/DixonTheatre/Images/a.htm" type="text/javascript"></script>
+	<style type="text/css">
+		.calnk a:hover {
+			background-position: 0 0;
+			text-decoration: none;
+			color: #000000;
+			border-bottom: 1px dotted #000000;
+		}
+
+		.calnk a:visited {
+			text-decoration: none;
+			color: #000000;
+			border-bottom: 1px dotted #000000;
+		}
+
+		.calnk a {
+			text-decoration: none;
+			color: #000000;
+			border-bottom: 1px dotted #000000;
+		}
+
+		.calnk a span {
+			display: none;
+		}
+
+		.calnk a:hover span {
+			color: #333333;
+			background: #F6F79B;
+			display: block;
+			position: absolute;
+			margin-top: 1px;
+			padding: 5px;
+			width: 150px;
+			z-index: 100;
+		}
+
+		.calendar-table {
+			border: none;
+			width: 100%;
+		}
+
+		.calendar-heading {
+			height: 25px;
+			text-align: center;
+			border: 1px solid #D6DED5;
+			background-color: #E4EBE3;
+		}
+
+		.calendar-next {
+			width: 25%;
+			text-align: center;
+		}
+
+		.calendar-prev {
+			width: 25%;
+			text-align: center;
+		}
+
+		.calendar-month {
+			width: 50%;
+			text-align: center;
+			font-weight: bold;
+		}
+
+		.normal-day-heading {
+			text-align: center;
+			width: 25px;
+			height: 25px;
+			font-size: 0.8em;
+			border: 1px solid #DFE6DE;
+			background-color: #EBF2EA;
+		}
+
+		.weekend-heading {
+			text-align: center;
+			width: 25px;
+			height: 25px;
+			font-size: 0.8em;
+			border: 1px solid #DFE6DE;
+			background-color: #EBF2EA;
+			color: #FF0000;
+		}
+
+		.day-with-date {
+			vertical-align: text-top;
+			text-align: left;
+			width: 60px;
+			height: 60px;
+			border: 1px solid #DFE6DE;
+		}
+
+		.no-events {}
+
+		.day-without-date {
+			width: 60px;
+			height: 60px;
+			border: 1px solid #E9F0E8;
+		}
+
+		span.weekend {
+			color: #FF0000;
+		}
+
+		.current-day {
+			vertical-align: text-top;
+			text-align: left;
+			width: 60px;
+			height: 60px;
+			border: 1px solid #BFBFBF;
+			background-color: #E4EBE3;
+		}
+
+		span.event {
+			font-size: 0.75em;
+		}
+
+		.kjo-link {
+			font-size: 0.75em;
+			text-align: center;
+		}
+
+		.event-title {
+			text-align: center;
+			font-weight: bold;
+			font-size: 1.2em;
+		}
+
+		.event-title-break {
+			width: 96%;
+			margin-left: 2%;
+			margin-right: 2%;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			text-align: center;
+			height: 1px;
+			background-color: #000000;
+		}
+
+		.event-content-break {
+			width: 96%;
+			margin-left: 2%;
+			margin-right: 2%;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			text-align: center;
+			height: 1px;
+			background-color: #000000;
+		}
+
+		.calendar-date-switcher {
+			height: 25px;
+			text-align: center;
+			border: 1px solid #D6DED5;
+			background-color: #E4EBE3;
+		}
+
+		.calendar-date-switcher form {
+			margin: 0;
+			padding: 0;
+		}
+
+		.calendar-date-switcher input {
+			border: 1px #D6DED5 solid;
+		}
+
+		.calendar-date-switcher select {
+			border: 1px #D6DED5 solid;
+		}
+
+		.cat-key {
+			width: 100%;
+			margin-top: 10px;
+			padding: 5px;
+			border: 1px solid #D6DED5;
+		}
+	</style>
+	<!-- Start Of Script Generated By Events-Calendar [Luke Howell | www.lukehowell.com] and [R. MALKA | www.heirem.fr] -->
+	<!-- More information at http://wp-eventscalendar.com. -->
+	<link type="text/css" rel="stylesheet" href="/clients/DixonTheatre/Images/thickbox_002.css">
+	<link type="text/css" rel="stylesheet" href="/clients/DixonTheatre/Images/events-calendar.css">
+	<script type="text/javascript">
+		// <![CDATA[
+		var ecd = {};
+		ecd.jq = jQuery.noConflict(false);
+		//]]>
+	</script>
+	<!-- End Of Script Generated By Events-Calendar - Version: 6.7.6 -->
+	<script charset="utf-8" type="text/javascript" src="/clients/DixonTheatre/Images/buttons.js"></script>
+	<script type="text/javascript">
+		stLight.options({
+			publisher: 'wp.cf0997e7-25ed-40c3-9f40-58471f884f85'
+		});
+		var st_type = 'wordpress3.0.1';
+	</script>
+	<script src="/clients/DixonTheatre/Images/getAllAppDefault.esi" type="text/javascript"></script>
+	<script src="/clients/DixonTheatre/Images/button.js" async="" charset="utf-8" type="text/javascript"></script>
+	<script src="/clients/DixonTheatre/Images/checkOAuth.esi" type="text/javascript"></script>
+	<link href="/clients/DixonTheatre/Images/buttons.css" type="text/css" rel="stylesheet">
+</head>
+
+<body class="home page page-id-4 page-template-default">
+	<div id="wrapper" class="hfeed">
+		<div id="header">
+			<div id="masthead">
+				<div id="branding" role="banner">
+					<img src="/clients/DixonTheatre/Images/head_home_002.png" alt="" height="198" width="980">
+				</div>
+				<!-- #branding -->
+
+				<div id="access" role="navigation">
+					<div class="skip-link screen-reader-text"><a href="#content" title="Skip to content">Skip to content</a></div>
+					<div class="menu">
+						<ul>
+							<li class="current_page_item"><a href="http://dixontheatre.com/">Home</a></li>
+							<li class="page_item page-item-87"><a href="http://dixontheatre.com/barton-pipe-organ/">BARTON PIPE ORGAN</a></li>
+							<li class="page_item page-item-896"><a href="http://dixontheatre.com/90-yrs-young/">91 Years</a></li>
+							<li class="page_item page-item-706"><a href="http://dixontheatre.com/about-us/">ABOUT US</a></li>
+							<li class="page_item page-item-26"><a href="http://dixontheatre.com/contact-us/">CONTACT US</a></li>
+							<li class="page_item page-item-176"><a href="http://dixontheatre.com/directions-parking/">DIRECTIONS &amp; PARKING</a></li>
+							<li class="page_item page-item-29"><a href="http://dixontheatre.com/event-tickets/">EVENTS</a></li>
+							<li class="page_item page-item-13 page_item_has_children"><a href="http://dixontheatre.com/past-events/">PAST EVENTS</a>
+								<ul class="children">
+									<li class="page_item page-item-1097"><a href="http://dixontheatre.com/past-events/andy-dick-io-improv-comedy-players/">Andy Dick &amp; iO Improv Comedy Players</a></li>
+									<li class="page_item page-item-191"><a href="http://dixontheatre.com/past-events/late-night-blues-brothers/">Late Night Blues Brothers</a></li>
+								</ul>
+							</li>
+							<li class="page_item page-item-18"><a href="http://dixontheatre.com/history-of-the-historic-dixon-theatre/">THEATRE HISTORY</a></li>
+							<li class="page_item page-item-893"><a href="http://dixontheatre.com/volunteers/">VOLUNTEERS</a></li>
+							<li class="page_item page-item-561"><a href="http://dixontheatre.com/weddings/">WEDDINGS</a></li>
+							<li class="page_item page-item-1516"><a href="http://dixontheatre.com/donation-wish-list/">WISH LIST</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- #access -->
+			</div>
+			<!-- #masthead -->
+		</div>
+		<!-- #header -->
+
+		<div id="main">
+
+			<div id="container">
+				<div id="content" role="main">
+
+<!--tix content-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+				</div>
+				<!-- #content -->
+			</div>
+			<!-- #container -->
+
+
+			<!-- #primary .widget-area -->
+
+
+			<div id="secondary" class="widget-area" role="complementary">
+				<ul class="xoxo">
+					<li id="text-8" class="widget-container widget_text">
+						<div class="textwidget">
+							<script src="/clients/DixonTheatre/Images/widget.js"></script>
+							<script>
+								new TWTR.Widget({
+									version: 2,
+									type: 'profile',
+									rpp: 5,
+									interval: 30000,
+									width: 250,
+									height: 300,
+									theme: {
+										shell: {
+											background: '#333333',
+											color: '#ffffff'
+										},
+										tweets: {
+											background: '#000000',
+											color: '#ccb9eb',
+											links: '#9a35de'
+										}
+									},
+									features: {
+										scrollbar: true,
+										loop: false,
+										live: true,
+										hashtags: true,
+										timestamp: true,
+										avatars: false,
+										behavior: 'all'
+									}
+								}).render().setUser('DixonTheatre').start();
+							</script>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- #secondary .widget-area -->
+
+		</div>
+		<!-- #main -->
+
+		<div id="footer" role="contentinfo">
+			<div id="colophon">
+
+
+
+				<div id="footer-widget-area" role="complementary">
+
+					<div id="first" class="widget-area">
+						<ul class="xoxo">
+							<li id="text-7" class="widget-container widget_text">
+								<div class="textwidget">© 1985 DTRI, Inc. All rights reserved.&#169; 2006 dixontheatre.com. All rights reserved. All information contained in this website is the sole property of DTRI, Inc and Historic Dixon Theatre. Use of any information provided, including pictures, video
+									and text is prohibited without written consent from DTRI, Inc. and it's representatives.</div>
+							</li>
+						</ul>
+					</div>
+					<!-- #first .widget-area -->
+
+
+
+
+				</div>
+				<!-- #footer-widget-area -->
+
+				<div id="site-info">
+					<a href="http://dixontheatre.com/" title="The Historic Dixon Theatre" rel="home">
+					The Historic Dixon Theatre				</a>
+				</div>
+				<!-- #site-info -->
+
+				<div id="site-generator">
+					<a href="http://wordpress.org/" title="Semantic Personal Publishing Platform" rel="generator">
+					Proudly powered by WordPress.				</a>
+				</div>
+				<!-- #site-generator -->
+
+			</div>
+			<!-- #colophon -->
+		</div>
+		<!-- #footer -->
+
+	</div>
+	<!-- #wrapper -->
+
+	<!-- Powered by WPtouch: 3.8.7 -->
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		var thickboxL10n = {
+			"next": "Next >",
+			"prev": "< Prev",
+			"image": "Image",
+			"of": "of",
+			"close": "Close",
+			"noiframes": "This feature requires inline frames. You have iframes disabled or your browser does not support them.",
+			"loadingAnimation": "http:\/\/dixontheatre.com\/wp-includes\/js\/thickbox\/loadingAnimation.gif"
+		};
+		/* ]]> */
+	</script>
+	<script type="text/javascript" src="/clients/DixonTheatre/Images/thickbox_002.js"></script>
+	<script type="text/javascript" src="/clients/DixonTheatre/Images/jquery_003.js"></script>
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		var _wpcf7 = {
+			"loaderUrl": "http:\/\/dixontheatre.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif",
+			"sending": "Sending ..."
+		};
+		/* ]]> */
+	</script>
+</div>
+</form>
+</body>
+</html>

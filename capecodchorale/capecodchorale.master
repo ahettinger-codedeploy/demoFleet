@@ -1,0 +1,153 @@
+<%
+'changelog'
+'LSP 11/15/16 - initial development'
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<body>
+<form id="form1" runat="server">
+<div>
+<script src="https://www.tix.com/clients/tix/js/jquery-1.6.4.min.js" type="text/javascript"></script>
+	 <style>
+		 div,span {
+			 font-size: inherit;
+		 }
+	 </style>
+<script src="https://www.tix.com/clients/tix/js/jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="https://www.tix.com/javascript/Tooltip.js"></script>
+
+<style>
+    #arrow {
+        z-index: 999998;
+        display: none;
+        background-color: Transparent;
+        pointer-events: none;
+    }
+
+    #tooltipBox {
+        z-index: 999999;
+        display: none;
+        position: absolute;
+    background-color: #fff !important;
+        border: 1px solid rgba(120, 120, 120, 0.8);
+        border-radius: 3px;
+        margin: 10px 8px;
+        padding: 5px;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        pointer-events: none;
+    }
+
+    #EventTooltip {
+        background-color: #fff;
+    }
+
+    #EventTooltip table, #EventTooltip tr, #EventTooltip td {
+        border: 0;
+    }
+
+    .tooltip-text {
+        width: 400px;
+        padding: 10px;
+        font-size: 0.85em;
+    }
+</style>
+
+<div id="tooltipBox">
+    <div id="EventTooltip"><img src="https://www.tix.com/images/loading.gif" /></div>
+</div>    
+<div id="arrow"><img src="https://www.tix.com/images/ArrowLeftDown.png" name="arrowimg" /></div>
+
+<!-- InstanceBeginEditable name="doctitle" -->
+
+<title>Cape Cod Chorale</title>
+
+<!-- InstanceEndEditable -->
+<link href="/clients/capecodchorale/images/choralestyles.css" rel="stylesheet" type="text/css" media="screen">
+<script type="text/javascript" src="/clients/capecodchorale/images/p7exp.js"></script>
+<!--[if lte IE 7]>
+<style>
+#menuwrapper, #p7menubar ul a {height: 1%;}
+a:active {width: auto;}
+</style>
+<![endif]-->
+</head>
+<body onload="P7_ExpMenu()">
+<div id="container">
+  <div id="header">
+    <!-- end #header -->
+  </div>
+  <div id="menuwrapper">
+    <ul id="p7menubar">
+      <li><a class="first" href="http://www.capecodchorale.org/index.htm">Home</a></li>
+      <li><a class="trigger" href="#">About Us</a>
+        <ul>
+          <li><a href="http://www.capecodchorale.org/history.htm">History</a></li>
+          <li><a href="http://www.capecodchorale.org/director.htm">The Director</a></li>
+          <li><a href="http://www.capecodchorale.org/dickens.htm">Dickens Carolers</a></li>
+          <li><a href="http://www.capecodchorale.org/scholarship.htm">Scholarships</a></li>
+        </ul>
+      </li>
+      <li><a href="http://www.capecodchorale.org/sponsor.htm">Sponsors &amp; Partners</a></li>
+      <li><a href="http://www.capecodchorale.org/schedule.htm">Schedule</a></li>
+      <li><a href="http://www.capecodchorale.org/contact.htm">Contact Us</a></li>
+    </ul>
+    <br class="clearfloat">
+    <!-- end #menuwrapper -->
+  </div>
+
+  <div id="mainContent">
+
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+
+
+  </div>
+  <br class="clearfloat">
+  <div id="footer">
+    <p> Cape Cod Chorale :: PO Box 751 Sandwich, MA 02563</p>
+    <!-- end #footer -->
+  </div>
+  <!-- end #container -->
+</div>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+
+
+		<script>
+			$(document).ready(function() {
+				$("#MasterContent_TixInnerContent_pnlButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_ButtonPanel").removeAttr("style");
+/* remove extra button defaults
+				$("#MasterContent_TixInnerContent_ctl00_gvSchedule_btnBuyTix_0").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnBackToShopping").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCancelOrder").removeAttr("style");
+				$("#MasterContent_TixInnerContent_btnCheckout").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_LoginButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CancelOrderButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_CompleteButton").removeAttr("style");
+				$("#MasterContent_TixInnerContent_BackToShoppingBtn").removeAttr("style");*/
+				
+				
+			});
+		</script>
+
+		</div>
+		</form>
+	</body>
+
+	</html>

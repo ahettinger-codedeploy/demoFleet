@@ -1,0 +1,74 @@
+﻿.sf-menu, .sf-menu * {margin:0;padding:0;list-style:none;}
+#main-menu{ padding:0;}
+.sf-menu li {float:left; position:relative; font:700 15px/18px 'Lato', sans-serif; font-style:normal;width:100%;max-width:188px;}
+	.sf-menu li a {display:block;color:#F4E0AE; text-transform:uppercase; background:#D9AD55; padding:80px 0 16px 18px; text-align:left; border-right:1px solid #AB8639; border-left:1px solid #D9AD55; border-bottom:3px solid #D9AD55;-webkit-transition:color 0.3s ease,background 0.3s ease;-moz-transition:color 0.3s ease,background 0.3s ease;-o-transition:color 0.3s ease,background 0.3s ease;transition:color 0.3s ease,background 0.3s ease; position:relative;}
+	.sf-menu li a strong{position:relative; font-weight:700;}
+			.sf-menu li.sfHover a,.sf-menu li.current a,.sf-menu li a:hover{ text-decoration:none; background:#AB8639;border-right:1px solid #ECCD86; border-left:1px solid #ECCD86; border-bottom:3px solid #D9AD55}
+.sf-menu ul {
+	position:		absolute;
+	top:			-999em;
+	z-index:		99;
+	width:			188px; 
+	display:none;
+	background:#352724;
+	padding:12px 0;
+}
+.sf-menu li li{width:100%; padding:0;font:700 14px/18px 'Lato', sans-serif; max-width:inherit;width:auto; }
+	.sf-menu li li a,.sf-menu li.sfHover li a,.sf-menu li.current li a{  display:inline-block; background:none;margin:6px 20px; border:none; padding:0; color:#ECCD86;}
+		.sf-menu li li a:hover,.sf-menu li li.sfHover a,.sf-menu li li.current a,.sf-menu li li a.current{color:#fff; background:none; border:none;}
+.sf-menu ul ul {
+	position:		absolute;
+	top:			-999em;
+	z-index:		99;
+	width:			166px; 
+	display:none;
+	background:#352724;
+}
+	.sf-menu li li li a,.sf-menu li li.sfHover li a,.sf-menu li li.current li a{color:#ECCD86}
+		.sf-menu li li li a:hover,.sf-menu li li li.current a{color:#FFFFFF;}
+.sf-menu li:hover ul,
+.sf-menu li.sfHover ul {
+	left:			0px;
+	top:			117px; /* match top ul list item height */
+}
+ul.sf-menu li:hover li ul,
+ul.sf-menu li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li:hover ul,
+ul.sf-menu li li.sfHover ul {
+	left:			167px; /* match ul width */
+	top:			-12px;
+}
+ul.sf-menu li li:hover li ul,
+ul.sf-menu li li.sfHover li ul {
+	top:			-999em;
+}
+ul.sf-menu li li li:hover ul,
+ul.sf-menu li li li.sfHover ul {
+	left:			10em; /* match ul width */
+	top:			00px;
+}
+.arrow{ background:url(/clients/CaminoRealPlayhouse/Images/submenu-arrow.png) 0 0 no-repeat; width:10px; height:7px; display:block; position:absolute; bottom:22px; left:97px;}
+.sf-menu li li a .arrow{top:4px; left:121px;} 
+@media only screen and (min-width: 768px) and (max-width: 995px) {
+.sf-menu li{width: auto; max-width: inherit;text-align:left; }
+.sf-menu li a{padding:80px 26px 16px 20px;}
+}
+@media only screen and (max-width: 767px) {
+.responsive-menu li { float: none;}
+.sf-menu li{width:100% !important; max-width:620px; padding:0; text-align:left;}
+.sf-menu li a{padding:11px 0 12px 18px; border:none; border-top:1px solid #ECCD86; border-bottom:1px solid #D9AD55;}
+.sf-menu li.sfHover a,.sf-menu li.current a,.sf-menu li a:hover{ border:none;border-top:1px solid #D9AD55;border-bottom:1px solid #2e0b08;}
+.sf-menu li li{ margin:0; padding:0 !important;box-shadow:none;min-width:100% !important;}
+.responsive-menu { padding: 0; margin: 0; }
+.sf-menu ul,.sf-menu li li{ width:100%;}
+.sf-menu li li a{ margin-left:30px;}
+.sf-menu li li a .arrow{ right:-20px;}
+.sf-menu li li li a{ margin-left:40px;}
+.responsive-menu li:hover > ul { display: none; }
+.responsive-menu li ul { position: relative; left: 0 !important; top: 0 !important;}
+.arrow{top:40%; left:40%;}
+.sf-menu li li a .arrow{top:40%; left:121px;}
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {.arrow{top:40%; left:30%;}}

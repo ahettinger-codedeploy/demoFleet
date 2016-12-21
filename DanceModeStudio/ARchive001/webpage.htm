@@ -1,0 +1,952 @@
+
+
+
+
+<link rel="Stylesheet" href="/clients/DanceModeStudio/Images/Style.css" type="text/css">
+
+</head><body topmargin="0" leftmargin="0" background="/clients/DanceModeStudio/Images/Logo75.gif">
+	
+	
+	<center>
+	<table bgcolor="#ffffff" border="1" bordercolor="#000000" cellpadding="0" cellspacing="0" width="800"><tbody><tr><td valign="top">
+	<script language="JavaScript">
+//###############################################################
+//Main Navigation
+//###############################################################
+function GoTo(activity){
+	switch(activity){
+		case 'Tuition':
+			thePage = "http://www.dancemodestudio.com/tuition.asp";
+			document.location = thePage;
+			break;
+		case 'Events':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200904.asp";
+			document.location = thePage;
+			break;
+		case 'Home':
+			thePage = "http://www.dancemodestudio.com/Default.asp";
+			document.location = thePage;
+			break;
+		case 'Policy':
+			thePage = "http://www.dancemodestudio.com/Policy.asp";
+			document.location = thePage;
+			break;
+		case 'DressCode':
+			thePage = "http://www.dancemodestudio.com/Policy.asp#dresscode";
+			document.location = thePage;
+			break;
+		case 'Teachers':
+			thePage = "http://www.dancemodestudio.com/Teachers/TeacherPage.asp";
+			document.location = thePage;
+			break;
+		case 'Classes':
+			thePage = "http://www.dancemodestudio.com/Classes/Classes.asp";
+			document.location = thePage;
+			break;
+		case 'Classes2005': //For the following season
+			thePage = "http://www.dancemodestudio.com/Classes/Classes2005.asp";
+			document.location = thePage;
+			break;
+		case 'Contacts':
+			thePage = "http://www.dancemodestudio.com/Contacts.asp";
+			document.location = thePage;
+			break;
+		case 'News':
+			thePage = "http://www.dancemodestudio.com/News/News.asp";
+			document.location = thePage;
+			break;
+		case 'Register':
+			thePage = "https://www.thestudiodirector.com/dancemodestudio/register.jsp";
+			document.location = thePage;
+			break;
+		case 'Register1':
+			thePage = "http://www.dancemodestudio.com/Register.asp";
+			document.location = thePage;
+			break;
+		case 'Letter':
+			thePage = "http://www.dancemodestudio.com/Newsletters/Current.asp";
+			document.location = thePage;
+			break;
+		case 'Merch':
+			thePage = "http://www.dancemodestudio.com/Merch/Store.asp";
+			document.location = thePage;
+			break;
+		case 'Production':
+			thePage = "http://www.dancemodestudio.com/Prod/ProdGroups.asp";
+			document.location = thePage;
+			break;
+		case 'Summer':
+			thePage = "http://www.dancemodestudio.com/Classes/Summer2005.asp";
+			document.location = thePage;
+			break;
+		}
+	}
+//###############################################################
+//Changing the logo depending on the class type
+//###############################################################
+	function ChangeLogo(theme){
+	switch(theme){
+		case 'Ballet':
+			LogoImage = "/images/logo2.gif";
+			document.all.Logo.src = LogoImage
+			break;
+		case 'HipHop':
+			LogoImage = "/images/logo3.gif";
+			document.all.Logo.src = LogoImage
+			break;
+		case 'Tap':
+			LogoImage = "/images/logo4.gif";
+			document.all.Logo.src = LogoImage
+			break;
+		case 'Tot':
+			LogoImage = "/images/logo5.gif";
+			document.all.Logo.src = LogoImage
+			break;
+		case 'Home':
+			LogoImage = "/images/logo1.gif";
+			document.all.Logo.src = LogoImage
+			break;
+		}
+	}
+	
+//###############################################################
+//Navigation for Events Calendar
+//###############################################################
+function Month(activity){
+	switch(activity){
+		case 'January08':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200801.asp";
+			document.location = thePage;
+			break;
+		case 'February08':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200802.asp";
+			document.location = thePage;
+			break;
+		case 'March08':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200803.asp";
+			document.location = thePage;
+			break;
+		case 'April08':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200804.asp";
+			document.location = thePage;
+			break;
+		case 'May08':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200805.asp";
+			document.location = thePage;
+			break;
+		case 'June08':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200806.asp";
+			document.location = thePage;
+			break;
+		case 'July08':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200807.asp";
+			document.location = thePage;
+			break;
+		case 'August08':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200808.asp";
+			document.location = thePage;
+			break;
+		case 'September08':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200809.asp";
+			document.location = thePage;
+			break;
+		case 'October08':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200810.asp";
+			document.location = thePage;
+			break;
+		case 'November08':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200811.asp";
+			document.location = thePage;
+			break;
+		case 'December08':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200812.asp";
+			document.location = thePage;
+			break;
+		case 'January09':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200901.asp";
+			document.location = thePage;
+			break;
+		case 'February09':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200902.asp";
+			document.location = thePage;
+			break;
+		case 'March09':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200903.asp";
+			document.location = thePage;
+			break;
+		case 'April09':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200908.asp";
+			document.location = thePage;
+			break;
+		case 'May09':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200909.asp";
+			document.location = thePage;
+			break;
+		case 'June09':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200906.asp";
+			document.location = thePage;
+			break;
+		case 'July09':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200907.asp";
+			document.location = thePage;
+			break;
+		case 'August05':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200508.asp";
+			document.location = thePage;
+			break;
+		case 'September05':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200509.asp";
+			document.location = thePage;
+			break;
+		case 'October05':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200510.asp";
+			document.location = thePage;
+			break;
+		case 'November05':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200511.asp";
+			document.location = thePage;
+			break;
+		case 'December05':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200512.asp";
+			document.location = thePage;
+			break;
+		case 'January06':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200601.asp";
+			document.location = thePage;
+			break;
+		case 'February06':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200602.asp";
+			document.location = thePage;
+			break;
+		case 'March06':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200603.asp";
+			document.location = thePage;
+			break;
+		case 'April06':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200604.asp";
+			document.location = thePage;
+			break;
+		case 'May06':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200605.asp";
+			document.location = thePage;
+			break;
+		case 'June06':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200606.asp";
+			document.location = thePage;
+			break;
+		case 'July06':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200607.asp";
+			document.location = thePage;
+			break;
+		case 'August06':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200608.asp";
+			document.location = thePage;
+			break;
+		case 'September06':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200609.asp";
+			document.location = thePage;
+			break;
+		case 'October06':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200610.asp";
+			document.location = thePage;
+			break;
+		case 'November06':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200611.asp";
+			document.location = thePage;
+			break;
+		case 'December06':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200612.asp";
+			document.location = thePage;
+			break;
+		case 'January07':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200701.asp";
+			document.location = thePage;
+			break;
+		case 'February07':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200702.asp";
+			document.location = thePage;
+			break;
+		case 'March07':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200703.asp";
+			document.location = thePage;
+			break;
+		case 'April07':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200704.asp";
+			document.location = thePage;
+			break;
+		case 'May07':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200705.asp";
+			document.location = thePage;
+			break;
+		case 'June07':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200706.asp";
+			document.location = thePage;
+			break;
+		case 'July07':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200707.asp";
+			document.location = thePage;
+			break;
+		case 'August07':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200708.asp";
+			document.location = thePage;
+			break;
+		case 'September07':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200709.asp";
+			document.location = thePage;
+			break;
+		case 'October07':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200710.asp";
+			document.location = thePage;
+			break;
+		case 'November07':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200711.asp";
+			document.location = thePage;
+			break;
+		case 'December07':
+			thePage = "http://www.dancemodestudio.com/Events/Cal200712.asp";
+			document.location = thePage;
+			break;
+		}
+	}
+
+//###############################################################
+//Start Tuition Calculator functions
+//###############################################################
+function CalculateFees(){
+var students = document.tuitionForm.Students.value;
+var classes = document.tuitionForm.Classes.value;
+
+//alert(students +" and "+ classes +" and "+ students);
+
+if(parseInt(students) > parseInt(classes)){
+	alert("There must be at least as many classes as family members.");
+	return;
+	}
+	
+if(students > 2){
+	GetScheduleC(classes);
+	}
+else{
+	if(students == 1){
+		GetScheduleA(classes);
+		}
+	else{
+		GetScheduleB(classes);
+		}
+	}
+}
+
+function GetScheduleA(iClasses){
+
+if(iClasses > 12){
+	iClasses = "12";
+	}
+
+var tuition;
+var discount;
+switch(iClasses){
+		case '1':
+			tuition = 53;
+			discount = 48;
+			break;
+		case '2':
+			tuition = 90;
+			discount = 80;
+			break;
+		case '3':
+			tuition = 115;
+			discount = 105;
+			break;
+		case '4':
+			tuition = 131;
+			discount = 121;
+			break;
+		case '5':
+			tuition = 151;
+			discount = 141;
+			break;
+		case '6':
+			tuition = 170;
+			discount = 160;
+			break;
+		case '7':
+			tuition = 188;
+			discount = 178;
+			break;
+		case '8':
+			tuition = 210;
+			discount = 200;
+			break;
+		case '9':
+			tuition = 225;
+			discount = 215;
+			break;
+		case '10':
+			tuition = 240;
+			discount = 230;
+			break;
+			
+		}
+	
+	document.all.DiscoutCalculation.innerHTML = "If you pay tuition on or before the first of the month your total tuition would be $"+ discount +".00";
+	
+	document.all.TuitionCalculation.innerHTML = "Monthly Tuition:  $"+ tuition +".00";
+	
+	document.all.SchedA.className = "DMbody";
+	document.all.SchedB.className = "hidden2";
+	document.all.SchedC.className = "hidden2";
+	document.all.AllSched.className = "hidden2";
+	return false;
+}
+
+function GetScheduleB(iClasses){
+
+if(iClasses > 12){
+	iClasses = "12";
+	}
+
+var tuition;
+var discount;
+switch(iClasses){
+		case '2':
+			tuition = 104;
+			discount = 94;
+			break;
+		case '3':
+			tuition = 130;
+			discount = 120;
+			break;
+		case '4':
+			tuition = 155;
+			discount = 145;
+			break;
+		case '5':
+			tuition = 175;
+			discount = 165;
+			break;
+		case '6':
+			tuition = 194;
+			discount = 184;
+			break;
+		case '7':
+			tuition = 212;
+			discount = 202;
+			break;
+		case '8':
+			tuition = 234;
+			discount = 224;
+			break;
+		case '9':
+			tuition = 249;
+			discount = 239;
+			break;
+		case '10':
+			tuition = 264;
+			discount = 254;
+			break;
+		case '11':
+			tuition = 280;
+			discount = 270;
+			break;
+		}
+	
+	document.all.DiscoutCalculation.innerHTML = "If you pay tuition on or before the first of the month your total tuition would be $"+ discount +".00";
+	
+	document.all.TuitionCalculation.innerHTML = "Monthly Tuition:  $"+ tuition +".00";
+	
+	document.all.SchedB.className = "DMbody";
+	document.all.SchedA.className = "hidden2";
+	document.all.SchedC.className = "hidden2";
+	document.all.AllSched.className = "hidden2";
+	return false;
+}
+
+function GetScheduleC(iClasses){
+
+if(iClasses > 12){
+	iClasses = "12";
+	}
+
+var tuition;
+var discount;
+switch(iClasses){
+		case '3':
+			tuition = 154;
+			discount = 144;
+			break;
+		case '4':
+			tuition = 179;
+			discount = 169;
+			break;
+		case '5':
+			tuition = 199;
+			discount = 189;
+			break;
+		case '6':
+			tuition = 219;
+			discount = 209;
+			break;
+		case '7':
+			tuition = 236;
+			discount = 226;
+			break;
+		case '8':
+			tuition = 258;
+			discount = 248;
+			break;
+		case '9':
+			tuition = 273;
+			discount = 263;
+			break;
+		case '10':
+			tuition = 288;
+			discount = 278;
+			break;
+		case '11':
+			tuition = 304;
+			discount = 294;
+			break;
+		case '12':
+			tuition = 320;
+			discount = 310;
+			break;
+		}
+	
+	document.all.DiscoutCalculation.innerHTML = "If you pay tuition on or before the first of the month your total tuition would be $"+ discount +".00";
+	
+	document.all.TuitionCalculation.innerHTML = "Monthly Tuition:  $"+ tuition +".00";
+	
+	document.all.SchedC.className = "DMbody";
+	document.all.SchedA.className = "hidden2";
+	document.all.SchedB.className = "hidden2";
+	document.all.AllSched.className = "hidden2";
+	return false;
+}
+//###############################################################
+//End Tuition Calculator functions
+//###############################################################
+
+
+function ShowAllFees(){
+	document.all.SchedC.className = "hidden2";
+	document.all.SchedA.className = "hidden2";
+	document.all.SchedB.className = "hidden2";
+	document.all.AllSched.className = "DMbody";
+	return false;
+}
+
+
+//###############################################################
+//Start Colored button functions
+//###############################################################
+function ChangeBackgroundColor(element, color){
+	element.style.background = color;
+	return;
+}
+
+function ChangeTextColor(element, color){
+	element.style.color = color;
+	return;
+}
+//###############################################################
+//End Colored button functions
+//###############################################################
+
+//###############################################################
+//Schedule Navigation
+//###############################################################
+function getStyle(sStyle){
+thePage = "http://www.dancemodestudio.com/Classes/Classes.asp?style="+sStyle;
+document.location = thePage;
+	}
+
+function getDay(sStyles){
+if(sStyles == "None"){
+	thePage = "http://www.dancemodestudio.com/Classes/Classes.asp?style=All";
+	document.location = thePage;
+	}
+else{
+	thePage = "http://www.dancemodestudio.com/Classes/ClassesByDay.asp?day="+sStyles;
+	document.location = thePage;
+	}
+}
+
+function getAge(sAge){
+if(sAge == ""){
+	thePage = "http://www.dancemodestudio.com/Classes/Classes.asp?style=All";
+	document.location = thePage;
+	}
+else{
+	thePage = "http://www.dancemodestudio.com/Classes/ClassesByAge.asp?age="+sAge;
+	document.location = thePage;
+	}
+}
+//###############################################################
+//End Schedule Navigation
+//###############################################################
+
+//###############################################################
+//Schedule Navigation for the following season
+//###############################################################
+function getStyleNext(sStyle){
+thePage = "http://www.dancemodestudio.com/Classes/ClassesNext.asp?style="+sStyle;
+document.location = thePage;
+	}
+
+function getDayNext(sStyles){
+if(sStyles == "None"){
+	thePage = "http://www.dancemodestudio.com/Classes/ClassesNext.asp?style=All";
+	document.location = thePage;
+	}
+else{
+	thePage = "http://www.dancemodestudio.com/Classes/ClassesByDayNext.asp?day="+sStyles;
+	document.location = thePage;
+	}
+}
+
+function getAgeNext(sAge){
+if(sAge == ""){
+	thePage = "http://www.dancemodestudio.com/Classes/ClassesNext.asp?style=All";
+	document.location = thePage;
+	}
+else{
+	thePage = "http://www.dancemodestudio.com/Classes/ClassesByAgeNext.asp?age="+sAge;
+	document.location = thePage;
+	}
+}
+//###############################################################
+//End Schedule Navigation 2005
+//###############################################################
+
+//###############################################################
+//Start Order Form Checking
+//###############################################################
+function CheckText(objField){
+var sVal = objField.value;
+
+if(sVal == ""){
+	alert("All fields must be completed");
+	objField.focus();
+	}
+}
+
+function CheckNum(objField){
+var sVal = objField.value;
+
+if(sVal == ""){
+	objField.value = "0";
+	return;
+	}
+	
+if(isNaN(sVal)){
+	objField.value = "0";
+	return;
+	}
+}
+//###############################################################
+//End Order Form Checking
+//###############################################################
+
+
+//###############################################################
+//Start Canada Map Toggle
+//###############################################################
+function ToggleMap(){
+var sVal = document.all.CanadaMap.className;
+//alert(sVal);
+if(sVal == "hidden2"){
+	document.all.CanadaMap.className = "visible";
+	}
+else{
+	document.all.CanadaMap.className = "hidden2";
+	}
+}
+
+function CheckNum(objField){
+var sVal = objField.value;
+
+if(sVal == ""){
+	objField.value = "0";
+	return;
+	}
+	
+if(isNaN(sVal)){
+	objField.value = "0";
+	return;
+	}
+}
+//###############################################################
+//End Canada Map Toggle
+//###############################################################
+
+//###############################################################
+//Start Calculate Tuition
+//###############################################################
+function getRate(sHours){
+
+switch (sHours) {
+	case "1": result = "50"; break;
+	case "1.5": result = "65"; break;
+	case "2": result = "85"; break;
+	case "2.5": result = "100"; break;
+	case "3": result = "110"; break;
+	case "3.5": result = "125"; break;
+	case "4": result = "126"; break;
+	case "4.5": result = "141"; break;
+	case "5": result = "146"; break;
+	case "5.5": result = "161"; break;
+	case "6": result = "165"; break;
+	case "6.5": result = "180"; break;
+	case "7": result = "183"; break;
+	case "7.5": result = "198"; break;
+	case "8": result = "205"; break;
+	case "8.5": result = "220"; break;
+	case "9": result = "220"; break;
+	case "9.5": result = "235"; break;
+	case "10": result = "235"; break;
+	case "10.5": result = "250"; break;
+	default: result = "0";
+	}
+return result;
+}
+
+function AddHours(){
+Dancer1Hours = Tuition.Dancer1.value;
+Dancer2Hours = Tuition.Dancer2.value;
+Dancer3Hours = Tuition.Dancer3.value;
+Dancer4Hours = Tuition.Dancer4.value;
+Dancer5Hours = Tuition.Dancer5.value;
+Dancer6Hours = Tuition.Dancer6.value;
+
+if (parseFloat(Dancer2Hours) > parseFloat(Dancer1Hours)){
+	alert("Dancer 1 must be the dance with the most hours of dancing");
+	return;
+	}
+
+if (parseFloat(Dancer3Hours) > parseFloat(Dancer1Hours)){
+	alert("Dancer 1 must be the dance with the most hours of dancing");
+	return;
+	}
+
+if (parseFloat(Dancer4Hours) > parseFloat(Dancer1Hours)){
+	alert("Dancer 1 must be the dance with the most hours of dancing");
+	return;
+	}
+
+if (parseFloat(Dancer5Hours) > parseFloat(Dancer1Hours)){
+	alert("Dancer 1 must be the dance with the most hours of dancing");
+	return;
+	}
+
+if (parseFloat(Dancer6Hours) > parseFloat(Dancer1Hours)){
+	alert("Dancer 1 must be the dance with the most hours of dancing");
+	return;
+	}
+
+//alert(Dancer1Hours);
+//alert(Dancer2Hours);
+sRate1 = getRate(Dancer1Hours);
+sRate2 = getRate(Dancer2Hours);
+sRate3 = getRate(Dancer3Hours);
+sRate4 = getRate(Dancer4Hours);
+sRate5 = getRate(Dancer5Hours);
+sRate6 = getRate(Dancer6Hours);
+TotalRate1 = parseFloat(sRate1) + (parseFloat(sRate2)*.85) + (parseFloat(sRate3)*.85) + (parseFloat(sRate4)*.85) + (parseFloat(sRate5)*.85) + (parseFloat(sRate6)*.85);
+//alert(sRate1);
+//alert(sRate2);
+//alert(TotalRate);
+Dancer1Cost.innerHTML = "$" + sRate1 + ".00";
+Dancer2Cost.innerHTML = "$" + sRate2 + ".00 (x 15% discount)";
+Dancer3Cost.innerHTML = "$" + sRate3 + ".00 (x 15% discount)";
+Dancer4Cost.innerHTML = "$" + sRate4 + ".00 (x 15% discount)";
+Dancer5Cost.innerHTML = "$" + sRate5 + ".00 (x 15% discount)";
+Dancer6Cost.innerHTML = "$" + sRate6 + ".00 (x 15% discount)";
+TotalRate2 = Math.round(TotalRate1*100)/100;
+var str = new String(TotalRate2);
+sTotalLength = str.indexOf(".");
+sChangeLength = str.length;
+sChangeSize = sChangeLength - (sTotalLength + 1);
+sTotalHTML = "$" + TotalRate2;
+if(sChangeSize != 2){
+	if(sChangeSize == 1){
+		sTotalHTML = "$" + TotalRate2 + "0";
+		}
+	else{
+		sTotalHTML = "$" + TotalRate2 + ".00";
+		}
+	}
+	
+//alert(nSize);
+TotalCost.innerHTML = sTotalHTML;
+//alert(TotalHours);
+}
+//###############################################################
+//End Calculate Tuition
+//###############################################################
+</script>
+	
+	
+	<a id="#top"></a>
+	<table border="0" cellpadding="0" cellspacing="0" width="100%">
+		<tbody><tr bgcolor="#cccccc" height="81">
+			<td colspan="3" width="100%">
+				<table background="/clients/DanceModeStudio/Images/TopIcon04.htm" width="100%">
+					<tbody><tr>
+						<td colspan="1" width="50">
+						<img id="Logo" class="Logo" src="/clients/DanceModeStudio/Images/toplogo.gif" style="" onclick="GoTo('Home');">
+						<!--script type="text/javascript" src="http://www.dancemodestudio.com/Scripts/rand.js">
+						</script-->
+						</td>
+						<td colspan="2" class="Title1" align="right" valign="bottom" nowrap="nowrap">
+						Policies and Procedures&nbsp;&nbsp;
+						</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		<tr bgcolor="#313390" height="20">
+			<td colspan="3">
+				<table cellpadding="0" cellspacing="0">
+					<tbody><tr align="left">
+						<td width="20">&nbsp;&nbsp;</td>
+						<td bgcolor="#808080" width="1"></td>
+						<td class="TopLinksOff" onmouseover="this.className='TopLinksOn';" onmouseout="this.className='TopLinksOff';" onclick="GoTo('Home');" title="Return to the homepage" align="center" width="60" nowrap="nowrap">
+						Home</td>
+						<td bgcolor="#808080" width="1"></td>
+						<td class="TopLinksOff" align="center" width="20" nowrap="nowrap"><span></span></td>
+						<td bgcolor="#808080" width="0"></td>	
+						<td class="TopLinksOff" onmouseover="this.className='TopLinksOn';" onmouseout="this.className='TopLinksOff';" onclick="GoTo('News');" title="Latest stories, Cechetti Standings and Birthdays" align="center" width="100" nowrap="nowrap">
+						&nbsp;
+						<!--Latest News--></td>
+						<td bgcolor="#808080" width="1"></td>
+						<td class="TopLinksOff" onmouseover="this.className='TopLinksOn';" onmouseout="this.className='TopLinksOff';" onclick="GoTo('Events');" title="Calendar of events" align="center" width="120" nowrap="nowrap">
+						Event Calendar</td>
+						<td bgcolor="#808080" width="1"></td>
+						<td class="TopLinksOff" align="center" width="30" nowrap="nowrap"><span></span></td>
+						<td bgcolor="#808080" width="1"></td>
+						<td class="TopLinksOff" onmouseover="this.className='TopLinksOn';" onmouseout="this.className='TopLinksOff';" onclick="GoTo('Policy');" title="Policies, Procedures and Dress Code" align="center" width="75" nowrap="nowrap">
+						Policies</td>
+						<td bgcolor="#808080" width="1"></td>
+						<td class="TopLinksOff" onmouseover="this.className='TopLinksOn';" onmouseout="this.className='TopLinksOff';" onclick="GoTo('DressCode');" title="Dress Code on the policies page" align="center" width="95" nowrap="nowrap">
+						Dress Code</td>
+						<td bgcolor="#808080" width="1"></td>	
+						<td class="TopLinksOff" onmouseover="this.className='TopLinksOn';" onmouseout="this.className='TopLinksOff';" onclick="GoTo('Tuition');" title="Tuition Calculator and Schedule" align="center" width="65" nowrap="nowrap">
+						Tuition</td>
+						<td bgcolor="#808080" width="1"></td>
+						<td class="TopLinksOff" align="center" width="55" nowrap="nowrap"><span></span></td>
+						<td bgcolor="#808080" width="1"></td>
+						<td class="TopLinksOff" onmouseover="this.className='TopLinksOn';" onmouseout="this.className='TopLinksOff';" onclick="GoTo('Contacts');" title="Contact Information, Directions and Important Forms" align="center" width="95" nowrap="nowrap">
+						Contact Us</td>
+						<td bgcolor="#808080" width="1"></td>
+						<td width="55">&nbsp;&nbsp;</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		<tr bgcolor="#000000" height="20">
+			<td colspan="3">
+				<table cellpadding="0" cellspacing="0">
+					<tbody><tr align="left">
+						<td width="20">&nbsp;&nbsp;</td>
+						<td bgcolor="#808080" width="1"></td>
+						<td class="TopLinksOff" onmouseover="this.className='TopLinksOn';" onmouseout="this.className='TopLinksOff';" onclick="GoTo('Teachers');" title="Teacher Information and Contacts" align="center" width="75" nowrap="nowrap"><span style="text-align: center;">
+						Teachers</span></td>
+						<td bgcolor="#808080" width="1"></td>
+						<td class="TopLinksOff" align="center" width="20" nowrap="nowrap"><span></span></td>
+						<td bgcolor="#808080" width="1"></td>
+						<td class="TopLinksOff" onmouseover="this.className='TopLinksOn';" onmouseout="this.className='TopLinksOff';" onclick="GoTo('Classes');" title="Class Schedule With 3 ways to find your classes" align="center" width="115" nowrap="nowrap">
+						Schedule</td>
+						<td bgcolor="#808080" width="1"></td>
+						<td class="TopLinksOff" align="center" width="200" nowrap="nowrap"><span></span></td>
+						<td bgcolor="#808080" width="1"></td>
+						<!--td align="center" width="65" class="TopLinksOff" onmouseover="this.className='TopLinksOn';" onmouseout="this.className='TopLinksOff';" onclick="document.location='http://www.dancemodestudio.com/Classes/Classes.asp?style=Ballet'" title="See all ballet classes">
+						Ballet</td>
+						<td bgcolor="#808080" width="1"></td>
+						<td align="center" width="75" class="TopLinksOff" onmouseover="this.className='TopLinksOn';" onmouseout="this.className='TopLinksOff';" onclick="document.location='http://www.dancemodestudio.com/Classes/Classes.asp?style=HipHop'" title="See all hip hop or hip hop related classes">
+						Hip Hop</td>
+						<td bgcolor="#808080" width="1"></td>
+						<td align="center" width="55" class="TopLinksOff" onmouseover="this.className='TopLinksOn';" onmouseout="this.className='TopLinksOff';" onclick="document.location='http://www.dancemodestudio.com/Classes/Classes.asp?style=Jazz'" title="See all jazz classes">
+						Jazz</td>
+						<td bgcolor="#808080" width="1"></td>
+						<td align="center" width="55" class="TopLinksOff" onmouseover="this.className='TopLinksOn';" onmouseout="this.className='TopLinksOff';" onclick="document.location='http://www.dancemodestudio.com/Classes/Classes.asp?style=Tap'" title="See all tap classes">
+						Tap</td>
+						<td bgcolor="#808080" width="1"></td>
+						<td align="center" width="65" class="TopLinksOff" onmouseover="this.className='TopLinksOn';" onmouseout="this.className='TopLinksOff';" onclick="document.location='http://www.dancemodestudio.com/Classes/Classes.asp?style=Other'" title="See all classes without a clear category">
+						Other</td>
+						<td bgcolor="#808080" width="1"></td>
+						<td align="center" width="55" class="TopLinksOff" onmouseover="this.className='TopLinksOn';" onmouseout="this.className='TopLinksOff';" onclick="document.location='http://www.dancemodestudio.com/Classes/Classes.asp?style=Tot'" title="See all classes for younger dancers">
+						Tot</td>
+						<td bgcolor="#808080" width="1"></td-->
+						<td class="TopLinksOff" onmouseover="this.className='TopLinksOn';" onmouseout="this.className='TopLinksOff';" onclick="GoTo('Production');" title="Production group newsletter and updates" align="center" width="100">
+						&nbsp;
+						Production</td>
+						<td class="TopLinksOff" align="center" width="10" nowrap="nowrap"><span></span></td>
+						<td bgcolor="#808080" width="1"></td>
+						<td class="TopLinksOff" align="center" width="25" nowrap="nowrap"><span></span></td>
+						<td bgcolor="#808080" width="0"></td><td class="TopLinksOff" align="center" width="75" nowrap="nowrap"><span></span></td>
+						<td bgcolor="#808080" width="0"></td>
+						<td class="TopLinksOff" onmouseover="this.className='TopLinksOn';" onmouseout="this.className='TopLinksOff';" onclick="GoTo('Register1');" title="Register for or log in to your online account" align="center" width="115" nowrap="nowrap">
+						&nbsp;
+						Register/Login</td>
+						<td bgcolor="#808080" width="0"></td>
+						<td width="15">&nbsp;&nbsp;</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+				<table cellpadding="0" cellspacing="0" width="100%">
+					<tbody><tr>
+						<td>&nbsp;&nbsp;
+						</td>
+						<td>
+						
+						
+						
+						
+						
+	
+
+						<!-- Page Content Goes Here!!!!!  -->
+						<br>
+						<table class="DMBody" cellpadding="0" cellspacing="0" width="95%">
+							<tbody><tr>
+								<td valign="top">
+								
+								</td>
+								<td rowspan="3" align="right">
+								
+								</td>
+								<td>
+							</td></tr>
+						</tbody></table>
+						
+						
+
+						
+						
+						
+						
+						
+						<!-- Page Content Ends Here!!!!!  -->
+						
+							<br><br>
+						</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" class="SmallNote" align="center">
+			Dance Mode Studio<br>
+			767 Industrial Road<br>
+			San Carlos, CA 94070<br>
+			(650) 598-0644
+			</td>
+		</tr>
+	</tbody></table>
+</td></tr></tbody></table>
+</center>
+	
+</body></html>

@@ -1,0 +1,1562 @@
+/* 
+=====================================================================
+	
+Site:
+Christ Presbyterian Academy (4534)
+
+Implemented by: 
+Chris Ullyott
+
+Special note:
+Changes to site styling may need to also be made on:
+Christ Presbyterian Church (4729)
+
+=====================================================================
+*/
+
+
+* {
+	margin:0;
+	padding:0;
+	outline:none;
+}
+
+body {
+	font-size:62.5%;
+	font-family:"Lucida Grande", Lucida, Verdana, sans-serif;
+	line-height:1;
+	background:#f5f5f5 url(/clients/CPalions/Images/bg_lines.gif) repeat-x;
+}
+
+hr {
+	display:none;
+}
+
+#skip {
+	position:absolute;
+	text-indent:-9999px;
+	list-style:none;
+}
+
+#container {
+	width:960px;
+	margin:0 auto;
+	position:relative;
+}
+
+#container #bg {
+	position:absolute;
+	z-index:-1;
+	left:-100px;
+	top:0;
+}
+
+#container-inner {
+}
+
+a {
+	overflow:hidden;
+}
+
+	
+/* the clearfix rules make it possible to clear floated elements without additional structural markup. See http://www.positioniseverything.net/easyclearing.html */
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+
+.clearfix {
+	display:inline-block;
+}
+
+
+	
+/* Hides from IE-mac \*/
+* html .clearfix {
+	height:1%;
+}
+
+.clearfix {
+	display:block;
+}
+
+
+	
+/* End hide from IE-mac */
+
+	
+/* =Header
+---------------------------------------------------------------------
+*/
+#header {
+	width:960px;
+	height:45px;
+	background:url(/clients/CPalions/Images/bg_header_bar.png) no-repeat;
+	margin-bottom:15px;
+	padding-top:5px;
+	display:block;
+	position:relative;
+	z-index:20;
+}
+
+#header #searchbar {
+	display:inline-block;
+	margin-right:10px;
+	float:right;
+}
+
+#header #searchbar #search_go {
+	display:none;
+}
+
+#header #searchbar #searchForm input#search_term {
+	width:135px;
+	margin-left:5px;
+	height:25px;
+	border:none!important;
+	background:url(/clients/CPalions/Images/bg_search.gif) no-repeat;
+	padding-right:20px;
+	padding-top:5px;
+	padding-left:5px;
+}
+
+
+	
+/* = Main Navigation
+---------------------------------------------------------------------
+*/
+#header #login {
+	display:inline-block;
+	float:right;
+	margin-top:6px;
+	margin-right:8px;
+	margin-bottom:0;
+	padding:0;
+	color:#78b1ba;
+}
+
+#header #login a {
+	color:#fff;
+	text-decoration:none;
+}
+
+#header #nav li {
+	position:relative;
+	display:inline-block;
+	float:left;
+	list-style-type:none;
+	height:28px;
+	
+}
+
+#header #nav > li.current {
+	text-decoration:none;
+	border-bottom:5px solid #cdba76;
+}
+
+#header #nav li a {
+	font-family:"Lucida Grande", Lucida, Verdana, sans-serif;
+	font-size:10.5px;
+	padding-right:8px;
+	padding-left:8px;
+	text-decoration:none;
+	color: #fff;
+	background:no-repeat 100%;
+	background-image:url(/clients/CPalions/Images/bg_header-sep.png);
+}
+#header #nav > li:hover > a {
+	color: #cdba76;
+}
+
+#header #nav {
+	display:block;
+	text-align:right;
+	float:right;
+	margin-right:10px;
+	margin-top:5px;
+	position:relative;
+	z-index:2;
+}
+
+#header #nav li:last-child a {
+	background-image:none;
+}
+
+/* drop-downs */
+#header #nav li ul {
+	display:none;
+	position:absolute;
+	z-index:50;
+	left:0;
+	top:28px;
+	border:1px solid #efebe0;
+}
+
+#header #nav > li:hover ul {
+	display:block;
+}
+
+#header #nav li ul li {
+	display:block;
+	padding:0;
+	margin:0;
+	float:none;
+	text-align:left;
+	white-space:nowrap;
+	background:#dcd4bd;
+}
+
+#header #nav li ul li a {
+	display:block;
+	margin:0;
+	border:0;
+	padding:7px 11px;
+	background:none;
+	color:#52237f;
+}
+
+#header #nav li ul li a:hover {
+	background:#efebe0;
+	text-decoration:none;
+}
+
+
+
+/* = Sidebar Navigation
+---------------------------------------------------------------------
+*/
+
+#content #inner-sidebar ul#sidebar-subnav {
+	padding:0;
+	list-style-type:none!important;
+	margin: 0 0 20px -10px;
+}
+
+#content #inner-sidebar ul#sidebar-subnav, #content #inner-sidebar ul#sidebar-subnav ul {
+	list-style: none;
+
+}
+
+/* second-level */
+#content #inner-sidebar ul#sidebar-subnav > li {
+	margin-bottom:5px;
+}
+#content #inner-sidebar ul#sidebar-subnav > li > a:hover {
+	background: #fff;
+	
+}
+
+#content #inner-sidebar ul#sidebar-subnav li a:hover {
+	text-decoration:none;
+	cursor:pointer;
+}
+
+#content #inner-sidebar ul#sidebar-subnav > li.current {
+	color:#303030;
+}
+
+#content #inner-sidebar ul#sidebar-subnav > li.current > a{
+	background: #fff;
+}
+
+#content #inner-sidebar ul#sidebar-subnav > li > a {
+	display: block;
+	font-size:13px;
+	padding:6px 0 6px 15px;
+	width: 205px;
+	color:#52237F;
+	background: url(/clients/CPalions/Images/bg_sidebar-subnav-li.png) repeat-y;
+}
+
+/* third-level */
+
+#content #inner-sidebar ul#sidebar-subnav ul {
+	display: none;
+}
+
+#content #inner-sidebar ul#sidebar-subnav li.current ul {
+	display: block;
+}
+
+#content #inner-sidebar ul#sidebar-subnav li ul {
+	margin-left: 28px;
+	margin-bottom: -4px;
+}
+
+#content #inner-sidebar ul#sidebar-subnav li ul li {
+	padding: 8px 0;
+}
+
+#content #inner-sidebar ul#sidebar-subnav li ul li a {
+	color: #632a9a;
+}
+/*
+#content #inner-sidebar ul#sidebar-subnav li.current {
+	display:block;
+	list-style:none;
+}
+
+#content #inner-sidebar ul#sidebar-subnav li.current a {
+	display:none;
+}
+
+#content #inner-sidebar ul#sidebar-subnav li.current ul {
+	margin-left:0;
+}
+
+#content #inner-sidebar ul#sidebar-subnav li.current ul li {
+	display:block;
+}
+
+#content #inner-sidebar ul#sidebar-subnav li.current ul li a {
+	display:block;
+	font-weight:bold;
+	border-bottom:1px solid #CCC;
+	padding:3px 0;
+}
+
+
+#content #inner-sidebar ul#sidebar-subnav li.current ul li a:hover {
+	color:rgb(188,162,69);
+	text-decoration:none;
+}
+
+
+#content #inner-sidebar ul.subnav li {
+	padding-bottom:5px;
+	margin-bottom:5px;
+	border-bottom:1px solid #e4e9e8;
+}
+
+#content #inner-sidebar ul.subnav li.current {
+	color:#303030;
+}
+
+#content #inner-sidebar ul.subnav li a {
+	color:#52237f;
+	font-size:1.2em;
+	padding-left:5px;
+}
+
+#content #inner-sidebar ul.subnav li a:hover {
+	text-decoration:none;
+	color:#515151;
+}
+
+#content #inner-sidebar ul.subnav li.current a {
+	color:#585858;
+}
+*/
+
+
+	
+/* = Secondary links
+---------------------------------------------------------------------
+*/
+ul.nav li {
+	display:inline-block;
+	float:left;
+	list-style-type:none;
+}
+
+ul.nav li a {
+	font:1em "Lucida Grande", Lucida, Verdana, sans-serif;
+	background:no-repeat 100%;
+	padding-right:12px;
+	padding-left:8px;
+	text-decoration:none;
+}
+
+#footer ul.nav li {
+}
+
+#footer ul.nav li a {
+	background-image:url(/clients/CPalions/Images/bg_footer-sep.png);
+	color:rgb(82,35,127);
+	font-weight:bold;
+	padding-right:8px;
+	padding-left:4px;
+}
+
+#footer ul.nav li a:hover {
+	color:rgb(190,161,69);
+}
+
+#footer ul.nav li.last a,#header #nav li.last a {
+	background-image:none;
+}
+
+	
+/* =Container-Inner
+---------------------------------------------------------------------
+*/
+
+	
+/* =Content-Wrap
+---------------------------------------------------------------------
+*/
+
+	
+#content {
+	margin-left:170px;
+	background:url(/clients/CPalions/Images/bg_content.gif) repeat-y 0;
+	min-height:700px;
+	height:auto!important;
+	height:700px;
+	border-bottom:1px solid #e7e7e7;
+}
+
+#content #content-header {
+	background:url(/clients/CPalions/Images/bg_content-header.png) no-repeat;
+	height:49px;
+	padding-left:35px;
+	padding-top:20px;
+}
+
+#content #content-header h1 {
+	color:#fff;
+	font-size:2.2em;
+	font-weight:normal;
+	font-style:normal;
+}
+
+#content .text {
+	margin-right:250px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:35px;
+}
+
+.onecol #content .text {
+	margin-right:15px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:35px;
+}
+
+#content #inner-sidebar {
+	margin-bottom:60px;
+	position:relative;
+	right:10px;
+	top:50px;
+	float:right;
+	background:url(/clients/CPalions/Images/bg_sidebar-repeat.gif) repeat-y;
+	border:1px solid #52237f;
+	border-left: none;
+}
+
+#content #inner-sidebar #sidebar-content {
+	min-height:550px;
+	height:auto!important;
+	height:550px;
+	width:210px;
+	display:block;
+	padding:10px;
+	background: url(/clients/CPalions/Images/bg_sidebar-grad-repeat.png) repeat-y;
+}
+
+#content #inner-sidebar #sidebar-content img {
+	margin:0;
+	padding:0;
+	float:none;
+}
+
+/* Page content */
+
+#content h2,#content h3,#content h4,#content h5,#content h6 {
+	line-height:normal;
+}
+
+#content h2 {
+	font-size:1.9em;
+	font-weight:normal;
+	color:rgb(82,35,127);
+	margin-bottom:10px;
+}
+
+#content h3 {
+	font-size:1.5em;
+	font-weight:bold;
+	color:rgb(82,35,127);
+	margin-bottom:10px;
+}
+
+#content h4 {
+	font-size:1.35em;
+	font-weight:bold;
+	color:#515151;
+	margin-bottom:6px;
+}
+
+#content h5,#content h6 {
+	font-size:1.3em;
+	margin-bottom:4px;
+}
+
+#content h5 {
+	color:#515151;
+}
+
+#content h6 {
+	color:red;
+}
+
+#content p,#content li {
+	margin-bottom:1em;
+	color:#515151;
+	font-size:1.2em;
+	line-height:1.5em;
+}
+
+#content ul,#content ol {
+	margin:0 0 1em 3em;
+}
+
+#content .text ul {
+	list-style-type:square;
+	list-style-image:url(/clients/CPalions/Images/bullet.gif);
+}
+
+#content .text ul#byline {
+	list-style:none!important;
+	margin-bottom:10px;
+	margin-left:0;
+	margin-top:10px;
+}
+
+#content ul#byline li {
+	font-size:1.2em;
+}
+
+#content li {
+	margin:0;
+}
+
+#content li li {
+	font-size:1em;
+}
+
+#content blockquote {
+	margin-left:3em;
+}
+
+#content hr {
+	width:400px;
+	display:block;
+	margin-bottom:1em;
+}
+
+#content a {
+	color:#52237f;
+	text-decoration:none;
+}
+
+#content a:hover {
+	text-decoration:underline;
+}
+
+#content img {
+
+	margin:0 10px 5px 0;
+	border:none;
+}
+
+#content #text {
+	clear:both;
+}
+
+#content .sermonbox {
+	margin-bottom:10px;
+	border-bottom:1px solid #cde4ec;
+	padding:5px;
+	overflow: hidden;
+}
+
+#content .sermonbox .eventlistimg {
+	display:inline-block;
+	float:left;
+}
+
+#content .eventimg img {
+	display:block;
+	float:none;
+}
+
+#content .sermonbox .eventlistimg img {
+	width:120px;
+}
+
+#content .sermonbox.last {
+	border-bottom-style:none;
+}
+
+#content .sermonbox.alt {
+	background-color:#fdfdfd;
+	padding:5px;
+}
+
+#content .sermonbox.alt .mediabox {
+	background-color:#fff;
+}
+
+#content .sermonbox h4,#content .bloglist h4,#content .text h5.blogposttitle {
+	margin-bottom:10px;
+	font-size:1.4em;
+}
+
+#content .sermonbox h4 a,#content .bloglist h4 a,#content .text h5.blogposttitle a {
+	color:#515151;
+}
+
+#content .sermonbox p.sermonlink {
+	margin-top:10px;
+}
+
+#content .sermonbox p.eventtime {
+	margin-bottom:0;
+}
+
+
+	
+/* @group mediabox */
+#content .text .mediabox {
+	float:right;
+	width:16px;
+	padding:5px 5px 0;
+	list-style:none!important;
+	list-style-image:none;
+	background-color:#f8f8f8;
+	border:1px solid rgb(89,39,134);
+}
+
+#content .text .mediabox li {
+	margin-bottom:5px;
+	font-size:1.1em;
+	list-style:none!important;
+	display:block;
+	height:16px;
+	width:16px;
+}
+
+#content .text .mediabox li a {
+	display:block;
+	height:16px;
+	width:16px;
+	background:url(/clients/CPalions/Images/mediabox.gif) no-repeat;
+	text-indent:-9999em;
+}
+
+#content .mediabox li.mb_print a {
+}
+
+#content .mediabox li.mb_play a {
+	background-position:0 bottom;
+}
+
+#content .mediabox li.mb_download a {
+	background-position:-18px bottom;
+}
+
+#content .mediabox li.mb_notes a {
+	background-position:-54px bottom;
+}
+
+#content .mediabox li.mb_podcast a {
+	background-position:-36px bottom;
+}
+
+#content .mediabox li.mb_video a {
+	background-position:-90px bottom;
+}
+
+
+	
+/* @end */
+#content #byline li#bl_date,#content .text p.date {
+	color:rgb(82,35,127);
+	font:bold 1.3em Georgia, serif;
+	margin-bottom:2px;
+}
+
+#content .text p.date {
+	margin-bottom:10px;
+}
+
+#content .byline {
+	color:#515151;
+	font:italic 1.3em Georgia, serif;
+}
+
+#content .byline span {
+	color:#909090;
+}
+
+#content #sidebar-content #side-wrap {
+	margin-top:10px;
+	position:relative;
+	top:-105px;
+}
+
+#content .bloglist .rss a,#content .text p.subscribe a {
+	width:20px;
+	height:20px;
+	background:url(/clients/CPalions/Images/rss.gif) no-repeat;
+	text-indent:-999em;
+	display:inline-block;
+	float:left;
+	margin-right:10px;
+}
+
+#content .text p.subscribe a {
+	float:none;
+}
+
+#content .bloglist {
+	padding-bottom:5px;
+	margin-bottom:5px;
+	border-bottom:1px solid #cde4ec;
+}
+
+
+	
+/* =Sidebar
+---------------------------------------------------------------------
+*/
+#sidebar {
+	float:left;
+	width:170px;
+	display:inline-block;
+	min-height:300px;
+	height:auto!important;
+	height:300px;
+	z-index:2;
+	position:relative;
+}
+
+#sidebar #logo img {
+	width:158px;
+	height:168px;
+	margin-bottom:15px;
+}
+
+#sidebar #logo a img {
+	border-style:none;
+}
+
+#sidebar #sidenav {
+	width: 270px;
+	position: relative;
+	right: 48px;
+	padding-top: 15px;
+	background: url(/clients/CPalions/Images/bg_nav-sub.gif) no-repeat;
+	height: 126px;
+	margin: 0;
+	list-style-type: none;
+	overflow: hidden;
+}
+/*#sidebar #sidenav li{
+	float: none;
+	padding-right: 10px;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	height: 24px;
+	width: 250px;
+	text-align: right;
+}
+
+*/
+
+#sidebar ul#sidenav li {
+	height: 21px;
+	width: 248px;
+	margin-left: 14px;
+	margin-top: 3px;
+	list-style: none;
+	padding: 0;
+	font-family: 'PT Sans Caption', Verdana, Arial, Helvetica, Tahoma, sans-serif;
+}
+#sidebar ul#sidenav li a {
+	height: 21px;
+	line-height: 21px;
+	font-size: 19px;
+	display: block;
+	text-align: left;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 100;
+	color: #52237f !important;
+	overflow: hidden;
+}
+
+
+#sidebar #powerschool {
+	margin:0;
+	padding:0;
+	position:relative;
+	left:35px;
+	margin-top: 5px;
+}
+
+#sidebar #powerschool a {
+	text-indent:-9999em;
+	display:block;
+	background:url(/clients/CPalions/Images/btn_powerschool.png) no-repeat;
+	width: 99px;
+	height: 22px;
+}
+
+#sidebar #ecashier {
+	margin:0;
+	padding:0;
+	position:relative;
+	left:35px;
+	margin-top: 5px;
+}
+
+#sidebar #ecashier a {
+	text-indent:-9999em;
+	display:block;
+	background:url(/clients/CPalions/Images/e-cashier-logo.png) no-repeat;
+	width: 99px;
+	height: 29px;
+}
+
+#sidebar-content .sidebar-hdr-img {
+	z-index:10;
+	position:relative;
+	top:-110px;
+	width:210px;
+	height:229px;
+	overflow:hidden;
+	margin-bottom:15px;
+}
+
+#content #sidebar-content #recent-sermons {
+	margin-top:15px;
+}
+
+#content #sidebar-content #recent-sermons .sermon p,#content #sidebar-content #recent-articles .article p {
+	margin-bottom:0;
+}
+
+#content #sidebar-content #recent-sermons .sermon,#content #sidebar-content #recent-articles .article {
+	border-bottom:1px solid #eaeaea;
+	padding-bottom:6px;
+	margin-bottom:6px;
+}
+
+#content #sidebar-content #recent-sermons .sermon h5.title a,#content #sidebar-content #recent-articles .article h5.title a {
+	color:#515151;
+	font-size:1.3em;
+}
+
+#content #sidebar-content #recent-sermons .sermon .sermonpreacher,#content #sidebar-content #recent-articles .article .articleauthor {
+	color:#64a2ac;
+}
+
+#content #sidebar-content #recent-sermons .sermon .sermondate,#content #sidebar-content #recent-articles .article .articledate {
+	color:#909090;
+}
+
+#content #sidebar-content .more a {
+	display:block;
+	text-align:right;
+	color:#7e7e7e;
+	background-color:#fff;
+	padding-top:2px;
+	padding-bottom:1px;
+	padding-right:5px;
+	border-top:1px solid #ececec;
+}
+
+#content #sidebar-content #recent-sermons .sermon.last,#content #sidebar-content #recent-articles .article.last {
+	border-bottom-style:none;
+}
+
+#sidebar-content #side-wrap #podcasts {
+	margin-top:15px;
+	border-bottom:2px solid #eee;
+	margin-bottom:10px;
+	position:relative;
+}
+
+#sidebar-content #side-wrap h4.title {
+	display:block;
+	color:#3e3e3e;
+	text-transform:uppercase;
+	font-size:1.5em;
+	padding:3px 4px 3px 0;
+	font-weight:normal;
+	font-style:normal;
+	margin-bottom:5px;
+}
+
+#sidebar-content #side-wrap #podcasts p {
+	margin-bottom:10px;
+}
+
+#sidebar-content #side-wrap #podcasts a {
+	width:20px;
+	height:20px;
+	background:url(/clients/CPalions/Images/rss.gif) no-repeat;
+	text-indent:-999em;
+	display:inline-block;
+	position:absolute;
+	top:1px;
+	right:0;
+}
+
+#sidebar-content #side-wrap #filter {
+	margin-bottom:5px;
+}
+
+#sidebar-content #side-wrap #filter p.sortby {
+	font-weight:bold;
+	color:#2b323c;
+	font-size:.9em;
+	margin-right:10px;
+	margin-top:11px;
+	width:40px;
+	float:left;
+	display:inline-block;
+}
+
+#sidebar-content #side-wrap #filter select {
+	width:125px;
+	margin-bottom:8px;
+	background-color:#fff;
+	color:#2b323c;
+	display:block;
+	margin-top:16px;
+}
+
+#sortmonth,#sortcat,#sortspeaker,#sortseries {
+	margin-left:55px;
+}
+
+#sidebar-content #backtoall {
+	margin-top:30px;
+	text-align:left;
+}
+
+#sidebar-content #backtoall a {
+	background-color:#fff;
+	padding:5px;
+	color:#7c7c7c;
+}
+
+#sidebar-content #backtoall a:hover {
+	background-color:#eaeaea;
+	text-decoration:none;
+	color:#515151;
+}
+
+#sidebar-content #side-wrap #blog_list_archive,#sidebar-content #side-wrap #blog_list_category {
+	margin:0 0 15px;
+	list-style-type:none;
+}
+
+#sidebar-content #side-wrap #blog_list_archive li,#sidebar-content #side-wrap #blog_list_category li {
+	margin-bottom:5px;
+}
+
+#sidebar-content #side-wrap #blog_list_archive li a,#sidebar-content #side-wrap #blog_list_category li a {
+	font-size:1.1em;
+	color:rgb(82,35,127);
+}
+
+#side-wrap .eventcat {
+	list-style-type:none;
+	margin-left:0;
+}
+
+#side-wrap .eventcat li {
+	margin-bottom:2px;
+	padding-bottom:2px;
+	border-bottom:1px solid #f0f0f0;
+}
+
+
+	
+/* =Footer
+---------------------------------------------------------------------
+*/
+#footer {
+	clear:both;
+	padding-top:15px;
+}
+
+#footer .foot-sep {
+	display:block;
+	margin-bottom:10px;
+	width:960px;
+	height:10px;
+	background-color:#fff;
+	border-top:1px solid #eee;
+}
+
+#footer .foot-left {
+	display:inline-block;
+	float:left;
+	color:#a0a0a0;
+}
+
+#footer .foot-left a {
+	text-decoration:none;
+	font-weight:bold;
+	color:rgb(82,35,127);
+}
+
+#footer .foot-left a:hover {
+	color:rgb(190,161,69);
+}
+
+#footer .foot-left .ekklesia {
+	display:block;
+	position:relative;
+	top:8px;
+}
+
+#footer .foot-left .ekklesia p {
+	display:inline-block;
+	z-index:2;
+	margin-top:5px;
+	float:left;
+}
+
+#footer .foot-left .ekklesia a {
+	background:url(/clients/CPalions/Images/icn-ekk360.png) 0 0 no-repeat;
+	display:inline-block;
+	z-index:2;
+	text-indent:-9999px;
+	width:85px;
+	height:22px;
+	margin-top:0;
+	margin-left:4px;
+}
+
+#footer .foot-left .ekklesia a:hover {
+	background-position:0 -22px;
+	text-decoration:none;
+}
+
+#footer .foot-right {
+	display:inline-block;
+	float:right;
+}
+
+#footer .foot-right li.rss,#footer .foot-right li.facebook,#footer .foot-right li.twitter {
+	display:block;
+	margin-right:5px;
+}
+
+#footer .foot-right li.rss a,#footer .foot-right li.twitter a,#footer .foot-right li.facebook a {
+	display:block;
+	text-indent:-999px;
+	margin:0;
+	padding:15px 0 0;
+	position:relative;
+	top:-7px;
+}
+
+#footer .foot-right li.rss a {
+	width:130px;
+	background:url(/clients/CPalions/Images/btn_subscribe-rss.png) 0 0;
+}
+
+#footer .foot-right li.twitter a {
+	width:69px;
+	background:url(/clients/CPalions/Images/btn_twitter.png) 0 0;
+}
+
+#footer .foot-right li.facebook a {
+	width:81px;
+	background:url(/clients/CPalions/Images/btn_facebook.png) 0 0;
+}
+
+#footer .foot-right li.rss a:hover {
+	background-position:0 -24px;
+}
+
+#footer .foot-right li.twitter a:hover {
+	background-position:0 -24px;
+}
+
+#footer .foot-right li.facebook a:hover {
+	background-position:0 -24px;
+}
+
+#content .text #sermonlist .mediabox,#content .text #sermonlist .byline ul {
+	list-style-type:none;
+	list-style-image:none;
+}
+
+#content #current-sermon {
+	border-top:3px solid #adadad;
+	margin-top:29px;
+	position:relative;
+	display:block;
+	padding-top:10px;
+	border-bottom:3px solid #bbb;
+}
+
+#content #current-sermon .feature {
+	display:inline-block;
+	position:absolute;
+	top:-35px;
+	left:10px;
+	padding:10px 25px;
+	font-size:1.3em;
+	font-weight:bold;
+	color:#fff;
+	background:#adadad url(/clients/CPalions/Images/bg_feature-sermon-title.png) repeat-x;
+}
+
+#content #current-sermon h4 {
+	font-size:1.5em;
+}
+
+#comment-bar {
+	font-size:1.1em;
+	background-color:#f9f9f9;
+	padding:5px;
+	border-top:1px solid #eee;
+}
+
+#comment-bar .comments {
+	display:inline-block;
+	margin-right:10px;
+}
+
+#content #comments form {
+	border-top:2px solid #dadada;
+	padding-top:5px;
+	margin-top:10px;
+}
+
+#content #comments form label {
+	display:block;
+	font-weight:bold;
+	margin-bottom:5px;
+}
+
+#content #comments form textarea {
+	margin-bottom:5px;
+	border:1px solid #7c7c7c;
+	width:500px;
+	height:100px;
+}
+
+#content #comments .comment h5 {
+	font-size:1.2em;
+	font-style:italic;
+	padding-bottom:2px;
+	color:#3b3b3b;
+}
+
+#content #comments .comment {
+	background-color:#fff;
+	padding:10px;
+	border-bottom:1px solid #d2d2d2;
+}
+
+#content #comments .comment.alt {
+	border-style:none;
+	background-color:#fcfcfc;
+	padding:10px;
+}
+
+#content #comments .comment.last {
+	border-style:none;
+}
+
+#header #login {
+	display:inline-block;
+}
+
+#content .text table.me {
+	width:380px;
+	font-size:1.1em;
+	display:block;
+}
+
+#content .text table.me h4 {
+	font-size:1.3em;
+	padding:4px;
+	background-color:#f6f6f6;
+}
+
+#sidebar-content .event {
+	border-bottom:1px solid #cde4ec;
+	display:block;
+	margin-bottom:10px;
+}
+
+#sidebar-content .event .date {
+	width:15px;
+	height:20px;
+	text-align:center;
+	padding:3px 5px 6px;
+	float:left;
+	display:block;
+	background-color:#53959f;
+	color:#fff;
+	font-size:.9em;
+	font-weight:bold;
+}
+
+#sidebar-content .event .date span {
+	display:block;
+	padding-top:2px;
+	font:1.2em Georgia, "Times New Roman", Times, serif;
+}
+
+#sidebar-content .event h4 {
+	padding-top:8px;
+	padding-bottom:15px;
+	font-size:1.1em;
+}
+
+#container #content #inner-sidebar #sidebar-content #side-wrap .event h4 a {
+	margin-left:5px;
+	color:#515151;
+	display:inline-block;
+	width:180px;
+}
+
+
+	
+/* @group Calendar */
+#content table.calendar {
+	margin-bottom:25px;
+	border:1px solid rgb(89,39,134);
+	border-collapse:collapse;
+	width:730px;
+}
+
+#content table.calendar caption {
+	padding-bottom:10px;
+	color:#515151;
+	font-size:1.4em;
+	font-weight:bold;
+}
+
+#content table.calendar caption span {
+	color:rgb(89,39,134);
+}
+
+#content table.calendar th {
+	padding:6px 0;
+	background:rgb(89,39,134);
+	color:#fff;
+	font-size:1.3em;
+	font-weight:bold;
+	text-transform:uppercase;
+}
+
+#content table.calendar td {
+	width:68px;
+	height:68px;
+	padding:2px;
+	border:1px solid rgb(89,39,134);
+	color:rgb(89,39,134);
+	font-size:1em;
+	vertical-align:top;
+}
+
+#content table.calendar td.linked-day a {
+	color:#515151;
+}
+
+#content table.calendar td.linked-day a:hover {
+	background-color:#515151;
+	color:#fff;
+	padding:2px;
+}
+
+#content table.calendar td.linked-day li a:hover {
+	background-color:transparent;
+	color:#515151;
+	padding:0;
+}
+
+#content table.calendar td.current {
+	background-color:#f2f2f2;
+}
+
+#content table.calendar td a {
+	text-decoration:none;
+}
+
+#content .text table.calendar td ul {
+	margin:.5em 0 0 .5em;
+	font-size:100%;
+	list-style:none;
+	list-style-image:none;
+}
+
+#content .text table.calendar td li {
+	margin-bottom:1em;
+	padding:0;
+	background:none;
+	font-size:1.1em;
+	line-height:1.2;
+	ist-style:none;
+	list-style-image:none;
+}
+
+#content table.calendar td li a {
+	text-decoration:underline;
+}
+
+#content table.calendar td li a:hover {
+	text-decoration:none;
+}
+
+
+	
+/* @end */
+
+	
+/* @group Events */
+#content .text p.time {
+	font-size:1.4em;
+	color:rgb(82,35,127);
+}
+
+#content .text p.time span.eventTime {
+	font-weight:bold;
+	color:#515151;
+}
+
+#sidebar-content #side-wrap .event.last {
+	border-bottom-style:none;
+}
+
+
+	
+/* @end */
+#content p#pagination {
+	clear:both;
+	padding-top:20px;
+	float:left;
+	line-height:2;
+}
+
+#content #paginatewrap {
+	clear:both;
+	margin:0 auto;
+	text-align:center;
+}
+
+#content p#pagination a {
+	margin:0 5px;
+	color:#000;
+	padding:5px;
+	text-decoration:none;
+	background:#7dafb6;
+}
+
+#content p#pagination a:hover {
+	text-decoration:underline;
+}
+
+#content p#pagination a#off {
+	display:none;
+}
+
+#content p#pagination a#current {
+	color:#fff;
+	background-color:rgb(82,35,127);
+}
+
+
+	
+/* TINYMCE CUSTOM EDITOR STYLES */
+.ten-point {
+	font-size:10px!important;
+}
+
+.eleven-point {
+	font-size:11px!important;
+}
+
+.twelve-point {
+	font-size:12px!important;
+}
+
+
+	
+/* EventU iFrame */
+iframe#eventU-calendar {
+	width:720px;
+	height:600px;
+	border:1px solid #52237F;
+	padding:5px;
+}
+
+
+	
+/* =Forms
+---------------------------------------------------------------------
+*/
+.monkForm {
+	margin:0;
+	padding:0;
+	width:100%;
+}
+
+#content fieldset .text {
+	padding:0;
+}
+
+.monkForm fieldset {
+	margin:0;
+	padding:0;
+}
+
+.monkForm fieldset div,.monkForm fieldset fieldset div {
+	padding:0;
+	margin:0;
+}
+
+
+	
+/* Legends and labels etc */
+.monkForm fieldset legend {
+	margin:0;
+	padding:0;
+	color:#000;
+	font-size:16px;
+	margin-bottom:10px;
+}
+
+.monkForm > fieldset > legend {
+	padding-bottom:20px;
+}
+
+.monkForm fieldset fieldset legend {
+	font-size:13px;
+	color:#000;
+}
+
+.monkForm label {
+	font-size:13px;
+	font-weight:bold;
+	margin-bottom:3px;
+	color:#000;
+}
+
+.monkForm fieldset fieldset label {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+}
+
+.monkForm fieldset fieldset fieldset label {
+	font-weight:normal;
+}
+
+.monkForm .description {
+	font-size:11px;
+	font-style:italic;
+	margin-top:2px;
+}
+
+.monkForm fieldset fieldset div,.monkForm fieldset fieldset div p,.monkForm fieldset fieldset div p {
+	padding:0;
+	margin:0;
+	font-weight:normal;
+	color:red;
+}
+
+.monkForm p.errorSummary {
+	font-style:italic;
+	color:red;
+}
+
+.monkForm p.error {
+	color:red;
+	font-size:1em;
+}
+
+.monkForm fieldset div {
+	margin-bottom:15px;
+}
+
+.monkForm fieldset fieldset div {
+	margin-bottom:20px;
+}
+
+
+	
+/* Fields (inputs, textarea, selects) */
+.monkForm input,.monkForm select,.monkForm textarea {
+	font:normal 12px/100% Verdana, Tahoma, sans-serif;
+	background:#fbfbfb;
+	border:1px solid #999;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+}
+
+
+	
+/* Inputs */
+.monkForm input[type=text] {
+	padding:6px;
+	width:200px;
+}
+
+
+	
+/* Textarea */
+.monkForm textarea {
+	padding:6px;
+	width:200px;
+}
+
+
+	
+/* Selects */
+.monkForm select {
+	padding:2px;
+	width:218px;
+}
+
+.monkForm select option {
+	padding:2px 4px;
+}
+
+
+	
+/* Checkboxes and buttons */
+.monkForm input[type=checkbox],.monkForm input[type=radio] {
+	background:none;
+	border:0;
+}
+
+.monkForm fieldset fieldset fieldset p {
+	padding:0;
+	margin:7px 10px;
+	margin-top:0;
+}
+
+
+	
+/* Asterisk */
+span.asterisk {
+	color:red;
+}
+
+
+	
+/* Submit button */
+.monkForm input[type=submit] {
+	background:#562583;
+	color:white;
+	padding:4px 5px;
+	text-transform:uppercase;
+}

@@ -1,0 +1,102 @@
+<!--CHANGELOG-->
+<!--LSP 4/18/11 - Initial Development-->
+  <script type="text/javascript" src="/clients/DukeEllingtonCenter/Images/mootools.js"></script>
+  <script type="text/javascript" src="/clients/DukeEllingtonCenter/Images/caption.js"></script>
+
+
+<script src="/clients/DukeEllingtonCenter/Images/jquery00.js" type="text/javascript"></script>
+<script type="text/javascript" src="/clients/DukeEllingtonCenter/Images/maxheight.js"></script>
+		<script type="text/javascript">
+	var $j = jQuery.noConflict();
+		$j(document).ready(function(){
+		$j('.menu-nav li').hover(
+			function() {
+				$j(this).addClass("active");
+				$j(this).find('.ulwrapper').stop(false, true).slideDown();
+				$j(this).find('.ulwrapper .ulwrapper').stop(false, true).slideUp('fast');
+			},
+			function() {
+				$j(this).removeClass("active");        
+				$j(this).find('div').stop(false, true).slideUp('fast');
+			}
+		);
+		$j('.ulwrapper').hover(
+			function() {
+				$j('.parent').addClass("active_tab");
+			},
+			function() {
+				$j('.parent').removeClass("active_tab");
+			}
+		);
+	});
+		$j(window).load(function(){
+	$j("div.tabs").tabs(".images > div", {
+
+		// enable "cross-fading" effect
+		effect: 'fade',
+		fadeOutSpeed: "slow",
+
+		// start from the beginning after the last tab
+		rotate: true
+
+	// use the slideshow plugin. It accepts its own configuration
+	}).slideshow();
+});
+</script>
+
+
+
+<script type="text/javascript" src="/clients/DukeEllingtonCenter/Images/ie6_script_other.js"></script>
+
+<link rel="stylesheet" href="/clients/DukeEllingtonCenter/Images/constant.css" type="text/css">
+<link rel="stylesheet" href="/clients/DukeEllingtonCenter/Images/template.css" type="text/css">
+<link rel="stylesheet" href="/clients/DukeEllingtonCenter/Images/standalo.css" type="text/css">
+<link rel="stylesheet" href="/clients/DukeEllingtonCenter/Images/tabs-sli.css" type="text/css">
+</head>
+<body id="body" onload="new ElementMaxHeight();">
+<div class="top-border-site">
+	<div class="main">
+    	<div class="header-box">
+        	<div class="fright header-link">		<div class="moduletable_menu">
+					<ul class="menu"><li class="item54"><a><span>Login</span></a></li><li class="item55"><a><span>Register</span></a></li></ul>		</div>
+	</div>
+            <h1 id="logo"><a href="http://dukeellingtoncenter.org/index.php" title="The Duke Ellington Center"><img title="The Duke Ellington Center" src="/clients/DukeEllingtonCenter/Images/logo.png" alt="The Duke Ellington Center"></a></h1>
+        </div>
+        
+       
+        <div class="wrapper-top-menu">
+        	<div class="wrapper-top-menu1">
+            	<div class="fright"><div class="module-search">
+        <form action="index.php" method="post">
+	<div class="search">
+		<div class="search-input"><input name="searchword" id="mod_search_searchword" maxlength="20" alt="Search" class="inputbox" size="20" value="search..." onblur="if(this.value=='') this.value='search...';" onfocus="if(this.value=='search...') this.value='';" type="text"></div><div class="search-button"><input value="Search" class="button" src="/clients/DukeEllingtonCenter/Images/searchButton.gif" onclick="this.form.searchword.focus();" type="image">	</div></div>
+	<input name="task" value="search" type="hidden">
+	<input name="option" value="com_search" type="hidden">
+</form> </div>
+</div>
+                <div class="fleft row-top-menu">    		<ul class="menu-nav"><li class="top item56"><a href="http://dukeellingtoncenter.org/"><span>Home</span></a></li><li class="top parent item57"><a href="http://dukeellingtoncenter.org/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=30&amp;Itemid=57"><span>About Us</span></a><div style="display: none;" class="ulwrapper"><ul><li class="item66"><a href="http://dukeellingtoncenter.org/index.php?option=com_content&amp;view=article&amp;id=24&amp;Itemid=66"><span>Mission</span></a></li><li class="item67"><a href="http://dukeellingtoncenter.org/index.php?option=com_content&amp;view=article&amp;id=26&amp;Itemid=67"><span>Our Board</span></a></li></ul></div></li><li id="current" class="top parent item58"><a href="http://dukeellingtoncenter.org/index.php?option=com_content&amp;view=article&amp;id=26&amp;Itemid=58"><span>Events</span></a><div style="display: none;" class="ulwrapper"><ul><li class="item62"><a href="http://dukeellingtoncenter.org/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=29&amp;Itemid=62"><span>Current Events</span></a></li><li class="item63"><a href="http://dukeellingtoncenter.org/index.php?option=com_content&amp;view=article&amp;id=27&amp;Itemid=63"><span>Calendar</span></a></li><li class="item64"><a><span>Past Events</span></a></li></ul></div></li><li class="top item59"><a href="http://dukeellingtoncenter.org/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=27&amp;Itemid=59"><span>Programs</span></a></li><li class="top parent item60"><a href="http://dukeellingtoncenter.org/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=29&amp;Itemid=60"><span>Support Us</span></a><div class="ulwrapper"><ul><li class="item68"><a href="http://dukeellingtoncenter.org/index.php?option=com_content&amp;view=section&amp;id=3&amp;Itemid=68"><span>Donate</span></a></li><li class="item69"><a href="http://dukeellingtoncenter.org/index.php?option=com_wrapper&amp;view=wrapper&amp;Itemid=69"><span>Buy Books &amp; Music</span></a></li></ul></div></li><li class="top item61"><a href="http://dukeellingtoncenter.org/index.php?option=com_contact&amp;view=contact&amp;id=2&amp;Itemid=61"><span>Contact</span></a></li></ul>	    </div>
+                <div class="clear1"></div>
+            </div>
+        </div>
+        
+        
+         <!--content-->
+         <div class="content-indent">
+         	<div class="content-left">
+                <div class="content-right">
+                    <div class="content-bottom">
+                    	                         <div id="content">
+                            <div class="clear">
+                                <!--right-->
+                                                                
+                                                                <!--left-->
+                                                                <!--center-->
+                                <div id="container" class="maxheight">
+                                     <div class="container-indent">
+                                     	<div class="clear">
+										<!--TIX DATA START-->	                                            
+										
+										
+										
+										
+										

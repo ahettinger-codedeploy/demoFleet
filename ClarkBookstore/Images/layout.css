@@ -1,0 +1,233 @@
+/* 
+
+Author:		Bart Johnston
+Modified:	14 March, 2006
+
+This stylesheet defines only the basic layout and structure of the page.  It defines both a 2 and 3 column
+layout that can be toggled by applying the class "two-col" or "three-col" to the #main div.
+
+*/
+
+/* LAYOUT */
+
+	body {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+	}
+	div#page {
+        width: 765px;
+		margin:  0 auto;
+		padding: 0;        
+        background: transparent;
+		text-align: center;
+    }
+    div#popup {
+       /* width: 765px;*/
+		margin:  0 auto;
+		padding: 0;        
+        background: transparent;
+		text-align: center;
+    }
+    
+    /* HEADER */
+	
+        div#header {
+            margin: 0;
+            padding: 0;
+			text-align: left;
+        }
+		
+		#site-name {
+			float: left;
+		}
+		
+		#cart-summary {
+			float:right;
+			width: 122px;
+			margin: 5px 0 0 10px;
+			display: inline;
+		}
+		
+		#user-summary {
+			float: right;
+			width: 150px;
+			margin: 5px 10px 0 0;
+			text-align: right;
+		}
+		
+    /* END HEADER */
+    
+    
+    /* CONTENT */
+        div#content {
+			width: 765px;
+			margin: 0;
+			padding: 0;
+			text-align: left;
+			clear: left;
+			/*
+			position: absolute;
+			top: 105px;
+			*/
+        }
+        
+        /* MAIN */
+            div#main {
+                text-align: left;
+            }
+        /* END MAIN */
+        
+        /* SUB */
+            div#sub {
+                
+            }
+        /* END SUB */
+		
+		/* ADVERTISING */
+			div#advertising {
+			}
+		/* END ADVERTISING */
+        
+    /* END CONTENT */
+    
+    
+    /* FOOTER */
+        div#footer {
+            
+        }
+        div#footer p {
+            font-size: 0.8em;
+            margin: 0;
+            padding: 15px;
+        }
+    /* END FOOTER */
+	
+	div#content div#advertising {
+		float: right;
+		width: 132px;
+		display: inline;
+		text-align: center;
+		padding: 50px 0 20px 0;			
+	}
+	
+	/* 2 COL LAYOUT - | CONTENT | ADVERTISING | */
+		div#content.two-col {
+		}
+		div#content.two-col div#main {
+			float: left;
+			display: inline;
+			padding: 0 0 0 20px;
+			
+			/* IE BOX MODEL HACK */
+			width: 620px; 
+			voice-family: "\"}\""; 
+			voice-family: inherit;
+			width: 600px;
+		}
+		
+		div#content.two-col div#sub-nav {
+			display: none;
+		}
+		
+	/* END 2 COL LAYOUT */
+	
+	
+	/* 3 COL LAYOUT - | SUBNAV | CONTENT | ADVERTISING | */
+		div#content.three-col {
+		}
+		div#content.three-col div#main {
+			float: left;
+			display: inline;
+			margin-right: -132px;
+			margin-left: 150px;
+			padding: 0 20px 0 10px;
+			
+			/* IE BOX MODEL HACK */
+			width:480px; 
+			voice-family: "\"}\""; 
+			voice-family:inherit;
+			width:450px;
+		}
+		
+		div#content.three-col div#sub-nav {
+			float: left;
+			display: inline;
+			margin-left: -500px;
+			
+			/* IE BOX MODEL HACK */
+			width:150px; 
+			voice-family: "\"}\""; 
+			voice-family:inherit;
+			width:130px;
+		}
+		
+	/* END 3 COL LAYOUT */
+	
+/* END LAYOUT */
+
+/* SITE SEARCH */
+
+	div#site-search {
+		padding: 10px 0;
+		text-align: right;
+		float: right;
+	}
+
+/* NAV */
+	
+	div#nav {
+		float: left;
+		text-align: left;
+    }
+    div#nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;		
+    }
+
+    div#nav li {
+		display: block;
+		float: left;
+        margin: 0;
+    }
+	
+    div#nav a,
+    div#nav a:link,
+    div#nav a:active,
+    div#nav a:visited {
+
+    }
+
+/* END NAV */
+
+
+/* SUB NAV */
+
+	div#sub-nav ul, div#sub-nav ul li {
+		
+	}
+	
+
+/* END SUB NAV */
+
+
+/* FOOTER */
+	#footer {
+	}
+	#footer ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;		
+	}
+	#footer ul li {
+		margin: 0 4px;
+		display: inline;
+	}
+/* FOOTER */
+
+
+form {
+	margin: 0;
+	padding: 0;
+}

@@ -1,0 +1,236 @@
+<%
+'CHANGELOG
+'LSP 04/23/11 - initial development
+%>
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="http://carnegie.wpengine.com/wp-content/uploads/2014/03/piano-favicon.jpg">
+
+<!-- Stylesheets -->
+<link rel="stylesheet" href="/clients/CarnegieRoom/Images/css.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/clients/CarnegieRoom/Images/style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/clients/CarnegieRoom/Images/css_options.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/clients/CarnegieRoom/Images/responsive.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/clients/CarnegieRoom/Images/dark.css" type="text/css" media="screen">
+
+<!-- Wordpress functions -->	
+<link rel="alternate" type="application/rss+xml" title="Carnegie Concert Series » Tickets Comments Feed" href="http://www.carnegieroom.org/tickets/feed/">
+<link rel="stylesheet" id="flick-css" href="/clients/CarnegieRoom/Images/flick.css" type="text/css" media="all">
+<link rel="stylesheet" id="mailchimpSF_main_css-css" href="/clients/CarnegieRoom/Images/a.css" type="text/css" media="all">
+
+<link rel="stylesheet" id="prettyPhoto-css" href="/clients/CarnegieRoom/Images/prettyPhoto.css" type="text/css" media="all">
+<link rel="stylesheet" id="shortcodes-css" href="/clients/CarnegieRoom/Images/shortcodes.css" type="text/css" media="all">
+<script style="" type="text/javascript" src="/clients/CarnegieRoom/Images/jquery_003.js"></script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/jquery-migrate.js"></script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/scrollTo.js"></script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/jquery.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var mailchimpSF = {"ajax_url":"http:\/\/www.carnegieroom.org\/"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/mailchimp.js"></script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/jquery_002.js"></script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/datepicker.js"></script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/cycle.js"></script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/audioauto.js"></script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/mosaic.js"></script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/p.js"></script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/backstretch.js"></script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/gmap.js"></script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/idTabs.js"></script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/selectnav.js"></script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/respond.js"></script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/script.js"></script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/dark.js"></script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/js"></script><script src="/clients/CarnegieRoom/Images/main.js" type="text/javascript"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.carnegieroom.org/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.carnegieroom.org/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Front Page" href="http://www.carnegieroom.org/">
+<link rel="next" title="Register" href="http://www.carnegieroom.org/register/">
+<link rel="canonical" href="http://www.carnegieroom.org/tickets/">
+<link rel="shortlink" href="http://www.carnegieroom.org/?p=163">
+	<script type="text/javascript">
+		jQuery(function($) {
+			$('.date-pick').each(function() {
+				var format = $(this).data('format') || 'mm/dd/yyyy';
+				format = format.replace(/yyyy/i, 'yy');
+				$(this).datepicker({
+					autoFocusNextInput: true,
+					constrainInput: false,
+					changeMonth: true,
+					changeYear: true,
+					beforeShow: function(input, inst) { $('#ui-datepicker-div').addClass('show'); },
+					dateFormat: format.toLowerCase(),
+				});
+			});
+			d = new Date();
+			$('.birthdate-pick').each(function() {
+				var format = $(this).data('format') || 'mm/dd';
+				format = format.replace(/yyyy/i, 'yy');
+				$(this).datepicker({
+					autoFocusNextInput: true,
+					constrainInput: false,
+					changeMonth: true,
+					changeYear: false,
+					minDate: new Date(d.getFullYear(), 1-1, 1),
+					maxDate: new Date(d.getFullYear(), 12-1, 31),
+					beforeShow: function(input, inst) { $('#ui-datepicker-div').removeClass('show'); },
+					dateFormat: format.toLowerCase(),
+				});
+
+			});
+
+		});
+	</script>
+	<link type="text/css" media="screen" rel="stylesheet" href="/clients/CarnegieRoom/Images/fbf_facebook_page_feed.css">
+
+
+     
+<script src="/clients/CarnegieRoom/Images/commonutilstats.js" charset="UTF-8" type="text/javascript"></script></head>
+
+<!-- Begin Body -->
+<body class="page page-id-163 page-template-default wpb-js-composer js-comp-ver-3.5.5 vc_responsive"> 
+
+<!-- Background Image -->
+<script>
+jQuery(document).ready(function($){
+    $.backstretch("http://carnegie.wpengine.com/wp-content/uploads/2014/03/carnegie-sepia_cooler.png");
+});
+</script>
+
+<!-- Header -->
+<div id="header"> 			
+  <div class="header-row fixed">		
+    <div id="logo">					
+
+      <a href="http://www.carnegieroom.org/"><img src="/clients/CarnegieRoom/Images/carnegie-logo_gold.png" alt="logo"></a>    </div><!-- end #logo -->
+	
+    <div id="main">
+	  <div id="btn-menu">MENIU</div>
+      <div class="main-navigation">
+				<div id="clubbmenu" class="menu-menu-1-container"><ul id="menu-menu-1" class="menu"><li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children has-sub"><a href="http://www.carnegieroom.org/about/">About</a>
+<ul>
+	<li id="menu-item-45" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.carnegieroom.org/contact-us/">Contact Us</a></li>
+	<li id="menu-item-210" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.carnegieroom.org/rental/">Rental</a></li>
+</ul>
+</li>
+<li id="menu-item-116" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.carnegieroom.org/upcoming-events/">Events</a></li>
+<li id="menu-item-164" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-163 current_page_item active"><a href="http://www.carnegieroom.org/tickets/">Tickets</a></li>
+<li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.carnegieroom.org/membership/">Membership</a></li>
+<li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.carnegieroom.org/donate/">Donate</a></li>
+<li id="menu-item-154" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.carnegieroom.org/livestream/">Livestream</a></li>
+</ul></div>	
+
+      </div><!-- end .main-navigation -->			
+    </div><!-- end #main -->
+  </div><!-- end .header-row fixed -->           
+</div><!-- end #header -->
+
+<!-- Wrap -->
+<div id="wrap">
+
+<!--TIX DATA START-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+</div><!-- end #wrap -->
+
+<!-- Footer -->
+<div id="footer">
+
+  </div><!-- end .footer-row fixed -->			
+</div><!-- end #footer -->
+
+<div class="footer-bottom"> 
+  <div class="footer-row">
+    <div class="footer-bottom-copyright">
+&#169;
+2014
+Carnegie Concert Series. All Rights Reserved.
+    </div><!-- end .footer-bottom-copyright -->
+    <div class="footer-bottom-social">
+      <ul id="footer-social">
+        
+        <li class="facebook footer-social"><a href="https://www.facebook.com/carnegieroom" target="_blank"></a></li>
+        <li class="twitter footer-social"><a href="https://twitter.com/carnegieconcert" target="_blank"></a></li>
+
+        <li class="youtube footer-social"><a href="https://www.youtube.com/user/carnegieconcerts" target="_blank"></a></li>
+
+
+
+
+
+
+
+        <li class="google footer-social"><a href="https://plus.google.com/b/103086765084703037234/103086765084703037234/posts" target="_blank"></a></li>
+
+
+
+
+
+
+      </ul>
+    </div><!-- end .footer-bottom-social -->
+  </div><!-- end .footer-row -->
+</div><!-- end .footer-bottom -->
+
+
+<script type="text/javascript">
+jQuery(document).ready(function($){
+   if (jQuery().prettyPhoto) {
+      	    jQuery("a[data-rel^='prettyPhoto']").prettyPhoto({
+            animation_speed: 'fast',
+			slideshow: 5000,
+			opacity: 0.80,
+			show_title: true,
+			allow_resize: true,
+			default_width: 540,
+			default_height: 344,
+			counter_separator_label: '/',
+			theme: 'pp_default',
+			horizontal_padding: 20,
+			autoplay: true,		
+			ie6_fallback: true,
+			social_tools: false,
+		});
+   }
+   
+   if (jQuery().prettyPhoto) {
+      	    jQuery("a[data-rel^='prettyPhoto-widget']").prettyPhoto({
+            animation_speed: 'fast',
+			slideshow: 5000,
+			opacity: 0.80,
+			show_title: true,
+			allow_resize: true,
+			default_width: 540,
+			default_height: 344,
+			counter_separator_label: '/',
+			theme: 'pp_default',
+			horizontal_padding: 20,
+			autoplay: true,		
+			ie6_fallback: true,
+			social_tools: false,
+		});
+   }
+   
+   });
+</script> 
+
+<link rel="stylesheet" id="js_composer_front-css" href="/clients/CarnegieRoom/Images/js_composer_front.css" type="text/css" media="screen">
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/comment-reply.js"></script>
+<script type="text/javascript" src="/clients/CarnegieRoom/Images/js_composer_front.js"></script>
+
+
+<div style="left: 0px; top: 0px; overflow: hidden; margin: 0px; padding: 0px; z-index: -999999; position: fixed; width: 1663px; height: 907px;" class="backstretch"><img src="/clients/CarnegieRoom/Images/carnegie-sepia_cooler.png" style="position: absolute; margin: 0px; padding: 0px; border: medium none; max-width: none; z-index: -999999; width: 1663px; height: 1307.66px; left: 0px; top: -200.329px;"></div>
+</div>
+</form>
+</body>
+</html>

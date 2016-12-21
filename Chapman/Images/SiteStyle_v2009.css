@@ -1,0 +1,365 @@
+/*------------------------------------------------------------------------------*/
+/* SiteStyle.css																*/
+/* ActiveCampus StyleSheet														*/
+/* This file comprises all display styles for the ActiveAdmissions and 			*/
+/*		ActiveAlumni V1.85 frontends											*/
+/* Author:  	M. Dempster 8/29/00												*/
+/* Modified: 	M. Dempster 1/27/03
+/* Modified: 	M. Thomas   6/14/2010: copied other 4 CSS files's content here	*/
+/* Copyright:	LiquidMatrix Corporation										*/
+/*------------------------------------------------------------------------------*/
+
+/* removed import statements since content is resident in this file now:
+   @  Ximport "http://www.chapman.edu/includes/SiteStyleAdvanced_v2009.css"; 	
+   @  Ximport "http://www.chapman.edu/includes/SiteStyleChapman_v2009.css"; 	
+   @  Ximport "http://www.chapman.edu/includes/SiteStylePopout_v2009.css"; 	
+   @  Ximport "http://www.chapman.edu/admission/news/AC_news.css"; 	            */
+   
+   
+/* ******************************************************************************/
+/* copied from /includes/SiteStyleAdvanced_v2009.css (ActiveCampus components): */
+/* ******************************************************************************/
+INPUT, TEXTAREA, SELECT		{color:#000000; font-family:arial,helvetica; font-size:11px;}
+/* ActiveCampus Basic component styles */
+.AC-ComponentHeader			{background-color:#898989; font-weight:bold; color:#ffffff; padding:.3em 0px .3em 6px;}
+.AC-Component				{background-color:#eeeeee; position:relative; width:100%;}
+.AC-ComponentHeaderALT		{background-color:#9F2F20; font-weight:bold; color:#ffffff; padding:.3em 0px .3em 6px;}
+.AC-ComponentALT			{background-color:#F2E9C9; position:relative;}
+.AC-ComponentTLC 			{display:none;}
+.AC-ComponentTRC 			{display:none;}
+.AC-ComponentBLC 			{display:none;}
+.AC-ComponentBRC 			{display:none;}
+.AC-ComponentBody 			{padding:10px; border:1px solid #898989;}
+.AC-ButtonRow				{text-align:right; clear:both; height:30px;}
+.AC-ButtonRow span.left 	{float:left; text-align:left;  padding:0px 0px; }	
+.AC-ButtonRow span.right 	{float:right; text-align:right; width:30%; padding:0px 0px;}
+.AC-DataGrid				{background-color:#fefefe; border-width:1px; border-style:solid; border-color: #3B61A0;width:90%;}
+.AC-DataGrid TH 			{padding:2px 2px;font-weight:bold;  background-color:#8A2034; border-bottom:1px solid #898989; text-align:left; color:#ffffff;}
+.AC-DataGrid TD				{padding:2px 2px;}
+.AC-DataGrid INPUT			{background-color:#dddddd; border:1px solid black; color:#000000; padding:0px;}
+/* Global HTML Constructions */
+div.row 					{clear:both; height:20px; padding-top:4px;}
+.requiredlabel 				{float:left; width:auto; margin-top:3px; } /* Note:  Bolding occurs in base style sheet*/
+.label 						{float:left; width:auto; margin-top:3px;}
+.input 						{float:right; width:235px; text-align:left;}
+/* MST changed 7/7/2009 to get rid of extra in breadcrumb container on bottom (from this): 
+	div.spacer			 		{clear:both; height:1px; font-size:1px;} */
+div.spacer			 		{clear:both; height:-1px; font-size:0px;}
+.left						{float:left; width:45%;}
+.right						{float:right; width:45%;}
+
+
+/* ******************************************************************************/
+/* copied from /includes/SiteStyleChapman_v2009.css (Chapman components):       */
+/* ******************************************************************************/
+/* brought over from siteStyleHome for NEWS that's on some homepages */
+/* Main pAge specific news styles */
+.AC-NewsMain				{margin:0em 0px 1em 0px;}
+.AC-NewsMainHeadline		{font-weight:bold; font-size:10px;}
+.AC-NewsMainHeadline A		{font-weight:normal; font-size:10px;}
+
+/* Styles for the Red bar at page top */
+#siteHeaderContainer 			{width:950px; height:139px; z-index:50; position:relative; top:0;}
+/*SAME AS _newRed now: #logobarContainer 				{margin:0px 0px 2px 0px; width:950px; background-color:#8A2034;} */
+#logobarContainer 				{background:#8A2034; margin:2px 0px 2px 0px; width:950px; padding:0px 0px 0px 1px; height:113px;}
+#logobarLogo 					{float:left;}
+#logobarSectImage 				{float:right; margin-right: 18px;}
+/* End Styles for the Red bar at page top */
+
+/* styles for new darker Red (summer 2006) */
+#logobarContainer_newRed		{background:#8A2034; margin:2px 0px 2px 0px; width:950px; padding:0px 0px 0px 1px; height:113px;}
+/* End Styles for the new red */
+
+/* styles for charcoal (AS - Aug 2009) */
+#logobarContainer_gray		{background:#2b2b2b; margin:2px 0px 0px 0px; width:950px; padding:0px 0px 0px 1px; height:113px;}
+/* End Styles for the new red */
+
+/* Styles for the Chapnet Black Logo bar at page top (CHAPNET templates only */
+#logobarContainer_Chapnet		{margin:0px 0px 2px 0px; width:950px; height:113px; background-color:#000000;}
+/* Styles for the CHUGADUG white Logo bar at page top */
+#logobarContainer_chugadug		{margin:0px 0px 2px 0px; width:950px; height:113px; background-color:#FFFFFF;}
+/* End Styles for the Chapnet Black Logo bar at page top */
+
+/* styles for White for neXted (may 2007) */
+#logobarContainer_white		{margin:2px 1px 0px 0px; width:950px; height:83px; background-color:#FFFFFF;}
+/* End Styles for white */
+
+/* Styles for the Black Navigation bar at page top  pad=ie margin=ff and ie */
+#navigationContainer 				{margin:0px 0px 2px 0px; padding:3px 0px 3px 1px; width:950px; clear:both; background-color:#000000;text-align:center;}
+#siteHeaderContainer>#navigationContainer 	{padding:4px 0px 4px 0px;} /*kludge for IE5 incorrect box model*/
+#navigationContainer UL 			{margin:0px; padding:0px; width:950px;}
+#navigationContainer UL LI 			{padding:0px 16px; margin:0px; display:inline; width:15px; list-style:none; }
+#navigationContainer UL LI A 		{padding:3px 0px;font-size:10px; color:#ffffff; font-weight:bold;}
+/* slightly lighter shade of cardinal so contrasts with black bkgd better */
+#navigationContainer UL LI A:hover 	{color:#ad2841; text-decoration:none;}
+#navigationContainer UL LI A.On 	{color:#ad2841; text-decoration:none;}
+/* End Styles for the Black Navigation bar at page top */
+
+/* special version for new Associated Students template (Jan 2010)  */
+/* removed: clear:both; background-color:#cb2027; float:right;   padding:5px 0px 2px 1px;  */
+#navigationContainer_AS 				{vertical-align: bottom; text-align:right; float: right;   width:950px; margin: 0px 0px 0px 0px; padding:1px 0px 0px 1px;
+	background:#cc3333; height:27px;}
+#siteHeaderContainer>#navigationContainer_AS 	{padding:1px 0px 0px 1px;} /*kludge for IE5 incorrect box model*/
+#navigationContainer_AS UL 			{margin:0px; padding:0px; width:950px;}
+#navigationContainer_AS UL LI 			{padding:0px 20px; margin:0px; display:inline; width:10px; list-style:none; }
+#navigationContainer_AS UL LI A 		{padding:0px 0px; font-size:14px; color:#ffffff; font-weight:bold;}
+/* slightly lighter shade of cardinal so contrasts with black bkgd better */
+#navigationContainer_AS UL LI A:hover 	{color:#CCCCCC; text-decoration:none;}
+#navigationContainer_AS UL LI A.On 	{color:#CCCCCC; text-decoration:none;}
+/* End Styles for the Red Navigation bar at page top */
+
+/* Styles for the Gray Breadcrumb bar at page top pad=ie margin=ff and ie */
+/* NOTE: Aug 2009 background url image moved here; was in templates...still in some */
+/* 1/22/2010 MST added float:left for AS */
+/* 1/12/2011 MST added height 23px and removed left padding of 1px */
+#pageHeaderContainer 	 			{background-color:#898989; color:#FFFFFF; width:950px; height: 23px; padding:0px 0px 0px 0px; 
+							background:url(/images/sectHeaders/grayBar/noGradient_gray_HeadBG.jpg); float:left;} 
+/* MST 11/3/2011: added p tag within this div class cuz some people put P tag around breadcrumbs and they extend past gray bar bottom */
+#pageHeaderContainer p {margin-top: 1px;}
+/* MST 2/22/2010 chgd from 9 px to 10 px */
+#pageBreadcrumb 					{float:left; padding:5px 0px 0px 9px; font-size:10px;}
+#pageBreadcrumb A					{color:#ffffff; text-decoration:underline;}
+#pageBreadcrumb A:hover				{text-decoration:underline;}
+#pageBreadcrumb A:visited			{color:#ffffff; text-decoration:underline;}
+#pageSectionImage 					{float:right;}
+/* End Styles for the Gray Breadcrumb bar at page top */
+
+/* same gray bar area as above for breadcrumbs, but this is for Assoc Students. they use area for quickfind */
+#quickFindContainer 	 			{vertical-align: middle; background-color:#898989; color:#FFFFFF; width:950px; padding:0px 0px 0px 1px; margin:0px 0px -15px 0px; float:left; height: 26px;}
+#quickFind 					{float:left; padding:5px 0px 0px 9px; font-size:12px; color:#ffffff;}
+
+/* Special:  USed in Print Style, turned off here. */
+#printSpacer						{clear:both; font-size:1px; height:1px; width:950px; background:#FFFFFF; margin:0 auto; }
+/* End Special:  USed in Print Style, turned off here. */
+
+/* Layout Grid Styles.  2 column, Open layout, 1 over 2. 1 over 3 */
+#pageGrid 							{width:950px; border:0px; background:#FFFFFF;}
+#pageGridLeftColumn 				{width:229px; vertical-align:top; padding-top:10px; background:url(/clients/Chapman/Images/site_sidebarBG.gif); }
+#pageGridSearchArea 				{width:229px; vertical-align:bottom; background:url(/clients/Chapman/Images/site_sidebarBG.gif); }
+#pageGridCenterColumn 				{padding:20px 5px 20px 5px; width:390px; vertical-align:top; }
+#pageGridRightColumn 				{padding:20px 5px 20px 5px;  width:234px; vertical-align:top;}
+#pageGridOpen		 				{padding:20px 18px 20px 5px; width:687px; vertical-align:top;}
+#pageGridOpen_NoLeftNav				{padding:20px 1px 20px 1px; width:950px; vertical-align:top;}
+#pageGridOpenBoundary				{width:687px; height:auto;}
+#pageGridOpen #pageGridCenterColumn {float:left; width:390px; padding-right:5px;} /* For 1 over 2 layout */
+#pageGridOpen #pageGridRightColumn 	{float:right; width:234px;}  /* For 1 over 2 layout */
+
+/* For 1 over 3 layout */
+#pageGridOpencolumns	{padding-top:8px;width:687px;}
+#pageGridOpencolumns li {list-style:none;padding:0 4px 0 8px;} 
+#pageGridOpenleftcolumn {border-right:thin solid #E02323;float:left; font-size:11px; /*height:251px;*/ padding-left:8px; padding-right:8px; width:30%;}
+#pageGridOpenleftcolumn.noborder {border-right:none;}
+ 
+#pageGridOpenleftcolumn ul {background:#ECEBEB; height:251px; margin:0; padding:0;}
+#pageGridOpenleftcolumn h3 {background:#892034; color:#FFFFFF;font-size:14px;height:22px;padding:5px 0 0 6px; margin:0;}
+#pageGridOpenleftcolumn ul li {line-height:2em;}
+
+#pageGridOpencentercolumn {border-right:thin solid #E02323;float:left; font-size:11px; height:251px; padding-left:8px; padding-right:8px; width:30%;} 
+#pageGridOpencentercolumn ul {background:#ECEBEB; height:251px; margin:0; padding:0;}
+#pageGridOpencentercolumn h3 {background:#892034; color:#FFFFFF;font-size:14px;height:22px;padding:5px 0 0 6px; margin:0;}
+#pageGridOpencentercolumn ul li {line-height:2em;}
+#pageGridOpencentercolumn.noborder {border-right: none;}
+
+#pageGridOpenrightcolumn {float:left; font-size:11px; height:251px; padding-left:8px; padding-right:8px; width:30%;} 
+#pageGridOpenrightcolumn ul {background:#ECEBEB; height:251px; margin:0; padding:0;}
+#pageGridOpenrightcolumn h3 {background:#892034; color:#FFFFFF;font-size:14px;height:22px;padding:5px 0 0 6px; margin:0;}
+#pageGridOpenrightcolumn ul li {line-height:2em;}
+
+/* End Layout Grid Styles.  2 column, Open layout, 1 over 2. */
+
+/* Footer Block Styles */
+#siteFooterContainer 				{width:950px; text-align:center; height:72px; padding:55px 0 0 0; background-color:#FFFFFF;}
+#siteFooterContainer UL 			{display:block; margin:0px 0px 10px 0px; padding-left:0px;}
+#siteFooterContainer UL LI 			{padding:4px 6px; list-style:none; display:inline; width:10px;}
+/* MST 2/22/2010 chgd from 9 px to 10 px */
+#siteFooterContainer UL LI A 		{font-family:arial; font-size:10px; color:#7b8b7b; text-decoration:none;}
+/* mst chgd 6/9/09 from ff0000: */
+#siteFooterContainer UL LI A:hover	{color:#ad2841; text-decoration:none;}
+/* MST 2/22/2010 chgd from 9 px to 10 px */
+#clientInfo 						{font-size:10px; color:#7b8b7b;}
+/* End Footer Block Styles */
+
+/* ------------------------------------------------------------*/
+/* Left Side Bar Style Units */
+/* ------------------------------------------------------------*/
+/* Navigation Blocks Styles (Section Nav, Tools, Portal Nav, Welcome Block) */
+.subnavContainer 			{margin-left:20px; padding:0px 0px 10px 0px; width:175px; border-bottom:1px solid #ad2841; text-align:right;}
+.subnavContainer UL 			{display:block; margin:0px; padding-left:0px;}
+.subnavContainer UL LI 			{padding:3px 0px; list-style:none;}
+ /* .subnavContainer UL LI A 		{font-size:10px; color:#7b8b7b;} */
+ /* .subnavContainer UL LI A:hover 	{color:#ff0000; text-decoration:none;} */
+ /* mst 6/8/09 changed red from ff0000*/
+.subnavContainer UL LI A 		{font-size:10px; color:#ad2841;}
+.subnavContainer UL LI A:hover 		{color:#000000; text-decoration:none;}
+.subnavContainer H1			{font-size:10px; color:#ad2841;text-align:left; margin:0px; font-weight:normal;}
+.subnavContainer P			{font-size:10px; color:#ad2841;text-align:left; margin:0px; font-weight:normal;}
+/* MST 8/24/2010: added for section header between left nav links which some depts have started doing */
+.subNavHeader {font-size:11px; color:#353430;text-align:left; margin:0px; font-weight:bold;}
+
+/* MST changed 8/20/2010 since are hiding Personlize This Site link on Adm pages now: 
+	#Welcome				{margin-top:30px; text-align:center; color:#787878;}*/
+#Welcome				{margin-top:1px; text-align:center; color:#787878;}
+
+#CMSNav H1				{display:none;}
+/* End Navigation Blocks Styles (Section Nav, Tools, Portal Nav, Welcome Block) */
+
+/* Search Form Block Styles */
+#quicklinksContainer 				{margin-left:10px; padding-top:15px; width:190px; padding-left:10px;}
+#quicklinksContainer FORM 				{margin:0px; padding:0px;}
+#quicklinksContainer FORM SELECT 		{width:141px; font-size:10px;}
+#quicklinksContainer FORM #jumpBtn 	{width:27px; height:14px; border:0px;}
+/* End Search Form Block Styles */
+
+/* Search Form Block Styles */
+#searchContainer 					{margin-left:10px; padding-top:15px; width:190px; padding-left:10px;}
+#searchContainer FORM 				{margin:0px; padding:0px;}
+#searchContainer FORM INPUT 		{width:141px; font-size:10px;}
+#searchContainer FORM #searchBtn 	{width:27px; height:14px; border:0px;}
+/* mst chgd from ff0000: */
+#searchContainer A 					{color:#cc3333; font-size:9px; text-decoration:none;}
+#searchContainer A:hover 			{text-decoration:none;}
+/* End Search Form Block Styles */
+
+/* AC Banner Ad Styles */
+#pageGridLeftColumn  .banneradContainer {margin:12px 0px 0px 20px; width:175px; border-bottom:1px solid #ad2841; padding-bottom:10px;}
+#pageGridRightColumn .banneradContainer {margin-top:20px;}
+/* End AC Banner Ad Styles */
+
+/* Side Text Block Styles */
+.sideblockContainer 				{width:229px;margin-top:10px;}
+.sideblockTop 						{padding-left:20px;}
+.sideblockMiddle 					{padding-left:21px;}
+.sideblockMiddle .sideblockLeft 	{width:175px;float:left;font-size:9px;}		
+.sideblockMiddle .sideblockRight 	{float:right;}	
+.sideblockBottom 					{padding-left:20px; clear:both;}
+.sideblockBaseline					{padding-top:10px;clear:both;border-bottom:1px solid #ad2841; margin-left:20px; width:175px; height:1px; font-size:1px;}
+/* End Side Text Block Styles */ 
+
+/* ------------------------------------------------------------*/
+/* End Left Side Bar Style Units */
+/* ------------------------------------------------------------*/
+
+/* ------------------------------------------------------------*/
+/* Right Side Bar Style Units */
+/* ------------------------------------------------------------*/
+/* Rounded Corner Box Styles (note:  not for use with AC Components! */
+.roundbox 				{margin-top:20px; width: 234px;}
+.roundboxTop 			{background-color:#ffffff; padding-bottom:1px; border-bottom:1px solid #ad2841;}
+.roundboxText 			{background-color:#000000; font-size:9px; color:#ffffff; padding:10px 15px 10px 15px; margin:1px 0px;}
+.roundboxImage 			{float:right;padding-left:10px;}
+/* mst chgd 6/9/09 from #ff3030 */
+.roundbox A				{color:#ad2841;}
+/* End Rounded Corner Box Styles (note:  not for use with AC Components! */
+
+/* List Box (ex:  Quickfacts, Alumni Updates, etc.) Styles: */
+.listbox				{margin-top: 20px; font-size:9px; width: 250px;}
+.listbox H1  			{margin:0px; font-size:14px; color:#ad2841; font-family:arial, helvetica; text-transform:uppercase; text-align:center;}
+.listbox H2  			{font-weight:bold; font-size:10px; padding:0px; margin:0px; display:inline; color:#ad2841; text-transform:uppercase;}
+.listbox UL 			{list-style-image:url(/clients/Chapman/Images/site_redarrowright.gif); margin-top:0px;margin-left:30px; padding-left:0px}
+.listbox UL LI 			{padding-bottom:10px;}
+/* End List Box (ex:  Quickfacts, Alumni Updates, etc.) Styles: */
+
+/* Important Notes Block Styles: */
+/* MST 2/22/2010 chgd from 9 px to 10 px */
+.importantNotes 		{font-size:10px; width:234px; margin-top:20px;}
+.importantNotesTop		{margin:0px;padding:0px;}
+.importantNotesSide 	{float:right;margin:0px;padding:0px;width:67px;}
+/* End Important Notes Block Styles: */
+
+/* ------------------------------------------------------------*/
+/* End Right Side Bar Style Units */
+/* ------------------------------------------------------------*/
+
+
+/* ******************************************************************************/
+/*  copied from /includes/SiteStylePopout_v2009.css (Popout Menu components):   */
+/* ******************************************************************************/
+/* changed z-index for new 2009 design, was too low number and disappeared in FF */
+.Menu					{display:block;margin:5px; position:absolute;  left:0px; top:0px;visibility:hidden; border:2px solid black; width:200px;  background-color:#8a8a8a; z-index:100;}
+.Menu UL				{list-style:none; margin:0px -0px 0px 0px; padding:0px 0px 0px 0px; border:2px solid #ffffff;}
+.Menu UL LI				{list-style:none;border-bottom:1px solid #ffffff; margin:0px;}
+.Menu UL LI A 			{display:block; background-color:#8a8a8a; padding:3px 6px; color:#ffffff; text-transform:uppercase; font-size:10px;}
+BODY>.Menu UL LI A 		{width:auto;}
+.Menu UL LI A:hover		{text-decoration:none;background-color:#8A2034;}
+
+/* special version for new Associated Students tempalte Jan 2010: */
+/* changed z-index for new 2009 design, was too low number and disappeared in FF */
+.Menu_AS					{display:block; margin:14px; position:absolute; left:0px; top:0px; visibility:hidden; border:2px solid black; width:200px;  background-color:#000000; z-index:100;}
+.Menu_AS UL				{list-style:none; margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; border:2px solid #ffffff;}
+.Menu_AS UL LI				{list-style:none;border-bottom:1px solid #ffffff;margin:0px;}
+.Menu_AS UL LI A 			{display:block; background-color:#333333; padding:3px 6px; color:#ffffff; text-transform:uppercase; font-size:10px;}
+BODY>.Menu_AS UL LI A 		{width:auto;}
+.Menu_AS UL LI A:hover		{text-decoration:none;background-color:#cc3333;}
+
+
+/* ******************************************************************************/
+/*  copied from /admission/news/AC_news.css (News components):                  */
+/* ******************************************************************************/
+/*----  News Modes  -------------------------------------------------------*/
+.AC-NewsOverview			{margin-bottom:1.3em;}
+.AC-NewsOverviewHeadline	{font-weight:bold;}
+.AC-NewsOverviewBody		{}
+.AC-NewsOverviewLink		{display:none;}
+.AC-NewsHeadline			{clear:both; padding:.5em 0px;}
+.AC-NewsHeadlineDate		{float:left; width:75px; text-align:left;}
+.AC-NewsHeadlineHeadline	{float:left; text-align:left; font-weight:bold;}
+.AC-NewsHeadlineLink		{display:none;}
+.AC-NewsHybridDivider		{font-family:arial, helvetica; font-size:11px; font-weight:bold;}
+#AC-NewsContainer			{padding-top:10px;}
+/*----  News Stories  -----------------------------------------------------*/
+.AC-NewsStoryHeadline 		{font-size:16px; color:#000000; font-weight:bold;margin:1em 0em;}
+.AC-NewsStoryOverview		{font-style:italic; margin:1em 0em;}
+.AC-NewsStory				{margin:1em 0em;}
+.AC-NewsStory IMG			{margin:10px;}
+.AC-ButtonRow span.left 	{padding:0px 0px; }	
+.AC-ButtonRow span.right 	{padding:0px 0px;}
+
+
+/* ******************************************************************************/
+/* original content of this siteStyle CSS                                       */
+/* ******************************************************************************/
+BODY 						{color:#000000; margin:-117px 0px 0px 0px; padding:0px; background-color:#353430;}
+BODY, DIV, TABLE, TD, P 	{font-family:verdana,arial,helvetica,sans-serif; font-size:11px;}
+
+/* MST 2/18/2010: added all 6 heading tags */
+h1 {font-family:verdana,arial,helvetica,sans-serif; font-size:21px;}
+h2 {font-family:verdana,arial,helvetica,sans-serif; font-size:18px;}
+h3 {font-family:verdana,arial,helvetica,sans-serif; font-size:16px;}
+h4 {font-family:verdana,arial,helvetica,sans-serif; font-size:14px;}
+h5 {font-family:verdana,arial,helvetica,sans-serif; font-size:12px;}
+h6 {font-family:verdana,arial,helvetica,sans-serif; font-size:10px;}
+
+/*MST chgd 6/9/09 from #ff0000, from cc3333 8/10/2009 */
+A							{color:#ad2841;	text-decoration:none;}
+A:hover						{text-decoration:underline;}
+HR							{background-color:#c4c4c4; color:#c4c4c4; height:1px; border:0px;}
+
+UL {
+	list-style-type: disc;
+}
+/* MST 9/3/2010 removed cause overrode OL lists too, replaced with below:   li { list-style-type: disc;} */
+UL li {
+	list-style-type: disc;
+}
+
+
+/* ActiveCampus Basic component styles. chgd from cc0000 MST 8/10/2009 */
+.AC-Error					{color:#8a2034; font-weight:bold;}
+.AC-Alert					{color:#8a2034; font-weight:bold;}
+.required					{font-weight:bold;}
+
+/* Global HTML Constructions */
+.requiredlabel 				{font-weight:bold;}
+
+/* hides print logo from all browsers */
+#logobarPrintLogo					{display:none;}
+
+/* July 2009. Meghan Farrington added for new cardinal/gray background wrapper on pages, and new wider page width */
+#siteWrap { background:url(/clients/Chapman/Images/shadow_grey2.gif) center repeat-y; margin: 0 auto; width:950px; padding:0 10px;}
+/*Mehan's original with red at top: #headerMast {background:#8a2034 url(http://www.chapman.edu/clients/Chapman/Images/shadow_red.gif) center repeat-y; padding:0 10px; height:115px; position:relative; top:115px; z-index:0;}*/
+#headerMast {background:#353430 url(/clients/Chapman/Images/shadow_grey2.gif) center repeat-y; padding:0 10px; height:115px; position:relative; top:115px; z-index:0;}
+#siteBackground {background:#353430;}
+
+
+
+

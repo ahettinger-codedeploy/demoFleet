@@ -1,0 +1,302 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+<link rel="Shortcut Icon" href="http://www.academyofmusictheatre.com/wp-content/themes/blackcanvas_30/images/favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet" href="/clients/AcademyofMusicTheatre/Images/style_002.css" type="text/css" media="screen">
+<link rel="alternate" type="application/rss+xml" title="ACADEMY OF MUSIC RSS Feed" href="http://www.academyofmusictheatre.com/feed/">
+<link rel="alternate" type="application/atom+xml" title="ACADEMY OF MUSIC Atom Feed" href="http://www.academyofmusictheatre.com/feed/atom/">
+<link rel="pingback" href="http://www.academyofmusictheatre.com/xmlrpc.php">
+
+    
+	<script src="/clients/AcademyofMusicTheatre/Images/ga.js" async="" type="text/javascript"></script><script src="/clients/AcademyofMusicTheatre/Images/dropdown.js" type="text/javascript"></script>
+
+<link rel="stylesheet" id="NextGEN-css" href="/clients/AcademyofMusicTheatre/Images/Black_Minimalism.css" type="text/css" media="screen">
+<link rel="stylesheet" id="shutter-css" href="/clients/AcademyofMusicTheatre/Images/shutter-reloaded.css" type="text/css" media="screen">
+<link rel="stylesheet" id="contact-form-7-css" href="/clients/AcademyofMusicTheatre/Images/styles.css" type="text/css" media="all">
+<script type="text/javascript" src="/clients/AcademyofMusicTheatre/Images/l10n.js"></script>
+<script type="text/javascript" src="/clients/AcademyofMusicTheatre/Images/jquery_002.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var shutterSettings = {
+	msgLoading: "L O A D I N G",
+	msgClose: "Click to Close",
+	imageCount: "1"
+};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/clients/AcademyofMusicTheatre/Images/shutter-reloaded.js"></script>
+<script type="text/javascript" src="/clients/AcademyofMusicTheatre/Images/swfobject.js"></script>
+<script type="text/javascript" src="/clients/AcademyofMusicTheatre/Images/comment-reply.js"></script>
+<link rel="index" title="ACADEMY OF MUSIC" href="http://www.academyofmusictheatre.com/">
+<link rel="prev" title="Calendar" href="http://www.academyofmusictheatre.com/event-calendar/">
+<link rel="next" title="Rental Info" href="http://www.academyofmusictheatre.com/rental-info/">
+<link rel="canonical" href="http://www.academyofmusictheatre.com/ticket-info/">
+<link rel="stylesheet" href="/clients/AcademyofMusicTheatre/Images/jquery.css" type="text/css" media="print, projection, screen">
+
+        <script type="text/javascript" language="javascript">
+function accordion_tab(i)
+{
+	var n;
+	for(n = 1; n <= 6; n++)
+	{
+		el = document.getElementById("accordion-" + n);
+		tab = document.getElementById("accordion-tab-" + n);
+		if(!el) continue;
+		if(n == i)
+		{
+			el.style.display = "block";
+			tab.className = "accordion-tabon";
+        }
+		else
+		{
+			el.style.display = "none";
+			tab.className = "accordion-tab";
+		}
+	}
+
+	return false;
+}
+        </script><link rel="stylesheet" href="/clients/AcademyofMusicTheatre/Images/events_manager.css" type="text/css">	<script type="text/javascript">
+		$j=jQuery.noConflict();   
+        
+
+		$j(document).ready( function() {
+		   initCalendar();
+		});
+		
+		function initCalendar() {
+			$j('a.prev-month').click(function(e){
+				e.preventDefault();
+				tableDiv = $j(this).parents('table').parent();
+				($j(this).hasClass('full-link')) ? fullcalendar = 1 : fullcalendar = 0;   
+				prevMonthCalendar(tableDiv, fullcalendar);
+			} );
+			$j('a.next-month').click(function(e){
+				e.preventDefault();
+				tableDiv = $j(this).parents('table').parent();
+				($j(this).hasClass('full-link')) ? fullcalendar = 1 : fullcalendar = 0;     
+				nextMonthCalendar(tableDiv, fullcalendar);
+			} );
+		}    
+		function prevMonthCalendar(tableDiv, fullcalendar) {  
+			if (fullcalendar === undefined) {
+			    fullcalendar = 0;
+			  }
+			month_n = tableDiv.children('div.month_n').html();                                
+			year_n = tableDiv.children('div.year_n').html();
+			parseInt(month_n) == 1 ? prevMonth = 12 : prevMonth = parseInt(month_n,10) - 1 ; 
+		   	if (parseInt(month_n,10) == 1)
+					year_n = parseInt(year_n,10) -1;
+			$j.get("http://www.academyofmusictheatre.com", {ajaxCalendar: 'true', calmonth: prevMonth, calyear: year_n, full: fullcalendar}, function(data){
+				tableDiv.html(data);
+				initCalendar();
+			});
+		}
+		function nextMonthCalendar(tableDiv, fullcalendar) {
+			if (fullcalendar === undefined) {
+			    fullcalendar = 0;
+			  }
+			month_n = tableDiv.children('div.month_n').html();                                
+			year_n = tableDiv.children('div.year_n').html();
+			parseInt(month_n,10) == 12 ? nextMonth = 1 : nextMonth = parseInt(month_n,10) + 1 ; 
+		   	if (parseInt(month_n,10) == 12)
+					year_n = parseInt(year_n,10) + 1;
+			$j.get("http://www.academyofmusictheatre.com", {ajaxCalendar: 'true', calmonth: nextMonth, calyear: year_n, full : fullcalendar}, function(data){
+				tableDiv.html(data);
+				initCalendar();
+			});
+		}
+		
+		// function reloadCalendar(e) {
+		// 	// e.preventDefault();
+		//  	console.log($j(this).parents('table'));
+		//     $j.get("http://www.academyofmusictheatre.com", {ajax: 'true'}, function(data){
+		// 		tableDiv = table.parent();
+		// 		tableDiv.html(data);
+		//             });
+		// }
+		//                      
+		
+	</script>
+	
+<script type="text/javascript" src="/clients/AcademyofMusicTheatre/Images/bubble.js"></script>
+<link rel="stylesheet" type="text/css" href="/clients/AcademyofMusicTheatre/Images/style.css">
+<!-- begin nextgen-smooth scripts -->
+          <script type="text/javascript" src="/clients/AcademyofMusicTheatre/Images/mootools.js"></script>
+          <script type="text/javascript" src="/clients/AcademyofMusicTheatre/Images/jd_002.js"></script>
+          <script type="text/javascript" src="/clients/AcademyofMusicTheatre/Images/jd.js"></script>          
+          <link type="text/css" href="/clients/AcademyofMusicTheatre/Images/jd.css" rel="stylesheet" media="screen">
+        <!-- end nextgen-smooth scripts -->
+       <link id="MediaRSS" rel="alternate" type="application/rss+xml" title="NextGEN Gallery RSS Feed" href="http://www.academyofmusictheatre.com/wp-content/plugins/nextgen-gallery/xml/media-rss.php">
+
+<meta name="NextGEN" content="1.8.3">
+<!-- All in one Favicon 3.1 | by Arne Franken, http://www.techotronic.de/ -->                      <!-- All in one Favicon 3.1 | by Arne Franken, http://www.techotronic.de/ -->
+	<script src="/clients/AcademyofMusicTheatre/Images/jquery-ui-1.js"></script>
+	<script type="text/javascript">
+				
+		jQuery(document).ready(function($){
+										
+			$("li#wpsb a").remove();
+			
+			$("#sidebarwidgeted").accordion( { collapsible: true, active: false, autoHeight: false } );
+			
+			var currentMonthString = "empty";
+			var lastMonthString = "empty";
+			
+			$("li#events-list ul li").each( function(i) {
+				
+				currentMonthString = $(this).text();
+				
+				currentMonthString = currentMonthString.substring(0, 3);
+				lastMonthString = lastMonthString.substring(0, 3);
+				
+				if ( currentMonthString != lastMonthString ) {
+					$(this).css("padding-top","12px");
+					$(this).css("margin-top","12px");
+					$(this).css("border-top","1px dotted #fff");
+				}
+				
+				lastMonthString = currentMonthString;			
+			});
+			
+			$("ul.dbem_events_list li").each( function(i) {
+				
+				currentMonthString = $(this).text();
+				
+				currentMonthString = currentMonthString.substring(0, 3);
+				lastMonthString = lastMonthString.substring(0, 3);
+				
+				if ( currentMonthString != lastMonthString ) {
+					$(this).css("padding-top","12px");
+					$(this).css("margin-top","12px");
+					$(this).css("border-top","1px dotted #fff");
+				}
+				
+				lastMonthString = currentMonthString;			
+			});
+			
+		});
+	</script>
+
+</head>
+
+<body class="page page-id-6 page-parent page-template-default">
+
+<div id="header">
+<div class="inner">
+    
+	        <div class="headerleft">
+                        <h4><a href="http://www.academyofmusictheatre.com/"><img src="/clients/AcademyofMusicTheatre/Images/logo.png" alt="ACADEMY OF MUSIC"></a></h4>
+             
+        </div>	
+      
+	
+	<div class="headerright">
+		<ul id="nav">
+			
+			<li class="page_item page-item-60"><a href="http://www.academyofmusictheatre.com/" title="Home">Home</a></li>
+<li class="page_item page-item-291"><a href="http://www.academyofmusictheatre.com/about/" title="About">About</a>
+<ul class="children">
+	<li class="page_item page-item-2"><a href="http://www.academyofmusictheatre.com/about/academy-of-music-history/" title="History">History</a></li>
+	<li class="page_item page-item-81"><a href="http://www.academyofmusictheatre.com/about/orginization-docs/" title="Organization Documents">Organization Documents</a></li>
+	<li class="page_item page-item-91"><a href="http://www.academyofmusictheatre.com/about/academy-of-music-boad-of-trustees/" title="Board">Board</a></li>
+	<li class="page_item page-item-594"><a href="http://www.academyofmusictheatre.com/about/staff/" title="Staff">Staff</a></li>
+	<li class="page_item page-item-189"><a href="http://www.academyofmusictheatre.com/about/resident-companies/" title="Resident Companies">Resident Companies</a></li>
+</ul>
+</li>
+<li class="page_item page-item-5"><a href="http://www.academyofmusictheatre.com/event-calendar/" title="Calendar">Calendar</a></li>
+<li class="page_item page-item-1008"><a href="http://www.academyofmusictheatre.com/academy-of-music-in-northampton-ma-youth-programs/" title="Youth Programs">Youth Programs</a>
+<ul class="children">
+	<li class="page_item page-item-1061"><a href="http://www.academyofmusictheatre.com/academy-of-music-in-northampton-ma-youth-programs/school-days-series-at-the-academy-of-music-in-northampton-ma/" title="School Day Series">School Day Series</a></li>
+	<li class="page_item page-item-836"><a href="http://www.academyofmusictheatre.com/academy-of-music-in-northampton-ma-youth-programs/academy-of-musicsummer-musical-theatre-workshops/" title="Summer Musical Theatre Workshops">Summer Musical Theatre Workshops</a></li>
+	<li class="page_item page-item-804"><a href="http://www.academyofmusictheatre.com/academy-of-music-in-northampton-ma-youth-programs/academy-youth-productions/" title="Academy Youth Productions">Academy Youth Productions</a></li>
+</ul>
+</li>
+<li class="page_item page-item-6 current_page_item"><a href="http://www.academyofmusictheatre.com/ticket-info/" title="Ticket Info">Ticket Info</a>
+<ul class="children">
+	<li class="page_item page-item-183"><a href="http://www.academyofmusictheatre.com/ticket-info/seating-chart/" title="Seating Chart">Seating Chart</a></li>
+	<li class="page_item page-item-185"><a href="http://www.academyofmusictheatre.com/ticket-info/purchase_tickets/" title="Purchase Tickets">Purchase Tickets</a></li>
+	<li class="page_item page-item-657"><a href="http://www.academyofmusictheatre.com/ticket-info/outside-venue-tickets/" title="Outside Venue Tickets">Outside Venue Tickets</a></li>
+</ul>
+</li>
+<li class="page_item page-item-8"><a href="http://www.academyofmusictheatre.com/rental-info/" title="Rental Info">Rental Info</a></li>
+<li class="page_item page-item-271"><a href="http://www.academyofmusictheatre.com/about/resident-companies/" title="Resident Companies">Resident Companies</a></li>
+<li class="page_item page-item-512"><a href="http://www.academyofmusictheatre.com/academy-news/" title="News">News</a>
+<ul class="children">
+	<li class="page_item page-item-584"><a href="http://www.academyofmusictheatre.com/academy-news/news-links/" title="News Links">News Links</a></li>
+</ul>
+</li>
+<li class="page_item page-item-104"><a href="http://www.academyofmusictheatre.com/contact-us/" title="Contact">Contact</a>
+<ul class="children">
+	<li class="page_item page-item-96"><a href="http://www.academyofmusictheatre.com/contact-us/volunteer/" title="Volunteer">Volunteer</a></li>
+	<li class="page_item page-item-12"><a href="http://www.academyofmusictheatre.com/contact-us/donat/" title="Donate">Donate</a></li>
+	<li class="page_item page-item-494"><a href="http://www.academyofmusictheatre.com/contact-us/site-map/" title="Site Map">Site Map</a></li>
+</ul>
+</li>
+		</ul>
+	</div>
+
+</div>
+</div>
+
+<div id="wrap"><div id="content">
+<div class="contentleft">
+<!--TIX DATA START-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+<!--TIX DATA END-->
+    	</div>
+		<div id="sidebar">
+
+	<ul id="sidebarwidgeted">
+	<li id="text-6" class="widget widget_text"><h4>CLICK HERE TO MAKE DONATIONS</h4>			<div class="textwidget"><p>Click <a href="https://www.networkforgood.org/donation/MakeDonation.aspx?ORGID2=042266004&amp;vlrStratCode=sZOvB%2f0cd%2fdoiEayuvrC062WlLcgVAXQgpxGrf4BzP2KJ5wCQrWGWEws9Vq3mHSD" target="_blank"><strong>HERE</strong></a> to donate.</p>
+</div>
+
+		</li>
+
+
+	</ul>
+			
+</div>   
+</div>
+<div class="clear"></div>
+
+<div id="footerbg">
+
+	<div id="footer">
+		<div class="inner">
+	
+		<div class="footer-1">
+			<p>Academy Of Music Theatre &#169; Copyright 2010-2011</p>
+			
+		</div>
+		
+		<div class="footer-2">
+			<p>274 Main St<br>Northampton MA 01060</p>
+		</div>
+		
+		<div class="footer-3">
+			<p><a href="http://midnightsondesigns.com/">Site by Midnight Son Designs Northampton MA</a></p> 
+		</div>
+		
+		<div class="footer-4">
+			 
+		</div>
+
+		</div> <!-- eo .inner -->
+		
+	</div>
+    </div>
+</form>
+</body>
+</html>
+    
+	        
+
+

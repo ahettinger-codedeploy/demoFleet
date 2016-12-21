@@ -1,0 +1,334 @@
+<%
+'changelog
+'LSP 04/25/16 - initial development
+%>
+
+<!DOCTYPE html>
+<html style="" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
+				lang="en-US">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<head runat="server">
+<asp:ContentPlaceHolder id="MasterHead" runat="server"></asp:ContentPlaceHolder>
+<meta property="og:title" content="title" />
+<meta property="og:description" content="description" />
+<meta property="og:image" content="http://tix.com/images/TixLogo128x128.gif"/>
+<meta property="og:image:secure_url" content="https://tix.com/images/TixLogo128x128.gif" />
+<meta property="og:image:type" content="image/jpeg" />
+</head>
+<BODY leftmargin=0 rightmargin=0 topmargin=0 marginheight=0 marginwidth=0 >
+<form id="form1" runat="server">
+<div>
+
+
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/datepicker.css">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/jquery-ui-1.css">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/tribe-events-full.css">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/tribe-events-theme.css">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/tribe-events-full-mobile.css" media="only screen and (max-width: 768px)">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/tribe-events-theme-mobile.css" media="only screen and (max-width: 768px)">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/woocommerce-layout.css">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/woocommerce-smallscreen.css" media="only screen and (max-width: 768px)">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/woocommerce.css">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/style.css">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/tribe-events-pro-full.css">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/tribe-events-pro-theme.css">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/tribe-events-pro-full-mobile.css" media="only screen and (max-width: 768px)">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/tribe-events-pro-theme-mobile.css" media="only screen and (max-width: 768px)">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/wc-memberships-frontend.css">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/chosen.css">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/filter-view.css">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/main.css">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/dashicons.css">
+	<link rel="stylesheet" href="/clients/alumniandfriends/images/thickbox.css">
+
+
+	
+	<link rel="shortcut icon" href="/clients/alumniandfriends/images/logo.png" type="image/x-icon">
+	<link rel="alternate" type="application/rss+xml" title="Alumni &amp; Friends of LaGuardia Feed" href="https://alumniandfriends.org/feed/">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-hQpvDQiCJaD2H465dQfA717v7lu5qHWtDbWNPvaTJ0ID5xnPUlVXnKzq7b8YUkbN" crossorigin="anonymous">
+	
+
+	<link href="/clients/alumniandfriends/images/buttons-secure.css" type="text/css" rel="stylesheet">
+
+</head>
+
+<body class="archive post-type-archive post-type-archive-tribe_events  tribe-events-uses-geolocation tribe-theme-afl_theme tribe-bar-is-disabled events-list events-archive tribe-events-style-full tribe-events-style-theme page-template-page-php singular tribe-is-responsive">
+
+
+	<header class="banner navbar navbar-default navbar-static-top" role="banner">
+		<div class="container">
+			<div class="row">
+				<div id="header-branding" class="navbar-header">
+
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+
+					<a id="logo-header" href="https://alumniandfriends.org/">
+						<img id="logo-img" class="pull-left" src="/clients/alumniandfriends/images/logo.png">
+						<span id="logo-text" class="pull-left">Alumni<br class"hidden-xs"="">and Friends of LaGuardia High School</span>
+					</a>
+
+				</div>
+
+
+				<div id="top-menu" class="col-xs-12 hidden-xs">
+
+					<div id="socialmenu">
+
+						<!-- Social menu -->
+						<ul class="list-inline">
+							<li><a target="_blank" href="https://www.facebook.com/AlumniandFriends" class="social-icon gray"><i class="fa fa-facebook fa-lg"></i></a></li>
+							<li><a target="_blank" href="https://twitter.com/LaGuardiaAF" class="social-icon gray"><i class="fa fa-twitter fa-lg"></i></a></li>
+							<li><a target="_blank" href="https://www.linkedin.com/groups/Alumni-Friends-LaGuardia-High-School-5133636" class="social-icon gray"><i class="fa fa-linkedin fa-lg"></i></a></li>
+						</ul>
+
+						<!-- Top navigation menu -->
+						<ul id="links_menu" class="list-inline">
+							<li class="menu-login hidden-xs"><a href="http://laguardiahs.org/" target="_blank">LaGuardia HS</a></li>
+							<li class="menu-login hidden-xs"><a href="http://laguardiahspa.org/" target="_blank">Parents Assn.</a></li>
+							<li class="menu-login"><a data-original-title="Login" href="#" data-toggle="popover" title="">Login</a></li>
+							<li class="menu-forms"><a href="https://alumniandfriends.org/forms/">Forms</a></li>
+							<li class="menu-contact-af"><a href="https://alumniandfriends.org/about/contact-us/">Contact A&amp;F</a></li>
+							<li class="menu-shop"><a href="https://alumniandfriends.org/shop/">Shop</a></li>
+
+						</ul>
+					</div>
+
+
+				</div>
+
+				<div id="primary_nav">
+					<nav class="collapse navbar-collapse" role="navigation">
+						<ul id="menu-primary-navigation" class="nav navbar-nav">
+							<li class="menu-join-af"><a href="https://alumniandfriends.org/join/">Join A&amp;F</a></li>
+							<li class="dropdown menu-our-community"><a class="dropdown-toggle" data-target="#" href="https://alumniandfriends.org/our-community/notable-alumni/">Our Community <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li class="menu-notable-alumni"><a href="https://alumniandfriends.org/our-community/notable-alumni/">Notable Alumni</a></li>
+									<li class="menu-where-are-we-now"><a href="https://alumniandfriends.org/category/where-are-we-now/">Where Are We Now?</a></li>
+									<li class="menu-did-you-know"><a href="https://alumniandfriends.org/about/did-you-know/">Did You Know?</a></li>
+									<li class="menu-student-success-stories"><a href="https://alumniandfriends.org/our-community/student-success-stories/">Student Success Stories</a></li>
+									<li class="menu-in-memoriam"><a href="https://alumniandfriends.org/inmemoriam">In Memoriam</a></li>
+								</ul>
+							</li>
+							<li class="dropdown menu-reunions"><a class="dropdown-toggle" data-target="#" href="https://alumniandfriends.org/reunions/">Reunions <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li class="menu-2016-reunion"><a href="https://alumniandfriends.org/reunions/">2016 Reunion</a></li>
+									<li class="menu-quick-tips-for-reunion-planning"><a href="https://alumniandfriends.org/reunions/quick-tips-for-reunion-planning/">Quick Tips for Reunion Planning</a></li>
+									<li class="menu-af-class-leaders"><a href="https://alumniandfriends.org/reunions/class-leaders/">A&amp;F Class Leaders</a></li>
+									<li class="menu-past-reunions"><a href="https://alumniandfriends.org/reunions/past-reunions/">Past Reunions</a></li>
+								</ul>
+							</li>
+							<li class="dropdown menu-about"><a class="dropdown-toggle" data-target="#" href="https://alumniandfriends.org/about/">About <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li class="menu-afs-mission"><a href="https://alumniandfriends.org/mission/">A&amp;F’s Mission</a></li>
+									<li class="menu-programs"><a href="https://alumniandfriends.org/about/programs/">Programs</a></li>
+									<li class="menu-history"><a href="https://alumniandfriends.org/about/history/">History</a></li>
+									<li class="menu-board-of-directors"><a href="https://alumniandfriends.org/about/board-of-directors/">Board of Directors</a></li>
+									<li class="menu-contact-us"><a href="https://alumniandfriends.org/about/contact-us/">Contact Us</a></li>
+								</ul>
+							</li>
+							<li class="active menu-calendar"><a href="https://alumniandfriends.org/events/">Calendar</a></li>
+							<li class="dropdown menu-news"><a class="dropdown-toggle" data-target="#" href="https://alumniandfriends.org/news/">News <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li class="menu-news"><a href="https://alumniandfriends.org/news/">News</a></li>
+									<li class="menu-alumni-update-newsletters"><a href="https://alumniandfriends.org/alumni-update-newsletter/">Alumni Update Newsletters</a></li>
+								</ul>
+							</li>
+							<li class="dropdown menu-support-af"><a class="dropdown-toggle" data-target="#" href="https://alumniandfriends.org/give/">Support A&amp;F <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+									<li class="menu-give-to-af"><a href="https://alumniandfriends.org/give/">Give to A&amp;F</a></li>
+									<li class="menu-establish-a-named-fund"><a href="https://alumniandfriends.org/give/named-funds/">Establish a Named Fund</a></li>
+									<li class="menu-find-a-fund"><a href="https://alumniandfriends.org/fund/">Find a Fund</a></li>
+									<li class="menu-legacy-society"><a href="https://alumniandfriends.org/give/legacy-society/">Legacy Society</a></li>
+									<li class="menu-donate-technology"><a href="https://alumniandfriends.org/give/donate-technology/">Donate Technology</a></li>
+								</ul>
+							</li>
+						</ul>
+						<ul id="menu-top-menu-1" class="nav navbar-nav visible-xs">
+							<li class="menu-forms"><a href="https://alumniandfriends.org/forms/">Forms</a></li>
+							<li class="menu-contact-af"><a href="https://alumniandfriends.org/about/contact-us/">Contact A&amp;F</a></li>
+							<li class="menu-shop"><a href="https://alumniandfriends.org/shop/">Shop</a></li>
+							<li class="menu-login"><a data-original-title="Login" href="#" data-toggle="popover" title="">Login</a></li>
+						</ul>
+					</nav>
+				</div>
+
+
+			</div>
+
+		</div>
+	</header>
+	<div id="loginform" class="hidden-xs hidden-sm hidden-md hidden-lg">
+		<div class="row omb_row-sm-offset-3 omb_socialButtons">
+			<div class="text-center">
+				<button type="button" class="btn btn-fb btn-lg" onclick="showInstaPopup()">
+				  Login with Facebook
+				</button>
+
+
+				<!-- <a href="#" class="btn btn-lg btn-block omb_btn-facebook">
+			        <i class="fa fa-facebook visible-xs"></i>
+			        <span class="hidden-xs">Facebook</span>
+		        </a> -->
+			</div>
+		</div>
+
+		<div class="separator">
+			<hr>
+			<div class="orseparator text-center">or</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+				<form action="login" id="wploginform" autocomplete="off" method="POST" _lpchecked="1">
+					<div class="input-group">
+						<span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+						<input id="username" class="form-control" name="username" placeholder="E-mail / Username" autocomplete="off" type="text">
+					</div>
+					<span class="help-block"></span>
+
+					<div class="input-group">
+						<span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+						<input id="password" class="form-control" name="password" placeholder="Password" autocomplete="off" type="password">
+					</div>
+					<span class="help-block status"></span>
+
+					<input id="security" name="security" value="2870ce5a06" type="hidden"><input name="_wp_http_referer" value="/events/" type="hidden"> <input class="btn btn-lg btn-primary btn-block" value="Login" name="submit" type="submit">
+				</form>
+			</div>
+		</div>
+
+		<div class="row">
+			<!-- <div class="col-xs-12 col-sm-6">
+				<label class="checkbox">
+					<input type="checkbox" value="remember-me"><small>Remember Me</small>
+				</label>
+			</div> -->
+			<div class="col-xs-12">
+				<p class="omb_forgotPwd">
+					<a class="lost" href="https://alumniandfriends.org/my-account/lost-password/">Forgot password?</a>
+					<a class="lost pull-right" href="https://alumniandfriends.org/registration/">Sign-Up</a>
+				</p>
+				<!--<p style="line-height:20px">Attention Existing Members: Please click on <a class="lost" href="https://alumniandfriends.org/my-account/lost-password/" style="color:#e63b14">RESET PASSWORD</a> to continue to access all the features of the re-launched Alumni site!</p>-->
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+
+	<div class="wrap container" role="document">
+		<div class="content row">
+			<main class="main col-sm-12 col-md-12" role="main">
+				<div class="afl_sharethis_line text-right"> <br><br></div>
+				<div class="page-header">
+					<h1 class="ff-didot">
+    Events  </h1>
+
+				</div>
+				<div id="tribe-events" class="" data-live_ajax="0" data-datepicker_format="2" data-category="">
+					<div class="tribe-events-before-html"></div><span class="tribe-events-ajax-loading"><img class="tribe-events-spinner-medium" src="/clients/alumniandfriends/images/tribe-loading.gif" alt="Loading Events"></span>
+					<div id="tribe-events-content-wrapper" class="tribe-clearfix"><input id="tribe-events-list-hash" value="" type="hidden">
+						<!-- Tribe Bar -->
+
+						<!-- Main Events Content -->
+
+						<div id="tribe-events-content" class="tribe-events-list">
+<!--tix content-->
+<asp:ContentPlaceHolder id="MasterContent" runat="server"></asp:ContentPlaceHolder>
+
+	</div>
+						<!-- #tribe-events-content -->
+
+						<div class="tribe-clear"></div>
+
+					</div>
+					<!-- #tribe-events-content-wrapper -->
+					<div class="tribe-events-after-html"></div>
+				</div>
+				<!-- #tribe-events -->
+				<!--
+This calendar is powered by The Events Calendar.
+http://eventscalendarpro.com/
+-->
+			</main>
+			<!-- /.main -->
+
+			<!-- /.sidebar -->
+		</div>
+		<!-- /.content -->
+	</div>
+	<!-- /.wrap -->
+
+
+	<footer class="hidden-print">
+		<div id="subfooter">
+			<div class="container">
+				<div class="col-sm-6">
+					<p></p>
+					<p>Copyright &#169; 2003-2016&nbsp;Alumni &amp;&nbsp;Friends of LaGuardia High School. All rights reserved. A&amp;F is a non-profit, 501 (c) 3 organization.</p>
+					<p>Our EIN is 13-3166108. Alumni &amp;&nbsp;Friends of Fiorello H. Laguardia High School of Music and Art and Performing Arts You may examine our filings with the New York State Department of Law&nbsp;<a href="http://www.charitiesnys.com/RegistrySearch/show_details.jsp?id=%7B44C00134-8DBA-499D-AD01-3F910D484FFC%7D"
+										target="_blank">here</a>.</p>
+					<p><a title="Privacy Policy" href="https://alumniandfriends.org/privacy-policy/">Privacy Policy</a></p>
+					<p></p>
+				</div>
+				<section class="widget widget_afl_followus-2 widget_afl_followus">
+					<h3>Follow Us</h3>
+					<ul>
+
+						<li>
+							<a target="_blank" href="https://www.facebook.com/AlumniandFriends">
+								<span class="social-icon gray"><i class="fa fa-facebook fa-lg"></i></span>Facebook
+							</a>
+						</li>
+
+						<li>
+							<a target="_blank" href="https://twitter.com/LaGuardiaAF">
+								<span class="social-icon gray"><i class="fa fa-twitter fa-lg"></i></span>Twitter
+							</a>
+						</li>
+
+						<li>
+							<a target="_blank" href="https://www.linkedin.com/groups/Alumni-Friends-LaGuardia-High-School-5133636">
+								<span class="social-icon gray"><i class="fa fa-linkedin fa-lg"></i></span>Linkedin
+							</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://smile.amazon.com/">
+								<img src="/clients/alumniandfriends/images/AmazonSmile.png" style="max-width:90%;">
+							</a>
+						</li>
+					</ul>
+
+				</section>
+				<section class="widget text-2 widget_text">
+					<h3>Connect</h3>
+					<div class="textwidget">
+						<p>Join our mailing list to receive regular updates from LaGuardia Arts Alumni and Friends</p>
+						<a class="btn btn-lg col-xs-12" href="https://alumniandfriends.org/connect/">Sign Up  Now</a></div>
+				</section>
+				<p id="siteby" class="col-xs-12">Website by <a href="http://www.npgroup.net/" target="_blank">New Possibilities Group</a></p>
+
+			</div>
+		</div>
+	</footer>
+
+
+
+	<!-- WP-FB AutoConnect Init v4.1.1 (NEW API) -->
+
+
+
+</div>
+</form>
+</body>
+</html>

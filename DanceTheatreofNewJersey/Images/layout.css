@@ -1,0 +1,159 @@
+/*
+-----------------------------------------------
+Layout 1010: Screen Styles
+----------------------------------------------- */
+
+body {
+	margin: 0;
+	padding: 0 0 120px;
+}
+
+div#background {
+	width: 100%;
+	height: 477px;
+	background: url(/clients/DanceTheatreofNewJersey/Images/1010-body_bg.png) repeat-x;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+* html div#background {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/clients/DanceTheatreofNewJersey/Images/1010-body_bg.png", enabled='true', sizingMethod='scale');
+	background-image: none;
+}
+
+.altcolor {
+	background: #abaaaa;
+}
+
+
+/* Container */
+
+div#container {
+	width: 940px;
+	margin: 0 auto;
+	background: url(/clients/DanceTheatreofNewJersey/Images/1010-container_bg.gif) repeat-y 220px 0;
+	position: relative;
+	z-index: 2;
+}
+
+
+/* Header */
+
+div#header {
+	padding: 20px 0;
+}
+
+
+/* Content */
+
+div#content {
+	width: 500px;
+	float: right;
+	padding: 40px 100px 80px 100px;
+	background: #fff;
+}
+
+
+/* Sidebar */
+
+div#sidebar {
+	width: 240px;
+	float: left;
+}
+
+
+/* Navigation */
+
+div#navigation {
+	padding: 0 0 80px;
+	background-image: url(/clients/DanceTheatreofNewJersey/Images/1010-navigation_rc_br.png);
+	background-repeat: no-repeat;
+	background-position: 100% 100%;
+}
+
+* html div#navigation, * html ul.mainNav1 {
+	background-image: none;
+}
+
+ul.mainNav1 {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	background: url(/clients/DanceTheatreofNewJersey/Images/1010-navigation_rc_tr.png) no-repeat 100% 0;
+}
+ul.mainNav1 li {
+	width: 240px;
+}
+ul.mainNav1 li a {
+	text-decoration: none;
+	display: block;
+	width: 210px;
+	padding: 5px 15px;
+	background: url(/clients/DanceTheatreofNewJersey/Images/1010-dots.gif) repeat-x 0 100%;
+}
+ul.mainNav1 li a:hover, ul.mainNav1 li a.current {
+	font-weight: bold;
+}
+ul.mainNav2 {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul.mainNav2 li a {
+	width: 190px;
+	padding: 4px 15px 4px 35px;
+}
+ul.mainNav3 {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+ul.mainNav3 li a {
+	width: 170px;
+	padding: 4px 15px 4px 55px;
+}
+
+div#sidebar_content {
+	padding: 20px 30px 0 10px;
+	color: #fff;
+}
+div#jimdobox {
+	margin-bottom: 20px;
+}
+
+
+/* Footer */
+
+div#footer {
+	clear: both;
+	width: 720px;
+	margin: 0 auto;
+	padding: 0 0 0 220px;
+}
+div#footer_inner {
+	background: red;
+	padding-top: 4px;
+	background: url(/clients/DanceTheatreofNewJersey/Images/1010-container_bottom_rc.png) no-repeat;
+	zoom: 1;
+}
+* html div#footer_inner {
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="/clients/DanceTheatreofNewJersey/Images/1010-container_bottom_rc.png", enabled='true', sizingMethod='crop');
+	background-image: none;
+}
+div#footer div.gutter {
+	background: url(/clients/DanceTheatreofNewJersey/Images/1010-dots.gif) repeat-x 0 100%;
+	margin: 0 10px 0 10px;
+	padding: 10px 0 5px 0;
+}
+
+br.c {
+	display: block;
+}
+
+
+/* Bugfix: Edit-Fenster in Sidebar durch Content ueberlagert */
+
+div#sidebar div.modulelt {
+	position: relative;
+	z-index: 9999px;
+}

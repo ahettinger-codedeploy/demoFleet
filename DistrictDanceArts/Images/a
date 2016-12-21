@@ -1,0 +1,24 @@
+
+var delay = setTimeout(function(){
+var pixelDataObject = new Object();
+pixelDataObject.window_location_pathname = window.location.pathname;
+pixelDataObject.domain = document.domain;
+pixelDataObject.document_url = document.URL;
+
+var cb_a = window.location.pathname.split("/");
+var cb_b = cb_a[cb_a.length - 1].replace(".html","");
+if (cb_b !== "") {
+	pixelDataObject.segment_id =  cb_b;
+}
+pixelDataJsonString = JSON.stringify(pixelDataObject);
+show_pixel(location.protocol+"//dynamic.cannedbanners.com/pixel/?pixelData="+encodeURIComponent(pixelDataJsonString)+"&clientId=15&campaignId=1109",1,1);
+},500);
+function show_pixel(src, width, height) {
+	var pixel = document.createElement("img");
+    pixel.src = src;
+    pixel.width = width;
+    pixel.height = height;
+    pixel.style.display = "none";
+    document.body.appendChild(pixel);
+}
+

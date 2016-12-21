@@ -1,0 +1,272 @@
+.loading {
+left: 260px;
+position: absolute;
+top: 120px;
+}
+
+#slide_holder {
+width: 600px;
+height:350px;
+float: left;
+border-bottom: 1px solid #cc0000;
+border-right: 1px solid #cc0000;
+background: #000000 url(../images/table_frontpage_image_bg_loading.gif) no-repeat center center;
+padding: 0;
+margin: 0;
+
+color: #ffffff;
+overflow: hidden;
+position: relative;
+text-align: left;
+z-index: 1000;
+}
+#slide_holder_inner {
+height: 350px;
+left: 0px;
+overflow: hidden;
+position: absolute;
+top: 0px;
+width: 602px;
+z-index: 2000;
+}
+
+#intro, .intro {
+position: absolute;
+z-index: 9000;
+}
+
+/*-- for slide divs --*/
+
+#slide_holder_inner div {
+position: absolute;
+}
+/*-- for divs in html slides to position relative --*/
+div#slide_holder_inner div.slide div {
+position: relative;
+}
+div#carousel_controls {
+	/*background: transparent url(../images/agile_carousel/images/bg_controls.png) repeat top left;*/
+	height: 30px;
+	width: 600px;
+	z-index: 4000;
+	top: 320px;
+}
+
+/*-- for slide buttons --*/
+#slide_buttons li:hover, #pause_button, .prev_button, .next_button, #hover_next_button, #hover_prev_button, #first_button, #last_button {
+cursor: pointer;
+/*//TN not valid: cursor: hand;*/
+z-index: 5000;
+}
+#carousel_controls #button_selected, #carousel_controls .prev_button_disabled, #carousel_controls  .next_button_disabled, #carousel_controls  .first_button_diabled, #carousel_controls  .last_button_disabled {
+cursor: auto;
+}
+#slide_buttons li span, #pause_button span, .prev_button span, .next_button span, #first_button span, #last_button span, #hover_next_button span, #hover_prev_button span, #water_mark span {
+margin-left: -10000px;
+}
+#slide_buttons li, #pause_button, .prev_button, .next_button, #first_button, #last_button, #water_mark {
+background-repeat: no-repeat;
+overflow: hidden;
+top: 0px;
+}
+ul#slide_buttons {
+margin: 0;
+padding: 15px 7px 15px 15px;
+position: absolute;
+right: 30px;/*//TN change to 155px for all buttons*/
+top: -7px;
+z-index: 5000;
+
+}
+ul#slide_buttons li {
+background-image: url(../images/agile_carousel/images/button.gif);
+display: block;
+float: left;
+height: 9px;
+list-style: none;
+margin: 0 0 0 3px;
+padding: 2px;
+width: 10px;
+cursor: pointer;
+}
+ul#slide_buttons li:hover {
+}
+ul#slide_buttons li#button_selected {
+background-image: url(../images/agile_carousel/images/button_selected.gif);
+}
+ul#slide_buttons li#button_selected:hover {
+}
+/*-- first & last buttons --*/
+
+#first_button {
+background-image: url(../images/agile_carousel/images/first.png);
+height: 29px;
+right: 120px;
+width: 34px;
+background-position: 0 -36px;
+}
+#first_button:hover {
+background-position: 0 0;
+}
+#last_button {
+background-image: url(../images/agile_carousel/images/last.png);
+height: 29px;
+right: 0px;
+width: 34px;
+background-position: 0 -36px;
+}
+#last_button:hover {
+background-position: 0 0;
+}
+
+/*-- end first & last buttons --*/
+
+/*-- next & prev buttons --*/
+#nex_prev_buttons {
+position: absolute;
+left: 0;
+z-index: 5000;
+}
+#next_button {
+background-image: url(../images/agile_carousel/images/next.png);
+background-position: 0 -36px;
+height: 29px;
+right: 34px;
+width: 31px;
+}
+#next_button:hover {
+background-position: 0 0;
+}
+#prev_button {
+background-image: url(../images/agile_carousel/images/prev.png);
+background-position: 0 -36px;
+height: 29px;
+right: 89px;
+width: 31px;
+}
+#prev_button:hover {
+background-position: 0 0;
+}
+/*-- end next & prev buttons --*/
+
+
+/*-- looks like pause button --*/
+.pause_button {
+background-image: url(../images/agile_carousel/images/pause.gif);
+background-position: 0 -36px;
+height: 29px;
+right: 5px;/*//TN change to 65px for all buttons*/
+width: 24px;
+}
+.pause_button:hover {
+background-position: 0 0;
+}
+/*-- looks like play button --*/
+.paused_button {
+background-image: url(../images/agile_carousel/images/play.gif);
+background-position: 0 -36px;
+height: 29px;
+right: 5px;/*//TN change to 65px for all buttons*/
+width: 24px;
+}
+.paused_button:hover {
+background-position: 0 0;
+}
+
+/*-- hover next & hoverprev buttons --*/
+
+#hover_next_button, #hover_prev_button {
+height: 125px;
+background-repeat: no-repeat;
+display: none;
+overflow: hidden;
+width: 77px;
+top: 60px;
+z-index: 6000;
+}
+#hover_next_button span {
+}
+#hover_next_button {
+background-image: url(../images/agile_carousel/images/hover_next.png);
+background-position: 21px 35px;
+padding: 30px 0 30px 30px;
+right: 0;
+}
+#hover_prev_button {
+background-image: url(../images/agile_carousel/images/hover_prev.png);
+background-position: 8px 35px;
+padding: 30px 30px 30px 0;
+left: 0;
+}
+
+/*-- end next & prev buttons --*/
+
+/*-- rules for slide captions --*/
+
+#slide_captions {
+	color: #333;
+	left: 8px;
+	overflow: visible;
+	top: 5px;
+	z-index: 6000;
+}
+#slide_captions span {
+	font-family: Tahoma;
+	font-size: 15px;
+	height: 20px;
+	line-height: 20px;
+	overflow: visible;
+}
+
+/*-- end rules for slide captions --*/
+
+/*-- rules for watermark --*/
+
+#water_mark {
+	background-image: url(../images/agile_carousel/images/water_mark.png);
+	height: 30px;
+	left: 202px;
+	width: 246px;
+	top: 208px;
+	z-index: 6000;
+}
+
+#water_mark span {
+}
+
+/*-- end rules for slide captions --*/
+
+/*-- slide number display --*/
+
+#slide_number_display {
+	background-image: url(../images/agile_carousel/images/bg_swatch.png);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	color: #333;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	height: 23px;
+	padding: 4px;
+	right: 7px;
+	text-align: center;
+	top: 208px;
+	width: 37px;
+	z-index: 5000;
+}
+
+/*-- for carousel view --*/
+
+#row_of_slides {
+position: absolute;
+top: 0;
+}
+#row_of_slides .slide {
+display: none;
+position: absolute;
+}
+
+/*//TN added*/
+.slide_html_code_wrapper {width: 600px; height: 350px; background: #333333;}
+.slide_html_code {padding: 10px;}
+.slide_display_error_wrapper {width: 600px; height: 350px;}
+.slide_display_error {padding: 10px; color: #eeeeee; font-size: 1.5em; font-family: "Courier New", Courier, monospace; font-weight: bold;}
