@@ -1,0 +1,9 @@
+version: 0.0
+os: windows
+files:
+  - source: /
+    destination: C:\inetpub\wwwroot\client\
+hooks:
+  BeforeInstall:
+    - location: scripts\before-install.bat
+      timeout: 900
