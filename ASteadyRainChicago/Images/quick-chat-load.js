@@ -1,3 +1,0 @@
-// Quick Chat 4.01 - load
-var quick_chat=jQuery.extend(quick_chat||{},{script_suffix:1==quick_chat.debug_mode?".dev":"",get_script:function(b,c,a){a=jQuery.extend(a||{},{crossDomain:1==quick_chat.debug_mode?!0:!1,dataType:"script",cache:!0,success:c,url:b});return jQuery.ajax(a)}});
-jQuery(window).load(function(){(0!=jQuery("div.quick-chat-container").length||jQuery.cookie("quick_chat_private_current")&&"{}"!=jQuery.cookie("quick_chat_private_current"))&&quick_chat.get_script(quick_chat.url+"/js/quick-chat-init"+quick_chat.script_suffix+".js?"+quick_chat.version)});
