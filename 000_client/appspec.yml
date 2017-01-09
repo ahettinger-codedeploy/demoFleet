@@ -1,0 +1,13 @@
+version: 0.0
+os: windows
+files:
+  - source: files\
+    destination: C:\inetpub\wwwroot\client\ClientA\files
+  - source: img\
+    destination: C:\inetpub\wwwroot\client\ClientA\img
+  - source: scripts\
+    destination: C:\inetpub\wwwroot\client\ClientA\scripts  
+hooks:
+  BeforeInstall:
+    - location: scripts\before-install.bat
+      timeout: 900
